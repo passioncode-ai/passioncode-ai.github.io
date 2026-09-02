@@ -1,0 +1,9 @@
+{
+  "name": "passioncode-ai.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The public home of PassionCode.ai.",
+  "scripts": {
+    "check": "node scripts/check-site.mjs"
+  }
+}
