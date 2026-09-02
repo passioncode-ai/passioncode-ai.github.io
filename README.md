@@ -8,8 +8,9 @@
 >
 > **The agent-agnostic operating system for AI-native teams.**
 
-This repository contains the dependency-free static site published at
-[passioncode.ai](https://passioncode.ai/).
+This repository contains the dependency-free static site for
+[passioncode.ai](https://passioncode.ai/). GitHub Pages publishes the artifact from
+`main`; the custom domain becomes public after its DNS records point to GitHub Pages.
 
 **Stop managing agents one by one. Start operating projects.** A Project keeps its
 purpose, team, routines, authority, work, evidence and feedback loop together while
@@ -24,3 +25,8 @@ python3 -m http.server 4173
 Open `http://localhost:4173`. The production site is published from `main` through
 GitHub Pages. The hosted PassionCode.ai product is in active development and is not
 publicly available yet.
+
+## Deployment
+
+The Pages workflow, custom-domain file and DNS handoff are documented in
+[`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
