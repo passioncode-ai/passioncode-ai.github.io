@@ -1,15 +1,18 @@
 # PassionCode.ai deployment
 
-## What is automated
+## What is enforced
 
-- Cloudflare Workers Builds watches `main`, runs `npm run build` and deploys with
-  `npx wrangler deploy`.
 - `wrangler.json` binds the Worker to `passioncode.ai` and `www.passioncode.ai` as
   Custom Domains. The Worker redirects `www` to the canonical apex URL.
 - `npm run check` validates the brand lock, public copy, static structure and deployment
   contract before a build can ship.
 - `.github/workflows/check.yml` repeats the checks on pushes and pull requests. It does
   not hold a Cloudflare credential or deploy independently.
+
+Cloudflare's GitHub connection is not granted to this organization, so production
+deploys currently run through the authenticated Wrangler path below. Connecting the
+repository in **Workers & Pages → passioncode-ai → Settings → Builds** can add automatic
+deploys later without storing a long-lived Cloudflare token in GitHub.
 
 ## Build and deploy
 

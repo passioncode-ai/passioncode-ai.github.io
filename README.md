@@ -23,8 +23,8 @@ python3 -m http.server 4173
 ```
 
 Open `http://localhost:4173`. The production site is published from `main` through
-Cloudflare Workers Builds. The hosted PassionCode.ai product is in active development
-and is not publicly available yet.
+the checked `npm run deploy` path to Cloudflare Workers. The hosted PassionCode.ai
+product is in active development and is not publicly available yet.
 
 ## Approved brand
 
