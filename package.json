@@ -4,6 +4,12 @@
   "version": "1.0.0",
   "description": "The public home of PassionCode.ai.",
   "scripts": {
-    "check": "node scripts/check-site.mjs"
+    "build": "node scripts/build-site.mjs",
+    "check": "node scripts/check-brand-lock.mjs && node scripts/check-site.mjs && node scripts/check-worker.mjs",
+    "deploy": "npm run check && npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "4.128.0"
   }
 }

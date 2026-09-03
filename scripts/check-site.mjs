@@ -7,9 +7,11 @@ const html = readFileSync(resolve(root, 'index.html'), 'utf8')
 const css = readFileSync(resolve(root, 'styles.css'), 'utf8')
 
 const requiredFiles = [
-  'CNAME',
   'robots.txt',
   'sitemap.xml',
+  'wrangler.json',
+  'worker/index.js',
+  'brand/LOCK.json',
   'assets/passioncode-mark.svg',
   'assets/favicon-64.png',
   'assets/icon-256.png',
@@ -27,7 +29,7 @@ const requiredCopy = [
   'From vibe coding to passion coding.',
   'The agent-agnostic operating system for',
   'Stop managing agents one by one. Start operating projects.',
-  'Product in active development',
+  'Hosted product in active development',
   'People remain accountable.'
 ]
 
@@ -41,6 +43,7 @@ assert.match(html, /<meta property="og:image" content="https:\/\/passioncode\.ai
 assert.match(html, /<script type="application\/ld\+json">[\s\S]*"@type": "Organization"/)
 assert.ok(!/<script\s+src=/i.test(html), 'the v1 page must not depend on external scripts')
 assert.ok(!/target="_blank"/i.test(html), 'new tabs are not forced')
+assert.equal((html.match(/Explore PassionCode on GitHub/g) || []).length, 2, 'primary CTA must stay consistent')
 assert.match(css, /@media \(max-width: 620px\)/)
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
 
@@ -65,4 +68,4 @@ assert.deepEqual(pngDimensions(resolve(root, 'assets/favicon-64.png')), { width:
 assert.deepEqual(pngDimensions(resolve(root, 'assets/icon-256.png')), { width: 256, height: 256 })
 assert.deepEqual(pngDimensions(resolve(root, 'assets/icon-1024.png')), { width: 1024, height: 1024 })
 
-console.log(`PASS: ${requiredFiles.length} assets, canonical copy, metadata, responsive CSS, 1200×630 social card`)
+console.log(`PASS: ${requiredFiles.length} files, canonical copy, metadata, consistent CTA, responsive CSS, 1200×630 social card`)

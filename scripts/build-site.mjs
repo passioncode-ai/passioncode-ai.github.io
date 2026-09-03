@@ -1,0 +1,28 @@
+import { cpSync, mkdirSync, rmSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+const root = resolve(import.meta.dirname, '..')
+const output = resolve(root, 'dist')
+
+const publicFiles = [
+  'index.html',
+  'styles.css',
+  'robots.txt',
+  'sitemap.xml',
+  'assets/passioncode-mark.svg',
+  'assets/favicon-64.png',
+  'assets/icon-256.png',
+  'assets/icon-1024.png',
+  'assets/passioncode-social-card.svg',
+  'assets/passioncode-social-card.png',
+  'assets/passioncode-social-card.jpg'
+]
+
+rmSync(output, { recursive: true, force: true })
+mkdirSync(output, { recursive: true })
+
+for (const file of publicFiles) {
+  cpSync(resolve(root, file), resolve(output, file), { recursive: true })
+}
+
+console.log(`PASS: built ${publicFiles.length} public entries in dist/`)
