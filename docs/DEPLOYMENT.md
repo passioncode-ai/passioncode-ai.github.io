@@ -49,3 +49,6 @@ curl -I https://www.passioncode.ai/
 
 The expected result is HTTPS `200` from Cloudflare for the apex and a `301` from `www`
 to the same path on `https://passioncode.ai`.
+
+The completed production migration, including record IDs, Worker version and observed
+responses, is recorded in [`CUTOVER_RECEIPT.md`](CUTOVER_RECEIPT.md).
