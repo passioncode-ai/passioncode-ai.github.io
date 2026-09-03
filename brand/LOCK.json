@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "brand": "PassionCode.ai",
+  "approvedAt": "2026-09-03",
+  "upstream": {
+    "repository": "passioncode-ai/fabric",
+    "commit": "a360b51778d6a80eb294a9a91dd4809fd4dfbff1",
+    "path": "assets/brand"
+  },
+  "files": {
+    "brand/favicon/source/passioncode-passion-fruit.svg": "8b49637faa386ce9658029a142d48e8a8c3ee4ed2d44ccb611cd03051046e1aa",
+    "brand/favicon/transparent/passioncode-favicon-1024.svg": "21d2d8dc87e6640890293fc8a5fe3b9083c9f838d4a28f891dd36248e752af6e",
+    "brand/favicon/transparent/passioncode-favicon-512.svg": "1abf15bc58839d42dead96e71e6644669cc0d3b8fe747055cdb867ed2449ab7c",
+    "brand/favicon/transparent/passioncode-favicon-256.svg": "12c0d84b3c6e215e2312c3b02d97881186b5defccbc5a2aefa49317ed7d77f04",
+    "brand/favicon/transparent/passioncode-favicon-128.svg": "bf92a2259f39e225bcc4ee938cc1834d492418500ff3c1b9fbb53a82b66b9052",
+    "brand/favicon/transparent/passioncode-favicon-64.svg": "9b126ff706c68b861aad11819c1888ca73ff841d5da01a6bfad0f66a8d9ba598",
+    "brand/favicon/dark/passioncode-favicon-1024.svg": "f2f6c6106ba161cd26af0382df7d9d2c310ceb34d1efd1866735545ca11d46f3",
+    "brand/favicon/dark/passioncode-favicon-512.svg": "5d0fb17e5432fd5aa306f6ebb861f7362d487b4da6f35ffe47e26585a741b912",
+    "brand/favicon/dark/passioncode-favicon-256.svg": "fc1cbd8861fb27fb0f760b342fbe688a9b77961f6463164de81430c3fe46771c",
+    "brand/favicon/dark/passioncode-favicon-128.svg": "4c687202fa4bb3f736bab7f79b4af57134227ada188d7259ae32ef326c3a8b8e",
+    "brand/favicon/dark/passioncode-favicon-64.svg": "927c8592750602c276f80a25c0845b0d9029bf6c77dc87351275415d0bf837fc",
+    "brand/favicon/white/passioncode-favicon-1024.svg": "c0f9daee18c489822acd1a10f3dc848663491270d93e20edec3d09035223805e",
+    "brand/favicon/white/passioncode-favicon-512.svg": "e22ccca63f29050f49accbc8a483230b9cd8fb3dbc327cd845faf7e2ff744d43",
+    "brand/favicon/white/passioncode-favicon-256.svg": "03bf1d205f7dd83a67dd15348c550edf6e766da5ed60a88986e65f38888d7488",
+    "brand/favicon/white/passioncode-favicon-128.svg": "78726c93f4c1c195dd741c1838bef27a9ad5f4f3bb1a5c154e65bdf31c7e72a0",
+    "brand/favicon/white/passioncode-favicon-64.svg": "9c4bd7619846d0eb8f09f21375aaa6edf5e25c604d873a04670ddd9344df5117",
+    "brand/brand-pack/manifest.json": "f84689f232d24bb64a84d1d21277937de2cef1ef528f8322129193aca3619d12",
+    "brand/social/passioncode-social-card.svg": "4e7bb0872785368025b347c897de60a0c3a75287df3d4f05c40de711ee96bdf2",
+    "brand/social/passioncode-social-card.png": "66f540fdcdaf38d0bf624af39e926a4cccdf5b1977932ca4d3a0c52919a2f00e",
+    "brand/social/passioncode-social-card.jpg": "49357798a821b5b60c26bbe41ac00fd93ab671548398f33c098de9b28c993d23"
+  },
+  "runtimeAliases": {
+    "assets/passioncode-mark.svg": "brand/favicon/source/passioncode-passion-fruit.svg",
+    "assets/favicon-64.png": "brand/brand-pack/png/transparent/passioncode-icon-64.png",
+    "assets/icon-256.png": "brand/brand-pack/png/transparent/passioncode-icon-256.png",
+    "assets/icon-1024.png": "brand/brand-pack/png/transparent/passioncode-icon-1024.png",
+    "assets/passioncode-social-card.svg": "brand/social/passioncode-social-card.svg",
+    "assets/passioncode-social-card.png": "brand/social/passioncode-social-card.png",
+    "assets/passioncode-social-card.jpg": "brand/social/passioncode-social-card.jpg"
+  }
+}
