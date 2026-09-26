@@ -77,3 +77,10 @@ Merged this work rather than overwriting it. Kept upstream SCN-006/SCR-04 for Ob
 this iteration’s Fabric/About cases are SCN-007/008 and Fabric screen SCR-05.
 REQ-04/05 now cover three tools and five total static pages. Observatory source installation
 is distinct from Switchboard binary downloads. No upstream product facts or limits removed.
+
+## Delivered
+
+REQ-01–08 delivered: five-page static/browser checks, public profile identity, source/private
+boundaries, download routing and exact publication are linked from [HANDOFF](../HANDOFF.md).
+No unresolved implementation item remains in this website iteration. Headline preference is
+open to operator review, not treated as an unreceived approval. Holds at close: 0 (preview stopped).

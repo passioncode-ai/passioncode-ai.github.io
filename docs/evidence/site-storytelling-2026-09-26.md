@@ -70,3 +70,24 @@ viewport. Observatory has visible navigation, scrollWidth=390; Explore Observato
 its page and Get started reaches its Python/source-install section. Existing beta warnings
 and shared brand lock remain intact. Work-cycle observations do not imply automatic review
 or a shipped integration between the three tools.
+
+## Production and cold-checkout receipt
+
+Exact source `72d7adabd049a97ea06d9db4da565aea916d5b21`, deployed 2026-09-26 19:28:12 UTC.
+[HTTP receipt](../STORYTELLING_RECEIPT.json): 17 passing checks. Five HTML pages, CSS, sitemap
+and both Observatory assets match local build bytes. Unchanged Switchboard archive integrity
+remains evidenced by the earlier launch; this run rechecks redirect destinations and headers.
+
+Fresh anonymous clone `/tmp/passioncode-story-fresh.s397dQ`: source 72d7ada; npm ci with
+ignore-scripts, 0 vulnerabilities, npm check/build and 5 projections all PASS.
+
+Production browser: all five routes loaded with expected h1 and no horizontal overflow at
+1280×720. [Capture](site-storytelling-live.jpg): homepage, populated/static, English, PassionCode
+dark, normal motion preference, Codex in-app browser, 2026-09-26 around 19:29 UTC, source
+72d7ada; screenshot is 1280×720 JPEG. No full accessibility or native application claim.
+
+Retro: preserved the original identity while replacing repeated mission copy with a reading
+sequence. Exact-SHA guard exposed a concurrent Observatory merge before deployment; integrated
+it and retained its stable scenario/screen identifiers. Next review is the headline and section
+order; native product acceptance stays with the individual product owners. No automatic loop
+created; the task-owned preview is stopped at handoff.

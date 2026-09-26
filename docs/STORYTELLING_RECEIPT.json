@@ -1,0 +1,110 @@
+{
+  "checked_at": "2026-09-26T19:29:11.756908+00:00",
+  "source_commit": "72d7adabd049a97ea06d9db4da565aea916d5b21",
+  "upstream_integrated": "c277b7bdfeee9c3add650c1d8407269aeeaebddb",
+  "worker_version": "1a2cf6bc-ad3e-49c8-b8e7-fc9ce72fc6b9",
+  "deployment_id": "fc31505e-3198-4c77-84b4-5dddf561cd33",
+  "deployed_at": "2026-09-26T19:28:12.454348Z",
+  "traffic_percent": 100,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "9aeafdf4000694b901da50d5da92627f0ed701179f16ee78426ac35caf1c92d5",
+      "matches_build": true
+    },
+    {
+      "path": "/switchboard/",
+      "status": 200,
+      "sha256": "eac6d1e365f7ed57522bc7b576491fab9cf9d1dc6ffd366b3bcd0e86a6fe24b6",
+      "matches_build": true
+    },
+    {
+      "path": "/observatory/",
+      "status": 200,
+      "sha256": "8511ccb662eed22f2bf3f93d861db58e39580d8ad9a0118c6119436fadc4415e",
+      "matches_build": true
+    },
+    {
+      "path": "/fabric/",
+      "status": 200,
+      "sha256": "4d729423f651cc0df03312309c096d1e4570e49077a44bc68425aef581f75856",
+      "matches_build": true
+    },
+    {
+      "path": "/design-system/",
+      "status": 200,
+      "sha256": "31c430a58fc237798495ce595711d86624f97cfa64174db755139e120361d8ba",
+      "matches_build": true
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "sha256": "faa8663a5dc053fd09c454c532fb9af173ca850178992aaeb442cc279dbd5f83",
+      "matches_build": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "078b50626d1c71b37cde9e4eaa31c32bec68686942f1b21d53d5f9bd99a98901",
+      "matches_build": true
+    },
+    {
+      "path": "/assets/observatory-mark.svg",
+      "status": 200,
+      "sha256": "d239e7c92df588af719630f36e17457f66d40dbec5b04ddbdadeccc622d3040c",
+      "matches_build": true
+    },
+    {
+      "path": "/assets/observatory-demo.jpg",
+      "status": 200,
+      "sha256": "83bde9fe12bc387e9eb5c210d2b01de241bd7a4ce4d9c196f67f5b798608fa84",
+      "matches_build": true
+    },
+    {
+      "path": "/switchboard/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-macos-universal.zip",
+      "no_store": true,
+      "noindex": true
+    },
+    {
+      "path": "/switchboard/download/macos?next=https://example.com",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-macos-universal.zip",
+      "no_store": true,
+      "noindex": true
+    },
+    {
+      "path": "/switchboard/download/windows",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-windows-x64.zip",
+      "no_store": true,
+      "noindex": true
+    },
+    {
+      "path": "/switchboard/download/windows?next=https://example.com",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-windows-x64.zip",
+      "no_store": true,
+      "noindex": true
+    },
+    {
+      "path": "www/fabric/?a=1",
+      "status": 301,
+      "location": "https://passioncode.ai/fabric/?a=1"
+    },
+    {
+      "path": "/docs/HANDOFF.md",
+      "status": 404
+    },
+    {
+      "path": "/.git/config",
+      "status": 404
+    },
+    {
+      "path": "/switchboard/download/linux",
+      "status": 404
+    }
+  ]
+}

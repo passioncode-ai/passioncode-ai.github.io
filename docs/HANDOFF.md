@@ -9,7 +9,20 @@ download-first Switchboard feature, explicit development pipeline, public source
 About/Twitter from verified author identity, shared responsive navigation and `/fabric/` page.
 Integrated upstream `c277b7b` (Observatory launch) before publication: its page/assets/design
 reference are preserved, with Observatory in the work cycle, available tools, pipeline and source.
-Previous release receipts below remain historical. New deployment receipt follows local review.
+Previous release receipts below remain historical.
+
+Published source: [72d7ada](https://github.com/passioncode-ai/passioncode-ai.github.io/commit/72d7adabd049a97ea06d9db4da565aea916d5b21), on `main` and `codex/site-storytelling`.
+Production: [receipt](STORYTELLING_RECEIPT.json), Worker version `1a2cf6bc-ad3e-49c8-b8e7-fc9ce72fc6b9`,
+deployment `fc31505e-3198-4c77-84b4-5dddf561cd33`, 2026-09-26 19:28 UTC, 100% traffic.
+Live browser opened all five pages; [homepage capture](evidence/site-storytelling-live.jpg).
+Fresh anonymous clone of the exact source passed npm ci (0 vulnerabilities), check, build and
+all five text projections. 17 live HTTP checks passed, including build-byte comparison,
+download destination/query isolation/no-store, www and private-path 404s.
+
+Actual skills: task-pipeline — delivery/integration; ux-scenarios — visitor paths;
+brand-voice — terms/facts; copywriting — page content and own humanization pass;
+sheleg-design — retained-style composition; cloudflare — existing Worker publication
+(the last is outside the family). No other repository or native binary changed.
 
 Next task: review the public reading order and headline; maintain product status from actual
 releases. Native beta acceptance and Fabric's private development remain separate owners.
