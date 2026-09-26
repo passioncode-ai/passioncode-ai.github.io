@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode.ai | A toolkit for AI-native work
 
-Tools for AI-native work. Download Switchboard, our open-source account manager for Claude Code and Codex. Meet Fabric, our CEO AI agent in development.
+Tools for AI-native work. Download Switchboard, our open-source account manager for Claude Code and Codex, and Project Observatory, the local dashboard for your agents’ projects. Meet Fabric, our CEO AI agent in development.
 
 Skip to content
 
@@ -15,6 +15,10 @@ PassionCode
 Products
 
 Switchboard
+
+Observatory
+
+Inbox
 
 Fabric
 
@@ -30,7 +34,7 @@ AI-native work.
 
 Keep building. Give your agents a better setup.
 
-PassionCode brings together tools for working with AI agents. Start with Switchboard to manage your Claude Code and Codex accounts. Follow Fabric as we build the CEO AI agent that coordinates the work around them.
+PassionCode brings together tools for working with AI agents. Start with Switchboard to manage your Claude Code and Codex accounts, and keep the projects they work on in view with Project Observatory. Follow Fabric as we build the CEO AI agent that coordinates the work around them.
 
 Download Switchboard
 
@@ -40,7 +44,7 @@ Meet the tools
 
 ↘
 
-Switchboard: open-source beta · Fabric: in development
+Switchboard: open-source beta · Observatory: open source · Fabric: in development
 
 people
 
@@ -109,6 +113,50 @@ Your CLI session
 Switch between requests.
 
 The current response keeps its account.
+
+AVAILABLE NOW · OPEN SOURCE
+
+Project Observatory
+
+Your projects.
+
+Back in view.
+
+A local dashboard for the projects your agents work on. See what changed, what needs attention and where known API keys left a copy, with the evidence beside each finding. In English or Russian.
+
+macOS + Linux
+
+CLI + MCP + dashboard
+
+MIT license
+
+Explore Observatory
+
+↗
+
+The actual dashboard · synthetic demo projects.
+
+IN DEVELOPMENT · DESKTOP MAIL
+
+Fabric Inbox
+
+Your mail.
+
+A place in the toolkit.
+
+A desktop mail client in development for the PassionCode family. Cloudflare and Gmail are implemented in the preview; a shared account interface is in progress. General IMAP and Outlook support are planned.
+
+Explore Inbox
+
+↗
+
+FABRIC INBOX / IN DEVELOPMENT
+
+MAIL
+
++
+
+ACCOUNTS
 
 IN DEVELOPMENT
 
@@ -182,9 +230,13 @@ Goals and authority stay explicit. An agent’s confidence is not permission.
 
 Start with something useful.
 
-Switchboard is our first public product. Its source, release notes and known limits are open. Fabric and its supporting contracts remain in private development.
+Switchboard and Project Observatory are our public products. Their source, release notes and known limits are open. Fabric Inbox, Fabric and its supporting contracts remain in private development.
 
 Read the Switchboard source
+
+↗
+
+Read the Observatory source
 
 ↗
 

@@ -11,6 +11,7 @@
 | SCN-003 | Download for Windows | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-004 | Inspect source and product boundaries | Trust | P-01 | ST-03, FLW-02 | draft | pending |
 | SCN-005 | Read the shared design language | Design system | P-01 | ST-03, FLW-02 | draft | pending |
+| SCN-007 | Understand Fabric Inbox and its availability | Inbox | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 | SCN-006 | Discover and start Project Observatory | Observatory | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 
 ## Personas
@@ -128,3 +129,22 @@ See [foundation](foundation.md).
 - **Coverage:** index.html#observatory; observatory/index.html; scripts/check-site.mjs.
 - **Product:** unobserved
 
+
+### SCN-007: Understand Fabric Inbox and its availability
+- **Persona:** P-01
+- **Feature:** Inbox
+- **Traces:** ST-01, ST-03, FLW-01
+- **Entry point:** / (product card) or /inbox/
+- **Preconditions:** none
+- **Steps:**
+  1. Follow Explore Inbox → its desktop mail role and development status are visible.
+  2. Follow See development status → Cloudflare/Gmail preview, account work in progress and planned providers are distinguished.
+  3. Follow Explore the toolkit or Meet Fabric → public context remains reachable.
+- **Expected result:** The visitor understands what is implemented, what is planned and that there is no public release or signed download.
+- **Alt paths:** Direct /inbox/#status entry; primary navigation and keyboard expose the same paths.
+- **UI elements:** Inbox navigation, product card, status anchor, toolkit and Fabric links, FAQ.
+- **States covered:** success, error; static content has no loading or application empty state.
+- **Errors & recovery:** Missing network: browser error; retry. No unavailable download or private source CTA is offered.
+- **Status:** draft
+- **Coverage:** inbox/index.html; index.html#inbox; scripts/check-site.mjs.
+- **Product:** unobserved

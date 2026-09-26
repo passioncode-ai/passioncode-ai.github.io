@@ -16,6 +16,10 @@ Products
 
 Switchboard
 
+Observatory
+
+Inbox
+
 Fabric
 
 GitHub

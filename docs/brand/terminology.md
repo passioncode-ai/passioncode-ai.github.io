@@ -12,6 +12,7 @@ Contract: brand-contract v1
 |---|---|
 | PassionCode.ai | Passion Code AI |
 | Fabric Switchboard | Fabric Switcher |
+| Fabric Inbox | Fabric Mail |
 | Claude Code | Cloud Code |
 | Codex | CodeX |
 | Windows | WINDOWS |
@@ -29,3 +30,5 @@ Contract: brand-contract v1
 | PassionCode.ai | The umbrella toolkit for AI-native work; PassionCode is the short family label. |
 | Switchboard | Short form of Fabric Switchboard, the open-source account manager. |
 | Fabric | The CEO AI agent in development; the kernel retains a technical meaning in internal docs. |
+
+| Inbox | Short form of Fabric Inbox, the desktop mail client in development. |
