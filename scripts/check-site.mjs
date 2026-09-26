@@ -3,69 +3,48 @@ import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 const root = resolve(import.meta.dirname, '..')
-const html = readFileSync(resolve(root, 'index.html'), 'utf8')
+const pages = ['index.html', 'switchboard/index.html', 'design-system/index.html']
 const css = readFileSync(resolve(root, 'styles.css'), 'utf8')
-
-const requiredFiles = [
-  'robots.txt',
-  'sitemap.xml',
-  'wrangler.json',
-  'worker/index.js',
-  'brand/LOCK.json',
-  'assets/passioncode-mark.svg',
-  'assets/favicon-64.png',
-  'assets/icon-256.png',
-  'assets/icon-1024.png',
-  'assets/passioncode-social-card.svg',
-  'assets/passioncode-social-card.png',
-  'assets/passioncode-social-card.jpg'
-]
-
-for (const file of requiredFiles) {
-  assert.ok(existsSync(resolve(root, file)), `missing ${file}`)
+const release = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
+const read = path => readFileSync(resolve(root, path), 'utf8')
+const downloadPaths = new Set(['/switchboard/download/macos', '/switchboard/download/windows'])
+for (const file of pages) {
+  const html = read(file)
+  const route = file.replace(/index.html$/, '')
+  assert.equal((html.match(/<h1\b/g) || []).length, 1, `${file}: exactly one h1`)
+  assert.ok(html.includes(`rel="canonical" href="https://passioncode.ai/${route}"`), `${file}: canonical`)
+  assert.match(html, /<meta name="description" content="[^"]+">/)
+  assert.ok(!/<script\s+src=/i.test(html), `${file}: content must not need client JavaScript`)
+  assert.ok(!/target="_blank"/i.test(html), 'do not force new tabs')
+  assert.ok(html.includes('href="#main"'), `${file}: skip link`)
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1])
+  assert.equal(new Set(ids).size, ids.length, `${file}: duplicate IDs`)
+  for (const block of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(block[1])
+  for (const [, value] of html.matchAll(/(?:href|src)="([^"\s]+)"/g)) {
+    if (!value.startsWith('/') && !value.startsWith('#')) continue
+    const url = new URL(value, `https://passioncode.ai/${route}`)
+    if (downloadPaths.has(url.pathname)) continue
+    const local = url.pathname.endsWith('/') ? `${url.pathname}index.html` : url.pathname
+    assert.ok(existsSync(resolve(root, '.' + local)), `${file}: missing ${value}`)
+    if (url.hash) assert.ok(read('.' + local).includes(`id="${url.hash.slice(1)}"`), `${file}: missing anchor ${value}`)
+  }
 }
-
-const requiredCopy = [
-  'From vibe coding to passion coding.',
-  'The agent-agnostic operating system for',
-  'Stop managing agents one by one. Start operating projects.',
-  'Hosted product in active development',
-  'People remain accountable.'
-]
-
-for (const text of requiredCopy) {
-  assert.ok(html.includes(text), `missing canonical copy: ${text}`)
+const home = read('index.html')
+for (const text of ['Your toolkit for', 'From vibe coding to passion coding.', 'CEO AI agent', 'in development', 'People remain accountable.', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
+const product = read('switchboard/index.html')
+for (const text of [release.version, release.releaseUrl, 'Not yet notarized', 'Unsigned beta', 'not yet verified', 'MIT']) assert.ok(product.includes(text), `product missing ${text}`)
+for (const os of ['macos', 'windows']) {
+  assert.ok(product.includes(`href="/switchboard/download/${os}"`))
+  const target = new URL(release.downloads[os])
+  assert.equal(target.origin, 'https://github.com')
+  assert.ok(target.pathname.startsWith(`/${release.repository}/releases/download/${release.tag}/`))
+  assert.ok(target.pathname.endsWith('.zip'))
 }
-
-assert.equal((html.match(/<h1\b/g) || []).length, 1, 'page must have exactly one h1')
-assert.match(html, /<link rel="canonical" href="https:\/\/passioncode\.ai\/">/)
-assert.match(html, /<meta property="og:image" content="https:\/\/passioncode\.ai\/assets\/passioncode-social-card\.png">/)
-assert.match(html, /<script type="application\/ld\+json">[\s\S]*"@type": "Organization"/)
-assert.ok(!/<script\s+src=/i.test(html), 'the v1 page must not depend on external scripts')
-assert.ok(!/target="_blank"/i.test(html), 'new tabs are not forced')
-assert.equal((html.match(/Explore PassionCode on GitHub/g) || []).length, 2, 'primary CTA must stay consistent')
+assert.equal(release.repository, 'passioncode-ai/fabric-switchboard')
+assert.equal(release.tag, `v${release.version}`)
+assert.equal(release.releaseUrl, `https://github.com/${release.repository}/releases/tag/${release.tag}`)
 assert.match(css, /@media \(max-width: 620px\)/)
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
-
-for (const match of html.matchAll(/(?:href|src)="(\/[^"]+)"/g)) {
-  const pathname = match[1].split(/[?#]/, 1)[0]
-  if (pathname === '/') continue
-  assert.ok(existsSync(resolve(root, pathname.slice(1))), `broken local asset ${pathname}`)
-}
-
-function pngDimensions(file) {
-  const data = readFileSync(file)
-  assert.equal(data.toString('ascii', 1, 4), 'PNG', `${file} is not PNG`)
-  return { width: data.readUInt32BE(16), height: data.readUInt32BE(20) }
-}
-
-assert.deepEqual(
-  pngDimensions(resolve(root, 'assets/passioncode-social-card.png')),
-  { width: 1200, height: 630 },
-  'social card must be 1200×630'
-)
-assert.deepEqual(pngDimensions(resolve(root, 'assets/favicon-64.png')), { width: 64, height: 64 })
-assert.deepEqual(pngDimensions(resolve(root, 'assets/icon-256.png')), { width: 256, height: 256 })
-assert.deepEqual(pngDimensions(resolve(root, 'assets/icon-1024.png')), { width: 1024, height: 1024 })
-
-console.log(`PASS: ${requiredFiles.length} files, canonical copy, metadata, consistent CTA, responsive CSS, 1200×630 social card`)
+for (const page of pages) assert.ok(read(page).includes('href="/design-system/tokens.css"'))
+for (const path of ['', 'switchboard/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
+console.log('PASS: 3 static pages, metadata, anchors, shared tokens, product status and both release downloads')

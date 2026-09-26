@@ -1,39 +1,30 @@
-<p align="center">
-  <img src="assets/icon-256.png" width="128" height="128" alt="PassionCode.ai passion fruit mark">
-</p>
+<p align="center"><img src="assets/icon-256.png" width="128" height="128" alt="PassionCode.ai passion fruit mark"></p>
 
 # PassionCode.ai
 
-> **From vibe coding to passion coding.**
->
-> **The agent-agnostic operating system for AI-native teams.**
+**A toolkit for AI-native work.** From vibe coding to passion coding.
 
-This repository contains the dependency-free static site for
-[passioncode.ai](https://passioncode.ai/). Cloudflare Workers serves the static artifact
-from its edge network; the public page remains complete without client-side JavaScript.
+Public home: [passioncode.ai](https://passioncode.ai/). Switchboard is the first downloadable open-source beta: a local account workbench for Claude Code and Codex CLI. Fabric is the CEO AI agent in development, coordinating agents around projects. People remain accountable.
 
-**Stop managing agents one by one. Start operating projects.** A Project keeps its
-purpose, team, routines, authority, work, evidence and feedback loop together while
-agents and providers can change.
+## Pages and shared design
 
-## Local preview
+- [Homepage](index.html): toolkit and product status.
+- [Switchboard](switchboard/index.html): product, platform downloads, limits and installation.
+- [Design system](design-system/README.md): canonical dark/gold tokens and product marks. Switchboard vendors a commit-pinned copy.
+- [Launch handoff](docs/HANDOFF.md): source owners, checks, publication and next work.
 
-```bash
-python3 -m http.server 4173
+The HTML is complete without client-side JavaScript. Cloudflare Workers serves an explicit static asset allowlist and stable OS download redirects. [Release manifest](switchboard/release.json) selects a verified public release, including an intentional prerelease; it does not assume GitHub's latest stable release is the newest beta.
+
+## Preview and checks
+
+```sh
+npm ci
+npm run check
+npm run preview -- --port 4173
 ```
 
-Open `http://localhost:4173`. The production site is published from `main` through
-the checked `npm run deploy` path to Cloudflare Workers. The hosted PassionCode.ai
-product is in active development and is not publicly available yet.
+Use the Worker preview to exercise download redirects. A plain static server only previews the HTML. Deployment from reviewed `main` uses `npm run deploy`; see [deployment contract](docs/DEPLOYMENT.md).
 
 ## Approved brand
 
-The complete graphical pack is vendored in [`brand/`](brand/README.md). `brand/LOCK.json`
-pins the approved source and exports, and `npm run check` rejects unreviewed visual drift.
-The runtime assets in [`assets/`](assets/README.md) must remain byte-identical to their
-locked canonical files.
-
-## Deployment
-
-The Worker configuration, build path and custom-domain handoff are documented in
-[`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
+The passion-fruit identity remains locked in [brand](brand/README.md). `npm run check` verifies those bytes. The new [shared design system](design-system/README.md) adds reusable semantic tokens and the yellow S mark without replacing the parent brand.

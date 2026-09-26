@@ -1,0 +1,10 @@
+{
+  "tag": "v0.3.1-beta.1",
+  "version": "0.3.1-beta.1",
+  "repository": "passioncode-ai/fabric-switchboard",
+  "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.3.1-beta.1",
+  "downloads": {
+    "macos": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-macos-universal.zip",
+    "windows": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-windows-x64.zip"
+  }
+}

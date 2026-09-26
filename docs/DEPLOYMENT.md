@@ -52,3 +52,19 @@ to the same path on `https://passioncode.ai`.
 
 The completed production migration, including record IDs, Worker version and observed
 responses, is recorded in [`CUTOVER_RECEIPT.md`](CUTOVER_RECEIPT.md).
+
+## Switchboard downloads
+
+`/switchboard/download/macos` and `/switchboard/download/windows` return 302 to the fixed URLs in `switchboard/release.json`, with `Cache-Control: no-store` and `X-Robots-Tag: noindex`. Query parameters cannot change the destination. The optional trailing slash is supported; unknown platform paths fall through to the asset 404. The Worker canonicalizes www before serving any route.
+
+To select a new published beta or stable release:
+
+```sh
+node scripts/update-switchboard-release.mjs vX.Y.Z-beta.N
+npm run check
+npm run build
+```
+
+Replace the example tag with the actual tag. The updater rejects drafts and requires both nonempty archives to be anonymously downloadable. Review the release's actual signing/platform limits and installation instructions before committing. Never advertise GitHub `releases/latest` as the newest beta: that endpoint excludes prereleases.
+
+Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment verify all three pages, both redirect destinations, anonymous archive hashes, and www canonicalization. Keep the Worker deployment ID and commit in the handoff receipt. No full hosted suite is dispatched for this update.

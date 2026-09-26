@@ -7,6 +7,12 @@ const output = resolve(root, 'dist')
 const publicFiles = [
   'index.html',
   'styles.css',
+  'switchboard/index.html',
+  'switchboard/release.json',
+  'design-system/index.html',
+  'design-system/tokens.css',
+  'assets/switchboard-mark.svg',
+  'assets/switchboard-demo.jpg',
   'robots.txt',
   'sitemap.xml',
   'assets/passioncode-mark.svg',
@@ -22,6 +28,7 @@ rmSync(output, { recursive: true, force: true })
 mkdirSync(output, { recursive: true })
 
 for (const file of publicFiles) {
+  mkdirSync(resolve(output, file, '..'), { recursive: true })
   cpSync(resolve(root, file), resolve(output, file), { recursive: true })
 }
 
