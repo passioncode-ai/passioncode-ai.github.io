@@ -28,6 +28,15 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Without JS:** requirements, beta limits, download/source links and native details/summary FAQ.
 **Entity:** Fabric Switchboard, MIT desktop account workbench from PassionCode.ai.
 
+### SCR-04: Project Observatory
+**Scenarios:** SCN-006. Purpose, synthetic screenshot, features, setup steps, limits and FAQ.
+**Web surface:** public
+**Route:** https://passioncode.ai/observatory/
+**Answers:** What does Project Observatory show, what does it read, and how do I start?
+**Indexable:** yes; canonical product URL, SoftwareApplication data and sitemap.
+**Without JS:** complete copy, setup steps, source and guide links, native details/summary FAQ.
+**Entity:** Project Observatory, MIT local dashboard from PassionCode.ai (English or Russian interface).
+
 ### SCR-03: Design system
 **Scenarios:** SCN-005. Shared identity, color roles, typography and reusable CSS.
 **Web surface:** public
@@ -35,6 +44,6 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Answers:** Which shared visual rules do PassionCode products use?
 **Indexable:** yes; canonical URL and sitemap.
 **Without JS:** all visual rules and link to canonical CSS tokens.
-**Entity:** PassionCode design system v1.0, adopted by website and Switchboard.
+**Entity:** PassionCode design system v1.0, adopted by the website, Switchboard and Project Observatory.
 
 Screens describe public website behavior, not acceptance of native Switchboard or Fabric runtime.
