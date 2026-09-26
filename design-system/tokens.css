@@ -52,9 +52,9 @@
    Gold stays the action fill; readable gold-brown is the focus/link role. */
 :root[data-theme="light"] {
   color-scheme: light;
-  --pc-bg: #faf7f2;
-  --pc-panel: #ffffff;
-  --pc-panel-raised: #f1ecef;
+  --pc-bg: #ffffff;
+  --pc-panel: #f7f5f8;
+  --pc-panel-raised: #ffffff;
   --pc-text: #211725;
   --pc-text-muted: #655769;
   --pc-border: #ddd4df;

@@ -12,7 +12,7 @@ Objective, requirements, source evidence and dependencies: [bounded task packet]
 
 ## Checks actually run
 
-- `npm run check`: PASS (locked assets, five static pages, anchors/status, download Worker semantics, 35 scoped palette contrast pairs; minimum computed ratio 4.91:1).
+- `npm run check`: PASS (locked assets, five static pages, anchors/status, download Worker semantics, 35 scoped palette contrast pairs; minimum computed ratio 5.29:1).
 - `npm run build`: PASS, 22 allowlisted entries.
 - `python3 scripts/extract-public-copy.py --check`: PASS.
 - Installed super-ux `ux_lint.py`: PASS. Installed `brand_lint.py --brief`: 0 errors, 211 warnings. All 211 are B022: its generic HTML registry heuristic still flags metadata/attributes and some prose; this is not a warning-free certification.
@@ -21,7 +21,7 @@ Objective, requirements, source evidence and dependencies: [bounded task packet]
 
 ## Exact shared bytes
 
-- `design-system/tokens.css` SHA-256: `f8f6dc6d8ed79e6d9f65f420edee9dbc52ad189eff2837ee77df707206282f47`.
+- `design-system/tokens.css` SHA-256: `86866df1bec49b85e9def4132021401894483bb819dc2d3a3a70511d2e4b2a61`.
 - `assets/inbox-mark.svg` SHA-256: `bc45a70e5b992f0495f3f00db6c729fd440ec9be10b75e7c13f292b1c98237c8`.
 
 Consumers must pin the eventual source commit as well as these hashes. Existing Switchboard vendored bytes were not changed in this packet.
@@ -46,3 +46,7 @@ Humanization: on — own advisory pass; retained the existing family heading sty
 ## Remote delivery receipt
 
 [Draft PR #5](https://github.com/passioncode-ai/passioncode-ai.github.io/pull/5). Source commit [b9c8a753dbd5588fbe9b38104d55712959ab1126](https://github.com/passioncode-ai/passioncode-ai.github.io/commit/b9c8a753dbd5588fbe9b38104d55712959ab1126) was pushed and `git ls-remote` matched the branch SHA. A fresh HTTPS clone of `codex/inbox-product-site` resolved to that commit; `npm run check` and `npm run build` both passed there with the same five pages and 22 public entries. This receipt is a documentation-only follow-up; source/theme bytes are unchanged. Browser review and production delivery remain with the root task.
+
+## White-theme correction after root visual review
+
+The operator explicitly requested white. The light canvas is now `#ffffff`, the panel `#f7f5f8`, and the raised panel `#ffffff`; the earlier warm canvas is superseded. All dark values and the Inbox glyph are unchanged. `npm run check`, `npm run build` and `git diff --check` pass after this correction; the 35-pair minimum is now 5.29:1. Root-task review owns acceptance of the updated render; consumers must repin the corrected token bytes above.

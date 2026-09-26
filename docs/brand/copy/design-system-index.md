@@ -62,7 +62,7 @@ Gold marks an action or selection. Status colors keep their own meaning and alwa
 
 data-theme="light"
 
-on the document root for warm paper surfaces and dark text. Use
+on the document root for white surfaces and dark text. Use
 
 --pc-link
 

@@ -28,7 +28,7 @@ The site serves the canonical file. Switchboard vendors its exact bytes and reco
 
 The default `:root` palette retains every v1.0.0 dark value. Set `data-theme="light"` on the document root to select the opt-in light palette; remove the attribute or use `data-theme="dark"` for dark. Theme choice belongs to each application; the website remains dark. Do not infer an automatic operating-system theme policy from these tokens.
 
-The light palette is an authored extension of the existing PassionCode system for the operator's 2026-09-26 Inbox request: warm paper canvas, white panels, plum-black text and the unchanged gold action fill. Status ink is darker on pale tinted backgrounds. It was not sampled from another product or presented as an upstream pack palette. Brand plum/magenta, typography, spacing, radii and motion inherit the original contract.
+The light palette is an authored extension of the existing PassionCode system for the operator's 2026-09-26 Inbox request: white canvas, subtly tinted panels and white raised surfaces, plum-black text and the unchanged gold action fill. Status ink is darker on pale tinted backgrounds. It was not sampled from another product or presented as an upstream pack palette. Brand plum/magenta, typography, spacing, radii and motion inherit the original contract.
 
 Use `--pc-accent` for button fills with `--pc-on-accent` text. Use `--pc-link` for text links and `--pc-focus` for focus outlines: raw yellow on white does not provide sufficient separation. The light strong border is the control-boundary role; the lighter border is decorative division only. State labels accompany every color.
 
