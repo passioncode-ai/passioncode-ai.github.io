@@ -1,5 +1,20 @@
 <sub>ssheleg skills — task-pipeline · ux-scenarios · sheleg-design · brand-voice · copywriting · evidence-docs · agent-sync · maintaining-fabric-workspace · cloudflare</sub>
 
+# Current handoff — website storytelling, 2026-09-26
+
+Objective: improve the main site's content while retaining the chosen style. [Bounded brief](tasks/2026-09-26-site-storytelling.md), [UX screens](ux/screens.md), [brand facts](brand/facts.md), [verification](evidence/site-storytelling-2026-09-26.md).
+
+Implemented on `codex/site-storytelling`: AI-native teams headline, work-cycle explanation,
+download-first Switchboard feature, explicit development pipeline, public source section,
+About/Twitter from verified author identity, shared responsive navigation and `/fabric/` page.
+Previous release receipts below remain historical. New deployment receipt follows local review.
+
+Next task: review the public reading order and headline; maintain product status from actual
+releases. Native beta acceptance and Fabric's private development remain separate owners.
+Local-only: `.DS_Store`, dependencies, preview state and Cloudflare ephemeral credentials.
+
+---
+
 # PassionCode toolkit / Switchboard launch — 2026-09-26
 
 Objective and bounded packets: [launch brief](tasks/2026-09-26-public-launch.md). Public contract: PassionCode.ai is a toolkit for AI-native work; Switchboard is the first downloadable MIT beta; Fabric is the CEO AI agent in development. The [shared design system](../design-system/README.md) owns tokens and the yellow S; Switchboard vendors reviewed hashes. No Fabric runtime UI migration is claimed.

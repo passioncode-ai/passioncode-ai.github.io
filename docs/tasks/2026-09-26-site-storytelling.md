@@ -56,3 +56,15 @@ section hierarchy, scan-readable statuses, useful links in every product block.
 
 Intake complete from user request and source harvest except two pending copy facts. Implementation
 proceeds on the independently specified content. Humanization on, own pass; no fabricated statistics.
+
+## Copy facts resolved during harvest
+
+The public GitHub profile https://github.com/sshlg links @sshlg93. `gh api user` returned
+`{"login":"sshlg","name":"Sergey S","twitter_username":"sshlg93","blog":"https://sshlg.me"}`.
+Use https://x.com/sshlg93 and first name Sergey; no guessed biography or endorsements.
+Pending optional headline preference: default to “Your toolkit for AI-native teams.” as announced;
+retains toolkit wording and restores the audience the operator explicitly requested.
+
+## Gate record / resume
+
+UX and brand update → HTML/CSS → local/static/browser review complete. See [verification](../evidence/site-storytelling-2026-09-26.md). Holds: 1 task-owned preview server; no leases, background automation or subagents. Next: exact-SHA publication, live browser check, final receipt and stop preview.

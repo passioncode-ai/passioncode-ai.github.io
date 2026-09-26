@@ -9,9 +9,10 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-01 | Home | SCN-001 |
 | SCR-02 | Switchboard | SCN-002, SCN-003, SCN-004 |
 | SCR-03 | Design system | SCN-005 |
+| SCR-04 | Fabric | SCN-006, SCN-007 |
 
 ### SCR-01: Home
-**Scenarios:** SCN-001. Toolkit hero, first product, Fabric direction and source links.
+**Scenarios:** SCN-001, SCN-006, SCN-007. Teams hero with download CTA; work cycle; available Switchboard; developing Fabric; build pipeline; public repositories; author/About. Header and footer expose the same main sections on mobile.
 **Web surface:** public
 **Route:** https://passioncode.ai/
 **Answers:** What is PassionCode and which product can I use today?
@@ -38,3 +39,12 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Entity:** PassionCode design system v1.0, adopted by website and Switchboard.
 
 Screens describe public website behavior, not acceptance of native Switchboard or Fabric runtime.
+
+### SCR-04: Fabric
+**Scenarios:** SCN-006, SCN-007. In-development hero, illustrative project brief, intended operating loop, people/authority principles, current focus and links back to About or downloadable Switchboard.
+**Web surface:** public
+**Route:** https://passioncode.ai/fabric/
+**Answers:** What is Fabric and what is being built?
+**Indexable:** yes; canonical URL, WebPage data and sitemap. No downloadable SoftwareApplication claim.
+**Without JS:** all content and navigation. No fake functional agent demo, waitlist or download.
+**Entity:** Fabric, the CEO AI agent in development within PassionCode.ai.

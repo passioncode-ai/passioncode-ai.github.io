@@ -11,6 +11,8 @@
 | SCN-003 | Download for Windows | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-004 | Inspect source and product boundaries | Trust | P-01 | ST-03, FLW-02 | draft | pending |
 | SCN-005 | Read the shared design language | Design system | P-01 | ST-03, FLW-02 | draft | pending |
+| SCN-006 | Understand the work cycle and Fabric | Direction | P-01 | ST-04, FLW-03 | draft | pending |
+| SCN-007 | Follow the builder | About | P-01 | ST-05, FLW-03 | draft | pending |
 
 ## Personas
 
@@ -25,15 +27,52 @@ See [foundation](foundation.md).
 - **Entry point:** /
 - **Preconditions:** none
 - **Steps:**
-  1. Read the headline and status → the umbrella, Switchboard beta and Fabric development state are distinguished.
+  1. Read the teams headline and work cycle → the umbrella, Switchboard beta and Fabric development state are distinguished.
   2. Follow Download Switchboard → the product download section opens.
 - **Expected result:** Product roles and available downloads are clear.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
-- **UI elements:** Navigation, product cards, Download Switchboard, Fabric anchor
+- **UI elements:** Navigation, work cycle, product features, Download Switchboard, Fabric detail link
 - **States covered:** success, error; static content has no application loading or empty state.
 - **Errors & recovery:** Missing network: browser error; reload.
 - **Status:** draft
 - **Coverage:** index.html; browser evidence recorded in HANDOFF.
+- **Product:** unobserved
+
+### SCN-006: Understand the work cycle and Fabric
+- **Persona:** P-01
+- **Feature:** Direction
+- **Traces:** ST-04, FLW-03
+- **Entry point:** /#toolkit or /fabric/
+- **Preconditions:** none
+- **Steps:**
+  1. Read the work cycle → account setup is available through Switchboard; project coordination and review describe Fabric's direction.
+  2. Read the build pipeline → available beta and in-development work are distinct, with no promised release date.
+  3. Follow Explore Fabric → its own page explains project purpose, agents, authority and evidence with an in-development notice.
+- **Expected result:** Reader understands the intended relationship without assuming a shipped integrated platform or downloadable Fabric.
+- **Alt paths:** direct product URL; narrow-screen or keyboard navigation; return to available Switchboard.
+- **UI elements:** Work cycle, build pipeline, Explore Fabric, Follow the build, Switchboard link
+- **States covered:** static populated content; network error.
+- **Errors & recovery:** Missing network: browser error and reload. No download button for unavailable Fabric.
+- **Status:** draft
+- **Coverage:** index.html and fabric/index.html; verification pending this iteration.
+- **Product:** unobserved
+
+### SCN-007: Follow the builder
+- **Persona:** P-01
+- **Feature:** About
+- **Traces:** ST-05, FLW-03
+- **Entry point:** /#about
+- **Preconditions:** none
+- **Steps:**
+  1. Follow About in navigation or footer → a short builder introduction is visible.
+  2. Follow Follow on Twitter → the public profile linked by the operator’s authenticated GitHub account opens.
+- **Expected result:** A visitor can follow the author without signing up on PassionCode.
+- **Alt paths:** footer social link; Fabric Follow the build reaches the same About section.
+- **UI elements:** About, Follow on Twitter, public profile handle
+- **States covered:** static populated content; external network/login wall.
+- **Errors & recovery:** Twitter may require login; return to website or inspect public GitHub releases instead.
+- **Status:** draft
+- **Coverage:** index.html and shared footer; Twitter identity verified from https://github.com/sshlg; browser verification pending.
 - **Product:** unobserved
 
 ### SCN-002: Download for macOS

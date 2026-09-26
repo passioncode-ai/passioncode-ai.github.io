@@ -12,3 +12,8 @@ Priority: must. As P-01, distinguish the toolkit, downloadable Switchboard and d
 Priority: must. As P-01, obtain the appropriate current beta and read limitations before installation.
 ## ST-03 — Inspect
 Priority: should. As P-01, inspect source, license, releases and shared design language.
+
+## ST-04 — Understand the direction
+Priority: must. As P-01, understand how account setup, project context, coordination and review fit together, and distinguish a downloadable tool from work in development.
+## ST-05 — Follow the builder
+Priority: should. As P-01, find who is building the toolkit and follow their public updates on Twitter.

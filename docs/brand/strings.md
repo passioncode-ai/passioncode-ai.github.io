@@ -8,3 +8,8 @@ Contract: brand-contract v1
 | download.windows | Download for Windows | switchboard/index.html | SCN-003 | proposed | copy |
 | source.view | View source | switchboard/index.html | SCN-004 | proposed | copy |
 | tokens.get | Get the CSS tokens | design-system/index.html | SCN-005 | proposed | copy |
+
+| toolkit.explore | Explore the toolkit | index.html | SCN-001 | proposed | copy |
+| fabric.explore | Explore Fabric | index.html | SCN-006 | proposed | copy |
+| build.follow | Follow the build | fabric/index.html | SCN-007 | proposed | copy |
+| author.follow | Follow on Twitter | index.html | SCN-007 | proposed | copy |

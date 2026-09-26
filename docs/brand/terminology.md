@@ -16,6 +16,8 @@ Contract: brand-contract v1
 | Codex | CodeX |
 | Windows | WINDOWS |
 | macOS | MacOS |
+| Twitter | twitter |
+| Sergey | sergey |
 
 ## Banned
 | Word or phrase | Why | Use instead |
@@ -26,6 +28,10 @@ Contract: brand-contract v1
 ## Glossary
 | Term | Meaning |
 |---|---|
-| PassionCode.ai | The umbrella toolkit for AI-native work; PassionCode is the short family label. |
+| PassionCode.ai | The umbrella toolkit for AI-native teams; PassionCode is the short family label. |
 | Switchboard | Short form of Fabric Switchboard, the open-source account manager. |
 | Fabric | The CEO AI agent in development; the kernel retains a technical meaning in internal docs. |
+
+| toolkit | The collection of tools; use consistently instead of alternating with toolset. |
+| work cycle | The jobs the toolkit is designed around; available account setup is distinct from Fabric’s planned project workflow. |
+| build pipeline | Public product availability and current development direction, with no promised dates. |

@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 const root = resolve(import.meta.dirname, '..')
-const pages = ['index.html', 'switchboard/index.html', 'design-system/index.html']
+const pages = ['index.html', 'switchboard/index.html', 'fabric/index.html', 'design-system/index.html']
 const css = readFileSync(resolve(root, 'styles.css'), 'utf8')
 const release = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
 const read = path => readFileSync(resolve(root, path), 'utf8')
@@ -30,7 +30,7 @@ for (const file of pages) {
   }
 }
 const home = read('index.html')
-for (const text of ['Your toolkit for', 'From vibe coding to passion coding.', 'CEO AI agent', 'in development', 'People remain accountable.', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
+for (const text of ['Your toolkit for', 'AI-native teams.', 'From vibe coding to passion coding.', 'CEO AI agent', 'in development', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
 const product = read('switchboard/index.html')
 for (const text of [release.version, release.releaseUrl, 'Not yet notarized', 'Unsigned beta', 'not yet verified', 'MIT']) assert.ok(product.includes(text), `product missing ${text}`)
 for (const os of ['macos', 'windows']) {
@@ -46,5 +46,10 @@ assert.equal(release.releaseUrl, `https://github.com/${release.repository}/relea
 assert.match(css, /@media \(max-width: 620px\)/)
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
 for (const page of pages) assert.ok(read(page).includes('href="/design-system/tokens.css"'))
-for (const path of ['', 'switchboard/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
-console.log('PASS: 3 static pages, metadata, anchors, shared tokens, product status and both release downloads')
+for (const path of ['', 'switchboard/', 'fabric/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
+console.log('PASS: 4 static pages, metadata, anchors, shared tokens, product status and both release downloads')
+
+const fabric = read('fabric/index.html')
+assert.ok(fabric.includes('no public download yet'))
+assert.ok(!fabric.includes('https://github.com/passioncode-ai/fabric\"'), 'do not link visitors to private Fabric source')
+for (const page of pages) assert.ok(read(page).includes('href="https://x.com/sshlg93"'), `${page}: author link`)

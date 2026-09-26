@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode.ai | A toolkit for AI-native work
+PassionCode.ai | A toolkit for AI-native teams
 
-Tools for AI-native work. Download Switchboard, our open-source account manager for Claude Code and Codex. Meet Fabric, our CEO AI agent in development.
+A toolkit for AI-native teams. Download Switchboard for Claude Code and Codex, explore the workflow, and follow Fabric as we build our CEO AI agent.
 
 Skip to content
 
@@ -12,35 +12,37 @@ PassionCode
 
 .ai
 
-Products
+The toolkit
 
-Switchboard
+What’s next
 
-Fabric
+About
 
-GitHub
+Download
 
-↗
+↓
 
 From vibe coding to passion coding.
 
 Your toolkit for
 
-AI-native work.
+AI-native teams.
 
-Keep building. Give your agents a better setup.
+Better tools for the work around your agents.
 
-PassionCode brings together tools for working with AI agents. Start with Switchboard to manage your Claude Code and Codex accounts. Follow Fabric as we build the CEO AI agent that coordinates the work around them.
+Manage the accounts you use today. Build toward projects that keep their context as agents come and go. PassionCode brings these tools together, starting with Switchboard.
 
 Download Switchboard
 
 ↓
 
-Meet the tools
+Explore the toolkit
 
 ↘
 
-Switchboard: open-source beta · Fabric: in development
+First release: Switchboard beta
+
+macOS + Windows · MIT
 
 people
 
@@ -50,15 +52,63 @@ projects
 
 tools
 
-01 · THE TOOLKIT
+01 / THE TOOLKIT
 
-One family.
+Good agents need
 
-Tools with a job to do.
+a working environment.
 
-Use what helps today. Each product has a clear role and its own stage of development.
+An account to run on. A project to work toward. Clear responsibility and a way to check the result. These are the parts of AI-native work we’re building for.
 
-AVAILABLE NOW · OPEN-SOURCE BETA
+01
+
+Set up your agents
+
+Keep accounts organised, see usage and choose which account handles the next request.
+
+Switchboard
+
+Available in beta
+
+02
+
+Give work a home
+
+Keep a project’s purpose, context and decisions together beyond a single conversation.
+
+Fabric
+
+In development
+
+03
+
+Coordinate the team
+
+Give people and agents clear roles, with explicit limits on what each may do.
+
+Fabric direction
+
+In development
+
+04
+
+Check and learn
+
+Review evidence, keep what the team learns and use it to shape the next piece of work.
+
+Fabric direction
+
+In development
+
+Start with the part you need. Switchboard works on its own; the wider project workflow is what we’re building toward.
+
+02 / AVAILABLE TODAY
+
+Start with Switchboard.
+
+The first tool in the kit solves an everyday problem: keeping track of the accounts behind your coding agents.
+
+OPEN-SOURCE BETA · macOS + Windows
 
 Switchboard
 
@@ -66,133 +116,141 @@ Your accounts.
 
 A clearer switch.
 
-A local account manager for Claude Code and Codex CLI. Keep work and personal accounts in separate pools, see reported usage limits and choose which account handles the next managed request.
+A local account manager for Claude Code and Codex CLI. Separate work and personal accounts, inspect reported usage limits and choose the account for your next managed request.
 
-macOS + Windows
+Group accounts by provider and pool
 
-Desktop + CLI
+See usage windows and reset times
 
-MIT license
+Switch between requests, or opt into rotation
+
+Download Switchboard
+
+↓
 
 Explore Switchboard
 
 ↗
 
-SWITCHBOARD / WORK POOL
+Free under MIT. Desktop + CLI. Check platform requirements and beta notes before installing.
 
-Illustration
-
-C
-
-Claude Code
-
-Work account
-
-Selected
-
-C
-
-Claude Code
-
-Second work account
-
-Available
-
-Next managed request
-
-↓
-
-❯
-
-Your CLI session
-
-Switch between requests.
-
-The current response keeps its account.
+Actual interface · synthetic demo accounts
 
 IN DEVELOPMENT
 
-Meet Fabric.
+Fabric.
 
 Your CEO AI agent.
 
-Fabric is the agent we’re building to coordinate other agents and the projects they work on. Its focus today is agent management: bringing context, work and decisions into one operating loop.
+Accounts are one part of the setup. Fabric is the agent we’re building to coordinate the work itself: bringing agents, context and decisions around a project.
 
-The direction is bigger: help you run projects while keeping people in charge of goals and authority. Fabric is in active development and is not available as a public download yet.
+You set the goals and authority. Fabric’s direction is to keep the team working through a clear operating loop, with evidence you can review.
 
-Explore the idea behind Fabric
-
-↓
-
-02 · THE SHIFT
-
-The bottleneck moved up a level.
-
-Getting an agent to write code is only part of the work. Accounts, context and coordination need a home too. That is where our tools begin.
-
-TODAY · SWITCHBOARD
-
-Put your accounts in order.
-
-Capture an existing CLI account
-
-Keep providers and pools separate
-
-Inspect usage and reset windows
-
-Choose a route or opt into rotation
-
-A local tool you can download, inspect and build yourself.
-
-→
-
-IN DEVELOPMENT · FABRIC
-
-Give the work a home.
-
-A purpose for each project
-
-Agent roles with clear responsibility
-
-Shared context and operating routines
-
-Outcomes with evidence attached
-
-Our direction for moving from individual sessions to coordinated work.
-
-03 · THE FABRIC DIRECTION
-
-Stop managing agents one by one. Start operating projects.
-
-A project should keep its purpose and history as agents change. We’re building Fabric around that idea, with people accountable for decisions and agents working within explicit boundaries.
-
-01
-
-Keep agents replaceable.
-
-Choose the right provider for the work. Keep the project’s context and history.
-
-02
-
-People remain accountable.
-
-Goals and authority stay explicit. An agent’s confidence is not permission.
-
-04 · BUILT IN THE OPEN, STEP BY STEP
-
-Start with something useful.
-
-Switchboard is our first public product. Its source, release notes and known limits are open. Fabric and its supporting contracts remain in private development.
-
-Read the Switchboard source
+Explore Fabric
 
 ↗
 
-THE FIRST TOOL IS HERE
+In active development. No public download yet.
 
-Make room for the work.
+03 / THE BUILD PIPELINE
 
-Get Switchboard for macOS or Windows. Open source, local, and ready to try in beta.
+What’s here.
+
+What we’re building.
+
+Each part ships when it has something useful to do. Here is where the toolkit stands today.
+
+Available in beta
+
+Switchboard
+
+Account management for Claude Code and Codex, on macOS and Windows.
+
+Download Switchboard
+
+↓
+
+In development
+
+Fabric
+
+Our current focus: agent management and project coordination.
+
+Explore Fabric
+
+↗
+
+The direction
+
+A complete project loop
+
+From purpose and planning to execution, review and learning. This is the direction for Fabric, not a shipped integration.
+
+See the workflow
+
+↗
+
+No promised release dates. Follow the build below for progress as it happens.
+
+04 / OPEN SOURCE
+
+Use the tools.
+
+Read the source.
+
+Start with a download, go deeper in the code. Switchboard is open source under MIT: inspect it, build it yourself or contribute a fix.
+
+PUBLIC REPOSITORY · MIT
+
+↗
+
+fabric-switchboard
+
+Desktop app, CLI, build instructions, issues and release notes.
+
+github.com/passioncode-ai/fabric-switchboard
+
+PUBLIC REPOSITORY
+
+↗
+
+This website
+
+The site you’re reading, with our shared design tokens and product pages.
+
+github.com/passioncode-ai/passioncode-ai.github.io
+
+Fabric is still in private development. Its public page describes the direction, not an available source release.
+
+Visit PassionCode on GitHub
+
+↗
+
+05 / ABOUT
+
+Built alongside
+
+the work.
+
+I’m Sergey. I’m building PassionCode for teams whose everyday work already includes AI agents.
+
+The starting point is practical: make the setup easier to manage, then bring more structure to how the work gets done. Switchboard is the first release. Fabric is the next part I’m working on.
+
+Follow the build, the decisions and the next releases.
+
+Follow on Twitter
+
+↗
+
+Sergey ·
+
+@sshlg93
+
+START WITH THE TOOL THAT’S HERE
+
+Get your accounts in order.
+
+Try Switchboard for macOS or Windows. A local tool, with source you can inspect.
 
 Download Switchboard
 
@@ -202,8 +260,18 @@ PassionCode
 
 .ai
 
-Where people and agents run the business together.
+From vibe coding to passion coding.
+
+Switchboard
+
+Fabric
+
+GitHub & source
+
+About
 
 Design system
+
+Twitter
 
 ↗
