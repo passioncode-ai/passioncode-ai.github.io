@@ -166,4 +166,3 @@ See [foundation](foundation.md).
 - **Status:** draft
 - **Coverage:** index.html#observatory; observatory/index.html; scripts/check-site.mjs.
 - **Product:** unobserved
-
