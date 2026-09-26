@@ -11,6 +11,7 @@
 | SCN-003 | Download for Windows | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-004 | Inspect source and product boundaries | Trust | P-01 | ST-03, FLW-02 | draft | pending |
 | SCN-005 | Read the shared design language | Design system | P-01 | ST-03, FLW-02 | draft | pending |
+| SCN-006 | Discover and start Project Observatory | Observatory | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 
 ## Personas
 
@@ -107,3 +108,23 @@ See [foundation](foundation.md).
 - **Status:** draft
 - **Coverage:** design-system/index.html; design-system/tokens.css; browser evidence recorded in HANDOFF.
 - **Product:** unobserved
+
+### SCN-006: Discover and start Project Observatory
+- **Persona:** P-01
+- **Feature:** Observatory
+- **Traces:** ST-01, ST-03, FLW-01
+- **Entry point:** / (product card) or /observatory/
+- **Preconditions:** a macOS or Linux visitor with Python 3.11+
+- **Steps:**
+  1. Read the Observatory card on the homepage → it is listed as available now and open source, beside Switchboard, and distinct from Fabric in development.
+  2. Follow Explore Observatory → the product page states purpose, release, platforms, language choice and the limits of known-value scanning.
+  3. Follow Get started → three setup steps, the installation guide and the source are reachable.
+- **Expected result:** The visitor knows what Observatory reads (only configured folders and sources), that it runs locally, and how to install it, without any claim of finding every secret.
+- **Alt paths:** the source link goes straight to GitHub; the screenshot is labelled as a synthetic demo estate.
+- **UI elements:** Observatory card, Explore Observatory, Get started, Installation guide, View source, FAQ
+- **States covered:** success, error; static content has no application loading or empty state.
+- **Errors & recovery:** Missing network: browser error; reload. Installation problems are covered by the repository's onboarding guide.
+- **Status:** draft
+- **Coverage:** index.html#observatory; observatory/index.html; scripts/check-site.mjs.
+- **Product:** unobserved
+

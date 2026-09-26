@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 const root = resolve(import.meta.dirname, '..')
-const pages = ['index.html', 'switchboard/index.html', 'design-system/index.html']
+const pages = ['index.html', 'switchboard/index.html', 'observatory/index.html', 'design-system/index.html']
 const css = readFileSync(resolve(root, 'styles.css'), 'utf8')
 const release = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
 const read = path => readFileSync(resolve(root, path), 'utf8')
@@ -46,5 +46,8 @@ assert.equal(release.releaseUrl, `https://github.com/${release.repository}/relea
 assert.match(css, /@media \(max-width: 620px\)/)
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
 for (const page of pages) assert.ok(read(page).includes('href="/design-system/tokens.css"'))
-for (const path of ['', 'switchboard/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
-console.log('PASS: 3 static pages, metadata, anchors, shared tokens, product status and both release downloads')
+for (const path of ['', 'switchboard/', 'observatory/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
+const observatory = read('observatory/index.html')
+for (const text of ['0.4.0', 'https://github.com/passioncode-ai/project-observatory-dashboard', 'MIT', 'English or Russian', 'cannot find unknown secrets', 'Synthetic demo']) assert.ok(observatory.includes(text), `observatory missing ${text}`)
+assert.ok(home.includes('href="/observatory/"'), 'homepage links Observatory')
+console.log('PASS: 4 static pages, metadata, anchors, shared tokens, product status and both release downloads')

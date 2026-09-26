@@ -569,3 +569,9 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .app-preview figure { margin: 0; }
 .app-preview img { display: block; width: 100%; height: auto; border: 1px solid var(--line-strong); border-radius: var(--pc-radius-panel); }
 .app-preview figcaption { margin-top: 18px; font-size: 13px; color: var(--ink-muted); }
+/* Project Observatory's product card shows the real dashboard instead of an illustration. */
+.product-shot{margin:0;border:1px solid var(--pc-border);border-radius:var(--pc-radius-feature);overflow:hidden;background:var(--pc-panel);box-shadow:var(--pc-shadow-overlay)}
+.product-shot img{display:block;width:100%;height:auto}
+.product-shot figcaption{padding:var(--pc-space-3) var(--pc-space-4);font-size:var(--pc-type-meta);color:var(--pc-text-muted);border-top:1px solid var(--pc-border)}
+
+.product-feature + .product-feature { margin-top: var(--pc-space-5); }
