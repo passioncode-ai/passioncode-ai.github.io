@@ -76,3 +76,7 @@ Public launch complete: exact source deployed, live pages and redirects verified
 - Anonymous curl byte comparison passed homepage/product/design-system/tokens/demo image; both OS redirects return the selected release with no-store/noindex; www preserves path/query; unknown OS and non-allowlisted docs/.git paths return 404. [Executed verification](evidence/verify-launch.py), [JSON result](LAUNCH_RECEIPT.json), [live product screenshot](evidence/switchboard-live.jpg).
 - Fresh anonymous website checkout at source SHA: npm ci, check and build PASS, audit0. Fresh Switchboard checkout `b6cde090a62a7a96a2a612ada875a9684e1e3b86`: 81 tests / 0 failed / 1 intentional Keychain test ignored, full gate PASS with scoped installed Command Line Tools. [Final app handoff](https://github.com/passioncode-ai/fabric-switchboard/blob/a1ff940/docs/HANDOFF.md).
 - Cloudflare skill was additionally used to resolve CLI authentication scope and follow direct upload API documentation. Existing connector authorization was used; no access grant, persistent token or DNS change was created.
+
+## Fabric Inbox published
+
+The subsequent Inbox change and canonical white/dark themes are live. Entry: [Inbox handoff](INBOX_HANDOFF.md), [deployment receipt](INBOX_DEPLOYMENT.json). Deployed source `630f4f7f5c94fc36f15d9047ff487d1142c3479f` preserves the storytelling/Fabric/Observatory work and adds Inbox. All six pages and 23 public files were compared with the exact build after deployment.

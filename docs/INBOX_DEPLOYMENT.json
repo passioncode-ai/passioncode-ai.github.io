@@ -1,0 +1,164 @@
+{
+  "checked_at": "2026-09-26T19:33:52.360047+00:00",
+  "source_commit": "630f4f7f5c94fc36f15d9047ff487d1142c3479f",
+  "worker": "passioncode-ai",
+  "version_id": "b214c3e5-bf68-4a60-a3e0-6dfc23801807",
+  "deployment_id": "cf59a5a8-68a7-4095-9e8f-d452f5f30e01",
+  "deployed_at": "2026-09-26T19:33:11.666856Z",
+  "method": "Cloudflare API connector, Wrangler dry-run bundle and direct assets upload",
+  "checks": [
+    {
+      "path": "/assets/favicon-64.png",
+      "status": 200,
+      "sha256": "34fb5047708a4381e660da439f06d405af8575b3de5a86cc2e315da95c294ea2"
+    },
+    {
+      "path": "/assets/icon-1024.png",
+      "status": 200,
+      "sha256": "6e753b92ed5b28f5883f1e784350e2bf9b377cd7be1538129a12982ef0df2dfc"
+    },
+    {
+      "path": "/assets/icon-256.png",
+      "status": 200,
+      "sha256": "a8c1265dcd1340109d329ad988ebb7b5aad2d0d5b5bc38f95ad67208899055f6"
+    },
+    {
+      "path": "/assets/inbox-mark.svg",
+      "status": 200,
+      "sha256": "bc45a70e5b992f0495f3f00db6c729fd440ec9be10b75e7c13f292b1c98237c8"
+    },
+    {
+      "path": "/assets/observatory-demo.jpg",
+      "status": 200,
+      "sha256": "83bde9fe12bc387e9eb5c210d2b01de241bd7a4ce4d9c196f67f5b798608fa84"
+    },
+    {
+      "path": "/assets/observatory-mark.svg",
+      "status": 200,
+      "sha256": "d239e7c92df588af719630f36e17457f66d40dbec5b04ddbdadeccc622d3040c"
+    },
+    {
+      "path": "/assets/passioncode-mark.svg",
+      "status": 200,
+      "sha256": "8b49637faa386ce9658029a142d48e8a8c3ee4ed2d44ccb611cd03051046e1aa"
+    },
+    {
+      "path": "/assets/passioncode-social-card.jpg",
+      "status": 200,
+      "sha256": "49357798a821b5b60c26bbe41ac00fd93ab671548398f33c098de9b28c993d23"
+    },
+    {
+      "path": "/assets/passioncode-social-card.png",
+      "status": 200,
+      "sha256": "66f540fdcdaf38d0bf624af39e926a4cccdf5b1977932ca4d3a0c52919a2f00e"
+    },
+    {
+      "path": "/assets/passioncode-social-card.svg",
+      "status": 200,
+      "sha256": "4e7bb0872785368025b347c897de60a0c3a75287df3d4f05c40de711ee96bdf2"
+    },
+    {
+      "path": "/assets/switchboard-demo.jpg",
+      "status": 200,
+      "sha256": "78ea2eda1beea8a604aa7c5ce57fe11d33fa6dfc599d73e084d7b8de405564b2"
+    },
+    {
+      "path": "/assets/switchboard-mark.svg",
+      "status": 200,
+      "sha256": "0aca33c30ea680663e010a468cb575f8f4ac681fc269ceafa99516813c086926"
+    },
+    {
+      "path": "/design-system/",
+      "status": 200,
+      "sha256": "6404a854d89370779ef117539e3a05e06859f8fca26ced22c90451fcacd735b0"
+    },
+    {
+      "path": "/design-system/tokens.css",
+      "status": 200,
+      "sha256": "86866df1bec49b85e9def4132021401894483bb819dc2d3a3a70511d2e4b2a61"
+    },
+    {
+      "path": "/fabric/",
+      "status": 200,
+      "sha256": "f43d7c093c2043b9052e3504812f3a9744055532e13f819a1dfcb89093045d14"
+    },
+    {
+      "path": "/inbox/",
+      "status": 200,
+      "sha256": "ead2b7eda50d2ff077c6703e3a4c1697ce30d9888cb3c5c6e70cadd3a84a2596"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "4741e44f8a6936ed99e4dc030a0c90b7fe7c37eb32b7c3e662480b8697ba7470"
+    },
+    {
+      "path": "/observatory/",
+      "status": 200,
+      "sha256": "52efabd7ad085b2696517b4a9d4fdc29a908994d0a57778407a588e89c962c0f"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sha256": "b6b934bb4618e82b922573774e38357069b3b2a38613aae40bc929dd77d813e3"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "504437693bb4fa1c37703851acbd1cf78eba1a121f62dd4edadf324afa15c728"
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "sha256": "faa8663a5dc053fd09c454c532fb9af173ca850178992aaeb442cc279dbd5f83"
+    },
+    {
+      "path": "/switchboard/",
+      "status": 200,
+      "sha256": "3953370ac2e0fbc207764bd572a0f96dd4e5bacd32691e251aa74058dd06971d"
+    },
+    {
+      "path": "/switchboard/release.json",
+      "status": 200,
+      "sha256": "cdf934fe8afab725ffa3b3f73cf955ee43fba4c8370f6e9ffbe29d6cf58c8376"
+    },
+    {
+      "path": "/switchboard/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-macos-universal.zip",
+      "cache-control": "no-store"
+    },
+    {
+      "path": "/switchboard/download/windows",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-windows-x64.zip",
+      "cache-control": "no-store"
+    },
+    {
+      "path": "www/inbox/?q=1",
+      "status": 301
+    },
+    {
+      "path": "/switchboard/download/linux",
+      "status": 404
+    },
+    {
+      "path": "/docs/INBOX_HANDOFF.md",
+      "status": 404
+    },
+    {
+      "path": "/.git/config",
+      "status": 404
+    },
+    {
+      "archive": "macos",
+      "size": 17052475,
+      "sha256": "5bdece37fb9965019d2a1f84af45075b571b7979dca8b8c475495ff4b50bed25"
+    },
+    {
+      "archive": "windows",
+      "size": 6232566,
+      "sha256": "f3fb96619e2722bbee954eb5758800c790df6dee6e2cd4763372b1a2a9df4665"
+    }
+  ]
+}
