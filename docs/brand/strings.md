@@ -9,6 +9,11 @@ Contract: brand-contract v1
 | source.view | View source | switchboard/index.html | SCN-004 | proposed | copy |
 | tokens.get | Get the CSS tokens | design-system/index.html | SCN-005 | proposed | copy |
 
-| inbox.explore | Explore Inbox | index.html | SCN-007 | proposed | copy |
-| inbox.status | See development status | inbox/index.html | SCN-007 | proposed | copy |
-| toolkit.explore | Explore the toolkit | inbox/index.html | SCN-007 | proposed | copy |
+| toolkit.explore | Explore the toolkit | index.html | SCN-001 | proposed | copy |
+| fabric.explore | Explore Fabric | index.html | SCN-007 | proposed | copy |
+| build.follow | Follow the build | fabric/index.html | SCN-008 | proposed | copy |
+| author.follow | Follow on Twitter | index.html | SCN-008 | proposed | copy |
+
+| inbox.explore | Explore Inbox | index.html | SCN-009 | proposed | copy |
+| inbox.status | See development status | inbox/index.html | SCN-009 | proposed | copy |
+| toolkit.explore | Explore the toolkit | inbox/index.html | SCN-009 | proposed | copy |

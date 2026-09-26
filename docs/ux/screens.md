@@ -6,14 +6,15 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 
 | ID | Screen | Scenarios |
 |---|---|---|
-| SCR-01 | Home | SCN-001 |
+| SCR-01 | Home | SCN-001, SCN-006, SCN-007, SCN-008 |
 | SCR-02 | Switchboard | SCN-002, SCN-003, SCN-004 |
 | SCR-03 | Design system | SCN-005 |
-| SCR-04 | Project Observatory | SCN-006 |
-| SCR-05 | Fabric Inbox | SCN-007 |
+| SCR-04 | Observatory | SCN-006 |
+| SCR-05 | Fabric | SCN-007, SCN-008 |
+| SCR-06 | Fabric Inbox | SCN-009 |
 
 ### SCR-01: Home
-**Scenarios:** SCN-001. Toolkit hero, first product, Fabric direction and source links.
+**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008. Teams hero with download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline; public repositories; author/About. Header and footer expose the same main sections on mobile.
 **Web surface:** public
 **Route:** https://passioncode.ai/
 **Answers:** What is PassionCode and which product can I use today?
@@ -46,12 +47,21 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Answers:** Which shared visual rules do PassionCode products use?
 **Indexable:** yes; canonical URL and sitemap.
 **Without JS:** all visual rules and link to canonical CSS tokens.
-**Entity:** PassionCode design system v1.1, adopted by the website, Switchboard and Project Observatory.
+**Entity:** PassionCode design system v1.0, adopted by the website, Switchboard and Project Observatory.
 
 Screens describe public website behavior, not acceptance of native Switchboard or Fabric runtime.
 
-### SCR-05: Fabric Inbox
-**Scenarios:** SCN-007. Desktop mail purpose, provider status, toolkit context and FAQ.
+### SCR-05: Fabric
+**Scenarios:** SCN-007, SCN-008. In-development hero, illustrative project brief, intended operating loop, people/authority principles, current focus and links back to About or downloadable Switchboard.
+**Web surface:** public
+**Route:** https://passioncode.ai/fabric/
+**Answers:** What is Fabric and what is being built?
+**Indexable:** yes; canonical URL, WebPage data and sitemap. No downloadable SoftwareApplication claim.
+**Without JS:** all content and navigation. No fake functional agent demo, waitlist or download.
+**Entity:** Fabric, the CEO AI agent in development within PassionCode.ai.
+
+### SCR-06: Fabric Inbox
+**Scenarios:** SCN-009. Desktop mail purpose, provider status, toolkit context and FAQ.
 **Web surface:** public
 **Route:** https://passioncode.ai/inbox/
 **Answers:** What does Inbox do and can I use it today?

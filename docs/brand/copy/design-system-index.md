@@ -12,19 +12,15 @@ PassionCode
 
 .ai
 
-Products
+The toolkit
 
-Switchboard
+What’s next
 
-Observatory
+About
 
-Inbox
+Download
 
-Fabric
-
-GitHub
-
-↗
+↓
 
 PASSIONCODE / DESIGN SYSTEM 1.1
 
@@ -128,8 +124,22 @@ PassionCode
 
 .ai
 
-Where people and agents run the business together.
+From vibe coding to passion coding.
+
+Switchboard
+
+Observatory
+
+Inbox
+
+Fabric
+
+GitHub & source
+
+About
 
 Design system
+
+Twitter
 
 ↗

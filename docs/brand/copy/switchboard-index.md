@@ -12,19 +12,15 @@ PassionCode
 
 .ai
 
-Products
+The toolkit
 
-Switchboard
+What’s next
 
-Observatory
+About
 
-Inbox
+Download
 
-Fabric
-
-GitHub
-
-↗
+↓
 
 FABRIC SWITCHBOARD · BY PASSIONCODE
 
@@ -34,7 +30,7 @@ A clearer switch.
 
 Keep your Claude Code and Codex CLI accounts in one local workbench. See reported usage, separate work from personal accounts, and choose what handles your next request.
 
-Download the beta
+Download Switchboard
 
 ↓
 
@@ -206,6 +202,10 @@ Is Switchboard the same thing as Fabric?
 
 Switchboard is the account-management tool available today. Fabric is our CEO AI agent in development, focused on coordinating agents and projects. Both belong to the PassionCode toolkit.
 
+Explore what we’re building with Fabric
+
+.
+
 Can I inspect or build it myself?
 
 Yes. Switchboard is open source under the MIT license. The
@@ -232,8 +232,22 @@ PassionCode
 
 .ai
 
-Where people and agents run the business together.
+From vibe coding to passion coding.
+
+Switchboard
+
+Observatory
+
+Inbox
+
+Fabric
+
+GitHub & source
+
+About
 
 Design system
+
+Twitter
 
 ↗

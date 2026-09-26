@@ -7,7 +7,7 @@ The operator asked to add Inbox to the PassionCode/Fabric product family, publis
 ## Scope and contracts
 
 - REQ-01: Add /inbox/, homepage card and navigation. Keep Switchboard and Observatory available; Inbox is in development. Checked by `scripts/check-site.mjs`.
-- REQ-02: Distinguish implemented Cloudflare/Gmail preview, shared account UI in progress and planned general IMAP/Outlook. No public release, signed download or public-source CTA. SCN-007 owns the visitor path.
+- REQ-02: Distinguish implemented Cloudflare/Gmail preview, shared account UI in progress and planned general IMAP/Outlook. No public release, signed download or public-source CTA. SCN-009 owns the visitor path.
 - REQ-03: Publish canonical tokens v1.1.0 with opt-in light palette, unchanged dark values, focus/link roles and matching Inbox tray glyph. `scripts/check-design-tokens.mjs` owns scoped contrast checks. Parent fruit lock stays untouched.
 - REQ-04: Ship static metadata, sitemap, build allowlist, brand facts and this handoff in Git. Root reviews browser rendering and integrates exact source.
 

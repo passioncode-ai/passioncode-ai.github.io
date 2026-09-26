@@ -8,6 +8,7 @@ const publicFiles = [
   'index.html',
   'styles.css',
   'switchboard/index.html',
+  'fabric/index.html',
   'switchboard/release.json',
   'observatory/index.html',
   'inbox/index.html',

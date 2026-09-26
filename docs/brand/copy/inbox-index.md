@@ -130,8 +130,22 @@ PassionCode
 
 .ai
 
-Where people and agents run the business together.
+From vibe coding to passion coding.
+
+Switchboard
+
+Observatory
+
+Inbox
+
+Fabric
+
+GitHub & source
+
+About
 
 Design system
+
+Twitter
 
 ↗

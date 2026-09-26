@@ -2,13 +2,15 @@
 
 # PassionCode.ai
 
-**A toolkit for AI-native work.** From vibe coding to passion coding.
+**A toolkit for AI-native teams.** From vibe coding to passion coding.
 
 Public home: [passioncode.ai](https://passioncode.ai/). Switchboard is the first downloadable open-source beta: a local account workbench for Claude Code and Codex CLI. Fabric is the CEO AI agent in development, coordinating agents around projects. People remain accountable.
 
 ## Pages and shared design
 
-- [Homepage](index.html): toolkit and product status.
+- [Homepage](index.html): toolkit work cycle, downloads, build pipeline, source and author.
+- [Project Observatory](observatory/index.html): local project dashboard, setup and source.
+- [Fabric](fabric/index.html): CEO AI agent direction and development status.
 - [Switchboard](switchboard/index.html): product, platform downloads, limits and installation.
 - [Design system](design-system/README.md): canonical dark/gold tokens and product marks. Switchboard vendors a commit-pinned copy.
 - [Launch handoff](docs/HANDOFF.md): source owners, checks, publication and next work.

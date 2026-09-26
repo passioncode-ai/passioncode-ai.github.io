@@ -18,7 +18,7 @@ Last calibrated: 2026-09-26
 | Density | one idea per section | a feature inventory in the headline |
 
 ## Narrative
-Hero: the builder working with AI agents.
+Hero: the builder or team working with AI agents.
 Enemy: account juggling and fragmented coordination.
 Product role: a toolkit, starting with Switchboard; Fabric remains in development.
 Promise: clear account control today and an explicit direction for coordinated work.

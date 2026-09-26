@@ -12,19 +12,15 @@ PassionCode
 
 .ai
 
-Products
+The toolkit
 
-Switchboard
+What’s next
 
-Observatory
+About
 
-Inbox
+Download
 
-Fabric
-
-GitHub
-
-↗
+↓
 
 PROJECT OBSERVATORY · BY PASSIONCODE
 
@@ -186,6 +182,10 @@ And Fabric?
 
 Fabric is our CEO AI agent in development, focused on coordinating agents and projects. Observatory is available now as a separate local tool.
 
+Explore Fabric
+
+.
+
 Can I inspect or build it myself?
 
 Yes. Project Observatory is open source under the MIT license. The
@@ -212,8 +212,22 @@ PassionCode
 
 .ai
 
-Where people and agents run the business together.
+From vibe coding to passion coding.
+
+Switchboard
+
+Observatory
+
+Inbox
+
+Fabric
+
+GitHub & source
+
+About
 
 Design system
+
+Twitter
 
 ↗

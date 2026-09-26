@@ -8,7 +8,7 @@ Objective, requirements, source evidence and dependencies: [bounded task packet]
 
 - [Inbox product page](../inbox/index.html), [homepage card](../index.html), five-page navigation, metadata, sitemap and 22-entry publication allowlist. Private source is not used as a public CTA. Cloudflare/Gmail are preview implementations, unified account UI is in progress, general IMAP/Outlook are planned. No public release or signed download is offered.
 - [Canonical light/dark tokens](../design-system/tokens.css), opt-in light via document-root `data-theme="light"`, theme-specific link/focus ink, [Inbox tray mark](../assets/inbox-mark.svg), public system reference and provenance. All 42 original dark token values are unchanged. Parent fruit lock passes.
-- SCN-007, screen contract, brand terminology/facts/actions and generated public-copy projections. The projection now includes Observatory as well as Inbox.
+- SCN-009, screen contract, brand terminology/facts/actions and generated public-copy projections. The projection now includes Observatory as well as Inbox.
 
 ## Checks actually run
 
