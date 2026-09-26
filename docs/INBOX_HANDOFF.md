@@ -15,7 +15,7 @@ Objective, requirements, source evidence and dependencies: [bounded task packet]
 - `npm run check`: PASS (locked assets, five static pages, anchors/status, download Worker semantics, 35 scoped palette contrast pairs; minimum computed ratio 4.91:1).
 - `npm run build`: PASS, 22 allowlisted entries.
 - `python3 scripts/extract-public-copy.py --check`: PASS.
-- Installed super-ux `ux_lint.py`: PASS. Installed `brand_lint.py --brief`: 0 errors, 211 warnings. Its generic HTML registry heuristic still flags metadata/attributes and some prose; this is not a warning-free certification.
+- Installed super-ux `ux_lint.py`: PASS. Installed `brand_lint.py --brief`: 0 errors, 211 warnings. All 211 are B022: its generic HTML registry heuristic still flags metadata/attributes and some prose; this is not a warning-free certification.
 - One-time comparison of every default token against base Git content: all 42 values preserved. `git diff --check`: PASS.
 - No full hosted CI dispatched. Browser review is owned by the root task and is pending this handoff; no whole-UI WCAG conformance, provider acceptance, merge or deployment is claimed.
 
@@ -42,3 +42,7 @@ The separate dirty `passioncode-ai.github.io` checkout was never edited. Depende
 Humanization: on — own advisory pass; retained the existing family heading style and made availability explicit. No source, provider, release or status fact was changed by the copy pass.
 
 **Made with [ssheleg skills](https://github.com/ssheleg/sshlg-skills)**
+
+## Remote delivery receipt
+
+[Draft PR #5](https://github.com/passioncode-ai/passioncode-ai.github.io/pull/5). Source commit [b9c8a753dbd5588fbe9b38104d55712959ab1126](https://github.com/passioncode-ai/passioncode-ai.github.io/commit/b9c8a753dbd5588fbe9b38104d55712959ab1126) was pushed and `git ls-remote` matched the branch SHA. A fresh HTTPS clone of `codex/inbox-product-site` resolved to that commit; `npm run check` and `npm run build` both passed there with the same five pages and 22 public entries. This receipt is a documentation-only follow-up; source/theme bytes are unchanged. Browser review and production delivery remain with the root task.
