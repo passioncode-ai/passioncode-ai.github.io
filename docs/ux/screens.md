@@ -14,7 +14,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-06 | Fabric Inbox | SCN-009 |
 
 ### SCR-01: Home
-**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008. Teams hero with download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline; public repositories; author/About. Header and footer expose the same main sections on mobile.
+**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008. Original operating-system hero with primary Explore the tools → #products and secondary download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline; public repositories; author/About. Header and footer expose the same main sections on mobile.
 **Web surface:** public
 **Route:** https://passioncode.ai/
 **Answers:** What is PassionCode and which product can I use today?

@@ -31,10 +31,11 @@ See [foundation](foundation.md).
 - **Preconditions:** none
 - **Steps:**
   1. Read the teams headline and work cycle → the umbrella, Switchboard beta and Fabric development state are distinguished.
-  2. Follow Download Switchboard → the product download section opens.
+  2. Follow the primary Explore the tools → the available-tools section on the homepage opens.
+  3. Follow the secondary Download Switchboard → the product download section opens.
 - **Expected result:** Product roles and available downloads are clear.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
-- **UI elements:** Navigation, work cycle, product features, Download Switchboard, Fabric detail link
+- **UI elements:** Navigation, work cycle, product features, Explore the tools, Download Switchboard, Fabric detail link
 - **States covered:** success, error; static content has no application loading or empty state.
 - **Errors & recovery:** Missing network: browser error; reload.
 - **Status:** draft

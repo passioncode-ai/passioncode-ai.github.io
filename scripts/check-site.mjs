@@ -30,7 +30,7 @@ for (const file of pages) {
   }
 }
 const home = read('index.html')
-for (const text of ['Your toolkit for', 'AI-native teams.', 'From vibe coding to passion coding.', 'CEO AI agent', 'in development', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
+for (const text of ['The agent-agnostic operating system for', 'AI-native teams.', 'From vibe coding to passion coding.', 'CEO AI agent', 'in development', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
 const product = read('switchboard/index.html')
 for (const text of [release.version, release.releaseUrl, 'Not yet notarized', 'Unsigned beta', 'not yet verified', 'MIT']) assert.ok(product.includes(text), `product missing ${text}`)
 for (const os of ['macos', 'windows']) {

@@ -24,3 +24,5 @@ Contract: brand-contract v1
 
 | Inbox role and status | Fabric Inbox is a desktop mail client in private development; no public release or signed download | [bounded packet](../tasks/2026-09-26-inbox-site.md), source evidence at d577462572d332c1e7c157504b7dffd9cde00bea | 2026-09-26 | 2026-10-26 | yes |
 | Inbox providers | Cloudflare and Gmail implemented in development preview; shared account interface in progress; general IMAP and Outlook planned | [bounded packet and source receipt](../tasks/2026-09-26-inbox-site.md) | 2026-09-26 | 2026-10-26 | yes |
+
+| homepage hero | The agent-agnostic operating system for AI-native teams. | Explicit operator correction 2026-09-27; original `d5c168d:index.html` | 2026-09-27 | 2026-12-27 | yes |

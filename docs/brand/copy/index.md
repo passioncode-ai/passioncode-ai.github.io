@@ -24,7 +24,7 @@ Download
 
 From vibe coding to passion coding.
 
-Your toolkit for
+The agent-agnostic operating system for
 
 AI-native teams.
 
@@ -32,13 +32,13 @@ Better tools for the work around your agents.
 
 Tools for accounts, project visibility and agent coordination. Start with what’s available today, and follow the rest as we build.
 
+Explore the tools
+
+↘
+
 Download Switchboard
 
 ↓
-
-Explore the toolkit
-
-↘
 
 First release: Switchboard beta
 

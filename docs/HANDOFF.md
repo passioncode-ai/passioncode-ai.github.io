@@ -1,3 +1,21 @@
+# Current correction — homepage hero, 2026-09-27
+
+Objective: restore the original hero headline and make tool exploration the primary action.
+Restored the exact H1 from `d5c168d` (verified with `git show d5c168d:index.html`):
+“The agent-agnostic operating system for AI-native teams.”
+Primary Explore the tools targets `#products`; Download Switchboard is secondary.
+Updated SCN-001, its flow/screen, brand facts and generated public copy in the same change.
+Upstream Inbox publication `3d44aa6` is included; no CSS or other product page changed.
+
+Checks: npm run check and npm run build passed (6 pages, 23 public files); copy extraction
+passed; brand lint 0 errors/284 advisory warnings; UX lint consistent. Browser at 1280×720
+and 390×844 showed the primary CTA within the viewport and no horizontal overflow;
+clicking it reached `/#products`. Publication receipt follows after live verification.
+Next task: inspect the published hero and maintain product facts from their owning releases.
+Local-only: .DS_Store, dependencies, preview state and ephemeral deployment credentials.
+
+---
+
 <sub>ssheleg skills — task-pipeline · ux-scenarios · sheleg-design · brand-voice · copywriting · evidence-docs · agent-sync · maintaining-fabric-workspace · cloudflare</sub>
 
 # Current handoff — website storytelling, 2026-09-26
