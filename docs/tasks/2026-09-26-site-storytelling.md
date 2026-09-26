@@ -68,3 +68,12 @@ retains toolkit wording and restores the audience the operator explicitly reques
 ## Gate record / resume
 
 UX and brand update → HTML/CSS → local/static/browser review complete. See [verification](../evidence/site-storytelling-2026-09-26.md). Holds: 1 task-owned preview server; no leases, background automation or subagents. Next: exact-SHA publication, live browser check, final receipt and stop preview.
+
+## Upstream integration
+
+Before publication, `origin/main` had advanced to c277b7bdfeee9c3add650c1d8407269aeeaebddb
+(PR #4, Observatory launch). Exact-SHA guard correctly stopped the first fast-forward attempt.
+Merged this work rather than overwriting it. Kept upstream SCN-006/SCR-04 for Observatory;
+this iteration’s Fabric/About cases are SCN-007/008 and Fabric screen SCR-05.
+REQ-04/05 now cover three tools and five total static pages. Observatory source installation
+is distinct from Switchboard binary downloads. No upstream product facts or limits removed.

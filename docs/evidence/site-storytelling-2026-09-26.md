@@ -59,3 +59,14 @@ and screenshots are recorded separately after deployment.
 No Switchboard binaries or release manifest changed. Existing beta limits still apply. No hosted
 full CI dispatch. No Fabric private workspace publication needed: this iteration changes its public
 explanation only. Current implementation/deployment and next review live in [HANDOFF](../HANDOFF.md).
+
+## Post-merge convergence
+
+Merged upstream c277b7b before deploy. Static check/build PASS for 5 pages / 21 public entries;
+5 text projections PASS; UX consistent; brand 0 errors / 230 advisory warnings.
+Observed 1280×800 homepage hero and Observatory card with its synthetic screenshot; at
+390×844 the merged homepage has scrollWidth=390 and no main text/link/image outside the
+viewport. Observatory has visible navigation, scrollWidth=390; Explore Observatory reaches
+its page and Get started reaches its Python/source-install section. Existing beta warnings
+and shared brand lock remain intact. Work-cycle observations do not imply automatic review
+or a shipped integration between the three tools.

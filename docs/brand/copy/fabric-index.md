@@ -166,6 +166,8 @@ From vibe coding to passion coding.
 
 Switchboard
 
+Observatory
+
 Fabric
 
 GitHub & source

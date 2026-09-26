@@ -9,6 +9,7 @@ Public home: [passioncode.ai](https://passioncode.ai/). Switchboard is the first
 ## Pages and shared design
 
 - [Homepage](index.html): toolkit work cycle, downloads, build pipeline, source and author.
+- [Project Observatory](observatory/index.html): local project dashboard, setup and source.
 - [Fabric](fabric/index.html): CEO AI agent direction and development status.
 - [Switchboard](switchboard/index.html): product, platform downloads, limits and installation.
 - [Design system](design-system/README.md): canonical dark/gold tokens and product marks. Switchboard vendors a commit-pinned copy.

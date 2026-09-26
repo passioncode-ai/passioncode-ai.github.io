@@ -7,6 +7,8 @@ Objective: improve the main site's content while retaining the chosen style. [Bo
 Implemented on `codex/site-storytelling`: AI-native teams headline, work-cycle explanation,
 download-first Switchboard feature, explicit development pipeline, public source section,
 About/Twitter from verified author identity, shared responsive navigation and `/fabric/` page.
+Integrated upstream `c277b7b` (Observatory launch) before publication: its page/assets/design
+reference are preserved, with Observatory in the work cycle, available tools, pipeline and source.
 Previous release receipts below remain historical. New deployment receipt follows local review.
 
 Next task: review the public reading order and headline; maintain product status from actual

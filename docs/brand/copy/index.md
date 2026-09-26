@@ -30,7 +30,7 @@ AI-native teams.
 
 Better tools for the work around your agents.
 
-Manage the accounts you use today. Build toward projects that keep their context as agents come and go. PassionCode brings these tools together, starting with Switchboard.
+Tools for accounts, project visibility and agent coordination. Start with what’s available today, and follow the rest as we build.
 
 Download Switchboard
 
@@ -92,21 +92,21 @@ In development
 
 04
 
-Check and learn
+See what changed
 
-Review evidence, keep what the team learns and use it to shape the next piece of work.
+See project activity and findings, with evidence beside each one. Know where to look next.
 
-Fabric direction
+Project Observatory
 
-In development
+Available now
 
-Start with the part you need. Switchboard works on its own; the wider project workflow is what we’re building toward.
+Start with the part you need. Switchboard and Observatory work on their own; the wider project workflow is what we’re building toward.
 
 02 / AVAILABLE TODAY
 
-Start with Switchboard.
+Tools you can use today.
 
-The first tool in the kit solves an everyday problem: keeping track of the accounts behind your coding agents.
+Start with your accounts or your projects. Switchboard and Observatory work independently, so you can pick the part you need.
 
 OPEN-SOURCE BETA · macOS + Windows
 
@@ -135,6 +135,34 @@ Explore Switchboard
 Free under MIT. Desktop + CLI. Check platform requirements and beta notes before installing.
 
 Actual interface · synthetic demo accounts
+
+AVAILABLE NOW · OPEN SOURCE
+
+Project Observatory
+
+Your projects.
+
+Back in view.
+
+A local dashboard for the projects your agents work on. See what changed, what needs attention and where known API keys left a copy, with the evidence beside each finding. In English or Russian.
+
+macOS + Linux
+
+CLI + MCP + dashboard
+
+MIT license
+
+Get started
+
+↗
+
+Explore Observatory
+
+↗
+
+· Install from source · Python 3.11+
+
+The actual dashboard · synthetic demo projects.
 
 IN DEVELOPMENT
 
@@ -170,6 +198,16 @@ Download Switchboard
 
 ↓
 
+Available now
+
+Project Observatory
+
+A local view of project activity and findings. Install from source on macOS or Linux.
+
+Get started
+
+↗
+
 In development
 
 Fabric
@@ -198,7 +236,7 @@ Use the tools.
 
 Read the source.
 
-Start with a download, go deeper in the code. Switchboard is open source under MIT: inspect it, build it yourself or contribute a fix.
+Start with a download, go deeper in the code. Switchboard and Observatory are open source under MIT: inspect them, build from source or contribute a fix.
 
 PUBLIC REPOSITORY · MIT
 
@@ -210,15 +248,15 @@ Desktop app, CLI, build instructions, issues and release notes.
 
 github.com/passioncode-ai/fabric-switchboard
 
-PUBLIC REPOSITORY
+PUBLIC REPOSITORY · MIT
 
 ↗
 
-This website
+Project Observatory
 
-The site you’re reading, with our shared design tokens and product pages.
+Local dashboard, CLI, setup guides, tests and the security model.
 
-github.com/passioncode-ai/passioncode-ai.github.io
+github.com/passioncode-ai/project-observatory-dashboard
 
 Fabric is still in private development. Its public page describes the direction, not an available source release.
 
@@ -234,7 +272,7 @@ the work.
 
 I’m Sergey. I’m building PassionCode for teams whose everyday work already includes AI agents.
 
-The starting point is practical: make the setup easier to manage, then bring more structure to how the work gets done. Switchboard is the first release. Fabric is the next part I’m working on.
+The starting point is practical: make the setup easier to manage, then bring more structure to how the work gets done. Switchboard and Observatory are available now. Fabric is the next part I’m working on.
 
 Follow the build, the decisions and the next releases.
 
@@ -263,6 +301,8 @@ PassionCode
 From vibe coding to passion coding.
 
 Switchboard
+
+Observatory
 
 Fabric
 

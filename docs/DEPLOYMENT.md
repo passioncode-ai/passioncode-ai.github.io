@@ -67,7 +67,7 @@ npm run build
 
 Replace the example tag with the actual tag. The updater rejects drafts and requires both nonempty archives to be anonymously downloadable. Review the release's actual signing/platform limits and installation instructions before committing. Never advertise GitHub `releases/latest` as the newest beta: that endpoint excludes prereleases.
 
-Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment verify all four pages, both redirect destinations, anonymous archive hashes, and www canonicalization. Keep the Worker deployment ID and commit in the handoff receipt. No full hosted suite is dispatched for this update.
+Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment verify all five pages, both redirect destinations, anonymous archive hashes, and www canonicalization. Keep the Worker deployment ID and commit in the handoff receipt. No full hosted suite is dispatched for this update.
 
 ## Authenticated connector fallback
 

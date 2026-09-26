@@ -46,6 +46,8 @@ PassionCode · the parent brand
 
 Switchboard · the first public tool
 
+Project Observatory · the second public tool
+
 02 / COLOR
 
 Color with a purpose.
@@ -102,7 +104,7 @@ Explore Switchboard
 
 Back to PassionCode
 
-The marketing site and Switchboard use these shared tokens. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.
+The marketing site, Switchboard and Project Observatory use these shared tokens. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.
 
 PassionCode
 
@@ -111,6 +113,8 @@ PassionCode
 From vibe coding to passion coding.
 
 Switchboard
+
+Observatory
 
 Fabric
 

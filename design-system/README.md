@@ -4,7 +4,7 @@ Canonical public token source: [tokens.css](tokens.css). Public reference: [pass
 
 ## Identity and roles
 
-The passion fruit remains the parent brand. Products carry their own glyph on the same dark tile; Switchboard uses S. Product name: Fabric Switchboard, short form Switchboard. Fabric is the CEO AI agent in development; the Fabric technical kernel retains its technical meaning.
+The passion fruit remains the parent brand. Products carry their own glyph on the same dark tile; Switchboard uses S, Project Observatory an observing lens with a gold point (O). Product name: Fabric Switchboard, short form Switchboard. Fabric is the CEO AI agent in development; the Fabric technical kernel retains its technical meaning.
 
 Use the semantic `--pc-*` tokens, not sampled colors. Gold is action/selection/focus; peach is warning, green positive, pink-red negative, blue information. Always pair state color with text. Plum/magenta belong to brand illustration, not operational status. Marketing can use the existing spacious hero and fruit; desktop uses compact rows and quiet surfaces. No animated backgrounds inside repeated workflows.
 

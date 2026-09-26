@@ -10,6 +10,6 @@ Contract: brand-contract v1
 | tokens.get | Get the CSS tokens | design-system/index.html | SCN-005 | proposed | copy |
 
 | toolkit.explore | Explore the toolkit | index.html | SCN-001 | proposed | copy |
-| fabric.explore | Explore Fabric | index.html | SCN-006 | proposed | copy |
-| build.follow | Follow the build | fabric/index.html | SCN-007 | proposed | copy |
-| author.follow | Follow on Twitter | index.html | SCN-007 | proposed | copy |
+| fabric.explore | Explore Fabric | index.html | SCN-007 | proposed | copy |
+| build.follow | Follow the build | fabric/index.html | SCN-008 | proposed | copy |
+| author.follow | Follow on Twitter | index.html | SCN-008 | proposed | copy |
