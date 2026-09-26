@@ -1,0 +1,67 @@
+{
+  "source_commit": "86acb6c3a6908f68ce1d541ee25f2de280e72ea6",
+  "deployment": {
+    "id": "addbd0c1-7ee0-418c-a122-be5241a6664c",
+    "source": "api",
+    "strategy": "percentage",
+    "author_email": "sergeysheleg4@gmail.com",
+    "annotations": {
+      "workers/message": "Restore original hero and Explore tools CTA; gi...",
+      "workers/triggered_by": "upload"
+    },
+    "versions": [
+      {
+        "version_id": "05dfdff2-7f8f-4ad6-a5e7-1b5031428f3b",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-26T22:27:23.539381Z"
+  },
+  "checks": [
+    {
+      "path": "/",
+      "matches_build": true
+    },
+    {
+      "path": "/switchboard/",
+      "matches_build": true
+    },
+    {
+      "path": "/observatory/",
+      "matches_build": true
+    },
+    {
+      "path": "/fabric/",
+      "matches_build": true
+    },
+    {
+      "path": "/inbox/",
+      "matches_build": true
+    },
+    {
+      "path": "/design-system/",
+      "matches_build": true
+    },
+    {
+      "path": "/styles.css",
+      "matches_build": true
+    },
+    {
+      "path": "/design-system/tokens.css",
+      "matches_build": true
+    },
+    {
+      "url": "https://passioncode.ai/switchboard/download/macos",
+      "status": 302
+    },
+    {
+      "url": "https://passioncode.ai/switchboard/download/windows",
+      "status": 302
+    },
+    {
+      "url": "https://www.passioncode.ai/",
+      "status": 301
+    }
+  ],
+  "browser": "Live H1 verified; Explore the tools click reached https://passioncode.ai/#products. Local 1280x720 and 390x844: CTA visible and no horizontal overflow."
+}

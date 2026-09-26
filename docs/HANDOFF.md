@@ -10,7 +10,9 @@ Upstream Inbox publication `3d44aa6` is included; no CSS or other product page c
 Checks: npm run check and npm run build passed (6 pages, 23 public files); copy extraction
 passed; brand lint 0 errors/284 advisory warnings; UX lint consistent. Browser at 1280×720
 and 390×844 showed the primary CTA within the viewport and no horizontal overflow;
-clicking it reached `/#products`. Publication receipt follows after live verification.
+clicking it reached `/#products`. Published source [86acb6c](https://github.com/passioncode-ai/passioncode-ai.github.io/commit/86acb6c3a6908f68ce1d541ee25f2de280e72ea6); [live receipt](HERO_RECEIPT.json).
+All 8 checked live files match the build, both downloads and www redirect pass.
+The live browser confirmed the restored H1 and primary CTA navigation to /#products.
 Next task: inspect the published hero and maintain product facts from their owning releases.
 Local-only: .DS_Store, dependencies, preview state and ephemeral deployment credentials.
 
