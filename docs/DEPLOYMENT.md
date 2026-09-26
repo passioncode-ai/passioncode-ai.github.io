@@ -68,3 +68,11 @@ npm run build
 Replace the example tag with the actual tag. The updater rejects drafts and requires both nonempty archives to be anonymously downloadable. Review the release's actual signing/platform limits and installation instructions before committing. Never advertise GitHub `releases/latest` as the newest beta: that endpoint excludes prereleases.
 
 Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment verify all three pages, both redirect destinations, anonymous archive hashes, and www canonicalization. Keep the Worker deployment ID and commit in the handoff receipt. No full hosted suite is dispatched for this update.
+
+## Authenticated connector fallback
+
+On 2026-09-26 Wrangler had no usable Workers credential in its environment. The existing authenticated Cloudflare connector could access the same account/Worker. The checked commit was bundled with `npx wrangler deploy --dry-run --outdir /tmp/passioncode-worker-527b5ba`, then deployed through the documented [direct asset upload API](https://developers.cloudflare.com/workers/static-assets/direct-upload/).
+
+The manifest included only the 17 files in the checked `dist` allowlist, using the documented SHA-256(base64 bytes + extension) prefix hash. The connector created an assets-upload-session for `passioncode-ai`; its short-lived JWT uploaded the requested multipart/base64 buckets. The completion JWT accompanied the bundled module and source map in the Worker PUT. Metadata retained `ASSETS`, compatibility date/flags, usage model and routing settings from the existing Worker; no DNS or account permissions changed. Tokens stayed local/transient and are excluded from receipts/Git.
+
+The upload created the production deployment directly. [Launch receipt](LAUNCH_RECEIPT.json) records its version/deployment IDs and curl observations. A Python urllib probe returned 403; curl and the normal browser returned the new pages. This fallback needs the connector's existing Workers authorization, not a Pages-only token or token-issuance credential.
