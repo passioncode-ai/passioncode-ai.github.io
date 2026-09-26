@@ -15,7 +15,7 @@ class Text(HTMLParser):
         if tag in ('script','style'): self.ignore -= 1
     def handle_data(self, data):
         if not self.ignore and data.strip(): self.lines.append(data.strip())
-for source in ('index.html','switchboard/index.html','fabric/index.html','observatory/index.html','design-system/index.html'):
+for source in ('index.html','switchboard/index.html','fabric/index.html','inbox/index.html','observatory/index.html','design-system/index.html'):
     parser=Text(); parser.feed((ROOT/source).read_text())
     target=ROOT/'docs/brand/copy'/source.replace('/','-').replace('.html','.md')
     content='Contract: brand-contract v1\n\n<!-- Generated from '+source+'; edit source and rerun scripts/extract-public-copy.py. -->\n\n'+'\n\n'.join(parser.lines)+'\n'
@@ -23,4 +23,4 @@ for source in ('index.html','switchboard/index.html','fabric/index.html','observ
         if not target.exists() or target.read_text()!=content: raise SystemExit('Stale public-copy projection: '+source)
     else:
         target.parent.mkdir(parents=True,exist_ok=True);target.write_text(content)
-print('PASS: 5 public HTML text projections')
+print('PASS: 6 public HTML text projections')

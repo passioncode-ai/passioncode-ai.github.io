@@ -11,6 +11,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-03 | Design system | SCN-005 |
 | SCR-04 | Observatory | SCN-006 |
 | SCR-05 | Fabric | SCN-007, SCN-008 |
+| SCR-06 | Fabric Inbox | SCN-009 |
 
 ### SCR-01: Home
 **Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008. Teams hero with download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline; public repositories; author/About. Header and footer expose the same main sections on mobile.
@@ -58,3 +59,14 @@ Screens describe public website behavior, not acceptance of native Switchboard o
 **Indexable:** yes; canonical URL, WebPage data and sitemap. No downloadable SoftwareApplication claim.
 **Without JS:** all content and navigation. No fake functional agent demo, waitlist or download.
 **Entity:** Fabric, the CEO AI agent in development within PassionCode.ai.
+
+### SCR-06: Fabric Inbox
+**Scenarios:** SCN-009. Desktop mail purpose, provider status, toolkit context and FAQ.
+**Web surface:** public
+**Route:** https://passioncode.ai/inbox/
+**Answers:** What does Inbox do and can I use it today?
+**Indexable:** yes; canonical URL, WebPage structured data describing software in development, and sitemap.
+**Without JS:** all content, status anchor, sibling product links and native FAQ.
+**Entity:** Fabric Inbox, desktop mail client in private development from PassionCode.ai.
+
+Inbox falsifier: a reader could mistake the page for a public release or a working generic IMAP/Outlook offering. The status appears in the first viewport and is repeated beside the provider roadmap. Composition follows the existing product page; no new animation or visual direction is introduced.

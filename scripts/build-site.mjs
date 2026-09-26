@@ -11,6 +11,8 @@ const publicFiles = [
   'fabric/index.html',
   'switchboard/release.json',
   'observatory/index.html',
+  'inbox/index.html',
+  'assets/inbox-mark.svg',
   'design-system/index.html',
   'design-system/tokens.css',
   'assets/switchboard-mark.svg',

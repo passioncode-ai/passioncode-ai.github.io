@@ -180,6 +180,28 @@ Explore Fabric
 
 In active development. No public download yet.
 
+IN DEVELOPMENT · DESKTOP MAIL
+
+Fabric Inbox
+
+Your mail.
+
+A place in the toolkit.
+
+A desktop mail client in development for the PassionCode family. Cloudflare and Gmail are implemented in the preview; a shared account interface is in progress. General IMAP and Outlook support are planned.
+
+Explore Inbox
+
+↗
+
+FABRIC INBOX / IN DEVELOPMENT
+
+MAIL
+
++
+
+ACCOUNTS
+
 03 / THE BUILD PIPELINE
 
 What’s here.
@@ -187,6 +209,16 @@ What’s here.
 What we’re building.
 
 Each part ships when it has something useful to do. Here is where the toolkit stands today.
+
+In development
+
+Fabric Inbox
+
+Desktop mail. Cloudflare and Gmail preview; shared account interface in progress.
+
+Explore Inbox
+
+↗
 
 Available in beta
 
@@ -303,6 +335,8 @@ From vibe coding to passion coding.
 Switchboard
 
 Observatory
+
+Inbox
 
 Fabric
 

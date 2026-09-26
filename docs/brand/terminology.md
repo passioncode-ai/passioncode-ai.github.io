@@ -12,6 +12,7 @@ Contract: brand-contract v1
 |---|---|
 | PassionCode.ai | Passion Code AI |
 | Fabric Switchboard | Fabric Switcher |
+| Fabric Inbox | Fabric Mail |
 | Claude Code | Cloud Code |
 | Codex | CodeX |
 | Windows | WINDOWS |
@@ -35,3 +36,5 @@ Contract: brand-contract v1
 | toolkit | The collection of tools; use consistently instead of alternating with toolset. |
 | work cycle | The jobs the toolkit is designed around; available account setup is distinct from Fabric’s planned project workflow. |
 | build pipeline | Public product availability and current development direction, with no promised dates. |
+
+| Inbox | Short form of Fabric Inbox, the desktop mail client in development. |

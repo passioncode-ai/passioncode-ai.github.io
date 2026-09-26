@@ -218,6 +218,8 @@ Switchboard
 
 Observatory
 
+Inbox
+
 Fabric
 
 GitHub & source

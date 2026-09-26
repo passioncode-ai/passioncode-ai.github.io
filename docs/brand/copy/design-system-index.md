@@ -22,13 +22,13 @@ Download
 
 ↓
 
-PASSIONCODE / DESIGN SYSTEM 1.0
+PASSIONCODE / DESIGN SYSTEM 1.1
 
 One family.
 
 A shared language.
 
-Dark surfaces keep the work quiet. Yellow makes the next action clear. The passion fruit identifies the family; each product gets a mark of its own.
+Dark and light palettes share one set of roles. Yellow makes the next action clear. The passion fruit identifies the family; each product gets a mark of its own.
 
 Get the CSS tokens
 
@@ -48,11 +48,25 @@ Switchboard · the first public tool
 
 Project Observatory · the second public tool
 
+Fabric Inbox · desktop mail in development
+
 02 / COLOR
 
 Color with a purpose.
 
-Gold marks an action or selection. Status colors keep their own meaning and always come with a label.
+Gold marks an action or selection. Status colors keep their own meaning and always come with a label. The default palette is dark. Set
+
+data-theme="light"
+
+on the document root for white surfaces and dark text. Use
+
+--pc-link
+
+and
+
+--pc-focus
+
+for readable links and focus in either theme.
 
 Canvas
 
@@ -104,7 +118,7 @@ Explore Switchboard
 
 Back to PassionCode
 
-The marketing site, Switchboard and Project Observatory use these shared tokens. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.
+The marketing site, Switchboard and Project Observatory use the shared dark system. Version 1.1 adds an opt-in light palette for products adopting it. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.
 
 PassionCode
 
@@ -115,6 +129,8 @@ From vibe coding to passion coding.
 Switchboard
 
 Observatory
+
+Inbox
 
 Fabric
 
