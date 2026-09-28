@@ -22,7 +22,7 @@ Contract: brand-contract v1
 | Observatory license | MIT | [LICENSE](https://github.com/passioncode-ai/project-observatory-dashboard/blob/main/LICENSE) | 2026-09-26 | 2026-12-26 | yes |
 | Observatory scanning limit | known-value scanning cannot find unknown secrets or prove absence | [SECURITY](https://github.com/passioncode-ai/project-observatory-dashboard/blob/main/SECURITY.md) | 2026-09-26 | 2026-12-26 | yes |
 
-| Inbox role and status | Fabric Inbox is a desktop mail client in private development; no public release or signed download | [bounded packet](../tasks/2026-09-26-inbox-site.md), source evidence at d577462572d332c1e7c157504b7dffd9cde00bea | 2026-09-26 | 2026-10-26 | yes |
-| Inbox providers | Cloudflare and Gmail implemented in development preview; shared account interface in progress; general IMAP and Outlook planned | [bounded packet and source receipt](../tasks/2026-09-26-inbox-site.md) | 2026-09-26 | 2026-10-26 | yes |
+| Inbox role and status | Fabric Inbox is a mail client in private development: important mail first across accounts, project addresses answered by agents under a reply policy; tested with synthetic mail only; no public release or signed download | passioncode-ai/fabric-inbox branch `agent/agents-triage-2026-09-28` (run brief `docs/app-store/tasks/2026-09-28-agents-triage-run.md`) | 2026-09-28 | 2026-10-28 | yes |
+| Inbox providers | Cloudflare and Gmail work in the preview (unified inbox shipped); general IMAP and Outlook planned (personal accounts synced on the Mac) | same run brief; roadmap L1 | 2026-09-28 | 2026-10-28 | yes |
 
 | homepage hero | The agent-agnostic operating system for AI-native teams. | Explicit operator correction 2026-09-27; original `d5c168d:index.html` | 2026-09-27 | 2026-12-27 | yes |

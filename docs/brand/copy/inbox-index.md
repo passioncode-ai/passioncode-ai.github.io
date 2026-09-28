@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from inbox/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Inbox | Desktop mail in development | PassionCode.ai
+Fabric Inbox | Mail that shows what matters | PassionCode.ai
 
-Fabric Inbox is a desktop mail client in development. Cloudflare and Gmail are implemented in the preview. Read its current status and planned account support.
+Fabric Inbox is a mail client in development: important mail first across Cloudflare and Gmail, and project addresses answered by agents within rules you set. Tested with test mail; no public release yet.
 
 Skip to content
 
@@ -30,11 +30,11 @@ FABRIC INBOX · IN DEVELOPMENT
 
 Your mail.
 
-Part of your work.
+Important first.
 
-A desktop mail client for the PassionCode toolkit. We’re bringing accounts and messages into one place, starting with Cloudflare and Gmail.
+One inbox for your accounts and your project addresses. What needs you comes first; newsletters and notifications wait in groups. An address like support@ on a project domain gets an agent that answers what you allow and drafts the rest for you.
 
-See development status
+See how it works
 
 ↓
 
@@ -42,41 +42,67 @@ Explore the toolkit
 
 ↗
 
-In development. No public release or signed download is available yet.
+In development and tested with test mail, not yet with real accounts. No public release or signed download is available yet.
 
-FABRIC INBOX / DESKTOP MAIL
+FABRIC INBOX / MAIL + AGENTS
 
-MAIL
+IMPORTANT
 
 +
 
-ACCOUNTS
+ANSWERED
 
-01 / DEVELOPMENT STATUS
+01 / WHAT IT DOES
 
-What is here.
+Less to read.
+
+Less to answer.
+
+Inbox sorts every account the same way and gives project addresses someone to answer them.
+
+IMPORTANT FIRST
+
+What needs you, on top.
+
+Unread mail from people, security alerts, failed payments, app review rejections and failed builds come first. Receipts, newsletters and notifications sit in collapsed groups you open when you want them. Each raised message says why it is there.
+
+PROJECT ADDRESSES
+
+An agent on every address.
+
+Add support@ or hello@ on a project domain and choose who answers it. One agent can serve several addresses, with its own instructions, knowledge and tools. Mail to an address that does not exist is bounced and listed, never lost.
+
+WITHIN YOUR RULES
+
+Sends only what it may.
+
+An agent sends an answer only when it rests on its knowledge, fits the topics you allowed and stays within its daily limit. Everything else waits as a draft with the reason. Automated mail is never answered, and every answer is on record.
+
+02 / DEVELOPMENT STATUS
+
+What is built.
 
 What comes next.
 
-Inbox is a development preview. The provider work and the everyday account experience are at different stages.
+Inbox is in development. Here is exactly how far each part has come.
 
-IMPLEMENTED IN THE PREVIEW
+BUILT · TESTED WITH TEST MAIL
 
-Cloudflare and Gmail.
+Cloudflare and Gmail, sorting and agents.
 
-The preview includes Cloudflare and Gmail mail integrations. This is implementation progress, not a public release or a promise of production readiness.
+Cloudflare addresses, Gmail, the important-first inbox, project addresses and agents work end to end with test mail. They have not yet run on a real account or answered a real message.
 
-IN PROGRESS
+NEXT
 
-Accounts in one workspace.
+The first live address.
 
-A shared account interface is being built so the desktop client can bring supported accounts into the same everyday workflow.
+Running the server and answering real mail on one project address comes next. We will say so here when it happens.
 
 PLANNED
 
-More mail providers.
+Personal accounts on the Mac.
 
-General IMAP and Outlook support are planned. Neither is offered as a working integration today.
+General IMAP and Outlook support are planned, with personal accounts synced on the Mac. Neither is offered as a working integration today.
 
 02 / THE PASSIONCODE FAMILY
 
@@ -114,13 +140,15 @@ PassionCode toolkit
 
 Does it support any mail account?
 
-No. Cloudflare and Gmail are implemented in the preview. General IMAP and Outlook support are planned, and the shared account interface is still in progress.
+Not yet. Cloudflare and Gmail work in the preview. General IMAP and Outlook support are planned.
+
+Will it answer my mail by itself?
+
+Only on project addresses you give an agent, and only answers its rules allow. A new agent drafts every answer until you let it send. Your personal mail is sorted, not answered.
 
 Is Inbox the Fabric agent?
 
-No. Inbox is a desktop mail client.
-
-Inbox
+No. Inbox is a mail client; its agents answer project addresses within the rules you set.
 
 Fabric
 
