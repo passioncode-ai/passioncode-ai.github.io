@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import worker from '../worker/index.js'
 import release from '../switchboard/release.json' with { type: 'json' }
+import fabric from '../fabric/release.json' with { type: 'json' }
 
 const config = JSON.parse(readFileSync(new URL('../wrangler.json', import.meta.url)))
 assert.equal(config.name, 'passioncode-ai')
@@ -23,10 +24,17 @@ for (const os of ['macos', 'windows']) {
     assert.equal(response.headers.get('x-robots-tag'), 'noindex')
   }
 }
+for (const suffix of ['', '/', '?next=https://example.com']) {
+  const response = await worker.fetch(new Request(`https://passioncode.ai/fabric/download/macos${suffix}`), env)
+  assert.equal(response.status, 302)
+  assert.equal(response.headers.get('location'), fabric.downloads.macos)
+  assert.equal(response.headers.get('cache-control'), 'no-store')
+  assert.equal(response.headers.get('x-robots-tag'), 'noindex')
+}
 assert.equal(calls, 0)
-for (const path of ['/', '/switchboard/', '/switchboard/download/linux', '/switchboard/download/macos/extra']) {
+for (const path of ['/', '/switchboard/', '/switchboard/download/linux', '/switchboard/download/macos/extra', '/fabric/download/windows', '/fabric/download/macos/extra']) {
   const response = await worker.fetch(new Request(`https://passioncode.ai${path}`), env)
   assert.equal(await response.text(), path)
 }
-assert.equal(calls, 4)
-console.log('PASS: Worker canonical host, OS download redirects, query isolation, no-store and asset/404 fallback')
+assert.equal(calls, 6)
+console.log('PASS: Worker canonical host, Switchboard and Fabric download redirects, query isolation, no-store and asset/404 fallback')

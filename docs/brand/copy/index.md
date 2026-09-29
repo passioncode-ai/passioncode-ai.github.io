@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode.ai | A toolkit for AI-native teams
 
-A toolkit for AI-native teams. Download Switchboard for Claude Code and Codex, explore the workflow, and follow Fabric as we build our CEO AI agent.
+A toolkit for AI-native teams. Download Switchboard for Claude Code and Codex, explore the workflow, and try the early preview of Fabric, our CEO AI agent.
 
 Skip to content
 
@@ -78,7 +78,7 @@ Keep a project’s purpose, context and decisions together beyond a single conve
 
 Fabric
 
-In development
+Early preview
 
 03
 
@@ -164,7 +164,7 @@ Explore Observatory
 
 The actual dashboard · synthetic demo projects.
 
-IN DEVELOPMENT
+EARLY PREVIEW
 
 Fabric.
 
@@ -178,7 +178,11 @@ Explore Fabric
 
 ↗
 
-In active development. No public download yet.
+Early preview for macOS on Apple silicon.
+
+Requirements and download
+
+.
 
 IN DEVELOPMENT · DESKTOP MAIL
 
@@ -240,11 +244,11 @@ Get started
 
 ↗
 
-In development
+Early preview
 
 Fabric
 
-Our current focus: agent management and project coordination.
+Our current focus: agent management and project coordination. A macOS preview is available.
 
 Explore Fabric
 
@@ -290,7 +294,7 @@ Local dashboard, CLI, setup guides, tests and the security model.
 
 github.com/passioncode-ai/project-observatory-dashboard
 
-Fabric is still in private development. Its public page describes the direction, not an available source release.
+Fabric’s source is private. Its page offers the signed macOS preview, not a source release.
 
 Visit PassionCode on GitHub
 

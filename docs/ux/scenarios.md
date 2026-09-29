@@ -51,12 +51,13 @@ See [foundation](foundation.md).
 - **Steps:**
   1. Read the work cycle → account setup is available through Switchboard; project coordination and review describe Fabric's direction.
   2. Read the build pipeline → available beta and in-development work are distinct, with no promised release date.
-  3. Follow Explore Fabric → its own page explains project purpose, agents, authority and evidence with an in-development notice.
-- **Expected result:** Reader understands the intended relationship without assuming a shipped integrated platform or downloadable Fabric.
+  3. Follow Explore Fabric → its own page explains project purpose, agents, authority and evidence, shows the actual window on synthetic demo data, and labels the build an early preview.
+  4. Read Get Fabric → the requirements (Apple silicon, Docker, Supabase CLI) and the preview's limits sit beside the macOS download → the download redirects to the public release asset.
+- **Expected result:** Reader understands what the preview does today and what it needs before downloading, without assuming a shipped integrated platform, an Intel build or a Fabric that replies.
 - **Alt paths:** direct product URL; narrow-screen or keyboard navigation; return to available Switchboard.
-- **UI elements:** Work cycle, build pipeline, Explore Fabric, Follow the build, Switchboard link
+- **UI elements:** Work cycle, build pipeline, Explore Fabric, Follow the build, Download for macOS, release notes and checksum, Switchboard link
 - **States covered:** static populated content; network error.
-- **Errors & recovery:** Missing network: browser error and reload. No download button for unavailable Fabric.
+- **Errors & recovery:** Missing network: browser error and reload. The download route answers only for macOS; any other platform path falls through to the 404. Missing Docker or Supabase CLI is named by Fabric on its first start, not by the site.
 - **Status:** draft
 - **Coverage:** index.html and fabric/index.html; verification pending this iteration.
 - **Product:** unobserved

@@ -1,0 +1,10 @@
+{
+  "tag": "fabric-v0.2.0",
+  "version": "0.2.0",
+  "repository": "passioncode-ai/passioncode-ai.github.io",
+  "releaseUrl": "https://github.com/passioncode-ai/passioncode-ai.github.io/releases/tag/fabric-v0.2.0",
+  "downloads": {
+    "macos": "https://github.com/passioncode-ai/passioncode-ai.github.io/releases/download/fabric-v0.2.0/Fabric-0.2.0-arm64.dmg"
+  },
+  "sha256": "ae04aabdf67c62bd74c4e8d1d0a8e120998b031e0d37a81c3c3309e57b2b9ae6"
+}

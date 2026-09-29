@@ -4,7 +4,8 @@ Contract: brand-contract v1
 | Fact | Value | Source | Checked | Review by | Public |
 |---|---|---|---|---|---|
 | positioning | PassionCode.ai — A toolkit for AI-native teams. | Operator continuation 2026-09-26; [storytelling brief](../tasks/2026-09-26-site-storytelling.md) | 2026-09-26 | 2026-12-26 | yes |
-| CEO name and status | Fabric is the CEO AI agent in development, focused on agent coordination; not a public download | Operator request; Fabric ADR-0057 | 2026-09-26 | 2026-10-26 | yes |
+| CEO name and status | Fabric is the CEO AI agent, an early preview for macOS on Apple silicon; its conversation saves messages but does not reply yet | Operator request 2026-09-29 (a DMG downloadable from the site); Fabric ADR-0057 | 2026-09-29 | 2026-10-29 | yes |
+| Fabric release | 0.2.0 early preview; macOS arm64 DMG, Developer ID signed, notarized and stapled; requires Docker and the Supabase CLI | [public release with SHA-256](https://github.com/passioncode-ai/passioncode-ai.github.io/releases/tag/fabric-v0.2.0); [selected manifest](../../fabric/release.json) | 2026-09-29 | 2026-10-29 | yes |
 | Switchboard release | 0.3.1-beta.1 | [public release](https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.3.1-beta.1); [selected manifest](../../switchboard/release.json) | 2026-09-26 | 2026-10-26 | yes |
 | license | MIT | [Switchboard LICENSE](https://github.com/passioncode-ai/fabric-switchboard/blob/main/LICENSE) | 2026-09-26 | 2026-12-26 | yes |
 | account features | explicit current capture, Claude Swap import, provider/pool separation, usage windows, opt-in rotation, desktop and CLI | [0.3 implementation source](https://github.com/passioncode-ai/fabric-switchboard/tree/0b415ef6f5c7b8046afe55152a730fd620afab7d) | 2026-09-26 | 2026-10-26 | yes |
@@ -14,7 +15,7 @@ Contract: brand-contract v1
 | design system | 1.1; dark/gold and opt-in light tokens, S, O and Inbox product marks; Fabric runtime not yet migrated | [design system](../../design-system/README.md) | 2026-09-26 | 2026-12-26 | yes |
 
 | author | Sergey; Twitter @sshlg93, https://x.com/sshlg93 | [Public GitHub profile](https://github.com/sshlg) links this Twitter; `gh api user` returned login sshlg and twitter_username sshlg93 | 2026-09-26 | 2026-12-26 | yes |
-| source availability | Switchboard, Observatory and website public; Fabric private | GitHub repository visibility query recorded in [brief](../tasks/2026-09-26-site-storytelling.md) | 2026-09-26 | 2026-10-26 | yes |
+| source availability | Switchboard, Observatory and website public; Fabric source private, its signed macOS build public | GitHub repository visibility query recorded in [brief](../tasks/2026-09-26-site-storytelling.md) | 2026-09-26 | 2026-10-26 | yes |
 
 | Observatory release | 0.4.0 | [CHANGELOG](https://github.com/passioncode-ai/project-observatory-dashboard/blob/main/CHANGELOG.md) | 2026-09-26 | 2026-10-26 | yes |
 | Observatory platforms | macOS and Linux, Python 3.11+ with SQLite extension support | [README](https://github.com/passioncode-ai/project-observatory-dashboard#readme) | 2026-09-26 | 2026-12-26 | yes |

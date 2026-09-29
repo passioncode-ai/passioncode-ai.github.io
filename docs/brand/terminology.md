@@ -31,7 +31,7 @@ Contract: brand-contract v1
 |---|---|
 | PassionCode.ai | The umbrella toolkit for AI-native teams; PassionCode is the short family label. |
 | Switchboard | Short form of Fabric Switchboard, the open-source account manager. |
-| Fabric | The CEO AI agent in development; the kernel retains a technical meaning in internal docs. |
+| Fabric | The CEO AI agent, in early preview; the kernel retains a technical meaning in internal docs. |
 
 | toolkit | The collection of tools; use consistently instead of alternating with toolset. |
 | work cycle | The jobs the toolkit is designed around; available account setup is distinct from Fabric’s planned project workflow. |
