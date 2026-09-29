@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Project Observatory | Local dashboard for agent-operated projects | PassionCode.ai
 
-See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is an open-source local dashboard from PassionCode.ai, in English or Russian.
+See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is a source-available local dashboard from PassionCode.ai, in English or Russian.
 
 Skip to content
 
@@ -38,7 +38,7 @@ View source
 
 ↗
 
-Open source · MIT · macOS + Linux · Python 3.11+
+Source-available · macOS + Linux · Python 3.11+
 
 ONE VIEW / YOUR PROJECTS
 
@@ -104,7 +104,7 @@ Start with your own workspace.
 
 Latest release:
 
-0.4.0
+0.8.1
 
 . No API key is needed for the first local observation. Hand the setup to your coding agent, or run it yourself.
 
@@ -176,7 +176,7 @@ reports what is enabled and what is missing, and the dashboard says when a sourc
 
 Is it the same thing as Switchboard?
 
-No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps the projects those agents work on in view. Both are open-source PassionCode tools you can use today.
+No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps the projects those agents work on in view. Both are source-available PassionCode tools you can use today.
 
 And Fabric?
 
@@ -188,13 +188,17 @@ Explore Fabric
 
 Can I inspect or build it myself?
 
-Yes. Project Observatory is open source under the MIT license. The
+Yes. Project Observatory is source-available under PolyForm Noncommercial or Internal Use; a commercial license is available on request from
+
+contact@passioncode.ai
+
+. Releases up to and including 0.8.1 were published under MIT and remain available under it. The
 
 repository
 
 includes the source, tests, the security model and release notes.
 
-OPEN SOURCE · LOCAL FIRST
+SOURCE-AVAILABLE · LOCAL FIRST
 
 Your projects. Your evidence.
 

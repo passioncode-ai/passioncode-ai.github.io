@@ -6,15 +6,15 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 
 | ID | Screen | Scenarios |
 |---|---|---|
-| SCR-01 | Home | SCN-001, SCN-006, SCN-007, SCN-008 |
+| SCR-01 | Home | SCN-001, SCN-006, SCN-007, SCN-008, SCN-010 |
 | SCR-02 | Switchboard | SCN-002, SCN-003, SCN-004 |
-| SCR-03 | Design system | SCN-005 |
+| SCR-03 | Design system | SCN-005, SCN-010 |
 | SCR-04 | Observatory | SCN-006 |
 | SCR-05 | Fabric | SCN-007, SCN-008 |
 | SCR-06 | Fabric Inbox | SCN-009 |
 
 ### SCR-01: Home
-**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008. Original operating-system hero with primary Explore the tools → #products and secondary download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline; public repositories; author/About. Header and footer expose the same main sections on mobile.
+**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010. Original operating-system hero with primary Explore the tools → #products and secondary download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline including Fabric Dashboards (no product page; it links its public release); public source-available repositories; author/About. Header and footer expose the same main sections on mobile.
 **Web surface:** public
 **Route:** https://passioncode.ai/
 **Answers:** What is PassionCode and which product can I use today?
@@ -29,7 +29,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Answers:** What does Switchboard do and where can I download it?
 **Indexable:** yes; canonical product URL, SoftwareApplication data and sitemap. Redirect endpoints noindex.
 **Without JS:** requirements, beta limits, download/source links and native details/summary FAQ.
-**Entity:** Fabric Switchboard, MIT desktop account workbench from PassionCode.ai.
+**Entity:** Fabric Switchboard, source-available desktop account workbench from PassionCode.ai.
 
 ### SCR-04: Project Observatory
 **Scenarios:** SCN-006. Purpose, synthetic screenshot, features, setup steps, limits and FAQ.
@@ -38,10 +38,10 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Answers:** What does Project Observatory show, what does it read, and how do I start?
 **Indexable:** yes; canonical product URL, SoftwareApplication data and sitemap.
 **Without JS:** complete copy, setup steps, source and guide links, native details/summary FAQ.
-**Entity:** Project Observatory, MIT local dashboard from PassionCode.ai (English or Russian interface).
+**Entity:** Project Observatory, source-available local dashboard from PassionCode.ai (English or Russian interface).
 
 ### SCR-03: Design system
-**Scenarios:** SCN-005. Shared identity, color roles, typography and reusable CSS.
+**Scenarios:** SCN-005, SCN-010. Shared identity and product marks (including Fabric Dashboards), color roles, typography and reusable CSS.
 **Web surface:** public
 **Route:** https://passioncode.ai/design-system/
 **Answers:** Which shared visual rules do PassionCode products use?

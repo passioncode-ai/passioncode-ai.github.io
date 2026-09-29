@@ -16,5 +16,6 @@ Contract: brand-contract v1
 | author.follow | Follow on Twitter | index.html | SCN-008 | proposed | copy |
 
 | inbox.explore | Explore Inbox | index.html | SCN-009 | proposed | copy |
+| dashboards.download | Download Fabric Dashboards | index.html | SCN-010 | proposed | copy |
 | inbox.status | See development status | inbox/index.html | SCN-009 | proposed | copy |
 | toolkit.explore | Explore the toolkit | inbox/index.html | SCN-009 | proposed | copy |

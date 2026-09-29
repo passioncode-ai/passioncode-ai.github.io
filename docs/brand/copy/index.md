@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode.ai | A toolkit for AI-native teams
 
-A toolkit for AI-native teams. Download Switchboard for Claude Code and Codex, explore the workflow, and try the early preview of Fabric, our CEO AI agent.
+A toolkit for AI-native teams: Switchboard for Claude Code and Codex accounts, Project Observatory for your projects, and Fabric, our CEO AI agent, in early preview.
 
 Skip to content
 
@@ -42,7 +42,7 @@ Download Switchboard
 
 First release: Switchboard beta
 
-macOS + Windows · MIT
+macOS + Windows · Source-available
 
 people
 
@@ -58,7 +58,7 @@ Good agents need
 
 a working environment.
 
-An account to run on. A project to work toward. Clear responsibility and a way to check the result. These are the parts of AI-native work we’re building for.
+An account to run on. A project to work toward. Clear responsibility and a way to check the result. These are the parts of an AI-native team’s work we’re building for.
 
 01
 
@@ -108,7 +108,7 @@ Tools you can use today.
 
 Start with your accounts or your projects. Switchboard and Observatory work independently, so you can pick the part you need.
 
-OPEN-SOURCE BETA · macOS + Windows
+SOURCE-AVAILABLE BETA · macOS + Windows
 
 Switchboard
 
@@ -132,11 +132,11 @@ Explore Switchboard
 
 ↗
 
-Free under MIT. Desktop + CLI. Check platform requirements and beta notes before installing.
+Source-available, free for noncommercial and internal use. Desktop + CLI. Check platform requirements and beta notes before installing.
 
 Actual interface · synthetic demo accounts
 
-AVAILABLE NOW · OPEN SOURCE
+AVAILABLE NOW · SOURCE-AVAILABLE
 
 Project Observatory
 
@@ -150,7 +150,7 @@ macOS + Linux
 
 CLI + MCP + dashboard
 
-MIT license
+Source-available
 
 Get started
 
@@ -244,6 +244,20 @@ Get started
 
 ↗
 
+Available now
+
+Fabric Dashboards
+
+One window for the local agent services on your Mac that speak
+
+fabric-service/0.1
+
+, including Project Observatory’s server. Signed and notarized, macOS 13 or later.
+
+Download Fabric Dashboards
+
+↗
+
 Early preview
 
 Fabric
@@ -266,15 +280,15 @@ See the workflow
 
 No promised release dates. Follow the build below for progress as it happens.
 
-04 / OPEN SOURCE
+04 / SOURCE
 
 Use the tools.
 
 Read the source.
 
-Start with a download, go deeper in the code. Switchboard and Observatory are open source under MIT: inspect them, build from source or contribute a fix.
+Start with a download, go deeper in the code. Switchboard, Observatory and Fabric Dashboards are source-available under PolyForm Noncommercial or Internal Use, with a commercial license on request: inspect them, build from source or contribute a fix.
 
-PUBLIC REPOSITORY · MIT
+PUBLIC REPOSITORY · SOURCE-AVAILABLE
 
 ↗
 
@@ -284,7 +298,7 @@ Desktop app, CLI, build instructions, issues and release notes.
 
 github.com/passioncode-ai/fabric-switchboard
 
-PUBLIC REPOSITORY · MIT
+PUBLIC REPOSITORY · SOURCE-AVAILABLE
 
 ↗
 
@@ -294,7 +308,17 @@ Local dashboard, CLI, setup guides, tests and the security model.
 
 github.com/passioncode-ai/project-observatory-dashboard
 
-Fabric’s source is private. Its page offers the signed macOS preview, not a source release.
+PUBLIC REPOSITORY · SOURCE-AVAILABLE
+
+↗
+
+Fabric Dashboards
+
+macOS app, tests, runbook and release notes with checksums.
+
+github.com/passioncode-ai/fabric-dashboards
+
+Releases already published under MIT stay under MIT: Switchboard up to 0.3.1-beta.1, Observatory up to 0.8.1 and Fabric Dashboards 0.1.0. Fabric’s source is private. Its page offers the signed macOS preview, not a source release.
 
 Visit PassionCode on GitHub
 
@@ -308,7 +332,7 @@ the work.
 
 I’m Sergey. I’m building PassionCode for teams whose everyday work already includes AI agents.
 
-The starting point is practical: make the setup easier to manage, then bring more structure to how the work gets done. Switchboard and Observatory are available now. Fabric is the next part I’m working on.
+The starting point is practical: make the setup easier to manage, then bring more structure to how the work gets done. Switchboard, Observatory and Fabric Dashboards are available now. Fabric is the next part I’m working on.
 
 Follow the build, the decisions and the next releases.
 

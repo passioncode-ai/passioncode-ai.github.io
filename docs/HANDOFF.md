@@ -1,3 +1,28 @@
+# Current handoff — source-available wording and Fabric Dashboards, 2026-09-29
+
+Objective: apply the operator's 2026-09-29 decisions to the public site — Switchboard,
+Observatory and Fabric Dashboards are source-available (PolyForm Noncommercial or Internal Use,
+commercial license on request; published MIT releases stay MIT), Observatory's latest release is
+0.8.1, the tagline names teams, and Fabric Dashboards 0.1.0 is listed with the family.
+[Bounded packet](tasks/2026-09-29-source-available-and-dashboards.md) (decisions, REQ, receipts).
+Changed: all six pages (copy, metadata, JSON-LD `license` → the two PolyForm URLs, footer
+anchor `/#source` with `#open-source` kept as a legacy anchor), `styles.css` (one rule: code in
+the build list does not wrap), `check-site`/`build-site`, brand facts/terminology/strings/copy,
+SCN-004/006/010, FLW-02/03, SCR-01..04, `README.md`, `design-system/README.md`.
+Fabric Dashboards has no product page by decision (packet): pipeline row, source card and
+design-system mark link its public repository and release.
+Checks: `npm run check` exit 0 (4 PASS lines), `npm run build` exit 0 (28 public entries),
+`extract-public-copy.py --check` exit 0, `git diff --check` exit 0; super-ux `ux_lint.py` OK;
+`brand_lint.py docs/brand` 2 errors / 296 warnings — both errors pre-existing (B020
+`toolkit.explore`, B021 `build.follow`), warnings all B022. Planted red: the old Observatory page
+fails on JSON-LD license; the old homepage fails on "open source". Browser (local `dist/`)
+1280×900 and 500×844: no horizontal overflow; five marks load on the design system.
+Published: see the live receipt `SOURCE_AVAILABLE_RECEIPT.json` added after deploy.
+Next task: when Switchboard or Observatory publish their first PolyForm release, update the
+version rows in `facts.md` and the pages; the MIT-history sentences keep naming the last MIT tag.
+
+---
+
 # Current handoff — Fabric early preview download, 2026-09-29
 
 Objective: the Fabric page offers the notarized macOS DMG with its requirements, limits and real

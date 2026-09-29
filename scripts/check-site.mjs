@@ -7,6 +7,11 @@ const pages = ['index.html', 'switchboard/index.html', 'fabric/index.html', 'inb
 const css = readFileSync(resolve(root, 'styles.css'), 'utf8')
 const release = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
 const read = path => readFileSync(resolve(root, path), 'utf8')
+// Switchboard, Observatory and Fabric Dashboards are source-available, not open source
+// (operator decision 2026-09-29). Pages say so in words and name both licenses; JSON-LD
+// points at the license texts themselves, not at a repository file that could change.
+const LICENSE_WORDING = ['Source-available', 'PolyForm Noncommercial', 'Internal Use', 'commercial license']
+const LICENSE_URLS = ['https://polyformproject.org/licenses/noncommercial/1.0.0/', 'https://polyformproject.org/licenses/internal-use/1.0.0/']
 const downloadPaths = new Set(['/switchboard/download/macos', '/switchboard/download/windows', '/fabric/download/macos'])
 for (const file of pages) {
   const html = read(file)
@@ -19,7 +24,14 @@ for (const file of pages) {
   assert.ok(html.includes('href="#main"'), `${file}: skip link`)
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1])
   assert.equal(new Set(ids).size, ids.length, `${file}: duplicate IDs`)
-  for (const block of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(block[1])
+  for (const block of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    const data = JSON.parse(block[1])
+    if (data['@type'] === 'SoftwareApplication') assert.deepEqual(data.license, LICENSE_URLS, `${file}: JSON-LD license must name both PolyForm licenses`)
+  }
+  // Attributes are excluded: the legacy #open-source anchor keeps old links working.
+  const words = html.replace(/\s(?:id|href)="[^"]*"/g, '')
+  assert.ok(!/open[- ]source/i.test(words), `${file}: the public tools are source-available, not open source`)
+  assert.ok(!/AI-native work\b/.test(words), `${file}: the tagline is "AI-native teams"`)
   for (const [, value] of html.matchAll(/(?:href|src)="([^"\s]+)"/g)) {
     if (!value.startsWith('/') && !value.startsWith('#')) continue
     const url = new URL(value, `https://passioncode.ai/${route}`)
@@ -32,7 +44,7 @@ for (const file of pages) {
 const home = read('index.html')
 for (const text of ['The agent-agnostic operating system for', 'AI-native teams.', 'From vibe coding to passion coding.', 'CEO AI agent', 'in development', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
 const product = read('switchboard/index.html')
-for (const text of [release.version, release.releaseUrl, 'Not yet notarized', 'Unsigned beta', 'not yet verified', 'MIT']) assert.ok(product.includes(text), `product missing ${text}`)
+for (const text of [release.version, release.releaseUrl, 'Not yet notarized', 'Unsigned beta', 'not yet verified', ...LICENSE_WORDING]) assert.ok(product.includes(text), `product missing ${text}`)
 for (const os of ['macos', 'windows']) {
   assert.ok(product.includes(`href="/switchboard/download/${os}"`))
   const target = new URL(release.downloads[os])
@@ -70,8 +82,12 @@ assert.ok(!fabric.includes('github.com/passioncode-ai/fabric/'), 'do not link vi
 for (const page of pages) assert.ok(read(page).includes('href="https://x.com/sshlg93"'), `${page}: author link`)
 
 const observatory = read('observatory/index.html')
-for (const text of ['0.4.0', 'https://github.com/passioncode-ai/project-observatory-dashboard', 'MIT', 'English or Russian', 'cannot find unknown secrets', 'Synthetic demo']) assert.ok(observatory.includes(text), `observatory missing ${text}`)
+for (const text of ['0.8.1', 'https://github.com/passioncode-ai/project-observatory-dashboard', ...LICENSE_WORDING, 'English or Russian', 'cannot find unknown secrets', 'Synthetic demo']) assert.ok(observatory.includes(text), `observatory missing ${text}`)
 assert.ok(home.includes('href="/observatory/"'), 'homepage links Observatory')
+assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
+assert.ok(home.includes('Fabric Dashboards'), 'homepage lists Fabric Dashboards')
+for (const url of ['https://github.com/passioncode-ai/fabric-dashboards', 'https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.1.0']) assert.ok(home.includes(`href="${url}"`), `homepage links ${url}`)
+assert.ok(read('design-system/index.html').includes('/assets/dashboards-mark.svg'), 'design system shows the Fabric Dashboards mark')
 
 const inbox = read('inbox/index.html')
 for (const text of ['in development', 'No public release or signed download', 'Cloudflare and Gmail', 'General IMAP and Outlook', 'href="/fabric/"']) assert.ok(inbox.includes(text), `Inbox missing ${text}`)

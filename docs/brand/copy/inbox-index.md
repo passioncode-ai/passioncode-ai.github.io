@@ -106,7 +106,7 @@ No public release or signed download is available yet. This page describes the d
 
 Is the source public?
 
-Inbox is in private development. Switchboard and Project Observatory are the public, open-source tools available from the
+Inbox is in private development. Switchboard, Project Observatory and Fabric Dashboards are the public, source-available tools in the
 
 PassionCode toolkit
 

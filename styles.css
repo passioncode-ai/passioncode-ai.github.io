@@ -600,6 +600,7 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .build-list h3 { font-size: 25px; letter-spacing: -.03em; margin-bottom: 10px; }
 .build-list article > div > p { color: var(--ink-soft); margin: 0; max-width: 560px; line-height: 1.7; }
 .build-list .text-link { margin-top: 6px; }
+.build-list code { white-space: nowrap; }
 .build-status { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-soft); padding-top: 6px; margin: 0; }
 .development-dot, .direction-dot { width: 7px; height: 7px; display: inline-block; flex-shrink: 0; border: 1px solid var(--gold); border-radius: 50%; }
 .direction-dot { border-color: var(--ink-muted); border-radius: 0; }

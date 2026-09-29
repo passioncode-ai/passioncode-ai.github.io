@@ -16,6 +16,7 @@
 | SCN-008 | Follow the builder | About | P-01 | ST-05, FLW-03 | draft | pending |
 
 | SCN-009 | Understand Fabric Inbox and its availability | Inbox | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
+| SCN-010 | Find Fabric Dashboards and its release | Dashboards | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 
 ## Personas
 
@@ -124,7 +125,7 @@ See [foundation](foundation.md).
 - **Preconditions:** none
 - **Steps:**
   1. Expand FAQ → managed/isolated and Fabric differences are explained.
-  2. Follow View source → public MIT repository opens.
+  2. Follow View source → the public repository opens; the FAQ names the source-available licenses, the commercial-license contact and which releases remain MIT.
 - **Expected result:** Reader can inspect source without GitHub authentication.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
 - **UI elements:** FAQ summaries, View source, Report an issue
@@ -159,7 +160,7 @@ See [foundation](foundation.md).
 - **Entry point:** / (product card) or /observatory/
 - **Preconditions:** a macOS or Linux visitor with Python 3.11+
 - **Steps:**
-  1. Read the Observatory card on the homepage → it is listed as available now and open source, beside Switchboard, and distinct from Fabric in development.
+  1. Read the Observatory card on the homepage → it is listed as available now and source-available, beside Switchboard, and distinct from Fabric in development.
   2. Follow Explore Observatory → the product page states purpose, release, platforms, language choice and the limits of known-value scanning.
   3. Follow Get started → three setup steps, the installation guide and the source are reachable.
 - **Expected result:** The visitor knows what Observatory reads (only configured folders and sources), that it runs locally, and how to install it, without any claim of finding every secret.
@@ -188,4 +189,23 @@ See [foundation](foundation.md).
 - **Errors & recovery:** Missing network: browser error; retry. No unavailable download or private source CTA is offered.
 - **Status:** draft
 - **Coverage:** inbox/index.html; index.html#inbox; scripts/check-site.mjs.
+- **Product:** unobserved
+
+### SCN-010: Find Fabric Dashboards and its release
+- **Persona:** P-01
+- **Feature:** Dashboards
+- **Traces:** ST-01, ST-03, FLW-01
+- **Entry point:** / (build pipeline or source section)
+- **Preconditions:** a Mac with macOS 13 or later for the download; none for reading
+- **Steps:**
+  1. Read the build pipeline → Fabric Dashboards is available now, for local agent services that speak `fabric-service/0.1` such as Project Observatory's server, signed and notarized for macOS 13 or later.
+  2. Follow Download Fabric Dashboards → the public GitHub release v0.1.0 opens with the DMG and its SHA-256.
+  3. Or follow the Fabric Dashboards source card → the public source-available repository opens.
+- **Expected result:** The visitor knows what Dashboards watches, where the signed build is and that the source is public under a source-available license, without a dedicated product page.
+- **Alt paths:** design-system page shows the Dashboards mark beside the other product marks.
+- **UI elements:** build-pipeline row, Download Fabric Dashboards, source card, design-system mark.
+- **States covered:** success, error; static content has no loading or application empty state.
+- **Errors & recovery:** GitHub unavailable: retry later; the release page needs no account.
+- **Status:** draft
+- **Coverage:** index.html#pipeline; index.html#source; design-system/index.html; scripts/check-site.mjs.
 - **Product:** unobserved

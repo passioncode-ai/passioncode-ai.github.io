@@ -17,6 +17,7 @@ const publicFiles = [
   'observatory/index.html',
   'inbox/index.html',
   'assets/inbox-mark.svg',
+  'assets/dashboards-mark.svg',
   'design-system/index.html',
   'design-system/tokens.css',
   'assets/switchboard-mark.svg',

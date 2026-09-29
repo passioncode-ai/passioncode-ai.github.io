@@ -50,6 +50,8 @@ Project Observatory · the second public tool
 
 Fabric Inbox · desktop mail in development
 
+Fabric Dashboards · local services in one window
+
 02 / COLOR
 
 Color with a purpose.
