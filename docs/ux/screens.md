@@ -7,7 +7,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | ID | Screen | Scenarios |
 |---|---|---|
 | SCR-01 | Home | SCN-001, SCN-006, SCN-007, SCN-008, SCN-010 |
-| SCR-02 | Switchboard | SCN-002, SCN-003, SCN-004 |
+| SCR-02 | Switchboard | SCN-002, SCN-003, SCN-004, SCN-011 |
 | SCR-03 | Design system | SCN-005, SCN-010 |
 | SCR-04 | Observatory | SCN-006 |
 | SCR-05 | Fabric | SCN-007, SCN-008 |
@@ -23,12 +23,13 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Entity:** PassionCode.ai organization/toolkit, linked to Switchboard and Fabric.
 
 ### SCR-02: Switchboard
-**Scenarios:** SCN-002/003/004. OS downloads/limits, synthetic screenshot, features, setup and FAQ.
+**Scenarios:** SCN-002/003/004/011. Reading order: hero → Get Switchboard (macOS and Windows cards, a full-width Before you open it card with CLI/OS/Windows requirements, SHA-256 list, release links, beta note) → The problem (limits run out; rotation keeps the session open) → synthetic screenshot → features → For agents (only for a selected release ≥ 0.4.0-beta.1: `switchboard mcp`, project rules, connect commands, the plugin line once the launcher lists it) → first session → FAQ → Part of the PassionCode toolkit → closing.
+**Release-bound parts:** only `data-release-*` elements, the `<!-- release:NAME -->` regions (`macos-note`, `checksums`, `license-current`, `agents`) and the JSON-LD `softwareVersion`/`license` change with `switchboard/release.json`; `scripts/switchboard-release.mjs` renders them, `npm run check` asserts the page equals the render and that the MIT-history sentence still names v0.3.1-beta.1.
 **Web surface:** public
 **Route:** https://passioncode.ai/switchboard/
 **Answers:** What does Switchboard do and where can I download it?
 **Indexable:** yes; canonical product URL, SoftwareApplication data and sitemap. Redirect endpoints noindex.
-**Without JS:** requirements, beta limits, download/source links and native details/summary FAQ.
+**Without JS:** requirements, checksums, beta limits, download/source links, agent connect commands and native details/summary FAQ. Checksums and commands wrap at 390 px.
 **Entity:** Fabric Switchboard, source-available desktop account workbench from PassionCode.ai.
 
 ### SCR-04: Project Observatory

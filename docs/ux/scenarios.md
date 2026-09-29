@@ -17,6 +17,7 @@
 
 | SCN-009 | Understand Fabric Inbox and its availability | Inbox | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 | SCN-010 | Find Fabric Dashboards and its release | Dashboards | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
+| SCN-011 | Connect an agent to Switchboard | Agents | P-01 | ST-02, FLW-01 | draft | pending |
 
 ## Personas
 
@@ -88,11 +89,13 @@ See [foundation](foundation.md).
 - **Entry point:** /switchboard/#download
 - **Preconditions:** macOS visitor
 - **Steps:**
-  1. Read macOS architecture/version and notarization notes → requirements are visible.
-  2. Follow Download for macOS → the pinned current public archive downloads from GitHub.
+  1. Read macOS architecture/version and the notarization note → the note states what the selected release's receipt proves (signed only, or notarized by Apple).
+  2. Read Before you open it → the official CLI must be installed separately; macOS 14+; the app or `switchboard serve` keeps managed sessions.
+  3. Follow Download for macOS → the pinned current public archive downloads from GitHub.
+  4. Compare the archive with the SHA-256 shown under the downloads (when the release publishes SHA256SUMS).
 - **Expected result:** A macOS universal ZIP is offered without claiming successful installation.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
-- **UI elements:** Download for macOS, release notes/checksums, installation guide
+- **UI elements:** Download for macOS, Before you open it card, SHA-256 list, release notes/checksums, installation guide
 - **States covered:** success, error; static content has no application loading or empty state.
 - **Errors & recovery:** Failed download: retry or use All releases; platform policy warnings are explained in the notes.
 - **Status:** draft
@@ -106,11 +109,12 @@ See [foundation](foundation.md).
 - **Entry point:** /switchboard/#download
 - **Preconditions:** Windows visitor
 - **Steps:**
-  1. Read Windows x64/WebView2 and unsigned/native-acceptance notes → requirements are visible.
+  1. Read Windows x64/WebView2 and unsigned/native-acceptance notes, repeated in Before you open it → requirements are visible.
   2. Follow Download for Windows → the pinned current public archive downloads from GitHub.
+  3. Compare the archive with the SHA-256 shown under the downloads (`Get-FileHash`).
 - **Expected result:** A Windows ZIP containing installer and CLI is offered.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
-- **UI elements:** Download for Windows, release notes/checksums, installation guide
+- **UI elements:** Download for Windows, Before you open it card, SHA-256 list, release notes/checksums, installation guide
 - **States covered:** success, error; static content has no application loading or empty state.
 - **Errors & recovery:** Failed download: retry or use All releases. No Windows execution claim is made.
 - **Status:** draft
@@ -125,10 +129,11 @@ See [foundation](foundation.md).
 - **Preconditions:** none
 - **Steps:**
   1. Expand FAQ → managed/isolated and Fabric differences are explained.
-  2. Follow View source → the public repository opens; the FAQ names the source-available licenses, the commercial-license contact and which releases remain MIT.
+  2. Follow View source → the public repository opens; the FAQ names the source-available licenses, the commercial-license contact, that releases up to and including v0.3.1-beta.1 remain MIT, and the license of the current download.
+  3. Read Part of the PassionCode toolkit → Observatory, Fabric Dashboards and Fabric links explain what the other tools do.
 - **Expected result:** Reader can inspect source without GitHub authentication.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
-- **UI elements:** FAQ summaries, View source, Report an issue
+- **UI elements:** FAQ summaries, View source, Report an issue, toolkit links (Explore Observatory, Fabric Dashboards release, Meet Fabric, All the tools)
 - **States covered:** success, error; static content has no application loading or empty state.
 - **Errors & recovery:** GitHub unavailable: retry later; source access does not require site account.
 - **Status:** draft
@@ -208,4 +213,24 @@ See [foundation](foundation.md).
 - **Errors & recovery:** GitHub unavailable: retry later; the release page needs no account.
 - **Status:** draft
 - **Coverage:** index.html#pipeline; index.html#source; design-system/index.html; scripts/check-site.mjs.
+- **Product:** unobserved
+
+### SCN-011: Connect an agent to Switchboard
+- **Persona:** P-01
+- **Feature:** Agents
+- **Traces:** ST-02, FLW-01
+- **Entry point:** /switchboard/#agents
+- **Preconditions:** the selected release is 0.4.0-beta.1 or later (before that the section is not rendered); the `switchboard` CLI reachable in the agent's shell
+- **Steps:**
+  1. Read The problem → limits running out mid-task is the job; rotation within a pool keeps the session open.
+  2. Read For agents → an agent can read remaining usage and switch its next request through `switchboard mcp`; no tool handles credentials; a global Claude Code login change needs `global`.
+  3. Read the optional project rules → none by default, visible, pausable, expiring, never stop rotation.
+  4. Copy a connect command (`claude mcp add …` or `codex mcp add …`), or launch the session from Switchboard; once the launcher lists Switchboard, the PassionCode plugin line appears as a third route.
+- **Expected result:** The visitor knows what an agent may do, what it may not, and one exact way to connect it.
+- **Alt paths:** returning visitors open /switchboard/#agents directly; keyboard and narrow screens expose the same text; commands wrap instead of overflowing.
+- **UI elements:** The problem statement, For agents feature grid, connect steps
+- **States covered:** success; hidden state (release < 0.4.0-beta.1: no section, no claim); static content has no loading state.
+- **Errors & recovery:** the tools do not appear in the agent: follow the operations guide (CLI on PATH, relaunch a session started without it).
+- **Status:** draft
+- **Coverage:** switchboard/index.html (release regions); scripts/switchboard-release.mjs; scripts/switchboard-release.test.mjs.
 - **Product:** unobserved

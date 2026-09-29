@@ -6,6 +6,8 @@ Contract: brand-contract v1
 |---|---|---|
 | pool | merged identity | account grouping |
 | managed request | session migration | request-boundary switching |
+| project rule | project binding, pinned project | the optional folder → account rule in Switchboard 0.4 |
+| agent tools / `switchboard mcp` | Switchboard API, agent integration | the local MCP server agents use to read usage and switch accounts |
 | source-available | open source, open-source, MIT (as the current license) | the license of Switchboard, Project Observatory and Fabric Dashboards |
 
 ## Entity and tier names: exact spelling
@@ -15,6 +17,7 @@ Contract: brand-contract v1
 | Fabric Switchboard | Fabric Switcher |
 | Fabric Inbox | Fabric Mail |
 | Fabric Dashboards | Fabric Dashbords, FabricDashboards |
+| Observatory | observatory (in running text), Observatory Dashboard |
 | Claude Code | Cloud Code |
 | Codex | CodeX |
 | Windows | WINDOWS |
@@ -42,5 +45,6 @@ Contract: brand-contract v1
 | build pipeline | Public product availability and current development direction, with no promised dates. |
 
 | Inbox | Short form of Fabric Inbox, the desktop mail client in development. |
+| Observatory | Short form of Project Observatory, the local project dashboard. |
 | Dashboards | Short form of Fabric Dashboards, the macOS app that shows local agent services in one window. |
 | source-available | The source is public to read and use under PolyForm Noncommercial or Internal Use; commercial use beyond that needs a separate license. |

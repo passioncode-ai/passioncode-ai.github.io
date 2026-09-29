@@ -40,9 +40,9 @@ Download Switchboard
 
 ↓
 
-First release: Switchboard beta
+Available now: Switchboard, Observatory and Fabric Dashboards
 
-macOS + Windows · Source-available
+Source-available · Fabric in early preview
 
 people
 
@@ -344,7 +344,7 @@ Sergey ·
 
 @sshlg93
 
-START WITH THE TOOL THAT’S HERE
+START WITH YOUR ACCOUNTS
 
 Get your accounts in order.
 

@@ -65,7 +65,14 @@ npm run check
 npm run build
 ```
 
-Replace the example tag with the actual tag. The updater rejects drafts and requires both nonempty archives to be anonymously downloadable. Review the release's actual signing/platform limits and installation instructions before committing. Never advertise GitHub `releases/latest` as the newest beta: that endpoint excludes prereleases.
+Replace the example tag with the actual tag. The updater rejects drafts and requires both nonempty archives to be anonymously downloadable. It also:
+
+- takes each archive's SHA-256 from the release's `SHA256SUMS-<X.Y.Z>.txt` (or `SHA256SUMS-<version>.txt`) and refuses a value that differs from GitHub's own asset digest; without a sums file the page shows no checksums;
+- sets `macosNotarized` only when `Fabric-Switchboard-<X.Y.Z>-macos-universal-receipt.json` says `notarization.status: Accepted`, `gatekeeper_accepted: true` and names the same archive SHA-256; otherwise the page keeps the not-notarized note;
+- sets `launcherPlugin` only when `passioncode-ai/passioncode` `family.json` lists `passioncode-ai/fabric-switchboard`;
+- re-renders only the release-bound parts of `switchboard/index.html` through `scripts/switchboard-release.mjs`: `data-release-*` elements, the `<!-- release:NAME -->` regions (`macos-note`, `checksums`, `license-current`, `agents` — the agent section appears from 0.4.0-beta.1) and the JSON-LD `softwareVersion`/`license` (MIT up to and including 0.3.1-beta.1, PolyForm after). The MIT-history sentence is never rewritten; `npm run check` fails if it stops naming v0.3.1-beta.1 or if the page differs from what the manifest renders (planted-defect tests: `npm test`).
+
+Review the release's actual signing/platform limits and installation instructions before committing, and update the Switchboard rows in `docs/brand/facts.md` and `python3 scripts/extract-public-copy.py`. Never advertise GitHub `releases/latest` as the newest beta: that endpoint excludes prereleases.
 
 Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment verify all five pages, both redirect destinations, anonymous archive hashes, and www canonicalization. Keep the Worker deployment ID and commit in the handoff receipt. No full hosted suite is dispatched for this update.
 

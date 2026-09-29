@@ -90,6 +90,42 @@ Download for Windows
 
 Unsigned beta, cross-built for Windows. SmartScreen may show a warning. Execution on a Windows machine has not yet been verified.
 
+☰
+
+Before you open it
+
+Switchboard manages accounts and launches the official CLIs. It does not replace them.
+
+Claude Code or Codex CLI, installed separately. Switchboard includes no provider subscription or API credits.
+
+macOS 14 or later, on Apple silicon or Intel.
+
+Windows x64 with WebView2. The Windows build is unsigned and has not yet been run on a Windows machine.
+
+The app or
+
+switchboard serve
+
+kept running for managed sessions.
+
+macOS ZIP · SHA-256
+
+5bdece37fb9965019d2a1f84af45075b571b7979dca8b8c475495ff4b50bed25
+
+Windows ZIP · SHA-256
+
+f3fb96619e2722bbee954eb5758800c790df6dee6e2cd4763372b1a2a9df4665
+
+Compare before opening:
+
+shasum -a 256
+
+in Terminal,
+
+Get-FileHash
+
+in PowerShell. A different value means a different file; download it again.
+
 Release notes & checksums
 
 ↗
@@ -103,6 +139,20 @@ All releases
 ↗
 
 This is an early beta. Real provider login and end-to-end requests with live accounts are not yet verified. Review the release notes and use accounts you are comfortable testing with.
+
+THE PROBLEM
+
+Limits run out
+
+before the work does.
+
+A long session can reach an account’s usage limit halfway through a task. Then the work waits while you sign out, find another account and sign back in.
+
+Switchboard keeps the
+
+work
+
+going. With rotation on, the next request moves to another account in the same pool, and the session stays open.
 
 INSIDE SWITCHBOARD
 
@@ -200,7 +250,7 @@ Managed sessions send requests through a local proxy and follow your selected ro
 
 Is Switchboard the same thing as Fabric?
 
-Switchboard is the account-management tool available today. Fabric is our CEO AI agent in development, focused on coordinating agents and projects. Both belong to the PassionCode toolkit.
+Switchboard is the account-management tool available today. Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Both belong to the PassionCode toolkit.
 
 Explore what we’re building with Fabric
 
@@ -212,11 +262,39 @@ Yes. Switchboard is source-available under PolyForm Noncommercial or Internal Us
 
 contact@passioncode.ai
 
-. Releases up to and including 0.3.1-beta.1, the current download, were published under MIT and remain available under it. The
+. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it.
+
+That includes the current download.
+
+The
 
 repository
 
 includes build instructions, source, tests and release evidence.
+
+PART OF THE PASSIONCODE TOOLKIT
+
+Accounts are one part
+
+of the setup.
+
+Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, our CEO AI agent, is in early preview.
+
+Explore Observatory
+
+↗
+
+Fabric Dashboards release
+
+↗
+
+Meet Fabric
+
+↗
+
+All the tools
+
+↗
 
 SOURCE-AVAILABLE · LOCAL FIRST
 

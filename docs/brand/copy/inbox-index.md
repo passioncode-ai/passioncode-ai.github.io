@@ -120,11 +120,9 @@ Is Inbox the Fabric agent?
 
 No. Inbox is a desktop mail client.
 
-Inbox
-
 Fabric
 
-is the CEO AI agent in development. They belong to the same toolkit and have different roles.
+is our CEO AI agent, in early preview. They belong to the same toolkit and have different roles.
 
 PassionCode
 
