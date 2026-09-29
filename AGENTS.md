@@ -2,8 +2,8 @@
 
 ## Role
 
-This repository is passioncode.ai, the public home and product pages: Fabric and its tools (Fabric
-Switchboard, Fabric Inbox, Fabric Dashboards), Project Observatory and the design system. It owns the public product descriptions, the download routing
+This repository is passioncode.ai, the public home and product pages: Fabric and its tools
+(Fabric Switchboard, Fabric Inbox, Fabric Dashboards), Project Observatory and the design system. It owns the public product descriptions, the download routing
 and the shared web design reference. It does not own native release acceptance
 (`docs/DOCMAP.md`).
 
