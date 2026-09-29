@@ -1,0 +1,15 @@
+{
+  "what": "Source-available wording, Observatory 0.8.1 and Fabric Dashboards published on passioncode.ai",
+  "source_commit": "308a4402676ae8ca5e6c20dad1ad0bf82f40b6bf",
+  "task": "docs/tasks/2026-09-29-source-available-and-dashboards.md",
+  "deployment": { "worker": "passioncode-ai", "version_id": "9a66aa1c-613f-4bc5-ad81-0810061f6020", "deployed_at": "2026-09-29", "via": "npm run deploy (authenticated Wrangler) from main at the source commit" },
+  "checks": [
+    "8 live files byte-equal (SHA-256) to dist/: index, observatory, switchboard, inbox, fabric, design-system pages, styles.css, assets/dashboards-mark.svg",
+    "every page: 0 occurrences of open source / open-source in text or metadata (id/href attributes excluded), 0 of AI-native work",
+    "MIT appears only in the MIT-history sentences: homepage 2, observatory 1, switchboard 1",
+    "/observatory/: softwareVersion 0.8.1, 'Latest release: 0.8.1', JSON-LD license = the two PolyForm license URLs",
+    "/: meta description names Project Observatory; Fabric Dashboards row and source card; link to fabric-dashboards/releases/tag/v0.1.0",
+    "/switchboard/download/macos: 302 to the v0.3.1-beta.1 macOS archive (unchanged)",
+    "www.passioncode.ai/observatory/: 301 to https://passioncode.ai/observatory/"
+  ]
+}

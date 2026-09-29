@@ -17,7 +17,7 @@ Checks: `npm run check` exit 0 (4 PASS lines), `npm run build` exit 0 (28 public
 `toolkit.explore`, B021 `build.follow`), warnings all B022. Planted red: the old Observatory page
 fails on JSON-LD license; the old homepage fails on "open source". Browser (local `dist/`)
 1280×900 and 500×844: no horizontal overflow; five marks load on the design system.
-Published: see the live receipt `SOURCE_AVAILABLE_RECEIPT.json` added after deploy.
+Published: source `308a440` (fast-forward to main), Worker version `9a66aa1c-613f-4bc5-ad81-0810061f6020`; [live receipt](SOURCE_AVAILABLE_RECEIPT.json) — 8 live files equal the build.
 Next task: when Switchboard or Observatory publish their first PolyForm release, update the
 version rows in `facts.md` and the pages; the MIT-history sentences keep naming the last MIT tag.
 
