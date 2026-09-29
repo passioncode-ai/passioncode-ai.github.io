@@ -5,6 +5,9 @@ screenshots. [Bounded packet](tasks/2026-09-29-fabric-preview-download.md) (REQ,
 Changed: `fabric/index.html` (early-preview hero, «Inside Fabric», «Get Fabric»), `fabric/release.json`,
 the Worker route `/fabric/download/macos`, `check-site`/`check-worker`, the build allow-list, the
 homepage status lines, brand facts/strings/voice/terminology, SCN-007, FLW-02/03, SCR-05.
+Published: source `8ffd874` (PR #7), Worker version `3726c08e-4a39-4d3b-8678-2edcb58c3716`;
+[live receipt](FABRIC_PREVIEW_RECEIPT.json) — 9 live files equal the build, the download redirect and the
+anonymously downloaded DMG (SHA-256 match, notarized) verified.
 Next task: after a newer Fabric build, publish its release here, update `fabric/release.json` and
 the facts row, re-take the screenshots from a fresh demo estate.
 
