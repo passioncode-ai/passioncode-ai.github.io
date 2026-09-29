@@ -52,13 +52,13 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 Screens describe public website behavior, not acceptance of native Switchboard or Fabric runtime.
 
 ### SCR-05: Fabric
-**Scenarios:** SCN-007, SCN-008. In-development hero, illustrative project brief, intended operating loop, people/authority principles, current focus and links back to About or downloadable Switchboard.
+**Scenarios:** SCN-007, SCN-008. Early-preview hero with Download for macOS, illustrative project brief, the actual window on synthetic demo data (home, board, releases), intended operating loop, people/authority principles, Get Fabric with requirements and limits, and links back to About or Switchboard.
 **Web surface:** public
 **Route:** https://passioncode.ai/fabric/
 **Answers:** What is Fabric and what is being built?
-**Indexable:** yes; canonical URL, WebPage data and sitemap. No downloadable SoftwareApplication claim.
-**Without JS:** all content and navigation. No fake functional agent demo, waitlist or download.
-**Entity:** Fabric, the CEO AI agent in development within PassionCode.ai.
+**Indexable:** yes; canonical URL, WebPage data and sitemap. The download redirect is noindex.
+**Without JS:** all content, navigation, requirements and the download link. No fake functional agent demo or waitlist.
+**Entity:** Fabric, the CEO AI agent within PassionCode.ai, in early preview.
 
 ### SCR-06: Fabric Inbox
 **Scenarios:** SCN-009. Desktop mail purpose, provider status, toolkit context and FAQ.

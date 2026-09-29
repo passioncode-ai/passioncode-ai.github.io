@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | CEO AI agent in development | PassionCode.ai
+Fabric | CEO AI agent · early preview for macOS | PassionCode.ai
 
-Fabric is our CEO AI agent in development. Explore how we are building project context, agent coordination, explicit authority and review into one operating loop.
+Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon. It keeps a project’s board, decisions, work and releases in one place, on your Mac.
 
 Skip to content
 
@@ -22,7 +22,7 @@ Download
 
 ↓
 
-FABRIC · IN DEVELOPMENT
+FABRIC · EARLY PREVIEW
 
 A CEO AI agent.
 
@@ -30,15 +30,15 @@ A home for the work.
 
 Fabric is the agent we’re building to coordinate other agents around a project. Purpose, context and decisions should stay with the work, even when the people, models or sessions change.
 
+Download for macOS
+
+↓
+
 Explore the workflow
 
 ↓
 
-Follow the build
-
-↗
-
-In active development · no public download yet
+Early preview 0.2.0 · macOS on Apple silicon
 
 A PROJECT, BEYOND THE CHAT
 
@@ -106,6 +106,20 @@ Review and keep learning
 
 Check the result against evidence. Preserve decisions and learning for the next cycle.
 
+INSIDE FABRIC
+
+Where you left off.
+
+What needs you.
+
+The actual Fabric window, shown with a synthetic demo space: four projects and 28 days of work.
+
+Home · synthetic demo projects, no real accounts or repositories.
+
+The board · what waits for your decision.
+
+Releases · what went in, why, and what confirms it.
+
 HOW WE’RE BUILDING IT
 
 People remain accountable.
@@ -130,25 +144,59 @@ Results need a receipt
 
 A completed task should come with something a person can check, not only an agent saying it is done.
 
-CURRENT FOCUS
+GET FABRIC
 
-Agent management.
+An early preview
 
-Project coordination.
+for your Mac.
 
-Fabric is in active development. We’re working on how agents, work and decisions fit into a project’s operating loop.
+Latest preview:
 
-There is no public download or public source release yet, and no announced release date. Follow the build for progress.
+0.2.0
 
-Follow the build
+. Fabric runs on your Mac with a local database; your projects stay on this machine.
+
+⌘
+
+macOS
+
+Apple silicon (arm64) · macOS 13 or later
+
+DMG installer · Developer ID signed and notarized by Apple
+
+Download for macOS
+
+↓
+
+Open the DMG and drag Fabric to Applications. Intel Macs are not supported in this preview.
+
+☰
+
+Before you open it
+
+Fabric starts its own local database with the Supabase CLI inside Docker.
+
+Docker Desktop or OrbStack, running
+
+Supabase CLI:
+
+brew install supabase/tap/supabase
+
+Claude Code or Codex CLI, signed in, for agents to do work
+
+If Docker or the CLI is missing, Fabric says which one on its first start.
+
+Release notes & checksum
 
 ↗
 
+This is an early preview. You can keep projects, a board of decisions, tasks, goals, a pulse of the work and releases with their receipts. The conversation with Fabric saves your messages, but Fabric does not reply yet. A newer version does not upgrade an existing database on its own; it tells you the command to run. Fabric’s source is private.
+
 PART OF THE SAME TOOLKIT
 
-You can start with Switchboard.
+Switchboard manages the accounts.
 
-The account-management tool is already available in beta. It runs independently of Fabric.
+The account-management tool is available in beta. It runs independently of Fabric.
 
 Download Switchboard
 

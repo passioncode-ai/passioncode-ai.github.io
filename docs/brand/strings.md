@@ -12,6 +12,7 @@ Contract: brand-contract v1
 | toolkit.explore | Explore the tools | index.html | SCN-001 | proposed | copy |
 | fabric.explore | Explore Fabric | index.html | SCN-007 | proposed | copy |
 | build.follow | Follow the build | fabric/index.html | SCN-008 | proposed | copy |
+| download.fabric.macos | Download for macOS | fabric/index.html | SCN-007 | proposed | copy |
 | author.follow | Follow on Twitter | index.html | SCN-008 | proposed | copy |
 
 | inbox.explore | Explore Inbox | index.html | SCN-009 | proposed | copy |

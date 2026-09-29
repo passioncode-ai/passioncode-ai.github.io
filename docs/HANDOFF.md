@@ -1,3 +1,15 @@
+# Current handoff — Fabric early preview download, 2026-09-29
+
+Objective: the Fabric page offers the notarized macOS DMG with its requirements, limits and real
+screenshots. [Bounded packet](tasks/2026-09-29-fabric-preview-download.md) (REQ, receipts, checks).
+Changed: `fabric/index.html` (early-preview hero, «Inside Fabric», «Get Fabric»), `fabric/release.json`,
+the Worker route `/fabric/download/macos`, `check-site`/`check-worker`, the build allow-list, the
+homepage status lines, brand facts/strings/voice/terminology, SCN-007, FLW-02/03, SCR-05.
+Next task: after a newer Fabric build, publish its release here, update `fabric/release.json` and
+the facts row, re-take the screenshots from a fresh demo estate.
+
+---
+
 # Current correction — homepage hero, 2026-09-27
 
 Objective: restore the original hero headline and make tool exploration the primary action.
