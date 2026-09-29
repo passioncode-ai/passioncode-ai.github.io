@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { checkSwitchboardPage, POLYFORM_LICENSE_URLS, releaseFacts } from './switchboard-release.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const pages = ['index.html', 'switchboard/index.html', 'fabric/index.html', 'inbox/index.html', 'observatory/index.html', 'design-system/index.html']
@@ -10,8 +11,9 @@ const read = path => readFileSync(resolve(root, path), 'utf8')
 // Switchboard, Observatory and Fabric Dashboards are source-available, not open source
 // (operator decision 2026-09-29). Pages say so in words and name both licenses; JSON-LD
 // points at the license texts themselves, not at a repository file that could change.
+// Switchboard's JSON-LD follows the selected release: MIT up to v0.3.1-beta.1, PolyForm after.
 const LICENSE_WORDING = ['Source-available', 'PolyForm Noncommercial', 'Internal Use', 'commercial license']
-const LICENSE_URLS = ['https://polyformproject.org/licenses/noncommercial/1.0.0/', 'https://polyformproject.org/licenses/internal-use/1.0.0/']
+const LICENSE_URLS = POLYFORM_LICENSE_URLS
 const downloadPaths = new Set(['/switchboard/download/macos', '/switchboard/download/windows', '/fabric/download/macos'])
 for (const file of pages) {
   const html = read(file)
@@ -26,9 +28,12 @@ for (const file of pages) {
   assert.equal(new Set(ids).size, ids.length, `${file}: duplicate IDs`)
   for (const block of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     const data = JSON.parse(block[1])
-    if (data['@type'] === 'SoftwareApplication') assert.deepEqual(data.license, LICENSE_URLS, `${file}: JSON-LD license must name both PolyForm licenses`)
+    const expected = file === 'switchboard/index.html' ? releaseFacts(release).license : LICENSE_URLS
+    if (data['@type'] === 'SoftwareApplication') assert.deepEqual(data.license, expected, `${file}: JSON-LD license must match the release it describes`)
   }
   // Attributes are excluded: the legacy #open-source anchor keeps old links working.
+  // aria-current belongs to navigation only: a link pasted into a sentence carries it along.
+  assert.ok(!/aria-current/.test(html.slice(html.indexOf('<main'), html.indexOf('</main>'))), `${file}: aria-current inside main (navigation pasted into content?)`)
   const words = html.replace(/\s(?:id|href)="[^"]*"/g, '')
   assert.ok(!/open[- ]source/i.test(words), `${file}: the public tools are source-available, not open source`)
   assert.ok(!/AI-native work\b/.test(words), `${file}: the tagline is "AI-native teams"`)
@@ -44,7 +49,10 @@ for (const file of pages) {
 const home = read('index.html')
 for (const text of ['The agent-agnostic operating system for', 'AI-native teams.', 'From vibe coding to passion coding.', 'CEO AI agent', 'in development', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
 const product = read('switchboard/index.html')
-for (const text of [release.version, release.releaseUrl, 'Not yet notarized', 'Unsigned beta', 'not yet verified', ...LICENSE_WORDING]) assert.ok(product.includes(text), `product missing ${text}`)
+for (const text of [release.version, release.releaseUrl, 'Unsigned beta', 'not yet verified', 'Before you open it', 'href="/observatory/"', ...LICENSE_WORDING]) assert.ok(product.includes(text), `product missing ${text}`)
+const releaseProblems = checkSwitchboardPage(product, release)
+assert.deepEqual(releaseProblems, [], `switchboard/index.html: ${releaseProblems.join('; ')}`)
+for (const os of ['macos', 'windows']) if (release.sha256?.[os] !== undefined) assert.match(release.sha256[os], /^[0-9a-f]{64}$/, `release.json sha256.${os}`)
 for (const os of ['macos', 'windows']) {
   assert.ok(product.includes(`href="/switchboard/download/${os}"`))
   const target = new URL(release.downloads[os])

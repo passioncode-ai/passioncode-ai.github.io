@@ -6,5 +6,11 @@
   "downloads": {
     "macos": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-macos-universal.zip",
     "windows": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-windows-x64.zip"
-  }
+  },
+  "sha256": {
+    "macos": "5bdece37fb9965019d2a1f84af45075b571b7979dca8b8c475495ff4b50bed25",
+    "windows": "f3fb96619e2722bbee954eb5758800c790df6dee6e2cd4763372b1a2a9df4665"
+  },
+  "macosNotarized": false,
+  "launcherPlugin": false
 }

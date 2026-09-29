@@ -1,0 +1,112 @@
+// node --test scripts/switchboard-release.test.mjs (part of npm run check)
+import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+import { test } from 'node:test'
+import {
+  checkSwitchboardPage, compareVersions, MIT_HISTORY, MIT_LICENSE_URL, POLYFORM_LICENSE_URLS, renderSwitchboardPage
+} from './switchboard-release.mjs'
+
+const page = readFileSync(new URL('../switchboard/index.html', import.meta.url), 'utf8')
+const current = JSON.parse(readFileSync(new URL('../switchboard/release.json', import.meta.url), 'utf8'))
+const repo = 'passioncode-ai/fabric-switchboard'
+const next = (extra = {}) => ({
+  tag: 'v0.4.0-beta.1',
+  version: '0.4.0-beta.1',
+  repository: repo,
+  releaseUrl: `https://github.com/${repo}/releases/tag/v0.4.0-beta.1`,
+  downloads: {
+    macos: `https://github.com/${repo}/releases/download/v0.4.0-beta.1/Fabric-Switchboard-0.4.0-macos-universal.zip`,
+    windows: `https://github.com/${repo}/releases/download/v0.4.0-beta.1/Fabric-Switchboard-0.4.0-windows-x64.zip`
+  },
+  sha256: { macos: 'a'.repeat(64), windows: 'b'.repeat(64) },
+  macosNotarized: false,
+  launcherPlugin: false,
+  ...extra
+})
+const jsonLd = html => JSON.parse(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(html)[1])
+
+test('the committed page is true for the committed manifest', () => {
+  assert.deepEqual(checkSwitchboardPage(page, current), [])
+})
+
+test('the committed JSON-LD names the license of the release it describes', () => {
+  assert.equal(jsonLd(page).softwareVersion, current.version)
+  if (compareVersions(current.version, '0.3.1-beta.1') <= 0) {
+    assert.equal(jsonLd(page).license, MIT_LICENSE_URL)
+    assert.ok(!page.includes(POLYFORM_LICENSE_URLS[0]), 'an MIT release never pairs with PolyForm')
+    assert.ok(!page.includes('id="agents"'), 'the agent section is not shown before 0.4')
+  } else {
+    assert.deepEqual(jsonLd(page).license, POLYFORM_LICENSE_URLS)
+    assert.ok(!page.includes(MIT_LICENSE_URL))
+  }
+})
+
+test('0.4.0-beta.1 renders PolyForm, the agent section and keeps the MIT history', () => {
+  const manifest = next()
+  const html = renderSwitchboardPage(page, manifest)
+  assert.deepEqual(checkSwitchboardPage(html, manifest), [])
+  assert.deepEqual(jsonLd(html).license, POLYFORM_LICENSE_URLS)
+  assert.equal(jsonLd(html).softwareVersion, '0.4.0-beta.1')
+  assert.ok(html.includes(MIT_HISTORY), 'MIT-history sentence still names v0.3.1-beta.1')
+  assert.ok(html.includes('id="agents"'))
+  assert.ok(html.includes('switchboard mcp'))
+  assert.ok(html.includes('is released under PolyForm'))
+  assert.ok(html.includes('Not yet notarized'), 'no notarization claim without a receipt')
+  assert.ok(!html.includes('@passioncode-ai/passioncode'), 'no plugin line until the launcher lists Switchboard')
+  assert.ok(html.includes(`href="${manifest.releaseUrl}" data-release-link`))
+  assert.ok(html.includes('aaaaaaaa'), 'checksums are shown')
+  assert.equal(renderSwitchboardPage(html, manifest), html, 'rendering is idempotent')
+})
+
+test('the notarized note and the plugin line follow the manifest', () => {
+  const manifest = next({ macosNotarized: true, launcherPlugin: true })
+  const html = renderSwitchboardPage(page, manifest)
+  assert.deepEqual(checkSwitchboardPage(html, manifest), [])
+  assert.ok(html.includes('notarized by Apple. Open the ZIP'))
+  assert.ok(!html.includes('Not yet notarized'))
+  assert.ok(html.includes('npx @passioncode-ai/passioncode@latest update'))
+})
+
+test('no checksums: the region is empty, not a placeholder', () => {
+  const manifest = next({ sha256: undefined })
+  const html = renderSwitchboardPage(page, manifest)
+  assert.ok(html.includes('<!-- release:checksums --><!-- /release:checksums -->'))
+  assert.deepEqual(checkSwitchboardPage(html, manifest), [])
+})
+
+// Planted defect: the updater before 0.4 did replaceAll(previous.version, version) over the
+// whole page, which rewrote the MIT-history sentence to name the new release as MIT.
+test('planted defect: the old whole-page replace is caught', () => {
+  const manifest = next()
+  const broken = page.replaceAll(current.releaseUrl, manifest.releaseUrl).replaceAll(current.version, manifest.version)
+  const problems = checkSwitchboardPage(broken, manifest)
+  assert.ok(problems.some(p => p.startsWith('the MIT-history sentence')), problems.join('; '))
+})
+
+test('planted defect: an edited MIT-history sentence is caught', () => {
+  const manifest = next()
+  const html = renderSwitchboardPage(page, manifest).replace('v0.3.1-beta.1 were published', 'v0.4.0-beta.1 were published')
+  assert.ok(checkSwitchboardPage(html, manifest).some(p => p.startsWith('the MIT-history sentence')))
+})
+
+test('planted defect: a page rendered for 0.4 fails against the 0.3.1 manifest', () => {
+  const html = renderSwitchboardPage(page, next())
+  const problems = checkSwitchboardPage(html, current)
+  assert.ok(problems.length >= 1)
+  assert.ok(problems.some(p => p.includes('out of step')))
+})
+
+test('planted defect: a missing release region is refused', () => {
+  const broken = page.replace('<!-- release:agents --><!-- /release:agents -->', '')
+  assert.throws(() => renderSwitchboardPage(broken, next()), /missing release region: agents/)
+})
+
+test('semantic version precedence', () => {
+  assert.equal(compareVersions('0.3.1-beta.1', '0.3.1'), -1)
+  assert.equal(compareVersions('0.3.1-beta.1', '0.4.0-beta.1'), -1)
+  assert.equal(compareVersions('0.4.0-beta.2', '0.4.0-beta.10'), -1)
+  assert.equal(compareVersions('0.4.0', '0.4.0-beta.1'), 1)
+  assert.equal(compareVersions('0.3.1-beta.1', '0.3.1-beta.1'), 0)
+  assert.equal(compareVersions('1.0.0-alpha', '1.0.0-alpha.1'), -1)
+  assert.throws(() => compareVersions('latest', '0.1.0'))
+})

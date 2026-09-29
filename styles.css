@@ -492,6 +492,13 @@ nav a { min-height: 36px; display: inline-flex; align-items: center; }
 .download-card .button { margin-top: 12px; }
 .download-card .download-note { font-size: 13px; margin-top: 24px; margin-bottom: 0; max-width: 420px; }
 .download-details { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 30px; }
+.download-card-wide { grid-column: 1 / -1; }
+.checksums { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin: 30px 0 0; }
+.checksums dt { color: var(--ink-muted); font-size: 13px; margin-bottom: 6px; }
+.checksums dd { margin: 0; }
+.checksums code, .agent-setup code { overflow-wrap: anywhere; }
+.checksums code { color: var(--ink-soft); font-size: 12px; }
+.agent-setup { margin-top: 48px; }
 .beta-note { color: var(--ink-soft); margin: 30px 0 0; padding: 18px 22px; border-left: 2px solid var(--pc-warning); background: var(--pc-warning-soft); font-size: 14px; line-height: 1.65; }
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; }
 .feature-grid article { padding-top: 26px; border-top: 1px solid var(--line-strong); }
@@ -560,6 +567,7 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
  .download-card { padding: 28px 24px; }
  .download-card .button { width: 100%; }
  .download-details { flex-direction: column; }
+ .checksums { grid-template-columns: 1fr; }
  .setup-steps li { gap: 22px; }
  .faq summary { font-size: 18px; }
  .swatch { padding: 18px 12px; min-height: 140px; }

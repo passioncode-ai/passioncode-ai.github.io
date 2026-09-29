@@ -19,3 +19,7 @@ Contract: brand-contract v1
 | dashboards.download | Download Fabric Dashboards | index.html | SCN-010 | proposed | copy |
 | inbox.status | See development status | inbox/index.html | SCN-009 | proposed | copy |
 | toolkit.explore | Explore the toolkit | inbox/index.html | SCN-009 | proposed | copy |
+| switchboard.family.observatory | Explore Observatory | switchboard/index.html | SCN-004 | proposed | copy |
+| switchboard.family.dashboards | Fabric Dashboards release | switchboard/index.html | SCN-004 | proposed | copy |
+| switchboard.family.fabric | Meet Fabric | switchboard/index.html | SCN-004 | proposed | copy |
+| switchboard.family.all | All the tools | switchboard/index.html | SCN-004 | proposed | copy |
