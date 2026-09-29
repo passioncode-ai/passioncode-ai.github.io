@@ -4,7 +4,7 @@
 
 **A toolkit for AI-native teams.** From vibe coding to passion coding.
 
-Public home: [passioncode.ai](https://passioncode.ai/). Available now: Switchboard, a local account workbench for Claude Code and Codex CLI (beta); Project Observatory, a local dashboard for the projects your agents work on; and Fabric Dashboards, one window for the local agent services on a Mac. All three are source-available under PolyForm Noncommercial or Internal Use; a commercial license is available on request. Fabric, the CEO AI agent, is an early preview (0.2.0, macOS); its source is private. Fabric Inbox, a desktop mail client, is in development. People remain accountable.
+Public home: [passioncode.ai](https://passioncode.ai/). PassionCode.ai is the organization; Fabric is its product, and Fabric's tools carry its name. Available now: Fabric Switchboard, a local account workbench for Claude Code and Codex CLI (beta); Project Observatory, a local dashboard for the projects your agents work on; and Fabric Dashboards, one window for the local agent services on a Mac. All three are source-available under PolyForm Noncommercial or Internal Use; a commercial license is available on request. Fabric, the CEO AI agent, is an early preview (0.2.0, macOS); its source is private. Fabric Inbox, a desktop mail client, is in development. People remain accountable.
 
 ## Pages and shared design
 
