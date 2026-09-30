@@ -1,0 +1,36 @@
+{
+  "recorded_at": "2026-09-30T12:55:05+00:00",
+  "change": "Select Switchboard v0.4.0-beta.1 (notarized macOS universal, Windows x64 cross-build)",
+  "deployed_source": "c8a3a65758f44ec06b58a70e52c151450dffbe24",
+  "pushed_main_equals_source": true,
+  "worker": "passioncode-ai",
+  "worker_version_id": "2cd961df-0de6-4422-9193-f4c726eed857",
+  "deploy": "npm run deploy (wrangler, OAuth session of this machine); exit 0",
+  "checks_before_deploy": {
+    "npm run check": 0,
+    "npm run build": 0,
+    "extract-public-copy.py --check": 0,
+    "pr_check": "https://github.com/passioncode-ai/passioncode-ai.github.io/actions/runs/36717644372 pass"
+  },
+  "live": {
+    "pages_http_200": [
+      "/",
+      "/switchboard/",
+      "/fabric/",
+      "/inbox/",
+      "/observatory/",
+      "/design-system/"
+    ],
+    "files_equal_build": "28 of 28 dist files, SHA-256 of live bytes equal",
+    "redirects": {
+      "/switchboard/download/macos": "302 https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.4.0-beta.1/Fabric-Switchboard-0.4.0-macos-universal.zip",
+      "/switchboard/download/windows": "302 https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.4.0-beta.1/Fabric-Switchboard-0.4.0-windows-x64.zip"
+    },
+    "www": "301 https://passioncode.ai/switchboard/",
+    "archive_sha256_via_redirect": {
+      "macos": "3ab0f1cf69a9a21f1fd469bfc195c3187e5121ebdfcfb94b36e76c54eec10b6e",
+      "windows": "55bf5d50b2c6701cb582ac1a028fcde013155a3a84fd3d4da339ee3930937f1b"
+    }
+  },
+  "release": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.4.0-beta.1"
+}

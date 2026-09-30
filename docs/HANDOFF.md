@@ -1,3 +1,25 @@
+# Current handoff — Switchboard v0.4.0-beta.1 selected, 2026-09-30
+
+Objective: serve the published, notarized Switchboard 0.4.0-beta.1 from the download redirects and
+the product page. Landed by fast-forward: the parked 0.4 page commit (rebased onto `main` as
+`a9b4b57`; the original `agent/switchboard-0.4-site` is left untouched) and `c8a3a65`, the updater's
+output for `v0.4.0-beta.1` (`switchboard/release.json` with SHA-256 and `macosNotarized: true` from the
+release receipt, PolyForm JSON-LD, notarized macOS note, agents section) plus brand facts pointing at
+the 0.4.0 receipts. The two planted-defect tests that assumed a 0.3.1 page now start from a page
+rendered for a frozen 0.3.1 manifest (planted red: 3 tests fail when the MIT-history check and the
+missing-region guard are disabled). PR [#13](https://github.com/passioncode-ai/passioncode-ai.github.io/pull/13).
+Checks: `npm run check` exit 0, `npm run build` exit 0, `extract-public-copy.py --check` exit 0, PR
+check pass; local Worker preview: macOS redirect → 0.4.0 ZIP, 500 px wide without horizontal overflow.
+Published: source `c8a3a65` (= pushed `main`), Worker version `2cd961df-0de6-4422-9193-f4c726eed857`;
+[live receipt](SWITCHBOARD_0.4_RECEIPT.json) — 28 of 28 live files equal the build, both redirects
+serve archives whose SHA-256 equals `SHA256SUMS-0.4.0.txt`.
+Open: the Switchboard page screenshot is still the browser demo, not the native 0.4 app; the launcher
+line appears only when `passioncode/family.json` lists Switchboard (`launcherPlugin: false`).
+Next task: when the launcher lists the plugin, rerun `node scripts/update-switchboard-release.mjs
+v0.4.0-beta.1` and deploy.
+
+---
+
 # Current handoff — source-available wording and Fabric Dashboards, 2026-09-29
 
 Objective: apply the operator's 2026-09-29 decisions to the public site — Switchboard,
