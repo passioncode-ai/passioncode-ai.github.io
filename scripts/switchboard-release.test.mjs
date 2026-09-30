@@ -23,6 +23,25 @@ const next = (extra = {}) => ({
   launcherPlugin: false,
   ...extra
 })
+// The last MIT release, frozen: planted defects start from a page rendered for it, so they
+// keep testing the 0.3.1 → 0.4 transition whatever release the committed page selects.
+const mitRelease = {
+  tag: 'v0.3.1-beta.1',
+  version: '0.3.1-beta.1',
+  repository: repo,
+  releaseUrl: `https://github.com/${repo}/releases/tag/v0.3.1-beta.1`,
+  downloads: {
+    macos: `https://github.com/${repo}/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-macos-universal.zip`,
+    windows: `https://github.com/${repo}/releases/download/v0.3.1-beta.1/Fabric-Switchboard-0.3.1-windows-x64.zip`
+  },
+  sha256: {
+    macos: '5bdece37fb9965019d2a1f84af45075b571b7979dca8b8c475495ff4b50bed25',
+    windows: 'f3fb96619e2722bbee954eb5758800c790df6dee6e2cd4763372b1a2a9df4665'
+  },
+  macosNotarized: false,
+  launcherPlugin: false
+}
+const mitPage = renderSwitchboardPage(page, mitRelease)
 const jsonLd = html => JSON.parse(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(html)[1])
 
 test('the committed page is true for the committed manifest', () => {
@@ -78,26 +97,27 @@ test('no checksums: the region is empty, not a placeholder', () => {
 // whole page, which rewrote the MIT-history sentence to name the new release as MIT.
 test('planted defect: the old whole-page replace is caught', () => {
   const manifest = next()
-  const broken = page.replaceAll(current.releaseUrl, manifest.releaseUrl).replaceAll(current.version, manifest.version)
+  const broken = mitPage.replaceAll(mitRelease.releaseUrl, manifest.releaseUrl).replaceAll(mitRelease.version, manifest.version)
   const problems = checkSwitchboardPage(broken, manifest)
   assert.ok(problems.some(p => p.startsWith('the MIT-history sentence')), problems.join('; '))
 })
 
 test('planted defect: an edited MIT-history sentence is caught', () => {
   const manifest = next()
-  const html = renderSwitchboardPage(page, manifest).replace('v0.3.1-beta.1 were published', 'v0.4.0-beta.1 were published')
+  const html = renderSwitchboardPage(mitPage, manifest).replace('v0.3.1-beta.1 were published', 'v0.4.0-beta.1 were published')
   assert.ok(checkSwitchboardPage(html, manifest).some(p => p.startsWith('the MIT-history sentence')))
 })
 
 test('planted defect: a page rendered for 0.4 fails against the 0.3.1 manifest', () => {
-  const html = renderSwitchboardPage(page, next())
-  const problems = checkSwitchboardPage(html, current)
+  const html = renderSwitchboardPage(mitPage, next())
+  const problems = checkSwitchboardPage(html, mitRelease)
   assert.ok(problems.length >= 1)
   assert.ok(problems.some(p => p.includes('out of step')))
 })
 
 test('planted defect: a missing release region is refused', () => {
-  const broken = page.replace('<!-- release:agents --><!-- /release:agents -->', '')
+  const broken = mitPage.replace('<!-- release:agents --><!-- /release:agents -->', '')
+  assert.notEqual(broken, mitPage, 'the fixture must contain the empty agents region')
   assert.throws(() => renderSwitchboardPage(broken, next()), /missing release region: agents/)
 })
 

@@ -54,7 +54,7 @@ Pick your platform.
 
 Latest public beta:
 
-0.3.1-beta.1
+0.4.0-beta.1
 
 . Both downloads include the desktop app and the
 
@@ -74,7 +74,7 @@ Download for macOS
 
 ↓
 
-Developer ID signed. Not yet notarized by Apple; macOS may block the first launch. Read the installation notes before opening.
+Developer ID signed and notarized by Apple. Open the ZIP, move Fabric Switchboard to Applications and open it from there.
 
 ⊞
 
@@ -110,11 +110,11 @@ kept running for managed sessions.
 
 macOS ZIP · SHA-256
 
-5bdece37fb9965019d2a1f84af45075b571b7979dca8b8c475495ff4b50bed25
+3ab0f1cf69a9a21f1fd469bfc195c3187e5121ebdfcfb94b36e76c54eec10b6e
 
 Windows ZIP · SHA-256
 
-f3fb96619e2722bbee954eb5758800c790df6dee6e2cd4763372b1a2a9df4665
+55bf5d50b2c6701cb582ac1a028fcde013155a3a84fd3d4da339ee3930937f1b
 
 Compare before opening:
 
@@ -208,6 +208,62 @@ switchboard serve
 
 running for managed sessions.
 
+FOR AGENTS · NEW IN 0.4
+
+Your agent can see
+
+its own limits.
+
+Switchboard includes
+
+switchboard mcp
+
+, a local MCP server. Claude Code, Codex or another MCP client can read the usage that’s left and move its next request to another account. No tool accepts or returns a credential.
+
+01 / USAGE
+
+Read what’s left.
+
+Remaining quota for each account and window, with reset times and the age of each check. Unknown usage is reported as unknown, never as zero.
+
+02 / SWITCHING
+
+Switch before the limit.
+
+An agent can choose the account for its session’s next request, within the same provider and pool. Changing the Claude Code login for every session on the Mac needs an explicit
+
+global
+
+flag.
+
+03 / PROJECT RULES
+
+Optional project rules.
+
+Start a project folder on a chosen account, if you want to. Rules stay visible in the app, can be paused or set to expire, and never stop rotation.
+
+01
+
+Launch from Switchboard
+
+Sessions you launch from the app or the CLI get the tools when the
+
+switchboard
+
+CLI can be found. Isolated sessions get the read-only tools. On macOS, the Agents panel links the CLI inside the app to
+
+~/.local/bin
+
+.
+
+02
+
+Or connect an agent yourself
+
+claude mcp add --scope user switchboard -- switchboard mcp
+
+codex mcp add switchboard -- switchboard mcp
+
 THE FIRST SESSION
 
 Bring an account.
@@ -264,7 +320,11 @@ contact@passioncode.ai
 
 . Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it.
 
-That includes the current download.
+The current download,
+
+0.4.0-beta.1
+
+, is released under PolyForm.
 
 The
 
