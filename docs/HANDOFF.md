@@ -12,15 +12,12 @@ SCN-004/006/010, FLW-02, SCR-02/04, `README.md` (+ `## License`), `AGENTS.md` (t
 `LICENSE`, `COMMERCIAL-LICENSE.md`, `CLA.md`, `package.json`/lock license.
 Checks: `npm run check` exit 0, `npm run build` exit 0, `extract-public-copy.py --check` exit 0,
 `ux_lint.py` OK, `brand_lint.py` unchanged (2 pre-existing errors); planted defects watched red
-(packet); org-index `check_format.py` 8 → 0 findings, `check_names.py` 0.
-Not deployed. Precondition: the public products' `main` must carry the AGPL `LICENSE` before the
-site says "open source under AGPL-3.0" live — on 2026-09-30 fabric-switchboard,
-project-observatory-dashboard and fabric-dashboards still had the PolyForm text
-(`gh api repos/passioncode-ai/<repo>/contents/LICENSE`).
-Next task: when `python3 scripts/check_format.py --repo fabric-switchboard --repo
-project-observatory-dashboard --repo fabric-dashboards` (org-index) reports no F7 finding, run
-`npm ci && npm run check && npm run build && npm run deploy` from `main` and record the Worker
-version and a live comparison here. Separately: Observatory's page names release 0.8.1 and
+(packet); org-index `check_format.py` 8 → 0 findings (offline before merge, online after), `check_names.py` 0.
+Published: source `42784ed` (fast-forward to `main`, PR #15), after the precondition held — the
+AGPL `LICENSE` on `main` of fabric-switchboard, project-observatory-dashboard, fabric-dashboards and
+fabric-agent-adapter; Worker version `8e17579f-b486-4882-9c49-3aac672990a1`;
+[live receipt](AGPL_RECEIPT.json) — 28 of 28 live files equal the build.
+Next task: release sync — Observatory's page names release 0.8.1 and
 Dashboards' links v0.1.0 while v0.9.1 and v0.3.0 are out — a release-sync task for `facts.md` and
 the pages.
 

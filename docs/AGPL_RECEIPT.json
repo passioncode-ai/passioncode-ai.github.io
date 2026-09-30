@@ -1,0 +1,14 @@
+{
+  "what": "Open source under AGPL-3.0 wording (Fabric ADR-0092) published on passioncode.ai",
+  "date": "2026-09-30",
+  "task": "docs/tasks/2026-09-30-agpl-and-repository-standard.md",
+  "source": "42784edbc7f003bb7ba1a92d2f3afe50e2cd12e0",
+  "pull_request": "https://github.com/passioncode-ai/passioncode-ai.github.io/pull/15",
+  "worker_version": "8e17579f-b486-4882-9c49-3aac672990a1",
+  "precondition": "LICENSE on main is the AGPL-3.0 text in fabric-switchboard, project-observatory-dashboard, fabric-dashboards and fabric-agent-adapter (gh api repos/passioncode-ai/<repo>/contents/LICENSE, first line 'GNU AFFERO GENERAL PUBLIC LICENSE', checked before deploy)",
+  "checks": [
+    "npm run deploy: brand lock, check-site, Worker, design tokens PASS; 28 public entries built; exit 0",
+    "28 of 28 live files at https://passioncode.ai/ equal dist/ (curl | cmp)",
+    "live homepage contains 'open source under AGPL-3.0'; live /fabric/ contains neither 'AGPL' nor 'open source'"
+  ]
+}
