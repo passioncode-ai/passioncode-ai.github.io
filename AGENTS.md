@@ -1,5 +1,10 @@
 # passioncode-ai.github.io — working in this repository
 
+Read this file and the organization's
+[CONTRIBUTING.md](https://github.com/passioncode-ai/.github/blob/main/CONTRIBUTING.md) before the
+first edit: that guide holds the names, how a change lands, the code region markers and the
+security contact; this file adds the rules of this repository and wins where the two differ.
+
 ## Role
 
 This repository is passioncode.ai, the public home and product pages: Fabric and its tools
