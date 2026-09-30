@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Switchboard | Claude Code & Codex account manager | PassionCode.ai
 
-Manage Claude Code and Codex accounts, inspect usage limits and switch managed requests. Download the source-available Switchboard beta for macOS and Windows.
+Manage Claude Code and Codex accounts, inspect usage limits and switch managed requests. Download the Switchboard beta for macOS and Windows.
 
 Skip to content
 
@@ -38,7 +38,7 @@ View source
 
 ↗
 
-Source-available · macOS + Windows · Desktop + CLI
+Open source · macOS + Windows · Desktop + CLI
 
 ONE TOOL / YOUR ACCOUNTS
 
@@ -314,17 +314,19 @@ Explore what we’re building with Fabric
 
 Can I inspect or build it myself?
 
-Yes. Switchboard is source-available under PolyForm Noncommercial or Internal Use; a commercial license is available on request from
+Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from
 
 contact@passioncode.ai
 
-. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it.
+.
+
+Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it.
 
 The current download,
 
 0.4.0-beta.1
 
-, is released under PolyForm.
+, was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.
 
 The
 
@@ -356,7 +358,7 @@ All the tools
 
 ↗
 
-SOURCE-AVAILABLE · LOCAL FIRST
+OPEN SOURCE · LOCAL FIRST
 
 Your setup. Your source.
 

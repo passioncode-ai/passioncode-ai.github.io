@@ -129,7 +129,7 @@ See [foundation](foundation.md).
 - **Preconditions:** none
 - **Steps:**
   1. Expand FAQ → managed/isolated and Fabric differences are explained.
-  2. Follow View source → the public repository opens; the FAQ names the source-available licenses, the commercial-license contact, that releases up to and including v0.3.1-beta.1 remain MIT, and the license of the current download.
+  2. Follow View source → the public repository opens; the FAQ says Switchboard is open source under the GNU AGPL-3.0, names the commercial-license contact, that releases up to and including v0.3.1-beta.1 remain MIT, and the license of the current download (0.4.0-beta.1 was released under PolyForm; the next release is the first under the AGPL).
   3. Read Part of the PassionCode toolkit → Observatory, Fabric Dashboards and Fabric links explain what the other tools do.
 - **Expected result:** Reader can inspect source without GitHub authentication.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
@@ -165,7 +165,7 @@ See [foundation](foundation.md).
 - **Entry point:** / (product card) or /observatory/
 - **Preconditions:** a macOS or Linux visitor with Python 3.11+
 - **Steps:**
-  1. Read the Observatory card on the homepage → it is listed as available now and source-available, beside Switchboard, and distinct from Fabric in development.
+  1. Read the Observatory card on the homepage → it is listed as available now and open source, beside Switchboard, and distinct from Fabric in development.
   2. Follow Explore Observatory → the product page states purpose, release, platforms, language choice and the limits of known-value scanning.
   3. Follow Get started → three setup steps, the installation guide and the source are reachable.
 - **Expected result:** The visitor knows what Observatory reads (only configured folders and sources), that it runs locally, and how to install it, without any claim of finding every secret.
@@ -205,8 +205,8 @@ See [foundation](foundation.md).
 - **Steps:**
   1. Read the build pipeline → Fabric Dashboards is available now, for local agent services that speak `fabric-service/0.1` such as Project Observatory's server, signed and notarized for macOS 13 or later.
   2. Follow Download Fabric Dashboards → the public GitHub release v0.1.0 opens with the DMG and its SHA-256.
-  3. Or follow the Fabric Dashboards source card → the public source-available repository opens.
-- **Expected result:** The visitor knows what Dashboards watches, where the signed build is and that the source is public under a source-available license, without a dedicated product page.
+  3. Or follow the Fabric Dashboards source card → the public repository, open source under AGPL-3.0, opens.
+- **Expected result:** The visitor knows what Dashboards watches, where the signed build is and that the source is public under AGPL-3.0 (v0.1.0 was released under MIT), without a dedicated product page.
 - **Alt paths:** design-system page shows the Dashboards mark beside the other product marks.
 - **UI elements:** build-pipeline row, Download Fabric Dashboards, source card, design-system mark.
 - **States covered:** success, error; static content has no loading or application empty state.

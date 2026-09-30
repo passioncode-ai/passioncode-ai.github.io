@@ -8,13 +8,19 @@
 //   - the SoftwareApplication JSON-LD (`softwareVersion`, `license`).
 // Everything else on the page, including the MIT-history sentence, is never rewritten.
 
-// Releases up to and including this one were published under MIT (fabric-switchboard
-// LICENSE header). Later releases are source-available under PolyForm.
+// The license each release shipped with, read from `LICENSE` at its tag
+// (`gh api repos/passioncode-ai/fabric-switchboard/contents/LICENSE?ref=<tag>`, 2026-09-30):
+// MIT up to and including LAST_MIT_VERSION, PolyForm Noncommercial or Internal Use up to and
+// including LAST_POLYFORM_VERSION, and the GNU AGPL-3.0 from the next release on (Fabric
+// ADR-0092: every repository is AGPL-3.0 or commercial; a released version keeps its license).
 export const LAST_MIT_VERSION = '0.3.1-beta.1'
+export const LAST_POLYFORM_VERSION = '0.4.0-beta.1'
 export const MIT_HISTORY = 'Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it.'
 // The license texts themselves. The trailing-slash forms return 404 (curl -sI, 2026-09-29).
 export const POLYFORM_LICENSE_URLS = ['https://polyformproject.org/licenses/noncommercial/1.0.0', 'https://polyformproject.org/licenses/internal-use/1.0.0']
 export const MIT_LICENSE_URL = 'https://spdx.org/licenses/MIT.html'
+// `curl -sI` → HTTP/2 200, 2026-09-30. The SPDX page names the exact identifier, `-only`.
+export const AGPL_LICENSE_URL = 'https://spdx.org/licenses/AGPL-3.0-only.html'
 // The first version whose page describes the agent tools (`switchboard mcp`, project rules).
 export const AGENTS_SINCE = '0.4.0-beta.1'
 
@@ -43,10 +49,13 @@ export function compareVersions (a, b) {
 
 export function releaseFacts (manifest) {
   const mit = compareVersions(manifest.version, LAST_MIT_VERSION) <= 0
+  const polyform = !mit && compareVersions(manifest.version, LAST_POLYFORM_VERSION) <= 0
   return {
     version: manifest.version,
     mit,
-    license: mit ? MIT_LICENSE_URL : POLYFORM_LICENSE_URLS,
+    polyform,
+    agpl: !mit && !polyform,
+    license: mit ? MIT_LICENSE_URL : polyform ? POLYFORM_LICENSE_URLS : AGPL_LICENSE_URL,
     agents: compareVersions(manifest.version, AGENTS_SINCE) >= 0,
     // Absent means false: a notarization claim needs the release's own receipt.
     macosNotarized: manifest.macosNotarized === true,
@@ -66,7 +75,9 @@ const REGIONS = {
   },
   'license-current': f => f.mit
     ? 'That includes the current download.'
-    : `The current download, <span data-release-version>${f.version}</span>, is released under PolyForm.`,
+    : f.polyform
+      ? `The current download, <span data-release-version>${f.version}</span>, was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.`
+      : `The current download, <span data-release-version>${f.version}</span>, is released under the AGPL.`,
   agents: f => f.agents ? AGENTS_SECTION(f) : ''
 }
 
@@ -118,9 +129,9 @@ export function checkSwitchboardPage (html, manifest) {
   if (rendered !== html) problems.push('page is out of step with switchboard/release.json: run scripts/update-switchboard-release.mjs')
   if (!html.includes(MIT_HISTORY)) problems.push(`the MIT-history sentence must stay exactly: ${MIT_HISTORY}`)
   const f = releaseFacts(manifest)
-  const polyform = html.includes(POLYFORM_LICENSE_URLS[0])
-  if (f.mit && polyform) problems.push(`${f.version} was released under MIT; its JSON-LD must not name PolyForm`)
+  if (!f.polyform && html.includes(POLYFORM_LICENSE_URLS[0])) problems.push(`${f.version} was not released under PolyForm; its JSON-LD must not name PolyForm`)
   if (!f.mit && html.includes(MIT_LICENSE_URL)) problems.push(`${f.version} is not an MIT release; its JSON-LD must not name MIT`)
+  if (!f.agpl && html.includes(AGPL_LICENSE_URL)) problems.push(`${f.version} was released before the AGPL; its JSON-LD must not name the AGPL`)
   if (f.macosNotarized === html.includes('Not yet notarized')) problems.push('the macOS note does not match the release receipt')
   if (f.agents !== html.includes('id="agents"')) problems.push(`the agent section is shown only from ${AGENTS_SINCE}`)
   return problems

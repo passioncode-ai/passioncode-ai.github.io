@@ -42,7 +42,7 @@ Download Switchboard
 
 Available now: Switchboard, Observatory and Fabric Dashboards
 
-Source-available · Fabric in early preview
+Open source · Fabric in early preview
 
 people
 
@@ -108,7 +108,7 @@ Tools you can use today.
 
 Start with your accounts or your projects. Switchboard and Observatory work independently, so you can pick the part you need.
 
-SOURCE-AVAILABLE BETA · macOS + Windows
+PUBLIC BETA · macOS + Windows
 
 Switchboard
 
@@ -132,11 +132,11 @@ Explore Switchboard
 
 ↗
 
-Source-available, free for noncommercial and internal use. Desktop + CLI. Check platform requirements and beta notes before installing.
+Open source under AGPL-3.0. Desktop + CLI. Check platform requirements, beta notes and the current download’s license before installing.
 
 Actual interface · synthetic demo accounts
 
-AVAILABLE NOW · SOURCE-AVAILABLE
+AVAILABLE NOW · OPEN SOURCE
 
 Project Observatory
 
@@ -150,7 +150,7 @@ macOS + Linux
 
 CLI + MCP + dashboard
 
-Source-available
+Open source
 
 Get started
 
@@ -286,9 +286,9 @@ Use the tools.
 
 Read the source.
 
-Start with a download, go deeper in the code. Switchboard, Observatory and Fabric Dashboards are source-available under PolyForm Noncommercial or Internal Use, with a commercial license on request: inspect them, build from source or contribute a fix.
+Start with a download, go deeper in the code. Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0: inspect them, build from source or contribute a fix. A commercial license is available for use the AGPL doesn’t cover.
 
-PUBLIC REPOSITORY · SOURCE-AVAILABLE
+PUBLIC REPOSITORY · AGPL-3.0
 
 ↗
 
@@ -298,7 +298,7 @@ Desktop app, CLI, build instructions, issues and release notes.
 
 github.com/passioncode-ai/fabric-switchboard
 
-PUBLIC REPOSITORY · SOURCE-AVAILABLE
+PUBLIC REPOSITORY · AGPL-3.0
 
 ↗
 
@@ -308,7 +308,7 @@ Local dashboard, CLI, setup guides, tests and the security model.
 
 github.com/passioncode-ai/project-observatory-dashboard
 
-PUBLIC REPOSITORY · SOURCE-AVAILABLE
+PUBLIC REPOSITORY · AGPL-3.0
 
 ↗
 
@@ -318,7 +318,9 @@ macOS app, tests, runbook and release notes with checksums.
 
 github.com/passioncode-ai/fabric-dashboards
 
-Releases already published under MIT stay under MIT: Switchboard up to 0.3.1-beta.1, Observatory up to 0.8.1 and Fabric Dashboards 0.1.0. Fabric’s source is private. Its page offers the signed macOS preview, not a source release.
+Released versions keep the license they shipped with: MIT for Switchboard up to 0.3.1-beta.1, Observatory up to 0.8.1 and Fabric Dashboards 0.1.0; PolyForm Noncommercial or Internal Use for Switchboard 0.4.0-beta.1, Observatory 0.9.0 and 0.9.1, and Fabric Dashboards 0.2.0 and 0.3.0.
+
+Fabric’s source is private. Its page offers the signed macOS preview, not a source release.
 
 Visit PassionCode on GitHub
 

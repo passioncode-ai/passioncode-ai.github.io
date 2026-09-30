@@ -2,6 +2,7 @@
   "name": "passioncode-ai.github.io",
   "private": true,
   "version": "1.0.0",
+  "license": "AGPL-3.0-only OR LicenseRef-PassionCode-Commercial",
   "description": "The public home of PassionCode.ai.",
   "scripts": {
     "build": "node scripts/build-site.mjs",

@@ -1,19 +1,29 @@
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { checkSwitchboardPage, POLYFORM_LICENSE_URLS, releaseFacts } from './switchboard-release.mjs'
+import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const pages = ['index.html', 'switchboard/index.html', 'fabric/index.html', 'inbox/index.html', 'observatory/index.html', 'design-system/index.html']
 const css = readFileSync(resolve(root, 'styles.css'), 'utf8')
 const release = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
 const read = path => readFileSync(resolve(root, path), 'utf8')
-// Switchboard, Observatory and Fabric Dashboards are source-available, not open source
-// (operator decision 2026-09-29). Pages say so in words and name both licenses; JSON-LD
-// points at the license texts themselves, not at a repository file that could change.
-// Switchboard's JSON-LD follows the selected release: MIT up to v0.3.1-beta.1, PolyForm after.
-const LICENSE_WORDING = ['Source-available', 'PolyForm Noncommercial', 'Internal Use', 'commercial license']
-const LICENSE_URLS = POLYFORM_LICENSE_URLS
+// Every repository is open source under AGPL-3.0 or available under a commercial license
+// (Fabric ADR-0092, 2026-09-30; supersedes the source-available wording of 2026-09-29).
+// Switchboard, Observatory and Fabric Dashboards, whose source is public, say so in words and
+// name the commercial license; JSON-LD points at the license text itself. Switchboard's JSON-LD
+// follows the selected release (MIT → PolyForm → AGPL, scripts/switchboard-release.mjs).
+// A released version keeps its license, so MIT and PolyForm appear only inside
+// <!-- license-history --> regions. Fabric and Fabric Inbox ship from private source: their
+// pages never call them open source or AGPL (knowledge/licensing.md, CO-KB-01).
+const LICENSE_WORDING = ['open source under the GNU AGPL-3.0', 'commercial license is available', 'contact@passioncode.ai']
+const LICENSE_URLS = AGPL_LICENSE_URL
+const PRIVATE_SOURCE_PAGES = new Set(['fabric/index.html', 'inbox/index.html'])
+// The words a visitor or a crawler reads: no JSON-LD, no id/href attributes, no license history.
+const currentWords = html => html
+  .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '')
+  .replace(/<!-- license-history -->[\s\S]*?<!-- \/license-history -->/g, '')
+  .replace(/\s(?:id|href)="[^"]*"/g, '')
 const downloadPaths = new Set(['/switchboard/download/macos', '/switchboard/download/windows', '/fabric/download/macos'])
 for (const file of pages) {
   const html = read(file)
@@ -31,11 +41,13 @@ for (const file of pages) {
     const expected = file === 'switchboard/index.html' ? releaseFacts(release).license : LICENSE_URLS
     if (data['@type'] === 'SoftwareApplication') assert.deepEqual(data.license, expected, `${file}: JSON-LD license must match the release it describes`)
   }
-  // Attributes are excluded: the legacy #open-source anchor keeps old links working.
   // aria-current belongs to navigation only: a link pasted into a sentence carries it along.
   assert.ok(!/aria-current/.test(html.slice(html.indexOf('<main'), html.indexOf('</main>'))), `${file}: aria-current inside main (navigation pasted into content?)`)
-  const words = html.replace(/\s(?:id|href)="[^"]*"/g, '')
-  assert.ok(!/open[- ]source/i.test(words), `${file}: the public tools are source-available, not open source`)
+  // Attributes are excluded: the legacy #open-source anchor keeps old links working.
+  const words = currentWords(html)
+  assert.ok(!/source[- ]available/i.test(words), `${file}: the tools are open source under AGPL-3.0, no longer source-available (ADR-0092)`)
+  assert.ok(!/PolyForm|\bMIT\b/.test(words), `${file}: MIT and PolyForm name only released versions, inside a license-history region`)
+  if (PRIVATE_SOURCE_PAGES.has(file)) assert.ok(!/AGPL|open[- ]source/i.test(words), `${file}: private source is never called open source or AGPL (CO-KB-01)`)
   assert.ok(!/AI-native work\b/.test(words), `${file}: the tagline is "AI-native teams"`)
   for (const [, value] of html.matchAll(/(?:href|src)="([^"\s]+)"/g)) {
     if (!value.startsWith('/') && !value.startsWith('#')) continue
@@ -94,6 +106,7 @@ for (const text of ['0.8.1', 'https://github.com/passioncode-ai/project-observat
 assert.ok(home.includes('href="/observatory/"'), 'homepage links Observatory')
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
 assert.ok(home.includes('Fabric Dashboards'), 'homepage lists Fabric Dashboards')
+for (const text of ['Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available']) assert.ok(home.includes(text), `homepage missing ${text}`)
 for (const url of ['https://github.com/passioncode-ai/fabric-dashboards', 'https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.1.0']) assert.ok(home.includes(`href="${url}"`), `homepage links ${url}`)
 assert.ok(read('design-system/index.html').includes('/assets/dashboards-mark.svg'), 'design system shows the Fabric Dashboards mark')
 

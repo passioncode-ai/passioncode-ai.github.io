@@ -30,7 +30,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Answers:** What does Switchboard do and where can I download it?
 **Indexable:** yes; canonical product URL, SoftwareApplication data and sitemap. Redirect endpoints noindex.
 **Without JS:** requirements, checksums, beta limits, download/source links, agent connect commands and native details/summary FAQ. Checksums and commands wrap at 390 px.
-**Entity:** Fabric Switchboard, source-available desktop account workbench from PassionCode.ai.
+**Entity:** Fabric Switchboard, open-source (AGPL-3.0) desktop account workbench from PassionCode.ai.
 
 ### SCR-04: Project Observatory
 **Scenarios:** SCN-006. Purpose, synthetic screenshot, features, setup steps, limits and FAQ.
@@ -39,7 +39,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 **Answers:** What does Project Observatory show, what does it read, and how do I start?
 **Indexable:** yes; canonical product URL, SoftwareApplication data and sitemap.
 **Without JS:** complete copy, setup steps, source and guide links, native details/summary FAQ.
-**Entity:** Project Observatory, source-available local dashboard from PassionCode.ai (English or Russian interface).
+**Entity:** Project Observatory, open-source (AGPL-3.0) local dashboard from PassionCode.ai (English or Russian interface).
 
 ### SCR-03: Design system
 **Scenarios:** SCN-005, SCN-010. Shared identity and product marks (including Fabric Dashboards), color roles, typography and reusable CSS.

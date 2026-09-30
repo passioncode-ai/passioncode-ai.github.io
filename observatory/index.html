@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Observatory | Local dashboard for agent-operated projects | PassionCode.ai</title><meta name="description" content="See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is a source-available local dashboard from PassionCode.ai, in English or Russian.">
+  <title>Project Observatory | Local dashboard for agent-operated projects | PassionCode.ai</title><meta name="description" content="See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is an open-source local dashboard from PassionCode.ai, in English or Russian.">
   <link rel="canonical" href="https://passioncode.ai/observatory/">
   <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
   <meta property="og:type" content="website"><meta property="og:site_name" content="PassionCode.ai">
-  <meta property="og:title" content="Project Observatory | Local dashboard for agent-operated projects | PassionCode.ai"><meta property="og:description" content="See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is a source-available local dashboard from PassionCode.ai, in English or Russian.">
+  <meta property="og:title" content="Project Observatory | Local dashboard for agent-operated projects | PassionCode.ai"><meta property="og:description" content="See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is an open-source local dashboard from PassionCode.ai, in English or Russian.">
   <meta property="og:url" content="https://passioncode.ai/observatory/">
   <meta property="og:image" content="https://passioncode.ai/assets/icon-1024.png">
   <meta property="og:image:width" content="1024"><meta property="og:image:height" content="1024">
   <meta property="og:image:alt" content="PassionCode.ai passion fruit mark">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Project Observatory | Local dashboard for agent-operated projects | PassionCode.ai">
-  <meta name="twitter:description" content="See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is a source-available local dashboard from PassionCode.ai, in English or Russian."><meta name="twitter:image" content="https://passioncode.ai/assets/icon-1024.png">
+  <meta name="twitter:description" content="See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is an open-source local dashboard from PassionCode.ai, in English or Russian."><meta name="twitter:image" content="https://passioncode.ai/assets/icon-1024.png">
   <link rel="icon" type="image/svg+xml" href="/assets/passioncode-mark.svg">
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
   <link rel="apple-touch-icon" sizes="256x256" href="/assets/icon-256.png">
@@ -23,14 +23,10 @@
   "name": "Project Observatory",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "macOS; Linux",
-  "softwareVersion": "0.8.1",
   "url": "https://passioncode.ai/observatory/",
-  "license": [
-    "https://polyformproject.org/licenses/noncommercial/1.0.0",
-    "https://polyformproject.org/licenses/internal-use/1.0.0"
-  ],
+  "license": "https://spdx.org/licenses/AGPL-3.0-only.html",
   "codeRepository": "https://github.com/passioncode-ai/project-observatory-dashboard",
-  "description": "Source-available local dashboard for the projects coding agents work on: project inventory, Git activity, findings, metrics and known-value credential exposure checks. English or Russian interface.",
+  "description": "Open-source local dashboard for the projects coding agents work on: project inventory, Git activity, findings, metrics and known-value credential exposure checks. English or Russian interface.",
   "inLanguage": ["en", "ru"],
   "publisher": {
     "@type": "Organization",
@@ -48,7 +44,7 @@
 <main id="main">
 
 <section class="hero switchboard-hero" aria-labelledby="hero-title">
- <div class="hero-copy"><p class="eyebrow"><span></span> PROJECT OBSERVATORY · BY PASSIONCODE</p><h1 id="hero-title">Your projects.<br><em>Back in view.</em></h1><p class="hero-body">A local dashboard for the projects your agents work on. See what changed, what needs attention and where known API keys left a copy. In English or Russian.</p><div class="hero-actions"><a class="button button-primary" href="#get-started">Get started <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="https://github.com/passioncode-ai/project-observatory-dashboard">View source <span aria-hidden="true">↗</span></a></div><p class="status"><span class="status-dot"></span> Source-available · macOS + Linux · Python 3.11+</p></div>
+ <div class="hero-copy"><p class="eyebrow"><span></span> PROJECT OBSERVATORY · BY PASSIONCODE</p><h1 id="hero-title">Your projects.<br><em>Back in view.</em></h1><p class="hero-body">A local dashboard for the projects your agents work on. See what changed, what needs attention and where known API keys left a copy. In English or Russian.</p><div class="hero-actions"><a class="button button-primary" href="#get-started">Get started <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="https://github.com/passioncode-ai/project-observatory-dashboard">View source <span aria-hidden="true">↗</span></a></div><p class="status"><span class="status-dot"></span> Open source · macOS + Linux · Python 3.11+</p></div>
  <div class="product-emblem" aria-hidden="true"><span class="emblem-label">ONE VIEW / YOUR PROJECTS</span><img src="/assets/observatory-mark.svg" width="340" height="340" alt=""><span class="emblem-footer">PROJECTS <span>+</span> FINDINGS</span></div>
 </section>
 <section class="section app-preview" aria-labelledby="preview-title"><div class="section-heading"><p class="section-number">INSIDE OBSERVATORY</p><h2 id="preview-title">What needs attention, first.</h2><p>The actual Observatory overview, rendered by the engine over a fictional company’s projects.</p></div><figure><img src="/assets/observatory-demo.jpg" width="1600" height="1000" loading="lazy" alt="The Project Observatory overview in its dark theme: five findings ordered from critical to info, project and activity counters, and a card for every section. Synthetic demo data."><figcaption>Synthetic demo estate · no real projects, repositories or credentials.</figcaption></figure></section>
@@ -69,11 +65,11 @@
 <section class="section faq" id="questions" aria-labelledby="faq-title"><div class="section-heading"><p class="section-number">BEFORE YOU START</p><h2 id="faq-title">A few useful distinctions.</h2></div>
  <details><summary>Does Observatory upload my projects or keys?</summary><p>No. The inventory, history and observations live in your private workspace on your machine. Optional integrations have their own access; each is enabled separately with your own account.</p></details>
  <details><summary>What does it read?</summary><p>Only the folders and sources you configure. <code>full doctor</code> reports what is enabled and what is missing, and the dashboard says when a source was not measured instead of showing zero.</p></details>
- <details><summary>Is it the same thing as Switchboard?</summary><p>No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps the projects those agents work on in view. Both are source-available PassionCode tools you can use today.</p></details>
+ <details><summary>Is it the same thing as Switchboard?</summary><p>No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps the projects those agents work on in view. Both are open-source PassionCode tools you can use today.</p></details>
  <details><summary>And Fabric?</summary><p>Fabric is our CEO AI agent in development, focused on coordinating agents and projects. Observatory is available now as a separate local tool. <a href="/fabric/">Explore Fabric</a>.</p></details>
- <details><summary>Can I inspect or build it myself?</summary><p>Yes. Project Observatory is source-available under PolyForm Noncommercial or Internal Use; a commercial license is available on request from <a href="mailto:contact@passioncode.ai">contact@passioncode.ai</a>. Releases up to and including 0.8.1 were published under MIT and remain available under it. The <a href="https://github.com/passioncode-ai/project-observatory-dashboard">repository</a> includes the source, tests, the security model and release notes.</p></details>
+ <details><summary>Can I inspect or build it myself?</summary><p>Yes. Project Observatory is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from <a href="mailto:contact@passioncode.ai">contact@passioncode.ai</a>. <!-- license-history -->Released versions keep their license: 0.8.1 and earlier under MIT, 0.9.0 and 0.9.1 under PolyForm Noncommercial or Internal Use.<!-- /license-history --> The <a href="https://github.com/passioncode-ai/project-observatory-dashboard">repository</a> includes the source, tests, the security model and release notes.</p></details>
 </section>
-<section class="closing" aria-labelledby="closing-title"><img src="/assets/observatory-mark.svg" width="88" height="88" alt=""><p class="section-number">SOURCE-AVAILABLE · LOCAL FIRST</p><h2 id="closing-title">Your projects. Your evidence.</h2><p>Set up a private workspace, observe your own folders, and tell us where it needs to improve.</p><div class="hero-actions"><a class="button button-primary" href="#get-started">Get started <span aria-hidden="true">↑</span></a><a class="button button-secondary" href="https://github.com/passioncode-ai/project-observatory-dashboard/issues">Report an issue <span aria-hidden="true">↗</span></a></div></section>
+<section class="closing" aria-labelledby="closing-title"><img src="/assets/observatory-mark.svg" width="88" height="88" alt=""><p class="section-number">OPEN SOURCE · LOCAL FIRST</p><h2 id="closing-title">Your projects. Your evidence.</h2><p>Set up a private workspace, observe your own folders, and tell us where it needs to improve.</p><div class="hero-actions"><a class="button button-primary" href="#get-started">Get started <span aria-hidden="true">↑</span></a><a class="button button-secondary" href="https://github.com/passioncode-ai/project-observatory-dashboard/issues">Report an issue <span aria-hidden="true">↗</span></a></div></section>
 </main>
 <footer class="story-footer">
  <div><a class="brand footer-brand" href="/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>From vibe coding to passion coding.</p></div>

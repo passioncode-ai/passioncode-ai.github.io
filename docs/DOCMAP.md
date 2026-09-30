@@ -11,4 +11,4 @@
   UX and brand lint use installed super-ux scripts recorded in the task evidence. Browser checks
   are recorded separately from static checks and native application acceptance.
 
-Entry: [HANDOFF](HANDOFF.md); current task [storytelling brief](tasks/2026-09-26-site-storytelling.md).
+Entry: [HANDOFF](HANDOFF.md); current task [AGPL and repository standard](tasks/2026-09-30-agpl-and-repository-standard.md).
