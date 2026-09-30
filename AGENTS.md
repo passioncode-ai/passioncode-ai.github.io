@@ -65,6 +65,15 @@ go from reviewed `main` with `npm run deploy` through authenticated Wrangler
   "Propagation"). A change to this repository's role, dependencies or test command updates its row
   in org-index `repositories.json` in the same change.
 
+## Organisation
+
+This repository is one of the `passioncode-ai` repositories. The org map —
+which repository owns what and how they connect — is
+[passioncode-ai/org-index](https://github.com/passioncode-ai/org-index) (private; readable by every
+org member), with [ONBOARDING.md](https://github.com/passioncode-ai/org-index/blob/main/ONBOARDING.md)
+for a new contributor's machine. The working rules are the knowledge base's
+[rules.md](https://github.com/passioncode-ai/fabric-workspace/blob/main/knowledge/rules.md).
+
 ## After work
 
 In the same run: update this repository's docs with the change; if a cross-repository fact changed
