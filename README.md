@@ -28,6 +28,18 @@ npm run preview -- --port 4173
 
 Use the Worker preview to exercise download redirects. A plain static server only previews the HTML. Deployment from reviewed `main` uses `npm run deploy`; see [deployment contract](docs/DEPLOYMENT.md).
 
+## Quick start for a new teammate
+
+1. **Install:** nothing to install — the product is the live site, https://passioncode.ai/.
+   For work: `npm ci`, then `npm run check` and `npm run build`.
+2. **Configure:** no key for preview or checks. Only a deploy needs a Cloudflare login to the
+   organization's account (`npx wrangler login`, or a scoped API token in `CLOUDFLARE_API_TOKEN`
+   issued by the operator); `npx wrangler deploy --dry-run --outdir <dir>` bundles without one.
+3. **MCP:** none; the site neither serves nor calls MCP.
+4. **Develop:** `npm run preview -- --port 4173` serves the Worker locally. Pages are `index.html`
+   and one directory per product, the Worker is `worker/`; [docs/DOCMAP.md](docs/DOCMAP.md) says
+   what each change must also update, and [AGENTS.md](AGENTS.md) holds the rules.
+
 ## Approved brand
 
 The passion-fruit identity remains locked in [brand](brand/README.md). `npm run check` verifies those bytes. The new [shared design system](design-system/README.md) adds reusable semantic tokens and the yellow S mark without replacing the parent brand.
