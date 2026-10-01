@@ -22,7 +22,7 @@ with sync_playwright() as p:
     page=b.new_page(viewport={'width':width,'height':height},device_scale_factor=1,reduced_motion='reduce')
     errors=[];page.on('pageerror',lambda err:errors.append(str(err)));page.on('console',lambda msg:errors.append(msg.text) if msg.type=='error' else None)
     page.goto(base+route,wait_until='networkidle');page.evaluate('document.fonts.ready')
-    
+
     for img in page.locator('img[loading=lazy]').all():
      img.scroll_into_view_if_needed();img.evaluate('(i) => i.decode()')
     page.evaluate('window.scrollTo(0,0)')
@@ -44,7 +44,7 @@ with sync_playwright() as p:
       page.goto(base+route);page.keyboard.press('Tab');assert page.locator(':focus').get_attribute('class')=='skip-link'
       page.keyboard.press('Enter');assert page.url.endswith('#main')
       faq=page.locator('summary').first;faq.focus();page.keyboard.press('Enter');assert page.locator('details').first.get_attribute('open') is not None
-    
+
     if phase=='after' and route=='/observatory/':
      page.goto(base+route+'#start');page.wait_for_timeout(100)
      assert page.locator('#start').count()==1
