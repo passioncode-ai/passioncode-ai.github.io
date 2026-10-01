@@ -56,3 +56,23 @@ Workspace consumes this source through its existing scheduled sync.
   0 errors, 372 advisory registry/calibration warnings, not a clean-warning result.
   This repository uses the installed linters; it does not have local lint.py or
   validate.py wrappers. Full accessibility conformance was not reassessed.
+
+## Production receipt
+
+Deployed source: `d9dd06ab2cdabd7a624a1169d6d3db230e0617f3`, verified equal to
+remote main before deployment. Cloudflare Worker version:
+`61c4218f-ccfa-477a-b569-5cec86a2bc4c`. Deployment completed through the existing
+production account with `npm run deploy`; no credentials are included here.
+
+- [Hosted check](https://github.com/passioncode-ai/passioncode-ai.github.io/actions/runs/36904591993): success on that exact source.
+- [Live receipt](../evidence/2026-10-01-display-copy/live.json): 30 public assets
+  match the build, all four download routes pass and three private paths remain excluded.
+- [Live browser receipt](../evidence/2026-10-01-display-copy/live-browser/browser.json):
+  21 cases, seven pages at 1280/390/320 px; no overflow, image failure or console error;
+  navigation, keyboard checks and the Observatory legacy anchor pass.
+- Fresh remote-main checkout resolves the task, current handoff, brand convention,
+  homepage and release renderer at the deployed source SHA.
+
+Complete for this editorial change. The next task is normal product maintenance
+under the recorded display-copy convention; the existing scheduled Workspace sync
+will import these source documents. This is not a new native-product release.

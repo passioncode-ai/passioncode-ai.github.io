@@ -3,8 +3,9 @@
 Operator request: remove decorative full stops, especially in heroes, and review
 the copy more carefully. Seven pages now share the display punctuation convention;
 hero introductions are concise and the generated Switchboard section agrees.
-[Task and verification](tasks/2026-10-01-display-copy.md). Publication receipt is
-recorded there after verified deployment. Next: preserve this convention when
+[Task and verification](tasks/2026-10-01-display-copy.md). Published and verified at source `d9dd06ab2cdabd7a624a1169d6d3db230e0617f3`,
+Worker `61c4218f-ccfa-477a-b569-5cec86a2bc4c`: all 37 live asset/route checks and
+21 live browser cases pass. The linked task contains the receipts. Next: preserve this convention when
 updating product pages or generated release copy; product tasks stay in the local board.
 
 ---
