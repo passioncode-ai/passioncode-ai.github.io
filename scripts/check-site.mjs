@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 
 const root = resolve(import.meta.dirname, '..')
-const pages = ['index.html', 'switchboard/index.html', 'fabric/index.html', 'inbox/index.html', 'observatory/index.html', 'design-system/index.html']
+const pages = ['index.html', 'switchboard/index.html', 'fabric/index.html', 'inbox/index.html', 'dashboards/index.html', 'observatory/index.html', 'design-system/index.html']
 const css = readFileSync(resolve(root, 'styles.css'), 'utf8')
 const release = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
 const read = path => readFileSync(resolve(root, path), 'utf8')
@@ -57,7 +57,7 @@ for (const file of pages) {
   }
 }
 const home = read('index.html')
-for (const text of ['The agent-agnostic operating system for', 'AI-native teams.', 'From vibe coding to passion coding.', 'CEO AI agent', 'In development', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
+for (const text of ['The agent-agnostic operating system for', 'AI-native teams.', 'From vibe coding to passion coding.', 'CEO AI agent', 'in development', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
 const product = read('switchboard/index.html')
 for (const text of [release.version, release.releaseUrl, 'Unsigned beta', 'not yet verified', 'Before you open it', 'href="/observatory/"', ...LICENSE_WORDING]) assert.ok(product.includes(text), `product missing ${text}`)
 const releaseProblems = checkSwitchboardPage(product, release)
@@ -76,8 +76,8 @@ assert.equal(release.releaseUrl, `https://github.com/${release.repository}/relea
 assert.match(css, /@media \(max-width: 620px\)/)
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
 for (const page of pages) assert.ok(read(page).includes('href="/design-system/tokens.css"'))
-for (const path of ['', 'switchboard/', 'fabric/', 'inbox/', 'observatory/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
-console.log('PASS: 6 static pages, metadata, anchors, shared tokens, product status and the release downloads')
+for (const path of ['', 'switchboard/', 'fabric/', 'inbox/', 'observatory/', 'dashboards/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
+console.log('PASS: 7 static pages, metadata, anchors, shared tokens, product status and the release downloads')
 
 const fabric = read('fabric/index.html')
 const fabricRelease = JSON.parse(read('fabric/release.json'))
@@ -105,7 +105,7 @@ assert.ok(home.includes('href="/observatory/"'), 'homepage links Observatory')
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
 assert.ok(home.includes('Fabric Dashboards'), 'homepage lists Fabric Dashboards')
 for (const text of ['Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available']) assert.ok(home.includes(text), `homepage missing ${text}`)
-for (const url of ['https://github.com/passioncode-ai/fabric-dashboards', 'https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.3.1', 'https://github.com/passioncode-ai/fabric', 'https://github.com/passioncode-ai/fabric-inbox']) assert.ok(home.includes(`href="${url}"`), `homepage links ${url}`)
+for (const url of ['https://github.com/passioncode-ai/fabric-dashboards', 'https://github.com/passioncode-ai/fabric', 'https://github.com/passioncode-ai/fabric-inbox']) assert.ok(home.includes(`href="${url}"`), `homepage links ${url}`)
 assert.ok(read('design-system/index.html').includes('/assets/dashboards-mark.svg'), 'design system shows the Fabric Dashboards mark')
 
 const inbox = read('inbox/index.html')
@@ -125,3 +125,19 @@ assert.equal(inboxTarget.pathname, `/${inboxRelease.repository}/releases/downloa
 assert.match(inboxRelease.sha256, /^[0-9a-f]{64}$/)
 assert.ok(home.includes('href="/inbox/#download"'), 'homepage offers the Inbox download')
 assert.ok(home.includes('href="/inbox/"'), 'homepage links Inbox')
+
+const dashboards = read('dashboards/index.html')
+for (const text of ['macOS 13', 'Apple silicon', 'Intel', 'list_services', 'Services are installed separately', 'Release 0.3.1 is the first under the AGPL', ...LICENSE_WORDING]) assert.ok(dashboards.includes(text), `Dashboards missing ${text}`)
+assert.ok(home.includes('href="/dashboards/#download"'))
+assert.ok(dashboards.includes('https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.3.1'))
+assert.ok(dashboards.includes('4ef44362566c3c05e6603266f52ba018f70b384ab7f4487c2fc4b305afe8f3d1'))
+for (const path of ['/dashboards/', '/#extend']) assert.ok(home.includes(`href="${path}"`))
+for (const name of ['PassionCode.ai launcher', 'Fabric Agent Adapter', 'Fabric Agent Contract', 'Fabric VR', 'Okolos']) assert.ok(home.includes(name), `directory missing ${name}`)
+assert.ok(home.includes('real-model replies are not yet verified'), 'Inbox preview limits must accompany the homepage promise')
+for (const file of pages) {
+ const html = read(file)
+ assert.equal((html.match(/aria-label="Footer navigation"/g) || []).length, 1, `${file}: one footer navigation landmark`)
+ assert.ok(!/href="https:\/\/github.com\/passioncode-ai\/(?:fabric-workspace|org-index)(?:["/#])/.test(html), `${file}: private repository visitor link`)
+}
+
+assert.match(observatory, /id="get-started"[^>]*><span id="start"/, 'legacy #start lands in the Observatory setup section')

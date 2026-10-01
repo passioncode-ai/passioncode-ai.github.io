@@ -1,4 +1,4 @@
-<!-- agent-sync:generated source=passioncode-ai.github.io@21751be cfg=993f6f20bdf9 at=2026-09-30T23:50:33Z — regenerate with `agent_sync.py setup`, do not hand-edit -->
+<!-- agent-sync:generated source=passioncode-ai.github.io@2ae041a cfg=bf015fdbacdc at=2026-10-01T15:48:26Z — regenerate with `agent_sync.py setup`, do not hand-edit -->
 
 # How documentation and coordination work in passioncode-ai.github.io
 
@@ -30,6 +30,8 @@ None declared here. Ids live in the parent repository; reserve them there.
 - `docs/brand/facts.md`
 - `switchboard/release.json`
 - `docs/HANDOFF.md`
+- `docs/backlog.md`
+- `docs/backlog-sources.json`
 
 ### Gates run before a change is considered done
 

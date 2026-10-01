@@ -11,4 +11,6 @@
   UX and brand lint use installed super-ux scripts recorded in the task evidence. Browser checks
   are recorded separately from static checks and native application acceptance.
 
-Entry: [HANDOFF](HANDOFF.md); current task [final check](tasks/2026-10-01-final-check.md).
+Local task status: [backlog](backlog.md), collected through [manifest](backlog-sources.json).
+
+Entry: [HANDOFF](HANDOFF.md); current task [agent workplace](tasks/2026-10-01-agent-workplace.md).

@@ -16,7 +16,7 @@ Contract: brand-contract v1
 | author.follow | Follow on Twitter | index.html | SCN-008 | proposed | copy |
 
 | inbox.explore | Explore Inbox | index.html | SCN-009 | proposed | copy |
-| dashboards.download | Download Fabric Dashboards | index.html | SCN-010 | proposed | copy |
+| dashboards.download | Download Fabric Dashboards | dashboards/index.html | SCN-010 | proposed | copy |
 | inbox.what | See what it does | inbox/index.html | SCN-009 | proposed | copy |
 | download.inbox.macos | Download for macOS | inbox/index.html | SCN-009 | proposed | copy |
 | inbox.download | Download Inbox | index.html | SCN-009 | proposed | copy |
@@ -24,3 +24,6 @@ Contract: brand-contract v1
 | switchboard.family.dashboards | Fabric Dashboards release | switchboard/index.html | SCN-004 | proposed | copy |
 | switchboard.family.fabric | Meet Fabric | switchboard/index.html | SCN-004 | proposed | copy |
 | switchboard.family.all | All the tools | switchboard/index.html | SCN-004 | proposed | copy |
+
+| builders.setup | Setup and update controls | index.html | SCN-012 | proposed | copy |
+| builders.service | Build your first service | index.html | SCN-012 | proposed | copy |

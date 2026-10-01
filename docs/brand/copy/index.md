@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode.ai | A toolkit for AI-native teams
+PassionCode.ai | Your workplace for AI agents
 
-A toolkit for AI-native teams: Switchboard for Claude Code and Codex accounts, Project Observatory for your projects, and Fabric, our CEO AI agent, in early preview.
+Build your own workplace for AI agents. Manage accounts with Fabric Switchboard, run local services with Fabric Dashboards, and review projects with Project Observatory.
 
 Skip to content
 
@@ -12,13 +12,15 @@ PassionCode
 
 .ai
 
-The toolkit
+The tools
 
-What’s next
+Your workflow
+
+For builders
 
 About
 
-Download
+Get the tools
 
 ↓
 
@@ -28,9 +30,9 @@ The agent-agnostic operating system for
 
 AI-native teams.
 
-Better tools for the work around your agents.
+Your agents. Your tools. Your way of working.
 
-Tools for accounts, project visibility and agent coordination. Start with what’s available today, and follow the rest as we build.
+Put accounts, local services, project evidence and mail in a workplace you control. Use each tool on its own, then connect the parts that fit your workflow.
 
 Explore the tools
 
@@ -40,9 +42,9 @@ Download Switchboard
 
 ↓
 
-Available now: Switchboard, Observatory and Fabric Dashboards
+Desktop apps, agent skills and public source
 
-Open source · Fabric in early preview
+Available releases · clearly marked previews
 
 people
 
@@ -52,13 +54,69 @@ projects
 
 tools
 
-01 / THE TOOLKIT
+01 / AVAILABLE TODAY
 
-Good agents need
+Tools you can use today.
 
-a working environment.
+Choose by the work you need to do. There is no all-or-nothing install: every tool below has its own setup and release.
 
-An account to run on. A project to work toward. Clear responsibility and a way to check the result. These are the parts of an AI-native team’s work we’re building for.
+Fabric Switchboard
+
+Choose the account your agent runs on.
+
+Beta 0.4.1 · macOS + Windows
+
+↗
+
+Fabric Dashboards
+
+Bring your local agent services into one window.
+
+0.3.1 · macOS
+
+↗
+
+Project Observatory
+
+See project activity, findings and their evidence.
+
+0.10.0 · macOS + Linux
+
+↗
+
+Fabric Inbox
+
+Triage Gmail and Cloudflare mail in one place.
+
+Preview 0.8.2 · macOS
+
+↗
+
+Fabric
+
+Give your projects a home while the CEO agent takes shape.
+
+Early preview 0.2.0 · macOS
+
+↗
+
+PassionCode.ai launcher
+
+Install the skills that teach agents how to build with Fabric.
+
+CLI · Node.js 18+
+
+↗
+
+Downloads and requirements are on each product page. Preview means unfinished: check the limits before installing.
+
+02 / YOUR WORKFLOW
+
+Make the workplace
+
+fit the way you work.
+
+Start with one useful tool. Add visibility, mail or your own agent service when the work calls for it. You keep the choice of agent, accounts and infrastructure.
 
 01
 
@@ -72,23 +130,23 @@ Available in beta
 
 02
 
-Give work a home
+Keep services in view
 
-Keep a project’s purpose, context and decisions together beyond a single conversation.
+See local services together, open their dashboards and handle the ones that need attention.
 
-Fabric
+Fabric Dashboards
 
-Early preview
+Available now
 
 03
 
-Coordinate the team
+Connect your workflow
 
-Give people and agents clear roles, with explicit limits on what each may do.
+Use the apps yourself or connect their MCP tools to an agent. Build a service of your own with the Adapter.
 
-Fabric direction
+Fabric Agent Adapter
 
-In development
+Available now
 
 04
 
@@ -100,17 +158,19 @@ Project Observatory
 
 Available now
 
-Start with the part you need. Switchboard and Observatory work on their own; the wider project workflow is what we’re building toward.
+A working connection today: Project Observatory runs as a local service and appears in Fabric Dashboards. Fabric’s complete coordination loop is still in development; these tools do not depend on it.
 
-02 / AVAILABLE TODAY
+03 / INSIDE THE TOOLS
 
-Tools you can use today.
+A useful part.
 
-Start with your accounts or your projects. Switchboard and Observatory work independently, so you can pick the part you need.
+A bigger picture.
+
+Different jobs, a shared direction: tools you can inspect, configure and use from your agent.
 
 PUBLIC BETA · macOS + Windows
 
-Switchboard
+Fabric Switchboard
 
 Your accounts.
 
@@ -192,7 +252,7 @@ Your mail.
 
 Important first.
 
-Fabric’s mail tool, which also works on its own. Gmail and Cloudflare mailboxes in one list, with what needs you on top; addresses on your own domains answered by agents within the rules you set. The Mac app creates its server in your own Cloudflare account. General IMAP and Outlook support are planned.
+Fabric’s mail tool, which also works on its own. Gmail and Cloudflare mailboxes in one list, with what needs you on top. Configure addresses on your own domains and reply policies for agents; real-model replies are not yet verified. The Mac app creates its server in your own Cloudflare account. General IMAP and Outlook support are planned.
 
 Download Inbox
 
@@ -212,7 +272,57 @@ MAIL
 
 ACCOUNTS
 
-03 / THE BUILD PIPELINE
+04 / MAKE IT YOURS
+
+Bring your own agent.
+
+Build your own workflow.
+
+Use Claude Code, Codex or another agent that fits your work. Install the skills, connect individual tools, or make your own service speak Fabric’s open contracts.
+
+START WITH THE SKILLS
+
+PassionCode.ai launcher
+
+One command installs Fabric Agent Adapter, Observatory Log and the organization’s working rules. No Fabric app or account is required.
+
+npx @passioncode-ai/passioncode@latest update
+
+Node.js 18+. Claude Code needs its CLI for plugins; other supported agents receive shared skills. Restart your agent after installation. Automatic updates are enabled by default and can be turned off.
+
+Setup and update controls ↗
+
+BUILD A SERVICE
+
+Fabric Agent Adapter
+
+Turn your own project or agent into a Fabric-compatible service. The kits and skills guide the setup; a conformance probe checks the contract.
+
+Use
+
+Fabric Agent Contract
+
+for the schemas and protocol. A compatible local service can appear in Fabric Dashboards.
+
+Build your first service ↗
+
+IN DEVELOPMENT · BUILD FROM SOURCE
+
+Fabric VR
+
+Fabric’s remote surfaces, starting with Meta Quest. A headset and a source build are required; there is no published release yet.
+
+Explore Fabric VR ↗
+
+PRE-ALPHA · BUILD FROM SOURCE
+
+Okolos
+
+A browser security extension from PassionCode.ai. An independent project, with public source you can build; no published release yet.
+
+Explore Okolos ↗
+
+05 / RELEASES & DIRECTION
 
 What’s here.
 
@@ -224,7 +334,7 @@ Development preview
 
 Fabric Inbox
 
-Desktop mail for Gmail and Cloudflare mailboxes, with agents on your own addresses. Signed and notarized, macOS 12 or later.
+Desktop mail for Gmail and Cloudflare mailboxes, with configurable agent reply policies. Real-model replies are not yet verified. Signed and notarized, macOS 12 or later.
 
 Download Inbox
 
@@ -232,7 +342,7 @@ Download Inbox
 
 Available in beta
 
-Switchboard
+Fabric Switchboard
 
 Account management for Claude Code and Codex, on macOS and Windows.
 
@@ -286,7 +396,7 @@ See the workflow
 
 No promised release dates. Follow the build below for progress as it happens.
 
-04 / SOURCE
+06 / SOURCE
 
 Use the tools.
 
@@ -298,7 +408,7 @@ PUBLIC REPOSITORY · AGPL-3.0
 
 ↗
 
-fabric-switchboard
+Fabric Switchboard
 
 Desktop app, CLI, build instructions, issues and release notes.
 
@@ -352,7 +462,7 @@ Visit PassionCode on GitHub
 
 ↗
 
-05 / ABOUT
+07 / ABOUT
 
 Built alongside
 
@@ -372,15 +482,17 @@ Sergey ·
 
 @sshlg93
 
-START WITH YOUR ACCOUNTS
+START WITH ONE USEFUL TOOL
 
-Get your accounts in order.
+Your next workflow
 
-Try Switchboard for macOS or Windows. A local tool, with source you can inspect.
+starts here.
 
-Download Switchboard
+Choose the part you need today. Add the rest when it earns a place in your work.
 
-↓
+Explore the tools
+
+↑
 
 PassionCode
 
@@ -393,6 +505,8 @@ Switchboard
 Observatory
 
 Inbox
+
+Dashboards
 
 Fabric
 

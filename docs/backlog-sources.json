@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/passioncode-ai/passioncode-ai.github.io",
+  "sources": [
+    {
+      "path": "docs/backlog.md",
+      "goal": "agent-workplace",
+      "kind": "tasks",
+      "format": "table",
+      "idColumn": "ID",
+      "titleColumn": "Item",
+      "statusColumn": "Status"
+    }
+  ]
+}

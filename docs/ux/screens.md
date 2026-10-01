@@ -12,9 +12,10 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-04 | Observatory | SCN-006 |
 | SCR-05 | Fabric | SCN-007, SCN-008 |
 | SCR-06 | Fabric Inbox | SCN-009 |
+| SCR-07 | Fabric Dashboards | SCN-010 |
 
 ### SCR-01: Home
-**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010. Original operating-system hero with primary Explore the tools → #products and secondary download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline including Fabric Dashboards (no product page; it links its public release); public source-available repositories; author/About. Header and footer expose the same main sections on mobile.
+**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012. Original operating-system hero with primary Explore the tools → #products and secondary download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline including Fabric Dashboards (own page with download and MCP setup); public AGPL source repositories; author/About. Header and footer expose the same main sections on mobile.
 **Web surface:** public
 **Route:** https://passioncode.ai/
 **Answers:** What is PassionCode and which product can I use today?
@@ -71,3 +72,14 @@ Screens describe public website behavior, not acceptance of native Switchboard o
 **Entity:** Fabric Inbox, Fabric's mail tool from PassionCode.ai, a desktop mail client in development preview, open source under AGPL-3.0.
 
 Inbox falsifier: a reader could mistake the preview for a finished product or a working generic IMAP/Outlook offering. The development-preview status appears in the first viewport, and the unverified parts are repeated beside the download. Composition follows the existing product page; no new animation or visual direction is introduced.
+
+### SCR-07: Fabric Dashboards
+**Scenarios:** SCN-010. Hero → practical service utility → download and requirements → agent setup → FAQ → sibling tools.
+**Web surface:** public
+**Route:** https://passioncode.ai/dashboards/
+**Answers:** What does Fabric Dashboards do, which services appear, and how do I install it?
+**Indexable:** yes; canonical URL, sitemap and versioned SoftwareApplication data.
+**Without JS:** complete page, download/checksum, MCP command and native FAQ.
+**Entity:** Fabric Dashboards, macOS service dashboard from PassionCode.ai, AGPL-3.0, release 0.3.1.
+
+Workplace update: the home directory precedes the work cycle and long product descriptions. Six entry points show utility and status; #extend owns launcher/Adapter instructions and source-build projects. Identity, headline and token palette are preserved. No new motion or component framework. Falsifiers: a product lacks a next action; a preview appears finished; the visitor mistakes the launcher for a desktop-app installer; a command or directory card clips at 390 px.

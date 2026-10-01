@@ -1,0 +1,30 @@
+[
+  {
+    "mutation": "dashboards/index.html: list_services -> list_service_BROKEN",
+    "exitCode": 1,
+    "caught": [
+      "AssertionError [ERR_ASSERTION]: Dashboards missing list_services"
+    ]
+  },
+  {
+    "mutation": "index.html: real-model replies are not yet verified -> real-model replies verified",
+    "exitCode": 1,
+    "caught": [
+      "AssertionError [ERR_ASSERTION]: Inbox preview limits must accompany the homepage promise"
+    ]
+  },
+  {
+    "mutation": "index.html: https://github.com/passioncode-ai/fabric-vr -> https://github.com/passioncode-ai/org-index",
+    "exitCode": 1,
+    "caught": [
+      "AssertionError [ERR_ASSERTION]: index.html: private repository visitor link"
+    ]
+  },
+  {
+    "mutation": "observatory/index.html: legacy start alias removed",
+    "exitCode": 1,
+    "caught": [
+      "AssertionError [ERR_ASSERTION]: legacy #start lands in the Observatory setup section"
+    ]
+  }
+]

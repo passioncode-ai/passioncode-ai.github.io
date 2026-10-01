@@ -20,8 +20,8 @@ Last calibrated: 2026-09-26
 ## Narrative
 Hero: the builder or team working with AI agents.
 Enemy: account juggling and fragmented coordination.
-Product role: a toolkit, starting with Switchboard; Fabric is an early preview.
-Promise: clear account control today and an explicit direction for coordinated work.
+Product role: a composable workplace for agents: independent account, service, project and mail tools; Fabric is an early preview.
+Promise: choose useful tools today, adapt them to your workflow, and see the boundary between a release and planned coordination.
 
 ## Invariant in every language
 Do not blur available beta capabilities with Fabric's development direction. Name limitations where they affect downloading or installing.

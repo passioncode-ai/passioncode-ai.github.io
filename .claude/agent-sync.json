@@ -10,7 +10,9 @@
   "guardedFiles": [
     "docs/brand/facts.md",
     "switchboard/release.json",
-    "docs/HANDOFF.md"
+    "docs/HANDOFF.md",
+    "docs/backlog.md",
+    "docs/backlog-sources.json"
   ],
   "claimTags": {},
   "gates": [

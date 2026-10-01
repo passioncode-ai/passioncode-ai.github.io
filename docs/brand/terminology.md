@@ -49,3 +49,7 @@ Contract: brand-contract v1
 | Observatory | Short form of Project Observatory, the local project dashboard. |
 | Dashboards | Short form of Fabric Dashboards, the macOS app that shows local agent services in one window. |
 | open source | Public source under the GNU AGPL-3.0: use, study, change and share it; a modified version you share or run as a service for others publishes its source. A closed product or an unpublished hosted service needs the commercial license. Released versions keep their earlier license (MIT or PolyForm). |
+
+| agent workplace | A composable setup of independent tools, agent skills and public protocols; not a claim that Fabric’s complete coordination loop has shipped. |
+| PassionCode.ai launcher | CLI that installs the listed skills and plugins, not a desktop application bundle. |
+| Fabric Agent Adapter | Kits, skills and conformance probe for making a service or agent compatible with Fabric. |

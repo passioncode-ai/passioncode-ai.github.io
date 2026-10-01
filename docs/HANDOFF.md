@@ -1,3 +1,17 @@
+# Current handoff — composable agent workplace, 2026-10-01
+
+Objective: explain each tool’s utility and how to adapt an agent workplace.
+Implemented: homepage product directory and workflow/extension paths, /dashboards/
+with pinned download and MCP setup, honest preview boundaries, consistent navigation,
+Wrangler security update and the federated local backlog.
+Checks and screenshots: [bounded task](tasks/2026-10-01-agent-workplace.md).
+Deployment: pending parent review and reviewed-main publication; no live claim yet.
+Next task: land source, deploy with the existing organization account, verify every
+asset/redirect, append the receipt and close SITE-001. Remaining work is canonical in
+[the local backlog](backlog.md), not repeated as independently editable statuses here.
+
+---
+
 # Current handoff — Project Observatory 0.10.0 named, 2026-10-01
 
 Objective: the homepage card, the Observatory page and the facts name

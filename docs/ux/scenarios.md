@@ -17,6 +17,7 @@
 
 | SCN-009 | Understand and download Fabric Inbox | Inbox | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 | SCN-010 | Find Fabric Dashboards and its release | Dashboards | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
+| SCN-012 | Customize an agent workplace | Extension | P-01 | ST-06, FLW-04 | draft | pending |
 | SCN-011 | Connect an agent to Switchboard | Agents | P-01 | ST-02, FLW-01 | draft | pending |
 
 ## Personas
@@ -32,9 +33,9 @@ See [foundation](foundation.md).
 - **Entry point:** /
 - **Preconditions:** none
 - **Steps:**
-  1. Read the teams headline and work cycle → the umbrella, Switchboard beta and Fabric development state are distinguished.
+  1. Read the teams headline → the agent workplace and independent tools are explained; the early product directory names six useful entry points and their availability.
   2. Follow the primary Explore the tools → the available-tools section on the homepage opens.
-  3. Follow the secondary Download Switchboard → the product download section opens.
+  3. Follow the secondary Download Switchboard → the Switchboard product download section opens.
 - **Expected result:** Product roles and available downloads are clear.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
 - **UI elements:** Navigation, work cycle, product features, Explore the tools, Download Switchboard, Fabric detail link
@@ -51,8 +52,8 @@ See [foundation](foundation.md).
 - **Entry point:** /#toolkit or /fabric/
 - **Preconditions:** none
 - **Steps:**
-  1. Read the work cycle → account setup is available through Switchboard; project coordination and review describe Fabric's direction.
-  2. Read the build pipeline → available beta and in-development work are distinct, with no promised release date.
+  1. Read the work cycle → account setup uses Switchboard, compatible local services appear in Dashboards, and the wider Fabric coordination loop remains in development.
+  2. Read the build pipeline → releases, previews and in-development work are distinct, with no promised release date.
   3. Follow Explore Fabric → its own page explains project purpose, agents, authority and evidence, shows the actual window on synthetic demo data, and labels the build an early preview.
   4. Read Get Fabric → the requirements (Apple silicon, Docker, Supabase CLI) and the preview's limits sit beside the macOS download → the download redirects to the public release asset.
 - **Expected result:** Reader understands what the preview does today and what it needs before downloading, without assuming a shipped integrated platform, an Intel build or a Fabric that replies.
@@ -129,7 +130,7 @@ See [foundation](foundation.md).
 - **Preconditions:** none
 - **Steps:**
   1. Expand FAQ → managed/isolated and Fabric differences are explained.
-  2. Follow View source → the public repository opens; the FAQ says Switchboard is open source under the GNU AGPL-3.0, names the commercial-license contact, that releases up to and including v0.3.1-beta.1 remain MIT, and the license of the current download (0.4.0-beta.1 was released under PolyForm; the next release is the first under the AGPL).
+  2. Follow View source → the public repository opens; the FAQ says Switchboard is open source under the GNU AGPL-3.0, names the commercial-license contact, that releases up to and including v0.3.1-beta.1 remain MIT, and the license of the current download (0.4.0-beta.1 was released under PolyForm; the selected 0.4.1-beta.1 release is the first under the AGPL).
   3. Read Part of the PassionCode toolkit → Observatory, Fabric Dashboards and Fabric links explain what the other tools do.
 - **Expected result:** Reader can inspect source without GitHub authentication.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
@@ -200,20 +201,21 @@ See [foundation](foundation.md).
 ### SCN-010: Find Fabric Dashboards and its release
 - **Persona:** P-01
 - **Feature:** Dashboards
-- **Traces:** ST-01, ST-03, FLW-01
-- **Entry point:** / (build pipeline or source section)
-- **Preconditions:** a Mac with macOS 13 or later for the download; none for reading
+- **Traces:** ST-01, ST-02, ST-03, FLW-01
+- **Entry point:** /#products or /dashboards/
+- **Preconditions:** none; macOS 13+ to install the app
 - **Steps:**
-  1. Read the build pipeline → Fabric Dashboards is available now, for local agent services that speak `fabric-service/0.1` such as Project Observatory's server, signed and notarized for macOS 13 or later.
-  2. Follow Download Fabric Dashboards → the public GitHub release v0.3.1 opens with the DMG; agents drive the app over MCP.
-  3. Or follow the Fabric Dashboards source card → the public repository, open source under AGPL-3.0, opens.
-- **Expected result:** The visitor knows what Dashboards watches, where the signed build is and that the source is public under AGPL-3.0 (v0.1.0 was released under MIT, v0.2.0 and v0.3.0 under PolyForm; v0.3.1 is its first AGPL-3.0 release), without a dedicated product page.
-- **Alt paths:** design-system page shows the Dashboards mark beside the other product marks.
-- **UI elements:** build-pipeline row, Download Fabric Dashboards, source card, design-system mark.
-- **States covered:** success, error; static content has no loading or application empty state.
-- **Errors & recovery:** GitHub unavailable: retry later; the release page needs no account.
+  1. Choose Fabric Dashboards in the directory → its own page explains local services and independent use.
+  2. Read download requirements → 0.3.1 universal DMG, signed/notarized, macOS 13+, separately installed compatible services and empty-list behavior are named.
+  3. Follow Download Fabric Dashboards → the pinned public DMG; inspect checksum and release notes.
+  4. Read For your agents → MCP registration command and list_services proving call; follow Observatory or Adapter to add a service.
+- **Expected result:** Reader can obtain the app without assuming it installs services or requires Fabric.
+- **Alt paths:** direct release link, keyboard, mobile; source and installation guide.
+- **UI elements:** directory card, download, requirements, checksum, MCP setup, FAQ
+- **States covered:** static populated page; network error; documented empty installed-service list.
+- **Errors & recovery:** Failed GitHub download: retry from linked release page. Unsupported OS: inspect source, no binary claim.
 - **Status:** draft
-- **Coverage:** index.html#pipeline; index.html#source; design-system/index.html; scripts/check-site.mjs.
+- **Coverage:** dashboards/index.html; scripts/check-site.mjs; browser receipt in the workplace task.
 - **Product:** unobserved
 
 ### SCN-011: Connect an agent to Switchboard
@@ -234,4 +236,23 @@ See [foundation](foundation.md).
 - **Errors & recovery:** the tools do not appear in the agent: follow the operations guide (CLI on PATH, relaunch a session started without it).
 - **Status:** draft
 - **Coverage:** switchboard/index.html (release regions); scripts/switchboard-release.mjs; scripts/switchboard-release.test.mjs.
+- **Product:** unobserved
+
+### SCN-012: Customize an agent workplace
+- **Persona:** P-01
+- **Feature:** Extension
+- **Traces:** ST-06, FLW-04
+- **Entry point:** /#extend
+- **Preconditions:** none; Node.js 18+ to run the launcher
+- **Steps:**
+  1. Follow For builders → launcher command, requirements and update controls are visible.
+  2. Read the Adapter card → choose the public quick start and contract to build a compatible service.
+  3. Read VR and Okolos → utility, source links and absence of a published release are explicit.
+- **Expected result:** Visitor can adapt their setup without assuming the launcher installs desktop apps or all tools are one finished platform.
+- **Alt paths:** direct public repository links; keyboard; narrow viewport.
+- **UI elements:** launcher command, setup guide, Adapter guide, contract, source-build entries
+- **States covered:** static populated content; external network failure.
+- **Errors & recovery:** Public repository unavailable: retry; no account is required to read the site.
+- **Status:** draft
+- **Coverage:** index.html; scripts/check-site.mjs; browser receipt in the workplace task.
 - **Product:** unobserved

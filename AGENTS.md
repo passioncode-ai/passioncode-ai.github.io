@@ -88,3 +88,13 @@ In the same run: update this repository's docs with the change; if a cross-repos
 (a product, a version, a plan row, a principle), update the page in `fabric-workspace/knowledge/`
 that owns it; land both; publish (`node scripts/workspace.mjs sync` from a Fabric checkout) or
 leave it to the scheduled sync. Leave a handoff with the exact next task.
+
+## Shared backlog
+
+Canonical site tasks live in [docs/backlog.md](docs/backlog.md), registered by
+[docs/backlog-sources.json](docs/backlog-sources.json). Edit the owning source under
+an agent-sync lease; keep stable IDs and completed history. Cross-project goals and
+the merge protocol live in the [workspace backlog](https://github.com/passioncode-ai/fabric-workspace/blob/main/knowledge/backlog.md).
+After landing, publish through Fabric workspace sync (or its scheduled run).
+https://wiki.passioncode.ai/backlog is a derived aggregate, never a second editable
+status. A task belongs to one repository; dependencies link to canonical task IDs.

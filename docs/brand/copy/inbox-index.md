@@ -256,6 +256,8 @@ Observatory
 
 Inbox
 
+Dashboards
+
 Fabric
 
 GitHub & source

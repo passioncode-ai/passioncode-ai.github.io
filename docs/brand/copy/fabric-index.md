@@ -12,9 +12,11 @@ PassionCode
 
 .ai
 
-The toolkit
+The tools
 
-What’s next
+Your workflow
+
+For builders
 
 About
 
@@ -227,6 +229,8 @@ Switchboard
 Observatory
 
 Inbox
+
+Dashboards
 
 Fabric
 
