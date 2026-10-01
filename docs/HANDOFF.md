@@ -1,3 +1,24 @@
+# Current handoff — Project Observatory 0.10.0 named, 2026-10-01
+
+Objective: the homepage card, the Observatory page and the facts name
+[Project Observatory v0.10.0](https://github.com/passioncode-ai/project-observatory-dashboard/releases/tag/v0.10.0),
+its first release under the AGPL.
+Changed: `index.html` (card and section note: release 0.10.0), `observatory/index.html` (latest release,
+wheel name, release link; the license-history note now says 0.10.0 is the first AGPL release and 0.9.1 and
+earlier keep their license), `scripts/check-site.mjs` (the page must name 0.10.0, its tag, its wheel and
+"first under the AGPL"; watched red with the old `<strong>0.9.1</strong>` planted), `docs/brand/facts.md`
+(Observatory release row with the wheel SHA-256 from `SHA256SUMS`, equal to the GitHub digest; license row;
+license history: Observatory v0.10.0 under AGPL-3.0), SCN-006, `README.md`, generated
+copy. The homepage license-history sentence is unchanged — it names only MIT and PolyForm releases, and
+0.8.2 to 0.9.1 stay PolyForm. The site names no launcher or adapter version, so neither changed here.
+Checks: `npm run check` exit 0, `extract-public-copy.py --check` exit 0, `npm run build` exit 0.
+Deploy: from `main` after the merge with `npm run deploy` (`CLOUDFLARE_ACCOUNT_ID` from Project Observatory); the
+Worker version and live check are recorded in Project Observatory's `docs/runs/2026-10-01-release-0.10.0/`.
+Next task: unchanged — when a product publishes a newer release, update its manifest or link, page and facts row
+in one change.
+
+---
+
 # Current handoff — Fabric Dashboards 0.3.1 named, 2026-10-01
 
 Objective: the homepage row, the Switchboard family link and the facts name
