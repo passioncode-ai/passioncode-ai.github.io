@@ -1,0 +1,28 @@
+{
+  "backend": "fs",
+  "leaseBackend": "git",
+  "leaseRemote": "origin",
+  "integrationBranch": "main",
+  "leaseTtlSeconds": 2700,
+  "renewIntervalSeconds": 300,
+  "gated": true,
+  "idRegisters": {},
+  "guardedFiles": [
+    "docs/brand/facts.md",
+    "switchboard/release.json",
+    "docs/HANDOFF.md"
+  ],
+  "claimTags": {},
+  "gates": [
+    "npm run check",
+    "python3 scripts/extract-public-copy.py --check"
+  ],
+  "mirror": {
+    "enabled": false,
+    "sources": []
+  },
+  "mergeLog": {
+    "file": "docs/MERGES.md",
+    "retentionDays": 7
+  }
+}

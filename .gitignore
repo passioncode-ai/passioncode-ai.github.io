@@ -3,3 +3,7 @@ node_modules/
 .wrangler/
 .dev.vars*
 !.dev.vars.example
+
+# agent-sync: local state and the credentials file are never committed
+.env.agent-sync
+.agent-sync/
