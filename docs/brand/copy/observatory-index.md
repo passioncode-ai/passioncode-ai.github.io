@@ -232,7 +232,7 @@ contact@passioncode.ai
 
 .
 
-Released versions keep their license: 0.8.1 and earlier under MIT, 0.9.0 and 0.9.1 under PolyForm Noncommercial or Internal Use.
+Released versions keep their license: 0.8.1 and earlier under MIT, 0.8.2 to 0.9.1 under PolyForm Noncommercial or Internal Use.
 
 The
 

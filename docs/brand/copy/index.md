@@ -344,7 +344,7 @@ Mac app, mail server, agent tools, tests and release notes with checksums.
 
 github.com/passioncode-ai/fabric-inbox
 
-Released versions keep the license they shipped with: MIT for Switchboard up to 0.3.1-beta.1, Observatory up to 0.8.1 and Fabric Dashboards 0.1.0; PolyForm Noncommercial or Internal Use for Switchboard 0.4.0-beta.1, Observatory 0.9.0 and 0.9.1, and Fabric Dashboards 0.2.0 and 0.3.0.
+Released versions keep the license they shipped with: MIT for Switchboard up to 0.3.1-beta.1, Observatory up to 0.8.1 and Fabric Dashboards 0.1.0; PolyForm Noncommercial or Internal Use for Switchboard 0.4.0-beta.1, Observatory 0.8.2 to 0.9.1, and Fabric Dashboards 0.2.0 and 0.3.0.
 
 The Fabric 0.2.0 preview was built before Fabric’s source was published. Okolos, browser security in pre-alpha, and Fabric VR have public repositories too.
 

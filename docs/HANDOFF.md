@@ -10,7 +10,12 @@ facts/terminology/strings/copy, SCN-006/009/010, FLW-01/02/03, SCR-05/06, `READM
 `docs/DEPLOYMENT.md`.
 Checks: `npm run check` exit 0, `extract-public-copy.py --check` exit 0, `npm run build` exit 0
 (29 entries); four planted defects watched red (packet).
-Published: see the PR and the deployment line added after landing.
+Published: source `88c9640` (squash of PR #20, = pushed `main`), Worker version
+`a1d20ec1-0052-40bf-b371-09bd2eaa452c` (`npm run deploy` with `CLOUDFLARE_ACCOUNT_ID` from Project
+Observatory); live check 2026-10-01: 29 of 29 live files equal the build, `/inbox/download/macos` and
+`/fabric/download/macos` 302 to their release DMGs, `www` 301 to the apex.
+Follow-up (same day, PR #21): Observatory v0.8.2 added to the PolyForm licence history on the
+homepage, the Observatory FAQ and `facts.md` (packet F7), then redeployed.
 Next task: when Fabric, Inbox, Observatory or Dashboards publish a newer release, update its
 manifest or link, the page and the facts row in one change; when Fabric's agent hub ships an MCP
 entry, replace the "no MCP entry" sentence on `/fabric/`.
