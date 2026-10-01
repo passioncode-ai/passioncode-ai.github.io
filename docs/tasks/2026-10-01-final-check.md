@@ -13,6 +13,7 @@ version, the license, download links that resolve and the MCP route (Fabric ADR-
 | F3 | Observatory page: "Latest release: 0.8.1" and "install from source"; v0.9.1 is out and the README installs the release wheel | Release 0.9.1, wheel + `SHA256SUMS` install step, MCP step (`claude mcp add observatory …`, `observatory_status`), the 0.9.1 PolyForm note inside a license-history region |
 | F4 | Homepage and Switchboard page linked Fabric Dashboards `v0.1.0`; v0.3.0 is out | Links → `v0.3.0`, the homepage row names 0.3.0 and MCP |
 | F5 | Fabric page did not say how agents reach Fabric | States that Fabric has no MCP entry for other agents yet (knowledge `products.md` "MCP gaps") |
+| F7 | Observatory licence history named PolyForm only for 0.9.0 and 0.9.1; `LICENSE` at tag v0.8.2 is PolyForm too (`gh api "repos/passioncode-ai/project-observatory-dashboard/contents/LICENSE?ref=v0.8.2"`; every tag scanned 2026-10-01: v0.1.0–v0.8.1 MIT, v0.8.2–v0.9.1 PolyForm) | Homepage, Observatory FAQ and `facts.md` say 0.8.2 to 0.9.1; the gate requires it (planted old sentence → red) |
 | F6 | Okolos and Fabric VR were not mentioned anywhere on the site | One sentence in the source section; no product page (neither has a release) |
 
 Branches without a PR, compared with `main`:
