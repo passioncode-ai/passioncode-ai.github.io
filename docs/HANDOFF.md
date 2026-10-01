@@ -1,3 +1,14 @@
+# Current handoff — display-copy refinement, 2026-10-01
+
+Operator request: remove decorative full stops, especially in heroes, and review
+the copy more carefully. Seven pages now share the display punctuation convention;
+hero introductions are concise and the generated Switchboard section agrees.
+[Task and verification](tasks/2026-10-01-display-copy.md). Publication receipt is
+recorded there after verified deployment. Next: preserve this convention when
+updating product pages or generated release copy; product tasks stay in the local board.
+
+---
+
 # Current handoff — composable agent workplace, 2026-10-01
 
 Objective: explain each tool’s utility and how to adapt an agent workplace.

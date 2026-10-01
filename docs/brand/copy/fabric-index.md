@@ -26,11 +26,11 @@ Download
 
 FABRIC · EARLY PREVIEW
 
-A CEO AI agent.
+A CEO AI agent
 
-A home for the work.
+A home for the work
 
-Fabric is the agent we’re building to coordinate other agents around a project. Purpose, context and decisions should stay with the work, even when the people, models or sessions change.
+Fabric is the agent we’re building to coordinate other agents around a project, keeping its purpose, context and decisions with the work as people, models and sessions change
 
 Download for macOS
 
@@ -60,13 +60,13 @@ Evidence
 
 How do we know it worked?
 
-An illustration of the model we’re building.
+An illustration of the model we’re building
 
 THE PROBLEM
 
 A project lasts longer
 
-than a conversation.
+than a conversation
 
 An agent can finish a task while the team still loses the reason behind it. Context gets spread across chats, decisions need repeating and someone has to put the work back together.
 
@@ -80,7 +80,7 @@ THE OPERATING LOOP · DIRECTION
 
 From intent
 
-to a checked result.
+to a checked result
 
 This is the workflow we’re designing toward. It describes Fabric’s direction, not a promise that every step is available today.
 
@@ -110,21 +110,21 @@ Check the result against evidence. Preserve decisions and learning for the next 
 
 INSIDE FABRIC
 
-Where you left off.
+Where you left off
 
-What needs you.
+What needs you
 
 The actual Fabric window, shown with a synthetic demo space: four projects and 28 days of work.
 
-Home · synthetic demo projects, no real accounts or repositories.
+Home · synthetic demo projects, no real accounts or repositories
 
-The board · what waits for your decision.
+The board · what waits for your decision
 
-Releases · what went in, why, and what confirms it.
+Releases · what went in, why, and what confirms it
 
 HOW WE’RE BUILDING IT
 
-People remain accountable.
+People remain accountable
 
 CEO describes a coordination role. You decide what the project is for and what the agent is allowed to do.
 
@@ -150,7 +150,7 @@ GET FABRIC
 
 An early preview
 
-for your Mac.
+for your Mac
 
 Latest preview:
 
@@ -206,7 +206,7 @@ for use the AGPL doesn’t cover. The 0.2.0 preview was built before its source 
 
 PART OF THE SAME TOOLKIT
 
-Switchboard manages the accounts.
+Switchboard manages the accounts
 
 The account-management tool is available in beta. It runs independently of Fabric.
 
@@ -222,7 +222,7 @@ PassionCode
 
 .ai
 
-From vibe coding to passion coding.
+From vibe coding to passion coding
 
 Switchboard
 

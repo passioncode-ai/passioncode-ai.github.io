@@ -26,11 +26,11 @@ Download
 
 FABRIC SWITCHBOARD · BY PASSIONCODE
 
-Your accounts.
+Your accounts
 
-A clearer switch.
+A clearer switch
 
-Keep your Claude Code and Codex CLI accounts in one local workbench. See reported usage, separate work from personal accounts, and choose what handles your next request.
+Keep Claude Code and Codex CLI accounts in one local workbench to check reported usage, separate work from personal accounts and choose what handles your next request
 
 Download Switchboard
 
@@ -52,7 +52,7 @@ CODEX CLI
 
 GET SWITCHBOARD
 
-Pick your platform.
+Pick your platform
 
 Latest public beta:
 
@@ -146,7 +146,7 @@ THE PROBLEM
 
 Limits run out
 
-before the work does.
+before the work does
 
 A long session can reach an account’s usage limit halfway through a task. Then the work waits while you sign out, find another account and sign back in.
 
@@ -158,51 +158,51 @@ going. With rotation on, the next request moves to another account in the same p
 
 INSIDE SWITCHBOARD
 
-One view of your accounts.
+One view of your accounts
 
 The actual Switchboard interface, shown with synthetic demo accounts.
 
-Browser demo · no real accounts, credentials or provider requests.
+Browser demo · no real accounts, credentials or provider requests
 
 A LOCAL WORKBENCH
 
-Less account juggling.
+Less account juggling
 
-More context at a glance.
+More context at a glance
 
 01 / ACCOUNTS
 
-Start where you are.
+Start where you are
 
 Explicitly capture the current CLI account, sign in through the official CLI, or import Claude Swap profiles. Choose what you bring into Switchboard.
 
 02 / BOUNDARIES
 
-Work stays with work.
+Work stays with work
 
 Group accounts into pools such as work and personal. Routing stays within the same provider and pool.
 
 03 / USAGE
 
-See the limits you have.
+See the limits you have
 
 Inspect reported quota windows, reset times and the age of each check. Unsupported or unknown usage stays clearly marked.
 
 04 / SWITCHING
 
-Change the next request.
+Change the next request
 
 Select a managed route or opt into quota-aware rotation. An in-flight response keeps the identity it started with.
 
 05 / LOCAL STORAGE
 
-Keep credentials on your machine.
+Keep credentials on your machine
 
 Saved secrets use macOS Keychain or Windows DPAPI. Isolated CLI launches create the local access-token copy the official client needs.
 
 06 / YOUR WORKFLOW
 
-Use a window. Or your terminal.
+Use a window or your terminal
 
 The desktop and CLI share the same runtime. Keep the app or
 
@@ -214,7 +214,7 @@ FOR AGENTS · NEW IN 0.4
 
 Your agent can see
 
-its own limits.
+its own limits
 
 Switchboard includes
 
@@ -224,13 +224,13 @@ switchboard mcp
 
 01 / USAGE
 
-Read what’s left.
+Read what’s left
 
 Remaining quota for each account and window, with reset times and the age of each check. Unknown usage is reported as unknown, never as zero.
 
 02 / SWITCHING
 
-Switch before the limit.
+Switch before the limit
 
 An agent can choose the account for its session’s next request, within the same provider and pool. Changing the Claude Code login for every session on the Mac needs an explicit
 
@@ -240,7 +240,7 @@ flag.
 
 03 / PROJECT RULES
 
-Optional project rules.
+Optional project rules
 
 Start a project folder on a chosen account, if you want to. Rules stay visible in the app, can be paused or set to expire, and never stop rotation.
 
@@ -268,9 +268,9 @@ codex mcp add switchboard -- switchboard mcp
 
 THE FIRST SESSION
 
-Bring an account.
+Bring an account
 
-Choose how it runs.
+Choose how it runs
 
 01
 
@@ -292,7 +292,7 @@ Use managed mode for switching between requests, or isolated mode for a direct s
 
 BEFORE YOU START
 
-A few useful distinctions.
+A few useful distinctions
 
 Does Switchboard replace Claude Code or Codex?
 
@@ -340,7 +340,7 @@ PART OF THE PASSIONCODE TOOLKIT
 
 Accounts are one part
 
-of the setup.
+of the setup
 
 Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, our CEO AI agent, is in early preview.
 
@@ -362,7 +362,7 @@ All the tools
 
 OPEN SOURCE · LOCAL FIRST
 
-Your setup. Your source.
+Your setup, your source
 
 Try the beta, inspect how it works, and tell us where it needs to improve.
 
@@ -378,7 +378,7 @@ PassionCode
 
 .ai
 
-From vibe coding to passion coding.
+From vibe coding to passion coding
 
 Switchboard
 

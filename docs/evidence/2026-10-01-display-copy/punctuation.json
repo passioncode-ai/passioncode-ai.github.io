@@ -1,0 +1,61 @@
+{
+  "scope": "Headings, hero introductions/reframe and figure captions; versions and normal prose are not stripped",
+  "pages": [
+    {
+      "file": "index.html",
+      "sha256": "8a2dc4598976b4c179ec0fdaf691c49278b2e1e33273dcbff848f77c3b1691e3",
+      "before_affected_blocks": 13,
+      "after_affected_blocks": 0,
+      "display_blocks": 36,
+      "hero": "The agent-agnostic operating system for AI-native teams"
+    },
+    {
+      "file": "switchboard/index.html",
+      "sha256": "7ee42aa930f82409406bfc76e722ded1f02103471d5bd56f91301625da232c95",
+      "before_affected_blocks": 21,
+      "after_affected_blocks": 0,
+      "display_blocks": 29,
+      "hero": "Your accounts\nA clearer switch"
+    },
+    {
+      "file": "fabric/index.html",
+      "sha256": "b7d0b4254557d6ed78f1d483395df3c15f878a3eeabb68caa99e9f1543cb6afd",
+      "before_affected_blocks": 11,
+      "after_affected_blocks": 0,
+      "display_blocks": 20,
+      "hero": "A CEO AI agent\nA home for the work"
+    },
+    {
+      "file": "inbox/index.html",
+      "sha256": "790decd15b9dc59d9c36d90572c229fd7738d6a29e0069280c333684ca060651",
+      "before_affected_blocks": 10,
+      "after_affected_blocks": 0,
+      "display_blocks": 14,
+      "hero": "Your mail\nImportant first"
+    },
+    {
+      "file": "dashboards/index.html",
+      "sha256": "01599f7560598e4ca4f1dc9c5f223331c4bab5d12a1c3bd8fe6f8c00476ed45b",
+      "before_affected_blocks": 7,
+      "after_affected_blocks": 0,
+      "display_blocks": 12,
+      "hero": "Your agent services\nOne place to look"
+    },
+    {
+      "file": "observatory/index.html",
+      "sha256": "f90de4a3d06362ed83b2b7c8afd46e790f1a88950bb007afdc3835b9a4dbb497",
+      "before_affected_blocks": 14,
+      "after_affected_blocks": 0,
+      "display_blocks": 18,
+      "hero": "Your projects\nBack in view"
+    },
+    {
+      "file": "design-system/index.html",
+      "sha256": "b1db408c8ca07329cb6619702b0d8c60665cb3270a19306b94839f6cd7458b86",
+      "before_affected_blocks": 6,
+      "after_affected_blocks": 0,
+      "display_blocks": 11,
+      "hero": "One family\nA shared language"
+    }
+  ]
+}

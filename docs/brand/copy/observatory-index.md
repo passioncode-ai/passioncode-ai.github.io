@@ -26,11 +26,11 @@ Download
 
 PROJECT OBSERVATORY · BY PASSIONCODE
 
-Your projects.
+Your projects
 
-Back in view.
+Back in view
 
-A local dashboard for the projects your agents work on. See what changed, what needs attention and where known API keys left a copy. In English or Russian.
+See what changed across your agents’ projects, what needs attention and where known API keys left a copy, in a local dashboard available in English or Russian
 
 Get started
 
@@ -52,57 +52,57 @@ FINDINGS
 
 INSIDE OBSERVATORY
 
-What needs attention, first.
+What needs attention, first
 
 The actual Observatory overview, rendered by the engine over a fictional company’s projects.
 
-Synthetic demo estate · no real projects, repositories or credentials.
+Synthetic demo estate · no real projects, repositories or credentials
 
 A LOCAL OBSERVATORY
 
-Less guessing.
+Less guessing
 
-More evidence at a glance.
+More evidence at a glance
 
 01 / INVENTORY
 
-Know what exists.
+Know what exists
 
 Choose the project folder you want to observe. Observatory finds the repositories inside it and keeps a local registry, with the rule behind every link.
 
 02 / ACTIVITY
 
-See what moved.
+See what moved
 
 Commits, working-tree state and work that exists only on this machine, across every project in scope, with the week-by-week shape of each.
 
 03 / FINDINGS
 
-Start with what matters.
+Start with what matters
 
 Findings come with their evidence and a next step, ordered from critical to info. Silenced findings keep who silenced them, when and why.
 
 04 / KEYS
 
-Find copies of known keys.
+Find copies of known keys
 
 Credential metadata stays separate from values. Selected transcripts, logs and SQLite stores are compared with keys already known locally; findings never repeat a value.
 
 05 / YOUR LANGUAGE
 
-English or Russian.
+English or Russian
 
 The dashboard is English by default. Set Russian for the workspace, or switch with EN/RU in the rail; counts use each language’s plural forms.
 
 06 / AGENTS
 
-Give the next agent context.
+Give the next agent context
 
 A CLI, MCP tools and a Claude Code plugin share the same local facts. Integrations and background jobs stay off until you choose them.
 
 GET OBSERVATORY
 
-Start with your own workspace.
+Start with your own workspace
 
 Latest release:
 
@@ -200,7 +200,7 @@ Known-value scanning compares selected artifacts with keys already known locally
 
 BEFORE YOU START
 
-A few useful distinctions.
+A few useful distinctions
 
 Does Observatory upload my projects or keys?
 
@@ -244,7 +244,7 @@ includes the source, tests, the security model and release notes.
 
 OPEN SOURCE · LOCAL FIRST
 
-Your projects. Your evidence.
+Your projects, your evidence
 
 Set up a private workspace, observe your own folders, and tell us where it needs to improve.
 
@@ -260,7 +260,7 @@ PassionCode
 
 .ai
 
-From vibe coding to passion coding.
+From vibe coding to passion coding
 
 Switchboard
 

@@ -28,11 +28,11 @@ GitHub
 
 FABRIC INBOX · DEVELOPMENT PREVIEW
 
-Your mail.
+Your mail
 
-Important first.
+Important first
 
-Fabric’s mail tool, and it works on its own. Gmail and Cloudflare mailboxes in one list: what needs you comes first, the rest waits in groups. An address on your own domain can get an agent that answers what you allow and drafts the rest.
+Bring Gmail and Cloudflare mailboxes into one list, with important mail first and agents for your own domains that answer what you allow and draft the rest
 
 Download for macOS
 
@@ -46,7 +46,7 @@ Development preview
 
 0.8.2
 
-· macOS 12 or later · open source under AGPL-3.0.
+· macOS 12 or later · open source under AGPL-3.0
 
 FABRIC INBOX / MAIL + AGENTS
 
@@ -58,27 +58,27 @@ ANSWERED
 
 01 / WHAT IT DOES
 
-Less to read.
+Less to read
 
-Less to answer.
+Less to answer
 
 Inbox sorts every account the same way, and gives the addresses on your domains someone to answer them.
 
 IMPORTANT FIRST
 
-What needs you, on top.
+What needs you, on top
 
 A person’s unread mail, security and sign-in mail, monitoring alerts, app review rejections, failed payments and failed builds come first. Newsletters, notifications, billing and the rest sit in collapsed groups with counts. Each row says why it is there.
 
 YOUR DOMAINS
 
-Every address in one place.
+Every address in one place
 
 Turn on mail for a domain of your Cloudflare account, bring in the addresses it already has and add new ones. Each existing address keeps forwarding a copy where it went before. Mail to an address with no mailbox is listed, never dropped.
 
 AGENTS, WITHIN YOUR RULES
 
-Sends only what it may.
+Sends only what it may
 
 An agent has its own instructions, knowledge and tools and can serve several addresses. It sends an answer only when it rests on its knowledge, fits a topic you allowed and stays within its daily limit. Everything else waits as a draft with the reason.
 
@@ -86,7 +86,7 @@ GET FABRIC INBOX
 
 A development preview
 
-for your Mac.
+for your Mac
 
 Latest preview:
 
@@ -158,7 +158,7 @@ FOR AGENTS
 
 Everything the app does,
 
-an agent can do.
+an agent can do
 
 Your server answers the Model Context Protocol at
 
@@ -192,7 +192,7 @@ list_accounts
 
 02 / THE PASSIONCODE FAMILY
 
-A tool with its own job.
+A tool with its own job
 
 Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric is the CEO AI agent we’re building to coordinate the work.
 
@@ -210,7 +210,7 @@ Meet Fabric
 
 BEFORE YOU START
 
-Where Inbox stands.
+Where Inbox stands
 
 Where does my mail go?
 
@@ -248,7 +248,7 @@ PassionCode
 
 .ai
 
-From vibe coding to passion coding.
+From vibe coding to passion coding
 
 Switchboard
 

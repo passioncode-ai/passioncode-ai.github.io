@@ -24,15 +24,15 @@ Get the tools
 
 ↓
 
-From vibe coding to passion coding.
+From vibe coding to passion coding
 
 The agent-agnostic operating system for
 
-AI-native teams.
+AI-native teams
 
-Your agents. Your tools. Your way of working.
+Your agents, your tools, your way of working
 
-Put accounts, local services, project evidence and mail in a workplace you control. Use each tool on its own, then connect the parts that fit your workflow.
+Put accounts, local services, project evidence and mail in a workplace you control, with independent tools you can combine to fit your workflow
 
 Explore the tools
 
@@ -56,7 +56,7 @@ tools
 
 01 / AVAILABLE TODAY
 
-Tools you can use today.
+Tools you can use today
 
 Choose by the work you need to do. There is no all-or-nothing install: every tool below has its own setup and release.
 
@@ -114,7 +114,7 @@ Downloads and requirements are on each product page. Preview means unfinished: c
 
 Make the workplace
 
-fit the way you work.
+fit the way you work
 
 Start with one useful tool. Add visibility, mail or your own agent service when the work calls for it. You keep the choice of agent, accounts and infrastructure.
 
@@ -162,9 +162,9 @@ A working connection today: Project Observatory runs as a local service and appe
 
 03 / INSIDE THE TOOLS
 
-A useful part.
+A useful part
 
-A bigger picture.
+A bigger picture
 
 Different jobs, a shared direction: tools you can inspect, configure and use from your agent.
 
@@ -222,13 +222,13 @@ Explore Observatory
 
 · Release 0.10.0 · Python 3.11+
 
-The actual dashboard · synthetic demo projects.
+The actual dashboard · synthetic demo projects
 
 EARLY PREVIEW
 
-Fabric.
+Fabric
 
-Your CEO AI agent.
+Your CEO AI agent
 
 Accounts are one part of the setup. Fabric is the agent we’re building to coordinate the work itself: bringing agents, context and decisions around a project.
 
@@ -274,9 +274,9 @@ ACCOUNTS
 
 04 / MAKE IT YOURS
 
-Bring your own agent.
+Bring your own agent
 
-Build your own workflow.
+Build your own workflow
 
 Use Claude Code, Codex or another agent that fits your work. Install the skills, connect individual tools, or make your own service speak Fabric’s open contracts.
 
@@ -324,9 +324,9 @@ Explore Okolos ↗
 
 05 / RELEASES & DIRECTION
 
-What’s here.
+What’s here
 
-What we’re building.
+What we’re building
 
 Each part ships when it has something useful to do. Here is where the toolkit stands today.
 
@@ -398,9 +398,9 @@ No promised release dates. Follow the build below for progress as it happens.
 
 06 / SOURCE
 
-Use the tools.
+Use the tools
 
-Read the source.
+Read the source
 
 Start with a download, go deeper in the code. Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0: inspect them, build from source or contribute a fix. A commercial license is available for use the AGPL doesn’t cover.
 
@@ -466,7 +466,7 @@ Visit PassionCode on GitHub
 
 Built alongside
 
-the work.
+the work
 
 I’m Sergey. I’m building PassionCode for teams whose everyday work already includes AI agents.
 
@@ -486,7 +486,7 @@ START WITH ONE USEFUL TOOL
 
 Your next workflow
 
-starts here.
+starts here
 
 Choose the part you need today. Add the rest when it earns a place in your work.
 
@@ -498,7 +498,7 @@ PassionCode
 
 .ai
 
-From vibe coding to passion coding.
+From vibe coding to passion coding
 
 Switchboard
 

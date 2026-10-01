@@ -26,11 +26,11 @@ Download
 
 PASSIONCODE / DESIGN SYSTEM 1.1
 
-One family.
+One family
 
-A shared language.
+A shared language
 
-Dark and light palettes share one set of roles. Yellow makes the next action clear. The passion fruit identifies the family; each product gets a mark of its own.
+Shared color roles connect dark and light palettes, yellow highlights the next action, and each product pairs its own mark with the family’s passion fruit
 
 Get the CSS tokens
 
@@ -42,7 +42,7 @@ Read the source
 
 01 / IDENTITY
 
-A family resemblance.
+A family resemblance
 
 PassionCode · the parent brand
 
@@ -56,7 +56,7 @@ Fabric Dashboards · local services in one window
 
 02 / COLOR
 
-Color with a purpose.
+Color with a purpose
 
 Gold marks an action or selection. Status colors keep their own meaning and always come with a label. The default palette is dark. Set
 
@@ -98,9 +98,9 @@ Information
 
 03 / TYPE & RHYTHM
 
-Space to understand.
+Space to understand
 
-Density to get work done.
+Density to get work done
 
 Expressive headlines on the site. Compact, readable rows in the app. Both use a system sans stack, monospace for data and a shared spacing scale.
 
@@ -114,7 +114,7 @@ switchboard accounts list
 
 04 / CONTROLS
 
-Familiar across products.
+Familiar across products
 
 One primary action per task. Visible keyboard focus. Clear borders for secondary controls. Motion stays brief and respects reduced-motion preferences.
 
@@ -128,7 +128,7 @@ PassionCode
 
 .ai
 
-From vibe coding to passion coding.
+From vibe coding to passion coding
 
 Switchboard
 

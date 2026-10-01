@@ -256,3 +256,11 @@ See [foundation](foundation.md).
 - **Status:** draft
 - **Coverage:** index.html; scripts/check-site.mjs; browser receipt in the workplace task.
 - **Product:** unobserved
+
+## Display-copy refinement, 2026-10-01
+
+SCN-001, SCN-005, SCN-006, SCN-007, SCN-009 and SCN-010 retain their paths and
+actions. Their hero/section headings and compact captions use no terminal full
+stops; hero introductions state the existing utility in one sentence. Review at
+1280, 390 and 320 px with the existing browser gate; this is presentation evidence,
+not a new product capability. See [the scoped task](../tasks/2026-10-01-display-copy.md).

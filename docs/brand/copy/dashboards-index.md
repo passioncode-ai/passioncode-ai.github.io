@@ -26,11 +26,11 @@ Download
 
 FABRIC DASHBOARDS · macOS
 
-Your agent services.
+Your agent services
 
-One place to look.
+One place to look
 
-See what is running, what needs attention and what happened last. Open each service’s own dashboard in one Mac app, instead of keeping a browser tab for every port.
+See what is running, what needs attention and what happened last, with each service’s own dashboard in one Mac app
 
 Download for macOS ↓
 
@@ -44,7 +44,7 @@ YOUR LOCAL SERVICES / TOGETHER
 
 A window into
 
-the tools doing the work.
+the tools doing the work
 
 Fabric Dashboards discovers compatible services on your Mac. Each service keeps its own job; you get a shared place to inspect and control them.
 
@@ -62,9 +62,9 @@ Start, stop or restart a service, inspect its logs, and use the actions its cont
 
 02 / GET FABRIC DASHBOARDS
 
-One download.
+One download
 
-Your services stay yours.
+Your services stay yours
 
 macOS
 
@@ -102,9 +102,9 @@ Installation guide ↗
 
 03 / FOR YOUR AGENTS
 
-The same services.
+The same services
 
-From your agent.
+From your agent
 
 Register the app’s MCP server with your client. An agent can list services, get dashboard links and use the operations exposed by the app’s rules.
 
@@ -122,7 +122,7 @@ MCP setup guide
 
 04 / GOOD TO KNOW
 
-Fits into your setup.
+Fits into your setup
 
 Do I need Fabric?
 
@@ -154,7 +154,7 @@ PART OF YOUR AGENT WORKPLACE
 
 Start with the services
 
-you already use.
+you already use
 
 Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.
 
@@ -164,7 +164,7 @@ PassionCode
 
 .ai
 
-From vibe coding to passion coding.
+From vibe coding to passion coding
 
 Switchboard
 
