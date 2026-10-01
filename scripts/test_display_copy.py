@@ -39,7 +39,7 @@ class DisplayCopyTests(unittest.TestCase):
                 '<h2>https://passioncode.ai</h2><h2>Need help?</h2>'
                 '<h2>Working...</h2><h2>Working…</h2><h2>Meet Dr. Smith</h2>'
                 '<h2>Acme Inc.</h2><h2>In the U.S.</h2>'
-                '<h2><code>./tool</code></h2>')
+                '<h2><code>./tool</code></h2><h2><code>git add .</code></h2>')
         self.assertEqual(inspect(html)[1], [])
 
     def test_source_whitespace_is_not_a_display_linebreak(self):

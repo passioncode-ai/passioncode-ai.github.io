@@ -103,3 +103,7 @@ The full advisory lint is not reported as clean.
 
 Fresh remote source checkout `2513989fe3fdd423df5679aec6a3e24756824d32` passed
 `npm ci --ignore-scripts`, `npm run check` and `npm run build` independently.
+
+The punctuation exceptions also cover the standalone current-directory token in
+commands such as `git add .`; the source gate does not rewrite or reject it.
+This additional negative control changes only verification code, not public assets.

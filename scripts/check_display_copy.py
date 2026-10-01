@@ -10,7 +10,8 @@ ABBREVIATION = re.compile(r'(?:\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|Inc|Ltd|Co|etc)|\
 
 def full_stop(text):
     text = text.strip().rstrip('\"\'”’»)]}').rstrip()
-    return text.endswith('.') and not text.endswith('..') and not ABBREVIATION.search(text)
+    return (text != '.' and not text.endswith(' .') and text.endswith('.')
+            and not text.endswith('..') and not ABBREVIATION.search(text))
 
 def inspect(html):
     root = parse(html)
