@@ -5,13 +5,8 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
-from urllib.error import HTTPError
-from urllib.request import build_opener, HTTPRedirectHandler, Request
+import tempfile
 from datetime import datetime, timezone
-
-class NoRedirect(HTTPRedirectHandler):
-    def redirect_request(self, req, fp, code, msg, headers, newurl):
-        return None
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--base-url', default='https://passioncode.ai')
@@ -21,16 +16,28 @@ root = Path(__file__).resolve().parents[1]
 files = sorted(path for path in (root / 'dist').rglob('*') if path.is_file())
 if not files:
     parser.error('Run npm run build first; dist has no files')
-opener = build_opener(NoRedirect)
 rows = []
 
 def fetch(path):
-    try:
-        response = opener.open(Request(args.base_url.rstrip('/') + path), timeout=30)
-    except HTTPError as error:
-        response = error
-    with response:
-        return response.status, response.headers, response.read()
+    # urllib is denied by the live edge (403); use the existing curl transport.
+    # No -L: redirect destinations must be inspected without following them.
+    with tempfile.TemporaryDirectory(prefix='site-live-') as directory:
+        body = Path(directory) / 'body'
+        header_file = Path(directory) / 'headers'
+        status = subprocess.check_output([
+            'curl', '--silent', '--show-error', '--max-time', '30',
+            '--proto', '=http,https', '--dump-header', str(header_file),
+            '--output', str(body), '--write-out', '%{http_code}',
+            args.base_url.rstrip('/') + path,
+        ], text=True)
+        headers = {}
+        for line in header_file.read_text().splitlines():
+            if line.startswith('HTTP/'):
+                headers = {}
+            elif ':' in line:
+                name, value = line.split(':', 1)
+                headers[name.lower()] = value.strip()
+        return int(status), headers, body.read_bytes()
 
 for file in files:
     relative = file.relative_to(root / 'dist').as_posix()
@@ -45,10 +52,10 @@ for product in ('switchboard', 'fabric', 'inbox'):
     for platform, expected in manifest['downloads'].items():
         path = f'/{product}/download/{platform}'
         status, headers, _ = fetch(path)
-        rows.append({'path': path, 'status': status, 'location': headers.get('Location'),
-                     'pass': status == 302 and headers.get('Location') == expected
-                     and headers.get('Cache-Control') == 'no-store'
-                     and headers.get('X-Robots-Tag') == 'noindex'})
+        rows.append({'path': path, 'status': status, 'location': headers.get('location'),
+                     'pass': status == 302 and headers.get('location') == expected
+                     and headers.get('cache-control') == 'no-store'
+                     and headers.get('x-robots-tag') == 'noindex'})
 for path in ('/docs/HANDOFF.md', '/.git/config', '/package.json'):
     status, _, _ = fetch(path)
     rows.append({'path': path, 'status': status, 'pass': status == 404})
