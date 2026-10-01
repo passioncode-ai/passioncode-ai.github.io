@@ -160,7 +160,7 @@ Explore Observatory
 
 ↗
 
-· Install from source · Python 3.11+
+· Release 0.9.1 · Python 3.11+
 
 The actual dashboard · synthetic demo projects.
 
@@ -184,21 +184,27 @@ Requirements and download
 
 .
 
-IN DEVELOPMENT · DESKTOP MAIL
+DEVELOPMENT PREVIEW · macOS
 
 Fabric Inbox
 
 Your mail.
 
-A place in the toolkit.
+Important first.
 
-A desktop mail client in development for the PassionCode family. Cloudflare and Gmail are implemented in the preview; a shared account interface is in progress. General IMAP and Outlook support are planned.
+Fabric’s mail tool, which also works on its own. Gmail and Cloudflare mailboxes in one list, with what needs you on top; addresses on your own domains answered by agents within the rules you set. The Mac app creates its server in your own Cloudflare account. General IMAP and Outlook support are planned.
+
+Download Inbox
+
+↓
 
 Explore Inbox
 
 ↗
 
-FABRIC INBOX / IN DEVELOPMENT
+Development preview 0.8.2 · macOS 12 or later · open source under AGPL-3.0.
+
+FABRIC INBOX / DEVELOPMENT PREVIEW
 
 MAIL
 
@@ -214,15 +220,15 @@ What we’re building.
 
 Each part ships when it has something useful to do. Here is where the toolkit stands today.
 
-In development
+Development preview
 
 Fabric Inbox
 
-Desktop mail. Cloudflare and Gmail preview; shared account interface in progress.
+Desktop mail for Gmail and Cloudflare mailboxes, with agents on your own addresses. Signed and notarized, macOS 12 or later.
 
-Explore Inbox
+Download Inbox
 
-↗
+↓
 
 Available in beta
 
@@ -238,7 +244,7 @@ Available now
 
 Project Observatory
 
-A local view of project activity and findings. Install from source on macOS or Linux.
+A local view of project activity and findings. Release 0.9.1, installed as a Python package on macOS or Linux.
 
 Get started
 
@@ -252,7 +258,7 @@ One window for the local agent services on your Mac that speak
 
 fabric-service/0.1
 
-, including Project Observatory’s server. Signed and notarized, macOS 13 or later.
+, including Project Observatory’s server; agents drive it over MCP. Release 0.3.0, signed and notarized, macOS 13 or later.
 
 Download Fabric Dashboards
 
@@ -286,7 +292,7 @@ Use the tools.
 
 Read the source.
 
-Start with a download, go deeper in the code. Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0: inspect them, build from source or contribute a fix. A commercial license is available for use the AGPL doesn’t cover.
+Start with a download, go deeper in the code. Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0: inspect them, build from source or contribute a fix. A commercial license is available for use the AGPL doesn’t cover.
 
 PUBLIC REPOSITORY · AGPL-3.0
 
@@ -318,9 +324,29 @@ macOS app, tests, runbook and release notes with checksums.
 
 github.com/passioncode-ai/fabric-dashboards
 
+PUBLIC REPOSITORY · AGPL-3.0
+
+↗
+
+Fabric
+
+The CEO AI agent: desktop app, kernel, decisions and the release procedure.
+
+github.com/passioncode-ai/fabric
+
+PUBLIC REPOSITORY · AGPL-3.0
+
+↗
+
+Fabric Inbox
+
+Mac app, mail server, agent tools, tests and release notes with checksums.
+
+github.com/passioncode-ai/fabric-inbox
+
 Released versions keep the license they shipped with: MIT for Switchboard up to 0.3.1-beta.1, Observatory up to 0.8.1 and Fabric Dashboards 0.1.0; PolyForm Noncommercial or Internal Use for Switchboard 0.4.0-beta.1, Observatory 0.9.0 and 0.9.1, and Fabric Dashboards 0.2.0 and 0.3.0.
 
-Fabric’s source is private. Its page offers the signed macOS preview, not a source release.
+The Fabric 0.2.0 preview was built before Fabric’s source was published. Okolos, browser security in pre-alpha, and Fabric VR have public repositories too.
 
 Visit PassionCode on GitHub
 

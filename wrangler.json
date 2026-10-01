@@ -1,7 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "passioncode-ai",
-  "account_id": "43da56547c0f538daaf7e94c6179faae",
   "main": "worker/index.js",
   "compatibility_date": "2026-09-03",
   "workers_dev": true,

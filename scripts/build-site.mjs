@@ -16,6 +16,7 @@ const publicFiles = [
   'switchboard/release.json',
   'observatory/index.html',
   'inbox/index.html',
+  'inbox/release.json',
   'assets/inbox-mark.svg',
   'assets/dashboards-mark.svg',
   'design-system/index.html',

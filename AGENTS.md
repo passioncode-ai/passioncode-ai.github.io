@@ -41,22 +41,21 @@ go from reviewed `main` with `npm run deploy` through authenticated Wrangler
 - Visitor paths are in [docs/ux/](docs/ux/). The brand is locked in [brand/](brand/README.md), and
   `npm run check` verifies its bytes. The shared tokens are in [design-system/](design-system/README.md).
   The copy's voice, terms and facts are in [docs/brand/](docs/brand/README.md).
-- [switchboard/release.json](switchboard/release.json) selects the public Switchboard release that
-  the download redirects serve.
+- [switchboard/release.json](switchboard/release.json), [fabric/release.json](fabric/release.json) and
+  [inbox/release.json](inbox/release.json) select the public releases that the download redirects serve.
 - The Worker is `worker/`, configured by `wrangler.json`. The pages are `index.html` and one
   directory per product.
 - Launch receipts in `docs/` (`*_RECEIPT.*`) describe their own release and are never rewritten.
 
 ## Local rules
 
-- This repository is public. Nothing private may be added. Never link visitors to private source:
-  `scripts/check-site.mjs` asserts this for Fabric and Inbox.
+- This repository is public. Nothing private may be added, and visitors are never linked to a
+  private repository (Fabric Workspace and org-index are the private ones).
 - License wording follows Fabric ADR-0092 and the knowledge base
   [licensing](https://github.com/passioncode-ai/fabric-workspace/blob/main/knowledge/licensing.md):
-  a product whose source is public is "open source under AGPL-3.0" with a commercial license
-  available; Fabric and Fabric Inbox, whose source is private, are never called open source or
-  AGPL; MIT and PolyForm name only released versions, inside `<!-- license-history -->` regions.
-  `scripts/check-site.mjs` enforces all three.
+  every product with a page here has public source (Fabric and Fabric Inbox since 2026-09-30) and is
+  "open source under the GNU AGPL-3.0" with a commercial license available; MIT and PolyForm name only
+  released versions, inside `<!-- license-history -->` regions. `scripts/check-site.mjs` enforces both.
 - The deploy artifact is an allow-list, not the repository root. Documentation and repository
   metadata stay out of the public asset namespace (`docs/DEPLOYMENT.md`).
 - Deploy only from reviewed `main` (`README.md`).

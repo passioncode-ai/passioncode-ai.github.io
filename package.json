@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node scripts/build-site.mjs",
     "check": "node scripts/check-brand-lock.mjs && node --test scripts/switchboard-release.test.mjs && node scripts/check-site.mjs && node scripts/check-worker.mjs && node scripts/check-design-tokens.mjs",
-    "deploy": "npm run check && npm run build && wrangler deploy",
+    "deploy": "test -n \"$CLOUDFLARE_ACCOUNT_ID\" || { echo \"npm run deploy: set CLOUDFLARE_ACCOUNT_ID to the organization account (docs/DEPLOYMENT.md)\" >&2; exit 1; }; npm run check && npm run build && wrangler deploy",
     "preview": "npm run build && wrangler dev",
     "test": "node --test scripts/switchboard-release.test.mjs"
   },

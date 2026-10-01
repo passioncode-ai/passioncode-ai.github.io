@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from inbox/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Inbox | Desktop mail in development | PassionCode.ai
+Fabric Inbox | Mail with what matters first · macOS preview | PassionCode.ai
 
-Fabric Inbox is a desktop mail client in development. Cloudflare and Gmail are implemented in the preview. Read its current status and planned account support.
+Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview 0.8.2 for macOS.
 
 Skip to content
 
@@ -26,57 +26,169 @@ GitHub
 
 ↗
 
-FABRIC INBOX · IN DEVELOPMENT
+FABRIC INBOX · DEVELOPMENT PREVIEW
 
 Your mail.
 
-Part of your work.
+Important first.
 
-A desktop mail client for the PassionCode toolkit. We’re bringing accounts and messages into one place, starting with Cloudflare and Gmail.
+Fabric’s mail tool, and it works on its own. Gmail and Cloudflare mailboxes in one list: what needs you comes first, the rest waits in groups. An address on your own domain can get an agent that answers what you allow and drafts the rest.
 
-See development status
+Download for macOS
 
 ↓
 
-Explore the toolkit
+See what it does
 
-↗
+↓
 
-In development. No public release or signed download is available yet.
+Development preview
 
-FABRIC INBOX / DESKTOP MAIL
+0.8.2
 
-MAIL
+· macOS 12 or later · open source under AGPL-3.0.
+
+FABRIC INBOX / MAIL + AGENTS
+
+IMPORTANT
 
 +
 
-ACCOUNTS
+ANSWERED
 
-01 / DEVELOPMENT STATUS
+01 / WHAT IT DOES
 
-What is here.
+Less to read.
 
-What comes next.
+Less to answer.
 
-Inbox is a development preview. The provider work and the everyday account experience are at different stages.
+Inbox sorts every account the same way, and gives the addresses on your domains someone to answer them.
 
-IMPLEMENTED IN THE PREVIEW
+IMPORTANT FIRST
 
-Cloudflare and Gmail.
+What needs you, on top.
 
-The preview includes Cloudflare and Gmail mail integrations. This is implementation progress, not a public release or a promise of production readiness.
+A person’s unread mail, security and sign-in mail, monitoring alerts, app review rejections, failed payments and failed builds come first. Newsletters, notifications, billing and the rest sit in collapsed groups with counts. Each row says why it is there.
 
-IN PROGRESS
+YOUR DOMAINS
 
-Accounts in one workspace.
+Every address in one place.
 
-A shared account interface is being built so the desktop client can bring supported accounts into the same everyday workflow.
+Turn on mail for a domain of your Cloudflare account, bring in the addresses it already has and add new ones. Each existing address keeps forwarding a copy where it went before. Mail to an address with no mailbox is listed, never dropped.
 
-PLANNED
+AGENTS, WITHIN YOUR RULES
 
-More mail providers.
+Sends only what it may.
 
-General IMAP and Outlook support are planned. Neither is offered as a working integration today.
+An agent has its own instructions, knowledge and tools and can serve several addresses. It sends an answer only when it rests on its knowledge, fits a topic you allowed and stays within its daily limit. Everything else waits as a draft with the reason.
+
+GET FABRIC INBOX
+
+A development preview
+
+for your Mac.
+
+Latest preview:
+
+0.8.2
+
+. The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
+
+⌘
+
+macOS
+
+Universal · Apple silicon + Intel · macOS 12 or later
+
+DMG installer · Developer ID signed and notarized by Apple
+
+Download for macOS
+
+↓
+
+Open the DMG and drag Fabric Inbox to Applications.
+
+☰
+
+Before you open it
+
+On first open, choose
+
+Create my server on Cloudflare
+
+.
+
+A Cloudflare account; the free plan works
+
+An API token you create in its dashboard, with the permissions the app lists
+
+For Gmail: an OAuth client from your own Google Cloud project
+
+The
+
+setup guide
+
+lists every setting.
+
+macOS DMG · SHA-256
+
+a808dd6fada61324b1b00cfbc2ebd59a441f9e924444040230a9805b979e152a
+
+Compare before opening:
+
+shasum -a 256
+
+in Terminal. A different value means a different file; download it again.
+
+Release notes & checksum
+
+↗
+
+Installation notes
+
+↗
+
+All releases
+
+↗
+
+This is a development preview. Agent answers have not yet been tried with a real model call, and Gmail has not yet been accepted on a real account. General IMAP and Outlook support are planned; neither is offered as a working integration today.
+
+FOR AGENTS
+
+Everything the app does,
+
+an agent can do.
+
+Your server answers the Model Context Protocol at
+
+/mcp
+
+. Each function of the app is also an MCP tool, so Claude Code or another MCP client can read, sort and send mail and manage addresses within the level of its key.
+
+01
+
+Make a key
+
+In the app, open
+
+Settings → Agent access
+
+. Choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.
+
+02
+
+Connect your agent
+
+The app prints the whole command:
+
+claude mcp add --transport http fabric-inbox https://<your-server>/mcp
+
+with the key’s two headers. Then ask for
+
+list_accounts
+
+.
 
 02 / THE PASSIONCODE FAMILY
 
@@ -96,29 +208,37 @@ Meet Fabric
 
 ↗
 
-BEFORE YOU LOOK FOR A DOWNLOAD
+BEFORE YOU START
 
 Where Inbox stands.
 
-Can I download Inbox today?
+Where does my mail go?
 
-No public release or signed download is available yet. This page describes the development state; it is not a download announcement.
+To the server the app creates in your own Cloudflare account. Gmail accounts connect through an OAuth client from your own Google Cloud project.
 
-Is the source public?
+Will it answer my mail by itself?
 
-No. Inbox is in private development. In the
-
-PassionCode toolkit
-
-, the source of Switchboard, Project Observatory and Fabric Dashboards is public.
+Only on addresses you give an agent, and only answers its rules allow. Automatic, bulk and no-reply mail is never answered, and every run records exactly what was sent.
 
 Does it support any mail account?
 
-No. Cloudflare and Gmail are implemented in the preview. General IMAP and Outlook support are planned, and the shared account interface is still in progress.
+Not yet. Cloudflare mailboxes and Gmail work in the preview. General IMAP and Outlook support are planned.
+
+Is the source public?
+
+Yes. Fabric Inbox is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from
+
+contact@passioncode.ai
+
+. It began as Cloudflare’s Agentic Inbox template, which keeps its own Apache-2.0 notice. The
+
+repository
+
+includes the source, tests and release notes.
 
 Is Inbox the Fabric agent?
 
-No. Inbox is a desktop mail client.
+No. Inbox is a mail client; its agents answer your addresses within the rules you set.
 
 Fabric
 

@@ -190,7 +190,17 @@ Release notes & checksum
 
 ↗
 
-This is an early preview. You can keep projects, a board of decisions, tasks, goals, a pulse of the work and releases with their receipts. The conversation with Fabric saves your messages, but Fabric does not reply yet. A newer version does not upgrade an existing database on its own; it tells you the command to run. Fabric’s source is private.
+View source
+
+↗
+
+This is an early preview. You can keep projects, a board of decisions, tasks, goals, a pulse of the work and releases with their receipts. The conversation with Fabric saves your messages, but Fabric does not reply yet. A newer version does not upgrade an existing database on its own; it tells you the command to run. Fabric has no MCP entry of its own for other agents yet; it arrives with Fabric’s agent hub, so today you work with Fabric in its window.
+
+Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from
+
+contact@passioncode.ai
+
+for use the AGPL doesn’t cover. The 0.2.0 preview was built before its source was published.
 
 PART OF THE SAME TOOLKIT
 
