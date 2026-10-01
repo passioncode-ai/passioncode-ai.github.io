@@ -81,3 +81,25 @@ changed visible text; the previous broader site receipt remains historical.
 
 Next task: retain this mandatory gate and update its corpus with new public
 pages. The skill-release coordinator owns the companion installed-tool update.
+
+## Brand-pack consumer audit
+
+The actual website brand pack was also run through the candidate super-ux linter,
+with `--fail-on B063`: zero errors and no title-punctuation findings. The first
+consumer pass exposed concatenated navigation labels in B022; that parser finding
+was sent back to super-ux before release. This is why a synthetic fixture pass
+alone was not the delivery criterion.
+
+`brand-voice` Validate compared `voice.md` with `foundation.md` P-01/JTBD-01 and
+ST-01 through ST-06: the builder audience, useful-tool-first narrative and explicit
+preview limits still agree. The calibration date now records this review;
+`Status: draft` remains, and no operator approval is invented.
+
+Remaining B022 advisories concern the decision registry and its HTML candidate
+scope, not the absence of the mandatory punctuation gate. The registry currently
+records proposed interface actions; marketing prose must not be registered as
+labels solely to clear a warning. SITE-005 owns this separate reconciliation.
+The full advisory lint is not reported as clean.
+
+Fresh remote source checkout `2513989fe3fdd423df5679aec6a3e24756824d32` passed
+`npm ci --ignore-scripts`, `npm run check` and `npm run build` independently.

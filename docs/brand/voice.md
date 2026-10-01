@@ -6,7 +6,7 @@ Derived-from: P-01, JTBD-01
 Status: draft
 Humanization: on
 Humanization pass: own
-Last calibrated: 2026-09-26
+Last calibrated: 2026-10-01
 
 ## Axes
 | Axis | The product IS | The product IS NOT |
