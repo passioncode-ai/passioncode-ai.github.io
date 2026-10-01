@@ -88,7 +88,11 @@ secret runner, deploy, then compare all built assets and download redirects with
 live responses. Run `python3 scripts/verify-live.py --output docs/evidence/2026-10-01-workplace/live.json`
 after deployment; it compares every built asset, all four download routes and three
 private-path exclusions. Append the deployment receipt; only then close SITE-001.
-The live checker has not been run against production for this implementation yet. The next
+A pre-deployment read against the old production site exercised the checker: 28/37
+checks passed; the new Dashboards page was 404 and eight changed public assets
+differed, as expected. All four download routes and three private-path exclusions
+passed. urllib received 403 from the edge; the checker uses the existing curl
+transport. This is a negative baseline, not a successful deployment receipt. The next
 content trigger is an actual new product release. SITE-002 keeps the native
 Switchboard screenshot follow-up; SITE-004 depends on Fabric's northbound MCP work.
 
