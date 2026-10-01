@@ -258,7 +258,7 @@ One window for the local agent services on your Mac that speak
 
 fabric-service/0.1
 
-, including Project Observatory’s server; agents drive it over MCP. Release 0.3.0, signed and notarized, macOS 13 or later.
+, including Project Observatory’s server; agents drive it over MCP. Release 0.3.1, signed and notarized, macOS 13 or later.
 
 Download Fabric Dashboards
 
