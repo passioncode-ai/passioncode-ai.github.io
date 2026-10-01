@@ -82,12 +82,8 @@ certification or screen-reader audit. Static review does not prove native instal
 
 ## Delivery and next task
 
-Implementation is ready for parent review. Production publication is still pending:
-land reviewed main, use the organization Cloudflare account through the existing
-secret runner, deploy, then compare all built assets and download redirects with
-live responses. Run `python3 scripts/verify-live.py --output docs/evidence/2026-10-01-workplace/live.json`
-after deployment; it compares every built asset, all four download routes and three
-private-path exclusions. Append the deployment receipt; only then close SITE-001.
+Reviewed source is deployed and verified; SITE-001 is closed. The next content trigger
+is an actual product release. The source and production receipt follow below.
 A pre-deployment read against the old production site exercised the checker: 28/37
 checks passed; the new Dashboards page was 404 and eight changed public assets
 differed, as expected. All four download routes and three private-path exclusions
@@ -102,3 +98,18 @@ Skills used: task-pipeline (bounded delivery), ux-scenarios (visitor paths),
 sheleg-design (preserved-brand composition and visual critique), copywriting (voice
 and public facts), evidence-docs (receipts), agent-sync (guarded leases), and external
 webapp-testing/accessibility-review (browser/keyboard/reflow scope, no full conformance).
+
+## Production receipt
+
+Reviewed source: `f908e01e252ede755f43d187fba904a7b9469025` on main.
+Cloudflare Worker version: `f0b30984-3b0c-464e-8616-1cda38d077d7`, deployed 2026-10-01
+through the existing organization secret runner and `npm run deploy` (exit 0).
+`python3 scripts/verify-live.py` passed all 37 checks: 30 source-identical assets,
+four download routes and three private-path exclusions. [Live receipt](../evidence/2026-10-01-workplace/live.json).
+
+The same browser gate against `https://passioncode.ai` passed 21 page/viewport cases:
+seven routes at 1280, 390 and 320 px, no overflow, broken images or console errors;
+product links, keyboard skip link/FAQ and the Observatory `#start` alias passed.
+[Live browser receipt](../evidence/2026-10-01-workplace/live-browser/browser.json).
+Use `--output-dir` to keep live evidence separate from baseline comparison images.
+These follow-up documentation and checker changes do not change deployed public bytes.

@@ -1,0 +1,257 @@
+{
+  "checkedAt": "2026-10-01T16:06:26.153248+00:00",
+  "baseUrl": "https://passioncode.ai",
+  "sourceCommit": "f908e01e252ede755f43d187fba904a7b9469025",
+  "checks": [
+    {
+      "path": "/assets/dashboards-mark.svg",
+      "status": 200,
+      "expectedSha256": "1d3788630cbe511cb0d927893ebfd4a3b3944ed9fd5da45a4cec4375837bbd37",
+      "actualSha256": "1d3788630cbe511cb0d927893ebfd4a3b3944ed9fd5da45a4cec4375837bbd37",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-board.jpg",
+      "status": 200,
+      "expectedSha256": "3aff02839da0f86228dee447e861a04072210e4d0b43071a30ac778a24563e40",
+      "actualSha256": "3aff02839da0f86228dee447e861a04072210e4d0b43071a30ac778a24563e40",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-home.jpg",
+      "status": 200,
+      "expectedSha256": "cb1891f6a5df3f7e5a0537207a0565c1c10e093048f985afc9745389b6f02f54",
+      "actualSha256": "cb1891f6a5df3f7e5a0537207a0565c1c10e093048f985afc9745389b6f02f54",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-releases.jpg",
+      "status": 200,
+      "expectedSha256": "c35d44c265f6f2c22aac1ef3aa66528a266f2edb7c6aded6b25780730a344d90",
+      "actualSha256": "c35d44c265f6f2c22aac1ef3aa66528a266f2edb7c6aded6b25780730a344d90",
+      "pass": true
+    },
+    {
+      "path": "/assets/favicon-64.png",
+      "status": 200,
+      "expectedSha256": "34fb5047708a4381e660da439f06d405af8575b3de5a86cc2e315da95c294ea2",
+      "actualSha256": "34fb5047708a4381e660da439f06d405af8575b3de5a86cc2e315da95c294ea2",
+      "pass": true
+    },
+    {
+      "path": "/assets/icon-1024.png",
+      "status": 200,
+      "expectedSha256": "6e753b92ed5b28f5883f1e784350e2bf9b377cd7be1538129a12982ef0df2dfc",
+      "actualSha256": "6e753b92ed5b28f5883f1e784350e2bf9b377cd7be1538129a12982ef0df2dfc",
+      "pass": true
+    },
+    {
+      "path": "/assets/icon-256.png",
+      "status": 200,
+      "expectedSha256": "a8c1265dcd1340109d329ad988ebb7b5aad2d0d5b5bc38f95ad67208899055f6",
+      "actualSha256": "a8c1265dcd1340109d329ad988ebb7b5aad2d0d5b5bc38f95ad67208899055f6",
+      "pass": true
+    },
+    {
+      "path": "/assets/inbox-mark.svg",
+      "status": 200,
+      "expectedSha256": "bc45a70e5b992f0495f3f00db6c729fd440ec9be10b75e7c13f292b1c98237c8",
+      "actualSha256": "bc45a70e5b992f0495f3f00db6c729fd440ec9be10b75e7c13f292b1c98237c8",
+      "pass": true
+    },
+    {
+      "path": "/assets/observatory-demo.jpg",
+      "status": 200,
+      "expectedSha256": "83bde9fe12bc387e9eb5c210d2b01de241bd7a4ce4d9c196f67f5b798608fa84",
+      "actualSha256": "83bde9fe12bc387e9eb5c210d2b01de241bd7a4ce4d9c196f67f5b798608fa84",
+      "pass": true
+    },
+    {
+      "path": "/assets/observatory-mark.svg",
+      "status": 200,
+      "expectedSha256": "d239e7c92df588af719630f36e17457f66d40dbec5b04ddbdadeccc622d3040c",
+      "actualSha256": "d239e7c92df588af719630f36e17457f66d40dbec5b04ddbdadeccc622d3040c",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-mark.svg",
+      "status": 200,
+      "expectedSha256": "8b49637faa386ce9658029a142d48e8a8c3ee4ed2d44ccb611cd03051046e1aa",
+      "actualSha256": "8b49637faa386ce9658029a142d48e8a8c3ee4ed2d44ccb611cd03051046e1aa",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.jpg",
+      "status": 200,
+      "expectedSha256": "49357798a821b5b60c26bbe41ac00fd93ab671548398f33c098de9b28c993d23",
+      "actualSha256": "49357798a821b5b60c26bbe41ac00fd93ab671548398f33c098de9b28c993d23",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.png",
+      "status": 200,
+      "expectedSha256": "66f540fdcdaf38d0bf624af39e926a4cccdf5b1977932ca4d3a0c52919a2f00e",
+      "actualSha256": "66f540fdcdaf38d0bf624af39e926a4cccdf5b1977932ca4d3a0c52919a2f00e",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.svg",
+      "status": 200,
+      "expectedSha256": "4e7bb0872785368025b347c897de60a0c3a75287df3d4f05c40de711ee96bdf2",
+      "actualSha256": "4e7bb0872785368025b347c897de60a0c3a75287df3d4f05c40de711ee96bdf2",
+      "pass": true
+    },
+    {
+      "path": "/assets/switchboard-demo.jpg",
+      "status": 200,
+      "expectedSha256": "78ea2eda1beea8a604aa7c5ce57fe11d33fa6dfc599d73e084d7b8de405564b2",
+      "actualSha256": "78ea2eda1beea8a604aa7c5ce57fe11d33fa6dfc599d73e084d7b8de405564b2",
+      "pass": true
+    },
+    {
+      "path": "/assets/switchboard-mark.svg",
+      "status": 200,
+      "expectedSha256": "0aca33c30ea680663e010a468cb575f8f4ac681fc269ceafa99516813c086926",
+      "actualSha256": "0aca33c30ea680663e010a468cb575f8f4ac681fc269ceafa99516813c086926",
+      "pass": true
+    },
+    {
+      "path": "/dashboards/",
+      "status": 200,
+      "expectedSha256": "6920ff8ad3e6c7da24a6d363c53feb826c13b0ddf860266397c3525cd102e91e",
+      "actualSha256": "6920ff8ad3e6c7da24a6d363c53feb826c13b0ddf860266397c3525cd102e91e",
+      "pass": true
+    },
+    {
+      "path": "/design-system/",
+      "status": 200,
+      "expectedSha256": "46d86d6db67eea86f9bfbf34be1a4edd536ac653cd9ecbf374ad70463d95f5cf",
+      "actualSha256": "46d86d6db67eea86f9bfbf34be1a4edd536ac653cd9ecbf374ad70463d95f5cf",
+      "pass": true
+    },
+    {
+      "path": "/design-system/tokens.css",
+      "status": 200,
+      "expectedSha256": "86866df1bec49b85e9def4132021401894483bb819dc2d3a3a70511d2e4b2a61",
+      "actualSha256": "86866df1bec49b85e9def4132021401894483bb819dc2d3a3a70511d2e4b2a61",
+      "pass": true
+    },
+    {
+      "path": "/fabric/",
+      "status": 200,
+      "expectedSha256": "8e84a2f86f4999e5df59a3cf3b85ca695e8cee9264330025a67d32977f0a2549",
+      "actualSha256": "8e84a2f86f4999e5df59a3cf3b85ca695e8cee9264330025a67d32977f0a2549",
+      "pass": true
+    },
+    {
+      "path": "/fabric/release.json",
+      "status": 200,
+      "expectedSha256": "c8aff69a10c8c8e2bb4d6789620047a44f0d3e7aa2631178bd9e6d8fbced6aa3",
+      "actualSha256": "c8aff69a10c8c8e2bb4d6789620047a44f0d3e7aa2631178bd9e6d8fbced6aa3",
+      "pass": true
+    },
+    {
+      "path": "/inbox/",
+      "status": 200,
+      "expectedSha256": "09e69afed57eb709ec7d52866ca19c4505e36fe4c134b1560bdc43c03e634a50",
+      "actualSha256": "09e69afed57eb709ec7d52866ca19c4505e36fe4c134b1560bdc43c03e634a50",
+      "pass": true
+    },
+    {
+      "path": "/inbox/release.json",
+      "status": 200,
+      "expectedSha256": "43e1f462579d7dd0291bcca2870d23dafffe777632e0bd2fb7af12a1f82c4dbe",
+      "actualSha256": "43e1f462579d7dd0291bcca2870d23dafffe777632e0bd2fb7af12a1f82c4dbe",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "expectedSha256": "f82e86f8bbf16a73bdb82c3cef358914b380985b876c805d5f74b900ed2f875c",
+      "actualSha256": "f82e86f8bbf16a73bdb82c3cef358914b380985b876c805d5f74b900ed2f875c",
+      "pass": true
+    },
+    {
+      "path": "/observatory/",
+      "status": 200,
+      "expectedSha256": "7b2b624ab6f3def354d6adf5268bed931c9f7c77d2259cad8d60bdd21e0ee621",
+      "actualSha256": "7b2b624ab6f3def354d6adf5268bed931c9f7c77d2259cad8d60bdd21e0ee621",
+      "pass": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "expectedSha256": "b6b934bb4618e82b922573774e38357069b3b2a38613aae40bc929dd77d813e3",
+      "actualSha256": "b6b934bb4618e82b922573774e38357069b3b2a38613aae40bc929dd77d813e3",
+      "pass": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "expectedSha256": "65f2ecdd68c403fe950dbdc7f2befffc44098e558cf998354e50a78095176486",
+      "actualSha256": "65f2ecdd68c403fe950dbdc7f2befffc44098e558cf998354e50a78095176486",
+      "pass": true
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "expectedSha256": "5dd0ce606aa90dab66401c23e52aecfebed58e04d92be85aafdc63eb2b2e112b",
+      "actualSha256": "5dd0ce606aa90dab66401c23e52aecfebed58e04d92be85aafdc63eb2b2e112b",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/",
+      "status": 200,
+      "expectedSha256": "afecf5857f9404f95321350cb3730401f4d3a3ab8cc98a157a66e33ade10f635",
+      "actualSha256": "afecf5857f9404f95321350cb3730401f4d3a3ab8cc98a157a66e33ade10f635",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/release.json",
+      "status": 200,
+      "expectedSha256": "3a5cada28bd8fbd0d4af304bdec3e1bd46858c440e8c0514bbc72e478661f16c",
+      "actualSha256": "3a5cada28bd8fbd0d4af304bdec3e1bd46858c440e8c0514bbc72e478661f16c",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.4.1-beta.1/Fabric-Switchboard-0.4.1-macos-universal.zip",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/download/windows",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.4.1-beta.1/Fabric-Switchboard-0.4.1-windows-x64.zip",
+      "pass": true
+    },
+    {
+      "path": "/fabric/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/passioncode-ai.github.io/releases/download/fabric-v0.2.0/Fabric-0.2.0-arm64.dmg",
+      "pass": true
+    },
+    {
+      "path": "/inbox/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.8.2/Fabric-Inbox-0.8.2.dmg",
+      "pass": true
+    },
+    {
+      "path": "/docs/HANDOFF.md",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/package.json",
+      "status": 404,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

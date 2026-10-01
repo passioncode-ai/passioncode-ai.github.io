@@ -10,9 +10,10 @@ import json,datetime,hashlib,argparse,subprocess
 parser=argparse.ArgumentParser(description="Focused static-site browser check; requires Python Playwright and an installed Chromium.")
 parser.add_argument("--base-url",default="http://localhost:4271")
 parser.add_argument("--baseline-url")
+parser.add_argument("--output-dir",default="docs/evidence/2026-10-01-workplace")
 parser.add_argument("--chromium",help="Optional existing Chromium executable")
 args=parser.parse_args()
-out=Path('docs/evidence/2026-10-01-workplace');out.mkdir(parents=True,exist_ok=True)
+out=Path(args.output_dir);out.mkdir(parents=True,exist_ok=True)
 rows=[]
 with sync_playwright() as p:
  b=p.chromium.launch(headless=True,executable_path=args.chromium)
@@ -52,5 +53,5 @@ with sync_playwright() as p:
      row['legacyStartAnchor']=True
     rows.append(row);page.close()
  b.close()
-Path('docs/evidence/2026-10-01-workplace/browser.json').write_text(json.dumps({'checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'baselineRevision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip() if args.baseline_url else None,'currentRevision':'sourceSha256: implementation bytes before commit','sourceSha256':{f:hashlib.sha256(Path(f).read_bytes()).hexdigest() for f in ['index.html','dashboards/index.html','switchboard/index.html','fabric/index.html','inbox/index.html','observatory/index.html','design-system/index.html','styles.css','design-system/tokens.css']},'checks':rows},indent=2)+'\n')
+(out/'browser.json').write_text(json.dumps({'checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'baselineRevision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip() if args.baseline_url else None,'currentRevision':'sourceSha256: implementation bytes before commit','sourceSha256':{f:hashlib.sha256(Path(f).read_bytes()).hexdigest() for f in ['index.html','dashboards/index.html','switchboard/index.html','fabric/index.html','inbox/index.html','observatory/index.html','design-system/index.html','styles.css','design-system/tokens.css']},'checks':rows},indent=2)+'\n')
 print('PASS:',len(rows),'page/viewport checks; 7 current pages × 3 widths; product links, skip link and keyboard FAQ')
