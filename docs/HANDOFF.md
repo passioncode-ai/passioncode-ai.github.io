@@ -4,8 +4,10 @@ Objective: prevent decorative title/hero periods from returning through agents o
 release generators. The mandatory source gate covers semantic and styled display
 roles; copy projections retain heading structure. One missed typography specimen
 was fixed. [Task, baseline plants and checks](tasks/2026-10-01-copy-guard.md).
-Next: review, integrate and deploy this source; record hosted CI and live specimen
-readback. General copywriting and design skill changes are owned by their separate
+Published source `2513989fe3fdd423df5679aec6a3e24756824d32`, Worker
+`e00ec2e7-51ac-4445-9bb0-bdba53e2bab2`: hosted checks, 37 live asset/route
+checks and three live specimen widths pass. Next: keep the source corpus aligned
+with sitemap/build entries when adding a page. General copywriting and design skill changes are owned by their separate
 ssheleg repositories. Model outcome evaluation remains NOT_RUN.
 
 ---

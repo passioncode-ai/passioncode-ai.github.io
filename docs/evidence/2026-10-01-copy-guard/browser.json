@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-01T20:57:34.322841+00:00",
+  "source": "2513989fe3fdd423df5679aec6a3e24756824d32",
+  "worker": "e00ec2e7-51ac-4445-9bb0-bdba53e2bab2",
+  "url": "https://passioncode.ai/design-system/#type-title",
+  "checks": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "visibleText": "Keep building",
+      "overflow": false,
+      "screenshot": "specimen-live-1280.png",
+      "browser": "151.0.7922.34"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "visibleText": "Keep building",
+      "overflow": false,
+      "screenshot": "specimen-live-390.png",
+      "browser": "151.0.7922.34"
+    },
+    {
+      "viewport": [
+        320,
+        700
+      ],
+      "visibleText": "Keep building",
+      "overflow": false,
+      "screenshot": "specimen-live-320.png",
+      "browser": "151.0.7922.34"
+    }
+  ]
+}

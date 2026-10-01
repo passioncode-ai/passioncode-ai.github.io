@@ -64,3 +64,20 @@ Integrate this reviewed source, let normal hosted CI run and publish from main.
 Then record the exact source, Worker version and live specimen readback. Skill
 releases and local installation are tracked in the owning ssheleg repositories;
 this site's source is the durable owner of its stricter display policy.
+
+## Publication receipt
+
+Source: `2513989fe3fdd423df5679aec6a3e24756824d32` on reviewed `main`.
+[Hosted site check](https://github.com/passioncode-ai/passioncode-ai.github.io/actions/runs/36925054469): success for that exact SHA.
+`npm run deploy` uploaded only the changed design-system HTML; production Worker
+`e00ec2e7-51ac-4445-9bb0-bdba53e2bab2` serves it.
+
+[Live receipt](../evidence/2026-10-01-copy-guard/live.json): 30 assets, four
+release redirects and three private-path exclusions pass.
+[Browser receipt](../evidence/2026-10-01-copy-guard/browser.json): the actual
+specimen says `Keep building` at 1280, 390 and 320 px, without horizontal overflow.
+The mobile capture was visually inspected. This focused review covers the only
+changed visible text; the previous broader site receipt remains historical.
+
+Next task: retain this mandatory gate and update its corpus with new public
+pages. The skill-release coordinator owns the companion installed-tool update.
