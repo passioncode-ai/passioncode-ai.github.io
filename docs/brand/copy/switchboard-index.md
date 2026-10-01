@@ -54,7 +54,7 @@ Pick your platform.
 
 Latest public beta:
 
-0.4.0-beta.1
+0.4.1-beta.1
 
 . Both downloads include the desktop app and the
 
@@ -110,11 +110,11 @@ kept running for managed sessions.
 
 macOS ZIP · SHA-256
 
-3ab0f1cf69a9a21f1fd469bfc195c3187e5121ebdfcfb94b36e76c54eec10b6e
+d5c4352359d4d1d5ae4e0e9618c6f239edbf1fe7c75012d7c83f516530e67007
 
 Windows ZIP · SHA-256
 
-55bf5d50b2c6701cb582ac1a028fcde013155a3a84fd3d4da339ee3930937f1b
+f6719bdddb8ab46ed0bf03ff148fa37ee7fa9b3742b9398a62cb8d335b111bd3
 
 Compare before opening:
 
@@ -324,9 +324,9 @@ Releases up to and including v0.3.1-beta.1 were published under MIT and remain a
 
 The current download,
 
-0.4.0-beta.1
+0.4.1-beta.1
 
-, was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.
+, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license.
 
 The
 

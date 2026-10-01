@@ -77,7 +77,7 @@ const REGIONS = {
     ? 'That includes the current download.'
     : f.polyform
       ? `The current download, <span data-release-version>${f.version}</span>, was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.`
-      : `The current download, <span data-release-version>${f.version}</span>, is released under the AGPL.`,
+      : `The current download, <span data-release-version>${f.version}</span>, is released under the AGPL. v${LAST_POLYFORM_VERSION} was released under PolyForm Noncommercial or Internal Use and keeps that license.`,
   agents: f => f.agents ? AGENTS_SECTION(f) : ''
 }
 

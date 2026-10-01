@@ -1,3 +1,25 @@
+# Current handoff — Switchboard v0.4.1-beta.1 selected, 2026-10-01
+
+Objective: the Switchboard page and download redirects select
+[v0.4.1-beta.1](https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.4.1-beta.1), the
+release that stops the repeated macOS Keychain dialogs and the first Switchboard release under the AGPL.
+Changed: `switchboard/release.json` and the release-bound regions of `switchboard/index.html`
+(`node scripts/update-switchboard-release.mjs v0.4.1-beta.1`: JSON-LD `softwareVersion` 0.4.1-beta.1 and
+`license` AGPL-3.0-only, checksums, release link); `scripts/switchboard-release.mjs` — the AGPL-era
+licence sentence now also names v0.4.0-beta.1 as the PolyForm release, so the page keeps the whole
+history once a later release is current (test in `switchboard-release.test.mjs`, watched red before the
+change); `docs/brand/facts.md` Switchboard rows (release, checksums, licence by release, notarization
+`c93a1bdc-1ad3-4dff-9056-b8250c3eea2a`, macOS/Windows receipts, licence history); generated copy.
+Checks: `npm run check` exit 0 (13 release tests), `extract-public-copy.py --check` exit 0, `npm run build`
+exit 0 (29 entries).
+Deploy: from `main` after the merge with `npm run deploy` (`CLOUDFLARE_ACCOUNT_ID` from Project Observatory);
+the Worker version and live redirect check are recorded in the Switchboard repository's
+`docs/evidence/release-0.4.1.md` → Website.
+Next task: unchanged — when a product publishes a newer release, update its manifest, page and facts row
+in one change.
+
+---
+
 # Current handoff — final check: releases, public source and MCP routes, 2026-10-01
 
 Objective: every product page states the current version, license, resolving downloads and the MCP

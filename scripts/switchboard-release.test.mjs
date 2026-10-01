@@ -92,6 +92,7 @@ test('the release after 0.4.0-beta.1 renders the AGPL and keeps the license hist
   assert.ok(!html.includes(POLYFORM_LICENSE_URLS[0]), 'the JSON-LD no longer names PolyForm')
   assert.ok(html.includes(MIT_HISTORY), 'MIT-history sentence still names v0.3.1-beta.1')
   assert.ok(html.includes('is released under the AGPL.'))
+  assert.ok(html.includes('v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license.'), 'the PolyForm release stays named once a later release is current')
   assert.ok(!html.includes('the next release is the first under the AGPL'))
 })
 
