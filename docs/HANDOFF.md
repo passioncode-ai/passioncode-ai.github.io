@@ -15,7 +15,8 @@ Published: source `88c9640` (squash of PR #20, = pushed `main`), Worker version
 Observatory); live check 2026-10-01: 29 of 29 live files equal the build, `/inbox/download/macos` and
 `/fabric/download/macos` 302 to their release DMGs, `www` 301 to the apex.
 Follow-up (same day, PR #21): Observatory v0.8.2 added to the PolyForm licence history on the
-homepage, the Observatory FAQ and `facts.md` (packet F7), then redeployed.
+homepage, the Observatory FAQ and `facts.md` (packet F7), then redeployed from `111ce81`: Worker
+version `a5edeb0e-18c8-4288-9fb0-e3d624463f64`, 29 of 29 live files equal the build.
 Next task: when Fabric, Inbox, Observatory or Dashboards publish a newer release, update its
 manifest or link, the page and the facts row in one change; when Fabric's agent hub ships an MCP
 entry, replace the "no MCP entry" sentence on `/fabric/`.
