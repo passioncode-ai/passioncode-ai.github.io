@@ -26,9 +26,9 @@ Download
 
 PASSIONCODE / DESIGN SYSTEM 1.1
 
-One family
+# One family
 
-A shared language
+# A shared language
 
 Shared color roles connect dark and light palettes, yellow highlights the next action, and each product pairs its own mark with the family’s passion fruit
 
@@ -42,7 +42,7 @@ Read the source
 
 01 / IDENTITY
 
-A family resemblance
+## A family resemblance
 
 PassionCode · the parent brand
 
@@ -56,21 +56,9 @@ Fabric Dashboards · local services in one window
 
 02 / COLOR
 
-Color with a purpose
+## Color with a purpose
 
-Gold marks an action or selection. Status colors keep their own meaning and always come with a label. The default palette is dark. Set
-
-data-theme="light"
-
-on the document root for white surfaces and dark text. Use
-
---pc-link
-
-and
-
---pc-focus
-
-for readable links and focus in either theme.
+Gold marks an action or selection. Status colors keep their own meaning and always come with a label. The default palette is dark. Set data-theme="light" on the document root for white surfaces and dark text. Use --pc-link and --pc-focus for readable links and focus in either theme.
 
 Canvas
 
@@ -98,15 +86,15 @@ Information
 
 03 / TYPE & RHYTHM
 
-Space to understand
+## Space to understand
 
-Density to get work done
+## Density to get work done
 
 Expressive headlines on the site. Compact, readable rows in the app. Both use a system sans stack, monospace for data and a shared spacing scale.
 
 A CLEAR NEXT STEP
 
-Keep building.
+Keep building
 
 Choose an account for your next managed request.
 
@@ -114,7 +102,7 @@ switchboard accounts list
 
 04 / CONTROLS
 
-Familiar across products
+## Familiar across products
 
 One primary action per task. Visible keyboard focus. Clear borders for secondary controls. Motion stays brief and respects reduced-motion preferences.
 

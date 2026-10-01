@@ -1,0 +1,21 @@
+{
+  "source": "9ec82afc7c3c184d7a5527a4244b6b096a816146",
+  "command": "npm run check",
+  "plants": [
+    {
+      "plant": "nested headline",
+      "exit": 0,
+      "missed": true
+    },
+    {
+      "plant": "hero fragment",
+      "exit": 0,
+      "missed": true
+    },
+    {
+      "plant": "eyebrow",
+      "exit": 0,
+      "missed": true
+    }
+  ]
+}

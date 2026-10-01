@@ -1,3 +1,15 @@
+# Current handoff — display-copy regression guard, 2026-10-01
+
+Objective: prevent decorative title/hero periods from returning through agents or
+release generators. The mandatory source gate covers semantic and styled display
+roles; copy projections retain heading structure. One missed typography specimen
+was fixed. [Task, baseline plants and checks](tasks/2026-10-01-copy-guard.md).
+Next: review, integrate and deploy this source; record hosted CI and live specimen
+readback. General copywriting and design skill changes are owned by their separate
+ssheleg repositories. Model outcome evaluation remains NOT_RUN.
+
+---
+
 # Current handoff — display-copy refinement, 2026-10-01
 
 Operator request: remove decorative full stops, especially in heroes, and review

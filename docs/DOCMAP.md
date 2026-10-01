@@ -8,9 +8,10 @@
   sitemap, build allowlist where routes change, README and task handoff. Immutable launch receipts
   describe their own release and are preserved; a newer receipt never silently rewrites them.
 - Checks: `npm run check`, `npm run build`, `python3 scripts/extract-public-copy.py --check`;
+  `npm run check` includes the display-copy tests/gate and projection freshness.
   UX and brand lint use installed super-ux scripts recorded in the task evidence. Browser checks
   are recorded separately from static checks and native application acceptance.
 
 Local task status: [backlog](backlog.md), collected through [manifest](backlog-sources.json).
 
-Entry: [HANDOFF](HANDOFF.md); current task [agent workplace](tasks/2026-10-01-agent-workplace.md).
+Entry: [HANDOFF](HANDOFF.md); current task [display-copy regression guard](tasks/2026-10-01-copy-guard.md).

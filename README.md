@@ -21,6 +21,10 @@ The HTML is complete without client-side JavaScript. Cloudflare Workers serves a
 
 ## Preview and checks
 
+Requires Node.js and Python 3 (stdlib only for editorial checks). `npm run check`
+includes display punctuation and generated-copy freshness; its source parser
+retains heading roles. See [the regression task](docs/tasks/2026-10-01-copy-guard.md).
+
 ```sh
 npm ci
 npm run check

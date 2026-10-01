@@ -264,3 +264,8 @@ actions. Their hero/section headings and compact captions use no terminal full
 stops; hero introductions state the existing utility in one sentence. Review at
 1280, 390 and 320 px with the existing browser gate; this is presentation evidence,
 not a new product capability. See [the scoped task](../tasks/2026-10-01-display-copy.md).
+
+The 2026-10-01 regression gate now checks source display roles in
+`scripts/check_display_copy.py`; projection tests retain heading semantics for
+brand-lint. The typography specimen follows the same policy. This supplements,
+rather than replaces, the browser review recorded above.

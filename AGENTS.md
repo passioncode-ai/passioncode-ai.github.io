@@ -24,7 +24,7 @@ These come from `README.md` ("Preview and checks") and `docs/DOCMAP.md` ("Checks
 | What | Command |
 |---|---|
 | Install | `npm ci` |
-| Test (the gate) | `npm run check` — brand lock, site structure and license wording, Worker contract, design tokens; then `python3 scripts/extract-public-copy.py --check` |
+| Test (the gate) | `npm run check` — brand lock, release contracts, site structure, Worker, design tokens, display-copy regression tests and source gate, fresh copy projections |
 | Build | `npm run build` — the allow-listed deploy artifact in `dist/` |
 | Preview | `npm run preview -- --port 4173` — the Worker, including the download redirects |
 | MCP (register + proving call) | none: the site neither serves nor calls MCP (knowledge base `products.md`) |
