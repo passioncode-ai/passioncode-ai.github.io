@@ -1,3 +1,22 @@
+# Current handoff — final check: releases, public source and MCP routes, 2026-10-01
+
+Objective: every product page states the current version, license, resolving downloads and the MCP
+route; `facts.md` matches the releases. [Bounded packet](tasks/2026-10-01-final-check.md) (findings,
+branch comparison, checks).
+Changed: `index.html`, `fabric/index.html`, `inbox/index.html` (rewritten for 0.8.2) + `inbox/release.json`,
+`observatory/index.html` (0.9.1, wheel install, MCP step), `switchboard/index.html` (Dashboards link),
+`worker/index.js` (`/inbox/download/macos`), `check-site`/`check-worker`/`build-site`, brand
+facts/terminology/strings/copy, SCN-006/009/010, FLW-01/02/03, SCR-05/06, `README.md`, `AGENTS.md`,
+`docs/DEPLOYMENT.md`.
+Checks: `npm run check` exit 0, `extract-public-copy.py --check` exit 0, `npm run build` exit 0
+(29 entries); four planted defects watched red (packet).
+Published: see the PR and the deployment line added after landing.
+Next task: when Fabric, Inbox, Observatory or Dashboards publish a newer release, update its
+manifest or link, the page and the facts row in one change; when Fabric's agent hub ships an MCP
+entry, replace the "no MCP entry" sentence on `/fabric/`.
+
+---
+
 # Current handoff — open source under AGPL-3.0 and the repository standard, 2026-09-30
 
 Objective: apply Fabric ADR-0092 to the public words — Switchboard, Project Observatory and Fabric

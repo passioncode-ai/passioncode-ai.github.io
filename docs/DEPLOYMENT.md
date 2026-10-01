@@ -23,8 +23,16 @@ brand source files and repository metadata out of the public asset namespace.
 npm ci
 npm run check
 npm run build
-npm run deploy
+CLOUDFLARE_ACCOUNT_ID=<organization account id> npm run deploy
 ```
+
+`wrangler.json` carries no account id: the public tree keeps account ids out (org-index
+`check_private.py` rule P4), so the deploy takes it from `CLOUDFLARE_ACCOUNT_ID` and `npm run
+deploy` refuses to start without it — a login that sees several accounts must not pick one. On the
+operator's machine the id is a named slot in Project Observatory:
+`tools/use_secret.py run --env prod passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npm run deploy`
+(run from the Observatory checkout with `--` followed by a command that `cd`s into this clone, or
+export the variable first); a contributor gets it from the operator.
 
 ## DNS and certificates
 
@@ -75,6 +83,10 @@ Replace the example tag with the actual tag. The updater rejects drafts and requ
 Review the release's actual signing/platform limits and installation instructions before committing, and update the Switchboard rows in `docs/brand/facts.md` and `python3 scripts/extract-public-copy.py`. Never advertise GitHub `releases/latest` as the newest beta: that endpoint excludes prereleases.
 
 Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment verify all five pages, both redirect destinations, anonymous archive hashes, and www canonicalization. Keep the Worker deployment ID and commit in the handoff receipt. No full hosted suite is dispatched for this update.
+
+## Fabric and Fabric Inbox downloads
+
+`/fabric/download/macos` and `/inbox/download/macos` behave like the Switchboard routes: a 302 to the fixed URL in `fabric/release.json` or `inbox/release.json`, `Cache-Control: no-store`, `X-Robots-Tag: noindex`, queries ignored, other paths fall through to the asset 404 (`scripts/check-worker.mjs`). To select a newer build, edit the manifest by hand from the release itself — tag, DMG URL, and the SHA-256 from the release's `.sha256` asset (Inbox) or release notes (Fabric), checked against GitHub's asset digest (`gh release view <tag> -R <repo> --json assets`) — then update the version, checksum and limits on the page and the rows in `docs/brand/facts.md`; `npm run check` fails when the page and the manifest disagree.
 
 ## Authenticated connector fallback
 

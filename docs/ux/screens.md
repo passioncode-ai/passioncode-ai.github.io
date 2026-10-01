@@ -53,7 +53,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 Screens describe public website behavior, not acceptance of native Switchboard or Fabric runtime.
 
 ### SCR-05: Fabric
-**Scenarios:** SCN-007, SCN-008. Early-preview hero with Download for macOS, illustrative project brief, the actual window on synthetic demo data (home, board, releases), intended operating loop, people/authority principles, Get Fabric with requirements and limits, and links back to About or Switchboard.
+**Scenarios:** SCN-007, SCN-008. Early-preview hero with Download for macOS, illustrative project brief, the actual window on synthetic demo data (home, board, releases), intended operating loop, people/authority principles, Get Fabric with requirements, limits, the MCP status (no entry for other agents yet), the public source and its license, and links back to About or Switchboard.
 **Web surface:** public
 **Route:** https://passioncode.ai/fabric/
 **Answers:** What is Fabric and what is being built?
@@ -62,12 +62,12 @@ Screens describe public website behavior, not acceptance of native Switchboard o
 **Entity:** Fabric, the CEO AI agent within PassionCode.ai, in early preview.
 
 ### SCR-06: Fabric Inbox
-**Scenarios:** SCN-009. Desktop mail purpose, provider status, toolkit context and FAQ.
+**Scenarios:** SCN-009. Development-preview hero with Download for macOS, what it does, Get Fabric Inbox (requirements, checksum, release notes, limits), For agents (key and MCP command), toolkit context and FAQ.
 **Web surface:** public
 **Route:** https://passioncode.ai/inbox/
 **Answers:** What does Inbox do and can I use it today?
-**Indexable:** yes; canonical URL, WebPage structured data describing software in development, and sitemap.
-**Without JS:** all content, status anchor, sibling product links and native FAQ.
-**Entity:** Fabric Inbox, desktop mail client in private development from PassionCode.ai.
+**Indexable:** yes; canonical URL, SoftwareApplication data naming the selected release and the AGPL, and sitemap. The download redirect is noindex.
+**Without JS:** all content, the download link, checksum, agent steps, sibling product links and native FAQ.
+**Entity:** Fabric Inbox, Fabric's mail tool from PassionCode.ai, a desktop mail client in development preview, open source under AGPL-3.0.
 
-Inbox falsifier: a reader could mistake the page for a public release or a working generic IMAP/Outlook offering. The status appears in the first viewport and is repeated beside the provider roadmap. Composition follows the existing product page; no new animation or visual direction is introduced.
+Inbox falsifier: a reader could mistake the preview for a finished product or a working generic IMAP/Outlook offering. The development-preview status appears in the first viewport, and the unverified parts are repeated beside the download. Composition follows the existing product page; no new animation or visual direction is introduced.

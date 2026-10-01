@@ -1,5 +1,6 @@
 import release from '../switchboard/release.json' with { type: 'json' }
 import fabric from '../fabric/release.json' with { type: 'json' }
+import inbox from '../inbox/release.json' with { type: 'json' }
 
 export default {
   async fetch(request, env) {
@@ -20,6 +21,13 @@ export default {
       return new Response(null, {
         status: 302,
         headers: { Location: fabric.downloads[fabricDownload[1]], 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' }
+      })
+    }
+    const inboxDownload = /^\/inbox\/download\/(macos)\/?$/.exec(url.pathname)
+    if (inboxDownload) {
+      return new Response(null, {
+        status: 302,
+        headers: { Location: inbox.downloads[inboxDownload[1]], 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' }
       })
     }
     return env.ASSETS.fetch(request)

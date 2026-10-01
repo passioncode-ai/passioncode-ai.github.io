@@ -104,17 +104,39 @@ Start with your own workspace.
 
 Latest release:
 
-0.8.1
+0.9.1
 
 . No API key is needed for the first local observation. Hand the setup to your coding agent, or run it yourself.
 
 01
 
-Install from source
+Install the release
 
-git clone https://github.com/passioncode-ai/project-observatory-dashboard
+Download
 
-, then install into an isolated Python 3.11+ environment with SQLite extension support. On macOS, use Homebrew Python.
+project_observatory-0.9.1-py3-none-any.whl
+
+and
+
+SHA256SUMS
+
+from
+
+release 0.9.1
+
+, check them with
+
+shasum -a 256 -c SHA256SUMS --ignore-missing
+
+, then
+
+pip install
+
+the wheel with
+
+[full]
+
+into an isolated Python 3.11+ environment with SQLite extension support. On macOS, use Homebrew Python.
 
 02
 
@@ -144,6 +166,20 @@ full configure interface locale ru
 
 .
 
+04
+
+Connect your agent
+
+The MCP server speaks stdio:
+
+claude mcp add observatory --scope user -e OBSERVATORY_HOME="$OBSERVATORY_HOME" -- "$(python -c 'import sys; print(sys.executable)')" "$(project-observatory full-path)/mcp/server.py"
+
+, then ask for
+
+observatory_status
+
+.
+
 Installation guide
 
 ↗
@@ -155,6 +191,8 @@ Onboarding & integrations
 All releases
 
 ↗
+
+The current release, 0.9.1, was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.
 
 Known-value scanning compares selected artifacts with keys already known locally. It cannot find unknown secrets or prove that no copy remains, and a local copy is not evidence that anyone else obtained a key. Live provider rotation and external MCP hosts are outside the offline test suite.
 
@@ -180,7 +218,7 @@ No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps t
 
 And Fabric?
 
-Fabric is our CEO AI agent in development, focused on coordinating agents and projects. Observatory is available now as a separate local tool.
+Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Observatory is available now as a separate local tool.
 
 Explore Fabric
 

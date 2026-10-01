@@ -2,7 +2,7 @@
 
 - Owner/scope: this repository owns passioncode.ai, its public product descriptions,
   download routing and shared web design reference. It does not own native release acceptance.
-- Truth: shipped HTML and `switchboard/release.json`; brand facts point to public release
+- Truth: shipped HTML and the release manifests (`switchboard/`, `fabric/`, `inbox/release.json`); brand facts point to public release
   receipts and identity sources. UX describes the public visitor paths.
 - Propagation: content/navigation → HTML, brand projections/facts/actions, UX scenarios/flows/screens,
   sitemap, build allowlist where routes change, README and task handoff. Immutable launch receipts
@@ -11,4 +11,4 @@
   UX and brand lint use installed super-ux scripts recorded in the task evidence. Browser checks
   are recorded separately from static checks and native application acceptance.
 
-Entry: [HANDOFF](HANDOFF.md); current task [AGPL and repository standard](tasks/2026-09-30-agpl-and-repository-standard.md).
+Entry: [HANDOFF](HANDOFF.md); current task [final check](tasks/2026-10-01-final-check.md).

@@ -15,7 +15,7 @@
 | SCN-007 | Understand the work cycle and Fabric | Direction | P-01 | ST-04, FLW-03 | draft | pending |
 | SCN-008 | Follow the builder | About | P-01 | ST-05, FLW-03 | draft | pending |
 
-| SCN-009 | Understand Fabric Inbox and its availability | Inbox | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
+| SCN-009 | Understand and download Fabric Inbox | Inbox | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 | SCN-010 | Find Fabric Dashboards and its release | Dashboards | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 | SCN-011 | Connect an agent to Switchboard | Agents | P-01 | ST-02, FLW-01 | draft | pending |
 
@@ -165,9 +165,9 @@ See [foundation](foundation.md).
 - **Entry point:** / (product card) or /observatory/
 - **Preconditions:** a macOS or Linux visitor with Python 3.11+
 - **Steps:**
-  1. Read the Observatory card on the homepage → it is listed as available now and open source, beside Switchboard, and distinct from Fabric in development.
+  1. Read the Observatory card on the homepage → it is listed as available now and open source, beside Switchboard, and distinct from Fabric in early preview.
   2. Follow Explore Observatory → the product page states purpose, release, platforms, language choice and the limits of known-value scanning.
-  3. Follow Get started → three setup steps, the installation guide and the source are reachable.
+  3. Follow Get started → install the 0.9.1 wheel checked against `SHA256SUMS`, create a workspace, observe, then connect an agent with `claude mcp add observatory …` and call `observatory_status`; the license that release keeps (PolyForm) is stated beside the steps.
 - **Expected result:** The visitor knows what Observatory reads (only configured folders and sources), that it runs locally, and how to install it, without any claim of finding every secret.
 - **Alt paths:** the source link goes straight to GitHub; the screenshot is labelled as a synthetic demo estate.
 - **UI elements:** Observatory card, Explore Observatory, Get started, Installation guide, View source, FAQ
@@ -177,23 +177,24 @@ See [foundation](foundation.md).
 - **Coverage:** index.html#observatory; observatory/index.html; scripts/check-site.mjs.
 - **Product:** unobserved
 
-### SCN-009: Understand Fabric Inbox and its availability
+### SCN-009: Understand and download Fabric Inbox
 - **Persona:** P-01
 - **Feature:** Inbox
 - **Traces:** ST-01, ST-03, FLW-01
-- **Entry point:** / (product card) or /inbox/
-- **Preconditions:** none
+- **Entry point:** / (product card, build pipeline or source section) or /inbox/
+- **Preconditions:** a Mac with macOS 12 or later, a Cloudflare account and an API token for the download; none for reading
 - **Steps:**
-  1. Follow Explore Inbox → its desktop mail role and development status are visible.
-  2. Follow See development status → Cloudflare/Gmail preview, account work in progress and planned providers are distinguished.
-  3. Follow Explore the toolkit or Meet Fabric → public context remains reachable.
-- **Expected result:** The visitor understands what is implemented, what is planned and that there is no public release or signed download.
-- **Alt paths:** Direct /inbox/#status entry; primary navigation and keyboard expose the same paths.
-- **UI elements:** Inbox navigation, product card, status anchor, toolkit and Fabric links, FAQ.
+  1. Follow Explore Inbox → Fabric's mail tool, which also works on its own; the development-preview version, macOS 12 or later and AGPL-3.0 are in the first viewport.
+  2. Follow See what it does → important-first triage, the domains of your Cloudflare account and agents within a reply policy.
+  3. Follow Download for macOS → `/inbox/download/macos` redirects to the release DMG; compare it with the SHA-256 on the page; Before you open it names the Cloudflare account, token and Gmail OAuth client.
+  4. Read For agents → make a key in Settings → Agent access, connect with the printed `claude mcp add --transport http …/mcp` command, call `list_accounts`.
+- **Expected result:** The visitor knows what works in the preview (Cloudflare and Gmail), what is not yet verified (a real model call, Gmail on a real account), what is planned (IMAP, Outlook), where the signed build and its checksum are, and how an agent connects.
+- **Alt paths:** Direct /inbox/#download or legacy /inbox/#status entry; source link to the public repository; primary navigation and keyboard expose the same paths.
+- **UI elements:** Inbox navigation, product card, Download Inbox, Download for macOS, checksum, release notes, agent steps, toolkit and Fabric links, FAQ.
 - **States covered:** success, error; static content has no loading or application empty state.
-- **Errors & recovery:** Missing network: browser error; retry. No unavailable download or private source CTA is offered.
+- **Errors & recovery:** Missing network or GitHub unavailable: browser error; retry or use All releases. A different checksum: download again.
 - **Status:** draft
-- **Coverage:** inbox/index.html; index.html#inbox; scripts/check-site.mjs.
+- **Coverage:** inbox/index.html; inbox/release.json; worker/index.js; index.html#inbox; scripts/check-site.mjs; scripts/check-worker.mjs.
 - **Product:** unobserved
 
 ### SCN-010: Find Fabric Dashboards and its release
@@ -204,9 +205,9 @@ See [foundation](foundation.md).
 - **Preconditions:** a Mac with macOS 13 or later for the download; none for reading
 - **Steps:**
   1. Read the build pipeline → Fabric Dashboards is available now, for local agent services that speak `fabric-service/0.1` such as Project Observatory's server, signed and notarized for macOS 13 or later.
-  2. Follow Download Fabric Dashboards → the public GitHub release v0.1.0 opens with the DMG and its SHA-256.
+  2. Follow Download Fabric Dashboards → the public GitHub release v0.3.0 opens with the DMG; agents drive the app over MCP.
   3. Or follow the Fabric Dashboards source card → the public repository, open source under AGPL-3.0, opens.
-- **Expected result:** The visitor knows what Dashboards watches, where the signed build is and that the source is public under AGPL-3.0 (v0.1.0 was released under MIT), without a dedicated product page.
+- **Expected result:** The visitor knows what Dashboards watches, where the signed build is and that the source is public under AGPL-3.0 (v0.1.0 was released under MIT, v0.2.0 and v0.3.0 under PolyForm), without a dedicated product page.
 - **Alt paths:** design-system page shows the Dashboards mark beside the other product marks.
 - **UI elements:** build-pipeline row, Download Fabric Dashboards, source card, design-system mark.
 - **States covered:** success, error; static content has no loading or application empty state.
