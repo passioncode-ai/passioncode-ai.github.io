@@ -100,7 +100,7 @@ assert.ok(!/source is private/i.test(fabric), 'Fabric source is public since 202
 for (const page of pages) assert.ok(read(page).includes('href="https://x.com/sshlg93"'), `${page}: author link`)
 
 const observatory = read('observatory/index.html')
-for (const text of ['<strong>0.9.1</strong>', 'releases/tag/v0.9.1', '0.8.2 to 0.9.1 under PolyForm', 'SHA256SUMS', 'claude mcp add observatory', 'https://github.com/passioncode-ai/project-observatory-dashboard', ...LICENSE_WORDING, 'English or Russian', 'cannot find unknown secrets', 'Synthetic demo']) assert.ok(observatory.includes(text), `observatory missing ${text}`)
+for (const text of ['<strong>0.10.0</strong>', 'releases/tag/v0.10.0', 'project_observatory-0.10.0-py3-none-any.whl', 'first under the AGPL', '0.8.2 to 0.9.1 under PolyForm', 'SHA256SUMS', 'claude mcp add observatory', 'https://github.com/passioncode-ai/project-observatory-dashboard', ...LICENSE_WORDING, 'English or Russian', 'cannot find unknown secrets', 'Synthetic demo']) assert.ok(observatory.includes(text), `observatory missing ${text}`)
 assert.ok(home.includes('href="/observatory/"'), 'homepage links Observatory')
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
 assert.ok(home.includes('Fabric Dashboards'), 'homepage lists Fabric Dashboards')

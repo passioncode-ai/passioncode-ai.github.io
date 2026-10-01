@@ -160,7 +160,7 @@ Explore Observatory
 
 ↗
 
-· Release 0.9.1 · Python 3.11+
+· Release 0.10.0 · Python 3.11+
 
 The actual dashboard · synthetic demo projects.
 
@@ -244,7 +244,7 @@ Available now
 
 Project Observatory
 
-A local view of project activity and findings. Release 0.9.1, installed as a Python package on macOS or Linux.
+A local view of project activity and findings. Release 0.10.0, installed as a Python package on macOS or Linux.
 
 Get started
 

@@ -167,7 +167,7 @@ See [foundation](foundation.md).
 - **Steps:**
   1. Read the Observatory card on the homepage → it is listed as available now and open source, beside Switchboard, and distinct from Fabric in early preview.
   2. Follow Explore Observatory → the product page states purpose, release, platforms, language choice and the limits of known-value scanning.
-  3. Follow Get started → install the 0.9.1 wheel checked against `SHA256SUMS`, create a workspace, observe, then connect an agent with `claude mcp add observatory …` and call `observatory_status`; the license that release keeps (PolyForm) is stated beside the steps.
+  3. Follow Get started → install the 0.10.0 wheel checked against `SHA256SUMS`, create a workspace, observe, then connect an agent with `claude mcp add observatory …` and call `observatory_status`; that the release is the first under the AGPL, and that earlier releases keep their license, is stated beside the steps.
 - **Expected result:** The visitor knows what Observatory reads (only configured folders and sources), that it runs locally, and how to install it, without any claim of finding every secret.
 - **Alt paths:** the source link goes straight to GitHub; the screenshot is labelled as a synthetic demo estate.
 - **UI elements:** Observatory card, Explore Observatory, Get started, Installation guide, View source, FAQ

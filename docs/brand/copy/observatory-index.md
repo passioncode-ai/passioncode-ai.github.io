@@ -104,7 +104,7 @@ Start with your own workspace.
 
 Latest release:
 
-0.9.1
+0.10.0
 
 . No API key is needed for the first local observation. Hand the setup to your coding agent, or run it yourself.
 
@@ -114,7 +114,7 @@ Install the release
 
 Download
 
-project_observatory-0.9.1-py3-none-any.whl
+project_observatory-0.10.0-py3-none-any.whl
 
 and
 
@@ -122,7 +122,7 @@ SHA256SUMS
 
 from
 
-release 0.9.1
+release 0.10.0
 
 , check them with
 
@@ -192,7 +192,7 @@ All releases
 
 ↗
 
-The current release, 0.9.1, was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.
+The current release, 0.10.0, is the first under the AGPL; 0.9.1 and earlier keep the license they shipped with.
 
 Known-value scanning compares selected artifacts with keys already known locally. It cannot find unknown secrets or prove that no copy remains, and a local copy is not evidence that anyone else obtained a key. Live provider rotation and external MCP hosts are outside the offline test suite.
 
