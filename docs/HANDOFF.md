@@ -1,3 +1,21 @@
+# Current handoff — Fabric Dashboards 0.3.1 named, 2026-10-01
+
+Objective: the homepage row, the Switchboard family link and the facts name
+[Fabric Dashboards v0.3.1](https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.3.1), the release
+that stops false "not answering" notifications (Dashboards ADR-0008) and its first release under the AGPL.
+Changed: `index.html` (row: release 0.3.1 and its link), `switchboard/index.html` (Dashboards release link),
+`scripts/check-site.mjs` (the homepage must link v0.3.1), `docs/brand/facts.md` (Dashboards status row with the
+DMG SHA-256 from the release's `.sha256` asset and both notarization ids; licence history: Dashboards v0.3.1 under
+AGPL-3.0), SCN-010, `README.md`, generated copy. The homepage licence-history sentence is unchanged — it names
+only MIT and PolyForm releases, and v0.2.0/v0.3.0 stay PolyForm.
+Checks: `npm run check` exit 0, `extract-public-copy.py --check` exit 0.
+Deploy: from `main` after the merge with `npm run deploy` (`CLOUDFLARE_ACCOUNT_ID` from Project Observatory); the
+Worker version and live check are recorded in the Dashboards repository's `docs/HANDOFF.md` → Release 0.3.1.
+Next task: unchanged — when a product publishes a newer release, update its manifest or link, page and facts row
+in one change.
+
+---
+
 # Current handoff — Switchboard v0.4.1-beta.1 selected, 2026-10-01
 
 Objective: the Switchboard page and download redirects select

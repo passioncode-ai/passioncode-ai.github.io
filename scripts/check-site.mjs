@@ -105,7 +105,7 @@ assert.ok(home.includes('href="/observatory/"'), 'homepage links Observatory')
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
 assert.ok(home.includes('Fabric Dashboards'), 'homepage lists Fabric Dashboards')
 for (const text of ['Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available']) assert.ok(home.includes(text), `homepage missing ${text}`)
-for (const url of ['https://github.com/passioncode-ai/fabric-dashboards', 'https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.3.0', 'https://github.com/passioncode-ai/fabric', 'https://github.com/passioncode-ai/fabric-inbox']) assert.ok(home.includes(`href="${url}"`), `homepage links ${url}`)
+for (const url of ['https://github.com/passioncode-ai/fabric-dashboards', 'https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.3.1', 'https://github.com/passioncode-ai/fabric', 'https://github.com/passioncode-ai/fabric-inbox']) assert.ok(home.includes(`href="${url}"`), `homepage links ${url}`)
 assert.ok(read('design-system/index.html').includes('/assets/dashboards-mark.svg'), 'design system shows the Fabric Dashboards mark')
 
 const inbox = read('inbox/index.html')

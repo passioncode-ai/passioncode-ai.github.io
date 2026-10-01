@@ -205,9 +205,9 @@ See [foundation](foundation.md).
 - **Preconditions:** a Mac with macOS 13 or later for the download; none for reading
 - **Steps:**
   1. Read the build pipeline → Fabric Dashboards is available now, for local agent services that speak `fabric-service/0.1` such as Project Observatory's server, signed and notarized for macOS 13 or later.
-  2. Follow Download Fabric Dashboards → the public GitHub release v0.3.0 opens with the DMG; agents drive the app over MCP.
+  2. Follow Download Fabric Dashboards → the public GitHub release v0.3.1 opens with the DMG; agents drive the app over MCP.
   3. Or follow the Fabric Dashboards source card → the public repository, open source under AGPL-3.0, opens.
-- **Expected result:** The visitor knows what Dashboards watches, where the signed build is and that the source is public under AGPL-3.0 (v0.1.0 was released under MIT, v0.2.0 and v0.3.0 under PolyForm), without a dedicated product page.
+- **Expected result:** The visitor knows what Dashboards watches, where the signed build is and that the source is public under AGPL-3.0 (v0.1.0 was released under MIT, v0.2.0 and v0.3.0 under PolyForm; v0.3.1 is its first AGPL-3.0 release), without a dedicated product page.
 - **Alt paths:** design-system page shows the Dashboards mark beside the other product marks.
 - **UI elements:** build-pipeline row, Download Fabric Dashboards, source card, design-system mark.
 - **States covered:** success, error; static content has no loading or application empty state.
