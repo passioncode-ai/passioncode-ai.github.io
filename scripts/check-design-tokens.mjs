@@ -32,7 +32,14 @@ for (const [theme,tokens] of Object.entries({dark,light})) {
     assert.ok(result>=threshold,`${theme}: ${ink} on ${bg} = ${result.toFixed(2)}:1 < ${threshold}`)
   }
 }
-assert.ok(ratio(light,'--pc-border-strong','--pc-panel')>=3,'light control border separation')
+// A control's edge must separate from every surface it sits on (WCAG 1.4.11, 3:1), in both
+// themes: the dark theme was never asserted and its border-strong was 2.33:1 on panel-raised.
+for (const [theme,tokens] of Object.entries({dark,light})) {
+  for (const bg of ['--pc-bg','--pc-panel','--pc-panel-raised']) {
+    const result = ratio(tokens,'--pc-border-strong',bg)
+    assert.ok(result>=3,`${theme}: control border --pc-border-strong on ${bg} = ${result.toFixed(2)}:1 < 3`)
+  }
+}
 assert.equal(dark['--pc-bg'],'#0a070d')
 assert.equal(dark['--pc-accent'],'#ffd21a')
-console.log(`PASS: ${pairs.length*2+1} scoped token contrast pairs; minimum ${minimum.toFixed(2)}:1; not full UI conformance`)
+console.log(`PASS: ${pairs.length*2+6} scoped token contrast pairs; minimum ${minimum.toFixed(2)}:1; not full UI conformance`)
