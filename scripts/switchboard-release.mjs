@@ -47,6 +47,26 @@ export function compareVersions (a, b) {
   return 0
 }
 
+// The release's checksum list. Releases built by hand named it SHA256SUMS-<version>.txt (0.3.1
+// used the binary version); releases built by the release workflow publish SHA256SUMS, signed
+// by SHA256SUMS.asc.
+export function checksumAssetName (names, version) {
+  const binaryVersion = version.split('-')[0]
+  return [`SHA256SUMS-${binaryVersion}.txt`, `SHA256SUMS-${version}.txt`, 'SHA256SUMS'].find(n => names.includes(n))
+}
+
+// Notarization is claimed only from the release's own receipt: Apple accepted the app, Gatekeeper
+// accepted the stapled app, and the receipt names this archive. A hand-built receipt carries
+// `gatekeeper_accepted` beside `status`; the release workflow's carries it per artifact, under
+// `notarization.app`.
+export function notarizedFromReceipt (receipt, archiveSha256) {
+  const n = receipt?.notarization ?? {}
+  const app = n.app ?? {}
+  const accepted = n.status === 'Accepted' &&
+    (n.gatekeeper_accepted === true || (app.status === 'Accepted' && app.gatekeeper_accepted === true))
+  return accepted && (!archiveSha256 || receipt.archive_sha256 === archiveSha256)
+}
+
 export function releaseFacts (manifest) {
   const mit = compareVersions(manifest.version, LAST_MIT_VERSION) <= 0
   const polyform = !mit && compareVersions(manifest.version, LAST_POLYFORM_VERSION) <= 0
