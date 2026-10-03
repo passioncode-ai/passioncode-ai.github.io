@@ -38,6 +38,24 @@ asset/redirect, append the receipt and close SITE-001. Remaining work is canonic
 
 ---
 
+# Current handoff — the Observatory Mac app download, 2026-10-03
+
+Objective: the Observatory page offers the Mac app that release 0.13.0 now carries,
+`ProjectObservatory-0.13.0-macos.zip`, signed with a Developer ID and notarized by Apple.
+Changed:
+- `observatory/index.html`: a note under Get started with the direct release link;
+- `docs/brand/facts.md`: platforms row;
+- `scripts/check-site.mjs`: the page must link the zip and say "notarized by Apple";
+- generated copy.
+
+Checks: `npm run check` exit 0, `npm run build` exit 0. The link answers 302 to GitHub's asset
+store.
+Deploy: from `main` with `npm run deploy` (`CLOUDFLARE_ACCOUNT_ID` from Project Observatory).
+Next task: unchanged. A newer Observatory release updates the version, wheel, app zip and facts
+in one change.
+
+---
+
 # Current handoff — Project Observatory 0.13.0 named, 2026-10-03
 
 Objective: the homepage card, the Observatory page and the facts name

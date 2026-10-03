@@ -142,6 +142,8 @@ All releases
 
 ↗
 
+Mac app: ProjectObservatory-0.13.0-macos.zip, signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same SHA256SUMS.
+
 The current release, 0.13.0, is under the AGPL, like every release since 0.10.0, the first under the AGPL; 0.9.1 and earlier keep the license they shipped with.
 
 Known-value scanning compares selected artifacts with keys already known locally. It cannot find unknown secrets or prove that no copy remains, and a local copy is not evidence that anyone else obtained a key. Live provider rotation and external MCP hosts are outside the offline test suite.
