@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import {
-  AGPL_LICENSE_URL, checkSwitchboardPage, compareVersions, LAST_POLYFORM_VERSION, MIT_HISTORY, MIT_LICENSE_URL, POLYFORM_LICENSE_URLS, renderSwitchboardPage
+  AGPL_LICENSE_URL, checkSwitchboardPage, checksumAssetName, compareVersions, LAST_POLYFORM_VERSION, MIT_HISTORY, MIT_LICENSE_URL, POLYFORM_LICENSE_URLS, notarizedFromReceipt, renderSwitchboardPage
 } from './switchboard-release.mjs'
 
 const page = readFileSync(new URL('../switchboard/index.html', import.meta.url), 'utf8')
@@ -163,4 +163,22 @@ test('semantic version precedence', () => {
   assert.equal(compareVersions('0.3.1-beta.1', '0.3.1-beta.1'), 0)
   assert.equal(compareVersions('1.0.0-alpha', '1.0.0-alpha.1'), -1)
   assert.throws(() => compareVersions('latest', '0.1.0'))
+})
+
+test('the checksum list is found under every name a release has used', () => {
+  assert.equal(checksumAssetName(['SHA256SUMS-0.3.1.txt', 'x.zip'], '0.3.1-beta.1'), 'SHA256SUMS-0.3.1.txt')
+  assert.equal(checksumAssetName(['SHA256SUMS-0.5.3-beta.1.txt'], '0.5.3-beta.1'), 'SHA256SUMS-0.5.3-beta.1.txt')
+  assert.equal(checksumAssetName(['SHA256SUMS', 'SHA256SUMS.asc', 'a.zip'], '0.5.3-beta.2'), 'SHA256SUMS')
+  assert.equal(checksumAssetName(['SHA256SUMS.asc', 'a.zip'], '0.5.3-beta.2'), undefined)
+})
+
+test('notarization is read from both receipt shapes, and only for this archive', () => {
+  const hand = { notarization: { status: 'Accepted', gatekeeper_accepted: true }, archive_sha256: 'a' }
+  const ci = { notarization: { status: 'Accepted', app: { status: 'Accepted', stapled: true, gatekeeper_accepted: true } }, archive_sha256: 'a' }
+  assert.equal(notarizedFromReceipt(hand, 'a'), true)
+  assert.equal(notarizedFromReceipt(ci, 'a'), true)
+  assert.equal(notarizedFromReceipt(ci, 'b'), false, 'another archive')
+  assert.equal(notarizedFromReceipt({ notarization: { status: 'Accepted', app: { status: 'Accepted' } }, archive_sha256: 'a' }, 'a'), false, 'Gatekeeper not accepted')
+  assert.equal(notarizedFromReceipt({ notarization: { status: 'Invalid', app: { status: 'Accepted', gatekeeper_accepted: true } } }, undefined), false)
+  assert.equal(notarizedFromReceipt({}, 'a'), false)
 })

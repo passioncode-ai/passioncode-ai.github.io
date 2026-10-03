@@ -10,7 +10,7 @@
 // switchboard/index.html (scripts/switchboard-release.mjs). Nothing else on the page changes.
 import { execFileSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
-import { checkSwitchboardPage, renderSwitchboardPage } from './switchboard-release.mjs'
+import { checkSwitchboardPage, checksumAssetName, notarizedFromReceipt, renderSwitchboardPage } from './switchboard-release.mjs'
 
 const tag = process.argv[2]
 if (!/^v\d+\.\d+\.\d+(?:-[\w.]+)?$/.test(tag ?? '')) throw new Error('Usage: node scripts/update-switchboard-release.mjs vX.Y.Z-beta.N')
@@ -35,8 +35,10 @@ async function fetchText (url, what) {
   }
 }
 
-// Checksums: SHA256SUMS-<binary version>.txt (0.3.1 used this form) or SHA256SUMS-<version>.txt.
-const sumsAsset = asset(`SHA256SUMS-${binaryVersion}.txt`) ?? asset(`SHA256SUMS-${version}.txt`)
+// Checksums: SHA256SUMS-<binary version>.txt, SHA256SUMS-<version>.txt, or the release
+// workflow's SHA256SUMS.
+const sumsName = checksumAssetName(release.assets.map(a => a.name), version)
+const sumsAsset = sumsName ? asset(sumsName) : undefined
 const sums = new Map()
 if (sumsAsset) {
   for (const line of (await fetchText(sumsAsset.browser_download_url, sumsAsset.name)).split('\n')) {
@@ -70,7 +72,7 @@ const receiptAsset = asset(`Fabric-Switchboard-${binaryVersion}-macos-universal-
 if (receiptAsset) {
   const receipt = JSON.parse(await fetchText(receiptAsset.browser_download_url, receiptAsset.name))
   const n = receipt.notarization ?? {}
-  macosNotarized = n.status === 'Accepted' && n.gatekeeper_accepted === true && (!sha256.macos || receipt.archive_sha256 === sha256.macos)
+  macosNotarized = notarizedFromReceipt(receipt, sha256.macos)
   if (n.status === 'Accepted' && !macosNotarized) console.warn('warning: the receipt says Accepted but not for this archive or without Gatekeeper acceptance; the page keeps the not-notarized note')
 } else {
   console.warn(`warning: ${tag} has no macOS receipt; the page keeps the not-notarized note`)
