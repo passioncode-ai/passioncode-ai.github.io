@@ -38,6 +38,28 @@ asset/redirect, append the receipt and close SITE-001. Remaining work is canonic
 
 ---
 
+# Current handoff — Project Observatory 0.13.0 named, 2026-10-03
+
+Objective: the homepage card, the Observatory page and the facts name
+[Project Observatory v0.13.0](https://github.com/passioncode-ai/project-observatory-dashboard/releases/tag/v0.13.0),
+which ships the three audit-and-fix runs over 0.12.0.
+Changed:
+- `index.html`: card, section note and product line say release 0.13.0.
+- `observatory/index.html`:
+  - latest release, wheel name and release link;
+  - step 01 installs the wheel with `--no-deps`, then its `[full]` extra under the `requirements-full.lock` it carries (the engine README's two-step install);
+  - step 04 asks for `observatory_overview`, the MCP server's own starting tool, instead of `observatory_status`, which unpaged returns every project;
+  - the license-history note says 0.13.0 is under the AGPL like every release since 0.10.0, the first.
+- `scripts/check-site.mjs`: the page must name 0.13.0, its tag, its wheel, `requirements-full.lock` and `observatory_overview`.
+- `docs/brand/facts.md`: release row with the SHA-256 from `SHA256SUMS`, equal to the GitHub digest and to a re-download; license row.
+- SCN-006.
+- generated copy.
+Checks: `npm run check` exit 0 (it includes `extract-public-copy.py --check`), `npm run build` exit 0.
+Deploy: from `main` after the merge with `npm run deploy` (`CLOUDFLARE_ACCOUNT_ID` from Project Observatory). The Worker version and live check are recorded in Project Observatory's private `docs/runs/2026-10-03-release-0.13.0/`.
+Next task: unchanged. When a product publishes a newer release, update its manifest or link, page and facts row in one change.
+
+---
+
 # Current handoff — Project Observatory 0.10.0 named, 2026-10-01
 
 Objective: the homepage card, the Observatory page and the facts name
