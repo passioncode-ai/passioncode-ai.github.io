@@ -40,7 +40,7 @@ Explore the workflow
 
 ↓
 
-Early preview 0.2.0 · macOS on Apple silicon
+Early preview 0.3.0 · macOS on Apple silicon
 
 A PROJECT, BEYOND THE CHAT
 
@@ -148,7 +148,7 @@ GET FABRIC
 
 ## for your Mac
 
-Latest preview: 0.2.0. Fabric runs on your Mac with a local database; your projects stay on this machine.
+Latest preview: 0.3.0. Fabric runs on your Mac with a local database; your projects stay on this machine.
 
 ⌘
 
@@ -187,7 +187,7 @@ View source
 
 This is an early preview. You can keep projects, a board of decisions, tasks, goals, a pulse of the work and releases with their receipts. The conversation with Fabric saves your messages, but Fabric does not reply yet. A newer version does not upgrade an existing database on its own; it tells you the command to run. Fabric has no MCP entry of its own for other agents yet; it arrives with Fabric’s agent hub, so today you work with Fabric in its window.
 
-Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from contact@passioncode.ai for use the AGPL doesn’t cover. The 0.2.0 preview was built before its source was published.
+Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from contact@passioncode.ai for use the AGPL doesn’t cover. The 0.3.0 preview is built, signed and notarized in CI from that public source.
 
 PART OF THE SAME TOOLKIT
 

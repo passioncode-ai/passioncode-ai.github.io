@@ -86,8 +86,9 @@ assert.ok(fabric.includes('Early preview'), 'Fabric is labelled an early preview
 for (const text of ['Apple silicon', 'Docker', 'Supabase CLI', 'does not reply yet', 'no MCP entry of its own', ...LICENSE_WORDING]) assert.ok(fabric.includes(text), `Fabric page must say: ${text}`)
 assert.ok(fabric.includes(`data-release-version>${fabricRelease.version}<`), 'the page names the release the manifest selects')
 assert.ok(fabric.includes(fabricRelease.releaseUrl), 'the page links the public release notes')
-assert.equal(fabricRelease.repository, 'passioncode-ai/passioncode-ai.github.io', 'the Fabric download is hosted by the public site repository')
-assert.equal(fabricRelease.tag, `fabric-v${fabricRelease.version}`)
+// Since 0.3.0 Fabric is released from CI in its own repository (Fabric ADR-0111), as Switchboard is.
+assert.equal(fabricRelease.repository, 'passioncode-ai/fabric', 'the Fabric download is the release in the Fabric repository')
+assert.equal(fabricRelease.tag, `v${fabricRelease.version}`)
 assert.equal(fabricRelease.releaseUrl, `https://github.com/${fabricRelease.repository}/releases/tag/${fabricRelease.tag}`)
 const fabricTarget = new URL(fabricRelease.downloads.macos)
 assert.equal(fabricTarget.origin, 'https://github.com')
