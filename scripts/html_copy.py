@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from html.parser import HTMLParser
 import re
 
-PAGES = ('index.html', 'switchboard/index.html', 'fabric/index.html',
+PAGES = ('index.html', 'switchboard/index.html', 'fabric/index.html', 'fabric/agents/index.html',
          'inbox/index.html', 'dashboards/index.html', 'observatory/index.html',
          'design-system/index.html')
 HEADINGS = {'h1', 'h2', 'h3', 'h4', 'h5', 'h6'}

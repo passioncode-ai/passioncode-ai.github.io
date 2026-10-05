@@ -9,6 +9,7 @@ const publicFiles = [
   'styles.css',
   'switchboard/index.html',
   'fabric/index.html',
+  'fabric/agents/index.html',
   'fabric/release.json',
   'assets/fabric-home.jpg',
   'assets/fabric-board.jpg',

@@ -723,3 +723,22 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .service-stack > div > span { margin-left: auto; color: var(--pc-positive); font-size: var(--pc-type-meta); }
 @media (max-width: 1100px) { .tool-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .tool-directory, .extend-grid, .source-projects { grid-template-columns: 1fr; } .tool-choice, .setup-panel, .source-projects article { padding: var(--pc-space-5); } .tool-choice img { width: 32px; height: 32px; } }
+
+/* Supported coding agents (/fabric/agents/): one table per level, readable at 320 px. */
+.agents-answer { margin: var(--pc-space-6) 0 0; font-size: 18px; }
+.agents-answer strong { color: var(--ink); }
+.inline-link, .download-note a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+.agent-table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.agent-table caption { caption-side: top; text-align: left; color: var(--ink-muted); font-size: 13px; padding-bottom: var(--pc-space-3); }
+.agent-table th, .agent-table td { text-align: left; vertical-align: top; padding: var(--pc-space-4) var(--pc-space-4) var(--pc-space-4) 0; border-top: 1px solid var(--line); }
+.agent-table thead th { border-top: 0; color: var(--ink-muted); font-size: var(--pc-type-meta); font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
+.agent-table tbody th { font-weight: 650; color: var(--ink); }
+.agent-table td { color: var(--ink-soft); }
+.agent-table td a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.agents-subheading { font-size: 24px; letter-spacing: -.03em; margin: 56px 0 12px; }
+.agents-text { color: var(--ink-soft); max-width: 760px; line-height: 1.7; margin-bottom: var(--pc-space-5); }
+@media (max-width: 620px) {
+ .agents-answer { font-size: 16px; }
+ .agent-table { font-size: 14px; }
+ .agent-table th, .agent-table td { padding-right: var(--pc-space-3); }
+}

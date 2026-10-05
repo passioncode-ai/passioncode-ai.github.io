@@ -1,3 +1,20 @@
+# Current handoff — Fabric: supported coding agents page, 2026-10-05
+
+Objective: a public page, `/fabric/agents/`, that answers "Which coding agents does Fabric work
+with, and what does 'works with' mean?" from the operator's facts of 2026-10-05, dated, with
+each agent at one level and its official site linked.
+Changed: `fabric/agents/index.html` (new), the Fabric page's "Before you open it" link,
+`styles.css` (`.agent-table`), the page registers (`scripts/html_copy.py`, `check-site.mjs`,
+`build-site.mjs`, `check-browser.py`, `sitemap.xml`), generated copy, facts row
+"Fabric coding agents", `strings.md`, SCN-013, SCR-08, FLW-03, README, backlog SITE-012.
+Checks: `npm run check` exit 0, `npm run build` exit 0, browser gate exit 0 (24 checks), the
+page at 1280/390/320 px without overflow. [Task, sources and receipts](tasks/2026-10-05-fabric-agents-page.md).
+Not deployed: the operator asked for a pull request only.
+Next task: review and merge the PR, then deploy from `main` with `npm run deploy`. Keep the page
+true to each Fabric release (SITE-012).
+
+---
+
 # Current handoff — display-copy regression guard, 2026-10-01
 
 Objective: prevent decorative title/hero periods from returning through agents or

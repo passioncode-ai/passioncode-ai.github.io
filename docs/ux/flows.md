@@ -9,6 +9,8 @@ Homepage/detail → source repository and its license (open source under AGPL-3.
 ## FLW-03 — Understand and follow
 Homepage directory → independent tools → concrete Observatory-to-Dashboards connection / Fabric early preview → individual product page → Fabric requirements and download. Build pipeline explains status without dates or implied integration. Fabric detail → homepage About → verified author Twitter. Alternative: inspect public code/release notes from the Source section (Fabric, Fabric Inbox, Switchboard, Observatory, Fabric Dashboards); no private repository link or sign-up barrier. Mobile navigation exposes the same destinations.
 
+Fabric agents branch of FLW-03: Fabric "Before you open it" → which coding agents Fabric works with → /fabric/agents/ → level tables with official sites → Download for macOS (Fabric #download) or Explore Switchboard. Answer engines can quote the first-viewport answer and its date directly.
+
 Dashboards branch of FLW-01: directory → /dashboards/ → requirements and separately installed service note → pinned 0.3.1 DMG → checksum/release notes. MCP setup is visible on the same page.
 
 ## FLW-04 — Customize the workplace

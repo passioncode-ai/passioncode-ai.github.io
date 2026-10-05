@@ -11,6 +11,7 @@ Public home: [passioncode.ai](https://passioncode.ai/). PassionCode.ai is the or
 - [Homepage](index.html): product chooser, agent workplace, releases, launcher/Adapter setup and source-build projects.
 - [Project Observatory](observatory/index.html): local project dashboard, setup and source.
 - [Fabric](fabric/index.html): CEO AI agent early preview, requirements and macOS download.
+- [Fabric: supported coding agents](fabric/agents/index.html): which coding agents Fabric works with and at which level, dated.
 - [Fabric Dashboards](dashboards/index.html): service dashboard, pinned 0.3.1 DMG, requirements, checksum and MCP setup.
 - [Fabric Inbox](inbox/index.html): desktop mail client in development preview, macOS download and agent connection.
 - [Switchboard](switchboard/index.html): product, platform downloads, limits and installation.

@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 
 const root = resolve(import.meta.dirname, '..')
-const pages = ['index.html', 'switchboard/index.html', 'fabric/index.html', 'inbox/index.html', 'dashboards/index.html', 'observatory/index.html', 'design-system/index.html']
+const pages = ['index.html', 'switchboard/index.html', 'fabric/index.html', 'fabric/agents/index.html', 'inbox/index.html', 'dashboards/index.html', 'observatory/index.html', 'design-system/index.html']
 const css = readFileSync(resolve(root, 'styles.css'), 'utf8')
 const release = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
 const read = path => readFileSync(resolve(root, path), 'utf8')
@@ -77,8 +77,8 @@ assert.equal(release.releaseUrl, `https://github.com/${release.repository}/relea
 assert.match(css, /@media \(max-width: 620px\)/)
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
 for (const page of pages) assert.ok(read(page).includes('href="/design-system/tokens.css"'))
-for (const path of ['', 'switchboard/', 'fabric/', 'inbox/', 'observatory/', 'dashboards/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
-console.log('PASS: 7 static pages, metadata, anchors, shared tokens, product status and the release downloads')
+for (const path of ['', 'switchboard/', 'fabric/', 'fabric/agents/', 'inbox/', 'observatory/', 'dashboards/', 'design-system/']) assert.ok(read('sitemap.xml').includes(`<loc>https://passioncode.ai/${path}</loc>`))
+console.log(`PASS: ${pages.length} static pages, metadata, anchors, shared tokens, product status and the release downloads`)
 
 const fabric = read('fabric/index.html')
 const fabricRelease = JSON.parse(read('fabric/release.json'))
@@ -143,3 +143,27 @@ for (const file of pages) {
 }
 
 assert.match(observatory, /id="get-started"[^>]*><span id="start"/, 'legacy #start lands in the Observatory setup section')
+
+// /fabric/agents/ answers one question: which coding agents Fabric works with, and at which level.
+// The levels are the operator's statement of 2026-10-05 (docs/brand/facts.md, "Fabric coding agents");
+// every agent sits in exactly one level, and the page never moves one up without a new fact row.
+const agentsPage = read('fabric/agents/index.html')
+const agentLevels = {
+  connected: ['Claude Code', 'Kilo Code'],
+  'runs-in-fabric': ['Codex'],
+  planned: ['Hermes Agent', 'Cline', 'omp (oh-my-pi)', 'pi', 'OpenClaw', 'OpenHands', 'Cursor CLI', 'Command Code', 'DeepSeek Harness', 'LangChain Deep Agents (dcode)', 'Letta', 'Strix', 'goose', 'Qwen Code', 'Gemini CLI', 'OpenCode', 'Zed', 'ZCode', 'Proto', 'CodeGPT', 'Freebuff', 'HackerAI']
+}
+const rowNames = html => [...html.matchAll(/<th scope="row">([^<]+)<\/th><td><a href="https:\/\/[^"]+">/g)].map(m => m[1])
+const allRows = rowNames(agentsPage)
+assert.equal(new Set(allRows).size, allRows.length, 'fabric/agents: an agent is listed in more than one row')
+for (const [level, names] of Object.entries(agentLevels)) {
+  const start = agentsPage.indexOf(`<section class="section" id="${level}"`)
+  assert.ok(start > 0, `fabric/agents: missing section #${level}`)
+  const section = agentsPage.slice(start, agentsPage.indexOf('</section>', start))
+  assert.deepEqual(rowNames(section), names, `fabric/agents: #${level} must list exactly ${names.join(', ')}, in order, each with its official site`)
+}
+assert.deepEqual(allRows, Object.values(agentLevels).flat(), 'fabric/agents: no agent outside its level table')
+for (const text of ['<time datetime="2026-10-05">5 October 2026</time>', 'one-session credential', 'nothing is written into the agent’s own settings', '<code>KILO_CONFIG_CONTENT</code>', '<code>kilo.json</code>', 'Kilo 7.4.17', 'href="https://agentclientprotocol.com"', 'href="https://openrouter.ai/apps"', 'read on 5 October 2026', 'largest share', 'switches accounts for Claude Code and Codex today', 'planned, not written yet']) assert.ok(agentsPage.includes(text), `fabric/agents must say: ${text}`)
+assert.ok(!/\d+(?:\.\d+)?\s?%/.test(currentWords(agentsPage)), 'fabric/agents: OpenRouter shares are named as "largest", never as percentages')
+assert.ok(fabric.includes('href="/fabric/agents/"'), 'the Fabric page links its supported coding agents')
+console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one level, as of 2026-10-05`)
