@@ -54,7 +54,7 @@ GET SWITCHBOARD
 
 ## Pick your platform
 
-Latest public beta: 0.5.4-beta.3. Both downloads include the desktop app and the switchboard CLI.
+Latest public beta: 0.5.5-beta.1. Both downloads include the desktop app and the switchboard CLI.
 
 ⌘
 
@@ -98,11 +98,11 @@ The app or switchboard serve kept running for managed sessions.
 
 macOS ZIP · SHA-256
 
-e91040f8c282241dd65dddb1ef5a7dcd07789854696920e11dc4cf23bd6c9665
+8be804b18a3012dd7b76272dd45aa9c802d147191cc577a1f9ce3fa664f9836a
 
 Windows ZIP · SHA-256
 
-67d890aafab6b0334f26a3e602d92798880bc45699e6708b8a1471063d7caafa
+c5b5a0e9d90f6c3d029badd0fa27e2276e485f62e7df534d6e7b4393e8e34cc6
 
 Compare before opening: shasum -a 256 in Terminal, Get-FileHash in PowerShell. A different value means a different file; download it again.
 
@@ -263,9 +263,13 @@ Is Switchboard the same thing as Fabric?
 
 Switchboard is the account-management tool available today. Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Both belong to the PassionCode toolkit. Explore what we’re building with Fabric.
 
+Does Switchboard send any data?
+
+Release builds count installs, days of use and how many accounts are connected, by provider and type. They never send account names, e-mail addresses, sign-ins, pool names or what you do with your accounts. A random installation number shared by PassionCode apps on your computer lets one person count once. Turn it off in About → Share anonymous usage counts; the switch applies to every PassionCode app. What exactly is sent.
+
 Can I inspect or build it myself?
 
-Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from contact@passioncode.ai. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.5.4-beta.3, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
+Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from contact@passioncode.ai. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.5.5-beta.1, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
 
 PART OF THE PASSIONCODE TOOLKIT
 
