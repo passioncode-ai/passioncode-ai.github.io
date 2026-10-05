@@ -170,7 +170,7 @@ Fabric is our CEO AI agent, in early preview, focused on coordinating agents and
 
 Can I inspect or build it myself?
 
-Yes. Project Observatory is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from contact@passioncode.ai. Released versions keep their license: 0.8.1 and earlier under MIT, 0.8.2 to 0.9.1 under PolyForm Noncommercial or Internal Use. The repository includes the source, tests, the security model and release notes.
+Yes. Project Observatory is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from passioncode.ai/business. Released versions keep their license: 0.8.1 and earlier under MIT, 0.8.2 to 0.9.1 under PolyForm Noncommercial or Internal Use. The repository includes the source, tests, the security model and release notes.
 
 OPEN SOURCE · LOCAL FIRST
 

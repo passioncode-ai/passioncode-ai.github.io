@@ -126,7 +126,7 @@ Services that publish a local descriptor for fabric-service/0.1. Project Observa
 
 Is it open source?
 
-Fabric Dashboards is open source under the GNU AGPL-3.0. A commercial license is available: contact@passioncode.ai. Release 0.1.0 keeps MIT; 0.2.0 and 0.3.0 keep PolyForm Noncommercial or Internal Use. Release 0.3.1 is the first under the AGPL.
+Fabric Dashboards is open source under the GNU AGPL-3.0. A commercial license is available: passioncode.ai/business. Release 0.1.0 keeps MIT; 0.2.0 and 0.3.0 keep PolyForm Noncommercial or Internal Use. Release 0.3.1 is the first under the AGPL.
 
 PART OF YOUR AGENT WORKPLACE
 

@@ -277,7 +277,7 @@ Release builds count installs, days of use and how many accounts are connected, 
 
 Can I inspect or build it myself?
 
-Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from contact@passioncode.ai. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.6.0, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
+Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from passioncode.ai/business. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.6.0, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
 
 PART OF THE PASSIONCODE TOOLKIT
 
