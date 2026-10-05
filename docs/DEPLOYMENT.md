@@ -124,8 +124,14 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
 - The Worker's cron (`*/15 * * * *`) asks GitHub with ETags (an unchanged list costs a 304) and
   stores the snapshot in D1. A product that fails keeps its last good entry; one that answers is
   taken as answered, so a release withdrawn on GitHub leaves the site too. Nothing ever goes below
-  `releases/current.json`, the snapshot bundled at build. An optional `GITHUB_TOKEN` secret raises
-  the rate limit; none is needed at this frequency.
+  `releases/current.json`, the snapshot bundled at build. A `GITHUB_TOKEN` Worker secret is
+  required in production: the Worker's egress addresses are shared, and on 2026-10-05 the
+  anonymous limit answered `403` for every product at the 16:00 UTC run (the site kept the last
+  good snapshot, so Switchboard 0.6.2 was not picked up). Use a fine-grained token with
+  *Public repositories (read-only)* access and no permissions, kept in Project Observatory as
+  `passioncode-ai.github.io/prod/GITHUB_TOKEN` and set with `wrangler secret put GITHUB_TOKEN`
+  from stdin. Failures are visible in D1 `release_snapshot.errors` and as
+  `releases.product_failed` log events.
 - Every HTML response passes through `worker/live.js`: an element with `data-live="<product>.<field>"`
   gets that value as text, `data-live-href` sets an `href`, and a `<script type="application/ld+json"
   data-live-ld="<product>">` gets `softwareVersion`. Crawlers and visitors without JavaScript see
