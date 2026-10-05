@@ -1,0 +1,12 @@
+{
+  "tag": "v0.5.3",
+  "version": "0.5.3",
+  "repository": "passioncode-ai/fabric-dashboards",
+  "releaseUrl": "https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.5.3",
+  "downloads": {
+    "macos": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.5.3/Fabric-Dashboards-0.5.3.dmg"
+  },
+  "sha256": "SHA256_PENDING",
+  "checksumFile": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.5.3/Fabric-Dashboards-0.5.3.dmg.sha256",
+  "receipt": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.5.3/Fabric-Dashboards-0.5.3.receipt.json"
+}

@@ -11,7 +11,7 @@ Public home: [passioncode.ai](https://passioncode.ai/). PassionCode.ai is the or
 - [Homepage](index.html): product chooser, agent workplace, releases, launcher/Adapter setup and source-build projects.
 - [Project Observatory](observatory/index.html): local project dashboard, setup and source.
 - [Fabric](fabric/index.html): CEO AI agent early preview, requirements and macOS download.
-- [Fabric Dashboards](dashboards/index.html): service dashboard, pinned 0.3.1 DMG, requirements, checksum and MCP setup.
+- [Fabric Dashboards](dashboards/index.html): service dashboard; the release in `dashboards/release.json` (download through the Worker route `/dashboards/download/macos`), requirements, checksum and MCP setup.
 - [Fabric Inbox](inbox/index.html): desktop mail client in development preview, macOS download and agent connection.
 - [Switchboard](switchboard/index.html): product, platform downloads, limits and installation.
 - [Design system](design-system/README.md): canonical dark/gold tokens and product marks. Switchboard vendors a commit-pinned copy.

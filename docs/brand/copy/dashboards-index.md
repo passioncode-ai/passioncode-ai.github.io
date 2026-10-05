@@ -36,7 +36,7 @@ Download for macOS ↓
 
 View source ↗
 
-Release 0.3.1 · macOS 13+ · Apple silicon + Intel
+Release 0.5.3 · macOS 13+ · Apple silicon + Intel
 
 YOUR LOCAL SERVICES / TOGETHER
 
@@ -50,15 +50,27 @@ Fabric Dashboards discovers compatible services on your Mac. Each service keeps 
 
 ### See what needs you
 
-Service state, latest activity and attention items appear together. A slow probe is not immediately treated as an outage.
+The overview opens on one line of numbers: how many services are ready, what is not answering, what needs you and what your agents spent today. Each problem takes one row. A slow probe is not treated as an outage.
 
 ### Open the actual dashboard
 
-Each service’s own interface opens inside the app, signed in. Project Observatory is one compatible service you can use today.
+Each service’s own interface opens inside the app, signed in. Go back, reload, or copy the page address or an app link to hand to a teammate or an agent. If a sign-in expires, the app signs in again on the same page.
+
+### See what your agents spent
+
+Agents that report their own usage appear on one Spend page: today, 7 days and 30 days, with a breakdown by model. A cost an agent could not price reads as unknown, never as $0.
+
+### One entry per agent
+
+A service that runs more than one copy, such as a main instance and a read-only one, appears once. Switch between its copies on its page.
+
+### Online services too
+
+Register a service that runs on a server, not on your Mac. It appears in its own Online group and opens signed in over HTTPS.
 
 ### Handle the next step
 
-Start, stop or restart a service, inspect its logs, and use the actions its contract exposes. Quitting Dashboards leaves your services running.
+Start, stop or restart a local service through macOS launchd, inspect its logs, and use the actions its contract exposes. Quitting Dashboards leaves your services running.
 
 02 / GET FABRIC DASHBOARDS
 
@@ -68,11 +80,11 @@ Start, stop or restart a service, inspect its logs, and use the actions its cont
 
 ### macOS
 
-Release 0.3.1. Universal DMG for Apple silicon and Intel, macOS 13 or later. Developer ID signed, notarized and stapled.
+Release 0.5.3. Universal DMG for Apple silicon and Intel, macOS 13 or later. Developer ID signed, notarized and stapled.
 
 Download Fabric Dashboards ↓
 
-Open the DMG, drag Fabric Dashboards to Applications, then open it. The app starts at login; you can change that in Settings.
+Open the DMG, drag Fabric Dashboards to Applications, then open it. The app asks once whether to open at login; you can change that in Settings. Later versions arrive through the app’s own updates.
 
 ### Before you open it
 
@@ -82,7 +94,7 @@ Try Project Observatory, or make your own service with the Fabric Agent Adapter.
 
 DMG SHA-256
 
-4ef44362566c3c05e6603266f52ba018f70b384ab7f4487c2fc4b305afe8f3d1
+SHA256_PENDING
 
 Release notes and checksums ↗
 
