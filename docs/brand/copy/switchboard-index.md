@@ -263,13 +263,17 @@ Is Switchboard the same thing as Fabric?
 
 Switchboard is the account-management tool available today. Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Both belong to the PassionCode toolkit. Explore what we’re building with Fabric.
 
+Which agents work with Switchboard?
+
+Claude Code, Codex and the other popular coding agents — Hermes, Kilo Code, Cline, Goose, OpenCode and more. See all 30 and how each connects.
+
 Can a project keep its own accounts?
 
 Yes. Create a project, add its folders — for example several related repositories — and choose its accounts. Sessions launched from those folders use only those accounts, automatic switching stays inside them, and agents working in other projects never switch to them.
 
 Does Switchboard send any data?
 
-Release builds count installs, days of use and how many accounts are connected, by provider and type. They never send account names, e-mail addresses, sign-ins, pool names or what you do with your accounts. A random installation number shared by PassionCode apps on your computer lets one person count once. Turn it off in About → Share anonymous usage counts; the switch applies to every PassionCode app. What exactly is sent.
+Release builds count installs, days of use and how many accounts are connected, by provider and type. They never send account names, e-mail addresses, sign-ins, pool names or what you do with your accounts. A random installation number shared by the PassionCode.ai tools on your computer lets one person count once. Turn it off in About → Share anonymous usage counts; the switch applies to every PassionCode.ai tool. What exactly is sent.
 
 Can I inspect or build it myself?
 

@@ -979,3 +979,9 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 @keyframes step-in { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .onboarding-steps::after { transform: scaleY(1); } }
 @media print { .js-motion .reveal { opacity: 1 !important; transform: none !important; } .site-header { position: static; } .copy-button, .form-nav, .workplace-map { display: none; } }
+/* Switchboard agents table */
+.agent-table-wrap { overflow-x: auto; }
+.agent-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.agent-table th, .agent-table td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--line, rgba(255,255,255,0.12)); vertical-align: top; }
+.agent-table th { font-weight: 600; white-space: nowrap; }
+.agent-rank { font-size: 0.8em; opacity: 0.7; margin-left: 0.35em; }
