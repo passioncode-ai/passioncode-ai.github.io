@@ -7,23 +7,37 @@ import { estimate, formatMoney } from './estimate.js'
 
 const form = document.getElementById('lead-form')
 const DRAFT_KEY = 'passioncode.business.draft.v1'
+const ID_KEY = 'passioncode.business.request-id.v1'
 const ARRAYS = new Set(['goals', 'processes.areas', 'processes.tools', 'setup.constraints'])
 
 const storage = {
   get () { try { return JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null') } catch { return null } },
   set (value) { try { localStorage.setItem(DRAFT_KEY, JSON.stringify(value)) } catch {} },
-  clear () { try { localStorage.removeItem(DRAFT_KEY) } catch {} }
+  clear () { try { localStorage.removeItem(DRAFT_KEY); localStorage.removeItem(ID_KEY) } catch {} }
 }
+// One id per request, kept with the draft: a resend after a lost answer is recognised by the
+// Worker as the same request, not a second one.
+let memoryId
+function requestId () {
+  try {
+    const kept = localStorage.getItem(ID_KEY)
+    if (kept) return kept
+    const id = crypto.randomUUID()
+    localStorage.setItem(ID_KEY, id)
+    return id
+  } catch { return (memoryId ??= crypto.randomUUID()) }
+}
+const SAFE_NAME = /^[a-z]+(?:\.[a-zA-Z]+)*$/
 
 // The form's answers as the lead/1 shape the Worker validates (worker/leads.js).
 function collect () {
   const out = {}
   for (const element of form.elements) {
-    if (!element.name || element.name === 'form_token' || element.name === 'company_fax' || element.disabled) continue
+    if (!element.name || element.name === 'form_token' || element.name === 'pc_hp' || element.disabled || !SAFE_NAME.test(element.name)) continue
     if ((element.type === 'checkbox' || element.type === 'radio') && !element.checked) continue
     const path = element.name.split('.')
     let node = out
-    for (const part of path.slice(0, -1)) node = node[part] ??= {}
+    for (const part of path.slice(0, -1)) node = Object.hasOwn(node, part) ? node[part] : (node[part] = {})
     const leaf = path.at(-1)
     let value = element.value
     if (element.name === 'consent.privacy' || element.name === 'consent.marketing') value = true
@@ -54,7 +68,7 @@ function restore (draft) {
 function snapshot () {
   const draft = {}
   for (const element of form.elements) {
-    if (!element.name || element.name === 'form_token' || element.name === 'company_fax' || element.type === 'submit' || element.type === 'button') continue
+    if (!element.name || element.name === 'form_token' || element.name === 'pc_hp' || element.type === 'submit' || element.type === 'button') continue
     if (element.type === 'checkbox' || element.type === 'radio') {
       if (element.checked) draft[element.name] = element.type === 'checkbox' ? [...(draft[element.name] || []), element.value] : element.value
     } else if (element.value) draft[element.name] = element.value
@@ -164,7 +178,7 @@ form.addEventListener('submit', async event => {
   status.className = 'form-status'
   status.textContent = 'Sending…'
   try {
-    const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...collect(), form_token: form.elements.form_token.value, company_fax: form.elements.company_fax.value }) })
+    const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...collect(), id: requestId(), form_token: form.elements.form_token.value, pc_hp: form.elements.pc_hp.value }) })
     const body = await response.json().catch(() => ({}))
     if (response.ok) {
       storage.clear()
@@ -172,7 +186,7 @@ form.addEventListener('submit', async event => {
       done.className = 'request-done'
       done.setAttribute('tabindex', '-1')
       const h = document.createElement('h3'); h.textContent = 'Thank you — it reached us'
-      const p = document.createElement('p'); p.textContent = 'We reply within two business days. A copy with your reference is on its way to your inbox.'
+      const p = document.createElement('p'); p.textContent = 'We reply within two business days. A confirmation email usually follows within minutes.'
       const ref = document.createElement('p'); ref.className = 'section-note'; ref.textContent = `Reference: ${body.id}`
       done.append(h, p, ref)
       form.replaceChildren(done)

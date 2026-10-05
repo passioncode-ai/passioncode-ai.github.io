@@ -5,7 +5,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import worker, { currentSnapshot, refreshReleases } from '../worker/index.js'
-import { buildLead, checkFormToken, deliver, formToObject, issueFormToken, platformSignature, retryDue } from '../worker/leads.js'
+import { buildLead, checkFormToken, deliver, formToObject, issueFormToken, knownFields, platformSignature, RECEIPTS_PER_HOUR, retryDue, storeLead } from '../worker/leads.js'
 import bundled from '../releases/current.json' with { type: 'json' }
 import { d1 } from './d1-shim.mjs'
 
@@ -15,7 +15,7 @@ const config = JSON.parse(readFileSync(new URL('../wrangler.json', import.meta.u
 globalThis.HTMLRewriter = class { on () { return this } transform (r) { return r } }
 
 const ctx = () => { const waits = []; return { waits, waitUntil: p => waits.push(p), done: () => Promise.all(waits) } }
-const assets = { fetch: async request => new Response(`asset ${new URL(request.url).pathname}`, { status: new URL(request.url).pathname === '/missing' ? 404 : 200, headers: { 'Content-Type': new URL(request.url).pathname.endsWith('/') ? 'text/html; charset=utf-8' : 'text/plain' } }) }
+const assets = { fetch: async request => new Response(`asset ${new URL(request.url).pathname}`, { status: new URL(request.url).pathname === '/missing' ? 404 : 200, headers: { 'Content-Type': new URL(request.url).pathname.endsWith('/') ? 'text/html; charset=utf-8' : 'text/plain', ETag: '"asset-1"', ...(request.headers.get('if-none-match') ? { 'X-Saw-Conditional': '1' } : {}) } }) }
 const mailer = () => { const sent = []; return { sent, send: async m => { sent.push(m); return { messageId: `m${sent.length}` } } } }
 const baseEnv = (extra = {}) => ({ ASSETS: assets, DB: d1(), EMAIL: mailer(), FORM_TOKEN_SECRET: 'form-secret', IP_HASH_SALT: 'salt', LEAD_NOTIFY_TO: 'commercial@passioncode.ai', ...extra })
 
@@ -219,7 +219,7 @@ test('intake refuses: bad token, too fast, invalid answers, foreign origin, over
   assert.ok((await invalid.json()).issues.length > 3)
   assert.equal((await post(env, '{}', { headers: { origin: 'https://evil.example' } })).status, 403)
   assert.equal((await post(env, 'x'.repeat(40000))).status, 413)
-  const trap = await post(env, JSON.stringify({ ...answers(), company_fax: 'spam', form_token: await oldToken() }))
+  const trap = await post(env, JSON.stringify({ ...answers(), pc_hp: 'spam', form_token: await oldToken() }))
   assert.equal(trap.status, 201)
   assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 0, 'nothing from the trap or the refusals is stored')
   assert.equal((await worker.fetch(new Request('https://passioncode.ai/api/leads'), env, ctx())).status, 405)
@@ -300,4 +300,89 @@ test('a forwarded lead leaves the buffer after 30 days; nothing stays past 24 mo
 
 test('deliver on an unknown id is a no-op', async () => {
   assert.deepEqual(await deliver(baseEnv(), 'nope'), { missing: true })
+})
+
+// ---- regressions from the 2026-10-05 pre-deploy review -------------------------------------
+
+test('a crafted field name cannot reach Object.prototype (form or JSON), and real leads still arrive', async () => {
+  const env = baseEnv()
+  await post(env, '__proto__.pc_hp=1&constructor.prototype.privacy=yes&company.__proto__.x=1', { type: 'application/x-www-form-urlencoded' })
+  await post(env, '{"__proto__":{"pc_hp":"1"},"constructor":{"prototype":{"pc_hp":"1"}}}')
+  assert.equal(({}).pc_hp, undefined)
+  assert.equal(({}).privacy, undefined)
+  assert.equal(Object.getPrototypeOf(formToObject(new URLSearchParams('company.name=x'))), null)
+  assert.equal(knownFields({ company: { name: 'x', evil: 'y' }, nope: 1 }).nope, undefined)
+  const r = await post(env, JSON.stringify({ ...answers(), form_token: await oldToken() }))
+  assert.equal(r.status, 201)
+  assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 1)
+  assert.equal(env.EMAIL.sent.length, 2)
+})
+
+test('line breaks never reach a single-line field or the email subject; the message keeps them', async () => {
+  const env = baseEnv()
+  const a = answers(); a.company.name = 'Evil\r\nBcc: victim@example.com'; a.contact.message = 'line one\nline two'
+  assert.equal((await post(env, JSON.stringify({ ...a, form_token: await oldToken() }))).status, 201)
+  const [notify] = env.EMAIL.sent
+  assert.ok(!/[\r\n]/.test(notify.subject), notify.subject)
+  assert.match(notify.text, /line one\nline two/)
+})
+
+test('a form token is spent once; a resend of the same request is a duplicate, not a refusal', async () => {
+  const env = baseEnv()
+  const token = await oldToken()
+  const id = '66666666-6666-4666-8666-666666666666'
+  assert.equal((await post(env, JSON.stringify({ ...answers(), id, form_token: token }))).status, 201)
+  assert.equal((await post(env, JSON.stringify({ ...answers(), id, form_token: token }))).status, 200, 'same request again: duplicate')
+  const other = await post(env, JSON.stringify({ ...answers(), id: '77777777-7777-4777-8777-777777777777', form_token: token }))
+  assert.equal(other.status, 409)
+  assert.equal((await other.json()).error, 'form_used')
+})
+
+test('two stores of one id: one wins, the other is told duplicate or conflict', async () => {
+  const env = baseEnv()
+  const context = { newId: () => '88888888-8888-4888-8888-888888888888', now: new Date(), ipHash: 'a'.repeat(64), country: '', userAgent: '' }
+  const { lead } = buildLead(answers(), context)
+  const [x, y] = await Promise.all([storeLead(env.DB, lead), storeLead(env.DB, lead)])
+  assert.deepEqual([x, y].sort(), ['duplicate', 'stored'])
+  const changed = { ...lead, company: { ...lead.company, name: 'Other' } }
+  assert.equal(await storeLead(env.DB, changed), 'conflict')
+})
+
+test('the receipt repeats nothing the sender typed, and receipts stop at the hourly cap', async () => {
+  const env = baseEnv()
+  const a = answers(); a.company.name = 'Visit evil.example now'; a.contact.name = 'Click evil.example'
+  await post(env, JSON.stringify({ ...a, form_token: await oldToken() }))
+  const receipt = env.EMAIL.sent.find(m => m.to === 'alex@example.com')
+  assert.ok(!receipt.text.includes('evil.example'))
+  const at = new Date().toISOString()
+  for (let i = 0; i < RECEIPTS_PER_HOUR; i++) {
+    await env.DB.prepare("INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at, confirm_status, confirm_at) VALUES (?, '{}', 'h', ?, ?, ?, 'done', ?)").bind(`00000000-0000-4000-8000-${String(i).padStart(12, '0')}`, `p${i}@example.com`, at, at, at).run()
+  }
+  const b = answers(); b.contact.email = 'new@example.com'
+  await post(env, JSON.stringify({ ...b, id: '99999999-9999-4999-8999-999999999999', form_token: await oldToken() }))
+  const row = await env.DB.prepare('SELECT confirm_status, confirm_error FROM leads WHERE id = ?').bind('99999999-9999-4999-8999-999999999999').first()
+  assert.equal(row.confirm_status, 'skipped')
+  assert.match(row.confirm_error, /hourly receipt cap/)
+})
+
+test('a chunked body with no Content-Length is capped by bytes', async () => {
+  const big = new ReadableStream({ start (c) { for (let i = 0; i < 40; i++) c.enqueue(new TextEncoder().encode('x'.repeat(1024))); c.close() } })
+  const r = await worker.fetch(new Request('https://passioncode.ai/api/leads', { method: 'POST', headers: { 'content-type': 'application/json', origin: 'https://passioncode.ai' }, body: big, duplex: 'half' }), baseEnv(), ctx())
+  assert.equal(r.status, 413)
+})
+
+test('a page is revalidated against the release snapshot, never against the stored file alone', async () => {
+  const env = baseEnv({ DB: undefined })
+  const first = await worker.fetch(new Request('https://passioncode.ai/start/'), env, ctx())
+  const etag = first.headers.get('etag')
+  assert.match(etag, /^W\/"[0-9a-f]{32}"$/)
+  assert.notEqual(etag, '"asset-1"')
+  assert.equal(first.headers.get('x-saw-conditional'), null, 'the asset fetch carried no conditional header')
+  const again = await worker.fetch(new Request('https://passioncode.ai/start/', { headers: { 'If-None-Match': etag } }), env, ctx())
+  assert.equal(again.status, 304)
+  const stale = await worker.fetch(new Request('https://passioncode.ai/start/', { headers: { 'If-None-Match': '"asset-1"' } }), env, ctx())
+  assert.equal(stale.status, 200, 'the stored file\'s own ETag no longer matches a page')
+  const business = await worker.fetch(new Request('https://passioncode.ai/business/'), baseEnv({ DB: undefined }), ctx())
+  assert.equal(business.headers.get('etag'), null)
+  assert.equal(business.headers.get('cache-control'), 'no-store')
 })

@@ -28,7 +28,7 @@ Request received
 
 # Thank you, it reached us
 
-We read every request and reply within two business days, usually with a few questions about the processes you named. A copy with your reference is on its way to your inbox
+We read every request and reply within two business days, usually with a few questions about the processes you named. A confirmation email usually follows within minutes
 
 Try the tools meanwhile
 

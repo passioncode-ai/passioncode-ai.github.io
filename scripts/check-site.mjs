@@ -107,7 +107,7 @@ for (const id of ['launcher', 'fabric', 'build', 'run', 'contribute']) assert.ok
 
 // ---- /business/: the funnel form agrees with what the Worker accepts --------------------------
 const business = read('business/index.html')
-for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="company_fax"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"']) assert.ok(business.includes(text), `/business/ missing ${text}`)
+for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"']) assert.ok(business.includes(text), `/business/ missing ${text}`)
 const formValues = name => [...business.matchAll(new RegExp(`name="${name.replace('.', '\\.')}" value="([^"]+)"`, 'g'))].map(m => m[1])
 const selectValues = name => {
   const block = new RegExp(`<select name="${name.replace('.', '\\.')}"[^>]*>([\\s\\S]*?)</select>`).exec(business)

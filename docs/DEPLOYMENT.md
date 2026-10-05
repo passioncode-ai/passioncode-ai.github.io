@@ -154,21 +154,29 @@ python3 "$(project-observatory full-path)/tools/use_secret.py" run --env prod \
   passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npx wrangler d1 migrations apply passioncode-site --remote
 ```
 
-Tables: `release_snapshot` (one row), `release_cache` (GitHub ETags and bodies), `leads`.
+Tables: `release_snapshot` (one row), `release_cache` (GitHub ETags and bodies), `leads`,
+`form_tokens` (spent nonces, pruned after two days).
 
 ## Commercial enquiries
 
 `POST /api/leads` takes the /business/ form as JSON (scripted) or form-encoded (no JavaScript).
-In order: same-origin check; the `LEAD_LIMITER` rate limit (5 a minute per address); a 32 KB cap;
-the hidden `company_fax` trap (answered as accepted, stored nowhere); the signed `form_token` the
-Worker writes into `/business/` on every render (refused when sent within 3 s or after 24 h);
-validation against `assets/lead-options.js` (`worker/leads.js` `buildLead`; the savings estimate
-is recomputed with `assets/estimate.js`, never taken from the client). Then the lead is **written
+In order: same-origin check; the `LEAD_LIMITER` rate limit (5 a minute per address); a 32 KB cap
+counted in bytes as the body streams; only the form's own field names are read (`FORM_FIELDS`,
+null-prototype objects — a crafted `__proto__.x` name reaches nothing); the hidden `pc_hp` trap
+(answered as accepted, stored nowhere, logged as `leads.honeypot`); the signed `form_token` the
+Worker writes into `/business/` on every render, with a random nonce (refused when sent within
+3 s or after 24 h, and spent once — a resend of the same request id is recognised as a duplicate
+before the token is spent); validation against `assets/lead-options.js` (`worker/leads.js`
+`buildLead`; control characters are removed and single-line fields lose line breaks; the savings
+estimate is recomputed with `assets/estimate.js`, never taken from the client). The browser sends
+one request id per draft, so a resend after a lost answer is the same lead. Then the lead is **written
 to D1 before anything is sent**, and three deliveries run, each retried by the cron with backoff
-(2, 4, 8 … minutes, at most 6 hours apart, 12 attempts, then marked failed):
+(the cron's first look is 2 minutes after the request, then 2, 4, 8 … minutes, at most 6 hours
+apart, 12 attempts, then marked failed; the Platform call times out after 10 s):
 
 1. a notification to `LEAD_NOTIFY_TO` through the `send_email` binding, reply-to the sender;
-2. a receipt to the sender, at most one per address a day;
+2. a receipt to the sender that repeats nothing they typed, at most one per address a day and
+   30 across all senders an hour;
 3. a copy to the PassionCode.ai Platform (`PLATFORM_URL` + `/v1/leads`), signed
    `X-PC-Signature: v1=HMAC-SHA256(PLATFORM_INTAKE_SECRET, "<X-PC-Timestamp>.<body>")`. Until both
    are set, leads wait in D1 and are forwarded once they are.
