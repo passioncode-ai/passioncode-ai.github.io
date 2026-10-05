@@ -122,7 +122,7 @@ Keep accounts organised, see usage and choose which account handles the next req
 
 Switchboard
 
-Available in beta
+Available now
 
 02
 
@@ -164,7 +164,7 @@ A working connection today: Project Observatory runs as a local service and appe
 
 Different jobs, a shared direction: tools you can inspect, configure and use from your agent.
 
-PUBLIC BETA · macOS + Windows
+AVAILABLE · macOS + Windows
 
 ### Fabric Switchboard
 
@@ -187,7 +187,7 @@ Explore Switchboard
 
 ↗
 
-Open source under AGPL-3.0. Desktop + CLI. Check platform requirements, beta notes and the current download’s license before installing.
+Open source under AGPL-3.0. Desktop + CLI. Check platform requirements, release notes and the current download’s license before installing.
 
 Actual interface · synthetic demo accounts
 
@@ -321,7 +321,7 @@ Download Inbox
 
 ↓
 
-Available in beta
+Available now
 
 ### Fabric Switchboard
 
