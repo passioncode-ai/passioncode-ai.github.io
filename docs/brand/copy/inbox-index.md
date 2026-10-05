@@ -189,7 +189,7 @@ Not yet. Cloudflare mailboxes and Gmail work in the preview. General IMAP and Ou
 
 Is the source public?
 
-Yes. Fabric Inbox is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from contact@passioncode.ai. It began as Cloudflare’s Agentic Inbox template, which keeps its own Apache-2.0 notice. The repository includes the source, tests and release notes.
+Yes. Fabric Inbox is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from passioncode.ai/business. It began as Cloudflare’s Agentic Inbox template, which keeps its own Apache-2.0 notice. The repository includes the source, tests and release notes.
 
 Is Inbox the Fabric agent?
 

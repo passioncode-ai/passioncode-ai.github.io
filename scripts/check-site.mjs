@@ -14,7 +14,7 @@ const release = JSON.parse(read('switchboard/release.json'))
 // Every repository is open source under AGPL-3.0 or available under a commercial license
 // (Fabric ADR-0092). Each product page says so; MIT and PolyForm appear only inside
 // <!-- license-history --> regions, because a released version keeps its license.
-const LICENSE_WORDING = ['open source under the GNU AGPL-3.0', 'commercial license is available', 'contact@passioncode.ai']
+const LICENSE_WORDING = ['open source under the GNU AGPL-3.0', 'commercial license is available', 'href="/business/"']
 // The words a visitor or a crawler reads: no JSON-LD, no id/href attributes, no license history.
 const currentWords = html => html
   .replace(/<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g, '')
