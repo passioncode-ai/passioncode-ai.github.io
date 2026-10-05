@@ -1,23 +1,23 @@
 {
   "schema": "releases/1",
-  "generatedAt": "2026-10-05T12:01:52.986Z",
+  "generatedAt": "2026-10-05T14:55:39.304Z",
   "products": {
     "fabric": {
       "key": "fabric",
       "name": "Fabric",
       "repository": "passioncode-ai/fabric",
       "page": "/fabric/",
-      "version": "0.3.0",
-      "tag": "v0.3.0",
+      "version": "0.3.1",
+      "tag": "v0.3.1",
       "prerelease": true,
-      "publishedAt": "2026-10-03T23:45:25Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric/releases/tag/v0.3.0",
+      "publishedAt": "2026-10-05T14:51:13Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric/releases/tag/v0.3.1",
       "assets": {
         "macos": {
-          "name": "Fabric-0.3.0-arm64.dmg",
-          "url": "https://github.com/passioncode-ai/fabric/releases/download/v0.3.0/Fabric-0.3.0-arm64.dmg",
-          "sha256": "0ee87af8249820aa5a5aa14980826f3ac6a65776bb2e78d5c9cb88ae88952b21",
-          "size": 168402839
+          "name": "Fabric-0.3.1-arm64.dmg",
+          "url": "https://github.com/passioncode-ai/fabric/releases/download/v0.3.1/Fabric-0.3.1-arm64.dmg",
+          "sha256": "3f522f650c69481a6b8e3b2c74a7daa425cdbffded66ece037ba96c1c6f0aa60",
+          "size": 168608164
         }
       }
     },
@@ -26,23 +26,23 @@
       "name": "Fabric Switchboard",
       "repository": "passioncode-ai/fabric-switchboard",
       "page": "/switchboard/",
-      "version": "0.6.0",
-      "tag": "v0.6.0",
+      "version": "0.6.1",
+      "tag": "v0.6.1",
       "prerelease": false,
-      "publishedAt": "2026-10-05T10:10:14Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.6.0",
+      "publishedAt": "2026-10-05T14:02:08Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.6.1",
       "assets": {
         "macos": {
-          "name": "Fabric-Switchboard-0.6.0-macos-universal.zip",
-          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.0/Fabric-Switchboard-0.6.0-macos-universal.zip",
-          "sha256": "be7ef792490b9b266e5a48529890db1cd97bce7e807d826f9881d5b0e698f9f0",
-          "size": 21173633
+          "name": "Fabric-Switchboard-0.6.1-macos-universal.zip",
+          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.1/Fabric-Switchboard-0.6.1-macos-universal.zip",
+          "sha256": "76a5ddf4933d9fc9e20879dfd3ca2c2d2e72c05bef44710471d286acd7433619",
+          "size": 22464244
         },
         "windows": {
-          "name": "Fabric-Switchboard-0.6.0-windows-x64.zip",
-          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.0/Fabric-Switchboard-0.6.0-windows-x64.zip",
-          "sha256": "6b8eefde9a37ce6e9bca4486cda421b0d72e64743cf8433ddcc295af5435afe2",
-          "size": 9675678
+          "name": "Fabric-Switchboard-0.6.1-windows-x64.zip",
+          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.1/Fabric-Switchboard-0.6.1-windows-x64.zip",
+          "sha256": "3ca1e96c0a0d7ac0aeb22b07b00824bde86c20ec4d8ddab37036eda5834e81a7",
+          "size": 10110936
         }
       }
     },
