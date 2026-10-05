@@ -145,7 +145,10 @@ for (const os of ['macos', 'windows']) assert.ok(product.includes(`href="/switch
 const fabric = read('fabric/index.html')
 assert.ok(fabric.includes('href="/fabric/download/macos"'), 'Fabric offers its macOS download through the Worker route')
 assert.ok(fabric.includes('Early preview'), 'Fabric is labelled an early preview')
-for (const text of ['Apple silicon', 'Docker', 'Supabase CLI', 'does not reply yet', 'no MCP entry of its own', 'href="https://github.com/passioncode-ai/fabric"', ...LICENSE_WORDING]) assert.ok(fabric.includes(text), `Fabric page must say: ${text}`)
+// Since 0.3.1 Fabric has a local agent hub (Fabric ADR-0115, facts.md "Fabric MCP"): the page says what it does,
+// and the earlier "no MCP entry of its own" would now be false, so it must be gone.
+for (const text of ['Apple silicon', 'Docker', 'Supabase CLI', 'does not reply yet', 'local agent hub', 'allow or deny each request', 'href="https://github.com/passioncode-ai/fabric"', ...LICENSE_WORDING]) assert.ok(fabric.includes(text), `Fabric page must say: ${text}`)
+assert.ok(!fabric.includes('no MCP entry of its own'), 'the Fabric page no longer claims it has no agent entry: 0.3.1 ships the hub')
 for (const image of ['fabric-home.jpg', 'fabric-board.jpg', 'fabric-releases.jpg']) assert.ok(fabric.includes(`/assets/${image}`), `Fabric preview ${image}`)
 assert.ok(!/source is private/i.test(fabric), 'Fabric source is public since 2026-09-30')
 
