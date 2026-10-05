@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Switchboard | Claude Code & Codex account manager | PassionCode.ai
 
-Manage Claude Code and Codex accounts, inspect usage limits and switch managed requests. Download the Switchboard beta for macOS and Windows.
+Manage Claude Code and Codex accounts, inspect usage limits and switch managed requests. Download Switchboard for macOS and Windows.
 
 Skip to content
 
@@ -54,7 +54,7 @@ GET SWITCHBOARD
 
 ## Pick your platform
 
-Latest public beta: 0.5.5-beta.1. Both downloads include the desktop app and the switchboard CLI.
+Latest release: 0.6.0. Both downloads include the desktop app and the switchboard CLI.
 
 ⌘
 
@@ -80,7 +80,7 @@ Download for Windows
 
 ↓
 
-Unsigned beta, cross-built for Windows. SmartScreen may show a warning. Execution on a Windows machine has not yet been verified.
+Built natively on Windows, not yet Authenticode-signed, so SmartScreen may show a warning. The installer includes the CLI.
 
 ☰
 
@@ -92,17 +92,17 @@ Claude Code or Codex CLI, installed separately. Switchboard includes no provider
 
 macOS 14 or later, on Apple silicon or Intel.
 
-Windows x64 with WebView2. The Windows build is unsigned and has not yet been run on a Windows machine.
+Windows x64 with WebView2. The Windows build is not yet Authenticode-signed.
 
-The app or switchboard serve kept running for managed sessions.
+The app keeps running in the menu bar after you close its window, and opens at login; quit it from its menu.
 
 macOS ZIP · SHA-256
 
-8be804b18a3012dd7b76272dd45aa9c802d147191cc577a1f9ce3fa664f9836a
+be7ef792490b9b266e5a48529890db1cd97bce7e807d826f9881d5b0e698f9f0
 
 Windows ZIP · SHA-256
 
-c5b5a0e9d90f6c3d029badd0fa27e2276e485f62e7df534d6e7b4393e8e34cc6
+6b8eefde9a37ce6e9bca4486cda421b0d72e64743cf8433ddcc295af5435afe2
 
 Compare before opening: shasum -a 256 in Terminal, Get-FileHash in PowerShell. A different value means a different file; download it again.
 
@@ -118,7 +118,7 @@ All releases
 
 ↗
 
-This is an early beta. Real provider login and end-to-end requests with live accounts are not yet verified. Review the release notes and use accounts you are comfortable testing with.
+Review the release notes before you upgrade. Acceptance with live provider accounts on each platform is tracked openly in the repository.
 
 THE PROBLEM
 
@@ -263,13 +263,17 @@ Is Switchboard the same thing as Fabric?
 
 Switchboard is the account-management tool available today. Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Both belong to the PassionCode toolkit. Explore what we’re building with Fabric.
 
+Can a project keep its own accounts?
+
+Yes. Create a project, add its folders — for example several related repositories — and choose its accounts. Sessions launched from those folders use only those accounts, automatic switching stays inside them, and agents working in other projects never switch to them.
+
 Does Switchboard send any data?
 
 Release builds count installs, days of use and how many accounts are connected, by provider and type. They never send account names, e-mail addresses, sign-ins, pool names or what you do with your accounts. A random installation number shared by PassionCode apps on your computer lets one person count once. Turn it off in About → Share anonymous usage counts; the switch applies to every PassionCode app. What exactly is sent.
 
 Can I inspect or build it myself?
 
-Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from contact@passioncode.ai. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.5.5-beta.1, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
+Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from contact@passioncode.ai. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.6.0, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
 
 PART OF THE PASSIONCODE TOOLKIT
 
@@ -299,7 +303,7 @@ OPEN SOURCE · LOCAL FIRST
 
 ## Your setup, your source
 
-Try the beta, inspect how it works, and tell us where it needs to improve.
+Try it, inspect how it works, and tell us where it needs to improve.
 
 Download Switchboard
 

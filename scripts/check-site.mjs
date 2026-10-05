@@ -59,7 +59,8 @@ for (const file of pages) {
 const home = read('index.html')
 for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'CEO AI agent', 'in development', 'href="/switchboard/#download"']) assert.ok(home.includes(text), `homepage missing ${text}`)
 const product = read('switchboard/index.html')
-for (const text of [release.version, release.releaseUrl, 'Unsigned beta', 'not yet verified', 'Before you open it', 'href="/observatory/"', ...LICENSE_WORDING]) assert.ok(product.includes(text), `product missing ${text}`)
+// Honest disclosures stay on the page: Windows is not Authenticode-signed, live acceptance is tracked.
+for (const text of [release.version, release.releaseUrl, 'not yet Authenticode-signed', 'tracked openly in the repository', 'Before you open it', 'href="/observatory/"', ...LICENSE_WORDING]) assert.ok(product.includes(text), `product missing ${text}`)
 const releaseProblems = checkSwitchboardPage(product, release)
 assert.deepEqual(releaseProblems, [], `switchboard/index.html: ${releaseProblems.join('; ')}`)
 for (const os of ['macos', 'windows']) if (release.sha256?.[os] !== undefined) assert.match(release.sha256[os], /^[0-9a-f]{64}$/, `release.json sha256.${os}`)
