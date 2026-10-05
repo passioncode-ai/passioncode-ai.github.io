@@ -1,26 +1,28 @@
 import { cpSync, mkdirSync, rmSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { PAGES } from './pages.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const output = resolve(root, 'dist')
 
 const publicFiles = [
-  'index.html',
+  ...PAGES,
+  'llms.txt',
+  'assets/site.js',
+  'assets/business.js',
+  'assets/estimate.js',
+  'assets/lead-options.js',
   'styles.css',
-  'switchboard/index.html',
-  'fabric/index.html',
   'fabric/release.json',
   'assets/fabric-home.jpg',
   'assets/fabric-board.jpg',
   'assets/fabric-releases.jpg',
   'switchboard/release.json',
-  'observatory/index.html',
-  'inbox/index.html',
-  'dashboards/index.html',
   'inbox/release.json',
   'assets/inbox-mark.svg',
   'assets/dashboards-mark.svg',
-  'design-system/index.html',
+  'assets/dashboards-overview.jpg',
+  'assets/dashboards-service-dashboard.jpg',
   'design-system/tokens.css',
   'assets/switchboard-mark.svg',
   'assets/switchboard-demo.jpg',

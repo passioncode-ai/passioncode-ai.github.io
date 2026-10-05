@@ -1,4 +1,4 @@
-# Onboarding, commercial intake and always-current versions — 2026-10-05 (in progress)
+# Onboarding, commercial intake and always-current versions — 2026-10-05
 
 Operator request 2026-10-05: homepage onboarding into the ecosystem (keep the header), three paths
 (personal use / contribute / commercial), a /business/ page with a funnel form and savings
@@ -21,33 +21,43 @@ animation; brand/icon/screenshot fixes across repositories.
   Observatory proposal `prop:9558486c6c994211`.
 - Narrow token `passioncode-ai.github.io/prod/CF_EMAIL_ROUTING_TOKEN` issued (zone passioncode.ai).
 
-## Open — exact next tasks, in order
-1. Write pages listed in `scripts/pages.mjs`: `start/`, `business/` (form fields = names in
-   `worker/leads.js` `buildLead`, options = `assets/lead-options.js`, hidden `form_token` and
-   honeypot `company_fax`), `business/thanks/`, `privacy/`; new homepage `<main>` (header kept);
-   `assets/site.js` (reveal, header state) and `assets/business.js` (steps, live estimate, JSON
-   submit, draft in localStorage); CSS appended to `styles.css`; mark version spans `data-live`.
-   Design dials announced: VARIANCE 7 / MOTION 5 / DENSITY 4, own PassionCode tokens, reduced
-   motion and no-JS fully static.
-2. Update `scripts/check-site.mjs` (use `PAGES`, allow only `/assets/site.js` and
-   `/assets/business.js`, options parity, data-live equals `releases/current.json`),
-   `build-site.mjs` allow-list (+ releases files, new pages, js), `package.json` scripts
-   (`releases:sync`, tests), sitemap, robots, `llms.txt`, docs (UX scenarios SCN-013+, facts,
-   DEPLOYMENT sections `#always-current-versions`, `#commercial-enquiries`, `#storage`,
-   `#security-headers`, HANDOFF, backlog under lease), nightly `releases:sync --check` workflow.
-3. Secrets: `wrangler secret put FORM_TOKEN_SECRET`, `IP_HASH_SALT` (random, stdin); later
-   `PLATFORM_INTAKE_SECRET` + var `PLATFORM_URL`. Deploy per docs/DEPLOYMENT.md, verify live.
-4. Backend: `~/DATA/passioncode-platform` (local, built by a subagent; not pushed). Create private
-   repo `passioncode-ai/passioncode-platform`, push, deploy to DigitalOcean after the operator puts
-   the team token in vault slot `passioncode-platform/prod/DIGITALOCEAN_TOKEN`.
-5. Cross-repo fixes from the 2026-10-05 audit (fabric README says private; stale org profile
-   versions; Okolos off-brand icons; inbox `demo_app.png` shows a real third-party identity; no
-   screenshots/social previews; CONTRIBUTING links) — send to owning sessions / PRs.
-6. Knowledge base: roadmap tracks for the org backend and site onboarding; licensing commercial
-   contact → /business/ form + commercial@ (templates in every repo).
+## Done since (same branch)
+- Pages: new homepage (vision, how it works, paths, tools with live versions, for builders,
+  company teaser, open source, FAQ), `/start/`, `/business/` (segments, estimate, engagement,
+  options, five-step form, FAQ), `/business/thanks/` (noindex), `/privacy/`; footer on every page
+  gains Get started, For companies, Privacy and the commercial address; header unchanged except a
+  scrolled shadow and hover underline. `assets/site.js`, `assets/business.js`; styles appended.
+- Product pages carry `data-live` markers (Switchboard through its renderer, Fabric, Inbox,
+  Dashboards — now on `/dashboards/download/macos` and the 0.4.1 facts verified below —
+  Observatory); Dashboards gains its synthetic screenshots from fabric-dashboards `8b23441`.
+- `scripts/pages.mjs` is the one page list (checks, copy projections, build, sync);
+  `scripts/check-site.mjs` rewritten: CSP-safe markup, live values equal the snapshot, form ↔
+  Worker options parity, privacy facts, honest disclosures kept.
+- Withdrawn-release bug found in local testing and fixed (a failed product keeps its last entry;
+  an answering one is taken as answered); test added.
+- SEO/AEO: canonical, Organization + WebSite + FAQPage (home), HowTo (/start/), Service + FAQPage
+  (/business/), the 1200x630 social card, sitemap with the new pages, `llms.txt`.
+- Nightly `.github/workflows/releases.yml` (21:00 UTC).
+
+## Checks run (2026-10-05)
+| Command | Result |
+|---|---|
+| `npm run check` | exit 0 — brand lock; 15 Switchboard + 12 release + 18 Worker tests; 11 pages; tokens; display copy; projections |
+| `npm run releases:check` | PASS: pages and releases/current.json match the published releases |
+| `npm run build` | PASS, allow-listed `dist/` |
+| `wrangler dev --local` + `/__scheduled` | snapshot refreshed from GitHub (7 products, 0 failed); an injected 9.9.9 moved the text, the checksum, the JSON-LD and the download; the cron then restored 0.4.1 |
+| local POST /api/leads with the served form token | 201; D1 row notify=done, confirm=done, forward=pending (waiting for the Platform) |
+| Playwright + Chrome, 1440 and 390 px, five pages | no console errors, no horizontal overflow, no broken images; the funnel walked step by step, errors per step, estimate $2,150–$4,350 for 40 h × $50 manual |
+| Dashboards v0.4.1 DMG | SHA-256 equal to the digest; `stapler validate` worked; `spctl` Notarized Developer ID; universal; macOS 13.0 |
+
+## Open — exact next tasks
+1. Deploy from reviewed main: secrets `FORM_TOKEN_SECRET`, `IP_HASH_SALT` (stdin), then
+   `npm run deploy`; verify live and send one test enquiry.
+2. Platform: deploy passioncode-platform when the DigitalOcean token is in the vault, then set
+   `PLATFORM_URL` and `PLATFORM_INTAKE_SECRET` (PLAT-003).
+3. SITE-015, SITE-016, SITE-017 in [backlog](../backlog.md).
 
 ## Human steps
-- Fabric Inbox → New mailbox `commercial@passioncode.ai` (agent off); until then set
-  `LEAD_NOTIFY_TO` to contact@passioncode.ai.
-- DigitalOcean team API token into the vault slot above.
-- Approve fixing apex SPF to `v=spf1 include:_spf.mx.cloudflare.net ~all` (stale Namecheap value).
+- DigitalOcean team API token into `passioncode-platform/prod/DIGITALOCEAN_TOKEN`.
+- Approve the apex SPF fix to `v=spf1 include:_spf.mx.cloudflare.net ~all`.
+- Done by the operator 2026-10-05: mailbox commercial@passioncode.ai (routing rule → fabric-inbox, verified).

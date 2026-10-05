@@ -91,13 +91,13 @@ const REGIONS = {
   checksums: f => {
     const rows = [['macos', 'macOS ZIP'], ['windows', 'Windows ZIP']].filter(([os]) => f.sha256[os])
     if (!rows.length) return ''
-    return `<dl class="checksums" aria-label="SHA-256 checksums">${rows.map(([os, name]) => `<div><dt>${name} · SHA-256</dt><dd><code data-release-sha256="${os}">${f.sha256[os]}</code></dd></div>`).join('')}</dl><p class="section-note">Compare before opening: <code>shasum -a 256</code> in Terminal, <code>Get-FileHash</code> in PowerShell. A different value means a different file; download it again.</p>`
+    return `<dl class="checksums" aria-label="SHA-256 checksums">${rows.map(([os, name]) => `<div><dt>${name} · SHA-256</dt><dd><code data-release-sha256="${os}" data-live="switchboard.assets.${os}.sha256">${f.sha256[os]}</code></dd></div>`).join('')}</dl><p class="section-note">Compare before opening: <code>shasum -a 256</code> in Terminal, <code>Get-FileHash</code> in PowerShell. A different value means a different file; download it again.</p>`
   },
   'license-current': f => f.mit
     ? 'That includes the current download.'
     : f.polyform
-      ? `The current download, <span data-release-version>${f.version}</span>, was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.`
-      : `The current download, <span data-release-version>${f.version}</span>, is released under the AGPL. v${LAST_POLYFORM_VERSION} was released under PolyForm Noncommercial or Internal Use and keeps that license.`,
+      ? `The current download, <span data-release-version data-live="switchboard.version">${f.version}</span>, was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.`
+      : `The current download, <span data-release-version data-live="switchboard.version">${f.version}</span>, is released under the AGPL. v${LAST_POLYFORM_VERSION} was released under PolyForm Noncommercial or Internal Use and keeps that license.`,
   agents: f => f.agents ? AGENTS_SECTION(f) : ''
 }
 
@@ -111,7 +111,7 @@ const AGENTS_SECTION = f => `<section class="section" id="agents" aria-labelledb
 </section>`
 
 const REGION = /(<!-- release:([a-z-]+) -->)([\s\S]*?)(<!-- \/release:\2 -->)/g
-const JSON_LD = /(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/g
+const JSON_LD = /(<script type="application\/ld\+json"(?: data-live-ld="[a-z]+")?>)([\s\S]*?)(<\/script>)/g
 
 export function renderSwitchboardPage (html, manifest) {
   const f = releaseFacts(manifest)

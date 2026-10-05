@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://passioncode.ai/</loc></url>
-  <url><loc>https://passioncode.ai/switchboard/</loc></url>
-  <url><loc>https://passioncode.ai/observatory/</loc></url>
-  <url><loc>https://passioncode.ai/design-system/</loc></url>
+  <url><loc>https://passioncode.ai/start/</loc></url>
+  <url><loc>https://passioncode.ai/business/</loc></url>
   <url><loc>https://passioncode.ai/fabric/</loc></url>
-  <url><loc>https://passioncode.ai/inbox/</loc></url>
+  <url><loc>https://passioncode.ai/switchboard/</loc></url>
   <url><loc>https://passioncode.ai/dashboards/</loc></url>
+  <url><loc>https://passioncode.ai/observatory/</loc></url>
+  <url><loc>https://passioncode.ai/inbox/</loc></url>
+  <url><loc>https://passioncode.ai/design-system/</loc></url>
+  <url><loc>https://passioncode.ai/privacy/</loc></url>
 </urlset>

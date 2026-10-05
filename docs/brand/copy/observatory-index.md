@@ -192,6 +192,10 @@ PassionCode
 
 From vibe coding to passion coding
 
+Get started
+
+For companies
+
 Switchboard
 
 Observatory
@@ -207,6 +211,10 @@ GitHub & source
 About
 
 Design system
+
+Privacy
+
+commercial@passioncode.ai
 
 Twitter
 

@@ -93,9 +93,14 @@ class DisplayCopyTests(unittest.TestCase):
         expected = {url.removeprefix('https://passioncode.ai/').rstrip('/') + '/index.html'
                     if url != 'https://passioncode.ai/' else 'index.html' for url in urls}
         self.assertTrue(expected)
-        self.assertEqual(set(PAGES), expected)
-        shipped_html = set(re.findall(r"[']([^']+\.html)[']", (ROOT / 'scripts/build-site.mjs').read_text()))
-        self.assertEqual(set(PAGES), shipped_html)
+        # Noindex pages (scripts/pages.mjs NOINDEX) are shipped and checked, but not listed.
+        pages_src = (ROOT / 'scripts/pages.mjs').read_text()
+        noindex = set(re.findall(r"'([^']+\.html)'", pages_src.split('export const NOINDEX', 1)[1]))
+        self.assertEqual(set(PAGES) - noindex, expected)
+        # The build ships every page by importing the same list.
+        build = (ROOT / 'scripts/build-site.mjs').read_text()
+        self.assertIn("import { PAGES } from './pages.mjs'", build)
+        self.assertIn('...PAGES', build)
 
     def test_projection_cli_staleness_is_in_gate(self):
         package = json.loads((ROOT / 'package.json').read_text())

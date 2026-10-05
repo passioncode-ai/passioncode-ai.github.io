@@ -43,10 +43,30 @@ for (const [key, entry] of Object.entries(merged.products)) {
   console.log(`${key.padEnd(12)} ${entry.version}${was && was !== entry.version ? `  (was ${was})` : ''}`)
 }
 if (check) {
+  const selected = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
+  if (selected.tag !== merged.products.switchboard.tag) changed.push('switchboard/release.json')
   if (changed.length) { console.error(`DRIFT: ${changed.join(', ')} — run npm run releases:sync`); process.exit(1) }
   console.log('PASS: pages and releases/current.json match the published releases')
   process.exit(errors.length ? 2 : 0)
 }
 if (comparable(merged) !== comparable(bundled)) writeFileSync(currentPath, JSON.stringify(merged, null, 2) + '\n')
 for (const [page, html] of pageOutputs) writeFileSync(resolve(root, page), html)
-console.log(changed.length ? `UPDATED: ${changed.join(', ')}` : 'UNCHANGED')
+
+// The older per-product manifests stay published at their URLs (fabric/, inbox/release.json),
+// written from the same snapshot so they can never disagree with it.
+for (const key of ['fabric', 'inbox']) {
+  const e = merged.products[key]
+  const legacy = { tag: e.tag, version: e.version, repository: e.repository, releaseUrl: e.releaseUrl, downloads: { macos: e.assets.macos.url }, sha256: e.assets.macos.sha256 }
+  const file = resolve(root, `${key}/release.json`)
+  const text = JSON.stringify(legacy, null, 2) + '\n'
+  if (readFileSync(file, 'utf8') !== text) { writeFileSync(file, text); changed.push(`${key}/release.json`) }
+}
+
+// Switchboard's page has release-bound sections of its own (license by version,
+// notarization, the launcher line): its renderer re-reads the release and redraws them.
+const selected = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
+if (selected.tag !== merged.products.switchboard.tag) {
+  execFileSync('node', [resolve(root, 'scripts/update-switchboard-release.mjs'), merged.products.switchboard.tag], { stdio: 'inherit' })
+  changed.push('switchboard/release.json', 'switchboard/index.html')
+}
+console.log(changed.length ? `UPDATED: ${[...new Set(changed)].join(', ')}` : 'UNCHANGED')

@@ -5,10 +5,10 @@ No computed CSS/JS: browser review owns those. aria-hidden is not a visual hide.
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 import re
+from pathlib import Path
 
-PAGES = ('index.html', 'switchboard/index.html', 'fabric/index.html',
-         'inbox/index.html', 'dashboards/index.html', 'observatory/index.html',
-         'design-system/index.html')
+# The one page list lives in scripts/pages.mjs; read it rather than keep a second copy.
+PAGES = tuple(re.findall(r"'([^']+\.html)'", (Path(__file__).resolve().parent / 'pages.mjs').read_text().split('export const PAGES = [', 1)[1].split(']', 1)[0]))
 HEADINGS = {'h1', 'h2', 'h3', 'h4', 'h5', 'h6'}
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
         'meta', 'param', 'source', 'track', 'wbr'}

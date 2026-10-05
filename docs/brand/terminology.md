@@ -9,7 +9,9 @@ Contract: brand-contract v1
 | project rule | project binding, pinned project | the optional folder → account rule in Switchboard 0.4 |
 | agent tools / `switchboard mcp` | Switchboard API, agent integration | the local MCP server agents use to read usage and switch accounts |
 | open source under AGPL-3.0 | source-available, PolyForm (as the current license), MIT (as the current license) | every product with a page — Fabric, Fabric Inbox, Switchboard, Project Observatory, Fabric Dashboards — whose source is public (ADR-0092; Fabric and Fabric Inbox since 2026-09-30) |
-| commercial license | paid license, enterprise license, license on request | the license PassionCode.ai offers for use the AGPL does not cover; from contact@passioncode.ai, no price or term |
+| commercial license | paid license, enterprise license, license on request | the license PassionCode.ai offers for use the AGPL does not cover; requested through passioncode.ai/business/ (commercial@passioncode.ai as the contact), no price or term |
+| agent workplace (for companies) | AI transformation, digital workforce | what /business/ sets up: the tools, the agents and their dashboards for a team's processes |
+| estimate | guaranteed savings, ROI | the /business/ arithmetic: hours a week × 4.33 × share × hourly cost, stated as an estimate |
 
 ## Entity and tier names: exact spelling
 | Name | Wrong forms seen |
@@ -31,6 +33,7 @@ Contract: brand-contract v1
 |---|---|---|
 | seamless | unsupported | describe the operation |
 | fully autonomous | erases authority | describe explicit scope |
+| guaranteed savings | a promise the estimate cannot keep | an estimate, measured in the pilot |
 | source-available | superseded by ADR-0092: every repository is open source under AGPL-3.0 or commercial | open source under AGPL-3.0 |
 | AI-native work (in the tagline) | the canonical tagline names teams | AI-native teams |
 

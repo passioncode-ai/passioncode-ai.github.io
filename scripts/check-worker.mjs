@@ -116,6 +116,11 @@ test('the cron refresh stores the snapshot and ETags, and keeps a product that f
   const row = await env.DB.prepare('SELECT data, errors FROM release_snapshot WHERE id = 1').first()
   assert.equal(JSON.parse(row.errors)[0].product, 'inbox')
   assert.ok((await env.DB.prepare('SELECT COUNT(*) AS n FROM release_cache').first()).n >= 5)
+  // A withdrawn release: D1 says 99.0.0, GitHub now answers the bundled version — the site follows GitHub.
+  const withdrawn = structuredClone(first.snapshot); withdrawn.products.dashboards.version = '99.0.0'; withdrawn.products.dashboards.tag = 'v99.0.0'
+  await env.DB.prepare('UPDATE release_snapshot SET data = ? WHERE id = 1').bind(JSON.stringify(withdrawn)).run()
+  const after = await refreshReleases(env, { fetch: fetchImpl })
+  assert.equal(after.snapshot.products.dashboards.version, bundled.products.dashboards.version, 'a withdrawn release leaves the site')
   calls.length = 0
   await refreshReleases(env, { fetch: fetchImpl })
   assert.ok(calls.some(([u, etag]) => u.includes('fabric-switchboard') && etag === '"passioncode-ai/fabric-switchboard"'), 'the second run sends If-None-Match')

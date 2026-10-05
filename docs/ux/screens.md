@@ -2,7 +2,7 @@
 
 **Web surfaces:** yes — public static pages; visible copy, canonical URLs and structured data are available without JavaScript.
 
-Design system: [PassionCode](../../design-system/README.md), existing static HTML components. No new Figma file. Identity update with existing layout language; no cinematic motion. Observable targets: primary CTA visible in first desktop viewport, OS requirements beside each download, no horizontal overflow on mobile, keyboard-visible links and summaries.
+Design system: [PassionCode](../../design-system/README.md), existing static HTML components. No new Figma file. Identity update with existing layout language; motion level 5 (foundation → Motion): entrances, one scrubbed rail, the hero map loop — never a dependency. Observable targets: primary CTA visible in first desktop viewport, OS requirements beside each download, no horizontal overflow on mobile, keyboard-visible links and summaries.
 
 | ID | Screen | Scenarios |
 |---|---|---|
@@ -12,10 +12,14 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-04 | Observatory | SCN-006 |
 | SCR-05 | Fabric | SCN-007, SCN-008 |
 | SCR-06 | Fabric Inbox | SCN-009 |
-| SCR-07 | Fabric Dashboards | SCN-010 |
+| SCR-07 | Fabric Dashboards | SCN-010, SCN-016 |
+| SCR-08 | Get started | SCN-013, SCN-015 |
+| SCR-09 | For companies | SCN-014 |
+| SCR-10 | Request received | SCN-014 |
+| SCR-11 | Privacy notice | SCN-017 |
 
 ### SCR-01: Home
-**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012. Original operating-system hero with primary Explore the tools → #products and secondary download CTA; work cycle; available Switchboard and Observatory; developing Fabric; build pipeline including Fabric Dashboards (own page with download and MCP setup); public AGPL source repositories; author/About. Header and footer expose the same main sections on mobile.
+**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012, SCN-013, SCN-016. Reading order (2026-10-05): hero (canonical headline, Start free → /start/, For companies → /business/, current versions, the workplace map) → vision (do what you love) → How it works (#toolkit, four steps on a rail) → three paths (#start) → the tools (#products, current versions) → For builders (#extend, #launcher) → company teaser (#companies) → open source (#source) → FAQ → About → closing. The header is unchanged; it gains only a scrolled shadow and a hover underline. Footer adds Get started, For companies, Privacy and the commercial address.
 **Web surface:** public
 **Route:** https://passioncode.ai/
 **Answers:** What is PassionCode and which product can I use today?
@@ -83,3 +87,29 @@ Inbox falsifier: a reader could mistake the preview for a finished product or a 
 **Entity:** Fabric Dashboards, macOS service dashboard from PassionCode.ai, AGPL-3.0, release 0.3.1.
 
 Workplace update: the home directory precedes the work cycle and long product descriptions. Six entry points show utility and status; #extend owns launcher/Adapter instructions and source-build projects. Identity, headline and token palette are preserved. No new motion or component framework. Falsifiers: a product lacks a next action; a preview appears finished; the visitor mistakes the launcher for a desktop-app installer; a command or directory card clips at 390 px.
+
+### SCR-08: Get started
+**Scenarios:** SCN-013, SCN-015. Hero with an on-page table of contents → four steps (#launcher, #fabric, #build, #run) with copyable commands and current versions → #contribute (three steps, public repository list, internal repositories named as collaborator-only) → closing to /business/.
+**Web surface:** public
+**Route:** https://passioncode.ai/start/
+**Answers:** How do I install the workplace and make my first agent?
+**Indexable:** yes; HowTo structured data.
+**Without JS:** complete; commands are selectable text.
+
+### SCR-09: For companies
+**Scenarios:** SCN-014. Hero with the four-step funnel → segments (#cases) → estimate formula (#estimate) → engagement (#engagement) → setup options (#options) → the request form (#request) → FAQ.
+**Web surface:** public
+**Route:** https://passioncode.ai/business/
+**Answers:** What could agents take over in my company, and how do I start?
+**Indexable:** yes; Service and FAQPage structured data.
+**Without JS:** the form is one page posting to /api/leads; the estimate formula and example are static text.
+
+### SCR-10: Request received
+**Scenarios:** SCN-014. Confirmation for the no-JavaScript path, with the email fallback.
+**Web surface:** public, `noindex`
+**Route:** https://passioncode.ai/business/thanks/
+
+### SCR-11: Privacy notice
+**Scenarios:** SCN-017. Controller, data, purposes and legal bases, storage locations, retention, rights, browser draft, the apps.
+**Web surface:** public
+**Route:** https://passioncode.ai/privacy/

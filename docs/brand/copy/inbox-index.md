@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric Inbox | Mail with what matters first · macOS preview | PassionCode.ai
 
-Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview 0.8.2 for macOS.
+Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS.
 
 Skip to content
 
@@ -42,7 +42,7 @@ See what it does
 
 ↓
 
-Development preview 0.8.2 · macOS 12 or later · open source under AGPL-3.0
+Development preview 0.9.0 · macOS 12 or later · open source under AGPL-3.0
 
 FABRIC INBOX / MAIL + AGENTS
 
@@ -84,7 +84,7 @@ GET FABRIC INBOX
 
 ## for your Mac
 
-Latest preview: 0.8.2. The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
+Latest preview: 0.9.0. The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
 
 ⌘
 
@@ -115,7 +115,7 @@ The setup guide lists every setting.
 
 macOS DMG · SHA-256
 
-a808dd6fada61324b1b00cfbc2ebd59a441f9e924444040230a9805b979e152a
+8a43b2fd32a27b54454d8ecce568d92795405ec8422fa6e7df295c2771ffc96c
 
 Compare before opening: shasum -a 256 in Terminal. A different value means a different file; download it again.
 
@@ -201,6 +201,10 @@ PassionCode
 
 From vibe coding to passion coding
 
+Get started
+
+For companies
+
 Switchboard
 
 Observatory
@@ -216,6 +220,10 @@ GitHub & source
 About
 
 Design system
+
+Privacy
+
+commercial@passioncode.ai
 
 Twitter
 
