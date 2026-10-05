@@ -19,7 +19,7 @@ with sync_playwright() as p:
  b=p.chromium.launch(headless=True,executable_path=args.chromium)
  for phase,base in ([('before',args.baseline_url)] if args.baseline_url else [])+[('after',args.base_url)]:
   for width,height in [(1280,900),(390,844),(320,700)]:
-   for route in (['/'] if phase=='before' else ['/','/dashboards/','/switchboard/','/fabric/','/inbox/','/observatory/','/design-system/']):
+   for route in (['/'] if phase=='before' else ['/','/dashboards/','/switchboard/','/fabric/','/fabric/agents/','/inbox/','/observatory/','/design-system/']):
     page=b.new_page(viewport={'width':width,'height':height},device_scale_factor=1,reduced_motion='reduce')
     errors=[];page.on('pageerror',lambda err:errors.append(str(err)));page.on('console',lambda msg:errors.append(msg.text) if msg.type=='error' else None)
     page.goto(base+route,wait_until='networkidle');page.evaluate('document.fonts.ready')
@@ -53,5 +53,5 @@ with sync_playwright() as p:
      row['legacyStartAnchor']=True
     rows.append(row);page.close()
  b.close()
-(out/'browser.json').write_text(json.dumps({'checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'baselineRevision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip() if args.baseline_url else None,'currentRevision':'sourceSha256: implementation bytes before commit','sourceSha256':{f:hashlib.sha256(Path(f).read_bytes()).hexdigest() for f in ['index.html','dashboards/index.html','switchboard/index.html','fabric/index.html','inbox/index.html','observatory/index.html','design-system/index.html','styles.css','design-system/tokens.css']},'checks':rows},indent=2)+'\n')
-print('PASS:',len(rows),'page/viewport checks; 7 current pages × 3 widths; product links, skip link and keyboard FAQ')
+(out/'browser.json').write_text(json.dumps({'checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'baselineRevision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip() if args.baseline_url else None,'currentRevision':'sourceSha256: implementation bytes before commit','sourceSha256':{f:hashlib.sha256(Path(f).read_bytes()).hexdigest() for f in ['index.html','dashboards/index.html','switchboard/index.html','fabric/index.html','fabric/agents/index.html','inbox/index.html','observatory/index.html','design-system/index.html','styles.css','design-system/tokens.css']},'checks':rows},indent=2)+'\n')
+print('PASS:',len(rows),'page/viewport checks; 8 current pages × 3 widths; product links, skip link and keyboard FAQ')

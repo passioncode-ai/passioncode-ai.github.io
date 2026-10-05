@@ -171,3 +171,27 @@ for (const key of ['fabric', 'inbox']) {
   assert.equal(legacy.sha256, snapshot.products[key].assets.macos.sha256)
 }
 console.log('PASS: product pages keep their disclosures; manifests follow the release snapshot')
+
+// /fabric/agents/ answers one question: which coding agents Fabric works with, and at which level.
+// The levels are the operator's statement of 2026-10-05 (docs/brand/facts.md, "Fabric coding agents");
+// every agent sits in exactly one level, and the page never moves one up without a new fact row.
+const agentsPage = read('fabric/agents/index.html')
+const agentLevels = {
+  connected: ['Claude Code', 'Kilo Code', 'Hermes Agent'],
+  'runs-in-fabric': ['Codex'],
+  planned: ['Cline', 'omp (oh-my-pi)', 'pi', 'OpenClaw', 'OpenHands', 'Cursor CLI', 'Command Code', 'DeepSeek Harness', 'LangChain Deep Agents (dcode)', 'Letta', 'Strix', 'goose', 'Qwen Code', 'Gemini CLI', 'OpenCode', 'Zed', 'ZCode', 'Proto', 'CodeGPT', 'Freebuff', 'HackerAI']
+}
+const rowNames = html => [...html.matchAll(/<th scope="row">([^<]+)<\/th><td><a href="https:\/\/[^"]+">/g)].map(m => m[1])
+const allRows = rowNames(agentsPage)
+assert.equal(new Set(allRows).size, allRows.length, 'fabric/agents: an agent is listed in more than one row')
+for (const [level, names] of Object.entries(agentLevels)) {
+  const start = agentsPage.indexOf(`<section class="section" id="${level}"`)
+  assert.ok(start > 0, `fabric/agents: missing section #${level}`)
+  const section = agentsPage.slice(start, agentsPage.indexOf('</section>', start))
+  assert.deepEqual(rowNames(section), names, `fabric/agents: #${level} must list exactly ${names.join(', ')}, in order, each with its official site`)
+}
+assert.deepEqual(allRows, Object.values(agentLevels).flat(), 'fabric/agents: no agent outside its level table')
+for (const text of ['<time datetime="2026-10-05">5 October 2026</time>', 'one-session credential', 'nothing is written into the agent’s own settings', '<code>KILO_CONFIG_CONTENT</code>', '<code>kilo.json</code>', 'Kilo 7.4.17', 'href="https://agentclientprotocol.com"', 'href="https://openrouter.ai/apps"', 'read on 5 October 2026', 'largest share', 'switches accounts for Claude Code and Codex today', 'planned, not written yet']) assert.ok(agentsPage.includes(text), `fabric/agents must say: ${text}`)
+assert.ok(!/\d+(?:\.\d+)?\s?%/.test(currentWords(agentsPage)), 'fabric/agents: OpenRouter shares are named as "largest", never as percentages')
+assert.ok(fabric.includes('href="/fabric/agents/"'), 'the Fabric page links its supported coding agents')
+console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one level, as of 2026-10-05`)
