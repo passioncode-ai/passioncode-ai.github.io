@@ -36,7 +36,7 @@ Download for macOS ↓
 
 View source ↗
 
-Release 0.5.3 · macOS 13+ · Apple silicon + Intel
+Release 0.5.4 · macOS 13+ · Apple silicon + Intel
 
 YOUR LOCAL SERVICES / TOGETHER
 
@@ -80,11 +80,11 @@ Start, stop or restart a local service through macOS launchd, inspect its logs, 
 
 ### macOS
 
-Release 0.5.3. Universal DMG for Apple silicon and Intel, macOS 13 or later. Developer ID signed, notarized and stapled.
+Release 0.5.4. Universal DMG for Apple silicon and Intel, macOS 13 or later. Developer ID signed, notarized and stapled.
 
 Download Fabric Dashboards ↓
 
-Open the DMG, drag Fabric Dashboards to Applications, then open it. The app asks once whether to open at login; you can change that in Settings. Later versions arrive through the app’s own updates.
+Open the DMG, drag Fabric Dashboards to Applications, then open it. The app asks once whether to open at login; you can change that in Settings. New versions install themselves while the window is closed; your settings stay even if you uninstall and reinstall.
 
 ### Before you open it
 
