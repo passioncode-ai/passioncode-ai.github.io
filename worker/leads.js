@@ -11,6 +11,9 @@ export const MAX_BODY_BYTES = 32 * 1024
 export const FORM_TOKEN_MIN_AGE_MS = 3000
 export const FORM_TOKEN_MAX_AGE_MS = 24 * 60 * 60 * 1000
 export const MAX_ATTEMPTS = 12
+// Receipts across all senders in one hour: a ceiling far above real traffic that stops the
+// form from being used to mail many strangers.
+export const RECEIPTS_PER_HOUR = 30
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/
 const EMAIL = /^[^\s@<>()[\]\\,;:"]{1,64}@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/
@@ -19,23 +22,51 @@ const EMAIL = /^[^\s@<>()[\]\\,;:"]{1,64}@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-
 
 // A no-JavaScript submission arrives form-encoded with dotted names (`company.name`,
 // `goals` repeated); a scripted one arrives as the same shape in JSON.
+// Only the form's own field names are read: a crafted name (`__proto__.x`) never reaches an
+// object, and every node has a null prototype, so nothing can change the isolate's Object.
+export const FORM_FIELDS = new Set([
+  'id', 'form_token', 'pc_hp',
+  'goals',
+  'company.name', 'company.website', 'company.industry', 'company.industryOther', 'company.size', 'company.agentUsers',
+  'processes.areas', 'processes.other', 'processes.currentState', 'processes.tools', 'processes.hoursPerWeek', 'processes.hourlyCost', 'processes.currency',
+  'setup.mode', 'setup.hosting', 'setup.constraints',
+  'budget.monthly', 'budget.setup', 'budget.timeline',
+  'contact.name', 'contact.role', 'contact.email', 'contact.phone', 'contact.telegram', 'contact.message',
+  'consent.privacy', 'consent.marketing',
+  'source.referrer', 'source.utm.source', 'source.utm.medium', 'source.utm.campaign', 'source.utm.term', 'source.utm.content'
+])
+const ARRAY_FIELDS = new Set(['goals', 'processes.areas', 'processes.tools', 'setup.constraints'])
 export function formToObject (params) {
-  const arrays = new Set(['goals', 'processes.areas', 'processes.tools', 'setup.constraints'])
-  const out = {}
+  const out = Object.create(null)
   for (const [name, raw] of params) {
-    if (typeof raw !== 'string') continue
+    if (typeof raw !== 'string' || !FORM_FIELDS.has(name)) continue
     const path = name.split('.')
     let node = out
-    for (const part of path.slice(0, -1)) node = node[part] ??= {}
+    for (const part of path.slice(0, -1)) node = Object.hasOwn(node, part) ? node[part] : (node[part] = Object.create(null))
     const leaf = path.at(-1)
-    if (arrays.has(name)) (node[leaf] ??= []).push(raw)
+    if (ARRAY_FIELDS.has(name)) (Object.hasOwn(node, leaf) ? node[leaf] : (node[leaf] = [])).push(raw)
     else node[leaf] = raw
   }
   return out
 }
+// A JSON body is reduced to the same known fields, so both paths read one shape.
+export function knownFields (input) {
+  const params = []
+  const walk = (value, prefix) => {
+    if (value === null || value === undefined) return
+    if (Array.isArray(value)) { for (const v of value) if (typeof v !== 'object') params.push([prefix, String(v)]); return }
+    if (typeof value === 'object') { for (const key of Object.keys(value)) walk(value[key], prefix ? `${prefix}.${key}` : key); return }
+    params.push([prefix, typeof value === 'boolean' ? (value ? 'yes' : '') : String(value)])
+  }
+  if (input && typeof input === 'object' && !Array.isArray(input)) walk(input, '')
+  return formToObject(params)
+}
 
-const str = (v, max, { min = 0, field, issues }) => {
-  const s = typeof v === 'string' ? v.trim().replace(/\s+\n/g, '\n') : (v == null ? '' : String(v)).trim()
+const str = (v, max, { min = 0, field, issues, multiline = false }) => {
+  const raw = typeof v === 'string' ? v : (v == null ? '' : String(v))
+  // Control characters never survive; a single-line field (it may reach an email subject)
+  // loses line breaks too.
+  const s = (multiline ? raw.replace(/\r\n?/g, '\n').replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, ' ').replace(/[ \t]+\n/g, '\n') : raw.replace(/[\u0000-\u001f\u007f]+/g, ' ')).trim()
   if (s.length < min) issues.push({ path: field, message: min > 1 ? `at least ${min} characters` : 'required' })
   if (s.length > max) issues.push({ path: field, message: `at most ${max} characters` })
   return s.slice(0, max)
@@ -83,7 +114,7 @@ export function buildLead (input, context) {
 
   const email = str(contact.email, 254, { min: 3, field: 'contact.email', issues }).toLowerCase()
   if (email && !EMAIL.test(email)) issues.push({ path: 'contact.email', message: 'a work email address' })
-  const consentGiven = consent.privacy === true || consent.privacy === 'yes' || consent.privacy === 'on'
+  const consentGiven = consent.privacy === true || consent.privacy === 'yes' || consent.privacy === 'on' || consent.privacy === 'true'
   if (!consentGiven) issues.push({ path: 'consent.privacy', message: 'agree to the privacy notice to send the request' })
 
   const currency = pick(processes.currency || 'USD', LEAD_OPTIONS.currency, 'processes.currency', issues) || 'USD'
@@ -108,7 +139,7 @@ export function buildLead (input, context) {
     },
     processes: {
       areas: list(processes.areas, LEAD_OPTIONS.areas, 'processes.areas', issues, { min: 1 }),
-      other: str(processes.other, 500, { field: 'processes.other', issues }),
+      other: str(processes.other, 500, { field: 'processes.other', issues, multiline: true }),
       currentState: pick(processes.currentState, LEAD_OPTIONS.currentState, 'processes.currentState', issues),
       tools: list(processes.tools, LEAD_OPTIONS.tools, 'processes.tools', issues),
       hoursPerWeek: num(processes.hoursPerWeek, 10000, 'processes.hoursPerWeek', issues, { required: false }),
@@ -131,9 +162,9 @@ export function buildLead (input, context) {
       email,
       phone: str(contact.phone, 40, { field: 'contact.phone', issues }),
       telegram: str(contact.telegram, 64, { field: 'contact.telegram', issues }),
-      message: str(contact.message, 4000, { field: 'contact.message', issues })
+      message: str(contact.message, 4000, { field: 'contact.message', issues, multiline: true })
     },
-    consent: { privacy: true, version: PRIVACY_VERSION, marketing: consent.marketing === true || consent.marketing === 'yes' || consent.marketing === 'on' },
+    consent: { privacy: true, version: PRIVACY_VERSION, marketing: consent.marketing === true || consent.marketing === 'yes' || consent.marketing === 'on' || consent.marketing === 'true' },
     client: { ipHash: context.ipHash, country: str(context.country || '', 2, { field: 'client.country', issues }), userAgent: str(context.userAgent || '', 400, { field: 'client.userAgent', issues }) }
   }
   const e = estimate(lead.processes)
@@ -159,17 +190,26 @@ const sameString = (a, b) => {
 
 // The /business/ page is served with a token naming when it was rendered; a submission
 // faster than a person can fill the form, or replayed a day later, is refused.
-export async function issueFormToken (secret, now = Date.now()) {
-  return `${now}.${await hmac(secret, `form.${now}`)}`
+// Each token carries a random nonce and is spent once (consumeFormToken), so one page load
+// sends one request.
+export async function issueFormToken (secret, now = Date.now(), nonce = hex(crypto.getRandomValues(new Uint8Array(12)))) {
+  return `${now}.${nonce}.${await hmac(secret, `form.${now}.${nonce}`)}`
 }
+export function tokenNonce (token) { return String(token || '').split('.')[1] || '' }
 export async function checkFormToken (secret, token, now = Date.now()) {
-  const m = /^(\d{13})\.([0-9a-f]{64})$/.exec(String(token || ''))
+  const m = /^(\d{13})\.([0-9a-f]{24})\.([0-9a-f]{64})$/.exec(String(token || ''))
   if (!m) return 'missing'
-  if (!sameString(m[2], await hmac(secret, `form.${m[1]}`))) return 'invalid'
+  if (!sameString(m[3], await hmac(secret, `form.${m[1]}.${m[2]}`))) return 'invalid'
   const age = now - Number(m[1])
   if (age < FORM_TOKEN_MIN_AGE_MS) return 'too_fast'
   if (age > FORM_TOKEN_MAX_AGE_MS) return 'expired'
   return 'ok'
+}
+// True once per nonce; a replayed token answers false. Spent nonces older than the token's
+// lifetime are pruned by the cron.
+export async function consumeFormToken (db, token, now = new Date()) {
+  const r = await db.prepare('INSERT INTO form_tokens (nonce, used_at) VALUES (?, ?) ON CONFLICT(nonce) DO NOTHING').bind(tokenNonce(token), now.toISOString()).run()
+  return (r.meta?.changes ?? 0) === 1
 }
 
 // Same signature the Platform verifies: HMAC-SHA256(secret, `${timestamp}.${body}`).
@@ -188,13 +228,23 @@ export function canonical (value) {
 // What identifies a submission for idempotency: everything the person chose, not the time.
 const identity = lead => canonical({ ...lead, submittedAt: null, client: null })
 
+export const FIRST_RETRY_MS = 2 * 60 * 1000
+export async function findLead (db, lead) {
+  const existing = await db.prepare('SELECT payload_hash FROM leads WHERE id = ?').bind(lead.id).first()
+  if (!existing) return null
+  return existing.payload_hash === await sha256(identity(lead)) ? 'duplicate' : 'conflict'
+}
+// INSERT … ON CONFLICT: two requests with one id cannot both win, and the loser is told the
+// truth (duplicate or conflict) rather than an error. The cron's first look waits two minutes,
+// so it never races the request's own delivery.
 export async function storeLead (db, lead) {
   const hash = await sha256(identity(lead))
+  const firstRetry = new Date(Date.parse(lead.submittedAt) + FIRST_RETRY_MS).toISOString()
+  const r = await db.prepare(`INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING`)
+    .bind(lead.id, JSON.stringify(lead), hash, lead.contact.email, lead.submittedAt, firstRetry).run()
+  if ((r.meta?.changes ?? 0) === 1) return 'stored'
   const existing = await db.prepare('SELECT payload_hash FROM leads WHERE id = ?').bind(lead.id).first()
-  if (existing) return existing.payload_hash === hash ? 'duplicate' : 'conflict'
-  await db.prepare(`INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at) VALUES (?, ?, ?, ?, ?, ?)`)
-    .bind(lead.id, JSON.stringify(lead), hash, lead.contact.email, lead.submittedAt, lead.submittedAt).run()
-  return 'stored'
+  return existing?.payload_hash === hash ? 'duplicate' : 'conflict'
 }
 
 // ---- delivery ----------------------------------------------------------------------------
@@ -233,9 +283,10 @@ export function notificationText (lead) {
 
 export function confirmationText (lead) {
   return [
-    `Hello ${lead.contact.name},`,
+    // No text the sender typed is repeated here: the receipt cannot carry someone else's words.
+    'Hello,',
     '',
-    `Thank you for telling us about ${lead.company.name}. Your request reached PassionCode.ai.`,
+    'Thank you for your request. It reached PassionCode.ai.',
     '',
     'What happens next:',
     '1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.',
@@ -286,7 +337,11 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
       // One receipt per address a day: the form cannot be used to mail a stranger repeatedly.
       const since = new Date(now.getTime() - 86400000).toISOString()
       const recent = await env.DB.prepare("SELECT COUNT(*) AS n FROM leads WHERE email = ? AND confirm_status = 'done' AND confirm_at > ? AND id != ?").bind(lead.contact.email, since, id).first()
-      if (recent?.n > 0) { await mark(env.DB, id, 'confirm', 'skipped', 'receipt already sent to this address today'); result.confirm = 'skipped' } else {
+      const hourAgo = new Date(now.getTime() - 3600000).toISOString()
+      const lastHour = await env.DB.prepare("SELECT COUNT(*) AS n FROM leads WHERE confirm_status = 'done' AND confirm_at > ?").bind(hourAgo).first()
+      if (recent?.n > 0) { await mark(env.DB, id, 'confirm', 'skipped', 'receipt already sent to this address today'); result.confirm = 'skipped' } else if (lastHour?.n >= RECEIPTS_PER_HOUR) {
+        await mark(env.DB, id, 'confirm', 'skipped', 'hourly receipt cap reached'); result.confirm = 'skipped'
+      } else {
         if (!env.EMAIL) throw new Error('no EMAIL binding')
         const text = confirmationText(lead)
         await env.EMAIL.send({ to: lead.contact.email, from, replyTo: env.LEAD_REPLY_TO || 'commercial@passioncode.ai', subject: 'We received your request — PassionCode.ai', text, html: asHtml(text) })
@@ -305,7 +360,8 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
         const response = await fetchImpl(new URL('/v1/leads', env.PLATFORM_URL), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-PC-Timestamp': ts, 'X-PC-Signature': await platformSignature(env.PLATFORM_INTAKE_SECRET, ts, body) },
-          body
+          body,
+          signal: AbortSignal.timeout(10000)
         })
         if (response.status === 200 || response.status === 201) { await mark(env.DB, id, 'forward', 'done'); result.forward = 'done' } else if (response.status >= 400 && response.status < 500 && response.status !== 408 && response.status !== 429) {
           await mark(env.DB, id, 'forward', 'failed', `platform ${response.status}: ${(await response.text()).slice(0, 300)}`); result.forward = 'failed'
@@ -337,6 +393,7 @@ export async function retryDue (env, { now = new Date(), fetch: fetchImpl = fetc
   }
   const cutoff = new Date(now.getTime() - 30 * 86400000).toISOString()
   await env.DB.prepare("DELETE FROM leads WHERE forward_status = 'done' AND created_at < ?").bind(cutoff).run()
+  await env.DB.prepare('DELETE FROM form_tokens WHERE used_at < ?').bind(new Date(now.getTime() - 2 * 86400000).toISOString()).run()
   // The privacy notice's ceiling: nothing stays in the buffer longer than 24 months.
   const ceiling = new Date(now.getTime() - 730 * 86400000).toISOString()
   await env.DB.prepare('DELETE FROM leads WHERE created_at < ?').bind(ceiling).run()

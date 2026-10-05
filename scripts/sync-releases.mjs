@@ -42,10 +42,14 @@ for (const [key, entry] of Object.entries(merged.products)) {
   const was = bundled.products[key]?.version
   console.log(`${key.padEnd(12)} ${entry.version}${was && was !== entry.version ? `  (was ${was})` : ''}`)
 }
+// Exit codes: 0 current, 2 current but a product did not answer, 3 drift (the nightly job
+// syncs on 3 only), 1 an error.
+const legacyOf = e => JSON.stringify({ tag: e.tag, version: e.version, repository: e.repository, releaseUrl: e.releaseUrl, downloads: { macos: e.assets.macos.url }, sha256: e.assets.macos.sha256 }, null, 2) + '\n'
 if (check) {
   const selected = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
   if (selected.tag !== merged.products.switchboard.tag) changed.push('switchboard/release.json')
-  if (changed.length) { console.error(`DRIFT: ${changed.join(', ')} — run npm run releases:sync`); process.exit(1) }
+  for (const key of ['fabric', 'inbox']) if (readFileSync(resolve(root, `${key}/release.json`), 'utf8') !== legacyOf(merged.products[key])) changed.push(`${key}/release.json`)
+  if (changed.length) { console.error(`DRIFT: ${changed.join(', ')} — run npm run releases:sync`); process.exit(3) }
   console.log('PASS: pages and releases/current.json match the published releases')
   process.exit(errors.length ? 2 : 0)
 }
@@ -56,9 +60,8 @@ for (const [page, html] of pageOutputs) writeFileSync(resolve(root, page), html)
 // written from the same snapshot so they can never disagree with it.
 for (const key of ['fabric', 'inbox']) {
   const e = merged.products[key]
-  const legacy = { tag: e.tag, version: e.version, repository: e.repository, releaseUrl: e.releaseUrl, downloads: { macos: e.assets.macos.url }, sha256: e.assets.macos.sha256 }
   const file = resolve(root, `${key}/release.json`)
-  const text = JSON.stringify(legacy, null, 2) + '\n'
+  const text = legacyOf(e)
   if (readFileSync(file, 'utf8') !== text) { writeFileSync(file, text); changed.push(`${key}/release.json`) }
 }
 

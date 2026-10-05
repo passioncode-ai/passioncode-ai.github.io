@@ -214,7 +214,7 @@ Where it runs is your choice too: your team’s computers, your cloud account, o
 
 Five short steps, about three minutes. You see the estimate as you go, and we reply within two business days.
 
-Company fax
+Leave this field empty
 
 Goals
 

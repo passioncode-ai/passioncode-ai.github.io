@@ -4,7 +4,7 @@ import policyFile from '../releases/products.json' with { type: 'json' }
 import bundled from '../releases/current.json' with { type: 'json' }
 import { fetchSnapshot, mergeSnapshots, validSnapshot } from './releases.js'
 import { liveRewriter } from './live.js'
-import { buildLead, checkFormToken, deliver, formToObject, issueFormToken, MAX_BODY_BYTES, retryDue, sha256, storeLead } from './leads.js'
+import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, formToObject, issueFormToken, knownFields, MAX_BODY_BYTES, retryDue, sha256, storeLead } from './leads.js'
 
 const policies = policyFile.products
 const SNAPSHOT_TTL_MS = 60_000
@@ -80,6 +80,27 @@ const json = (data, status = 200, headers = {}) => new Response(JSON.stringify(d
 const page = (title, body, status) => new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} | PassionCode.ai</title><link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css"></head><body class="story-site"><main id="main" class="section notice-page">${body}<p><a class="button button-secondary" href="/business/#request">Back to the form</a></p></main></body></html>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } })
 const escape = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
 
+// The body, read with a byte counter: a chunked request without Content-Length cannot make
+// the Worker buffer more than `limit` bytes. null when it is longer.
+async function readCapped (request, limit) {
+  if (Number(request.headers.get('content-length') || 0) > limit) return null
+  if (!request.body) return ''
+  const reader = request.body.getReader()
+  const chunks = []
+  let size = 0
+  for (;;) {
+    const { done, value } = await reader.read()
+    if (done) break
+    size += value.byteLength
+    if (size > limit) { await reader.cancel(); return null }
+    chunks.push(value)
+  }
+  const bytes = new Uint8Array(size)
+  let at = 0
+  for (const c of chunks) { bytes.set(c, at); at += c.byteLength }
+  return new TextDecoder().decode(bytes)
+}
+
 async function intake (request, env, ctx) {
   const scripted = (request.headers.get('content-type') || '').includes('application/json')
   const fail = (status, error, message, issues) => scripted
@@ -95,16 +116,15 @@ async function intake (request, env, ctx) {
     const { success } = await env.LEAD_LIMITER.limit({ key: `lead:${ip}` })
     if (!success) return fail(429, 'rate_limited', 'Too many requests from your network in the last minute. Please wait a minute and try again.')
   }
-  const length = Number(request.headers.get('content-length') || 0)
-  if (length > MAX_BODY_BYTES) return fail(413, 'too_large', 'The request is too long.')
-  const raw = await request.text()
-  if (raw.length > MAX_BODY_BYTES) return fail(413, 'too_large', 'The request is too long.')
+  const raw = await readCapped(request, MAX_BODY_BYTES)
+  if (raw === null) return fail(413, 'too_large', 'The request is too long.')
 
   let input
-  try { input = scripted ? JSON.parse(raw) : formToObject(new URLSearchParams(raw)) } catch { return fail(400, 'invalid', 'The request could not be read.') }
-  // A field people never see; anything in it is a bot filling every input.
-  if (input?.company_fax) { log('leads.honeypot'); return scripted ? json({ id: crypto.randomUUID(), status: 'received' }, 201) : Response.redirect(new URL('/business/thanks/', request.url), 303) }
-  const token = await checkFormToken(env.FORM_TOKEN_SECRET, input?.form_token)
+  try { input = scripted ? knownFields(JSON.parse(raw)) : formToObject(new URLSearchParams(raw)) } catch { return fail(400, 'invalid', 'The request could not be read.') }
+  // A field people never see; anything in it is a bot filling every input. Counted in the logs
+  // so a rise (or a browser that autofills it) shows up.
+  if (input.pc_hp) { log('leads.honeypot'); return scripted ? json({ id: crypto.randomUUID(), status: 'received' }, 201) : Response.redirect(new URL('/business/thanks/', request.url), 303) }
+  const token = await checkFormToken(env.FORM_TOKEN_SECRET, input.form_token)
   if (token !== 'ok') {
     log('leads.token_refused', { reason: token })
     return fail(token === 'too_fast' ? 429 : 400, 'form_expired', token === 'too_fast' ? 'That was faster than a person can fill the form. Please check your answers and send it again.' : 'The form has expired. Reload the page and send it again — your answers are kept in the browser.')
@@ -121,7 +141,18 @@ async function intake (request, env, ctx) {
   if (!ok) return fail(400, 'invalid', 'Some answers need another look.', issues)
 
   let stored
-  try { stored = await storeLead(env.DB, lead) } catch (error) {
+  try {
+    // A resend of a request that already arrived is recognised before the token is spent, so a
+    // browser that lost the first answer gets the truth instead of "form used".
+    stored = await findLead(env.DB, lead)
+    if (!stored) {
+      if (!(await consumeFormToken(env.DB, input.form_token))) {
+        log('leads.token_refused', { reason: 'used' })
+        return fail(409, 'form_used', 'This form was already sent once. Reload the page to send another request — your answers are kept in the browser.')
+      }
+      stored = await storeLead(env.DB, lead)
+    }
+  } catch (error) {
     log('leads.store_failed', { id: lead.id, error: String(error.message || error) })
     return fail(503, 'unavailable', 'We could not save your request. Nothing was sent. Please try again in a minute or write to commercial@passioncode.ai.')
   }
@@ -163,8 +194,16 @@ export default {
       return withHeaders(await intake(request, env, ctx))
     }
 
-    const response = await env.ASSETS.fetch(request)
-    if (!(response.headers.get('content-type') || '').includes('text/html')) return response
+    // Conditional headers never reach the assets for a page: the stored file's ETag does not
+    // change when a release does, so a 304 would keep an old version in the browser.
+    const conditional = new Headers(request.headers)
+    const ifNoneMatch = conditional.get('if-none-match')
+    conditional.delete('if-none-match')
+    conditional.delete('if-modified-since')
+    const response = await env.ASSETS.fetch(new Request(request, { headers: conditional }))
+    if (!(response.headers.get('content-type') || '').includes('text/html')) {
+      return ifNoneMatch ? env.ASSETS.fetch(request) : response
+    }
     const snapshot = await currentSnapshot(env)
     let rewriter = liveRewriter(HTMLRewriter, snapshot)
     const business = url.pathname === '/business/' || url.pathname === '/business'
@@ -172,7 +211,19 @@ export default {
       const token = await issueFormToken(env.FORM_TOKEN_SECRET)
       rewriter = rewriter.on('input[name="form_token"]', { element (el) { el.setAttribute('value', token) } })
     }
-    const out = withHeaders(rewriter.transform(response), business ? { 'Cache-Control': 'no-store' } : {})
+    if (business) {
+      const out = withHeaders(rewriter.transform(response), { 'Cache-Control': 'no-store' })
+      out.headers.delete('etag')
+      out.headers.delete('last-modified')
+      return out
+    }
+    // The page's identity is the stored file plus the release snapshot it is rewritten with.
+    const etag = `W/"${(await sha256(`${response.headers.get('etag') || ''}|${JSON.stringify(snapshot.products)}`)).slice(0, 32)}"`
+    if (ifNoneMatch && ifNoneMatch.split(/\s*,\s*/).includes(etag)) {
+      return withHeaders(new Response(null, { status: 304, headers: { ETag: etag, 'Cache-Control': 'public, max-age=0, must-revalidate' } }))
+    }
+    const out = withHeaders(rewriter.transform(response), { ETag: etag, 'Cache-Control': 'public, max-age=0, must-revalidate' })
+    out.headers.delete('last-modified')
     return out
   },
 
