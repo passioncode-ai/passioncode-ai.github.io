@@ -1,0 +1,62 @@
+{
+  "$comment": "Release policy for every product the site names. Edited by hand; releases/current.json is generated from it (npm run releases:sync). channel: 'stable' takes the newest non-prerelease (or the newest prerelease when none exists yet); 'prerelease' takes the newest release of either kind. A release is eligible only when every asset below is attached with a SHA-256 digest. hold: a tag to stay on instead of the newest (remove it to follow releases again). docs/DEPLOYMENT.md#always-current-versions",
+  "products": {
+    "fabric": {
+      "name": "Fabric",
+      "repository": "passioncode-ai/fabric",
+      "page": "/fabric/",
+      "channel": "prerelease",
+      "assets": { "macos": "Fabric-{version}-arm64.dmg" }
+    },
+    "switchboard": {
+      "name": "Fabric Switchboard",
+      "repository": "passioncode-ai/fabric-switchboard",
+      "page": "/switchboard/",
+      "channel": "stable",
+      "assets": {
+        "macos": "Fabric-Switchboard-{version}-macos-universal.zip",
+        "windows": "Fabric-Switchboard-{version}-windows-x64.zip"
+      }
+    },
+    "inbox": {
+      "name": "Fabric Inbox",
+      "repository": "passioncode-ai/fabric-inbox",
+      "page": "/inbox/",
+      "channel": "stable",
+      "assets": { "macos": "Fabric-Inbox-{version}.dmg" }
+    },
+    "dashboards": {
+      "name": "Fabric Dashboards",
+      "repository": "passioncode-ai/fabric-dashboards",
+      "page": "/dashboards/",
+      "channel": "stable",
+      "assets": { "macos": "Fabric-Dashboards-{version}.dmg" }
+    },
+    "observatory": {
+      "name": "Project Observatory",
+      "repository": "passioncode-ai/project-observatory-dashboard",
+      "page": "/observatory/",
+      "channel": "stable",
+      "assets": {
+        "wheel": "project_observatory-{version}-py3-none-any.whl",
+        "macos": "ProjectObservatory-{version}-macos.zip"
+      }
+    },
+    "adapter": {
+      "name": "Fabric Agent Adapter",
+      "repository": "passioncode-ai/fabric-agent-adapter",
+      "page": "/start/#build",
+      "channel": "stable",
+      "npm": "@passioncode-ai/fabric-agent-adapter",
+      "assets": {}
+    },
+    "launcher": {
+      "name": "PassionCode.ai launcher",
+      "repository": "passioncode-ai/passioncode",
+      "page": "/start/#launcher",
+      "channel": "stable",
+      "npm": "@passioncode-ai/passioncode",
+      "assets": {}
+    }
+  }
+}
