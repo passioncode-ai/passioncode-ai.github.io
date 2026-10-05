@@ -50,6 +50,19 @@ animation; brand/icon/screenshot fixes across repositories.
 | Playwright + Chrome, 1440 and 390 px, five pages | no console errors, no horizontal overflow, no broken images; the funnel walked step by step, errors per step, estimate $2,150–$4,350 for 40 h × $50 manual |
 | Dashboards v0.4.1 DMG | SHA-256 equal to the digest; `stapler validate` worked; `spctl` Notarized Developer ID; universal; macOS 13.0 |
 
+## Production receipt
+
+| What | Result |
+|---|---|
+| Deploy | main `cbb5da3` (PR #44) → Worker version `bf806580-ed1c-4643-90e8-c6e6b3f3c24c`; then `b07102e` (PR #45, commercial links to /business/, on top of #46) → `a50e488a-574b-4d88-9dc1-30e17925908f`. An intermediate `wrangler deploy` without a rebuild (version `c3750259`) served the previous `dist/` for about a minute; deploy only with `npm run deploy`, which checks and builds first. |
+| D1 | `passioncode-site` migrations 0001 and 0002 applied remotely |
+| Secrets | `FORM_TOKEN_SECRET`, `IP_HASH_SALT` generated into Project Observatory (`passioncode-ai.github.io/prod`), set on the Worker from stdin |
+| Pages | 11 pages + `/switchboard/agents/`, `llms.txt`, `sitemap.xml`, `/api/releases`, both scripts: 200 |
+| Downloads | fabric/macos, switchboard/macos+windows, inbox/macos, dashboards/macos, observatory/macos+wheel: 302 to the current release assets |
+| Headers | CSP, `X-Frame-Options: DENY`, snapshot `ETag`, `www` → apex 301 |
+| Enquiry | live smoke lead from /business/ (served token): 201; D1 notify `done`, confirm `done` (Cloudflare Email Sending accepted both), forward `pending`; the row was then deleted |
+| Cron | first production run 2026-10-05T14:00:37Z wrote the snapshot; `/api/releases` `generatedAt` moved to it |
+
 ## Open — exact next tasks
 1. Deploy from reviewed main: secrets `FORM_TOKEN_SECRET`, `IP_HASH_SALT` (stdin), then
    `npm run deploy`; verify live and send one test enquiry.
