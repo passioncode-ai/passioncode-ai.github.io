@@ -1,0 +1,25 @@
+# PassionCode.ai
+
+> A toolkit for AI-native teams: an open-source workplace for AI agents. Fabric is the CEO AI agent; Fabric Switchboard, Fabric Dashboards, Fabric Inbox and Project Observatory are its tools, and each works on its own. Everything is open source under the GNU AGPL-3.0 and free to use; a commercial license and setup for companies are available.
+
+Vision: do what you love — agents take the routine. You start from one command and your coding agent (Claude Code or Codex); the workplace runs on your own machines and grows with you.
+
+## Start
+- [Get started](https://passioncode.ai/start/): install the skills (`npx @passioncode-ai/passioncode@latest update`), add Fabric, create or convert an agent, run it in Fabric Dashboards, contribute.
+- [Current releases as JSON](https://passioncode.ai/api/releases): every product's current version, release notes link, download URLs and SHA-256, resolved from GitHub releases.
+
+## Products
+- [Fabric](https://passioncode.ai/fabric/): the CEO AI agent; early preview for macOS on Apple silicon; keeps each project's purpose, board, decisions and releases. Its conversation does not reply yet.
+- [Fabric Switchboard](https://passioncode.ai/switchboard/): local account manager for Claude Code and Codex CLI, macOS and Windows, with an MCP server (`switchboard mcp`).
+- [Fabric Dashboards](https://passioncode.ai/dashboards/): one window for local agent services that speak fabric-service/0.1; driven over MCP.
+- [Project Observatory](https://passioncode.ai/observatory/): a local dashboard of project activity and findings with evidence; CLI, MCP and dashboard; macOS and Linux.
+- [Fabric Inbox](https://passioncode.ai/inbox/): desktop mail for Gmail and Cloudflare mailboxes with agent reply policies; development preview.
+- [Fabric Agent Adapter](https://github.com/passioncode-ai/fabric-agent-adapter): skills, kits and a conformance probe that make any agent, MCP server or CLI a Fabric-compatible service.
+
+## Companies
+- [For companies](https://passioncode.ai/business/): process mapping, a measured pilot, rollout and operation of an agent workplace; savings estimate = hours a week × 4.33 × share agents take (10–50% by how the work runs today) × loaded hourly cost.
+- Contact: commercial@passioncode.ai
+
+## Source
+- [GitHub organization](https://github.com/passioncode-ai): public repositories, issues and pull requests; contributions accepted under each repository's CLA.md.
+- [Privacy notice](https://passioncode.ai/privacy/)

@@ -45,7 +45,7 @@ const mitRelease = {
   launcherPlugin: false
 }
 const mitPage = renderSwitchboardPage(page, mitRelease)
-const jsonLd = html => JSON.parse(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(html)[1])
+const jsonLd = html => JSON.parse(/<script type="application\/ld\+json"(?: data-live-ld="[a-z]+")?>([\s\S]*?)<\/script>/.exec(html)[1])
 
 test('the committed page is true for the committed manifest', () => {
   assert.deepEqual(checkSwitchboardPage(page, current), [])

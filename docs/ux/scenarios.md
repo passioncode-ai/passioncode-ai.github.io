@@ -19,6 +19,11 @@
 | SCN-010 | Find Fabric Dashboards and its release | Dashboards | P-01 | ST-01, ST-03, FLW-01 | draft | pending |
 | SCN-012 | Customize an agent workplace | Extension | P-01 | ST-06, FLW-04 | draft | pending |
 | SCN-011 | Connect an agent to Switchboard | Agents | P-01 | ST-02, FLW-01 | draft | pending |
+| SCN-013 | Get started from the vision to a first agent | Onboarding | P-01 | ST-01, ST-06, FLW-05 | draft | pending |
+| SCN-014 | Request an AI workplace for a company | Commercial | P-02 | ST-07, FLW-06 | draft | pending |
+| SCN-015 | Contribute a pull request | Contribution | P-01 | ST-08, FLW-05 | draft | pending |
+| SCN-016 | See and download the current release | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
+| SCN-017 | Read how request data is handled | Trust | P-02 | ST-07, FLW-06 | draft | pending |
 
 ## Personas
 
@@ -269,3 +274,96 @@ The 2026-10-01 regression gate now checks source display roles in
 `scripts/check_display_copy.py`; projection tests retain heading semantics for
 brand-lint. The typography specimen follows the same policy. This supplements,
 rather than replaces, the browser review recorded above.
+
+### SCN-013: Get started from the vision to a first agent
+- **Persona:** P-01
+- **Feature:** Onboarding
+- **Traces:** ST-01, ST-06, FLW-05
+- **Entry point:** / (hero → Start free) or /start/
+- **Preconditions:** Node.js 18+ and Claude Code or Codex; Fabric needs macOS on Apple silicon, Docker and the Supabase CLI
+- **Steps:**
+  1. Read the hero and the vision (do what you love) → the promise and its boundary: today one command and a coding agent; a conversation with Fabric is the direction.
+  2. Read How it works → four steps: create the workplace, create agents, convert what you have, run and see them; each names its current version.
+  3. Follow Start free → /start/ → copy the launcher command, download Fabric (current version and SHA-256 beside the button), ask the coding agent to create or adapt an agent, install Fabric Dashboards and connect it over MCP.
+- **Expected result:** The visitor has the skills installed and knows the exact prompt that creates or converts an agent, without believing Fabric already replies.
+- **Alt paths:** stop after any step; jump with the on-page table of contents; copy buttons or manual selection without JavaScript.
+- **UI elements:** hero actions, vision principles, onboarding rail, /start/ steps, copy buttons, download buttons
+- **States covered:** success; no-JS (complete page, no copy buttons); reduced motion (static rail and map).
+- **Errors & recovery:** the command fails → the launcher README (linked); download unavailable → release notes link.
+- **Status:** draft
+- **Coverage:** index.html (#vision, #toolkit, #start), start/index.html; scripts/check-site.mjs.
+- **Product:** unobserved
+
+### SCN-014: Request an AI workplace for a company
+- **Persona:** P-02
+- **Feature:** Commercial
+- **Traces:** ST-07, FLW-06
+- **Entry point:** /business/ (from the homepage hero, paths, company teaser, footer, /start/ closing, license notes)
+- **Preconditions:** none
+- **Steps:**
+  1. Read who it is for → six segments with the processes agents take over.
+  2. Read the estimate → the formula, the share table and a worked example.
+  3. Fill five steps → goals and company; processes, today's state, tools, hours and hourly cost (the estimate updates as they type); setup and hosting; budget and timing; contact and consent.
+  4. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
+- **Expected result:** A complete, validated lead reaches PassionCode.ai with a server-computed estimate, and the visitor knows when to expect a reply.
+- **Alt paths:** without JavaScript the form is one page and lands on /business/thanks/; a reload keeps unsent answers in the browser; email commercial@passioncode.ai instead.
+- **UI elements:** hero funnel, case grid, formula card, five-step form with progress, estimate output, status line
+- **States covered:** empty, partial (draft), invalid (per-step errors), too fast or expired form (refused with a reason), rate-limited, sending, success, network failure (answers kept), service not configured (503 naming the email).
+- **Errors & recovery:** every refusal names the field or the reason; the email address is offered whenever the form cannot take the request.
+- **Status:** draft
+- **Coverage:** business/index.html, assets/business.js, assets/estimate.js, assets/lead-options.js, worker/leads.js; scripts/check-worker.mjs (intake, refusals, delivery, retries), scripts/check-site.mjs (form ↔ options parity).
+- **Product:** unobserved
+
+### SCN-015: Contribute a pull request
+- **Persona:** P-01
+- **Feature:** Contribution
+- **Traces:** ST-08, FLW-05
+- **Entry point:** /start/#contribute (from the homepage paths)
+- **Preconditions:** a GitHub account
+- **Steps:**
+  1. Pick a public repository from the list.
+  2. Read its AGENTS.md and the organization CONTRIBUTING.md; run the test command.
+  3. Open the pull request → opening it is the CLA agreement.
+- **Expected result:** The contributor knows the gate and the route, and that internal repositories exist only for collaborators.
+- **Alt paths:** follow the builder on Twitter to join the team.
+- **UI elements:** contribute steps, repository list
+- **States covered:** success; static.
+- **Errors & recovery:** none on the site.
+- **Status:** draft
+- **Coverage:** start/index.html#contribute.
+- **Product:** unobserved
+
+### SCN-016: See and download the current release
+- **Persona:** P-01
+- **Feature:** Downloads
+- **Traces:** ST-02, FLW-01
+- **Entry point:** any page naming a version; /<product>/download/<platform>; /api/releases
+- **Preconditions:** none
+- **Steps:**
+  1. Read a version → the edge has written the newest eligible release into the page (text, checksum, JSON-LD).
+  2. Download → 302 to that release's asset on GitHub.
+- **Expected result:** The version shown, its checksum and the file downloaded are the same release, the newest one that carries every required asset with a SHA-256 digest.
+- **Alt paths:** /api/releases for agents; release notes link.
+- **UI elements:** `data-live` values, download buttons
+- **States covered:** current; GitHub unreachable (last good snapshot, never below the build's); a release withdrawn on GitHub (the site follows it back down).
+- **Errors & recovery:** none for the visitor.
+- **Status:** draft
+- **Coverage:** worker/releases.js, worker/live.js, worker/index.js; scripts/releases.test.mjs, scripts/check-worker.mjs; `npm run releases:check`.
+- **Product:** unobserved
+
+### SCN-017: Read how request data is handled
+- **Persona:** P-02
+- **Feature:** Trust
+- **Traces:** ST-07, FLW-06
+- **Entry point:** /privacy/ (from the consent line, the form FAQ and the footer)
+- **Preconditions:** none
+- **Steps:**
+  1. Read what is collected, why, where it is stored, for how long and how to have it erased.
+- **Expected result:** The lead can agree knowingly; nothing is collected outside the form.
+- **Alt paths:** none.
+- **UI elements:** legal page
+- **States covered:** static.
+- **Errors & recovery:** none.
+- **Status:** draft
+- **Coverage:** privacy/index.html; scripts/check-site.mjs.
+- **Product:** unobserved

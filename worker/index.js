@@ -38,9 +38,12 @@ export async function refreshReleases (env, { fetch: fetchImpl = fetch, now = ()
   for (const r of results) cache[r.repository] = { etag: r.etag, body: r.body }
   const previous = await env.DB.prepare('SELECT data FROM release_snapshot WHERE id = 1').first()
   const { snapshot, errors, cache: next } = await fetchSnapshot({ policies, fetch: fetchImpl, token: env.GITHUB_TOKEN, cache, now })
-  // A product that failed this time keeps what the last good answer said.
-  const base = previous ? mergeSnapshots(bundled, JSON.parse(previous.data)) : bundled
-  const merged = mergeSnapshots(base, snapshot)
+  // A product that failed this time keeps what the last good answer said. One that answered
+  // is taken as answered, so a release withdrawn on GitHub leaves the site too (down to the
+  // bundled floor, never below it).
+  const failed = new Set(errors.map(e => e.product))
+  const kept = previous ? Object.entries(JSON.parse(previous.data).products || {}).filter(([key]) => failed.has(key)) : []
+  const merged = mergeSnapshots(mergeSnapshots(bundled, { products: Object.fromEntries(kept) }), snapshot)
   if (!validSnapshot(merged, policies)) { log('releases.refresh_invalid', { errors }); return { ok: false, errors } }
   const at = now().toISOString()
   const statements = [env.DB.prepare('INSERT INTO release_snapshot (id, data, fetched_at, errors) VALUES (1, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET data = excluded.data, fetched_at = excluded.fetched_at, errors = excluded.errors')

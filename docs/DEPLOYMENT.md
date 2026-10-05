@@ -4,8 +4,9 @@
 
 - `wrangler.json` binds the Worker to `passioncode.ai` and `www.passioncode.ai` as
   Custom Domains. The Worker redirects `www` to the canonical apex URL.
-- `npm run check` validates the brand lock, 13 release tests, seven-page structure,
-  Worker routes and scoped design-token contrast.
+- `npm run check` validates the brand lock, the release and Worker unit tests, the eleven pages
+  (`scripts/pages.mjs`), live values against `releases/current.json`, the form against the Worker's
+  options, and scoped design-token contrast.
 - `python3 scripts/extract-public-copy.py --check` verifies all seven copy projections;
   run it separately before committing/deploying. It is not part of `npm run check`.
 - `.github/workflows/check.yml` repeats the checks on pushes and pull requests. It does
@@ -109,19 +110,90 @@ anonymous download and archive SHA-256 against the selected release receipt.
 Check www canonicalization separately and verify the historical Observatory
 `#start` fragment lands at `/observatory/#start`, an alias for the setup section. Keep the Worker deployment ID and commit in the handoff receipt. No full hosted suite is dispatched for this update.
 
-## Fabric and Fabric Inbox downloads
+## Always-current versions
 
-`/fabric/download/macos` and `/inbox/download/macos` behave like the Switchboard routes: a 302 to the fixed URL in `fabric/release.json` or `inbox/release.json`, `Cache-Control: no-store`, `X-Robots-Tag: noindex`, queries ignored, other paths fall through to the asset 404 (`scripts/check-worker.mjs`). To select a newer build, edit the manifest by hand from the release itself — tag, DMG URL, and the SHA-256 from the release's `.sha256` asset (Inbox) or release notes (Fabric), checked against GitHub's asset digest (`gh release view <tag> -R <repo> --json assets`) — then update the version, checksum and limits on the page and the rows in `docs/brand/facts.md`; `npm run check` fails when the page and the manifest disagree.
+Operator decision 2026-10-05 (roadmap RM-15): the site names and serves the current release of
+every product without a redeploy. One resolver (`worker/releases.js`) serves both paths:
 
-## Fabric Dashboards download
+- `releases/products.json` is the policy, edited by hand: each product's repository, channel
+  (`stable` takes the newest non-prerelease, or the newest prerelease while none exists;
+  `prerelease` takes the newest of either), the assets a release must carry, and an optional
+  `hold` tag that freezes it. A release is eligible only when every required asset is attached
+  with a SHA-256 digest at the repository's own release path; a half-uploaded release is never
+  offered. npm products (launcher, adapter) take the registry's `latest`.
+- The Worker's cron (`*/15 * * * *`) asks GitHub with ETags (an unchanged list costs a 304) and
+  stores the snapshot in D1. A product that fails keeps its last good entry; one that answers is
+  taken as answered, so a release withdrawn on GitHub leaves the site too. Nothing ever goes below
+  `releases/current.json`, the snapshot bundled at build. An optional `GITHUB_TOKEN` secret raises
+  the rate limit; none is needed at this frequency.
+- Every HTML response passes through `worker/live.js`: an element with `data-live="<product>.<field>"`
+  gets that value as text, `data-live-href` sets an `href`, and a `<script type="application/ld+json"
+  data-live-ld="<product>">` gets `softwareVersion`. Crawlers and visitors without JavaScript see
+  the same values.
+- `/<product>/download/<platform>` (fabric, switchboard, inbox, dashboards, observatory; `macos`,
+  `windows`, `wheel` where the policy names them) answers 302 to that release's asset with
+  `Cache-Control: no-store` and `X-Robots-Tag: noindex`. Unknown paths fall through to the asset 404.
+- `/api/releases` returns the snapshot as JSON (`Access-Control-Allow-Origin: *`, cached 60 s), for
+  agents and other sites.
+- `npm run releases:sync` writes the same values into the sources (`releases/current.json`, every
+  `data-live` element, the legacy `fabric/` and `inbox/release.json`) and, when Switchboard moved,
+  runs `scripts/update-switchboard-release.mjs` so its release-bound sections follow.
+  `npm run releases:check` changes nothing and fails on drift; `.github/workflows/releases.yml`
+  runs it nightly and opens a pull request with the sync.
 
-`/dashboards/` is an allow-listed static product page. Its Download button links
-directly to the pinned public v0.3.1 DMG; there is no Dashboards Worker redirect.
-When selecting a newer release, update its download URL, version, full SHA-256,
-requirements, license history and JSON-LD together with the homepage, facts ledger,
-UX and static checks. Verify the digest with `gh release view <tag> -R
-passioncode-ai/fabric-dashboards --json assets` and the release's checksum/receipt.
-A downloadable DMG proves availability, not a new native acceptance run.
+Facts that are not versions — requirements, notarization, a feature a release adds — still change
+by hand with the product page and `docs/brand/facts.md`; the live value never invents them.
+
+## Storage
+
+D1 database `passioncode-site` (binding `DB`, region WEUR, id in `wrangler.json`), migrations in
+`migrations/`. Apply a new migration before deploying the code that needs it:
+
+```sh
+python3 "$(project-observatory full-path)/tools/use_secret.py" run --env prod \
+  passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npx wrangler d1 migrations apply passioncode-site --remote
+```
+
+Tables: `release_snapshot` (one row), `release_cache` (GitHub ETags and bodies), `leads`.
+
+## Commercial enquiries
+
+`POST /api/leads` takes the /business/ form as JSON (scripted) or form-encoded (no JavaScript).
+In order: same-origin check; the `LEAD_LIMITER` rate limit (5 a minute per address); a 32 KB cap;
+the hidden `company_fax` trap (answered as accepted, stored nowhere); the signed `form_token` the
+Worker writes into `/business/` on every render (refused when sent within 3 s or after 24 h);
+validation against `assets/lead-options.js` (`worker/leads.js` `buildLead`; the savings estimate
+is recomputed with `assets/estimate.js`, never taken from the client). Then the lead is **written
+to D1 before anything is sent**, and three deliveries run, each retried by the cron with backoff
+(2, 4, 8 … minutes, at most 6 hours apart, 12 attempts, then marked failed):
+
+1. a notification to `LEAD_NOTIFY_TO` through the `send_email` binding, reply-to the sender;
+2. a receipt to the sender, at most one per address a day;
+3. a copy to the PassionCode.ai Platform (`PLATFORM_URL` + `/v1/leads`), signed
+   `X-PC-Signature: v1=HMAC-SHA256(PLATFORM_INTAKE_SECRET, "<X-PC-Timestamp>.<body>")`. Until both
+   are set, leads wait in D1 and are forwarded once they are.
+
+Retention: a forwarded lead leaves D1 after 30 days; nothing stays longer than 24 months
+(`/privacy/`). Secrets, set once with values on stdin (never in a file in the repository):
+
+```sh
+openssl rand -hex 32 | npx wrangler secret put FORM_TOKEN_SECRET
+openssl rand -hex 32 | npx wrangler secret put IP_HASH_SALT
+# when the Platform is deployed (passioncode-platform docs/runbooks/deploy.md):
+<secret on stdin> | npx wrangler secret put PLATFORM_INTAKE_SECRET   # and vars.PLATFORM_URL
+```
+
+Each runs under `use_secret.py run … CLOUDFLARE_ACCOUNT_ID --` like the deploy. Without
+`FORM_TOKEN_SECRET` or `IP_HASH_SALT` the endpoint answers 503 and names the email address.
+Structured log events (`leads.received`, `leads.delivered`, `leads.retried`, `releases.refreshed`,
+`releases.product_failed`) are in Workers Logs (`observability.enabled`); none carries personal data.
+
+## Security headers
+
+Every HTML response carries `Content-Security-Policy` (`default-src 'self'`; no inline script or
+style — `scripts/check-site.mjs` refuses inline `style=`, event handlers and executable inline
+scripts), `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`,
+`Permissions-Policy` and `X-Frame-Options: DENY`.
 
 ## Authenticated connector fallback
 

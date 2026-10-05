@@ -36,9 +36,21 @@ Download for macOS ↓
 
 View source ↗
 
-Release 0.3.1 · macOS 13+ · Apple silicon + Intel
+Release 0.4.1 · macOS 13+ · Apple silicon + Intel
 
 YOUR LOCAL SERVICES / TOGETHER
+
+THE WINDOW
+
+## Every agent service
+
+## on one screen
+
+What is ready, what needs you and what it costs, with the action one click away. Each service opens its own dashboard inside the app.
+
+The actual app from its development build · sample services from the Fabric Agent Adapter kit, no real data
+
+A service’s own dashboard, opened in the app
 
 01 / KEEP THE WORK IN VIEW
 
@@ -68,7 +80,7 @@ Start, stop or restart a service, inspect its logs, and use the actions its cont
 
 ### macOS
 
-Release 0.3.1. Universal DMG for Apple silicon and Intel, macOS 13 or later. Developer ID signed, notarized and stapled.
+Release 0.4.1. Universal DMG for Apple silicon and Intel, macOS 13 or later. Developer ID signed, notarized and stapled.
 
 Download Fabric Dashboards ↓
 
@@ -82,7 +94,7 @@ Try Project Observatory, or make your own service with the Fabric Agent Adapter.
 
 DMG SHA-256
 
-4ef44362566c3c05e6603266f52ba018f70b384ab7f4487c2fc4b305afe8f3d1
+0688b1f3d51a8859308f1395763bfcabdf9cc1ea02d744f528f55200df04dca4
 
 Release notes and checksums ↗
 
@@ -132,6 +144,10 @@ PassionCode
 
 From vibe coding to passion coding
 
+Get started
+
+For companies
+
 Switchboard
 
 Observatory
@@ -147,6 +163,10 @@ GitHub & source
 About
 
 Design system
+
+Privacy
+
+commercial@passioncode.ai
 
 Twitter
 

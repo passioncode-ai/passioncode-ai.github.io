@@ -1,0 +1,62 @@
+name: Release drift
+
+# Nightly, inside the organization's 23:00 Europe/Warsaw window (CI policy of 2026-09-25).
+# The live site is already current: the Worker writes versions at the edge
+# (docs/DEPLOYMENT.md#always-current-versions). This job keeps the sources equal to it, so a
+# crawler of the repository and the next deploy carry the same versions.
+on:
+  schedule:
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: release-drift
+  cancel-in-progress: false
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check the sources against the published releases
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          npm run releases:check
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          # 0 = current, 2 = current but a product did not answer, 1 = drift
+          if [ "$code" = 2 ]; then echo "::warning::a product did not answer; its last version was kept"; fi
+          case "$code" in 0|1|2) exit 0 ;; *) echo "::error::releases:check crashed ($code)"; exit "$code" ;; esac
+      - name: Sync and propose
+        if: steps.check.outputs.code == '1'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          npm run releases:sync
+          python3 scripts/extract-public-copy.py
+          npm run check
+          branch="automation/release-sync-$(date -u +%Y%m%d)"
+          git config user.name "passioncode-ai release sync"
+          git config user.email "contact@passioncode.ai"
+          git checkout -b "$branch"
+          git add -A
+          git commit -m "Sync pages to the published releases"
+          git push -u origin "$branch"
+          if ! gh pr create --title "Sync pages to the published releases" --body "Nightly \`npm run releases:sync\`; \`npm run check\` passed in the job. The live site already shows these versions (edge rewrite); this keeps the sources equal. docs/DEPLOYMENT.md#always-current-versions"; then
+            echo "::error::Drift found and synced on $branch, but this repository does not let Actions open pull requests. Open it: https://github.com/${{ github.repository }}/compare/main...$branch"
+            exit 1
+          fi

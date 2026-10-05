@@ -1,3 +1,17 @@
+# Current handoff — onboarding, commercial intake and always-current versions, 2026-10-05
+
+Objective (operator, 2026-10-05; roadmap RM-14/RM-15): make the product family the focus; onboard
+visitors (create your workplace → create agents → convert what you have → run and see them; open
+source and free); vision "do what you love"; personal / contribute / commercial paths; a /business/
+funnel with a savings estimate whose submissions reach the organization's backend; versions that
+are always current; SEO and motion; the header kept.
+Task and receipts: [tasks/2026-10-05-onboarding-commercial.md](tasks/2026-10-05-onboarding-commercial.md).
+Next task: after deploy, verify live (DEPLOYMENT → Verification, plus `/api/releases`, one test
+enquiry from /business/ marked as a test), then connect the Platform once deployed
+(`PLATFORM_URL`, `PLATFORM_INTAKE_SECRET`; passioncode-platform PLAT-003).
+
+---
+
 # Current handoff — display-copy regression guard, 2026-10-01
 
 Objective: prevent decorative title/hero periods from returning through agents or
