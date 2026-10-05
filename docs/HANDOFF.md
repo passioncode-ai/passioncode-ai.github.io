@@ -6,9 +6,9 @@ source and free); vision "do what you love"; personal / contribute / commercial 
 funnel with a savings estimate whose submissions reach the organization's backend; versions that
 are always current; SEO and motion; the header kept.
 Task and receipts: [tasks/2026-10-05-onboarding-commercial.md](tasks/2026-10-05-onboarding-commercial.md).
-Next task: after deploy, verify live (DEPLOYMENT → Verification, plus `/api/releases`, one test
-enquiry from /business/ marked as a test), then connect the Platform once deployed
-(`PLATFORM_URL`, `PLATFORM_INTAKE_SECRET`; passioncode-platform PLAT-003).
+Deployed and verified 2026-10-05 ([production receipt](tasks/2026-10-05-onboarding-commercial.md#production-receipt)).
+Next task: connect the Platform once deployed (`PLATFORM_URL`, `PLATFORM_INTAKE_SECRET`;
+passioncode-platform PLAT-003); then SITE-015…017.
 
 ---
 
