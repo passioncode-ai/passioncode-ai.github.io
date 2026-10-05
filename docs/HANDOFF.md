@@ -10,6 +10,14 @@ Deployed and verified 2026-10-05 ([production receipt](tasks/2026-10-05-onboardi
 Next task: connect the Platform once deployed (`PLATFORM_URL`, `PLATFORM_INTAKE_SECRET`;
 passioncode-platform PLAT-003); then SITE-015…017.
 
+## Also 2026-10-05 — Fabric: supported coding agents (`/fabric/agents/`)
+
+Answers "Which coding agents does Fabric work with, and what does 'works with' mean?", dated, each agent at
+one level with its official site. Rebuilt on this `main` after PR #43 (branch `agent/agents-page-20261005`)
+fell behind the page-list and check restructuring; Hermes Agent moved to "connected in development" (Fabric
+ADR-0119 amendment 2). Receipts: [task](tasks/2026-10-05-fabric-agents-page.md). Keep it true to each Fabric
+release (SITE-012).
+
 ---
 
 # Current handoff — display-copy regression guard, 2026-10-01

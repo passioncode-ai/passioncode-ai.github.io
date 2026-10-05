@@ -17,6 +17,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-09 | For companies | SCN-014 |
 | SCR-10 | Request received | SCN-014 |
 | SCR-11 | Privacy notice | SCN-017 |
+| SCR-12 | Fabric: supported coding agents | SCN-018 |
 
 ### SCR-01: Home
 **Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012, SCN-013, SCN-016. Reading order (2026-10-05): hero (canonical headline, Start free → /start/, For companies → /business/, current versions, the workplace map) → vision (do what you love) → How it works (#toolkit, four steps on a rail) → three paths (#start) → the tools (#products, current versions) → For builders (#extend, #launcher) → company teaser (#companies) → open source (#source) → FAQ → About → closing. The header is unchanged; it gains only a scrolled shadow and a hover underline. Footer adds Get started, For companies, Privacy and the commercial address.
@@ -58,7 +59,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 Screens describe public website behavior, not acceptance of native Switchboard or Fabric runtime.
 
 ### SCR-05: Fabric
-**Scenarios:** SCN-007, SCN-008. Early-preview hero with Download for macOS, illustrative project brief, the actual window on synthetic demo data (home, board, releases), intended operating loop, people/authority principles, Get Fabric with requirements, limits, the MCP status (no entry for other agents yet), the public source and its license, and links back to About or Switchboard.
+**Scenarios:** SCN-007, SCN-008. Early-preview hero with Download for macOS, illustrative project brief, the actual window on synthetic demo data (home, board, releases), intended operating loop, people/authority principles, Get Fabric with requirements (the "Before you open it" card links /fabric/agents/, SCR-08), limits, the MCP status (no entry for other agents yet), the public source and its license, and links back to About or Switchboard.
 **Web surface:** public
 **Route:** https://passioncode.ai/fabric/
 **Answers:** What is Fabric and what is being built?
@@ -113,3 +114,11 @@ Workplace update: the home directory precedes the work cycle and long product de
 **Scenarios:** SCN-017. Controller, data, purposes and legal bases, storage locations, retention, rights, browser draft, the apps.
 **Web surface:** public
 **Route:** https://passioncode.ai/privacy/
+### SCR-12: Fabric: supported coding agents
+**Scenarios:** SCN-018. Intro (as-of date, direct answer) → three levels → Connected table → Runs in Fabric table → Planned table in order, then desktop apps and editors → ACP → why these agents (OpenRouter, dated) → account switching with Download for macOS and Explore Switchboard.
+**Route:** https://passioncode.ai/fabric/agents/
+**Answers:** Which coding agents does Fabric work with, and what does "works with" mean?
+**Indexable:** yes; canonical URL, WebPage data with `dateModified` and a breadcrumb, sitemap.
+**Without JS:** the whole answer, every table and every official-site link.
+**Entity:** Fabric, the CEO AI agent within PassionCode.ai; the agents are named with their own official sites.
+Falsifiers: an agent appears at two levels or a planned agent reads as connected; a table clips at 320 px; the page quotes an OpenRouter share as a number; the date is missing. Existing tokens and section patterns only; the one new component is a token-styled table.

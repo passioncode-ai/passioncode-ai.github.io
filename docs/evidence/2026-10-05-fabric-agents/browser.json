@@ -1,0 +1,796 @@
+{
+  "checkedAt": "2026-10-05T13:29:44.146505+00:00",
+  "baselineRevision": null,
+  "currentRevision": "sourceSha256: implementation bytes before commit",
+  "sourceSha256": {
+    "index.html": "6c8716ecf96258916dd49626880974436b2173176529140285fbff45eef81f5b",
+    "dashboards/index.html": "01599f7560598e4ca4f1dc9c5f223331c4bab5d12a1c3bd8fe6f8c00476ed45b",
+    "switchboard/index.html": "d008ce8ba9917c3910c339ff50f33701678ff193a30fc18a4518b03e8e64cfa9",
+    "fabric/index.html": "4dd1cba93891fa7165ab4568e87a9ca238974f40ffec7b29f4ecda9c99304f01",
+    "fabric/agents/index.html": "8c16edafd4ad185fe5497f526323f84be4f53243fcfdfeeb92004b1edae0a24f",
+    "inbox/index.html": "790decd15b9dc59d9c36d90572c229fd7738d6a29e0069280c333684ca060651",
+    "observatory/index.html": "faae805f66d7826f6e18545ae153355941651693d9aaa31d7b9e810b90bc9d0f",
+    "design-system/index.html": "1c188efcdc249d74b8ab7a67caed9a8dc19459c74a6df14ec0acd487a454a70a",
+    "styles.css": "abaec2142e0f279a45ea07345b7f5e2e543f6d40fd4cfb69405f1f5c71019888",
+    "design-system/tokens.css": "e006575d6505ea08c5dac7dcbd8945a695e72522a482d1a8d4f0d53f9e0cc819"
+  },
+  "checks": [
+    {
+      "phase": "after",
+      "route": "/",
+      "viewport": [
+        1280,
+        900
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:33.131630+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "The agent-agnostic operating system for\nAI-native teams",
+        "primary": {
+          "x": 50,
+          "y": 592.125,
+          "width": 182.328125,
+          "height": 50,
+          "top": 592.125,
+          "right": 232.328125,
+          "bottom": 642.125,
+          "left": 50
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": [],
+      "screenshot": "after-home-1280.png",
+      "directoryScreenshot": "after-directory-1280.png"
+    },
+    {
+      "phase": "after",
+      "route": "/dashboards/",
+      "viewport": [
+        1280,
+        900
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:36.250464+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your agent services\n\nOne place to look",
+        "primary": {
+          "x": 50,
+          "y": 536.9375,
+          "width": 200.546875,
+          "height": 50,
+          "top": 536.9375,
+          "right": 250.546875,
+          "bottom": 586.9375,
+          "left": 50
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": [],
+      "screenshot": "after-dashboards-1280.png"
+    },
+    {
+      "phase": "after",
+      "route": "/switchboard/",
+      "viewport": [
+        1280,
+        900
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:39.595718+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your accounts\n\nA clearer switch",
+        "primary": {
+          "x": 50,
+          "y": 545.28125,
+          "width": 226,
+          "height": 50,
+          "top": 545.28125,
+          "right": 276,
+          "bottom": 595.28125,
+          "left": 50
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/fabric/",
+      "viewport": [
+        1280,
+        900
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:42.413637+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "A CEO AI agent\n\nA home for the work",
+        "primary": {
+          "x": 50,
+          "y": 537.984375,
+          "width": 211.0625,
+          "height": 50,
+          "top": 537.984375,
+          "right": 261.0625,
+          "bottom": 587.984375,
+          "left": 50
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/fabric/agents/",
+      "viewport": [
+        1280,
+        900
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:43.756184+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Coding agents\n\nFabric works with",
+        "primary": {
+          "x": 50,
+          "y": 6910.015625,
+          "width": 211.0625,
+          "height": 50,
+          "top": 6910.015625,
+          "right": 261.0625,
+          "bottom": 6960.015625,
+          "left": 50
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/inbox/",
+      "viewport": [
+        1280,
+        900
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:45.288213+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your mail\n\nImportant first",
+        "primary": {
+          "x": 50,
+          "y": 516.140625,
+          "width": 211.0625,
+          "height": 50,
+          "top": 516.140625,
+          "right": 261.0625,
+          "bottom": 566.140625,
+          "left": 50
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/observatory/",
+      "viewport": [
+        1280,
+        900
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:46.789184+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your projects\n\nBack in view",
+        "primary": {
+          "x": 50,
+          "y": 530.4375,
+          "width": 145.109375,
+          "height": 50,
+          "top": 530.4375,
+          "right": 195.109375,
+          "bottom": 580.4375,
+          "left": 50
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": [],
+      "legacyStartAnchor": true
+    },
+    {
+      "phase": "after",
+      "route": "/design-system/",
+      "viewport": [
+        1280,
+        900
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:48.174852+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "One family\n\nA shared language",
+        "primary": {
+          "x": 50,
+          "y": 504.40625,
+          "width": 199.53125,
+          "height": 50,
+          "top": 504.40625,
+          "right": 249.53125,
+          "bottom": 554.40625,
+          "left": 50
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:50.203236+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "The agent-agnostic operating system for\nAI-native teams",
+        "primary": {
+          "x": 14,
+          "y": 578.09375,
+          "width": 362,
+          "height": 50,
+          "top": 578.09375,
+          "right": 376,
+          "bottom": 628.09375,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": [],
+      "screenshot": "after-home-390.png",
+      "directoryScreenshot": "after-directory-390.png"
+    },
+    {
+      "phase": "after",
+      "route": "/dashboards/",
+      "viewport": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:52.789245+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your agent services\n\nOne place to look",
+        "primary": {
+          "x": 14,
+          "y": 422.390625,
+          "width": 362,
+          "height": 50,
+          "top": 422.390625,
+          "right": 376,
+          "bottom": 472.390625,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": [],
+      "screenshot": "after-dashboards-390.png"
+    },
+    {
+      "phase": "after",
+      "route": "/switchboard/",
+      "viewport": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:54.835017+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your accounts\n\nA clearer switch",
+        "primary": {
+          "x": 14,
+          "y": 448.78125,
+          "width": 362,
+          "height": 50,
+          "top": 448.78125,
+          "right": 376,
+          "bottom": 498.78125,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/fabric/",
+      "viewport": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:56.224698+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "A CEO AI agent\n\nA home for the work",
+        "primary": {
+          "x": 14,
+          "y": 444.84375,
+          "width": 362,
+          "height": 50,
+          "top": 444.84375,
+          "right": 376,
+          "bottom": 494.84375,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/fabric/agents/",
+      "viewport": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:57.496751+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Coding agents\n\nFabric works with",
+        "primary": {
+          "x": 14,
+          "y": 7470.09375,
+          "width": 362,
+          "height": 50,
+          "top": 7470.09375,
+          "right": 376,
+          "bottom": 7520.09375,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/inbox/",
+      "viewport": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:58.570466+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your mail\n\nImportant first",
+        "primary": {
+          "x": 14,
+          "y": 410.28125,
+          "width": 362,
+          "height": 50,
+          "top": 410.28125,
+          "right": 376,
+          "bottom": 460.28125,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/observatory/",
+      "viewport": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:28:59.731087+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your projects\n\nBack in view",
+        "primary": {
+          "x": 14,
+          "y": 448.78125,
+          "width": 362,
+          "height": 50,
+          "top": 448.78125,
+          "right": 376,
+          "bottom": 498.78125,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": [],
+      "legacyStartAnchor": true
+    },
+    {
+      "phase": "after",
+      "route": "/design-system/",
+      "viewport": [
+        390,
+        844
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:01.578224+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "One family\n\nA shared language",
+        "primary": {
+          "x": 14,
+          "y": 558.125,
+          "width": 362,
+          "height": 50,
+          "top": 558.125,
+          "right": 376,
+          "bottom": 608.125,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/",
+      "viewport": [
+        320,
+        700
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:03.506374+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "The agent-agnostic operating system for\nAI-native teams",
+        "primary": {
+          "x": 14,
+          "y": 639.703125,
+          "width": 292,
+          "height": 50,
+          "top": 639.703125,
+          "right": 306,
+          "bottom": 689.703125,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/dashboards/",
+      "viewport": [
+        320,
+        700
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:05.194661+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your agent services\n\nOne place to look",
+        "primary": {
+          "x": 14,
+          "y": 532.625,
+          "width": 292,
+          "height": 50,
+          "top": 532.625,
+          "right": 306,
+          "bottom": 582.625,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/switchboard/",
+      "viewport": [
+        320,
+        700
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:06.743637+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your accounts\n\nA clearer switch",
+        "primary": {
+          "x": 14,
+          "y": 486.234375,
+          "width": 292,
+          "height": 50,
+          "top": 486.234375,
+          "right": 306,
+          "bottom": 536.234375,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/fabric/",
+      "viewport": [
+        320,
+        700
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:08.268794+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "A CEO AI agent\n\nA home for the work",
+        "primary": {
+          "x": 14,
+          "y": 515.125,
+          "width": 292,
+          "height": 50,
+          "top": 515.125,
+          "right": 306,
+          "bottom": 565.125,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/fabric/agents/",
+      "viewport": [
+        320,
+        700
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:09.346133+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Coding agents\n\nFabric works with",
+        "primary": {
+          "x": 14,
+          "y": 8390.4375,
+          "width": 292,
+          "height": 50,
+          "top": 8390.4375,
+          "right": 306,
+          "bottom": 8440.4375,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/inbox/",
+      "viewport": [
+        320,
+        700
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:10.527069+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your mail\n\nImportant first",
+        "primary": {
+          "x": 14,
+          "y": 432.734375,
+          "width": 292,
+          "height": 50,
+          "top": 432.734375,
+          "right": 306,
+          "bottom": 482.734375,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    },
+    {
+      "phase": "after",
+      "route": "/observatory/",
+      "viewport": [
+        320,
+        700
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:12.014448+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "Your projects\n\nBack in view",
+        "primary": {
+          "x": 14,
+          "y": 486.234375,
+          "width": 292,
+          "height": 50,
+          "top": 486.234375,
+          "right": 306,
+          "bottom": 536.234375,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": [],
+      "legacyStartAnchor": true
+    },
+    {
+      "phase": "after",
+      "route": "/design-system/",
+      "viewport": [
+        320,
+        700
+      ],
+      "dpr": 1,
+      "locale": "en",
+      "theme": "dark",
+      "motion": "reduced",
+      "capturedAt": "2026-10-05T13:29:13.859694+00:00",
+      "source": "Python Playwright / Chromium 151.0.7922.34",
+      "state": "populated",
+      "measurements": {
+        "overflow": false,
+        "brokenImages": 0,
+        "h1": "One family\n\nA shared language",
+        "primary": {
+          "x": 14,
+          "y": 545.46875,
+          "width": 292,
+          "height": 50,
+          "top": 545.46875,
+          "right": 306,
+          "bottom": 595.46875,
+          "left": 14
+        },
+        "fonts": "loaded"
+      },
+      "consoleErrors": []
+    }
+  ]
+}

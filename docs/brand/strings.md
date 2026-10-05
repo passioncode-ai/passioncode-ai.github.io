@@ -27,3 +27,7 @@ Contract: brand-contract v1
 
 | builders.setup | Setup and update controls | index.html | SCN-012 | proposed | copy |
 | builders.service | Build your first service | index.html | SCN-012 | proposed | copy |
+
+| fabric.agents | which coding agents Fabric works with | fabric/index.html | SCN-013 | proposed | copy |
+| download.fabric.macos | Download for macOS | fabric/agents/index.html | SCN-013 | proposed | copy |
+| switchboard.explore | Explore Switchboard | fabric/agents/index.html | SCN-013 | proposed | copy |

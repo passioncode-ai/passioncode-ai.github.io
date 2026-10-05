@@ -1,0 +1,341 @@
+Contract: brand-contract v1
+
+<!-- Generated from fabric/agents/index.html; edit source and rerun scripts/extract-public-copy.py. -->
+
+Coding agents Fabric works with | Fabric | PassionCode.ai
+
+As of 5 October 2026, Fabric connects Claude Code in its released app, Kilo Code and Hermes Agent are connected in development, Codex runs in Fabric without its tools, and Cline is next on the plan.
+
+Skip to content
+
+PassionCode
+
+.ai
+
+The tools
+
+Your workflow
+
+For builders
+
+About
+
+Download
+
+↓
+
+FABRIC · SUPPORTED CODING AGENTS
+
+# Coding agents
+
+# Fabric works with
+
+Which agents Fabric can start in your project, which of them get Fabric’s own tools, and which come next
+
+As of 5 October 2026 · the released app is Fabric 0.3
+
+In the released app, Fabric connects Claude Code: it starts the agent in a project’s terminal and gives it Fabric’s tools for that session. Kilo Code and Hermes Agent are connected in development and ship with the next release. Codex runs in Fabric but does not have Fabric’s tools yet. Cline is first among the planned agents, then the rest listed below. Fabric Switchboard switches accounts for Claude Code and Codex today.
+
+01 / WHAT “WORKS WITH” MEANS
+
+## Three levels
+
+## Each agent sits at one
+
+Working with Fabric can mean different things, so this page names the level for every agent.
+
+CONNECTED
+
+### Started with Fabric’s tools
+
+Fabric starts the agent in a project’s terminal. For that session only, the agent gets Fabric’s own tools: claims, hand-offs, memory and the board. A one-session credential carries that access, and nothing is written into the agent’s own settings.
+
+RUNS IN FABRIC
+
+### Started in the project folder
+
+Fabric starts the agent in the project’s folder, so it works on that project’s files. It does not have Fabric’s tools yet.
+
+PLANNED
+
+### On the plan, in order
+
+We intend to connect the agent. The plan below gives an order, not dates.
+
+02 / CONNECTED
+
+## Connected
+
+## Fabric’s tools for the session
+
+Claude Code in the released app; Kilo Code and Hermes Agent in development.
+
+Connected agents, as of 5 October 2026
+
+Agent
+
+Official site
+
+Where it stands
+
+Claude Code
+
+claude.com
+
+Released, in Fabric 0.3
+
+Kilo Code
+
+kilo.ai
+
+In development, ships with the next release
+
+Hermes Agent
+
+hermes-agent.nousresearch.com
+
+In development, ships with the next release
+
+Kilo Code takes its session settings from its KILO_CONFIG_CONTENT variable, and a project’s own kilo.json cannot override them. We verified this on Kilo 7.4.17 on 5 October 2026. Hermes Agent connects over the open Agent Client Protocol: Fabric opens its session and hands it Fabric’s tools through a local bridge, verified on Hermes 0.21.4 the same day. Hermes needs a model chosen in its own setup before it can answer.
+
+03 / RUNS IN FABRIC
+
+## Runs in Fabric
+
+## Not connected yet
+
+Fabric starts the agent in the project folder. It works there without Fabric’s tools.
+
+Agents that run in Fabric, as of 5 October 2026
+
+Agent
+
+Official site
+
+Where it stands
+
+Codex
+
+github.com/openai/codex
+
+Runs in the project folder, no Fabric tools yet
+
+04 / PLANNED
+
+## Planned
+
+## In this order
+
+Cline comes first. Five more follow as a group, and the last nine we take case by case. None of them has Fabric’s tools yet.
+
+Planned coding agents, in order, as of 5 October 2026
+
+Agent
+
+Official site
+
+Order
+
+Cline
+
+cline.bot
+
+First
+
+omp (oh-my-pi)
+
+omp.sh
+
+Then
+
+pi
+
+pi.dev
+
+Then
+
+OpenClaw
+
+openclaw.ai
+
+Then
+
+OpenHands
+
+openhands.dev
+
+Then
+
+Cursor CLI
+
+cursor.com/cli
+
+Then
+
+Command Code
+
+commandcode.ai
+
+Case by case
+
+DeepSeek Harness
+
+deepseek.com/harness
+
+Case by case
+
+LangChain Deep Agents (dcode)
+
+docs.langchain.com
+
+Case by case
+
+Letta
+
+letta.com
+
+Case by case
+
+Strix
+
+strix.ai
+
+Case by case
+
+goose
+
+goose-docs.ai
+
+Case by case
+
+Qwen Code
+
+github.com/QwenLM/qwen-code
+
+Case by case
+
+Gemini CLI
+
+geminicli.com
+
+Case by case
+
+OpenCode
+
+opencode.ai
+
+Case by case
+
+### Desktop apps and editors
+
+Zed, ZCode, Proto, CodeGPT, Freebuff and HackerAI are desktop apps and editors that another program cannot start. They can be clients of Fabric’s local hub instead. Each needs its own documented entry, and those entries are planned, not written yet.
+
+Planned desktop apps and editors, as of 5 October 2026
+
+App
+
+Official site
+
+Route
+
+Zed
+
+zed.dev
+
+Client of the local hub, entry planned
+
+ZCode
+
+zcode.z.ai
+
+Client of the local hub, entry planned
+
+Proto
+
+proto.erp.ai
+
+Client of the local hub, entry planned
+
+CodeGPT
+
+codegpt.co
+
+Client of the local hub, entry planned
+
+Freebuff
+
+freebuff.com
+
+Client of the local hub, entry planned
+
+HackerAI
+
+hackerai.co
+
+Client of the local hub, entry planned
+
+05 / HOW THE PLANNED AGENTS CONNECT
+
+## One open protocol
+
+## For the planned agents
+
+The planned agents connect through the Agent Client Protocol (ACP). Its session setup carries the session’s MCP servers, and Fabric drives any agent that speaks it.
+
+06 / WHY THESE AGENTS
+
+## Chosen from
+
+## what people use
+
+We picked them from OpenRouter’s public app ranking, read on 5 October 2026. Of its daily top 30, 15 are coding agents or agent harnesses. Hermes Agent, now connected in development, has the largest share.
+
+07 / ACCOUNTS
+
+## Account switching
+
+## Claude Code and Codex today
+
+Fabric Switchboard switches accounts for Claude Code and Codex today. Account switching for the other agents on this page is planned after the Fabric work above.
+
+Download for macOS
+
+↓
+
+Explore Switchboard
+
+↗
+
+PassionCode
+
+.ai
+
+From vibe coding to passion coding
+
+Get started
+
+For companies
+
+Switchboard
+
+Observatory
+
+Inbox
+
+Dashboards
+
+Fabric
+
+GitHub & source
+
+About
+
+Design system
+
+Privacy
+
+commercial@passioncode.ai
+
+Twitter
+
+↗

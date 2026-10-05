@@ -24,6 +24,7 @@
 | SCN-015 | Contribute a pull request | Contribution | P-01 | ST-08, FLW-05 | draft | pending |
 | SCN-016 | See and download the current release | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-017 | Read how request data is handled | Trust | P-02 | ST-07, FLW-06 | draft | pending |
+| SCN-018 | Check which coding agents Fabric works with | Fabric agents | P-01 | ST-04, FLW-03 | draft | pending |
 
 ## Personas
 
@@ -260,6 +261,26 @@ See [foundation](foundation.md).
 - **Errors & recovery:** Public repository unavailable: retry; no account is required to read the site.
 - **Status:** draft
 - **Coverage:** index.html; scripts/check-site.mjs; browser receipt in the workplace task.
+- **Product:** unobserved
+
+### SCN-018: Check which coding agents Fabric works with
+- **Persona:** P-01
+- **Feature:** Fabric agents
+- **Traces:** ST-04, FLW-03
+- **Entry point:** /fabric/agents/, the link in Fabric's "Before you open it" card, or a search or answer engine quoting the page
+- **Preconditions:** none
+- **Steps:**
+  1. Read the first viewport → the as-of date (5 October 2026) and a direct answer: Claude Code connected in the released app, Kilo Code and Hermes Agent connected in development, Codex runs in Fabric, Cline first among the planned agents, Switchboard covers Claude Code and Codex accounts.
+  2. Read What "works with" means → three levels: connected (Fabric's tools for one session through a one-session credential, nothing written into the agent's settings), runs in Fabric, planned.
+  3. Find their agent in exactly one level table, with its official site linked.
+  4. Read how the planned agents connect (ACP), why these agents (OpenRouter's ranking, linked and dated) and the account-switching boundary → Download for macOS goes to Fabric's download section; Explore Switchboard goes to Switchboard.
+- **Expected result:** The visitor knows whether their agent gets Fabric's tools today, runs without them, or is planned, without reading a plan as a release.
+- **Alt paths:** a desktop app or editor user reads the local-hub route and learns its entry is planned, not documented; narrow screens and keyboard expose the same tables, and long site names wrap.
+- **UI elements:** as-of caption, answer paragraph, level cards, four tables (connected, runs in Fabric, planned, desktop apps and editors), ACP and OpenRouter links, Download for macOS, Explore Switchboard
+- **States covered:** static populated content; external network failure on an official site.
+- **Errors & recovery:** an official site is unavailable: the agent's name and level remain on the page; retry later. A stale page is prevented by the dated caption and the facts row's review date (SITE-012).
+- **Status:** draft
+- **Coverage:** fabric/agents/index.html; fabric/index.html (link); scripts/check-site.mjs (each agent at one level, date, sources, no percentages).
 - **Product:** unobserved
 
 ## Display-copy refinement, 2026-10-01

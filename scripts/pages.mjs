@@ -9,6 +9,7 @@ export const PAGES = [
   'switchboard/index.html',
   'switchboard/agents/index.html',
   'fabric/index.html',
+  'fabric/agents/index.html',
   'inbox/index.html',
   'dashboards/index.html',
   'observatory/index.html',

@@ -175,7 +175,7 @@ Supabase CLI: brew install supabase/tap/supabase
 
 Claude Code or Codex CLI, signed in, for agents to do work
 
-If Docker or the CLI is missing, Fabric says which one on its first start.
+If Docker or the CLI is missing, Fabric says which one on its first start. See which coding agents Fabric works with and what each one can do there.
 
 Release notes & checksum
 
