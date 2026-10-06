@@ -118,7 +118,9 @@ const SECURITY_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-  'X-Frame-Options': 'DENY'
+  'X-Frame-Options': 'DENY',
+  // Two years, subdomains included (api. and wiki. answer over HTTPS); no preload commitment.
+  'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'
 }
 function withHeaders (response, extra = {}) {
   const out = new Response(response.body, response)
@@ -222,8 +224,11 @@ const DOWNLOAD = /^\/(fabric|switchboard|inbox|dashboards|observatory)\/download
 export default {
   async fetch (request, env, ctx) {
     const url = new URL(request.url)
-    if (url.hostname === 'www.passioncode.ai') {
-      url.hostname = 'passioncode.ai'
+    // One canonical origin, encrypted: http:// and www. both go to https://passioncode.ai in one
+    // hop, so the /business/ form can never post personal data in cleartext.
+    if (url.hostname === 'www.passioncode.ai' || url.protocol === 'http:') {
+      if (url.hostname === 'www.passioncode.ai') url.hostname = 'passioncode.ai'
+      url.protocol = 'https:'
       return Response.redirect(url, 301)
     }
 
@@ -235,19 +240,19 @@ export default {
     }
 
     if (url.pathname === '/api/releases/ingest') {
-      if (request.method !== 'POST') return json({ error: 'method_not_allowed' }, 405, { Allow: 'POST' })
+      if (request.method !== 'POST') return withHeaders(json({ error: 'method_not_allowed' }, 405, { Allow: 'POST' }))
       return withHeaders(await ingestReleases(request, env))
     }
 
     if (url.pathname === '/api/releases' || url.pathname === '/api/releases/') {
-      if (request.method !== 'GET' && request.method !== 'HEAD') return json({ error: 'method_not_allowed' }, 405, { Allow: 'GET, HEAD' })
+      if (request.method !== 'GET' && request.method !== 'HEAD') return withHeaders(json({ error: 'method_not_allowed' }, 405, { Allow: 'GET, HEAD' }))
       const snapshot = await currentSnapshot(env)
       return withHeaders(json(snapshot, 200, { 'Cache-Control': 'public, max-age=60', 'Access-Control-Allow-Origin': '*' }))
     }
 
     if (url.pathname === '/api/leads' || url.pathname === '/api/leads/') {
-      if (request.method !== 'POST') return json({ error: 'method_not_allowed' }, 405, { Allow: 'POST' })
-      if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return json({ error: 'forbidden_origin' }, 403)
+      if (request.method !== 'POST') return withHeaders(json({ error: 'method_not_allowed' }, 405, { Allow: 'POST' }))
+      if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return withHeaders(json({ error: 'forbidden_origin' }, 403))
       return withHeaders(await intake(request, env, ctx))
     }
 
@@ -259,7 +264,10 @@ export default {
     conditional.delete('if-modified-since')
     const response = await env.ASSETS.fetch(new Request(request, { headers: conditional }))
     if (!(response.headers.get('content-type') || '').includes('text/html')) {
-      return ifNoneMatch ? env.ASSETS.fetch(request) : response
+      const asset = ifNoneMatch ? await env.ASSETS.fetch(request) : response
+      // Plain-text assets (llms.txt, robots.txt) carry non-ASCII text: name the charset.
+      const type = asset.headers.get('content-type') || ''
+      return withHeaders(asset, type.startsWith('text/plain') && !/charset/i.test(type) ? { 'Content-Type': 'text/plain; charset=utf-8' } : {})
     }
     const snapshot = await currentSnapshot(env)
     let rewriter = liveRewriter(HTMLRewriter, snapshot)

@@ -371,7 +371,14 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
         // The cap protects strangers' inboxes, not the sender: a receipt over it waits for the
         // next hour (the cron's backoff) instead of being dropped, so filling the cap with
         // scripted requests cannot deny real senders their receipt.
-        await mark(env.DB, id, 'confirm', 'pending', 'hourly receipt cap reached; deferred'); result.confirm = 'deferred'
+        // A deferral is not an attempt: attempts stay for real sending failures. After 24 hours
+        // over the cap the receipt is dropped (skipped), so a flood cannot keep leads pending.
+        if (now.getTime() - Date.parse(row.created_at) > 86400000) {
+          await mark(env.DB, id, 'confirm', 'skipped', 'hourly receipt cap held for 24 hours'); result.confirm = 'skipped'
+        } else {
+          await env.DB.prepare('UPDATE leads SET confirm_error = ? WHERE id = ?').bind('hourly receipt cap reached; deferred', id).run()
+          result.confirm = 'deferred'
+        }
       } else {
         if (!env.EMAIL) throw new Error('no EMAIL binding')
         const text = confirmationText(lead)
@@ -408,8 +415,10 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
   // Exponential backoff for whatever is still pending: 2, 4, 8 … minutes, capped at 6 hours.
   const fresh = await env.DB.prepare('SELECT notify_attempts, confirm_attempts, forward_attempts FROM leads WHERE id = ?').bind(id).first()
   const attempts = Math.max(fresh.notify_attempts, fresh.confirm_attempts, fresh.forward_attempts)
-  const wait = Math.min(2 ** Math.max(attempts, 1), 360) * 60000
-  await env.DB.prepare('UPDATE leads SET next_attempt_at = ? WHERE id = ?').bind(new Date(now.getTime() + wait).toISOString(), id).run()
+  let next = now.getTime() + Math.min(2 ** Math.max(attempts, 1), 360) * 60000
+  // A receipt deferred by the hourly cap is tried again at the top of the next hour, not sooner.
+  if (result.confirm === 'deferred') next = Math.max(next, Math.floor(now.getTime() / 3600000 + 1) * 3600000)
+  await env.DB.prepare('UPDATE leads SET next_attempt_at = ? WHERE id = ?').bind(new Date(next).toISOString(), id).run()
   return result
 }
 

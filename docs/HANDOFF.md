@@ -1,4 +1,15 @@
-# Current handoff — onboarding, commercial intake and always-current versions, 2026-10-05
+# Current handoff — audit fixes, 2026-10-07
+
+An audit of the live site (operator request 2026-10-07: find and fix bugs) found plain HTTP served
+with 200 and no HSTS, an empty 404, a receipt deferral that spent attempts, an adapter version on
+/start/ that the launcher does not install, and missing headers and charset on some responses.
+Fixed in branch `agent/site-audit-fixes-20261007`: HTTPS redirect in one hop with `www.`, HSTS and
+the security headers on every response, `404.html`, receipts deferred to the next hour without an
+attempt (dropped after 24 h), `text/plain; charset=utf-8`, the /start/ line names only the launcher.
+Next task: the Russian version (RM-25); the nightly release-drift job re-run now that Actions may
+open pull requests.
+
+# Previous handoff — onboarding, commercial intake and always-current versions, 2026-10-05
 
 Objective (operator, 2026-10-05; roadmap RM-14/RM-15): make the product family the focus; onboard
 visitors (create your workplace → create agents → convert what you have → run and see them; open
@@ -7,8 +18,8 @@ funnel with a savings estimate whose submissions reach the organization's backen
 are always current; SEO and motion; the header kept.
 Task and receipts: [tasks/2026-10-05-onboarding-commercial.md](tasks/2026-10-05-onboarding-commercial.md).
 Deployed and verified 2026-10-05 ([production receipt](tasks/2026-10-05-onboarding-commercial.md#production-receipt)).
-Next task: connect the Platform once deployed (`PLATFORM_URL`, `PLATFORM_INTAKE_SECRET`;
-passioncode-platform PLAT-003); then SITE-015…017.
+The Platform is connected (SITE-014, PLAT-003, 2026-10-06). Next task: the Russian version of the
+site (RM-25, operator 2026-10-07); then SITE-015…017.
 
 ## Also 2026-10-05 — Fabric: supported coding agents (`/fabric/agents/`)
 

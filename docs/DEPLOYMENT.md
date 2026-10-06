@@ -211,8 +211,8 @@ apart, 12 attempts, then marked failed; the Platform call times out after 10 s):
 
 1. a notification to `LEAD_NOTIFY_TO` through the `send_email` binding, reply-to the sender;
 2. a receipt to the sender that repeats nothing they typed, at most one per address a day and
-   30 across all senders an hour — a receipt over the hourly cap waits for the cron's next try
-   instead of being dropped;
+   30 across all senders an hour — a receipt over the hourly cap waits until the top of the next
+   hour without spending an attempt, and is dropped (`skipped`) only after 24 hours over the cap;
 3. a copy to the PassionCode.ai Platform (`PLATFORM_URL` + `/v1/leads`), signed
    `X-PC-Signature: v1=HMAC-SHA256(PLATFORM_INTAKE_SECRET, "<X-PC-Timestamp>.<body>")` with the
    time of sending (the Platform accepts ±300 s). Until both are set, leads wait in D1 and are
@@ -252,10 +252,20 @@ Structured log events (`leads.received`, `leads.delivered`, `leads.retried`, `le
 
 ## Security headers
 
-Every HTML response carries `Content-Security-Policy` (`default-src 'self'`; no inline script or
-style — `scripts/check-site.mjs` refuses inline `style=`, event handlers and executable inline
-scripts), `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`,
-`Permissions-Policy` and `X-Frame-Options: DENY`.
+Every response — pages, assets, API answers and refusals (since 2026-10-07) — carries
+`Strict-Transport-Security: max-age=63072000; includeSubDomains` (two years; `api.` and `wiki.`
+answer over HTTPS; no preload commitment), `Content-Security-Policy` (`default-src 'self'`; no
+inline script or style — `scripts/check-site.mjs` refuses inline `style=`, event handlers and
+executable inline scripts), `X-Content-Type-Options: nosniff`, `Referrer-Policy:
+strict-origin-when-cross-origin`, `Permissions-Policy` and `X-Frame-Options: DENY`. Plain-text
+assets (`llms.txt`, `robots.txt`) are served as `text/plain; charset=utf-8`.
+
+**One encrypted origin.** Any `http://` request and any `www.` request is answered `301` to
+`https://passioncode.ai` with the path and query kept, in one hop — the /business/ form never
+posts personal data in cleartext (audit 2026-10-07: the site answered plain HTTP with `200`).
+
+**Unknown addresses** get `404.html` (noindex, the site's header and footer, links to the home
+page, /start/ and /business/) with status 404, through `assets.not_found_handling: "404-page"`.
 
 ## Authenticated connector fallback
 
