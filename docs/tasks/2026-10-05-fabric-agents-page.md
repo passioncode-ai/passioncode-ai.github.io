@@ -5,7 +5,7 @@
 Operator request: a public page that answers one question, "Which coding agents does Fabric
 work with, and what does 'works with' mean?", useful to a person and quotable by a machine.
 Route `/fabric/agents/`, linked from the Fabric page, in the sitemap. Facts are the operator's
-statement of 2026-10-05 and nothing more; the page states its as-of date. Serves SITE-012
+statement of 2026-10-05 and nothing more; the page states its as-of date. Serves SITE-018
 (keep it true); no roadmap track is named in the brief.
 
 Vision check: aligned. The page separates what the released app does (Claude Code connected)
@@ -102,7 +102,7 @@ follow a deploy, and the super-ux brand linter.
 
 Review and merge the PR; deploy from `main` with `npm run deploy`. When the next Fabric
 release ships Kilo Code, move it to "Released" with a new facts row and re-date the page
-(SITE-012).
+(SITE-018).
 
 ## Update 2026-10-05 (later the same day)
 

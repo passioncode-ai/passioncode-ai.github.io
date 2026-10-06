@@ -278,7 +278,7 @@ See [foundation](foundation.md).
 - **Alt paths:** a desktop app or editor user reads the local-hub route and learns its entry is planned, not documented; narrow screens and keyboard expose the same tables, and long site names wrap.
 - **UI elements:** as-of caption, answer paragraph, level cards, four tables (connected, runs in Fabric, planned, desktop apps and editors), ACP and OpenRouter links, Download for macOS, Explore Switchboard
 - **States covered:** static populated content; external network failure on an official site.
-- **Errors & recovery:** an official site is unavailable: the agent's name and level remain on the page; retry later. A stale page is prevented by the dated caption and the facts row's review date (SITE-012).
+- **Errors & recovery:** an official site is unavailable: the agent's name and level remain on the page; retry later. A stale page is prevented by the dated caption and the facts row's review date (SITE-018).
 - **Status:** draft
 - **Coverage:** fabric/agents/index.html; fabric/index.html (link); scripts/check-site.mjs (each agent at one level, date, sources, no percentages).
 - **Product:** unobserved
