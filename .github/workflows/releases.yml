@@ -13,6 +13,7 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
+  actions: write
 
 concurrency:
   group: release-drift
@@ -58,6 +59,9 @@ jobs:
           git add -A
           git commit -m "Sync pages to the published releases"
           git push --force -u origin "$branch"
+          # Pushes and pull requests made with the Actions token start no workflow; a dispatch does,
+          # so the pull request below carries the same check a person's would.
+          gh workflow run check.yml --ref "$branch"
           if [ -n "$(gh pr list --head "$branch" --state open --json number --jq '.[].number')" ]; then
             echo "The open pull request from $branch now carries tonight's sync."
           elif ! gh pr create --title "Sync pages to the published releases" --body "Nightly \`npm run releases:sync\`; \`npm run check\` passed in the job. The live site already shows these versions (edge rewrite); this keeps the sources equal. docs/DEPLOYMENT.md#always-current-versions"; then

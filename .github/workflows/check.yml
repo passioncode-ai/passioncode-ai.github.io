@@ -4,6 +4,9 @@ on:
   pull_request:
   push:
     branches: [main]
+  # The nightly release sync (releases.yml) dispatches this on its branch: a pull request opened
+  # with the Actions token starts no workflow, so without it that pull request carries no check.
+  workflow_dispatch:
 
 permissions:
   contents: read
