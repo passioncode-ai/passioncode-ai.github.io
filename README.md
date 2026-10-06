@@ -52,7 +52,8 @@ The passion-fruit identity remains locked in [brand](brand/README.md). `npm run 
 ## License
 
 Open source under the [GNU AGPL-3.0](LICENSE). A [commercial license](COMMERCIAL-LICENSE.md) is
-available for use that does not meet the AGPL's terms — contact@passioncode.ai.
+available for use that does not meet the AGPL's terms — tell us about your use at
+[passioncode.ai/business](https://passioncode.ai/business/) or write to commercial@passioncode.ai.
 
 ## Backlog
 

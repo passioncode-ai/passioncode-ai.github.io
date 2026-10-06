@@ -34,7 +34,7 @@ Which agents Fabric can start in your project, which of them get Fabric’s own 
 
 As of 5 October 2026 · the released app is Fabric 0.3
 
-In the released app, Fabric connects Claude Code: it starts the agent in a project’s terminal and gives it Fabric’s tools for that session. Kilo Code and Hermes Agent are connected in development and ship with the next release. Codex runs in Fabric but does not have Fabric’s tools yet. Cline is first among the planned agents, then the rest listed below. Fabric Switchboard switches accounts for Claude Code and Codex today.
+In the released app, Fabric connects Claude Code: it starts the agent in a project’s terminal and gives it Fabric’s tools for that session. Kilo Code and Hermes Agent are connected in development and ship with the next release. Codex runs in Fabric but does not have Fabric’s tools yet. Cline is first among the planned agents, then the rest listed below. Fabric Switchboard switches subscription accounts for Claude Code and Codex, and API-key accounts for the other agents through Switchboard.
 
 01 / WHAT “WORKS WITH” MEANS
 
@@ -296,7 +296,7 @@ We picked them from OpenRouter’s public app ranking, read on 5 October 2026. O
 
 ## Claude Code and Codex today
 
-Fabric Switchboard switches accounts for Claude Code and Codex today. Account switching for the other agents on this page is planned after the Fabric work above.
+Fabric Switchboard switches subscription accounts for Claude Code and Codex. Since 0.6.1 it also works with the other agents: each gets Switchboard's tools, and an agent that accepts a custom endpoint can send its requests through Switchboard, which switches its API-key accounts. Which agents, and how each connects.
 
 Download for macOS
 

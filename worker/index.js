@@ -27,7 +27,7 @@ export async function currentSnapshot (env, now = Date.now()) {
       }
     } catch (error) { log('releases.snapshot_read_failed', { error: String(error.message || error) }) }
   }
-  const snapshot = mergeSnapshots(bundled, live)
+  const snapshot = mergeSnapshots(bundled, live, policies)
   memory = { at: now, snapshot }
   return snapshot
 }
@@ -39,7 +39,7 @@ async function storeSnapshot (env, fetched, errors, { at, source, extra = [] }) 
   const previous = await env.DB.prepare('SELECT data FROM release_snapshot WHERE id = 1').first()
   const missing = new Set(Object.keys(policies).filter(key => !fetched.products?.[key]))
   const kept = previous ? Object.entries(JSON.parse(previous.data).products || {}).filter(([key]) => missing.has(key)) : []
-  const merged = mergeSnapshots(mergeSnapshots(bundled, { products: Object.fromEntries(kept) }), fetched)
+  const merged = mergeSnapshots(mergeSnapshots(bundled, { products: Object.fromEntries(kept) }, policies), fetched, policies)
   if (!validSnapshot(merged, policies)) return { ok: false, errors }
   await env.DB.batch([
     env.DB.prepare("INSERT INTO release_snapshot (id, data, fetched_at, errors, source) VALUES (1, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET data = excluded.data, fetched_at = excluded.fetched_at, errors = excluded.errors, source = excluded.source")
@@ -67,6 +67,13 @@ export async function refreshReleases (env, { fetch: fetchImpl = fetch, now = ()
   const { results = [] } = await env.DB.prepare('SELECT repository, etag, body FROM release_cache').all()
   for (const r of results) cache[r.repository] = { etag: r.etag, body: r.body }
   const { snapshot, errors, cache: next } = await fetchSnapshot({ policies, fetch: fetchImpl, token: env.GITHUB_TOKEN, cache, now })
+  // Nothing answered (the anonymous 403 case): the stored snapshot stays as it was, with its own
+  // time, so /api/releases never presents an old answer as a fresh one.
+  if (Object.keys(snapshot.products).length === 0) {
+    for (const e of errors) log('releases.product_failed', e)
+    log('releases.refresh_failed', { failed: errors.length })
+    return { ok: false, errors }
+  }
   const at = now().toISOString()
   const extra = []
   for (const [repository, { etag, body }] of Object.entries(next)) {

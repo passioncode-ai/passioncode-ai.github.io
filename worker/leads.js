@@ -16,7 +16,12 @@ export const MAX_ATTEMPTS = 12
 export const RECEIPTS_PER_HOUR = 30
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/
-const EMAIL = /^[^\s@<>()[\]\\,;:"]{1,64}@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/
+// The Platform's own rule (zod `z.regexes.email`, passioncode-platform src/modules/leads/schema.ts):
+// an address this Worker accepts and the Platform refuses would be stored here and never delivered.
+export const EMAIL = /^(?:[A-Za-z0-9_'+\-]+\.)*[A-Za-z0-9_'+\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/
+// Statuses the Platform answers for a request that will never succeed as sent; anything else
+// (401 during a secret rotation, 404 while a route deploys, 5xx) is retried with backoff.
+export const FINAL_STATUSES = new Set([400, 409, 413, 415, 422])
 
 // ---- input -------------------------------------------------------------------------------
 
@@ -62,13 +67,16 @@ export function knownFields (input) {
   return formToObject(params)
 }
 
-const str = (v, max, { min = 0, field, issues, multiline = false }) => {
-  const raw = typeof v === 'string' ? v : (v == null ? '' : String(v))
+// `truncate` is for what the visitor never typed (referrer, UTM, user agent): it is cut to size
+// silently, because an issue there is one the person cannot fix.
+const str = (v, max, { min = 0, field, issues, multiline = false, truncate = false }) => {
+  // A lone surrogate is not text: Postgres refuses it, so it would fail the lead downstream.
+  const raw = (typeof v === 'string' ? v : (v == null ? '' : String(v))).toWellFormed()
   // Control characters never survive; a single-line field (it may reach an email subject)
   // loses line breaks too.
   const s = (multiline ? raw.replace(/\r\n?/g, '\n').replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, ' ').replace(/[ \t]+\n/g, '\n') : raw.replace(/[\u0000-\u001f\u007f]+/g, ' ')).trim()
   if (s.length < min) issues.push({ path: field, message: min > 1 ? `at least ${min} characters` : 'required' })
-  if (s.length > max) issues.push({ path: field, message: `at most ${max} characters` })
+  if (s.length > max && !truncate) issues.push({ path: field, message: `at most ${max} characters` })
   return s.slice(0, max)
 }
 const pick = (v, options, field, issues) => {
@@ -88,6 +96,12 @@ const num = (v, max, field, issues, { required = true } = {}) => {
   const n = typeof v === 'number' ? v : Number(String(v).replace(/[\s,]/g, ''))
   if (!Number.isFinite(n) || n < 0 || n > max) { issues.push({ path: field, message: `a number from 0 to ${max}` }); return 0 }
   return Math.round(n * 100) / 100
+}
+// The referrer is kept only as an http(s) address (an app referrer such as android-app:// is
+// dropped), cut silently to the Platform's limit.
+const referrer = v => {
+  const s = str(v, 500, { field: 'source.referrer', issues: [], truncate: true })
+  return /^https?:\/\/\S+$/i.test(s) ? s : ''
 }
 const url = (v, field, issues) => {
   const s = str(v, 300, { field, issues })
@@ -113,7 +127,7 @@ export function buildLead (input, context) {
   const utm = i.source?.utm || {}
 
   const email = str(contact.email, 254, { min: 3, field: 'contact.email', issues }).toLowerCase()
-  if (email && !EMAIL.test(email)) issues.push({ path: 'contact.email', message: 'a work email address' })
+  if (email && (!EMAIL.test(email) || email.split('@')[0].length > 64)) issues.push({ path: 'contact.email', message: 'a work email address' })
   const consentGiven = consent.privacy === true || consent.privacy === 'yes' || consent.privacy === 'on' || consent.privacy === 'true'
   if (!consentGiven) issues.push({ path: 'consent.privacy', message: 'agree to the privacy notice to send the request' })
 
@@ -124,9 +138,9 @@ export function buildLead (input, context) {
     submittedAt: context.now.toISOString(),
     source: {
       page: '/business/',
-      referrer: str(i.source?.referrer ?? context.referrer ?? '', 500, { field: 'source.referrer', issues }),
+      referrer: referrer(i.source?.referrer ?? context.referrer ?? ''),
       locale: 'en',
-      utm: Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, str(utm[k], 120, { field: `source.utm.${k}`, issues })]))
+      utm: Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, str(utm[k], 120, { field: `source.utm.${k}`, issues, truncate: true })]))
     },
     goals: list(i.goals, LEAD_OPTIONS.goals, 'goals', issues, { min: 1 }),
     company: {
@@ -165,7 +179,7 @@ export function buildLead (input, context) {
       message: str(contact.message, 4000, { field: 'contact.message', issues, multiline: true })
     },
     consent: { privacy: true, version: PRIVACY_VERSION, marketing: consent.marketing === true || consent.marketing === 'yes' || consent.marketing === 'on' || consent.marketing === 'true' },
-    client: { ipHash: context.ipHash, country: str(context.country || '', 2, { field: 'client.country', issues }), userAgent: str(context.userAgent || '', 400, { field: 'client.userAgent', issues }) }
+    client: { ipHash: context.ipHash, country: /^[A-Za-z0-9]{2}$/.test(context.country || '') ? context.country : '', userAgent: str(context.userAgent || '', 400, { field: 'client.userAgent', issues, truncate: true }) }
   }
   const e = estimate(lead.processes)
   if (e) lead.estimate = e
@@ -225,8 +239,9 @@ export function canonical (value) {
   if (value && typeof value === 'object') return `{${Object.keys(value).sort().map(k => `${JSON.stringify(k)}:${canonical(value[k])}`).join(',')}}`
   return JSON.stringify(value)
 }
-// What identifies a submission for idempotency: everything the person chose, not the time.
-const identity = lead => canonical({ ...lead, submittedAt: null, client: null })
+// What identifies a submission for idempotency: everything the person chose — not the time, and
+// not where they came from (a resend through another link is still the same request).
+const identity = lead => canonical({ ...lead, submittedAt: null, client: null, source: null })
 
 export const FIRST_RETRY_MS = 2 * 60 * 1000
 export async function findLead (db, lead) {
@@ -308,6 +323,19 @@ const asHtml = text => `<pre style="font:14px/1.6 -apple-system,Segoe UI,sans-se
 
 const COLUMNS = { notify: 'notify', confirm: 'confirm', forward: 'forward' }
 
+// A delivery that ended for good is told to the commercial mailbox, so a lead never sits
+// unseen in the buffer. Best effort: the row already records the failure.
+export async function alertFailure (env, from, id, channel, error) {
+  try {
+    console.log(JSON.stringify({ event: 'leads.failed', id, channel }))
+    // The commercial mailbox cannot be told that its own notification failed: the log carries it.
+    if (!env.EMAIL || channel === 'notify') return
+    const to = String(env.LEAD_NOTIFY_TO || 'commercial@passioncode.ai').split(',').map(s => s.trim()).filter(Boolean)
+    const text = `Lead ${id}: delivery "${channel}" gave up.\n\n${String(error || '').slice(0, 500)}\n\nThe lead stays in D1 (table leads); docs/DEPLOYMENT.md#commercial-enquiries says how to re-queue it.`
+    await env.EMAIL.send({ to, from, subject: `Enquiry delivery failed: ${channel} · ${id}`, text, html: asHtml(text) })
+  } catch (e) { console.log(JSON.stringify({ event: 'leads.alert_failed', id, channel, error: e.message })) }
+}
+
 async function mark (db, id, channel, status, error = null) {
   const c = COLUMNS[channel]
   await db.prepare(`UPDATE leads SET ${c}_status = ?, ${c}_attempts = ${c}_attempts + 1, ${c}_error = ?, ${c}_at = CASE WHEN ? = 'done' THEN ? ELSE ${c}_at END WHERE id = ?`)
@@ -315,7 +343,7 @@ async function mark (db, id, channel, status, error = null) {
 }
 
 // One attempt at every channel still pending for a lead. Returns what happened per channel.
-export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Date() } = {}) {
+export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Date(), clock = () => Date.now() } = {}) {
   const row = await env.DB.prepare('SELECT * FROM leads WHERE id = ?').bind(id).first()
   if (!row) return { missing: true }
   const lead = JSON.parse(row.payload)
@@ -356,15 +384,19 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
     } else {
       try {
         const body = row.payload
-        const ts = String(Math.floor(now.getTime() / 1000))
+        // Signed at the moment of sending, not at the cron's start: a slow batch must not send a
+        // timestamp outside the Platform's ±300 s window.
+        const ts = String(Math.floor(clock() / 1000))
         const response = await fetchImpl(new URL('/v1/leads', env.PLATFORM_URL), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-PC-Timestamp': ts, 'X-PC-Signature': await platformSignature(env.PLATFORM_INTAKE_SECRET, ts, body) },
           body,
           signal: AbortSignal.timeout(10000)
         })
-        if (response.status === 200 || response.status === 201) { await mark(env.DB, id, 'forward', 'done'); result.forward = 'done' } else if (response.status >= 400 && response.status < 500 && response.status !== 408 && response.status !== 429) {
-          await mark(env.DB, id, 'forward', 'failed', `platform ${response.status}: ${(await response.text()).slice(0, 300)}`); result.forward = 'failed'
+        if (response.status === 200 || response.status === 201) { await mark(env.DB, id, 'forward', 'done'); result.forward = 'done' } else if (FINAL_STATUSES.has(response.status)) {
+          const error = `platform ${response.status}: ${(await response.text()).slice(0, 300)}`
+          await mark(env.DB, id, 'forward', 'failed', error); result.forward = 'failed'
+          await alertFailure(env, from, id, 'forward', error)
         } else { await mark(env.DB, id, 'forward', 'pending', `platform ${response.status}`); result.forward = 'retry' }
       } catch (error) { await mark(env.DB, id, 'forward', 'pending', error.message); result.forward = 'retry' }
     }
@@ -389,7 +421,9 @@ export async function retryDue (env, { now = new Date(), fetch: fetchImpl = fetc
   const outcomes = []
   for (const { id } of results) outcomes.push({ id, ...(await deliver(env, id, { now, fetch: fetchImpl })) })
   for (const c of ['notify', 'confirm', 'forward']) {
+    const { results: exhausted = [] } = await env.DB.prepare(`SELECT id, ${c}_error AS error FROM leads WHERE ${c}_status = 'pending' AND ${c}_attempts >= ?`).bind(MAX_ATTEMPTS).all()
     await env.DB.prepare(`UPDATE leads SET ${c}_status = 'failed', ${c}_error = COALESCE(${c}_error, '') || ' (gave up)' WHERE ${c}_status = 'pending' AND ${c}_attempts >= ?`).bind(MAX_ATTEMPTS).run()
+    for (const row of exhausted) await alertFailure(env, { email: env.LEAD_FROM || 'commercial@passioncode.ai', name: 'PassionCode.ai' }, row.id, c, `${row.error || ''} (gave up after ${MAX_ATTEMPTS} attempts)`)
   }
   const cutoff = new Date(now.getTime() - 30 * 86400000).toISOString()
   await env.DB.prepare("DELETE FROM leads WHERE forward_status = 'done' AND created_at < ?").bind(cutoff).run()

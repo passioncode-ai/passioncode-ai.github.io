@@ -4,11 +4,12 @@
 
 - `wrangler.json` binds the Worker to `passioncode.ai` and `www.passioncode.ai` as
   Custom Domains. The Worker redirects `www` to the canonical apex URL.
-- `npm run check` validates the brand lock, the release and Worker unit tests, the eleven pages
+- `npm run check` validates the brand lock, the release and Worker unit tests, the 13 pages
   (`scripts/pages.mjs`), live values against `releases/current.json`, the form against the Worker's
   options, and scoped design-token contrast.
-- `python3 scripts/extract-public-copy.py --check` verifies all seven copy projections;
-  run it separately before committing/deploying. It is not part of `npm run check`.
+- `python3 scripts/extract-public-copy.py --check` verifies the 13 public copy projections in
+  `docs/brand/copy/`; it is the last step of `npm run check`. After changing visible text, run
+  `python3 scripts/extract-public-copy.py` to regenerate them.
 - `.github/workflows/check.yml` repeats the checks on pushes and pull requests. It does
   not hold a Cloudflare credential or deploy independently.
 
@@ -76,7 +77,7 @@ responses, is recorded in [`CUTOVER_RECEIPT.md`](CUTOVER_RECEIPT.md).
 
 ## Switchboard downloads
 
-`/switchboard/download/macos` and `/switchboard/download/windows` return 302 to the fixed URLs in `switchboard/release.json`, with `Cache-Control: no-store` and `X-Robots-Tag: noindex`. Query parameters cannot change the destination. The optional trailing slash is supported; unknown platform paths fall through to the asset 404. The Worker canonicalizes www before serving any route.
+`/switchboard/download/macos` and `/switchboard/download/windows` return 302 to the current release's assets in the release snapshot ([always-current versions](#always-current-versions)) — `switchboard/release.json` is its floor and the source of the release-bound page sections below — with `Cache-Control: no-store` and `X-Robots-Tag: noindex`. Query parameters cannot change the destination. The optional trailing slash is supported; unknown platform paths fall through to the asset 404. The Worker canonicalizes www before serving any route.
 
 To select a new published beta or stable release:
 
@@ -95,9 +96,9 @@ Replace the example tag with the actual tag. The updater rejects drafts and requ
 
 Review the release's actual signing/platform limits and installation instructions before committing, and update the Switchboard rows in `docs/brand/facts.md` and `python3 scripts/extract-public-copy.py`. Never advertise GitHub `releases/latest` as the newest beta: that endpoint excludes prereleases.
 
-Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment compare all seven pages (home, Switchboard, Fabric, Inbox,
-Observatory, Dashboards and design system), the other allow-listed assets and all
-four download redirects. `scripts/verify-live.py` checks the current build's 30
+Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment compare the 13 pages `scripts/pages.mjs` lists, the other allow-listed assets and
+the seven download redirects (`/<product>/download/<platform>`, [always-current
+versions](#always-current-versions)). `scripts/verify-live.py` checks the current build's 30
 entries, redirect destination/no-store/noindex and private-path exclusions:
 
 ```sh
@@ -118,7 +119,9 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
 - `releases/products.json` is the policy, edited by hand: each product's repository, channel
   (`stable` takes the newest non-prerelease, or the newest prerelease while none exists;
   `prerelease` takes the newest of either), the assets a release must carry, and an optional
-  `hold` tag that freezes it. A release is eligible only when every required asset is attached
+  `hold` tag that freezes it — also below the bundled floor, so `hold` is how a bad release is
+  rolled back on purpose (a release merely withdrawn on GitHub never takes a product below the
+  floor; hold the previous tag instead). A release is eligible only when every required asset is attached
   with a SHA-256 digest at the repository's own release path; a half-uploaded release is never
   offered. npm products (launcher, adapter) take the registry's `latest`.
 - **The hourly push is the main path.** `.github/workflows/releases-push.yml` (minute 7 of every
@@ -152,10 +155,22 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   `data-live` element, the legacy `fabric/` and `inbox/release.json`) and, when Switchboard moved,
   runs `scripts/update-switchboard-release.mjs` so its release-bound sections follow.
   `npm run releases:check` changes nothing and fails on drift; `.github/workflows/releases.yml`
-  runs it nightly and opens a pull request with the sync.
+  runs it nightly, pushes the sync to `automation/release-sync` and opens a pull request from it.
+  The organization does not let Actions open pull requests (measured 2026-10-06), so when
+  `gh pr create` is refused the job keeps one open issue, "Release drift: sources behind the
+  published releases", with the compare link, and ends with a warning instead of failing: the live
+  site already serves the current versions. A person opens the pull request from that link; allowing
+  Actions to create pull requests (organization → Actions → General → Workflow permissions) removes
+  this step.
 
 Facts that are not versions — requirements, notarization, a feature a release adds — still change
-by hand with the product page and `docs/brand/facts.md`; the live value never invents them.
+by hand with the product page and `docs/brand/facts.md`; the live value never invents them. Until
+the sync lands, a release-bound sentence (Switchboard's notarization note, its license region) may
+describe the release in `switchboard/release.json` while the version beside it is already the
+newer one: merge the nightly sync and re-check `facts.md` the day a release ships.
+
+A cron run where no product answered (the anonymous `403` case) stores nothing: the snapshot and
+its `fetched_at` stay as they were, and the log says `releases.refresh_failed`.
 
 ## Storage
 
@@ -191,8 +206,26 @@ apart, 12 attempts, then marked failed; the Platform call times out after 10 s):
 2. a receipt to the sender that repeats nothing they typed, at most one per address a day and
    30 across all senders an hour;
 3. a copy to the PassionCode.ai Platform (`PLATFORM_URL` + `/v1/leads`), signed
-   `X-PC-Signature: v1=HMAC-SHA256(PLATFORM_INTAKE_SECRET, "<X-PC-Timestamp>.<body>")`. Until both
-   are set, leads wait in D1 and are forwarded once they are.
+   `X-PC-Signature: v1=HMAC-SHA256(PLATFORM_INTAKE_SECRET, "<X-PC-Timestamp>.<body>")` with the
+   time of sending (the Platform accepts ±300 s). Until both are set, leads wait in D1 and are
+   forwarded once they are. Only `400`, `409`, `413`, `415` and `422` end a forward at once; any
+   other answer (a `401` during a secret rotation, a `404` while a route deploys, `5xx`) is retried.
+
+The Worker accepts only what the Platform's `lead/1` schema accepts: the email rule is the
+Platform's own (zod `z.regexes.email`), the referrer is kept only as an http(s) address, and what
+the visitor never typed (referrer, UTM values, user agent) is cut to size instead of failing the
+request. The request id does not cover the referrer, so a resend through another link is the same
+request; on a `409` the page drops its id, so the next send is a new request.
+
+A delivery that ends as `failed` — at once, or after the last attempt — mails `LEAD_NOTIFY_TO`
+(subject "Enquiry delivery failed") and logs `leads.failed`; a failed notification is only logged.
+To re-queue a lead once the cause is fixed:
+
+```sh
+python3 "$(project-observatory full-path)/tools/use_secret.py" run --env prod \
+  passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npx wrangler d1 execute passioncode-site --remote \
+  --command "UPDATE leads SET forward_status = 'pending', forward_attempts = 0, next_attempt_at = datetime('now') WHERE id = '<lead id>'"
+```
 
 Retention: a forwarded lead leaves D1 after 30 days; nothing stays longer than 24 months
 (`/privacy/`). Secrets, set once with values on stdin (never in a file in the repository):
@@ -206,8 +239,8 @@ openssl rand -hex 32 | npx wrangler secret put IP_HASH_SALT
 
 Each runs under `use_secret.py run … CLOUDFLARE_ACCOUNT_ID --` like the deploy. Without
 `FORM_TOKEN_SECRET` or `IP_HASH_SALT` the endpoint answers 503 and names the email address.
-Structured log events (`leads.received`, `leads.delivered`, `leads.retried`, `releases.refreshed`,
-`releases.product_failed`) are in Workers Logs (`observability.enabled`); none carries personal data.
+Structured log events (`leads.received`, `leads.delivered`, `leads.retried`, `leads.failed`,
+`releases.refreshed`, `releases.refresh_failed`, `releases.product_failed`) are in Workers Logs (`observability.enabled`); none carries personal data.
 
 ## Security headers
 

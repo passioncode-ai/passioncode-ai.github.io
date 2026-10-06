@@ -193,6 +193,9 @@ form.addEventListener('submit', async event => {
       done.focus()
       return
     }
+    // A conflict means this id was already used for other answers: drop it, so the next send is
+    // a new request instead of the same refusal forever.
+    if (response.status === 409) { try { localStorage.removeItem(ID_KEY) } catch {} memoryId = undefined }
     const issues = (body.issues || []).map(i => `${i.path}: ${i.message}`).join('; ')
     status.className = 'form-status is-error'
     status.textContent = `${body.message || 'The request was not sent.'}${issues ? ` (${issues})` : ''}`
