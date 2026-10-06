@@ -62,7 +62,7 @@ The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observator
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.1.29 · Adapter 0.8.0 · restart your agent afterwards. Automatic updates are on by default; turn them off if you prefer.
+Launcher 0.1.29 · it installs the family members at the versions it pins · restart your agent afterwards. Automatic updates are on by default; turn them off if you prefer.
 
 02
 

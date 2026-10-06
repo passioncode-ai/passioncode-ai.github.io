@@ -91,12 +91,15 @@ test('/api/releases answers the snapshot, cacheable and cross-origin readable', 
   assert.equal((await worker.fetch(new Request('https://passioncode.ai/api/releases', { method: 'POST' }), baseEnv(), ctx())).status, 405)
 })
 
-test('HTML responses carry the security headers; other assets are untouched', async () => {
+test('HTML responses carry the security headers; other assets get them too and keep their type and caching', async () => {
   const html = await worker.fetch(new Request('https://passioncode.ai/start/'), baseEnv({ DB: undefined }), ctx())
   assert.match(html.headers.get('content-security-policy'), /script-src 'self'/)
   assert.equal(html.headers.get('x-frame-options'), 'DENY')
+  // Since 2026-10-07 (audit): every response carries HSTS and nosniff, assets included.
   const css = await worker.fetch(new Request('https://passioncode.ai/styles.css'), baseEnv({ DB: undefined }), ctx())
-  assert.equal(css.headers.get('content-security-policy'), null)
+  assert.equal(css.headers.get('strict-transport-security'), 'max-age=63072000; includeSubDomains')
+  assert.ok(css.headers.get('content-type').startsWith('text/plain'), 'the asset keeps its own type (the stub serves text/plain)')
+  assert.equal(css.headers.get('etag'), '"asset-1"', 'and its own caching')
 })
 
 test('the cron refresh stores the snapshot and ETags, and keeps a product that failed', async () => {
@@ -382,6 +385,9 @@ test('the receipt repeats nothing the sender typed, and receipts over the hourly
   const row = await env.DB.prepare('SELECT confirm_status, confirm_error FROM leads WHERE id = ?').bind('99999999-9999-4999-8999-999999999999').first()
   assert.equal(row.confirm_status, 'pending', 'over the cap a receipt waits, it is not dropped')
   assert.match(row.confirm_error, /hourly receipt cap reached; deferred/)
+  const deferred = await env.DB.prepare('SELECT confirm_attempts, next_attempt_at FROM leads WHERE id = ?').bind('99999999-9999-4999-8999-999999999999').first()
+  assert.equal(deferred.confirm_attempts, 0, 'a deferral is not an attempt')
+  assert.ok(Date.parse(deferred.next_attempt_at) >= Math.floor(Date.now() / 3600000 + 1) * 3600000, 'tried again at the top of the next hour, not sooner')
   assert.ok(!env.EMAIL.sent.some(m => m.to === 'new@example.com'))
   await retryDue(env, { now: new Date(Date.now() + 3 * 3600e3) })
   const later = await env.DB.prepare('SELECT confirm_status FROM leads WHERE id = ?').bind('99999999-9999-4999-8999-999999999999').first()
@@ -569,4 +575,51 @@ test('nothing stays in the buffer past 24 months, whatever its delivery state', 
   assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 1, 'kept before the ceiling')
   await retryDue(env, { now: new Date(Date.now() + 731 * 86400e3) })
   assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 0, 'gone after 24 months')
+})
+
+// ---- 2026-10-07 audit: one encrypted origin, headers on every response, a real 404 ------------
+
+test('http:// and www. go to https://passioncode.ai in one hop, path and query kept', async () => {
+  for (const from of ['http://passioncode.ai/business/?a=1', 'http://www.passioncode.ai/business/?a=1', 'https://www.passioncode.ai/business/?a=1']) {
+    const r = await worker.fetch(new Request(from), baseEnv(), ctx())
+    assert.equal(r.status, 301, from)
+    assert.equal(r.headers.get('location'), 'https://passioncode.ai/business/?a=1', from)
+  }
+  const form = await worker.fetch(new Request('http://passioncode.ai/api/leads', { method: 'POST', body: '{}' }), baseEnv(), ctx())
+  assert.equal(form.status, 301, 'the form endpoint never accepts cleartext')
+})
+
+test('HSTS and the security headers are on pages, assets, refusals and API answers', async () => {
+  const checks = [
+    worker.fetch(new Request('https://passioncode.ai/start/'), baseEnv(), ctx()),
+    worker.fetch(new Request('https://passioncode.ai/llms.txt'), baseEnv(), ctx()),
+    worker.fetch(new Request('https://passioncode.ai/api/leads'), baseEnv(), ctx()),
+    worker.fetch(new Request('https://passioncode.ai/api/leads', { method: 'POST', headers: { origin: 'https://evil.example' }, body: '{}' }), baseEnv(), ctx()),
+    worker.fetch(new Request('https://passioncode.ai/api/releases', { method: 'DELETE' }), baseEnv(), ctx())
+  ]
+  for (const r of await Promise.all(checks)) {
+    assert.equal(r.headers.get('strict-transport-security'), 'max-age=63072000; includeSubDomains', `${r.status} ${r.url}`)
+    assert.equal(r.headers.get('x-content-type-options'), 'nosniff')
+  }
+  const txt = await worker.fetch(new Request('https://passioncode.ai/llms.txt'), baseEnv(), ctx())
+  assert.equal(txt.headers.get('content-type'), 'text/plain; charset=utf-8', 'plain text names its charset')
+})
+
+test('a deferred receipt is dropped after 24 hours over the cap, not kept pending forever', async () => {
+  const env = baseEnv()
+  const at = new Date().toISOString()
+  for (let i = 0; i < RECEIPTS_PER_HOUR; i++) {
+    await env.DB.prepare("INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at, confirm_status, confirm_at, notify_status, forward_status) VALUES (?, '{}', 'h', ?, ?, ?, 'done', ?, 'done', 'done')").bind(`10000000-0000-4000-8000-${String(i).padStart(12, '0')}`, `q${i}@example.com`, at, at, at).run()
+  }
+  const id = '12121212-1212-4121-8121-121212121212'
+  const b = answers(); b.contact.email = 'late@example.com'
+  await post(env, JSON.stringify({ ...b, id, form_token: await oldToken() }))
+  // The cap is still full 25 hours later (refreshed rows), so the receipt gives way.
+  const later = new Date(Date.now() + 25 * 3600e3)
+  await env.DB.prepare("UPDATE leads SET confirm_at = ? WHERE email LIKE 'q%'").bind(new Date(later.getTime() - 60e3).toISOString()).run()
+  await env.DB.prepare('UPDATE leads SET next_attempt_at = ? WHERE id = ?').bind(new Date(later.getTime() - 1).toISOString(), id).run()
+  await retryDue(env, { now: later })
+  const row = await env.DB.prepare('SELECT confirm_status, confirm_error FROM leads WHERE id = ?').bind(id).first()
+  assert.equal(row.confirm_status, 'skipped')
+  assert.match(row.confirm_error, /held for 24 hours/)
 })

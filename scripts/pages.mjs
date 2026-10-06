@@ -13,7 +13,8 @@ export const PAGES = [
   'inbox/index.html',
   'dashboards/index.html',
   'observatory/index.html',
-  'design-system/index.html'
+  'design-system/index.html',
+  '404.html'
 ]
-// Pages a search engine should not list: the form's no-JavaScript confirmation.
-export const NOINDEX = new Set(['business/thanks/index.html'])
+// Pages a search engine should not list: the form's no-JavaScript confirmation and the 404 page.
+export const NOINDEX = new Set(['business/thanks/index.html', '404.html'])
