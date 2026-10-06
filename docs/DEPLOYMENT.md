@@ -165,6 +165,9 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   runs `scripts/update-switchboard-release.mjs` so its release-bound sections follow.
   `npm run releases:check` changes nothing and fails on drift; `.github/workflows/releases.yml`
   runs it nightly, pushes the sync to `automation/release-sync` and opens a pull request from it.
+  It also dispatches `check.yml` on that branch: a push or pull request made with the Actions token
+  starts no workflow, so without the dispatch the pull request carried no check (measured
+  2026-10-07, PR #63).
   Actions may open pull requests in the organization and in this repository since 2026-10-06
   (`can_approve_pull_request_reviews: true`, set by the operator's decision). Should that be
   refused again, the job keeps one open issue, "Release drift: sources behind the published
