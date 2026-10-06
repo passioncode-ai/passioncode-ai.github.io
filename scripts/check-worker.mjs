@@ -5,7 +5,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import worker, { currentSnapshot, ingestReleases, refreshReleases } from '../worker/index.js'
+import worker, { currentSnapshot, ingestReleases, MISSING_PATH, refreshReleases } from '../worker/index.js'
 import { pushReleases } from './push-releases.mjs'
 import { buildLead, checkFormToken, deliver, formToObject, issueFormToken, knownFields, platformSignature, RECEIPTS_PER_HOUR, retryDue, storeLead } from '../worker/leads.js'
 import bundled from '../releases/current.json' with { type: 'json' }
@@ -17,7 +17,7 @@ const config = JSON.parse(readFileSync(new URL('../wrangler.json', import.meta.u
 globalThis.HTMLRewriter = class { on () { return this } transform (r) { return r } }
 
 const ctx = () => { const waits = []; return { waits, waitUntil: p => waits.push(p), done: () => Promise.all(waits) } }
-const assets = { fetch: async request => new Response(`asset ${new URL(request.url).pathname}`, { status: new URL(request.url).pathname === '/missing' ? 404 : 200, headers: { 'Content-Type': new URL(request.url).pathname.endsWith('/') ? 'text/html; charset=utf-8' : 'text/plain', ETag: '"asset-1"', ...(request.headers.get('if-none-match') ? { 'X-Saw-Conditional': '1' } : {}) } }) }
+const assets = { fetch: async request => new Response(`asset ${new URL(request.url).pathname}`, { status: ['/missing', MISSING_PATH].includes(new URL(request.url).pathname) ? 404 : 200, headers: { 'Content-Type': new URL(request.url).pathname.endsWith('/') ? 'text/html; charset=utf-8' : 'text/plain', ETag: '"asset-1"', ...(request.headers.get('if-none-match') ? { 'X-Saw-Conditional': '1' } : {}) } }) }
 const mailer = () => { const sent = []; return { sent, send: async m => { sent.push(m); return { messageId: `m${sent.length}` } } } }
 const baseEnv = (extra = {}) => ({ ASSETS: assets, DB: d1(), EMAIL: mailer(), FORM_TOKEN_SECRET: 'form-secret', IP_HASH_SALT: 'salt', LEAD_NOTIFY_TO: 'commercial@passioncode.ai', ...extra })
 
@@ -622,4 +622,15 @@ test('a deferred receipt is dropped after 24 hours over the cap, not kept pendin
   const row = await env.DB.prepare('SELECT confirm_status, confirm_error FROM leads WHERE id = ?').bind(id).first()
   assert.equal(row.confirm_status, 'skipped')
   assert.match(row.confirm_error, /held for 24 hours/)
+})
+
+test('the not-found page answers 404 at its own addresses too, never 200', async () => {
+  for (const path of ['/404', '/404/', '/404.html']) {
+    const r = await worker.fetch(new Request(`https://passioncode.ai${path}`), baseEnv(), ctx())
+    assert.equal(r.status, 404, path)
+    assert.equal(await r.text(), `asset ${MISSING_PATH}`, `${path} serves the not-found page`)
+    assert.equal(r.headers.get('strict-transport-security'), 'max-age=63072000; includeSubDomains')
+  }
+  const page = await worker.fetch(new Request('https://passioncode.ai/404-list/'), baseEnv(), ctx())
+  assert.equal(page.status, 200, 'only the not-found addresses are rewritten')
 })

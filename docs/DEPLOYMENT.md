@@ -98,8 +98,9 @@ Review the release's actual signing/platform limits and installation instruction
 
 Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment compare the 13 pages `scripts/pages.mjs` lists, the other allow-listed assets and
 the seven download redirects (`/<product>/download/<platform>`, [always-current
-versions](#always-current-versions)). `scripts/verify-live.py` checks the current build's 30
-entries, redirect destination/no-store/noindex and private-path exclusions:
+versions](#always-current-versions)). `scripts/verify-live.py` checks the current build's 44
+entries (the not-found page through an address that cannot exist, expecting 404), redirect
+destination/no-store/noindex, and that private paths and the not-found page's own addresses answer 404:
 
 ```sh
 python3 scripts/verify-live.py --output docs/evidence/2026-10-01-workplace/live.json
@@ -266,6 +267,9 @@ posts personal data in cleartext (audit 2026-10-07: the site answered plain HTTP
 
 **Unknown addresses** get `404.html` (noindex, the site's header and footer, links to the home
 page, /start/ and /business/) with status 404, through `assets.not_found_handling: "404-page"`.
+Its own addresses (`/404`, `/404/`, `/404.html`) answer the same way: the Worker asks the assets for a
+path that cannot exist (`MISSING_PATH` in `worker/index.js`), because the assets would otherwise
+serve the file as an ordinary page with `200` (measured 2026-10-07: `/404` → 200, `/404.html` → 307).
 
 ## Authenticated connector fallback
 
