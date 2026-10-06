@@ -53,7 +53,8 @@
   "vars": {
     "LEAD_FROM": "commercial@passioncode.ai",
     "LEAD_REPLY_TO": "commercial@passioncode.ai",
-    "LEAD_NOTIFY_TO": "commercial@passioncode.ai"
+    "LEAD_NOTIFY_TO": "commercial@passioncode.ai",
+    "PLATFORM_URL": "https://api.passioncode.ai"
   },
   "observability": {
     "enabled": true
