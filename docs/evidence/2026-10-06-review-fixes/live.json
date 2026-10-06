@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-06T03:03:24.213950+00:00",
+  "checkedAt": "2026-10-06T07:56:03.006419+00:00",
   "baseUrl": "https://passioncode.ai",
-  "sourceCommit": "6de5bb0e3fcd8bb385e023aa88bcfa3431032d7f",
+  "sourceCommit": "cab0251abf270a4eacb0afb02f3a04d844853bd1",
   "checks": [
     {
       "path": "/assets/business.js",
@@ -230,8 +230,8 @@
     {
       "path": "/",
       "status": 200,
-      "expectedSha256": "3f832c8e6724520674ef1336f5e308aece2699f55137b958bd52aaa91ea0e9d7",
-      "actualSha256": "3f832c8e6724520674ef1336f5e308aece2699f55137b958bd52aaa91ea0e9d7",
+      "expectedSha256": "8513734b474e325650bc595e089f06c0952e3fe9f221c76e66d64d410e91ddfd",
+      "actualSha256": "8513734b474e325650bc595e089f06c0952e3fe9f221c76e66d64d410e91ddfd",
       "pass": true
     },
     {
@@ -293,15 +293,15 @@
     {
       "path": "/switchboard/",
       "status": 200,
-      "expectedSha256": "c9dc7fad8caffc565a88cd09239ac196c2b05a65dc3992f2b2e7b5a8a1cd08ae",
-      "actualSha256": "c9dc7fad8caffc565a88cd09239ac196c2b05a65dc3992f2b2e7b5a8a1cd08ae",
+      "expectedSha256": "ffd7e61299a539a1ee79da11455cd58ed2739675e05daa76bf011da0a6a2fde9",
+      "actualSha256": "ffd7e61299a539a1ee79da11455cd58ed2739675e05daa76bf011da0a6a2fde9",
       "pass": true
     },
     {
       "path": "/switchboard/release.json",
       "status": 200,
-      "expectedSha256": "2764787a2c56962247086b094b7c36c8076c2aecfbba6501b113297ce45aaafd",
-      "actualSha256": "2764787a2c56962247086b094b7c36c8076c2aecfbba6501b113297ce45aaafd",
+      "expectedSha256": "fcb391374a5e979066765bde1b48fc0b03f2e56ce39d0e34b2fa652add080724",
+      "actualSha256": "fcb391374a5e979066765bde1b48fc0b03f2e56ce39d0e34b2fa652add080724",
       "pass": true
     },
     {
@@ -313,13 +313,13 @@
     {
       "path": "/switchboard/download/macos",
       "status": 302,
-      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.2/Fabric-Switchboard-0.6.2-macos-universal.zip",
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.5/Fabric-Switchboard-0.6.5-macos-universal.zip",
       "pass": true
     },
     {
       "path": "/switchboard/download/windows",
       "status": 302,
-      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.2/Fabric-Switchboard-0.6.2-windows-x64.zip",
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.5/Fabric-Switchboard-0.6.5-windows-x64.zip",
       "pass": true
     },
     {

@@ -38,6 +38,11 @@ CI `check` pass on PR #53.
   which a person creates in GitHub settings — docs/DEPLOYMENT.md#always-current-versions.
 - Organization setting: allow Actions to create pull requests (removes the drift issue step).
 
+Later the same day (07:50–08:10 UTC): PR #55 (receipts over the cap wait) and PR #56 (Switchboard
+0.6.5, published 03:14Z, synced into the sources with facts re-verified) deployed from `main`
+`cab0251` → Worker `c5bd3094-e3e3-4be8-9bff-5423cad61f2c`; `verify-live.py` PASS, 43 assets,
+7 download routes, 3 exclusions ([live.json](../evidence/2026-10-06-review-fixes/live.json)).
+
 Closed after the deploy above: receipts over the hourly cap wait for the next cron try instead of
 being dropped (PR "Receipts over the hourly cap wait").
 
