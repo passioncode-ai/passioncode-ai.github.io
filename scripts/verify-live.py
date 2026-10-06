@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import subprocess
 import tempfile
@@ -17,6 +18,7 @@ files = sorted(path for path in (root / 'dist').rglob('*') if path.is_file())
 if not files:
     parser.error('Run npm run build first; dist has no files')
 rows = []
+FORM_TOKEN = re.compile(rb'(<input type="hidden" name="form_token" value=")[^"]*(")')
 
 def fetch(path):
     # urllib is denied by the live edge (403); use the existing curl transport.
@@ -43,19 +45,27 @@ for file in files:
     relative = file.relative_to(root / 'dist').as_posix()
     path = '/' + (relative[:-10] if relative.endswith('index.html') else relative)
     status, headers, body = fetch(path)
-    local = hashlib.sha256(file.read_bytes()).hexdigest()
+    local_bytes = file.read_bytes()
+    if path == '/business/':
+        # The Worker writes a fresh signed form token into every render (docs/DEPLOYMENT.md
+        # "Commercial enquiries"); compare the page with that one value blanked.
+        body = FORM_TOKEN.sub(rb'\1\2', body)
+    local = hashlib.sha256(local_bytes).hexdigest()
     actual = hashlib.sha256(body).hexdigest()
     rows.append({'path': path, 'status': status, 'expectedSha256': local,
                  'actualSha256': actual, 'pass': status == 200 and local == actual})
-for product in ('switchboard', 'fabric', 'inbox'):
-    manifest = json.loads((root / product / 'release.json').read_text())
-    for platform, expected in manifest['downloads'].items():
-        path = f'/{product}/download/{platform}'
-        status, headers, _ = fetch(path)
-        rows.append({'path': path, 'status': status, 'location': headers.get('location'),
-                     'pass': status == 302 and headers.get('location') == expected
-                     and headers.get('cache-control') == 'no-store'
-                     and headers.get('x-robots-tag') == 'noindex'})
+# Every download route the Worker serves, against the committed release snapshot (the live one is
+# never older: worker/releases.js mergeSnapshots keeps it as the floor).
+snapshot = json.loads((root / 'releases' / 'current.json').read_text())
+routes = [(key, platform, asset['url']) for key, entry in snapshot['products'].items()
+          for platform, asset in (entry.get('assets') or {}).items()]
+for product, platform, expected in routes:
+    path = f'/{product}/download/{platform}'
+    status, headers, _ = fetch(path)
+    rows.append({'path': path, 'status': status, 'location': headers.get('location'),
+                 'pass': status == 302 and headers.get('location') == expected
+                 and headers.get('cache-control') == 'no-store'
+                 and headers.get('x-robots-tag') == 'noindex'})
 for path in ('/docs/HANDOFF.md', '/.git/config', '/package.json'):
     status, _, _ = fetch(path)
     rows.append({'path': path, 'status': status, 'pass': status == 404})
@@ -65,5 +75,5 @@ result = {'checkedAt': datetime.now(timezone.utc).isoformat(), 'baseUrl': args.b
 output = Path(args.output)
 output.parent.mkdir(parents=True, exist_ok=True)
 output.write_text(json.dumps(result, indent=2) + '\n')
-print(('PASS' if result['pass'] else 'FAIL') + f': {len(files)} assets, 4 download routes and 3 private-path exclusions; {output}')
+print(('PASS' if result['pass'] else 'FAIL') + f': {len(files)} assets, {len(routes)} download routes and 3 private-path exclusions; {output}')
 raise SystemExit(0 if result['pass'] else 1)
