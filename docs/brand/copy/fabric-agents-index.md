@@ -296,7 +296,7 @@ We picked them from OpenRouter’s public app ranking, read on 5 October 2026. O
 
 ## Claude Code and Codex today
 
-Fabric Switchboard switches accounts for Claude Code and Codex today. Account switching for the other agents on this page is planned after the Fabric work above.
+Fabric Switchboard switches subscription accounts for Claude Code and Codex. Since 0.6.1 it also works with the other agents: each gets Switchboard's tools, and an agent that accepts a custom endpoint can send its requests through Switchboard, which switches its API-key accounts. Which agents, and how each connects.
 
 Download for macOS
 

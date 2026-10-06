@@ -12,6 +12,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 concurrency:
   group: release-drift
@@ -60,6 +61,14 @@ jobs:
           if [ -n "$(gh pr list --head "$branch" --state open --json number --jq '.[].number')" ]; then
             echo "The open pull request from $branch now carries tonight's sync."
           elif ! gh pr create --title "Sync pages to the published releases" --body "Nightly \`npm run releases:sync\`; \`npm run check\` passed in the job. The live site already shows these versions (edge rewrite); this keeps the sources equal. docs/DEPLOYMENT.md#always-current-versions"; then
-            echo "::error::Drift found and synced on $branch, but this repository does not let Actions open pull requests. Open it: https://github.com/${{ github.repository }}/compare/main...$branch"
-            exit 1
+            # The organization does not let Actions open pull requests (measured 2026-10-06:
+            # "GitHub Actions is not permitted to create or approve pull requests"). The live site is
+            # unaffected (the Worker rewrites versions at the edge), so the job does not fail every
+            # night; it keeps ONE open issue pointing at the synced branch until a person opens it.
+            title="Release drift: sources behind the published releases"
+            compare="https://github.com/${{ github.repository }}/compare/main...$branch"
+            body="The nightly job synced the sources on \`$branch\` (\`npm run check\` passed) but cannot open the pull request itself. Open it: $compare — run ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. The live site already serves the current versions. docs/DEPLOYMENT.md#always-current-versions"
+            issue=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[0].number')
+            if [ -n "$issue" ]; then gh issue comment "$issue" --body "$body"; else gh issue create --title "$title" --body "$body"; fi
+            echo "::warning::Drift synced on $branch; Actions may not open pull requests here, so issue \"$title\" tracks it: $compare"
           fi

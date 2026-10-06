@@ -152,7 +152,13 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   `data-live` element, the legacy `fabric/` and `inbox/release.json`) and, when Switchboard moved,
   runs `scripts/update-switchboard-release.mjs` so its release-bound sections follow.
   `npm run releases:check` changes nothing and fails on drift; `.github/workflows/releases.yml`
-  runs it nightly and opens a pull request with the sync.
+  runs it nightly, pushes the sync to `automation/release-sync` and opens a pull request from it.
+  The organization does not let Actions open pull requests (measured 2026-10-06), so when
+  `gh pr create` is refused the job keeps one open issue, "Release drift: sources behind the
+  published releases", with the compare link, and ends with a warning instead of failing: the live
+  site already serves the current versions. A person opens the pull request from that link; allowing
+  Actions to create pull requests (organization → Actions → General → Workflow permissions) removes
+  this step.
 
 Facts that are not versions — requirements, notarization, a feature a release adds — still change
 by hand with the product page and `docs/brand/facts.md`; the live value never invents them.
