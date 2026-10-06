@@ -16,7 +16,7 @@ Answers "Which coding agents does Fabric work with, and what does 'works with' m
 one level with its official site. Rebuilt on this `main` after PR #43 (branch `agent/agents-page-20261005`)
 fell behind the page-list and check restructuring; Hermes Agent moved to "connected in development" (Fabric
 ADR-0119 amendment 2). Receipts: [task](tasks/2026-10-05-fabric-agents-page.md). Keep it true to each Fabric
-release (SITE-012).
+release (SITE-018; numbered SITE-012 until 2026-10-06, when the workspace sync refused the duplicate id).
 
 ---
 
