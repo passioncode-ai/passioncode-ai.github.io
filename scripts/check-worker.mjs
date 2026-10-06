@@ -367,7 +367,7 @@ test('two stores of one id: one wins, the other is told duplicate or conflict', 
   assert.equal(await storeLead(env.DB, changed), 'conflict')
 })
 
-test('the receipt repeats nothing the sender typed, and receipts stop at the hourly cap', async () => {
+test('the receipt repeats nothing the sender typed, and receipts over the hourly cap wait for the next hour', async () => {
   const env = baseEnv()
   const a = answers(); a.company.name = 'Visit evil.example now'; a.contact.name = 'Click evil.example'
   await post(env, JSON.stringify({ ...a, form_token: await oldToken() }))
@@ -375,13 +375,18 @@ test('the receipt repeats nothing the sender typed, and receipts stop at the hou
   assert.ok(!receipt.text.includes('evil.example'))
   const at = new Date().toISOString()
   for (let i = 0; i < RECEIPTS_PER_HOUR; i++) {
-    await env.DB.prepare("INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at, confirm_status, confirm_at) VALUES (?, '{}', 'h', ?, ?, ?, 'done', ?)").bind(`00000000-0000-4000-8000-${String(i).padStart(12, '0')}`, `p${i}@example.com`, at, at, at).run()
+    await env.DB.prepare("INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at, confirm_status, confirm_at, notify_status, forward_status) VALUES (?, '{}', 'h', ?, ?, ?, 'done', ?, 'done', 'done')").bind(`00000000-0000-4000-8000-${String(i).padStart(12, '0')}`, `p${i}@example.com`, at, at, at).run()
   }
   const b = answers(); b.contact.email = 'new@example.com'
   await post(env, JSON.stringify({ ...b, id: '99999999-9999-4999-8999-999999999999', form_token: await oldToken() }))
   const row = await env.DB.prepare('SELECT confirm_status, confirm_error FROM leads WHERE id = ?').bind('99999999-9999-4999-8999-999999999999').first()
-  assert.equal(row.confirm_status, 'skipped')
-  assert.match(row.confirm_error, /hourly receipt cap/)
+  assert.equal(row.confirm_status, 'pending', 'over the cap a receipt waits, it is not dropped')
+  assert.match(row.confirm_error, /hourly receipt cap reached; deferred/)
+  assert.ok(!env.EMAIL.sent.some(m => m.to === 'new@example.com'))
+  await retryDue(env, { now: new Date(Date.now() + 3 * 3600e3) })
+  const later = await env.DB.prepare('SELECT confirm_status FROM leads WHERE id = ?').bind('99999999-9999-4999-8999-999999999999').first()
+  assert.equal(later.confirm_status, 'done')
+  assert.equal(env.EMAIL.sent.filter(m => m.to === 'new@example.com').length, 1, 'sent once the hour has passed')
 })
 
 test('a chunked body with no Content-Length is capped by bytes', async () => {

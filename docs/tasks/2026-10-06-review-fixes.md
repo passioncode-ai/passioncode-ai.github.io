@@ -31,9 +31,15 @@ CI `check` pass on PR #53.
 
 ## Open
 
-- Receipts: the global cap (30 an hour) can be used up by anyone; skipped receipts are not retried.
-- The hourly `Release push` had no scheduled run in its first hour (only the manual one at
-  01:52Z); confirm scheduled runs appear, or set a Worker `GITHUB_TOKEN`.
+- The hourly `Release push` (Actions schedule) has not run once on schedule: only the manual run at
+  01:52Z, none in the following six hours (checked 07:50Z). The Worker's cron fallback carries the
+  versions meanwhile: D1 `release_snapshot` source `cron`, `fetched_at` 07:45Z, `errors` `[]`.
+  The dependable fix is a Worker `GITHUB_TOKEN` (fine-grained, public repositories read-only),
+  which a person creates in GitHub settings — docs/DEPLOYMENT.md#always-current-versions.
 - Organization setting: allow Actions to create pull requests (removes the drift issue step).
 
-Next task: confirm `Release push` scheduled runs on 2026-10-06; then the receipt cap.
+Closed after the deploy above: receipts over the hourly cap wait for the next cron try instead of
+being dropped (PR "Receipts over the hourly cap wait").
+
+Next task: once the Worker has `GITHUB_TOKEN`, confirm `releases.refreshed` with `source = cron`
+every 15 minutes and no `product_failed`.

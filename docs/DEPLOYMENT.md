@@ -204,7 +204,8 @@ apart, 12 attempts, then marked failed; the Platform call times out after 10 s):
 
 1. a notification to `LEAD_NOTIFY_TO` through the `send_email` binding, reply-to the sender;
 2. a receipt to the sender that repeats nothing they typed, at most one per address a day and
-   30 across all senders an hour;
+   30 across all senders an hour — a receipt over the hourly cap waits for the cron's next try
+   instead of being dropped;
 3. a copy to the PassionCode.ai Platform (`PLATFORM_URL` + `/v1/leads`), signed
    `X-PC-Signature: v1=HMAC-SHA256(PLATFORM_INTAKE_SECRET, "<X-PC-Timestamp>.<body>")` with the
    time of sending (the Platform accepts ±300 s). Until both are set, leads wait in D1 and are
