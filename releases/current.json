@@ -1,6 +1,6 @@
 {
   "schema": "releases/1",
-  "generatedAt": "2026-10-06T02:46:38.699Z",
+  "generatedAt": "2026-10-06T07:54:17.384Z",
   "products": {
     "fabric": {
       "key": "fabric",
@@ -26,23 +26,23 @@
       "name": "Fabric Switchboard",
       "repository": "passioncode-ai/fabric-switchboard",
       "page": "/switchboard/",
-      "version": "0.6.2",
-      "tag": "v0.6.2",
+      "version": "0.6.5",
+      "tag": "v0.6.5",
       "prerelease": false,
-      "publishedAt": "2026-10-05T15:44:19Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.6.2",
+      "publishedAt": "2026-10-06T03:14:46Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.6.5",
       "assets": {
         "macos": {
-          "name": "Fabric-Switchboard-0.6.2-macos-universal.zip",
-          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.2/Fabric-Switchboard-0.6.2-macos-universal.zip",
-          "sha256": "39d9adee34a2e318e9b04c7907582c1f5b92ddff9f8092cb862bc973f70b9983",
-          "size": 22685399
+          "name": "Fabric-Switchboard-0.6.5-macos-universal.zip",
+          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.5/Fabric-Switchboard-0.6.5-macos-universal.zip",
+          "sha256": "6c7dde15badd17f7cdf1d8da389401272cd23664161d4e85790cbacb5d013040",
+          "size": 22728283
         },
         "windows": {
-          "name": "Fabric-Switchboard-0.6.2-windows-x64.zip",
-          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.2/Fabric-Switchboard-0.6.2-windows-x64.zip",
-          "sha256": "639cbf6c78a41f521fbee56a858012dd9d9b0565f0b167ef8f9daf90636c5c86",
-          "size": 10226138
+          "name": "Fabric-Switchboard-0.6.5-windows-x64.zip",
+          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.5/Fabric-Switchboard-0.6.5-windows-x64.zip",
+          "sha256": "bafbbe94c504bce73a1be68db6ac3baebad9453cb3d826aba7a876b8417bb21e",
+          "size": 10243238
         }
       }
     },
