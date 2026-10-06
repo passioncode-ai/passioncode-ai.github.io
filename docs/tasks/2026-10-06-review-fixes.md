@@ -31,12 +31,13 @@ CI `check` pass on PR #53.
 
 ## Open
 
-- The hourly `Release push` (Actions schedule) has not run once on schedule: only the manual run at
-  01:52Z, none in the following six hours (checked 07:50Z). The Worker's cron fallback carries the
-  versions meanwhile: D1 `release_snapshot` source `cron`, `fetched_at` 07:45Z, `errors` `[]`.
-  The dependable fix is a Worker `GITHUB_TOKEN` (fine-grained, public repositories read-only),
-  which a person creates in GitHub settings — docs/DEPLOYMENT.md#always-current-versions.
-- Organization setting: allow Actions to create pull requests (removes the drift issue step).
+- Closed 2026-10-06 10:30Z: the Worker has `GITHUB_TOKEN` (expires 2027-08-30; rotate before);
+  first cron with it stored the snapshot with `errors` `[]`. The Actions schedule never fired in
+  nine hours and is now the second path (docs/DEPLOYMENT.md#always-current-versions).
+- Closed 2026-10-06: Actions may create pull requests (organization and this repository).
+- Mail DNS, 2026-10-06 10:12Z: the apex SPF no longer authorises Namecheap's forwarding servers;
+  it is `v=spf1 include:_spf.mx.cloudflare.net ~all` (MX, DKIM `cf2024-1`, DMARC `p=reject` and
+  `cf-bounce` SPF were already right), checked on both Cloudflare nameservers, 1.1.1.1 and 8.8.8.8.
 
 Later the same day (07:50–08:10 UTC): PR #55 (receipts over the cap wait) and PR #56 (Switchboard
 0.6.5, published 03:14Z, synced into the sources with facts re-verified) deployed from `main`
@@ -46,5 +47,4 @@ Later the same day (07:50–08:10 UTC): PR #55 (receipts over the cap wait) and 
 Closed after the deploy above: receipts over the hourly cap wait for the next cron try instead of
 being dropped (PR "Receipts over the hourly cap wait").
 
-Next task: once the Worker has `GITHUB_TOKEN`, confirm `releases.refreshed` with `source = cron`
-every 15 minutes and no `product_failed`.
+Next task: rotate `GITHUB_TOKEN` before 2027-08-30.

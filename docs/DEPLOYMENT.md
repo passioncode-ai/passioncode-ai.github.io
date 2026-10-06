@@ -124,8 +124,16 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   floor; hold the previous tag instead). A release is eligible only when every required asset is attached
   with a SHA-256 digest at the repository's own release path; a half-uploaded release is never
   offered. npm products (launcher, adapter) take the registry's `latest`.
-- **The hourly push is the main path.** `.github/workflows/releases-push.yml` (minute 7 of every
-  hour) runs `scripts/push-releases.mjs`: it resolves every product with the job's own token —
+- **The Worker's cron with a token is the main path** (since 2026-10-06). `GITHUB_TOKEN` is a
+  fine-grained token with *Public repositories (read-only)* and no permissions, owned by the
+  operator's account; the organization refuses fine-grained tokens that live longer than 366 days,
+  so it **expires 2027-08-30** and is rotated before then (`vault.py rotate passioncode-ai.github.io
+  prod GITHUB_TOKEN`, then `wrangler secret put GITHUB_TOKEN` from stdin). Kept in Project
+  Observatory (`passioncode-ai.github.io/prod/GITHUB_TOKEN`). First run with it: 2026-10-06
+  10:30:41 UTC, every product answered (`errors` `[]`).
+- **The hourly push is a second path.** GitHub runs scheduled workflows on a best-effort basis:
+  in its first nine hours `releases-push.yml` never fired on schedule (only the manual run at
+  01:52Z). `.github/workflows/releases-push.yml` (minute 7 of every hour) runs `scripts/push-releases.mjs`: it resolves every product with the job's own token —
   GitHub limits that token per repository, not per shared address — and sends the snapshot to
   `POST /api/releases/ingest`, signed `X-PC-Signature: v1=HMAC-SHA256(RELEASES_INGEST_SECRET,
   "<X-PC-Timestamp>.<body>")` within five minutes. The Worker validates it with the same rules as
@@ -133,7 +141,7 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   kept in Project Observatory (`passioncode-ai.github.io/prod/RELEASES_INGEST_SECRET`) and set
   twice from stdin: `wrangler secret put RELEASES_INGEST_SECRET` and
   `gh secret set RELEASES_INGEST_SECRET -R passioncode-ai/passioncode-ai.github.io`.
-- The Worker's own cron (`*/15 * * * *`) is the fallback. Without a `GITHUB_TOKEN` it does not ask
+- The Worker's own cron runs every 15 minutes (`*/15 * * * *`). Without a `GITHUB_TOKEN` it does not ask
   GitHub while a pushed snapshot is younger than two hours: its shared egress addresses hit the
   anonymous limit (2026-10-05 16:00 UTC: `403` for every product). With a `GITHUB_TOKEN` secret
   (fine-grained, *Public repositories (read-only)*) it asks every run. Either way it uses ETags.
@@ -156,12 +164,11 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   runs `scripts/update-switchboard-release.mjs` so its release-bound sections follow.
   `npm run releases:check` changes nothing and fails on drift; `.github/workflows/releases.yml`
   runs it nightly, pushes the sync to `automation/release-sync` and opens a pull request from it.
-  The organization does not let Actions open pull requests (measured 2026-10-06), so when
-  `gh pr create` is refused the job keeps one open issue, "Release drift: sources behind the
-  published releases", with the compare link, and ends with a warning instead of failing: the live
-  site already serves the current versions. A person opens the pull request from that link; allowing
-  Actions to create pull requests (organization → Actions → General → Workflow permissions) removes
-  this step.
+  Actions may open pull requests in the organization and in this repository since 2026-10-06
+  (`can_approve_pull_request_reviews: true`, set by the operator's decision). Should that be
+  refused again, the job keeps one open issue, "Release drift: sources behind the published
+  releases", with the compare link, and ends with a warning instead of failing: the live site
+  already serves the current versions.
 
 Facts that are not versions — requirements, notarization, a feature a release adds — still change
 by hand with the product page and `docs/brand/facts.md`; the live value never invents them. Until
