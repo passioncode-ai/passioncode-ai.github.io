@@ -368,7 +368,10 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
       const hourAgo = new Date(now.getTime() - 3600000).toISOString()
       const lastHour = await env.DB.prepare("SELECT COUNT(*) AS n FROM leads WHERE confirm_status = 'done' AND confirm_at > ?").bind(hourAgo).first()
       if (recent?.n > 0) { await mark(env.DB, id, 'confirm', 'skipped', 'receipt already sent to this address today'); result.confirm = 'skipped' } else if (lastHour?.n >= RECEIPTS_PER_HOUR) {
-        await mark(env.DB, id, 'confirm', 'skipped', 'hourly receipt cap reached'); result.confirm = 'skipped'
+        // The cap protects strangers' inboxes, not the sender: a receipt over it waits for the
+        // next hour (the cron's backoff) instead of being dropped, so filling the cap with
+        // scripted requests cannot deny real senders their receipt.
+        await mark(env.DB, id, 'confirm', 'pending', 'hourly receipt cap reached; deferred'); result.confirm = 'deferred'
       } else {
         if (!env.EMAIL) throw new Error('no EMAIL binding')
         const text = confirmationText(lead)
