@@ -1,0 +1,33 @@
+name: Release push
+
+# Hourly: resolve every product's current release with this job's own token and hand the signed
+# snapshot to the passioncode.ai Worker (docs/DEPLOYMENT.md#always-current-versions). The Worker
+# cannot ask GitHub itself without a token: its shared egress addresses hit the anonymous limit
+# (measured 2026-10-05, every product answered 403). This is a single small request job, not a
+# test suite; the nightly hosted checks stay where the CI policy of 2026-09-25 puts them.
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-push
+  cancel-in-progress: true
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Push the release snapshot to the Worker
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RELEASES_INGEST_SECRET: ${{ secrets.RELEASES_INGEST_SECRET }}
+        run: node scripts/push-releases.mjs

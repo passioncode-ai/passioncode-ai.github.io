@@ -4,7 +4,8 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import worker, { currentSnapshot, refreshReleases } from '../worker/index.js'
+import worker, { currentSnapshot, ingestReleases, refreshReleases } from '../worker/index.js'
+import { pushReleases } from './push-releases.mjs'
 import { buildLead, checkFormToken, deliver, formToObject, issueFormToken, knownFields, platformSignature, RECEIPTS_PER_HOUR, retryDue, storeLead } from '../worker/leads.js'
 import bundled from '../releases/current.json' with { type: 'json' }
 import { d1 } from './d1-shim.mjs'
@@ -385,4 +386,84 @@ test('a page is revalidated against the release snapshot, never against the stor
   const business = await worker.fetch(new Request('https://passioncode.ai/business/'), baseEnv({ DB: undefined }), ctx())
   assert.equal(business.headers.get('etag'), null)
   assert.equal(business.headers.get('cache-control'), 'no-store')
+})
+
+// ---- the hourly push from GitHub Actions --------------------------------------------------
+
+const signedPush = async (body, { secret = 'ingest-secret', ts = Math.floor(Date.now() / 1000) } = {}) => {
+  const raw = JSON.stringify(body)
+  return new Request('https://passioncode.ai/api/releases/ingest', { method: 'POST', headers: { 'content-type': 'application/json', 'X-PC-Timestamp': String(ts), 'X-PC-Signature': await platformSignature(secret, String(ts), raw) }, body: raw })
+}
+const bumped = (key, version) => {
+  const e = structuredClone(bundled.products[key])
+  e.version = version; e.tag = `v${version}`
+  for (const a of Object.values(e.assets)) a.url = a.url.replace(/\/download\/v[^/]+\//, `/download/v${version}/`)
+  return e
+}
+
+test('a signed push is stored; a product it lacks keeps its last entry', async () => {
+  const env = baseEnv({ RELEASES_INGEST_SECRET: 'ingest-secret' })
+  const r = await ingestReleases(await signedPush({ schema: 'releases/1', generatedAt: 'x', products: { switchboard: bumped('switchboard', '9.0.0') } }), env)
+  assert.equal(r.status, 200)
+  assert.equal((await r.json()).versions.switchboard, '9.0.0')
+  const row = await env.DB.prepare('SELECT source FROM release_snapshot WHERE id = 1').first()
+  assert.equal(row.source, 'push')
+  assert.equal((await currentSnapshot(env, Date.now() + 5e9)).products.switchboard.version, '9.0.0')
+  assert.equal((await currentSnapshot(env, Date.now() + 5e9)).products.fabric.version, bundled.products.fabric.version, 'a missing product keeps its entry')
+  // the same release withdrawn: the next push answers the bundled version and the site follows
+  await ingestReleases(await signedPush({ schema: 'releases/1', products: { switchboard: bundled.products.switchboard } }), env)
+  assert.equal((await currentSnapshot(env, Date.now() + 6e9)).products.switchboard.version, bundled.products.switchboard.version)
+})
+
+test('a push with a wrong or stale signature, or an invalid snapshot, changes nothing', async () => {
+  const env = baseEnv({ RELEASES_INGEST_SECRET: 'ingest-secret' })
+  const good = { schema: 'releases/1', products: { switchboard: bumped('switchboard', '9.0.0') } }
+  assert.equal((await ingestReleases(await signedPush(good, { secret: 'other' }), env)).status, 401)
+  assert.equal((await ingestReleases(await signedPush(good, { ts: Math.floor(Date.now() / 1000) - 900 }), env)).status, 401)
+  const evil = structuredClone(good); evil.products.switchboard.assets.macos.url = 'https://example.com/x.zip'
+  assert.equal((await ingestReleases(await signedPush(evil), env)).status, 400)
+  assert.equal((await ingestReleases(await signedPush({ schema: 'other', products: {} }), env)).status, 400)
+  assert.equal(await env.DB.prepare('SELECT COUNT(*) AS n FROM release_snapshot').first().then(r => r.n), 0)
+  assert.equal((await ingestReleases(await signedPush(good), baseEnv())).status, 503, 'not configured without the secret')
+  const viaRoute = await worker.fetch(await signedPush(good), env, ctx())
+  assert.equal(viaRoute.status, 200)
+  assert.equal((await worker.fetch(new Request('https://passioncode.ai/api/releases/ingest'), env, ctx())).status, 405)
+})
+
+test('without a token the cron does not ask GitHub while pushed snapshots are fresh', async () => {
+  const env = baseEnv({ RELEASES_INGEST_SECRET: 'ingest-secret' })
+  await ingestReleases(await signedPush({ schema: 'releases/1', products: { switchboard: bundled.products.switchboard } }), env)
+  let asked = 0
+  const r = await refreshReleases(env, { fetch: async () => { asked++; return new Response('[]') } })
+  assert.equal(r.skipped, true)
+  assert.equal(asked, 0)
+  const later = await refreshReleases(env, { fetch: async () => { asked++; return new Response('x', { status: 403 }) }, now: () => new Date(Date.now() + 3 * 3600e3) })
+  assert.equal(later.ok, true)
+  assert.ok(asked > 0, 'a stale push lets the cron try again')
+  const withToken = await refreshReleases({ ...env, GITHUB_TOKEN: 't' }, { fetch: async () => new Response('x', { status: 403 }) })
+  assert.notEqual(withToken.skipped, true, 'a token makes the cron ask regardless')
+})
+
+test('the push script signs what it resolved and reports the answer', async () => {
+  const sent = []
+  const fakeFetch = async (url, init = {}) => {
+    if (String(url).includes('registry.npmjs.org')) return new Response(JSON.stringify({ version: '1.0.0' }))
+    if (String(url).includes('api.github.com')) {
+      const repo = String(url).match(/repos\/(.+)\/releases/)[1]
+      const entry = Object.values(bundled.products).find(p => p.repository === repo)
+      return new Response(JSON.stringify([{ tag_name: entry.tag, prerelease: entry.prerelease, draft: false, published_at: entry.publishedAt, assets: Object.values(entry.assets).map(a => ({ name: a.name, browser_download_url: a.url, digest: `sha256:${a.sha256}`, state: 'uploaded', size: a.size })) }]))
+    }
+    sent.push({ url: String(url), init })
+    return new Response(JSON.stringify({ stored: true, versions: {} }), { status: 200 })
+  }
+  const result = await pushReleases({ token: 't', secret: 's', url: 'https://example.test/ingest', fetch: fakeFetch })
+  assert.equal(result.ok, true)
+  assert.equal(sent.length, 1)
+  const ts = sent[0].init.headers['X-PC-Timestamp']
+  assert.equal(sent[0].init.headers['X-PC-Signature'], await platformSignature('s', ts, sent[0].init.body))
+  assert.equal(JSON.parse(sent[0].init.body).schema, 'releases/1')
+  const none = await pushReleases({ token: 't', secret: 's', url: 'https://example.test/ingest', fetch: async () => new Response('x', { status: 403 }) })
+  assert.equal(none.ok, false)
+  assert.equal(none.reason, 'no product answered')
+  await assert.rejects(pushReleases({ url: 'x', fetch: fakeFetch }), /RELEASES_INGEST_SECRET/)
 })

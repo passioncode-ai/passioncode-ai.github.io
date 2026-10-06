@@ -4,7 +4,7 @@ import policyFile from '../releases/products.json' with { type: 'json' }
 import bundled from '../releases/current.json' with { type: 'json' }
 import { fetchSnapshot, mergeSnapshots, validSnapshot } from './releases.js'
 import { liveRewriter } from './live.js'
-import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, formToObject, issueFormToken, knownFields, MAX_BODY_BYTES, retryDue, sha256, storeLead } from './leads.js'
+import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, formToObject, issueFormToken, knownFields, MAX_BODY_BYTES, platformSignature, retryDue, sha256, storeLead } from './leads.js'
 
 const policies = policyFile.products
 const SNAPSHOT_TTL_MS = 60_000
@@ -32,31 +32,76 @@ export async function currentSnapshot (env, now = Date.now()) {
   return snapshot
 }
 
+// A fetched (or pushed) snapshot becomes the stored one. A product it lacks keeps what the last
+// good answer said; one it carries is taken as given, so a release withdrawn on GitHub leaves the
+// site too (down to the bundled floor, never below it).
+async function storeSnapshot (env, fetched, errors, { at, source, extra = [] }) {
+  const previous = await env.DB.prepare('SELECT data FROM release_snapshot WHERE id = 1').first()
+  const missing = new Set(Object.keys(policies).filter(key => !fetched.products?.[key]))
+  const kept = previous ? Object.entries(JSON.parse(previous.data).products || {}).filter(([key]) => missing.has(key)) : []
+  const merged = mergeSnapshots(mergeSnapshots(bundled, { products: Object.fromEntries(kept) }), fetched)
+  if (!validSnapshot(merged, policies)) return { ok: false, errors }
+  await env.DB.batch([
+    env.DB.prepare("INSERT INTO release_snapshot (id, data, fetched_at, errors, source) VALUES (1, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET data = excluded.data, fetched_at = excluded.fetched_at, errors = excluded.errors, source = excluded.source")
+      .bind(JSON.stringify(merged), at, JSON.stringify(errors), source),
+    ...extra
+  ])
+  memory = { at: 0, snapshot: null }
+  return { ok: true, errors, snapshot: merged }
+}
+
+const versionsOf = snapshot => Object.fromEntries(Object.entries(snapshot.products).map(([k, v]) => [k, v.version]))
+export const PUSH_FRESH_MS = 2 * 60 * 60 * 1000
+
 export async function refreshReleases (env, { fetch: fetchImpl = fetch, now = () => new Date() } = {}) {
+  // Without a token the Worker's shared egress addresses are rate-limited by GitHub, so while the
+  // hourly job keeps pushing fresh snapshots the cron does not ask (docs/DEPLOYMENT.md).
+  if (!env.GITHUB_TOKEN) {
+    const last = await env.DB.prepare('SELECT fetched_at, source FROM release_snapshot WHERE id = 1').first()
+    if (last?.source === 'push' && now().getTime() - Date.parse(last.fetched_at) < PUSH_FRESH_MS) {
+      log('releases.refresh_skipped', { reason: 'fresh pushed snapshot', fetched_at: last.fetched_at })
+      return { ok: true, skipped: true, errors: [] }
+    }
+  }
   const cache = {}
   const { results = [] } = await env.DB.prepare('SELECT repository, etag, body FROM release_cache').all()
   for (const r of results) cache[r.repository] = { etag: r.etag, body: r.body }
-  const previous = await env.DB.prepare('SELECT data FROM release_snapshot WHERE id = 1').first()
   const { snapshot, errors, cache: next } = await fetchSnapshot({ policies, fetch: fetchImpl, token: env.GITHUB_TOKEN, cache, now })
-  // A product that failed this time keeps what the last good answer said. One that answered
-  // is taken as answered, so a release withdrawn on GitHub leaves the site too (down to the
-  // bundled floor, never below it).
-  const failed = new Set(errors.map(e => e.product))
-  const kept = previous ? Object.entries(JSON.parse(previous.data).products || {}).filter(([key]) => failed.has(key)) : []
-  const merged = mergeSnapshots(mergeSnapshots(bundled, { products: Object.fromEntries(kept) }), snapshot)
-  if (!validSnapshot(merged, policies)) { log('releases.refresh_invalid', { errors }); return { ok: false, errors } }
   const at = now().toISOString()
-  const statements = [env.DB.prepare('INSERT INTO release_snapshot (id, data, fetched_at, errors) VALUES (1, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET data = excluded.data, fetched_at = excluded.fetched_at, errors = excluded.errors')
-    .bind(JSON.stringify(merged), at, JSON.stringify(errors))]
+  const extra = []
   for (const [repository, { etag, body }] of Object.entries(next)) {
     if (cache[repository]?.etag === etag && cache[repository]?.body === body) continue
-    statements.push(env.DB.prepare('INSERT INTO release_cache (repository, etag, body, fetched_at) VALUES (?, ?, ?, ?) ON CONFLICT(repository) DO UPDATE SET etag = excluded.etag, body = excluded.body, fetched_at = excluded.fetched_at').bind(repository, etag, body, at))
+    extra.push(env.DB.prepare('INSERT INTO release_cache (repository, etag, body, fetched_at) VALUES (?, ?, ?, ?) ON CONFLICT(repository) DO UPDATE SET etag = excluded.etag, body = excluded.body, fetched_at = excluded.fetched_at').bind(repository, etag, body, at))
   }
-  await env.DB.batch(statements)
-  memory = { at: 0, snapshot: null }
+  const result = await storeSnapshot(env, snapshot, errors, { at, source: 'cron', extra })
+  if (!result.ok) { log('releases.refresh_invalid', { errors }); return result }
   for (const e of errors) log('releases.product_failed', e)
-  log('releases.refreshed', { versions: Object.fromEntries(Object.entries(merged.products).map(([k, v]) => [k, v.version])), failed: errors.length })
-  return { ok: true, errors, snapshot: merged }
+  log('releases.refreshed', { versions: versionsOf(result.snapshot), failed: errors.length })
+  return result
+}
+
+// The hourly GitHub Actions job (scripts/push-releases.mjs) resolves the releases with the
+// Actions token and sends the snapshot here, signed like an enquiry is to the Platform:
+// HMAC-SHA256(RELEASES_INGEST_SECRET, "<X-PC-Timestamp>.<body>"), within five minutes.
+export const INGEST_MAX_BYTES = 512 * 1024
+export async function ingestReleases (request, env, { now = () => new Date() } = {}) {
+  if (!env.RELEASES_INGEST_SECRET || !env.DB) return json({ error: 'not_configured' }, 503)
+  const ts = request.headers.get('x-pc-timestamp') || ''
+  const signature = request.headers.get('x-pc-signature') || ''
+  const raw = await readCapped(request, INGEST_MAX_BYTES)
+  if (raw === null) return json({ error: 'too_large' }, 413)
+  if (!/^\d{10}$/.test(ts) || Math.abs(now().getTime() / 1000 - Number(ts)) > 300) return json({ error: 'stale' }, 401)
+  const expected = await platformSignature(env.RELEASES_INGEST_SECRET, ts, raw)
+  if (expected.length !== signature.length || (await sha256(expected)) !== (await sha256(signature))) return json({ error: 'bad_signature' }, 401)
+  let pushed
+  try { pushed = JSON.parse(raw) } catch { return json({ error: 'invalid' }, 400) }
+  const products = pushed?.products && typeof pushed.products === 'object' ? pushed.products : null
+  if (pushed?.schema !== 'releases/1' || !products || !validSnapshot({ schema: 'releases/1', products }, policies)) return json({ error: 'invalid' }, 400)
+  const errors = Array.isArray(pushed.errors) ? pushed.errors.filter(e => e && typeof e.product === 'string').slice(0, 20).map(e => ({ product: e.product, error: String(e.error || '').slice(0, 200) })) : []
+  const result = await storeSnapshot(env, { schema: 'releases/1', generatedAt: pushed.generatedAt || null, products }, errors, { at: now().toISOString(), source: 'push' })
+  if (!result.ok) return json({ error: 'invalid' }, 400)
+  log('releases.pushed', { versions: versionsOf(result.snapshot), failed: errors.length })
+  return json({ stored: true, versions: versionsOf(result.snapshot) })
 }
 // #endregion snapshot
 
@@ -180,6 +225,11 @@ export default {
       const snapshot = await currentSnapshot(env)
       const asset = snapshot.products[download[1]]?.assets?.[download[2]]
       if (asset) return new Response(null, { status: 302, headers: { Location: asset.url, 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' } })
+    }
+
+    if (url.pathname === '/api/releases/ingest') {
+      if (request.method !== 'POST') return json({ error: 'method_not_allowed' }, 405, { Allow: 'POST' })
+      return withHeaders(await ingestReleases(request, env))
     }
 
     if (url.pathname === '/api/releases' || url.pathname === '/api/releases/') {
