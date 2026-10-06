@@ -98,12 +98,14 @@ export function npmEntryFor (key, policy, version, releases = []) {
 }
 
 // Newer wins per product; a live answer never takes a product below the bundled snapshot
-// (a deleted or yanked release must not silently downgrade a download).
-export function mergeSnapshots (bundled, live) {
+// (a deleted or yanked release must not silently downgrade a download) — except the release a
+// policy's `hold` names: holding is how an operator rolls a bad release back on purpose.
+export function mergeSnapshots (bundled, live, policies = {}) {
   const products = { ...(bundled?.products || {}) }
   for (const [key, entry] of Object.entries(live?.products || {})) {
     const floor = products[key]
-    if (!floor || compareVersions(entry.version, floor.version) >= 0) products[key] = entry
+    const held = policies[key]?.hold && entry.tag === policies[key].hold
+    if (!floor || held || compareVersions(entry.version, floor.version) >= 0) products[key] = entry
   }
   const times = [bundled?.generatedAt, live?.generatedAt].filter(Boolean).sort()
   return { schema: 'releases/1', generatedAt: times.at(-1) || null, products }
@@ -122,8 +124,11 @@ export function validSnapshot (snapshot, policies) {
   if (!snapshot || snapshot.schema !== 'releases/1' || typeof snapshot.products !== 'object') return false
   for (const [key, entry] of Object.entries(snapshot.products)) {
     const policy = policies[key]
-    if (!policy || entry.repository !== policy.repository || !parseVersion(entry.version)) return false
+    if (!policy || !entry || entry.repository !== policy.repository || !parseVersion(entry.version)) return false
+    if (!entry || typeof entry !== 'object' || typeof entry.tag !== 'string' || typeof entry.releaseUrl !== 'string') return false
+    if (!entry.releaseUrl.startsWith(`https://github.com/${policy.repository}/`) && !entry.releaseUrl.startsWith('https://www.npmjs.com/')) return false
     for (const [platform, asset] of Object.entries(entry.assets || {})) {
+      if (!asset || typeof asset !== 'object' || typeof asset.url !== 'string' || typeof asset.sha256 !== 'string') return false
       if (!/^[0-9a-f]{64}$/.test(asset.sha256)) return false
       if (!asset.url.startsWith(`https://github.com/${policy.repository}/releases/download/`)) return false
       if (!policy.assets?.[platform]) return false

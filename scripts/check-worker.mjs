@@ -1,6 +1,7 @@
 // The Worker's unit tests: config, canonical host, live downloads, /api/releases, the
 // enquiry intake end to end against a real SQLite with the D1 migrations, delivery and
-// retries. The HTMLRewriter path is exercised for real by scripts/check-local-worker.mjs.
+// retries. The edge HTMLRewriter is replaced by a pass-through here; its rules are tested on the
+// string form (worker/live.js rewriteSource) in scripts/releases.test.mjs.
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
@@ -125,6 +126,23 @@ test('the cron refresh stores the snapshot and ETags, and keeps a product that f
   calls.length = 0
   await refreshReleases(env, { fetch: fetchImpl })
   assert.ok(calls.some(([u, etag]) => u.includes('fabric-switchboard') && etag === '"passioncode-ai/fabric-switchboard"'), 'the second run sends If-None-Match')
+})
+
+test('a cron run where nothing answered keeps the stored snapshot and its time', async () => {
+  const env = baseEnv()
+  const ok = async url => {
+    if (url.includes('registry.npmjs.org')) return new Response(JSON.stringify({ version: url.includes('adapter') ? bundled.products.adapter.version : bundled.products.launcher.version }))
+    const repo = url.match(/repos\/(.+)\/releases/)[1]
+    const entry = Object.values(bundled.products).find(p => p.repository === repo)
+    const assetsList = Object.values(entry.assets).map(a => ({ name: a.name, browser_download_url: a.url, digest: `sha256:${a.sha256}`, state: 'uploaded', size: a.size }))
+    return new Response(JSON.stringify([{ tag_name: entry.tag, prerelease: entry.prerelease, draft: false, published_at: entry.publishedAt, assets: assetsList }]))
+  }
+  await refreshReleases(env, { fetch: ok, now: () => new Date('2026-10-06T00:00:00Z') })
+  const before = await env.DB.prepare('SELECT fetched_at, data FROM release_snapshot WHERE id = 1').first()
+  const result = await refreshReleases(env, { fetch: async () => new Response('rate limited', { status: 403 }), now: () => new Date('2026-10-06T05:00:00Z') })
+  assert.equal(result.ok, false)
+  const after = await env.DB.prepare('SELECT fetched_at, data FROM release_snapshot WHERE id = 1').first()
+  assert.deepEqual(after, before, 'neither the data nor its time moved')
 })
 
 // ---- enquiries -------------------------------------------------------------------------
@@ -438,7 +456,7 @@ test('without a token the cron does not ask GitHub while pushed snapshots are fr
   assert.equal(r.skipped, true)
   assert.equal(asked, 0)
   const later = await refreshReleases(env, { fetch: async () => { asked++; return new Response('x', { status: 403 }) }, now: () => new Date(Date.now() + 3 * 3600e3) })
-  assert.equal(later.ok, true)
+  assert.equal(later.ok, false, 'every product answered 403: nothing is stored as fresh')
   assert.ok(asked > 0, 'a stale push lets the cron try again')
   const withToken = await refreshReleases({ ...env, GITHUB_TOKEN: 't' }, { fetch: async () => new Response('x', { status: 403 }) })
   assert.notEqual(withToken.skipped, true, 'a token makes the cron ask regardless')
@@ -466,4 +484,84 @@ test('the push script signs what it resolved and reports the answer', async () =
   assert.equal(none.ok, false)
   assert.equal(none.reason, 'no product answered')
   await assert.rejects(pushReleases({ url: 'x', fetch: fakeFetch }), /RELEASES_INGEST_SECRET/)
+})
+
+// ---- regressions from the 2026-10-06 review: what the Worker accepts, the Platform must accept --
+
+test('email follows the Platform rule: what the Worker stores, the Platform will take', () => {
+  const context = { newId: () => '00000000-0000-4000-8000-000000000010', now: new Date('2026-10-06T12:00:00Z'), ipHash: 'a'.repeat(64), country: 'PL', userAgent: 'test' }
+  const withEmail = email => { const a = answers(); a.contact.email = email; return buildLead(a, context) }
+  for (const email of ['alex@example.com', "o'brien@example.co", 'first.last+tag@sub.example.org']) assert.equal(withEmail(email).ok, true, email)
+  for (const email of ['josé@acme.com', 'a@acme.c', 'a!b@acme.com', 'a.@acme.com', `${'a'.repeat(65)}@acme.com`]) {
+    assert.ok(withEmail(email).issues.some(i => i.path === 'contact.email'), `${email} refused here, as the Platform would`)
+  }
+})
+
+test('metadata the visitor never typed is cut to size, never fails the request', () => {
+  const context = { newId: () => '00000000-0000-4000-8000-000000000011', now: new Date('2026-10-06T12:00:00Z'), ipHash: 'a'.repeat(64), country: 'PL', userAgent: 'u'.repeat(450), referrer: `https://example.com/${'r'.repeat(600)}` }
+  const a = answers(); a.source = { utm: { content: 'c'.repeat(130), source: 's'.repeat(300) } }
+  const r = buildLead(a, context)
+  assert.equal(r.ok, true, JSON.stringify(r.issues))
+  assert.equal(r.lead.source.utm.content.length, 120)
+  assert.equal(r.lead.source.referrer.length, 500)
+  assert.equal(r.lead.client.userAgent.length, 400)
+  const app = buildLead({ ...answers(), source: { referrer: 'android-app://com.google.android.gm/' } }, context)
+  assert.equal(app.ok, true)
+  assert.equal(app.lead.source.referrer, '', 'only an http(s) referrer is kept (the Platform takes nothing else)')
+  const odd = buildLead({ ...answers(), company: { ...answers().company, name: 'Acme \ud800 Ltd' } }, context)
+  assert.equal(odd.lead.company.name, 'Acme � Ltd', 'a lone surrogate becomes a replacement character, not a Postgres error')
+})
+
+test('a resend through another link is the same request; a conflict lets the next send start fresh', async () => {
+  const env = baseEnv()
+  const id = '66666666-6666-4666-8666-666666666666'
+  const first = await post(env, JSON.stringify({ ...answers(), id, source: { referrer: 'https://a.example/' }, form_token: await oldToken() }))
+  assert.equal(first.status, 201)
+  const again = await post(env, JSON.stringify({ ...answers(), id, source: { referrer: 'https://b.example/' }, form_token: await oldToken() }))
+  assert.equal(again.status, 200, 'a different referrer does not turn a resend into a conflict')
+  const client = readFileSync(new URL('../assets/business.js', import.meta.url), 'utf8')
+  assert.match(client, /response\.status === 409\) \{ try \{ localStorage\.removeItem\(ID_KEY\)/, 'the page drops a conflicting id')
+})
+
+test('the forward is signed at send time; 401/404 are retried, 400/409/422 end it and alert the mailbox', async () => {
+  for (const [status, expected] of [[401, 'retry'], [403, 'retry'], [404, 'retry'], [400, 'failed'], [409, 'failed'], [422, 'failed']]) {
+    const env = baseEnv({ PLATFORM_URL: 'https://api.example.test', PLATFORM_INTAKE_SECRET: 'k' })
+    const id = `77777777-7777-4777-8777-${String(status).padStart(12, '0')}`
+    const realFetch = globalThis.fetch
+    globalThis.fetch = async () => new Response('', { status: 503 })
+    try { await post(env, JSON.stringify({ ...answers(), id, form_token: await oldToken() })) } finally { globalThis.fetch = realFetch }
+    const stale = new Date(Date.now() - 3600e3)
+    let signed
+    const result = await deliver(env, id, { now: stale, clock: () => 1_900_000_000_000, fetch: async (url, init) => { signed = init.headers['X-PC-Timestamp']; return new Response('nope', { status }) } })
+    assert.equal(signed, '1900000000', 'the timestamp is the send time, not the batch start')
+    assert.equal(result.forward, expected, `platform ${status}`)
+    const alerts = env.EMAIL.sent.filter(m => /delivery failed/.test(m.subject))
+    assert.equal(alerts.length, expected === 'failed' ? 1 : 0, `alert on ${status}`)
+    if (alerts.length) assert.deepEqual(alerts[0].to, ['commercial@passioncode.ai'])
+  }
+})
+
+test('giving up after the last attempt alerts the mailbox once', async () => {
+  const env = baseEnv({ PLATFORM_URL: 'https://api.example.test', PLATFORM_INTAKE_SECRET: 'k' })
+  const id = '88888888-8888-4888-8888-888888888888'
+  const realFetch = globalThis.fetch
+  globalThis.fetch = async () => new Response('', { status: 503 })
+  try { await post(env, JSON.stringify({ ...answers(), id, form_token: await oldToken() })) } finally { globalThis.fetch = realFetch }
+  await env.DB.prepare('UPDATE leads SET forward_attempts = 12 WHERE id = ?').bind(id).run()
+  const before = env.EMAIL.sent.length
+  await retryDue(env, { now: new Date(Date.now() + 86400e3) })
+  await retryDue(env, { now: new Date(Date.now() + 2 * 86400e3) })
+  const alerts = env.EMAIL.sent.slice(before).filter(m => /delivery failed: forward/.test(m.subject))
+  assert.equal(alerts.length, 1)
+  assert.match(alerts[0].text, /gave up after 12 attempts/)
+})
+
+test('nothing stays in the buffer past 24 months, whatever its delivery state', async () => {
+  const env = baseEnv()
+  await post(env, JSON.stringify({ ...answers(), id: '99999999-9999-4999-8999-999999999999', form_token: await oldToken() }))
+  await env.DB.prepare("UPDATE leads SET forward_status = 'failed'").run()
+  await retryDue(env, { now: new Date(Date.now() + 700 * 86400e3) })
+  assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 1, 'kept before the ceiling')
+  await retryDue(env, { now: new Date(Date.now() + 731 * 86400e3) })
+  assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 0, 'gone after 24 months')
 })

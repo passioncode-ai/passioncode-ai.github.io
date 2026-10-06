@@ -132,3 +132,26 @@ test('fetchSnapshot uses ETags, keeps a 304 body, and reports a failing product 
   assert.deepEqual(failing.errors, [{ product: 'switchboard', error: 'GitHub 403' }])
   assert.deepEqual(failing.snapshot.products, {})
 })
+
+test('hold rolls a product back below the bundled floor on purpose', () => {
+  const policies = { switchboard: { ...policy, hold: 'v0.6.0' } }
+  assert.equal(mergeSnapshots(snap('0.6.2'), snap('0.6.0'), policies).products.switchboard.version, '0.6.0', 'the held tag wins over a newer floor')
+  assert.equal(mergeSnapshots(snap('0.6.2'), snap('0.5.0'), policies).products.switchboard.version, '0.6.2', 'only the held tag may go below the floor')
+})
+
+test('validation answers false, never throws, on a malformed entry or asset', () => {
+  const policies = { switchboard: policy }
+  const broken = (mutate) => { const s = snap('0.6.0'); mutate(s.products.switchboard); return s }
+  assert.equal(validSnapshot(broken(e => { e.assets.macos = null }), policies), false)
+  assert.equal(validSnapshot(broken(e => { delete e.tag }), policies), false)
+  assert.equal(validSnapshot(broken(e => { e.releaseUrl = 'https://evil.example/x' }), policies), false)
+  assert.equal(validSnapshot({ schema: 'releases/1', products: { switchboard: null } }, policies), false)
+})
+
+test('JSON-LD written into the page cannot close its <script>', () => {
+  const s = snap('0.6.0'); s.products.switchboard.version = '0.6.0'
+  const json = JSON.stringify({ '@type': 'SoftwareApplication', name: 'Fabric Switchboard', softwareVersion: 'x', description: '</script><script>alert(1)</script>' })
+  const out = liveJsonLd(s, 'switchboard', json)
+  assert.ok(!out.includes('<'), out)
+  assert.equal(JSON.parse(out).description, '</script><script>alert(1)</script>', 'still the same data once parsed')
+})

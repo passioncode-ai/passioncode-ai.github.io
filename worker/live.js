@@ -28,7 +28,8 @@ export function liveJsonLd (snapshot, product, json) {
     for (const value of Object.values(node)) if (typeof value === 'object') apply(value)
   }
   apply(data)
-  return JSON.stringify(data, null, 2)
+  // Inserted as raw HTML inside <script>: a "<" in any value must not close the element.
+  return JSON.stringify(data, null, 2).replace(/</g, '\\u003c')
 }
 
 const escapeText = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')

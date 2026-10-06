@@ -10,7 +10,9 @@ Vision: do what you love — agents take the routine. You start from one command
 
 ## Products
 - [Fabric](https://passioncode.ai/fabric/): the CEO AI agent; early preview for macOS on Apple silicon; keeps each project's purpose, board, decisions and releases. Its conversation does not reply yet.
-- [Fabric Switchboard](https://passioncode.ai/switchboard/): local account manager for Claude Code and Codex CLI, macOS and Windows, with an MCP server (`switchboard mcp`).
+- [Coding agents Fabric works with](https://passioncode.ai/fabric/agents/): which agents Fabric connects (Claude Code; Kilo Code and Hermes Agent in development), which run in it, which are planned.
+- [Fabric Switchboard](https://passioncode.ai/switchboard/): local account manager for Claude Code and Codex CLI, macOS and Windows, with an MCP server (`switchboard mcp`); updates itself.
+- [Switchboard agents](https://passioncode.ai/switchboard/agents/): 30 other coding agents (Hermes, Kilo Code, Cline, Goose …) get Switchboard's tools; those that accept a custom endpoint have their API-key accounts switched through it.
 - [Fabric Dashboards](https://passioncode.ai/dashboards/): one window for local agent services that speak fabric-service/0.1; driven over MCP.
 - [Project Observatory](https://passioncode.ai/observatory/): a local dashboard of project activity and findings with evidence; CLI, MCP and dashboard; macOS and Linux.
 - [Fabric Inbox](https://passioncode.ai/inbox/): desktop mail for Gmail and Cloudflare mailboxes with agent reply policies; development preview.

@@ -15,7 +15,8 @@ const description = 'Which coding agents work with Switchboard: tools for every 
 
 // Every anchor must exist: a missing one makes slice() swallow the whole product page.
 const at = (marker) => { const i = product.indexOf(marker); if (i < 0) throw new Error(`switchboard/index.html: anchor not found: ${marker}`); return i }
-let head = product.slice(0, at('<script type="application/ld+json"')) + '</head>\n'
+const ld = { '@context': 'https://schema.org', '@type': 'WebPage', name: 'Switchboard agents', url: 'https://passioncode.ai/switchboard/agents/', description, about: { '@type': 'SoftwareApplication', name: 'Fabric Switchboard', url: 'https://passioncode.ai/switchboard/' }, breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'PassionCode.ai', item: 'https://passioncode.ai/' }, { '@type': 'ListItem', position: 2, name: 'Fabric Switchboard', item: 'https://passioncode.ai/switchboard/' }, { '@type': 'ListItem', position: 3, name: 'Agents', item: 'https://passioncode.ai/switchboard/agents/' }] }, isPartOf: { '@type': 'WebSite', name: 'PassionCode.ai', url: 'https://passioncode.ai/' } }
+let head = product.slice(0, at('<script type="application/ld+json"')) + `  <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>\n</head>\n`
 head = head.replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
   .replace(/(<meta name="description" content=")[^"]*/, `$1${esc(description)}`)
   .replace(/(<meta property="og:description" content=")[^"]*/, `$1${esc(description)}`)

@@ -1,8 +1,8 @@
 // npm run releases:sync [-- --check]
 // Resolves every product in releases/products.json against GitHub and npm, writes
 // releases/current.json and rewrites the `data-live` markers in the pages, so the source
-// equals what the Worker serves. --check changes nothing and exits 1 when anything would
-// change (the nightly drift check). The token, when present, comes from GITHUB_TOKEN or
+// equals what the Worker serves. --check changes nothing and exits 3 when anything would
+// change (the nightly drift check; 2: a product did not answer and kept its last version). The token, when present, comes from GITHUB_TOKEN or
 // `gh auth token` and is held in memory only.
 import { execFileSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -24,7 +24,7 @@ if (!token) {
 
 const { snapshot, errors } = await fetchSnapshot({ policies, fetch, token })
 for (const e of errors) console.error(`WARN: ${e.product}: ${e.error} — keeping ${bundled.products[e.product]?.version ?? 'nothing'}`)
-const merged = mergeSnapshots(bundled, snapshot)
+const merged = mergeSnapshots(bundled, snapshot, policies)
 if (!validSnapshot(merged, policies)) { console.error('FAIL: resolved snapshot does not validate against releases/products.json'); process.exit(1) }
 
 // generatedAt alone never counts as a change.
