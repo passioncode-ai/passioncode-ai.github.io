@@ -122,6 +122,9 @@ const SECURITY_HEADERS = {
   // Two years, subdomains included (api. and wiki. answer over HTTPS); no preload commitment.
   'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'
 }
+const NOT_FOUND_PAGE = /^\/404(?:\.html|\/)?$/
+export const MISSING_PATH = '/__not-found__/'
+
 function withHeaders (response, extra = {}) {
   const out = new Response(response.body, response)
   for (const [k, v] of Object.entries({ ...SECURITY_HEADERS, ...extra })) out.headers.set(k, v)
@@ -262,7 +265,12 @@ export default {
     const ifNoneMatch = conditional.get('if-none-match')
     conditional.delete('if-none-match')
     conditional.delete('if-modified-since')
-    const response = await env.ASSETS.fetch(new Request(request, { headers: conditional }))
+    // The not-found page is a file (404.html), so the assets would serve /404 and /404.html as an
+    // ordinary page with 200; ask for a path that cannot exist instead, which answers 404 with it.
+    const assetRequest = NOT_FOUND_PAGE.test(url.pathname)
+      ? new Request(new URL(MISSING_PATH, url), { method: request.method, headers: conditional })
+      : new Request(request, { headers: conditional })
+    const response = await env.ASSETS.fetch(assetRequest)
     if (!(response.headers.get('content-type') || '').includes('text/html')) {
       const asset = ifNoneMatch ? await env.ASSETS.fetch(request) : response
       // Plain-text assets (llms.txt, robots.txt) carry non-ASCII text: name the charset.

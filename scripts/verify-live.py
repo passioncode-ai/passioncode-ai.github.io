@@ -44,7 +44,10 @@ def fetch(path):
 for file in files:
     relative = file.relative_to(root / 'dist').as_posix()
     path = '/' + (relative[:-10] if relative.endswith('index.html') else relative)
-    status, headers, body = fetch(path)
+    # The not-found page is what an unknown address returns, with 404 (worker/index.js
+    # NOT_FOUND_PAGE); its own address answers the same way, so fetch one that cannot exist.
+    expected_status = 404 if relative == '404.html' else 200
+    status, headers, body = fetch('/__verify-live-missing__/' if relative == '404.html' else path)
     local_bytes = file.read_bytes()
     if path == '/business/':
         # The Worker writes a fresh signed form token into every render (docs/DEPLOYMENT.md
@@ -53,7 +56,7 @@ for file in files:
     local = hashlib.sha256(local_bytes).hexdigest()
     actual = hashlib.sha256(body).hexdigest()
     rows.append({'path': path, 'status': status, 'expectedSha256': local,
-                 'actualSha256': actual, 'pass': status == 200 and local == actual})
+                 'actualSha256': actual, 'pass': status == expected_status and local == actual})
 # Every download route the Worker serves, against the committed release snapshot (the live one is
 # never older: worker/releases.js mergeSnapshots keeps it as the floor).
 snapshot = json.loads((root / 'releases' / 'current.json').read_text())
@@ -66,7 +69,7 @@ for product, platform, expected in routes:
                  'pass': status == 302 and headers.get('location') == expected
                  and headers.get('cache-control') == 'no-store'
                  and headers.get('x-robots-tag') == 'noindex'})
-for path in ('/docs/HANDOFF.md', '/.git/config', '/package.json'):
+for path in ('/docs/HANDOFF.md', '/.git/config', '/package.json', '/404', '/404.html'):
     status, _, _ = fetch(path)
     rows.append({'path': path, 'status': status, 'pass': status == 404})
 result = {'checkedAt': datetime.now(timezone.utc).isoformat(), 'baseUrl': args.base_url,
@@ -75,5 +78,5 @@ result = {'checkedAt': datetime.now(timezone.utc).isoformat(), 'baseUrl': args.b
 output = Path(args.output)
 output.parent.mkdir(parents=True, exist_ok=True)
 output.write_text(json.dumps(result, indent=2) + '\n')
-print(('PASS' if result['pass'] else 'FAIL') + f': {len(files)} assets, {len(routes)} download routes and 3 private-path exclusions; {output}')
+print(('PASS' if result['pass'] else 'FAIL') + f': {len(files)} assets, {len(routes)} download routes and 5 not-found addresses; {output}')
 raise SystemExit(0 if result['pass'] else 1)
