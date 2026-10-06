@@ -121,17 +121,24 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   `hold` tag that freezes it. A release is eligible only when every required asset is attached
   with a SHA-256 digest at the repository's own release path; a half-uploaded release is never
   offered. npm products (launcher, adapter) take the registry's `latest`.
-- The Worker's cron (`*/15 * * * *`) asks GitHub with ETags (an unchanged list costs a 304) and
-  stores the snapshot in D1. A product that fails keeps its last good entry; one that answers is
-  taken as answered, so a release withdrawn on GitHub leaves the site too. Nothing ever goes below
-  `releases/current.json`, the snapshot bundled at build. A `GITHUB_TOKEN` Worker secret is
-  required in production: the Worker's egress addresses are shared, and on 2026-10-05 the
-  anonymous limit answered `403` for every product at the 16:00 UTC run (the site kept the last
-  good snapshot, so Switchboard 0.6.2 was not picked up). Use a fine-grained token with
-  *Public repositories (read-only)* access and no permissions, kept in Project Observatory as
-  `passioncode-ai.github.io/prod/GITHUB_TOKEN` and set with `wrangler secret put GITHUB_TOKEN`
-  from stdin. Failures are visible in D1 `release_snapshot.errors` and as
-  `releases.product_failed` log events.
+- **The hourly push is the main path.** `.github/workflows/releases-push.yml` (minute 7 of every
+  hour) runs `scripts/push-releases.mjs`: it resolves every product with the job's own token —
+  GitHub limits that token per repository, not per shared address — and sends the snapshot to
+  `POST /api/releases/ingest`, signed `X-PC-Signature: v1=HMAC-SHA256(RELEASES_INGEST_SECRET,
+  "<X-PC-Timestamp>.<body>")` within five minutes. The Worker validates it with the same rules as
+  everything else (`validSnapshot`) and stores it in D1 with `source = 'push'`. The secret is
+  kept in Project Observatory (`passioncode-ai.github.io/prod/RELEASES_INGEST_SECRET`) and set
+  twice from stdin: `wrangler secret put RELEASES_INGEST_SECRET` and
+  `gh secret set RELEASES_INGEST_SECRET -R passioncode-ai/passioncode-ai.github.io`.
+- The Worker's own cron (`*/15 * * * *`) is the fallback. Without a `GITHUB_TOKEN` it does not ask
+  GitHub while a pushed snapshot is younger than two hours: its shared egress addresses hit the
+  anonymous limit (2026-10-05 16:00 UTC: `403` for every product). With a `GITHUB_TOKEN` secret
+  (fine-grained, *Public repositories (read-only)*) it asks every run. Either way it uses ETags.
+- In both paths a product that is missing or failed keeps its last good entry; one that answered
+  is taken as answered, so a release withdrawn on GitHub leaves the site too. Nothing ever goes
+  below `releases/current.json`, the snapshot bundled at build. D1 `release_snapshot` holds
+  `fetched_at`, `source` and the per-product `errors`; the log events are `releases.pushed`,
+  `releases.refreshed`, `releases.refresh_skipped` and `releases.product_failed`.
 - Every HTML response passes through `worker/live.js`: an element with `data-live="<product>.<field>"`
   gets that value as text, `data-live-href` sets an `href`, and a `<script type="application/ld+json"
   data-live-ld="<product>">` gets `softwareVersion`. Crawlers and visitors without JavaScript see
