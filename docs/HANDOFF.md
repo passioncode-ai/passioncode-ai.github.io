@@ -20,6 +20,9 @@ Branch `agent/fabric-032-site-20261008`:
 
 Checks: `npm run check` exit 0, `extract-public-copy.py --check` exit 0, `npm run build` exit 0; the old agents page and
 the old privacy notice watched failing the new assertions.
+Merged as PR #66 (`0677deb`, check run 37704096224 green) and deployed from `main` 0677deb: Worker version
+`ebfe7dcf-a294-4a9d-92ff-46cbad27f69a`; `verify-live.py`: PASS — 44 assets, 7 download routes, 5 not-found addresses
+([live.json](evidence/2026-10-08-fabric-032/live.json)); the three live screenshots equal the build byte for byte.
 
 Open: the facts rows of Switchboard (0.6.5), Inbox, Dashboards and Observatory still describe their earlier releases —
 the sync moved their versions only; each product's own release note updates its row. Next task: unchanged — the
