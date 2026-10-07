@@ -102,7 +102,7 @@ Fabric Dashboards shows every local agent service in one window; your agent can 
 
 Download Fabric Dashboards
 
-0.4.1
+0.6.2
 
 ↓
 
