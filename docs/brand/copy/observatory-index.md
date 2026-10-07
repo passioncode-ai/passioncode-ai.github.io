@@ -104,13 +104,13 @@ GET OBSERVATORY
 
 ## Start with your own workspace
 
-Latest release: 0.18.0. No API key is needed for the first local observation. Hand the setup to your coding agent, or run it yourself.
+Latest release: 0.19.1. No API key is needed for the first local observation. Hand the setup to your coding agent, or run it yourself.
 
 01
 
 ### Install the release
 
-Download project_observatory-0.18.0-py3-none-any.whl and SHA256SUMS from release 0.18.0, check them with shasum -a 256 -c SHA256SUMS --ignore-missing, then, in an isolated Python 3.11+ environment with SQLite extension support, pip install --no-deps the wheel and then its [full] extra with -c "$(project-observatory full-path)/requirements-full.lock", the dependency set the release was tested with. On macOS, use Homebrew Python.
+Download project_observatory-0.19.1-py3-none-any.whl and SHA256SUMS from release 0.19.1, check them with shasum -a 256 -c SHA256SUMS --ignore-missing, then, in an isolated Python 3.11+ environment with SQLite extension support, pip install --no-deps the wheel and then its [full] extra with -c "$(project-observatory full-path)/requirements-full.lock", the dependency set the release was tested with. On macOS, use Homebrew Python.
 
 02
 
@@ -142,9 +142,9 @@ All releases
 
 ↗
 
-Mac app: ProjectObservatory-0.18.0-macos.zip, signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same SHA256SUMS.
+Mac app: ProjectObservatory-0.19.1-macos.zip, signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same SHA256SUMS.
 
-The current release, 0.18.0, is under the AGPL, like every release since 0.10.0, the first under the AGPL; 0.9.1 and earlier keep the license they shipped with.
+The current release, 0.19.1, is under the AGPL, like every release since 0.10.0, the first under the AGPL; 0.9.1 and earlier keep the license they shipped with.
 
 Known-value scanning compares selected artifacts with keys already known locally. It cannot find unknown secrets or prove that no copy remains, and a local copy is not evidence that anyone else obtained a key. Live provider rotation and external MCP hosts are outside the offline test suite.
 
