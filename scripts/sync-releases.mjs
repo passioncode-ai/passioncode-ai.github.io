@@ -9,7 +9,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { fetchSnapshot, mergeSnapshots, validSnapshot } from '../worker/releases.js'
 import { rewriteSource } from '../worker/live.js'
-import { PAGES } from './pages.mjs'
+import { PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const check = process.argv.includes('--check')
@@ -70,6 +70,6 @@ for (const key of ['fabric', 'inbox']) {
 const selected = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
 if (selected.tag !== merged.products.switchboard.tag) {
   execFileSync('node', [resolve(root, 'scripts/update-switchboard-release.mjs'), merged.products.switchboard.tag], { stdio: 'inherit' })
-  changed.push('switchboard/release.json', 'switchboard/index.html')
+  changed.push('switchboard/release.json', 'switchboard/index.html', ...TRANSLATED_LOCALES.map(locale => `${locale}/switchboard/index.html`))
 }
 console.log(changed.length ? `UPDATED: ${[...new Set(changed)].join(', ')}` : 'UNCHANGED')

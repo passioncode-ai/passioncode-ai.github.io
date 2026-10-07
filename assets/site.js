@@ -35,8 +35,15 @@ function headerState () {
   update()
 }
 
+// The words the copy buttons add, in the page's language (<html lang>).
+const COPY_TEXT = {
+  en: { copy: 'Copy', copied: 'Copied', manual: 'Select and copy', label: text => `Copy: ${text}` },
+  ru: { copy: 'Копировать', copied: 'Скопировано', manual: 'Выделите и скопируйте', label: text => `Копировать: ${text}` }
+}
+
 function copyButtons () {
   if (!navigator.clipboard) return
+  const t = COPY_TEXT[root.lang === 'ru' ? 'ru' : 'en']
   for (const pre of document.querySelectorAll('pre.copyable, .onboarding-steps pre, .setup-panel pre')) {
     const code = pre.querySelector('code')
     if (!code) continue
@@ -44,16 +51,16 @@ function copyButtons () {
     const button = document.createElement('button')
     button.type = 'button'
     button.className = 'copy-button'
-    button.textContent = 'Copy'
-    button.setAttribute('aria-label', `Copy: ${code.textContent.trim().slice(0, 60)}`)
+    button.textContent = t.copy
+    button.setAttribute('aria-label', t.label(code.textContent.trim().slice(0, 60)))
     button.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(code.textContent.trim())
-        button.textContent = 'Copied'
+        button.textContent = t.copied
       } catch {
-        button.textContent = 'Select and copy'
+        button.textContent = t.manual
       }
-      setTimeout(() => { button.textContent = 'Copy' }, 1800)
+      setTimeout(() => { button.textContent = t.copy }, 1800)
     })
     pre.append(button)
   }

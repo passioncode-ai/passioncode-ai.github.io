@@ -11,6 +11,7 @@
 import { execFileSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { checkSwitchboardPage, checksumAssetName, notarizedFromReceipt, renderSwitchboardPage } from './switchboard-release.mjs'
+import { TRANSLATED_LOCALES } from './pages.mjs'
 
 const tag = process.argv[2]
 if (!/^v\d+\.\d+\.\d+(?:-[\w.]+)?$/.test(tag ?? '')) throw new Error('Usage: node scripts/update-switchboard-release.mjs vX.Y.Z-beta.N')
@@ -92,11 +93,16 @@ if (Object.keys(sha256).length) manifest.sha256 = sha256
 manifest.macosNotarized = macosNotarized
 manifest.launcherPlugin = launcherPlugin
 
-const pagePath = new URL('../switchboard/index.html', import.meta.url)
-const html = renderSwitchboardPage(readFileSync(pagePath, 'utf8'), manifest)
-const problems = checkSwitchboardPage(html, manifest)
-if (problems.length) throw new Error(`Refusing to write an untrue page:\n- ${problems.join('\n- ')}`)
+// The English page and each translated one (ru/switchboard/, scripts/locales.mjs) are rendered
+// from the same manifest, in their own language; nothing is written unless every page is true.
+const pages = [['en', new URL('../switchboard/index.html', import.meta.url)], ...TRANSLATED_LOCALES.map(locale => [locale, new URL(`../${locale}/switchboard/index.html`, import.meta.url)])]
+const rendered = pages.map(([locale, path]) => {
+  const html = renderSwitchboardPage(readFileSync(path, 'utf8'), manifest, locale)
+  const problems = checkSwitchboardPage(html, manifest, locale)
+  if (problems.length) throw new Error(`Refusing to write an untrue page (${locale}):\n- ${problems.join('\n- ')}`)
+  return [path, html]
+})
 writeFileSync(new URL('../switchboard/release.json', import.meta.url), JSON.stringify(manifest, null, 2) + '\n')
-writeFileSync(pagePath, html)
+for (const [path, html] of rendered) writeFileSync(path, html)
 console.log(`Selected public ${release.prerelease ? 'beta' : 'release'} ${tag} (checksums: ${Object.keys(sha256).join(', ') || 'none'}; macOS notarized: ${macosNotarized}; launcher plugin: ${launcherPlugin}).`)
 console.log('Next: review the release notes and platform limits, update docs/brand/facts.md, then npm run check && npm run build.')

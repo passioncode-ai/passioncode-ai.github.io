@@ -5,9 +5,9 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import worker, { currentSnapshot, ingestReleases, MISSING_PATH, refreshReleases } from '../worker/index.js'
+import worker, { currentSnapshot, ingestReleases, MISSING_PATH, refreshReleases, RU_NOT_FOUND } from '../worker/index.js'
 import { pushReleases } from './push-releases.mjs'
-import { buildLead, checkFormToken, deliver, formToObject, issueFormToken, knownFields, platformSignature, RECEIPTS_PER_HOUR, retryDue, storeLead } from '../worker/leads.js'
+import { buildLead, checkFormToken, confirmationText, deliver, formToObject, issueFormToken, issueMessage, knownFields, notificationText, platformSignature, plural, RECEIPTS_PER_HOUR, retryDue, storeLead } from '../worker/leads.js'
 import bundled from '../releases/current.json' with { type: 'json' }
 import { d1 } from './d1-shim.mjs'
 
@@ -17,7 +17,7 @@ const config = JSON.parse(readFileSync(new URL('../wrangler.json', import.meta.u
 globalThis.HTMLRewriter = class { on () { return this } transform (r) { return r } }
 
 const ctx = () => { const waits = []; return { waits, waitUntil: p => waits.push(p), done: () => Promise.all(waits) } }
-const assets = { fetch: async request => new Response(`asset ${new URL(request.url).pathname}`, { status: ['/missing', MISSING_PATH].includes(new URL(request.url).pathname) ? 404 : 200, headers: { 'Content-Type': new URL(request.url).pathname.endsWith('/') ? 'text/html; charset=utf-8' : 'text/plain', ETag: '"asset-1"', ...(request.headers.get('if-none-match') ? { 'X-Saw-Conditional': '1' } : {}) } }) }
+const assets = { fetch: async request => new Response(`asset ${new URL(request.url).pathname}`, { status: ['/missing', '/ru/missing/', MISSING_PATH].includes(new URL(request.url).pathname) ? 404 : 200, headers: { 'Content-Type': new URL(request.url).pathname.endsWith('/') ? 'text/html; charset=utf-8' : 'text/plain', ETag: '"asset-1"', ...(request.headers.get('if-none-match') ? { 'X-Saw-Conditional': '1' } : {}) } }) }
 const mailer = () => { const sent = []; return { sent, send: async m => { sent.push(m); return { messageId: `m${sent.length}` } } } }
 const baseEnv = (extra = {}) => ({ ASSETS: assets, DB: d1(), EMAIL: mailer(), FORM_TOKEN_SECRET: 'form-secret', IP_HASH_SALT: 'salt', LEAD_NOTIFY_TO: 'commercial@passioncode.ai', ...extra })
 
@@ -160,8 +160,8 @@ const answers = () => ({
   consent: { privacy: true, marketing: false }
 })
 const oldToken = async (secret = 'form-secret') => issueFormToken(secret, Date.now() - 60_000)
-const post = async (env, body, { type = 'application/json', c = ctx(), headers = {} } = {}) => {
-  const r = await worker.fetch(new Request('https://passioncode.ai/api/leads', { method: 'POST', headers: { 'content-type': type, 'cf-connecting-ip': '203.0.113.7', origin: 'https://passioncode.ai', ...headers }, body }), env, c)
+const post = async (env, body, { type = 'application/json', c = ctx(), headers = {}, path = '/api/leads' } = {}) => {
+  const r = await worker.fetch(new Request(`https://passioncode.ai${path}`, { method: 'POST', headers: { 'content-type': type, 'cf-connecting-ip': '203.0.113.7', origin: 'https://passioncode.ai', ...headers }, body }), env, c)
   await c.done()
   return r
 }
@@ -633,4 +633,112 @@ test('the not-found page answers 404 at its own addresses too, never 200', async
   }
   const page = await worker.fetch(new Request('https://passioncode.ai/404-list/'), baseEnv(), ctx())
   assert.equal(page.status, 200, 'only the not-found addresses are rewritten')
+})
+
+// ---- the Russian version (/ru/, RM-25): pages, not-found, the form and its mail -----------------
+
+test('an unknown address under /ru/ gets the Russian not-found page, with 404; its own addresses too', async () => {
+  for (const path of ['/ru/missing/', '/ru/404', '/ru/404/', '/ru/404.html']) {
+    const r = await worker.fetch(new Request(`https://passioncode.ai${path}`), baseEnv(), ctx())
+    assert.equal(r.status, 404, path)
+    assert.equal(await r.text(), `asset ${RU_NOT_FOUND}`, `${path} serves ru/404.html`)
+    assert.equal(r.headers.get('strict-transport-security'), 'max-age=63072000; includeSubDomains')
+  }
+  const en = await worker.fetch(new Request('https://passioncode.ai/missing'), baseEnv(), ctx())
+  assert.equal(await en.text(), 'asset /missing', 'an English address keeps the English page')
+  const page = await worker.fetch(new Request('https://passioncode.ai/ru/start/'), baseEnv(), ctx())
+  assert.equal(page.status, 200)
+})
+
+test('the Russian form page gets its own form token, uncached, like the English one', async () => {
+  let seen = false
+  globalThis.HTMLRewriter = class { on (selector) { if (selector.includes('form_token')) seen = true; return this } transform (r) { return r } }
+  try {
+    const r = await worker.fetch(new Request('https://passioncode.ai/ru/business/'), baseEnv(), ctx())
+    assert.equal(r.headers.get('cache-control'), 'no-store')
+    assert.ok(seen, 'the token rewriter runs on /ru/business/')
+  } finally {
+    globalThis.HTMLRewriter = class { on () { return this } transform (r) { return r } }
+  }
+})
+
+const formBody = async () => {
+  const params = new URLSearchParams()
+  const a = answers()
+  for (const g of a.goals) params.append('goals', g)
+  for (const [k, v] of Object.entries(a.company)) params.append(`company.${k}`, v)
+  for (const [k, v] of Object.entries(a.processes)) for (const x of [].concat(v)) params.append(`processes.${k}`, x)
+  for (const [k, v] of Object.entries(a.setup)) for (const x of [].concat(v)) params.append(`setup.${k}`, x)
+  for (const [k, v] of Object.entries(a.budget)) params.append(`budget.${k}`, v)
+  for (const [k, v] of Object.entries(a.contact)) params.append(`contact.${k}`, v)
+  params.append('consent.privacy', 'yes')
+  params.append('form_token', await oldToken())
+  return params.toString()
+}
+
+test('a Russian submission is stored with its language and page, and redirected to the Russian thanks page', async () => {
+  const env = baseEnv()
+  const r = await post(env, await formBody(), { type: 'application/x-www-form-urlencoded', path: '/api/leads?lang=ru' })
+  assert.equal(r.status, 303)
+  assert.match(r.headers.get('location'), /^https:\/\/passioncode.ai\/ru\/business\/thanks\/\?ref=[0-9a-f-]{36}$/)
+  const lead = JSON.parse((await env.DB.prepare('SELECT payload FROM leads').first()).payload)
+  assert.equal(lead.source.locale, 'ru')
+  assert.equal(lead.source.page, '/ru/business/')
+  assert.equal(lead.goals[0], 'automate_operations', 'the values are the same keys in every language')
+  // The receipt is in Russian; the commercial mailbox is told which language to answer in.
+  const receipt = env.EMAIL.sent.find(m => m.to === 'alex@example.com')
+  assert.equal(receipt.subject, 'Мы получили вашу заявку — PassionCode.ai')
+  assert.match(receipt.text, /Спасибо за заявку/)
+  assert.match(receipt.text, /https:\/\/passioncode.ai\/ru\/privacy\//)
+  assert.ok(!/Thank you/.test(receipt.text))
+  const notice = env.EMAIL.sent.find(m => m !== receipt)
+  assert.match(notice.text, /Form language: Russian \(ru\) — reply in Russian · page \/ru\/business\//)
+  const honeypot = await post(baseEnv(), 'pc_hp=bot', { type: 'application/x-www-form-urlencoded', path: '/api/leads?lang=ru' })
+  assert.equal(honeypot.headers.get('location'), 'https://passioncode.ai/ru/business/thanks/')
+})
+
+test('a refused Russian submission is explained in Russian; the error code stays English', async () => {
+  const env = baseEnv()
+  const page = await post(env, 'company.name=&form_token=' + encodeURIComponent(await oldToken()), { type: 'application/x-www-form-urlencoded', path: '/api/leads?lang=ru' })
+  assert.equal(page.status, 400)
+  const html = await page.text()
+  assert.match(html, /<html lang="ru">/)
+  assert.match(html, /Ваша заявка не отправлена/)
+  assert.match(html, /обязательное поле/)
+  assert.match(html, /href="\/ru\/business\/#request">Вернуться к форме/)
+  const scripted = await post(env, JSON.stringify({ ...answers(), contact: { ...answers().contact, email: 'nope' }, form_token: await oldToken() }), { path: '/api/leads?lang=ru' })
+  assert.equal(scripted.status, 400)
+  const body = await scripted.json()
+  assert.equal(body.error, 'invalid')
+  assert.equal(body.message, 'Некоторые ответы нужно проверить.')
+  assert.deepEqual(body.issues, [{ path: 'contact.email', message: 'рабочий адрес почты' }])
+  const unknown = await post(env, JSON.stringify({}), { path: '/api/leads?lang=de' })
+  assert.equal((await unknown.json()).message, 'The form has expired. Reload the page and send it again — your answers are kept in the browser.', 'an unknown language falls back to English')
+})
+
+test('English stays the default: a form without ?lang is English end to end', async () => {
+  const env = baseEnv()
+  const r = await post(env, JSON.stringify({ ...answers(), form_token: await oldToken() }))
+  assert.equal(r.status, 201)
+  const lead = JSON.parse((await env.DB.prepare('SELECT payload FROM leads').first()).payload)
+  assert.equal(lead.source.locale, 'en')
+  assert.equal(lead.source.page, '/business/')
+  assert.equal(env.EMAIL.sent.find(m => m.to === 'alex@example.com').subject, 'We received your request — PassionCode.ai')
+  assert.match(notificationText(lead), /Form language: English \(en\)/)
+  assert.match(confirmationText(lead), /^Hello,/)
+})
+
+test('validation messages translate where they are shown, with Russian plural forms', () => {
+  assert.equal(issueMessage('required', 'en'), 'required')
+  assert.equal(issueMessage('required', 'ru'), 'обязательное поле')
+  assert.equal(issueMessage('at most 1 characters', 'ru'), 'не больше 1 символа')
+  assert.equal(issueMessage('at least 2 characters', 'ru'), 'не меньше 2 символов')
+  assert.equal(issueMessage('at most 200 characters', 'ru'), 'не больше 200 символов')
+  assert.equal(issueMessage('a number from 0 to 10000', 'ru'), 'число от 0 до 10000')
+  assert.equal(issueMessage('something new', 'ru'), 'something new', 'an unknown message is shown as made, never lost')
+  for (const [n, form] of [[1, 'a'], [2, 'b'], [4, 'b'], [5, 'c'], [11, 'c'], [12, 'c'], [14, 'c'], [21, 'a'], [22, 'b'], [25, 'c'], [101, 'a'], [111, 'c']]) assert.equal(plural(n, 'a', 'b', 'c'), form, String(n))
+  // Every message buildLead makes for a bad submission has a Russian form.
+  const { issues } = buildLead({ goals: ['nope'], contact: { email: 'x', name: 'y'.repeat(200) }, company: { website: 'not a url', name: '' }, processes: { hoursPerWeek: 'many', areas: [] }, setup: { mode: 'nope' } }, { newId: () => 'x', now: new Date(), ipHash: '', locale: 'ru' })
+  assert.ok(issues.length >= 6)
+  for (const i of issues) assert.notEqual(issueMessage(i.message, 'ru'), i.message, `no Russian for "${i.message}"`)
 })

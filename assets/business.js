@@ -5,6 +5,47 @@
 // and a JSON submission that stays on the page.
 import { estimate, formatMoney } from './estimate.js'
 
+// What this script says, in the page's language (<html lang>, /ru/business/ is Russian). The form's
+// own labels are in the HTML; these are the words the script adds.
+const TEXT = {
+  en: {
+    estimateEmpty: 'Fill in the hours, the cost and how the work runs today to see the estimate.',
+    estimateLead: 'Agents could take over about',
+    perMonth: 'a month',
+    estimateDetail: (low, high) => `${low}–${high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.`,
+    chooseAny: 'Choose at least one.',
+    chooseOne: 'Choose one.',
+    required: 'Required.',
+    email: 'A work email address.',
+    consent: 'Agree to the privacy notice to send the request.',
+    sending: 'Sending…',
+    doneTitle: 'Thank you — it reached us',
+    doneBody: 'We reply within two business days. A confirmation email usually follows within minutes.',
+    reference: id => `Reference: ${id}`,
+    notSent: 'The request was not sent.',
+    offline: 'The request did not leave your browser — check your connection and send it again. Your answers are kept here.'
+  },
+  ru: {
+    estimateEmpty: 'Укажите часы, стоимость и то, как работа устроена сегодня, — и увидите оценку.',
+    estimateLead: 'Агенты могли бы взять на себя примерно',
+    perMonth: 'в месяц',
+    estimateDetail: (low, high) => `${low}–${high} ч в месяц. Это оценка по формуле выше, а не обещание; реальную цифру измерит пилот.`,
+    chooseAny: 'Выберите хотя бы один вариант.',
+    chooseOne: 'Выберите один вариант.',
+    required: 'Обязательное поле.',
+    email: 'Нужен рабочий адрес почты.',
+    consent: 'Чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности.',
+    sending: 'Отправляем…',
+    doneTitle: 'Спасибо, заявка у нас',
+    doneBody: 'Мы ответим в течение двух рабочих дней. Письмо-подтверждение обычно приходит в течение нескольких минут.',
+    reference: id => `Номер заявки: ${id}`,
+    notSent: 'Заявка не отправлена.',
+    offline: 'Заявка не ушла из браузера — проверьте подключение и отправьте её снова. Ответы сохранены здесь.'
+  }
+}
+const locale = document.documentElement.lang === 'ru' ? 'ru' : 'en'
+const t = TEXT[locale]
+
 const form = document.getElementById('lead-form')
 const DRAFT_KEY = 'passioncode.business.draft.v1'
 const ID_KEY = 'passioncode.business.request-id.v1'
@@ -91,16 +132,16 @@ function renderEstimate () {
   if (!e) {
     const span = document.createElement('span')
     span.className = 'estimate-empty'
-    span.textContent = 'Fill in the hours, the cost and how the work runs today to see the estimate.'
+    span.textContent = t.estimateEmpty
     output.append(span)
     return
   }
   const lead = document.createElement('span')
-  lead.textContent = 'Agents could take over about'
+  lead.textContent = t.estimateLead
   const figure = document.createElement('strong')
-  figure.textContent = `${formatMoney(e.monthlySavings[0], e.currency)}–${formatMoney(e.monthlySavings[1], e.currency)} a month`
+  figure.textContent = `${formatMoney(e.monthlySavings[0], e.currency, locale)}–${formatMoney(e.monthlySavings[1], e.currency, locale)} ${t.perMonth}`
   const detail = document.createElement('small')
-  detail.textContent = `${e.hoursSavedPerMonth[0]}–${e.hoursSavedPerMonth[1]} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.`
+  detail.textContent = t.estimateDetail(e.hoursSavedPerMonth[0], e.hoursSavedPerMonth[1])
   output.append(lead, figure, detail)
 }
 
@@ -138,17 +179,17 @@ function validate (step) {
   const fail = (target, message, focus) => { flag(target, message); first ??= focus || target }
   for (const group of step.querySelectorAll('.choices[role="group"]')) {
     const name = group.querySelector('input')?.name
-    if ((name === 'goals' || name === 'processes.areas') && !group.querySelector('input:checked')) fail(group, 'Choose at least one.', group.querySelector('input'))
+    if ((name === 'goals' || name === 'processes.areas') && !group.querySelector('input:checked')) fail(group, t.chooseAny, group.querySelector('input'))
   }
   for (const group of step.querySelectorAll('.choices[role="radiogroup"]')) {
-    if (group.querySelector('input[required]') && !group.querySelector('input:checked')) fail(group, 'Choose one.', group.querySelector('input'))
+    if (group.querySelector('input[required]') && !group.querySelector('input:checked')) fail(group, t.chooseOne, group.querySelector('input'))
   }
   for (const field of step.querySelectorAll('input[required]:not([type="radio"]):not([type="checkbox"]), select[required]')) {
-    if (!field.value.trim()) fail(field, 'Required.')
-    else if (field.type === 'email' && !field.validity.valid) fail(field, 'A work email address.')
+    if (!field.value.trim()) fail(field, t.required)
+    else if (field.type === 'email' && !field.validity.valid) fail(field, t.email)
   }
   const consent = step.querySelector('[name="consent.privacy"]')
-  if (consent && !consent.checked) fail(consent.closest('.consent'), 'Agree to the privacy notice to send the request.', consent)
+  if (consent && !consent.checked) fail(consent.closest('.consent'), t.consent, consent)
   first?.focus()
   return !first
 }
@@ -176,7 +217,7 @@ form.addEventListener('submit', async event => {
   for (const [i, step] of steps.entries()) if (!validate(step)) { show(i); return }
   submit.disabled = true
   status.className = 'form-status'
-  status.textContent = 'Sending…'
+  status.textContent = t.sending
   try {
     const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...collect(), id: requestId(), form_token: form.elements.form_token.value, pc_hp: form.elements.pc_hp.value }) })
     const body = await response.json().catch(() => ({}))
@@ -185,9 +226,9 @@ form.addEventListener('submit', async event => {
       const done = document.createElement('div')
       done.className = 'request-done'
       done.setAttribute('tabindex', '-1')
-      const h = document.createElement('h3'); h.textContent = 'Thank you — it reached us'
-      const p = document.createElement('p'); p.textContent = 'We reply within two business days. A confirmation email usually follows within minutes.'
-      const ref = document.createElement('p'); ref.className = 'section-note'; ref.textContent = `Reference: ${body.id}`
+      const h = document.createElement('h3'); h.textContent = t.doneTitle
+      const p = document.createElement('p'); p.textContent = t.doneBody
+      const ref = document.createElement('p'); ref.className = 'section-note'; ref.textContent = t.reference(body.id)
       done.append(h, p, ref)
       form.replaceChildren(done)
       done.focus()
@@ -198,10 +239,11 @@ form.addEventListener('submit', async event => {
     if (response.status === 409) { try { localStorage.removeItem(ID_KEY) } catch {} memoryId = undefined }
     const issues = (body.issues || []).map(i => `${i.path}: ${i.message}`).join('; ')
     status.className = 'form-status is-error'
-    status.textContent = `${body.message || 'The request was not sent.'}${issues ? ` (${issues})` : ''}`
+    // The Worker answers in the form's language (/api/leads?lang=…, the form's action).
+    status.textContent = `${body.message || t.notSent}${issues ? ` (${issues})` : ''}`
   } catch {
     status.className = 'form-status is-error'
-    status.textContent = 'The request did not leave your browser — check your connection and send it again. Your answers are kept here.'
+    status.textContent = t.offline
   } finally {
     submit.disabled = false
   }

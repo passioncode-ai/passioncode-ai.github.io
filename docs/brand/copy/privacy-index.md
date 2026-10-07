@@ -20,6 +20,8 @@ For builders
 
 About
 
+Русский
+
 Get the tools
 
 ↓
@@ -29,6 +31,8 @@ PRIVACY NOTICE · VERSION 2026-10-05
 # Privacy notice
 
 passioncode.ai has no analytics, no advertising trackers and no cookies. The only personal data it collects is what you type into the request form on /business/.
+
+This notice is published in English and Russian. If the two versions differ, the English version prevails.
 
 ## Who is responsible
 

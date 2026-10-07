@@ -20,6 +20,8 @@ For builders
 
 About
 
+Русский
+
 Get the tools
 
 ↓

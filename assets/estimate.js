@@ -29,9 +29,10 @@ export function estimate ({ hoursPerWeek, hourlyCost, currentState, currency = '
   return { model: ESTIMATE_MODEL, currency, hoursSavedPerMonth: saved, monthlySavings: money }
 }
 
-export function formatMoney (amount, currency) {
+// Money in the reader's language: $2,150 in English, 2 150 $ in Russian (L10N-05).
+export function formatMoney (amount, currency, locale = 'en') {
   try {
-    return new Intl.NumberFormat('en', { style: 'currency', currency, maximumFractionDigits: 0 }).format(amount)
+    return new Intl.NumberFormat(locale === 'ru' ? 'ru-RU' : 'en', { style: 'currency', currency, maximumFractionDigits: 0 }).format(amount)
   } catch {
     return `${Math.round(amount)} ${currency}`
   }

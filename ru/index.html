@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PassionCode.ai | Рабочее место для ИИ-агентов с открытым исходным кодом</title><meta name="description" content="Соберите своё рабочее место для ИИ-агентов. Fabric, ИИ-агент в роли CEO, ведёт проект; ваш агент для программирования создаёт новых агентов и адаптирует уже существующих; Fabric Dashboards, Switchboard и Project Observatory запускают их и следят за ними. Открытый исходный код, бесплатно.">
+  <link rel="canonical" href="https://passioncode.ai/ru/">
+  <link rel="alternate" hreflang="en" href="https://passioncode.ai/"><link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/"><link rel="alternate" hreflang="x-default" href="https://passioncode.ai/">
+  <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="ru_RU"><meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="PassionCode.ai | Рабочее место для ИИ-агентов с открытым исходным кодом"><meta property="og:description" content="Создайте рабочее место, создавайте агентов, адаптируйте тех, что уже есть. Открытый исходный код под GNU AGPL-3.0, бесплатно.">
+  <meta property="og:url" content="https://passioncode.ai/ru/">
+  <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PassionCode.ai — инструменты для AI-native команд">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PassionCode.ai | Рабочее место для ИИ-агентов с открытым исходным кодом">
+  <meta name="twitter:description" content="Создайте рабочее место, создавайте агентов, адаптируйте тех, что уже есть. Открытый исходный код под GNU AGPL-3.0, бесплатно."><meta name="twitter:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/passioncode-mark.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="/assets/icon-256.png">
+  <link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/assets/site.js"></script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://passioncode.ai/#organization",
+      "name": "PassionCode.ai",
+      "url": "https://passioncode.ai/ru/",
+      "logo": "https://passioncode.ai/assets/icon-1024.png",
+      "description": "Инструменты для AI-native команд: Fabric, ИИ-агент в роли CEO, его инструменты и контракты, которые делают любого агента совместимым с Fabric. Открытый исходный код под GNU AGPL-3.0; доступна коммерческая лицензия.",
+      "sameAs": ["https://github.com/passioncode-ai", "https://x.com/sshlg93"],
+      "contactPoint": [{ "@type": "ContactPoint", "contactType": "sales", "email": "commercial@passioncode.ai", "url": "https://passioncode.ai/ru/business/" }]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://passioncode.ai/#website",
+      "name": "PassionCode.ai",
+      "url": "https://passioncode.ai/ru/",
+      "publisher": { "@id": "https://passioncode.ai/#organization" }
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "PassionCode.ai — это бесплатно?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Все инструменты открыты под GNU AGPL-3.0: их можно бесплатно скачивать, использовать, изучать и менять. Коммерческая лицензия нужна, если вы встраиваете их в закрытый продукт или запускаете изменённую версию как сервис, не публикуя её исходный код." } },
+    { "@type": "Question", "name": "С какими агентами это работает?", "acceptedAnswer": { "@type": "Answer", "text": "С любыми. Сегодня поддерживаются Claude Code и Codex; любой агент, MCP-сервер или консольный инструмент можно сделать сервисом, совместимым с Fabric, с помощью Fabric Agent Adapter." } },
+    { "@type": "Question", "name": "Как превратить существующий проект или агента в агента Fabric?", "acceptedAnswer": { "@type": "Answer", "text": "Установите лаунчер PassionCode.ai (npx @passioncode-ai/passioncode@latest update) и попросите своего агента для программирования адаптировать проект к Fabric. Скил Fabric Agent Adapter оформит его как сервис с контрактом, дашбордом и проверкой соответствия." } },
+    { "@type": "Question", "name": "Может ли PassionCode.ai настроить это для моей компании?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Опишите команду и процессы на passioncode.ai/ru/business/, и мы ответим оценкой и предложением: внедрение вместе с вашей командой или рабочее место, которое мы построим и будем вести за вас." } }
+  ]
+}</script>
+</head>
+<body class="story-site"><a class="skip-link" href="#main">Перейти к содержанию</a>
+<header class="site-header">
+ <a class="brand" href="/ru/" aria-label="PassionCode.ai — главная страница"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a>
+ <nav aria-label="Основная навигация"><a href="/ru/#products">Инструменты</a><a href="/ru/#toolkit">Ваша работа</a><a href="/ru/#extend">Разработчикам</a><a href="/ru/#about">О проекте</a></nav>
+ <div class="header-actions"><a class="lang-switch" href="/" hreflang="en" lang="en">English</a><a class="header-link header-download" href="/ru/#products">Скачать <span aria-hidden="true">↓</span></a></div>
+</header>
+<main id="main">
+<section class="hero home-hero" aria-labelledby="hero-title">
+ <div class="hero-copy">
+  <p class="eyebrow"><span></span> От vibe coding к passion coding</p>
+  <h1 id="hero-title">Операционная система, не привязанная к одному агенту, для <em>AI-native команд</em></h1>
+  <p class="hero-reframe">Рабочее место, где работу делают агенты, а вы видите всё</p>
+  <p class="hero-body">Fabric, наш ИИ-агент в роли CEO, хранит цель, решения и релизы каждого проекта. Ваш агент для программирования создаёт новых агентов и адаптирует тех, что уже есть. С открытым кодом, на ваших машинах и бесплатно</p>
+  <div class="hero-actions"><a class="button button-primary" href="/ru/start/">Начать бесплатно <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/ru/business/">Компаниям <span aria-hidden="true">↗</span></a></div>
+  <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Открытый код под AGPL-3.0 <span>Fabric <span data-live="fabric.version">0.3.1</span> · Switchboard <span data-live="switchboard.version">0.6.8</span> · Dashboards <span data-live="dashboards.version">0.6.2</span> · Observatory <span data-live="observatory.version">0.18.0</span></span></p>
+ </div>
+ <div class="workplace-map" aria-hidden="true">
+  <svg viewBox="0 0 480 480" class="map-lines">
+   <circle class="map-ring" cx="240" cy="240" r="190"/><circle class="map-ring map-ring-inner" cx="240" cy="240" r="128"/>
+   <path class="map-link" d="M240 240 L240 50"/><path class="map-link" d="M240 240 L420 180"/><path class="map-link" d="M240 240 L370 390"/><path class="map-link" d="M240 240 L110 390"/><path class="map-link" d="M240 240 L60 180"/>
+   <circle class="map-pulse" cx="240" cy="240" r="6"/>
+  </svg>
+  <img class="map-core" src="/assets/passioncode-mark.svg" width="150" height="150" alt="">
+  <span class="map-node node-1"><img src="/assets/switchboard-mark.svg" width="44" height="44" alt=""><b>Аккаунты</b></span>
+  <span class="map-node node-2"><img src="/assets/dashboards-mark.svg" width="44" height="44" alt=""><b>Сервисы</b></span>
+  <span class="map-node node-3"><img src="/assets/observatory-mark.svg" width="44" height="44" alt=""><b>Проекты</b></span>
+  <span class="map-node node-4"><img src="/assets/inbox-mark.svg" width="44" height="44" alt=""><b>Почта</b></span>
+  <span class="map-node node-5 node-agent"><i>+</i><b>Ваши агенты</b></span>
+  <span class="map-label">FABRIC · ИИ-АГЕНТ В РОЛИ CEO</span>
+ </div>
+</section>
+
+<section class="section vision" id="vision" aria-labelledby="vision-title">
+ <div class="vision-copy">
+  <p class="section-number">НАШ ВЗГЛЯД</p>
+  <h2 id="vision-title">Делайте то, что любите<br><em>Остальное возьмут агенты</em></h2>
+  <p class="vision-lead">Хватит собирать цепочки инструментов, разбираться, как стыкуется каждая деталь, и делать руками то, что может сделать машина. Начните со слов — «сделай мне то, что нужно» — и пусть рабочее место растёт вместе с вами. Каждый агент снимает с вас ещё одну рутину, и с каждой неделей остаётся больше времени на работу, которая вам по-настоящему нравится.</p>
+  <ul class="vision-principles">
+   <li><strong>Ноль на старте</strong><span>Слова, а не пайплайны. Вы описываете результат, агенты выстраивают шаги.</span></li>
+   <li><strong>Локально и с открытым кодом</strong><span>На ваших машинах, в коде, который может прочитать любой, под GNU AGPL-3.0.</span></li>
+   <li><strong>Безопасно по устройству</strong><span>Вы решаете, что разрешено каждому агенту, и каждое действие оставляет след.</span></li>
+   <li><strong>Устроено по-вашему</strong><span>С нуля и до чего угодно — настраивайте сами или поручите агентам.</span></li>
+   <li><strong>Любой агент</strong><span>Нужна только ваша подписка на Claude Code или Codex; другие агенты, начиная с DeepSeek, — в планах.</span></li>
+  </ul>
+  <p class="section-note">Где мы сегодня: вы начинаете с одной команды и своего агента для программирования. Начинать с разговора с Fabric — это направление, в котором Fabric развивается.</p>
+ </div>
+ <figure class="vision-meter reveal" aria-labelledby="meter-caption">
+  <div class="meter-row"><span class="meter-label">Первая неделя</span><span class="meter-bar"><span class="meter-routine share-78"></span></span></div>
+  <div class="meter-row"><span class="meter-label">Первый месяц</span><span class="meter-bar"><span class="meter-routine share-52"></span></span></div>
+  <div class="meter-row"><span class="meter-label">Первый квартал</span><span class="meter-bar"><span class="meter-routine share-30"></span></span></div>
+  <p class="meter-legend"><span class="legend-routine">рутина</span><span class="legend-creative">ваша работа</span></p>
+  <figcaption id="meter-caption">Иллюстрация направления, а не замер: чем больше рутины берут агенты, тем больше недели остаётся вам</figcaption>
+ </figure>
+</section>
+
+<section class="section onboarding" id="toolkit" aria-labelledby="toolkit-title">
+ <span id="shift" class="legacy-anchor" aria-hidden="true"></span><span id="how" class="legacy-anchor" aria-hidden="true"></span>
+ <div class="section-heading story-heading"><p class="section-number">01 / КАК ЭТО РАБОТАЕТ</p><h2 id="toolkit-title">От пустого Mac<br>до работающих агентов</h2><p>Четыре шага, и каждый полезен сам по себе. Начните с того, что нужно сейчас, и добавляйте остальное, когда этого потребует работа.</p></div>
+ <ol class="onboarding-steps">
+  <li class="reveal"><span class="step-index">01</span><div><h3>Создайте рабочее место</h3><p>Установите скилы для агентов одной командой, затем добавьте Fabric — ИИ-агента в роли CEO, который даёт каждому проекту дом для цели, доски задач, решений и релизов.</p><pre><code>npx @passioncode-ai/passioncode@latest update</code></pre><p class="step-meta">Ранняя предварительная версия Fabric <span data-live="fabric.version">0.3.1</span> для macOS на Apple silicon · лаунчер <span data-live="launcher.version">0.1.29</span></p><a class="text-link" href="/ru/start/">Пошаговое руководство <span aria-hidden="true">→</span></a></div></li>
+  <li class="reveal"><span class="step-index">02</span><div><h3>Создавайте агентов</h3><p>Попросите Claude Code или Codex сделать нужного агента: публикатора релизов, разборщика обращений в поддержку, еженедельный отчёт. Скил Fabric Agent Adapter соберёт его как сервис со своим контрактом, дашбордом и тестами. Fabric будет делать это за вас из разговора; сегодня это делает ваш агент для программирования с тем же скилом.</p><p class="step-prompt"><span>вы</span> Создай агента Fabric, который пишет черновик заметок к релизу по влитым pull request</p></div></li>
+  <li class="reveal"><span class="step-index">03</span><div><h3>Адаптируйте то, что уже есть</h3><p>Агент, MCP-сервер, консольный инструмент или целый проект становится сервисом, совместимым с Fabric, без переписывания. Проверка соответствия покажет, чего не хватает.</p><p class="step-prompt"><span>вы</span> Адаптируй этот репозиторий к Fabric</p><p class="step-meta">Fabric Agent Adapter <span data-live="adapter.version">0.8.0</span> · <a href="https://github.com/passioncode-ai/fabric-agent-contract">Fabric Agent Contract</a></p></div></li>
+  <li class="reveal"><span class="step-index">04</span><div><h3>Запускайте и держите всё на виду</h3><p>Fabric Dashboards показывает все сервисы в одном окне и даёт агентам запускать и останавливать их. Switchboard выбирает аккаунт, на котором работает каждый агент. Project Observatory показывает, что изменилось в каждом проекте, с доказательствами.</p><a class="text-link" href="#products">Выбрать инструменты <span aria-hidden="true">↓</span></a></div></li>
+ </ol>
+ <div class="onboarding-promise reveal"><p><strong>Всё ваше — до последней строчки.</strong> Всё работает на ваших машинах и под вашими аккаунтами. Каждая строка кода открыта на GitHub под GNU AGPL-3.0. Без регистрации, без оплаты, без привязки к одной модели или поставщику.</p></div>
+</section>
+
+<section class="section paths" id="start" aria-labelledby="paths-title">
+ <div class="section-heading story-heading"><p class="section-number">02 / ВЫБЕРИТЕ СВОЙ ПУТЬ</p><h2 id="paths-title">Пользуйтесь, улучшайте<br>или внедрите в компании</h2></div>
+ <div class="path-grid">
+  <article class="path-card reveal"><p class="availability">ДЛЯ СЕБЯ · БЕСПЛАТНО</p><h3>Установите и пользуйтесь</h3><p>Скачайте приложения, установите скилы и создавайте своих агентов. Открытый код, без аккаунта и без оплаты.</p><a class="button button-primary" href="/ru/start/">Начать <span aria-hidden="true">→</span></a></article>
+  <article class="path-card reveal"><p class="availability">УЧАСТИЕ · GITHUB</p><h3>Сделайте лучше</h3><p>У каждого продукта открытый код, трекер задач и команда для тестов. Откройте pull request: мы смотрим каждый, а открывая его, вы соглашаетесь с CLA.</p><a class="button button-secondary" href="/ru/start/#contribute">Как внести вклад <span aria-hidden="true">↗</span></a></article>
+  <article class="path-card path-card-commercial reveal"><p class="availability">КОМПАНИИ · КОММЕРЧЕСКОЕ ИСПОЛЬЗОВАНИЕ</p><h3>ИИ-рабочее место для вашей команды</h3><p>Мы описываем ваши процессы, оцениваем, что могут взять на себя агенты, и настраиваем рабочее место вместе с вами или за вас. Коммерческая лицензия — если она нужна.</p><a class="button button-primary" href="/ru/business/">Оценка и заявка <span aria-hidden="true">→</span></a></article>
+ </div>
+</section>
+
+<section class="section product-directory" id="products" aria-labelledby="products-title">
+ <div class="section-heading"><p class="section-number">03 / ИНСТРУМЕНТЫ</p><h2 id="products-title">Инструменты, которыми можно пользоваться уже сегодня</h2><p>У каждого инструмента свой файл для скачивания и свой релиз; каждый работает сам по себе, а вместе — лучше. Ниже указаны текущие версии.</p></div>
+ <div class="tool-directory">
+  <a class="tool-choice reveal" href="/ru/fabric/"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric</strong><span>ИИ-агент в роли CEO: дом для цели, доски задач, решений и релизов каждого проекта.</span><small>Ранняя предварительная версия <span data-live="fabric.version">0.3.1</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ru/switchboard/"><img src="/assets/switchboard-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Switchboard</strong><span>Выбирайте аккаунт, на котором работает каждый агент, и держите лимиты перед глазами.</span><small>Релиз <span data-live="switchboard.version">0.6.8</span> · macOS + Windows</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ru/dashboards/"><img src="/assets/dashboards-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Dashboards</strong><span>Все локальные сервисы агентов в одном окне — управляете вы или агенты.</span><small>Релиз <span data-live="dashboards.version">0.6.2</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ru/observatory/"><img src="/assets/observatory-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Project Observatory</strong><span>Что изменилось в каждом проекте и что требует внимания — с доказательствами.</span><small>Релиз <span data-live="observatory.version">0.18.0</span> · macOS + Linux</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ru/inbox/"><img src="/assets/inbox-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Inbox</strong><span>Почта Gmail и Cloudflare в одном списке, важное — первым; агенты отвечают по правилам.</span><small>Предварительная версия в разработке <span data-live="inbox.version">0.11.0</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ru/#extend"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Лаунчер PassionCode.ai</strong><span>Одна команда устанавливает скилы, которые учат агентов работать с Fabric.</span><small>CLI <span data-live="launcher.version">0.1.29</span> · Node.js 18+</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+ </div>
+ <p class="section-note">Предварительная версия значит незаконченная: Fabric — в ранней предварительной версии, и его чат пока не отвечает; Fabric Inbox — в предварительной версии в разработке, и ответы с реальной моделью ещё не проверены. На странице каждого продукта требования и ограничения указаны до кнопки скачивания. Версии в машиночитаемом виде: <a href="/api/releases">/api/releases</a>.</p>
+</section>
+
+<section class="section" id="extend" aria-labelledby="extend-title">
+ <div class="section-heading story-heading"><p class="section-number">04 / РАЗРАБОТЧИКАМ</p><h2 id="extend-title">Приходите со своим агентом<br>Стройте свой рабочий процесс</h2><p>Используйте Claude Code, Codex или другого агента, который подходит вашей работе. Установите скилы, подключите отдельные инструменты по MCP или научите свой сервис говорить на открытых контрактах Fabric.</p></div>
+ <div class="extend-grid">
+  <article class="setup-panel reveal" id="launcher"><p class="availability">НАЧНИТЕ СО СКИЛОВ</p><h3>Лаунчер PassionCode.ai</h3><p>Одна команда устанавливает Fabric Agent Adapter, Observatory Log и рабочие правила организации. Приложение Fabric и аккаунт не нужны.</p><pre><code>npx @passioncode-ai/passioncode@latest update</code></pre><p class="section-note">Node.js 18+. После установки перезапустите агента. Автоматические обновления включены по умолчанию, их можно отключить.</p><a class="text-link" href="https://github.com/passioncode-ai/passioncode#quick-start-for-a-new-teammate">Установка и настройка обновлений ↗</a></article>
+  <article class="setup-panel reveal"><p class="availability">СОЗДАЙТЕ СЕРВИС</p><h3>Fabric Agent Adapter</h3><p>Превратите свой проект или агента в сервис, совместимый с Fabric. Наборы и скилы проведут через настройку, проверка соответствия сверит контракт. Совместимый сервис появится в Fabric Dashboards.</p><p>Схемы и протокол — в репозитории <a class="text-link" href="https://github.com/passioncode-ai/fabric-agent-contract">Fabric Agent Contract</a>.</p><a class="text-link" href="https://github.com/passioncode-ai/fabric-agent-adapter#quick-start-for-a-new-teammate">Создать первый сервис ↗</a></article>
+ </div>
+ <div class="source-projects"><article class="reveal"><p class="availability">В РАЗРАБОТКЕ · СБОРКА ИЗ ИСХОДНИКОВ</p><h3>Fabric VR</h3><p>Удалённые интерфейсы Fabric, начиная с Meta Quest. Нужны шлем и сборка из исходников; опубликованного релиза пока нет.</p><a class="text-link" href="https://github.com/passioncode-ai/fabric-vr">Подробнее о Fabric VR ↗</a></article><article class="reveal"><p class="availability">ПРЕ-АЛЬФА · СБОРКА ИЗ ИСХОДНИКОВ</p><h3>Okolos</h3><p>Расширение безопасности для браузера от PassionCode.ai: оно вырезает скрытые инструкции, подброшенные вашему ИИ. Открытый код, который можно собрать; опубликованного релиза пока нет.</p><a class="text-link" href="https://github.com/passioncode-ai/okolos">Подробнее об Okolos ↗</a></article></div>
+</section>
+
+<section class="section business-teaser" id="companies" aria-labelledby="companies-title">
+ <div class="teaser-copy reveal"><p class="section-number">05 / КОМПАНИЯМ</p><h2 id="companies-title">Ваши процессы<br>ведут ваши собственные агенты</h2><p>Мобильный издатель, SaaS-команда, маркетинговое агентство — одно и то же рабочее место подстраивается под работу. Расскажите, как ваша команда работает сегодня, и получите оценку часов, которые могут взять на себя агенты, ещё до того, как кто-то что-то подпишет.</p><a class="button button-primary" href="/ru/business/#request">Оценить экономию <span aria-hidden="true">→</span></a></div>
+ <ul class="teaser-list reveal" aria-label="Типичные процессы">
+  <li><span>Релизы и публикация в сторах</span><small>заметки к релизам, карточки, скриншоты, ответы на отзывы</small></li>
+  <li><span>Маркетинговые креативы и отчёты</span><small>варианты, отчёты по кампаниям, апдейты для клиентов</small></li>
+  <li><span>Поддержка и общие почтовые ящики</span><small>сортировка, черновики ответов, маршрутизация по правилам</small></li>
+  <li><span>Разработка и QA</span><small>ревью, проверки, гейты релиза, доказательства</small></li>
+ </ul>
+</section>
+
+<section class="section" id="source" aria-labelledby="source-title">
+ <span id="open-source" class="legacy-anchor" aria-hidden="true"></span><span id="foundation" class="legacy-anchor" aria-hidden="true"></span><span id="pipeline" class="legacy-anchor" aria-hidden="true"></span>
+ <div class="section-heading story-heading"><p class="section-number">06 / ОТКРЫТЫЙ КОД</p><h2 id="source-title">Пользуйтесь инструментами<br>Читайте исходный код</h2><p>Fabric, Fabric Inbox, Switchboard, Observatory и Fabric Dashboards — открытый код под AGPL-3.0: изучайте его, собирайте из исходников или присылайте исправления. Для использования, которое AGPL не покрывает, доступна коммерческая лицензия.</p></div>
+ <div class="source-grid"><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric"><span class="source-meta">ОТКРЫТЫЙ РЕПОЗИТОРИЙ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric</h3><p>ИИ-агент в роли CEO: десктопное приложение, ядро, решения и порядок выпуска релизов.</p><span class="source-path">github.com/passioncode-ai/fabric</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric-switchboard"><span class="source-meta">ОТКРЫТЫЙ РЕПОЗИТОРИЙ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric Switchboard</h3><p>Десктопное приложение, CLI, инструкции по сборке, задачи и заметки к релизам.</p><span class="source-path">github.com/passioncode-ai/fabric-switchboard</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric-dashboards"><span class="source-meta">ОТКРЫТЫЙ РЕПОЗИТОРИЙ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric Dashboards</h3><p>Приложение для macOS, тесты, ранбук и заметки к релизам с контрольными суммами.</p><span class="source-path">github.com/passioncode-ai/fabric-dashboards</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/project-observatory-dashboard"><span class="source-meta">ОТКРЫТЫЙ РЕПОЗИТОРИЙ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Project Observatory</h3><p>Локальный дашборд, CLI, руководства по установке, тесты и модель безопасности.</p><span class="source-path">github.com/passioncode-ai/project-observatory-dashboard</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric-inbox"><span class="source-meta">ОТКРЫТЫЙ РЕПОЗИТОРИЙ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric Inbox</h3><p>Приложение для Mac, почтовый сервер, инструменты для агентов, тесты и заметки к релизам с контрольными суммами.</p><span class="source-path">github.com/passioncode-ai/fabric-inbox</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric-agent-adapter"><span class="source-meta">ОТКРЫТЫЙ РЕПОЗИТОРИЙ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric Agent Adapter</h3><p>Скилы для агентов, наборы для Python и Node и проверка соответствия.</p><span class="source-path">github.com/passioncode-ai/fabric-agent-adapter</span></a></div>
+ <p class="section-note"><!-- license-history -->Выпущенные версии сохраняют лицензию, с которой вышли: MIT — Switchboard до 0.3.1-beta.1, Observatory до 0.8.1 и Fabric Dashboards 0.1.0; PolyForm Noncommercial или Internal Use — Switchboard 0.4.0-beta.1, Observatory с 0.8.2 по 0.9.1 и Fabric Dashboards 0.2.0 и 0.3.0.<!-- /license-history --> Предварительная версия Fabric 0.2.0 собрана до публикации исходного кода Fabric. Коммерческая лицензия доступна: <a href="/ru/business/">расскажите, как вы будете использовать</a>. <a href="https://github.com/passioncode-ai">PassionCode на GitHub <span aria-hidden="true">↗</span></a></p>
+</section>
+
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+ <div class="section-heading"><p class="section-number">07 / ВОПРОСЫ</p><h2 id="faq-title">О чём спрашивают в первую очередь</h2></div>
+ <details><summary>PassionCode.ai — это бесплатно?</summary><p>Да. Все инструменты открыты под GNU AGPL-3.0: их можно бесплатно скачивать, использовать, изучать и менять. Коммерческая лицензия нужна, если вы встраиваете их в закрытый продукт или запускаете изменённую версию как сервис, не публикуя её исходный код.</p></details>
+ <details><summary>С какими агентами это работает?</summary><p>С любыми. Сегодня поддерживаются Claude Code и Codex; любой агент, MCP-сервер или консольный инструмент можно сделать сервисом, совместимым с Fabric, с помощью Fabric Agent Adapter.</p></details>
+ <details><summary>Как превратить существующий проект или агента в агента Fabric?</summary><p>Установите лаунчер PassionCode.ai (<code>npx @passioncode-ai/passioncode@latest update</code>) и попросите своего агента для программирования адаптировать проект к Fabric. Скил Fabric Agent Adapter оформит его как сервис с контрактом, дашбордом и проверкой соответствия. <a href="/ru/start/#build">Шаги описаны в</a> руководстве.</p></details>
+ <details><summary>Fabric сам создаёт агентов?</summary><p>Пока нет. Fabric — в ранней предварительной версии: он хранит доску задач, решения и релизы каждого проекта, а его чат пока не отвечает. Создание агентов из разговора — направление развития; сегодня это делает ваш агент для программирования со скилом Fabric Agent Adapter.</p></details>
+ <details><summary>Куда уходят мои данные?</summary><p>Туда, где мы их не видим. Приложения и агенты работают на ваших компьютерах и в ваших облачных аккаунтах; ничего не отправляется в PassionCode.ai. Анонимную статистику использования Switchboard можно отключить в окне «О программе».</p></details>
+ <details><summary>Может ли PassionCode.ai настроить это для моей компании?</summary><p>Да. <a href="/ru/business/">Опишите команду и процессы</a> — и мы ответим оценкой и предложением: внедрение вместе с вашей командой или рабочее место, которое мы построим и будем вести за вас.</p></details>
+</section>
+
+<section class="section about-section" id="about" aria-labelledby="about-title"><div><p class="section-number">08 / О ПРОЕКТЕ</p><h2 id="about-title">Создаётся<br>в работе</h2></div><div class="about-copy"><p class="about-lead">Меня зовут Сергей. Я делаю PassionCode для команд, в чьей повседневной работе уже есть ИИ-агенты.</p><p>Отправная точка практическая: сделать так, чтобы окружением было проще управлять, а затем внести больше порядка в то, как делается работа. Switchboard, Observatory и Fabric Dashboards доступны уже сейчас; Fabric, ИИ-агент в роли CEO, в разработке и доступен в ранней предварительной версии.</p><p>Следите за разработкой, решениями и следующими релизами.</p><a class="button button-secondary" href="https://x.com/sshlg93">Читать в Twitter <span aria-hidden="true">↗</span></a><p class="author-signature">Сергей · <a href="https://x.com/sshlg93">@sshlg93</a></p></div></section>
+<section class="closing" aria-labelledby="closing-title"><img src="/assets/passioncode-mark.svg" width="72" height="72" alt=""><p class="section-number">НАЧНИТЕ С ОДНОГО ПОЛЕЗНОГО ИНСТРУМЕНТА</p><h2 id="closing-title">Ваше рабочее место<br>начинается с одной команды</h2><p>Установите скилы, создайте первого агента и добавляйте остальное, когда оно заслужит место в вашей работе.</p><div class="hero-actions closing-actions"><a class="button button-primary" href="/ru/start/">Начать бесплатно <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/ru/business/">Компаниям <span aria-hidden="true">↗</span></a></div></section>
+</main>
+<footer class="story-footer">
+ <div><a class="brand footer-brand" href="/ru/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>От vibe coding к passion coding</p></div>
+ <nav aria-label="Навигация по сайту"><a href="/ru/start/">Начать</a><a href="/ru/business/">Компаниям</a><a href="/ru/switchboard/">Switchboard</a><a href="/ru/observatory/">Observatory</a><a href="/ru/inbox/">Inbox</a><a href="/ru/dashboards/">Dashboards</a><a href="/ru/fabric/">Fabric</a><a href="/ru/#source">GitHub и исходный код</a><a href="/ru/#about">О проекте</a><a href="/ru/design-system/">Дизайн-система</a><a href="/ru/privacy/">Конфиденциальность</a><a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a><a href="https://x.com/sshlg93">Twitter <span aria-hidden="true">↗</span></a></nav>
+</footer>
+</body></html>

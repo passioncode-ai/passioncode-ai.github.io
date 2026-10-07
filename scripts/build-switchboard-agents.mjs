@@ -4,6 +4,7 @@
 //   node scripts/build-switchboard-agents.mjs [--check]
 import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { counterpartRoute } from './locales.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const catalog = JSON.parse(readFileSync(resolve(root, 'switchboard/agents.json'), 'utf8'))
@@ -23,8 +24,10 @@ head = head.replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
   .replace(/(<meta name="twitter:description" content=")[^"]*/, `$1${esc(description)}`)
   .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(title)}`)
   .replace(/(<meta name="twitter:title" content=")[^"]*/, `$1${esc(title)}`)
-  .replace(/https:\/\/passioncode\.ai\/switchboard\/"/g, 'https://passioncode.ai/switchboard/agents/"')
-const header = product.slice(at('<body'), at('<main id="main">'))
+  // Canonical, og:url and both hreflang alternates (English and /ru/) move to this page.
+  .replace(/(https:\/\/passioncode\.ai(?:\/ru)?\/switchboard\/)"/g, '$1agents/"')
+// The language switch leads to this page's Russian version, not Switchboard's.
+const header = product.slice(at('<body'), at('<main id="main">')).replace(/(class="lang-switch" href=")[^"]*/, `$1${counterpartRoute('switchboard/agents/index.html', 'ru')}`)
 const footer = product.slice(at('</main>'))
 
 const rows = catalog.agents.map((a, i) => {

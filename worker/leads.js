@@ -113,8 +113,47 @@ const url = (v, field, issues) => {
   } catch { issues.push({ path: field, message: 'a web address' }); return '' }
 }
 
+// The languages the form is published in (/business/, /ru/business/). The form tells the Worker
+// which one it is (`/api/leads?lang=ru`); anything else is English. The answers' values are the
+// same in every language — only what the visitor reads differs.
+export const LEAD_LOCALES = ['en', 'ru']
+export const leadLocale = value => LEAD_LOCALES.includes(value) ? value : 'en'
+export const formPage = locale => locale === 'en' ? '/business/' : `/${locale}/business/`
+
+// Validation messages are made in English (code and tests compare them) and shown in the
+// visitor's language (fabric-workspace knowledge/localization.md, L10N-04).
+const ISSUE_MESSAGES_RU = [
+  [/^required$/, () => 'обязательное поле'],
+  [/^at least (\d+) characters$/, n => `не меньше ${n} ${plural(n, 'символа', 'символов', 'символов')}`],
+  [/^at most (\d+) characters$/, n => `не больше ${n} ${plural(n, 'символа', 'символов', 'символов')}`],
+  [/^a number from 0 to (\d+)$/, n => `число от 0 до ${n}`],
+  [/^choose one of the listed answers$/, () => 'выберите один из предложенных ответов'],
+  [/^unknown answer$/, () => 'неизвестный ответ'],
+  [/^choose at least one$/, () => 'выберите хотя бы один вариант'],
+  [/^choose at least (\d+)$/, n => `выберите не меньше ${n}`],
+  [/^a web address$/, () => 'адрес сайта'],
+  [/^a work email address$/, () => 'рабочий адрес почты'],
+  [/^agree to the privacy notice to send the request$/, () => 'чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности']
+]
+// Russian has three plural forms (L10N-03): 1 символа, 2 символов… chosen by the number's ending.
+export function plural (n, one, few, many) {
+  const m10 = n % 10
+  const m100 = n % 100
+  if (m10 === 1 && m100 !== 11) return one
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few
+  return many
+}
+export function issueMessage (message, locale) {
+  if (locale !== 'ru') return message
+  for (const [pattern, render] of ISSUE_MESSAGES_RU) {
+    const m = pattern.exec(message)
+    if (m) return render(m[1] === undefined ? undefined : Number(m[1]))
+  }
+  return message
+}
+
 // Returns { ok, lead, issues }. `context` carries what the server knows and the client
-// must not choose: id fallback, time, page, client hashes.
+// must not choose: id fallback, time, page, language, client hashes.
 export function buildLead (input, context) {
   const issues = []
   const i = input && typeof input === 'object' ? input : {}
@@ -132,14 +171,15 @@ export function buildLead (input, context) {
   if (!consentGiven) issues.push({ path: 'consent.privacy', message: 'agree to the privacy notice to send the request' })
 
   const currency = pick(processes.currency || 'USD', LEAD_OPTIONS.currency, 'processes.currency', issues) || 'USD'
+  const locale = leadLocale(context.locale)
   const lead = {
     schema: LEAD_SCHEMA,
     id: typeof i.id === 'string' && UUID.test(i.id) ? i.id : context.newId(),
     submittedAt: context.now.toISOString(),
     source: {
-      page: '/business/',
+      page: formPage(locale),
       referrer: referrer(i.source?.referrer ?? context.referrer ?? ''),
-      locale: 'en',
+      locale,
       utm: Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, str(utm[k], 120, { field: `source.utm.${k}`, issues, truncate: true })]))
     },
     goals: list(i.goals, LEAD_OPTIONS.goals, 'goals', issues, { min: 1 }),
@@ -292,11 +332,37 @@ export function notificationText (lead) {
     lead.contact.message ? `Message:\n${lead.contact.message}` : 'No message.',
     '',
     `Lead ${lead.id} · ${lead.submittedAt} · country ${lead.client.country || '—'} · marketing consent ${lead.consent.marketing ? 'yes' : 'no'}`,
+    // The commercial mailbox reads English; it is told which language to answer in.
+    `Form language: ${lead.source.locale === 'ru' ? 'Russian (ru) — reply in Russian' : 'English (en)'} · page ${lead.source.page}`,
     lead.source.utm.source ? `UTM: ${Object.entries(lead.source.utm).filter(([, v]) => v).map(([k, v]) => `${k}=${v}`).join(' ')}` : null
   ].filter(x => x !== null && x !== undefined && x !== false).join('\n')
 }
 
+// The receipt is written in the language of the form the person filled in.
+export const CONFIRMATION_SUBJECT = { en: 'We received your request — PassionCode.ai', ru: 'Мы получили вашу заявку — PassionCode.ai' }
 export function confirmationText (lead) {
+  if (lead.source?.locale === 'ru') {
+    return [
+      // Как и в английской версии: ни слова из того, что ввёл отправитель.
+      'Здравствуйте!',
+      '',
+      'Спасибо за заявку. Она дошла до PassionCode.ai.',
+      '',
+      'Что будет дальше:',
+      '1. Мы прочитаем то, что вы прислали, и ответим в течение двух рабочих дней — обычно с несколькими вопросами о названных вами процессах.',
+      '2. Если всё сходится, предложим короткий созвон, чтобы описать один процесс и договориться, как его измерять.',
+      '3. Вы получите письменное предложение: что мы настроим, где это будет работать и какая лицензия для этого нужна.',
+      '',
+      'Всё, что делает PassionCode.ai, — открытый код под GNU AGPL-3.0, поэтому начать можно и самостоятельно уже сегодня: https://passioncode.ai/ru/start/',
+      '',
+      'Чтобы что-то добавить, просто ответьте на это письмо.',
+      '',
+      'PassionCode.ai',
+      'https://passioncode.ai/ru/business/',
+      '',
+      `Номер заявки: ${lead.id}. Мы храним заявку только для того, чтобы ответить на неё: https://passioncode.ai/ru/privacy/`
+    ].join('\n')
+  }
   return [
     // No text the sender typed is repeated here: the receipt cannot carry someone else's words.
     'Hello,',
@@ -382,7 +448,7 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
       } else {
         if (!env.EMAIL) throw new Error('no EMAIL binding')
         const text = confirmationText(lead)
-        await env.EMAIL.send({ to: lead.contact.email, from, replyTo: env.LEAD_REPLY_TO || 'commercial@passioncode.ai', subject: 'We received your request — PassionCode.ai', text, html: asHtml(text) })
+        await env.EMAIL.send({ to: lead.contact.email, from, replyTo: env.LEAD_REPLY_TO || 'commercial@passioncode.ai', subject: CONFIRMATION_SUBJECT[leadLocale(lead.source?.locale)], text, html: asHtml(text) })
         await mark(env.DB, id, 'confirm', 'done'); result.confirm = 'done'
       }
     } catch (error) { await mark(env.DB, id, 'confirm', 'pending', error.message); result.confirm = 'retry' }

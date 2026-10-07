@@ -84,7 +84,15 @@ export function releaseFacts (manifest) {
   }
 }
 
-const REGIONS = {
+// The page exists in English and Russian (/ru/switchboard/, scripts/locales.mjs); each region and
+// each sentence the check looks for has a version per language. English is the default.
+export const MIT_HISTORY_BY_LOCALE = {
+  en: MIT_HISTORY,
+  ru: 'Релизы до v0.3.1-beta.1 включительно вышли под MIT и остаются доступны под ней.'
+}
+export const NOT_NOTARIZED_BY_LOCALE = { en: 'Not yet notarized', ru: 'Пока не нотаризовано' }
+
+const REGIONS_EN = {
   'macos-note': f => f.macosNotarized
     ? 'Developer ID signed and notarized by Apple. Open the ZIP, move Fabric Switchboard to Applications and open it from there.'
     : 'Developer ID signed. Not yet notarized by Apple; macOS may block the first launch. Read the installation notes before opening.',
@@ -101,6 +109,33 @@ const REGIONS = {
   agents: f => f.agents ? AGENTS_SECTION(f) : ''
 }
 
+const REGIONS_RU = {
+  'macos-note': f => f.macosNotarized
+    ? 'Подписано Developer ID и нотаризовано Apple. Откройте ZIP, перенесите Fabric Switchboard в «Программы» и запускайте оттуда.'
+    : 'Подписано Developer ID. Пока не нотаризовано Apple, поэтому macOS может заблокировать первый запуск. Прежде чем открывать, прочитайте заметки об установке.',
+  checksums: f => {
+    const rows = [['macos', 'ZIP для macOS'], ['windows', 'ZIP для Windows']].filter(([os]) => f.sha256[os])
+    if (!rows.length) return ''
+    return `<dl class="checksums" aria-label="Контрольные суммы SHA-256">${rows.map(([os, name]) => `<div><dt>${name} · SHA-256</dt><dd><code data-release-sha256="${os}" data-live="switchboard.assets.${os}.sha256">${f.sha256[os]}</code></dd></div>`).join('')}</dl><p class="section-note">Сверьте перед открытием: <code>shasum -a 256</code> в Терминале, <code>Get-FileHash</code> в PowerShell. Другое значение — другой файл; скачайте его заново.</p>`
+  },
+  'license-current': f => f.mit
+    ? 'Это относится и к текущей загрузке.'
+    : f.polyform
+      ? `Текущая загрузка, <span data-release-version data-live="switchboard.version">${f.version}</span>, вышла под PolyForm Noncommercial или Internal Use и сохраняет эту лицензию; следующий релиз — первый под AGPL.`
+      : `Текущая загрузка, <span data-release-version data-live="switchboard.version">${f.version}</span>, выпущена под AGPL. v${LAST_POLYFORM_VERSION} вышла под PolyForm Noncommercial или Internal Use и сохраняет эту лицензию.`,
+  agents: f => f.agents ? AGENTS_SECTION_RU(f) : ''
+}
+const REGIONS_BY_LOCALE = { en: REGIONS_EN, ru: REGIONS_RU }
+
+const AGENTS_SECTION_RU = f => `<section class="section" id="agents" aria-labelledby="agents-title"><div class="section-heading"><p class="section-number">ДЛЯ АГЕНТОВ · НОВОЕ В 0.4</p><h2 id="agents-title">Ваш агент видит<br>свои лимиты</h2><p>В Switchboard есть <code>switchboard mcp</code> — локальный MCP-сервер. Claude Code, Codex или другой MCP-клиент может узнать, сколько использования осталось, и перевести следующий запрос на другой аккаунт. Ни один инструмент не принимает и не возвращает учётные данные.</p></div>
+ <div class="feature-grid">
+ <article><span class="principle-mark">01 / ИСПОЛЬЗОВАНИЕ</span><h3>Узнать остаток</h3><p>Оставшаяся квота по каждому аккаунту и окну — со временем сброса и давностью каждой проверки. Неизвестное использование так и называется неизвестным, а не нулём.</p></article>
+ <article><span class="principle-mark">02 / ПЕРЕКЛЮЧЕНИЕ</span><h3>Переключиться до лимита</h3><p>Агент может выбрать аккаунт для следующего запроса своей сессии — в пределах того же провайдера и пула. Чтобы сменить вход Claude Code для всех сессий на Mac, нужен явный флаг <code>global</code>.</p></article>
+ <article><span class="principle-mark">03 / ПРАВИЛА ПРОЕКТА</span><h3>Правила проекта — по желанию</h3><p>Если хотите, папка проекта будет запускаться на выбранном аккаунте. Правила видны в приложении, их можно приостановить или ограничить сроком, и они никогда не останавливают ротацию.</p></article>
+ </div>
+ <ol class="setup-steps agent-setup"><li><span>01</span><div><h3>Запуск из Switchboard</h3><p>Сессии, запущенные из приложения или CLI, получают инструменты, если CLI <code>switchboard</code> доступен. Изолированные сессии получают инструменты только для чтения. На macOS панель «Агенты» связывает CLI внутри приложения с <code>~/.local/bin</code>.</p></div></li><li><span>02</span><div><h3>Или подключите агента сами</h3><p><code>claude mcp add --scope user switchboard -- switchboard mcp</code><br><code>codex mcp add switchboard -- switchboard mcp</code></p></div></li>${f.launcherPlugin ? '<li><span>03</span><div><h3>Или установите плагин PassionCode</h3><p><code>npx @passioncode-ai/passioncode@latest update</code> устанавливает скилы PassionCode, включая скил Switchboard и его MCP-сервер, для Claude Code и других агентов на этой машине.</p></div></li>' : ''}</ol>
+</section>`
+
 const AGENTS_SECTION = f => `<section class="section" id="agents" aria-labelledby="agents-title"><div class="section-heading"><p class="section-number">FOR AGENTS · NEW IN 0.4</p><h2 id="agents-title">Your agent can see<br>its own limits</h2><p>Switchboard includes <code>switchboard mcp</code>, a local MCP server. Claude Code, Codex or another MCP client can read the usage that’s left and move its next request to another account. No tool accepts or returns a credential.</p></div>
  <div class="feature-grid">
  <article><span class="principle-mark">01 / USAGE</span><h3>Read what’s left</h3><p>Remaining quota for each account and window, with reset times and the age of each check. Unknown usage is reported as unknown, never as zero.</p></article>
@@ -113,8 +148,10 @@ const AGENTS_SECTION = f => `<section class="section" id="agents" aria-labelledb
 const REGION = /(<!-- release:([a-z-]+) -->)([\s\S]*?)(<!-- \/release:\2 -->)/g
 const JSON_LD = /(<script type="application\/ld\+json"(?: data-live-ld="[a-z]+")?>)([\s\S]*?)(<\/script>)/g
 
-export function renderSwitchboardPage (html, manifest) {
+export function renderSwitchboardPage (html, manifest, locale = 'en') {
   const f = releaseFacts(manifest)
+  const REGIONS = REGIONS_BY_LOCALE[locale]
+  if (!REGIONS) throw new Error(`No release regions for locale ${locale}`)
   const seen = new Set()
   let out = html.replace(REGION, (_, open, name, _body, close) => {
     if (!REGIONS[name]) throw new Error(`Unknown release region: ${name}`)
@@ -138,21 +175,22 @@ export function renderSwitchboardPage (html, manifest) {
 }
 
 // Problems with the page for this manifest; an empty list means the page is true.
-export function checkSwitchboardPage (html, manifest) {
+export function checkSwitchboardPage (html, manifest, locale = 'en') {
   const problems = []
   let rendered
   try {
-    rendered = renderSwitchboardPage(html, manifest)
+    rendered = renderSwitchboardPage(html, manifest, locale)
   } catch (error) {
     return [error.message]
   }
   if (rendered !== html) problems.push('page is out of step with switchboard/release.json: run scripts/update-switchboard-release.mjs')
-  if (!html.includes(MIT_HISTORY)) problems.push(`the MIT-history sentence must stay exactly: ${MIT_HISTORY}`)
+  const history = MIT_HISTORY_BY_LOCALE[locale]
+  if (!html.includes(history)) problems.push(`the MIT-history sentence must stay exactly: ${history}`)
   const f = releaseFacts(manifest)
   if (!f.polyform && html.includes(POLYFORM_LICENSE_URLS[0])) problems.push(`${f.version} was not released under PolyForm; its JSON-LD must not name PolyForm`)
   if (!f.mit && html.includes(MIT_LICENSE_URL)) problems.push(`${f.version} is not an MIT release; its JSON-LD must not name MIT`)
   if (!f.agpl && html.includes(AGPL_LICENSE_URL)) problems.push(`${f.version} was released before the AGPL; its JSON-LD must not name the AGPL`)
-  if (f.macosNotarized === html.includes('Not yet notarized')) problems.push('the macOS note does not match the release receipt')
+  if (f.macosNotarized === html.includes(NOT_NOTARIZED_BY_LOCALE[locale])) problems.push('the macOS note does not match the release receipt')
   if (f.agents !== html.includes('id="agents"')) problems.push(`the agent section is shown only from ${AGENTS_SINCE}`)
   return problems
 }

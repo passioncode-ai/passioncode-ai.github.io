@@ -998,6 +998,15 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .fabric-agent-table td a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
 .agents-subheading { font-size: 24px; letter-spacing: -.03em; margin: 56px 0 12px; }
 .agents-text { color: var(--ink-soft); max-width: 760px; line-height: 1.7; margin-bottom: var(--pc-space-5); }
+@media (max-width: 620px) {
  .agents-answer { font-size: 16px; }
  .fabric-agent-table { font-size: 14px; }
  .fabric-agent-table th, .fabric-agent-table td { padding-right: var(--pc-space-3); }
+}
+/* The language switch (English / Русский) sits beside the header's action on every page; it leads
+   to the same page in the other language (docs/ux/screens.md, docs/DEPLOYMENT.md#languages). */
+.header-actions { justify-self: end; display: flex; align-items: center; gap: 22px; }
+.lang-switch { color: var(--ink-soft); font-size: 14px; transition: color 160ms ease; }
+.lang-switch:hover, .lang-switch:focus-visible { color: var(--gold); }
+@media (max-width: 900px) { .story-site .site-header .header-actions { grid-column: 2; grid-row: 1; } }
+@media (max-width: 620px) { .header-actions { gap: 14px; } .lang-switch { font-size: 13px; } }
