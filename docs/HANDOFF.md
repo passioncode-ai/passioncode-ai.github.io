@@ -6,8 +6,20 @@ with 200 and no HSTS, an empty 404, a receipt deferral that spent attempts, an a
 Fixed in branch `agent/site-audit-fixes-20261007`: HTTPS redirect in one hop with `www.`, HSTS and
 the security headers on every response, `404.html`, receipts deferred to the next hour without an
 attempt (dropped after 24 h), `text/plain; charset=utf-8`, the /start/ line names only the launcher.
-Next task: the Russian version (RM-25); the nightly release-drift job re-run now that Actions may
-open pull requests.
+Deployed from `main` 6907d48 (Worker version 479abcf0).
+
+Later the same day: the not-found page answered 200 at `/404` and 307 at `/404.html` (a soft 404,
+and `scripts/verify-live.py` failed on it); the Worker now serves it with 404 there too (PR #62).
+The release-sync pull request (#63) carried no check, because a pull request opened with the
+Actions token starts no workflow; `releases.yml` now dispatches `check.yml` on its branch (PR #64),
+and #63 merged with that check green on its head (run 37549574816). The `pull_request` runs the
+bot's pull request starts wait for approval (`action_required`) and are not the gate. Deployed from
+`main` 7046166, Worker version 7efa1a6b-aa2f-4707-b74d-1b834f5a78a1; `verify-live.py`: PASS — 44
+assets, 7 download routes, 5 not-found addresses.
+
+Next task: the Russian version (RM-25): `/ru/` pages, `hreflang` and sitemap alternates, the
+/business/ form, its receipt email and the Worker's pages, against the glossary in
+fabric-workspace `knowledge/localization.md`.
 
 # Previous handoff — onboarding, commercial intake and always-current versions, 2026-10-05
 
