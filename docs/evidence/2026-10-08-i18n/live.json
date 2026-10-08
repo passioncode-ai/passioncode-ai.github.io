@@ -1,0 +1,660 @@
+{
+  "checkedAt": "2026-10-08T21:08:25.535561+00:00",
+  "baseUrl": "https://passioncode.ai",
+  "sourceCommit": "4d5ca2779edff8e587c3bd37bffdfd9af575892e",
+  "checks": [
+    {
+      "path": "/404.html",
+      "status": 404,
+      "expectedSha256": "d2c0ad7568c9d77aaf4e322ab79213fad9c200cdbe4670414225b63040c409aa",
+      "actualSha256": "d2c0ad7568c9d77aaf4e322ab79213fad9c200cdbe4670414225b63040c409aa",
+      "pass": true,
+      "locale": "en"
+    },
+    {
+      "path": "/assets/business.js",
+      "status": 200,
+      "expectedSha256": "b42acf743babbbf848427edcfa26ad1c10f617eadda17d36811875aaa7e70f0e",
+      "actualSha256": "b42acf743babbbf848427edcfa26ad1c10f617eadda17d36811875aaa7e70f0e",
+      "pass": true
+    },
+    {
+      "path": "/assets/dashboards-mark.svg",
+      "status": 200,
+      "expectedSha256": "1d3788630cbe511cb0d927893ebfd4a3b3944ed9fd5da45a4cec4375837bbd37",
+      "actualSha256": "1d3788630cbe511cb0d927893ebfd4a3b3944ed9fd5da45a4cec4375837bbd37",
+      "pass": true
+    },
+    {
+      "path": "/assets/dashboards-overview.jpg",
+      "status": 200,
+      "expectedSha256": "1be35e473b2916fe72bf8937d24f0de95ed5b7b6c40494f95e24683636675b4c",
+      "actualSha256": "1be35e473b2916fe72bf8937d24f0de95ed5b7b6c40494f95e24683636675b4c",
+      "pass": true
+    },
+    {
+      "path": "/assets/dashboards-service-dashboard.jpg",
+      "status": 200,
+      "expectedSha256": "48ac12f59bad66152df450b1cd4f5ac0bc3ada604222a596be4f634fb3356007",
+      "actualSha256": "48ac12f59bad66152df450b1cd4f5ac0bc3ada604222a596be4f634fb3356007",
+      "pass": true
+    },
+    {
+      "path": "/assets/estimate.js",
+      "status": 200,
+      "expectedSha256": "fde901d9d9ee163a177ba42c3071e643119717d5ed42edb6fecb7aaa7a2335eb",
+      "actualSha256": "fde901d9d9ee163a177ba42c3071e643119717d5ed42edb6fecb7aaa7a2335eb",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-board.jpg",
+      "status": 200,
+      "expectedSha256": "c9e6b3f7af09cfb62f04aee644be5731226d634404bb0cbef82945985c6b158b",
+      "actualSha256": "c9e6b3f7af09cfb62f04aee644be5731226d634404bb0cbef82945985c6b158b",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-home.jpg",
+      "status": 200,
+      "expectedSha256": "9a05abd5f181af79591904ef9a0909a651e198ffc4e2f547fb66059e775e937d",
+      "actualSha256": "9a05abd5f181af79591904ef9a0909a651e198ffc4e2f547fb66059e775e937d",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-releases.jpg",
+      "status": 200,
+      "expectedSha256": "37e23a72507e14e2f1a6e81e0164d42726ef6c423a90700e88f075b8792602de",
+      "actualSha256": "37e23a72507e14e2f1a6e81e0164d42726ef6c423a90700e88f075b8792602de",
+      "pass": true
+    },
+    {
+      "path": "/assets/favicon-64.png",
+      "status": 200,
+      "expectedSha256": "34fb5047708a4381e660da439f06d405af8575b3de5a86cc2e315da95c294ea2",
+      "actualSha256": "34fb5047708a4381e660da439f06d405af8575b3de5a86cc2e315da95c294ea2",
+      "pass": true
+    },
+    {
+      "path": "/assets/i18n.js",
+      "status": 200,
+      "expectedSha256": "a677d692ca1811ebb97059646ba9e92d3a34a90096e21092664ac9471b8a1bf8",
+      "actualSha256": "a677d692ca1811ebb97059646ba9e92d3a34a90096e21092664ac9471b8a1bf8",
+      "pass": true
+    },
+    {
+      "path": "/assets/icon-1024.png",
+      "status": 200,
+      "expectedSha256": "6e753b92ed5b28f5883f1e784350e2bf9b377cd7be1538129a12982ef0df2dfc",
+      "actualSha256": "6e753b92ed5b28f5883f1e784350e2bf9b377cd7be1538129a12982ef0df2dfc",
+      "pass": true
+    },
+    {
+      "path": "/assets/icon-256.png",
+      "status": 200,
+      "expectedSha256": "a8c1265dcd1340109d329ad988ebb7b5aad2d0d5b5bc38f95ad67208899055f6",
+      "actualSha256": "a8c1265dcd1340109d329ad988ebb7b5aad2d0d5b5bc38f95ad67208899055f6",
+      "pass": true
+    },
+    {
+      "path": "/assets/inbox-mark.svg",
+      "status": 200,
+      "expectedSha256": "bc45a70e5b992f0495f3f00db6c729fd440ec9be10b75e7c13f292b1c98237c8",
+      "actualSha256": "bc45a70e5b992f0495f3f00db6c729fd440ec9be10b75e7c13f292b1c98237c8",
+      "pass": true
+    },
+    {
+      "path": "/assets/lead-options.js",
+      "status": 200,
+      "expectedSha256": "dfbab98cb40aac21cf301e79ec23f9a29504b90ba06181877d342838ea2c217c",
+      "actualSha256": "dfbab98cb40aac21cf301e79ec23f9a29504b90ba06181877d342838ea2c217c",
+      "pass": true
+    },
+    {
+      "path": "/assets/messages.js",
+      "status": 200,
+      "expectedSha256": "f285fa72b2768e98f54a5a5b02a134e4f1191ff3408ca0a227a606d18f55f3e2",
+      "actualSha256": "f285fa72b2768e98f54a5a5b02a134e4f1191ff3408ca0a227a606d18f55f3e2",
+      "pass": true
+    },
+    {
+      "path": "/assets/observatory-demo.jpg",
+      "status": 200,
+      "expectedSha256": "83bde9fe12bc387e9eb5c210d2b01de241bd7a4ce4d9c196f67f5b798608fa84",
+      "actualSha256": "83bde9fe12bc387e9eb5c210d2b01de241bd7a4ce4d9c196f67f5b798608fa84",
+      "pass": true
+    },
+    {
+      "path": "/assets/observatory-mark.svg",
+      "status": 200,
+      "expectedSha256": "d239e7c92df588af719630f36e17457f66d40dbec5b04ddbdadeccc622d3040c",
+      "actualSha256": "d239e7c92df588af719630f36e17457f66d40dbec5b04ddbdadeccc622d3040c",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-mark.svg",
+      "status": 200,
+      "expectedSha256": "8b49637faa386ce9658029a142d48e8a8c3ee4ed2d44ccb611cd03051046e1aa",
+      "actualSha256": "8b49637faa386ce9658029a142d48e8a8c3ee4ed2d44ccb611cd03051046e1aa",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.jpg",
+      "status": 200,
+      "expectedSha256": "49357798a821b5b60c26bbe41ac00fd93ab671548398f33c098de9b28c993d23",
+      "actualSha256": "49357798a821b5b60c26bbe41ac00fd93ab671548398f33c098de9b28c993d23",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.png",
+      "status": 200,
+      "expectedSha256": "66f540fdcdaf38d0bf624af39e926a4cccdf5b1977932ca4d3a0c52919a2f00e",
+      "actualSha256": "66f540fdcdaf38d0bf624af39e926a4cccdf5b1977932ca4d3a0c52919a2f00e",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.svg",
+      "status": 200,
+      "expectedSha256": "4e7bb0872785368025b347c897de60a0c3a75287df3d4f05c40de711ee96bdf2",
+      "actualSha256": "4e7bb0872785368025b347c897de60a0c3a75287df3d4f05c40de711ee96bdf2",
+      "pass": true
+    },
+    {
+      "path": "/assets/site.js",
+      "status": 200,
+      "expectedSha256": "c03e3d55d3e114a206d909d1172cf6238a2686ce4e3cc7de06b7156d920aba9e",
+      "actualSha256": "c03e3d55d3e114a206d909d1172cf6238a2686ce4e3cc7de06b7156d920aba9e",
+      "pass": true
+    },
+    {
+      "path": "/assets/switchboard-demo.jpg",
+      "status": 200,
+      "expectedSha256": "78245aa5a0731a8b91329f332c508fc97a63bd1d2f541fb441a96bc97b7b07e6",
+      "actualSha256": "78245aa5a0731a8b91329f332c508fc97a63bd1d2f541fb441a96bc97b7b07e6",
+      "pass": true
+    },
+    {
+      "path": "/assets/switchboard-mark.svg",
+      "status": 200,
+      "expectedSha256": "0aca33c30ea680663e010a468cb575f8f4ac681fc269ceafa99516813c086926",
+      "actualSha256": "0aca33c30ea680663e010a468cb575f8f4ac681fc269ceafa99516813c086926",
+      "pass": true
+    },
+    {
+      "path": "/assets/translate.js",
+      "status": 200,
+      "expectedSha256": "342efe063c0bfaf94b4c99e895606e182bca15e8f47688ba1a11dafa6ef92ca4",
+      "actualSha256": "342efe063c0bfaf94b4c99e895606e182bca15e8f47688ba1a11dafa6ef92ca4",
+      "pass": true
+    },
+    {
+      "path": "/business/",
+      "status": 200,
+      "expectedSha256": "744c678aef146beb4465f2cf88b4efc05501c6564801b5ed649550dc3d3bac1a",
+      "actualSha256": "744c678aef146beb4465f2cf88b4efc05501c6564801b5ed649550dc3d3bac1a",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/business/",
+        "ru https://passioncode.ai/ru/business/",
+        "x-default https://passioncode.ai/business/"
+      ]
+    },
+    {
+      "path": "/business/thanks/",
+      "status": 200,
+      "expectedSha256": "b2a8869cc242f8be7355c477bc53e956874dfbe0ffb096157d0b11c9bcde2c6f",
+      "actualSha256": "b2a8869cc242f8be7355c477bc53e956874dfbe0ffb096157d0b11c9bcde2c6f",
+      "pass": true,
+      "locale": "en"
+    },
+    {
+      "path": "/dashboards/",
+      "status": 200,
+      "expectedSha256": "90826fbef8cdf01940a3889ee787997050e23958924b5538df37d80945b50909",
+      "actualSha256": "90826fbef8cdf01940a3889ee787997050e23958924b5538df37d80945b50909",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/dashboards/",
+        "ru https://passioncode.ai/ru/dashboards/",
+        "x-default https://passioncode.ai/dashboards/"
+      ]
+    },
+    {
+      "path": "/design-system/",
+      "status": 200,
+      "expectedSha256": "b7ac9286099ed46f3d5a27f36f9d3f22ec5745d410b1200ae7ef7316902f5a1c",
+      "actualSha256": "b7ac9286099ed46f3d5a27f36f9d3f22ec5745d410b1200ae7ef7316902f5a1c",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/design-system/",
+        "ru https://passioncode.ai/ru/design-system/",
+        "x-default https://passioncode.ai/design-system/"
+      ]
+    },
+    {
+      "path": "/design-system/tokens.css",
+      "status": 200,
+      "expectedSha256": "e006575d6505ea08c5dac7dcbd8945a695e72522a482d1a8d4f0d53f9e0cc819",
+      "actualSha256": "e006575d6505ea08c5dac7dcbd8945a695e72522a482d1a8d4f0d53f9e0cc819",
+      "pass": true
+    },
+    {
+      "path": "/fabric/agents/",
+      "status": 200,
+      "expectedSha256": "3eab3128495a87bd6ad657b1a4f3348d02fb8a1ea97070d36e24c9b0b68f4759",
+      "actualSha256": "3eab3128495a87bd6ad657b1a4f3348d02fb8a1ea97070d36e24c9b0b68f4759",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/fabric/agents/",
+        "ru https://passioncode.ai/ru/fabric/agents/",
+        "x-default https://passioncode.ai/fabric/agents/"
+      ]
+    },
+    {
+      "path": "/fabric/",
+      "status": 200,
+      "expectedSha256": "b58fddac7416cd751cc0b579fd94ad94889b3c65f0946c7930a646010e19e452",
+      "actualSha256": "b58fddac7416cd751cc0b579fd94ad94889b3c65f0946c7930a646010e19e452",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/fabric/",
+        "ru https://passioncode.ai/ru/fabric/",
+        "x-default https://passioncode.ai/fabric/"
+      ]
+    },
+    {
+      "path": "/fabric/release.json",
+      "status": 200,
+      "expectedSha256": "ec1e38e3049e831d61c6e977dbd40ac62be9d161e772e9c4d5bf341798330312",
+      "actualSha256": "ec1e38e3049e831d61c6e977dbd40ac62be9d161e772e9c4d5bf341798330312",
+      "pass": true
+    },
+    {
+      "path": "/inbox/",
+      "status": 200,
+      "expectedSha256": "bb03b71e9971017b96361880c417b733ce8c2f9e9f908d5eb9377efc0296f81e",
+      "actualSha256": "bb03b71e9971017b96361880c417b733ce8c2f9e9f908d5eb9377efc0296f81e",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/inbox/",
+        "ru https://passioncode.ai/ru/inbox/",
+        "x-default https://passioncode.ai/inbox/"
+      ]
+    },
+    {
+      "path": "/inbox/release.json",
+      "status": 200,
+      "expectedSha256": "3077318fb38ece2aeda0a68152e854eed7a79b0f1e257d8bdc1a3de94cff8793",
+      "actualSha256": "3077318fb38ece2aeda0a68152e854eed7a79b0f1e257d8bdc1a3de94cff8793",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "expectedSha256": "da195b00b50dab08563f794fc6fdca67c9859325a2aea6c68da09c660198e174",
+      "actualSha256": "da195b00b50dab08563f794fc6fdca67c9859325a2aea6c68da09c660198e174",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/",
+        "ru https://passioncode.ai/ru/",
+        "x-default https://passioncode.ai/"
+      ]
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "expectedSha256": "c625a92797154e9fc8c2f00e1faba074d7e65497089eb6b69e2b50b5863e2094",
+      "actualSha256": "c625a92797154e9fc8c2f00e1faba074d7e65497089eb6b69e2b50b5863e2094",
+      "pass": true
+    },
+    {
+      "path": "/observatory/",
+      "status": 200,
+      "expectedSha256": "2c5cec155127ce35f2b23b2599cc564f3961f297a53e27a3dea31c363a388f55",
+      "actualSha256": "2c5cec155127ce35f2b23b2599cc564f3961f297a53e27a3dea31c363a388f55",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/observatory/",
+        "ru https://passioncode.ai/ru/observatory/",
+        "x-default https://passioncode.ai/observatory/"
+      ]
+    },
+    {
+      "path": "/privacy/",
+      "status": 200,
+      "expectedSha256": "b00608c9076b399c87dfee73485eea5862169622544a78d95c65868db06e3c6a",
+      "actualSha256": "b00608c9076b399c87dfee73485eea5862169622544a78d95c65868db06e3c6a",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/privacy/",
+        "ru https://passioncode.ai/ru/privacy/",
+        "x-default https://passioncode.ai/privacy/"
+      ]
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "expectedSha256": "b6b934bb4618e82b922573774e38357069b3b2a38613aae40bc929dd77d813e3",
+      "actualSha256": "b6b934bb4618e82b922573774e38357069b3b2a38613aae40bc929dd77d813e3",
+      "pass": true
+    },
+    {
+      "path": "/ru/404.html",
+      "status": 404,
+      "expectedSha256": "e989d74744c5219d94e075d12120e1026ad5d5abe897657c5405228dbf39f633",
+      "actualSha256": "e989d74744c5219d94e075d12120e1026ad5d5abe897657c5405228dbf39f633",
+      "pass": true,
+      "locale": "ru"
+    },
+    {
+      "path": "/ru/business/",
+      "status": 200,
+      "expectedSha256": "bb0fcf2e4a81ec2b40c571dcd4063749e0abb3a893246cd7226448eda72d8d5b",
+      "actualSha256": "bb0fcf2e4a81ec2b40c571dcd4063749e0abb3a893246cd7226448eda72d8d5b",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/business/",
+        "ru https://passioncode.ai/ru/business/",
+        "x-default https://passioncode.ai/business/"
+      ]
+    },
+    {
+      "path": "/ru/business/thanks/",
+      "status": 200,
+      "expectedSha256": "b9c482878c79c5ecd7d62233bb6fb8a6dcade1fdcfe3b6f8f2118429d603d716",
+      "actualSha256": "b9c482878c79c5ecd7d62233bb6fb8a6dcade1fdcfe3b6f8f2118429d603d716",
+      "pass": true,
+      "locale": "ru"
+    },
+    {
+      "path": "/ru/dashboards/",
+      "status": 200,
+      "expectedSha256": "cbececbcdeb348a6cc6fb672b0d34c85998f23b688aa09b90dd0748c96129653",
+      "actualSha256": "cbececbcdeb348a6cc6fb672b0d34c85998f23b688aa09b90dd0748c96129653",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/dashboards/",
+        "ru https://passioncode.ai/ru/dashboards/",
+        "x-default https://passioncode.ai/dashboards/"
+      ]
+    },
+    {
+      "path": "/ru/design-system/",
+      "status": 200,
+      "expectedSha256": "228651fd3f202214d012fc000de5cadf4b28e68f52665c2d6165212bb6cc48e0",
+      "actualSha256": "228651fd3f202214d012fc000de5cadf4b28e68f52665c2d6165212bb6cc48e0",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/design-system/",
+        "ru https://passioncode.ai/ru/design-system/",
+        "x-default https://passioncode.ai/design-system/"
+      ]
+    },
+    {
+      "path": "/ru/fabric/agents/",
+      "status": 200,
+      "expectedSha256": "939b14da83a5d9d6d5c72ae03a87e5abce768bde0597fdd23a10ea62b6c0522a",
+      "actualSha256": "939b14da83a5d9d6d5c72ae03a87e5abce768bde0597fdd23a10ea62b6c0522a",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/fabric/agents/",
+        "ru https://passioncode.ai/ru/fabric/agents/",
+        "x-default https://passioncode.ai/fabric/agents/"
+      ]
+    },
+    {
+      "path": "/ru/fabric/",
+      "status": 200,
+      "expectedSha256": "15733233ca20ac448e0fb510fe03f7656f602f5dcdd19f480cc3bc5b9c6e14e8",
+      "actualSha256": "15733233ca20ac448e0fb510fe03f7656f602f5dcdd19f480cc3bc5b9c6e14e8",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/fabric/",
+        "ru https://passioncode.ai/ru/fabric/",
+        "x-default https://passioncode.ai/fabric/"
+      ]
+    },
+    {
+      "path": "/ru/inbox/",
+      "status": 200,
+      "expectedSha256": "c69e4b3af88e80fb9c3d1e53350fa693a1a340ce9696dd4ff20fd0950fb78409",
+      "actualSha256": "c69e4b3af88e80fb9c3d1e53350fa693a1a340ce9696dd4ff20fd0950fb78409",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/inbox/",
+        "ru https://passioncode.ai/ru/inbox/",
+        "x-default https://passioncode.ai/inbox/"
+      ]
+    },
+    {
+      "path": "/ru/",
+      "status": 200,
+      "expectedSha256": "d8a8ee23edacd636c0c9edd44b7e8a6087b15eec4bcc37e511096b04b934912d",
+      "actualSha256": "d8a8ee23edacd636c0c9edd44b7e8a6087b15eec4bcc37e511096b04b934912d",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/",
+        "ru https://passioncode.ai/ru/",
+        "x-default https://passioncode.ai/"
+      ]
+    },
+    {
+      "path": "/ru/observatory/",
+      "status": 200,
+      "expectedSha256": "98df31b8c02c6898928fc75fdbe9a2b16e064efcc37870457a15fee741c17ab3",
+      "actualSha256": "98df31b8c02c6898928fc75fdbe9a2b16e064efcc37870457a15fee741c17ab3",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/observatory/",
+        "ru https://passioncode.ai/ru/observatory/",
+        "x-default https://passioncode.ai/observatory/"
+      ]
+    },
+    {
+      "path": "/ru/privacy/",
+      "status": 200,
+      "expectedSha256": "d01a10125390273d574166deb1536950a6f80fc8ff45da17fc8ec29568f5c3e6",
+      "actualSha256": "d01a10125390273d574166deb1536950a6f80fc8ff45da17fc8ec29568f5c3e6",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/privacy/",
+        "ru https://passioncode.ai/ru/privacy/",
+        "x-default https://passioncode.ai/privacy/"
+      ]
+    },
+    {
+      "path": "/ru/start/",
+      "status": 200,
+      "expectedSha256": "bb03c90c4406f3e33c7a9899fb6691c853983c6f89e6777717ee2640410d8882",
+      "actualSha256": "bb03c90c4406f3e33c7a9899fb6691c853983c6f89e6777717ee2640410d8882",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/start/",
+        "ru https://passioncode.ai/ru/start/",
+        "x-default https://passioncode.ai/start/"
+      ]
+    },
+    {
+      "path": "/ru/switchboard/agents/",
+      "status": 200,
+      "expectedSha256": "71296c60ce54066865393b9942939582ea90013b517eabab610df54b4bd600d1",
+      "actualSha256": "71296c60ce54066865393b9942939582ea90013b517eabab610df54b4bd600d1",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/switchboard/agents/",
+        "ru https://passioncode.ai/ru/switchboard/agents/",
+        "x-default https://passioncode.ai/switchboard/agents/"
+      ]
+    },
+    {
+      "path": "/ru/switchboard/",
+      "status": 200,
+      "expectedSha256": "6150194de0df93578232a69f2845bc566a8f00e874292bab2d2a1cf47c91b899",
+      "actualSha256": "6150194de0df93578232a69f2845bc566a8f00e874292bab2d2a1cf47c91b899",
+      "pass": true,
+      "locale": "ru",
+      "hreflang": [
+        "en https://passioncode.ai/switchboard/",
+        "ru https://passioncode.ai/ru/switchboard/",
+        "x-default https://passioncode.ai/switchboard/"
+      ]
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "expectedSha256": "4485202d8b2a0daedcf151f01edd5626a4b44a0f37e14ac9c20b5ed436967bf9",
+      "actualSha256": "4485202d8b2a0daedcf151f01edd5626a4b44a0f37e14ac9c20b5ed436967bf9",
+      "pass": true
+    },
+    {
+      "path": "/start/",
+      "status": 200,
+      "expectedSha256": "da3b4630ff7846f9e1f653687a1f81ba14f9de44779ebb0c906ebc65cd68665e",
+      "actualSha256": "da3b4630ff7846f9e1f653687a1f81ba14f9de44779ebb0c906ebc65cd68665e",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/start/",
+        "ru https://passioncode.ai/ru/start/",
+        "x-default https://passioncode.ai/start/"
+      ]
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "expectedSha256": "dfc6d8ba25d27df15d590d53fbe9ad6990ca74633d038e442b313ec6bfd7d8c9",
+      "actualSha256": "dfc6d8ba25d27df15d590d53fbe9ad6990ca74633d038e442b313ec6bfd7d8c9",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/agents/",
+      "status": 200,
+      "expectedSha256": "1d3bf9e18cd9e81502ac1f619616802814757268a19c148429771095892b1b65",
+      "actualSha256": "1d3bf9e18cd9e81502ac1f619616802814757268a19c148429771095892b1b65",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/switchboard/agents/",
+        "ru https://passioncode.ai/ru/switchboard/agents/",
+        "x-default https://passioncode.ai/switchboard/agents/"
+      ]
+    },
+    {
+      "path": "/switchboard/",
+      "status": 200,
+      "expectedSha256": "42cc378a1b2ccb8575b88405e76121ff6fa874e1335c65f0e9c953f57cd8bb40",
+      "actualSha256": "42cc378a1b2ccb8575b88405e76121ff6fa874e1335c65f0e9c953f57cd8bb40",
+      "pass": true,
+      "locale": "en",
+      "hreflang": [
+        "en https://passioncode.ai/switchboard/",
+        "ru https://passioncode.ai/ru/switchboard/",
+        "x-default https://passioncode.ai/switchboard/"
+      ]
+    },
+    {
+      "path": "/switchboard/release.json",
+      "status": 200,
+      "expectedSha256": "70e6cd5aea443b64b19cb9856d52ebbf0109d687938cbd23ad0d966c379e3509",
+      "actualSha256": "70e6cd5aea443b64b19cb9856d52ebbf0109d687938cbd23ad0d966c379e3509",
+      "pass": true
+    },
+    {
+      "path": "/fabric/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric/releases/download/v0.3.2/Fabric-0.3.2-arm64.dmg",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.14/Fabric-Switchboard-0.6.14-macos-universal.zip",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/download/windows",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.14/Fabric-Switchboard-0.6.14-windows-x64.zip",
+      "pass": true
+    },
+    {
+      "path": "/inbox/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.12.0/Fabric-Inbox-0.12.0.dmg",
+      "pass": true
+    },
+    {
+      "path": "/dashboards/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.6.5/Fabric-Dashboards-0.6.5.dmg",
+      "pass": true
+    },
+    {
+      "path": "/observatory/download/wheel",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.19.4/project_observatory-0.19.4-py3-none-any.whl",
+      "pass": true
+    },
+    {
+      "path": "/observatory/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.19.4/ProjectObservatory-0.19.4-macos.zip",
+      "pass": true
+    },
+    {
+      "path": "/docs/HANDOFF.md",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/package.json",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/404",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/404.html",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/ru/404",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/ru/404.html",
+      "status": 404,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

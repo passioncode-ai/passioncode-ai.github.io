@@ -26,9 +26,21 @@ builds, passes `check-site.mjs` and the Worker tests), `npm run build` exit 0 (6
 `/ru/nope/` 404 in Russian, a refused `/api/leads?lang=ru` in Russian; browser check of `/ru/`, `/ru/business/`
 (the estimate in `ru-RU` money) and `/ru/start/` (copy buttons) with no console errors.
 
-Open: SITE-020 (home agent claims vs `/fabric/agents/`), SITE-021 (the Russian hero is six lines on desktop),
-fabric-workspace `knowledge/localization.md` row for passioncode.ai. Next task: the production receipt for
-this change (merge, deploy, `verify-live.py`), then SITE-020.
+Production receipt: merged as PR #68 (`667044c`, check run 37844074233 green) and deployed from `main`
+(Worker version `9ee1a1d2-8b49-48db-ab1a-7927874b7ccb`); `verify-live.py` then failed only on release drift
+(Switchboard 0.6.14, Dashboards 0.6.5, Observatory 0.19.4, launcher 0.1.31, adapter 0.8.1 published since the
+last sync), so `releases.yml` was dispatched (run 37844360326): its sync updated Switchboard through
+`update-switchboard-release.mjs`, which regenerated `/ru/switchboard/` — the first real run of the language
+regeneration — and opened PR #69, merged as `4d5ca27` with the dispatched check green (run 37844414981).
+Deployed from `main` `4d5ca27`: Worker version `ff200b47-7bdd-41f6-bd33-3fe101474c52`; `verify-live.py`: PASS —
+61 assets (28 pages: en 14, ru 14; hreflang on 24), 7 download routes and 7 not-found addresses
+([live.json](evidence/2026-10-08-i18n/live.json)). Live smoke: `POST /api/leads?lang=ru` with an empty body
+answers `form_expired` with the Russian message; `/ru/business/` carries a fresh form token;
+`/ru/does-not-exist/` answers 404.
+
+Open: SITE-020 (home agent claims vs `/fabric/agents/`), SITE-021 (the Russian hero is six lines on desktop);
+the facts rows of Switchboard, Dashboards and Observatory still describe earlier releases (unchanged since the
+previous handoff). Next task: SITE-020.
 
 # Previous handoff — Fabric 0.3.2 on the site, 2026-10-08
 
