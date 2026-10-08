@@ -64,7 +64,7 @@ The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observator
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.1.29 · it installs the family members at the versions it pins · restart your agent afterwards. Automatic updates are on by default; turn them off if you prefer.
+Launcher 0.1.30 · it installs the family members at the versions it pins · restart your agent afterwards. Automatic updates are on by default; turn them off if you prefer.
 
 02
 
@@ -74,7 +74,7 @@ Fabric is the CEO AI agent: each project gets a home for its purpose, board, dec
 
 Download Fabric
 
-0.3.1
+0.3.2
 
 for macOS
 
@@ -82,7 +82,7 @@ for macOS
 
 Requirements and limits
 
-Apple silicon · signed and notarized · SHA-256 3f522f650c69481a6b8e3b2c74a7daa425cdbffded66ece037ba96c1c6f0aa60 · release notes
+Apple silicon · signed and notarized · SHA-256 db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b · release notes
 
 03
 
@@ -104,7 +104,7 @@ Fabric Dashboards shows every local agent service in one window; your agent can 
 
 Download Fabric Dashboards
 
-0.6.2
+0.6.4
 
 ↓
 

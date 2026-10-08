@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Coding agents Fabric works with | Fabric | PassionCode.ai
 
-As of 5 October 2026, Fabric connects Claude Code in its released app, Kilo Code and Hermes Agent are connected in development, Codex runs in Fabric without its tools, and Cline is next on the plan.
+As of 8 October 2026, Fabric 0.3.2 connects Claude Code, Kilo Code and Hermes Agent, Codex and Cline run in Fabric without its tools, and five more agents are next on the plan.
 
 Skip to content
 
@@ -34,9 +34,9 @@ FABRIC · SUPPORTED CODING AGENTS
 
 Which agents Fabric can start in your project, which of them get Fabric’s own tools, and which come next
 
-As of 5 October 2026 · the released app is Fabric 0.3
+As of 8 October 2026 · the released app is Fabric 0.3.2
 
-In the released app, Fabric connects Claude Code: it starts the agent in a project’s terminal and gives it Fabric’s tools for that session. Kilo Code and Hermes Agent are connected in development and ship with the next release. Codex runs in Fabric but does not have Fabric’s tools yet. Cline is first among the planned agents, then the rest listed below. Fabric Switchboard switches subscription accounts for Claude Code and Codex, and API-key accounts for the other agents through Switchboard.
+In the released app, Fabric connects Claude Code, Kilo Code and Hermes Agent: it starts the agent in a project’s terminal and gives it Fabric’s tools for that session. Codex and Cline run in Fabric but do not have Fabric’s tools yet. Five more agents come next on the plan, then the rest listed below. Fabric Switchboard switches subscription accounts for Claude Code and Codex, and API-key accounts for the other agents through Switchboard.
 
 01 / WHAT “WORKS WITH” MEANS
 
@@ -70,9 +70,9 @@ We intend to connect the agent. The plan below gives an order, not dates.
 
 ## Fabric’s tools for the session
 
-Claude Code in the released app; Kilo Code and Hermes Agent in development.
+Claude Code, Kilo Code and Hermes Agent, all three in the released app.
 
-Connected agents, as of 5 October 2026
+Connected agents, as of 8 October 2026
 
 Agent
 
@@ -90,13 +90,13 @@ Kilo Code
 
 kilo.ai
 
-In development, ships with the next release
+Released, in Fabric 0.3.2
 
 Hermes Agent
 
 hermes-agent.nousresearch.com
 
-In development, ships with the next release
+Released, in Fabric 0.3.2
 
 Kilo Code takes its session settings from its KILO_CONFIG_CONTENT variable, and a project’s own kilo.json cannot override them. We verified this on Kilo 7.4.17 on 5 October 2026. Hermes Agent connects over the open Agent Client Protocol: Fabric opens its session and hands it Fabric’s tools through a local bridge, verified on Hermes 0.21.4 the same day. Hermes needs a model chosen in its own setup before it can answer.
 
@@ -108,7 +108,7 @@ Kilo Code takes its session settings from its KILO_CONFIG_CONTENT variable, and 
 
 Fabric starts the agent in the project folder. It works there without Fabric’s tools.
 
-Agents that run in Fabric, as of 5 October 2026
+Agents that run in Fabric, as of 8 October 2026
 
 Agent
 
@@ -122,15 +122,21 @@ github.com/openai/codex
 
 Runs in the project folder, no Fabric tools yet
 
+Cline
+
+cline.bot
+
+Released, in Fabric 0.3.2; asks before each tool, no Fabric tools yet
+
 04 / PLANNED
 
 ## Planned
 
 ## In this order
 
-Cline comes first. Five more follow as a group, and the last nine we take case by case. None of them has Fabric’s tools yet.
+Five come next as a group, and the last nine we take case by case. None of them has Fabric’s tools yet.
 
-Planned coding agents, in order, as of 5 October 2026
+Planned coding agents, in order, as of 8 October 2026
 
 Agent
 
@@ -138,41 +144,35 @@ Official site
 
 Order
 
-Cline
-
-cline.bot
-
-First
-
 omp (oh-my-pi)
 
 omp.sh
 
-Then
+Next, as a group
 
 pi
 
 pi.dev
 
-Then
+Next, as a group
 
 OpenClaw
 
 openclaw.ai
 
-Then
+Next, as a group
 
 OpenHands
 
 openhands.dev
 
-Then
+Next, as a group
 
 Cursor CLI
 
 cursor.com/cli
 
-Then
+Next, as a group
 
 Command Code
 
@@ -232,7 +232,7 @@ Case by case
 
 Zed, ZCode, Proto, CodeGPT, Freebuff and HackerAI are desktop apps and editors that another program cannot start. They can be clients of Fabric’s local hub instead. Each needs its own documented entry, and those entries are planned, not written yet.
 
-Planned desktop apps and editors, as of 5 October 2026
+Planned desktop apps and editors, as of 8 October 2026
 
 App
 
@@ -290,7 +290,7 @@ The planned agents connect through the Agent Client Protocol (ACP). Its session 
 
 ## what people use
 
-We picked them from OpenRouter’s public app ranking, read on 5 October 2026. Of its daily top 30, 15 are coding agents or agent harnesses. Hermes Agent, now connected in development, has the largest share.
+We picked them from OpenRouter’s public app ranking, read on 5 October 2026. Of its daily top 30, 15 are coding agents or agent harnesses. Hermes Agent, connected since Fabric 0.3.2, has the largest share.
 
 07 / ACCOUNTS
 

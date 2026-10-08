@@ -189,8 +189,8 @@ for (const locale of TRANSLATED_LOCALES) {
   for (const text of [`action="/api/leads?lang=${locale}" method="post"`, 'name="form_token"', 'name="pc_hp"', `href="/${locale}/privacy/"`, 'src="/assets/business.js"']) assert.ok(form.includes(text), `/${locale}/business/ missing ${text}`)
 }
 const privacy = read('privacy/index.html')
-for (const text of ['GDPR Art. 6(1)(b)', '24 months', '30 days', 'Western Europe', 'Frankfurt', 'no cookies', 'VERSION 2026-10-05', 'the English version prevails']) assert.ok(privacy.includes(text), `/privacy/ missing ${text}`)
-for (const text of ['GDPR, ст. 6(1)(b)', '24 месяца', '30 дней', 'Западной Европе', 'Франкфурте', 'cookies', 'ВЕРСИЯ 2026-10-05', 'действует английская']) assert.ok(read('ru/privacy/index.html').includes(text), `/ru/privacy/ missing ${text}`)
+for (const text of ['GDPR Art. 6(1)(b)', '24 months', '30 days', 'Western Europe', 'Frankfurt', 'no cookies', 'VERSION 2026-10-08', 'since version 0.3.2, Fabric send anonymous usage counts']) assert.ok(privacy.includes(text), `/privacy/ missing ${text}`)
+for (const text of ['GDPR, ст. 6(1)(b)', '24 месяца', '30 дней', 'Западной Европе', 'Франкфурте', 'cookies', 'ВЕРСИЯ 2026-10-08', 'действует английская']) assert.ok(read('ru/privacy/index.html').includes(text), `/ru/privacy/ missing ${text}`)
 console.log('PASS: homepage vision and paths, /start/ guide, /business/ form ↔ Worker options, privacy notice')
 
 // ---- product pages: honest disclosures stay -------------------------------------------------
@@ -246,13 +246,14 @@ for (const key of ['fabric', 'inbox']) {
 console.log('PASS: product pages keep their disclosures; manifests follow the release snapshot')
 
 // /fabric/agents/ answers one question: which coding agents Fabric works with, and at which level.
-// The levels are the operator's statement of 2026-10-05 (docs/brand/facts.md, "Fabric coding agents");
+// The levels are the operator's statement of 2026-10-05, moved by the Fabric 0.3.2 release on 2026-10-08
+// (docs/brand/facts.md, "Fabric coding agents");
 // every agent sits in exactly one level, and the page never moves one up without a new fact row.
 const agentsPage = read('fabric/agents/index.html')
 const agentLevels = {
   connected: ['Claude Code', 'Kilo Code', 'Hermes Agent'],
-  'runs-in-fabric': ['Codex'],
-  planned: ['Cline', 'omp (oh-my-pi)', 'pi', 'OpenClaw', 'OpenHands', 'Cursor CLI', 'Command Code', 'DeepSeek Harness', 'LangChain Deep Agents (dcode)', 'Letta', 'Strix', 'goose', 'Qwen Code', 'Gemini CLI', 'OpenCode', 'Zed', 'ZCode', 'Proto', 'CodeGPT', 'Freebuff', 'HackerAI']
+  'runs-in-fabric': ['Codex', 'Cline'],
+  planned: ['omp (oh-my-pi)', 'pi', 'OpenClaw', 'OpenHands', 'Cursor CLI', 'Command Code', 'DeepSeek Harness', 'LangChain Deep Agents (dcode)', 'Letta', 'Strix', 'goose', 'Qwen Code', 'Gemini CLI', 'OpenCode', 'Zed', 'ZCode', 'Proto', 'CodeGPT', 'Freebuff', 'HackerAI']
 }
 const rowNames = html => [...html.matchAll(/<th scope="row">([^<]+)<\/th><td><a href="https:\/\/[^"]+">/g)].map(m => m[1])
 const allRows = rowNames(agentsPage)
@@ -264,7 +265,7 @@ for (const [level, names] of Object.entries(agentLevels)) {
   assert.deepEqual(rowNames(section), names, `fabric/agents: #${level} must list exactly ${names.join(', ')}, in order, each with its official site`)
 }
 assert.deepEqual(allRows, Object.values(agentLevels).flat(), 'fabric/agents: no agent outside its level table')
-for (const text of ['<time datetime="2026-10-05">5 October 2026</time>', 'one-session credential', 'nothing is written into the agent’s own settings', '<code>KILO_CONFIG_CONTENT</code>', '<code>kilo.json</code>', 'Kilo 7.4.17', 'href="https://agentclientprotocol.com"', 'href="https://openrouter.ai/apps"', 'read on 5 October 2026', 'largest share', 'switches subscription accounts for Claude Code and Codex', 'href="/switchboard/agents/"', 'planned, not written yet']) assert.ok(agentsPage.includes(text), `fabric/agents must say: ${text}`)
+for (const text of ['<time datetime="2026-10-08">8 October 2026</time>', 'the released app is Fabric 0.3.2', 'one-session credential', 'nothing is written into the agent’s own settings', '<code>KILO_CONFIG_CONTENT</code>', '<code>kilo.json</code>', 'Kilo 7.4.17', 'href="https://agentclientprotocol.com"', 'href="https://openrouter.ai/apps"', 'read on 5 October 2026', 'largest share', 'switches subscription accounts for Claude Code and Codex', 'href="/switchboard/agents/"', 'planned, not written yet']) assert.ok(agentsPage.includes(text), `fabric/agents must say: ${text}`)
 assert.ok(!/\d+(?:\.\d+)?\s?%/.test(currentWords(agentsPage)), 'fabric/agents: OpenRouter shares are named as "largest", never as percentages')
 assert.ok(fabric.includes('href="/fabric/agents/"'), 'the Fabric page links its supported coding agents')
-console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one level, as of 2026-10-05`)
+console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one level, as of 2026-10-08`)

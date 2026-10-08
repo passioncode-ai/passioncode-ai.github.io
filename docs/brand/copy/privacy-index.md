@@ -26,7 +26,7 @@ Get the tools
 
 ↓
 
-PRIVACY NOTICE · VERSION 2026-10-05
+PRIVACY NOTICE · VERSION 2026-10-08
 
 # Privacy notice
 
@@ -72,7 +72,7 @@ While you fill the form, your unsent answers are kept only in your own browser�
 
 ## The apps
 
-The PassionCode.ai apps run on your computers and do not send your work to us. Fabric Switchboard sends anonymous usage counts — counts and kinds only — which you can turn off in its About window.
+The PassionCode.ai apps run on your computers and do not send your work to us. Fabric Switchboard and, since version 0.3.2, Fabric send anonymous usage counts — counts and kinds only, never names, paths or content. Turn them off in Switchboard’s About window or in Fabric’s Settings; the switch applies to every PassionCode.ai app on that computer.
 
 PassionCode
 

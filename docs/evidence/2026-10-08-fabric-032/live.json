@@ -1,0 +1,383 @@
+{
+  "checkedAt": "2026-10-07T23:48:08.718527+00:00",
+  "baseUrl": "https://passioncode.ai",
+  "sourceCommit": "0677debb0ac4af796ce0b19c8bfdbf8e8ca00fdc",
+  "checks": [
+    {
+      "path": "/404.html",
+      "status": 404,
+      "expectedSha256": "fb7b9ba09c9b1628d6ba266f26918b15f112a43081c5a05cf185a8fa70a407f1",
+      "actualSha256": "fb7b9ba09c9b1628d6ba266f26918b15f112a43081c5a05cf185a8fa70a407f1",
+      "pass": true
+    },
+    {
+      "path": "/assets/business.js",
+      "status": 200,
+      "expectedSha256": "7d1fb3ce681cb6630c41f55fccc4018936741f6d2a74e66e892cbca460c7c7cc",
+      "actualSha256": "7d1fb3ce681cb6630c41f55fccc4018936741f6d2a74e66e892cbca460c7c7cc",
+      "pass": true
+    },
+    {
+      "path": "/assets/dashboards-mark.svg",
+      "status": 200,
+      "expectedSha256": "1d3788630cbe511cb0d927893ebfd4a3b3944ed9fd5da45a4cec4375837bbd37",
+      "actualSha256": "1d3788630cbe511cb0d927893ebfd4a3b3944ed9fd5da45a4cec4375837bbd37",
+      "pass": true
+    },
+    {
+      "path": "/assets/dashboards-overview.jpg",
+      "status": 200,
+      "expectedSha256": "1be35e473b2916fe72bf8937d24f0de95ed5b7b6c40494f95e24683636675b4c",
+      "actualSha256": "1be35e473b2916fe72bf8937d24f0de95ed5b7b6c40494f95e24683636675b4c",
+      "pass": true
+    },
+    {
+      "path": "/assets/dashboards-service-dashboard.jpg",
+      "status": 200,
+      "expectedSha256": "48ac12f59bad66152df450b1cd4f5ac0bc3ada604222a596be4f634fb3356007",
+      "actualSha256": "48ac12f59bad66152df450b1cd4f5ac0bc3ada604222a596be4f634fb3356007",
+      "pass": true
+    },
+    {
+      "path": "/assets/estimate.js",
+      "status": 200,
+      "expectedSha256": "5b1c592d3c9b049d5a43225dd16dcfc528ab3f98f98a1f02a46d97c0562bc84a",
+      "actualSha256": "5b1c592d3c9b049d5a43225dd16dcfc528ab3f98f98a1f02a46d97c0562bc84a",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-board.jpg",
+      "status": 200,
+      "expectedSha256": "c9e6b3f7af09cfb62f04aee644be5731226d634404bb0cbef82945985c6b158b",
+      "actualSha256": "c9e6b3f7af09cfb62f04aee644be5731226d634404bb0cbef82945985c6b158b",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-home.jpg",
+      "status": 200,
+      "expectedSha256": "9a05abd5f181af79591904ef9a0909a651e198ffc4e2f547fb66059e775e937d",
+      "actualSha256": "9a05abd5f181af79591904ef9a0909a651e198ffc4e2f547fb66059e775e937d",
+      "pass": true
+    },
+    {
+      "path": "/assets/fabric-releases.jpg",
+      "status": 200,
+      "expectedSha256": "37e23a72507e14e2f1a6e81e0164d42726ef6c423a90700e88f075b8792602de",
+      "actualSha256": "37e23a72507e14e2f1a6e81e0164d42726ef6c423a90700e88f075b8792602de",
+      "pass": true
+    },
+    {
+      "path": "/assets/favicon-64.png",
+      "status": 200,
+      "expectedSha256": "34fb5047708a4381e660da439f06d405af8575b3de5a86cc2e315da95c294ea2",
+      "actualSha256": "34fb5047708a4381e660da439f06d405af8575b3de5a86cc2e315da95c294ea2",
+      "pass": true
+    },
+    {
+      "path": "/assets/icon-1024.png",
+      "status": 200,
+      "expectedSha256": "6e753b92ed5b28f5883f1e784350e2bf9b377cd7be1538129a12982ef0df2dfc",
+      "actualSha256": "6e753b92ed5b28f5883f1e784350e2bf9b377cd7be1538129a12982ef0df2dfc",
+      "pass": true
+    },
+    {
+      "path": "/assets/icon-256.png",
+      "status": 200,
+      "expectedSha256": "a8c1265dcd1340109d329ad988ebb7b5aad2d0d5b5bc38f95ad67208899055f6",
+      "actualSha256": "a8c1265dcd1340109d329ad988ebb7b5aad2d0d5b5bc38f95ad67208899055f6",
+      "pass": true
+    },
+    {
+      "path": "/assets/inbox-mark.svg",
+      "status": 200,
+      "expectedSha256": "bc45a70e5b992f0495f3f00db6c729fd440ec9be10b75e7c13f292b1c98237c8",
+      "actualSha256": "bc45a70e5b992f0495f3f00db6c729fd440ec9be10b75e7c13f292b1c98237c8",
+      "pass": true
+    },
+    {
+      "path": "/assets/lead-options.js",
+      "status": 200,
+      "expectedSha256": "dfbab98cb40aac21cf301e79ec23f9a29504b90ba06181877d342838ea2c217c",
+      "actualSha256": "dfbab98cb40aac21cf301e79ec23f9a29504b90ba06181877d342838ea2c217c",
+      "pass": true
+    },
+    {
+      "path": "/assets/observatory-demo.jpg",
+      "status": 200,
+      "expectedSha256": "83bde9fe12bc387e9eb5c210d2b01de241bd7a4ce4d9c196f67f5b798608fa84",
+      "actualSha256": "83bde9fe12bc387e9eb5c210d2b01de241bd7a4ce4d9c196f67f5b798608fa84",
+      "pass": true
+    },
+    {
+      "path": "/assets/observatory-mark.svg",
+      "status": 200,
+      "expectedSha256": "d239e7c92df588af719630f36e17457f66d40dbec5b04ddbdadeccc622d3040c",
+      "actualSha256": "d239e7c92df588af719630f36e17457f66d40dbec5b04ddbdadeccc622d3040c",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-mark.svg",
+      "status": 200,
+      "expectedSha256": "8b49637faa386ce9658029a142d48e8a8c3ee4ed2d44ccb611cd03051046e1aa",
+      "actualSha256": "8b49637faa386ce9658029a142d48e8a8c3ee4ed2d44ccb611cd03051046e1aa",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.jpg",
+      "status": 200,
+      "expectedSha256": "49357798a821b5b60c26bbe41ac00fd93ab671548398f33c098de9b28c993d23",
+      "actualSha256": "49357798a821b5b60c26bbe41ac00fd93ab671548398f33c098de9b28c993d23",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.png",
+      "status": 200,
+      "expectedSha256": "66f540fdcdaf38d0bf624af39e926a4cccdf5b1977932ca4d3a0c52919a2f00e",
+      "actualSha256": "66f540fdcdaf38d0bf624af39e926a4cccdf5b1977932ca4d3a0c52919a2f00e",
+      "pass": true
+    },
+    {
+      "path": "/assets/passioncode-social-card.svg",
+      "status": 200,
+      "expectedSha256": "4e7bb0872785368025b347c897de60a0c3a75287df3d4f05c40de711ee96bdf2",
+      "actualSha256": "4e7bb0872785368025b347c897de60a0c3a75287df3d4f05c40de711ee96bdf2",
+      "pass": true
+    },
+    {
+      "path": "/assets/site.js",
+      "status": 200,
+      "expectedSha256": "0671ce592647b6884e7d8d58465fb1783b90ae2389e1ac345933eb94315b368b",
+      "actualSha256": "0671ce592647b6884e7d8d58465fb1783b90ae2389e1ac345933eb94315b368b",
+      "pass": true
+    },
+    {
+      "path": "/assets/switchboard-demo.jpg",
+      "status": 200,
+      "expectedSha256": "78245aa5a0731a8b91329f332c508fc97a63bd1d2f541fb441a96bc97b7b07e6",
+      "actualSha256": "78245aa5a0731a8b91329f332c508fc97a63bd1d2f541fb441a96bc97b7b07e6",
+      "pass": true
+    },
+    {
+      "path": "/assets/switchboard-mark.svg",
+      "status": 200,
+      "expectedSha256": "0aca33c30ea680663e010a468cb575f8f4ac681fc269ceafa99516813c086926",
+      "actualSha256": "0aca33c30ea680663e010a468cb575f8f4ac681fc269ceafa99516813c086926",
+      "pass": true
+    },
+    {
+      "path": "/business/",
+      "status": 200,
+      "expectedSha256": "e115d1c8d4a5f8f3a275f5f6284162bf296c9b5409c6818f7b3d39b15e59901a",
+      "actualSha256": "e115d1c8d4a5f8f3a275f5f6284162bf296c9b5409c6818f7b3d39b15e59901a",
+      "pass": true
+    },
+    {
+      "path": "/business/thanks/",
+      "status": 200,
+      "expectedSha256": "db4e43ede6d6d45e598ae8d5f1dec260634f3b5d49dc4c62a1041d9e7c115ad0",
+      "actualSha256": "db4e43ede6d6d45e598ae8d5f1dec260634f3b5d49dc4c62a1041d9e7c115ad0",
+      "pass": true
+    },
+    {
+      "path": "/dashboards/",
+      "status": 200,
+      "expectedSha256": "8dd62a8b1d0706e1230e29f4df481b9d5223903f5f34be70af5a1fd6e438d96d",
+      "actualSha256": "8dd62a8b1d0706e1230e29f4df481b9d5223903f5f34be70af5a1fd6e438d96d",
+      "pass": true
+    },
+    {
+      "path": "/design-system/",
+      "status": 200,
+      "expectedSha256": "956ccf42c169ed7ef611695301132c02918169663823ad16697a1996995e82a6",
+      "actualSha256": "956ccf42c169ed7ef611695301132c02918169663823ad16697a1996995e82a6",
+      "pass": true
+    },
+    {
+      "path": "/design-system/tokens.css",
+      "status": 200,
+      "expectedSha256": "e006575d6505ea08c5dac7dcbd8945a695e72522a482d1a8d4f0d53f9e0cc819",
+      "actualSha256": "e006575d6505ea08c5dac7dcbd8945a695e72522a482d1a8d4f0d53f9e0cc819",
+      "pass": true
+    },
+    {
+      "path": "/fabric/agents/",
+      "status": 200,
+      "expectedSha256": "ba0357b02e266752831642da7405e84fc4140c16f63c85a532623bf563ebf80d",
+      "actualSha256": "ba0357b02e266752831642da7405e84fc4140c16f63c85a532623bf563ebf80d",
+      "pass": true
+    },
+    {
+      "path": "/fabric/",
+      "status": 200,
+      "expectedSha256": "003fa4aade0603dd99a70290a524131987fc3ba7c88244c9e0b4ca451e5bbb5a",
+      "actualSha256": "003fa4aade0603dd99a70290a524131987fc3ba7c88244c9e0b4ca451e5bbb5a",
+      "pass": true
+    },
+    {
+      "path": "/fabric/release.json",
+      "status": 200,
+      "expectedSha256": "ec1e38e3049e831d61c6e977dbd40ac62be9d161e772e9c4d5bf341798330312",
+      "actualSha256": "ec1e38e3049e831d61c6e977dbd40ac62be9d161e772e9c4d5bf341798330312",
+      "pass": true
+    },
+    {
+      "path": "/inbox/",
+      "status": 200,
+      "expectedSha256": "b61f71129fb39e892b5626927ed35ab276cf28b60d22dbb5cc3f65c275d8dfc6",
+      "actualSha256": "b61f71129fb39e892b5626927ed35ab276cf28b60d22dbb5cc3f65c275d8dfc6",
+      "pass": true
+    },
+    {
+      "path": "/inbox/release.json",
+      "status": 200,
+      "expectedSha256": "3077318fb38ece2aeda0a68152e854eed7a79b0f1e257d8bdc1a3de94cff8793",
+      "actualSha256": "3077318fb38ece2aeda0a68152e854eed7a79b0f1e257d8bdc1a3de94cff8793",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "expectedSha256": "30d4f507debec4c4f9feb342b92bc019fff3bf0c3c4dbfc445cccc0191cdc2d4",
+      "actualSha256": "30d4f507debec4c4f9feb342b92bc019fff3bf0c3c4dbfc445cccc0191cdc2d4",
+      "pass": true
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "expectedSha256": "98b3962074b02b24783a9ef99aa391d2f68cfc6d984b425a9ea61e7eac1d0f62",
+      "actualSha256": "98b3962074b02b24783a9ef99aa391d2f68cfc6d984b425a9ea61e7eac1d0f62",
+      "pass": true
+    },
+    {
+      "path": "/observatory/",
+      "status": 200,
+      "expectedSha256": "390a2b354f928e83ccb06f8d56e1ec555f22412b1e55abd52ca560d704aaff8b",
+      "actualSha256": "390a2b354f928e83ccb06f8d56e1ec555f22412b1e55abd52ca560d704aaff8b",
+      "pass": true
+    },
+    {
+      "path": "/privacy/",
+      "status": 200,
+      "expectedSha256": "abb8f81a150f5279959ae557cca109dfb87f0faebf6cc443d465ec994fbf622a",
+      "actualSha256": "abb8f81a150f5279959ae557cca109dfb87f0faebf6cc443d465ec994fbf622a",
+      "pass": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "expectedSha256": "b6b934bb4618e82b922573774e38357069b3b2a38613aae40bc929dd77d813e3",
+      "actualSha256": "b6b934bb4618e82b922573774e38357069b3b2a38613aae40bc929dd77d813e3",
+      "pass": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "expectedSha256": "b3d9737969827c9bddcf8faf53e81655afd5f57148a6101647f4ebe0294a7a9b",
+      "actualSha256": "b3d9737969827c9bddcf8faf53e81655afd5f57148a6101647f4ebe0294a7a9b",
+      "pass": true
+    },
+    {
+      "path": "/start/",
+      "status": 200,
+      "expectedSha256": "ace69e36c6bec51d1eca445c6bf11328cc9ac1c680f8deba4a2a04d75536bc8a",
+      "actualSha256": "ace69e36c6bec51d1eca445c6bf11328cc9ac1c680f8deba4a2a04d75536bc8a",
+      "pass": true
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "expectedSha256": "e3b241ad11d767e4b920e3d0d71185dcdc943f80365e8216655acf495280df18",
+      "actualSha256": "e3b241ad11d767e4b920e3d0d71185dcdc943f80365e8216655acf495280df18",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/agents/",
+      "status": 200,
+      "expectedSha256": "c552b343c2fb63b046c6f62a13a50ad5c55fc94eb178fdd3b5e6c5ffc0e344b5",
+      "actualSha256": "c552b343c2fb63b046c6f62a13a50ad5c55fc94eb178fdd3b5e6c5ffc0e344b5",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/",
+      "status": 200,
+      "expectedSha256": "4c0d354e9837772c593ccdff1dab6ebacfc54e11a2e0a6eb0bfe216044ebfdef",
+      "actualSha256": "4c0d354e9837772c593ccdff1dab6ebacfc54e11a2e0a6eb0bfe216044ebfdef",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/release.json",
+      "status": 200,
+      "expectedSha256": "7bf6fabb7e0c4460c8b715595fee6e0b8957fecbe622dfa114d8600339372fb3",
+      "actualSha256": "7bf6fabb7e0c4460c8b715595fee6e0b8957fecbe622dfa114d8600339372fb3",
+      "pass": true
+    },
+    {
+      "path": "/fabric/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric/releases/download/v0.3.2/Fabric-0.3.2-arm64.dmg",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.10/Fabric-Switchboard-0.6.10-macos-universal.zip",
+      "pass": true
+    },
+    {
+      "path": "/switchboard/download/windows",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.10/Fabric-Switchboard-0.6.10-windows-x64.zip",
+      "pass": true
+    },
+    {
+      "path": "/inbox/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.12.0/Fabric-Inbox-0.12.0.dmg",
+      "pass": true
+    },
+    {
+      "path": "/dashboards/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.6.4/Fabric-Dashboards-0.6.4.dmg",
+      "pass": true
+    },
+    {
+      "path": "/observatory/download/wheel",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.19.1/project_observatory-0.19.1-py3-none-any.whl",
+      "pass": true
+    },
+    {
+      "path": "/observatory/download/macos",
+      "status": 302,
+      "location": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.19.1/ProjectObservatory-0.19.1-macos.zip",
+      "pass": true
+    },
+    {
+      "path": "/docs/HANDOFF.md",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/package.json",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/404",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/404.html",
+      "status": 404,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

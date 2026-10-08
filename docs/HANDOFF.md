@@ -1,4 +1,34 @@
-# Current handoff — audit fixes, 2026-10-07
+# Current handoff — Fabric 0.3.2 on the site, 2026-10-08
+
+Objective: the website's change for [Fabric v0.3.2](https://github.com/passioncode-ai/fabric/releases/tag/v0.3.2)
+(Fabric `docs/launch/release-mac.md` steps 8–9). The live download already redirected to 0.3.2 through the
+edge resolver; this change brings the sources, screenshots and claims in line with the release.
+Branch `agent/fabric-032-site-20261008`:
+
+- `npm run releases:sync` — Fabric 0.3.2, Switchboard 0.6.10, Inbox 0.12.0, Dashboards 0.6.4, Observatory 0.19.1,
+  launcher 0.1.30: the nightly drift job's content, which it cannot open as a pull request itself.
+- `assets/fabric-{home,board,releases}.jpg` re-shot from the installed, notarized 0.3.2 app at 1440×900 on a fresh
+  English launch estate (`launch-estate.sql` from the tag, `-v lang=en`, estate `e9789f9c-efc8-4f61-af81-a5bd9ff1a8c3`,
+  receipt `backwards_steps = 0`), throwaway user-data folder, no console errors; Releases shows Atlas → 0.4.2 as in 0.2.0.
+- `/fabric/agents/` as of 8 October 2026: Kilo Code and Hermes Agent connected in Fabric 0.3.2, Cline runs in Fabric
+  (no Fabric tools, asks before each tool), five agents next as a group. Source: v0.3.2 `apps/desktop/src/shared/agents.ts`
+  (`connectsToSurface`). `scripts/check-site.mjs` holds the new levels and date.
+- `/privacy/` version 2026-10-08 and `/fabric/`: Fabric 0.3.2 sends anonymous usage counts (its release build carries
+  the App Key — checked in the packaged `out/main/index.js`, value not read), switch in Settings → Share usage counts.
+- `docs/brand/facts.md`: Fabric release (SHA-256 `db0f1a2a…7457b`, verified on an anonymous download: `shasum -c`,
+  GPG good signature, `spctl` Notarized Developer ID, stapler), Fabric MCP (board tools; CO-194 still open), coding agents.
+
+Checks: `npm run check` exit 0, `extract-public-copy.py --check` exit 0, `npm run build` exit 0; the old agents page and
+the old privacy notice watched failing the new assertions.
+Merged as PR #66 (`0677deb`, check run 37704096224 green) and deployed from `main` 0677deb: Worker version
+`ebfe7dcf-a294-4a9d-92ff-46cbad27f69a`; `verify-live.py`: PASS — 44 assets, 7 download routes, 5 not-found addresses
+([live.json](evidence/2026-10-08-fabric-032/live.json)); the three live screenshots equal the build byte for byte.
+
+Open: the facts rows of Switchboard (0.6.5), Inbox, Dashboards and Observatory still describe their earlier releases —
+the sync moved their versions only; each product's own release note updates its row. Next task: unchanged — the
+Russian version (RM-25).
+
+# Previous handoff — audit fixes, 2026-10-07
 
 An audit of the live site (operator request 2026-10-07: find and fix bugs) found plain HTTP served
 with 200 and no HSTS, an empty 404, a receipt deferral that spent attempts, an adapter version on
