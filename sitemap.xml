@@ -15,15 +15,10 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/business/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/business/"/>
   </url>
-  <url><loc>https://passioncode.ai/fabric/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/fabric/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/fabric/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/fabric/"/>
-  </url>
-  <url><loc>https://passioncode.ai/fabric/agents/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/fabric/agents/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/fabric/agents/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/fabric/agents/"/>
+  <url><loc>https://passioncode.ai/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/privacy/"/>
   </url>
   <url><loc>https://passioncode.ai/switchboard/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/switchboard/"/>
@@ -35,6 +30,21 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/switchboard/agents/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/switchboard/agents/"/>
   </url>
+  <url><loc>https://passioncode.ai/fabric/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/fabric/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/fabric/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/fabric/"/>
+  </url>
+  <url><loc>https://passioncode.ai/fabric/agents/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/fabric/agents/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/fabric/agents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/fabric/agents/"/>
+  </url>
+  <url><loc>https://passioncode.ai/inbox/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/inbox/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/inbox/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/inbox/"/>
+  </url>
   <url><loc>https://passioncode.ai/dashboards/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/dashboards/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/dashboards/"/>
@@ -45,20 +55,10 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/observatory/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/observatory/"/>
   </url>
-  <url><loc>https://passioncode.ai/inbox/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/inbox/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/inbox/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/inbox/"/>
-  </url>
   <url><loc>https://passioncode.ai/design-system/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/design-system/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/design-system/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/design-system/"/>
-  </url>
-  <url><loc>https://passioncode.ai/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/privacy/"/>
   </url>
   <url><loc>https://passioncode.ai/ru/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/"/>
@@ -75,15 +75,10 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/business/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/business/"/>
   </url>
-  <url><loc>https://passioncode.ai/ru/fabric/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/fabric/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/fabric/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/fabric/"/>
-  </url>
-  <url><loc>https://passioncode.ai/ru/fabric/agents/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/fabric/agents/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/fabric/agents/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/fabric/agents/"/>
+  <url><loc>https://passioncode.ai/ru/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/privacy/"/>
   </url>
   <url><loc>https://passioncode.ai/ru/switchboard/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/switchboard/"/>
@@ -95,6 +90,21 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/switchboard/agents/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/switchboard/agents/"/>
   </url>
+  <url><loc>https://passioncode.ai/ru/fabric/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/fabric/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/fabric/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/fabric/"/>
+  </url>
+  <url><loc>https://passioncode.ai/ru/fabric/agents/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/fabric/agents/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/fabric/agents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/fabric/agents/"/>
+  </url>
+  <url><loc>https://passioncode.ai/ru/inbox/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/inbox/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/inbox/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/inbox/"/>
+  </url>
   <url><loc>https://passioncode.ai/ru/dashboards/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/dashboards/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/dashboards/"/>
@@ -105,19 +115,9 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/observatory/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/observatory/"/>
   </url>
-  <url><loc>https://passioncode.ai/ru/inbox/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/inbox/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/inbox/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/inbox/"/>
-  </url>
   <url><loc>https://passioncode.ai/ru/design-system/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/design-system/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/design-system/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/design-system/"/>
-  </url>
-  <url><loc>https://passioncode.ai/ru/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/privacy/"/>
   </url>
 </urlset>

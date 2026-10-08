@@ -5,6 +5,8 @@ import bundled from '../releases/current.json' with { type: 'json' }
 import { fetchSnapshot, mergeSnapshots, validSnapshot } from './releases.js'
 import { liveRewriter } from './live.js'
 import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, formPage, formToObject, issueFormToken, issueMessage, knownFields, leadLocale, MAX_BODY_BYTES, platformSignature, retryDue, sha256, storeLead } from './leads.js'
+import { M } from './messages.js'
+import { LOCALES, SOURCE_LOCALE, t } from './i18n.js'
 
 const policies = policyFile.products
 const SNAPSHOT_TTL_MS = 60_000
@@ -122,11 +124,16 @@ const SECURITY_HEADERS = {
   // Two years, subdomains included (api. and wiki. answer over HTTPS); no preload commitment.
   'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'
 }
-const NOT_FOUND_PAGE = /^\/(?:ru\/)?404(?:\.html|\/)?$/
+// The site's languages other than English, each under /<locale>/ (i18n/locales.json).
+const TRANSLATED = Object.keys(LOCALES).filter(l => l !== SOURCE_LOCALE)
+const LOCALE_PREFIX = TRANSLATED.length ? `(?:(?:${TRANSLATED.join('|')})\\/)?` : ''
+const NOT_FOUND_PAGE = new RegExp(`^\\/${LOCALE_PREFIX}404(?:\\.html|\\/)?$`)
 export const MISSING_PATH = '/__not-found__/'
-// An address under /ru/ that has no page gets the Russian not-found page (ru/404.html), still 404.
-const RUSSIAN = /^\/ru(?:\/|$)/
-export const RU_NOT_FOUND = '/ru/404'
+// An address under /<locale>/ that has no page gets that language's not-found page
+// (<locale>/404.html), still 404.
+export const localeOfPath = path => TRANSLATED.find(l => path === `/${l}` || path.startsWith(`/${l}/`)) || SOURCE_LOCALE
+export const notFoundPath = locale => `/${locale}/404`
+const BUSINESS_PAGE = new RegExp(`^\\/${LOCALE_PREFIX}business\\/?$`)
 
 function withHeaders (response, extra = {}) {
   const out = new Response(response.body, response)
@@ -137,43 +144,11 @@ const json = (data, status = 200, headers = {}) => new Response(JSON.stringify(d
 // #endregion headers
 
 // #region intake — docs: docs/DEPLOYMENT.md#commercial-enquiries
-// What the intake says to a person, in the language of the form they sent (/api/leads?lang=ru).
-// `error` codes stay English: scripts compare them; people read `message`.
-const INTAKE_TEXT = {
-  en: {
-    title: 'Request not sent',
-    heading: 'Your request was not sent',
-    writeTo: 'You can also write to',
-    back: 'Back to the form',
-    unavailable: 'The form is not accepting requests right now. Please write to commercial@passioncode.ai instead.',
-    rate_limited: 'Too many requests from your network in the last minute. Please wait a minute and try again.',
-    too_large: 'The request is too long.',
-    invalid_body: 'The request could not be read.',
-    too_fast: 'That was faster than a person can fill the form. Please check your answers and send it again.',
-    form_expired: 'The form has expired. Reload the page and send it again — your answers are kept in the browser.',
-    invalid: 'Some answers need another look.',
-    form_used: 'This form was already sent once. Reload the page to send another request — your answers are kept in the browser.',
-    store_failed: 'We could not save your request. Nothing was sent. Please try again in a minute or write to commercial@passioncode.ai.',
-    conflict: 'This request was already sent with different answers. Reload the page to start a new one.'
-  },
-  ru: {
-    title: 'Заявка не отправлена',
-    heading: 'Ваша заявка не отправлена',
-    writeTo: 'Можно также написать на',
-    back: 'Вернуться к форме',
-    unavailable: 'Сейчас форма не принимает заявки. Пожалуйста, напишите на commercial@passioncode.ai.',
-    rate_limited: 'За последнюю минуту из вашей сети пришло слишком много заявок. Подождите минуту и попробуйте снова.',
-    too_large: 'Заявка слишком длинная.',
-    invalid_body: 'Не удалось прочитать заявку.',
-    too_fast: 'Это быстрее, чем человек успевает заполнить форму. Проверьте ответы и отправьте ещё раз.',
-    form_expired: 'Срок действия формы истёк. Перезагрузите страницу и отправьте заявку снова — ответы сохранены в браузере.',
-    invalid: 'Некоторые ответы нужно проверить.',
-    form_used: 'Эта форма уже была отправлена. Чтобы отправить новую заявку, перезагрузите страницу — ответы сохранены в браузере.',
-    store_failed: 'Не удалось сохранить заявку, ничего не отправлено. Попробуйте через минуту или напишите на commercial@passioncode.ai.',
-    conflict: 'Эта заявка уже была отправлена с другими ответами. Перезагрузите страницу, чтобы начать новую.'
-  }
-}
-const page = (locale, title, body, status) => new Response(`<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} | PassionCode.ai</title><link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css"></head><body class="story-site"><main id="main" class="section notice-page">${body}<p><a class="button button-secondary" href="${formPage(locale)}#request">${INTAKE_TEXT[locale].back}</a></p></main></body></html>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } })
+// What the intake says to a person, in the language of the form they sent (/api/leads?lang=ru):
+// worker/messages.js, translated through worker/i18n.js. `error` codes stay English: scripts
+// compare them; people read `message`.
+const COMMERCIAL = 'commercial@passioncode.ai'
+const page = (locale, title, body, status) => new Response(`<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${escape(title)} | PassionCode.ai</title><link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css"></head><body class="story-site"><main id="main" class="section notice-page">${body}<p><a class="button button-secondary" href="${formPage(locale)}#request">${escape(t(locale, M.back))}</a></p></main></body></html>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } })
 const escape = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
 
 // The body, read with a byte counter: a chunked request without Content-Length cannot make
@@ -200,38 +175,39 @@ async function readCapped (request, limit) {
 async function intake (request, env, ctx) {
   const scripted = (request.headers.get('content-type') || '').includes('application/json')
   const locale = leadLocale(new URL(request.url).searchParams.get('lang'))
-  const t = INTAKE_TEXT[locale]
-  // `text` names the message; issues keep their English text for code and gain the visitor's.
+  // `text` is the English message (worker/messages.js); the visitor reads it in the form's
+  // language, issues included (L10N-04).
   const fail = (status, error, text, rawIssues) => {
-    const message = t[text]
+    const message = t(locale, text, { email: COMMERCIAL })
     const issues = rawIssues?.map(i => ({ path: i.path, message: issueMessage(i.message, locale) }))
+    const mail = `<a href="mailto:${COMMERCIAL}">${COMMERCIAL}</a>`
     return scripted
       ? json({ error, message, issues }, status, { 'Cache-Control': 'no-store' })
-      : page(locale, t.title, `<h1>${t.heading}</h1><p>${escape(message)}</p>${issues?.length ? `<ul>${issues.map(i => `<li><code>${escape(i.path)}</code>: ${escape(i.message)}</li>`).join('')}</ul>` : ''}<p>${t.writeTo} <a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a>.</p>`, status)
+      : page(locale, t(locale, M.notSentTitle), `<h1>${escape(t(locale, M.notSentHeading))}</h1><p>${escape(message)}</p>${issues?.length ? `<ul>${issues.map(i => `<li><code>${escape(i.path)}</code>: ${escape(i.message)}</li>`).join('')}</ul>` : ''}<p>${escape(t(locale, M.writeTo, { email: '\u0000' })).replace('\u0000', mail)}</p>`, status)
   }
   const thanks = id => new URL(`${formPage(locale)}thanks/${id ? `?ref=${id}` : ''}`, request.url)
 
   if (!env.DB || !env.FORM_TOKEN_SECRET || !env.IP_HASH_SALT) {
     log('leads.not_configured')
-    return fail(503, 'unavailable', 'unavailable')
+    return fail(503, 'unavailable', M.unavailable)
   }
   const ip = request.headers.get('cf-connecting-ip') || ''
   if (env.LEAD_LIMITER) {
     const { success } = await env.LEAD_LIMITER.limit({ key: `lead:${ip}` })
-    if (!success) return fail(429, 'rate_limited', 'rate_limited')
+    if (!success) return fail(429, 'rate_limited', M.rateLimited)
   }
   const raw = await readCapped(request, MAX_BODY_BYTES)
-  if (raw === null) return fail(413, 'too_large', 'too_large')
+  if (raw === null) return fail(413, 'too_large', M.tooLarge)
 
   let input
-  try { input = scripted ? knownFields(JSON.parse(raw)) : formToObject(new URLSearchParams(raw)) } catch { return fail(400, 'invalid', 'invalid_body') }
+  try { input = scripted ? knownFields(JSON.parse(raw)) : formToObject(new URLSearchParams(raw)) } catch { return fail(400, 'invalid', M.invalidBody) }
   // A field people never see; anything in it is a bot filling every input. Counted in the logs
   // so a rise (or a browser that autofills it) shows up.
   if (input.pc_hp) { log('leads.honeypot'); return scripted ? json({ id: crypto.randomUUID(), status: 'received' }, 201) : Response.redirect(thanks(), 303) }
   const token = await checkFormToken(env.FORM_TOKEN_SECRET, input.form_token)
   if (token !== 'ok') {
     log('leads.token_refused', { reason: token })
-    return fail(token === 'too_fast' ? 429 : 400, 'form_expired', token === 'too_fast' ? 'too_fast' : 'form_expired')
+    return fail(token === 'too_fast' ? 429 : 400, 'form_expired', token === 'too_fast' ? M.tooFast : M.formExpired)
   }
 
   const { ok, lead, issues } = buildLead(input, {
@@ -243,7 +219,7 @@ async function intake (request, env, ctx) {
     userAgent: request.headers.get('user-agent') || '',
     locale
   })
-  if (!ok) return fail(400, 'invalid', 'invalid', issues)
+  if (!ok) return fail(400, 'invalid', M.invalid, issues)
 
   let stored
   try {
@@ -253,15 +229,15 @@ async function intake (request, env, ctx) {
     if (!stored) {
       if (!(await consumeFormToken(env.DB, input.form_token))) {
         log('leads.token_refused', { reason: 'used' })
-        return fail(409, 'form_used', 'form_used')
+        return fail(409, 'form_used', M.formUsed)
       }
       stored = await storeLead(env.DB, lead)
     }
   } catch (error) {
     log('leads.store_failed', { id: lead.id, error: String(error.message || error) })
-    return fail(503, 'unavailable', 'store_failed')
+    return fail(503, 'unavailable', M.storeFailed)
   }
-  if (stored === 'conflict') return fail(409, 'conflict', 'conflict')
+  if (stored === 'conflict') return fail(409, 'conflict', M.conflict)
   log('leads.received', { id: lead.id, stored })
   if (stored === 'stored') ctx.waitUntil(deliver(env, lead.id).then(r => log('leads.delivered', { id: lead.id, ...r })).catch(e => log('leads.deliver_failed', { id: lead.id, error: String(e.message || e) })))
   return scripted
@@ -319,9 +295,10 @@ export default {
       ? new Request(new URL(MISSING_PATH, url), { method: request.method, headers: conditional })
       : new Request(request, { headers: conditional })
     let response = await env.ASSETS.fetch(assetRequest)
-    if (response.status === 404 && RUSSIAN.test(url.pathname)) {
-      const ru = await env.ASSETS.fetch(new Request(new URL(RU_NOT_FOUND, url), { method: request.method, headers: conditional }))
-      if (ru.ok) response = new Response(ru.body, { status: 404, headers: ru.headers })
+    const pathLocale = localeOfPath(url.pathname)
+    if (response.status === 404 && pathLocale !== SOURCE_LOCALE) {
+      const own = await env.ASSETS.fetch(new Request(new URL(notFoundPath(pathLocale), url), { method: request.method, headers: conditional }))
+      if (own.ok) response = new Response(own.body, { status: 404, headers: own.headers })
     }
     if (!(response.headers.get('content-type') || '').includes('text/html')) {
       const asset = ifNoneMatch ? await env.ASSETS.fetch(request) : response
@@ -331,7 +308,7 @@ export default {
     }
     const snapshot = await currentSnapshot(env)
     let rewriter = liveRewriter(HTMLRewriter, snapshot)
-    const business = /^\/(?:ru\/)?business\/?$/.test(url.pathname)
+    const business = BUSINESS_PAGE.test(url.pathname)
     if (business && env.FORM_TOKEN_SECRET) {
       const token = await issueFormToken(env.FORM_TOKEN_SECRET)
       rewriter = rewriter.on('input[name="form_token"]', { element (el) { el.setAttribute('value', token) } })

@@ -1,0 +1,8 @@
+{
+  "$comment": "The languages passioncode.ai is published in (docs/DEPLOYMENT.md#languages). English is the source: its pages are written by hand at /, every other language is generated under /<code>/ from the catalogs in i18n/<code>/. Adding a language is one entry here plus its catalogs; `npm run locales -- --missing` lists what to translate. name: the language's own name, shown in the language switch. englishName: what the commercial mailbox reads. og: the Open Graph locale. intl: the BCP 47 tag for numbers, money and plural rules. switchLabel: the language switch's accessible name, in the language itself.",
+  "source": "en",
+  "locales": {
+    "en": { "name": "English", "englishName": "English", "og": "en_US", "intl": "en", "switchLabel": "Language" },
+    "ru": { "name": "Русский", "englishName": "Russian", "og": "ru_RU", "intl": "ru-RU", "switchLabel": "Язык" }
+  }
+}

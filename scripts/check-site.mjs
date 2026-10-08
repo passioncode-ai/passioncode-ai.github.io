@@ -3,8 +3,8 @@ import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 import { PAGES, NOINDEX, TRANSLATED_LOCALES } from './pages.mjs'
-import { LEAD_LABELS, LEAD_OPTIONS } from '../assets/lead-options.js'
-import { counterpartRoute, LANGUAGE_NAMES, localeOfFile, ORIGIN, routeOf, sourceFileOf } from './locales.mjs'
+import { LEAD_OPTIONS } from '../assets/lead-options.js'
+import { alternates, languageSwitch, LOCALES, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
 
 const root = resolve(import.meta.dirname, '..')
@@ -26,13 +26,18 @@ const apiPaths = new Set(['/api/releases', '/api/leads'])
 // The only scripts a page may load: the site's own progressive enhancement. Content never
 // depends on them (each page is complete without JavaScript).
 const ALLOWED_SCRIPTS = new Set(['/assets/site.js', '/assets/business.js'])
-// The header every page carries, in its language (the Inbox page keeps its own product
-// navigation until its redesign, docs/backlog.md SITE-009).
-const PRIMARY_NAV = {
-  en: '<nav aria-label="Primary navigation"><a href="/#products">The tools</a><a href="/#toolkit">Your workflow</a><a href="/#extend">For builders</a><a href="/#about">About</a></nav>',
-  ru: '<nav aria-label="Основная навигация"><a href="/ru/#products">Инструменты</a><a href="/ru/#toolkit">Ваша работа</a><a href="/ru/#extend">Разработчикам</a><a href="/ru/#about">О проекте</a></nav>'
+// The header every page carries (the Inbox page keeps its own product navigation until its
+// redesign, docs/backlog.md SITE-009). In another language it is the same navigation, its links
+// under /<locale>/ and its words from the catalog.
+const PRIMARY_NAV = '<nav aria-label="Primary navigation"><a href="/#products">The tools</a><a href="/#toolkit">Your workflow</a><a href="/#extend">For builders</a><a href="/#about">About</a></nav>'
+const primaryNav = locale => {
+  if (locale === 'en') return PRIMARY_NAV
+  const { common } = loadCatalog(root, locale)
+  return PRIMARY_NAV.replace(/href="([^"]+)"/g, (_, href) => `href="${localizeUrl(href, locale)}"`).replace(/aria-label="([^"]+)"/, (_, label) => `aria-label="${common[label]}"`).replace(/>([^<]+)</g, (_, text) => `>${common[text]}<`)
 }
-const prefixOf = locale => locale === 'en' ? '' : `/${locale}`
+// Each translated language's own assertions (i18n/<locale>/_checks.json): its banned phrases and
+// the disclosures its pages must keep — a translation may not soften a limitation.
+const CHECKS = Object.fromEntries(TRANSLATED_LOCALES.map(locale => [locale, JSON.parse(read(`i18n/${locale}/_checks.json`))]))
 
 for (const file of PAGES) {
   const html = read(file)
@@ -43,16 +48,20 @@ for (const file of PAGES) {
   assert.equal((html.match(/<h1\b/g) || []).length, 1, `${file}: exactly one h1`)
   assert.ok(html.includes(`rel="canonical" href="https://passioncode.ai/${route}"`), `${file}: canonical`)
   assert.ok(html.includes(`<html lang="${locale}">`), `${file}: <html lang="${locale}">`)
-  // Every language version names all of them, English as the default: the same three lines on
-  // both pages, so hreflang is reciprocal. Pages kept out of search carry none.
-  const alternates = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m => `${m[1]} ${m[2]}`)
-  const expectedAlternates = NOINDEX.has(file) ? [] : ['en', ...TRANSLATED_LOCALES, 'x-default'].map(l => `${l} ${ORIGIN}${l === 'en' || l === 'x-default' ? '' : `/${l}`}${routeOf(source)}`)
-  assert.deepEqual(alternates, expectedAlternates, `${file}: hreflang alternates`)
-  // One visible switch to the other language, leading to the same page there.
-  const other = locale === 'en' ? TRANSLATED_LOCALES[0] : 'en'
-  const switches = [...html.matchAll(/<a class="lang-switch" href="([^"]+)" hreflang="([^"]+)" lang="([^"]+)">([^<]+)<\/a>/g)]
-  assert.equal(switches.length, 1, `${file}: one language switch`)
-  assert.deepEqual(switches[0].slice(1), [counterpartRoute(source, other), other, other, LANGUAGE_NAMES[other]], `${file}: the language switch leads to the same page in ${other}`)
+  // Every language version names all of them, English as x-default: the same list on every
+  // version, so hreflang is reciprocal. Pages kept out of search carry none.
+  const pageAlternates = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m => `${m[1]} ${m[2]}`)
+  const expectedAlternates = NOINDEX.has(file) ? [] : alternates(source).map(([l, href]) => `${l} ${href}`)
+  assert.deepEqual(pageAlternates, expectedAlternates, `${file}: hreflang alternates`)
+  if (!NOINDEX.has(file)) assert.deepEqual(expectedAlternates.map(a => a.split(' ')[0]), [...LOCALES, 'x-default'], `${file}: every language and x-default`)
+  assert.ok(html.includes(`rel="canonical" href="${ORIGIN}${pageRoute(source, locale)}"`), `${file}: canonical in its own language`)
+  // One visible switch, leading to the same page in each other language.
+  assert.equal((html.match(/class="lang-switch/g) || []).length, 1, `${file}: one language switch`)
+  assert.ok(html.includes(languageSwitch(source, locale)), `${file}: the language switch leads to the same page in every other language`)
+  if (html.includes('property="og:site_name"')) {
+    assert.ok(html.includes(`<meta property="og:locale" content="${OG_LOCALES[locale]}">`), `${file}: og:locale`)
+    for (const l of LOCALES.filter(l => l !== locale)) assert.ok(html.includes(`<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`), `${file}: og:locale:alternate ${l}`)
+  }
   assert.match(html, /<meta name="description" content="[^"]+">/)
   assert.ok(html.includes(NOINDEX.has(file) ? 'content="noindex, follow"' : 'content="index, follow"'), `${file}: robots meta`)
   for (const [, src] of html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)) assert.ok(ALLOWED_SCRIPTS.has(src), `${file}: unexpected script ${src}`)
@@ -85,7 +94,7 @@ for (const file of PAGES) {
   assert.ok(!/PolyForm|\bMIT\b/.test(words), `${file}: MIT and PolyForm name only released versions, inside a license-history region`)
   if (locale === 'en') assert.ok(!/AI-native work\b/.test(words), `${file}: the tagline is "AI-native teams"`)
   if (locale === 'en') assert.ok(!/\bseamless|fully autonomous\b/i.test(words), `${file}: banned phrase (docs/brand/terminology.md)`)
-  if (locale === 'ru') assert.ok(!/бесшовн|полностью автономн|гарантированн[а-я]* экономи/i.test(words), `${file}: banned phrase (docs/brand/terminology.md, in Russian)`)
+  if (locale !== 'en') for (const banned of CHECKS[locale].banned) assert.ok(!new RegExp(banned, 'iu').test(words), `${file}: banned phrase ${banned} (docs/brand/terminology.md, i18n/${locale}/_checks.json)`)
   for (const [, value] of html.matchAll(/(?:href|src|action)="([^"\s]+)"/g)) {
     if (!value.startsWith('/') && !value.startsWith('#')) continue
     const url = new URL(value, `https://passioncode.ai/${route}`)
@@ -96,14 +105,14 @@ for (const file of PAGES) {
   }
   // The header is the site's; every page carries it unchanged. The Inbox page keeps its own
   // product navigation until its redesign (docs/backlog.md SITE-009).
-  if (source !== 'inbox/index.html') assert.ok(html.includes(PRIMARY_NAV[locale]), `${file}: primary navigation`)
+  if (source !== 'inbox/index.html') assert.ok(html.includes(primaryNav(locale)), `${file}: primary navigation`)
   assert.equal((html.match(/<footer class="story-footer">/g) || []).length, 1, `${file}: one footer`)
   assert.equal((html.match(/<nav aria-label="[^"]+"><a href="[^"]*\/start\/">/g) || []).length, 1, `${file}: one footer navigation landmark`)
   for (const path of ['/start/', '/business/', '/privacy/']) assert.ok(html.includes(`<a href="${prefix}${path}">`), `${file}: footer links ${prefix}${path}`)
   // A translated page links to pages in its own language; only the language switch and the
-  // hreflang alternates point to the other one.
+  // hreflang alternates point to the others.
   if (locale !== 'en') {
-    for (const [, value] of html.replace(/<a class="lang-switch"[^>]*>/, '').replace(/<link rel="alternate"[^>]*>/g, '').matchAll(/\s(?:href|action)="(\/[^"]*)"/g)) {
+    for (const [, value] of html.replace(languageSwitch(source, locale), '').replace(/<link rel="alternate"[^>]*>/g, '').matchAll(/\s(?:href|action)="(\/[^"]*)"/g)) {
       const path = value.split(/[?#]/, 1)[0]
       if (path === '/' || path.endsWith('/')) assert.ok(path.startsWith(`/${locale}/`), `${file}: ${value} leaves the ${locale} site`)
     }
@@ -112,6 +121,10 @@ for (const file of PAGES) {
   assert.ok(!/href="https:\/\/github.com\/passioncode-ai\/(?:fabric-workspace|org-index|passioncode-platform)(?:["/#])/.test(html), `${file}: private repository visitor link`)
   assert.ok(html.includes('href="/design-system/tokens.css"'))
 }
+// Every module a shipped script imports is shipped too (scripts/build-site.mjs allow-list): a
+// missing one breaks the copy buttons and the form on every page.
+const shipped = new Set([...read('scripts/build-site.mjs').matchAll(/'(assets\/[^']+\.js)'/g)].map(m => m[1]))
+for (const file of shipped) for (const [, spec] of read(file).matchAll(/^\s*(?:import|export)\b[^'"]*from '(\.\/[^']+)'/gm)) assert.ok(shipped.has(`assets/${spec.slice(2)}`), `${file} imports ${spec}, which the build does not ship`)
 assert.match(css, /@media \(max-width: 620px\)/)
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
 assert.match(css, /@media \(prefers-reduced-motion: no-preference\)/)
@@ -124,9 +137,10 @@ for (const file of PAGES) {
 // Each listed address names its language versions, as the pages' own hreflang links do.
 for (const block of sitemap.match(/<url>[\s\S]*?<\/url>/g)) {
   const loc = /<loc>([^<]+)<\/loc>/.exec(block)[1]
-  const sourceRoute = loc.slice(ORIGIN.length).replace(new RegExp(`^/(?:${TRANSLATED_LOCALES.join('|')})/`), '/')
+  const file = PAGES.find(f => `${ORIGIN}${pageRoute(sourceFileOf(f), localeOfFile(f))}` === loc)
+  assert.ok(file, `sitemap: ${loc} is not a page`)
   const links = [...block.matchAll(/<xhtml:link rel="alternate" hreflang="([^"]+)" href="([^"]+)"\/>/g)].map(m => `${m[1]} ${m[2]}`)
-  assert.deepEqual(links, ['en', ...TRANSLATED_LOCALES, 'x-default'].map(l => `${l} ${ORIGIN}${l === 'en' || l === 'x-default' ? '' : `/${l}`}${sourceRoute}`), `sitemap: ${loc} alternates`)
+  assert.deepEqual(links, alternates(sourceFileOf(file)).map(([l, href]) => `${l} ${href}`), `sitemap: ${loc} alternates`)
 }
 assert.match(sitemap, /xmlns:xhtml="http:\/\/www\.w3\.org\/1999\/xhtml"/, 'sitemap declares the xhtml namespace')
 console.log(`PASS: ${PAGES.length} static pages, metadata, CSP-safe markup, anchors, live values, shared header and footer`)
@@ -171,18 +185,18 @@ same(selectValues('budget.timeline'), 'timeline', 'budget.timeline')
 for (const name of ['company.name', 'company.website', 'company.industryOther', 'company.agentUsers', 'processes.other', 'processes.hoursPerWeek', 'processes.hourlyCost', 'contact.name', 'contact.role', 'contact.email', 'contact.phone', 'contact.telegram', 'contact.message', 'consent.privacy', 'consent.marketing']) assert.ok(business.includes(`name="${name}"`), `/business/ field ${name}`)
 // commercial@ is the contact, not the path: the page leads to the form.
 assert.equal((business.match(/mailto:commercial@passioncode.ai/g) || []).length, 2, '/business/: the email appears once in the page and once in the footer')
-// Each language's form shows every answer with the label assets/lead-options.js gives it in that
-// language (LEAD_LABELS): the visitor reads the words, the Worker receives the same values.
+// The English form shows every answer with the label assets/lead-options.js gives it: the visitor
+// reads the words, the Worker receives the values. A translated form is generated from it
+// (scripts/build-locale.mjs: same values, same field names, labels from the catalog).
 const GROUP_OF = { goals: 'goals', 'processes.areas': 'areas', 'processes.currentState': 'currentState', 'processes.tools': 'tools', 'setup.mode': 'mode', 'setup.hosting': 'hosting', 'setup.constraints': 'constraints', 'company.industry': 'industry', 'company.size': 'size', 'processes.currency': 'currency', 'budget.monthly': 'monthly', 'budget.setup': 'setup', 'budget.timeline': 'timeline' }
 const unescape = s => s.replace(/&amp;/g, '&').trim()
-for (const locale of ['en', ...TRANSLATED_LOCALES]) {
-  const form = read(locale === 'en' ? 'business/index.html' : `${locale}/business/index.html`)
+{
   const shown = {}
-  for (const m of form.matchAll(/<input type="(?:checkbox|radio)" name="([a-zA-Z.]+)" value="([^"]+)"[^>]*>([^<]*)<\/label>/g)) if (GROUP_OF[m[1]]) (shown[GROUP_OF[m[1]]] ??= {})[m[2]] = unescape(m[3])
-  for (const s of form.matchAll(/<select name="([a-zA-Z.]+)"[^>]*>([\s\S]*?)<\/select>/g)) {
-    for (const o of s[2].matchAll(/<option value="([^"]+)">([^<]*)<\/option>/g)) (shown[GROUP_OF[s[1]]] ??= {})[o[1]] = unescape(o[2])
+  for (const m of business.matchAll(/<input type="(?:checkbox|radio)" name="([a-zA-Z.]+)" value="([^"]+)"[^>]*>([^<]*)<\/label>/g)) if (GROUP_OF[m[1]]) (shown[GROUP_OF[m[1]]] ??= {})[m[2]] = unescape(m[3])
+  for (const sel of business.matchAll(/<select name="([a-zA-Z.]+)"[^>]*>([\s\S]*?)<\/select>/g)) {
+    for (const o of sel[2].matchAll(/<option value="([^"]+)">([^<]*)<\/option>/g)) (shown[GROUP_OF[sel[1]]] ??= {})[o[1]] = unescape(o[2])
   }
-  assert.deepEqual(shown, Object.fromEntries(Object.keys(GROUP_OF).map(name => [GROUP_OF[name], LEAD_LABELS[locale][GROUP_OF[name]]]).sort(([a], [b]) => Object.keys(shown).indexOf(a) - Object.keys(shown).indexOf(b))), `${locale}/business/: the form's labels differ from assets/lead-options.js LEAD_LABELS.${locale}`)
+  for (const group of Object.values(GROUP_OF)) assert.deepEqual(shown[group], LEAD_OPTIONS[group], `/business/: the form's labels for ${group} differ from assets/lead-options.js`)
 }
 for (const locale of TRANSLATED_LOCALES) {
   const form = read(`${locale}/business/index.html`)
@@ -190,7 +204,6 @@ for (const locale of TRANSLATED_LOCALES) {
 }
 const privacy = read('privacy/index.html')
 for (const text of ['GDPR Art. 6(1)(b)', '24 months', '30 days', 'Western Europe', 'Frankfurt', 'no cookies', 'VERSION 2026-10-08', 'since version 0.3.2, Fabric send anonymous usage counts']) assert.ok(privacy.includes(text), `/privacy/ missing ${text}`)
-for (const text of ['GDPR, ст. 6(1)(b)', '24 месяца', '30 дней', 'Западной Европе', 'Франкфурте', 'cookies', 'ВЕРСИЯ 2026-10-08', 'действует английская']) assert.ok(read('ru/privacy/index.html').includes(text), `/ru/privacy/ missing ${text}`)
 console.log('PASS: homepage vision and paths, /start/ guide, /business/ form ↔ Worker options, privacy notice')
 
 // ---- product pages: honest disclosures stay -------------------------------------------------
@@ -221,20 +234,20 @@ for (const text of ['requirements-full.lock', 'observatory_overview', 'notarized
 assert.match(observatory, /id="get-started"[^>]*><span id="start"/, 'legacy #start lands in the Observatory setup section')
 assert.ok(read('design-system/index.html').includes('/assets/dashboards-mark.svg'), 'design system shows the Fabric Dashboards mark')
 
-// The same honesty in Russian: a translation may not soften a limitation (docs/brand/voice.md,
-// "Invariant in every language").
-const RU_DISCLOSURES = {
-  'ru/index.html': ['пока не отвечает', 'ещё не проверены', 'href="/ru/start/"', 'href="/ru/business/"', 'открытый код под AGPL-3.0', 'коммерческая лицензия'],
-  'ru/start/index.html': ['npx @passioncode-ai/passioncode@latest update', 'Docker и Supabase CLI', 'пока не отвечает', 'href="/fabric/download/macos"'],
-  'ru/fabric/index.html': ['Ранняя предварительная версия', 'Fabric пока не отвечает', 'Intel', 'вы разрешаете или отклоняете каждый запрос', 'href="/fabric/download/macos"', 'коммерческую лицензию'],
-  'ru/inbox/index.html': ['Предварительная версия в разработке', 'ещё не проверялись с вызовом реальной модели', 'IMAP и Outlook', 'href="/inbox/download/macos"'],
-  'ru/switchboard/index.html': ['пока без подписи Authenticode', 'открыто ведётся в репозитории', release.version, 'href="/switchboard/download/windows"'],
-  'ru/dashboards/index.html': ['Сервисы устанавливаются отдельно', 'Релиз 0.3.1 — первый под AGPL', 'href="/dashboards/download/macos"'],
-  'ru/observatory/index.html': ['не может найти неизвестные секреты', 'с 0.8.2 по 0.9.1 — PolyForm', 'requirements-full.lock'],
-  'ru/business/index.html': ['Это оценка, а не обещание', 'фиксированного пакета нет']
+// The same honesty in every language: a translation may not soften a limitation
+// (docs/brand/voice.md, "Invariant in every language"). Each language names, in its own words,
+// what the English checks above require of these pages.
+const DISCLOSURE_PAGES = ['index.html', 'start/index.html', 'business/index.html', 'privacy/index.html', 'switchboard/index.html', 'fabric/index.html', 'inbox/index.html', 'dashboards/index.html', 'observatory/index.html']
+for (const locale of TRANSLATED_LOCALES) {
+  const { disclosures } = CHECKS[locale]
+  assert.deepEqual(Object.keys(disclosures).sort(), [...DISCLOSURE_PAGES].sort(), `i18n/${locale}/_checks.json: disclosures for every product page`)
+  for (const [page, texts] of Object.entries(disclosures)) {
+    const html = read(`${locale}/${page}`)
+    for (const text of texts) assert.ok(html.includes(text), `${locale}/${page} must say: ${text}`)
+  }
+  // The live version is the same number in every language.
+  assert.ok(read(`${locale}/switchboard/index.html`).includes(release.version), `${locale}/switchboard/index.html names ${release.version}`)
 }
-for (const [file, texts] of Object.entries(RU_DISCLOSURES)) for (const text of texts) assert.ok(read(file).includes(text), `${file} must say: ${text}`)
-assert.deepEqual(checkSwitchboardPage(read('ru/switchboard/index.html'), release, 'ru'), [], 'ru/switchboard/index.html: release-bound sections')
 
 // The older manifests stay equal to the snapshot they are written from.
 for (const key of ['fabric', 'inbox']) {

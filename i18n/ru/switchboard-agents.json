@@ -2,7 +2,7 @@
   "page": "switchboard/agents/index.html",
   "strings": {
     "Switchboard agents | Hermes, Kilo Code, Cline, Goose and more | PassionCode.ai": "Агенты Switchboard | Hermes, Kilo Code, Cline, Goose и другие | PassionCode.ai",
-    "Which coding agents work with Switchboard: tools for every one of the 30 popular agents, account switching through Switchboard for those that accept an endpoint, launch from Switchboard for some.": "Какие агенты для программирования работают со Switchboard: инструменты для каждого из 30 популярных агентов, переключение аккаунтов через Switchboard для тех, кто принимает свой адрес API, и запуск из Switchboard для некоторых.",
+    "Which coding agents work with Switchboard: tools for every one of the 30 popular agents, account switching through Switchboard for those that accept an endpoint, launch from Switchboard for some.": "Какие агенты для программирования работают со Switchboard: инструменты для каждого из 30 популярных агентов, переключение аккаунтов через Switchboard для тех, кому можно задать свой адрес API, и запуск из Switchboard для некоторых.",
     "Switchboard agents": "Агенты Switchboard",
     "Agents": "Агенты",
     "Download": "Скачать",

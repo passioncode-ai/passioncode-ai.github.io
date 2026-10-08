@@ -2,6 +2,10 @@
 // Progressive enhancement for every page. Without it the page is complete: content is
 // visible, links work, commands can be selected by hand. With it: entrances on scroll,
 // the header's scrolled state and copy buttons. Motion only when the visitor allows it.
+// The copy buttons' words, in the page's language (<html lang>, assets/messages.js).
+import { M } from './messages.js'
+import { resolveLocale, t as translate } from './i18n.js'
+
 const root = document.documentElement
 const motion = window.matchMedia('(prefers-reduced-motion: no-preference)')
 
@@ -35,15 +39,10 @@ function headerState () {
   update()
 }
 
-// The words the copy buttons add, in the page's language (<html lang>).
-const COPY_TEXT = {
-  en: { copy: 'Copy', copied: 'Copied', manual: 'Select and copy', label: text => `Copy: ${text}` },
-  ru: { copy: 'Копировать', copied: 'Скопировано', manual: 'Выделите и скопируйте', label: text => `Копировать: ${text}` }
-}
-
 function copyButtons () {
   if (!navigator.clipboard) return
-  const t = COPY_TEXT[root.lang === 'ru' ? 'ru' : 'en']
+  const locale = resolveLocale(root.lang)
+  const t = (message, params) => translate(locale, message, params)
   for (const pre of document.querySelectorAll('pre.copyable, .onboarding-steps pre, .setup-panel pre')) {
     const code = pre.querySelector('code')
     if (!code) continue
@@ -51,16 +50,16 @@ function copyButtons () {
     const button = document.createElement('button')
     button.type = 'button'
     button.className = 'copy-button'
-    button.textContent = t.copy
-    button.setAttribute('aria-label', t.label(code.textContent.trim().slice(0, 60)))
+    button.textContent = t(M.copy)
+    button.setAttribute('aria-label', t(M.copyLabel, { text: code.textContent.trim().slice(0, 60) }))
     button.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(code.textContent.trim())
-        button.textContent = t.copied
+        button.textContent = t(M.copied)
       } catch {
-        button.textContent = t.manual
+        button.textContent = t(M.copyManual)
       }
-      setTimeout(() => { button.textContent = t.copy }, 1800)
+      setTimeout(() => { button.textContent = t(M.copy) }, 1800)
     })
     pre.append(button)
   }

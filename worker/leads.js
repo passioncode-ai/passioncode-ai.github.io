@@ -5,6 +5,8 @@
 // retried by the cron from D1, so a lead is never lost to a backend or mail outage.
 import { LEAD_OPTIONS, PRIVACY_VERSION } from '../assets/lead-options.js'
 import { estimate } from '../assets/estimate.js'
+import { ISSUES, M } from './messages.js'
+import { LOCALES, resolveLocale, SOURCE_LOCALE, t, tn } from './i18n.js'
 
 export const LEAD_SCHEMA = 'lead/1'
 export const MAX_BODY_BYTES = 32 * 1024
@@ -67,6 +69,9 @@ export function knownFields (input) {
   return formToObject(params)
 }
 
+// An issue's message as it is made: in English, the text code compares (worker/messages.js).
+const made = (issue, params) => typeof issue === 'object' ? tn(SOURCE_LOCALE, params.n, issue, params) : t(SOURCE_LOCALE, issue, params)
+
 // `truncate` is for what the visitor never typed (referrer, UTM, user agent): it is cut to size
 // silently, because an issue there is one the person cannot fix.
 const str = (v, max, { min = 0, field, issues, multiline = false, truncate = false }) => {
@@ -75,26 +80,26 @@ const str = (v, max, { min = 0, field, issues, multiline = false, truncate = fal
   // Control characters never survive; a single-line field (it may reach an email subject)
   // loses line breaks too.
   const s = (multiline ? raw.replace(/\r\n?/g, '\n').replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, ' ').replace(/[ \t]+\n/g, '\n') : raw.replace(/[\u0000-\u001f\u007f]+/g, ' ')).trim()
-  if (s.length < min) issues.push({ path: field, message: min > 1 ? `at least ${min} characters` : 'required' })
-  if (s.length > max && !truncate) issues.push({ path: field, message: `at most ${max} characters` })
+  if (s.length < min) issues.push({ path: field, message: min > 1 ? made(ISSUES.atLeast, { n: min }) : made(ISSUES.required) })
+  if (s.length > max && !truncate) issues.push({ path: field, message: made(ISSUES.atMost, { n: max }) })
   return s.slice(0, max)
 }
 const pick = (v, options, field, issues) => {
   if (typeof v === 'string' && Object.hasOwn(options, v)) return v
-  issues.push({ path: field, message: 'choose one of the listed answers' })
+  issues.push({ path: field, message: made(ISSUES.chooseListed) })
   return null
 }
 const list = (v, options, field, issues, { min = 0 } = {}) => {
   const values = Array.isArray(v) ? v : (v == null || v === '' ? [] : [v])
   const out = [...new Set(values.filter(x => typeof x === 'string'))]
-  if (out.some(x => !Object.hasOwn(options, x))) issues.push({ path: field, message: 'unknown answer' })
-  if (out.length < min) issues.push({ path: field, message: min === 1 ? 'choose at least one' : `choose at least ${min}` })
+  if (out.some(x => !Object.hasOwn(options, x))) issues.push({ path: field, message: made(ISSUES.unknownAnswer) })
+  if (out.length < min) issues.push({ path: field, message: min === 1 ? made(ISSUES.chooseAtLeastOne) : made(ISSUES.chooseAtLeast, { n: min }) })
   return out.filter(x => Object.hasOwn(options, x))
 }
 const num = (v, max, field, issues, { required = true } = {}) => {
   if ((v === '' || v == null) && !required) return 0
   const n = typeof v === 'number' ? v : Number(String(v).replace(/[\s,]/g, ''))
-  if (!Number.isFinite(n) || n < 0 || n > max) { issues.push({ path: field, message: `a number from 0 to ${max}` }); return 0 }
+  if (!Number.isFinite(n) || n < 0 || n > max) { issues.push({ path: field, message: made(ISSUES.numberRange, { max }) }); return 0 }
   return Math.round(n * 100) / 100
 }
 // The referrer is kept only as an http(s) address (an app referrer such as android-app:// is
@@ -110,44 +115,33 @@ const url = (v, field, issues) => {
     const u = new URL(/^[a-z]+:\/\//i.test(s) ? s : `https://${s}`)
     if (!['http:', 'https:'].includes(u.protocol) || !u.hostname.includes('.')) throw new Error()
     return u.href
-  } catch { issues.push({ path: field, message: 'a web address' }); return '' }
+  } catch { issues.push({ path: field, message: made(ISSUES.webAddress) }); return '' }
 }
 
-// The languages the form is published in (/business/, /ru/business/). The form tells the Worker
-// which one it is (`/api/leads?lang=ru`); anything else is English. The answers' values are the
-// same in every language — only what the visitor reads differs.
-export const LEAD_LOCALES = ['en', 'ru']
-export const leadLocale = value => LEAD_LOCALES.includes(value) ? value : 'en'
-export const formPage = locale => locale === 'en' ? '/business/' : `/${locale}/business/`
+// The languages the form is published in: every language of the site (i18n/locales.json), each
+// at /<locale>/business/. The form tells the Worker which one it is (`/api/leads?lang=ru`);
+// anything else is English. The answers' values are the same in every language — only what the
+// visitor reads differs.
+export const LEAD_LOCALES = Object.keys(LOCALES)
+export const leadLocale = resolveLocale
+export const formPage = locale => `${locale === SOURCE_LOCALE ? '' : `/${locale}`}/business/`
+export const sitePage = (locale, path) => `https://passioncode.ai${locale === SOURCE_LOCALE ? '' : `/${locale}`}${path}`
 
-// Validation messages are made in English (code and tests compare them) and shown in the
-// visitor's language (fabric-workspace knowledge/localization.md, L10N-04).
-const ISSUE_MESSAGES_RU = [
-  [/^required$/, () => 'обязательное поле'],
-  [/^at least (\d+) characters$/, n => `не меньше ${n} ${plural(n, 'символа', 'символов', 'символов')}`],
-  [/^at most (\d+) characters$/, n => `не больше ${n} ${plural(n, 'символа', 'символов', 'символов')}`],
-  [/^a number from 0 to (\d+)$/, n => `число от 0 до ${n}`],
-  [/^choose one of the listed answers$/, () => 'выберите один из предложенных ответов'],
-  [/^unknown answer$/, () => 'неизвестный ответ'],
-  [/^choose at least one$/, () => 'выберите хотя бы один вариант'],
-  [/^choose at least (\d+)$/, n => `выберите не меньше ${n}`],
-  [/^a web address$/, () => 'адрес сайта'],
-  [/^a work email address$/, () => 'рабочий адрес почты'],
-  [/^agree to the privacy notice to send the request$/, () => 'чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности']
-]
-// Russian has three plural forms (L10N-03): 1 символа, 2 символов… chosen by the number's ending.
-export function plural (n, one, few, many) {
-  const m10 = n % 10
-  const m100 = n % 100
-  if (m10 === 1 && m100 !== 11) return one
-  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few
-  return many
-}
+// Validation messages are made in English and shown in the visitor's language (L10N-04): the
+// English text is matched against each issue's forms (worker/messages.js ISSUES), its values
+// taken back out, and the issue said again in that language. An unknown message is shown as made.
+const escapeRegExp = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+const ISSUE_PATTERNS = Object.values(ISSUES).flatMap(issue => (typeof issue === 'object' ? [issue.one, issue.other] : [issue]).map(form => ({
+  issue,
+  pattern: new RegExp(`^${escapeRegExp(form).replace(/\\\{([a-zA-Z]\w*)\\\}/g, '(?<$1>\\d+)')}$`)
+})))
 export function issueMessage (message, locale) {
-  if (locale !== 'ru') return message
-  for (const [pattern, render] of ISSUE_MESSAGES_RU) {
+  if (resolveLocale(locale) === SOURCE_LOCALE) return message
+  for (const { issue, pattern } of ISSUE_PATTERNS) {
     const m = pattern.exec(message)
-    if (m) return render(m[1] === undefined ? undefined : Number(m[1]))
+    if (!m) continue
+    const params = Object.fromEntries(Object.entries(m.groups || {}).map(([k, v]) => [k, Number(v)]))
+    return typeof issue === 'object' ? tn(locale, params.n, issue, params) : t(locale, issue, params)
   }
   return message
 }
@@ -166,9 +160,9 @@ export function buildLead (input, context) {
   const utm = i.source?.utm || {}
 
   const email = str(contact.email, 254, { min: 3, field: 'contact.email', issues }).toLowerCase()
-  if (email && (!EMAIL.test(email) || email.split('@')[0].length > 64)) issues.push({ path: 'contact.email', message: 'a work email address' })
+  if (email && (!EMAIL.test(email) || email.split('@')[0].length > 64)) issues.push({ path: 'contact.email', message: made(ISSUES.workEmail) })
   const consentGiven = consent.privacy === true || consent.privacy === 'yes' || consent.privacy === 'on' || consent.privacy === 'true'
-  if (!consentGiven) issues.push({ path: 'consent.privacy', message: 'agree to the privacy notice to send the request' })
+  if (!consentGiven) issues.push({ path: 'consent.privacy', message: made(ISSUES.agreePrivacy) })
 
   const currency = pick(processes.currency || 'USD', LEAD_OPTIONS.currency, 'processes.currency', issues) || 'USD'
   const locale = leadLocale(context.locale)
@@ -333,55 +327,36 @@ export function notificationText (lead) {
     '',
     `Lead ${lead.id} · ${lead.submittedAt} · country ${lead.client.country || '—'} · marketing consent ${lead.consent.marketing ? 'yes' : 'no'}`,
     // The commercial mailbox reads English; it is told which language to answer in.
-    `Form language: ${lead.source.locale === 'ru' ? 'Russian (ru) — reply in Russian' : 'English (en)'} · page ${lead.source.page}`,
+    `Form language: ${LOCALES[leadLocale(lead.source.locale)].englishName} (${leadLocale(lead.source.locale)})${leadLocale(lead.source.locale) === SOURCE_LOCALE ? '' : ` — reply in ${LOCALES[leadLocale(lead.source.locale)].englishName}`} · page ${lead.source.page}`,
     lead.source.utm.source ? `UTM: ${Object.entries(lead.source.utm).filter(([, v]) => v).map(([k, v]) => `${k}=${v}`).join(' ')}` : null
   ].filter(x => x !== null && x !== undefined && x !== false).join('\n')
 }
 
-// The receipt is written in the language of the form the person filled in.
-export const CONFIRMATION_SUBJECT = { en: 'We received your request — PassionCode.ai', ru: 'Мы получили вашу заявку — PassionCode.ai' }
+// The receipt is written in the language of the form the person filled in, and links that
+// language's pages. No text the sender typed is repeated here: the receipt cannot carry someone
+// else's words.
+export const receiptSubject = locale => t(resolveLocale(locale), M.receiptSubject)
 export function confirmationText (lead) {
-  if (lead.source?.locale === 'ru') {
-    return [
-      // Как и в английской версии: ни слова из того, что ввёл отправитель.
-      'Здравствуйте!',
-      '',
-      'Спасибо за заявку. Она дошла до PassionCode.ai.',
-      '',
-      'Что будет дальше:',
-      '1. Мы прочитаем то, что вы прислали, и ответим в течение двух рабочих дней — обычно с несколькими вопросами о названных вами процессах.',
-      '2. Если всё сходится, предложим короткий созвон, чтобы описать один процесс и договориться, как его измерять.',
-      '3. Вы получите письменное предложение: что мы настроим, где это будет работать и какая лицензия для этого нужна.',
-      '',
-      'Всё, что делает PassionCode.ai, — открытый код под GNU AGPL-3.0, поэтому начать можно и самостоятельно уже сегодня: https://passioncode.ai/ru/start/',
-      '',
-      'Чтобы что-то добавить, просто ответьте на это письмо.',
-      '',
-      'PassionCode.ai',
-      'https://passioncode.ai/ru/business/',
-      '',
-      `Номер заявки: ${lead.id}. Мы храним заявку только для того, чтобы ответить на неё: https://passioncode.ai/ru/privacy/`
-    ].join('\n')
-  }
+  const locale = leadLocale(lead.source?.locale)
+  const say = (message, params) => t(locale, message, params)
   return [
-    // No text the sender typed is repeated here: the receipt cannot carry someone else's words.
-    'Hello,',
+    say(M.receiptHello),
     '',
-    'Thank you for your request. It reached PassionCode.ai.',
+    say(M.receiptThanks),
     '',
-    'What happens next:',
-    '1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.',
-    '2. If it fits, we suggest a short call to map one process and agree how to measure it.',
-    '3. You get a written proposal: what we would set up, where it runs, and the license it needs.',
+    say(M.receiptNext),
+    say(M.receiptStep1),
+    say(M.receiptStep2),
+    say(M.receiptStep3),
     '',
-    'Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: https://passioncode.ai/start/',
+    say(M.receiptOpenSource, { start: sitePage(locale, '/start/') }),
     '',
-    'To add anything, reply to this email.',
+    say(M.receiptReply),
     '',
     'PassionCode.ai',
-    'https://passioncode.ai/business/',
+    sitePage(locale, '/business/'),
     '',
-    `Reference: ${lead.id}. We keep your request only to answer it: https://passioncode.ai/privacy/`
+    say(M.receiptReference, { id: lead.id, privacy: sitePage(locale, '/privacy/') })
   ].join('\n')
 }
 
@@ -448,7 +423,7 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
       } else {
         if (!env.EMAIL) throw new Error('no EMAIL binding')
         const text = confirmationText(lead)
-        await env.EMAIL.send({ to: lead.contact.email, from, replyTo: env.LEAD_REPLY_TO || 'commercial@passioncode.ai', subject: CONFIRMATION_SUBJECT[leadLocale(lead.source?.locale)], text, html: asHtml(text) })
+        await env.EMAIL.send({ to: lead.contact.email, from, replyTo: env.LEAD_REPLY_TO || 'commercial@passioncode.ai', subject: receiptSubject(lead.source?.locale), text, html: asHtml(text) })
         await mark(env.DB, id, 'confirm', 'done'); result.confirm = 'done'
       }
     } catch (error) { await mark(env.DB, id, 'confirm', 'pending', error.message); result.confirm = 'retry' }

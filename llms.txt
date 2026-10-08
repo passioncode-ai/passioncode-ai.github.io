@@ -5,7 +5,7 @@
 Vision: do what you love — agents take the routine. You start from one command and your coding agent (Claude Code or Codex); the workplace runs on your own machines and grows with you.
 
 ## Languages
-- Every page is published in English and in Russian. The Russian version lives under /ru/ at the same path ([Начать](https://passioncode.ai/ru/start/), [Компаниям](https://passioncode.ai/ru/business/), [Fabric](https://passioncode.ai/ru/fabric/)); each page names both versions with hreflang. English is the source; where the privacy notice differs, the English version prevails.
+- Every page is published in English and in one more language, at the same path under the language's prefix: Russian (Русский) under /ru/ — for example https://passioncode.ai/ru/start/. Each page names all its versions with hreflang, English as x-default, and sitemap.xml lists every version. English is the source; where a translated privacy notice differs, the English version prevails.
 
 ## Start
 - [Get started](https://passioncode.ai/start/): install the skills (`npx @passioncode-ai/passioncode@latest update`), add Fabric, create or convert an agent, run it in Fabric Dashboards, contribute.

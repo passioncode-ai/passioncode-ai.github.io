@@ -9,7 +9,8 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { fetchSnapshot, mergeSnapshots, validSnapshot } from '../worker/releases.js'
 import { rewriteSource } from '../worker/live.js'
-import { PAGES, TRANSLATED_LOCALES } from './pages.mjs'
+import { PAGES } from './pages.mjs'
+import { writeLocales } from './build-locale.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const check = process.argv.includes('--check')
@@ -70,6 +71,10 @@ for (const key of ['fabric', 'inbox']) {
 const selected = JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
 if (selected.tag !== merged.products.switchboard.tag) {
   execFileSync('node', [resolve(root, 'scripts/update-switchboard-release.mjs'), merged.products.switchboard.tag], { stdio: 'inherit' })
-  changed.push('switchboard/release.json', 'switchboard/index.html', ...TRANSLATED_LOCALES.map(locale => `${locale}/switchboard/index.html`))
+  changed.push('switchboard/release.json', 'switchboard/index.html')
 }
+// Every translated page is generated from its English page (scripts/build-locale.mjs): after
+// the English pages moved, the languages are written again, so the sync never leaves one behind.
+const localeProblems = writeLocales({ log: line => changed.push(line.replace(/^WROTE: /, '')) })
+if (localeProblems.length) { console.error(`FAIL: the translated pages cannot follow:\n${localeProblems.join('\n')}`); process.exit(1) }
 console.log(changed.length ? `UPDATED: ${[...new Set(changed)].join(', ')}` : 'UNCHANGED')

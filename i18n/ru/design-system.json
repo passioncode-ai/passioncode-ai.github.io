@@ -2,7 +2,7 @@
   "page": "design-system/index.html",
   "strings": {
     "PassionCode design system | One family, a shared language": "Дизайн-система PassionCode | Одно семейство, общий язык",
-    "The visual language behind PassionCode and Switchboard: dark surfaces, yellow actions, product marks and reusable design tokens.": "Визуальный язык PassionCode и Switchboard: тёмные поверхности, жёлтые действия, знаки продуктов и переиспользуемые дизайн-токены.",
+    "The visual language behind PassionCode and Switchboard: dark surfaces, yellow actions, product marks and reusable design tokens.": "Визуальный язык PassionCode и Switchboard: тёмные поверхности, жёлтый цвет действий, знаки продуктов и переиспользуемые дизайн-токены.",
     "PassionCode design system": "Дизайн-система PassionCode",
     "Download": "Скачать",
     "PASSIONCODE / DESIGN SYSTEM 1.1": "PASSIONCODE / ДИЗАЙН-СИСТЕМА 1.1",
@@ -38,17 +38,17 @@
     "Error": "Ошибка",
     "Information": "Информация",
     "03 / TYPE &amp; RHYTHM": "03 / ШРИФТ И РИТМ",
-    "Space to understand": "Простор, чтобы понять",
-    "Density to get work done": "Плотность, чтобы сделать работу",
+    "Space to understand": "Простор для понимания",
+    "Density to get work done": "Плотность для работы",
     "Expressive headlines on the site. Compact, readable rows in the app. Both use a system sans stack, monospace for data and a shared spacing scale.": "Выразительные заголовки на сайте. Компактные, читаемые строки в приложении. И там и там — системный шрифт без засечек, моноширинный для данных и общая шкала отступов.",
     "A CLEAR NEXT STEP": "ПОНЯТНЫЙ СЛЕДУЮЩИЙ ШАГ",
     "Keep building": "Продолжайте строить",
     "Choose an account for your next managed request.": "Выберите аккаунт для следующего управляемого запроса.",
     "04 / CONTROLS": "04 / ЭЛЕМЕНТЫ УПРАВЛЕНИЯ",
-    "Familiar across products": "Знакомы во всех продуктах",
-    "One primary action per task. Visible keyboard focus. Clear borders for secondary controls. Motion stays brief and respects reduced-motion preferences.": "Одно основное действие на задачу. Видимый фокус клавиатуры. Чёткие границы у второстепенных элементов. Анимация короткая и учитывает настройку «уменьшить движение».",
+    "Familiar across products": "Одинаковые во всех продуктах",
+    "One primary action per task. Visible keyboard focus. Clear borders for secondary controls. Motion stays brief and respects reduced-motion preferences.": "Одно основное действие на задачу. Видимый фокус клавиатуры. Чёткие границы у второстепенных элементов. Анимация короткая и учитывает настройку «Уменьшение движения».",
     "Explore Switchboard": "Подробнее о Switchboard",
     "Back to PassionCode": "Вернуться на PassionCode",
-    "The marketing site, Switchboard and Project Observatory use the shared dark system. Version 1.1 adds an opt-in light palette for products adopting it. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.": "Сайт, Switchboard и Project Observatory используют общую тёмную систему. Версия 1.1 добавляет светлую палитру по выбору для продуктов, которые её принимают. Существующий интерфейс Fabric приводится в соответствие отдельно; справочник системы не означает, что все экраны уже переведены."
+    "The marketing site, Switchboard and Project Observatory use the shared dark system. Version 1.1 adds an opt-in light palette for products adopting it. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.": "Сайт, Switchboard и Project Observatory используют общую тёмную систему. В версии 1.1 появилась светлая палитра, которую продукты подключают по желанию. Нынешний интерфейс Fabric приводится к системе отдельно; этот справочник не означает, что все экраны уже перешли на неё."
   }
 }

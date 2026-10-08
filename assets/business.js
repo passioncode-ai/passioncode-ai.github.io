@@ -5,46 +5,12 @@
 // and a JSON submission that stays on the page.
 import { estimate, formatMoney } from './estimate.js'
 
-// What this script says, in the page's language (<html lang>, /ru/business/ is Russian). The form's
-// own labels are in the HTML; these are the words the script adds.
-const TEXT = {
-  en: {
-    estimateEmpty: 'Fill in the hours, the cost and how the work runs today to see the estimate.',
-    estimateLead: 'Agents could take over about',
-    perMonth: 'a month',
-    estimateDetail: (low, high) => `${low}–${high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.`,
-    chooseAny: 'Choose at least one.',
-    chooseOne: 'Choose one.',
-    required: 'Required.',
-    email: 'A work email address.',
-    consent: 'Agree to the privacy notice to send the request.',
-    sending: 'Sending…',
-    doneTitle: 'Thank you — it reached us',
-    doneBody: 'We reply within two business days. A confirmation email usually follows within minutes.',
-    reference: id => `Reference: ${id}`,
-    notSent: 'The request was not sent.',
-    offline: 'The request did not leave your browser — check your connection and send it again. Your answers are kept here.'
-  },
-  ru: {
-    estimateEmpty: 'Укажите часы, стоимость и то, как работа устроена сегодня, — и увидите оценку.',
-    estimateLead: 'Агенты могли бы взять на себя примерно',
-    perMonth: 'в месяц',
-    estimateDetail: (low, high) => `${low}–${high} ч в месяц. Это оценка по формуле выше, а не обещание; реальную цифру измерит пилот.`,
-    chooseAny: 'Выберите хотя бы один вариант.',
-    chooseOne: 'Выберите один вариант.',
-    required: 'Обязательное поле.',
-    email: 'Нужен рабочий адрес почты.',
-    consent: 'Чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности.',
-    sending: 'Отправляем…',
-    doneTitle: 'Спасибо, заявка у нас',
-    doneBody: 'Мы ответим в течение двух рабочих дней. Письмо-подтверждение обычно приходит в течение нескольких минут.',
-    reference: id => `Номер заявки: ${id}`,
-    notSent: 'Заявка не отправлена.',
-    offline: 'Заявка не ушла из браузера — проверьте подключение и отправьте её снова. Ответы сохранены здесь.'
-  }
-}
-const locale = document.documentElement.lang === 'ru' ? 'ru' : 'en'
-const t = TEXT[locale]
+// What this script says, in the page's language (<html lang>): English in assets/messages.js,
+// translated through assets/i18n.js (generated from i18n/<locale>/_scripts.json).
+import { M } from './messages.js'
+import { LOCALES, resolveLocale, t as translate } from './i18n.js'
+const locale = resolveLocale(document.documentElement.lang)
+const t = (message, params) => translate(locale, message, params)
 
 const form = document.getElementById('lead-form')
 const DRAFT_KEY = 'passioncode.business.draft.v1'
@@ -89,9 +55,9 @@ function collect () {
     const [a, b] = name.split('.')
     if (b) { out[a] ??= {}; out[a][b] ??= [] } else out[a] ??= []
   }
-  out.consent ??= {}
-  out.consent.privacy = out.consent.privacy === true
-  out.consent.marketing = out.consent.marketing === true
+  out(M.consent) ??= {}
+  out(M.consent).privacy = out(M.consent).privacy === true
+  out(M.consent).marketing = out(M.consent).marketing === true
   const params = new URLSearchParams(location.search)
   out.source = { referrer: document.referrer || '', utm: Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, params.get(`utm_${k}`) || ''])) }
   return out
@@ -132,16 +98,16 @@ function renderEstimate () {
   if (!e) {
     const span = document.createElement('span')
     span.className = 'estimate-empty'
-    span.textContent = t.estimateEmpty
+    span.textContent = t(M.estimateEmpty)
     output.append(span)
     return
   }
   const lead = document.createElement('span')
-  lead.textContent = t.estimateLead
+  lead.textContent = t(M.estimateLead)
   const figure = document.createElement('strong')
-  figure.textContent = `${formatMoney(e.monthlySavings[0], e.currency, locale)}–${formatMoney(e.monthlySavings[1], e.currency, locale)} ${t.perMonth}`
+  figure.textContent = t(M.estimateFigure, { low: formatMoney(e.monthlySavings[0], e.currency, LOCALES[locale].intl), high: formatMoney(e.monthlySavings[1], e.currency, LOCALES[locale].intl) })
   const detail = document.createElement('small')
-  detail.textContent = t.estimateDetail(e.hoursSavedPerMonth[0], e.hoursSavedPerMonth[1])
+  detail.textContent = t(M.estimateDetail, { low: e.hoursSavedPerMonth[0].toLocaleString(LOCALES[locale].intl), high: e.hoursSavedPerMonth[1].toLocaleString(LOCALES[locale].intl) })
   output.append(lead, figure, detail)
 }
 
@@ -179,17 +145,17 @@ function validate (step) {
   const fail = (target, message, focus) => { flag(target, message); first ??= focus || target }
   for (const group of step.querySelectorAll('.choices[role="group"]')) {
     const name = group.querySelector('input')?.name
-    if ((name === 'goals' || name === 'processes.areas') && !group.querySelector('input:checked')) fail(group, t.chooseAny, group.querySelector('input'))
+    if ((name === 'goals' || name === 'processes.areas') && !group.querySelector('input:checked')) fail(group, t(M.chooseAny), group.querySelector('input'))
   }
   for (const group of step.querySelectorAll('.choices[role="radiogroup"]')) {
-    if (group.querySelector('input[required]') && !group.querySelector('input:checked')) fail(group, t.chooseOne, group.querySelector('input'))
+    if (group.querySelector('input[required]') && !group.querySelector('input:checked')) fail(group, t(M.chooseOne), group.querySelector('input'))
   }
   for (const field of step.querySelectorAll('input[required]:not([type="radio"]):not([type="checkbox"]), select[required]')) {
-    if (!field.value.trim()) fail(field, t.required)
-    else if (field.type === 'email' && !field.validity.valid) fail(field, t.email)
+    if (!field.value.trim()) fail(field, t(M.required))
+    else if (field.type === 'email' && !field.validity.valid) fail(field, t(M.email))
   }
   const consent = step.querySelector('[name="consent.privacy"]')
-  if (consent && !consent.checked) fail(consent.closest('.consent'), t.consent, consent)
+  if (consent && !consent.checked) fail(consent.closest('.consent'), t(M.consent), consent)
   first?.focus()
   return !first
 }
@@ -217,7 +183,7 @@ form.addEventListener('submit', async event => {
   for (const [i, step] of steps.entries()) if (!validate(step)) { show(i); return }
   submit.disabled = true
   status.className = 'form-status'
-  status.textContent = t.sending
+  status.textContent = t(M.sending)
   try {
     const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...collect(), id: requestId(), form_token: form.elements.form_token.value, pc_hp: form.elements.pc_hp.value }) })
     const body = await response.json().catch(() => ({}))
@@ -226,9 +192,9 @@ form.addEventListener('submit', async event => {
       const done = document.createElement('div')
       done.className = 'request-done'
       done.setAttribute('tabindex', '-1')
-      const h = document.createElement('h3'); h.textContent = t.doneTitle
-      const p = document.createElement('p'); p.textContent = t.doneBody
-      const ref = document.createElement('p'); ref.className = 'section-note'; ref.textContent = t.reference(body.id)
+      const h = document.createElement('h3'); h.textContent = t(M.doneTitle)
+      const p = document.createElement('p'); p.textContent = t(M.doneBody)
+      const ref = document.createElement('p'); ref.className = 'section-note'; ref.textContent = t(M.reference, { id: body.id })
       done.append(h, p, ref)
       form.replaceChildren(done)
       done.focus()
@@ -240,10 +206,10 @@ form.addEventListener('submit', async event => {
     const issues = (body.issues || []).map(i => `${i.path}: ${i.message}`).join('; ')
     status.className = 'form-status is-error'
     // The Worker answers in the form's language (/api/leads?lang=…, the form's action).
-    status.textContent = `${body.message || t.notSent}${issues ? ` (${issues})` : ''}`
+    status.textContent = `${body.message || t(M.notSent)}${issues ? ` (${issues})` : ''}`
   } catch {
     status.className = 'form-status is-error'
-    status.textContent = t.offline
+    status.textContent = t(M.offline)
   } finally {
     submit.disabled = false
   }

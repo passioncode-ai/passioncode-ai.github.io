@@ -5,9 +5,12 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import worker, { currentSnapshot, ingestReleases, MISSING_PATH, refreshReleases, RU_NOT_FOUND } from '../worker/index.js'
+import worker, { currentSnapshot, ingestReleases, localeOfPath, MISSING_PATH, notFoundPath, refreshReleases } from '../worker/index.js'
 import { pushReleases } from './push-releases.mjs'
-import { buildLead, checkFormToken, confirmationText, deliver, formToObject, issueFormToken, issueMessage, knownFields, notificationText, platformSignature, plural, RECEIPTS_PER_HOUR, retryDue, storeLead } from '../worker/leads.js'
+import { buildLead, checkFormToken, confirmationText, deliver, formPage, formToObject, issueFormToken, issueMessage, knownFields, LEAD_LOCALES, notificationText, platformSignature, RECEIPTS_PER_HOUR, receiptSubject, retryDue, storeLead } from '../worker/leads.js'
+import { ISSUES, M } from '../worker/messages.js'
+import { CATALOGS, LOCALES, SOURCE_LOCALE, t, tn } from '../worker/i18n.js'
+import { liveValue } from '../worker/live.js'
 import bundled from '../releases/current.json' with { type: 'json' }
 import { d1 } from './d1-shim.mjs'
 
@@ -17,7 +20,7 @@ const config = JSON.parse(readFileSync(new URL('../wrangler.json', import.meta.u
 globalThis.HTMLRewriter = class { on () { return this } transform (r) { return r } }
 
 const ctx = () => { const waits = []; return { waits, waitUntil: p => waits.push(p), done: () => Promise.all(waits) } }
-const assets = { fetch: async request => new Response(`asset ${new URL(request.url).pathname}`, { status: ['/missing', '/ru/missing/', MISSING_PATH].includes(new URL(request.url).pathname) ? 404 : 200, headers: { 'Content-Type': new URL(request.url).pathname.endsWith('/') ? 'text/html; charset=utf-8' : 'text/plain', ETag: '"asset-1"', ...(request.headers.get('if-none-match') ? { 'X-Saw-Conditional': '1' } : {}) } }) }
+const assets = { fetch: async request => new Response(`asset ${new URL(request.url).pathname}`, { status: ['/missing', MISSING_PATH, ...Object.keys(LOCALES).map(l => `/${l}/missing/`)].includes(new URL(request.url).pathname) ? 404 : 200, headers: { 'Content-Type': new URL(request.url).pathname.endsWith('/') ? 'text/html; charset=utf-8' : 'text/plain', ETag: '"asset-1"', ...(request.headers.get('if-none-match') ? { 'X-Saw-Conditional': '1' } : {}) } }) }
 const mailer = () => { const sent = []; return { sent, send: async m => { sent.push(m); return { messageId: `m${sent.length}` } } } }
 const baseEnv = (extra = {}) => ({ ASSETS: assets, DB: d1(), EMAIL: mailer(), FORM_TOKEN_SECRET: 'form-secret', IP_HASH_SALT: 'salt', LEAD_NOTIFY_TO: 'commercial@passioncode.ai', ...extra })
 
@@ -635,14 +638,30 @@ test('the not-found page answers 404 at its own addresses too, never 200', async
   assert.equal(page.status, 200, 'only the not-found addresses are rewritten')
 })
 
-// ---- the Russian version (/ru/, RM-25): pages, not-found, the form and its mail -----------------
+// ---- the other languages (/<locale>/, RM-25): pages, not-found, the form and its mail ----------
+// The generic tests run for every language in i18n/locales.json; the Russian ones pin the words.
+const TRANSLATED = Object.keys(LOCALES).filter(l => l !== SOURCE_LOCALE)
 
-test('an unknown address under /ru/ gets the Russian not-found page, with 404; its own addresses too', async () => {
-  for (const path of ['/ru/missing/', '/ru/404', '/ru/404/', '/ru/404.html']) {
-    const r = await worker.fetch(new Request(`https://passioncode.ai${path}`), baseEnv(), ctx())
-    assert.equal(r.status, 404, path)
-    assert.equal(await r.text(), `asset ${RU_NOT_FOUND}`, `${path} serves ru/404.html`)
-    assert.equal(r.headers.get('strict-transport-security'), 'max-age=63072000; includeSubDomains')
+test('the Worker serves every language of the registry, and the form accepts each', () => {
+  assert.deepEqual(LEAD_LOCALES, Object.keys(JSON.parse(readFileSync(new URL('../i18n/locales.json', import.meta.url))).locales))
+  assert.ok(TRANSLATED.includes('ru'))
+  for (const l of TRANSLATED) {
+    assert.equal(formPage(l), `/${l}/business/`)
+    assert.equal(localeOfPath(`/${l}/start/`), l)
+    assert.equal(localeOfPath(`/${l}`), l)
+  }
+  assert.equal(localeOfPath('/russian/'), 'en', 'a prefix is a whole path segment')
+  assert.equal(formPage('en'), '/business/')
+})
+
+test('an unknown address under /<locale>/ gets that language\'s not-found page, with 404; its own addresses too', async () => {
+  for (const l of TRANSLATED) {
+    for (const path of [`/${l}/missing/`, `/${l}/404`, `/${l}/404/`, `/${l}/404.html`]) {
+      const r = await worker.fetch(new Request(`https://passioncode.ai${path}`), baseEnv(), ctx())
+      assert.equal(r.status, 404, path)
+      assert.equal(await r.text(), `asset ${notFoundPath(l)}`, `${path} serves ${l}/404.html`)
+      assert.equal(r.headers.get('strict-transport-security'), 'max-age=63072000; includeSubDomains')
+    }
   }
   const en = await worker.fetch(new Request('https://passioncode.ai/missing'), baseEnv(), ctx())
   assert.equal(await en.text(), 'asset /missing', 'an English address keeps the English page')
@@ -650,15 +669,41 @@ test('an unknown address under /ru/ gets the Russian not-found page, with 404; i
   assert.equal(page.status, 200)
 })
 
-test('the Russian form page gets its own form token, uncached, like the English one', async () => {
-  let seen = false
-  globalThis.HTMLRewriter = class { on (selector) { if (selector.includes('form_token')) seen = true; return this } transform (r) { return r } }
-  try {
-    const r = await worker.fetch(new Request('https://passioncode.ai/ru/business/'), baseEnv(), ctx())
-    assert.equal(r.headers.get('cache-control'), 'no-store')
-    assert.ok(seen, 'the token rewriter runs on /ru/business/')
-  } finally {
-    globalThis.HTMLRewriter = class { on () { return this } transform (r) { return r } }
+test('every language\'s form page gets its own form token, uncached, like the English one', async () => {
+  for (const path of ['/business/', ...TRANSLATED.map(l => `/${l}/business/`)]) {
+    let seen = false
+    globalThis.HTMLRewriter = class { on (selector) { if (selector.includes('form_token')) seen = true; return this } transform (r) { return r } }
+    try {
+      const r = await worker.fetch(new Request(`https://passioncode.ai${path}`), baseEnv(), ctx())
+      assert.equal(r.headers.get('cache-control'), 'no-store', path)
+      assert.ok(seen, `the token rewriter runs on ${path}`)
+    } finally {
+      globalThis.HTMLRewriter = class { on () { return this } transform (r) { return r } }
+    }
+  }
+})
+
+test('the live-version rewriter runs on every language\'s pages, and each page carries the same hooks', async () => {
+  const { SOURCE_PAGES } = await import('./pages.mjs')
+  for (const l of TRANSLATED) {
+    for (const page of SOURCE_PAGES) {
+      const path = `/${l}/${page.replace(/index\.html$/, '')}`
+      if (page === '404.html') continue
+      const selectors = []
+      globalThis.HTMLRewriter = class { on (selector) { selectors.push(selector); return this } transform (r) { return r } }
+      try {
+        await worker.fetch(new Request(`https://passioncode.ai${path}`), baseEnv(), ctx())
+      } finally {
+        globalThis.HTMLRewriter = class { on () { return this } transform (r) { return r } }
+      }
+      for (const hook of ['[data-live]', '[data-live-href]', 'script[data-live-ld]']) assert.ok(selectors.includes(hook), `${path}: ${hook}`)
+      // The translated page names the same live values as its English page, each with a value.
+      const hooks = html => [...html.matchAll(/\bdata-live(?:-href|-ld)?="([^"]+)"/g)].map(m => m[1])
+      const en = readFileSync(new URL(`../${page}`, import.meta.url), 'utf8')
+      const localized = readFileSync(new URL(`../${l}/${page}`, import.meta.url), 'utf8')
+      assert.deepEqual(hooks(localized), hooks(en), `${l}/${page}: the same data-live hooks as ${page}`)
+      for (const h of hooks(en).filter(h => !/^[a-z]+$/.test(h))) assert.notEqual(liveValue(bundled, h), undefined, `${page}: ${h}`)
+    }
   }
 })
 
@@ -728,6 +773,25 @@ test('English stays the default: a form without ?lang is English end to end', as
   assert.match(confirmationText(lead), /^Hello,/)
 })
 
+test('every language has every Worker message, with the same placeholders and its own plural forms', () => {
+  const placeholders = s => [...s.matchAll(/\{([a-zA-Z]\w*)\}/g)].map(m => m[1]).sort().join()
+  for (const l of TRANSLATED) {
+    const categories = new Intl.PluralRules(LOCALES[l].intl).resolvedOptions().pluralCategories.slice().sort()
+    for (const message of [...Object.values(M), ...Object.values(ISSUES)]) {
+      const key = typeof message === 'object' ? message.other : message
+      const value = CATALOGS[l][key]
+      assert.ok(value, `${l}: no translation for "${key}"`)
+      if (typeof message === 'object') assert.deepEqual(Object.keys(value).sort(), categories, `${l}: "${key}" plural forms`)
+      for (const form of typeof value === 'object' ? Object.values(value) : [value]) assert.equal(placeholders(form), placeholders(key), `${l}: "${key}" placeholders`)
+    }
+    assert.equal(receiptSubject(l), t(l, M.receiptSubject))
+    const text = confirmationText({ id: 'r-1', source: { locale: l } })
+    for (const path of ['/start/', '/business/', '/privacy/']) assert.ok(text.includes(`https://passioncode.ai/${l}${path}`), `${l} receipt links ${path} in its language`)
+    assert.ok(text.includes('r-1'))
+  }
+  assert.equal(t('xx', M.back), M.back, 'an unknown language reads English, never a key')
+})
+
 test('validation messages translate where they are shown, with Russian plural forms', () => {
   assert.equal(issueMessage('required', 'en'), 'required')
   assert.equal(issueMessage('required', 'ru'), 'обязательное поле')
@@ -736,7 +800,10 @@ test('validation messages translate where they are shown, with Russian plural fo
   assert.equal(issueMessage('at most 200 characters', 'ru'), 'не больше 200 символов')
   assert.equal(issueMessage('a number from 0 to 10000', 'ru'), 'число от 0 до 10000')
   assert.equal(issueMessage('something new', 'ru'), 'something new', 'an unknown message is shown as made, never lost')
-  for (const [n, form] of [[1, 'a'], [2, 'b'], [4, 'b'], [5, 'c'], [11, 'c'], [12, 'c'], [14, 'c'], [21, 'a'], [22, 'b'], [25, 'c'], [101, 'a'], [111, 'c']]) assert.equal(plural(n, 'a', 'b', 'c'), form, String(n))
+  // Russian has three plural forms for whole numbers (L10N-03), chosen by the number's ending.
+  for (const [n, form] of [[1, 'символа'], [2, 'символов'], [4, 'символов'], [5, 'символов'], [11, 'символов'], [12, 'символов'], [14, 'символов'], [21, 'символа'], [22, 'символов'], [25, 'символов'], [101, 'символа'], [111, 'символов']]) assert.equal(tn('ru', n, ISSUES.atLeast), `не меньше ${n} ${form}`, String(n))
+  assert.equal(tn('en', 1, ISSUES.atMost), 'at most 1 character')
+  assert.equal(tn('en', 3, ISSUES.atMost), 'at most 3 characters')
   // Every message buildLead makes for a bad submission has a Russian form.
   const { issues } = buildLead({ goals: ['nope'], contact: { email: 'x', name: 'y'.repeat(200) }, company: { website: 'not a url', name: '' }, processes: { hoursPerWeek: 'many', areas: [] }, setup: { mode: 'nope' } }, { newId: () => 'x', now: new Date(), ipHash: '', locale: 'ru' })
   assert.ok(issues.length >= 6)

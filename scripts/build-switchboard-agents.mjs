@@ -4,7 +4,7 @@
 //   node scripts/build-switchboard-agents.mjs [--check]
 import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { counterpartRoute } from './locales.mjs'
+import { applyChrome } from './locales.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const catalog = JSON.parse(readFileSync(resolve(root, 'switchboard/agents.json'), 'utf8'))
@@ -24,10 +24,10 @@ head = head.replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
   .replace(/(<meta name="twitter:description" content=")[^"]*/, `$1${esc(description)}`)
   .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(title)}`)
   .replace(/(<meta name="twitter:title" content=")[^"]*/, `$1${esc(title)}`)
-  // Canonical, og:url and both hreflang alternates (English and /ru/) move to this page.
-  .replace(/(https:\/\/passioncode\.ai(?:\/ru)?\/switchboard\/)"/g, '$1agents/"')
-// The language switch leads to this page's Russian version, not Switchboard's.
-const header = product.slice(at('<body'), at('<main id="main">')).replace(/(class="lang-switch" href=")[^"]*/, `$1${counterpartRoute('switchboard/agents/index.html', 'ru')}`)
+  // og:url moves to this page; the canonical, the hreflang alternates and the language switch
+  // are this page's chrome, written below (scripts/locales.mjs applyChrome).
+  .replace(/(<meta property="og:url" content="https:\/\/passioncode\.ai\/switchboard\/)"/, '$1agents/"')
+const header = product.slice(at('<body'), at('<main id="main">'))
 const footer = product.slice(at('</main>'))
 
 const rows = catalog.agents.map((a, i) => {
@@ -52,7 +52,7 @@ ${rows}
 <p class="section-note">From the command line: <code>switchboard agents list</code>, <code>switchboard agents connect hermes</code>, <code>switchboard agents launch goose --dir ~/project</code>.</p>
 </section>
 `
-const html = head + header + main + footer
+const html = applyChrome(head + header + main + footer, { sourceFile: 'switchboard/agents/index.html', locale: 'en' })
 const out = resolve(root, 'switchboard/agents/index.html')
 if (process.argv.includes('--check')) {
   if (!existsSync(out) || readFileSync(out, 'utf8') !== html) { console.error('switchboard/agents/index.html is stale; run node scripts/build-switchboard-agents.mjs'); process.exit(1) }
