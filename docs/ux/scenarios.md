@@ -25,6 +25,7 @@
 | SCN-016 | See and download the current release | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-017 | Read how request data is handled | Trust | P-02 | ST-07, FLW-06 | draft | pending |
 | SCN-018 | Check which coding agents Fabric works with | Fabric agents | P-01 | ST-04, FLW-03 | draft | pending |
+| SCN-019 | Read the site in another language | Languages | P-01, P-02 | ST-01, ST-07, FLW-07 | draft | pending |
 
 ## Personas
 
@@ -387,4 +388,23 @@ rather than replaces, the browser review recorded above.
 - **Errors & recovery:** none.
 - **Status:** draft
 - **Coverage:** privacy/index.html; scripts/check-site.mjs.
+- **Product:** unobserved
+
+### SCN-019: Read the site in another language
+- **Persona:** P-01, P-02
+- **Feature:** Languages
+- **Traces:** ST-01, ST-07, FLW-07
+- **Entry point:** any page; a search result or link to /ru/…; the header's language switch
+- **Preconditions:** none (no cookie, no browser-language redirect: the address decides the language)
+- **Steps:**
+  1. Open a page → the header shows the switch to the other language (Русский on an English page, English on a Russian one; a menu of every language once there are three or more).
+  2. Choose a language → the same page in that language, at the same path under its prefix (/start/ ↔ /ru/start/), same sections, same versions and downloads.
+  3. On /ru/business/ fill and send the form → the Worker records the request's language, answers refusals and validation in Russian, sends the receipt email in Russian with links to /ru/ pages; the commercial mailbox is told to reply in Russian.
+- **Expected result:** Every page reads in the chosen language with the same facts and limitations as English; links stay in that language; a search engine sees each version with reciprocal hreflang, x-default English, and every version in the sitemap.
+- **Alt paths:** an unknown address under /ru/ shows the Russian not-found page (404); the not-found page's switch leads to the other language's home page.
+- **UI elements:** language switch (`.lang-switch` link or `.lang-menu` disclosure), translated pages, the form's script messages
+- **States covered:** two languages (link), three or more (menu, no JavaScript needed); a refused or offline form submission in Russian.
+- **Errors & recovery:** a refused request shows its reason in the form's language and keeps the answers in the browser.
+- **Status:** draft
+- **Coverage:** scripts/locales.mjs, scripts/build-locale.mjs, worker/index.js, worker/leads.js; scripts/locales.test.mjs, scripts/check-worker.mjs, scripts/check-site.mjs; docs/DEPLOYMENT.md#languages.
 - **Product:** unobserved

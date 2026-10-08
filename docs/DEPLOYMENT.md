@@ -4,10 +4,11 @@
 
 - `wrangler.json` binds the Worker to `passioncode.ai` and `www.passioncode.ai` as
   Custom Domains. The Worker redirects `www` to the canonical apex URL.
-- `npm run check` validates the brand lock, the release and Worker unit tests, the 13 pages
-  (`scripts/pages.mjs`), live values against `releases/current.json`, the form against the Worker's
-  options, and scoped design-token contrast.
-- `python3 scripts/extract-public-copy.py --check` verifies the 13 public copy projections in
+- `npm run check` validates the brand lock, the release and Worker unit tests, the 28 pages
+  (`scripts/pages.mjs`: 14 English pages and the same 14 in each other [language](#languages)),
+  the generated language versions, live values against `releases/current.json`, the form against
+  the Worker's options, and scoped design-token contrast.
+- `python3 scripts/extract-public-copy.py --check` verifies the 28 public copy projections in
   `docs/brand/copy/`; it is the last step of `npm run check`. After changing visible text, run
   `python3 scripts/extract-public-copy.py` to regenerate them.
 - `.github/workflows/check.yml` repeats the checks on pushes and pull requests. It does
@@ -96,11 +97,13 @@ Replace the example tag with the actual tag. The updater rejects drafts and requ
 
 Review the release's actual signing/platform limits and installation instructions before committing, and update the Switchboard rows in `docs/brand/facts.md` and `python3 scripts/extract-public-copy.py`. Never advertise GitHub `releases/latest` as the newest beta: that endpoint excludes prereleases.
 
-Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment compare the 13 pages `scripts/pages.mjs` lists, the other allow-listed assets and
+Before production, verify the pushed `main` SHA equals the reviewed local commit, rerun the local checks, then deploy. After deployment compare the 28 pages `scripts/pages.mjs` lists, the other allow-listed assets and
 the seven download redirects (`/<product>/download/<platform>`, [always-current
-versions](#always-current-versions)). `scripts/verify-live.py` checks the current build's 44
-entries (the not-found page through an address that cannot exist, expecting 404), redirect
-destination/no-store/noindex, and that private paths and the not-found page's own addresses answer 404:
+versions](#always-current-versions)). `scripts/verify-live.py` checks every entry of the current build
+(61 on 2026-10-08; the not-found page of each language through an address that cannot exist under
+its prefix, expecting 404), each page's `<html lang>` and, on indexed pages, the hreflang list (every
+language and x-default), redirect destination/no-store/noindex, and that private paths and the
+not-found page's own addresses in every language answer 404:
 
 ```sh
 python3 scripts/verify-live.py --output docs/evidence/2026-10-01-workplace/live.json
@@ -182,6 +185,66 @@ newer one: merge the nightly sync and re-check `facts.md` the day a release ship
 
 A cron run where no product answered (the anonymous `403` case) stores nothing: the snapshot and
 its `fetched_at` stay as they were, and the log says `releases.refresh_failed`.
+
+## Languages
+
+Operator decision 2026-10-08 (roadmap RM-25, fabric-workspace `knowledge/localization.md`): every
+page in English and in Russian, on a foundation that takes more languages from catalogs alone.
+
+- **The registry** is `i18n/locales.json`: each language's code, own name (the switch's label),
+  English name (what the commercial mailbox reads), Open Graph locale, BCP 47 tag (numbers, money,
+  plural rules) and the switch's accessible name. `scripts/pages.mjs`, the Worker, the page scripts,
+  the Python helpers and `verify-live.py` read it; nothing else lists languages.
+- **English is the source.** English pages are written by hand at `/`; every other language has the
+  same pages under `/<code>/`, **generated** by `npm run locales` (`scripts/build-locale.mjs`) from the
+  English page and the catalogs `i18n/<code>/*.json`, keyed by the English text (L10N-02):
+  `_common.json` (header, footer, names), one file per page (`home.json`, `business.json`, …;
+  Switchboard's release regions in `switchboard-release.json`), `_scripts.json` (what
+  `assets/messages.js` and `worker/messages.js` say), `_checks.json` (the gate's banned phrases and
+  disclosures in that language). Never edit a generated page; edit the English page or the catalog.
+- **What the generator writes**: each translated page (markup unchanged, text, translatable
+  attributes, meta and JSON-LD prose translated, page links moved under `/<code>/`, the form's action
+  `/api/leads?lang=<code>`); the chrome of every page, English included — `<html lang>`, the canonical
+  in its own language, reciprocal `hreflang` for every language plus `x-default` (English), `og:locale`
+  and `og:locale:alternate`, and the header's language switch to the same page in the other language
+  (one link for two languages, a `<details>` menu for three or more); `assets/i18n.js` and
+  `worker/i18n.js`; `sitemap.xml` with every version of every indexed page and its alternates; the
+  "Languages" section of `llms.txt`. The thanks and 404 pages stay `noindex` in every language and carry
+  no alternates; every other page is indexed in every language.
+- **The gate** (`npm run locales -- --check`, inside `npm run check`) fails on an English fragment or
+  message with no translation (a changed English sentence is a new key, so it is reported until
+  translated), an unused catalog entry, a translation that carries markup or changes its `{placeholders}`,
+  a plural without every form the language's `Intl.PluralRules` needs (L10N-03), a generated file out of
+  date, or a translated page whose skeleton differs from its English page — every element, id, class,
+  `data-live` hook, link (compared in English) and form field name in order. Switchboard's release
+  regions are translated in every variant a release can produce (MIT/PolyForm/AGPL, notarized or not,
+  checksums, launcher plugin), so a release never meets an untranslated region.
+- **Releases.** `npm run releases:sync` and `scripts/update-switchboard-release.mjs` regenerate every
+  language after the English pages move; the updater restores the English page and manifest if a
+  language cannot follow. The Worker's live rewriter (`worker/live.js`) runs on every language's pages;
+  `data-live` text, codes and versions are never translated, so the same hooks carry the same values
+  (`scripts/locales.test.mjs`, `scripts/check-worker.mjs`).
+- **The Worker** serves an unknown address under `/<code>/` with that language's `404.html` (status
+  404), writes a fresh form token into `/<code>/business/`, records the form's language on the lead
+  (`source.locale`, `source.page`), answers refusals (page and JSON `message`, validation issues) in it
+  — `error` codes stay English — and sends the receipt email in it, with links to that language's
+  pages. The notification to the commercial mailbox stays English and names the language to reply in.
+
+### Adding a language
+
+1. Add its entry to `i18n/locales.json` (e.g. `"de": { "name": "Deutsch", "englishName": "German",
+   "og": "de_DE", "intl": "de-DE", "switchLabel": "Sprache" }`).
+2. `npm run locales -- --missing` prints every fragment and message to translate, file by file, as
+   catalog JSON; save each block as `i18n/<code>/<file>.json` and fill the values (product names stay
+   English; the glossary in fabric-workspace `knowledge/localization.md` and `docs/brand/` apply). A
+   plural gets one form per category the language has (German: `one`, `other`).
+3. Write `i18n/<code>/_checks.json` (copy the Russian one): banned phrases in the language and, for each
+   product page, the disclosures it must keep, in its own words.
+4. `npm run locales`, `python3 scripts/extract-public-copy.py`, `npm run check`, `npm run build`, PR,
+   deploy, `verify-live.py`. Nothing else changes: routes, the Worker, the sitemap, hreflang, the switch
+   (it becomes a menu at three languages) and `llms.txt` follow the registry. The test "adding a
+   language takes only i18n/locales.json and i18n/<locale>/" in `scripts/locales.test.mjs` proves this
+   on a copy of the site on every check.
 
 ## Storage
 
