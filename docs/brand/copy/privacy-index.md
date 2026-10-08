@@ -32,7 +32,7 @@ PRIVACY NOTICE · VERSION 2026-10-08
 
 passioncode.ai has no analytics, no advertising trackers and no cookies. The only personal data it collects is what you type into the request form on /business/.
 
-This notice is published in English and Russian. If the two versions differ, the English version prevails.
+This notice is also published in other languages. If a translation differs from this English version, the English version prevails.
 
 ## Who is responsible
 

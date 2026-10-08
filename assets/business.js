@@ -55,9 +55,9 @@ function collect () {
     const [a, b] = name.split('.')
     if (b) { out[a] ??= {}; out[a][b] ??= [] } else out[a] ??= []
   }
-  out(M.consent) ??= {}
-  out(M.consent).privacy = out(M.consent).privacy === true
-  out(M.consent).marketing = out(M.consent).marketing === true
+  out.consent ??= {}
+  out.consent.privacy = out.consent.privacy === true
+  out.consent.marketing = out.consent.marketing === true
   const params = new URLSearchParams(location.search)
   out.source = { referrer: document.referrer || '', utm: Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, params.get(`utm_${k}`) || ''])) }
   return out

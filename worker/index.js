@@ -6,7 +6,8 @@ import { fetchSnapshot, mergeSnapshots, validSnapshot } from './releases.js'
 import { liveRewriter } from './live.js'
 import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, formPage, formToObject, issueFormToken, issueMessage, knownFields, leadLocale, MAX_BODY_BYTES, platformSignature, retryDue, sha256, storeLead } from './leads.js'
 import { M } from './messages.js'
-import { LOCALES, SOURCE_LOCALE, t } from './i18n.js'
+import { SOURCE_LOCALE, t } from './i18n.js'
+import { BUSINESS_PAGE, localeOfPath, MISSING_PATH, NOT_FOUND_PAGE, notFoundPath } from './routing.js'
 
 const policies = policyFile.products
 const SNAPSHOT_TTL_MS = 60_000
@@ -53,7 +54,7 @@ async function storeSnapshot (env, fetched, errors, { at, source, extra = [] }) 
 }
 
 const versionsOf = snapshot => Object.fromEntries(Object.entries(snapshot.products).map(([k, v]) => [k, v.version]))
-export const PUSH_FRESH_MS = 2 * 60 * 60 * 1000
+const PUSH_FRESH_MS = 2 * 60 * 60 * 1000
 
 export async function refreshReleases (env, { fetch: fetchImpl = fetch, now = () => new Date() } = {}) {
   // Without a token the Worker's shared egress addresses are rate-limited by GitHub, so while the
@@ -92,7 +93,7 @@ export async function refreshReleases (env, { fetch: fetchImpl = fetch, now = ()
 // The hourly GitHub Actions job (scripts/push-releases.mjs) resolves the releases with the
 // Actions token and sends the snapshot here, signed like an enquiry is to the Platform:
 // HMAC-SHA256(RELEASES_INGEST_SECRET, "<X-PC-Timestamp>.<body>"), within five minutes.
-export const INGEST_MAX_BYTES = 512 * 1024
+const INGEST_MAX_BYTES = 512 * 1024
 export async function ingestReleases (request, env, { now = () => new Date() } = {}) {
   if (!env.RELEASES_INGEST_SECRET || !env.DB) return json({ error: 'not_configured' }, 503)
   const ts = request.headers.get('x-pc-timestamp') || ''
@@ -124,16 +125,6 @@ const SECURITY_HEADERS = {
   // Two years, subdomains included (api. and wiki. answer over HTTPS); no preload commitment.
   'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'
 }
-// The site's languages other than English, each under /<locale>/ (i18n/locales.json).
-const TRANSLATED = Object.keys(LOCALES).filter(l => l !== SOURCE_LOCALE)
-const LOCALE_PREFIX = TRANSLATED.length ? `(?:(?:${TRANSLATED.join('|')})\\/)?` : ''
-const NOT_FOUND_PAGE = new RegExp(`^\\/${LOCALE_PREFIX}404(?:\\.html|\\/)?$`)
-export const MISSING_PATH = '/__not-found__/'
-// An address under /<locale>/ that has no page gets that language's not-found page
-// (<locale>/404.html), still 404.
-export const localeOfPath = path => TRANSLATED.find(l => path === `/${l}` || path.startsWith(`/${l}/`)) || SOURCE_LOCALE
-export const notFoundPath = locale => `/${locale}/404`
-const BUSINESS_PAGE = new RegExp(`^\\/${LOCALE_PREFIX}business\\/?$`)
 
 function withHeaders (response, extra = {}) {
   const out = new Response(response.body, response)

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
@@ -124,6 +125,10 @@ for (const file of PAGES) {
 // Every module a shipped script imports is shipped too (scripts/build-site.mjs allow-list): a
 // missing one breaks the copy buttons and the form on every page.
 const shipped = new Set([...read('scripts/build-site.mjs').matchAll(/'(assets\/[^']+\.js)'/g)].map(m => m[1]))
+for (const file of shipped) {
+  // A syntax error in a shipped module silently turns off the copy buttons or the form's script.
+  try { execFileSync(process.execPath, ['--check', resolve(root, file)], { stdio: 'pipe' }) } catch (error) { assert.fail(`${file} does not parse: ${String(error.stderr).split('\n').slice(0, 5).join(' ')}`) }
+}
 for (const file of shipped) for (const [, spec] of read(file).matchAll(/^\s*(?:import|export)\b[^'"]*from '(\.\/[^']+)'/gm)) assert.ok(shipped.has(`assets/${spec.slice(2)}`), `${file} imports ${spec}, which the build does not ship`)
 assert.match(css, /@media \(max-width: 620px\)/)
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)

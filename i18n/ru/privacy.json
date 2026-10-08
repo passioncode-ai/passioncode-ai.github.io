@@ -6,7 +6,6 @@
     "Privacy notice": "Уведомление о конфиденциальности",
     "passioncode.ai has no analytics, no advertising trackers and no cookies. The only personal data it collects is what you type into the request form on": "На passioncode.ai нет аналитики, рекламных трекеров и cookies. Единственные персональные данные, которые сайт собирает, — то, что вы вводите в форму заявки на странице",
     "/business/": "/ru/business/",
-    "This notice is published in English and Russian. If the two versions differ, the English version prevails.": "Это уведомление опубликовано на английском и русском языках. Если версии расходятся, действует английская.",
     "Who is responsible": "Кто отвечает за данные",
     "PassionCode.ai, run by Siarhei Sheleh, is the controller of the data described here. Contact:": "Оператор описанных здесь данных — PassionCode.ai, которым руководит Siarhei Sheleh. Связь:",
     "or": "или",
@@ -30,6 +29,7 @@
     "While you fill the form, your unsent answers are kept only in your own browser’s storage so a reload does not lose them; they are removed when the request is sent.": "Пока вы заполняете форму, неотправленные ответы хранятся только в хранилище вашего браузера, чтобы не потеряться при перезагрузке страницы; после отправки заявки они удаляются.",
     "The apps": "Приложения",
     "PRIVACY NOTICE · VERSION 2026-10-08": "УВЕДОМЛЕНИЕ О КОНФИДЕНЦИАЛЬНОСТИ · ВЕРСИЯ 2026-10-08",
-    "The PassionCode.ai apps run on your computers and do not send your work to us. Fabric Switchboard and, since version 0.3.2, Fabric send anonymous usage counts — counts and kinds only, never names, paths or content. Turn them off in Switchboard’s About window or in Fabric’s Settings; the switch applies to every PassionCode.ai app on that computer.": "Приложения PassionCode.ai работают на ваших компьютерах и не отправляют нам вашу работу. Fabric Switchboard и, начиная с версии 0.3.2, Fabric отправляют анонимные счётчики использования — только количество и типы событий, без имён, путей и содержимого. Отключить их можно в окне «О программе» Switchboard или в настройках Fabric; переключатель действует для всех приложений PassionCode.ai на этом компьютере."
+    "The PassionCode.ai apps run on your computers and do not send your work to us. Fabric Switchboard and, since version 0.3.2, Fabric send anonymous usage counts — counts and kinds only, never names, paths or content. Turn them off in Switchboard’s About window or in Fabric’s Settings; the switch applies to every PassionCode.ai app on that computer.": "Приложения PassionCode.ai работают на ваших компьютерах и не отправляют нам вашу работу. Fabric Switchboard и, начиная с версии 0.3.2, Fabric отправляют анонимные счётчики использования — только количество и типы событий, без имён, путей и содержимого. Отключить их можно в окне «О программе» Switchboard или в настройках Fabric; переключатель действует для всех приложений PassionCode.ai на этом компьютере.",
+    "This notice is also published in other languages. If a translation differs from this English version, the English version prevails.": "Это уведомление опубликовано и на других языках. Если перевод расходится с этой английской версией, действует английская."
   }
 }
