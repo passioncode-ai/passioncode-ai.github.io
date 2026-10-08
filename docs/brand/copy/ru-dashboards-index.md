@@ -38,7 +38,7 @@ FABRIC DASHBOARDS · macOS
 
 Исходный код ↗
 
-Релиз 0.6.4 · macOS 13+ · Apple silicon + Intel
+Релиз 0.6.5 · macOS 13+ · Apple silicon + Intel
 
 ВАШИ ЛОКАЛЬНЫЕ СЕРВИСЫ / ВМЕСТЕ
 
@@ -82,7 +82,7 @@ Fabric Dashboards находит совместимые сервисы на ва
 
 ### macOS
 
-Релиз 0.6.4. Универсальный DMG для Apple silicon и Intel, macOS 13 или новее. Подписан Developer ID, нотаризован, тикет вшит (stapled).
+Релиз 0.6.5. Универсальный DMG для Apple silicon и Intel, macOS 13 или новее. Подписан Developer ID, нотаризован, тикет вшит (stapled).
 
 Скачать Fabric Dashboards ↓
 
@@ -96,7 +96,7 @@ Fabric Dashboards находит совместимые сервисы на ва
 
 SHA-256 для DMG
 
-466e0d708f541d625b285d52af25a15e88b85face1bfb5a6e138ba15af3b2e01
+b1d1d7253a32a059686725befb1b9ead53252688a3ce0ae995de3a91106a3ea3
 
 Заметки к релизу и контрольные суммы ↗
 

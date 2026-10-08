@@ -56,7 +56,7 @@ GET SWITCHBOARD
 
 ## Pick your platform
 
-Latest release: 0.6.10. Both downloads include the desktop app and the switchboard CLI.
+Latest release: 0.6.14. Both downloads include the desktop app and the switchboard CLI.
 
 ⌘
 
@@ -100,11 +100,11 @@ The app keeps running in the menu bar after you close its window, and opens at l
 
 macOS ZIP · SHA-256
 
-b633788750ff600dbeccd6a1ee2336f346180e2e837d65aa19c8187dc77765af
+7daffb205c73ca65c2a279d46baf1a9e99ff7ff0a7d6226243f4cad63989f64e
 
 Windows ZIP · SHA-256
 
-0b259c035fd3a536f39bd1cebc0e85af3de61eb911a5ef22908734ef4c4e26b1
+4bf62562c216100b4c3adf4864fa9260764b20301f952345f38aca79c34a7eac
 
 Compare before opening: shasum -a 256 in Terminal, Get-FileHash in PowerShell. A different value means a different file; download it again.
 
@@ -279,7 +279,7 @@ Release builds count installs, days of use and how many accounts are connected, 
 
 Can I inspect or build it myself?
 
-Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from passioncode.ai/business. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.6.10, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
+Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from passioncode.ai/business. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.6.14, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
 
 PART OF THE PASSIONCODE TOOLKIT
 
