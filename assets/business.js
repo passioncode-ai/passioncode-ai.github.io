@@ -5,6 +5,13 @@
 // and a JSON submission that stays on the page.
 import { estimate, formatMoney } from './estimate.js'
 
+// What this script says, in the page's language (<html lang>): English in assets/messages.js,
+// translated through assets/i18n.js (generated from i18n/<locale>/_scripts.json).
+import { M } from './messages.js'
+import { LOCALES, resolveLocale, t as translate } from './i18n.js'
+const locale = resolveLocale(document.documentElement.lang)
+const t = (message, params) => translate(locale, message, params)
+
 const form = document.getElementById('lead-form')
 const DRAFT_KEY = 'passioncode.business.draft.v1'
 const ID_KEY = 'passioncode.business.request-id.v1'
@@ -91,16 +98,16 @@ function renderEstimate () {
   if (!e) {
     const span = document.createElement('span')
     span.className = 'estimate-empty'
-    span.textContent = 'Fill in the hours, the cost and how the work runs today to see the estimate.'
+    span.textContent = t(M.estimateEmpty)
     output.append(span)
     return
   }
   const lead = document.createElement('span')
-  lead.textContent = 'Agents could take over about'
+  lead.textContent = t(M.estimateLead)
   const figure = document.createElement('strong')
-  figure.textContent = `${formatMoney(e.monthlySavings[0], e.currency)}–${formatMoney(e.monthlySavings[1], e.currency)} a month`
+  figure.textContent = t(M.estimateFigure, { low: formatMoney(e.monthlySavings[0], e.currency, LOCALES[locale].intl), high: formatMoney(e.monthlySavings[1], e.currency, LOCALES[locale].intl) })
   const detail = document.createElement('small')
-  detail.textContent = `${e.hoursSavedPerMonth[0]}–${e.hoursSavedPerMonth[1]} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.`
+  detail.textContent = t(M.estimateDetail, { low: e.hoursSavedPerMonth[0].toLocaleString(LOCALES[locale].intl), high: e.hoursSavedPerMonth[1].toLocaleString(LOCALES[locale].intl) })
   output.append(lead, figure, detail)
 }
 
@@ -138,17 +145,17 @@ function validate (step) {
   const fail = (target, message, focus) => { flag(target, message); first ??= focus || target }
   for (const group of step.querySelectorAll('.choices[role="group"]')) {
     const name = group.querySelector('input')?.name
-    if ((name === 'goals' || name === 'processes.areas') && !group.querySelector('input:checked')) fail(group, 'Choose at least one.', group.querySelector('input'))
+    if ((name === 'goals' || name === 'processes.areas') && !group.querySelector('input:checked')) fail(group, t(M.chooseAny), group.querySelector('input'))
   }
   for (const group of step.querySelectorAll('.choices[role="radiogroup"]')) {
-    if (group.querySelector('input[required]') && !group.querySelector('input:checked')) fail(group, 'Choose one.', group.querySelector('input'))
+    if (group.querySelector('input[required]') && !group.querySelector('input:checked')) fail(group, t(M.chooseOne), group.querySelector('input'))
   }
   for (const field of step.querySelectorAll('input[required]:not([type="radio"]):not([type="checkbox"]), select[required]')) {
-    if (!field.value.trim()) fail(field, 'Required.')
-    else if (field.type === 'email' && !field.validity.valid) fail(field, 'A work email address.')
+    if (!field.value.trim()) fail(field, t(M.required))
+    else if (field.type === 'email' && !field.validity.valid) fail(field, t(M.email))
   }
   const consent = step.querySelector('[name="consent.privacy"]')
-  if (consent && !consent.checked) fail(consent.closest('.consent'), 'Agree to the privacy notice to send the request.', consent)
+  if (consent && !consent.checked) fail(consent.closest('.consent'), t(M.consent), consent)
   first?.focus()
   return !first
 }
@@ -176,7 +183,7 @@ form.addEventListener('submit', async event => {
   for (const [i, step] of steps.entries()) if (!validate(step)) { show(i); return }
   submit.disabled = true
   status.className = 'form-status'
-  status.textContent = 'Sending…'
+  status.textContent = t(M.sending)
   try {
     const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...collect(), id: requestId(), form_token: form.elements.form_token.value, pc_hp: form.elements.pc_hp.value }) })
     const body = await response.json().catch(() => ({}))
@@ -185,9 +192,9 @@ form.addEventListener('submit', async event => {
       const done = document.createElement('div')
       done.className = 'request-done'
       done.setAttribute('tabindex', '-1')
-      const h = document.createElement('h3'); h.textContent = 'Thank you — it reached us'
-      const p = document.createElement('p'); p.textContent = 'We reply within two business days. A confirmation email usually follows within minutes.'
-      const ref = document.createElement('p'); ref.className = 'section-note'; ref.textContent = `Reference: ${body.id}`
+      const h = document.createElement('h3'); h.textContent = t(M.doneTitle)
+      const p = document.createElement('p'); p.textContent = t(M.doneBody)
+      const ref = document.createElement('p'); ref.className = 'section-note'; ref.textContent = t(M.reference, { id: body.id })
       done.append(h, p, ref)
       form.replaceChildren(done)
       done.focus()
@@ -198,10 +205,11 @@ form.addEventListener('submit', async event => {
     if (response.status === 409) { try { localStorage.removeItem(ID_KEY) } catch {} memoryId = undefined }
     const issues = (body.issues || []).map(i => `${i.path}: ${i.message}`).join('; ')
     status.className = 'form-status is-error'
-    status.textContent = `${body.message || 'The request was not sent.'}${issues ? ` (${issues})` : ''}`
+    // The Worker answers in the form's language (/api/leads?lang=…, the form's action).
+    status.textContent = `${body.message || t(M.notSent)}${issues ? ` (${issues})` : ''}`
   } catch {
     status.className = 'form-status is-error'
-    status.textContent = 'The request did not leave your browser — check your connection and send it again. Your answers are kept here.'
+    status.textContent = t(M.offline)
   } finally {
     submit.disabled = false
   }

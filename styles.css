@@ -998,6 +998,26 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .fabric-agent-table td a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
 .agents-subheading { font-size: 24px; letter-spacing: -.03em; margin: 56px 0 12px; }
 .agents-text { color: var(--ink-soft); max-width: 760px; line-height: 1.7; margin-bottom: var(--pc-space-5); }
+@media (max-width: 620px) {
  .agents-answer { font-size: 16px; }
  .fabric-agent-table { font-size: 14px; }
  .fabric-agent-table th, .fabric-agent-table td { padding-right: var(--pc-space-3); }
+}
+/* The language switch sits beside the header's action on every page and leads to the same page in
+   another language (docs/ux/screens.md, docs/DEPLOYMENT.md#languages). With two languages it is one
+   link; with three or more, a disclosure listing them all (scripts/locales.mjs languageSwitch),
+   which needs no script. */
+.header-actions { justify-self: end; display: flex; align-items: center; gap: 22px; }
+.lang-switch { color: var(--ink-soft); font-size: 14px; transition: color 160ms ease; }
+.lang-switch:hover, .lang-switch:focus-visible { color: var(--gold); }
+.lang-menu { position: relative; }
+.lang-menu > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; color: var(--ink-soft); transition: color 160ms ease; }
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.lang-menu[open] > summary::after { transform: translateY(2px) rotate(-135deg); }
+.lang-menu > summary:hover, .lang-menu[open] > summary { color: var(--gold); }
+.lang-menu > ul { position: absolute; right: 0; top: calc(100% + 14px); z-index: 30; min-width: 168px; margin: 0; padding: 6px; list-style: none; background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--pc-radius-control); box-shadow: 0 18px 40px rgba(0, 0, 0, .45); }
+.lang-menu > ul a { display: block; padding: 9px 12px; border-radius: 6px; color: var(--ink-soft); font-size: 14px; transition: color 160ms ease, background-color 160ms ease; }
+.lang-menu > ul a:hover, .lang-menu > ul a:focus-visible { color: var(--gold); background: rgba(255, 255, 255, .05); }
+@media (max-width: 900px) { .story-site .site-header .header-actions { grid-column: 2; grid-row: 1; } }
+@media (max-width: 620px) { .header-actions { gap: 14px; } .lang-switch { font-size: 13px; } }

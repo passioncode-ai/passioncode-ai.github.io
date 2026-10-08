@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Начало работы | Установите рабочее место для ИИ-агентов | PassionCode.ai</title><meta name="description" content="Установите скилы PassionCode.ai, добавьте Fabric, создайте первого агента Fabric с помощью Claude Code или Codex, адаптируйте существующий проект и запустите его в Fabric Dashboards. Бесплатно и с открытым кодом.">
+  <link rel="canonical" href="https://passioncode.ai/ru/start/">
+  <link rel="alternate" hreflang="en" href="https://passioncode.ai/start/"><link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/start/"><link rel="alternate" hreflang="x-default" href="https://passioncode.ai/start/">
+  <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="ru_RU"><meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Начните работу с PassionCode.ai"><meta property="og:description" content="От пустого Mac до первого работающего агента — за четыре шага. Бесплатно и с открытым кодом.">
+  <meta property="og:url" content="https://passioncode.ai/ru/start/">
+  <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/passioncode-mark.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="/assets/icon-256.png">
+  <link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/assets/site.js"></script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Настройка рабочего места для ИИ-агентов с PassionCode.ai",
+  "description": "Установите скилы, добавьте Fabric, создайте агента Fabric, адаптируйте существующий проект и запустите его в Fabric Dashboards.",
+  "totalTime": "PT20M",
+  "tool": [{ "@type": "HowToTool", "name": "Claude Code или Codex" }, { "@type": "HowToTool", "name": "Node.js 18 или новее" }],
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Установите скилы", "text": "Выполните npx @passioncode-ai/passioncode@latest update и перезапустите агента.", "url": "https://passioncode.ai/ru/start/#launcher" },
+    { "@type": "HowToStep", "position": 2, "name": "Добавьте Fabric", "text": "Скачайте раннюю предварительную версию Fabric для macOS на Apple silicon и откройте первый проект.", "url": "https://passioncode.ai/ru/start/#fabric" },
+    { "@type": "HowToStep", "position": 3, "name": "Создайте или адаптируйте агента", "text": "Попросите своего агента для программирования создать агента Fabric или адаптировать к Fabric существующий проект.", "url": "https://passioncode.ai/ru/start/#build" },
+    { "@type": "HowToStep", "position": 4, "name": "Запустите и посмотрите", "text": "Установите Fabric Dashboards и подключите его к своему агенту по MCP.", "url": "https://passioncode.ai/ru/start/#run" }
+  ]
+}</script>
+</head>
+<body class="story-site"><a class="skip-link" href="#main">Перейти к содержанию</a>
+<header class="site-header">
+ <a class="brand" href="/ru/" aria-label="PassionCode.ai — главная страница"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a>
+ <nav aria-label="Основная навигация"><a href="/ru/#products">Инструменты</a><a href="/ru/#toolkit">Ваша работа</a><a href="/ru/#extend">Разработчикам</a><a href="/ru/#about">О проекте</a></nav>
+ <div class="header-actions"><a class="lang-switch" href="/start/" hreflang="en" lang="en">English</a><a class="header-link header-download" href="/ru/#products">Скачать <span aria-hidden="true">↓</span></a></div>
+</header>
+<main id="main">
+<section class="hero page-hero" aria-labelledby="hero-title">
+ <div class="hero-copy">
+  <p class="eyebrow"><span></span> Начало работы · бесплатно и с открытым кодом</p>
+  <h1 id="hero-title">От пустого Mac до <em>первого агента</em></h1>
+  <p class="hero-body">Четыре шага, около двадцати минут. Каждый полезен сам по себе — остановитесь там, где результата уже достаточно</p>
+  <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Нужны Node.js 18+ и Claude Code или Codex <span>Для Fabric нужен macOS на Apple silicon</span></p>
+ </div>
+ <nav class="page-toc" aria-label="На этой странице"><a href="#launcher"><span>01</span> Установите скилы</a><a href="#fabric"><span>02</span> Добавьте Fabric</a><a href="#build"><span>03</span> Создайте или адаптируйте агента</a><a href="#run"><span>04</span> Запустите и посмотрите</a><a href="#contribute"><span>+</span> Участие</a></nav>
+</section>
+
+<section class="section guide" aria-labelledby="steps-title">
+ <h2 id="steps-title" class="visually-hidden">Шаги</h2>
+ <ol class="setup-steps guide-steps">
+  <li id="launcher" class="reveal"><span>01</span><div><h3>Установите скилы</h3><p>Лаунчер PassionCode.ai устанавливает скилы Fabric Agent Adapter, Observatory Log и рабочие правила в Claude Code, Codex и других поддерживаемых агентов. Без аккаунта и без ключа.</p><pre class="copyable"><code>npx @passioncode-ai/passioncode@latest update</code></pre><p class="step-meta">Лаунчер <span data-live="launcher.version">0.1.30</span> · устанавливает компоненты семейства в зафиксированных версиях · после установки перезапустите агента. Автоматические обновления включены по умолчанию; <a href="https://github.com/passioncode-ai/passioncode#quick-start-for-a-new-teammate">их можно отключить</a>, если хотите.</p></div></li>
+  <li id="fabric" class="reveal"><span>02</span><div><h3>Добавьте Fabric</h3><p>Fabric — ИИ-агент в роли CEO: у каждого проекта появляется единое место для цели, доски задач, решений и релизов. Это ранняя предварительная версия: ей нужны Docker и Supabase CLI, а чат сохраняет сообщения, но пока не отвечает.</p><div class="hero-actions"><a class="button button-primary" href="/fabric/download/macos">Скачать Fabric <span data-live="fabric.version">0.3.2</span> для macOS <span aria-hidden="true">↓</span></a><a class="text-link" href="/ru/fabric/#download">Требования и ограничения</a></div><p class="step-meta">Apple silicon · подписано и нотаризовано · SHA-256 <code data-live="fabric.assets.macos.sha256">db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b</code> · <a href="https://github.com/passioncode-ai/fabric/releases/tag/v0.3.2" data-live-href="fabric.releaseUrl">заметки к релизу</a></p></div></li>
+  <li id="build" class="reveal"><span>03</span><div><h3>Создайте или адаптируйте агента</h3><p>Попросите в Claude Code или Codex то, что вам нужно. Скил Fabric Agent Adapter соберёт сервис, совместимый с Fabric: контракт, дашборд, тесты и проверку соответствия.</p><p class="step-prompt"><span>создание</span> Создай агента Fabric, который каждое утро проверяет отзывы о нашем приложении в сторе и готовит черновики ответов</p><p class="step-prompt"><span>адаптация</span> Адаптируй этот репозиторий к Fabric</p><p>Существующий агент, MCP-сервер или консольный инструмент сохраняет свой код; адаптер добавляет вокруг него то, что нужно Fabric. <a href="https://github.com/passioncode-ai/fabric-agent-adapter#quick-start-for-a-new-teammate">Быстрый старт адаптера</a> · <a href="https://github.com/passioncode-ai/fabric-agent-contract">контракт</a></p></div></li>
+  <li id="run" class="reveal"><span>04</span><div><h3>Запустите и посмотрите</h3><p>Fabric Dashboards показывает все локальные сервисы агентов в одном окне; ваш агент может запускать, останавливать и открывать их по MCP.</p><div class="hero-actions"><a class="button button-secondary" href="/dashboards/download/macos">Скачать Fabric Dashboards <span data-live="dashboards.version">0.6.4</span> <span aria-hidden="true">↓</span></a></div><pre class="copyable"><code>claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"</code></pre><p>Затем добавьте то, что нужно вашей работе: <a href="/ru/switchboard/">Fabric Switchboard</a> — когда агентам нужно несколько аккаунтов, <a href="/ru/observatory/">Project Observatory</a> — чтобы видеть, что изменилось во всех проектах, <a href="/ru/inbox/">Fabric Inbox</a> — для почты.</p></div></li>
+ </ol>
+</section>
+
+<section class="section contribute" id="contribute" aria-labelledby="contribute-title">
+ <div class="section-heading story-heading"><p class="section-number">УЧАСТИЕ</p><h2 id="contribute-title">Нашли, что исправить?<br>Пришлите pull request</h2><p>Репозитории всех продуктов открыты. В каждом команда для тестов указана в <code>AGENTS.md</code>, а быстрый старт — в README; ваш агент для программирования прочитает оба и сделает остальное.</p></div>
+ <ol class="contribute-steps">
+  <li class="reveal"><h3>Выберите репозиторий</h3><p>Сделайте форк продукта, которым пользуетесь, или <a href="https://github.com/passioncode-ai">посмотрите всю организацию</a>. Задачи с меткой — хорошее начало.</p></li>
+  <li class="reveal"><h3>Запустите его проверки</h3><p>Прочитайте <code>AGENTS.md</code> репозитория и <a href="https://github.com/passioncode-ai/.github/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> организации, внесите изменение и запускайте команду тестов, пока она не пройдёт.</p></li>
+  <li class="reveal"><h3>Откройте pull request</h3><p>Открывая его, вы соглашаетесь с <code>CLA.md</code> репозитория; отмечать ничего не нужно. Мы рассматриваем каждый pull request и отвечаем.</p></li>
+ </ol>
+ <div class="repo-list">
+  <a href="https://github.com/passioncode-ai/fabric">fabric</a><a href="https://github.com/passioncode-ai/fabric-switchboard">fabric-switchboard</a><a href="https://github.com/passioncode-ai/fabric-dashboards">fabric-dashboards</a><a href="https://github.com/passioncode-ai/fabric-inbox">fabric-inbox</a><a href="https://github.com/passioncode-ai/project-observatory-dashboard">project-observatory-dashboard</a><a href="https://github.com/passioncode-ai/fabric-agent-adapter">fabric-agent-adapter</a><a href="https://github.com/passioncode-ai/fabric-agent-contract">fabric-agent-contract</a><a href="https://github.com/passioncode-ai/passioncode">passioncode</a><a href="https://github.com/passioncode-ai/okolos">okolos</a><a href="https://github.com/passioncode-ai/fabric-vr">fabric-vr</a><a href="https://github.com/passioncode-ai/passioncode-ai.github.io">passioncode-ai.github.io</a>
+ </div>
+ <p class="section-note">Несколько репозиториев — внутренние, их видят только участники команды: база знаний и карта организации. Хотите в команду? <a href="https://x.com/sshlg93">Напишите Сергею</a>.</p>
+</section>
+
+<section class="closing" aria-labelledby="closing-title"><img src="/assets/passioncode-mark.svg" width="72" height="72" alt=""><p class="section-number">КОМПАНИЯМ</p><h2 id="closing-title">Хотите, чтобы это работало<br>для всей команды?</h2><p>Мы разбираем ваши процессы, оцениваем, что могут взять на себя агенты, и настраиваем всё вместе с вами или за вас.</p><a class="button button-primary" href="/ru/business/">Оценка и заявка <span aria-hidden="true">→</span></a></section>
+</main>
+<footer class="story-footer">
+ <div><a class="brand footer-brand" href="/ru/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>От vibe coding к passion coding</p></div>
+ <nav aria-label="Навигация по сайту"><a href="/ru/start/">Начать</a><a href="/ru/business/">Компаниям</a><a href="/ru/switchboard/">Switchboard</a><a href="/ru/observatory/">Observatory</a><a href="/ru/inbox/">Inbox</a><a href="/ru/dashboards/">Dashboards</a><a href="/ru/fabric/">Fabric</a><a href="/ru/#source">GitHub и исходный код</a><a href="/ru/#about">О проекте</a><a href="/ru/design-system/">Дизайн-система</a><a href="/ru/privacy/">Конфиденциальность</a><a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a><a href="https://x.com/sshlg93">Twitter <span aria-hidden="true">↗</span></a></nav>
+</footer>
+</body></html>

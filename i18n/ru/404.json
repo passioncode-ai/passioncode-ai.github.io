@@ -1,0 +1,13 @@
+{
+  "page": "404.html",
+  "strings": {
+    "Page not found | PassionCode.ai": "Страница не найдена | PassionCode.ai",
+    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for companies.": "По этому адресу на passioncode.ai нет страницы. Начните с инструментов, руководства по установке или страницы для компаний.",
+    "Error 404": "Ошибка 404",
+    "There is no page": "Здесь нет",
+    "at this address": "такой страницы",
+    "The link may be old or mistyped. Everything on passioncode.ai starts from the pages below": "Возможно, ссылка устарела или в ней опечатка. Всё на passioncode.ai начинается со страниц ниже",
+    "Go to the home page": "На главную",
+    "Set up the tools": "Установить инструменты"
+  }
+}

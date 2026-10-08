@@ -1,0 +1,67 @@
+{
+  "$comment": "The gate's assertions in Russian (scripts/check-site.mjs): phrases the brand never uses, and the disclosures a translation may not soften (docs/brand/voice.md, \"Invariant in every language\"). Every translated language has this file.",
+  "banned": [
+    "бесшовн",
+    "полностью автономн",
+    "гарантированн[а-я]* экономи"
+  ],
+  "disclosures": {
+    "index.html": [
+      "пока не отвечает",
+      "ещё не проверены",
+      "href=\"/ru/start/\"",
+      "href=\"/ru/business/\"",
+      "открытый код под AGPL-3.0",
+      "коммерческая лицензия"
+    ],
+    "start/index.html": [
+      "npx @passioncode-ai/passioncode@latest update",
+      "Docker и Supabase CLI",
+      "пока не отвечает",
+      "href=\"/fabric/download/macos\""
+    ],
+    "fabric/index.html": [
+      "Ранняя предварительная версия",
+      "Fabric пока не отвечает",
+      "Intel",
+      "вы разрешаете или отклоняете каждый запрос",
+      "href=\"/fabric/download/macos\"",
+      "коммерческую лицензию"
+    ],
+    "inbox/index.html": [
+      "Предварительная версия в разработке",
+      "ещё не проверялись с вызовом реальной модели",
+      "IMAP и Outlook",
+      "href=\"/inbox/download/macos\""
+    ],
+    "switchboard/index.html": [
+      "пока без подписи Authenticode",
+      "открыто ведётся в репозитории",
+      "href=\"/switchboard/download/windows\""
+    ],
+    "dashboards/index.html": [
+      "Сервисы устанавливаются отдельно",
+      "Релиз 0.3.1 — первый под AGPL",
+      "href=\"/dashboards/download/macos\""
+    ],
+    "observatory/index.html": [
+      "не может найти неизвестные секреты",
+      "с 0.8.2 по 0.9.1 — PolyForm",
+      "requirements-full.lock"
+    ],
+    "business/index.html": [
+      "Это оценка, а не обещание",
+      "фиксированного пакета нет"
+    ],
+    "privacy/index.html": [
+      "GDPR, ст. 6(1)(b)",
+      "24 месяца",
+      "30 дней",
+      "Западной Европе",
+      "Франкфурте",
+      "cookies",
+      "ВЕРСИЯ 2026-10-08",
+      "действует английская"
+    ]
+  }
+}

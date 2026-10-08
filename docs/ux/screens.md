@@ -19,6 +19,8 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-11 | Privacy notice | SCN-017 |
 | SCR-12 | Fabric: supported coding agents | SCN-018 |
 
+Every screen exists in every language of `i18n/locales.json` (Russian at `/ru/…`), generated from the English one with the same structure (docs/DEPLOYMENT.md#languages). The shared header carries the language switch beside its action: one text link to the same page in the other language with two languages, a `<details>` menu listing every language with three or more (SCN-019).
+
 ### SCR-01: Home
 **Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012, SCN-013, SCN-016. Reading order (2026-10-05): hero (canonical headline, Start free → /start/, For companies → /business/, current versions, the workplace map) → vision (do what you love) → How it works (#toolkit, four steps on a rail) → three paths (#start) → the tools (#products, current versions) → For builders (#extend, #launcher) → company teaser (#companies) → open source (#source) → FAQ → About → closing. The header is unchanged; it gains only a scrolled shadow and a hover underline. Footer adds Get started, For companies, Privacy and the commercial address.
 **Web surface:** public

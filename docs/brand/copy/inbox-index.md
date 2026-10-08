@@ -22,6 +22,8 @@ Inbox
 
 Fabric
 
+Русский
+
 GitHub
 
 ↗

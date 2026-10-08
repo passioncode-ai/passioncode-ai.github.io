@@ -11,6 +11,7 @@
 import { execFileSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { checkSwitchboardPage, checksumAssetName, notarizedFromReceipt, renderSwitchboardPage } from './switchboard-release.mjs'
+import { writeLocales } from './build-locale.mjs'
 
 const tag = process.argv[2]
 if (!/^v\d+\.\d+\.\d+(?:-[\w.]+)?$/.test(tag ?? '')) throw new Error('Usage: node scripts/update-switchboard-release.mjs vX.Y.Z-beta.N')
@@ -93,10 +94,21 @@ manifest.macosNotarized = macosNotarized
 manifest.launcherPlugin = launcherPlugin
 
 const pagePath = new URL('../switchboard/index.html', import.meta.url)
+const manifestPath = new URL('../switchboard/release.json', import.meta.url)
 const html = renderSwitchboardPage(readFileSync(pagePath, 'utf8'), manifest)
 const problems = checkSwitchboardPage(html, manifest)
 if (problems.length) throw new Error(`Refusing to write an untrue page:\n- ${problems.join('\n- ')}`)
-writeFileSync(new URL('../switchboard/release.json', import.meta.url), JSON.stringify(manifest, null, 2) + '\n')
+// Each translated page (<locale>/switchboard/) is generated from the English one
+// (scripts/build-locale.mjs): write the English page, regenerate the languages, and put both
+// files back if a language cannot follow (an untranslated region names itself).
+const before = [readFileSync(pagePath, 'utf8'), readFileSync(manifestPath, 'utf8')]
+writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n')
 writeFileSync(pagePath, html)
+const localeProblems = writeLocales({ manifest })
+if (localeProblems.length) {
+  writeFileSync(pagePath, before[0])
+  writeFileSync(manifestPath, before[1])
+  throw new Error(`Refusing to write: the translated pages cannot follow this release:\n- ${localeProblems.join('\n- ')}`)
+}
 console.log(`Selected public ${release.prerelease ? 'beta' : 'release'} ${tag} (checksums: ${Object.keys(sha256).join(', ') || 'none'}; macOS notarized: ${macosNotarized}; launcher plugin: ${launcherPlugin}).`)
 console.log('Next: review the release notes and platform limits, update docs/brand/facts.md, then npm run check && npm run build.')

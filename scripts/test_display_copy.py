@@ -7,7 +7,7 @@ import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from check_display_copy import check, inspect
-from html_copy import PAGES, parse, projection
+from html_copy import LOCALES, PAGES, SOURCE_NOINDEX, parse, projection
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -94,8 +94,9 @@ class DisplayCopyTests(unittest.TestCase):
                     if url != 'https://passioncode.ai/' else 'index.html' for url in urls}
         self.assertTrue(expected)
         # Noindex pages (scripts/pages.mjs NOINDEX) are shipped and checked, but not listed.
-        pages_src = (ROOT / 'scripts/pages.mjs').read_text()
-        noindex = set(re.findall(r"'([^']+\.html)'", pages_src.split('export const NOINDEX', 1)[1]))
+        source_noindex = set(SOURCE_NOINDEX)
+        noindex = {page for page in PAGES
+                   if page in source_noindex or (page.split('/', 1)[0] in LOCALES and page.split('/', 1)[1] in source_noindex)}
         self.assertEqual(set(PAGES) - noindex, expected)
         # The build ships every page by importing the same list.
         build = (ROOT / 'scripts/build-site.mjs').read_text()

@@ -49,7 +49,9 @@ go from reviewed `main` with `npm run deploy` through authenticated Wrangler
 - [switchboard/release.json](switchboard/release.json), [fabric/release.json](fabric/release.json) and
   [inbox/release.json](inbox/release.json) select the public releases that the download redirects serve.
 - The Worker is `worker/`, configured by `wrangler.json`. The pages are `index.html` and one
-  directory per product.
+  directory per product, in English; every other language (`i18n/locales.json`, Russian under `ru/`)
+  is generated from them by `npm run locales` from the catalogs in `i18n/<code>/` — edit the English
+  page or the catalog, never a generated page ([languages](docs/DEPLOYMENT.md#languages)).
 - Launch receipts in `docs/` (`*_RECEIPT.*`) describe their own release and are never rewritten.
 
 ## Local rules

@@ -4,11 +4,20 @@ No computed CSS/JS: browser review owns those. aria-hidden is not a visual hide.
 """
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
+import json
 import re
 from pathlib import Path
 
-# The one page list lives in scripts/pages.mjs; read it rather than keep a second copy.
-PAGES = tuple(re.findall(r"'([^']+\.html)'", (Path(__file__).resolve().parent / 'pages.mjs').read_text().split('export const PAGES = [', 1)[1].split(']', 1)[0]))
+# The one page list lives in scripts/pages.mjs and the languages in i18n/locales.json; read them
+# rather than keep a second copy: the English source pages, then the same pages under each
+# translated locale.
+_SCRIPTS = Path(__file__).resolve().parent
+_PAGES_SOURCE = (_SCRIPTS / 'pages.mjs').read_text()
+_REGISTRY = json.loads((_SCRIPTS.parent / 'i18n' / 'locales.json').read_text())
+SOURCE_PAGES = tuple(re.findall(r"'([^']+\.html)'", _PAGES_SOURCE.split('export const SOURCE_PAGES = [', 1)[1].split(']', 1)[0]))
+SOURCE_NOINDEX = tuple(re.findall(r"'([^']+\.html)'", _PAGES_SOURCE.split('export const SOURCE_NOINDEX = [', 1)[1].split(']', 1)[0]))
+LOCALES = tuple(code for code in _REGISTRY['locales'] if code != _REGISTRY['source'])
+PAGES = SOURCE_PAGES + tuple(f'{locale}/{page}' for locale in LOCALES for page in SOURCE_PAGES)
 HEADINGS = {'h1', 'h2', 'h3', 'h4', 'h5', 'h6'}
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
         'meta', 'param', 'source', 'track', 'wbr'}

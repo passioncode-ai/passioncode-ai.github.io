@@ -1,4 +1,36 @@
-# Current handoff — Fabric 0.3.2 on the site, 2026-10-08
+# Current handoff — the site in Russian, on a generic language foundation, 2026-10-08
+
+Objective (operator, 2026-10-08; roadmap RM-25): finish and ship the Russian version of passioncode.ai with a
+foundation that takes more languages from catalogs alone. Branch `agent/site-i18n-20261008`, made from the
+unfinished WIP `agent/site-ru-20261007` (`faca07e`) with `main` merged in.
+
+Done:
+- `i18n/locales.json` is the one list of languages; `scripts/build-locale.mjs` (`npm run locales`) generates
+  every `/ru/` page from its English page and `i18n/ru/*.json`, writes the chrome of every page (lang,
+  canonical, reciprocal hreflang + x-default, og:locale, the header language switch — a link for two
+  languages, a `<details>` menu for three or more), `assets/i18n.js`, `worker/i18n.js`, `sitemap.xml` and the
+  Languages section of `llms.txt`. The gate fails on an untranslated or changed English fragment, an unused
+  entry, changed placeholders, missing plural forms or a structural difference ([DEPLOYMENT →
+  Languages](DEPLOYMENT.md#languages), with the exact steps to add a language).
+- The Worker: `/ru/` not-found with 404, the form token on `/ru/business/`, the lead's language and page,
+  refusals and validation issues in the form's language (codes English), the receipt email in Russian with
+  `/ru/` links; English messages in `worker/messages.js`, the browser's in `assets/messages.js`.
+- Switchboard's release regions are translated by the catalog in every release variant; the release sync and
+  the Switchboard updater regenerate every language.
+- Russian reviewed against the brand pack and the glossary (142 values changed; one empty link text fixed).
+- Found on the way: the Switchboard agents page's JSON-LD pointed `about` and the breadcrumb at itself (fixed);
+  `wrangler dev` refused the entry module's non-handler exports, also on `main` (moved to `worker/routing.js`).
+
+Checks: `npm run check` exit 0 (96 node tests, including a copy of the site with a third language that
+builds, passes `check-site.mjs` and the Worker tests), `npm run build` exit 0 (61 entries); local `wrangler dev`:
+`/ru/nope/` 404 in Russian, a refused `/api/leads?lang=ru` in Russian; browser check of `/ru/`, `/ru/business/`
+(the estimate in `ru-RU` money) and `/ru/start/` (copy buttons) with no console errors.
+
+Open: SITE-020 (home agent claims vs `/fabric/agents/`), SITE-021 (the Russian hero is six lines on desktop),
+fabric-workspace `knowledge/localization.md` row for passioncode.ai. Next task: the production receipt for
+this change (merge, deploy, `verify-live.py`), then SITE-020.
+
+# Previous handoff — Fabric 0.3.2 on the site, 2026-10-08
 
 Objective: the website's change for [Fabric v0.3.2](https://github.com/passioncode-ai/fabric/releases/tag/v0.3.2)
 (Fabric `docs/launch/release-mac.md` steps 8–9). The live download already redirected to 0.3.2 through the

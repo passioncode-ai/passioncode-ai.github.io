@@ -20,6 +20,8 @@ For builders
 
 About
 
+Русский
+
 Download
 
 ↓

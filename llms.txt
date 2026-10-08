@@ -4,13 +4,16 @@
 
 Vision: do what you love — agents take the routine. You start from one command and your coding agent (Claude Code or Codex); the workplace runs on your own machines and grows with you.
 
+## Languages
+- Every page is published in English and in one more language, at the same path under the language's prefix: Russian (Русский) under /ru/ — for example https://passioncode.ai/ru/start/. Each page names all its versions with hreflang, English as x-default, and sitemap.xml lists every version. English is the source; where a translated privacy notice differs, the English version prevails.
+
 ## Start
 - [Get started](https://passioncode.ai/start/): install the skills (`npx @passioncode-ai/passioncode@latest update`), add Fabric, create or convert an agent, run it in Fabric Dashboards, contribute.
 - [Current releases as JSON](https://passioncode.ai/api/releases): every product's current version, release notes link, download URLs and SHA-256, resolved from GitHub releases.
 
 ## Products
 - [Fabric](https://passioncode.ai/fabric/): the CEO AI agent; early preview for macOS on Apple silicon; keeps each project's purpose, board, decisions and releases. Its conversation does not reply yet.
-- [Coding agents Fabric works with](https://passioncode.ai/fabric/agents/): which agents Fabric connects (Claude Code; Kilo Code and Hermes Agent in development), which run in it, which are planned.
+- [Coding agents Fabric works with](https://passioncode.ai/fabric/agents/): which agents Fabric connects (Claude Code, Kilo Code and Hermes Agent, as of Fabric 0.3.2), which run in it (Codex, Cline), which are planned.
 - [Fabric Switchboard](https://passioncode.ai/switchboard/): local account manager for Claude Code and Codex CLI, macOS and Windows, with an MCP server (`switchboard mcp`); updates itself.
 - [Switchboard agents](https://passioncode.ai/switchboard/agents/): 30 other coding agents (Hermes, Kilo Code, Cline, Goose …) get Switchboard's tools; those that accept a custom endpoint have their API-key accounts switched through it.
 - [Fabric Dashboards](https://passioncode.ai/dashboards/): one window for local agent services that speak fabric-service/0.1; driven over MCP.

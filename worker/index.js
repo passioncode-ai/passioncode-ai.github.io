@@ -4,7 +4,10 @@ import policyFile from '../releases/products.json' with { type: 'json' }
 import bundled from '../releases/current.json' with { type: 'json' }
 import { fetchSnapshot, mergeSnapshots, validSnapshot } from './releases.js'
 import { liveRewriter } from './live.js'
-import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, formToObject, issueFormToken, knownFields, MAX_BODY_BYTES, platformSignature, retryDue, sha256, storeLead } from './leads.js'
+import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, formPage, formToObject, issueFormToken, issueMessage, knownFields, leadLocale, MAX_BODY_BYTES, platformSignature, retryDue, sha256, storeLead } from './leads.js'
+import { M } from './messages.js'
+import { SOURCE_LOCALE, t } from './i18n.js'
+import { BUSINESS_PAGE, localeOfPath, MISSING_PATH, NOT_FOUND_PAGE, notFoundPath } from './routing.js'
 
 const policies = policyFile.products
 const SNAPSHOT_TTL_MS = 60_000
@@ -51,7 +54,7 @@ async function storeSnapshot (env, fetched, errors, { at, source, extra = [] }) 
 }
 
 const versionsOf = snapshot => Object.fromEntries(Object.entries(snapshot.products).map(([k, v]) => [k, v.version]))
-export const PUSH_FRESH_MS = 2 * 60 * 60 * 1000
+const PUSH_FRESH_MS = 2 * 60 * 60 * 1000
 
 export async function refreshReleases (env, { fetch: fetchImpl = fetch, now = () => new Date() } = {}) {
   // Without a token the Worker's shared egress addresses are rate-limited by GitHub, so while the
@@ -90,7 +93,7 @@ export async function refreshReleases (env, { fetch: fetchImpl = fetch, now = ()
 // The hourly GitHub Actions job (scripts/push-releases.mjs) resolves the releases with the
 // Actions token and sends the snapshot here, signed like an enquiry is to the Platform:
 // HMAC-SHA256(RELEASES_INGEST_SECRET, "<X-PC-Timestamp>.<body>"), within five minutes.
-export const INGEST_MAX_BYTES = 512 * 1024
+const INGEST_MAX_BYTES = 512 * 1024
 export async function ingestReleases (request, env, { now = () => new Date() } = {}) {
   if (!env.RELEASES_INGEST_SECRET || !env.DB) return json({ error: 'not_configured' }, 503)
   const ts = request.headers.get('x-pc-timestamp') || ''
@@ -122,8 +125,6 @@ const SECURITY_HEADERS = {
   // Two years, subdomains included (api. and wiki. answer over HTTPS); no preload commitment.
   'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'
 }
-const NOT_FOUND_PAGE = /^\/404(?:\.html|\/)?$/
-export const MISSING_PATH = '/__not-found__/'
 
 function withHeaders (response, extra = {}) {
   const out = new Response(response.body, response)
@@ -134,7 +135,11 @@ const json = (data, status = 200, headers = {}) => new Response(JSON.stringify(d
 // #endregion headers
 
 // #region intake — docs: docs/DEPLOYMENT.md#commercial-enquiries
-const page = (title, body, status) => new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} | PassionCode.ai</title><link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css"></head><body class="story-site"><main id="main" class="section notice-page">${body}<p><a class="button button-secondary" href="/business/#request">Back to the form</a></p></main></body></html>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } })
+// What the intake says to a person, in the language of the form they sent (/api/leads?lang=ru):
+// worker/messages.js, translated through worker/i18n.js. `error` codes stay English: scripts
+// compare them; people read `message`.
+const COMMERCIAL = 'commercial@passioncode.ai'
+const page = (locale, title, body, status) => new Response(`<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${escape(title)} | PassionCode.ai</title><link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css"></head><body class="story-site"><main id="main" class="section notice-page">${body}<p><a class="button button-secondary" href="${formPage(locale)}#request">${escape(t(locale, M.back))}</a></p></main></body></html>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } })
 const escape = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
 
 // The body, read with a byte counter: a chunked request without Content-Length cannot make
@@ -160,31 +165,40 @@ async function readCapped (request, limit) {
 
 async function intake (request, env, ctx) {
   const scripted = (request.headers.get('content-type') || '').includes('application/json')
-  const fail = (status, error, message, issues) => scripted
-    ? json({ error, message, issues }, status, { 'Cache-Control': 'no-store' })
-    : page('Request not sent', `<h1>Your request was not sent</h1><p>${escape(message)}</p>${issues?.length ? `<ul>${issues.map(i => `<li><code>${escape(i.path)}</code>: ${escape(i.message)}</li>`).join('')}</ul>` : ''}<p>You can also write to <a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a>.</p>`, status)
+  const locale = leadLocale(new URL(request.url).searchParams.get('lang'))
+  // `text` is the English message (worker/messages.js); the visitor reads it in the form's
+  // language, issues included (L10N-04).
+  const fail = (status, error, text, rawIssues) => {
+    const message = t(locale, text, { email: COMMERCIAL })
+    const issues = rawIssues?.map(i => ({ path: i.path, message: issueMessage(i.message, locale) }))
+    const mail = `<a href="mailto:${COMMERCIAL}">${COMMERCIAL}</a>`
+    return scripted
+      ? json({ error, message, issues }, status, { 'Cache-Control': 'no-store' })
+      : page(locale, t(locale, M.notSentTitle), `<h1>${escape(t(locale, M.notSentHeading))}</h1><p>${escape(message)}</p>${issues?.length ? `<ul>${issues.map(i => `<li><code>${escape(i.path)}</code>: ${escape(i.message)}</li>`).join('')}</ul>` : ''}<p>${escape(t(locale, M.writeTo, { email: '\u0000' })).replace('\u0000', mail)}</p>`, status)
+  }
+  const thanks = id => new URL(`${formPage(locale)}thanks/${id ? `?ref=${id}` : ''}`, request.url)
 
   if (!env.DB || !env.FORM_TOKEN_SECRET || !env.IP_HASH_SALT) {
     log('leads.not_configured')
-    return fail(503, 'unavailable', 'The form is not accepting requests right now. Please write to commercial@passioncode.ai instead.')
+    return fail(503, 'unavailable', M.unavailable)
   }
   const ip = request.headers.get('cf-connecting-ip') || ''
   if (env.LEAD_LIMITER) {
     const { success } = await env.LEAD_LIMITER.limit({ key: `lead:${ip}` })
-    if (!success) return fail(429, 'rate_limited', 'Too many requests from your network in the last minute. Please wait a minute and try again.')
+    if (!success) return fail(429, 'rate_limited', M.rateLimited)
   }
   const raw = await readCapped(request, MAX_BODY_BYTES)
-  if (raw === null) return fail(413, 'too_large', 'The request is too long.')
+  if (raw === null) return fail(413, 'too_large', M.tooLarge)
 
   let input
-  try { input = scripted ? knownFields(JSON.parse(raw)) : formToObject(new URLSearchParams(raw)) } catch { return fail(400, 'invalid', 'The request could not be read.') }
+  try { input = scripted ? knownFields(JSON.parse(raw)) : formToObject(new URLSearchParams(raw)) } catch { return fail(400, 'invalid', M.invalidBody) }
   // A field people never see; anything in it is a bot filling every input. Counted in the logs
   // so a rise (or a browser that autofills it) shows up.
-  if (input.pc_hp) { log('leads.honeypot'); return scripted ? json({ id: crypto.randomUUID(), status: 'received' }, 201) : Response.redirect(new URL('/business/thanks/', request.url), 303) }
+  if (input.pc_hp) { log('leads.honeypot'); return scripted ? json({ id: crypto.randomUUID(), status: 'received' }, 201) : Response.redirect(thanks(), 303) }
   const token = await checkFormToken(env.FORM_TOKEN_SECRET, input.form_token)
   if (token !== 'ok') {
     log('leads.token_refused', { reason: token })
-    return fail(token === 'too_fast' ? 429 : 400, 'form_expired', token === 'too_fast' ? 'That was faster than a person can fill the form. Please check your answers and send it again.' : 'The form has expired. Reload the page and send it again — your answers are kept in the browser.')
+    return fail(token === 'too_fast' ? 429 : 400, 'form_expired', token === 'too_fast' ? M.tooFast : M.formExpired)
   }
 
   const { ok, lead, issues } = buildLead(input, {
@@ -193,9 +207,10 @@ async function intake (request, env, ctx) {
     referrer: request.headers.get('referer') || '',
     ipHash: await sha256(`${env.IP_HASH_SALT}:${ip}`),
     country: request.cf?.country || '',
-    userAgent: request.headers.get('user-agent') || ''
+    userAgent: request.headers.get('user-agent') || '',
+    locale
   })
-  if (!ok) return fail(400, 'invalid', 'Some answers need another look.', issues)
+  if (!ok) return fail(400, 'invalid', M.invalid, issues)
 
   let stored
   try {
@@ -205,20 +220,20 @@ async function intake (request, env, ctx) {
     if (!stored) {
       if (!(await consumeFormToken(env.DB, input.form_token))) {
         log('leads.token_refused', { reason: 'used' })
-        return fail(409, 'form_used', 'This form was already sent once. Reload the page to send another request — your answers are kept in the browser.')
+        return fail(409, 'form_used', M.formUsed)
       }
       stored = await storeLead(env.DB, lead)
     }
   } catch (error) {
     log('leads.store_failed', { id: lead.id, error: String(error.message || error) })
-    return fail(503, 'unavailable', 'We could not save your request. Nothing was sent. Please try again in a minute or write to commercial@passioncode.ai.')
+    return fail(503, 'unavailable', M.storeFailed)
   }
-  if (stored === 'conflict') return fail(409, 'conflict', 'This request was already sent with different answers. Reload the page to start a new one.')
+  if (stored === 'conflict') return fail(409, 'conflict', M.conflict)
   log('leads.received', { id: lead.id, stored })
   if (stored === 'stored') ctx.waitUntil(deliver(env, lead.id).then(r => log('leads.delivered', { id: lead.id, ...r })).catch(e => log('leads.deliver_failed', { id: lead.id, error: String(e.message || e) })))
   return scripted
     ? json({ id: lead.id, status: stored === 'duplicate' ? 'duplicate' : 'received', estimate: lead.estimate ?? null }, stored === 'duplicate' ? 200 : 201, { 'Cache-Control': 'no-store' })
-    : Response.redirect(new URL(`/business/thanks/?ref=${lead.id}`, request.url), 303)
+    : Response.redirect(thanks(lead.id), 303)
 }
 // #endregion intake
 
@@ -270,7 +285,12 @@ export default {
     const assetRequest = NOT_FOUND_PAGE.test(url.pathname)
       ? new Request(new URL(MISSING_PATH, url), { method: request.method, headers: conditional })
       : new Request(request, { headers: conditional })
-    const response = await env.ASSETS.fetch(assetRequest)
+    let response = await env.ASSETS.fetch(assetRequest)
+    const pathLocale = localeOfPath(url.pathname)
+    if (response.status === 404 && pathLocale !== SOURCE_LOCALE) {
+      const own = await env.ASSETS.fetch(new Request(new URL(notFoundPath(pathLocale), url), { method: request.method, headers: conditional }))
+      if (own.ok) response = new Response(own.body, { status: 404, headers: own.headers })
+    }
     if (!(response.headers.get('content-type') || '').includes('text/html')) {
       const asset = ifNoneMatch ? await env.ASSETS.fetch(request) : response
       // Plain-text assets (llms.txt, robots.txt) carry non-ASCII text: name the charset.
@@ -279,7 +299,7 @@ export default {
     }
     const snapshot = await currentSnapshot(env)
     let rewriter = liveRewriter(HTMLRewriter, snapshot)
-    const business = url.pathname === '/business/' || url.pathname === '/business'
+    const business = BUSINESS_PAGE.test(url.pathname)
     if (business && env.FORM_TOKEN_SECRET) {
       const token = await issueFormToken(env.FORM_TOKEN_SECRET)
       rewriter = rewriter.on('input[name="form_token"]', { element (el) { el.setAttribute('value', token) } })

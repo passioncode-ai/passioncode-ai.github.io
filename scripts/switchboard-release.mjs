@@ -84,6 +84,8 @@ export function releaseFacts (manifest) {
   }
 }
 
+// The regions are written in English; each translated page (<locale>/switchboard/) is generated
+// from this page by scripts/build-locale.mjs, which translates every variant below.
 const REGIONS = {
   'macos-note': f => f.macosNotarized
     ? 'Developer ID signed and notarized by Apple. Open the ZIP, move Fabric Switchboard to Applications and open it from there.'

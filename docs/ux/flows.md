@@ -23,3 +23,6 @@ Hero → vision (do what you love; the boundary between today and the direction)
 
 ## FLW-06 — Request a company workplace
 Any entry (hero For companies, paths card, company teaser, footer, license notes, /start/ closing) → /business/ → segments → estimate formula → five-step form (goals/company → processes with live estimate → setup → budget → contact + consent) → POST /api/leads → stored in D1 → notification to the commercial mailbox, receipt to the sender, signed copy to the Platform → reference shown (or /business/thanks/ without JavaScript). Refusals return to the step with the reason; the email address is the fallback, never the main path.
+
+## FLW-07 — Switch language
+Any page → header language switch → the same page in the other language at `/<code>/<path>` (English at `/`) → continue in that language: every internal link, the form and its confirmation stay under the prefix; downloads, release notes and source links are the same in every language. The address alone decides the language (no redirect by browser language, no cookie), so a shared link opens in the language it was copied in. SCN-019.
