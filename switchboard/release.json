@@ -1,15 +1,15 @@
 {
-  "tag": "v0.6.10",
-  "version": "0.6.10",
+  "tag": "v0.6.14",
+  "version": "0.6.14",
   "repository": "passioncode-ai/fabric-switchboard",
-  "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.6.10",
+  "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.6.14",
   "downloads": {
-    "macos": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.10/Fabric-Switchboard-0.6.10-macos-universal.zip",
-    "windows": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.10/Fabric-Switchboard-0.6.10-windows-x64.zip"
+    "macos": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.14/Fabric-Switchboard-0.6.14-macos-universal.zip",
+    "windows": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.6.14/Fabric-Switchboard-0.6.14-windows-x64.zip"
   },
   "sha256": {
-    "macos": "b633788750ff600dbeccd6a1ee2336f346180e2e837d65aa19c8187dc77765af",
-    "windows": "0b259c035fd3a536f39bd1cebc0e85af3de61eb911a5ef22908734ef4c4e26b1"
+    "macos": "7daffb205c73ca65c2a279d46baf1a9e99ff7ff0a7d6226243f4cad63989f64e",
+    "windows": "4bf62562c216100b4c3adf4864fa9260764b20301f952345f38aca79c34a7eac"
   },
   "macosNotarized": true,
   "launcherPlugin": false

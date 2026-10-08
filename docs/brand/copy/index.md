@@ -42,7 +42,7 @@ For companies
 
 ↗
 
-Open source under AGPL-3.0 Fabric 0.3.2 · Switchboard 0.6.10 · Dashboards 0.6.4 · Observatory 0.19.1
+Open source under AGPL-3.0 Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
 
 Accounts
 
@@ -104,7 +104,7 @@ Install the agent skills with one command, then add Fabric: the CEO AI agent tha
 
 npx @passioncode-ai/passioncode@latest update
 
-Fabric early preview 0.3.2 for macOS on Apple silicon · launcher 0.1.30
+Fabric early preview 0.3.2 for macOS on Apple silicon · launcher 0.1.31
 
 Step-by-step guide
 
@@ -126,7 +126,7 @@ An agent, an MCP server, a command-line tool or a whole project becomes a Fabric
 
 you Adapt this repository to Fabric
 
-Fabric Agent Adapter 0.8.0 · Fabric Agent Contract
+Fabric Agent Adapter 0.8.1 · Fabric Agent Contract
 
 04
 
@@ -200,7 +200,7 @@ Choose the account each agent runs on, with usage limits in view.
 
 Release
 
-0.6.10
+0.6.14
 
 · macOS + Windows
 
@@ -212,7 +212,7 @@ Every local agent service in one window, driven by you or by agents.
 
 Release
 
-0.6.4
+0.6.5
 
 · macOS
 
@@ -224,7 +224,7 @@ What changed in every project, what needs attention, with the evidence.
 
 Release
 
-0.19.1
+0.19.4
 
 · macOS + Linux
 
@@ -248,7 +248,7 @@ One command installs the skills that teach agents to build with Fabric.
 
 CLI
 
-0.1.30
+0.1.31
 
 · Node.js 18+
 

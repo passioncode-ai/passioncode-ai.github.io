@@ -38,7 +38,7 @@ Download for macOS ↓
 
 View source ↗
 
-Release 0.6.4 · macOS 13+ · Apple silicon + Intel
+Release 0.6.5 · macOS 13+ · Apple silicon + Intel
 
 YOUR LOCAL SERVICES / TOGETHER
 
@@ -82,7 +82,7 @@ Start, stop or restart a service, inspect its logs, and use the actions its cont
 
 ### macOS
 
-Release 0.6.4. Universal DMG for Apple silicon and Intel, macOS 13 or later. Developer ID signed, notarized and stapled.
+Release 0.6.5. Universal DMG for Apple silicon and Intel, macOS 13 or later. Developer ID signed, notarized and stapled.
 
 Download Fabric Dashboards ↓
 
@@ -96,7 +96,7 @@ Try Project Observatory, or make your own service with the Fabric Agent Adapter.
 
 DMG SHA-256
 
-466e0d708f541d625b285d52af25a15e88b85face1bfb5a6e138ba15af3b2e01
+b1d1d7253a32a059686725befb1b9ead53252688a3ce0ae995de3a91106a3ea3
 
 Release notes and checksums ↗
 

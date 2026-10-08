@@ -42,7 +42,7 @@ Fabric, наш ИИ-агент в роли CEO, хранит цель, реше�
 
 ↗
 
-Открытый код под AGPL-3.0 Fabric 0.3.2 · Switchboard 0.6.10 · Dashboards 0.6.4 · Observatory 0.19.1
+Открытый код под AGPL-3.0 Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
 
 Аккаунты
 
@@ -104,7 +104,7 @@ FABRIC · ИИ-АГЕНТ В РОЛИ CEO
 
 npx @passioncode-ai/passioncode@latest update
 
-Ранняя предварительная версия Fabric 0.3.2 для macOS на Apple silicon · лаунчер 0.1.30
+Ранняя предварительная версия Fabric 0.3.2 для macOS на Apple silicon · лаунчер 0.1.31
 
 Пошаговое руководство
 
@@ -126,7 +126,7 @@ npx @passioncode-ai/passioncode@latest update
 
 вы Адаптируй этот репозиторий к Fabric
 
-Fabric Agent Adapter 0.8.0 · Fabric Agent Contract
+Fabric Agent Adapter 0.8.1 · Fabric Agent Contract
 
 04
 
@@ -200,7 +200,7 @@ Fabric Switchboard
 
 Релиз
 
-0.6.10
+0.6.14
 
 · macOS + Windows
 
@@ -212,7 +212,7 @@ Fabric Dashboards
 
 Релиз
 
-0.6.4
+0.6.5
 
 · macOS
 
@@ -224,7 +224,7 @@ Project Observatory
 
 Релиз
 
-0.19.1
+0.19.4
 
 · macOS + Linux
 
@@ -248,7 +248,7 @@ Fabric Inbox
 
 CLI
 
-0.1.30
+0.1.31
 
 · Node.js 18+
 
