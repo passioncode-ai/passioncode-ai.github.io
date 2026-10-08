@@ -1,14 +1,17 @@
 # PassionCode.ai
 
-> A toolkit for AI-native teams: an open-source workplace for AI agents. Fabric is the CEO AI agent; Fabric Switchboard, Fabric Dashboards, Fabric Inbox and Project Observatory are its tools, and each works on its own. Everything is open source under the GNU AGPL-3.0 and free to use; a commercial license and setup for companies are available.
+> A toolkit for AI-native teams: an open-source workplace for AI agents. Fabric is the CEO AI agent; Fabric Switchboard, Fabric Dashboards, Fabric Inbox and Project Observatory are its tools, and each works on its own. Everything is open source under the GNU AGPL-3.0 and free to use; a commercial license and setup for organizations (PassionCode for Enterprise) are available.
 
-Vision: do what you love — agents take the routine. You start from one command and your coding agent (Claude Code or Codex); the workplace runs on your own machines and grows with you.
+Vision: do what you love — agents take the routine. Agents need a harness — a home, accounts, health, memory and evidence — or they rot and do not talk to each other. You start from one command and your coding agent (Claude Code, Codex or another); one agent grows into a family, a team and an organization, on your own machines. PassionCode.ai works on top of the coding agents, vendor-neutral, local first and open source.
+
+## Vision
+- [Vision](https://passioncode.ai/vision/): agent sprawl with sources (McKinsey, Gartner, the NANDA report), what a harness is, six principles, the path in six stages (one agent, two that talk, a chain, a family that looks after itself, a team, an organization) each marked available now or direction, trust, and task-pipeline (github.com/ssheleg/sshlg-skills) as a recommended separate open-source skill.
 
 ## Languages
 - Every page is published in English and in one more language, at the same path under the language's prefix: Russian (Русский) under /ru/ — for example https://passioncode.ai/ru/start/. Each page names all its versions with hreflang, English as x-default, and sitemap.xml lists every version. English is the source; where a translated privacy notice differs, the English version prevails.
 
 ## Start
-- [Get started](https://passioncode.ai/start/): install the skills (`npx @passioncode-ai/passioncode@latest update`), add Fabric, create or convert an agent, run it in Fabric Dashboards, contribute.
+- [Get started](https://passioncode.ai/start/): install the skills (`npx @passioncode-ai/passioncode@latest update`), add Fabric, create or convert an agent, run it in Fabric Dashboards, add the next agent to the same family, contribute.
 - [Current releases as JSON](https://passioncode.ai/api/releases): every product's current version, release notes link, download URLs and SHA-256, resolved from GitHub releases.
 
 ## Products
@@ -16,13 +19,13 @@ Vision: do what you love — agents take the routine. You start from one command
 - [Coding agents Fabric works with](https://passioncode.ai/fabric/agents/): which agents Fabric connects (Claude Code, Kilo Code and Hermes Agent, as of Fabric 0.3.2), which run in it (Codex, Cline), which are planned.
 - [Fabric Switchboard](https://passioncode.ai/switchboard/): local account manager for Claude Code and Codex CLI, macOS and Windows, with an MCP server (`switchboard mcp`); updates itself.
 - [Switchboard agents](https://passioncode.ai/switchboard/agents/): 30 other coding agents (Hermes, Kilo Code, Cline, Goose …) get Switchboard's tools; those that accept a custom endpoint have their API-key accounts switched through it.
-- [Fabric Dashboards](https://passioncode.ai/dashboards/): one window for local agent services that speak fabric-service/0.1; driven over MCP.
+- [Fabric Dashboards](https://passioncode.ai/dashboards/): one window for local agent services that speak fabric-service/0.1, their state, spend and limits (Spend page), an agent console beside each dashboard, signed self-updates; driven over MCP.
 - [Project Observatory](https://passioncode.ai/observatory/): a local dashboard of project activity and findings with evidence; CLI, MCP and dashboard; macOS and Linux.
-- [Fabric Inbox](https://passioncode.ai/inbox/): desktop mail for Gmail and Cloudflare mailboxes with agent reply policies; development preview.
+- [Fabric Inbox](https://passioncode.ai/inbox/): desktop mail for Gmail and Cloudflare mailboxes with agent reply policies, in English or Russian, with recoverable Discarded mail and discard rules (0.12.0); development preview.
 - [Fabric Agent Adapter](https://github.com/passioncode-ai/fabric-agent-adapter): skills, kits and a conformance probe that make any agent, MCP server or CLI a Fabric-compatible service.
 
-## Companies
-- [For companies](https://passioncode.ai/business/): process mapping, a measured pilot, rollout and operation of an agent workplace; savings estimate = hours a week × 4.33 × share agents take (10–50% by how the work runs today) × loaded hourly cost.
+## Organizations
+- [For organizations — PassionCode for Enterprise](https://passioncode.ai/business/): bringing an organization into AI — a measured pilot, workplaces per role, agents on employees' machines, people as the experts who verify agents' work; designed for 1 to 1000 people. PassionCode for Enterprise (in development, offered on request) adds analytics on agents and processes, control and policy, help for employees to automate, and your cloud or ours; savings estimate = hours a week × 4.33 × share agents take (10–50% by how the work runs today) × loaded hourly cost.
 - Contact: commercial@passioncode.ai
 
 ## Source

@@ -12,6 +12,7 @@ export const TRANSLATED_LOCALES = LOCALES.filter(locale => locale !== SOURCE_LOC
 
 export const SOURCE_PAGES = [
   'index.html',
+  'vision/index.html',
   'start/index.html',
   'business/index.html',
   'business/thanks/index.html',

@@ -117,6 +117,7 @@
     "OPEN SOURCE · LOCAL FIRST": "ОТКРЫТЫЙ КОД · ЛОКАЛЬНО ПРЕЖДЕ ВСЕГО",
     "Your setup, your source": "Ваше окружение, ваш код",
     "Try it, inspect how it works, and tell us where it needs to improve.": "Попробуйте, посмотрите, как всё устроено, и расскажите, что стоит улучшить.",
-    "Report an issue": "Сообщить о проблеме"
+    "Report an issue": "Сообщить о проблеме",
+    "The accounts: which account each agent runs on, with its usage limits in view.": "Аккаунты: на каком аккаунте работает каждый агент, с его лимитами использования на виду."
   }
 }

@@ -88,6 +88,7 @@
     "includes the source, tests and release notes.": "есть исходный код, тесты и заметки к релизам.",
     "Is Inbox the Fabric agent?": "Inbox — это агент Fabric?",
     "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "Нет. Inbox — почтовый клиент; его агенты отвечают на ваших адресах в рамках правил, которые задаёте вы.",
-    "is our CEO AI agent, in early preview. They belong to the same toolkit and have different roles.": "— наш ИИ-агент в роли CEO, в ранней предварительной версии. Они входят в один набор инструментов, но у них разные роли."
+    "is our CEO AI agent, in early preview. They belong to the same toolkit and have different roles.": "— наш ИИ-агент в роли CEO, в ранней предварительной версии. Они входят в один набор инструментов, но у них разные роли.",
+    "Mail: the addresses agents read and answer within the policy you set.": "Почта: адреса, которые агенты читают и на которые отвечают в рамках заданных вами правил."
   }
 }

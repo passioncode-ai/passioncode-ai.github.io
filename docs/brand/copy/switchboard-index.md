@@ -12,11 +12,13 @@ PassionCode
 
 .ai
 
+Vision
+
+For you
+
+For organizations
+
 The tools
-
-Your workflow
-
-For builders
 
 About
 
@@ -33,6 +35,8 @@ FABRIC SWITCHBOARD · BY PASSIONCODE
 # A clearer switch
 
 Keep Claude Code and Codex CLI accounts in one local workbench to check reported usage, separate work from personal accounts and choose what handles your next request
+
+IN THE FAMILY The accounts: which account each agent runs on, with its usage limits in view. The whole family
 
 Download Switchboard
 
@@ -327,7 +331,9 @@ From vibe coding to passion coding
 
 Get started
 
-For companies
+Vision
+
+For organizations
 
 Switchboard
 

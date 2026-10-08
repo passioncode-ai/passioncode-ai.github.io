@@ -56,3 +56,8 @@ Contract: brand-contract v1
 | agent workplace | A composable setup of independent tools, agent skills and public protocols; not a claim that Fabric’s complete coordination loop has shipped. |
 | PassionCode.ai launcher | CLI that installs the listed skills and plugins, not a desktop application bundle. |
 | Fabric Agent Adapter | Kits, skills and conformance probe for making a service or agent compatible with Fabric. |
+| harness | Everything around a model that makes an agent dependable over time: where it works, its tools and accounts, its memory, its checks and the record of what it did. Russian: «обвязка (harness)» at first use, then «обвязка». The labs use the word too (`/vision/#harness`). |
+| agent family | The agents and tools one person or team runs together under one contract; each tool has one role in it (`facts.md` "family roles"). Russian: «семья». Not "swarm", not "digital workforce". |
+| PassionCode for Enterprise | The organization edition, named at offer level only: analytics on agents and processes, control and policy, help employees automate, your cloud or ours. In development, offered on request. No internal codename, architecture or employee-scoring wording in public copy. |
+| For organizations | The navigation and section name for /business/ since 2026-10-09 (was "For companies"); the hero door reads "For your organization". |
+| available now / direction | The label every stage of the path carries (`AVAILABLE NOW`, `AVAILABLE NOW, IN PART`, `DIRECTION`; Russian «ДОСТУПНО СЕЙЧАС», «ЧАСТИЧНО ДОСТУПНО СЕЙЧАС», «НАПРАВЛЕНИЕ»). A stage without one is not published. |

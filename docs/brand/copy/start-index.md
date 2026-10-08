@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Get started | Install your AI agent workplace | PassionCode.ai
 
-Install the PassionCode.ai skills, add Fabric, create your first Fabric agent with Claude Code or Codex, convert an existing project, and run it in Fabric Dashboards. Free and open source.
+Install the PassionCode.ai skills, add Fabric, create your first Fabric agent with Claude Code or Codex, convert an existing project, run it in Fabric Dashboards and add the next agent to the same family. Free and open source.
 
 Skip to content
 
@@ -12,11 +12,13 @@ PassionCode
 
 .ai
 
+Vision
+
+For you
+
+For organizations
+
 The tools
-
-Your workflow
-
-For builders
 
 About
 
@@ -30,7 +32,7 @@ Get started · free and open source
 
 # From an empty Mac to your first agent
 
-Four steps, about twenty minutes. Each one is useful on its own, so stop wherever the result is enough
+Stop building agents that rot and don’t talk to each other. Five steps, about twenty minutes, from the first agent to a family you can see. Each step is useful on its own, so stop wherever the result is enough
 
 Needs Node.js 18+ and Claude Code or Codex Fabric needs macOS on Apple silicon
 
@@ -49,6 +51,10 @@ Create or convert an agent
 04
 
 Run it and see it
+
+05
+
+Add the next agent
 
 +
 
@@ -112,6 +118,28 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 Then add what your work calls for: Fabric Switchboard when agents need several accounts, Project Observatory to see what changed across projects, Fabric Inbox for mail.
 
+05
+
+### Add the next agent and see the family
+
+When the work asks for it, build the next agent the same way and give it the same project in Fabric. Claude Code, Kilo Code and Hermes Agent started from Fabric share that project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric Dashboards shows both, with their state and spend, in one window.
+
+next Create a Fabric agent that turns the drafted review replies into a weekly summary for the board
+
+Every new agent joins a family you can already see, instead of becoming one more script to remember. How the family grows · which agents connect today
+
+A TOOL WE RECOMMEND
+
+## Agents that finish
+
+## what they start
+
+For the changes your agents make, we recommend task-pipeline, a separate open-source skill from the sshlg-skills family. It carries a change through gated stages, from the brief and the plan to the tests, the deploy and the acceptance, and does not move on until each gate passes.
+
+npx sshlg-skills install
+
+task-pipeline on GitHub · it is not part of PassionCode.ai and needs nothing from it
+
 CONTRIBUTE
 
 ## Found something to fix?
@@ -156,7 +184,7 @@ passioncode-ai.github.io
 
 A few repositories are internal and visible only to collaborators: the team’s knowledge base and organization map. Want to join the team? Write to Sergey.
 
-FOR COMPANIES
+FOR ORGANIZATIONS
 
 ## Want it running
 
@@ -176,7 +204,9 @@ From vibe coding to passion coding
 
 Get started
 
-For companies
+Vision
+
+For organizations
 
 Switchboard
 

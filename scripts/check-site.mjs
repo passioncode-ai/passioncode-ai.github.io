@@ -30,7 +30,7 @@ const ALLOWED_SCRIPTS = new Set(['/assets/site.js', '/assets/business.js'])
 // The header every page carries (the Inbox page keeps its own product navigation until its
 // redesign, docs/backlog.md SITE-009). In another language it is the same navigation, its links
 // under /<locale>/ and its words from the catalog.
-const PRIMARY_NAV = '<nav aria-label="Primary navigation"><a href="/#products">The tools</a><a href="/#toolkit">Your workflow</a><a href="/#extend">For builders</a><a href="/#about">About</a></nav>'
+const PRIMARY_NAV = '<nav aria-label="Primary navigation"><a href="/vision/">Vision</a><a href="/start/">For you</a><a href="/business/">For organizations</a><a href="/#products">The tools</a><a href="/#about">About</a></nav>'
 const primaryNav = locale => {
   if (locale === 'en') return PRIMARY_NAV
   const { common } = loadCatalog(root, locale)
@@ -152,8 +152,8 @@ console.log(`PASS: ${PAGES.length} static pages, metadata, CSP-safe markup, anch
 
 // ---- the homepage: vision, onboarding, three paths, honest previews --------------------------
 const home = read('index.html')
-for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'CEO AI agent', 'Do what you love', 'is where Fabric is heading', 'does not reply yet', 'real-model replies are not yet verified', 'Fabric will do this for you from a conversation', 'href="/start/"', 'href="/business/"', 'href="/start/#contribute"', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available']) assert.ok(home.includes(text), `homepage missing ${text}`)
-for (const id of ['vision', 'toolkit', 'start', 'products', 'extend', 'companies', 'source', 'faq', 'about', 'launcher']) assert.ok(home.includes(`id="${id}"`), `homepage section #${id}`)
+for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'CEO AI agent', 'Do what you love', 'is where Fabric is heading', 'does not reply yet', 'real-model replies are not yet verified', 'Fabric will do this for you from a conversation', 'href="/start/"', 'href="/business/"', 'href="/start/#contribute"', 'href="/vision/"', 'since version 0.3.2, Fabric send anonymous usage counts', 'id="path"', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available']) assert.ok(home.includes(text), `homepage missing ${text}`)
+for (const id of ['path', 'vision', 'toolkit', 'start', 'products', 'extend', 'companies', 'source', 'faq', 'about', 'launcher']) assert.ok(home.includes(`id="${id}"`), `homepage section #${id}`)
 for (const name of ['PassionCode.ai launcher', 'Fabric Agent Adapter', 'Fabric Agent Contract', 'Fabric VR', 'Okolos', 'Fabric Dashboards', 'Project Observatory', 'Fabric Inbox', 'Fabric Switchboard']) assert.ok(home.includes(name), `homepage names ${name}`)
 for (const path of ['/switchboard/', '/dashboards/', '/observatory/', '/inbox/', '/fabric/']) assert.ok(home.includes(`href="${path}"`), `homepage links ${path}`)
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
@@ -162,11 +162,18 @@ assert.ok(home.includes('"@type": "FAQPage"'), 'homepage FAQ structured data')
 // ---- /start/: install, create, convert, run, contribute --------------------------------------
 const start = read('start/index.html')
 for (const text of ['npx @passioncode-ai/passioncode@latest update', 'href="/fabric/download/macos"', 'href="/dashboards/download/macos"', 'Docker and the Supabase CLI', 'does not reply yet', 'Adapt this repository to Fabric', 'CONTRIBUTING.md', 'CLA.md', '"@type": "HowTo"']) assert.ok(start.includes(text), `/start/ missing ${text}`)
-for (const id of ['launcher', 'fabric', 'build', 'run', 'contribute']) assert.ok(start.includes(`id="${id}"`), `/start/ #${id}`)
+for (const id of ['launcher', 'fabric', 'build', 'run', 'family', 'pipeline', 'contribute']) assert.ok(start.includes(`id="${id}"`), `/start/ #${id}`)
+assert.ok(start.includes('"position": 5'), '/start/: the HowTo names the fifth step')
+
+// ---- /vision/: sources, the harness, the path, today against direction ------------------------
+const vision = read('vision/index.html')
+for (const text of ['https://www.mckinsey.com/', 'https://www.gartner.com/en/newsroom/press-releases/2025-06-25', 'https://www.gartner.com/en/newsroom/press-releases/2026-04-28', 'https://fortune.com/2025/08/18/', 'Read it as a signal, not a measurement', 'https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents', 'https://openai.com/index/harness-engineering/', 'https://github.com/ssheleg/sshlg-skills', 'AVAILABLE NOW', 'DIRECTION', 'href="/start/"', 'href="/business/"', '"@type": "FAQPage"']) assert.ok(vision.includes(text), `/vision/ missing ${text}`)
+for (const id of ['problem', 'harness', 'beliefs', 'path', 'today', 'trust', 'pipeline', 'organizations', 'faq']) assert.ok(vision.includes(`id="${id}"`), `/vision/ #${id}`)
+assert.equal((vision.match(/<li class="reveal"><span class="cycle-number">0[1-6]<\/span><p class="availability">/g) || []).length, 6, '/vision/: every stage of the path says whether it works today')
 
 // ---- /business/: the funnel form agrees with what the Worker accepts --------------------------
 const business = read('business/index.html')
-for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"']) assert.ok(business.includes(text), `/business/ missing ${text}`)
+for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"', 'PassionCode for Enterprise', 'Designed for 1 to 1000 people', 'id="organization"', 'id="enterprise"', 'Visible, never stealth']) assert.ok(business.includes(text), `/business/ missing ${text}`)
 const formValues = name => [...business.matchAll(new RegExp(`name="${name.replace('.', '\\.')}" value="([^"]+)"`, 'g'))].map(m => m[1])
 const selectValues = name => {
   const block = new RegExp(`<select name="${name.replace('.', '\\.')}"[^>]*>([\\s\\S]*?)</select>`).exec(business)
