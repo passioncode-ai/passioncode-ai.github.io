@@ -68,6 +68,21 @@
     "Start with the services": "Начните с сервисов,",
     "you already use": "которыми уже пользуетесь",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "Следите за проектами в Observatory. Настраивайте аккаунты в Switchboard. Добавляйте только те инструменты, которые нужны вашей работе.",
-    "Explore the tools ↗": "Все инструменты ↗"
+    "Explore the tools ↗": "Все инструменты ↗",
+    "Health, spend and control: every agent service, its state, its spend and its updates in one window.": "Состояние, расходы и управление: все сервисы агентов, их состояние, расходы и обновления в одном окне.",
+    "IN 0.6": "В 0.6",
+    "Spend, a console": "Расходы, консоль",
+    "and updates you can trust": "и обновления, которым можно доверять",
+    "What the 0.6 releases added, from 0.6.0 on 6 October to 0.6.5 on 8 October 2026.": "Что добавили релизы 0.6 — от 0.6.0 6 октября до 0.6.5 8 октября 2026 года.",
+    "Every limit on Spend": "Все лимиты на странице расходов",
+    "The Spend page lists the limits each agent applies: the one that most needs you shows red when it stopped work or crossed its line and amber at 80%, and an agent expands to every limit with its window and what was spent. Your agent reads the same list over MCP.": "Страница расходов перечисляет лимиты, которые применяет каждый агент: тот, что больше всего требует вашего внимания, красный, если он остановил работу или превышен, и жёлтый на 80%, а агент раскрывается до всех лимитов с их окном и потраченным. Ваш агент читает тот же список по MCP.",
+    "An agent console beside the dashboard": "Консоль агента рядом с дашбордом",
+    "A real terminal opens next to a service’s dashboard, running Claude Code, Codex or another runtime in that agent’s repository. Where Fabric Switchboard binds the folder to a project, the session starts on that project’s account.": "Рядом с дашбордом сервиса открывается настоящий терминал, где в репозитории этого агента работает Claude Code, Codex или другой рантайм. Если Fabric Switchboard привязывает папку к проекту, сессия начинается на аккаунте этого проекта.",
+    "Updates that are checked first": "Обновления, которые сначала проверяются",
+    "The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.": "Приложение обновляется само: релиз должен нести подпись организации и совпадать с контрольными суммами, прежде чем установится, и ждёт, пока работает консоль или команда. Автоматическую установку можно отключить в настройках.",
+    "The family kept current": "Семья в актуальном состоянии",
+    "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "Раздел обновлений окружения в настройках следит за Fabric Agent Contract и скилами PassionCode.ai и может обновлять скилы в фоне, проверив, кто их опубликовал. По умолчанию этот переключатель выключен.",
+    "English or Russian": "Английский или русский",
+    "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Настройки → Язык: как на этом Mac, English или Русский. Окно, меню и трей переключаются сразу."
   }
 }

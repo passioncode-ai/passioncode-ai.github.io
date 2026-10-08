@@ -12,11 +12,13 @@ PassionCode
 
 .ai
 
+Vision
+
+For you
+
+For organizations
+
 The tools
-
-Your workflow
-
-For builders
 
 About
 
@@ -33,6 +35,8 @@ PROJECT OBSERVATORY · BY PASSIONCODE
 # Back in view
 
 See what changed across your agents’ projects, what needs attention and where known API keys left a copy, in a local dashboard available in English or Russian
+
+IN THE FAMILY Memory and evidence: what changed in each project, what was decided and what needs attention. The whole family
 
 Get started
 
@@ -196,7 +200,9 @@ From vibe coding to passion coding
 
 Get started
 
-For companies
+Vision
+
+For organizations
 
 Switchboard
 

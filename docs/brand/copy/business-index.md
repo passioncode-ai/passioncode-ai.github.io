@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from business/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-AI agent workplace for companies | Process automation with open-source agents | PassionCode.ai
+PassionCode for Enterprise | AI agent workplace for organizations | PassionCode.ai
 
-PassionCode.ai sets up an AI agent workplace for your team: we map your processes, estimate the hours agents can take over, and build it with you or for you on open-source tools you own. Mobile publishers, SaaS, agencies, e-commerce.
+PassionCode.ai brings your organization into AI: a measured pilot, a workplace per role and agents on every employee’s machine, on open-source tools you own. Designed for 1 to 1000 people. PassionCode for Enterprise adds analytics on agents and processes, control and policy, and your cloud or ours.
 
 Skip to content
 
@@ -12,11 +12,13 @@ PassionCode
 
 .ai
 
+Vision
+
+For you
+
+For organizations
+
 The tools
-
-Your workflow
-
-For builders
 
 About
 
@@ -26,7 +28,7 @@ Get the tools
 
 ↓
 
-For companies
+Enterprise · for organizations
 
 # Your processes, run by agents you own
 
@@ -40,7 +42,7 @@ See what agents take over
 
 ↓
 
-Reply within two business days No fixed package · the estimate comes before any contract
+Reply within two business days Designed for 1 to 1000 people · the estimate comes before any contract
 
 01Tell usteam, processes, budget
 
@@ -50,7 +52,49 @@ Reply within two business days No fixed package · the estimate comes before any
 
 04Rolloutworkplaces per role
 
-01 / WHO IT IS FOR
+01 / BRINGING YOUR ORGANIZATION INTO AI
+
+## From a pilot
+
+## to agents on every machine
+
+The same path one person takes, at the size of your organization. Each step is measured before the next one starts, and each says whether it works today or is where we are building.
+
+01
+
+AVAILABLE NOW
+
+### Pilot
+
+One process, one agent workplace, measured against its own baseline: the hours, the cost and every action the agents took.
+
+02
+
+AVAILABLE NOW
+
+### Workplaces
+
+A workplace per role: its agents, the accounts they run on, what they may do, and one window to see them.
+
+03
+
+AVAILABLE NOW, IN PART
+
+### Agents on every machine
+
+Agents reach the computers of the people who need them. Today we install them with your team; rolling them out and updating them from one place is the direction.
+
+04
+
+DIRECTION
+
+### People as the experts
+
+Employees become the human in the loop: they verify what agents prepare, and build agents of their own that spread through the organization.
+
+Designed for 1 to 1000 people. One person starts free from the guide; a team of ten gets a workplace per role; a department of a hundred gets a measured rollout; an organization of a thousand gets PassionCode for Enterprise. Read the vision
+
+02 / WHO IT IS FOR
 
 ## The same workplace,
 
@@ -124,7 +168,7 @@ Recurring reports from spreadsheets and accounting exports
 
 Every agent action written down for audit
 
-02 / WHAT IT SAVES
+03 / WHAT IT SAVES
 
 ## The estimate is arithmetic
 
@@ -160,7 +204,7 @@ Example: 40 hours a week of mostly manual work at $50 an hour is 173 hours a mon
 
 An estimate, not a promise. The pilot measures the real number against your own baseline before anything is rolled out.
 
-03 / HOW WE WORK
+04 / HOW WE WORK
 
 ## Measured first,
 
@@ -190,7 +234,59 @@ A workplace per role: the agents, Fabric Dashboards to see them, Switchboard whe
 
 Your team runs it, or we run it for you. Updates, new agents and support as the processes change.
 
-04 / YOUR CHOICE
+05 / PASSIONCODE FOR ENTERPRISE
+
+## For organizations
+
+## that need integration
+
+PassionCode for Enterprise is the edition for organizations that need the workplace tied into how they already run. It is in development: pilots run on the open-source tools today, and the edition is offered on request.
+
+DIRECTION
+
+### Analytics on agents and processes
+
+Which agents ran, on which processes, what they cost and what people approved, across every workplace.
+
+DIRECTION
+
+### Control and policy
+
+What each agent may do, which accounts and data it may reach, and which releases may install, set once for the organization.
+
+DIRECTION
+
+### Help employees automate
+
+People who know the work get help turning it into agents of their own, reviewed before they reach anyone else.
+
+AVAILABLE NOW
+
+### Your cloud or ours
+
+Run it in your own cloud account or hosted by PassionCode.ai. The models run on your own provider accounts.
+
+TRUST
+
+### What does not change
+
+Your data stays in your accounts; the apps send only anonymous usage counts, and those can be turned off
+
+Open source under the GNU AGPL-3.0, an open contract and any coding agent: no lock-in
+
+Releases are signed and checked before they install
+
+PEOPLE
+
+### Visible, never stealth
+
+Analytics are about agents and the outcomes of processes, not about scoring people
+
+What is measured is visible to the people it concerns
+
+People set what agents may do and approve what matters
+
+06 / YOUR CHOICE
 
 ## You own the workplace
 
@@ -210,7 +306,7 @@ We build, host and run the workplace and its agents, and report what they did an
 
 Where it runs is your choice too: your team’s computers, your cloud account, or hosted by PassionCode.ai. The models run on your own provider accounts.
 
-05 / REQUEST
+07 / REQUEST
 
 ## Tell us about your team
 
@@ -484,7 +580,7 @@ Send request →
 
 Prefer email? Write to commercial@passioncode.ai.
 
-06 / QUESTIONS
+08 / QUESTIONS
 
 ## Before you ask
 
@@ -498,7 +594,11 @@ No. The workplace can run on your team’s computers, in your own cloud account,
 
 Which models and agents can we use?
 
-Any. The workplace is agent-agnostic: Claude Code and Codex today, and any agent, MCP server or tool you already run becomes a Fabric-compatible service.
+Any. The workplace is agent-agnostic: Claude Code, Kilo Code and Hermes Agent connect to Fabric today, Codex and Cline run inside it, and more are planned. Any agent, MCP server or tool you already run becomes a Fabric-compatible service.
+
+Do the analytics watch our employees?
+
+No. Analytics are about agents and the outcomes of processes: what ran, what it cost, what was approved. Nothing is stealth, and what is measured is visible to the people it concerns.
 
 When do we need a commercial license?
 
@@ -516,7 +616,9 @@ From vibe coding to passion coding
 
 Get started
 
-For companies
+Vision
+
+For organizations
 
 Switchboard
 

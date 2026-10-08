@@ -36,6 +36,8 @@ FABRIC INBOX · DEVELOPMENT PREVIEW
 
 Bring Gmail and Cloudflare mailboxes into one list, with important mail first and agents for your own domains that answer what you allow and draft the rest
 
+IN THE FAMILY Mail: the addresses agents read and answer within the policy you set. The whole family
+
 Download for macOS
 
 ↓
@@ -205,7 +207,9 @@ From vibe coding to passion coding
 
 Get started
 
-For companies
+Vision
+
+For organizations
 
 Switchboard
 

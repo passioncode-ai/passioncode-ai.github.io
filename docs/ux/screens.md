@@ -14,15 +14,16 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-06 | Fabric Inbox | SCN-009 |
 | SCR-07 | Fabric Dashboards | SCN-010, SCN-016 |
 | SCR-08 | Get started | SCN-013, SCN-015 |
-| SCR-09 | For companies | SCN-014 |
+| SCR-09 | For organizations (Enterprise) | SCN-014 |
 | SCR-10 | Request received | SCN-014 |
 | SCR-11 | Privacy notice | SCN-017 |
 | SCR-12 | Fabric: supported coding agents | SCN-018 |
+| SCR-13 | Vision | SCN-020 |
 
 Every screen exists in every language of `i18n/locales.json` (Russian at `/ru/…`), generated from the English one with the same structure (docs/DEPLOYMENT.md#languages). The shared header carries the language switch beside its action: one text link to the same page in the other language with two languages, a `<details>` menu listing every language with three or more (SCN-019).
 
 ### SCR-01: Home
-**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012, SCN-013, SCN-016. Reading order (2026-10-05): hero (canonical headline, Start free → /start/, For companies → /business/, current versions, the workplace map) → vision (do what you love) → How it works (#toolkit, four steps on a rail) → three paths (#start) → the tools (#products, current versions) → For builders (#extend, #launcher) → company teaser (#companies) → open source (#source) → FAQ → About → closing. The header is unchanged; it gains only a scrolled shadow and a hover underline. Footer adds Get started, For companies, Privacy and the commercial address.
+**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012, SCN-013, SCN-016. Reading order (2026-10-09): hero (canonical headline unchanged; two doors — For you, free → /start/ and For your organization → /business/; current versions, the workplace map) → the path (#path, six stages, each labelled available now / in part / direction, link to /vision/) → vision (do what you love) → How it works (#toolkit, four steps on a rail) → three paths (#start) → the tools (#products, current versions, each card with its one-line role in the family) → For builders (#extend, #launcher) → organization teaser (#companies, "05 / For organizations") → open source (#source) → FAQ → About → closing. Header navigation since 2026-10-09: Vision · For you · For organizations · The tools · About (every page but Inbox). Footer: Get started, Vision, For organizations, the products, Privacy and the commercial address.
 **Web surface:** public
 **Route:** https://passioncode.ai/
 **Answers:** What is PassionCode and which product can I use today?
@@ -92,18 +93,18 @@ Inbox falsifier: a reader could mistake the preview for a finished product or a 
 Workplace update: the home directory precedes the work cycle and long product descriptions. Six entry points show utility and status; #extend owns launcher/Adapter instructions and source-build projects. Identity, headline and token palette are preserved. No new motion or component framework. Falsifiers: a product lacks a next action; a preview appears finished; the visitor mistakes the launcher for a desktop-app installer; a command or directory card clips at 390 px.
 
 ### SCR-08: Get started
-**Scenarios:** SCN-013, SCN-015. Hero with an on-page table of contents → four steps (#launcher, #fabric, #build, #run) with copyable commands and current versions → #contribute (three steps, public repository list, internal repositories named as collaborator-only) → closing to /business/.
+**Scenarios:** SCN-013, SCN-015. Hero with the thesis (stop building agents that rot and don’t talk to each other) and an on-page table of contents → five steps (#launcher, #fabric, #build, #run, #family) with copyable commands and current versions → the task-pipeline recommendation (#pipeline, separate open-source project) → #contribute (three steps, public repository list, internal repositories named as collaborator-only) → closing to /business/.
 **Web surface:** public
 **Route:** https://passioncode.ai/start/
 **Answers:** How do I install the workplace and make my first agent?
 **Indexable:** yes; HowTo structured data.
 **Without JS:** complete; commands are selectable text.
 
-### SCR-09: For companies
-**Scenarios:** SCN-014. Hero with the four-step funnel → segments (#cases) → estimate formula (#estimate) → engagement (#engagement) → setup options (#options) → the request form (#request) → FAQ.
+### SCR-09: For organizations (Enterprise)
+**Scenarios:** SCN-014. Hero ("Enterprise · for organizations", designed for 1 to 1000 people) with the four-step funnel → bringing your organization into AI (#organization: pilot, workplaces, agents on every machine, people as the experts; labelled) → segments (#cases) → estimate formula (#estimate) → engagement (#engagement) → PassionCode for Enterprise (#enterprise: four offer-level cards and the trust block; no codename, internals or employee scoring) → setup options (#options) → the request form (#request) → FAQ.
 **Web surface:** public
 **Route:** https://passioncode.ai/business/
-**Answers:** What could agents take over in my company, and how do I start?
+**Answers:** How does my organization move into AI with agents it owns, what could they take over, and how do I start?
 **Indexable:** yes; Service and FAQPage structured data.
 **Without JS:** the form is one page posting to /api/leads; the estimate formula and example are static text.
 
@@ -124,3 +125,12 @@ Workplace update: the home directory precedes the work cycle and long product de
 **Without JS:** the whole answer, every table and every official-site link.
 **Entity:** Fabric, the CEO AI agent within PassionCode.ai; the agents are named with their own official sites.
 Falsifiers: an agent appears at two levels or a planned agent reads as connected; a table clips at 320 px; the page quotes an OpenRouter share as a number; the date is missing. Existing tokens and section patterns only; the one new component is a token-styled table.
+
+### SCR-13: Vision
+**Scenarios:** SCN-020. Hero (From one agent to an AI-native organization; local first, open source, vendor-neutral) with a table of contents → agent sprawl (#problem, four dated source cards and the source list with the NANDA method caveat) → the missing harness (#harness, its four parts mapped to the tools) → six principles (#beliefs) → the path (#path, six labelled stages with solo / team / department examples) → today and direction (#today) → trust (#trust, five cards) → task-pipeline recommendation (#pipeline) → for organizations (#organizations) → FAQ → closing with both doors.
+**Web surface:** public
+**Route:** https://passioncode.ai/vision/
+**Answers:** Why do agents need a harness, how does one agent grow into an organization, and what works today?
+**Indexable:** yes; canonical URL, Article and FAQPage data, sitemap, hreflang with /ru/vision/.
+**Without JS:** the whole page; the install command is selectable text.
+Falsifiers: a stage without an availability label; a figure without its source and date; the NANDA figure quoted without its caveat; the page reading as if PassionCode.ai replaces the coding agents; a three-column path or stage examples clipping at 390 px.

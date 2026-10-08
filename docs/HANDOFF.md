@@ -1,4 +1,50 @@
-# Current handoff — the site in Russian, on a generic language foundation, 2026-10-08
+# Current handoff — content rework: Vision, Enterprise, the family, 2026-10-09
+
+Objective (operator points, 2026-10-09): rework passioncode.ai's content in English and Russian — no
+investors page; `/business/` becomes the Enterprise page for organizations that need integration; a separate
+`/vision/`; every other page kept and worked out; every page indexed; the home hero kept verbatim; the Russian
+hero shortened faithfully. Branch `agent/site-content-20261009` (backlog SITE-022).
+
+Done:
+- Navigation on every page but Inbox: Vision · For you · For organizations · The tools · About; the footer gains
+  Vision and says "For organizations". `scripts/check-site.mjs` `PRIMARY_NAV` holds it.
+- Home: two doors in the hero and the closing (For you, free → /start/; For your organization → /business/);
+  `#path`, six stages each labelled available now / available now, in part / direction; each tool card names
+  its role in the family; SITE-020 wording on the vision line and FAQ; the data FAQ mirrors `/privacy/`
+  (Switchboard and, since 0.3.2, Fabric send anonymous counts; how to turn them off).
+- `/vision/` (new, indexed, Article + FAQPage): agent sprawl with McKinsey (Nov 2025), Gartner (2025-06-25,
+  2026-04-28) and Fortune on the NANDA report (2025-08-18) with its method caveat; the harness, with Anthropic's
+  and OpenAI's use of the word; six principles; the path with solo / team / department examples; today vs
+  direction; trust (security, data, no lock-in, reliability, people — analytics on agents and outcomes, never
+  stealth); task-pipeline from github.com/ssheleg/sshlg-skills as a separate open-source recommendation;
+  organizations; both doors.
+- `/start/`: the thesis, step 5 (`#family`, HowTo step 5), the task-pipeline block (`#pipeline`).
+- `/business/`: Enterprise eyebrow, `#organization` (pilot → workplaces → agents on every machine → people as
+  the experts; designed for 1 to 1000 people), `#enterprise` (PassionCode for Enterprise at offer level, in
+  development, on request; trust block), labels renumbered 01–08, Service JSON-LD named for it, an FAQ that
+  says the analytics do not watch employees. The estimate formula and the form are unchanged.
+- Product pages: an "In the family" line on Fabric, Switchboard, Dashboards, Observatory and Inbox;
+  `/dashboards/#new` describes 0.6.0–0.6.5 from the CHANGELOG. Inbox stays at 0.12.0 (0.13.0 is unreleased,
+  SITE-024).
+- Russian: every new and changed fragment through `i18n/ru/*.json` (new `vision.json`), unused entries
+  removed; the hero reads «Операционная система для любых агентов в AI-native командах» (SITE-021).
+- Facts (`docs/brand/facts.md`, under lease): Switchboard 0.6.14, Observatory 0.19.4, Dashboards 0.6.5,
+  Inbox 0.12.0, launcher 0.1.31, adapter 0.8.1, the vision and commercial-path rows, homepage hero (Russian);
+  new rows harness, agent sprawl sources, family roles, recommended skill. `terminology.md`: harness, agent
+  family, PassionCode for Enterprise, For organizations, the availability labels. `llms.txt`, README, UX
+  scenarios (SCN-013, SCN-014, new SCN-020), screens (new SCR-13) and flows.
+
+Checks: `npm run locales` PASS (2 languages, 15 pages each); `python3 scripts/extract-public-copy.py` PASS
+(30 projections); `npm run check` exit 0; `npm run build` PASS. Browser check from `dist/` at 1440 and 390,
+en and ru, of home, vision, start and business: no horizontal overflow on any of the 16 views; the Russian
+header wraps to two rows at 390 px (SITE-023).
+
+Production receipt: see the next section once merged and deployed.
+
+Open: SITE-023 (one-row Russian header?), SITE-024 (Inbox 0.13.0 copy when released), SITE-018 as before.
+Next task: after the receipt, SITE-024 when Inbox 0.13.0 is published.
+
+# Previous handoff — the site in Russian, on a generic language foundation, 2026-10-08
 
 Objective (operator, 2026-10-08; roadmap RM-25): finish and ship the Russian version of passioncode.ai with a
 foundation that takes more languages from catalogs alone. Branch `agent/site-i18n-20261008`, made from the

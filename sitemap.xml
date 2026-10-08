@@ -5,6 +5,11 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/"/>
   </url>
+  <url><loc>https://passioncode.ai/vision/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/vision/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/vision/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/vision/"/>
+  </url>
   <url><loc>https://passioncode.ai/start/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/start/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/start/"/>
@@ -64,6 +69,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/"/>
+  </url>
+  <url><loc>https://passioncode.ai/ru/vision/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/vision/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/vision/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://passioncode.ai/vision/"/>
   </url>
   <url><loc>https://passioncode.ai/ru/start/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://passioncode.ai/start/"/>

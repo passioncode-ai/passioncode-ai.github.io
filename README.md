@@ -4,14 +4,17 @@
 
 **A toolkit for AI-native teams.** From vibe coding to passion coding.
 
-Public home: [passioncode.ai](https://passioncode.ai/). PassionCode.ai is the organization; Fabric is its product, and Fabric's tools carry its name. Available now: Fabric Switchboard, a local account workbench for Claude Code and Codex CLI (beta, 0.4.1-beta.1); Project Observatory, a local dashboard for the projects your agents work on (0.10.0); and Fabric Dashboards, one window for the local agent services on a Mac (0.3.1). Fabric, the CEO AI agent, is an early preview (0.3.0, macOS), and Fabric Inbox, its mail tool, a development preview (0.8.2, macOS). All five are open source under AGPL-3.0; a commercial license is available. People remain accountable.
+Public home: [passioncode.ai](https://passioncode.ai/). PassionCode.ai is the organization; Fabric is its product, and Fabric's tools carry its name. Available now: Fabric Switchboard, a local account workbench for Claude Code, Codex and other coding agents (0.6.14); Project Observatory, a local dashboard for the projects your agents work on (0.19.4); and Fabric Dashboards, one window for the agent services on a Mac (0.6.5). Fabric, the CEO AI agent, is an early preview (0.3.2, macOS), and Fabric Inbox, its mail tool, a development preview (0.12.0, macOS). All five are open source under AGPL-3.0; a commercial license is available. People remain accountable. The live versions are on the site, written from `releases/current.json`; the numbers here were read on 2026-10-09.
 
 ## Pages and shared design
 
-- [Homepage](index.html): product chooser, agent workplace, releases, launcher/Adapter setup and source-build projects.
+- [Homepage](index.html): the hero, two doors (for you, for your organization), the growth path, product chooser with each tool's role in the family, launcher/Adapter setup and source-build projects.
+- [Vision](vision/index.html): agent sprawl with sources, the harness, principles, the path in six labelled stages, today and direction, trust.
+- [Get started](start/index.html): five steps from the launcher to the second agent in the same family, and contributing.
+- [For organizations](business/index.html): bringing an organization into AI, PassionCode for Enterprise at offer level, the estimate and the request form.
 - [Project Observatory](observatory/index.html): local project dashboard, setup and source.
 - [Fabric](fabric/index.html): CEO AI agent early preview, requirements and macOS download.
-- [Fabric Dashboards](dashboards/index.html): service dashboard, pinned 0.3.1 DMG, requirements, checksum and MCP setup.
+- [Fabric Dashboards](dashboards/index.html): service dashboard, what the 0.6 releases added, the current DMG, requirements, checksum and MCP setup.
 - [Fabric Inbox](inbox/index.html): desktop mail client in development preview, macOS download and agent connection.
 - [Switchboard](switchboard/index.html): product, platform downloads, limits and installation.
 - [Design system](design-system/README.md): canonical dark/gold tokens and product marks. Switchboard vendors a commit-pinned copy.

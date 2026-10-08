@@ -20,12 +20,13 @@
 | SCN-012 | Customize an agent workplace | Extension | P-01 | ST-06, FLW-04 | draft | pending |
 | SCN-011 | Connect an agent to Switchboard | Agents | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-013 | Get started from the vision to a first agent | Onboarding | P-01 | ST-01, ST-06, FLW-05 | draft | pending |
-| SCN-014 | Request an AI workplace for a company | Commercial | P-02 | ST-07, FLW-06 | draft | pending |
+| SCN-014 | Request an AI workplace for an organization | Commercial | P-02 | ST-07, FLW-06 | draft | pending |
 | SCN-015 | Contribute a pull request | Contribution | P-01 | ST-08, FLW-05 | draft | pending |
 | SCN-016 | See and download the current release | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-017 | Read how request data is handled | Trust | P-02 | ST-07, FLW-06 | draft | pending |
 | SCN-018 | Check which coding agents Fabric works with | Fabric agents | P-01 | ST-04, FLW-03 | draft | pending |
 | SCN-019 | Read the site in another language | Languages | P-01, P-02 | ST-01, ST-07, FLW-07 | draft | pending |
+| SCN-020 | Read the vision and choose a door | Vision | P-01, P-02 | ST-01, ST-04, ST-07, FLW-03 | draft | pending |
 
 ## Personas
 
@@ -301,35 +302,37 @@ rather than replaces, the browser review recorded above.
 - **Persona:** P-01
 - **Feature:** Onboarding
 - **Traces:** ST-01, ST-06, FLW-05
-- **Entry point:** / (hero → Start free) or /start/
+- **Entry point:** / (hero → For you, free) or /start/
 - **Preconditions:** Node.js 18+ and Claude Code or Codex; Fabric needs macOS on Apple silicon, Docker and the Supabase CLI
 - **Steps:**
   1. Read the hero and the vision (do what you love) → the promise and its boundary: today one command and a coding agent; a conversation with Fabric is the direction.
-  2. Read How it works → four steps: create the workplace, create agents, convert what you have, run and see them; each names its current version.
-  3. Follow Start free → /start/ → copy the launcher command, download Fabric (current version and SHA-256 beside the button), ask the coding agent to create or adapt an agent, install Fabric Dashboards and connect it over MCP.
-- **Expected result:** The visitor has the skills installed and knows the exact prompt that creates or converts an agent, without believing Fabric already replies.
+  2. Read The path → six stages from one agent to an organization, each labelled available now, available now in part, or direction; then How it works → four steps, each naming its current version.
+  3. Follow For you, free → /start/ → read the thesis (stop building agents that rot and don’t talk to each other); copy the launcher command, download Fabric (current version and SHA-256 beside the button), ask the coding agent to create or adapt an agent, install Fabric Dashboards and connect it over MCP.
+  4. Step 5 → build the next agent the same way and give it the same Fabric project; see both in Dashboards. The task-pipeline recommendation follows, marked as a separate open-source project.
+- **Expected result:** The visitor has the skills installed, knows the exact prompt that creates or converts an agent and how the second agent joins the same family, without believing Fabric already replies or that a chain of agents has shipped.
 - **Alt paths:** stop after any step; jump with the on-page table of contents; copy buttons or manual selection without JavaScript.
 - **UI elements:** hero actions, vision principles, onboarding rail, /start/ steps, copy buttons, download buttons
 - **States covered:** success; no-JS (complete page, no copy buttons); reduced motion (static rail and map).
 - **Errors & recovery:** the command fails → the launcher README (linked); download unavailable → release notes link.
 - **Status:** draft
-- **Coverage:** index.html (#vision, #toolkit, #start), start/index.html; scripts/check-site.mjs.
+- **Coverage:** index.html (#path, #vision, #toolkit, #start), start/index.html (#family, #pipeline); scripts/check-site.mjs.
 - **Product:** unobserved
 
-### SCN-014: Request an AI workplace for a company
+### SCN-014: Request an AI workplace for an organization
 - **Persona:** P-02
 - **Feature:** Commercial
 - **Traces:** ST-07, FLW-06
-- **Entry point:** /business/ (from the homepage hero, paths, company teaser, footer, /start/ closing, license notes)
+- **Entry point:** /business/ (from the header "For organizations", the homepage hero "For your organization", paths, organization teaser, /vision/, footer, /start/ closing, license notes)
 - **Preconditions:** none
 - **Steps:**
-  1. Read who it is for → six segments with the processes agents take over.
+  1. Read Bringing your organization into AI → pilot, workplaces, agents on every machine, people as the experts, each labelled; designed for 1 to 1000 people. Read who it is for → six segments with the processes agents take over.
   2. Read the estimate → the formula, the share table and a worked example.
   3. Fill five steps → goals and company; processes, today's state, tools, hours and hourly cost (the estimate updates as they type); setup and hosting; budget and timing; contact and consent.
-  4. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
+  4. Read PassionCode for Enterprise → four offer-level capabilities, each labelled direction or available now, and the trust block (data, no lock-in, signed releases; analytics on agents and outcomes, never stealth).
+  5. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
 - **Expected result:** A complete, validated lead reaches PassionCode.ai with a server-computed estimate, and the visitor knows when to expect a reply.
 - **Alt paths:** without JavaScript the form is one page and lands on /business/thanks/; a reload keeps unsent answers in the browser; email commercial@passioncode.ai instead.
-- **UI elements:** hero funnel, case grid, formula card, five-step form with progress, estimate output, status line
+- **UI elements:** hero funnel, organization cycle, case grid, formula card, Enterprise option cards, trust block, five-step form with progress, estimate output, status line
 - **States covered:** empty, partial (draft), invalid (per-step errors), too fast or expired form (refused with a reason), rate-limited, sending, success, network failure (answers kept), service not configured (503 naming the email).
 - **Errors & recovery:** every refusal names the field or the reason; the email address is offered whenever the form cannot take the request.
 - **Status:** draft
@@ -407,4 +410,25 @@ rather than replaces, the browser review recorded above.
 - **Errors & recovery:** a refused request shows its reason in the form's language and keeps the answers in the browser.
 - **Status:** draft
 - **Coverage:** scripts/locales.mjs, scripts/build-locale.mjs, worker/index.js, worker/leads.js; scripts/locales.test.mjs, scripts/check-worker.mjs, scripts/check-site.mjs; docs/DEPLOYMENT.md#languages.
+- **Product:** unobserved
+
+### SCN-020: Read the vision and choose a door
+- **Persona:** P-01, P-02
+- **Feature:** Vision
+- **Traces:** ST-01, ST-04, ST-07, FLW-03
+- **Entry point:** the header "Vision", the footer, the home page's path note, /business/ "Read the vision", a search result for /vision/
+- **Preconditions:** none
+- **Steps:**
+  1. Read the hook → agent sprawl with four dated, linked sources (McKinsey, Gartner twice, Fortune on the NANDA report) and the caveat on that report's method.
+  2. Read The missing harness → what a harness is, that Anthropic and OpenAI use the word (linked), and which tool is which part of it.
+  3. Read the six principles, then the path → six stages, each with an example for a solo founder, a small team and a department, each labelled available now or direction.
+  4. Read Today and direction and Trust → what downloads today, what is being built in order; security, data, no lock-in, reliability, people (analytics on agents and outcomes, never stealth).
+  5. Choose a door → For you, free (/start/) or For your organization (/business/).
+- **Expected result:** The visitor can say what PassionCode.ai is for (a harness on top of the coding agents they already use), which parts work today, and where to go next, without reading any stage as a shipped promise.
+- **Alt paths:** the on-page table of contents; the recommended task-pipeline skill (external, marked as not part of PassionCode.ai); /ru/vision/.
+- **UI elements:** hero, page TOC, source cards and list, harness cycle, principles list, path cycle with stage examples, today grid, trust cards, recommendation block with copy button, organization teaser, FAQ, closing doors
+- **States covered:** success; no-JS (complete page, no copy button); reduced motion; 390 px (one column).
+- **Errors & recovery:** an external source moved → the dated citation still names the publisher and date.
+- **Status:** draft
+- **Coverage:** vision/index.html, i18n/ru/vision.json; scripts/check-site.mjs (/vision/ block).
 - **Product:** unobserved

@@ -12,11 +12,13 @@ PassionCode
 
 .ai
 
+Vision
+
+For you
+
+For organizations
+
 The tools
-
-Your workflow
-
-For builders
 
 About
 
@@ -34,11 +36,11 @@ Build a workplace where agents do the work, and you see all of it
 
 Fabric, our CEO AI agent, keeps each project’s purpose, decisions and releases. Your coding agent creates new agents and converts the ones you already have. Open source, running on your own machines, and free
 
-Start free
+For you, free
 
 →
 
-For companies
+For your organization
 
 ↗
 
@@ -58,6 +60,64 @@ Your agents
 
 FABRIC · CEO AI AGENT
 
+THE PATH
+
+## From one agent
+
+## to an AI-native organization
+
+Start with one agent for one job. Add the next one when the work asks for it. They join one family that you can see, trust and grow, and the same family grows with your team.
+
+01
+
+AVAILABLE NOW
+
+### One agent
+
+You build an agent for one job with Claude Code, Codex or another coding agent. The Fabric Agent Adapter skill gives it a contract, a dashboard and tests.
+
+02
+
+AVAILABLE NOW
+
+### Two agents that talk
+
+Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped, and you read every hand-off.
+
+03
+
+DIRECTION
+
+### A chain
+
+Agents line up into one process: one prepares, the next checks, a person approves.
+
+04
+
+AVAILABLE NOW, IN PART
+
+### A family that looks after itself
+
+Fabric Dashboards shows each agent’s health and spend, the tools update themselves, and Project Observatory keeps what changed and what was decided. Agents watching over each other is the direction.
+
+05
+
+DIRECTION
+
+### A team
+
+You invite people into the same loops: each person gets a workplace, the agents of their role and what they may do.
+
+06
+
+DIRECTION
+
+### An organization
+
+Agents reach every workplace, people verify and build agents of their own, and the organization sees how the work runs.
+
+Read the vision: why agents need a harness, and how the family grows
+
 THE VISION
 
 ## Do what you love
@@ -74,7 +134,7 @@ Safe by designYou set what each agent may do, and every action leaves evidence.
 
 Yours to shapeFrom nothing to anything, configured by hand or by agents.
 
-Any agentAll it needs is your Claude Code or Codex subscription; more agents, DeepSeek first, are on the roadmap.
+Any agentClaude Code, Kilo Code and Hermes Agent connect to Fabric today, Codex and Cline run inside it, and more agents are planned. Which agents, at which level
 
 Where we are today: you start with one command and your coding agent. Starting from a conversation with Fabric is where Fabric is heading.
 
@@ -186,6 +246,8 @@ Fabric
 
 The CEO AI agent: a home for each project’s purpose, board, decisions and releases.
 
+In the family: the home every agent of a project shares
+
 Early preview
 
 0.3.2
@@ -197,6 +259,8 @@ Early preview
 Fabric Switchboard
 
 Choose the account each agent runs on, with usage limits in view.
+
+In the family: the accounts
 
 Release
 
@@ -210,6 +274,8 @@ Fabric Dashboards
 
 Every local agent service in one window, driven by you or by agents.
 
+In the family: health, spend and control
+
 Release
 
 0.6.5
@@ -221,6 +287,8 @@ Release
 Project Observatory
 
 What changed in every project, what needs attention, with the evidence.
+
+In the family: memory and evidence
 
 Release
 
@@ -234,6 +302,8 @@ Fabric Inbox
 
 Gmail and Cloudflare mail in one list, important first; agents answer by policy.
 
+In the family: mail
+
 Development preview
 
 0.12.0
@@ -245,6 +315,8 @@ Development preview
 PassionCode.ai launcher
 
 One command installs the skills that teach agents to build with Fabric.
+
+In the family: the skills and their updates
 
 CLI
 
@@ -302,13 +374,13 @@ A browser security extension from PassionCode.ai that strips hidden instructions
 
 Explore Okolos ↗
 
-05 / FOR COMPANIES
+05 / FOR ORGANIZATIONS
 
 ## Your processes,
 
 ## run by agents you own
 
-A mobile publisher, a SaaS team, a marketing agency: the same workplace adapts to the work. Tell us how your team works today and see an estimate of the hours agents can take over before anyone signs anything.
+A mobile publisher, a SaaS team, a marketing agency: the same workplace adapts to the work. Tell us how your team works today and see an estimate of the hours agents can take over before anyone signs anything. Designed for 1 to 1000 people, with PassionCode for Enterprise for organizations that need integration.
 
 Estimate your savings
 
@@ -402,7 +474,7 @@ Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, st
 
 Which agents does it work with?
 
-It is agent-agnostic. Claude Code and Codex are supported today; any agent, MCP server or command-line tool can become a Fabric-compatible service with the Fabric Agent Adapter.
+It is agent-agnostic. Claude Code, Kilo Code and Hermes Agent connect to Fabric today, Codex and Cline run inside it, and more are planned: the full list, by level. Any agent, MCP server or command-line tool can become a Fabric-compatible service with the Fabric Agent Adapter.
 
 How do I turn an existing project or agent into a Fabric agent?
 
@@ -414,7 +486,7 @@ Not yet. Fabric is in early preview: it keeps each project’s board, decisions 
 
 Where does my data go?
 
-Nowhere we can see. The apps and agents run on your computers and your own cloud accounts; nothing reports to PassionCode.ai. Switchboard’s anonymous usage counts can be turned off in About.
+Your work stays on your computers and your own cloud accounts. Fabric Switchboard and, since version 0.3.2, Fabric send anonymous usage counts: counts and kinds only, never names, paths or content. Turn them off in Switchboard’s About window or in Fabric’s Settings. What is sent, exactly.
 
 Can PassionCode.ai set this up for my company?
 
@@ -450,7 +522,7 @@ Start free
 
 →
 
-For companies
+For your organization
 
 ↗
 
@@ -462,7 +534,9 @@ From vibe coding to passion coding
 
 Get started
 
-For companies
+Vision
+
+For organizations
 
 Switchboard
 

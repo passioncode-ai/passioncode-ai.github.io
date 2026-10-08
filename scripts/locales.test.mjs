@@ -204,7 +204,7 @@ test('adding a language takes only i18n/locales.json and i18n/<locale>/', { time
     const run = (...args) => execFileSync('node', args, { cwd: dir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
     assert.match(run('scripts/build-locale.mjs'), /PASS: 3 languages \(en, ru, de\)/)
     assert.match(run('scripts/build-locale.mjs', '--check'), /PASS: 3 languages/)
-    assert.match(run('scripts/check-site.mjs'), /PASS: 42 static pages/)
+    assert.match(run('scripts/check-site.mjs'), /PASS: 45 static pages/)
     run('--test', 'scripts/check-worker.mjs')
     const home = readFileSync(join(dir, 'ru/index.html'), 'utf8')
     assert.match(home, /<details class="lang-switch lang-menu"><summary aria-label="Язык: Русский">/)

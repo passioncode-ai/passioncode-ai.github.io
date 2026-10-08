@@ -12,11 +12,13 @@ PassionCode
 
 .ai
 
+Vision
+
+For you
+
+For organizations
+
 The tools
-
-Your workflow
-
-For builders
 
 About
 
@@ -33,6 +35,8 @@ FABRIC DASHBOARDS · macOS
 # One place to look
 
 See what is running, what needs attention and what happened last, with each service’s own dashboard in one Mac app
+
+IN THE FAMILY Health, spend and control: every agent service, its state, its spend and its updates in one window. The whole family
 
 Download for macOS ↓
 
@@ -73,6 +77,34 @@ Each service’s own interface opens inside the app, signed in. Project Observat
 ### Handle the next step
 
 Start, stop or restart a service, inspect its logs, and use the actions its contract exposes. Quitting Dashboards leaves your services running.
+
+IN 0.6
+
+## Spend, a console
+
+## and updates you can trust
+
+What the 0.6 releases added, from 0.6.0 on 6 October to 0.6.5 on 8 October 2026.
+
+### Every limit on Spend
+
+The Spend page lists the limits each agent applies: the one that most needs you shows red when it stopped work or crossed its line and amber at 80%, and an agent expands to every limit with its window and what was spent. Your agent reads the same list over MCP.
+
+### An agent console beside the dashboard
+
+A real terminal opens next to a service’s dashboard, running Claude Code, Codex or another runtime in that agent’s repository. Where Fabric Switchboard binds the folder to a project, the session starts on that project’s account.
+
+### Updates that are checked first
+
+The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.
+
+### The family kept current
+
+Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.
+
+### English or Russian
+
+Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.
 
 02 / GET FABRIC DASHBOARDS
 
@@ -148,7 +180,9 @@ From vibe coding to passion coding
 
 Get started
 
-For companies
+Vision
+
+For organizations
 
 Switchboard
 

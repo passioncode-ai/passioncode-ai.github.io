@@ -12,11 +12,13 @@ PassionCode
 
 .ai
 
+Vision
+
+For you
+
+For organizations
+
 The tools
-
-Your workflow
-
-For builders
 
 About
 
@@ -33,6 +35,8 @@ FABRIC · EARLY PREVIEW
 # A home for the work
 
 Fabric is the agent we’re building to coordinate other agents around a project, keeping its purpose, context and decisions with the work as people, models and sessions change
+
+IN THE FAMILY The home every agent of a project shares: its purpose, board, decisions and releases. The whole family
 
 Download for macOS
 
@@ -213,7 +217,9 @@ From vibe coding to passion coding
 
 Get started
 
-For companies
+Vision
+
+For organizations
 
 Switchboard
 
