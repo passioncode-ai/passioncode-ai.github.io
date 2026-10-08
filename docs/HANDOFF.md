@@ -39,10 +39,18 @@ Checks: `npm run locales` PASS (2 languages, 15 pages each); `python3 scripts/ex
 en and ru, of home, vision, start and business: no horizontal overflow on any of the 16 views; the Russian
 header wraps to two rows at 390 px (SITE-023).
 
-Production receipt: see the next section once merged and deployed.
+Production receipt: PR #71 (check run 37854877842 green) merged as `af91350` (merge commit) and deployed
+from a checkout whose HEAD equalled `origin/main` `af91350`: Worker version
+`bff5575f-11bc-40c1-83b9-5da6d803a3f9`. `verify-live.py`: PASS — 63 assets (30 pages: en 15, ru 15;
+hreflang on 26), 7 download routes and 7 not-found addresses, no release drift
+([live.json](evidence/2026-10-09-site-content/live.json)). Live smoke: `/vision/`, `/ru/vision/`, `/start/`,
+`/business/` answer 200; `sitemap.xml` lists both language versions of `/vision/`. The deploy's local
+release refresh logged `GitHub 403` (unauthenticated rate limit) and kept the committed snapshot, which the
+live check matched. The deploy checkout needed its own `npm ci`: a `node_modules` symlinked from another
+checkout had no `wrangler`.
 
 Open: SITE-023 (one-row Russian header?), SITE-024 (Inbox 0.13.0 copy when released), SITE-018 as before.
-Next task: after the receipt, SITE-024 when Inbox 0.13.0 is published.
+Next task: SITE-024 when Inbox 0.13.0 is published; otherwise SITE-023.
 
 # Previous handoff — the site in Russian, on a generic language foundation, 2026-10-08
 
