@@ -94,7 +94,7 @@
   <div class="formula-card reveal">
    <p class="formula"><span>週あたりの時間 × 4.33</span><i>×</i><span>エージェントが引き受ける割合</span><i>×</i><span>1時間あたりの総コスト</span></p>
    <table class="share-table"><caption>現在の作業の進め方別に見たエージェントが引き受けられる割合</caption><thead><tr><th scope="col">現在</th><th scope="col">割合</th></tr></thead><tbody><tr><td>ほぼ手作業</td><td>25–50%</td></tr><tr><td>スクリプトと連携</td><td>20–40%</td></tr><tr><td>チャットアシスタントを都度利用</td><td>15–35%</td></tr><tr><td>エージェントがすでに一部を担当</td><td>10–25%</td></tr></tbody></table>
-   <p class="worked-example"><strong>例：</strong> 時間あたり50ドルで、ほぼ手作業の業務が週40時間あれば、月173時間になります。エージェントがその25～50％を引き受けると、月43～87時間、つまり月額2,150～4,350ドルです。</p>
+   <p class="worked-example"><strong>例：</strong> 時間あたり$50で、ほぼ手作業の業務が週40時間あれば、月173時間になります。エージェントがその25～50％を引き受けると、月43～87時間、つまり月額$2,150～4,350です。</p>
    <p class="section-note">これは見積もりであり、約束ではありません。展開の前に、パイロットで実際の数値をお客様自身のベースラインと比較して計測します。</p>
   </div>
  </div>
@@ -233,8 +233,8 @@
   <fieldset class="form-step" data-step="4">
    <legend><span>4 / 5</span> 予算と時期</legend>
    <div class="field-row field-row-3">
-    <label class="field">自動化の月額予算 <select name="budget.monthly" required><option value="">選択してください…</option><option value="lt_1k">月額1,000ドル未満</option><option value="1k_5k">$1,000–5,000</option><option value="5k_20k">$5,000–20,000</option><option value="20k_50k">$20,000–50,000</option><option value="50k_plus">月額5万ドル超</option><option value="unsure">まだ決まっていない</option></select></label>
-    <label class="field">一度きりのセットアップ予算 <select name="budget.setup" required><option value="">選択してください…</option><option value="lt_5k">5,000ドル未満</option><option value="5k_20k">$5,000–20,000</option><option value="20k_50k">$20,000–50,000</option><option value="50k_plus">月額5万ドル超</option><option value="unsure">まだ決まっていない</option></select></label>
+    <label class="field">自動化の月額予算 <select name="budget.monthly" required><option value="">選択してください…</option><option value="lt_1k">月額$1,000未満</option><option value="1k_5k">$1,000–5,000</option><option value="5k_20k">$5,000–20,000</option><option value="20k_50k">$20,000–50,000</option><option value="50k_plus">月額$50,000超</option><option value="unsure">まだ決まっていない</option></select></label>
+    <label class="field">一度きりのセットアップ予算 <select name="budget.setup" required><option value="">選択してください…</option><option value="lt_5k">$5,000未満</option><option value="5k_20k">$5,000–20,000</option><option value="20k_50k">$20,000–50,000</option><option value="50k_plus">月額$50,000超</option><option value="unsure">まだ決まっていない</option></select></label>
     <label class="field">いつから始めたいですか？<select name="budget.timeline" required><option value="">選択してください…</option><option value="asap">できるだけ早く</option><option value="this_quarter">今四半期</option><option value="next_quarter">来四半期</option><option value="exploring">今は検討中</option></select></label>
    </div>
    <p class="field-hint">範囲は、適切な提案をするための目安にすぎません。上の見積もりが参考になります。</p>
@@ -270,7 +270,7 @@
  <div class="section-heading"><p class="section-number">08 / 質問</p><h2 id="faq-title">ご質問の前に</h2></div>
  <details><summary>費用はどのくらいですか？</summary><p>ツールは無料のオープンソースです。お支払いいただくのは、当社が行う作業（整理、構築、ホスティング、サポート）と、必要な場合の商用ライセンスです。価格は、プロセスを把握したうえで提案書にてお示しします。固定のパッケージはありません。</p></details>
  <details><summary>当社のクラウドを使う必要はありますか？</summary><p>いいえ。ワークプレースは、チームのコンピューター、お客様ご自身のクラウドアカウント、または PassionCode.ai のホスティングのいずれでも動かせます。どの場合でも、データとモデルのアカウントはお客様のものです。</p></details>
- <details><summary>どのモデルやエージェントを使えますか？</summary><p>どれでも使えます。ワークプレースは特定のエージェントに依存しません。Claude Code、Kilo Code、Hermes Agent は現在 Fabric に接続でき、Codex と Cline はワークプレース内で動作します。<a href="/ja/fabric/agents/">今後の対応予定</a>も用意しています。すでにお使いのエージェント、MCP サーバー、ツールは、Fabric 互換のサービスにできます。</p></details>
+ <details><summary>どのモデルやエージェントを使えますか？</summary><p>どれでも使えます。ワークプレースは特定のエージェントに依存しません。Claude Code、Kilo Code、Hermes Agent は現在 Fabric に接続でき、Codex と Cline はワークプレース内で動作します。さらに<a href="/ja/fabric/agents/">対応予定のエージェント</a>があります。すでにお使いのエージェント、MCP サーバー、ツールは、Fabric 互換のサービスにできます。</p></details>
  <details><summary>分析は従業員を監視するものですか？</summary><p>いいえ。分析の対象はエージェントとプロセスの成果です。何が実行され、いくらかかり、何が承認されたかを見ます。隠れた計測はなく、計測される内容は、その対象となる人に見えます。</p></details>
  <details><summary>商用ライセンスが必要になるのはいつですか？</summary><p>ツールは GNU AGPL-3.0 で提供されます。社内での利用と、同じライセンスで公開する変更には、何も必要ありません。ツールを組み込んだクローズドな製品や、ソースを公開しない改変版のホスト型サービスには、商用ライセンスが必要です。</p></details>
  <details><summary>このフォームの回答はどうなりますか？</summary><p>返信と提案書の作成のためだけに使い、保管は24か月までです。詳細は<a href="/ja/privacy/">プライバシー通知</a>に記載しています。</p></details>

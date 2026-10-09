@@ -134,7 +134,7 @@ Fabric Dashboards をダウンロード
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-続いて、作業に必要なものを追加します：Fabric Switchboard複数のアカウントが必要なエージェントには、Project Observatoryプロジェクト全体の変更を確認するには、Fabric Inboxメールには、
+続いて、作業に必要なものを追加します：Fabric Switchboard（複数のアカウントが必要なとき）、Project Observatory（プロジェクト全体の変更を確認）、Fabric Inbox（メール処理）。
 
 05
 
@@ -152,7 +152,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 ## 最後までやり遂げるエージェント
 
-エージェントが加える変更には、次をおすすめします：task-pipelineは、次のファミリーに含まれる独立したオープンソースのスキルです：sshlg-skills。変更をゲート付きのステージで進め、ブリーフと計画からテスト、デプロイ、受け入れまで、各ゲートを通過するまで次に進みません。
+エージェントが加える変更には、task-pipelineをおすすめします。独立したオープンソースのスキルで、sshlg-skillsファミリーに属します。変更をゲート付きのステージで進め、ブリーフと計画からテスト、デプロイ、受け入れまで、各ゲートを通過するまで次に進みません。
 
 npx sshlg-skills install
 

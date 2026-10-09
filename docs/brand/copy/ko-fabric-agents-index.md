@@ -56,7 +56,7 @@ Fabric이 프로젝트에서 시작할 수 있는 에이전트, 그중 Fabric �
 
 기준일: 2026년 10월 8일 · 릴리스된 앱은 Fabric 0.3.2
 
-릴리스된 앱에서 Fabric이 연결하는 에이전트는 Claude Code, Kilo Code 및 Hermes Agent입니다. 프로젝트의 터미널에서 에이전트를 시작하고, 그 세션 동안 Fabric의 도구를 제공합니다. Codex 및 Cline 은(는) Fabric 안에서 실행되지만 아직 Fabric의 도구는 없습니다. 계획상 에이전트 5개가 다음 순서이고, 그다음이 아래에 나열된 나머지입니다. Fabric Switchboard는 Claude Code와 Codex의 구독 계정을 전환하며, 다른 에이전트는 Switchboard를 통해 API 키 계정을 전환합니다.
+릴리스된 앱에서 Fabric이 연결하는 에이전트는 Claude Code, Kilo Code 및 Hermes Agent입니다. 프로젝트의 터미널에서 에이전트를 시작하고, 그 세션 동안 Fabric의 도구를 제공합니다. Codex 및 Cline은(는) Fabric 안에서 실행되지만 아직 Fabric의 도구는 없습니다. 계획상 에이전트 5개가 다음 순서이고, 그다음이 아래에 나열된 나머지입니다. Fabric Switchboard는 Claude Code와 Codex의 구독 계정을 전환하며, 다른 에이전트는 Switchboard를 통해 API 키 계정을 전환합니다.
 
 01 / “함께 쓸 수 있다”의 의미
 
@@ -118,7 +118,7 @@ hermes-agent.nousresearch.com
 
 릴리스됨, Fabric 0.3.2
 
-Kilo Code는 세션 설정을 KILO_CONFIG_CONTENT 변수에서 가져오며, 프로젝트 자체의 kilo.json 은(는) 이를 덮어쓸 수 없습니다. 2026년 10월 5일 Kilo 7.4.17에서 이를 확인했습니다. Hermes Agent는 개방형 Agent Client Protocol로 연결됩니다. Fabric이 세션을 열고 로컬 브리지를 통해 Fabric의 도구를 전달하며, 같은 날 Hermes 0.21.4에서 확인했습니다. Hermes는 자체 설정에서 모델을 선택해야 답할 수 있습니다.
+Kilo Code는 세션 설정을 KILO_CONFIG_CONTENT 변수에서 가져오며, 프로젝트 자체의 kilo.json은 이를 덮어쓸 수 없습니다. 2026년 10월 5일 Kilo 7.4.17에서 이를 확인했습니다.
 
 03 / FABRIC에서 실행
 

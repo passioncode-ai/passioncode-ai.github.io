@@ -1,5 +1,5 @@
 {
-  "$comment": "The languages passioncode.ai is published in (docs/DEPLOYMENT.md#languages). English is the source: its pages are written by hand at /, every other language is generated under /<code>/ from the catalogs in i18n/<code>/. Adding a language is one entry here (latinSpacing: false writes Latin names against CJK text without a space, as Japanese does) plus its catalogs; `npm run locales -- --missing` lists what to translate. name: the language's own name, shown in the language switch. englishName: what the commercial mailbox reads. og: the Open Graph locale. intl: the BCP 47 tag for numbers, money and plural rules. switchLabel: the language switch's accessible name, in the language itself.",
+  "$comment": "The languages passioncode.ai is published in (docs/DEPLOYMENT.md#languages). English is the source: its pages are written by hand at /, every other language is generated under /<code>/ from the catalogs in i18n/<code>/. Adding a language is one entry here (latinSpacing: false writes Latin names against CJK text without a space, as Japanese does; attachParticles: true drops the space before a Korean particle that follows a link or code span) plus its catalogs; `npm run locales -- --missing` lists what to translate. name: the language's own name, shown in the language switch. englishName: what the commercial mailbox reads. og: the Open Graph locale. intl: the BCP 47 tag for numbers, money and plural rules. switchLabel: the language switch's accessible name, in the language itself.",
   "source": "en",
   "locales": {
     "en": {
@@ -42,7 +42,8 @@
       "englishName": "Korean",
       "og": "ko_KR",
       "intl": "ko-KR",
-      "switchLabel": "언어"
+      "switchLabel": "언어",
+      "attachParticles": true
     },
     "es": {
       "name": "Español",

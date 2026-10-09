@@ -72,7 +72,7 @@
 </section>
 
 <section class="section" id="harness" aria-labelledby="harness-title">
- <div class="section-heading story-heading"><p class="section-number">02 / 빠진 하네스</p><h2 id="harness-title">문제는 모델이 아닙니다<br>에이전트를 붙들어 주는 것은</h2><p><strong>하네스(harness)</strong> 는 모델을 둘러싼 모든 것으로, 에이전트가 시간이 지나도 믿고 쓸 수 있게 해 줍니다. 에이전트가 어디서 일하는지, 어떤 도구와 계정을 쓸 수 있는지, 세션 사이에 무엇을 기억하는지, 작업이 통과해야 할 검사, 그리고 무엇을 했는지에 대한 기록입니다. 모델을 만드는 연구소들도 같은 용어를 씁니다. Anthropic은 <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">장기 실행 에이전트를 위한 효과적인 하네스</a> (2025년 11월)를 다루었고, OpenAI는 <a href="https://openai.com/index/harness-engineering/">하네스 엔지니어링</a> (2026년 2월)을 다루었습니다.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">02 / 빠진 하네스</p><h2 id="harness-title">문제는 모델이 아닙니다<br>에이전트를 붙들어 주는 것은</h2><p><strong>하네스(harness)</strong>는 모델을 둘러싼 모든 것으로, 에이전트가 시간이 지나도 믿고 쓸 수 있게 해 줍니다. 에이전트가 어디서 일하는지, 어떤 도구와 계정을 쓸 수 있는지, 세션 사이에 무엇을 기억하는지, 작업이 통과해야 할 검사, 그리고 무엇을 했는지에 대한 기록입니다. 모델을 만드는 연구소들도 같은 용어를 씁니다. Anthropic은 <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">장기 실행 에이전트를 위한 효과적인 하네스</a> (2025년 11월)을 다루었고, OpenAI는 <a href="https://openai.com/index/harness-engineering/">하네스 엔지니어링</a> (2026년 2월)을 다루었습니다.</p></div>
  <ol class="work-cycle">
   <li class="reveal"><span class="cycle-number">01</span><h3>업무 공간</h3><p>각 프로젝트에는 목적, 보드, 결정, 릴리스를 담은 한 곳이 있고, 그 프로젝트에서 일하는 모든 에이전트가 함께 씁니다. 그것이 Fabric입니다.</p></li>
   <li class="reveal"><span class="cycle-number">02</span><h3>계정</h3><p>각 에이전트는 맞는 계정으로 실행되며, 그 한도가 한눈에 보입니다. 그것이 Fabric Switchboard입니다.</p></li>
@@ -113,7 +113,7 @@
  <div class="section-heading story-heading"><p class="section-number">05 / 오늘과 방향</p><h2 id="today-title">오늘 사용할 수 있는 것<br>그리고 만들고 있는 것</h2></div>
  <div class="today-grid">
   <article class="reveal"><p class="availability">지금 사용 가능</p><h3>다운로드해서 사용</h3><ul><li>PassionCode.ai 런처와 Fabric Agent Adapter 스킬. Claude Code나 Codex로 에이전트를 만들거나 변환합니다</li><li>Fabric Dashboards, Fabric Switchboard, Project Observatory 릴리스 버전</li><li>Fabric, 초기 프리뷰: 프로젝트, 보드, 결정, 연결된 에이전트. 대화 기능은 아직 응답하지 않습니다</li><li>Fabric Inbox, 메일용 개발 프리뷰</li></ul></article>
-  <article class="reveal"><p class="availability">방향</p><h3>이 순서로 만드는 중</h3><ul><li>대화로 에이전트를 만드는 Fabric</li><li>사람의 승인이 중간에 들어가는 에이전트 체인</li><li>서로의 상태를 살피는 에이전트</li><li>팀용 업무 공간, 그리고 조직용 PassionCode for Enterprise</li><li>Fabric에 연결되는 더 많은 코딩 에이전트. 목록은 다음 페이지에 있습니다 <a href="/ko/fabric/agents/">에이전트 페이지</a></li></ul></article>
+  <article class="reveal"><p class="availability">방향</p><h3>이 순서로 만드는 중</h3><ul><li>대화로 에이전트를 만드는 Fabric</li><li>사람의 승인이 중간에 들어가는 에이전트 체인</li><li>서로의 상태를 살피는 에이전트</li><li>팀용 업무 공간, 그리고 조직용 PassionCode for Enterprise</li><li>Fabric에 연결되는 더 많은 코딩 에이전트. 목록: <a href="/ko/fabric/agents/">에이전트 페이지</a></li></ul></article>
  </div>
 </section>
 
@@ -129,7 +129,7 @@
 </section>
 
 <section class="section" id="pipeline" aria-labelledby="pipeline-title">
- <div class="section-heading story-heading"><p class="section-number">추천하는 도구</p><h2 id="pipeline-title">끝까지 해내는 에이전트<br>시작한 일을</h2><p>하네스는 각 변경 안에서도 규율이 필요합니다. 우리는 다음 도구를 추천합니다 <strong>task-pipeline</strong>, 별도의 오픈 소스 스킬이며 <a href="https://github.com/ssheleg/sshlg-skills">sshlg-skills</a> 패밀리에 속합니다. 브리프와 계획부터 테스트, 배포, 인수까지 단계별 관문을 거치며 변경을 진행하고, 각 관문을 통과하기 전에는 다음으로 넘어가지 않습니다. Claude Code, Codex 그리고 Agent Skills를 읽는 다른 에이전트에서 동작합니다.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">추천하는 도구</p><h2 id="pipeline-title">끝까지 해내는 에이전트<br>시작한 일을</h2><p>하네스는 각 변경 안에서도 규율이 필요합니다. 우리는 다음 스킬을 권장합니다: <strong>task-pipeline</strong>, 별도의 오픈 소스 스킬로, <a href="https://github.com/ssheleg/sshlg-skills">sshlg-skills</a> 패밀리에 속합니다. 브리프와 계획부터 테스트, 배포, 인수까지 단계별 관문을 거치며 변경을 진행하고, 각 관문을 통과하기 전에는 다음으로 넘어가지 않습니다. Claude Code, Codex 그리고 Agent Skills를 읽는 다른 에이전트에서 동작합니다.</p></div>
  <pre class="copyable"><code>npx sshlg-skills install</code></pre>
  <p class="section-note"><a href="https://github.com/ssheleg/task-pipeline">GitHub의 task-pipeline</a> · PassionCode.ai에 포함되지 않으며 PassionCode.ai가 필요하지 않습니다</p>
 </section>

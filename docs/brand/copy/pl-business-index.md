@@ -14,7 +14,7 @@ PassionCode
 
 Wizja
 
-Dla ciebie
+Dla Ciebie
 
 Dla organizacji
 
@@ -50,7 +50,7 @@ Enterprise · dla organizacji
 
 # Twoje procesy, prowadzone przez własnych agentów
 
-Mapujemy, jak pracuje Wasz zespół, szacujemy, ile godzin mogą przejąć agenci, i budujemy miejsce pracy dla agentów razem z Wami albo za Was — na narzędziach o otwartym kodzie, Waszych komputerach lub w Waszej chmurze, z modelami, które wybierzecie
+Mapujemy, jak pracuje Twój zespół, szacujemy, ile godzin mogą przejąć agenci, i budujemy miejsce pracy dla agentów razem z Tobą albo za Ciebie — na narzędziach o otwartym kodzie, Twoich komputerach lub w Twojej chmurze, z modelami, które wybierzecie
 
 Szacunek i zapytanie
 
@@ -76,7 +76,7 @@ Odpowiadamy w ciągu dwóch dni roboczych Zaprojektowane dla 1 do 1000 osób · 
 
 ## do agentów na każdym komputerze
 
-Ta sama droga, którą przechodzi jedna osoba, w skali Waszej organizacji. Każdy krok jest mierzony, zanim zacznie się następny, i każdy mówi, czy działa już dziś, czy dopiero go budujemy.
+Ta sama droga, którą przechodzi jedna osoba, w skali Twojej organizacji. Każdy krok jest mierzony, zanim zacznie się następny, i każdy mówi, czy działa już dziś, czy dopiero go budujemy.
 
 01
 
@@ -100,7 +100,7 @@ DOSTĘPNE TERAZ, CZĘŚCIOWO
 
 ### Agenci na każdym komputerze
 
-Agenci trafiają na komputery ludzi, którzy ich potrzebują. Dziś instalujemy ich razem z Waszym zespołem; wdrażanie i aktualizowanie z jednego miejsca to kierunek, w którym zmierzamy.
+Agenci trafiają na komputery ludzi, którzy ich potrzebują. Dziś instalujemy ich razem z Twoim zespołem; wdrażanie i aktualizowanie z jednego miejsca to kierunek, w którym zmierzamy.
 
 04
 
@@ -138,7 +138,7 @@ SAAS
 
 Skrzynka wsparcia sortowana według ważności, odpowiedzi szkicowane zgodnie z regułami odpowiedzi
 
-Cotygodniowe raporty produktowe i przychodowe składane z Waszych własnych danych
+Cotygodniowe raporty produktowe i przychodowe składane z Twoich własnych danych
 
 Code review, uruchomienia QA i changelogi prowadzone przez agentów, zatwierdzane przez inżynierów
 
@@ -164,7 +164,7 @@ Opisy produktów i tłumaczenia w całym katalogu
 
 Monitorowanie cen i stanów magazynowych z alertami, które nazywają zmianę
 
-Odpowiedzi na pytania klientów na podstawie Waszych zasad, zwroty zostają po stronie ludzi
+Odpowiedzi na pytania klientów na podstawie Twoich zasad, zwroty zostają po stronie ludzi
 
 STUDIA PROGRAMISTYCZNE
 
@@ -192,7 +192,7 @@ Każde działanie agenta zapisane na potrzeby audytu
 
 ## którą możesz sprawdzić
 
-Godziny, które Wasz zespół spędza miesięcznie na tych procesach, razy udział, który agenci mogą realnie przejąć, razy koszt godziny. Udział jest niższy, gdy praca jest już częściowo zautomatyzowana, bo zostaje mniej ręcznego wysiłku do usunięcia.
+Godziny, które Twój zespół spędza miesięcznie na tych procesach, razy udział, który agenci mogą realnie przejąć, razy koszt godziny. Udział jest niższy, gdy praca jest już częściowo zautomatyzowana, bo zostaje mniej ręcznego wysiłku do usunięcia.
 
 godzin tygodniowo × 4,33×udział przejmowany przez agentów×pełny koszt godziny
 
@@ -218,9 +218,9 @@ Agenci już prowadzą część tej pracy
 
 10–25%
 
-Przykład: 40 godzin tygodniowo głównie ręcznej pracy po 50 USD za godzinę to 173 godziny miesięcznie; jeśli agenci przejmą 25–50 % z tego, to 43–87 godzin, czyli 2 150–4 350 USD miesięcznie.
+Przykład: 40 godzin tygodniowo głównie ręcznej pracy po 50 USD za godzinę to 173 godziny miesięcznie; jeśli agenci przejmą 25–50 % z tego, to 43–87 godzin, czyli 2150–4350 USD miesięcznie.
 
-To szacunek, a nie obietnica. Pilotaż mierzy rzeczywistą liczbę względem Waszego własnego punktu odniesienia, zanim cokolwiek zostanie wdrożone.
+To szacunek, a nie obietnica. Pilotaż mierzy rzeczywistą liczbę względem Twojego własnego punktu odniesienia, zanim cokolwiek zostanie wdrożone.
 
 04 / JAK PRACUJEMY
 
@@ -232,7 +232,7 @@ To szacunek, a nie obietnica. Pilotaż mierzy rzeczywistą liczbę względem Was
 
 ### Mapowanie
 
-Rozmowa, w której przejdziemy przez wskazane przez Was procesy: kto co robi, jak często, gdzie są dane i czego nie wolno automatyzować.
+Rozmowa, w której przejdziemy przez wskazane przez Ciebie procesy: kto co robi, jak często, gdzie są dane i czego nie wolno automatyzować.
 
 02
 
@@ -250,7 +250,7 @@ Miejsce pracy dla każdej roli: agenci, Fabric Dashboards, żeby ich widzieć, S
 
 ### Prowadzenie
 
-Wasz zespół prowadzi to sam albo my prowadzimy to dla Was. Aktualizacje, nowi agenci i wsparcie w miarę, jak zmieniają się procesy.
+Twój zespół prowadzi to sam albo my prowadzimy to dla Ciebie. Aktualizacje, nowi agenci i wsparcie w miarę, jak zmieniają się procesy.
 
 05 / PASSIONCODE FOR ENTERPRISE
 
@@ -280,15 +280,15 @@ Osoby, które znają tę pracę, dostają pomoc w zamianie jej na własnych agen
 
 DOSTĘPNE TERAZ
 
-### Wasza chmura lub nasza
+### Twoja chmura lub nasza
 
-Uruchom to na własnym koncie w chmurze albo hostowane przez PassionCode.ai. Modele działają na Waszych własnych kontach u dostawców.
+Uruchom to na własnym koncie w chmurze albo hostowane przez PassionCode.ai. Modele działają na Twoich własnych kontach u dostawców.
 
 ZAUFANIE
 
 ### Co się nie zmienia
 
-Wasze dane zostają na Waszych kontach; aplikacje wysyłają tylko anonimowe liczniki użycia i można je wyłączyć
+Twoje dane zostają na Twoich kontach; aplikacje wysyłają tylko anonimowe liczniki użycia i można je wyłączyć
 
 Otwarty kod na licencji GNU AGPL-3.0, otwarty kontrakt i dowolny agent programistyczny: bez uzależnienia od dostawcy
 
@@ -304,25 +304,25 @@ To, co jest mierzone, widzą osoby, których to dotyczy
 
 Ludzie ustalają, co wolno agentom, i zatwierdzają to, co ważne
 
-06 / WASZ WYBÓR
+06 / TWÓJ WYBÓR
 
-## Miejsce pracy należy do Was
+## Miejsce pracy należy do Ciebie
 
 ## niezależnie od sposobu uruchomienia
 
 ### Uruchamiamy sami
 
-Całość to otwarty kod na licencji GNU AGPL-3.0, za darmo. Zacznijcie od przewodnika; poproście nas o licencję komercyjną, jeśli Wasze użycie jej wymaga.
+Całość to otwarty kod na licencji GNU AGPL-3.0, za darmo. Zacznij od przewodnika; poproś nas o licencję komercyjną, jeśli Twoje użycie jej wymaga.
 
 ### Wdrożenie z naszym wsparciem
 
-Budujemy pierwszych agentów razem z Waszym zespołem, szkolimy osoby, które będą się nimi opiekować, i pozostajemy pod telefonem, dopóki wszystko się nie ułoży.
+Budujemy pierwszych agentów razem z Twoim zespołem, szkolimy osoby, które będą się nimi opiekować, i pozostajemy pod telefonem, dopóki wszystko się nie ułoży.
 
-### Zrobione za Was
+### Zrobione za Ciebie
 
 Budujemy, hostujemy i prowadzimy miejsce pracy oraz jego agentów i raportujemy, co zrobili i ile to kosztowało.
 
-Miejsce uruchomienia to też Wasz wybór: komputery Waszego zespołu, Wasze konto w chmurze albo hosting PassionCode.ai. Modele działają na Waszych własnych kontach u dostawców.
+Miejsce uruchomienia to też Twój wybór: komputery Twojego zespołu, Twoje konto w chmurze albo hosting PassionCode.ai. Modele działają na Twoich własnych kontach u dostawców.
 
 07 / ZAPYTANIE
 
@@ -344,9 +344,9 @@ Kontakt
 
 1 / 5
 
-Czego chcecie i kim jesteście
+Czego chcesz i kim jesteś
 
-Co chcecie osiągnąć? wybierz dowolne
+Co chcesz osiągnąć? wybierz dowolne
 
 Zautomatyzować powtarzalne operacje
 
@@ -412,7 +412,7 @@ opcjonalnie
 
 Procesy
 
-Które procesy zabierają czas Waszemu zespołowi? wybierz dowolne
+Które procesy zabierają czas Twojemu zespołowi? wybierz dowolne
 
 Wydania i publikacja w sklepach
 
@@ -446,7 +446,7 @@ Asystenci czatowi używani doraźnie
 
 Agenci już prowadzą część tej pracy
 
-Narzędzia AI, których używa Wasz zespół opcjonalnie
+Narzędzia AI, których używa Twój zespół opcjonalnie
 
 Claude Code
 
@@ -480,13 +480,13 @@ Wpisz godziny, koszt i sposób, w jaki praca wygląda dziś, aby zobaczyć szacu
 
 3 / 5
 
-Jak chcecie to uruchomić
+Jak chcesz to uruchomić
 
 Kto się tym zajmuje?
 
 Uruchamiamy sami
 
-Wdrożenie z naszym wsparciem, razem z Waszym zespołem
+Wdrożenie z naszym wsparciem, razem z Twoim zespołem
 
 Budujecie i prowadzicie to za nas
 
@@ -520,13 +520,13 @@ Miesięczny budżet na automatyzację
 
 Wybierz…
 
-Poniżej 1 000 USD miesięcznie
+Poniżej 1000 USD miesięcznie
 
-$1,000–5,000
+1000–5000 USD
 
-$5,000–20,000
+5000–20 000 USD
 
-$20,000–50,000
+20 000–50 000 USD
 
 Ponad 50 000 USD
 
@@ -536,17 +536,17 @@ Jednorazowy budżet na wdrożenie
 
 Wybierz…
 
-Poniżej 5 000 USD
+Poniżej 5000 USD
 
-$5,000–20,000
+5000–20 000 USD
 
-$20,000–50,000
+20 000–50 000 USD
 
 Ponad 50 000 USD
 
 Jeszcze nie wiemy
 
-Kiedy chcecie zacząć?
+Kiedy chcesz zacząć?
 
 Wybierz…
 
@@ -562,7 +562,7 @@ Przedziały pomagają nam tylko zaproponować właściwy zakres; szacunek powyż
 
 5 / 5
 
-Jak się z Wami skontaktować
+Jak się z Tobą skontaktować
 
 Imię i nazwisko
 
@@ -604,15 +604,15 @@ Wolisz e-mail? Napisz na commercial@passioncode.ai.
 
 Ile to kosztuje?
 
-Narzędzia są darmowe i mają otwarty kod. Płacisz za naszą pracę dla Ciebie — mapowanie, budowanie, hosting, wsparcie — oraz za licencję komercyjną, jeśli jej potrzebujesz. Cenę podajemy w propozycji, gdy zrozumiemy Wasze procesy; nie ma stałego pakietu.
+Narzędzia są darmowe i mają otwarty kod. Płacisz za naszą pracę dla Ciebie — mapowanie, budowanie, hosting, wsparcie — oraz za licencję komercyjną, jeśli jej potrzebujesz. Cenę podajemy w propozycji, gdy zrozumiemy Twoje procesy; nie ma stałego pakietu.
 
-Czy musimy korzystać z Waszej chmury?
+Czy musimy korzystać z Twojej chmury?
 
-Nie. Miejsce pracy może działać na komputerach Waszego zespołu, na Waszym koncie w chmurze albo być hostowane przez PassionCode.ai. Wasze dane i konta modeli w każdym wariancie pozostają Wasze.
+Nie. Miejsce pracy może działać na komputerach Twojego zespołu, na Twoim koncie w chmurze albo być hostowane przez PassionCode.ai. Twoje dane i konta modeli w każdym wariancie pozostają Twoje.
 
 Jakich modeli i agentów możemy używać?
 
-Dowolnych. Miejsce pracy nie jest przywiązane do jednego agenta: Claude Code, Kilo Code i Hermes Agent łączą się z Fabric już dziś, Codex i Cline działają w jego wnętrzu, a kolejne są planowane. Każdy agent, serwer MCP lub narzędzie, które już uruchamiacie, staje się usługą zgodną z Fabric.
+Dowolnych. Miejsce pracy nie jest przywiązane do jednego agenta: Claude Code, Kilo Code i Hermes Agent łączą się z Fabric już dziś, Codex i Cline działają w jego wnętrzu, a kolejne są planowane. Każdy agent, serwer MCP lub narzędzie, które już uruchamiasz, staje się usługą zgodną z Fabric.
 
 Czy analityka obserwuje naszych pracowników?
 

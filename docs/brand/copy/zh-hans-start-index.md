@@ -88,7 +88,7 @@ PassionCode.ai 启动器会把 Fabric Agent Adapter 技能、Observatory Log 和
 
 npx @passioncode-ai/passioncode@latest update
 
-启动器 0.1.31 · 它会按其固定的版本安装智能体家族成员 · 之后请重启你的智能体。自动更新默认开启；关闭自动更新也可以按需关闭。
+启动器 0.1.31 · 它会按其固定的版本安装智能体家族成员 · 之后请重启你的智能体。自动更新默认开启。如需关闭，请参阅关闭自动更新。
 
 02
 
@@ -134,7 +134,7 @@ Fabric Dashboards 在一个窗口中显示每个本地智能体服务；你的�
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-然后按你的工作需要添加：Fabric Switchboard 在智能体需要多个账号时用 Project Observatory，查看各个项目有什么变化用 Fabric Inbox，处理邮件用
+然后按你的工作需要添加：Fabric Switchboard（智能体需要多个账号时）；Project Observatory（查看各个项目的变化）；Fabric Inbox（处理邮件）。
 
 05
 

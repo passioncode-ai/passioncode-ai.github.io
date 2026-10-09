@@ -218,7 +218,7 @@ Des agents font déjà tourner une partie
 
 10–25%
 
-Exemple : 40 heures par semaine de travail surtout manuel à 50 $ de l’heure font 173 heures par mois ; si les agents en reprennent 25 à 50 %, cela représente 43 à 87 heures, soit 2 150 à 4 350 $ par mois.
+Exemple : 40 heures par semaine de travail surtout manuel à 50 $US de l’heure font 173 heures par mois ; si les agents en reprennent 25 à 50 %, cela représente 43 à 87 heures, soit 2 150 à 4 350 $US par mois.
 
 Une estimation, pas une promesse. Le pilote mesure le chiffre réel par rapport à votre propre base de référence avant tout déploiement.
 
@@ -520,15 +520,15 @@ Budget mensuel pour l’automatisation
 
 Choisir…
 
-Moins de 1 000 $ par mois
+Moins de 1 000 $US par mois
 
-$1,000–5,000
+1 000–5 000 $US
 
-$5,000–20,000
+5 000–20 000 $US
 
-$20,000–50,000
+20 000–50 000 $US
 
-Plus de 50 000 $
+Plus de 50 000 $US
 
 Pas encore sûr
 
@@ -536,13 +536,13 @@ Budget de mise en place, une seule fois
 
 Choisir…
 
-Moins de 5 000 $
+Moins de 5 000 $US
 
-$5,000–20,000
+5 000–20 000 $US
 
-$20,000–50,000
+20 000–50 000 $US
 
-Plus de 50 000 $
+Plus de 50 000 $US
 
 Pas encore sûr
 

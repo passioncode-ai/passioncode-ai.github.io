@@ -296,7 +296,7 @@ Fabric 通过对话创建智能体
 
 面向团队的工作空间，以及面向组织的 PassionCode for Enterprise
 
-更多连接到 Fabric 的编码智能体，列在智能体页面
+更多连接到 Fabric 的编码智能体，详见智能体页面
 
 06 / 信任
 

@@ -88,7 +88,7 @@ PassionCode.ai 런처는 Fabric Agent Adapter 스킬, Observatory Log, 작업 �
 
 npx @passioncode-ai/passioncode@latest update
 
-런처 0.1.31 · 고정된 버전으로 패밀리 구성 요소를 설치합니다 · 설치 후 에이전트를 다시 시작하세요. 자동 업데이트는 기본으로 켜져 있습니다. 자동 업데이트 끄기 원하면 끌 수 있습니다.
+런처 0.1.31 · 고정된 버전으로 패밀리 구성 요소를 설치합니다 · 설치 후 에이전트를 다시 시작하세요. 자동 업데이트는 기본으로 켜져 있습니다. 원하지 않으면 자동 업데이트 끄기 방법을 확인하세요.
 
 02
 
@@ -134,7 +134,7 @@ Fabric Dashboards 다운로드
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-그다음 작업에 필요한 것을 추가하세요. Fabric Switchboard 에이전트에 계정이 여러 개 필요할 때, Project Observatory 프로젝트 전반의 변경 사항을 볼 때, Fabric Inbox 메일에는 이 툴을 쓰세요.
+그다음 작업에 필요한 것을 추가하세요. Fabric Switchboard (에이전트에 계정이 여러 개 필요할 때), Project Observatory (프로젝트 전반의 변경 사항 확인), Fabric Inbox (메일 처리).
 
 05
 
@@ -152,7 +152,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 ## 끝내는 에이전트
 
-에이전트가 만드는 변경에는 다음을 권장합니다: task-pipeline, 별도의 오픈 소스 스킬로, sshlg-skills 패밀리에 속합니다. 브리프와 계획에서 테스트, 배포, 수락까지 게이트가 있는 단계를 거쳐 변경을 진행하며, 각 게이트를 통과해야 다음으로 넘어갑니다.
+에이전트가 만드는 변경에는 다음 스킬을 권장합니다: task-pipeline, 별도의 오픈 소스 스킬로, sshlg-skills 패밀리에 속합니다. 브리프와 계획에서 테스트, 배포, 수락까지 게이트가 있는 단계를 거쳐 변경을 진행하며, 각 게이트를 통과해야 다음으로 넘어갑니다.
 
 npx sshlg-skills install
 
@@ -164,7 +164,7 @@ GitHub의 task-pipeline · PassionCode.ai에 속하지 않으며 PassionCode.ai 
 
 ## 풀 리퀘스트 보내기
 
-모든 제품 저장소는 공개되어 있습니다. 각 저장소는 테스트 명령을 AGENTS.md 에, 빠른 시작을 README에 적어 둡니다. 코딩 에이전트가 둘을 읽고 나머지를 처리할 수 있습니다.
+모든 제품 저장소는 공개되어 있습니다. 각 저장소는 테스트 명령을 AGENTS.md에, 빠른 시작을 README에 적어 둡니다. 코딩 에이전트가 둘을 읽고 나머지를 처리할 수 있습니다.
 
 ### 저장소 선택
 
@@ -172,7 +172,7 @@ GitHub의 task-pipeline · PassionCode.ai에 속하지 않으며 PassionCode.ai 
 
 ### 게이트 실행
 
-저장소의 AGENTS.md 와 조직의 CONTRIBUTING.md를 읽고, 변경한 뒤, 테스트 명령이 통과할 때까지 실행하세요.
+저장소의 AGENTS.md와 조직의 CONTRIBUTING.md를 읽고, 변경한 뒤, 테스트 명령이 통과할 때까지 실행하세요.
 
 ### 풀 리퀘스트 열기
 

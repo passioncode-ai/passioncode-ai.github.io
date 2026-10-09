@@ -1069,3 +1069,7 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
    letter-spacing that suits Latin display type is dropped because it loosens or crushes Hangul. */
 html:lang(ko) body { word-break: keep-all; line-break: strict; overflow-wrap: break-word; }
 html:lang(ko) body * { letter-spacing: normal !important; }
+
+/* Long compound words (German "agentenunabhängige") must never widen a 390px page: headings
+   hyphenate where the language allows and break as a last resort. */
+html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; overflow-wrap: anywhere; }

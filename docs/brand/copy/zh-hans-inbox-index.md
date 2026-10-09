@@ -139,7 +139,7 @@ macOS DMG · SHA-256
 
 a8e55bc8c8ad8837f079ad161104096cd14f1c09e08efaa883028642c0f136c7
 
-打开前请比对：shasum -a 256 在“终端”中。如果值不同，说明是另一个文件；请重新下载。
+打开前请比对：shasum -a 256（终端）。值不同说明文件不同，请重新下载。
 
 版本说明与校验和
 
@@ -161,7 +161,7 @@ a8e55bc8c8ad8837f079ad161104096cd14f1c09e08efaa883028642c0f136c7
 
 ## 智能体也能做
 
-你的服务器在以下地址使用 Model Context Protocol 应答 /mcp。应用的每个功能同时也是一个 MCP 工具，因此 Claude Code 或其他 MCP 客户端可以在其密钥的权限级别内读取、分拣和发送邮件，并管理地址。
+你的服务器通过 Model Context Protocol 应答，地址为 /mcp。应用的每个功能同时也是一个 MCP 工具，因此 Claude Code 或其他 MCP 客户端可以在其密钥的权限级别内读取、分拣和发送邮件，并管理地址。
 
 01
 
@@ -173,7 +173,7 @@ a8e55bc8c8ad8837f079ad161104096cd14f1c09e08efaa883028642c0f136c7
 
 ### 连接你的智能体
 
-应用会输出完整的命令：claude mcp add --transport http fabric-inbox https://<your-server>/mcp 其中带有密钥的两个请求头。然后请求 list_accounts。
+应用会输出完整的命令：claude mcp add --transport http fabric-inbox https://<your-server>/mcp 其中带有密钥的两个请求头。然后让智能体调用 list_accounts。
 
 02 / PASSIONCODE 家族
 

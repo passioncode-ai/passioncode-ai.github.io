@@ -14,7 +14,7 @@ PassionCode
 
 Wizja
 
-Dla ciebie
+Dla Ciebie
 
 Dla organizacji
 
