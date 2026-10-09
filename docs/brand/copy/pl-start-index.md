@@ -34,7 +34,7 @@ Français
 
 한국어
 
-Zdobądź narzędzia
+Pobierz narzędzia
 
 ↓
 
