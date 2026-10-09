@@ -60,7 +60,7 @@ macOS 版をダウンロード ↓
 
 ソースを見る ↗
 
-リリース 0.6.5 · macOS 13 以降 · Apple silicon と Intel
+リリース 0.6.7 · macOS 13 以降 · Apple silicon と Intel
 
 ローカルのサービスを一か所に
 
@@ -132,7 +132,7 @@ Fabric Dashboards は、Mac 上の対応サービスを検出します。各サ�
 
 ### macOS
 
-リリース 0.6.5。Apple silicon と Intel の両方に対応するユニバーサル DMG で、macOS 13 以降が必要です。Developer ID で署名され、公証とステープル処理済みです。
+リリース 0.6.7。Apple silicon と Intel の両方に対応するユニバーサル DMG で、macOS 13 以降が必要です。Developer ID で署名され、公証とステープル処理済みです。
 
 Fabric Dashboards をダウンロード ↓
 
@@ -146,7 +146,7 @@ DMG を開いて Fabric Dashboards を Applications にドラッグし、アプ�
 
 DMG SHA-256
 
-b1d1d7253a32a059686725befb1b9ead53252688a3ce0ae995de3a91106a3ea3
+d0e916fc1a9ee0586446c67474eb75156e770cc37dff302a3808703b4ec42e02
 
 リリースノートとチェックサム ↗
 

@@ -62,7 +62,7 @@ CEO AIエージェントの Fabric が、各プロジェクトの目的、決定
 
 ↗
 
-AGPL-3.0 のオープンソース Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
+AGPL-3.0 のオープンソース Fabric 0.3.3 · Switchboard 0.6.14 · Dashboards 0.6.7 · Observatory 0.20.1
 
 アカウント
 
@@ -182,7 +182,7 @@ Fabric Dashboards が各エージェントの状態とコストを表示し、�
 
 npx @passioncode-ai/passioncode@latest update
 
-Fabric 早期プレビュー版 0.3.2 Apple silicon 搭載の macOS 向け · ランチャー 0.1.31
+Fabric 早期プレビュー版 0.3.3 Apple silicon 搭載の macOS 向け · ランチャー 0.1.31
 
 ステップバイステップガイド
 
@@ -268,7 +268,7 @@ CEO AIエージェント：各プロジェクトの目的、ボード、決定�
 
 早期プレビュー版
 
-0.3.2
+0.3.3
 
 · macOS
 
@@ -296,7 +296,7 @@ Fabric Dashboards
 
 リリース
 
-0.6.5
+0.6.7
 
 · macOS
 
@@ -310,7 +310,7 @@ Project Observatory
 
 リリース
 
-0.19.4
+0.20.1
 
 · macOS + Linux
 
@@ -324,7 +324,7 @@ Gmail と Cloudflare のメールを1つのリストに集約し、重要なも�
 
 開発プレビュー版
 
-0.12.0
+0.13.0
 
 · macOS
 

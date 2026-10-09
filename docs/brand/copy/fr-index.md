@@ -62,7 +62,7 @@ Pour votre organisation
 
 ↗
 
-Open source sous licence AGPL-3.0 Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
+Open source sous licence AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.14 · Dashboards 0.6.7 · Observatory 0.20.1
 
 Comptes
 
@@ -182,7 +182,7 @@ Installez les skills pour agents en une commande, puis ajoutez Fabric : l’agen
 
 npx @passioncode-ai/passioncode@latest update
 
-Préversion de Fabric 0.3.2 pour macOS sur Apple silicon · lanceur 0.1.31
+Préversion de Fabric 0.3.3 pour macOS sur Apple silicon · lanceur 0.1.31
 
 Guide pas à pas
 
@@ -268,7 +268,7 @@ Dans la famille : le lieu commun à tous les agents d’un projet
 
 Préversion
 
-0.3.2
+0.3.3
 
 · macOS
 
@@ -296,7 +296,7 @@ Dans la famille : état, dépenses et pilotage
 
 Version
 
-0.6.5
+0.6.7
 
 · macOS
 
@@ -310,7 +310,7 @@ Dans la famille : mémoire et preuves
 
 Version
 
-0.19.4
+0.20.1
 
 · macOS + Linux
 
@@ -324,7 +324,7 @@ Dans la famille : le courrier
 
 Préversion de développement
 
-0.12.0
+0.13.0
 
 · macOS
 

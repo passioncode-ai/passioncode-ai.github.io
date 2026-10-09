@@ -60,7 +60,7 @@ Descargar para macOS ↓
 
 Ver código fuente ↗
 
-Versión 0.6.5 · macOS 13+ · Apple silicon + Intel
+Versión 0.6.7 · macOS 13+ · Apple silicon + Intel
 
 TUS SERVICIOS LOCALES / JUNTOS
 
@@ -132,7 +132,7 @@ Ajustes → Language: como en este Mac, English o Русский. La ventana, el
 
 ### macOS
 
-Versión 0.6.5. DMG universal para Apple silicon e Intel, macOS 13 o posterior. Firmado con Developer ID, notarizado y con el ticket incorporado (stapled).
+Versión 0.6.7. DMG universal para Apple silicon e Intel, macOS 13 o posterior. Firmado con Developer ID, notarizado y con el ticket incorporado (stapled).
 
 Descargar Fabric Dashboards ↓
 
@@ -146,7 +146,7 @@ Prueba Project Observatory, o crea tu propio servicio con el Fabric Agent Adapte
 
 DMG SHA-256
 
-b1d1d7253a32a059686725befb1b9ead53252688a3ce0ae995de3a91106a3ea3
+d0e916fc1a9ee0586446c67474eb75156e770cc37dff302a3808703b4ec42e02
 
 Notas de la versión y sumas de verificación ↗
 

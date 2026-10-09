@@ -60,7 +60,7 @@ macOS용 다운로드 ↓
 
 소스 보기 ↗
 
-릴리스 0.6.5 · macOS 13 이상 · Apple silicon + Intel
+릴리스 0.6.7 · macOS 13 이상 · Apple silicon + Intel
 
 내 로컬 서비스 / 한곳에서
 
@@ -132,7 +132,7 @@ Spend 페이지에는 각 에이전트에 적용된 한도가 나열됩니다. �
 
 ### macOS
 
-릴리스 0.6.5. Apple silicon과 Intel용 유니버설 DMG, macOS 13 이상. Developer ID 서명, 공증, 스테이플 완료.
+릴리스 0.6.7. Apple silicon과 Intel용 유니버설 DMG, macOS 13 이상. Developer ID 서명, 공증, 스테이플 완료.
 
 Fabric Dashboards 다운로드 ↓
 
@@ -146,7 +146,7 @@ DMG를 열고 Fabric Dashboards를 응용 프로그램 폴더로 드래그한 �
 
 DMG SHA-256
 
-b1d1d7253a32a059686725befb1b9ead53252688a3ce0ae995de3a91106a3ea3
+d0e916fc1a9ee0586446c67474eb75156e770cc37dff302a3808703b4ec42e02
 
 릴리스 노트와 체크섬 ↗
 

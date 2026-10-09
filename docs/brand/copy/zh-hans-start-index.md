@@ -98,7 +98,7 @@ Fabric 是 CEO AI 智能体：每个项目都有一个放置其目标、看板�
 
 下载 Fabric
 
-0.3.2
+0.3.3
 
 macOS 版
 
@@ -106,7 +106,7 @@ macOS 版
 
 要求与限制
 
-Apple silicon · 已签名并公证 · SHA-256 db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b · 版本说明
+Apple silicon · 已签名并公证 · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · 版本说明
 
 03
 
@@ -128,7 +128,7 @@ Fabric Dashboards 在一个窗口中显示每个本地智能体服务；你的�
 
 下载 Fabric Dashboards
 
-0.6.5
+0.6.7
 
 ↓
 

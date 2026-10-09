@@ -62,7 +62,7 @@ CEO AI 에이전트 Fabric이 각 프로젝트의 목적, 결정, 릴리스를 �
 
 ↗
 
-AGPL-3.0 오픈 소스 Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
+AGPL-3.0 오픈 소스 Fabric 0.3.3 · Switchboard 0.6.14 · Dashboards 0.6.7 · Observatory 0.20.1
 
 계정
 
@@ -182,7 +182,7 @@ Fabric Dashboards가 각 에이전트의 상태와 비용을 보여 주고, 도�
 
 npx @passioncode-ai/passioncode@latest update
 
-Fabric 초기 프리뷰 0.3.2 Apple silicon용 macOS · 런처 0.1.31
+Fabric 초기 프리뷰 0.3.3 Apple silicon용 macOS · 런처 0.1.31
 
 단계별 가이드
 
@@ -268,7 +268,7 @@ CEO AI 에이전트: 각 프로젝트의 목적, 보드, 결정, 릴리스를 �
 
 초기 프리뷰
 
-0.3.2
+0.3.3
 
 · macOS
 
@@ -296,7 +296,7 @@ Fabric Dashboards
 
 릴리스
 
-0.6.5
+0.6.7
 
 · macOS
 
@@ -310,7 +310,7 @@ Project Observatory
 
 릴리스
 
-0.19.4
+0.20.1
 
 · macOS + Linux
 
@@ -324,7 +324,7 @@ Gmail과 Cloudflare 메일을 한 목록에 모아 중요한 것부터 보여 �
 
 개발 프리뷰
 
-0.12.0
+0.13.0
 
 · macOS
 

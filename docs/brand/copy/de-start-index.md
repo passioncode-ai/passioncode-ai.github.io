@@ -98,7 +98,7 @@ Fabric ist der CEO-KI-Agent: Jedes Projekt bekommt ein Zuhause für Zweck, Board
 
 Fabric herunterladen
 
-0.3.2
+0.3.3
 
 für macOS
 
@@ -106,7 +106,7 @@ für macOS
 
 Voraussetzungen und Einschränkungen
 
-Apple silicon · signiert und notarisiert · SHA-256 db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b · Release Notes
+Apple silicon · signiert und notarisiert · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · Release Notes
 
 03
 
@@ -128,7 +128,7 @@ Fabric Dashboards zeigt jeden lokalen Agentendienst in einem Fenster; dein Agent
 
 Fabric Dashboards herunterladen
 
-0.6.5
+0.6.7
 
 ↓
 

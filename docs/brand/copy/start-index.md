@@ -98,7 +98,7 @@ Fabric is the CEO AI agent: each project gets a home for its purpose, board, dec
 
 Download Fabric
 
-0.3.2
+0.3.3
 
 for macOS
 
@@ -106,7 +106,7 @@ for macOS
 
 Requirements and limits
 
-Apple silicon · signed and notarized · SHA-256 db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b · release notes
+Apple silicon · signed and notarized · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · release notes
 
 03
 
@@ -128,7 +128,7 @@ Fabric Dashboards shows every local agent service in one window; your agent can 
 
 Download Fabric Dashboards
 
-0.6.5
+0.6.7
 
 ↓
 

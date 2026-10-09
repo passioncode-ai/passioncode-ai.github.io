@@ -64,7 +64,7 @@ Ansehen, was es kann
 
 ↓
 
-Entwicklungsvorschau 0.12.0 · macOS 12 oder neuer · Open Source unter AGPL-3.0
+Entwicklungsvorschau 0.13.0 · macOS 12 oder neuer · Open Source unter AGPL-3.0
 
 FABRIC INBOX / MAIL + AGENTEN
 
@@ -106,7 +106,7 @@ FABRIC INBOX HOLEN
 
 ## für deinen Mac
 
-Neueste Vorschau: 0.12.0. Die Mac-App erstellt ihren Mailserver in deinem eigenen Cloudflare-Account und öffnet ihn; deine Mail bleibt bei deinen Accounts.
+Neueste Vorschau: 0.13.0. Die Mac-App erstellt ihren Mailserver in deinem eigenen Cloudflare-Account und öffnet ihn; deine Mail bleibt bei deinen Accounts.
 
 ⌘
 
@@ -137,7 +137,7 @@ Die Einrichtungsanleitung listet jede Einstellung auf.
 
 macOS-DMG · SHA-256
 
-a8e55bc8c8ad8837f079ad161104096cd14f1c09e08efaa883028642c0f136c7
+7709361f9a2f98cd125bbabd9433c320859c85e9f11c96367aa66aee21350a37
 
 Vor dem Öffnen vergleichen: shasum -a 256 im Terminal. Ein abweichender Wert bedeutet eine andere Datei; lade sie erneut herunter.
 

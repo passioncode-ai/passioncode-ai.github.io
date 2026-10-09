@@ -98,7 +98,7 @@ Fabric은 CEO AI 에이전트입니다. 각 프로젝트에 목적, 보드, 결�
 
 Fabric 다운로드
 
-0.3.2
+0.3.3
 
 macOS용
 
@@ -106,7 +106,7 @@ macOS용
 
 요구 사항과 제한
 
-Apple silicon · 서명 및 공증 완료 · SHA-256 db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b · 릴리스 노트
+Apple silicon · 서명 및 공증 완료 · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · 릴리스 노트
 
 03
 
@@ -128,7 +128,7 @@ Fabric Dashboards는 로컬 에이전트 서비스를 한 창에 모두 보여 �
 
 Fabric Dashboards 다운로드
 
-0.6.5
+0.6.7
 
 ↓
 
