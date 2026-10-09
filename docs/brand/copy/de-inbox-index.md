@@ -30,6 +30,10 @@ English
 
 Français
 
+Polski
+
+한국어
+
 GitHub
 
 ↗

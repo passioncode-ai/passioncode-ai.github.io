@@ -22,6 +22,16 @@ export const LOCALES = {
     "name": "Français",
     "englishName": "French",
     "intl": "fr-FR"
+  },
+  "pl": {
+    "name": "Polski",
+    "englishName": "Polish",
+    "intl": "pl-PL"
+  },
+  "ko": {
+    "name": "한국어",
+    "englishName": "Korean",
+    "intl": "ko-KR"
   }
 }
 export const CATALOGS = {
@@ -159,6 +169,94 @@ export const CATALOGS = {
     "a web address": "une adresse web",
     "a work email address": "une adresse e-mail professionnelle",
     "agree to the privacy notice to send the request": "acceptez la politique de confidentialité pour envoyer la demande"
+  },
+  "pl": {
+    "Request not sent": "Zgłoszenie niewysłane",
+    "Your request was not sent": "Twoje zgłoszenie nie zostało wysłane",
+    "You can also write to {email}.": "Możesz też napisać na {email}.",
+    "Back to the form": "Wróć do formularza",
+    "The form is not accepting requests right now. Please write to {email} instead.": "Formularz nie przyjmuje teraz zgłoszeń. Napisz zamiast tego na {email}.",
+    "Too many requests from your network in the last minute. Please wait a minute and try again.": "W ciągu ostatniej minuty z Twojej sieci przyszło zbyt wiele zgłoszeń. Odczekaj minutę i spróbuj ponownie.",
+    "The request is too long.": "Zgłoszenie jest zbyt długie.",
+    "The request could not be read.": "Nie udało się odczytać zgłoszenia.",
+    "That was faster than a person can fill the form. Please check your answers and send it again.": "Formularz wypełniono szybciej, niż jest w stanie zrobić to człowiek. Sprawdź odpowiedzi i wyślij go ponownie.",
+    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "Formularz wygasł. Odśwież stronę i wyślij zgłoszenie ponownie — Twoje odpowiedzi są zachowane w przeglądarce.",
+    "Some answers need another look.": "Niektóre odpowiedzi trzeba sprawdzić.",
+    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "Ten formularz został już raz wysłany. Aby wysłać kolejne zgłoszenie, odśwież stronę — Twoje odpowiedzi są zachowane w przeglądarce.",
+    "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "Nie udało się zapisać Twojego zgłoszenia. Nic nie zostało wysłane. Spróbuj ponownie za minutę albo napisz na {email}.",
+    "This request was already sent with different answers. Reload the page to start a new one.": "To zgłoszenie zostało już wysłane z innymi odpowiedziami. Odśwież stronę, aby zacząć nowe.",
+    "We received your request — PassionCode.ai": "Otrzymaliśmy Twoje zgłoszenie — PassionCode.ai",
+    "Hello,": "Dzień dobry,",
+    "Thank you for your request. It reached PassionCode.ai.": "Dziękujemy za zgłoszenie. Dotarło do PassionCode.ai.",
+    "What happens next:": "Co dalej:",
+    "1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.": "1. Przeczytamy, co nam przesłano, i odpowiemy w ciągu dwóch dni roboczych — zwykle z kilkoma pytaniami o wskazane procesy.",
+    "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. Jeśli to do nas pasuje, zaproponujemy krótką rozmowę, żeby rozpisać jeden proces i ustalić, jak go mierzyć.",
+    "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. Otrzymasz pisemną propozycję: co skonfigurujemy, gdzie będzie działać i jakiej licencji wymaga.",
+    "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "Wszystko, co tworzy PassionCode.ai, to open source na licencji GNU AGPL-3.0, więc możesz też zacząć samodzielnie już dziś: {start}",
+    "To add anything, reply to this email.": "Jeśli chcesz coś dodać, po prostu odpowiedz na tego e-maila.",
+    "Reference: {id}. We keep your request only to answer it: {privacy}": "Numer zgłoszenia: {id}. Przechowujemy Twoje zgłoszenie wyłącznie po to, żeby na nie odpowiedzieć: {privacy}",
+    "required": "pole wymagane",
+    "at least {n} characters": {
+      "one": "co najmniej {n} znak",
+      "few": "co najmniej {n} znaki",
+      "many": "co najmniej {n} znaków",
+      "other": "co najmniej {n} znaku"
+    },
+    "at most {n} characters": {
+      "one": "najwyżej {n} znak",
+      "few": "najwyżej {n} znaki",
+      "many": "najwyżej {n} znaków",
+      "other": "najwyżej {n} znaku"
+    },
+    "a number from 0 to {max}": "liczba od 0 do {max}",
+    "choose one of the listed answers": "wybierz jedną z podanych odpowiedzi",
+    "unknown answer": "nieznana odpowiedź",
+    "choose at least one": "wybierz co najmniej jedną odpowiedź",
+    "choose at least {n}": "wybierz co najmniej {n}",
+    "a web address": "adres strony internetowej",
+    "a work email address": "służbowy adres e-mail",
+    "agree to the privacy notice to send the request": "aby wysłać zgłoszenie, zaakceptuj informację o prywatności"
+  },
+  "ko": {
+    "Request not sent": "요청이 전송되지 않았습니다",
+    "Your request was not sent": "요청이 전송되지 않았습니다",
+    "You can also write to {email}.": "{email}로 직접 메일을 보내셔도 됩니다.",
+    "Back to the form": "양식으로 돌아가기",
+    "The form is not accepting requests right now. Please write to {email} instead.": "양식이 지금은 요청을 받지 않습니다. 대신 {email}로 메일을 보내 주세요.",
+    "Too many requests from your network in the last minute. Please wait a minute and try again.": "최근 1분 동안 사용 중인 네트워크에서 요청이 너무 많이 들어왔습니다. 1분 정도 기다린 뒤 다시 시도해 주세요.",
+    "The request is too long.": "요청이 너무 깁니다.",
+    "The request could not be read.": "요청을 읽을 수 없었습니다.",
+    "That was faster than a person can fill the form. Please check your answers and send it again.": "사람이 양식을 작성하는 속도보다 빠르게 전송되었습니다. 입력한 내용을 확인한 뒤 다시 보내 주세요.",
+    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "양식이 만료되었습니다. 페이지를 새로 고친 뒤 다시 보내 주세요. 입력한 내용은 브라우저에 남아 있습니다.",
+    "Some answers need another look.": "다시 확인이 필요한 답변이 있습니다.",
+    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "이 양식은 이미 한 번 전송되었습니다. 다른 요청을 보내려면 페이지를 새로 고쳐 주세요. 입력한 내용은 브라우저에 남아 있습니다.",
+    "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "요청을 저장하지 못했습니다. 아무것도 전송되지 않았습니다. 잠시 후 다시 시도하시거나 {email}로 메일을 보내 주세요.",
+    "This request was already sent with different answers. Reload the page to start a new one.": "이 요청은 다른 답변으로 이미 전송되었습니다. 새 요청을 작성하려면 페이지를 새로 고쳐 주세요.",
+    "We received your request — PassionCode.ai": "요청을 받았습니다 — PassionCode.ai",
+    "Hello,": "안녕하세요,",
+    "Thank you for your request. It reached PassionCode.ai.": "요청해 주셔서 감사합니다. 요청이 PassionCode.ai에 도착했습니다.",
+    "What happens next:": "다음 순서로 진행됩니다.",
+    "1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.": "1. 보내 주신 내용을 읽고 영업일 기준 2일 이내에 답변드립니다. 말씀하신 프로세스에 대해 몇 가지 질문을 드리는 경우가 많습니다.",
+    "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. 적합하다고 판단되면 프로세스 하나를 정리하고 측정 방법을 합의하는 짧은 통화를 제안드립니다.",
+    "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. 서면 제안서를 받으시게 됩니다. 무엇을 구성하는지, 어디에서 실행되는지, 어떤 라이선스가 필요한지가 담깁니다.",
+    "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "PassionCode.ai가 만드는 모든 것은 GNU AGPL-3.0 오픈 소스이므로 지금 바로 직접 시작하실 수도 있습니다: {start}",
+    "To add anything, reply to this email.": "추가할 내용이 있으면 이 이메일에 회신해 주세요.",
+    "Reference: {id}. We keep your request only to answer it: {privacy}": "참조 번호: {id}. 요청 내용은 답변을 드리는 용도로만 보관합니다: {privacy}",
+    "required": "필수",
+    "at least {n} characters": {
+      "other": "{n}자 이상"
+    },
+    "at most {n} characters": {
+      "other": "{n}자 이하"
+    },
+    "a number from 0 to {max}": "0에서 {max} 사이의 숫자",
+    "choose one of the listed answers": "목록에 있는 답변 중 하나를 선택하세요",
+    "unknown answer": "알 수 없는 답변",
+    "choose at least one": "하나 이상 선택하세요",
+    "choose at least {n}": "{n}개 이상 선택하세요",
+    "a web address": "웹 주소",
+    "a work email address": "업무용 이메일 주소",
+    "agree to the privacy notice to send the request": "요청을 보내려면 개인정보 처리방침에 동의하세요"
   }
 }
 export const { resolveLocale, t, tn } = translator({ source: SOURCE_LOCALE, locales: LOCALES, catalogs: CATALOGS })
