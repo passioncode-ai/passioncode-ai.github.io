@@ -8,7 +8,14 @@
 // generated from i18n/<locale>/_scripts.json by scripts/build-locale.mjs (assets/i18n.js for the
 // browser, worker/i18n.js for the Worker); this file holds only the lookup.
 export function translator ({ source, locales, catalogs }) {
-  const resolveLocale = value => typeof value === 'string' && Object.hasOwn(locales, value) ? value : source
+  // A locale is named by its code (`pt-br`, the address prefix and the form's ?lang=) or by the
+  // tag its pages carry in <html lang> (`pt-BR`); language tags compare without case (BCP 47).
+  const resolveLocale = value => {
+    if (typeof value !== 'string') return source
+    if (Object.hasOwn(locales, value)) return value
+    const wanted = value.toLowerCase()
+    return Object.keys(locales).find(code => code.toLowerCase() === wanted || (locales[code].lang ?? code).toLowerCase() === wanted) ?? source
+  }
   const fill = (text, params = {}) => text.replace(/\{([a-zA-Z]\w*)\}/g, (all, name) => Object.hasOwn(params, name) ? String(params[name]) : all)
   const t = (locale, message, params) => {
     const value = locale === source ? undefined : catalogs[locale]?.[message]

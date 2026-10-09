@@ -9,7 +9,7 @@ import { execFileSync } from 'node:child_process'
 import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
-import { alternates, applyChrome, counterpartRoute, languageSwitch, loadCatalog, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceUrl, translateMessages } from './locales.mjs'
+import { alternates, applyChrome, counterpartRoute, langTag, LANG_TAGS, languageSwitch, loadCatalog, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceUrl, translateMessages } from './locales.mjs'
 import { LOCALES, NOINDEX, PAGES, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { buildLocale, generate } from './build-locale.mjs'
 import { rewriteSource } from '../worker/live.js'
@@ -44,7 +44,7 @@ test('chrome: lang, canonical, reciprocal hreflang with x-default, og:locale and
   const en = applyChrome(page('<p>Hi</p>').replace('</title>', '</title><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="xx_XX">'), { sourceFile: 'x/index.html', locale: 'en' })
   const links = [...en.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m => [m[1], m[2]])
   assert.deepEqual(links, alternates('x/index.html'))
-  assert.deepEqual(links.map(l => l[0]), [...LOCALES, 'x-default'])
+  assert.deepEqual(links.map(l => l[0]), [...LOCALES.map(langTag), 'x-default'])
   assert.equal(links.at(-1)[1], 'https://passioncode.ai/x/', 'x-default is English')
   assert.match(en, /<meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ru_RU">/)
   const back = applyChrome(en, { sourceFile: 'x/index.html', locale: 'ru' })
@@ -60,10 +60,39 @@ test('chrome: lang, canonical, reciprocal hreflang with x-default, og:locale and
 test('with two languages the switch is one link; it never leads to its own language', () => {
   for (const locale of LOCALES) {
     const html = languageSwitch('start/index.html', locale)
-    for (const other of LOCALES.filter(l => l !== locale)) assert.ok(html.includes(`href="${counterpartRoute('start/index.html', other)}" hreflang="${other}" lang="${other}"`), `${locale} → ${other}`)
-    assert.ok(!html.includes(`hreflang="${locale}"`), `${locale}: no link to itself`)
+    for (const other of LOCALES.filter(l => l !== locale)) assert.ok(html.includes(`href="${counterpartRoute('start/index.html', other)}" hreflang="${langTag(other)}" lang="${langTag(other)}"`), `${locale} → ${other}`)
+    assert.ok(!html.includes(`hreflang="${langTag(locale)}"`), `${locale}: no link to itself`)
     if (LOCALES.length === 2) assert.match(html, /^<a class="lang-switch" [^>]+>[^<]+<\/a>$/)
   }
+})
+
+// The address prefix is the registry code, lowercase (`/pt-br/`); the language tag the version
+// carries in <html lang>, hreflang and the switch is the registry's `lang` (`pt-BR`), the code when
+// there is none. The page scripts and the Worker find the language by either.
+test('a code with a region keeps a lowercase prefix and carries its BCP 47 tag', async () => {
+  const registry = JSON.parse(read('i18n/locales.json'))
+  for (const locale of LOCALES) {
+    const tag = registry.locales[locale].lang ?? locale
+    assert.equal(langTag(locale), tag)
+    assert.equal(locale, locale.toLowerCase(), `${locale}: the prefix is lowercase`)
+    assert.deepEqual(Intl.getCanonicalLocales(tag), [tag], `${locale}: ${tag} is a canonical BCP 47 tag`)
+  }
+  assert.ok(Object.values(LANG_TAGS).every(Boolean))
+  const regional = LOCALES.filter(l => langTag(l) !== l)
+  for (const locale of regional) {
+    const tag = langTag(locale)
+    const html = applyChrome(page('<p>Hi</p>'), { sourceFile: 'x/index.html', locale })
+    assert.ok(html.includes(`<html lang="${tag}">`), `${locale}: <html lang="${tag}">`)
+    assert.ok(html.includes(`<link rel="alternate" hreflang="${tag}" href="https://passioncode.ai/${locale}/x/">`), `${locale}: hreflang ${tag} at /${locale}/`)
+    assert.ok(languageSwitch('x/index.html', 'en').includes(`href="/${locale}/x/" hreflang="${tag}" lang="${tag}"`), `${locale}: the switch`)
+    assert.equal(localizeUrl('/start/', locale), `/${locale}/start/`)
+    for (const module of ['../assets/i18n.js', '../worker/i18n.js']) {
+      const { resolveLocale } = await import(module)
+      for (const name of [locale, tag, tag.toUpperCase()]) assert.equal(resolveLocale(name), locale, `${module}: ${name}`)
+    }
+  }
+  const { resolveLocale } = await import('../assets/i18n.js')
+  for (const unknown of ['xx', 'pt', '', undefined, '__proto__']) assert.equal(resolveLocale(unknown), 'en', String(unknown))
 })
 
 test('text, attributes, meta and JSON-LD prose are translated; code, live values and identifiers are not', () => {
@@ -202,9 +231,10 @@ test('adding a language takes only i18n/locales.json and i18n/<locale>/', { time
     for (const [key, value] of Object.entries(scripts.strings)) if (typeof value === 'object') scripts.strings[key] = { one: value.one, other: value.many }
     writeFileSync(scriptsFile, JSON.stringify(scripts, null, 2))
     const run = (...args) => execFileSync('node', args, { cwd: dir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
-    assert.match(run('scripts/build-locale.mjs'), /PASS: 3 languages \(en, ru, de\)/)
-    assert.match(run('scripts/build-locale.mjs', '--check'), /PASS: 3 languages/)
-    assert.match(run('scripts/check-site.mjs'), /PASS: 45 static pages/)
+    const languages = Object.keys(registry.locales)
+    assert.match(run('scripts/build-locale.mjs'), new RegExp(`PASS: ${languages.length} languages \\(${languages.join(', ')}\\)`))
+    assert.match(run('scripts/build-locale.mjs', '--check'), new RegExp(`PASS: ${languages.length} languages`))
+    assert.match(run('scripts/check-site.mjs'), new RegExp(`PASS: ${languages.length * SOURCE_PAGES.length} static pages`))
     run('--test', 'scripts/check-worker.mjs')
     const home = readFileSync(join(dir, 'ru/index.html'), 'utf8')
     assert.match(home, /<details class="lang-switch lang-menu"><summary aria-label="Язык: Русский">/)

@@ -5,7 +5,7 @@ import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 import { PAGES, NOINDEX, TRANSLATED_LOCALES } from './pages.mjs'
 import { LEAD_OPTIONS } from '../assets/lead-options.js'
-import { alternates, languageSwitch, LOCALES, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
+import { alternates, langTag, languageSwitch, LOCALES, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
 
 const root = resolve(import.meta.dirname, '..')
@@ -48,13 +48,13 @@ for (const file of PAGES) {
   const prefix = prefixOf(locale)
   assert.equal((html.match(/<h1\b/g) || []).length, 1, `${file}: exactly one h1`)
   assert.ok(html.includes(`rel="canonical" href="https://passioncode.ai/${route}"`), `${file}: canonical`)
-  assert.ok(html.includes(`<html lang="${locale}">`), `${file}: <html lang="${locale}">`)
+  assert.ok(html.includes(`<html lang="${langTag(locale)}">`), `${file}: <html lang="${langTag(locale)}">`)
   // Every language version names all of them, English as x-default: the same list on every
   // version, so hreflang is reciprocal. Pages kept out of search carry none.
   const pageAlternates = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m => `${m[1]} ${m[2]}`)
   const expectedAlternates = NOINDEX.has(file) ? [] : alternates(source).map(([l, href]) => `${l} ${href}`)
   assert.deepEqual(pageAlternates, expectedAlternates, `${file}: hreflang alternates`)
-  if (!NOINDEX.has(file)) assert.deepEqual(expectedAlternates.map(a => a.split(' ')[0]), [...LOCALES, 'x-default'], `${file}: every language and x-default`)
+  if (!NOINDEX.has(file)) assert.deepEqual(expectedAlternates.map(a => a.split(' ')[0]), [...LOCALES.map(langTag), 'x-default'], `${file}: every language and x-default`)
   assert.ok(html.includes(`rel="canonical" href="${ORIGIN}${pageRoute(source, locale)}"`), `${file}: canonical in its own language`)
   // One visible switch, leading to the same page in each other language.
   assert.equal((html.match(/class="lang-switch/g) || []).length, 1, `${file}: one language switch`)
