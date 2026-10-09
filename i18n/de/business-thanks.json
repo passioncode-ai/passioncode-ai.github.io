@@ -1,0 +1,15 @@
+{
+  "page": "business/thanks/index.html",
+  "strings": {
+    "Request received | PassionCode.ai": "Anfrage erhalten | PassionCode.ai",
+    "Your request reached PassionCode.ai. We reply within two business days.": "Deine Anfrage ist bei PassionCode.ai angekommen. Wir antworten innerhalb von zwei Werktagen.",
+    "Request received": "Anfrage erhalten",
+    "Thank you, it": "Danke, sie ist",
+    "reached us": "bei uns angekommen",
+    "We read every request and reply within two business days, usually with a few questions about the processes you named. A confirmation email usually follows within minutes": "Wir lesen jede Anfrage und antworten innerhalb von zwei Werktagen, meist mit ein paar Fragen zu den Prozessen, die du genannt hast. Eine Bestätigungs-E-Mail kommt in der Regel innerhalb weniger Minuten",
+    "Try the tools meanwhile": "Probier in der Zwischenzeit die Tools aus",
+    "Back to the home page": "Zurück zur Startseite",
+    "No copy in your inbox within an hour?": "Nach einer Stunde noch keine Bestätigung im Posteingang?",
+    "Write to": "Schreib an"
+  }
+}

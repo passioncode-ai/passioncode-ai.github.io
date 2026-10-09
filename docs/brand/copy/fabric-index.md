@@ -22,7 +22,13 @@ The tools
 
 About
 
+English
+
 Русский
+
+Deutsch
+
+Français
 
 Download
 

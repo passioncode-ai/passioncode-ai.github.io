@@ -1,0 +1,68 @@
+{
+  "$comment": "The gate's assertions in German (scripts/check-site.mjs): phrases the brand never uses, and the disclosures a translation may not soften (docs/brand/voice.md, \"Invariant in every language\"). Every translated language has this file.",
+  "banned": [
+    "nahtlos",
+    "vollständig autonom",
+    "vollautonom",
+    "garantierte[a-z]* einsparung"
+  ],
+  "disclosures": {
+    "index.html": [
+      "antwortet noch nicht",
+      "noch nicht verifiziert",
+      "href=\"/de/start/\"",
+      "href=\"/de/business/\"",
+      "Open Source unter AGPL-3.0",
+      "kommerzielle Lizenz"
+    ],
+    "start/index.html": [
+      "npx @passioncode-ai/passioncode@latest update",
+      "Docker und die Supabase CLI",
+      "antwortet aber noch nicht",
+      "href=\"/fabric/download/macos\""
+    ],
+    "fabric/index.html": [
+      "Frühe Vorschau",
+      "Fabric antwortet noch nicht",
+      "Intel",
+      "du erlaubst oder verweigerst jede Anfrage",
+      "href=\"/fabric/download/macos\"",
+      "kommerzielle Lizenz"
+    ],
+    "inbox/index.html": [
+      "Entwicklungsvorschau",
+      "noch nicht mit einem echten Modellaufruf ausprobiert",
+      "IMAP- und Outlook",
+      "href=\"/inbox/download/macos\""
+    ],
+    "switchboard/index.html": [
+      "noch nicht mit Authenticode signiert",
+      "offen im Repository verfolgt",
+      "href=\"/switchboard/download/windows\""
+    ],
+    "dashboards/index.html": [
+      "Dienste werden separat installiert",
+      "Release 0.3.1 ist das erste unter der AGPL",
+      "href=\"/dashboards/download/macos\""
+    ],
+    "observatory/index.html": [
+      "keine unbekannten Secrets finden",
+      "0.8.2 bis 0.9.1 unter PolyForm",
+      "requirements-full.lock"
+    ],
+    "business/index.html": [
+      "Eine Schätzung, kein Versprechen",
+      "ein festes Paket gibt es nicht"
+    ],
+    "privacy/index.html": [
+      "DSGVO Art. 6 Abs. 1 lit. b",
+      "24 Monate",
+      "30 Tage",
+      "Westeuropa",
+      "Frankfurt",
+      "keine Cookies",
+      "VERSION 2026-10-08",
+      "gilt die englische Fassung"
+    ]
+  }
+}
