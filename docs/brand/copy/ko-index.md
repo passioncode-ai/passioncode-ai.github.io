@@ -28,6 +28,10 @@ English
 
 Русский
 
+Deutsch
+
+Français
+
 Polski
 
 도구 받기

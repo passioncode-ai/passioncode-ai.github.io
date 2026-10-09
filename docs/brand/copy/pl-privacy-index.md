@@ -28,6 +28,10 @@ English
 
 Русский
 
+Deutsch
+
+Français
+
 한국어
 
 Pobierz narzędzia

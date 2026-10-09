@@ -9,6 +9,12 @@ export const LOCALES = {
   "ru": {
     "intl": "ru-RU"
   },
+  "de": {
+    "intl": "de-DE"
+  },
+  "fr": {
+    "intl": "fr-FR"
+  },
   "pl": {
     "intl": "pl-PL"
   },
@@ -37,6 +43,48 @@ export const CATALOGS = {
     "Reference: {id}": "Номер заявки: {id}",
     "The request was not sent.": "Заявка не отправлена.",
     "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "Заявка не ушла из браузера — проверьте подключение и отправьте её снова. Ответы сохранены здесь."
+  },
+  "de": {
+    "Copy": "Kopieren",
+    "Copied": "Kopiert",
+    "Select and copy": "Markieren und kopieren",
+    "Copy: {text}": "Kopieren: {text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "Gib die Stunden, die Kosten und den heutigen Ablauf der Arbeit an, um die Schätzung zu sehen.",
+    "Agents could take over about": "Agenten könnten etwa so viel übernehmen:",
+    "{low}–{high} a month": "{low}–{high} pro Monat",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "{low}–{high} Stunden pro Monat. Eine Schätzung nach der Formel oben, kein Versprechen; die echte Zahl misst das Pilotprojekt.",
+    "Choose at least one.": "Wähle mindestens eine Option.",
+    "Choose one.": "Wähle eine Option.",
+    "Required.": "Pflichtfeld.",
+    "A work email address.": "Gib eine geschäftliche E-Mail-Adresse an.",
+    "Agree to the privacy notice to send the request.": "Stimme dem Datenschutzhinweis zu, um die Anfrage zu senden.",
+    "Sending…": "Wird gesendet…",
+    "Thank you — it reached us": "Danke – deine Anfrage ist bei uns angekommen",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "Wir antworten innerhalb von zwei Werktagen. Eine Bestätigung per E-Mail kommt meist innerhalb weniger Minuten.",
+    "Reference: {id}": "Anfragenummer: {id}",
+    "The request was not sent.": "Die Anfrage wurde nicht gesendet.",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "Die Anfrage hat deinen Browser nicht verlassen – prüfe deine Verbindung und sende sie erneut. Deine Antworten bleiben hier erhalten."
+  },
+  "fr": {
+    "Copy": "Copier",
+    "Copied": "Copié",
+    "Select and copy": "Sélectionnez et copiez",
+    "Copy: {text}": "Copier : {text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "Indiquez les heures, le coût et la façon dont le travail se fait aujourd’hui pour voir l’estimation.",
+    "Agents could take over about": "Les agents pourraient prendre en charge environ",
+    "{low}–{high} a month": "{low}–{high} par mois",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "{low}–{high} heures par mois. Une estimation tirée de la formule ci-dessus, pas une promesse ; le pilote mesure le chiffre réel.",
+    "Choose at least one.": "Choisissez au moins une option.",
+    "Choose one.": "Choisissez une option.",
+    "Required.": "Champ obligatoire.",
+    "A work email address.": "Une adresse e-mail professionnelle.",
+    "Agree to the privacy notice to send the request.": "Acceptez la politique de confidentialité pour envoyer la demande.",
+    "Sending…": "Envoi…",
+    "Thank you — it reached us": "Merci, votre demande nous est parvenue",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "Nous répondons sous deux jours ouvrés. Un e-mail de confirmation arrive généralement en quelques minutes.",
+    "Reference: {id}": "Référence : {id}",
+    "The request was not sent.": "La demande n’a pas été envoyée.",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "La demande n’a pas quitté votre navigateur : vérifiez votre connexion et renvoyez-la. Vos réponses sont conservées ici."
   },
   "pl": {
     "Copy": "Kopiuj",

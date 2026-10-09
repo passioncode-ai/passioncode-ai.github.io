@@ -758,7 +758,7 @@ test('a refused Russian submission is explained in Russian; the error code stays
   assert.equal(body.error, 'invalid')
   assert.equal(body.message, 'Некоторые ответы нужно проверить.')
   assert.deepEqual(body.issues, [{ path: 'contact.email', message: 'рабочий адрес почты' }])
-  const unknown = await post(env, JSON.stringify({}), { path: '/api/leads?lang=de' })
+  const unknown = await post(env, JSON.stringify({}), { path: '/api/leads?lang=sv' })
   assert.equal((await unknown.json()).message, 'The form has expired. Reload the page and send it again — your answers are kept in the browser.', 'an unknown language falls back to English')
 })
 

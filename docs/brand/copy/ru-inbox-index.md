@@ -26,6 +26,10 @@ Fabric
 
 English
 
+Deutsch
+
+Français
+
 Polski
 
 한국어

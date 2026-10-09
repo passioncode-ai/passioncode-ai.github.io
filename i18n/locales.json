@@ -16,6 +16,20 @@
       "intl": "ru-RU",
       "switchLabel": "Язык"
     },
+    "de": {
+      "name": "Deutsch",
+      "englishName": "German",
+      "og": "de_DE",
+      "intl": "de-DE",
+      "switchLabel": "Sprache"
+    },
+    "fr": {
+      "name": "Français",
+      "englishName": "French",
+      "og": "fr_FR",
+      "intl": "fr-FR",
+      "switchLabel": "Langue"
+    },
     "pl": {
       "name": "Polski",
       "englishName": "Polish",

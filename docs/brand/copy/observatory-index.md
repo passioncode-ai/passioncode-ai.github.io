@@ -26,6 +26,10 @@ English
 
 Русский
 
+Deutsch
+
+Français
+
 Polski
 
 한국어
