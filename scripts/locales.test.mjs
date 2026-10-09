@@ -132,7 +132,7 @@ test('structure: generated pages match; a removed hook, a renamed field or a mov
   const en = page('<form action="/api/leads"><input name="contact.email"></form><span data-live="x.version">1</span><a href="/switchboard/download/macos">Get</a>')
   const { html: out } = ru(en, { Get: 'Скачать' })
   assert.equal(skeletonDiff(skeleton(en), skeleton(out)), null, 'the chrome differs by design and is not compared')
-  for (const broken of [out.replace(' data-live="x.version"', ''), out.replace('contact.email', 'contact.mail'), out.replace('/switchboard/download/macos', '/fabric/download/macos'), out.replace('<span', '<em><span').replace('</span>', '</span></em>')]) {
+  for (const broken of [out.replace(' data-live="x.version"', ''), out.replace('contact.email', 'contact.mail'), out.replace('/switchboard/download/macos', '/fabric/download/macos'), out.replace('<span data-live="x.version">1</span>', '<em><span data-live="x.version">1</span></em>')]) {
     assert.notEqual(skeletonDiff(skeleton(en), skeleton(broken)), null)
   }
 })
@@ -202,9 +202,10 @@ test('adding a language takes only i18n/locales.json and i18n/<locale>/', { time
     for (const [key, value] of Object.entries(scripts.strings)) if (typeof value === 'object') scripts.strings[key] = { one: value.one, other: value.many }
     writeFileSync(scriptsFile, JSON.stringify(scripts, null, 2))
     const run = (...args) => execFileSync('node', args, { cwd: dir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
-    assert.match(run('scripts/build-locale.mjs'), /PASS: 3 languages \(en, ru, de\)/)
-    assert.match(run('scripts/build-locale.mjs', '--check'), /PASS: 3 languages/)
-    assert.match(run('scripts/check-site.mjs'), /PASS: 45 static pages/)
+    const codes = Object.keys(registry.locales)
+    assert.match(run('scripts/build-locale.mjs'), new RegExp(`PASS: ${codes.length} languages \\(${codes.join(', ')}\\)`))
+    assert.match(run('scripts/build-locale.mjs', '--check'), new RegExp(`PASS: ${codes.length} languages`))
+    assert.match(run('scripts/check-site.mjs'), new RegExp(`PASS: ${codes.length * 15} static pages`))
     run('--test', 'scripts/check-worker.mjs')
     const home = readFileSync(join(dir, 'ru/index.html'), 'utf8')
     assert.match(home, /<details class="lang-switch lang-menu"><summary aria-label="Язык: Русский">/)

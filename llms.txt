@@ -8,7 +8,7 @@ Vision: do what you love — agents take the routine. Agents need a harness — 
 - [Vision](https://passioncode.ai/vision/): agent sprawl with sources (McKinsey, Gartner, the NANDA report), what a harness is, six principles, the path in six stages (one agent, two that talk, a chain, a family that looks after itself, a team, an organization) each marked available now or direction, trust, and task-pipeline (github.com/ssheleg/sshlg-skills) as a recommended separate open-source skill.
 
 ## Languages
-- Every page is published in English and in one more language, at the same path under the language's prefix: Russian (Русский) under /ru/ — for example https://passioncode.ai/ru/start/. Each page names all its versions with hreflang, English as x-default, and sitemap.xml lists every version. English is the source; where a translated privacy notice differs, the English version prevails.
+- Every page is published in English and in 3 more languages, at the same path under the language's prefix: Russian (Русский) under /ru/ — for example https://passioncode.ai/ru/start/; Polish (Polski) under /pl/ — for example https://passioncode.ai/pl/start/; Korean (한국어) under /ko/ — for example https://passioncode.ai/ko/start/. Each page names all its versions with hreflang, English as x-default, and sitemap.xml lists every version. English is the source; where a translated privacy notice differs, the English version prevails.
 
 ## Start
 - [Get started](https://passioncode.ai/start/): install the skills (`npx @passioncode-ai/passioncode@latest update`), add Fabric, create or convert an agent, run it in Fabric Dashboards, add the next agent to the same family, contribute.
