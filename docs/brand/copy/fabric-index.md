@@ -64,7 +64,7 @@ Explore the workflow
 
 ↓
 
-Early preview 0.3.2 · macOS on Apple silicon
+Early preview 0.3.3 · macOS on Apple silicon
 
 A PROJECT, BEYOND THE CHAT
 
@@ -172,7 +172,7 @@ GET FABRIC
 
 ## for your Mac
 
-Latest preview: 0.3.2. Fabric runs on your Mac with a local database; your projects stay on this machine.
+Latest preview: 0.3.3. Fabric runs on your Mac with a local database; your projects stay on this machine.
 
 ⌘
 
@@ -211,7 +211,7 @@ View source
 
 This is an early preview. You can keep projects, a board of decisions, tasks, goals, a pulse of the work and releases with their receipts. The conversation with Fabric saves your messages, but Fabric does not reply yet. A newer version does not upgrade an existing database on its own; it tells you the command to run. Agents registered on this Mac can ask Fabric, through its local agent hub, for access to a connected product such as Fabric Inbox; you allow or deny each request and can revoke it in Settings. Since 0.3.2, Fabric sends anonymous usage counts — counts and kinds only, never names, paths or content; turn them off in Settings → Share usage counts, which applies to every PassionCode.ai app on your Mac.
 
-Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from passioncode.ai/business for use the AGPL doesn’t cover. The 0.3.2 preview is built, signed and notarized in CI from that public source.
+Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from passioncode.ai/business for use the AGPL doesn’t cover. The 0.3.3 preview is built, signed and notarized in CI from that public source.
 
 PART OF THE SAME TOOLKIT
 

@@ -62,7 +62,7 @@ Português (Brasil)
 
 ↗
 
-基于 AGPL-3.0 开源 Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
+基于 AGPL-3.0 开源 Fabric 0.3.3 · Switchboard 0.6.14 · Dashboards 0.6.7 · Observatory 0.20.1
 
 账号
 
@@ -182,7 +182,7 @@ Fabric Dashboards 显示每个智能体的健康状况和花费，工具会自�
 
 npx @passioncode-ai/passioncode@latest update
 
-Fabric 早期预览版 0.3.2 适用于 Apple silicon 的 macOS · 启动器 0.1.31
+Fabric 早期预览版 0.3.3 适用于 Apple silicon 的 macOS · 启动器 0.1.31
 
 分步指南
 
@@ -268,7 +268,7 @@ CEO AI 智能体：为每个项目的目标、看板、决策和版本提供一�
 
 早期预览版
 
-0.3.2
+0.3.3
 
 · macOS
 
@@ -296,7 +296,7 @@ Fabric Dashboards
 
 版本
 
-0.6.5
+0.6.7
 
 · macOS
 
@@ -310,7 +310,7 @@ Project Observatory
 
 版本
 
-0.19.4
+0.20.1
 
 · macOS + Linux
 
@@ -324,7 +324,7 @@ Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智�
 
 开发预览版
 
-0.12.0
+0.13.0
 
 · macOS
 

@@ -64,7 +64,7 @@ Ver o que ele faz
 
 ↓
 
-Prévia de desenvolvimento 0.12.0 · macOS 12 ou mais recente · código aberto sob a AGPL-3.0
+Prévia de desenvolvimento 0.13.0 · macOS 12 ou mais recente · código aberto sob a AGPL-3.0
 
 FABRIC INBOX / E-MAIL + AGENTES
 
@@ -106,7 +106,7 @@ BAIXAR O FABRIC INBOX
 
 ## para o seu Mac
 
-Prévia mais recente: 0.12.0. O app para Mac cria o servidor de e-mail na sua própria conta da Cloudflare e o abre; seu e-mail permanece com as suas contas.
+Prévia mais recente: 0.13.0. O app para Mac cria o servidor de e-mail na sua própria conta da Cloudflare e o abre; seu e-mail permanece com as suas contas.
 
 ⌘
 
@@ -137,7 +137,7 @@ O guia de configuração lista todas as configurações.
 
 DMG para macOS · SHA-256
 
-a8e55bc8c8ad8837f079ad161104096cd14f1c09e08efaa883028642c0f136c7
+7709361f9a2f98cd125bbabd9433c320859c85e9f11c96367aa66aee21350a37
 
 Compare antes de abrir: shasum -a 256 no Terminal. Um valor diferente significa um arquivo diferente; baixe-o de novo.
 

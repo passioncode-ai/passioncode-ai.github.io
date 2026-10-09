@@ -98,7 +98,7 @@ Fabric は CEO AIエージェントです。各プロジェクトに、目的、
 
 Fabric をダウンロード
 
-0.3.2
+0.3.3
 
 （macOS 向け）
 
@@ -106,7 +106,7 @@ Fabric をダウンロード
 
 要件と制限
 
-Apple silicon · 署名・公証済み · SHA-256 db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b · リリースノート
+Apple silicon · 署名・公証済み · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · リリースノート
 
 03
 
@@ -128,7 +128,7 @@ Fabric Dashboards は、ローカルのエージェントサービスをすべ�
 
 Fabric Dashboards をダウンロード
 
-0.6.5
+0.6.7
 
 ↓
 

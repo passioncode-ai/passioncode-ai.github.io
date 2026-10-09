@@ -62,7 +62,7 @@ For your organization
 
 ↗
 
-Open source under AGPL-3.0 Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
+Open source under AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.14 · Dashboards 0.6.7 · Observatory 0.20.1
 
 Accounts
 
@@ -182,7 +182,7 @@ Install the agent skills with one command, then add Fabric: the CEO AI agent tha
 
 npx @passioncode-ai/passioncode@latest update
 
-Fabric early preview 0.3.2 for macOS on Apple silicon · launcher 0.1.31
+Fabric early preview 0.3.3 for macOS on Apple silicon · launcher 0.1.31
 
 Step-by-step guide
 
@@ -268,7 +268,7 @@ In the family: the home every agent of a project shares
 
 Early preview
 
-0.3.2
+0.3.3
 
 · macOS
 
@@ -296,7 +296,7 @@ In the family: health, spend and control
 
 Release
 
-0.6.5
+0.6.7
 
 · macOS
 
@@ -310,7 +310,7 @@ In the family: memory and evidence
 
 Release
 
-0.19.4
+0.20.1
 
 · macOS + Linux
 
@@ -324,7 +324,7 @@ In the family: mail
 
 Development preview
 
-0.12.0
+0.13.0
 
 · macOS
 

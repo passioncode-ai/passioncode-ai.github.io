@@ -62,7 +62,7 @@ Para a sua organização
 
 ↗
 
-Código aberto sob a AGPL-3.0 Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
+Código aberto sob a AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.14 · Dashboards 0.6.7 · Observatory 0.20.1
 
 Contas
 
@@ -182,7 +182,7 @@ Instale as skills dos agentes com um comando e depois adicione o Fabric: o agent
 
 npx @passioncode-ai/passioncode@latest update
 
-Fabric, prévia inicial 0.3.2 para macOS em Apple silicon · launcher 0.1.31
+Fabric, prévia inicial 0.3.3 para macOS em Apple silicon · launcher 0.1.31
 
 Guia passo a passo
 
@@ -268,7 +268,7 @@ Na família: a casa que todos os agentes de um projeto compartilham
 
 Prévia inicial
 
-0.3.2
+0.3.3
 
 · macOS
 
@@ -296,7 +296,7 @@ Na família: saúde, gasto e controle
 
 Release
 
-0.6.5
+0.6.7
 
 · macOS
 
@@ -310,7 +310,7 @@ Na família: memória e evidências
 
 Release
 
-0.19.4
+0.20.1
 
 · macOS + Linux
 
@@ -324,7 +324,7 @@ Na família: e-mail
 
 Prévia em desenvolvimento
 
-0.12.0
+0.13.0
 
 · macOS
 

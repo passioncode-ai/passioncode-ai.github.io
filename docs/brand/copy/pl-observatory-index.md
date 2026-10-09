@@ -128,13 +128,13 @@ POBIERZ OBSERVATORY
 
 ## Zacznij od własnej przestrzeni roboczej
 
-Najnowsze wydanie: 0.19.4. Do pierwszej lokalnej obserwacji nie potrzeba klucza API. Przekaż konfigurację swojemu agentowi programującemu albo wykonaj ją samodzielnie.
+Najnowsze wydanie: 0.20.1. Do pierwszej lokalnej obserwacji nie potrzeba klucza API. Przekaż konfigurację swojemu agentowi programującemu albo wykonaj ją samodzielnie.
 
 01
 
 ### Zainstaluj wydanie
 
-Pobierz project_observatory-0.19.4-py3-none-any.whl i SHA256SUMS z wydania 0.19.4, sprawdź je poleceniem shasum -a 256 -c SHA256SUMS --ignore-missing, a następnie w odizolowanym środowisku Python 3.11+ z obsługą rozszerzeń SQLite wykonaj pip install --no-deps dla pakietu wheel, a potem jego dodatku [full] z -c "$(project-observatory full-path)/requirements-full.lock", czyli zestawem zależności, z którym wydanie było testowane. Na macOS użyj Pythona z Homebrew.
+Pobierz project_observatory-0.20.1-py3-none-any.whl i SHA256SUMS z wydania 0.20.1, sprawdź je poleceniem shasum -a 256 -c SHA256SUMS --ignore-missing, a następnie w odizolowanym środowisku Python 3.11+ z obsługą rozszerzeń SQLite wykonaj pip install --no-deps dla pakietu wheel, a potem jego dodatku [full] z -c "$(project-observatory full-path)/requirements-full.lock", czyli zestawem zależności, z którym wydanie było testowane. Na macOS użyj Pythona z Homebrew.
 
 02
 
@@ -166,9 +166,9 @@ Wszystkie wydania
 
 ↗
 
-Aplikacja na Maca: ProjectObservatory-0.19.4-macos.zip, podpisana certyfikatem Developer ID i notaryzowana przez Apple, na macOS 14+. Otwiera się na dashboardzie i korzysta z silnika zainstalowanego wyżej; sprawdź ją względem tego samego SHA256SUMS.
+Aplikacja na Maca: ProjectObservatory-0.20.1-macos.zip, podpisana certyfikatem Developer ID i notaryzowana przez Apple, na macOS 14+. Otwiera się na dashboardzie i korzysta z silnika zainstalowanego wyżej; sprawdź ją względem tego samego SHA256SUMS.
 
-Bieżące wydanie, 0.19.4, jest na licencji AGPL, tak jak każde wydanie od 0.10.0, pierwszego na AGPL; 0.9.1 i wcześniejsze zachowują licencję, z którą zostały wydane.
+Bieżące wydanie, 0.20.1, jest na licencji AGPL, tak jak każde wydanie od 0.10.0, pierwszego na AGPL; 0.9.1 i wcześniejsze zachowują licencję, z którą zostały wydane.
 
 Skanowanie znanych wartości porównuje wybrane artefakty z kluczami już znanymi lokalnie. Nie potrafi znaleźć nieznanych sekretów ani udowodnić, że nie została żadna kopia, a lokalna kopia nie jest dowodem, że ktokolwiek inny zdobył klucz. Rotacja kluczy u prawdziwych dostawców i zewnętrzne hosty MCP nie wchodzą w skład testów offline.
 

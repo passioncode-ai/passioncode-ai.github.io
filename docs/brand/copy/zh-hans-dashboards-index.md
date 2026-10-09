@@ -60,7 +60,7 @@ FABRIC DASHBOARDS · macOS
 
 查看源代码 ↗
 
-版本 0.6.5 · macOS 13+ · Apple silicon + Intel
+版本 0.6.7 · macOS 13+ · Apple silicon + Intel
 
 你的本地服务 / 汇聚一处
 
@@ -132,7 +132,7 @@ Settings → Language：跟随这台 Mac，可选 English 或 Русский。�
 
 ### macOS
 
-版本 0.6.5。适用于 Apple silicon 和 Intel 的通用 DMG，需要 macOS 13 或更高版本。已使用 Developer ID 签名、公证并装订。
+版本 0.6.7。适用于 Apple silicon 和 Intel 的通用 DMG，需要 macOS 13 或更高版本。已使用 Developer ID 签名、公证并装订。
 
 下载 Fabric Dashboards ↓
 
@@ -146,7 +146,7 @@ Settings → Language：跟随这台 Mac，可选 English 或 Русский。�
 
 DMG SHA-256
 
-b1d1d7253a32a059686725befb1b9ead53252688a3ce0ae995de3a91106a3ea3
+d0e916fc1a9ee0586446c67474eb75156e770cc37dff302a3808703b4ec42e02
 
 版本说明与校验和 ↗
 

@@ -60,7 +60,7 @@ Pobierz na macOS ↓
 
 Zobacz kod źródłowy ↗
 
-Wydanie 0.6.5 · macOS 13+ · Apple silicon + Intel
+Wydanie 0.6.7 · macOS 13+ · Apple silicon + Intel
 
 TWOJE LOKALNE USŁUGI / RAZEM
 
@@ -132,7 +132,7 @@ Settings → Language: jak na tym Macu, English lub Русский. Okno, menu i
 
 ### macOS
 
-Wydanie 0.6.5. Universal DMG dla Apple silicon i Intel, macOS 13 lub nowszy. Podpisany certyfikatem Developer ID, notaryzowany, z dołączonym biletem notaryzacji.
+Wydanie 0.6.7. Universal DMG dla Apple silicon i Intel, macOS 13 lub nowszy. Podpisany certyfikatem Developer ID, notaryzowany, z dołączonym biletem notaryzacji.
 
 Pobierz Fabric Dashboards ↓
 
@@ -146,7 +146,7 @@ Wypróbuj Project Observatory, albo stwórz własną usługę za pomocą Fabric 
 
 SHA-256 pliku DMG
 
-b1d1d7253a32a059686725befb1b9ead53252688a3ce0ae995de3a91106a3ea3
+d0e916fc1a9ee0586446c67474eb75156e770cc37dff302a3808703b4ec42e02
 
 Informacje o wydaniu i sumy kontrolne ↗
 

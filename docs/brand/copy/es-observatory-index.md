@@ -128,13 +128,13 @@ DESCARGAR OBSERVATORY
 
 ## Empieza con tu propio espacio de trabajo
 
-Última versión: 0.19.4. No se necesita ninguna clave de API para la primera observación local. Entrega la instalación a tu agente de programación o ejecútala tú mismo.
+Última versión: 0.20.1. No se necesita ninguna clave de API para la primera observación local. Entrega la instalación a tu agente de programación o ejecútala tú mismo.
 
 01
 
 ### Instala la versión
 
-Descargar project_observatory-0.19.4-py3-none-any.whl y SHA256SUMS de la versión 0.19.4, compruébalos con shasum -a 256 -c SHA256SUMS --ignore-missing, y luego, en un entorno aislado de Python 3.11+ con soporte para extensiones de SQLite, ejecuta pip install --no-deps para el wheel y después para su extra [full] con -c "$(project-observatory full-path)/requirements-full.lock", el conjunto de dependencias con el que se probó la versión. En macOS, usa Python de Homebrew.
+Descargar project_observatory-0.20.1-py3-none-any.whl y SHA256SUMS de la versión 0.20.1, compruébalos con shasum -a 256 -c SHA256SUMS --ignore-missing, y luego, en un entorno aislado de Python 3.11+ con soporte para extensiones de SQLite, ejecuta pip install --no-deps para el wheel y después para su extra [full] con -c "$(project-observatory full-path)/requirements-full.lock", el conjunto de dependencias con el que se probó la versión. En macOS, usa Python de Homebrew.
 
 02
 
@@ -166,9 +166,9 @@ Todas las versiones
 
 ↗
 
-App para Mac: ProjectObservatory-0.19.4-macos.zip, firmada con Developer ID y notarizada por Apple, para macOS 14+. Se abre en el panel y usa el motor instalado arriba; compárala con el mismo SHA256SUMS.
+App para Mac: ProjectObservatory-0.20.1-macos.zip, firmada con Developer ID y notarizada por Apple, para macOS 14+. Se abre en el panel y usa el motor instalado arriba; compárala con el mismo SHA256SUMS.
 
-La versión actual, 0.19.4, está bajo la AGPL, como todas las versiones desde la 0.10.0, la primera bajo la AGPL; la 0.9.1 y las anteriores conservan la licencia con la que se publicaron.
+La versión actual, 0.20.1, está bajo la AGPL, como todas las versiones desde la 0.10.0, la primera bajo la AGPL; la 0.9.1 y las anteriores conservan la licencia con la que se publicaron.
 
 El análisis de valores conocidos compara artefactos seleccionados con claves ya conocidas localmente. No puede encontrar secretos desconocidos ni demostrar que no queda ninguna copia, y una copia local no es prueba de que otra persona haya obtenido una clave. La rotación en vivo con proveedores y los hosts MCP externos quedan fuera de la suite de pruebas sin conexión.
 

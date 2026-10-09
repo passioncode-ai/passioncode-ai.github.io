@@ -98,7 +98,7 @@ O Fabric é o agente de IA que atua como CEO: cada projeto ganha um lar para seu
 
 Baixar o Fabric
 
-0.3.2
+0.3.3
 
 para macOS
 
@@ -106,7 +106,7 @@ para macOS
 
 Requisitos e limites
 
-Apple silicon · assinado e notarizado · SHA-256 db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b · notas de versão
+Apple silicon · assinado e notarizado · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · notas de versão
 
 03
 
@@ -128,7 +128,7 @@ O Fabric Dashboards mostra todos os serviços de agentes locais em uma só janel
 
 Baixar o Fabric Dashboards
 
-0.6.5
+0.6.7
 
 ↓
 

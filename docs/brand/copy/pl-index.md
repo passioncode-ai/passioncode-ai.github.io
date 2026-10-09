@@ -62,7 +62,7 @@ Dla Twojej organizacji
 
 ↗
 
-Otwarty kod na licencji AGPL-3.0 Fabric 0.3.2 · Switchboard 0.6.14 · Dashboards 0.6.5 · Observatory 0.19.4
+Otwarty kod na licencji AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.14 · Dashboards 0.6.7 · Observatory 0.20.1
 
 Konta
 
@@ -182,7 +182,7 @@ Zainstaluj skille dla agentów jedną komendą, a potem dodaj Fabric: agenta AI 
 
 npx @passioncode-ai/passioncode@latest update
 
-Wczesna wersja zapoznawcza Fabric 0.3.2 dla macOS na Apple silicon · launcher 0.1.31
+Wczesna wersja zapoznawcza Fabric 0.3.3 dla macOS na Apple silicon · launcher 0.1.31
 
 Przewodnik krok po kroku
 
@@ -268,7 +268,7 @@ W rodzinie: wspólny dom wszystkich agentów projektu
 
 Wczesna wersja zapoznawcza
 
-0.3.2
+0.3.3
 
 · macOS
 
@@ -296,7 +296,7 @@ W rodzinie: stan, wydatki i sterowanie
 
 Wydanie
 
-0.6.5
+0.6.7
 
 · macOS
 
@@ -310,7 +310,7 @@ W rodzinie: pamięć i dowody
 
 Wydanie
 
-0.19.4
+0.20.1
 
 · macOS + Linux
 
@@ -324,7 +324,7 @@ W rodzinie: poczta
 
 Wersja zapoznawcza w rozwoju
 
-0.12.0
+0.13.0
 
 · macOS
 
