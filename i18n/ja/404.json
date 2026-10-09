@@ -1,0 +1,14 @@
+{
+  "page": "404.html",
+  "strings": {
+    "Page not found | PassionCode.ai": "ページが見つかりません | PassionCode.ai",
+    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for companies.": "このアドレスに該当するページは passioncode.ai にありません。ツール、セットアップガイド、企業向けページからお探しください。",
+    "Error 404": "エラー 404",
+    "There is no page": "ページが",
+    "at this address": "見つかりません",
+    "The link may be old or mistyped. Everything on passioncode.ai starts from the pages below": "リンクが古いか、入力に誤りがある可能性があります。passioncode.ai のすべての情報は、次のページから辿れます",
+    "Go to the home page": "ホームへ移動",
+    "Set up the tools": "ツールをセットアップ",
+    "For companies": "企業向け"
+  }
+}

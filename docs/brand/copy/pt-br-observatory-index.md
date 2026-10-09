@@ -38,6 +38,10 @@ Polski
 
 Español
 
+简体中文
+
+日本語
+
 Baixar
 
 ↓

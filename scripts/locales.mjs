@@ -211,6 +211,31 @@ export function translateMessages (messages, strings, locale) {
 
 // ---- generation ----------------------------------------------------------------------------
 
+// Full-width punctuation (CJK): what may open a fragment without a space before it, and what may
+// end one without a space after it.
+const CJK_OPENS_WITH = /^[、。，．：；！？）」』】〕〉》]/u
+const CJK_ENDS_WITH = /[、。，．：；！？（「『【〔〈《）」』】〕〉》]$/u
+// Chinese and Japanese put no space between characters; the English source has one around a link
+// or a name, which a translation inherits. Around links (and code, in Japanese) that space is
+// removed where it would sit between CJK characters or beside full-width punctuation. Japanese
+// (`latinSpacing: false` in the registry) also writes Latin names against CJK text without it.
+const CJK_CHAR = '[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}、。，．：；！？（）「」『』【】〔〕〈〉《》ー]'
+const CJK_PUNCT = '[、。，．：；！？（）「」『』【】〔〕〈〉《》]'
+export function tightenCjk (html, locale) {
+  const C = CJK_CHAR
+  const P = CJK_PUNCT
+  const latin = localeInfo(locale).latinSpacing !== false
+  const rules = [
+    [`(${P}) +(?=<(?:a|code|em|strong|b)\\b)`, '$1'],
+    [`(</(?:a|code|em|strong|b)>) +(?=${P})`, '$1'],
+    [`(${C}) +(<a\\b[^>]*>)(?=${C})`, '$1$2'],
+    [`(${C}</a>) +(?=${C})`, '$1']
+  ]
+  if (!latin) rules.push([`(${C}) +(?=<(?:a\\b|code\\b))`, '$1'], [`(</(?:a|code)>) +(?=${C})`, '$1'])
+  let out = html
+  for (const [pattern, replacement] of rules) out = out.replace(new RegExp(pattern, 'gu'), replacement)
+  return out
+}
 const escapeText = s => s.replace(/&(?!(?:[a-z]+|#\d+|#x[0-9a-f]+);)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 // Returns { html, missing, used }: the page in `locale`, the English fragments with no
@@ -234,8 +259,10 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
     if (JSON.stringify(placeholders(value)) !== JSON.stringify(placeholders(key))) throw new Error(`${sourceFile}: the translation of "${key}" changes its placeholders`)
     // The English fragment's surrounding spaces are kept, unless the translation says otherwise:
     // its own leading or trailing space wins, and one that opens with punctuation takes none.
-    const lead = /^\s/.test(value) || /^[,.;:!?)»]/.test(value) ? '' : /^\s*/.exec(text)[0]
-    const trail = /\s$/.test(value) || value === '' ? '' : /\s*$/.exec(text)[0]
+    // Chinese and Japanese full-width punctuation carries its own spacing, so a translation that
+    // opens with closing punctuation (，。）) or ends with any (。、（) takes no space on that side.
+    const lead = /^\s/.test(value) || /^[,.;:!?)»]/.test(value) || CJK_OPENS_WITH.test(value) ? '' : /^\s*/.exec(text)[0]
+    const trail = /\s$/.test(value) || value === '' || CJK_ENDS_WITH.test(value) ? '' : /\s*$/.exec(text)[0]
     return lead + escapeText(value) + trail
   }
 
@@ -297,7 +324,7 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
     }
     out.push(verbatim() ? token : translate(token, `${region ? `release:${region} ` : ''}${stack.at(-1)?.name || 'text'}`))
   }
-  return { html: applyChrome(out.join(''), { sourceFile, locale }), missing, used }
+  return { html: applyChrome(tightenCjk(out.join(''), locale), { sourceFile, locale }), missing, used }
 }
 const verbatimSwitch = stack => stack.some(e => e.switch)
 

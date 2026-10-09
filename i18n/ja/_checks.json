@@ -1,0 +1,62 @@
+{
+  "$comment": "The gate's assertions in Japanese (scripts/check-site.mjs): phrases the brand never uses, and the disclosures a translation may not soften (docs/brand/voice.md, \"Invariant in every language\"). Every translated language has this file.",
+  "banned": [
+    "シームレス",
+    "完全自律",
+    "完全に自律",
+    "節約を保証",
+    "削減を保証"
+  ],
+  "disclosures": {
+    "index.html": [
+      "会話にはまだ返信できず",
+      "未検証",
+      "href=\"/ja/start/\"",
+      "href=\"/ja/business/\"",
+      "AGPL-3.0",
+      "商用ライセンス"
+    ],
+    "start/index.html": [
+      "Docker と Supabase CLI",
+      "まだ応答しません",
+      "npx @passioncode-ai/passioncode@latest update",
+      "href=\"/fabric/download/macos\""
+    ],
+    "fabric/index.html": [
+      "早期プレビュー版",
+      "Intel Macはサポートされていません",
+      "href=\"/fabric/download/macos\"",
+      "商用ライセンス"
+    ],
+    "inbox/index.html": [
+      "開発中のプレビュー版",
+      "IMAPとOutlookへの対応は計画中です",
+      "href=\"/inbox/download/macos\""
+    ],
+    "switchboard/index.html": [
+      "Authenticode 署名はまだ行われていない",
+      "href=\"/switchboard/download/windows\""
+    ],
+    "dashboards/index.html": [
+      "別途インストール",
+      "href=\"/dashboards/download/macos\""
+    ],
+    "observatory/index.html": [
+      "requirements-full.lock"
+    ],
+    "business/index.html": [
+      "これは見積もりであり、約束ではありません",
+      "固定のパッケージはありません"
+    ],
+    "privacy/index.html": [
+      "GDPR 第6条1項(b)",
+      "24",
+      "30 日",
+      "西ヨーロッパ",
+      "フランクフルト",
+      "cookie",
+      "2026-10-08",
+      "英語版が優先"
+    ]
+  }
+}

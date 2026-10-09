@@ -235,6 +235,14 @@ Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry
   — `error` codes stay English — and sends the receipt email in it, with links to that language's
   pages. The notification to the commercial mailbox stays English and names the language to reply in.
 
+- **Chinese and Japanese** (2026-10-10): `zh-hans` (Simplified Chinese, `/zh-hans/`) and `ja`
+  (`/ja/`). The prefix is the lowercase code; the registry's `lang` carries the tag, `zh-Hans`. It is
+  the script tag rather than `zh-CN` because it names what the text is (Simplified) and not a
+  country, and it makes the browser pick Simplified glyphs. Both have one plural form (`other`).
+  `tightenCjk` (`scripts/locales.mjs`) drops the English space around links between CJK characters;
+  `"latinSpacing": false` (Japanese) also drops it beside Latin names. `styles.css` ends with the
+  CJK block: system CJK font stacks, no negative tracking, taller headings.
+
 ### Adding a language
 
 1. Add its entry to `i18n/locales.json` (e.g. `"de": { "name": "Deutsch", "englishName": "German",
