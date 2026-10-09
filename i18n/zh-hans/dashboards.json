@@ -53,7 +53,7 @@
     "Services are installed separately. An empty list is expected until a compatible service is installed; Dashboards does not turn every local process into an agent service.": "服务需单独安装。在安装兼容的服务之前，列表为空属于正常情况；Dashboards 不会把本机每个进程都当作智能体服务。",
     "Try": "可以试试",
     ", or make your own service with the": "，或者用",
-    ". The app itself needs no account or API key.": "做一个你自己的服务。应用本身不需要账号或 API 密钥。",
+    ". The app itself needs no account or API key.": "来构建你自己的服务。应用本身不需要账号或 API 密钥。",
     "DMG SHA-256": "DMG SHA-256",
     "Release notes and checksums ↗": "版本说明与校验和 ↗",
     "Installation guide ↗": "安装指南 ↗",

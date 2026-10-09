@@ -42,7 +42,7 @@ Português (Brasil)
 
 简体中文
 
-ダウンロード
+ダウンロード対象：
 
 ↓
 
@@ -134,7 +134,7 @@ OBSERVATORY を入手
 
 ### リリースをインストール
 
-ダウンロードproject_observatory-0.19.4-py3-none-any.whlおよびSHA256SUMS取得元：リリース 0.19.4。確認には次を使います：shasum -a 256 -c SHA256SUMS --ignore-missing。その後、SQLite 拡張に対応した分離済みの Python 3.11+ 環境で、次を実行します：pip install --no-deps（wheel 本体）、続いてその[full] extra を次で：-c "$(project-observatory full-path)/requirements-full.lock"。リリースがテストされた依存関係セットです。macOS では Homebrew の Python を使ってください。
+ダウンロード対象：project_observatory-0.19.4-py3-none-any.whlとSHA256SUMS（取得元：リリース 0.19.4）。確認にはshasum -a 256 -c SHA256SUMS --ignore-missingを使います。その後、SQLite 拡張に対応した分離済みの Python 3.11+ 環境で、pip install --no-depsで wheel を、続けて[full] extra を-c "$(project-observatory full-path)/requirements-full.lock"付きでインストールします。これはリリースがテストされた依存関係セットです。macOS では Homebrew の Python を使ってください。
 
 02
 
@@ -166,7 +166,7 @@ MCP サーバーは stdio で動作します：claude mcp add observatory --scop
 
 ↗
 
-Mac アプリ：ProjectObservatory-0.19.4-macos.zip。Developer ID で署名され、Apple による公証済みで、macOS 14 以降向けです。ダッシュボードが開き、上でインストールしたエンジンを使います。同じ次のファイルで確認してください：SHA256SUMS。
+Mac アプリ：ProjectObservatory-0.19.4-macos.zip。Developer ID で署名され、Apple による公証済みで、macOS 14 以降向けです。ダッシュボードが開き、上でインストールしたエンジンを使います。検証には上記と同じファイルを使います：SHA256SUMS。
 
 現在のリリース 0.19.4は AGPL です。0.10.0 以降のすべてのリリースがそうで、0.10.0 が AGPL 下での最初のリリースです。0.9.1 以前は、リリース時のライセンスのままです。
 

@@ -84,7 +84,7 @@ Cloudflare에 있는 사본은 당사 백엔드에 도착한 지 30일 후에 �
 
 ## 귀하의 권리
 
-데이터 사본, 정정 또는 삭제를 요청하거나, 처리 제한을 요청하거나, 이용에 이의를 제기하려면 다음 주소로 보내 주세요 commercial@passioncode.ai 요청하실 때 사용하신 주소에서 보내셔야 합니다. 개인정보 보호 감독 기관에 민원을 제기할 수도 있으며, 폴란드에서는 개인정보 보호청장(UODO, President of the Personal Data Protection Office)입니다.
+데이터 사본, 정정 또는 삭제를 요청하거나, 처리 제한을 요청하거나, 이용에 이의를 제기하려면 신청 때 사용하신 주소에서 다음 주소로 메일을 보내 주세요: commercial@passioncode.ai. 개인정보 보호 감독 기관에 민원을 제기할 수도 있으며, 폴란드에서는 개인정보 보호청장(UODO, President of the Personal Data Protection Office)입니다.
 
 ## 브라우저에서
 

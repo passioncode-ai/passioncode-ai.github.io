@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-다운로드
+다운로드:
 
 ↓
 
@@ -134,7 +134,7 @@ OBSERVATORY 받기
 
 ### 릴리스 설치
 
-다운로드 project_observatory-0.19.4-py3-none-any.whl 및 SHA256SUMS 출처: 릴리스 0.19.4, 확인 명령: shasum -a 256 -c SHA256SUMS --ignore-missing, 이어서 SQLite 확장을 지원하는 격리된 Python 3.11+ 환경에서 pip install --no-deps wheel을 설치하고, 이어서 해당 [full] extra를 다음 옵션으로 설치합니다: -c "$(project-observatory full-path)/requirements-full.lock"는 릴리스를 테스트한 의존성 세트입니다. macOS에서는 Homebrew Python을 사용하세요.
+다운로드: project_observatory-0.19.4-py3-none-any.whl 및 SHA256SUMS (출처: 릴리스 0.19.4), 확인 명령: shasum -a 256 -c SHA256SUMS --ignore-missing. 그다음 SQLite 확장을 지원하는 격리된 Python 3.11+ 환경에서 pip install --no-deps으로 wheel을 설치하고, 이어서 [full] extra를 다음 옵션과 함께 설치합니다: -c "$(project-observatory full-path)/requirements-full.lock", 즉 이 릴리스를 테스트한 의존성 세트입니다. macOS에서는 Homebrew Python을 사용하세요.
 
 02
 
@@ -166,7 +166,7 @@ MCP 서버는 stdio로 동작합니다: claude mcp add observatory --scope user 
 
 ↗
 
-Mac 앱: ProjectObservatory-0.19.4-macos.zip, Developer ID로 서명되고 Apple 공증을 받았으며 macOS 14+용입니다. 대시보드로 열리고 위에서 설치한 엔진을 사용합니다. 검증은 같은 SHA256SUMS.
+Mac 앱: ProjectObservatory-0.19.4-macos.zip, Developer ID로 서명되고 Apple 공증을 받았으며 macOS 14+용입니다. 대시보드로 열리고 위에서 설치한 엔진을 사용합니다. 검증에는 위에서 받은 것과 같은 파일을 사용하세요: SHA256SUMS.
 
 현재 릴리스 0.19.4는 AGPL 라이선스입니다. 최초의 AGPL 릴리스인 0.10.0 이후 모든 릴리스가 같으며, 0.9.1 및 이전 버전은 배포 당시의 라이선스를 유지합니다.
 
@@ -194,7 +194,7 @@ Fabric은 초기 프리뷰 단계의 CEO AI 에이전트로, 에이전트와 프
 
 직접 살펴보거나 빌드할 수 있나요?
 
-예. Project Observatory는 GNU AGPL-3.0 오픈 소스입니다. AGPL이 다루지 않는 용도에는 다음 주소에서 상용 라이선스를 받을 수 있습니다: passioncode.ai/business. 이미 배포된 버전은 해당 라이선스를 유지합니다. 0.8.1 및 이전 버전은 MIT, 0.8.2부터 0.9.1까지는 PolyForm Noncommercial or Internal Use입니다. 소스 코드, 테스트, 보안 모델, 릴리스 노트는 저장소 에 들어 있습니다.
+예. Project Observatory는 GNU AGPL-3.0 오픈 소스입니다. AGPL이 다루지 않는 용도에는 다음 주소에서 상용 라이선스를 받을 수 있습니다: passioncode.ai/business. 이미 배포된 버전은 해당 라이선스를 유지합니다. 0.8.1 및 이전 버전은 MIT, 0.8.2부터 0.9.1까지는 PolyForm Noncommercial or Internal Use입니다. 소스 코드, 테스트, 보안 모델, 릴리스 노트는 저장소에 들어 있습니다.
 
 오픈 소스 · 로컬 우선
 

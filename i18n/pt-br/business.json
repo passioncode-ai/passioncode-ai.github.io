@@ -105,7 +105,7 @@
     "Chat assistants used ad hoc": "Assistentes de chat usados de forma pontual",
     "Agents already run parts of it": "Agentes já executam partes do trabalho",
     "Example:": "Exemplo:",
-    "40 hours a week of mostly manual work at $50 an hour is 173 hours a month; agents taking 25–50% of it is 43–87 hours, or $2,150–4,350 a month.": "40 horas por semana de trabalho quase todo manual a US$ 50 por hora são 173 horas por mês; se os agentes assumirem 25–50% disso, são 43–87 horas, ou US$ 2.150–4.350 por mês.",
+    "40 hours a week of mostly manual work at $50 an hour is 173 hours a month; agents taking 25–50% of it is 43–87 hours, or $2,150–4,350 a month.": "40 horas por semana de trabalho quase todo manual a US$ 50 por hora são 173 horas por mês; se os agentes assumirem 25–50% disso, são 43–87 horas, ou US$ 2.150–4.350 por mês.",
     "An estimate, not a promise. The pilot measures the real number against your own baseline before anything is rolled out.": "É uma estimativa, não uma promessa. O piloto mede o número real em relação à sua própria linha de base antes de qualquer implantação.",
     "04 / HOW WE WORK": "04 / COMO TRABALHAMOS",
     "Measured first,": "Primeiro medimos,",
@@ -227,11 +227,11 @@
     "Audit trail of agent actions": "Trilha de auditoria das ações dos agentes",
     "Budget and timing": "Orçamento e prazo",
     "Monthly budget for automation": "Orçamento mensal para automação",
-    "Under $1,000 a month": "Menos de US$ 1.000 por mês",
-    "More than $50,000": "Mais de US$ 50.000",
+    "Under $1,000 a month": "Menos de US$ 1.000 por mês",
+    "More than $50,000": "Mais de US$ 50.000",
     "Not sure yet": "Ainda não sei",
     "One-time setup budget": "Orçamento único de configuração",
-    "Under $5,000": "Menos de US$ 5.000",
+    "Under $5,000": "Menos de US$ 5.000",
     "When do you want to start?": "Quando você quer começar?",
     "As soon as possible": "O quanto antes",
     "This quarter": "Neste trimestre",
@@ -264,8 +264,8 @@
     "We use them only to reply and to prepare a proposal, and keep them no longer than 24 months. The": "Usamos as respostas apenas para responder e preparar uma proposta, e as guardamos por no máximo 24 meses. O",
     "has the details.": "traz os detalhes.",
     "201–1,000": "201–1.000",
-    "$1,000–5,000": "US$ 1.000–5.000",
-    "$5,000–20,000": "US$ 5.000–20.000",
-    "$20,000–50,000": "US$ 20.000–50.000"
+    "$1,000–5,000": "US$ 1.000–5.000",
+    "$5,000–20,000": "US$ 5.000–20.000",
+    "$20,000–50,000": "US$ 20.000–50.000"
   }
 }

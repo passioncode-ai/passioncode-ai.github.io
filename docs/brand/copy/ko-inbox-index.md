@@ -133,7 +133,7 @@ Cloudflare 대시보드에서 만든 API 토큰(앱에 나열된 권한 포함)
 
 Gmail의 경우: 내 Google Cloud 프로젝트의 OAuth 클라이언트
 
-모든 설정은 설정 가이드 에 나와 있습니다.
+모든 설정은 설정 가이드에 나와 있습니다.
 
 macOS DMG · SHA-256
 
@@ -211,11 +211,11 @@ Fabric 만나보기
 
 소스는 공개되어 있나요?
 
-예. Fabric Inbox는 GNU AGPL-3.0 오픈 소스입니다. AGPL이 다루지 않는 용도에는 다음 주소에서 상용 라이선스를 받을 수 있습니다: passioncode.ai/business. 이 프로젝트는 Cloudflare의 Agentic Inbox 템플릿에서 시작했으며, 해당 템플릿은 자체 Apache-2.0 고지를 유지합니다. 소스, 테스트, 릴리스 노트는 저장소 에 있습니다.
+예. Fabric Inbox는 GNU AGPL-3.0 오픈 소스입니다. AGPL이 다루지 않는 용도에는 다음 주소에서 상용 라이선스를 받을 수 있습니다: passioncode.ai/business. 이 프로젝트는 Cloudflare의 Agentic Inbox 템플릿에서 시작했으며, 해당 템플릿은 자체 Apache-2.0 고지를 유지합니다. 소스, 테스트, 릴리스 노트는 저장소에 있습니다.
 
 Inbox가 Fabric 에이전트인가요?
 
-아닙니다. Inbox는 메일 클라이언트이며, Inbox의 에이전트는 내가 정한 규칙 안에서 내 주소로 온 메일에 답합니다. Fabric 은 초기 프리뷰 단계의 CEO AI 에이전트입니다. 둘은 같은 툴킷에 속하지만 역할이 다릅니다.
+아닙니다. Inbox는 메일 클라이언트이며, Inbox의 에이전트는 내가 정한 규칙 안에서 내 주소로 온 메일에 답합니다. Fabric은 초기 프리뷰 단계의 CEO AI 에이전트입니다. 둘은 같은 툴킷에 속하지만 역할이 다릅니다.
 
 PassionCode
 

@@ -251,3 +251,25 @@ test('adding a language takes only i18n/locales.json and i18n/<locale>/', { time
     rmSync(dir, { recursive: true, force: true })
   }
 })
+
+// One money convention per language: the static prices in the business page's catalog are written
+// the way assets/estimate.js's formatMoney (Intl, the registry's `intl` tag) writes the computed ones.
+test('static dollar amounts in every catalog match what the estimate prints for that language', async () => {
+  const { formatMoney } = await import('../assets/estimate.js')
+  const registry = JSON.parse(read('i18n/locales.json')).locales
+  for (const locale of TRANSLATED_LOCALES) {
+    const intl = registry[locale].intl
+    const money = n => formatMoney(n, 'USD', intl)
+    // The amount's pattern with its digits as {n}: "{n} $", "US${n}", "US$ {n}".
+    const pattern = new Intl.NumberFormat(intl, { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).formatToParts(12345)
+      .reduce((out, p) => (['integer', 'group'].includes(p.type) ? (out.endsWith('{n}') ? out : out + '{n}') : out + p.value), '')
+    const digits = n => money(n).match(/[\d.,\s\u00a0\u202f]*\d/)[0].trim()
+    const range = (a, b) => pattern.replace('{n}', `${digits(a)}–${digits(b)}`)
+    const strings = siteCatalog(locale).pages['business/index.html']
+    const sentence = Object.entries(strings).find(([k]) => k.includes('at $50 an hour'))[1]
+    assert.ok(sentence.includes(money(50)), `${locale}: "${money(50)}" in the estimate example`)
+    assert.ok(sentence.includes(range(2150, 4350).replace('–', locale === 'ja' ? '～' : locale === 'fr' ? ' à ' : '–')) || sentence.includes(money(2150)), `${locale}: the example's range follows the estimate's pattern`)
+    for (const [key, amounts] of [['Under $1,000 a month', [1000]], ['Under $5,000', [5000]], ['More than $50,000', [50000]]]) assert.ok(strings[key].includes(money(amounts[0])), `${locale}: "${strings[key]}" writes ${amounts[0]} as ${money(amounts[0])}`)
+    for (const [key, [a, b]] of [['$1,000–5,000', [1000, 5000]], ['$5,000–20,000', [5000, 20000]], ['$20,000–50,000', [20000, 50000]]]) assert.equal(strings[key], range(a, b), `${locale}: ${key}`)
+  }
+})

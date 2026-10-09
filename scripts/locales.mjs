@@ -231,6 +231,12 @@ export function tightenCjk (html, locale) {
     [`(${C}) +(<a\\b[^>]*>)(?=${C})`, '$1$2'],
     [`(${C}</a>) +(?=${C})`, '$1']
   ]
+  // A space the English source keeps inside a bracket, against a link or a live value, is a typo in any language.
+  rules.push([`(\\() +(?=<(?:a|code|em|strong|b|span)\\b)`, '$1'], [`(</(?:a|code|em|strong|b|span)>) +(?=\\))`, '$1'])
+  // Korean particles (은/는, 을/를, 에, 에서, 로…) attach to the word before them, so the space the
+  // English source keeps after a link, a code span or an emphasis is dropped before one
+  // (`attachParticles` in the registry); a word that merely starts like a particle is left alone.
+  if (localeInfo(locale).attachParticles) rules.push([`(</(?:a|code|em|strong|b)>) +(?=(?:에서|에는|에|으로|로|은|는|을|를|와|과|의|도|라는|이라는)(?![가-힣]))`, '$1'])
   if (!latin) rules.push([`(${C}) +(?=<(?:a\\b|code\\b))`, '$1'], [`(</(?:a|code)>) +(?=${C})`, '$1'])
   let out = html
   for (const [pattern, replacement] of rules) out = out.replace(new RegExp(pattern, 'gu'), replacement)

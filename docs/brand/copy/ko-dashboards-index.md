@@ -142,7 +142,7 @@ DMG를 열고 Fabric Dashboards를 응용 프로그램 폴더로 드래그한 �
 
 서비스는 별도로 설치합니다. 호환되는 서비스를 설치하기 전에는 목록이 비어 있는 것이 정상이며, Dashboards가 모든 로컬 프로세스를 에이전트 서비스로 바꾸지는 않습니다.
 
-사용해 보기: Project Observatory, 또는 직접 서비스를 만들 수 있는 도구: Fabric Agent Adapter. 앱 자체에는 계정이나 API 키가 필요하지 않습니다.
+먼저 Project Observatory를 써 보거나, Fabric Agent Adapter로 직접 서비스를 만들 수 있습니다. 앱 자체에는 계정이나 API 키가 필요하지 않습니다.
 
 DMG SHA-256
 
@@ -174,7 +174,7 @@ Fabric이 필요한가요?
 
 어떤 서비스가 표시되나요?
 
-다음 규격의 로컬 디스크립터를 게시하는 서비스입니다: fabric-service/0.1. Project Observatory가 이를 지원합니다. 프로토콜은 Fabric Agent Contract 에서 정의하며, Adapter가 구현을 도와줍니다.
+다음 규격의 로컬 디스크립터를 게시하는 서비스입니다: fabric-service/0.1. Project Observatory가 이를 지원합니다. 프로토콜은 Fabric Agent Contract에서 정의하며, Adapter가 구현을 도와줍니다.
 
 오픈 소스인가요?
 

@@ -142,7 +142,7 @@ DMG を開いて Fabric Dashboards を Applications にドラッグし、アプ�
 
 サービスは別途インストールします。対応サービスをインストールするまでは、一覧が空なのが通常です。Dashboards は、ローカルのプロセスをすべてエージェントサービスとして扱うわけではありません。
 
-次を試すか、Project Observatory、または次の Adapter で独自のサービスを作れます：Fabric Agent Adapter。アプリ自体にアカウントや API キーは不要です。
+まずはProject Observatoryを試すか、Fabric Agent Adapterで独自のサービスを作れます。アプリ自体にアカウントや API キーは不要です。
 
 DMG SHA-256
 
@@ -162,7 +162,7 @@ b1d1d7253a32a059686725befb1b9ead53252688a3ce0ae995de3a91106a3ea3
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-アプリを Applications にインストールしたら、エージェントに次の呼び出しを依頼します：list_services。結果が空なら、サービスがまだインストールされていません。他の MCP クライアントでも、同じ実行ファイルを stdio サーバーとして実行できます。次も参照してください：MCP セットアップガイド。
+アプリを Applications にインストールしたら、エージェントにlist_servicesを呼び出すよう依頼します。結果が空なら、サービスがまだインストールされていません。他の MCP クライアントでも、同じ実行ファイルを stdio サーバーとして実行できます。詳細はMCP セットアップガイド。
 
 04 / 知っておきたいこと
 
@@ -174,7 +174,7 @@ Fabric は必要ですか？
 
 どのサービスが表示されますか？
 
-次のローカルディスクリプターを公開するサービスです：fabric-service/0.1。Project Observatory が対応しています。プロトコルはFabric Agent Contractで定義されており、Adapter が実装を支援します。
+次の仕様のローカルディスクリプターを公開しているサービス：fabric-service/0.1。Project Observatory が対応しています。プロトコルはFabric Agent Contractで定義されており、Adapter が実装を支援します。
 
 オープンソースですか？
 

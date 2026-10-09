@@ -142,7 +142,7 @@ Settings → Language：跟随这台 Mac，可选 English 或 Русский。�
 
 服务需单独安装。在安装兼容的服务之前，列表为空属于正常情况；Dashboards 不会把本机每个进程都当作智能体服务。
 
-可以试试 Project Observatory，或者用 Fabric Agent Adapter做一个你自己的服务。应用本身不需要账号或 API 密钥。
+可以试试 Project Observatory，或者用 Fabric Agent Adapter来构建你自己的服务。应用本身不需要账号或 API 密钥。
 
 DMG SHA-256
 

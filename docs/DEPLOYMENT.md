@@ -243,6 +243,16 @@ Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry
   `"latinSpacing": false` (Japanese) also drops it beside Latin names. `styles.css` ends with the
   CJK block: system CJK font stacks, no negative tracking, taller headings.
 
+- **Korean** (2026-10-10): `"attachParticles": true` in the registry makes `tightenCjk` drop the space
+  the English source keeps between a closing `</a>`, `</code>`, `</em>`, `</strong>` or `</b>` and a Korean particle
+  (은/는, 을/를, 에, 에서, 로, 의…), so a link reads `[Fabric]은`, not `[Fabric] 은`.
+
+- **Money**: a language writes dollar amounts the way `formatMoney` in `assets/estimate.js` does (`Intl`, the
+  registry's `intl` tag): the business page's catalog entries (the example, the budget ranges and options) are
+  checked against it by "static dollar amounts in every catalog match what the estimate prints" in
+  `scripts/locales.test.mjs`. German keeps CLDR's bare `$` (`50 $`), not `US$`.
+- **Narrow screens**: `styles.css` hyphenates headings in German and Polish so a long compound never widens a 390 px page.
+
 ### Adding a language
 
 1. Add its entry to `i18n/locales.json` (e.g. `"de": { "name": "Deutsch", "englishName": "German",

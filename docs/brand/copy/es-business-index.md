@@ -218,7 +218,7 @@ Los agentes ya se encargan de partes
 
 10–25%
 
-Ejemplo: 40 horas a la semana de trabajo sobre todo manual a 50 $ la hora son 173 horas al mes; si los agentes asumen entre el 25 % y el 50 %, son 43–87 horas, es decir, 2150–4350 $ al mes.
+Ejemplo: 40 horas a la semana de trabajo sobre todo manual a 50 US$ la hora son 173 horas al mes; si los agentes asumen entre el 25 % y el 50 %, son 43–87 horas, es decir, 2150–4350 US$ al mes.
 
 Es una estimación, no una promesa. El piloto mide la cifra real frente a tu propia línea de base antes de desplegar nada.
 
@@ -520,15 +520,15 @@ Presupuesto mensual para automatización
 
 Elige…
 
-Menos de 1000 $ al mes
+Menos de 1000 US$ al mes
 
-1000–5000 $
+1000–5000 US$
 
-5000–20 000 $
+5000–20.000 US$
 
-20 000–50 000 $
+20.000–50.000 US$
 
-Más de 50 000 $
+Más de 50.000 US$
 
 Aún no lo sé
 
@@ -536,13 +536,13 @@ Presupuesto único de puesta en marcha
 
 Elige…
 
-Menos de 5000 $
+Menos de 5000 US$
 
-5000–20 000 $
+5000–20.000 US$
 
-20 000–50 000 $
+20.000–50.000 US$
 
-Más de 50 000 $
+Más de 50.000 US$
 
 Aún no lo sé
 
