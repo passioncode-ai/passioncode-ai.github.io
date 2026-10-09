@@ -22,7 +22,13 @@ PassionCode
 
 О проекте
 
+Русский
+
 English
+
+Deutsch
+
+Français
 
 Скачать
 

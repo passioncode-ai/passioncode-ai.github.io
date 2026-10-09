@@ -189,7 +189,7 @@ its `fetched_at` stay as they were, and the log says `releases.refresh_failed`.
 ## Languages
 
 Operator decision 2026-10-08 (roadmap RM-25, fabric-workspace `knowledge/localization.md`): every
-page in English and in Russian, on a foundation that takes more languages from catalogs alone.
+page in English, Russian, German and French (de and fr added 2026-10-10), on a foundation that takes more languages from catalogs alone.
 
 - **The registry** is `i18n/locales.json`: each language's code, own name (the switch's label),
   English name (what the commercial mailbox reads), Open Graph locale, BCP 47 tag (numbers, money,
