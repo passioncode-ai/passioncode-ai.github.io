@@ -28,6 +28,10 @@ English
 
 Русский
 
+Deutsch
+
+Français
+
 Español
 
 GitHub

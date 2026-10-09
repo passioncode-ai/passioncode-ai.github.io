@@ -15,6 +15,18 @@ export const LOCALES = {
     "intl": "ru-RU",
     "lang": "ru"
   },
+  "de": {
+    "name": "Deutsch",
+    "englishName": "German",
+    "intl": "de-DE",
+    "lang": "de"
+  },
+  "fr": {
+    "name": "Français",
+    "englishName": "French",
+    "intl": "fr-FR",
+    "lang": "fr"
+  },
   "es": {
     "name": "Español",
     "englishName": "Spanish",
@@ -75,6 +87,94 @@ export const CATALOGS = {
     "a web address": "адрес сайта",
     "a work email address": "рабочий адрес почты",
     "agree to the privacy notice to send the request": "чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности"
+  },
+  "de": {
+    "Request not sent": "Anfrage nicht gesendet",
+    "Your request was not sent": "Deine Anfrage wurde nicht gesendet",
+    "You can also write to {email}.": "Du kannst uns auch an {email} schreiben.",
+    "Back to the form": "Zurück zum Formular",
+    "The form is not accepting requests right now. Please write to {email} instead.": "Das Formular nimmt gerade keine Anfragen an. Schreib uns bitte stattdessen an {email}.",
+    "Too many requests from your network in the last minute. Please wait a minute and try again.": "In der letzten Minute kamen zu viele Anfragen aus deinem Netzwerk. Warte bitte eine Minute und versuch es dann noch einmal.",
+    "The request is too long.": "Die Anfrage ist zu lang.",
+    "The request could not be read.": "Die Anfrage konnte nicht gelesen werden.",
+    "That was faster than a person can fill the form. Please check your answers and send it again.": "Das ging schneller, als ein Mensch das Formular ausfüllen kann. Prüfe bitte deine Antworten und sende es noch einmal.",
+    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "Das Formular ist abgelaufen. Lade die Seite neu und sende es noch einmal – deine Antworten bleiben im Browser gespeichert.",
+    "Some answers need another look.": "Einige Antworten solltest du dir noch einmal ansehen.",
+    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "Dieses Formular wurde bereits einmal gesendet. Lade die Seite neu, um eine weitere Anfrage zu senden – deine Antworten bleiben im Browser gespeichert.",
+    "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "Wir konnten deine Anfrage nicht speichern. Es wurde nichts gesendet. Versuch es bitte in einer Minute noch einmal oder schreib an {email}.",
+    "This request was already sent with different answers. Reload the page to start a new one.": "Diese Anfrage wurde bereits mit anderen Antworten gesendet. Lade die Seite neu, um eine neue zu beginnen.",
+    "We received your request — PassionCode.ai": "Wir haben deine Anfrage erhalten – PassionCode.ai",
+    "Hello,": "Hallo,",
+    "Thank you for your request. It reached PassionCode.ai.": "danke für deine Anfrage. Sie ist bei PassionCode.ai angekommen.",
+    "What happens next:": "So geht es weiter:",
+    "1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.": "1. Wir lesen, was du geschickt hast, und antworten innerhalb von zwei Werktagen, meist mit ein paar Fragen zu den Prozessen, die du genannt hast.",
+    "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. Wenn es passt, schlagen wir ein kurzes Gespräch vor, um einen Prozess durchzugehen und zu vereinbaren, wie wir ihn messen.",
+    "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. Du bekommst ein schriftliches Angebot: was wir einrichten würden, wo es läuft und welche Lizenz dafür nötig ist.",
+    "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "Alles, was PassionCode.ai baut, ist Open Source unter der GNU AGPL-3.0 – du kannst also auch heute schon selbst anfangen: {start}",
+    "To add anything, reply to this email.": "Wenn du etwas ergänzen möchtest, antworte einfach auf diese E-Mail.",
+    "Reference: {id}. We keep your request only to answer it: {privacy}": "Anfragenummer: {id}. Wir speichern deine Anfrage nur, um sie zu beantworten: {privacy}",
+    "required": "erforderlich",
+    "at least {n} characters": {
+      "one": "mindestens {n} Zeichen",
+      "other": "mindestens {n} Zeichen"
+    },
+    "at most {n} characters": {
+      "one": "höchstens {n} Zeichen",
+      "other": "höchstens {n} Zeichen"
+    },
+    "a number from 0 to {max}": "eine Zahl von 0 bis {max}",
+    "choose one of the listed answers": "wähle eine der aufgeführten Antworten",
+    "unknown answer": "unbekannte Antwort",
+    "choose at least one": "wähle mindestens eine Option",
+    "choose at least {n}": "wähle mindestens {n} aus",
+    "a web address": "eine Webadresse",
+    "a work email address": "eine geschäftliche E-Mail-Adresse",
+    "agree to the privacy notice to send the request": "stimme dem Datenschutzhinweis zu, um die Anfrage zu senden"
+  },
+  "fr": {
+    "Request not sent": "Demande non envoyée",
+    "Your request was not sent": "Votre demande n’a pas été envoyée",
+    "You can also write to {email}.": "Vous pouvez aussi écrire à {email}.",
+    "Back to the form": "Retour au formulaire",
+    "The form is not accepting requests right now. Please write to {email} instead.": "Le formulaire n’accepte pas de demandes pour le moment. Merci d’écrire plutôt à {email}.",
+    "Too many requests from your network in the last minute. Please wait a minute and try again.": "Trop de demandes depuis votre réseau au cours de la dernière minute. Merci de patienter une minute avant de réessayer.",
+    "The request is too long.": "La demande est trop longue.",
+    "The request could not be read.": "La demande n’a pas pu être lue.",
+    "That was faster than a person can fill the form. Please check your answers and send it again.": "Le formulaire a été rempli plus vite qu’une personne ne peut le faire. Vérifiez vos réponses et renvoyez-le.",
+    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "Le formulaire a expiré. Rechargez la page et renvoyez-le : vos réponses sont conservées dans le navigateur.",
+    "Some answers need another look.": "Certaines réponses sont à revoir.",
+    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "Ce formulaire a déjà été envoyé une fois. Rechargez la page pour envoyer une autre demande : vos réponses sont conservées dans le navigateur.",
+    "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "Nous n’avons pas pu enregistrer votre demande. Rien n’a été envoyé. Réessayez dans une minute ou écrivez à {email}.",
+    "This request was already sent with different answers. Reload the page to start a new one.": "Cette demande a déjà été envoyée avec d’autres réponses. Rechargez la page pour en commencer une nouvelle.",
+    "We received your request — PassionCode.ai": "Nous avons reçu votre demande — PassionCode.ai",
+    "Hello,": "Bonjour,",
+    "Thank you for your request. It reached PassionCode.ai.": "Merci pour votre demande. Elle est bien parvenue à PassionCode.ai.",
+    "What happens next:": "La suite :",
+    "1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.": "1. Nous lisons ce que vous avez envoyé et répondons sous deux jours ouvrés, généralement avec quelques questions sur les processus que vous avez cités.",
+    "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. Si cela correspond, nous proposons un court appel pour décrire un processus et convenir de la façon de le mesurer.",
+    "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. Vous recevez une proposition écrite : ce que nous mettrions en place, où cela tournerait et la licence nécessaire.",
+    "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "Tout ce que PassionCode.ai construit est open source sous licence GNU AGPL-3.0 : vous pouvez donc aussi commencer par vous-même dès aujourd’hui. {start}",
+    "To add anything, reply to this email.": "Pour ajouter quoi que ce soit, répondez à cet e-mail.",
+    "Reference: {id}. We keep your request only to answer it: {privacy}": "Référence : {id}. Nous conservons votre demande uniquement pour y répondre : {privacy}",
+    "required": "obligatoire",
+    "at least {n} characters": {
+      "one": "au moins {n} caractère",
+      "many": "au moins {n} caractères",
+      "other": "au moins {n} caractères"
+    },
+    "at most {n} characters": {
+      "one": "au plus {n} caractère",
+      "many": "au plus {n} caractères",
+      "other": "au plus {n} caractères"
+    },
+    "a number from 0 to {max}": "un nombre de 0 à {max}",
+    "choose one of the listed answers": "choisissez l’une des réponses proposées",
+    "unknown answer": "réponse inconnue",
+    "choose at least one": "choisissez au moins une option",
+    "choose at least {n}": "choisissez-en au moins {n}",
+    "a web address": "une adresse web",
+    "a work email address": "une adresse e-mail professionnelle",
+    "agree to the privacy notice to send the request": "acceptez la politique de confidentialité pour envoyer la demande"
   },
   "es": {
     "Request not sent": "Solicitud no enviada",

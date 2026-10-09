@@ -1,0 +1,68 @@
+{
+  "$comment": "The gate's assertions in French (scripts/check-site.mjs): phrases the brand never uses, and the disclosures a translation may not soften (docs/brand/voice.md, \"Invariant in every language\"). Every translated language has this file.",
+  "banned": [
+    "sans couture",
+    "entièrement autonome",
+    "totalement autonome",
+    "économies? garanties?"
+  ],
+  "disclosures": {
+    "index.html": [
+      "ne répond pas encore",
+      "pas encore vérifiées",
+      "href=\"/fr/start/\"",
+      "href=\"/fr/business/\"",
+      "open source sous licence AGPL-3.0",
+      "licence commerciale"
+    ],
+    "start/index.html": [
+      "npx @passioncode-ai/passioncode@latest update",
+      "Docker et la CLI Supabase",
+      "ne répond pas encore",
+      "href=\"/fabric/download/macos\""
+    ],
+    "fabric/index.html": [
+      "Préversion",
+      "Fabric ne répond pas encore",
+      "Intel",
+      "vous autorisez ou refusez chaque demande",
+      "href=\"/fabric/download/macos\"",
+      "licence commerciale"
+    ],
+    "inbox/index.html": [
+      "Préversion de développement",
+      "pas encore été testées avec un véritable appel de modèle",
+      "IMAP générique et d",
+      "href=\"/inbox/download/macos\""
+    ],
+    "switchboard/index.html": [
+      "pas encore signé avec Authenticode",
+      "suivie publiquement dans le dépôt",
+      "href=\"/switchboard/download/windows\""
+    ],
+    "dashboards/index.html": [
+      "Les services s",
+      "La version 0.3.1 est la première sous AGPL",
+      "href=\"/dashboards/download/macos\""
+    ],
+    "observatory/index.html": [
+      "ne peut ni trouver des secrets inconnus",
+      "de la 0.8.2 à la 0.9.1 sous PolyForm",
+      "requirements-full.lock"
+    ],
+    "business/index.html": [
+      "Une estimation, pas une promesse",
+      "pas de forfait fixe"
+    ],
+    "privacy/index.html": [
+      "RGPD, art. 6, par. 1, point b",
+      "24 mois",
+      "30 jours",
+      "Europe de l",
+      "Francfort",
+      "cookie",
+      "VERSION 2026-10-08",
+      "la version anglaise prévaut"
+    ]
+  }
+}

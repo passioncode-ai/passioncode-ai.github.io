@@ -26,6 +26,10 @@ PassionCode
 
 English
 
+Deutsch
+
+Français
+
 Español
 
 Português (Brasil)

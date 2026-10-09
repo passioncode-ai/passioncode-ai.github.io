@@ -1,3 +1,21 @@
+# Current handoff — German and French, 2026-10-10
+
+Objective (operator): add de and fr to passioncode.ai through `docs/DEPLOYMENT.md#languages`. Branch
+`agent/site-l10n-de-fr`.
+
+Done: registry entries in `i18n/locales.json`; catalogs `i18n/de/` and `i18n/fr/` for every page, `_scripts.json`
+(CLDR one/other for de, one/many/other for fr) and `_checks.json`; generated pages under `/de/` and `/fr/`,
+sitemap, hreflang, `llms.txt`. German uses du, French vous; product names stay English; the privacy page is
+translated in full and keeps the line that the English version prevails. Tests: the "adding a language" test now
+probes a language the site does not have (sv, nl or tr), and the Worker's unknown-language test uses `sv`, so
+real languages can land without editing them. Checks run: `npm run locales`, `python3 scripts/extract-public-copy.py`,
+`npm run check`, `npm run build`.
+
+Open: deploy and `verify-live.py` (not run: the operator said not to deploy); a native-speaker read of de and fr.
+Next task: after merge, deploy per `docs/DEPLOYMENT.md` and run `scripts/verify-live.py`.
+
+---
+
 # Current handoff — content rework: Vision, Enterprise, the family, 2026-10-09
 
 Objective (operator points, 2026-10-09): rework passioncode.ai's content in English and Russian — no

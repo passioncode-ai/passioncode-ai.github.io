@@ -26,6 +26,10 @@ Fabric
 
 English
 
+Deutsch
+
+Français
+
 Español
 
 Português (Brasil)

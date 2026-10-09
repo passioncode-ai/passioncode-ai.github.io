@@ -1,6 +1,6 @@
 Contract: brand-contract v1
 Voice pack: operator-brief
-Locales: en (primary), ru
+Locales: en (primary), ru, de, fr
 Locale parity threshold: 80%
 Derived-from: P-01, JTBD-01
 Status: draft
@@ -29,7 +29,7 @@ Commercial register (/business/): the same voice speaking to a company lead — 
 Do not blur available beta capabilities with Fabric's development direction. Name limitations where they affect downloading or installing.
 
 ## Reconsidered per locale
-English is the source; Russian (since 2026-10-08, /ru/) is generated from it through the catalogs in i18n/ru/ (docs/DEPLOYMENT.md#languages). Russian keeps the same plain, concrete register: product names stay English, the glossary is fabric-workspace knowledge/localization.md, «открытый код под GNU AGPL-3.0» for open source, «оценка» for estimate, never «бесшовный», «полностью автономный» or «гарантированная экономия». A translation may not soften a limitation; i18n/<locale>/_checks.json holds the disclosures each language must keep. More languages follow the same rule.
+English is the source; Russian (since 2026-10-08, /ru/) is generated from it through the catalogs in i18n/ru/ (docs/DEPLOYMENT.md#languages). Russian keeps the same plain, concrete register: product names stay English, the glossary is fabric-workspace knowledge/localization.md, «открытый код под GNU AGPL-3.0» for open source, «оценка» for estimate, never «бесшовный», «полностью автономный» or «гарантированная экономия». A translation may not soften a limitation; i18n/<locale>/_checks.json holds the disclosures each language must keep. German (since 2026-10-10, /de/) addresses the reader informally (du/dein), as one builder to another; French (/fr/) uses the polite vous. Both keep product names English, the same facts and every disclosure in i18n/<locale>/_checks.json; the banned phrases are banned in their own words (nahtlos, vollständig autonom; sans couture, entièrement autonome). More languages follow the same rule.
 
 ## Failure mode
 Insider shorthand or a performance of limitations obscures what the tool is useful for.
