@@ -1,13 +1,13 @@
 {
   "page": "404.html",
   "strings": {
-    "Page not found | PassionCode.ai": "",
-    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for companies.": "",
-    "Error 404": "",
-    "There is no page": "",
-    "at this address": "",
-    "The link may be old or mistyped. Everything on passioncode.ai starts from the pages below": "",
-    "Go to the home page": "",
-    "Set up the tools": ""
+    "Page not found | PassionCode.ai": "Página não encontrada | PassionCode.ai",
+    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for companies.": "Este endereço não tem página em passioncode.ai. Comece pelas ferramentas, pelo guia de configuração ou pela página para organizações.",
+    "Error 404": "Erro 404",
+    "There is no page": "Não existe página",
+    "at this address": "neste endereço",
+    "The link may be old or mistyped. Everything on passioncode.ai starts from the pages below": "O link pode ser antigo ou ter sido digitado errado. Tudo em passioncode.ai começa pelas páginas abaixo",
+    "Go to the home page": "Ir para a página inicial",
+    "Set up the tools": "Configurar as ferramentas"
   }
 }
