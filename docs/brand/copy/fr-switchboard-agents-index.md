@@ -30,6 +30,10 @@ English
 
 Deutsch
 
+Polski
+
+한국어
+
 Español
 
 Português (Brasil)

@@ -32,6 +32,10 @@ Deutsch
 
 Français
 
+Polski
+
+한국어
+
 Español
 
 Baixar

@@ -1,0 +1,15 @@
+{
+  "page": "404.html",
+  "strings": {
+    "Page not found | PassionCode.ai": "페이지를 찾을 수 없음 | PassionCode.ai",
+    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for companies.": "이 주소에는 passioncode.ai의 페이지가 없습니다. 도구, 설정 가이드 또는 기업용 페이지에서 시작해 보세요.",
+    "Get the tools": "도구 다운로드",
+    "Error 404": "오류 404",
+    "There is no page": "이 주소에는",
+    "at this address": "페이지가 없습니다",
+    "The link may be old or mistyped. Everything on passioncode.ai starts from the pages below": "링크가 오래되었거나 잘못 입력되었을 수 있습니다. passioncode.ai의 모든 내용은 아래 페이지에서 시작합니다",
+    "Go to the home page": "홈 페이지로 이동",
+    "Set up the tools": "도구 설정하기",
+    "For companies": "기업용"
+  }
+}

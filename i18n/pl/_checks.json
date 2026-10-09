@@ -1,0 +1,66 @@
+{
+  "$comment": "The gate's assertions in Polish (scripts/check-site.mjs): phrases the brand never uses, and the disclosures a translation may not soften (docs/brand/voice.md, \"Invariant in every language\"). Every translated language has this file.",
+  "banned": [
+    "bezszwow",
+    "w pełni autonomiczn",
+    "gwarantowan[a-ząćęłńóśźż]* oszczędnoś"
+  ],
+  "disclosures": {
+    "index.html": [
+      "jeszcze nie odpowiada",
+      "nie zostały jeszcze zweryfikowane",
+      "href=\"/pl/start/\"",
+      "href=\"/pl/business/\"",
+      "otwarty kod na licencji AGPL-3.0",
+      "licencja komercyjna"
+    ],
+    "start/index.html": [
+      "npx @passioncode-ai/passioncode@latest update",
+      "Dockera i Supabase CLI",
+      "jeszcze nie odpowiada",
+      "href=\"/fabric/download/macos\""
+    ],
+    "fabric/index.html": [
+      "Wczesna wersja zapoznawcza",
+      "Fabric jeszcze nie odpowiada",
+      "Intel",
+      "href=\"/fabric/download/macos\"",
+      "licencję komercyjną"
+    ],
+    "inbox/index.html": [
+      "Rozwojowa wersja zapoznawcza",
+      "nie zostały jeszcze wypróbowane z prawdziwym wywołaniem modelu",
+      "IMAP i Outlook",
+      "href=\"/inbox/download/macos\""
+    ],
+    "switchboard/index.html": [
+      "jeszcze bez podpisu Authenticode",
+      "prowadzone jawnie w repozytorium",
+      "href=\"/switchboard/download/windows\""
+    ],
+    "dashboards/index.html": [
+      "Usługi instaluje się osobno",
+      "Wydanie 0.3.1 jest pierwszym na AGPL",
+      "href=\"/dashboards/download/macos\""
+    ],
+    "observatory/index.html": [
+      "Nie potrafi znaleźć nieznanych sekretów",
+      "od 0.8.2 do 0.9.1 na PolyForm",
+      "requirements-full.lock"
+    ],
+    "business/index.html": [
+      "To szacunek, a nie obietnica",
+      "nie ma stałego pakietu"
+    ],
+    "privacy/index.html": [
+      "art. 6 ust. 1 lit. b",
+      "24 miesiącach",
+      "30 dni",
+      "Europie Zachodniej",
+      "Frankfurcie",
+      "plików cookie",
+      "WERSJA 2026-10-08",
+      "rozstrzygająca jest wersja angielska"
+    ]
+  }
+}
