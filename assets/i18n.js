@@ -9,6 +9,18 @@ export const LOCALES = {
   "ru": {
     "intl": "ru-RU"
   },
+  "de": {
+    "intl": "de-DE"
+  },
+  "fr": {
+    "intl": "fr-FR"
+  },
+  "pl": {
+    "intl": "pl-PL"
+  },
+  "ko": {
+    "intl": "ko-KR"
+  },
   "zh-Hans": {
     "intl": "zh-Hans"
   },
@@ -37,6 +49,90 @@ export const CATALOGS = {
     "Reference: {id}": "Номер заявки: {id}",
     "The request was not sent.": "Заявка не отправлена.",
     "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "Заявка не ушла из браузера — проверьте подключение и отправьте её снова. Ответы сохранены здесь."
+  },
+  "de": {
+    "Copy": "Kopieren",
+    "Copied": "Kopiert",
+    "Select and copy": "Markieren und kopieren",
+    "Copy: {text}": "Kopieren: {text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "Gib die Stunden, die Kosten und den heutigen Ablauf der Arbeit an, um die Schätzung zu sehen.",
+    "Agents could take over about": "Agenten könnten etwa so viel übernehmen:",
+    "{low}–{high} a month": "{low}–{high} pro Monat",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "{low}–{high} Stunden pro Monat. Eine Schätzung nach der Formel oben, kein Versprechen; die echte Zahl misst das Pilotprojekt.",
+    "Choose at least one.": "Wähle mindestens eine Option.",
+    "Choose one.": "Wähle eine Option.",
+    "Required.": "Pflichtfeld.",
+    "A work email address.": "Gib eine geschäftliche E-Mail-Adresse an.",
+    "Agree to the privacy notice to send the request.": "Stimme dem Datenschutzhinweis zu, um die Anfrage zu senden.",
+    "Sending…": "Wird gesendet…",
+    "Thank you — it reached us": "Danke – deine Anfrage ist bei uns angekommen",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "Wir antworten innerhalb von zwei Werktagen. Eine Bestätigung per E-Mail kommt meist innerhalb weniger Minuten.",
+    "Reference: {id}": "Anfragenummer: {id}",
+    "The request was not sent.": "Die Anfrage wurde nicht gesendet.",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "Die Anfrage hat deinen Browser nicht verlassen – prüfe deine Verbindung und sende sie erneut. Deine Antworten bleiben hier erhalten."
+  },
+  "fr": {
+    "Copy": "Copier",
+    "Copied": "Copié",
+    "Select and copy": "Sélectionnez et copiez",
+    "Copy: {text}": "Copier : {text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "Indiquez les heures, le coût et la façon dont le travail se fait aujourd’hui pour voir l’estimation.",
+    "Agents could take over about": "Les agents pourraient prendre en charge environ",
+    "{low}–{high} a month": "{low}–{high} par mois",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "{low}–{high} heures par mois. Une estimation tirée de la formule ci-dessus, pas une promesse ; le pilote mesure le chiffre réel.",
+    "Choose at least one.": "Choisissez au moins une option.",
+    "Choose one.": "Choisissez une option.",
+    "Required.": "Champ obligatoire.",
+    "A work email address.": "Une adresse e-mail professionnelle.",
+    "Agree to the privacy notice to send the request.": "Acceptez la politique de confidentialité pour envoyer la demande.",
+    "Sending…": "Envoi…",
+    "Thank you — it reached us": "Merci, votre demande nous est parvenue",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "Nous répondons sous deux jours ouvrés. Un e-mail de confirmation arrive généralement en quelques minutes.",
+    "Reference: {id}": "Référence : {id}",
+    "The request was not sent.": "La demande n’a pas été envoyée.",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "La demande n’a pas quitté votre navigateur : vérifiez votre connexion et renvoyez-la. Vos réponses sont conservées ici."
+  },
+  "pl": {
+    "Copy": "Kopiuj",
+    "Copied": "Skopiowano",
+    "Select and copy": "Zaznacz i skopiuj",
+    "Copy: {text}": "Kopiuj: {text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "Wpisz godziny, koszt i to, jak praca przebiega dziś — a zobaczysz szacunek.",
+    "Agents could take over about": "Agenci mogliby przejąć około",
+    "{low}–{high} a month": "{low}–{high} miesięcznie",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "{low}–{high} godz. miesięcznie. To szacunek według powyższego wzoru, a nie obietnica; rzeczywistą liczbę zmierzy pilotaż.",
+    "Choose at least one.": "Wybierz co najmniej jedną odpowiedź.",
+    "Choose one.": "Wybierz jedną odpowiedź.",
+    "Required.": "Pole wymagane.",
+    "A work email address.": "Podaj służbowy adres e-mail.",
+    "Agree to the privacy notice to send the request.": "Aby wysłać zgłoszenie, zaakceptuj informację o prywatności.",
+    "Sending…": "Wysyłanie…",
+    "Thank you — it reached us": "Dziękujemy — zgłoszenie do nas dotarło",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "Odpowiemy w ciągu dwóch dni roboczych. E-mail z potwierdzeniem zwykle przychodzi w ciągu kilku minut.",
+    "Reference: {id}": "Numer zgłoszenia: {id}",
+    "The request was not sent.": "Zgłoszenie nie zostało wysłane.",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "Zgłoszenie nie opuściło Twojej przeglądarki — sprawdź połączenie i wyślij je ponownie. Twoje odpowiedzi są tu zachowane."
+  },
+  "ko": {
+    "Copy": "복사",
+    "Copied": "복사됨",
+    "Select and copy": "선택한 뒤 복사하세요",
+    "Copy: {text}": "복사: {text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "시간, 비용, 그리고 지금 업무가 어떻게 진행되는지 입력하면 추정치를 볼 수 있습니다.",
+    "Agents could take over about": "에이전트가 맡을 수 있는 시간은 약",
+    "{low}–{high} a month": "월 {low}–{high}",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "월 {low}–{high}시간입니다. 위 공식으로 계산한 추정치이며 약속이 아닙니다. 실제 수치는 파일럿에서 측정합니다.",
+    "Choose at least one.": "하나 이상 선택해 주세요.",
+    "Choose one.": "하나를 선택해 주세요.",
+    "Required.": "필수 항목입니다.",
+    "A work email address.": "업무용 이메일 주소를 입력해 주세요.",
+    "Agree to the privacy notice to send the request.": "요청을 보내려면 개인정보 처리방침에 동의해 주세요.",
+    "Sending…": "보내는 중…",
+    "Thank you — it reached us": "감사합니다. 요청이 도착했습니다",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "영업일 기준 2일 이내에 답변드립니다. 확인 이메일은 보통 몇 분 안에 도착합니다.",
+    "Reference: {id}": "참조 번호: {id}",
+    "The request was not sent.": "요청이 전송되지 않았습니다.",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "요청이 브라우저에서 나가지 못했습니다. 연결을 확인한 뒤 다시 보내 주세요. 입력한 내용은 여기에 그대로 남아 있습니다."
   },
   "zh-Hans": {
     "Copy": "复制",

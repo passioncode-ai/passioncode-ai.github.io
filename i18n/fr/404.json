@@ -1,0 +1,13 @@
+{
+  "page": "404.html",
+  "strings": {
+    "Page not found | PassionCode.ai": "Page introuvable | PassionCode.ai",
+    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for companies.": "Aucune page ne correspond à cette adresse sur passioncode.ai. Commencez par les outils, le guide d’installation ou la page destinée aux entreprises.",
+    "Error 404": "Erreur 404",
+    "There is no page": "Il n’y a pas de page",
+    "at this address": "à cette adresse",
+    "The link may be old or mistyped. Everything on passioncode.ai starts from the pages below": "Le lien est peut-être ancien ou mal saisi. Tout, sur passioncode.ai, part des pages ci-dessous",
+    "Go to the home page": "Aller à l’accueil",
+    "Set up the tools": "Installer les outils"
+  }
+}

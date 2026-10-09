@@ -28,6 +28,14 @@ English
 
 Русский
 
+Deutsch
+
+Français
+
+Polski
+
+한국어
+
 日本語
 
 下载

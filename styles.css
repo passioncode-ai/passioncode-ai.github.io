@@ -1063,3 +1063,9 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 :root:lang(zh-Hans) h2, :root:lang(zh-Hans) h3, :root:lang(ja) h2, :root:lang(ja) h3 { line-height: 1.35; }
 :root:lang(zh-Hans) .vision h2, :root:lang(ja) .vision h2 { font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.3; }
 :root:lang(zh-Hans) .editorial-statement, :root:lang(ja) .editorial-statement { line-height: 1.6; }
+
+/* Korean (docs/DEPLOYMENT.md#languages): words are separated by spaces, so lines break at spaces
+   only (a word is never split unless it alone is wider than its column), and the negative or wide
+   letter-spacing that suits Latin display type is dropped because it loosens or crushes Hangul. */
+html:lang(ko) body { word-break: keep-all; line-break: strict; overflow-wrap: break-word; }
+html:lang(ko) body * { letter-spacing: normal !important; }
