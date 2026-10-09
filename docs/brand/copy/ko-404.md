@@ -34,6 +34,10 @@ Français
 
 Polski
 
+Español
+
+Português (Brasil)
+
 简体中文
 
 日本語

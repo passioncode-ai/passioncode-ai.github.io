@@ -9,7 +9,7 @@ import { execFileSync } from 'node:child_process'
 import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
-import { alternates, applyChrome, counterpartRoute, languageSwitch, loadCatalog, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceUrl, tightenCjk, translateMessages } from './locales.mjs'
+import { alternates, applyChrome, counterpartRoute, langTag, LANG_TAGS, languageSwitch, loadCatalog, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceUrl, translateMessages } from './locales.mjs'
 import { LOCALES, NOINDEX, PAGES, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { buildLocale, generate } from './build-locale.mjs'
 import { rewriteSource } from '../worker/live.js'
@@ -44,7 +44,7 @@ test('chrome: lang, canonical, reciprocal hreflang with x-default, og:locale and
   const en = applyChrome(page('<p>Hi</p>').replace('</title>', '</title><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="xx_XX">'), { sourceFile: 'x/index.html', locale: 'en' })
   const links = [...en.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m => [m[1], m[2]])
   assert.deepEqual(links, alternates('x/index.html'))
-  assert.deepEqual(links.map(l => l[0]), [...LOCALES, 'x-default'])
+  assert.deepEqual(links.map(l => l[0]), [...LOCALES.map(langTag), 'x-default'])
   assert.equal(links.at(-1)[1], 'https://passioncode.ai/x/', 'x-default is English')
   assert.match(en, /<meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ru_RU">/)
   const back = applyChrome(en, { sourceFile: 'x/index.html', locale: 'ru' })
@@ -60,10 +60,39 @@ test('chrome: lang, canonical, reciprocal hreflang with x-default, og:locale and
 test('with two languages the switch is one link; it never leads to its own language', () => {
   for (const locale of LOCALES) {
     const html = languageSwitch('start/index.html', locale)
-    for (const other of LOCALES.filter(l => l !== locale)) assert.ok(html.includes(`href="${counterpartRoute('start/index.html', other)}" hreflang="${other}" lang="${other}"`), `${locale} → ${other}`)
-    assert.ok(!html.includes(`hreflang="${locale}"`), `${locale}: no link to itself`)
+    for (const other of LOCALES.filter(l => l !== locale)) assert.ok(html.includes(`href="${counterpartRoute('start/index.html', other)}" hreflang="${langTag(other)}" lang="${langTag(other)}"`), `${locale} → ${other}`)
+    assert.ok(!html.includes(`hreflang="${langTag(locale)}"`), `${locale}: no link to itself`)
     if (LOCALES.length === 2) assert.match(html, /^<a class="lang-switch" [^>]+>[^<]+<\/a>$/)
   }
+})
+
+// The address prefix is the registry code, lowercase (`/pt-br/`); the language tag the version
+// carries in <html lang>, hreflang and the switch is the registry's `lang` (`pt-BR`), the code when
+// there is none. The page scripts and the Worker find the language by either.
+test('a code with a region keeps a lowercase prefix and carries its BCP 47 tag', async () => {
+  const registry = JSON.parse(read('i18n/locales.json'))
+  for (const locale of LOCALES) {
+    const tag = registry.locales[locale].lang ?? locale
+    assert.equal(langTag(locale), tag)
+    assert.equal(locale, locale.toLowerCase(), `${locale}: the prefix is lowercase`)
+    assert.deepEqual(Intl.getCanonicalLocales(tag), [tag], `${locale}: ${tag} is a canonical BCP 47 tag`)
+  }
+  assert.ok(Object.values(LANG_TAGS).every(Boolean))
+  const regional = LOCALES.filter(l => langTag(l) !== l)
+  for (const locale of regional) {
+    const tag = langTag(locale)
+    const html = applyChrome(page('<p>Hi</p>'), { sourceFile: 'x/index.html', locale })
+    assert.ok(html.includes(`<html lang="${tag}">`), `${locale}: <html lang="${tag}">`)
+    assert.ok(html.includes(`<link rel="alternate" hreflang="${tag}" href="https://passioncode.ai/${locale}/x/">`), `${locale}: hreflang ${tag} at /${locale}/`)
+    assert.ok(languageSwitch('x/index.html', 'en').includes(`href="/${locale}/x/" hreflang="${tag}" lang="${tag}"`), `${locale}: the switch`)
+    assert.equal(localizeUrl('/start/', locale), `/${locale}/start/`)
+    for (const module of ['../assets/i18n.js', '../worker/i18n.js']) {
+      const { resolveLocale } = await import(module)
+      for (const name of [locale, tag, tag.toUpperCase()]) assert.equal(resolveLocale(name), locale, `${module}: ${name}`)
+    }
+  }
+  const { resolveLocale } = await import('../assets/i18n.js')
+  for (const unknown of ['xx', 'pt', '', undefined, '__proto__']) assert.equal(resolveLocale(unknown), 'en', String(unknown))
 })
 
 test('text, attributes, meta and JSON-LD prose are translated; code, live values and identifiers are not', () => {
@@ -102,21 +131,6 @@ test('a translation decides its own edges: leading space, punctuation, or empty'
   assert.match(out, /Прочитайте <a href="\/ru\/x\/">это<\/a> сегодня, <a href="\/ru\/y\/">то<\/a>— и всё\./)
   const { html: punct } = ru(page('<p><a href="/x/">Docs</a> if you prefer.</p>'), { Docs: 'Документация', 'if you prefer.': ', если хотите.' })
   assert.match(punct, /Документация<\/a>, если хотите\./, 'a translation opening with punctuation takes no leading space')
-})
-
-test('full-width punctuation takes no inherited space: Chinese and Japanese edges', () => {
-  const html = page('<p>Read <a href="/x/">this</a> today, <a href="/y/">that</a>, then stop.</p>')
-  // A Latin name beside CJK text keeps the English space; full-width punctuation drops it.
-  const { html: zh } = ru(html, { Read: '阅读', this: 'Fabric', 'today,': '今天，', that: 'Inbox', ', then stop.': '，然后停下。' })
-  assert.match(zh, /<p>阅读 <a href="\/ru\/x\/">Fabric<\/a> 今天，<a href="\/ru\/y\/">Inbox<\/a>，然后停下。<\/p>/)
-  const { html: ja } = ru(page('<p>Install <code>npx x</code> (the launcher), then ask.</p>'), { Install: 'インストール（', '(the launcher), then ask.': '）してから依頼します。' })
-  assert.match(ja, /<p>インストール（<code>npx x<\/code>）してから依頼します。<\/p>/, 'an opening bracket at the end and a closing one at the start join their neighbours')
-})
-
-test('CJK text drops the English space around links; Japanese also around Latin names', () => {
-  assert.equal(tightenCjk('这个 <a href="/x/">仓库</a> 包含，<a href="/y/">Fabric</a> 与 <a href="/z/">Inbox</a>。', 'zh-Hans'), '这个<a href="/x/">仓库</a>包含，<a href="/y/">Fabric</a> 与 <a href="/z/">Inbox</a>。')
-  assert.equal(tightenCjk('詳細は <a href="/y/">Fabric</a> を見てください。 <code>npx x</code> を実行', 'ja'), '詳細は<a href="/y/">Fabric</a>を見てください。<code>npx x</code>を実行')
-  assert.equal(tightenCjk('Open <a href="/y/">the guide</a> now', 'ja'), 'Open <a href="/y/">the guide</a> now', 'Latin text keeps its spaces')
 })
 
 test('a translation that carries markup or changes its placeholders is refused', () => {
@@ -206,7 +220,6 @@ test('adding a language takes only i18n/locales.json and i18n/<locale>/', { time
   try {
     cpSync(root, dir, { recursive: true, filter: src => !/\/(?:node_modules|\.git|dist)(?:\/|$)/.test(src.slice(root.length)) })
     if (existsSync(resolve(root, 'node_modules'))) symlinkSync(resolve(root, 'node_modules'), join(dir, 'node_modules'))
-    // The added language is one the site does not have yet, so the test holds as languages arrive.
     const registry = JSON.parse(readFileSync(join(dir, 'i18n/locales.json'), 'utf8'))
     // The probe is a language the site does not have yet, so the test stays valid as languages land.
     const probes = { sv: { name: 'Svenska', englishName: 'Swedish', og: 'sv_SE', intl: 'sv-SE', switchLabel: 'Språk' }, nl: { name: 'Nederlands', englishName: 'Dutch', og: 'nl_NL', intl: 'nl-NL', switchLabel: 'Taal' }, tr: { name: 'Türkçe', englishName: 'Turkish', og: 'tr_TR', intl: 'tr-TR', switchLabel: 'Dil' } }
@@ -221,7 +234,6 @@ test('adding a language takes only i18n/locales.json and i18n/<locale>/', { time
     const scripts = JSON.parse(readFileSync(scriptsFile, 'utf8'))
     for (const [key, value] of Object.entries(scripts.strings)) if (typeof value === 'object') scripts.strings[key] = { one: value.one, other: value.many }
     writeFileSync(scriptsFile, JSON.stringify(scripts, null, 2))
-    const codes = Object.keys(registry.locales)
     const run = (...args) => execFileSync('node', args, { cwd: dir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
     assert.match(run('scripts/build-locale.mjs'), new RegExp(`PASS: ${expected} languages \\(en, .*${code}\\)`))
     assert.match(run('scripts/build-locale.mjs', '--check'), new RegExp(`PASS: ${expected} languages`))

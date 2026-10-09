@@ -1,0 +1,65 @@
+{
+  "$comment": "The gate's assertions in Brazilian Portuguese (scripts/check-site.mjs): phrases the brand never uses, and the disclosures a translation may not soften (docs/brand/voice.md, \"Invariant in every language\"). Every translated language has this file.",
+  "banned": [
+    "sem emendas",
+    "totalmente autônom",
+    "economia garantida"
+  ],
+  "disclosures": {
+    "index.html": [
+      "ainda não foram verificadas",
+      "href=\"/pt-br/start/\"",
+      "href=\"/pt-br/business/\"",
+      "código aberto sob a GNU AGPL-3.0",
+      "licença comercial"
+    ],
+    "start/index.html": [
+      "npx @passioncode-ai/passioncode@latest update",
+      "Docker e da Supabase CLI",
+      "ainda não responde",
+      "href=\"/fabric/download/macos\""
+    ],
+    "fabric/index.html": [
+      "prévia inicial",
+      "o Fabric ainda não responde",
+      "Intel",
+      "você permite ou recusa cada pedido",
+      "href=\"/fabric/download/macos\"",
+      "licença comercial"
+    ],
+    "inbox/index.html": [
+      "prévia de desenvolvimento",
+      "ainda não foram testadas com uma chamada real a um modelo",
+      "IMAP em geral e a Outlook",
+      "href=\"/inbox/download/macos\""
+    ],
+    "switchboard/index.html": [
+      "ainda sem assinatura Authenticode",
+      "é acompanhada abertamente no repositório",
+      "href=\"/switchboard/download/windows\""
+    ],
+    "dashboards/index.html": [
+      "Os serviços são instalados separadamente",
+      "0.3.1 é o primeiro sob a AGPL",
+      "href=\"/dashboards/download/macos\""
+    ],
+    "observatory/index.html": [
+      "não consegue encontrar segredos desconhecidos",
+      "da 0.8.2 à 0.9.1 sob PolyForm",
+      "requirements-full.lock"
+    ],
+    "business/index.html": [
+      "não existe pacote fixo"
+    ],
+    "privacy/index.html": [
+      "GDPR, art. 6(1)(b)",
+      "24 meses",
+      "30 dias",
+      "Europa Ocidental",
+      "Frankfurt",
+      "cookies",
+      "VERSÃO 2026-10-08",
+      "prevalece a versão em inglês"
+    ]
+  }
+}

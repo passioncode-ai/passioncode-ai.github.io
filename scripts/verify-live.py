@@ -27,6 +27,9 @@ REGISTRY = json.loads((root / 'i18n' / 'locales.json').read_text())
 SOURCE_LOCALE = REGISTRY['source']
 ALL_LOCALES = list(REGISTRY['locales'])
 LOCALES = [code for code in ALL_LOCALES if code != SOURCE_LOCALE]
+# The tag each version carries in <html lang> and hreflang: the registry's `lang` where the
+# address prefix is not the tag itself (pt-br -> pt-BR), the code otherwise (scripts/locales.mjs).
+LANG_TAGS = {code: REGISTRY['locales'][code].get('lang', code) for code in ALL_LOCALES}
 ORIGIN = 'https://passioncode.ai'
 HTML_LANG = re.compile(rb'<html lang="([^"]+)">')
 
@@ -74,11 +77,11 @@ for file in files:
     if relative.endswith('.html'):
         row['locale'] = locale
         lang = HTML_LANG.search(body)
-        row['pass'] = row['pass'] and bool(lang) and lang.group(1).decode() == locale
+        row['pass'] = row['pass'] and bool(lang) and lang.group(1).decode() == LANG_TAGS[locale]
         # A page that search engines list names its language versions, English as the default.
         if b'content="index, follow"' in local_bytes:
             route = '/' + (source[:-10] if source.endswith('index.html') else source)
-            expected = [f'{l} {ORIGIN}{"" if l in (SOURCE_LOCALE, "x-default") else "/" + l}{route}' for l in [*ALL_LOCALES, 'x-default']]
+            expected = [f'{LANG_TAGS.get(l, l)} {ORIGIN}{"" if l in (SOURCE_LOCALE, "x-default") else "/" + l}{route}' for l in [*ALL_LOCALES, 'x-default']]
             row['hreflang'] = [f'{m[0].decode()} {m[1].decode()}' for m in ALTERNATE.findall(body)]
             row['pass'] = row['pass'] and row['hreflang'] == expected
     rows.append(row)

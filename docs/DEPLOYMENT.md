@@ -189,11 +189,16 @@ its `fetched_at` stay as they were, and the log says `releases.refresh_failed`.
 ## Languages
 
 Operator decision 2026-10-08 (roadmap RM-25, fabric-workspace `knowledge/localization.md`): every
-page in English, Russian, German and French (de and fr added 2026-10-10), on a foundation that takes more languages from catalogs alone.
+page in English and in Russian, German, French, Polish, Korean, Spanish and Brazilian Portuguese (registry order; ru 2026-10-08, the others 2026-10-10), on a foundation that takes more languages from catalogs alone.
+Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry key `lang`).
 
 - **The registry** is `i18n/locales.json`: each language's code, own name (the switch's label),
   English name (what the commercial mailbox reads), Open Graph locale, BCP 47 tag (numbers, money,
-  plural rules) and the switch's accessible name. `scripts/pages.mjs`, the Worker, the page scripts,
+  plural rules) and the switch's accessible name. The code is the address prefix, the catalog
+  directory and the form's `?lang=`, always lowercase (`/pt-br/`); a language with a region adds
+  `lang`, the canonical BCP 47 tag its pages carry in `<html lang>`, `hreflang` and the switch
+  (`"lang": "pt-BR"`), which may differ from the code only in case. The page scripts and the Worker
+  accept either. `scripts/pages.mjs`, the Worker, the page scripts,
   the Python helpers and `verify-live.py` read it; nothing else lists languages.
 - **English is the source.** English pages are written by hand at `/`; every other language has the
   same pages under `/<code>/`, **generated** by `npm run locales` (`scripts/build-locale.mjs`) from the
@@ -230,13 +235,13 @@ page in English, Russian, German and French (de and fr added 2026-10-10), on a f
   — `error` codes stay English — and sends the receipt email in it, with links to that language's
   pages. The notification to the commercial mailbox stays English and names the language to reply in.
 
-- **Chinese and Japanese** (2026-10-10): `zh-Hans` (Simplified Chinese, `/zh-Hans/`) and `ja`
-  (`/ja/`). The registry code is the URL prefix, `<html lang>` and the hreflang value alike, so the
-  Chinese code is the script tag `zh-Hans` rather than `zh-CN`: it names what the text is (Simplified)
-  and not a country, and it makes the browser pick Simplified glyphs. Both have one plural form
-  (`other`). `tightenCjk` (`scripts/locales.mjs`) drops the English space around links between CJK
-  characters; `"latinSpacing": false` (Japanese) also drops it beside Latin names. `styles.css` ends
-  with the CJK block: system CJK font stacks, no negative tracking, taller headings.
+- **Chinese and Japanese** (2026-10-10): `zh-hans` (Simplified Chinese, `/zh-hans/`) and `ja`
+  (`/ja/`). The prefix is the lowercase code; the registry's `lang` carries the tag, `zh-Hans`. It is
+  the script tag rather than `zh-CN` because it names what the text is (Simplified) and not a
+  country, and it makes the browser pick Simplified glyphs. Both have one plural form (`other`).
+  `tightenCjk` (`scripts/locales.mjs`) drops the English space around links between CJK characters;
+  `"latinSpacing": false` (Japanese) also drops it beside Latin names. `styles.css` ends with the
+  CJK block: system CJK font stacks, no negative tracking, taller headings.
 
 ### Adding a language
 
@@ -252,7 +257,8 @@ page in English, Russian, German and French (de and fr added 2026-10-10), on a f
    deploy, `verify-live.py`. Nothing else changes: routes, the Worker, the sitemap, hreflang, the switch
    (it becomes a menu at three languages) and `llms.txt` follow the registry. The test "adding a
    language takes only i18n/locales.json and i18n/<locale>/" in `scripts/locales.test.mjs` proves this
-   on a copy of the site on every check.
+   on a copy of the site on every check; "a code with a region keeps a lowercase prefix and carries its
+   BCP 47 tag" covers `lang`.
 
 ## Storage
 

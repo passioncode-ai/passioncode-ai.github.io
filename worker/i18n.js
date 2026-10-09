@@ -6,42 +6,62 @@ export const LOCALES = {
   "en": {
     "name": "English",
     "englishName": "English",
-    "intl": "en"
+    "intl": "en",
+    "lang": "en"
   },
   "ru": {
     "name": "Русский",
     "englishName": "Russian",
-    "intl": "ru-RU"
+    "intl": "ru-RU",
+    "lang": "ru"
   },
   "de": {
     "name": "Deutsch",
     "englishName": "German",
-    "intl": "de-DE"
+    "intl": "de-DE",
+    "lang": "de"
   },
   "fr": {
     "name": "Français",
     "englishName": "French",
-    "intl": "fr-FR"
+    "intl": "fr-FR",
+    "lang": "fr"
   },
   "pl": {
     "name": "Polski",
     "englishName": "Polish",
-    "intl": "pl-PL"
+    "intl": "pl-PL",
+    "lang": "pl"
   },
   "ko": {
     "name": "한국어",
     "englishName": "Korean",
-    "intl": "ko-KR"
+    "intl": "ko-KR",
+    "lang": "ko"
   },
-  "zh-Hans": {
+  "es": {
+    "name": "Español",
+    "englishName": "Spanish",
+    "intl": "es",
+    "lang": "es"
+  },
+  "pt-br": {
+    "name": "Português (Brasil)",
+    "englishName": "Brazilian Portuguese",
+    "intl": "pt-BR",
+    "lang": "pt-BR"
+  },
+  "zh-hans": {
     "name": "简体中文",
     "englishName": "Chinese (Simplified)",
-    "intl": "zh-Hans"
+    "intl": "zh-Hans",
+    "lang": "zh-Hans"
   },
   "ja": {
     "name": "日本語",
     "englishName": "Japanese",
-    "intl": "ja-JP"
+    "intl": "ja-JP",
+    "lang": "ja"
   }
 }
 export const CATALOGS = {
@@ -268,7 +288,97 @@ export const CATALOGS = {
     "a work email address": "업무용 이메일 주소",
     "agree to the privacy notice to send the request": "요청을 보내려면 개인정보 처리방침에 동의하세요"
   },
-  "zh-Hans": {
+  "es": {
+    "Request not sent": "Solicitud no enviada",
+    "Your request was not sent": "Tu solicitud no se ha enviado",
+    "You can also write to {email}.": "También puedes escribir a {email}.",
+    "Back to the form": "Volver al formulario",
+    "The form is not accepting requests right now. Please write to {email} instead.": "Ahora mismo el formulario no acepta solicitudes. Escribe a {email}, por favor.",
+    "Too many requests from your network in the last minute. Please wait a minute and try again.": "Se han recibido demasiadas solicitudes desde tu red en el último minuto. Espera un minuto e inténtalo de nuevo.",
+    "The request is too long.": "La solicitud es demasiado larga.",
+    "The request could not be read.": "No se ha podido leer la solicitud.",
+    "That was faster than a person can fill the form. Please check your answers and send it again.": "El formulario se ha completado más rápido de lo que podría hacerlo una persona. Revisa tus respuestas y envíalo de nuevo.",
+    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "El formulario ha caducado. Recarga la página y envíalo de nuevo: tus respuestas se conservan en el navegador.",
+    "Some answers need another look.": "Algunas respuestas necesitan una revisión.",
+    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "Este formulario ya se envió una vez. Recarga la página para enviar otra solicitud: tus respuestas se conservan en el navegador.",
+    "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "No hemos podido guardar tu solicitud. No se ha enviado nada. Inténtalo de nuevo en un minuto o escribe a {email}.",
+    "This request was already sent with different answers. Reload the page to start a new one.": "Esta solicitud ya se envió con otras respuestas. Recarga la página para empezar una nueva.",
+    "We received your request — PassionCode.ai": "Hemos recibido tu solicitud — PassionCode.ai",
+    "Hello,": "Hola:",
+    "Thank you for your request. It reached PassionCode.ai.": "Gracias por tu solicitud. Ha llegado a PassionCode.ai.",
+    "What happens next:": "Qué ocurre ahora:",
+    "1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.": "1. Leemos lo que nos enviaste y respondemos en un plazo de dos días hábiles, normalmente con algunas preguntas sobre los procesos que mencionaste.",
+    "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. Si encaja, te proponemos una llamada breve para describir un proceso y acordar cómo medirlo.",
+    "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. Recibes una propuesta por escrito: qué configuraríamos, dónde funcionaría y qué licencia necesita.",
+    "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "Todo lo que construye PassionCode.ai es código abierto bajo la GNU AGPL-3.0, así que también puedes empezar por tu cuenta hoy mismo: {start}",
+    "To add anything, reply to this email.": "Si quieres añadir algo, responde a este correo.",
+    "Reference: {id}. We keep your request only to answer it: {privacy}": "Referencia: {id}. Conservamos tu solicitud solo para responderla: {privacy}",
+    "required": "obligatorio",
+    "at least {n} characters": {
+      "one": "al menos {n} carácter",
+      "many": "al menos {n} caracteres",
+      "other": "al menos {n} caracteres"
+    },
+    "at most {n} characters": {
+      "one": "como máximo {n} carácter",
+      "many": "como máximo {n} caracteres",
+      "other": "como máximo {n} caracteres"
+    },
+    "a number from 0 to {max}": "un número de 0 a {max}",
+    "choose one of the listed answers": "elige una de las respuestas de la lista",
+    "unknown answer": "respuesta desconocida",
+    "choose at least one": "elige al menos una opción",
+    "choose at least {n}": "elige al menos {n}",
+    "a web address": "una dirección web",
+    "a work email address": "un correo de trabajo",
+    "agree to the privacy notice to send the request": "acepta el aviso de privacidad para enviar la solicitud"
+  },
+  "pt-br": {
+    "Request not sent": "Solicitação não enviada",
+    "Your request was not sent": "Sua solicitação não foi enviada",
+    "You can also write to {email}.": "Você também pode escrever para {email}.",
+    "Back to the form": "Voltar ao formulário",
+    "The form is not accepting requests right now. Please write to {email} instead.": "O formulário não está aceitando solicitações no momento. Escreva para {email}.",
+    "Too many requests from your network in the last minute. Please wait a minute and try again.": "Houve solicitações demais da sua rede no último minuto. Aguarde um minuto e tente novamente.",
+    "The request is too long.": "A solicitação é longa demais.",
+    "The request could not be read.": "Não foi possível ler a solicitação.",
+    "That was faster than a person can fill the form. Please check your answers and send it again.": "O formulário foi preenchido mais rápido do que uma pessoa consegue. Confira as respostas e envie de novo.",
+    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "O formulário expirou. Recarregue a página e envie novamente. Suas respostas ficam guardadas no navegador.",
+    "Some answers need another look.": "Algumas respostas precisam ser revisadas.",
+    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "Este formulário já foi enviado. Para enviar outra solicitação, recarregue a página. Suas respostas ficam guardadas no navegador.",
+    "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "Não conseguimos salvar a sua solicitação e nada foi enviado. Tente novamente em um minuto ou escreva para {email}.",
+    "This request was already sent with different answers. Reload the page to start a new one.": "Esta solicitação já foi enviada com respostas diferentes. Recarregue a página para começar uma nova.",
+    "We received your request — PassionCode.ai": "Recebemos a sua solicitação — PassionCode.ai",
+    "Hello,": "Olá,",
+    "Thank you for your request. It reached PassionCode.ai.": "Obrigado pela sua solicitação. Ela chegou à PassionCode.ai.",
+    "What happens next:": "O que acontece agora:",
+    "1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.": "1. Lemos o que você enviou e respondemos em até dois dias úteis, geralmente com algumas perguntas sobre os processos que você citou.",
+    "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. Se fizer sentido, sugerimos uma conversa rápida para mapear um processo e combinar como medi-lo.",
+    "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. Você recebe uma proposta por escrito: o que configuraríamos, onde rodaria e qual licença seria necessária.",
+    "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "Tudo o que a PassionCode.ai desenvolve é código aberto sob a GNU AGPL-3.0, então você também pode começar por conta própria hoje mesmo: {start}",
+    "To add anything, reply to this email.": "Para acrescentar algo, basta responder a este e-mail.",
+    "Reference: {id}. We keep your request only to answer it: {privacy}": "Referência: {id}. Guardamos a sua solicitação apenas para respondê-la: {privacy}",
+    "required": "obrigatório",
+    "at least {n} characters": {
+      "one": "pelo menos {n} caractere",
+      "many": "pelo menos {n} de caracteres",
+      "other": "pelo menos {n} caracteres"
+    },
+    "at most {n} characters": {
+      "one": "no máximo {n} caractere",
+      "many": "no máximo {n} de caracteres",
+      "other": "no máximo {n} caracteres"
+    },
+    "a number from 0 to {max}": "um número de 0 a {max}",
+    "choose one of the listed answers": "escolha uma das respostas listadas",
+    "unknown answer": "resposta desconhecida",
+    "choose at least one": "escolha pelo menos uma opção",
+    "choose at least {n}": "escolha pelo menos {n}",
+    "a web address": "um endereço da web",
+    "a work email address": "um e-mail de trabalho",
+    "agree to the privacy notice to send the request": "concorde com o aviso de privacidade para enviar a solicitação"
+  },
+  "zh-hans": {
     "Request not sent": "申请未发送",
     "Your request was not sent": "你的申请未发送",
     "You can also write to {email}.": "你也可以写信至 {email}。",
