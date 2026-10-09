@@ -34,6 +34,10 @@ Français
 
 한국어
 
+Español
+
+Português (Brasil)
+
 Pobierz
 
 ↓

@@ -43,6 +43,21 @@
       "og": "ko_KR",
       "intl": "ko-KR",
       "switchLabel": "언어"
+    },
+    "es": {
+      "name": "Español",
+      "englishName": "Spanish",
+      "og": "es_ES",
+      "intl": "es",
+      "switchLabel": "Idioma"
+    },
+    "pt-br": {
+      "name": "Português (Brasil)",
+      "englishName": "Brazilian Portuguese",
+      "og": "pt_BR",
+      "intl": "pt-BR",
+      "lang": "pt-BR",
+      "switchLabel": "Idioma"
     }
   }
 }

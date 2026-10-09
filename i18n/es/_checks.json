@@ -1,0 +1,65 @@
+{
+  "$comment": "The gate's assertions in Spanish (scripts/check-site.mjs): phrases the brand never uses, and the disclosures a translation may not soften (docs/brand/voice.md, \"Invariant in every language\"). Every translated language has this file.",
+  "banned": [
+    "sin fisuras",
+    "totalmente autónom",
+    "ahorro garantizado"
+  ],
+  "disclosures": {
+    "index.html": [
+      "aún no están verificadas",
+      "href=\"/es/start/\"",
+      "href=\"/es/business/\"",
+      "código abierto bajo la GNU AGPL-3.0",
+      "licencia comercial"
+    ],
+    "start/index.html": [
+      "npx @passioncode-ai/passioncode@latest update",
+      "Docker y la CLI de Supabase",
+      "todavía no responde",
+      "href=\"/fabric/download/macos\""
+    ],
+    "fabric/index.html": [
+      "vista previa temprana",
+      "Fabric todavía no responde",
+      "Intel",
+      "tú permites o rechazas cada solicitud",
+      "href=\"/fabric/download/macos\"",
+      "licencia comercial"
+    ],
+    "inbox/index.html": [
+      "vista previa de desarrollo",
+      "todavía no se han probado con una llamada real a un modelo",
+      "IMAP y de Outlook",
+      "href=\"/inbox/download/macos\""
+    ],
+    "switchboard/index.html": [
+      "aún sin firma Authenticode",
+      "se sigue abiertamente en el repositorio",
+      "href=\"/switchboard/download/windows\""
+    ],
+    "dashboards/index.html": [
+      "Los servicios se instalan por separado",
+      "La versión 0.3.1 es la primera bajo la AGPL",
+      "href=\"/dashboards/download/macos\""
+    ],
+    "observatory/index.html": [
+      "No puede encontrar secretos desconocidos",
+      "de la 0.8.2 a la 0.9.1, bajo PolyForm",
+      "requirements-full.lock"
+    ],
+    "business/index.html": [
+      "no hay un paquete fijo"
+    ],
+    "privacy/index.html": [
+      "RGPD, art. 6.1.b",
+      "24 meses",
+      "30 días",
+      "Europa Occidental",
+      "Fráncfort",
+      "cookies",
+      "VERSIÓN 2026-10-08",
+      "prevalece la versión en inglés"
+    ]
+  }
+}

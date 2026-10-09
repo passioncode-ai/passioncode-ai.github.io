@@ -34,6 +34,10 @@ Français
 
 Polski
 
+Español
+
+Português (Brasil)
+
 도구 다운로드
 
 ↓

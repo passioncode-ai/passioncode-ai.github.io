@@ -34,6 +34,10 @@ Français
 
 Polski
 
+Español
+
+Português (Brasil)
+
 툴 받기
 
 ↓

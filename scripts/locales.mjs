@@ -23,6 +23,17 @@ export const localeInfo = locale => {
 // The language switch's visible label in each language: always the language's own name.
 export const LANGUAGE_NAMES = Object.fromEntries(LOCALES.map(l => [l, localeInfo(l).name]))
 export const OG_LOCALES = Object.fromEntries(LOCALES.map(l => [l, localeInfo(l).og]))
+// The language tag a version carries in <html lang>, hreflang and the switch's lang: the
+// registry's `lang` where the address prefix is not the tag itself (`pt-br` → `pt-BR`), the code
+// otherwise. The code stays the prefix, the catalog directory and the form's `?lang=`.
+export const LANG_TAGS = Object.fromEntries(LOCALES.map(l => {
+  const tag = localeInfo(l).lang ?? l
+  const [canonical] = Intl.getCanonicalLocales(tag)
+  if (canonical !== tag) throw new Error(`i18n/locales.json: ${l}.lang "${tag}" is not a canonical BCP 47 tag (${canonical})`)
+  if (canonical.toLowerCase() !== l.toLowerCase()) throw new Error(`i18n/locales.json: ${l}.lang "${tag}" must name the same language as its code, differing only in case`)
+  return [l, tag]
+}))
+export const langTag = locale => LANG_TAGS[locale]
 
 // ---- tokens --------------------------------------------------------------------------------
 
@@ -102,17 +113,17 @@ export function counterpartRoute (sourceFile, locale) {
 // version, so hreflang is reciprocal. Pages kept out of search carry none.
 export function alternates (sourceFile) {
   if (NOINDEX.has(sourceFile)) return []
-  return [...LOCALES.map(l => [l, ORIGIN + pageRoute(sourceFile, l)]), ['x-default', ORIGIN + pageRoute(sourceFile, SOURCE_LOCALE)]]
+  return [...LOCALES.map(l => [langTag(l), ORIGIN + pageRoute(sourceFile, l)]), ['x-default', ORIGIN + pageRoute(sourceFile, SOURCE_LOCALE)]]
 }
 // The visible switch. With two languages it is one link to the other; with more, a disclosure
 // that lists them all (it works without JavaScript: <details>). Each link leads to the same page
 // in that language and carries its hreflang and lang.
 export function languageSwitch (sourceFile, locale) {
   const others = LOCALES.filter(l => l !== locale)
-  const link = (l, cls = '') => `<a${cls} href="${counterpartRoute(sourceFile, l)}" hreflang="${l}" lang="${l}">${escapeHtml(LANGUAGE_NAMES[l])}</a>`
+  const link = (l, cls = '') => `<a${cls} href="${counterpartRoute(sourceFile, l)}" hreflang="${langTag(l)}" lang="${langTag(l)}">${escapeHtml(LANGUAGE_NAMES[l])}</a>`
   if (others.length === 1) return link(others[0], ' class="lang-switch"')
   const label = `${localeInfo(locale).switchLabel}: ${LANGUAGE_NAMES[locale]}`
-  return `<details class="lang-switch lang-menu"><summary aria-label="${escapeHtml(label)}"><span lang="${locale}">${escapeHtml(LANGUAGE_NAMES[locale])}</span></summary><ul>${others.map(l => `<li>${link(l)}</li>`).join('')}</ul></details>`
+  return `<details class="lang-switch lang-menu"><summary aria-label="${escapeHtml(label)}"><span lang="${langTag(locale)}">${escapeHtml(LANGUAGE_NAMES[locale])}</span></summary><ul>${others.map(l => `<li>${link(l)}</li>`).join('')}</ul></details>`
 }
 const SWITCH = /<a class="lang-switch"[^>]*>[^<]*<\/a>|<details class="lang-switch[^"]*">[\s\S]*?<\/details>/g
 const CANONICAL = /(<link rel="canonical" href=")[^"]*(">)((?:\n\s*)?(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*">)+)?/
@@ -127,7 +138,7 @@ export function applyChrome (html, { sourceFile, locale }) {
   if ((html.match(SWITCH) || []).length !== 1) throw new Error(`${where}: expected one language switch (class="lang-switch")`)
   const links = alternates(sourceFile).map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join('')
   let out = html
-    .replace(/<html lang="[^"]*">/, `<html lang="${locale}">`)
+    .replace(/<html lang="[^"]*">/, `<html lang="${langTag(locale)}">`)
     .replace(CANONICAL, (_, open, close) => open + ORIGIN + pageRoute(sourceFile, locale) + close + (links ? `\n  ${links}` : ''))
     .replace(SWITCH, () => languageSwitch(sourceFile, locale))
   if (OG_LOCALE.test(out)) out = out.replace(OG_LOCALE, (_, site) => site + `<meta property="og:locale" content="${OG_LOCALES[locale]}">` + LOCALES.filter(l => l !== locale).map(l => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`).join(''))
