@@ -1,0 +1,29 @@
+{
+  "about": "What every page shares: the header, the footer, the brand and product names. Names stay in English (fabric-workspace knowledge/localization.md, glossary).",
+  "strings": {
+    "PassionCode.ai": "PassionCode.ai",
+    "Skip to content": "Przejdź do treści",
+    "PassionCode.ai home": "PassionCode.ai — strona główna",
+    "PassionCode": "PassionCode",
+    ".ai": ".ai",
+    "Primary navigation": "Nawigacja główna",
+    "Vision": "Wizja",
+    "For you": "Dla ciebie",
+    "For organizations": "Dla organizacji",
+    "The tools": "Narzędzia",
+    "About": "O projekcie",
+    "commercial@passioncode.ai": "commercial@passioncode.ai",
+    "From vibe coding to passion coding": "Od vibe coding do passion coding",
+    "Footer navigation": "Nawigacja w stopce",
+    "Get started": "Zacznij",
+    "Switchboard": "Switchboard",
+    "Observatory": "Observatory",
+    "Inbox": "Inbox",
+    "Dashboards": "Dashboards",
+    "Fabric": "Fabric",
+    "GitHub &amp; source": "GitHub i kod źródłowy",
+    "Design system": "System projektowy",
+    "Privacy": "Prywatność",
+    "Twitter": "Twitter"
+  }
+}

@@ -1052,3 +1052,9 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .family-line span { display: block; color: var(--pc-accent); font-size: var(--pc-type-meta); letter-spacing: .08em; font-weight: 700; }
 .family-line a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
 .trust-block { margin-top: var(--pc-space-6); }
+
+/* Korean (docs/DEPLOYMENT.md#languages): words are separated by spaces, so lines break at spaces
+   only (a word is never split unless it alone is wider than its column), and the negative or wide
+   letter-spacing that suits Latin display type is dropped because it loosens or crushes Hangul. */
+html:lang(ko) body { word-break: keep-all; line-break: strict; overflow-wrap: break-word; }
+html:lang(ko) body * { letter-spacing: normal !important; }

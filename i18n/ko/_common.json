@@ -1,0 +1,29 @@
+{
+  "about": "What every page shares: the header, the footer, the brand and product names. Names stay in English (fabric-workspace knowledge/localization.md, glossary).",
+  "strings": {
+    "PassionCode.ai": "PassionCode.ai",
+    "Skip to content": "본문으로 건너뛰기",
+    "PassionCode.ai home": "PassionCode.ai 홈",
+    "PassionCode": "PassionCode",
+    ".ai": ".ai",
+    "Primary navigation": "주요 메뉴",
+    "Vision": "비전",
+    "For you": "개인용",
+    "For organizations": "조직용",
+    "The tools": "도구",
+    "About": "소개",
+    "commercial@passioncode.ai": "commercial@passioncode.ai",
+    "From vibe coding to passion coding": "vibe coding에서 passion coding으로",
+    "Footer navigation": "푸터 메뉴",
+    "Get started": "시작하기",
+    "Switchboard": "Switchboard",
+    "Observatory": "Observatory",
+    "Inbox": "Inbox",
+    "Dashboards": "Dashboards",
+    "Fabric": "Fabric",
+    "GitHub &amp; source": "GitHub 및 소스 코드",
+    "Design system": "디자인 시스템",
+    "Privacy": "개인정보 처리방침",
+    "Twitter": "Twitter"
+  }
+}
