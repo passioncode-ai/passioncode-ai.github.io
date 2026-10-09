@@ -22,7 +22,13 @@ Inbox
 
 Fabric
 
+Русский
+
 English
+
+Español
+
+Português (Brasil)
 
 GitHub
 

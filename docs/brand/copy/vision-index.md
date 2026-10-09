@@ -22,7 +22,13 @@ The tools
 
 About
 
+English
+
 Русский
+
+Español
+
+Português (Brasil)
 
 Get the tools
 

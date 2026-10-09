@@ -4,10 +4,20 @@ import { translator } from './translate.js'
 export const SOURCE_LOCALE = "en"
 export const LOCALES = {
   "en": {
-    "intl": "en"
+    "intl": "en",
+    "lang": "en"
   },
   "ru": {
-    "intl": "ru-RU"
+    "intl": "ru-RU",
+    "lang": "ru"
+  },
+  "es": {
+    "intl": "es",
+    "lang": "es"
+  },
+  "pt-br": {
+    "intl": "pt-BR",
+    "lang": "pt-BR"
   }
 }
 export const CATALOGS = {
@@ -31,6 +41,48 @@ export const CATALOGS = {
     "Reference: {id}": "Номер заявки: {id}",
     "The request was not sent.": "Заявка не отправлена.",
     "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "Заявка не ушла из браузера — проверьте подключение и отправьте её снова. Ответы сохранены здесь."
+  },
+  "es": {
+    "Copy": "Copiar",
+    "Copied": "Copiado",
+    "Select and copy": "Selecciona y copia",
+    "Copy: {text}": "Copiar: {text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "Indica las horas, el coste y cómo se hace hoy el trabajo para ver la estimación.",
+    "Agents could take over about": "Los agentes podrían encargarse de unas",
+    "{low}–{high} a month": "{low}–{high} al mes",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "{low}–{high} horas al mes. Es una estimación a partir de la fórmula de arriba, no una promesa; el piloto mide la cifra real.",
+    "Choose at least one.": "Elige al menos una opción.",
+    "Choose one.": "Elige una opción.",
+    "Required.": "Campo obligatorio.",
+    "A work email address.": "Indica un correo de trabajo.",
+    "Agree to the privacy notice to send the request.": "Acepta el aviso de privacidad para enviar la solicitud.",
+    "Sending…": "Enviando…",
+    "Thank you — it reached us": "Gracias, tu solicitud nos ha llegado",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "Respondemos en un plazo de dos días hábiles. Un correo de confirmación suele llegar en unos minutos.",
+    "Reference: {id}": "Referencia: {id}",
+    "The request was not sent.": "La solicitud no se ha enviado.",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "La solicitud no salió de tu navegador: revisa la conexión y envíala de nuevo. Tus respuestas se conservan aquí."
+  },
+  "pt-br": {
+    "Copy": "Copiar",
+    "Copied": "Copiado",
+    "Select and copy": "Selecione e copie",
+    "Copy: {text}": "Copiar: {text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "Informe as horas, o custo e como o trabalho funciona hoje para ver a estimativa.",
+    "Agents could take over about": "Os agentes poderiam assumir cerca de",
+    "{low}–{high} a month": "{low}–{high} por mês",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "{low}–{high} horas por mês. É uma estimativa pela fórmula acima, não uma promessa; o piloto mede o número real.",
+    "Choose at least one.": "Escolha pelo menos uma opção.",
+    "Choose one.": "Escolha uma opção.",
+    "Required.": "Campo obrigatório.",
+    "A work email address.": "Informe um e-mail de trabalho.",
+    "Agree to the privacy notice to send the request.": "Para enviar a solicitação, concorde com o aviso de privacidade.",
+    "Sending…": "Enviando…",
+    "Thank you — it reached us": "Obrigado, recebemos a sua solicitação",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "Respondemos em até dois dias úteis. Um e-mail de confirmação costuma chegar em poucos minutos.",
+    "Reference: {id}": "Referência: {id}",
+    "The request was not sent.": "A solicitação não foi enviada.",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "A solicitação não saiu do seu navegador. Verifique a conexão e envie de novo. Suas respostas continuam guardadas aqui."
   }
 }
 export const { resolveLocale, t, tn } = translator({ source: SOURCE_LOCALE, locales: LOCALES, catalogs: CATALOGS })

@@ -161,7 +161,7 @@ test('structure: generated pages match; a removed hook, a renamed field or a mov
   const en = page('<form action="/api/leads"><input name="contact.email"></form><span data-live="x.version">1</span><a href="/switchboard/download/macos">Get</a>')
   const { html: out } = ru(en, { Get: 'Скачать' })
   assert.equal(skeletonDiff(skeleton(en), skeleton(out)), null, 'the chrome differs by design and is not compared')
-  for (const broken of [out.replace(' data-live="x.version"', ''), out.replace('contact.email', 'contact.mail'), out.replace('/switchboard/download/macos', '/fabric/download/macos'), out.replace('<span', '<em><span').replace('</span>', '</span></em>')]) {
+  for (const broken of [out.replace(' data-live="x.version"', ''), out.replace('contact.email', 'contact.mail'), out.replace('/switchboard/download/macos', '/fabric/download/macos'), out.replace('<span data-live="x.version">1</span>', '<em><span data-live="x.version">1</span></em>')]) {
     assert.notEqual(skeletonDiff(skeleton(en), skeleton(broken)), null)
   }
 })
@@ -221,29 +221,32 @@ test('adding a language takes only i18n/locales.json and i18n/<locale>/', { time
     cpSync(root, dir, { recursive: true, filter: src => !/\/(?:node_modules|\.git|dist)(?:\/|$)/.test(src.slice(root.length)) })
     if (existsSync(resolve(root, 'node_modules'))) symlinkSync(resolve(root, 'node_modules'), join(dir, 'node_modules'))
     const registry = JSON.parse(readFileSync(join(dir, 'i18n/locales.json'), 'utf8'))
-    registry.locales.de = { name: 'Deutsch', englishName: 'German', og: 'de_DE', intl: 'de-DE', switchLabel: 'Sprache' }
+    // The probe is a language the site does not have yet, so the test stays valid as languages land.
+    const probes = { sv: { name: 'Svenska', englishName: 'Swedish', og: 'sv_SE', intl: 'sv-SE', switchLabel: 'Språk' }, nl: { name: 'Nederlands', englishName: 'Dutch', og: 'nl_NL', intl: 'nl-NL', switchLabel: 'Taal' }, tr: { name: 'Türkçe', englishName: 'Turkish', og: 'tr_TR', intl: 'tr-TR', switchLabel: 'Dil' } }
+    const code = Object.keys(probes).find(c => !registry.locales[c])
+    const expected = Object.keys(registry.locales).length + 1
+    registry.locales[code] = probes[code]
     writeFileSync(join(dir, 'i18n/locales.json'), JSON.stringify(registry, null, 2))
-    cpSync(join(dir, 'i18n/ru'), join(dir, 'i18n/de'), { recursive: true })
-    const checksFile = join(dir, 'i18n/de/_checks.json')
-    writeFileSync(checksFile, readFileSync(checksFile, 'utf8').replaceAll('/ru/', '/de/'))
-    const scriptsFile = join(dir, 'i18n/de/_scripts.json')
+    cpSync(join(dir, 'i18n/ru'), join(dir, `i18n/${code}`), { recursive: true })
+    const checksFile = join(dir, `i18n/${code}/_checks.json`)
+    writeFileSync(checksFile, readFileSync(checksFile, 'utf8').replaceAll('/ru/', `/${code}/`))
+    const scriptsFile = join(dir, `i18n/${code}/_scripts.json`)
     const scripts = JSON.parse(readFileSync(scriptsFile, 'utf8'))
     for (const [key, value] of Object.entries(scripts.strings)) if (typeof value === 'object') scripts.strings[key] = { one: value.one, other: value.many }
     writeFileSync(scriptsFile, JSON.stringify(scripts, null, 2))
     const run = (...args) => execFileSync('node', args, { cwd: dir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
-    const languages = Object.keys(registry.locales)
-    assert.match(run('scripts/build-locale.mjs'), new RegExp(`PASS: ${languages.length} languages \\(${languages.join(', ')}\\)`))
-    assert.match(run('scripts/build-locale.mjs', '--check'), new RegExp(`PASS: ${languages.length} languages`))
-    assert.match(run('scripts/check-site.mjs'), new RegExp(`PASS: ${languages.length * SOURCE_PAGES.length} static pages`))
+    assert.match(run('scripts/build-locale.mjs'), new RegExp(`PASS: ${expected} languages \\(en, .*${code}\\)`))
+    assert.match(run('scripts/build-locale.mjs', '--check'), new RegExp(`PASS: ${expected} languages`))
+    assert.match(run('scripts/check-site.mjs'), new RegExp(`PASS: ${15 * expected} static pages`))
     run('--test', 'scripts/check-worker.mjs')
     const home = readFileSync(join(dir, 'ru/index.html'), 'utf8')
     assert.match(home, /<details class="lang-switch lang-menu"><summary aria-label="Язык: Русский">/)
-    assert.match(home, /<a href="\/de\/" hreflang="de" lang="de">Deutsch<\/a>/)
-    assert.match(home, /<link rel="alternate" hreflang="de" href="https:\/\/passioncode.ai\/de\/">/)
-    assert.match(readFileSync(join(dir, 'de/business/index.html'), 'utf8'), /action="\/api\/leads\?lang=de"/)
-    assert.match(readFileSync(join(dir, 'sitemap.xml'), 'utf8'), /<loc>https:\/\/passioncode.ai\/de\/start\/<\/loc>/)
-    assert.match(readFileSync(join(dir, 'llms.txt'), 'utf8'), /German \(Deutsch\) under \/de\//)
-    assert.match(readFileSync(join(dir, 'worker/i18n.js'), 'utf8'), /"de": \{/)
+    assert.match(home, new RegExp(`<a href="/${code}/" hreflang="${code}" lang="${code}">${probes[code].name}</a>`))
+    assert.match(home, new RegExp(`<link rel="alternate" hreflang="${code}" href="https://passioncode.ai/${code}/">`))
+    assert.match(readFileSync(join(dir, `${code}/business/index.html`), 'utf8'), new RegExp(`action="/api/leads\\?lang=${code}"`))
+    assert.match(readFileSync(join(dir, 'sitemap.xml'), 'utf8'), new RegExp(`<loc>https://passioncode.ai/${code}/start/</loc>`))
+    assert.match(readFileSync(join(dir, 'llms.txt'), 'utf8'), new RegExp(`${probes[code].englishName} \\(${probes[code].name}\\) under /${code}/`))
+    assert.match(readFileSync(join(dir, 'worker/i18n.js'), 'utf8'), new RegExp(`"${code}": \\{`))
   } finally {
     rmSync(dir, { recursive: true, force: true })
   }

@@ -213,7 +213,7 @@
     "How you want it set up": "Cómo quieres configurarlo",
     "Who does the setup?": "¿Quién hace la configuración?",
     "Guided onboarding with your team": "Incorporación guiada con tu equipo",
-    "You build and run it for us": "Vosotros lo construís y lo operáis por nosotros",
+    "You build and run it for us": "Lo construyen y lo operan por nosotros",
     "Where should it run?": "¿Dónde debe ejecutarse?",
     "Our own computers": "Nuestros propios equipos",
     "Our cloud account": "Nuestra cuenta de nube",
@@ -262,6 +262,10 @@
     ". Any agent, MCP server or tool you already run becomes a Fabric-compatible service.": ". Cualquier agente, servidor MCP o herramienta que ya uses se convierte en un servicio compatible con Fabric.",
     "What happens to the answers in this form?": "¿Qué pasa con las respuestas de este formulario?",
     "We use them only to reply and to prepare a proposal, and keep them no longer than 24 months. The": "Las usamos solo para responder y preparar una propuesta, y las conservamos como máximo 24 meses. El",
-    "has the details.": "incluye los detalles."
+    "has the details.": "incluye los detalles.",
+    "201–1,000": "201–1000",
+    "$1,000–5,000": "1000–5000 $",
+    "$5,000–20,000": "5000–20 000 $",
+    "$20,000–50,000": "20 000–50 000 $"
   }
 }
