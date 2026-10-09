@@ -8,6 +8,12 @@ export const LOCALES = {
   },
   "ru": {
     "intl": "ru-RU"
+  },
+  "zh-Hans": {
+    "intl": "zh-Hans"
+  },
+  "ja": {
+    "intl": "ja-JP"
   }
 }
 export const CATALOGS = {
@@ -31,6 +37,48 @@ export const CATALOGS = {
     "Reference: {id}": "Номер заявки: {id}",
     "The request was not sent.": "Заявка не отправлена.",
     "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "Заявка не ушла из браузера — проверьте подключение и отправьте её снова. Ответы сохранены здесь."
+  },
+  "zh-Hans": {
+    "Copy": "复制",
+    "Copied": "已复制",
+    "Select and copy": "选中并复制",
+    "Copy: {text}": "复制：{text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "填写工时、成本和目前的工作方式，即可查看估算。",
+    "Agents could take over about": "智能体大约可以接手",
+    "{low}–{high} a month": "每月 {low}–{high}",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "每月 {low}–{high} 小时。这是按上述公式得出的估算，并非承诺；实际数字由试点来衡量。",
+    "Choose at least one.": "请至少选择一项。",
+    "Choose one.": "请选择一项。",
+    "Required.": "必填。",
+    "A work email address.": "请填写工作邮箱地址。",
+    "Agree to the privacy notice to send the request.": "请同意隐私声明后再提交申请。",
+    "Sending…": "正在发送…",
+    "Thank you — it reached us": "谢谢，我们已收到",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "我们会在两个工作日内回复。确认邮件通常几分钟内送达。",
+    "Reference: {id}": "编号：{id}",
+    "The request was not sent.": "申请未发送。",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "申请没有从你的浏览器发出，请检查网络连接后重新发送。你填写的内容仍保留在这里。"
+  },
+  "ja": {
+    "Copy": "コピー",
+    "Copied": "コピーしました",
+    "Select and copy": "選択してコピーしてください",
+    "Copy: {text}": "コピー：{text}",
+    "Fill in the hours, the cost and how the work runs today to see the estimate.": "時間、コスト、現在の作業の進め方を入力すると、見積もりが表示されます。",
+    "Agents could take over about": "エージェントが引き受けられる作業は約",
+    "{low}–{high} a month": "月{low}～{high}",
+    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "月{low}～{high}時間です。上記の計算式による見積もりであり、お約束ではありません。実際の数値はパイロットで測定します。",
+    "Choose at least one.": "1つ以上選択してください。",
+    "Choose one.": "1つ選択してください。",
+    "Required.": "必須です。",
+    "A work email address.": "勤務先のメールアドレスを入力してください。",
+    "Agree to the privacy notice to send the request.": "ご依頼を送信するには、プライバシー通知への同意が必要です。",
+    "Sending…": "送信中…",
+    "Thank you — it reached us": "ありがとうございます。届きました",
+    "We reply within two business days. A confirmation email usually follows within minutes.": "2営業日以内にご返信します。確認メールは通常、数分以内に届きます。",
+    "Reference: {id}": "参照番号：{id}",
+    "The request was not sent.": "ご依頼は送信されませんでした。",
+    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "ご依頼はブラウザから送信されていません。接続を確認して、もう一度送信してください。入力内容はここに保持されています。"
   }
 }
 export const { resolveLocale, t, tn } = translator({ source: SOURCE_LOCALE, locales: LOCALES, catalogs: CATALOGS })

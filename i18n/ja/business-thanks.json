@@ -1,0 +1,15 @@
+{
+  "page": "business/thanks/index.html",
+  "strings": {
+    "Request received | PassionCode.ai": "ご依頼を受け付けました | PassionCode.ai",
+    "Your request reached PassionCode.ai. We reply within two business days.": "ご依頼は PassionCode.ai に届きました。2営業日以内にご返信します。",
+    "Request received": "ご依頼を受け付けました",
+    "Thank you, it": "ありがとうございます。",
+    "reached us": "届きました",
+    "We read every request and reply within two business days, usually with a few questions about the processes you named. A confirmation email usually follows within minutes": "すべてのご依頼を確認し、2営業日以内にご返信します。多くの場合、挙げていただいたプロセスについていくつか質問をさせていただきます。確認メールは通常、数分以内に届きます",
+    "Try the tools meanwhile": "その間にツールをお試しください",
+    "Back to the home page": "ホームに戻る",
+    "No copy in your inbox within an hour?": "1時間以内にメールが届かない場合は、",
+    "Write to": "次のアドレスまでご連絡ください："
+  }
+}

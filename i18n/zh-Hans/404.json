@@ -1,0 +1,14 @@
+{
+  "page": "404.html",
+  "strings": {
+    "Page not found | PassionCode.ai": "找不到页面 | PassionCode.ai",
+    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for companies.": "passioncode.ai 上没有这个地址对应的页面。请从工具、安装指南或企业页面开始。",
+    "Error 404": "错误 404",
+    "There is no page": "这里没有页面",
+    "at this address": "位于此地址",
+    "The link may be old or mistyped. Everything on passioncode.ai starts from the pages below": "链接可能已过期或输入有误。passioncode.ai 上的内容都可以从下面的页面进入",
+    "Go to the home page": "前往首页",
+    "Set up the tools": "安装工具",
+    "For companies": "面向企业"
+  }
+}

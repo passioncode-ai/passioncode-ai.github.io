@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>开始使用 | 安装你的 AI 智能体工作空间 | PassionCode.ai</title><meta name="description" content="安装 PassionCode.ai 技能，添加 Fabric，用 Claude Code 或 Codex 创建你的第一个 Fabric 智能体，转换现有项目，在 Fabric Dashboards 中运行它，并把下一个智能体加入同一个智能体家族。免费且开源。">
+  <link rel="canonical" href="https://passioncode.ai/zh-Hans/start/">
+  <link rel="alternate" hreflang="en" href="https://passioncode.ai/start/"><link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/start/"><link rel="alternate" hreflang="zh-Hans" href="https://passioncode.ai/zh-Hans/start/"><link rel="alternate" hreflang="ja" href="https://passioncode.ai/ja/start/"><link rel="alternate" hreflang="x-default" href="https://passioncode.ai/start/">
+  <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="zh_CN"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:title" content="开始使用 PassionCode.ai"><meta property="og:description" content="从一台空白的 Mac 到第一批智能体开始工作，共五个步骤。免费且开源。">
+  <meta property="og:url" content="https://passioncode.ai/zh-Hans/start/">
+  <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/passioncode-mark.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="/assets/icon-256.png">
+  <link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/assets/site.js"></script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "用 PassionCode.ai 搭建 AI 智能体工作空间",
+  "description": "安装技能，添加 Fabric，创建 Fabric 智能体，转换现有项目，在 Fabric Dashboards 中运行，并把下一个智能体加入同一个智能体家族。",
+  "totalTime": "PT20M",
+  "tool": [{ "@type": "HowToTool", "name": "Claude Code 或 Codex" }, { "@type": "HowToTool", "name": "Node.js 18 或更高版本" }],
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "安装技能", "text": "运行 npx @passioncode-ai/passioncode@latest update，然后重启你的智能体。", "url": "https://passioncode.ai/zh-Hans/start/#launcher" },
+    { "@type": "HowToStep", "position": 2, "name": "添加 Fabric", "text": "下载适用于 Apple silicon 的 macOS 版 Fabric 早期预览版，并打开你的第一个项目。", "url": "https://passioncode.ai/zh-Hans/start/#fabric" },
+    { "@type": "HowToStep", "position": 3, "name": "创建或转换智能体", "text": "请你的编码智能体创建一个 Fabric 智能体，或把现有项目适配到 Fabric。", "url": "https://passioncode.ai/zh-Hans/start/#build" },
+    { "@type": "HowToStep", "position": 4, "name": "运行并查看", "text": "安装 Fabric Dashboards，并通过 MCP 把它连接到你的智能体。", "url": "https://passioncode.ai/zh-Hans/start/#run" },
+    { "@type": "HowToStep", "position": 5, "name": "添加下一个智能体，查看整个家族", "text": "为下一项工作再创建一个智能体，并把两者连接到同一个 Fabric 项目，让它们共用该项目的看板、记忆和交接。", "url": "https://passioncode.ai/zh-Hans/start/#family" }
+  ]
+}</script>
+</head>
+<body class="story-site"><a class="skip-link" href="#main">跳到正文</a>
+<header class="site-header">
+ <a class="brand" href="/zh-Hans/" aria-label="PassionCode.ai 首页"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a>
+ <nav aria-label="主导航"><a href="/zh-Hans/vision/">愿景</a><a href="/zh-Hans/start/">个人</a><a href="/zh-Hans/business/">组织</a><a href="/zh-Hans/#products">工具</a><a href="/zh-Hans/#about">关于</a></nav>
+ <div class="header-actions"><details class="lang-switch lang-menu"><summary aria-label="语言: 简体中文"><span lang="zh-Hans">简体中文</span></summary><ul><li><a href="/start/" hreflang="en" lang="en">English</a></li><li><a href="/ru/start/" hreflang="ru" lang="ru">Русский</a></li><li><a href="/ja/start/" hreflang="ja" lang="ja">日本語</a></li></ul></details><a class="header-link header-download" href="/zh-Hans/#products">获取工具 <span aria-hidden="true">↓</span></a></div>
+</header>
+<main id="main">
+<section class="hero page-hero" aria-labelledby="hero-title">
+ <div class="hero-copy">
+  <p class="eyebrow"><span></span> 开始使用 · 免费且开源</p>
+  <h1 id="hero-title">从一台空白的 Mac <em>到你的第一个智能体</em></h1>
+  <p class="hero-body">别再做那些会腐烂、又彼此不通气的智能体。五个步骤，大约二十分钟，从第一个智能体到一个看得见的智能体家族。每一步本身都有用，结果够用就可以在任何一步停下</p>
+  <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> 需要 Node.js 18+ 以及 Claude Code 或 Codex <span>Fabric 需要搭载 Apple silicon 的 macOS</span></p>
+ </div>
+ <nav class="page-toc" aria-label="本页内容"><a href="#launcher"><span>01</span> 安装技能</a><a href="#fabric"><span>02</span> 添加 Fabric</a><a href="#build"><span>03</span> 创建或转换智能体</a><a href="#run"><span>04</span> 运行并查看</a><a href="#family"><span>05</span> 添加下一个智能体</a><a href="#contribute"><span>+</span> 参与贡献</a></nav>
+</section>
+
+<section class="section guide" aria-labelledby="steps-title">
+ <h2 id="steps-title" class="visually-hidden">步骤</h2>
+ <ol class="setup-steps guide-steps">
+  <li id="launcher" class="reveal"><span>01</span><div><h3>安装技能</h3><p>PassionCode.ai 启动器会把 Fabric Agent Adapter 技能、Observatory Log 和工作规则安装到 Claude Code、Codex 以及其他受支持的智能体中。无需账号，无需密钥。</p><pre class="copyable"><code>npx @passioncode-ai/passioncode@latest update</code></pre><p class="step-meta">启动器 <span data-live="launcher.version">0.1.31</span> · 它会按其固定的版本安装智能体家族成员 · 之后请重启你的智能体。自动更新默认开启；<a href="https://github.com/passioncode-ai/passioncode#quick-start-for-a-new-teammate">关闭自动更新</a>也可以按需关闭。</p></div></li>
+  <li id="fabric" class="reveal"><span>02</span><div><h3>添加 Fabric</h3><p>Fabric 是 CEO AI 智能体：每个项目都有一个放置其目标、看板、决策和版本的家。它是早期预览版：需要 Docker 和 Supabase CLI，它的对话会保存消息，但目前还不会回复。</p><div class="hero-actions"><a class="button button-primary" href="/fabric/download/macos">下载 Fabric <span data-live="fabric.version">0.3.2</span> macOS 版 <span aria-hidden="true">↓</span></a><a class="text-link" href="/zh-Hans/fabric/#download">要求与限制</a></div><p class="step-meta">Apple silicon · 已签名并公证 · SHA-256 <code data-live="fabric.assets.macos.sha256">db0f1a2adcc3aae96100e98194268826b1514b26dd0d35e62fd2301e7337457b</code> · <a href="https://github.com/passioncode-ai/fabric/releases/tag/v0.3.2" data-live-href="fabric.releaseUrl">版本说明</a></p></div></li>
+  <li id="build" class="reveal"><span>03</span><div><h3>创建或转换智能体</h3><p>在 Claude Code 或 Codex 中，直接说出你的需求。Fabric Agent Adapter 技能会构建一个兼容 Fabric 的服务：契约、仪表盘、测试和一致性检查。</p><p class="step-prompt"><span>新建</span> 创建一个 Fabric 智能体，每天早上检查我们的应用商店评论并起草回复</p><p class="step-prompt"><span>转换</span> 让此仓库适配 Fabric</p><p>现有的智能体、MCP 服务器或命令行工具保留原有代码；适配器会在其外围补上 Fabric 所需的部分。<a href="https://github.com/passioncode-ai/fabric-agent-adapter#quick-start-for-a-new-teammate">Adapter 快速入门</a> · <a href="https://github.com/passioncode-ai/fabric-agent-contract">契约</a></p></div></li>
+  <li id="run" class="reveal"><span>04</span><div><h3>运行并查看</h3><p>Fabric Dashboards 在一个窗口中显示每个本地智能体服务；你的智能体可以通过 MCP 启动、停止并打开它们。</p><div class="hero-actions"><a class="button button-secondary" href="/dashboards/download/macos">下载 Fabric Dashboards <span data-live="dashboards.version">0.6.5</span> <span aria-hidden="true">↓</span></a></div><pre class="copyable"><code>claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"</code></pre><p>然后按你的工作需要添加：<a href="/zh-Hans/switchboard/">Fabric Switchboard</a> 在智能体需要多个账号时用 <a href="/zh-Hans/observatory/">Project Observatory</a>，查看各个项目有什么变化用 <a href="/zh-Hans/inbox/">Fabric Inbox</a>，处理邮件用</p></div></li>
+  <li id="family" class="reveal"><span>05</span><div><h3>添加下一个智能体，查看整个家族</h3><p>当工作需要时，用同样的方式构建下一个智能体，并让它加入 Fabric 中的同一个项目。从 Fabric 启动的 Claude Code、Kilo Code 和 Hermes Agent 共用该项目的看板、记忆和交接，所以一个可以接着另一个停下的地方继续。Fabric Dashboards 在一个窗口里同时显示两者的状态和花费。</p><p class="step-prompt"><span>下一个</span> 创建一个 Fabric 智能体，把已起草的评论回复整理成给董事会的每周摘要</p><p>每个新智能体都会加入一个你已经看得见的家族，而不是变成又一个需要你记住的脚本。<a href="/zh-Hans/vision/#path">智能体家族如何成长</a> · <a href="/zh-Hans/fabric/agents/">目前可连接的智能体</a></p></div></li>
+ </ol>
+</section>
+
+<section class="section" id="pipeline" aria-labelledby="pipeline-title">
+ <div class="section-heading story-heading"><p class="section-number">我们推荐的工具</p><h2 id="pipeline-title">让智能体完成<br>它们开始的工作</h2><p>对于你的智能体所做的改动，我们推荐 <strong>task-pipeline</strong>，一个独立的开源技能，来自 <a href="https://github.com/ssheleg/sshlg-skills">sshlg-skills</a> 技能家族。它让一项改动依次经过分阶段的关卡，从需求说明、计划到测试、部署和验收，每道关卡通过之前不会继续往下走。</p></div>
+ <pre class="copyable"><code>npx sshlg-skills install</code></pre>
+ <p class="section-note"><a href="https://github.com/ssheleg/task-pipeline">GitHub 上的 task-pipeline</a> · 它不属于 PassionCode.ai，也不依赖 PassionCode.ai 的任何部分</p>
+</section>
+
+<section class="section contribute" id="contribute" aria-labelledby="contribute-title">
+ <div class="section-heading story-heading"><p class="section-number">参与贡献</p><h2 id="contribute-title">发现要修的地方？<br>提交 Pull Request</h2><p>每个产品仓库都是公开的。每个仓库都在 <code>AGENTS.md</code> 中写明了测试命令，在 README 中写明了快速入门；你的编码智能体可以读懂这两处，其余的交给它。</p></div>
+ <ol class="contribute-steps">
+  <li class="reveal"><h3>选一个仓库</h3><p>Fork 你在用的产品，或<a href="https://github.com/passioncode-ai">浏览整个组织</a>。带标签的 issue 是不错的起点。</p></li>
+  <li class="reveal"><h3>运行它的关卡</h3><p>阅读仓库的 <code>AGENTS.md</code> 和组织的 <a href="https://github.com/passioncode-ai/.github/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>，做出修改，并反复运行测试命令直到通过。</p></li>
+  <li class="reveal"><h3>提交 Pull Request</h3><p>提交即表示你同意该仓库的 <code>CLA.md</code>；无需勾选任何选项。我们会审阅每一个 pull request 并回复。</p></li>
+ </ol>
+ <div class="repo-list">
+  <a href="https://github.com/passioncode-ai/fabric">fabric</a><a href="https://github.com/passioncode-ai/fabric-switchboard">fabric-switchboard</a><a href="https://github.com/passioncode-ai/fabric-dashboards">fabric-dashboards</a><a href="https://github.com/passioncode-ai/fabric-inbox">fabric-inbox</a><a href="https://github.com/passioncode-ai/project-observatory-dashboard">project-observatory-dashboard</a><a href="https://github.com/passioncode-ai/fabric-agent-adapter">fabric-agent-adapter</a><a href="https://github.com/passioncode-ai/fabric-agent-contract">fabric-agent-contract</a><a href="https://github.com/passioncode-ai/passioncode">passioncode</a><a href="https://github.com/passioncode-ai/okolos">okolos</a><a href="https://github.com/passioncode-ai/fabric-vr">fabric-vr</a><a href="https://github.com/passioncode-ai/passioncode-ai.github.io">passioncode-ai.github.io</a>
+ </div>
+ <p class="section-note">有少数仓库是内部的，仅协作者可见：团队的知识库和组织结构图。想加入团队吗？<a href="https://x.com/sshlg93">给 Sergey 写信</a>。</p>
+</section>
+
+<section class="closing" aria-labelledby="closing-title"><img src="/assets/passioncode-mark.svg" width="72" height="72" alt=""><p class="section-number">面向组织</p><h2 id="closing-title">想让它在<br>整个团队中运行吗？</h2><p>我们梳理你的流程，评估智能体能接手哪些工作，并与你一起或为你完成搭建。</p><a class="button button-primary" href="/zh-Hans/business/">估算并提交申请 <span aria-hidden="true">→</span></a></section>
+</main>
+<footer class="story-footer">
+ <div><a class="brand footer-brand" href="/zh-Hans/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>从 vibe coding 到 passion coding</p></div>
+ <nav aria-label="页脚导航"><a href="/zh-Hans/start/">开始使用</a><a href="/zh-Hans/vision/">愿景</a><a href="/zh-Hans/business/">组织</a><a href="/zh-Hans/switchboard/">Switchboard</a><a href="/zh-Hans/observatory/">Observatory</a><a href="/zh-Hans/inbox/">Inbox</a><a href="/zh-Hans/dashboards/">Dashboards</a><a href="/zh-Hans/fabric/">Fabric</a><a href="/zh-Hans/#source">GitHub 与源代码</a><a href="/zh-Hans/#about">关于</a><a href="/zh-Hans/design-system/">设计系统</a><a href="/zh-Hans/privacy/">隐私</a><a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a><a href="https://x.com/sshlg93">Twitter <span aria-hidden="true">↗</span></a></nav>
+</footer>
+</body></html>

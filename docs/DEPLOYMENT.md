@@ -230,6 +230,14 @@ page in English and in Russian, on a foundation that takes more languages from c
   — `error` codes stay English — and sends the receipt email in it, with links to that language's
   pages. The notification to the commercial mailbox stays English and names the language to reply in.
 
+- **Chinese and Japanese** (2026-10-10): `zh-Hans` (Simplified Chinese, `/zh-Hans/`) and `ja`
+  (`/ja/`). The registry code is the URL prefix, `<html lang>` and the hreflang value alike, so the
+  Chinese code is the script tag `zh-Hans` rather than `zh-CN`: it names what the text is (Simplified)
+  and not a country, and it makes the browser pick Simplified glyphs. Both have one plural form
+  (`other`). `tightenCjk` (`scripts/locales.mjs`) drops the English space around links between CJK
+  characters; `"latinSpacing": false` (Japanese) also drops it beside Latin names. `styles.css` ends
+  with the CJK block: system CJK font stacks, no negative tracking, taller headings.
+
 ### Adding a language
 
 1. Add its entry to `i18n/locales.json` (e.g. `"de": { "name": "Deutsch", "englishName": "German",

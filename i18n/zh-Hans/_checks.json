@@ -1,0 +1,65 @@
+{
+  "$comment": "The gate's assertions in Simplified Chinese (scripts/check-site.mjs): phrases the brand never uses, and the disclosures a translation may not soften (docs/brand/voice.md, \"Invariant in every language\"). Every translated language has this file.",
+  "banned": [
+    "无缝",
+    "完全自主",
+    "保证节省",
+    "保证省钱",
+    "保证节约"
+  ],
+  "disclosures": {
+    "index.html": [
+      "还不能回复",
+      "尚未验证",
+      "href=\"/zh-Hans/start/\"",
+      "href=\"/zh-Hans/business/\"",
+      "基于 AGPL-3.0 开源",
+      "商业许可证"
+    ],
+    "start/index.html": [
+      "npx @passioncode-ai/passioncode@latest update",
+      "Docker 和 Supabase CLI",
+      "还不会回复",
+      "href=\"/fabric/download/macos\""
+    ],
+    "fabric/index.html": [
+      "早期预览版",
+      "Fabric 还不会回答",
+      "Intel",
+      "href=\"/fabric/download/macos\"",
+      "商业许可证"
+    ],
+    "inbox/index.html": [
+      "开发中的预览版",
+      "尚未用真实的模型调用试过",
+      "IMAP 和 Outlook",
+      "href=\"/inbox/download/macos\""
+    ],
+    "switchboard/index.html": [
+      "尚未使用 Authenticode 签名",
+      "href=\"/switchboard/download/windows\""
+    ],
+    "dashboards/index.html": [
+      "服务需单独安装",
+      "href=\"/dashboards/download/macos\""
+    ],
+    "observatory/index.html": [
+      "无法找到未知的机密",
+      "requirements-full.lock"
+    ],
+    "business/index.html": [
+      "这是估算，不是承诺",
+      "没有固定套餐"
+    ],
+    "privacy/index.html": [
+      "GDPR Art. 6(1)(b)",
+      "24 个月",
+      "30 天",
+      "西欧",
+      "法兰克福",
+      "cookies",
+      "版本 2026-10-08",
+      "以英文版本为准"
+    ]
+  }
+}

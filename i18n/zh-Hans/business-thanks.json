@@ -1,0 +1,15 @@
+{
+  "page": "business/thanks/index.html",
+  "strings": {
+    "Request received | PassionCode.ai": "已收到申请 | PassionCode.ai",
+    "Your request reached PassionCode.ai. We reply within two business days.": "你的申请已送达 PassionCode.ai。我们会在两个工作日内回复。",
+    "Request received": "已收到申请",
+    "Thank you, it": "谢谢，申请",
+    "reached us": "已送达",
+    "We read every request and reply within two business days, usually with a few questions about the processes you named. A confirmation email usually follows within minutes": "我们会阅读每一份申请，并在两个工作日内回复，通常会就你提到的流程问几个问题。确认邮件通常几分钟内送达",
+    "Try the tools meanwhile": "在此期间不妨试用这些工具",
+    "Back to the home page": "返回首页",
+    "No copy in your inbox within an hour?": "一小时内没有收到邮件副本？",
+    "Write to": "请写信至"
+  }
+}

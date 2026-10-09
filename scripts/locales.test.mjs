@@ -9,7 +9,7 @@ import { execFileSync } from 'node:child_process'
 import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
-import { alternates, applyChrome, counterpartRoute, languageSwitch, loadCatalog, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceUrl, translateMessages } from './locales.mjs'
+import { alternates, applyChrome, counterpartRoute, languageSwitch, loadCatalog, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceUrl, tightenCjk, translateMessages } from './locales.mjs'
 import { LOCALES, NOINDEX, PAGES, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { buildLocale, generate } from './build-locale.mjs'
 import { rewriteSource } from '../worker/live.js'
@@ -104,6 +104,21 @@ test('a translation decides its own edges: leading space, punctuation, or empty'
   assert.match(punct, /Документация<\/a>, если хотите\./, 'a translation opening with punctuation takes no leading space')
 })
 
+test('full-width punctuation takes no inherited space: Chinese and Japanese edges', () => {
+  const html = page('<p>Read <a href="/x/">this</a> today, <a href="/y/">that</a>, then stop.</p>')
+  // A Latin name beside CJK text keeps the English space; full-width punctuation drops it.
+  const { html: zh } = ru(html, { Read: '阅读', this: 'Fabric', 'today,': '今天，', that: 'Inbox', ', then stop.': '，然后停下。' })
+  assert.match(zh, /<p>阅读 <a href="\/ru\/x\/">Fabric<\/a> 今天，<a href="\/ru\/y\/">Inbox<\/a>，然后停下。<\/p>/)
+  const { html: ja } = ru(page('<p>Install <code>npx x</code> (the launcher), then ask.</p>'), { Install: 'インストール（', '(the launcher), then ask.': '）してから依頼します。' })
+  assert.match(ja, /<p>インストール（<code>npx x<\/code>）してから依頼します。<\/p>/, 'an opening bracket at the end and a closing one at the start join their neighbours')
+})
+
+test('CJK text drops the English space around links; Japanese also around Latin names', () => {
+  assert.equal(tightenCjk('这个 <a href="/x/">仓库</a> 包含，<a href="/y/">Fabric</a> 与 <a href="/z/">Inbox</a>。', 'zh-Hans'), '这个<a href="/x/">仓库</a>包含，<a href="/y/">Fabric</a> 与 <a href="/z/">Inbox</a>。')
+  assert.equal(tightenCjk('詳細は <a href="/y/">Fabric</a> を見てください。 <code>npx x</code> を実行', 'ja'), '詳細は<a href="/y/">Fabric</a>を見てください。<code>npx x</code>を実行')
+  assert.equal(tightenCjk('Open <a href="/y/">the guide</a> now', 'ja'), 'Open <a href="/y/">the guide</a> now', 'Latin text keeps its spaces')
+})
+
 test('a translation that carries markup or changes its placeholders is refused', () => {
   assert.throws(() => ru(page('<p>Plain</p>'), { Plain: '<b>Жирный</b>' }), /markup/)
   assert.throws(() => ru(page('<p>Hi {name}</p>'), { 'Hi {name}': 'Привет, {имя}' }), /placeholders/)
@@ -132,7 +147,7 @@ test('structure: generated pages match; a removed hook, a renamed field or a mov
   const en = page('<form action="/api/leads"><input name="contact.email"></form><span data-live="x.version">1</span><a href="/switchboard/download/macos">Get</a>')
   const { html: out } = ru(en, { Get: 'Скачать' })
   assert.equal(skeletonDiff(skeleton(en), skeleton(out)), null, 'the chrome differs by design and is not compared')
-  for (const broken of [out.replace(' data-live="x.version"', ''), out.replace('contact.email', 'contact.mail'), out.replace('/switchboard/download/macos', '/fabric/download/macos'), out.replace('<span', '<em><span').replace('</span>', '</span></em>')]) {
+  for (const broken of [out.replace(' data-live="x.version"', ''), out.replace('contact.email', 'contact.mail'), out.replace('/switchboard/download/macos', '/fabric/download/macos'), out.replace('<span data-live="x.version">1</span>', '<em><span data-live="x.version">1</span></em>')]) {
     assert.notEqual(skeletonDiff(skeleton(en), skeleton(broken)), null)
   }
 })
@@ -191,29 +206,39 @@ test('adding a language takes only i18n/locales.json and i18n/<locale>/', { time
   try {
     cpSync(root, dir, { recursive: true, filter: src => !/\/(?:node_modules|\.git|dist)(?:\/|$)/.test(src.slice(root.length)) })
     if (existsSync(resolve(root, 'node_modules'))) symlinkSync(resolve(root, 'node_modules'), join(dir, 'node_modules'))
+    // The added language is one the site does not have yet, so the test holds as languages arrive.
     const registry = JSON.parse(readFileSync(join(dir, 'i18n/locales.json'), 'utf8'))
-    registry.locales.de = { name: 'Deutsch', englishName: 'German', og: 'de_DE', intl: 'de-DE', switchLabel: 'Sprache' }
+    const candidates = {
+      de: { name: 'Deutsch', englishName: 'German', og: 'de_DE', intl: 'de-DE', switchLabel: 'Sprache' },
+      nl: { name: 'Nederlands', englishName: 'Dutch', og: 'nl_NL', intl: 'nl-NL', switchLabel: 'Taal' },
+      sv: { name: 'Svenska', englishName: 'Swedish', og: 'sv_SE', intl: 'sv-SE', switchLabel: 'Språk' },
+      it: { name: 'Italiano', englishName: 'Italian', og: 'it_IT', intl: 'it-IT', switchLabel: 'Lingua' }
+    }
+    const added = Object.keys(candidates).find(code => !Object.hasOwn(registry.locales, code))
+    const info = candidates[added]
+    registry.locales[added] = info
     writeFileSync(join(dir, 'i18n/locales.json'), JSON.stringify(registry, null, 2))
-    cpSync(join(dir, 'i18n/ru'), join(dir, 'i18n/de'), { recursive: true })
-    const checksFile = join(dir, 'i18n/de/_checks.json')
-    writeFileSync(checksFile, readFileSync(checksFile, 'utf8').replaceAll('/ru/', '/de/'))
-    const scriptsFile = join(dir, 'i18n/de/_scripts.json')
+    cpSync(join(dir, 'i18n/ru'), join(dir, `i18n/${added}`), { recursive: true })
+    const checksFile = join(dir, `i18n/${added}/_checks.json`)
+    writeFileSync(checksFile, readFileSync(checksFile, 'utf8').replaceAll('/ru/', `/${added}/`))
+    const scriptsFile = join(dir, `i18n/${added}/_scripts.json`)
     const scripts = JSON.parse(readFileSync(scriptsFile, 'utf8'))
     for (const [key, value] of Object.entries(scripts.strings)) if (typeof value === 'object') scripts.strings[key] = { one: value.one, other: value.many }
     writeFileSync(scriptsFile, JSON.stringify(scripts, null, 2))
+    const codes = Object.keys(registry.locales)
     const run = (...args) => execFileSync('node', args, { cwd: dir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
-    assert.match(run('scripts/build-locale.mjs'), /PASS: 3 languages \(en, ru, de\)/)
-    assert.match(run('scripts/build-locale.mjs', '--check'), /PASS: 3 languages/)
-    assert.match(run('scripts/check-site.mjs'), /PASS: 45 static pages/)
+    assert.ok(run('scripts/build-locale.mjs').includes(`PASS: ${codes.length} languages (${codes.join(', ')})`))
+    assert.match(run('scripts/build-locale.mjs', '--check'), new RegExp(`PASS: ${codes.length} languages`))
+    assert.match(run('scripts/check-site.mjs'), new RegExp(`PASS: ${SOURCE_PAGES.length * codes.length} static pages`))
     run('--test', 'scripts/check-worker.mjs')
     const home = readFileSync(join(dir, 'ru/index.html'), 'utf8')
     assert.match(home, /<details class="lang-switch lang-menu"><summary aria-label="Язык: Русский">/)
-    assert.match(home, /<a href="\/de\/" hreflang="de" lang="de">Deutsch<\/a>/)
-    assert.match(home, /<link rel="alternate" hreflang="de" href="https:\/\/passioncode.ai\/de\/">/)
-    assert.match(readFileSync(join(dir, 'de/business/index.html'), 'utf8'), /action="\/api\/leads\?lang=de"/)
-    assert.match(readFileSync(join(dir, 'sitemap.xml'), 'utf8'), /<loc>https:\/\/passioncode.ai\/de\/start\/<\/loc>/)
-    assert.match(readFileSync(join(dir, 'llms.txt'), 'utf8'), /German \(Deutsch\) under \/de\//)
-    assert.match(readFileSync(join(dir, 'worker/i18n.js'), 'utf8'), /"de": \{/)
+    assert.ok(home.includes(`<a href="/${added}/" hreflang="${added}" lang="${added}">${info.name}</a>`))
+    assert.ok(home.includes(`<link rel="alternate" hreflang="${added}" href="https://passioncode.ai/${added}/">`))
+    assert.ok(readFileSync(join(dir, `${added}/business/index.html`), 'utf8').includes(`action="/api/leads?lang=${added}"`))
+    assert.ok(readFileSync(join(dir, 'sitemap.xml'), 'utf8').includes(`<loc>https://passioncode.ai/${added}/start/</loc>`))
+    assert.ok(readFileSync(join(dir, 'llms.txt'), 'utf8').includes(`${info.englishName} (${info.name}) under /${added}/`))
+    assert.ok(readFileSync(join(dir, 'worker/i18n.js'), 'utf8').includes(`"${added}": {`))
   } finally {
     rmSync(dir, { recursive: true, force: true })
   }

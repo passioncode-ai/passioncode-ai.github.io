@@ -12,6 +12,16 @@ export const LOCALES = {
     "name": "Русский",
     "englishName": "Russian",
     "intl": "ru-RU"
+  },
+  "zh-Hans": {
+    "name": "简体中文",
+    "englishName": "Chinese (Simplified)",
+    "intl": "zh-Hans"
+  },
+  "ja": {
+    "name": "日本語",
+    "englishName": "Japanese",
+    "intl": "ja-JP"
   }
 }
 export const CATALOGS = {
@@ -61,6 +71,88 @@ export const CATALOGS = {
     "a web address": "адрес сайта",
     "a work email address": "рабочий адрес почты",
     "agree to the privacy notice to send the request": "чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности"
+  },
+  "zh-Hans": {
+    "Request not sent": "申请未发送",
+    "Your request was not sent": "你的申请未发送",
+    "You can also write to {email}.": "你也可以写信至 {email}。",
+    "Back to the form": "返回表单",
+    "The form is not accepting requests right now. Please write to {email} instead.": "表单目前暂不接收申请。请改为写信至 {email}。",
+    "Too many requests from your network in the last minute. Please wait a minute and try again.": "过去一分钟内你的网络发出的请求过多。请等待一分钟后重试。",
+    "The request is too long.": "申请内容过长。",
+    "The request could not be read.": "无法读取该申请。",
+    "That was faster than a person can fill the form. Please check your answers and send it again.": "提交速度快于人工填写表单。请检查你的回答并重新发送。",
+    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "表单已过期。请刷新页面并重新发送，你的回答仍保留在浏览器中。",
+    "Some answers need another look.": "部分回答需要再检查一下。",
+    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "此表单已发送过一次。如需再提交一份申请，请刷新页面，你的回答仍保留在浏览器中。",
+    "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "我们无法保存你的申请，内容未被发送。请一分钟后重试，或写信至 {email}。",
+    "This request was already sent with different answers. Reload the page to start a new one.": "这份申请已用不同的回答发送过。请刷新页面重新开始。",
+    "We received your request — PassionCode.ai": "我们已收到你的申请 — PassionCode.ai",
+    "Hello,": "你好，",
+    "Thank you for your request. It reached PassionCode.ai.": "感谢你的申请，PassionCode.ai 已收到。",
+    "What happens next:": "接下来：",
+    "1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.": "1. 我们会阅读你发来的内容，并在两个工作日内回复，通常会就你提到的流程问几个问题。",
+    "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. 如果合适，我们会建议安排一次简短通话，梳理一个流程，并商定衡量方式。",
+    "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. 你会收到一份书面方案：我们会搭建什么、在哪里运行，以及需要哪种许可证。",
+    "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "PassionCode.ai 构建的一切均以 GNU AGPL-3.0 开源，因此你今天也可以自己动手开始：{start}",
+    "To add anything, reply to this email.": "如需补充，请直接回复这封邮件。",
+    "Reference: {id}. We keep your request only to answer it: {privacy}": "编号：{id}。我们保留你的申请仅用于回复：{privacy}",
+    "required": "必填",
+    "at least {n} characters": {
+      "other": "至少 {n} 个字符"
+    },
+    "at most {n} characters": {
+      "other": "最多 {n} 个字符"
+    },
+    "a number from 0 to {max}": "0 到 {max} 之间的数字",
+    "choose one of the listed answers": "请选择列出的答案之一",
+    "unknown answer": "未知的回答",
+    "choose at least one": "请至少选择一项",
+    "choose at least {n}": "请至少选择 {n} 项",
+    "a web address": "网址",
+    "a work email address": "工作邮箱地址",
+    "agree to the privacy notice to send the request": "请同意隐私声明后再提交申请"
+  },
+  "ja": {
+    "Request not sent": "送信されていません",
+    "Your request was not sent": "ご依頼は送信されませんでした",
+    "You can also write to {email}.": "{email} 宛てにメールでお送りいただくこともできます。",
+    "Back to the form": "フォームに戻る",
+    "The form is not accepting requests right now. Please write to {email} instead.": "現在、フォームでは依頼を受け付けていません。代わりに {email} 宛てにメールをお送りください。",
+    "Too many requests from your network in the last minute. Please wait a minute and try again.": "お使いのネットワークから直近1分間にリクエストが多すぎます。1分ほど待ってから、もう一度お試しください。",
+    "The request is too long.": "ご依頼の内容が長すぎます。",
+    "The request could not be read.": "ご依頼を読み取れませんでした。",
+    "That was faster than a person can fill the form. Please check your answers and send it again.": "人がフォームに入力するよりも速く送信されました。入力内容を確認して、もう一度送信してください。",
+    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "フォームの有効期限が切れました。ページを再読み込みして、もう一度送信してください。入力内容はブラウザに保持されています。",
+    "Some answers need another look.": "一部の回答をご確認ください。",
+    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "このフォームはすでに一度送信されています。別のご依頼を送るには、ページを再読み込みしてください。入力内容はブラウザに保持されています。",
+    "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "ご依頼を保存できませんでした。何も送信されていません。1分ほど後にもう一度お試しいただくか、{email} 宛てにメールをお送りください。",
+    "This request was already sent with different answers. Reload the page to start a new one.": "このご依頼はすでに別の回答で送信されています。新しく始めるには、ページを再読み込みしてください。",
+    "We received your request — PassionCode.ai": "ご依頼を受け付けました — PassionCode.ai",
+    "Hello,": "こんにちは。",
+    "Thank you for your request. It reached PassionCode.ai.": "ご依頼ありがとうございます。PassionCode.ai に届きました。",
+    "What happens next:": "今後の流れ：",
+    "1. We read what you sent and reply within two business days, usually with a few questions about the processes you named.": "1. お送りいただいた内容を確認し、2営業日以内にご返信します。多くの場合、挙げていただいたプロセスについていくつか質問をさせていただきます。",
+    "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. 合致する場合は、1つのプロセスを整理し、測定方法を決めるための短い通話をご提案します。",
+    "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. 書面の提案をお送りします。設定する内容、実行場所、必要なライセンスを記載します。",
+    "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "PassionCode.ai が構築するものはすべて、GNU AGPL-3.0 のオープンソースです。今すぐご自身で始めることもできます：{start}",
+    "To add anything, reply to this email.": "追加でお伝えしたいことがあれば、このメールに返信してください。",
+    "Reference: {id}. We keep your request only to answer it: {privacy}": "参照番号：{id}。ご依頼は、ご返信のためにのみ保管します：{privacy}",
+    "required": "必須",
+    "at least {n} characters": {
+      "other": "{n}文字以上"
+    },
+    "at most {n} characters": {
+      "other": "{n}文字以内"
+    },
+    "a number from 0 to {max}": "0～{max}の数値",
+    "choose one of the listed answers": "表示されている回答から1つ選択してください",
+    "unknown answer": "不明な回答",
+    "choose at least one": "1つ以上選択してください",
+    "choose at least {n}": "{n}つ以上選択してください",
+    "a web address": "ウェブアドレス",
+    "a work email address": "勤務先のメールアドレス",
+    "agree to the privacy notice to send the request": "ご依頼を送信するには、プライバシー通知への同意が必要です"
   }
 }
 export const { resolveLocale, t, tn } = translator({ source: SOURCE_LOCALE, locales: LOCALES, catalogs: CATALOGS })
