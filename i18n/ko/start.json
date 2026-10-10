@@ -12,7 +12,6 @@
     "Install the skills": "스킬 설치",
     "Run npx @passioncode-ai/passioncode@latest update and restart your agent.": "npx @passioncode-ai/passioncode@latest update를 실행하고 에이전트를 다시 시작하세요.",
     "Add Fabric": "Fabric 추가",
-    "Download the Fabric early preview for macOS on Apple silicon and open your first project.": "Apple silicon용 macOS 버전 Fabric 초기 프리뷰를 다운로드하고 첫 프로젝트를 여세요.",
     "Create or convert an agent": "에이전트 만들기 또는 변환",
     "Ask your coding agent to create a Fabric agent, or to adapt an existing project to Fabric.": "코딩 에이전트에게 Fabric 에이전트를 만들어 달라고 하거나, 기존 프로젝트를 Fabric에 맞춰 달라고 요청하세요.",
     "Run it and see it": "실행하고 확인",
@@ -24,7 +23,6 @@
     "From an empty Mac to": "빈 Mac에서",
     "your first agent": "첫 에이전트까지",
     "Needs Node.js 18+ and Claude Code or Codex": "Node.js 18+와 Claude Code 또는 Codex 필요",
-    "Fabric needs macOS on Apple silicon": "Fabric은 Apple silicon 기반 macOS 필요",
     "On this page": "이 페이지에서",
     "Add the next agent": "다음 에이전트 추가",
     "Contribute": "기여하기",
@@ -35,7 +33,6 @@
     "Download Fabric": "Fabric 다운로드",
     "for macOS": "macOS용",
     "Requirements and limits": "요구 사항과 제한",
-    "Apple silicon · signed and notarized · SHA-256": "Apple silicon · 서명 및 공증 완료 · SHA-256",
     "release notes": "릴리스 노트",
     "In Claude Code or Codex, ask for what you need. The Fabric Agent Adapter skill builds a Fabric-compatible service: a contract, a dashboard, tests and a conformance check.": "Claude Code나 Codex에서 필요한 것을 요청하세요. Fabric Agent Adapter 스킬이 Fabric과 호환되는 서비스를 만듭니다. 계약, 대시보드, 테스트, 적합성 검사가 포함됩니다.",
     "new": "새로 만들기",
@@ -81,6 +78,9 @@
     "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "패밀리에 속합니다. 브리프에서 승인까지 모든 변경을 이끌며, 각 관문을 통과하기 전에는 다음으로 넘어가지 않습니다.",
     "Every product repository is public and names its test command in": "모든 제품 저장소는 공개되어 있으며, 테스트 명령은",
     ". Follow the organization’s": "에 적혀 있습니다. 조직의",
-    "and open a pull request; opening it is your agreement to the repository’s": "를 따라 풀 리퀘스트를 여세요. 풀 리퀘스트를 열면 동의하는 것으로 간주되는 문서는 저장소의"
+    "and open a pull request; opening it is your agreement to the repository’s": "를 따라 풀 리퀘스트를 여세요. 풀 리퀘스트를 열면 동의하는 것으로 간주되는 문서는 저장소의",
+    "Apple silicon and Intel · signed and notarized · SHA-256": "Apple silicon 및 Intel · 서명 및 공증 완료 · SHA-256",
+    "Download the Fabric early preview for macOS on Apple silicon or Intel and open your first project.": "Apple silicon 또는 Intel용 macOS 버전 Fabric 초기 프리뷰를 다운로드하고 첫 프로젝트를 여세요.",
+    "Fabric needs macOS on Apple silicon or Intel": "Fabric은 Apple silicon 또는 Intel 기반 macOS 필요"
   }
 }

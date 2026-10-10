@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric | CEO AIエージェント · macOS向け早期プレビュー版 | PassionCode.ai
 
-Fabricは私たちのCEO AIエージェントで、現在はApple silicon搭載のmacOS向け早期プレビュー版です。プロジェクトのボード、決定、作業、リリースを、お使いのMac上の一か所にまとめます。
+Fabricは私たちのCEO AIエージェントで、現在はApple siliconおよびIntel搭載のmacOS向け早期プレビュー版です。プロジェクトのボード、決定、作業、リリースを、お使いのMac上の一か所にまとめます。
 
 本文へスキップ
 
@@ -64,7 +64,7 @@ macOS 版をダウンロード
 
 ↓
 
-早期プレビュー版 0.3.3 · Apple silicon搭載のmacOS
+早期プレビュー版 0.3.4 · Apple silicon・Intel搭載のmacOS
 
 チャットを超えたプロジェクト
 
@@ -172,20 +172,20 @@ FABRICを入手
 
 ## Mac 向け
 
-最新のプレビュー版：0.3.3。FabricはMac上でローカルデータベースとともに動作し、プロジェクトはこのマシンの中にとどまります。
+最新のプレビュー版：0.3.4。FabricはMac上でローカルデータベースとともに動作し、プロジェクトはこのマシンの中にとどまります。
 
 ⌘
 
 ### macOS
 
-Apple silicon（arm64）· macOS 13以降
+Apple silicon・Intel（ユニバーサル）· macOS 13以降
 DMG インストーラー · Developer ID で署名され、Apple の公証済み
 
 macOS 版をダウンロード
 
 ↓
 
-DMGを開き、FabricをApplicationsにドラッグします。このプレビュー版ではIntel Macはサポートされていません。
+DMGを開き、FabricをApplicationsにドラッグします。同じDMGがApple silicon搭載MacとIntel Macの両方で動作します。
 
 ☰
 
@@ -211,7 +211,7 @@ DockerまたはCLIがない場合、Fabricは初回起動時にどちらが不�
 
 これは早期プレビュー版です。プロジェクト、判断のボード、タスク、目標、作業の動き、レシート付きのリリースを保管できます。Fabricとの会話ではメッセージが保存されますが、Fabricはまだ応答しません。新しいバージョンでも既存のデータベースは自動ではアップグレードされず、実行するコマンドが案内されます。このMacに登録されたエージェントは、ローカルのエージェントハブを通じて、Fabric Inboxなどの接続済みプロダクトへのアクセスをFabricに求めることができます。各リクエストを許可するか拒否するかはあなたが決め、設定でいつでも取り消せます。0.3.2以降、Fabricは匿名の利用回数を送信します。送るのは回数と種類だけで、名前、パス、内容は送りません。設定の「Share usage counts」でオフにでき、この設定はMac上のすべてのPassionCode.aiアプリに適用されます。
 
-FabricはGNU AGPL-3.0に基づくオープンソースです。AGPLの対象外となる用途向けの商用ライセンスはpassioncode.ai/businessから入手できます。0.3.3 プレビュー版は、その公開ソースからCIでビルド、署名、公証されています。
+FabricはGNU AGPL-3.0に基づくオープンソースです。AGPLの対象外となる用途向けの商用ライセンスはpassioncode.ai/businessから入手できます。0.3.4 プレビュー版は、その公開ソースからCIでビルド、署名、公証されています。
 
 同じツールキットの一部
 

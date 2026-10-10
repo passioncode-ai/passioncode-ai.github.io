@@ -62,7 +62,7 @@ Português (Brasil)
 
 ↗
 
-基于 AGPL-3.0 开源 Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
+基于 AGPL-3.0 开源 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
 
 账号
 
@@ -132,7 +132,7 @@ CEO AI 智能体：为每个项目的目标、看板、决策和版本提供一�
 
 早期预览版
 
-0.3.3
+0.3.4
 
 · macOS
 
@@ -168,7 +168,7 @@ Project Observatory
 
 版本
 
-0.20.1
+0.21.0
 
 · macOS + Linux
 

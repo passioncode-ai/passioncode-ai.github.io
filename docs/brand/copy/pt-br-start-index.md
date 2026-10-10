@@ -52,7 +52,7 @@ Primeiros passos · gratuito e de código aberto
 
 Pare de criar agentes que se degradam e não conversam entre si. Cinco passos, cerca de vinte minutos, cada um útil por si só
 
-Requer Node.js 18+ e Claude Code ou Codex O Fabric requer macOS em Apple silicon
+Requer Node.js 18+ e Claude Code ou Codex O Fabric requer macOS em Apple silicon ou Intel
 
 01
 
@@ -98,7 +98,7 @@ O Fabric é o agente de IA que atua como CEO: cada projeto ganha um lar para seu
 
 Baixar o Fabric
 
-0.3.3
+0.3.4
 
 para macOS
 
@@ -106,7 +106,7 @@ para macOS
 
 Requisitos e limites
 
-Apple silicon · assinado e notarizado · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · notas de versão
+Apple silicon e Intel · assinado e notarizado · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · notas de versão
 
 03
 

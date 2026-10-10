@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric | CEO AI agent · early preview for macOS | PassionCode.ai
 
-Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon. It keeps a project’s board, decisions, work and releases in one place, on your Mac.
+Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.
 
 Skip to content
 
@@ -64,7 +64,7 @@ Explore the workflow
 
 ↓
 
-Early preview 0.3.3 · macOS on Apple silicon
+Early preview 0.3.4 · macOS on Apple silicon and Intel
 
 A PROJECT, BEYOND THE CHAT
 
@@ -172,20 +172,20 @@ GET FABRIC
 
 ## for your Mac
 
-Latest preview: 0.3.3. Fabric runs on your Mac with a local database; your projects stay on this machine.
+Latest preview: 0.3.4. Fabric runs on your Mac with a local database; your projects stay on this machine.
 
 ⌘
 
 ### macOS
 
-Apple silicon (arm64) · macOS 13 or later
+Apple silicon and Intel (universal) · macOS 13 or later
 DMG installer · Developer ID signed and notarized by Apple
 
 Download for macOS
 
 ↓
 
-Open the DMG and drag Fabric to Applications. Intel Macs are not supported in this preview.
+Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.
 
 ☰
 
@@ -211,7 +211,7 @@ View source
 
 This is an early preview. You can keep projects, a board of decisions, tasks, goals, a pulse of the work and releases with their receipts. The conversation with Fabric saves your messages, but Fabric does not reply yet. A newer version does not upgrade an existing database on its own; it tells you the command to run. Agents registered on this Mac can ask Fabric, through its local agent hub, for access to a connected product such as Fabric Inbox; you allow or deny each request and can revoke it in Settings. Since 0.3.2, Fabric sends anonymous usage counts — counts and kinds only, never names, paths or content; turn them off in Settings → Share usage counts, which applies to every PassionCode.ai app on your Mac.
 
-Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from passioncode.ai/business for use the AGPL doesn’t cover. The 0.3.3 preview is built, signed and notarized in CI from that public source.
+Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from passioncode.ai/business for use the AGPL doesn’t cover. The 0.3.4 preview is built, signed and notarized in CI from that public source.
 
 PART OF THE SAME TOOLKIT
 

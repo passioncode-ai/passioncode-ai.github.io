@@ -2,7 +2,6 @@
   "page": "fabric/index.html",
   "strings": {
     "Fabric | CEO AI agent · early preview for macOS | PassionCode.ai": "Fabric | CEO AI 智能体 · macOS 早期预览版 | PassionCode.ai",
-    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric 是我们的 CEO AI 智能体，目前是适用于搭载 Apple silicon 的 macOS 的早期预览版。它把项目的看板、决策、工作和版本集中在一处，就在你的 Mac 上。",
     "Fabric — CEO AI agent, early preview": "Fabric — CEO AI 智能体，早期预览版",
     "FABRIC · EARLY PREVIEW": "FABRIC · 早期预览版",
     "A CEO AI agent": "一个 CEO AI 智能体",
@@ -10,7 +9,6 @@
     "Fabric is the agent we’re building to coordinate other agents around a project, keeping its purpose, context and decisions with the work as people, models and sessions change": "Fabric 是我们正在打造的智能体，围绕项目协调其他智能体，让项目的目标、上下文和决策始终跟着工作走，不论人、模型和会话如何更替",
     "The home every agent of a project shares: its purpose, board, decisions and releases.": "项目中所有智能体共用的归处：目标、看板、决策和版本。",
     "Explore the workflow": "了解工作流程",
-    "· macOS on Apple silicon": "· 适用于搭载 Apple silicon 的 macOS",
     "Illustrative project brief": "项目简介示例",
     "A PROJECT, BEYOND THE CHAT": "项目，不止于聊天",
     "Purpose": "目标",
@@ -65,8 +63,6 @@
     "GET FABRIC": "获取 Fabric",
     "An early preview": "早期预览版",
     ". Fabric runs on your Mac with a local database; your projects stay on this machine.": "。Fabric 在你的 Mac 上运行，使用本地数据库；你的项目只留在这台机器上。",
-    "Apple silicon (arm64) · macOS 13 or later": "Apple silicon (arm64) · macOS 13 或更高版本",
-    "Open the DMG and drag Fabric to Applications. Intel Macs are not supported in this preview.": "打开 DMG，把 Fabric 拖到“应用程序”。此预览版不支持 Intel Mac。",
     "Fabric starts its own local database with the Supabase CLI inside Docker.": "Fabric 会在 Docker 内用 Supabase CLI 启动自己的本地数据库。",
     "Docker Desktop or OrbStack, running": "Docker Desktop 或 OrbStack，处于运行状态",
     "Supabase CLI:": "Supabase CLI：",
@@ -81,6 +77,10 @@
     "PART OF THE SAME TOOLKIT": "同一套工具集的一部分",
     "Switchboard manages the accounts": "Switchboard 管理账号",
     "The account-management tool runs independently of Fabric.": "账号管理工具独立于 Fabric 运行。",
-    "Back to the toolkit": "返回工具集"
+    "Back to the toolkit": "返回工具集",
+    "· macOS on Apple silicon and Intel": "· 适用于搭载 Apple silicon 或 Intel 的 macOS",
+    "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon 和 Intel（通用）· macOS 13 或更高版本",
+    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric 是我们的 CEO AI 智能体，目前是适用于搭载 Apple silicon 或 Intel 的 macOS 的早期预览版。它把项目的看板、决策、工作和版本集中在一处，就在你的 Mac 上。",
+    "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "打开 DMG，把 Fabric 拖到“应用程序”。同一个 DMG 可在搭载 Apple silicon 和 Intel 的 Mac 上运行。"
   }
 }

@@ -2,7 +2,6 @@
   "page": "fabric/index.html",
   "strings": {
     "Fabric | CEO AI agent · early preview for macOS | PassionCode.ai": "Fabric | CEO AI 에이전트 · macOS용 초기 프리뷰 | PassionCode.ai",
-    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric은 PassionCode.ai의 CEO AI 에이전트로, 지금은 Apple silicon용 macOS 초기 프리뷰입니다. 프로젝트의 보드, 결정, 작업, 릴리스를 Mac 한곳에 모아 둡니다.",
     "PassionCode.ai passion fruit mark": "PassionCode.ai 패션프루트 마크",
     "Fabric — CEO AI agent, early preview": "Fabric — CEO AI 에이전트, 초기 프리뷰",
     "Download": "다운로드",
@@ -16,7 +15,6 @@
     "Download for macOS": "macOS용 다운로드",
     "Explore the workflow": "워크플로 살펴보기",
     "Early preview": "초기 프리뷰",
-    "· macOS on Apple silicon": "· Apple silicon용 macOS",
     "Illustrative project brief": "프로젝트 브리프 예시",
     "A PROJECT, BEYOND THE CHAT": "채팅 너머의 프로젝트",
     "Purpose": "목적",
@@ -75,9 +73,7 @@
     "Latest preview:": "최신 프리뷰:",
     ". Fabric runs on your Mac with a local database; your projects stay on this machine.": ". Fabric은 로컬 데이터베이스와 함께 Mac에서 실행되며, 프로젝트는 이 기기에 남습니다.",
     "macOS": "macOS",
-    "Apple silicon (arm64) · macOS 13 or later": "Apple silicon(arm64) · macOS 13 이상",
     "DMG installer · Developer ID signed and notarized by Apple": "DMG 설치 파일 · Developer ID로 서명되고 Apple 공증을 받음",
-    "Open the DMG and drag Fabric to Applications. Intel Macs are not supported in this preview.": "DMG를 열고 Fabric을 Applications로 끌어다 놓으세요. 이 프리뷰는 Intel Mac을 지원하지 않습니다.",
     "Before you open it": "열기 전에",
     "Fabric starts its own local database with the Supabase CLI inside Docker.": "Fabric은 Docker 안에서 Supabase CLI로 자체 로컬 데이터베이스를 시작합니다.",
     "Docker Desktop or OrbStack, running": "Docker Desktop 또는 OrbStack(실행 중)",
@@ -97,6 +93,10 @@
     "Switchboard manages the accounts": "Switchboard는 계정을 관리합니다",
     "The account-management tool runs independently of Fabric.": "계정 관리 도구는 Fabric과 별개로 실행됩니다.",
     "Download Switchboard": "Switchboard 다운로드",
-    "Back to the toolkit": "툴킷으로 돌아가기"
+    "Back to the toolkit": "툴킷으로 돌아가기",
+    "· macOS on Apple silicon and Intel": "· Apple silicon 및 Intel용 macOS",
+    "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon 및 Intel(유니버설) · macOS 13 이상",
+    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric은 PassionCode.ai의 CEO AI 에이전트로, 지금은 Apple silicon 및 Intel용 macOS 초기 프리뷰입니다. 프로젝트의 보드, 결정, 작업, 릴리스를 Mac 한곳에 모아 둡니다.",
+    "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "DMG를 열고 Fabric을 Applications로 끌어다 놓으세요. 같은 DMG가 Apple silicon Mac과 Intel Mac에서 모두 실행됩니다."
   }
 }

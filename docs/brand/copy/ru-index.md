@@ -62,7 +62,7 @@ Fabric, наш ИИ-агент в роли CEO, хранит цель, реше�
 
 ↗
 
-Открытый код под AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
+Открытый код под AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
 
 Аккаунты
 
@@ -132,7 +132,7 @@ Fabric
 
 Ранняя предварительная версия
 
-0.3.3
+0.3.4
 
 · macOS
 
@@ -168,7 +168,7 @@ Project Observatory
 
 Релиз
 
-0.20.1
+0.21.0
 
 · macOS + Linux
 

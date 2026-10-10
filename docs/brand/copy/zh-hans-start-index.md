@@ -52,7 +52,7 @@ Português (Brasil)
 
 别再构建会腐坏、彼此不交流的智能体了。五个步骤，大约二十分钟，每一步单独也有用
 
-需要 Node.js 18+ 以及 Claude Code 或 Codex Fabric 需要搭载 Apple silicon 的 macOS
+需要 Node.js 18+ 以及 Claude Code 或 Codex Fabric 需要搭载 Apple silicon 或 Intel 的 macOS
 
 01
 
@@ -98,7 +98,7 @@ Fabric 是 CEO AI 智能体：每个项目都有一个放置其目标、看板�
 
 下载 Fabric
 
-0.3.3
+0.3.4
 
 macOS 版
 
@@ -106,7 +106,7 @@ macOS 版
 
 要求与限制
 
-Apple silicon · 已签名并公证 · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · 版本说明
+Apple silicon 和 Intel · 已签名并公证 · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · 版本说明
 
 03
 

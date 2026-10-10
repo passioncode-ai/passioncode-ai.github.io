@@ -52,7 +52,7 @@ Loslegen · kostenlos und Open Source
 
 Schluss mit Agenten, die verrotten und nicht miteinander reden. Fünf Schritte, etwa zwanzig Minuten, jeder für sich nützlich
 
-Braucht Node.js 18+ und Claude Code oder Codex Fabric braucht macOS auf Apple silicon
+Braucht Node.js 18+ und Claude Code oder Codex Fabric braucht macOS auf Apple silicon oder Intel
 
 01
 
@@ -98,7 +98,7 @@ Fabric ist der CEO-KI-Agent: Jedes Projekt bekommt ein Zuhause für Zweck, Board
 
 Fabric herunterladen
 
-0.3.3
+0.3.4
 
 für macOS
 
@@ -106,7 +106,7 @@ für macOS
 
 Voraussetzungen und Einschränkungen
 
-Apple silicon · signiert und notarisiert · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · Release Notes
+Apple silicon und Intel · signiert und notarisiert · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · Release Notes
 
 03
 

@@ -62,7 +62,7 @@ For your organization
 
 ↗
 
-Open source under AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
+Open source under AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
 
 Accounts
 
@@ -132,7 +132,7 @@ The CEO AI agent: a home for each project’s purpose, board, decisions and rele
 
 Early preview
 
-0.3.3
+0.3.4
 
 · macOS
 
@@ -168,7 +168,7 @@ What changed in every project, what needs attention, with the evidence.
 
 Release
 
-0.20.1
+0.21.0
 
 · macOS + Linux
 

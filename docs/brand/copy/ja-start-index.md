@@ -52,7 +52,7 @@ Português (Brasil)
 
 傷んでしまい、互いに話せないエージェントを作るのは、もうやめましょう。5つのステップ、約20分で、どれも単独で役立ちます
 
-Node.js 18 以降と、Claude Code または Codex が必要です Fabric には Apple silicon 搭載の macOS が必要です
+Node.js 18 以降と、Claude Code または Codex が必要です Fabric には Apple silicon または Intel 搭載の macOS が必要です
 
 01
 
@@ -98,7 +98,7 @@ Fabric は CEO AIエージェントです。各プロジェクトに、目的、
 
 Fabric をダウンロード
 
-0.3.3
+0.3.4
 
 （macOS 向け）
 
@@ -106,7 +106,7 @@ Fabric をダウンロード
 
 要件と制限
 
-Apple silicon · 署名・公証済み · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · リリースノート
+Apple silicon・Intel · 署名・公証済み · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · リリースノート
 
 03
 

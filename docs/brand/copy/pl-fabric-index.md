@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric | agent AI w roli CEO · wczesna wersja zapoznawcza dla macOS | PassionCode.ai
 
-Fabric to nasz agent AI w roli CEO, dostępny jako wczesna wersja zapoznawcza dla macOS na Apple silicon. Trzyma tablicę projektu, decyzje, pracę i wydania w jednym miejscu, na Twoim Macu.
+Fabric to nasz agent AI w roli CEO, dostępny jako wczesna wersja zapoznawcza dla macOS na Apple silicon i Intel. Trzyma tablicę projektu, decyzje, pracę i wydania w jednym miejscu, na Twoim Macu.
 
 Przejdź do treści
 
@@ -64,7 +64,7 @@ Poznaj sposób pracy
 
 ↓
 
-Wczesna wersja zapoznawcza 0.3.3 · macOS na Apple silicon
+Wczesna wersja zapoznawcza 0.3.4 · macOS na Apple silicon i Intel
 
 PROJEKT PONAD CZATEM
 
@@ -172,20 +172,20 @@ POBIERZ FABRIC
 
 ## na Twojego Maca
 
-Najnowsza wersja zapoznawcza: 0.3.3. Fabric działa na Twoim Macu z lokalną bazą danych; Twoje projekty zostają na tym komputerze.
+Najnowsza wersja zapoznawcza: 0.3.4. Fabric działa na Twoim Macu z lokalną bazą danych; Twoje projekty zostają na tym komputerze.
 
 ⌘
 
 ### macOS
 
-Apple silicon (arm64) · macOS 13 lub nowszy
+Apple silicon i Intel (uniwersalny) · macOS 13 lub nowszy
 Instalator DMG · podpisany identyfikatorem Developer ID i poświadczony przez Apple (notarization)
 
 Pobierz na macOS
 
 ↓
 
-Otwórz plik DMG i przeciągnij Fabric do folderu Programy. Maki z procesorem Intel nie są obsługiwane w tej wersji zapoznawczej.
+Otwórz plik DMG i przeciągnij Fabric do folderu Programy. Ten sam plik DMG działa na Makach z Apple silicon i z procesorem Intel.
 
 ☰
 
@@ -211,7 +211,7 @@ Zobacz kod źródłowy
 
 To wczesna wersja zapoznawcza. Możesz w niej prowadzić projekty, tablicę decyzji, zadania, cele, puls pracy i wydania z ich potwierdzeniami. Rozmowa z Fabric zapisuje Twoje wiadomości, ale Fabric jeszcze nie odpowiada. Nowsza wersja nie aktualizuje istniejącej bazy danych sama; podaje polecenie, które trzeba uruchomić. Agenci zarejestrowani na tym Macu mogą przez lokalny hub agentów poprosić Fabric o dostęp do połączonego produktu, takiego jak Fabric Inbox; każdą prośbę akceptujesz albo odrzucasz i możesz cofnąć zgodę w Ustawieniach. Od wersji 0.3.2 Fabric wysyła anonimowe liczniki użycia — wyłącznie liczby i rodzaje, nigdy nazwy, ścieżki ani treść; wyłączysz je w Ustawienia → Share usage counts, co dotyczy każdej aplikacji PassionCode.ai na Twoim Macu.
 
-Fabric ma otwarty kod na licencji GNU AGPL-3.0, a licencję komercyjną można uzyskać na stronie passioncode.ai/business dla zastosowań, których AGPL nie obejmuje. Wersja 0.3.3 zapoznawcza jest budowana, podpisywana i poświadczana w CI z tego publicznego kodu.
+Fabric ma otwarty kod na licencji GNU AGPL-3.0, a licencję komercyjną można uzyskać na stronie passioncode.ai/business dla zastosowań, których AGPL nie obejmuje. Wersja 0.3.4 zapoznawcza jest budowana, podpisywana i poświadczana w CI z tego publicznego kodu.
 
 CZĘŚĆ TEGO SAMEGO ZESTAWU NARZĘDZI
 

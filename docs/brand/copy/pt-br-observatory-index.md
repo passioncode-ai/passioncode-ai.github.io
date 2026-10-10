@@ -128,13 +128,13 @@ BAIXAR O OBSERVATORY
 
 ## Comece pelo seu próprio espaço de trabalho
 
-Release mais recente: 0.20.1. Nenhuma chave de API é necessária para a primeira observação local. Entregue a configuração ao seu agente de programação ou execute-a você mesmo.
+Release mais recente: 0.21.0. Nenhuma chave de API é necessária para a primeira observação local. Entregue a configuração ao seu agente de programação ou execute-a você mesmo.
 
 01
 
 ### Instale o release
 
-Baixar project_observatory-0.20.1-py3-none-any.whl e SHA256SUMS do release 0.20.1, confira-os com shasum -a 256 -c SHA256SUMS --ignore-missing, depois, num ambiente Python 3.11+ isolado com suporte a extensões do SQLite, pip install --no-deps o wheel e depois o seu extra [full] com -c "$(project-observatory full-path)/requirements-full.lock", o conjunto de dependências com o qual o release foi testado. No macOS, use o Python do Homebrew.
+Baixar project_observatory-0.21.0-py3-none-any.whl e SHA256SUMS do release 0.21.0, confira-os com shasum -a 256 -c SHA256SUMS --ignore-missing, depois, num ambiente Python 3.11+ isolado com suporte a extensões do SQLite, pip install --no-deps o wheel e depois o seu extra [full] com -c "$(project-observatory full-path)/requirements-full.lock", o conjunto de dependências com o qual o release foi testado. No macOS, use o Python do Homebrew.
 
 02
 
@@ -166,9 +166,9 @@ Todos os releases
 
 ↗
 
-App para Mac: ProjectObservatory-0.20.1-macos.zip, assinado com Developer ID e notarizado pela Apple, para macOS 14+. Ele abre no painel e usa o motor instalado acima; confira-o com o mesmo SHA256SUMS.
+App para Mac: ProjectObservatory-0.21.0-macos.zip, assinado com Developer ID e notarizado pela Apple, para macOS 14+. Ele abre no painel e usa o motor instalado acima; confira-o com o mesmo SHA256SUMS.
 
-O release atual, 0.20.1, está sob a AGPL, como todos os releases desde a 0.10.0, a primeira sob a AGPL; a 0.9.1 e as anteriores mantêm a licença com a qual foram lançadas.
+O release atual, 0.21.0, está sob a AGPL, como todos os releases desde a 0.10.0, a primeira sob a AGPL; a 0.9.1 e as anteriores mantêm a licença com a qual foram lançadas.
 
 A varredura de valores conhecidos compara artefatos selecionados com chaves já conhecidas localmente. Ela não consegue encontrar segredos desconhecidos nem provar que nenhuma cópia restou, e uma cópia local não é prova de que alguém mais obteve uma chave. A rotação real nos provedores e os hosts MCP externos ficam fora da suíte de testes offline.
 

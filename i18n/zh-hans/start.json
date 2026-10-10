@@ -12,7 +12,6 @@
     "Install the skills": "安装技能",
     "Run npx @passioncode-ai/passioncode@latest update and restart your agent.": "运行 npx @passioncode-ai/passioncode@latest update，然后重启你的智能体。",
     "Add Fabric": "添加 Fabric",
-    "Download the Fabric early preview for macOS on Apple silicon and open your first project.": "下载适用于 Apple silicon 的 macOS 版 Fabric 早期预览版，并打开你的第一个项目。",
     "Create or convert an agent": "创建或转换智能体",
     "Ask your coding agent to create a Fabric agent, or to adapt an existing project to Fabric.": "请你的编码智能体创建一个 Fabric 智能体，或把现有项目适配到 Fabric。",
     "Run it and see it": "运行并查看",
@@ -23,7 +22,6 @@
     "From an empty Mac to": "从一台空白的 Mac",
     "your first agent": "到你的第一个智能体",
     "Needs Node.js 18+ and Claude Code or Codex": "需要 Node.js 18+ 以及 Claude Code 或 Codex",
-    "Fabric needs macOS on Apple silicon": "Fabric 需要搭载 Apple silicon 的 macOS",
     "Add the next agent": "添加下一个智能体",
     "Contribute": "参与贡献",
     "Steps": "步骤",
@@ -33,7 +31,6 @@
     "Download Fabric": "下载 Fabric",
     "for macOS": "macOS 版",
     "Requirements and limits": "要求与限制",
-    "Apple silicon · signed and notarized · SHA-256": "Apple silicon · 已签名并公证 · SHA-256",
     "release notes": "版本说明",
     "In Claude Code or Codex, ask for what you need. The Fabric Agent Adapter skill builds a Fabric-compatible service: a contract, a dashboard, tests and a conformance check.": "在 Claude Code 或 Codex 中，直接说出你的需求。Fabric Agent Adapter 技能会构建一个兼容 Fabric 的服务：契约、仪表盘、测试和一致性检查。",
     "new": "新建",
@@ -69,6 +66,9 @@
     "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "系列：它把每项变更从简报一路带到验收，每道关卡通过之前不会继续往下走。",
     "Every product repository is public and names its test command in": "所有产品仓库都是公开的，测试命令写在",
     ". Follow the organization’s": " 中。请遵循组织的",
-    "and open a pull request; opening it is your agreement to the repository’s": "并提交 pull request；提交即表示你同意仓库的"
+    "and open a pull request; opening it is your agreement to the repository’s": "并提交 pull request；提交即表示你同意仓库的",
+    "Apple silicon and Intel · signed and notarized · SHA-256": "Apple silicon 和 Intel · 已签名并公证 · SHA-256",
+    "Download the Fabric early preview for macOS on Apple silicon or Intel and open your first project.": "下载适用于 Apple silicon 或 Intel 的 macOS 版 Fabric 早期预览版，并打开你的第一个项目。",
+    "Fabric needs macOS on Apple silicon or Intel": "Fabric 需要搭载 Apple silicon 或 Intel 的 macOS"
   }
 }

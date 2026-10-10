@@ -62,7 +62,7 @@ CEO AIエージェントの Fabric が、各プロジェクトの目的、決定
 
 ↗
 
-AGPL-3.0 のオープンソース Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
+AGPL-3.0 のオープンソース Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
 
 アカウント
 
@@ -132,7 +132,7 @@ CEO AIエージェント：各プロジェクトの目的、ボード、決定�
 
 早期プレビュー版
 
-0.3.3
+0.3.4
 
 · macOS
 
@@ -168,7 +168,7 @@ Project Observatory
 
 リリース
 
-0.20.1
+0.21.0
 
 · macOS + Linux
 

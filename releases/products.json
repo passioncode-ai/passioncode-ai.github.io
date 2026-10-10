@@ -6,7 +6,7 @@
       "repository": "passioncode-ai/fabric",
       "page": "/fabric/",
       "channel": "prerelease",
-      "assets": { "macos": "Fabric-{version}-arm64.dmg" }
+      "assets": { "macos": "Fabric-{version}-universal.dmg" }
     },
     "switchboard": {
       "name": "Fabric Switchboard",
