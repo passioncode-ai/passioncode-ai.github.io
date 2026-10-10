@@ -63,6 +63,15 @@
     "Want it running": "¿Quieres que funcione",
     "for your whole team?": "para todo tu equipo?",
     "We map your processes, estimate what agents can take over, and set it up with you or for you.": "Mapeamos tus procesos, estimamos qué pueden asumir los agentes y lo configuramos contigo o por ti.",
-    "Estimate and request": "Estimación y solicitud"
+    "Estimate and request": "Estimación y solicitud",
+    "Stop building agents that rot and don’t talk to each other. Five steps, about twenty minutes, each useful on its own": "Deja de crear agentes que se pudren y no hablan entre sí. Cinco pasos, unos veinte minutos, cada uno útil por sí solo",
+    "The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key.": "El launcher de PassionCode.ai instala en tu agente de programación las skills de Fabric Agent Adapter, Observatory Log y las reglas de trabajo. Sin cuenta y sin clave.",
+    "· restart your agent afterwards · automatic updates are on;": "· reinicia tu agente después · las actualizaciones automáticas están activadas;",
+    "Build the next agent the same way and give it the same project in Fabric. Claude Code, Kilo Code and Hermes Agent started from Fabric share that project’s board, memory and hand-offs, so one picks up where the other stopped.": "Crea el siguiente agente del mismo modo y dale el mismo proyecto en Fabric. Claude Code, Kilo Code y Hermes Agent iniciados desde Fabric comparten el tablero, la memoria y los traspasos de ese proyecto, así que uno retoma donde lo dejó el otro.",
+    "Which agents connect today": "Qué agentes se conectan hoy",
+    "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "familia: lleva cada cambio del brief a la aceptación y no avanza hasta que se supera cada verificación.",
+    "Every product repository is public and names its test command in": "Todos los repositorios de producto son públicos e indican su comando de pruebas en",
+    ". Follow the organization’s": ". Sigue el documento",
+    "and open a pull request; opening it is your agreement to the repository’s": "de la organización y abre una pull request; al abrirla aceptas el"
   }
 }
