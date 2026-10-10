@@ -76,6 +76,12 @@
     "Start with the services": "すでに使っている",
     "you already use": "サービスから始めましょう",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "プロジェクトの確認は Observatory で、アカウントの設定は Switchboard で行います。ツールは、作業に必要なものだけを追加してください。",
-    "Explore the tools ↗": "ツールを見る ↗"
+    "Explore the tools ↗": "ツールを見る ↗",
+    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Mac 上のすべてのエージェントサービスを一つのアプリで確認できます。対応が必要なものが先頭に来て、各サービス自身のダッシュボードがその横に開きます",
+    "IN THE TOOLKIT": "ツールキットの一員",
+    "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "状態、支出、操作：すべてのエージェントサービスについて、何をしているか、どれだけ使っているか、アップデートの状況を一つのウィンドウで確認できます。",
+    "how it works": "使い方のステップ 4 です",
+    "All the tools": "すべてのツール",
+    "The skills kept current": "最新に保たれるスキル"
   }
 }

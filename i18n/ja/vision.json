@@ -48,6 +48,26 @@
     ", a separate open-source skill that does not move on until each gate passes.": "をおすすめします。これは独立したオープンソースのスキルで、各ゲートを通過するまで次へ進みません。",
     "How to install it": "インストール方法",
     "03 / THE PATH": "03 / 道筋",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "スキルをインストールして最初のエージェントを作るか、組織ごと進めることもできます。PassionCode for Enterprise は開発中で、ご依頼に応じて提供します。"
+    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "スキルをインストールして最初のエージェントを作るか、組織ごと進めることもできます。PassionCode for Enterprise は開発中で、ご依頼に応じて提供します。",
+    "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "支える仕組みがないとエージェントが崩れていく理由、PassionCode.ai が拠りどころとする4つの原則、そして1つのエージェントがチーム、組織へと育つ道筋を紹介します。ローカルファースト、オープンソースで、Claude Code や Codex、そしてその先のツールの上で動きます。",
+    "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "エージェントが働き続けるために必要なもの、1つのエージェントがチーム、組織へと育つ道筋、そして今日使えるもの。",
+    "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "エージェントが働き続けるために必要なもの、PassionCode.ai が拠りどころとする4つの原則、そして1つのエージェントがチーム、組織へと育つ道筋を紹介します。各段階には、今日使えるものか、目指す方向かを示しています。",
+    "No. It works on top of them. Your coding agent keeps doing the work; PassionCode.ai gives it a home, accounts, its state, memory and evidence, and lets the next agent join the same project.": "いいえ。その上で動きます。作業はこれまでどおりコーディングエージェントが行い、PassionCode.ai はそのエージェントに、拠点、アカウント、状態、メモリ、証跡を与え、次のエージェントが同じプロジェクトに加われるようにします。",
+    "Agents are easy to start and hard to keep. We are building what holds them together, so each new agent makes the others stronger": "エージェントは始めるのは簡単でも、続けるのは難しいものです。私たちは、エージェントをつなぎとめる仕組みを作っています。新しいエージェントが加わるたびに、ほかのエージェントも強くなるように",
+    "What holds an agent": "エージェントを支えるもの",
+    "01 / WHAT HOLDS AN AGENT": "01 / エージェントを支えるもの",
+    "in any one function. An agent built alone forgets between sessions and loses track of its accounts. It leaves no record of what it did, and the next agent knows nothing about it. We call what holds it together": "です。単独で作られたエージェントは、セッションが変わると忘れ、自分のアカウントも見失います。何をしたかの記録を残さず、次のエージェントはそのことを何も知りません。エージェントをつなぎとめるものを、私たちはこう呼んでいます。",
+    "a harness": "ハーネス（harness）",
+    ": everything around a model that keeps an agent working over time. The labs use the word too:": "：モデルを取り巻き、エージェントが長く働き続けられるようにするものすべてです。主要なAIラボもこの言葉を使っています：",
+    "State and control": "状態とコントロール",
+    "Every agent service, what it is doing and what it spends, in one window that people and agents can drive. That is Fabric Dashboards.": "すべてのエージェントサービスについて、何をしているか、どれだけ使っているかを、人もエージェントも操作できる1つのウィンドウで確認できます。それが Fabric Dashboards です。",
+    "A run leaves evidence you can open, and Observatory keeps it today. Retrospectives that turn it into lessons the next agent learns from are the direction.": "実行は開いて確かめられる証跡を残し、今日は Observatory がそれを保管しています。それを次のエージェントが学べる教訓に変える振り返りは、これから目指す方向です。",
+    "The same setup grows from one person to a whole organization. Each stage says whether it works today or is where we are building.": "同じ仕組みが、1人から組織全体へと育っていきます。各段階には、今日使えるものか、開発中の方向かを示しています。",
+    "How it works, step 3": "使い方：ステップ3",
+    "How it works, step 5": "使い方：ステップ5",
+    "Agents kept in good order": "整った状態に保たれるエージェント",
+    "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards が各エージェントの状態と支出を示し、ツールは自動で更新され、Observatory が変更を記録します。エージェント同士が見守り合うことは、これから目指す方向です。",
+    "How it works, step 6": "使い方：ステップ6",
+    "Your agents start": "エージェントは、"
   }
 }

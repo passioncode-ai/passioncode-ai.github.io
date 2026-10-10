@@ -177,6 +177,7 @@
     "02 / WHAT IT SAVES": "02 / 削減できるもの",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "チームが毎月これらのプロセスに費やす時間に、エージェントが引き受けられそうな割合と、1時間あたりのコストを掛けたものです。",
     "03 / REQUEST": "03 / ご依頼",
-    "04 / QUESTIONS": "04 / よくある質問"
+    "04 / QUESTIONS": "04 / よくある質問",
+    "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "1人のノートPCにいるエージェントは、その1人しか助けません。組織のマシンにエージェントを導入し、つなぎ、何をしているかが見える状態にします。オープンソースのツールで、データはお客様のマシンまたは自社クラウドに置かれます"
   }
 }

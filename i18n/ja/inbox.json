@@ -67,6 +67,14 @@
     ". It began as Cloudflare’s Agentic Inbox template, which keeps its own Apache-2.0 notice. The": "から入手できます。もとはCloudflareのAgentic Inboxテンプレートで、そのApache-2.0の表示はそのまま残しています。",
     "includes the source, tests and release notes.": "にソース、テスト、リリースノートが含まれます。",
     "Is Inbox the Fabric agent?": "InboxはFabricのエージェントですか？",
-    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "いいえ。Inboxはメールクライアントで、そのエージェントはあなたが決めたルールの範囲でアドレスに対応します。"
+    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "いいえ。Inboxはメールクライアントで、そのエージェントはあなたが決めたルールの範囲でアドレスに対応します。",
+    "Bring Gmail and Cloudflare mailboxes into one list, important mail first. Agents for your own domains answer what you allow and leave the rest as a draft": "GmailとCloudflareのメールボックスを1つのリストにまとめ、大事なメールを先頭に表示します。お持ちのドメインのエージェントは、許可した内容にだけ返信し、残りは下書きとして残します",
+    "IN THE TOOLKIT": "ツールキットの一員",
+    "Mail: the addresses agents read and answer within the policy you set. Step 5 of": "メール：エージェントが読み、あなたが決めたポリシーの範囲で返信するアドレス。",
+    "how it works": "使い方のステップ5です",
+    "All the tools": "すべてのツール",
+    "02 / THE PASSIONCODE TOOLKIT": "02 / PASSIONCODEツールキット",
+    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inboxはメールを扱います。SwitchboardはClaude CodeとCodexのアカウントを管理します。Project Observatoryは、それらのエージェントが作業するプロジェクトを見渡せるようにします。早期プレビュー版のFabricは、プロジェクトとそのエージェントのための拠点です。",
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "は早期プレビュー版で、プロジェクトとそのエージェントのための拠点です。同じツールキットに属し、役割が異なります。"
   }
 }

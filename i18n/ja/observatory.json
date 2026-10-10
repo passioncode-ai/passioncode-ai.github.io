@@ -18,7 +18,7 @@
     "Synthetic demo estate · no real projects, repositories or credentials": "合成データによるデモ環境 · 実際のプロジェクト、リポジトリ、認証情報は含みません",
     "A LOCAL OBSERVATORY": "ローカルの OBSERVATORY",
     "Less guessing": "推測を減らし、",
-    "More evidence at a glance": "根拠を一目で確認",
+    "More evidence at a glance": "証跡を一目で確認",
     "01 / INVENTORY": "01 / 一覧",
     "Know what exists": "何があるかを把握",
     "Choose the project folder you want to observe. Observatory finds the repositories inside it and keeps a local registry, with the rule behind every link.": "観察したいプロジェクトのフォルダを選びます。Observatory がその中のリポジトリを見つけ、ローカルのレジストリを保持します。各リンクの根拠となるルールも確認できます。",
@@ -27,7 +27,7 @@
     "Commits, working-tree state and work that exists only on this machine, across every project in scope, with the week-by-week shape of each.": "対象範囲のすべてのプロジェクトについて、コミット、作業ツリーの状態、このマシンにしかない作業を確認でき、各プロジェクトの週ごとの推移も分かります。",
     "03 / FINDINGS": "03 / 検出事項",
     "Start with what matters": "重要なものから確認",
-    "Findings come with their evidence and a next step, ordered from critical to info. Silenced findings keep who silenced them, when and why.": "検出事項には根拠と次のステップが付き、重大から情報の順に並びます。無効化された検出事項には、誰が、いつ、なぜ無効化したかが残ります。",
+    "Findings come with their evidence and a next step, ordered from critical to info. Silenced findings keep who silenced them, when and why.": "検出事項には証跡と次のステップが付き、重大から情報の順に並びます。無効化された検出事項には、誰が、いつ、なぜ無効化したかが残ります。",
     "04 / KEYS": "04 / キー",
     "Find copies of known keys": "既知のキーのコピーを見つける",
     "Credential metadata stays separate from values. Selected transcripts, logs and SQLite stores are compared with keys already known locally; findings never repeat a value.": "認証情報のメタデータは値とは別に保持されます。選択したトランスクリプト、ログ、SQLite ストアを、ローカルで既知のキーと照合します。検出事項に値が繰り返し表示されることはありません。",
@@ -76,7 +76,13 @@
     "Yes. Project Observatory is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from": "はい。Project Observatory は GNU AGPL-3.0 のオープンソースです。AGPL の対象外となる利用には、商用ライセンスをご用意しています：",
     "Released versions keep their license: 0.8.1 and earlier under MIT, 0.8.2 to 0.9.1 under PolyForm Noncommercial or Internal Use.": "リリース済みのバージョンは、そのライセンスのままです。0.8.1 以前は MIT、0.8.2 から 0.9.1 までは PolyForm Noncommercial または Internal Use です。",
     "includes the source, tests, the security model and release notes.": "には、ソース、テスト、セキュリティモデル、リリースノートが含まれます。",
-    "Your projects, your evidence": "あなたのプロジェクト、あなたの根拠",
-    "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "プライベートワークスペースを設定し、ご自身のフォルダを観察して、改善が必要な点をお知らせください。"
+    "Your projects, your evidence": "あなたのプロジェクト、あなたの証跡",
+    "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "プライベートワークスペースを設定し、ご自身のフォルダを観察して、改善が必要な点をお知らせください。",
+    "See what changed across your agents’ projects and what needs you first, including where a known API key left a copy, in a local dashboard available in English or Russian": "エージェントが扱うプロジェクトで何が変わり、まず何に対応すべきかを、既知の API キーのコピーが残る場所も含めて、英語またはロシア語で使えるローカルダッシュボードで確認できます",
+    "IN THE TOOLKIT": "ツールキットの一員",
+    "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "メモリと証跡：各プロジェクトで何が変わり、何が決まり、何に対応が必要かを確認できます。",
+    "how it works": "使い方のステップ 5 です",
+    "All the tools": "すべてのツール",
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "早期プレビュー版の Fabric は、プロジェクトとそのエージェントのための拠点です。Observatory は、別のローカルツールとして今すぐ使えます。"
   }
 }
