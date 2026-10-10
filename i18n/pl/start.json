@@ -72,6 +72,15 @@
     ", a separate open-source skill from the": ", odrębny skill na otwartym kodzie z rodziny",
     "sshlg-skills": "sshlg-skills",
     "task-pipeline on GitHub": "task-pipeline na GitHubie",
-    "· it is not part of PassionCode.ai and needs nothing from it": "· nie jest częścią PassionCode.ai i niczego od niego nie wymaga"
+    "· it is not part of PassionCode.ai and needs nothing from it": "· nie jest częścią PassionCode.ai i niczego od niego nie wymaga",
+    "Stop building agents that rot and don’t talk to each other. Five steps, about twenty minutes, each useful on its own": "Koniec z agentami, które gniją i nie rozmawiają ze sobą. Pięć kroków, około dwudziestu minut, a każdy przydaje się sam z siebie",
+    "The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key.": "Launcher PassionCode.ai instaluje skille Fabric Agent Adapter, Observatory Log i zasady pracy w Twoim agencie do programowania. Bez konta i bez klucza.",
+    "· restart your agent afterwards · automatic updates are on;": "· po instalacji uruchom agenta ponownie · automatyczne aktualizacje są włączone;",
+    "Build the next agent the same way and give it the same project in Fabric. Claude Code, Kilo Code and Hermes Agent started from Fabric share that project’s board, memory and hand-offs, so one picks up where the other stopped.": "Zbuduj następnego agenta w ten sam sposób i daj mu ten sam projekt w Fabric. Claude Code, Kilo Code i Hermes Agent uruchomione z Fabric dzielą tablicę, pamięć i przekazania tego projektu, więc jeden podejmuje pracę tam, gdzie skończył drugi.",
+    "Which agents connect today": "Którzy agenci łączą się dziś",
+    "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "– prowadzi każdą zmianę od zlecenia do odbioru i nie idzie dalej, dopóki nie przejdzie każda kontrola.",
+    "Every product repository is public and names its test command in": "Repozytorium każdego produktu jest publiczne, a polecenie do testów podano w",
+    ". Follow the organization’s": ". Zastosuj się do pliku",
+    "and open a pull request; opening it is your agreement to the repository’s": "organizacji i otwórz pull request; jego otwarcie oznacza Twoją zgodę na zapisy z pliku"
   }
 }
