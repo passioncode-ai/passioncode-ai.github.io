@@ -181,6 +181,7 @@
     "02 / WHAT IT SAVES": "02 / O QUE ECONOMIZA",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "As horas que a sua equipe gasta por mês nos processos, vezes a parte que os agentes poderiam assumir de forma realista, vezes o quanto custa uma hora.",
     "03 / REQUEST": "03 / SOLICITAÇÃO",
-    "04 / QUESTIONS": "04 / PERGUNTAS"
+    "04 / QUESTIONS": "04 / PERGUNTAS",
+    "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "Um agente que vive no notebook de uma pessoa ajuda uma pessoa. Levamos agentes para as máquinas da sua organização, conectamos todos e mostramos o que eles fazem, com ferramentas de código aberto e com os seus dados nas suas máquinas ou na sua própria nuvem"
   }
 }
