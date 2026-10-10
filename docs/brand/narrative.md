@@ -1,9 +1,9 @@
 Contract: brand-contract v1
 # Narrative: the message house for passioncode.ai
 
-Status: **draft, waiting for the operator's approval** (plan [W1](../tasks/2026-10-10-narrative-l10n-video.md#3-workstreams),
-backlog SITE-028). Nothing here changes a page yet: W6 (structure) and W7 (en and ru copy) apply it once it is
-approved. Every term marked **DECISION NEEDED** has a recommendation and alternatives; the operator picks one.
+Status: **approved by the operator on 2026-10-10**, with the six terms decided as recorded in §6 (D-T1…D-T6)
+(plan [W1](../tasks/2026-10-10-narrative-l10n-video.md#3-workstreams), backlog SITE-028). W6 (structure) and W7 (en
+and ru copy) apply it; W8 and W9 carry it into the other languages through the saved Tone of Voice (§8).
 
 This file says *what* the site says and in which order. [voice.md](voice.md) says *how* it sounds,
 [terminology.md](terminology.md) holds the words once decided, and [facts.md](facts.md) holds every number and
@@ -81,8 +81,8 @@ release yet (`gh release view v0.3.4` → not found), so the site still offers 0
 operator and W4; this change does not touch the download.
 
 Two lists of six on one site would confuse. The **journey** (this table) is how one person gets started, and it
-belongs on home and /start/. The **path** on /vision/ (one agent → two agents that talk → a chain → a family that
-looks after itself → a team → an organization) is how the work grows over months. W6 keeps the path on /vision/
+belongs on home and /start/. The **path** on /vision/ (one agent → two agents that talk → a chain → agents that
+look after each other → a team → an organization; "a family" became "agents" with D-T4) is how the work grows over months. W6 keeps the path on /vision/
 only, and names each path stage's journey step where they meet (path 1 = step 3, path 2 = step 5, path 6 =
 step 6).
 
@@ -120,7 +120,7 @@ Each page answers one question first. Anything that answers another question lin
 
 ### Words we own
 
-One action, one name, in every language. Where the en and ru columns disagree with a page, the page changes in W7.
+One action, one name, in every language. Where the en and ru columns disagree with a page, the page changes in W7. The six terms decided on 2026-10-10 are added at the end of the table.
 
 | English | Русский | Use for | Note |
 |---|---|---|---|
@@ -128,7 +128,7 @@ One action, one name, in every language. Where the en and ru columns disagree wi
 | project | проект | the axis every agent works for | |
 | coding agent | агент для программирования | Claude Code, Codex and the others that build agents | |
 | create an agent | создать агента | Fabric's first agent action, the `creating-fabric-agents` skill | |
-| adapt an agent | адаптировать агента | Fabric's second agent action, the `adapting-projects-to-fabric` skill | **Recommended:** "adapt", Fabric 0.3.3's own button ("Adapt an existing agent"), in place of "convert" on home and /start/. Russian already says «адаптировать» |
+| adapt an agent | адаптировать агента | Fabric's second agent action, the `adapting-projects-to-fabric` skill | "Adapt" (approved with the narrative, 2026-10-10), Fabric 0.3.3's own button ("Adapt an existing agent"), in place of "convert" on home and /start/. Russian already says «адаптировать» |
 | available now / preview / direction | доступно сейчас / предварительная версия / направление | the label on every step, stage and tool | |
 | open source under the GNU AGPL-3.0 | открытый код под GNU AGPL-3.0 | the license, every language | |
 | on your machines | на ваших машинах | where it runs | |
@@ -136,6 +136,11 @@ One action, one name, in every language. Where the en and ru columns disagree wi
 | board, hand-off | доска задач, передача работы | what agents share in a Fabric project | glossary: передача |
 | account, limit | аккаунт, лимит | Switchboard | glossary: not «учётная запись» |
 | estimate | оценка | the /business/ arithmetic | never "savings" |
+| evidence | подтверждения | what an agent's work and a release leave behind | D-T2 |
+| state | состояние | what is running, what needs you, what it costs | D-T3 |
+| the tools; your agents; IN THE TOOLKIT | инструменты; ваши агенты; В НАБОРЕ | products; a person's agents; the product pages' label | D-T4 |
+| Fabric, the home for your projects and their agents | Fabric — дом для ваших проектов и их агентов | Fabric, on every page but the one /fabric/ line that names the CEO direction | D-T5 |
+| skills | навыки (first use «навыки (skills)») | the adapter's skills | D-T6 |
 
 ### Words we ban
 
@@ -151,94 +156,50 @@ One action, one name, in every language. Where the en and ru columns disagree wi
 | revolutionary, game-changing, unlock, supercharge, leverage | революционный, раскройте потенциал, инновационный, уникальный | filler with no fact | the fact |
 | Fabric coordinates your agents (as a present fact) | Fabric координирует ваших агентов | the conversation does not reply yet; coordination is direction | what Fabric keeps today: the project, the board, hand-offs |
 
-### DECISION NEEDED: six terms
+### Decided: six terms (operator, 2026-10-10)
 
-The operator decides each one. The recommendation is listed first; W7 applies the choice and
-[terminology.md](terminology.md) records it.
+The operator decided all six on 2026-10-10; [terminology.md](terminology.md#decided-terms-operator-2026-10-10) holds
+them as rules. Russian measured in `i18n/ru/*.json` on `6e62d8f` showed why they needed a decision: "evidence" was
+rendered four ways («подтверждения», «доказательства», «следов», «основание») and "health" two ways («здоровье»,
+«контроль состояния»).
 
-Russian measured in `i18n/ru/*.json` on `6e62d8f` shows why these need a decision: "evidence" is rendered four
-ways («подтверждения» home, vision; «доказательства» vision, observatory; «следов» home, vision; «основание»
-observatory), and "health" two ways («здоровье» home, vision; «контроль состояния» vision FAQ).
-
-**D-T1 · "harness" — DECISION NEEDED**
-- **Recommendation:** name it once, on /vision/ only, where it is defined and the labs' use of the word is
-  linked ([facts.md](facts.md) row *harness*). Everywhere else, say what it does: "what keeps an agent working:
-  its home, its accounts, its memory and a record of what it did". Russian on /vision/: «обвязка» with
-  «(harness)» once, then «обвязка»; nowhere else.
-- Alternative A: keep "harness" on home as today ("Without a harness, agents rot"), and add a one-line
-  definition beside it.
-- Alternative B: replace it everywhere with "the workplace" (the hero's own word), and drop «обвязка» from
-  Russian altogether.
-
-**D-T2 · "evidence" — DECISION NEEDED**
-- **Recommendation:** English keeps "evidence" for what an agent's work leaves behind, and says what it is
-  the first time on a page (commits, files, checks). Russian: «следы работы» for that sense, everywhere;
-  «подтверждение» only for a release's proof (a signature, a checksum, a notarization receipt). Drop
-  «доказательства» and «основание» from the site.
-- Alternative A: Russian «подтверждения» everywhere, as the home page says today.
-- Alternative B: English "record", Russian «журнал работы»: plainer, but loses the sense that it proves
-  something.
-
-**D-T3 · "health" — DECISION NEEDED**
-- **Recommendation:** English "state", Russian «состояние»: what is running, what needs you, what it costs.
-  This is the word the Dashboards page already uses ("Service state"), so the site agrees with the product.
-- Alternative A: keep "health" (an ops word builders know), Russian «работоспособность» in place of
-  «здоровье».
-- Alternative B: "status and spend", Russian «статус и расходы»: concrete, but two words where one was.
-
-**D-T4 · "family" — DECISION NEEDED**
-- **Recommendation:** stop using one word for two things. The tools are "the tools" (Russian «инструменты»);
-  the product pages' "IN THE FAMILY" line becomes "IN THE TOOLKIT" («В НАБОРЕ»). A person's agents are "your
-  agents" («ваши агенты»).
-- Alternative A: keep "family" for the agents only (Russian «семья агентов»), and "the tools" for the tools.
-- Alternative B: "fleet" for the agents (Russian «парк агентов», as in «автопарк»).
-
-**D-T5 · "CEO AI agent" — DECISION NEEDED**
-- **Recommendation:** lead with what Fabric does today: "Fabric, the home for your projects and their agents"
-  (Russian «Fabric — дом для ваших проектов и их агентов»). Keep "CEO AI agent" as the direction, once, on
-  /fabric/: "we are building it to act as the CEO of your agents". The conversation does not reply yet, so a
-  role title that implies it leads reads as more than the release does. Changing the name touches the guarded
-  [facts.md](facts.md) row *CEO name and status*, so the operator's choice is applied there under lease.
-- Alternative A: keep "the CEO AI agent" as the category name everywhere (memorable, already in every
-  language), always with "early preview" beside it.
-- Alternative B: "coordinator agent" (Russian «агент-координатор»): accurate for the direction, less
-  distinctive.
-
-**D-T6 · "skills" in Russian — DECISION NEEDED**
-- **Recommendation:** «навыки», with «навыки (skills)» at first use on /start/ and wherever the reader installs
-  them, because Claude Code and Codex print "skills". «Навыки» is already the ordinary Russian word for an
-  assistant's add-on abilities, so it needs no explaining.
-- Alternative A: keep the borrowed word. If so, spell it «скиллы» (double л, as the English transliteration
-  keeps it) or keep the site's current «скилы», one spelling everywhere.
-- Alternative B: «скилы» in instructions and commands (/start/), «навыки» in running prose (home, /vision/).
+| ID | Term | Decision | Against the recommendation |
+|---|---|---|---|
+| D-T1 | harness | Say it in the reader's words everywhere ("what keeps an agent working: its home, its accounts, its memory and a record of what it did"). "Harness" is named and defined **once, on /vision/ only**, with the labs' use linked; Russian there «обвязка (harness)» once, nowhere else | as recommended |
+| D-T2 | evidence | English "evidence". Russian **«подтверждения» everywhere**: one word for an agent's record and a release's proof alike. «доказательства», «основание» and «следы работы» leave the site | the operator chose Alternative A over the recommended «следы работы» |
+| D-T3 | health | English "state", Russian «состояние»: what is running, what needs you, what it costs (the word the Dashboards page already uses) | as recommended |
+| D-T4 | family | Products are "the tools" («инструменты»); the product pages' "IN THE FAMILY" label becomes "IN THE TOOLKIT" («В НАБОРЕ»); a person's agents are "your agents" («ваши агенты») | as recommended |
+| D-T5 | CEO AI agent | Lead with what Fabric does today: "Fabric, the home for your projects and their agents" («Fabric — дом для ваших проектов и их агентов»). "CEO" appears once, on /fabric/, as direction: "we are building it to act as the CEO of your agents". [facts.md](facts.md) row *CEO name and status* updated under lease the same day | as recommended |
+| D-T6 | skills (ru) | «навыки»; the first use on a page is «навыки (skills)», because Claude Code and Codex print "skills" | as recommended |
 
 ## 7. What changes on each page (for W6 and W7)
 
-A list of changes, not new copy. Copy is written in W7 once this file is approved.
+A list of changes, not new copy. W7 writes the copy from this list.
 
 | Page | Changes |
 |---|---|
 | `/` home | Hero unchanged. `<title>` and meta line up under the hero (§1). §Why: the problem in the reader's words (§2) in place of "Without a harness, agents rot". New "How it works" section: the six journey steps with one screenshot each (W5) and the label per step. The tool list maps each tool to its step. "Converts" → "adapts" (§6). The three proofs (§4) replace the three Why cards. D-T1, D-T2, D-T3, D-T5 applied |
 | `/vision/` | Keeps the four parts. "Harness" named and defined once (D-T1); the four parts say "state" and "evidence" per D-T2 and D-T3. The path stays; each stage names its journey step (§3). Russian: no calques, one term per sense |
-| `/start/` | The five steps follow journey steps 1–5. Step 2 shows Fabric's four actions (0.3.3) and says the agent work runs in the coding agent's console. "Convert" → "adapt". Fresh-install note until Fabric 0.3.4 is released (§3). Russian «скилы» per D-T6 |
+| `/start/` | The five steps follow journey steps 1–5. Step 2 shows Fabric's four actions (0.3.3) and says the agent work runs in the coding agent's console. "Convert" → "adapt". Fresh-install note until Fabric 0.3.4 is released (§3). Russian «навыки (skills)» per D-T6 |
 | `/business/` | Answers one question (§5): the problem in an organization's words, then what we set up, the estimate, the form. Shorter prose before the form (plan N6). "CEO AI agent" per D-T5 |
 | `/fabric/` | Leads with the four actions (preview) and the project home; screenshots of onboarding (SCR-70, -74, -75) from W5; the operating loop stays as direction; the conversation's limit stays in the hero area. D-T5 |
-| `/fabric/agents/` | No change of message; "family" per D-T4 |
-| `/switchboard/`, `/dashboards/`, `/observatory/`, `/inbox/` | Each opens with its one question (§5) and names its journey step. "IN THE FAMILY" per D-T4. Dashboards: "health" per D-T3. Observatory: "evidence/proof" per D-T2. 2–3 screenshots each (W6) |
+| `/fabric/agents/` | No change of message; "family" per D-T4 ("your agents", "the tools") |
+| `/switchboard/`, `/dashboards/`, `/observatory/`, `/inbox/` | Each opens with its one question (§5) and names its journey step. "IN THE FAMILY" per D-T4. Dashboards: "health" per D-T3. Observatory: "evidence" / «подтверждения» per D-T2. 2–3 screenshots each (W6) |
 | All languages | W8 and W9 translate from the approved English; the voice draft below carries the locale registers |
 
-## 8. Tone of Voice draft (W2)
+## 8. Tone of Voice (W2)
 
-The PassionCode.ai Tone of Voice is drafted in our copy tool, **not saved**: saving waits for the operator's
-approval of this narrative. The tool is internal and never named on a public page or in `llms.txt`.
+The PassionCode.ai Tone of Voice is **saved** (2026-10-10), after the operator approved this narrative. It lives in
+our copy tool, which is internal and never named on a public page or in `llms.txt`. The receipt is in
+[voice.md](voice.md#saved-tone-of-voice-2026-10-10).
 
 | Field | Value |
 |---|---|
-| Draft resourceId | `b4f63ab7-b080-406c-8cc8-9b20735163b0` |
-| Draft revision | 1 (content hash `9a11dda242926aa1b3a5ffd5e61681e170ef7739236434f3c9562323b545dcdd`, operation `a832a2b5-89c4-4f84-93f1-76fccaf492ff`, 2026-10-10) |
-| Saved voice | none: not saved on purpose. After approval, `voices.save` takes this resourceId with expected revision 1, and the saved `voiceId` goes into [voice.md](voice.md) (plan W2 "done when") |
-| Contents | primary locale en-US; the five axes and twelve secondary traits; 28 rules and 32 bans; 44 lexicon entries (every product name do-not-translate, in each of the ten locales; license wording required and the banned phrases forbidden per locale); overlays for ru-RU, de-DE, fr-FR, pl-PL, ko-KR, es-ES, pt-BR, ja-JP, zh-Hans-CN; channels web and ui; 4 positive examples from the live site and 4 negative (two live, two constructed) |
-| Built from | [voice.md](voice.md) axes, locale registers and bans; this file's words and proofs; `i18n/<code>/_checks.json` banned phrases and license wording |
+| Saved voice | "PassionCode.ai — site voice", voiceId `c2ca25b8-aad6-4e92-9ada-b3b8a880cc7e`, version 1, content hash `29392ff21493342a027f022b41de081f5bcc1e432c5f849778412b85a1c4808d` |
+| Saved from | a new draft, `bd778985-6cfe-4ea9-a99b-c6413fecec85` revision 1, re-derived from this file and [voice.md](voice.md) with the six decided terms (§6). The review draft `b4f63ab7-b080-406c-8cc8-9b20735163b0` revision 1 (operation `a832a2b5-89c4-4f84-93f1-76fccaf492ff`) predates the decisions and was not saved |
+| Contents | primary locale en-US; the five axes and twelve secondary traits; 28 rules and 32 bans; 42 lexicon entries (every product name do-not-translate, the license wording required and the banned phrases forbidden, in each of the ten locales; the decided terms preferred and their rejected forms forbidden in en-US and ru-RU); overlays for ru-RU, de-DE, fr-FR, pl-PL, ko-KR, es-ES, pt-BR, ja-JP, zh-Hans-CN; channels web and ui; 4 positive examples (the hero, the problem in en and ru, Fabric today) and 4 negative (one live, three constructed) |
+| Built from | [voice.md](voice.md) axes, locale registers and bans; this file's words, decided terms and proofs; `i18n/<code>/_checks.json` banned phrases and license wording |
+| Used by | every W7 copy check (`voiceRef {voiceId, version: 1}`), and W8/W9 translations |
 
 Registers measured in `i18n/<code>/*.json` on `6e62d8f` and carried into the draft's locale overlays: ru «вы»
 (lowercase); de du; fr vous; pl ty (Twój, capitalised as in a letter); es tú (167 forms of tu/tus, no usted);

@@ -150,7 +150,7 @@ done).
   each page for W6 and W7. Linked from [`voice.md`](../brand/voice.md) and the brand
   [README](../brand/README.md). `terminology.md` is not changed until the operator decides D-T1…D-T6.
 - **W2 drafted, not saved.** Voice draft `b4f63ab7-b080-406c-8cc8-9b20735163b0`, revision 1
-  ([narrative §8](../brand/narrative.md#8-tone-of-voice-draft-w2)). `voices.save` waits for the narrative's approval.
+  ([narrative §8](../brand/narrative.md#8-tone-of-voice-w2)). `voices.save` waits for the narrative's approval.
 - **Found while writing, for the operator and W4:** Fabric's `CHANGELOG.md` §0.3.4 says a fresh install of
   0.2.0–0.3.3 stops before its first window; 0.3.4 has a tag and no GitHub release on 2026-10-10, and the site
   offers 0.3.3. [`facts.md`](../brand/facts.md) row *Fabric release* still describes 0.3.2 while
@@ -158,6 +158,20 @@ done).
 - **Next task:** the operator reads `narrative.md` and answers D-T1…D-T6; then W1 records the answers in
   `terminology.md` (and, for D-T5, the guarded `facts.md` row *CEO name and status* under lease), W2 saves the
   voice with expected revision 1 and records the `voiceId` in `voice.md`, and W6/W7 start from narrative §7.
+
+### Status: W1 approved, W2 saved (2026-10-10)
+
+- **W1 approved.** The operator approved the narrative on 2026-10-10 and decided D-T1…D-T6: "harness" named once
+  on /vision/ only; "evidence" with Russian «подтверждения» everywhere (over the recommended «следы работы»);
+  "state" / «состояние»; "the tools", "your agents" and the label "IN THE TOOLKIT"; Fabric "the home for your
+  projects and their agents", with "CEO" once on /fabric/ as direction; Russian «навыки», first use «навыки (skills)».
+  Recorded in [`terminology.md`](../brand/terminology.md#decided-terms-operator-2026-10-10),
+  [`narrative.md`](../brand/narrative.md) §6, and the guarded [`facts.md`](../brand/facts.md) row *CEO name and
+  status* (under lease).
+- **W2 done.** A new draft was re-derived with these terms and saved as "PassionCode.ai — site voice", voiceId
+  `c2ca25b8-aad6-4e92-9ada-b3b8a880cc7e`, version 1 ([`voice.md`](../brand/voice.md#saved-tone-of-voice-2026-10-10)).
+  The earlier review draft was not saved.
+- **Next task:** W6 and W7 on a new branch from the updated `main`.
 
 ## 4. Decisions for the operator
 
