@@ -37,6 +37,30 @@ Not run, because the copy agent's generation model is not connected:
 
 The other eight languages have not been checked by any tool or person (SITE-026).
 
+### Other pages
+
+Run in W1 on `main` at `6e62d8f`: the internal copy tool's deterministic check, register `marketing`, no model, no charge. The text checked is
+the prose of each page's projection (`docs/brand/copy/<page>.md` and `ru-<page>.md`): the body from the `h1` to
+the footer, sentences only. Navigation, headings, labels, version and checksum lines, commands, the example
+prompts on /start/ and the /business/ form fields were left out. A heading glued to its paragraph by the
+projection ("Projects are the axisEvery agent…") was split with a full stop so it is not read as one word.
+
+| Page | Locale | Report id | Score | Findings |
+|---|---|---|---|---|
+| /vision/ | en-US | `e2517320-d4a0-4522-b669-4ee82e4c46e5` | 100, pass | 3 × rule of three (`en-rule-of-three`). 0 clichés per 1 000 words (baseline 1,5) |
+| /vision/ | ru-RU | `4f726d16-c472-498c-90a5-d045a8a94a89` | 100, pass | 20 × no-break space after a short word (`ru-nbsp-short-word`, safe patches); 4 × no-break space before a particle (`ru-nbsp-particle`, safe patches); 3 × rule of three; 2 × «X — это» (`ru-x-eto`: «Обвязка (harness) — это», «Проекты — это»); 1 × "AGPL" as all caps (`ru-allcaps`, a false positive for a licence name). 2,15 clichés per 1 000 words (baseline 2) |
+| /start/ | en-US | `1591ca74-b27d-4322-bc16-9f54b265dea0` | 93, pass (weakest: sentence rhythm) | 3 × rule of three. 0 clichés |
+| /start/ | ru-RU | `91a7310a-6d9c-4a06-a181-8bd30c334179` | 93,4, pass (weakest: sentence rhythm) | 20 × `ru-nbsp-short-word`; 2 × `ru-nbsp-particle`; 3 × rule of three. 0 clichés |
+| /business/ | en-US | `e475b202-17a9-4ccf-ad31-ae937af1b969` | 100, pass | 3 × rule of three. 0 clichés |
+| /business/ | ru-RU | `962f9315-f509-49ec-b18f-4b17dd6b164d` | 100, pass | 20 × `ru-nbsp-short-word`; 1 × `ru-nbsp-particle`; 2 × rule of three; 2 × chain of «который» (`ru-kotory-chain`); 1 × "AGPL" all caps (false positive). 0 clichés |
+
+No finding blocks. Every Russian report lists exactly 20 `ru-nbsp-short-word` findings, the same as the home page
+above, which suggests a per-rule cap rather than a count; W7 applies the safe patches and re-runs the check until
+none are left. `native-naturalness` and `claim-evidence` were not run (no generation model connected). What the
+findings mean for the narrative: the Russian «X — это» definition and «гниют» belong to the vocabulary W1 replaces
+([narrative §6](../brand/narrative.md#6-words-we-own-words-we-ban)); the rules of three are rhythm to review in W7,
+not errors.
+
 ### Narrative
 
 Our reading, using the `copywriting` doctrine of the super-ux skill family:
@@ -118,6 +142,37 @@ Critical path: W1 → W2 → W7 → W8/W9 → W11; W4 → W5 → W6/W10 runs bes
 W9; if it stays off, W7 is written by us and W8 by agents with `copy-agent.check` as the gate (the way PR #80 was
 done).
 
+### Status: W1 and W2 (2026-10-10, branch `agent/site-w1-narrative`)
+
+- **W1 drafted, waiting for the operator.** [`docs/brand/narrative.md`](../brand/narrative.md): the promise
+  (hero verbatim), the problem in the reader's words, the six steps with labels and proof, three proofs, one
+  question per page, words we own and ban, six terms marked DECISION NEEDED (D-T1…D-T6), and what changes on
+  each page for W6 and W7. Linked from [`voice.md`](../brand/voice.md) and the brand
+  [README](../brand/README.md). `terminology.md` is not changed until the operator decides D-T1…D-T6.
+- **W2 drafted, not saved.** Voice draft `b4f63ab7-b080-406c-8cc8-9b20735163b0`, revision 1
+  ([narrative §8](../brand/narrative.md#8-tone-of-voice-w2)). `voices.save` waits for the narrative's approval.
+- **Found while writing, for the operator and W4:** Fabric's `CHANGELOG.md` §0.3.4 says a fresh install of
+  0.2.0–0.3.3 stops before its first window; 0.3.4 has a tag and no GitHub release on 2026-10-10, and the site
+  offers 0.3.3. [`facts.md`](../brand/facts.md) row *Fabric release* still describes 0.3.2 while
+  `fabric/release.json` is 0.3.3; the row is guarded and is updated under lease by whoever ships 0.3.4 to the site.
+- **Next task:** the operator reads `narrative.md` and answers D-T1…D-T6; then W1 records the answers in
+  `terminology.md` (and, for D-T5, the guarded `facts.md` row *CEO name and status* under lease), W2 saves the
+  voice with expected revision 1 and records the `voiceId` in `voice.md`, and W6/W7 start from narrative §7.
+
+### Status: W1 approved, W2 saved (2026-10-10)
+
+- **W1 approved.** The operator approved the narrative on 2026-10-10 and decided D-T1…D-T6: "harness" named once
+  on /vision/ only; "evidence" with Russian «подтверждения» everywhere (over the recommended «следы работы»);
+  "state" / «состояние»; "the tools", "your agents" and the label "IN THE TOOLKIT"; Fabric "the home for your
+  projects and their agents", with "CEO" once on /fabric/ as direction; Russian «навыки», first use «навыки (skills)».
+  Recorded in [`terminology.md`](../brand/terminology.md#decided-terms-operator-2026-10-10),
+  [`narrative.md`](../brand/narrative.md) §6, and the guarded [`facts.md`](../brand/facts.md) row *CEO name and
+  status* (under lease).
+- **W2 done.** A new draft was re-derived with these terms and saved as "PassionCode.ai — site voice", voiceId
+  `c2ca25b8-aad6-4e92-9ada-b3b8a880cc7e`, version 1 ([`voice.md`](../brand/voice.md#saved-tone-of-voice-2026-10-10)).
+  The earlier review draft was not saved.
+- **Next task:** W6 and W7 on a new branch from the updated `main`.
+
 ## 4. Decisions for the operator
 
 | ID | Question | Recommendation |
@@ -126,6 +181,17 @@ done).
 | D2 | Turn on the copy agent live generation (OpenRouter) for this work, under a spend cap | Yes, cap $30 for all site copy and translations |
 | D3 | Video voice and length | An AI narrator voice (ElevenLabs through the media pipeline) in en and ru, 75 s, 16:9, subtitles in 10 languages |
 | D4 | Who reviews Chinese | A paid native reviewer for zh-Hans, and community reviewers for the rest (SITE-026) |
+
+**Answers (operator, 2026-10-10):**
+- **D1:** the hero stays verbatim.
+- **D2:** live generation is on, with a $30 cap for all site copy and translations. Enabling it is coordinated with
+  the copy agent's owner.
+- **D3:** an AI narrator voice in en and ru.
+- **D4:** zh-Hans is translated by Chinese models and checked by agents only, with no human reviewer for now.
+
+Known blocker for step 1 (found by W1/W4): on a new Mac, Fabric 0.3.0–0.3.3 stops before its first window. 0.3.4
+fixes this, and it has a tag but no release yet. The site offers 0.3.3 until the 0.3.4 release lands. W5 captures
+from 0.3.4.
 
 ## 5. Constraints
 

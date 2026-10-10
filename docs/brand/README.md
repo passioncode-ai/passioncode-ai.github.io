@@ -6,7 +6,9 @@ Website projection of the PassionCode narrative, updated by the operator on 2026
 Sources:
   marketing: docs/brand/copy/*.md
 
-Files: [voice](voice.md), [terms](terminology.md), [facts](facts.md), [channels](channels.md), [strings](strings.md).
+Files: [voice](voice.md), [narrative](narrative.md), [terms](terminology.md), [facts](facts.md), [channels](channels.md), [strings](strings.md).
+
+[narrative.md](narrative.md) is the message house for the whole site: the promise (the home hero, verbatim), the problem in the reader's words, the six-step journey with what is available, preview or direction, three proofs, one question per page, and the words we own and ban. It is a draft until the operator approves it (plan [W1](../tasks/2026-10-10-narrative-l10n-video.md)).
 
 `copy/` is generated from static visible HTML text/metadata by `scripts/extract-public-copy.py`; HTML classes, dimensions and JSON-LD syntax are excluded from language lint. Heading levels and explicit headline breaks are retained as Markdown headings.
 The original HTML pages and projection freshness are checked by `npm run check`.
