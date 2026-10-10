@@ -18,6 +18,7 @@ Last calibrated: 2026-10-01
 | Density | one idea per section | a feature inventory in the headline |
 
 ## Narrative
+The full message house (promise, problem, journey, proofs, per-page jobs, words we own and ban) is [narrative.md](narrative.md), a draft for the operator's approval; the lines below are its summary for this pack.
 Hero: the builder or team working with AI agents.
 Enemy: account juggling and fragmented coordination.
 Product role: a composable workplace for agents: independent account, service, project and mail tools; Fabric is an early preview.
