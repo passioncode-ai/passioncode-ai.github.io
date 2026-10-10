@@ -168,6 +168,17 @@ done).
 | D3 | Video voice and length | An AI narrator voice (ElevenLabs through the media pipeline) in en and ru, 75 s, 16:9, subtitles in 10 languages |
 | D4 | Who reviews Chinese | A paid native reviewer for zh-Hans, and community reviewers for the rest (SITE-026) |
 
+**Answers (operator, 2026-10-10):**
+- **D1:** the hero stays verbatim.
+- **D2:** live generation is on, with a $30 cap for all site copy and translations. Enabling it is coordinated with
+  the copy agent's owner.
+- **D3:** an AI narrator voice in en and ru.
+- **D4:** zh-Hans is translated by Chinese models and checked by agents only, with no human reviewer for now.
+
+Known blocker for step 1 (found by W1/W4): on a new Mac, Fabric 0.3.0–0.3.3 stops before its first window. 0.3.4
+fixes this, and it has a tag but no release yet. The site offers 0.3.3 until the 0.3.4 release lands. W5 captures
+from 0.3.4.
+
 ## 5. Constraints
 
 - Every public claim needs a row in `docs/brand/facts.md`; preview and direction stay marked.
