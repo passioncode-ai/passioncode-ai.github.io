@@ -31,7 +31,7 @@
     "Commits, working-tree state and work that exists only on this machine, across every project in scope, with the week-by-week shape of each.": "범위에 포함된 모든 프로젝트의 커밋, 작업 트리 상태, 이 머신에만 있는 작업을 프로젝트별 주간 추이와 함께 보여 줍니다.",
     "03 / FINDINGS": "03 / 발견 항목",
     "Start with what matters": "중요한 것부터",
-    "Findings come with their evidence and a next step, ordered from critical to info. Silenced findings keep who silenced them, when and why.": "발견 항목에는 근거와 다음 단계가 함께 제공되며, 심각도 높음부터 정보까지 정렬됩니다. 무시 처리된 발견 항목에는 누가, 언제, 왜 무시했는지가 남습니다.",
+    "Findings come with their evidence and a next step, ordered from critical to info. Silenced findings keep who silenced them, when and why.": "발견 항목에는 증거와 다음 단계가 함께 제공되며, 심각도 높음부터 정보까지 정렬됩니다. 무시 처리된 발견 항목에는 누가, 언제, 왜 무시했는지가 남습니다.",
     "04 / KEYS": "04 / 키",
     "Find copies of known keys": "알려진 키의 사본 찾기",
     "Credential metadata stays separate from values. Selected transcripts, logs and SQLite stores are compared with keys already known locally; findings never repeat a value.": "자격 증명 메타데이터는 값과 분리되어 있습니다. 선택한 대화 기록, 로그, SQLite 저장소를 로컬에 이미 알려진 키와 비교하며, 발견 항목에는 값이 다시 나타나지 않습니다.",
@@ -92,6 +92,12 @@
     "OPEN SOURCE · LOCAL FIRST": "오픈 소스 · 로컬 우선",
     "Your projects, your evidence": "내 프로젝트, 내 증거",
     "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "비공개 워크스페이스를 만들고, 내 폴더를 관찰하고, 개선이 필요한 부분을 알려 주세요.",
-    "Report an issue": "문제 보고"
+    "Report an issue": "문제 보고",
+    "See what changed across your agents’ projects and what needs you first, including where a known API key left a copy, in a local dashboard available in English or Russian": "에이전트가 작업하는 프로젝트에서 무엇이 바뀌었는지, 무엇부터 내 확인이 필요한지, 알려진 API 키의 사본이 어디에 남았는지까지 영어 또는 러시아어로 쓸 수 있는 로컬 대시보드에서 확인하세요",
+    "IN THE TOOLKIT": "툴킷 안에서",
+    "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "메모리와 증거: 각 프로젝트에서 무엇이 바뀌었고, 무엇이 결정되었고, 무엇에 주의가 필요한지 보여 줍니다.",
+    "how it works": "작동 방식의 5단계입니다",
+    "All the tools": "모든 도구",
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "초기 프리뷰 단계인 Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. Observatory는 지금 별도의 로컬 도구로 사용할 수 있습니다."
   }
 }

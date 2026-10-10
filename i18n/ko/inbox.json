@@ -88,6 +88,14 @@
     "repository": "저장소",
     "includes the source, tests and release notes.": "에 있습니다.",
     "Is Inbox the Fabric agent?": "Inbox가 Fabric 에이전트인가요?",
-    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "아닙니다. Inbox는 메일 클라이언트이며, Inbox의 에이전트는 내가 정한 규칙 안에서 내 주소로 온 메일에 답합니다."
+    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "아닙니다. Inbox는 메일 클라이언트이며, Inbox의 에이전트는 내가 정한 규칙 안에서 내 주소로 온 메일에 답합니다.",
+    "Bring Gmail and Cloudflare mailboxes into one list, important mail first. Agents for your own domains answer what you allow and leave the rest as a draft": "Gmail과 Cloudflare 메일함을 하나의 목록으로 모으고, 중요한 메일을 먼저 보여 줍니다. 내 도메인의 에이전트는 허용한 메일에만 답하고 나머지는 초안으로 남깁니다",
+    "IN THE TOOLKIT": "툴킷 안에서",
+    "Mail: the addresses agents read and answer within the policy you set. Step 5 of": "메일: 에이전트가 정해 둔 정책 안에서 읽고 답하는 주소입니다.",
+    "how it works": "작동 방식의 5단계입니다",
+    "All the tools": "모든 도구",
+    "02 / THE PASSIONCODE TOOLKIT": "02 / PASSIONCODE 툴킷",
+    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox는 메일을 다룹니다. Switchboard는 Claude Code와 Codex 계정을 관리합니다. Project Observatory는 그 에이전트들이 작업하는 프로젝트를 한눈에 보여 줍니다. 초기 프리뷰 단계인 Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다.",
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "은 초기 프리뷰 단계이며, 내 프로젝트와 그 에이전트를 위한 집입니다. 둘은 같은 툴킷에 속하지만 역할이 다릅니다."
   }
 }

@@ -183,6 +183,7 @@
     "02 / WHAT IT SAVES": "02 / 절감되는 것",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "팀이 매달 이 프로세스에 쓰는 시간에, 에이전트가 현실적으로 맡을 수 있는 비율과 한 시간의 비용을 곱한 값입니다.",
     "03 / REQUEST": "03 / 요청",
-    "04 / QUESTIONS": "04 / 질문"
+    "04 / QUESTIONS": "04 / 질문",
+    "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "한 사람의 노트북에 있는 에이전트는 그 한 사람만 돕습니다. 조직의 컴퓨터에 에이전트를 들여와 서로 연결하고 무엇을 하는지 보여 드립니다. 오픈 소스 도구 위에서, 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다"
   }
 }
