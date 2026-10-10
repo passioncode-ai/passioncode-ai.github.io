@@ -78,7 +78,7 @@ CODEX CLI
 
 ## 选择你的平台
 
-最新版本：0.6.15。两个下载包都包含桌面应用和 switchboard CLI。
+最新版本：0.6.16。两个下载包都包含桌面应用和 switchboard CLI。
 
 ⌘
 
@@ -122,11 +122,11 @@ macOS 14 或更高版本，Apple 芯片或 Intel 均可。
 
 macOS ZIP · SHA-256
 
-1479f39c25ec2a410643cbed1143ee3552f9cfb5a072a9b2f6d501a50278bbc8
+df7b94a8843711d80891ec91e800585eb1fd4db1440c735975615d1f4d3c7905
 
 Windows ZIP · SHA-256
 
-418449ad2807828c09b1cfdf1e176bf83d44e10c28eb7fdbe4deaff9f4e33613
+dfba522d80e4153d45614a04506d8093c0c3374e9d23068b87f4ed29cf13c2a2
 
 打开前请比对：shasum -a 256（终端）、Get-FileHash（PowerShell）。值不同说明文件不同，请重新下载。
 
@@ -301,7 +301,7 @@ Switchboard 会发送数据吗？
 
 我可以自己查看或构建吗？
 
-可以。Switchboard 是基于 GNU AGPL-3.0 的开源软件。对于 AGPL 未涵盖的用途，可从以下地址获取商业许可证：passioncode.ai/business。截至 v0.3.1-beta.1（含）的版本以 MIT 许可证发布，并继续按该许可证提供。当前下载的版本 0.6.15，以 AGPL 发布。v0.4.0-beta.1 以 PolyForm Noncommercial or Internal Use 发布，并保持该许可证。 这个仓库包含构建说明、源代码、测试和发布证据。
+可以。Switchboard 是基于 GNU AGPL-3.0 的开源软件。对于 AGPL 未涵盖的用途，可从以下地址获取商业许可证：passioncode.ai/business。截至 v0.3.1-beta.1（含）的版本以 MIT 许可证发布，并继续按该许可证提供。当前下载的版本 0.6.16，以 AGPL 发布。v0.4.0-beta.1 以 PolyForm Noncommercial or Internal Use 发布，并保持该许可证。 这个仓库包含构建说明、源代码、测试和发布证据。
 
 PASSIONCODE 工具包的一部分
 

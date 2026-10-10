@@ -62,7 +62,7 @@ Dla Twojej organizacji
 
 ↗
 
-Otwarty kod na licencji AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
+Otwarty kod na licencji AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.6.7 · Observatory 0.21.0
 
 Konta
 
@@ -224,7 +224,7 @@ Wybieraj konto, na którym pracuje każdy agent, mając limity zużycia przed oc
 
 Wydanie
 
-0.6.15
+0.6.16
 
 · macOS + Windows · krok 4
 
@@ -260,7 +260,7 @@ Poczta Gmail i Cloudflare na jednej liście, ważne na górze; agenci odpowiadaj
 
 Wersja zapoznawcza w rozwoju
 
-0.13.0
+0.14.0
 
 · macOS · krok 5
 
@@ -272,7 +272,7 @@ Jedna komenda instaluje skille, które uczą agentów budować z Fabric.
 
 CLI
 
-0.1.31
+0.1.32
 
 · Node.js 18+ · kroki 1 i 3
 

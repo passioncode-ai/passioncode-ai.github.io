@@ -88,7 +88,7 @@ PassionCode.ai ランチャーが、Fabric Agent Adapter スキル、Observatory
 
 npx @passioncode-ai/passioncode@latest update
 
-ランチャー 0.1.31 · インストール後にエージェントを再起動 · 自動更新はオン；オフにする
+ランチャー 0.1.32 · インストール後にエージェントを再起動 · 自動更新はオン；オフにする
 
 02
 
