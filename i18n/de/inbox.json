@@ -84,6 +84,14 @@
     "repository": "Repository",
     "includes the source, tests and release notes.": "enthält den Quellcode, die Tests und die Release-Notes.",
     "Is Inbox the Fabric agent?": "Ist Inbox der Fabric-Agent?",
-    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "Nein. Inbox ist ein Mailprogramm; seine Agenten beantworten deine Adressen im Rahmen der Regeln, die du festlegst."
+    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "Nein. Inbox ist ein Mailprogramm; seine Agenten beantworten deine Adressen im Rahmen der Regeln, die du festlegst.",
+    "Bring Gmail and Cloudflare mailboxes into one list, important mail first. Agents for your own domains answer what you allow and leave the rest as a draft": "Bring Gmail- und Cloudflare-Postfächer in eine Liste, wichtige Mails zuerst. Agenten für deine eigenen Domains beantworten, was du erlaubst, und lassen den Rest als Entwurf liegen",
+    "IN THE TOOLKIT": "IM TOOLKIT",
+    "Mail: the addresses agents read and answer within the policy you set. Step 5 of": "Mail: die Adressen, die Agenten lesen und im Rahmen deiner Richtlinie beantworten. Schritt 5 in",
+    "how it works": "„So funktioniert es“",
+    "All the tools": "Alle Tools",
+    "02 / THE PASSIONCODE TOOLKIT": "02 / DAS PASSIONCODE-TOOLKIT",
+    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox kümmert sich um Mail. Switchboard verwaltet Accounts für Claude Code und Codex. Project Observatory behält die Projekte im Blick, an denen diese Agenten arbeiten. Fabric, in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten.",
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": ", in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten. Sie gehören zum selben Toolkit und haben unterschiedliche Rollen."
   }
 }
