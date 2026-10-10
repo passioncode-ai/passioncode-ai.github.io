@@ -62,7 +62,7 @@ CEO AIエージェントの Fabric が、各プロジェクトの目的、決定
 
 ↗
 
-AGPL-3.0 のオープンソース Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
+AGPL-3.0 のオープンソース Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.6.7 · Observatory 0.21.0
 
 アカウント
 
@@ -144,7 +144,7 @@ Fabric Switchboard
 
 リリース
 
-0.6.15
+0.6.16
 
 · macOS + Windows
 
@@ -180,7 +180,7 @@ Gmail と Cloudflare のメールを1つのリストに集約し、重要なも�
 
 開発プレビュー版
 
-0.13.0
+0.14.0
 
 · macOS
 
@@ -192,7 +192,7 @@ PassionCode.ai ランチャー
 
 CLI
 
-0.1.31
+0.1.32
 
 · Node.js 18+
 

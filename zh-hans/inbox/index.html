@@ -24,7 +24,7 @@
   "name": "Fabric Inbox",
   "applicationCategory": "CommunicationApplication",
   "operatingSystem": "macOS 12 or later",
-  "softwareVersion": "0.13.0",
+  "softwareVersion": "0.14.0",
   "url": "https://passioncode.ai/zh-hans/inbox/",
   "license": "https://spdx.org/licenses/AGPL-3.0-only.html",
   "codeRepository": "https://github.com/passioncode-ai/fabric-inbox",
@@ -44,7 +44,7 @@
 </header>
 <main id="main">
 <section class="hero switchboard-hero" aria-labelledby="hero-title">
- <div class="hero-copy"><p class="eyebrow"><span></span> FABRIC INBOX · 开发中的预览版</p><h1 id="hero-title">你的邮件<br><em>重要的优先</em></h1><p class="hero-body">把 Gmail 和 Cloudflare 邮箱汇入同一个列表，重要邮件优先；你自己域名下的地址由智能体负责，能回复的按你允许的范围回复，其余起草成草稿</p><p class="family-line"><span>家族成员</span> 邮件：智能体读取并在你设定的策略范围内回复的地址。<a href="/zh-hans/#products">完整家族</a></p><div class="hero-actions"><a class="button button-primary" href="#download">下载 macOS 版 <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="#what">看看它能做什么 <span aria-hidden="true">↓</span></a></div><p class="beta-note">开发预览版 <span data-release-version data-live="inbox.version">0.13.0</span> · macOS 12 或更高版本 · 以 AGPL-3.0 开源</p></div>
+ <div class="hero-copy"><p class="eyebrow"><span></span> FABRIC INBOX · 开发中的预览版</p><h1 id="hero-title">你的邮件<br><em>重要的优先</em></h1><p class="hero-body">把 Gmail 和 Cloudflare 邮箱汇入同一个列表，重要邮件优先；你自己域名下的地址由智能体负责，能回复的按你允许的范围回复，其余起草成草稿</p><p class="family-line"><span>家族成员</span> 邮件：智能体读取并在你设定的策略范围内回复的地址。<a href="/zh-hans/#products">完整家族</a></p><div class="hero-actions"><a class="button button-primary" href="#download">下载 macOS 版 <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="#what">看看它能做什么 <span aria-hidden="true">↓</span></a></div><p class="beta-note">开发预览版 <span data-release-version data-live="inbox.version">0.14.0</span> · macOS 12 或更高版本 · 以 AGPL-3.0 开源</p></div>
  <div class="product-emblem" aria-hidden="true"><span class="emblem-label">FABRIC INBOX / 邮件 + 智能体</span><img src="/assets/inbox-mark.svg" width="340" height="340" alt=""><span class="emblem-footer">重要 <span>+</span> 已回复</span></div>
 </section>
 <span id="status" class="legacy-anchor" aria-hidden="true"></span><section class="section" id="what" aria-labelledby="what-title"><div class="section-heading"><p class="section-number">01 / 它能做什么</p><h2 id="what-title">少读一些<br>少回一些</h2><p>Inbox 以同样的方式分拣每个账号，并让你域名下的地址有智能体来回复。</p></div>
@@ -55,13 +55,13 @@
  </div>
 </section>
 <section class="section" id="download" aria-labelledby="download-title">
- <div class="section-heading"><p class="section-number">获取 FABRIC INBOX</p><h2 id="download-title">开发中的预览版<br>适用于你的 Mac</h2><p>最新预览版：<strong data-release-version data-live="inbox.version">0.13.0</strong>。Mac 应用会在你自己的 Cloudflare 账号中创建它的邮件服务器并将其打开；你的邮件只留在你自己的账号里。</p></div>
+ <div class="section-heading"><p class="section-number">获取 FABRIC INBOX</p><h2 id="download-title">开发中的预览版<br>适用于你的 Mac</h2><p>最新预览版：<strong data-release-version data-live="inbox.version">0.14.0</strong>。Mac 应用会在你自己的 Cloudflare 账号中创建它的邮件服务器并将其打开；你的邮件只留在你自己的账号里。</p></div>
  <div class="download-grid">
   <article class="download-card"><span class="platform-symbol" aria-hidden="true">⌘</span><h3>macOS</h3><p>通用版 · Apple silicon + Intel · macOS 12 或更高版本<br>DMG 安装包 · 已使用 Developer ID 签名并通过 Apple 公证</p><a class="button button-primary" href="/inbox/download/macos" aria-describedby="inbox-macos-note">下载 macOS 版 <span aria-hidden="true">↓</span></a><p class="download-note" id="inbox-macos-note">打开 DMG，把 Fabric Inbox 拖到“应用程序”。</p></article>
   <article class="download-card"><span class="platform-symbol" aria-hidden="true">☰</span><h3>打开之前</h3><p>首次打开时，选择 <strong>Create my server on Cloudflare</strong>。</p><ul class="requirements"><li>一个 Cloudflare 账号；免费套餐即可</li><li>你在其控制台中创建的 API 令牌，权限以应用列出的为准</li><li>如果使用 Gmail：来自你自己的 Google Cloud 项目的 OAuth 客户端</li></ul><p class="download-note">这个<a href="https://github.com/passioncode-ai/fabric-inbox/blob/main/docs/desktop-mail/setup.md">设置指南</a>列出了所有设置。</p></article>
  </div>
- <dl class="checksums" aria-label="SHA-256 校验和"><div><dt>macOS DMG · SHA-256</dt><dd><code data-release-sha256="macos" data-live="inbox.assets.macos.sha256">7709361f9a2f98cd125bbabd9433c320859c85e9f11c96367aa66aee21350a37</code></dd></div></dl><p class="section-note">打开前请比对：<code>shasum -a 256</code>（终端）。值不同说明文件不同，请重新下载。</p>
- <div class="download-details"><a class="text-link" href="https://github.com/passioncode-ai/fabric-inbox/releases/tag/v0.13.0" data-release-link data-live-href="inbox.releaseUrl">版本说明与校验和 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/passioncode-ai/fabric-inbox#readme">安装说明 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/passioncode-ai/fabric-inbox/releases">所有版本 <span aria-hidden="true">↗</span></a></div>
+ <dl class="checksums" aria-label="SHA-256 校验和"><div><dt>macOS DMG · SHA-256</dt><dd><code data-release-sha256="macos" data-live="inbox.assets.macos.sha256">ade939562ca8a035402f92927c308af4882d1b260abad879f7d41adcc7a14a24</code></dd></div></dl><p class="section-note">打开前请比对：<code>shasum -a 256</code>（终端）。值不同说明文件不同，请重新下载。</p>
+ <div class="download-details"><a class="text-link" href="https://github.com/passioncode-ai/fabric-inbox/releases/tag/v0.14.0" data-release-link data-live-href="inbox.releaseUrl">版本说明与校验和 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/passioncode-ai/fabric-inbox#readme">安装说明 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/passioncode-ai/fabric-inbox/releases">所有版本 <span aria-hidden="true">↗</span></a></div>
  <p class="beta-note">这是开发中的预览版。智能体的回答尚未用真实的模型调用试过，Gmail 也尚未在真实账号上通过验收。通用 IMAP 和 Outlook 支持已列入计划；目前都不是可用的集成。</p>
 </section>
 <section class="section" id="agents" aria-labelledby="agents-title"><div class="section-heading"><p class="section-number">面向智能体</p><h2 id="agents-title">应用能做的一切，<br>智能体也能做</h2><p>你的服务器通过 Model Context Protocol 应答，地址为 <code>/mcp</code>。应用的每个功能同时也是一个 MCP 工具，因此 Claude Code 或其他 MCP 客户端可以在其密钥的权限级别内读取、分拣和发送邮件，并管理地址。</p></div>

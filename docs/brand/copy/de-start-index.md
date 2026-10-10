@@ -88,7 +88,7 @@ Der PassionCode.ai-Launcher installiert die Fabric-Agent-Adapter-Skills, Observa
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.1.31 · danach den Agenten neu starten · automatische Updates sind an; schalte sie ab,
+Launcher 0.1.32 · danach den Agenten neu starten · automatische Updates sind an; schalte sie ab,
 
 02
 
