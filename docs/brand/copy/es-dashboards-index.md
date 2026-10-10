@@ -52,9 +52,9 @@ FABRIC DASHBOARDS · macOS
 
 # Un solo lugar donde mirar
 
-Ve qué está en marcha, qué necesita atención y qué pasó por última vez, con el panel propio de cada servicio en una sola app para Mac
+Ve todos los servicios de agentes de tu Mac en una sola app: primero lo que te necesita, y el panel propio de cada servicio se abre al lado
 
-EN LA FAMILIA Estado, gasto y control: cada servicio de agentes, su estado, su gasto y sus actualizaciones en una sola ventana. Toda la familia
+EN EL CONJUNTO DE HERRAMIENTAS Estado, gasto y control: cada servicio de agente, lo que está haciendo, lo que gasta y sus actualizaciones en una sola ventana. Es el paso 4 de «Cómo funciona». Todas las herramientas
 
 Descargar para macOS ↓
 
@@ -116,7 +116,7 @@ Se abre una terminal real junto al panel de un servicio, que ejecuta Claude Code
 
 La app se actualiza sola: una versión debe llevar la firma de la organización y coincidir con sus sumas de verificación antes de instalarse, y espera mientras se ejecuta una consola o un comando. La instalación automática se puede desactivar en Ajustes.
 
-### La familia, al día
+### Las skills, al día
 
 Ajustes → Estate updates vigila el Fabric Agent Contract y las skills de PassionCode.ai, y puede actualizar las skills en segundo plano tras comprobar quién las publicó. Ese interruptor está desactivado por defecto.
 

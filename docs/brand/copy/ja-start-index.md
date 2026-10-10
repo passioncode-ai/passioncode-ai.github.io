@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 はじめる | AIエージェントワークプレースをインストール | PassionCode.ai
 
-PassionCode.ai のスキルをインストールし、Fabric を追加し、Claude Code または Codex で最初の Fabric エージェントを作成し、既存のプロジェクトを変換し、Fabric Dashboards で動かし、同じファミリーに次のエージェントを加えます。無料のオープンソースです。
+PassionCode.ai のスキルをインストールし、Fabric を追加し、Claude Code または Codex で最初の Fabric エージェントを作成するか既存のプロジェクトを Fabric に対応させ、Fabric Dashboards で動かし、同じプロジェクトに次のエージェントを加えます。無料のオープンソースです。
 
 本文へスキップ
 
@@ -50,7 +50,7 @@ Português (Brasil)
 
 # 何もない Mac から 最初のエージェントまで
 
-傷んでしまい、互いに話せないエージェントを作るのは、もうやめましょう。5つのステップ、約20分で、どれも単独で役立ちます
+働き続け、ほかのエージェントがしたことを把握しているエージェントを作りましょう。5つのステップ、約20分で、どれも単独で役立ちます
 
 Node.js 18 以降と、Claude Code または Codex が必要です Fabric には Apple silicon または Intel 搭載の macOS が必要です
 
@@ -64,7 +64,7 @@ Fabric を追加
 
 03
 
-エージェントを作成または変換
+エージェントの作成と対応
 
 04
 
@@ -84,7 +84,7 @@ Fabric を追加
 
 ### スキルをインストール
 
-PassionCode.ai ランチャーが、Fabric Agent Adapter スキル、Observatory Log、作業ルールをコーディングエージェントにインストールします。アカウントもキーも不要です。
+PassionCode.ai ランチャーが、Fabric Agent Adapter スキル、Observatory Log、作業ルールをコーディングエージェントにインストールします。アカウントもキーも不要です。Fabric はインストールしません。Fabric は次のステップで、別途ダウンロードします。
 
 npx @passioncode-ai/passioncode@latest update
 
@@ -94,7 +94,7 @@ npx @passioncode-ai/passioncode@latest update
 
 ### Fabric を追加
 
-Fabric は CEO AIエージェントです。各プロジェクトに、目的、ボード、決定事項、リリースの拠点が用意されます。早期プレビュー版のため、Docker と Supabase CLI が必要で、会話はメッセージを保存しますが、まだ応答しません。
+Fabric は、プロジェクトとそのエージェントのための拠点です。各プロジェクトの目的、ボード、決定事項、リリースがここに置かれます。最初の画面には、エージェントを作成する、お手持ちのエージェントを対応させる、プロジェクトを開く、プロジェクトを作成する、の4つの操作があります。早期プレビュー版のため、Docker と Supabase CLI が必要で、会話はメッセージを保存しますが、まだ応答しません。
 
 Fabric をダウンロード
 
@@ -110,13 +110,13 @@ Apple silicon・Intel · 署名・公証済み · SHA-256 4d8e8da80bcf490fed955d
 
 03
 
-### エージェントを作成または変換
+### エージェントの作成と対応
 
-Claude Code または Codex で、必要なことを依頼します。Fabric Agent Adapter スキルが、Fabric 互換のサービスを構築します。コントラクト、ダッシュボード、テスト、適合性チェックが含まれます。
+Claude Code または Codex で必要なことを依頼するか、Fabric の作成（Create）と対応（Adapt）の操作から始めます。どちらの場合も、作業はコーディングエージェントのコンソールで進みます。Fabric Agent Adapter スキルは、まず質問し、何かを変更する前に計画を示します。対応させる作業は、新しいfabric-adapterブランチで行います。コントラクト、ダッシュボード、テスト、適合性レポートが得られます。
 
 新規 毎朝アプリストアのレビューを確認し、返信の下書きを作成する Fabric エージェントを作成して
 
-変換 このリポジトリを Fabric に対応させる
+対応させる このリポジトリを Fabric に対応させる
 
 04
 
@@ -134,7 +134,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 05
 
-### 次のエージェントを追加してファミリーを見渡す
+### 次のエージェントを追加
 
 次のエージェントも同じ方法で作り、Fabric の同じプロジェクトに割り当てます。Fabric から起動した Claude Code、Kilo Code、Hermes Agent は、そのプロジェクトのボード、メモリ、引き継ぎを共有するので、1つのエージェントが止めたところから別のエージェントが続けられます。現在つながるエージェント
 
@@ -144,7 +144,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 ## 最後までやり遂げるエージェント
 
-エージェントが加える変更には、task-pipelineをおすすめします。独立したオープンソースのスキルで、sshlg-skillsファミリーに属します。ブリーフから受け入れまで各変更を運び、各ゲートを通過するまで次へ進みません。
+エージェントが加える変更には、task-pipelineをおすすめします。独立したオープンソースのスキルで、sshlg-skillsコレクションに含まれます。ブリーフから受け入れまで各変更を運び、各ゲートを通過するまで次へ進みません。
 
 npx sshlg-skills install
 

@@ -58,6 +58,18 @@
     ". Follow the organization’s": " 中。请遵循组织的",
     "and open a pull request; opening it is your agreement to the repository’s": "并提交 pull request；提交即表示你同意仓库的",
     "Apple silicon and Intel · signed and notarized · SHA-256": "Apple silicon 和 Intel · 已签名并公证 · SHA-256",
-    "Fabric needs macOS on Apple silicon or Intel": "Fabric 需要搭载 Apple silicon 或 Intel 的 macOS"
+    "Fabric needs macOS on Apple silicon or Intel": "Fabric 需要搭载 Apple silicon 或 Intel 的 macOS",
+    "Install the PassionCode.ai skills, add Fabric, create your first Fabric agent with Claude Code or Codex or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project. Free and open source.": "安装 PassionCode.ai 技能，添加 Fabric，用 Claude Code 或 Codex 创建你的第一个 Fabric 智能体，或适配现有项目，在 Fabric Dashboards 中运行它，并把下一个智能体加入同一个项目。免费且开源。",
+    "Install the skills, add Fabric, create a Fabric agent or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project.": "安装技能，添加 Fabric，创建一个 Fabric 智能体或适配现有项目，在 Fabric Dashboards 中运行它，并把下一个智能体加入同一个项目。",
+    "Download the Fabric early preview for macOS on Apple silicon or Intel, a separate download from the skills, and open or create your first project.": "下载适用于 Apple silicon 或 Intel 的 macOS 版 Fabric 早期预览版；它与技能分开下载。然后打开或创建你的第一个项目。",
+    "Create or adapt an agent": "创建或改造一个智能体",
+    "Add the next agent to the same project": "把下一个智能体加入同一个项目",
+    "Build agents that keep working and know what the others did. Five steps, about twenty minutes, each useful on its own": "构建能持续工作、并知道其他智能体做过什么的智能体。五个步骤，约二十分钟，每一步都可单独发挥作用",
+    "The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key. It does not install Fabric: that is the next step, a separate download.": "PassionCode.ai 启动器会把 Fabric Agent Adapter 技能、Observatory Log 和工作规则安装到你的编码智能体中。无需账号，无需密钥。它不会安装 Fabric：Fabric 是下一步，需要单独下载。",
+    "Fabric is the home for your projects and their agents: each project keeps its purpose, board, decisions and releases there. Its first screen offers four actions: create an agent, adapt one you already have, open a project or create one. It is an early preview: it needs Docker and the Supabase CLI, and its conversation saves messages but does not reply yet.": "Fabric 是你的项目及其智能体的家：每个项目的目标、看板、决定和版本都保存在这里。它的首屏提供四个操作：创建智能体、适配已有智能体、打开项目或创建项目。它是早期预览版：需要 Docker 和 Supabase CLI；对话会保存消息，但还不会回复。",
+    "In Claude Code or Codex, ask for what you need, or start from Fabric’s Create and Adapt actions; the work runs in your coding agent’s console either way. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything; adapting works on a new": "在 Claude Code 或 Codex 中，直接说出你的需求，或从 Fabric 的创建和适配操作开始；无论哪种方式，工作都在你的编码智能体控制台中运行。Fabric Agent Adapter 技能会先提出问题，并在修改任何内容前展示计划；适配会在新的",
+    "branch. You get a contract, a dashboard, tests and a conformance report.": "分支上进行。你会得到一份契约、一个仪表盘、测试和一份符合性报告。",
+    "adapt": "适配",
+    "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "集合：它会把每项改动从简报带到验收，每个关卡通过后才继续。"
   }
 }

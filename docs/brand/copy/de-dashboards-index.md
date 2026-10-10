@@ -52,9 +52,9 @@ FABRIC DASHBOARDS · macOS
 
 # Alles an einem Ort
 
-Sieh, was läuft, was Aufmerksamkeit braucht und was zuletzt passiert ist – mit dem eigenen Dashboard jedes Dienstes in einer Mac-App
+Sieh jeden Agentendienst auf deinem Mac in einer App: Was dich braucht, steht oben, und das eigene Dashboard jedes Dienstes öffnet sich direkt daneben
 
-IN DER FAMILIE Zustand, Ausgaben und Steuerung: jeder Agentendienst mit seinem Status, seinen Ausgaben und seinen Updates in einem Fenster. Die ganze Familie
+IM TOOLKIT Zustand, Ausgaben und Steuerung: jeder Agentendienst, was er gerade tut, was er ausgibt und seine Updates in einem Fenster. Schritt 4 in „So funktioniert es“. Alle Tools
 
 Für macOS herunterladen ↓
 
@@ -116,7 +116,7 @@ Neben dem Dashboard eines Dienstes öffnet sich ein echtes Terminal, in dem Clau
 
 Die App aktualisiert sich selbst: Ein Release muss die Signatur der Organisation tragen und zu ihren Prüfsummen passen, bevor es installiert wird, und es wartet, solange eine Konsole oder ein Befehl läuft. Die automatische Installation lässt sich unter Settings abschalten.
 
-### Die Agentenfamilie bleibt aktuell
+### Die Skills bleiben aktuell
 
 Settings → Estate updates beobachtet den Fabric Agent Contract und die Skills von PassionCode.ai und kann die Skills im Hintergrund aktualisieren, nachdem geprüft wurde, wer sie veröffentlicht hat. Dieser Schalter ist standardmäßig aus.
 

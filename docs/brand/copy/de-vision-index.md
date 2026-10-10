@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Vision | Von einem Agenten zur AI-nativen Organisation | PassionCode.ai
 
-Warum Agenten verrotten, wenn sie nichts zusammenhält, was ein Harness ist und wie PassionCode.ai aus einem Agenten eine Familie, ein Team und eine Organisation wachsen lässt. Local-first, Open Source, aufbauend auf Claude Code, Codex und dem, was als Nächstes kommt.
+Warum Agenten auseinanderfallen, wenn nichts sie zusammenhält, die vier Prinzipien, nach denen PassionCode.ai baut, und wie aus einem Agenten ein Team und eine Organisation wird. Local-first, Open Source, aufbauend auf Claude Code, Codex und dem, was als Nächstes kommt.
 
 Zum Inhalt springen
 
@@ -50,13 +50,13 @@ Die Vision · Stand Oktober 2026
 
 # Von einem Agenten zur AI-nativen Organisation
 
-Agenten sind schnell gestartet und schwer zu halten. Wir bauen das Harness, das sie zusammenhält, damit jeder neue Agent die Familie stärker macht
+Agenten sind schnell gestartet und schwer zu halten. Wir bauen, was sie zusammenhält, damit jeder neue Agent die anderen stärker macht
 
 Local-first, Open Source, herstellerneutral Aufbauend auf Claude Code, Codex und dem, was als Nächstes kommt
 
 01
 
-Das fehlende Harness
+Was einen Agenten hält
 
 02
 
@@ -66,13 +66,13 @@ Woran wir glauben
 
 Der Weg
 
-01 / DAS FEHLENDE HARNESS
+01 / WAS EINEN AGENTEN HÄLT
 
 ## Nicht das Modell ist das Problem,
 
 ## sondern das, was es hält
 
-Die meisten Organisationen experimentieren schon mit Agenten, aber höchstens 10 % skalieren sie in einer einzelnen Funktion. Ein Agent, der allein gebaut wird, vergisst zwischen den Sitzungen alles, verliert seine Accounts aus dem Blick, hinterlässt keinen Nachweis und redet nicht mit dem nächsten. Ein Harness ist alles um ein Modell herum, was einen Agenten verlässlich macht. Auch die Labs nutzen das Wort: Anthropic, OpenAI.
+Die meisten Organisationen experimentieren schon mit Agenten, aber höchstens 10 % skalieren sie in einer einzelnen Funktion. Ein Agent, der allein gebaut wird, vergisst zwischen den Sitzungen alles und verliert seine Accounts aus dem Blick. Er hinterlässt kein Protokoll seiner Arbeit, und der nächste Agent weiß nichts von ihm. Was ihn zusammenhält, nennen wir ein Harness: alles um ein Modell herum, was einen Agenten auf Dauer am Laufen hält. Auch die Labs nutzen das Wort: Anthropic, OpenAI.
 
 01
 
@@ -90,7 +90,7 @@ Jeder Agent läuft auf dem Account, auf dem er laufen soll, und seine Limits ble
 
 ### Zustand und Steuerung
 
-Jeder Agentendienst mit Zustand, Kosten und Updates in einem Fenster, das Menschen und Agenten bedienen können. Das ist Fabric Dashboards.
+Jeder Agentendienst, was er gerade tut und was er ausgibt, in einem Fenster, das Menschen und Agenten bedienen können. Das ist Fabric Dashboards.
 
 04
 
@@ -106,7 +106,7 @@ Was sich geändert hat, was entschieden wurde und was Aufmerksamkeit braucht –
 
 Projekte sind die AchseJeder Agent arbeitet für ein Projekt, und das Projekt behält Zweck, Entscheidungen und Releases, sodass die Arbeit die Sitzung überdauert, in der sie entstanden ist.
 
-Die Arbeit verbessert sich selbstJeder Lauf hinterlässt Nachweise, und Observatory bewahrt sie schon heute auf. Retrospektiven, die daraus Lektionen für den nächsten Agenten machen, sind die Richtung.
+Die Arbeit verbessert sich selbstEin Lauf hinterlässt Nachweise, die du öffnen kannst, und Observatory bewahrt sie schon heute auf. Retrospektiven, die daraus Lektionen für den nächsten Agenten machen, sind die Entwicklungsrichtung.
 
 Jeder Agent, auf deinen RechnernHerstellerneutral, lokal zuerst und Open Source unter der GNU AGPL-3.0, obendrauf auf Claude Code, Codex und allem, was danach kommt.
 
@@ -120,7 +120,7 @@ Für Disziplin innerhalb jeder Änderung empfehlen wir task-pipeline, ein eigene
 
 ## jede für sich nützlich
 
-Dieselbe Familie wächst von einer Person bis zu einer ganzen Organisation. Jede Stufe sagt, ob sie heute funktioniert oder ob wir noch daran bauen.
+Dasselbe Setup wächst von einer Person bis zu einer ganzen Organisation. Jede Stufe sagt, ob sie heute funktioniert oder ob wir noch daran bauen.
 
 01
 
@@ -130,6 +130,8 @@ JETZT VERFÜGBAR
 
 Dein Coding-Agent baut einen Agenten für eine Aufgabe, mit Vertrag, Dashboard und Tests.
 
+So funktioniert es, Schritt 3
+
 02
 
 JETZT VERFÜGBAR
@@ -137,6 +139,8 @@ JETZT VERFÜGBAR
 ### Zwei Agenten, die miteinander reden
 
 Mit Fabric verbundene Agenten teilen Board, Gedächtnis und Übergaben eines Projekts, sodass einer dort weitermacht, wo der andere aufgehört hat.
+
+So funktioniert es, Schritt 5
 
 03
 
@@ -150,9 +154,9 @@ Agenten reihen sich zu einem Prozess auf: Einer bereitet vor, der nächste prüf
 
 TEILWEISE JETZT VERFÜGBAR
 
-### Eine Familie, die auf sich selbst achtet
+### Gut gepflegte Agenten
 
-Dashboards zeigt Gesundheit und Kosten jedes Agenten, die Tools aktualisieren sich selbst, und Observatory hält fest, was sich geändert hat. Agenten, die aufeinander aufpassen, sind die Richtung.
+Dashboards zeigt Zustand und Ausgaben jedes Agenten, die Tools aktualisieren sich selbst, und Observatory hält fest, was sich geändert hat. Agenten, die aufeinander aufpassen, sind die Entwicklungsrichtung.
 
 05
 
@@ -170,17 +174,19 @@ ENTWICKLUNGSRICHTUNG
 
 Agenten erreichen jeden Arbeitsplatz. Menschen sind die Experten, die die Arbeit der Agenten prüfen und eigene Agenten bauen, und diese Agenten verbreiten sich im Netzwerk.
 
+So funktioniert es, Schritt 6
+
 FRAGEN
 
 ## Bevor du anfängst
 
 Ersetzt PassionCode.ai Claude Code oder Codex?
 
-Nein. Es setzt auf ihnen auf. Dein Coding-Agent erledigt weiter die Arbeit; PassionCode.ai gibt ihm ein Zuhause, Accounts, Zustandsüberwachung, Gedächtnis und Nachweise und lässt den nächsten Agenten derselben Familie beitreten.
+Nein. Es setzt auf ihnen auf. Dein Coding-Agent erledigt weiter die Arbeit; PassionCode.ai gibt ihm ein Zuhause, Accounts, seinen Zustand, Gedächtnis und Nachweise und lässt den nächsten Agenten demselben Projekt beitreten.
 
 START: EIN AGENT
 
-## Die Familie beginnt
+## Deine Agenten starten
 
 ## mit einem Befehl
 

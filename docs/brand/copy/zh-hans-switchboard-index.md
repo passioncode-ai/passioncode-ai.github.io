@@ -52,9 +52,9 @@ FABRIC SWITCHBOARD · PASSIONCODE 出品
 
 # 更清楚的切换
 
-在一个本地工作台中管理 Claude Code 和 Codex CLI 账号：查看上报的用量，区分工作账号与个人账号，并选择由哪个账号处理下一次请求
+把 Claude Code 和 Codex CLI 账号放在同一个本地工作台：查看每个账号上报的用量，并选择由哪个账号处理下一次请求
 
-家族成员 账号：每个智能体运行在哪个账号上，并显示其用量限制。完整家族
+工具包成员 账号：每个智能体运行在哪个账号上，并可查看其用量限制。第 4 步：工作原理。全部工具
 
 下载 Switchboard
 
@@ -160,7 +160,7 @@ SWITCHBOARD 内部
 
 Switchboard 的真实界面，使用合成的演示账号。
 
-浏览器演示 · 不含真实账号、凭据或服务商请求
+0.6.13 的浏览器演示 · 无真实账号、凭据或服务商请求
 
 本地工作台
 
@@ -285,7 +285,7 @@ Switchboard 会取代 Claude Code 或 Codex 吗？
 
 Switchboard 和 Fabric 是同一个东西吗？
 
-Switchboard 是目前已可使用的账号管理工具。Fabric 是我们的 CEO AI 智能体，处于早期预览版，专注于协调智能体和项目。两者都属于 PassionCode 工具包。了解我们用 Fabric 在构建什么。
+Switchboard 是现已可用的账号管理工具。Fabric 是你的项目及其智能体的家，目前为早期预览版。两者都属于 PassionCode 工具包。了解我们用 Fabric 在构建什么。
 
 哪些智能体可以与 Switchboard 配合使用？
 
@@ -309,7 +309,7 @@ PASSIONCODE 工具包的一部分
 
 ## 整套环境的一部分
 
-Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让这些智能体所处理的项目一目了然。Fabric Dashboards 在一个窗口中显示你 Mac 上的本地智能体服务。Fabric 是我们的 CEO AI 智能体，处于早期预览版。
+Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你查看这些智能体正在处理的项目。Fabric Dashboards 在一个窗口中显示你 Mac 上的本地智能体服务。Fabric 是你的项目及其智能体的家，目前为早期预览版。
 
 了解 Observatory
 

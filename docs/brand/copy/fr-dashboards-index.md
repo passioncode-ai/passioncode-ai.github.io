@@ -52,9 +52,9 @@ FABRIC DASHBOARDS · macOS
 
 # Un seul endroit où regarder
 
-Voyez ce qui tourne, ce qui demande votre attention et ce qui s’est passé en dernier, avec le tableau de bord propre à chaque service, dans une seule application Mac
+Voyez tous les services d’agents de votre Mac dans une seule application : ce qui vous attend passe en premier, et le tableau de bord propre à chaque service s’ouvre juste à côté
 
-DANS LA FAMILLE État, dépenses et contrôle : chaque service d’agent, son état, ses dépenses et ses mises à jour dans une seule fenêtre. Toute la famille
+DANS LA BOÎTE À OUTILS État, dépenses et contrôle : chaque service d’agent, ce qu’il fait, ce qu’il dépense et ses mises à jour dans une seule fenêtre. Étape 4 de « Comment ça marche ». Tous les outils
 
 Télécharger pour macOS ↓
 
@@ -116,7 +116,7 @@ Un vrai terminal s’ouvre à côté du tableau de bord d’un service et lance 
 
 L’application se met à jour seule : une version doit porter la signature de l’organisation et correspondre à ses sommes de contrôle avant de s’installer, et l’installation attend tant qu’une console ou une commande tourne. L’installation automatique peut être désactivée dans les réglages.
 
-### La famille d’agents tenue à jour
+### Des skills toujours à jour
 
 Dans Settings → Estate updates, l’application surveille le Fabric Agent Contract et les skills PassionCode.ai, et peut mettre à jour les skills en arrière-plan après avoir vérifié qui les a publiés. Cette option est désactivée par défaut.
 

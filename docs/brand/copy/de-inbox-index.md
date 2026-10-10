@@ -52,9 +52,9 @@ FABRIC INBOX · ENTWICKLUNGSVORSCHAU
 
 # Wichtiges zuerst
 
-Bring Gmail- und Cloudflare-Postfächer in eine Liste, mit wichtigen Mails zuerst und Agenten für deine eigenen Domains, die beantworten, was du erlaubst, und den Rest als Entwurf vorbereiten
+Bring Gmail- und Cloudflare-Postfächer in eine Liste, wichtige Mails zuerst. Agenten für deine eigenen Domains beantworten, was du erlaubst, und lassen den Rest als Entwurf liegen
 
-IN DER FAMILIE Mail: die Adressen, die Agenten lesen und im Rahmen deiner Richtlinie beantworten. Die ganze Familie
+IM TOOLKIT Mail: die Adressen, die Agenten lesen und im Rahmen deiner Richtlinie beantworten. Schritt 5 in „So funktioniert es“. Alle Tools
 
 Für macOS herunterladen
 
@@ -175,11 +175,11 @@ Dein Server spricht das Model Context Protocol unter /mcp. Jede Funktion der App
 
 Die App gibt den ganzen Befehl aus: claude mcp add --transport http fabric-inbox https://<your-server>/mcp mit den beiden Headern des Schlüssels. Dann frag nach list_accounts.
 
-02 / DIE PASSIONCODE-FAMILIE
+02 / DAS PASSIONCODE-TOOLKIT
 
 ## Ein Tool mit eigener Aufgabe
 
-Inbox kümmert sich um Mail. Switchboard verwaltet Accounts für Claude Code und Codex. Project Observatory behält die Projekte im Blick, an denen diese Agenten arbeiten. Fabric ist der KI-Agent in der Rolle des CEO, den wir bauen, um die Arbeit zu koordinieren.
+Inbox kümmert sich um Mail. Switchboard verwaltet Accounts für Claude Code und Codex. Project Observatory behält die Projekte im Blick, an denen diese Agenten arbeiten. Fabric, in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten.
 
 Switchboard entdecken
 
@@ -215,7 +215,7 @@ Ja. Fabric Inbox ist Open Source unter der GNU AGPL-3.0. Für eine Nutzung, die 
 
 Ist Inbox der Fabric-Agent?
 
-Nein. Inbox ist ein Mailprogramm; seine Agenten beantworten deine Adressen im Rahmen der Regeln, die du festlegst. Fabric ist unser KI-Agent in der Rolle des CEO, in früher Vorschau. Sie gehören zum selben Toolkit und haben unterschiedliche Rollen.
+Nein. Inbox ist ein Mailprogramm; seine Agenten beantworten deine Adressen im Rahmen der Regeln, die du festlegst. Fabric, in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten. Sie gehören zum selben Toolkit und haben unterschiedliche Rollen.
 
 PassionCode
 

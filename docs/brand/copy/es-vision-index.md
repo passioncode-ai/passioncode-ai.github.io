@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Visión | De un agente a una organización AI-native | PassionCode.ai
 
-Por qué los agentes se pudren cuando nada los mantiene unidos, qué es un arnés (harness) y cómo PassionCode.ai hace crecer un agente hasta convertirlo en una familia, un equipo y una organización. Local primero, código abierto, sobre Claude Code, Codex y lo que venga después.
+Por qué los agentes se desmoronan cuando nada los mantiene unidos, los cuatro principios con los que construye PassionCode.ai y cómo un agente crece hasta ser un equipo y una organización. Local primero, código abierto, sobre Claude Code, Codex y lo que venga después.
 
 Saltar al contenido
 
@@ -50,13 +50,13 @@ La visión · a octubre de 2026
 
 # De un agente a una organización AI-native
 
-Los agentes son fáciles de empezar y difíciles de mantener. Estamos construyendo el arnés que los mantiene unidos, para que cada agente nuevo haga más fuerte a la familia
+Los agentes son fáciles de empezar y difíciles de mantener. Estamos construyendo lo que los mantiene unidos, para que cada agente nuevo haga más fuertes a los demás
 
 Local primero, código abierto, sin ataduras a un proveedor Sobre Claude Code, Codex y lo que venga después
 
 01
 
-El arnés que falta
+Lo que sostiene a un agente
 
 02
 
@@ -66,13 +66,13 @@ En qué creemos
 
 El camino
 
-01 / EL ARNÉS QUE FALTA
+01 / LO QUE SOSTIENE A UN AGENTE
 
 ## El modelo no es el problema
 
 ## Lo que lo sostiene sí
 
-La mayoría de las organizaciones ya experimenta con agentes, pero no más del 10 % los escala en una sola función. Un agente creado a solas olvida entre sesiones, pierde el rastro de sus cuentas, no deja evidencias y no habla con el siguiente. Un arnés es todo lo que rodea a un modelo y mantiene fiable a un agente. Los laboratorios también usan la palabra: Anthropic, OpenAI.
+La mayoría de las organizaciones ya experimenta con agentes, pero no más del 10 % los escala en una sola función. Un agente creado a solas olvida entre sesiones y pierde el rastro de sus cuentas. No deja registro de lo que hizo, y el siguiente agente no sabe nada de él. A lo que lo mantiene unido lo llamamos arnés (harness): todo lo que rodea a un modelo y mantiene a un agente funcionando con el tiempo. Los laboratorios también usan la palabra: Anthropic, OpenAI.
 
 01
 
@@ -88,9 +88,9 @@ Cada agente funciona con la cuenta que debe, con sus límites a la vista. Eso es
 
 03
 
-### Salud y control
+### Estado y control
 
-Cada servicio de agente, con su estado, gasto y actualizaciones, en una sola ventana que personas y agentes pueden manejar. Eso es Fabric Dashboards.
+Cada servicio de agente, lo que está haciendo y lo que gasta, en una sola ventana que personas y agentes pueden manejar. Eso es Fabric Dashboards.
 
 04
 
@@ -106,7 +106,7 @@ Qué cambió, qué se decidió y qué requiere atención, con la prueba al lado.
 
 Los proyectos son el ejeCada agente trabaja para un proyecto, y el proyecto guarda el propósito, las decisiones y las versiones, así que el trabajo sobrevive a la sesión que lo hizo.
 
-El trabajo se mejora soloCada ejecución deja evidencias, y Observatory las guarda hoy. Las retrospectivas que las convierten en lecciones para el siguiente agente son la dirección.
+El trabajo se mejora soloCada ejecución deja evidencias que puedes abrir, y Observatory las guarda hoy. Las retrospectivas que las convierten en lecciones para el siguiente agente son la dirección.
 
 Cualquier agente, en tus equiposNeutral respecto a proveedores, local primero y de código abierto bajo la GNU AGPL-3.0, sobre Claude Code, Codex y lo que venga después.
 
@@ -120,7 +120,7 @@ Dentro de cada cambio recomendamos task-pipeline, una skill de código abierto a
 
 ## Cada una útil por sí sola
 
-La misma familia crece de una persona a toda una organización. Cada etapa indica si funciona hoy o si es hacia donde estamos construyendo.
+La misma configuración crece de una persona a toda una organización. Cada etapa indica si funciona hoy o si es hacia donde estamos construyendo.
 
 01
 
@@ -130,6 +130,8 @@ DISPONIBLE AHORA
 
 Tu agente de programación construye un agente para una tarea, con un contrato, un panel y pruebas.
 
+Cómo funciona, paso 3
+
 02
 
 DISPONIBLE AHORA
@@ -137,6 +139,8 @@ DISPONIBLE AHORA
 ### Dos agentes que se hablan
 
 Los agentes conectados a Fabric comparten el tablero, la memoria y los traspasos de un proyecto, de modo que uno continúa donde se quedó el otro.
+
+Cómo funciona, paso 5
 
 03
 
@@ -150,9 +154,9 @@ Los agentes se alinean en un solo proceso: uno prepara, el siguiente comprueba y
 
 DISPONIBLE AHORA, EN PARTE
 
-### Una familia que se cuida sola
+### Agentes en buen orden
 
-Dashboards muestra la salud y el gasto de cada agente, las herramientas se actualizan solas y Observatory guarda lo que cambió. Que los agentes se vigilen entre sí es la dirección.
+Dashboards muestra el estado y el gasto de cada agente, las herramientas se actualizan solas y Observatory guarda lo que cambió. Que los agentes se cuiden entre sí es la dirección.
 
 05
 
@@ -170,17 +174,19 @@ DIRECCIÓN
 
 Los agentes llegan a cada espacio de trabajo. Las personas actúan como expertas que verifican el trabajo de los agentes y construyen agentes propios, y esos agentes se extienden por la red.
 
+Cómo funciona, paso 6
+
 PREGUNTAS
 
 ## Antes de empezar
 
 ¿PassionCode.ai reemplaza a Claude Code o a Codex?
 
-No. Funciona encima de ellos. Tu agente de programación sigue haciendo el trabajo; PassionCode.ai le da un hogar, cuentas, salud, memoria y evidencias, y deja que el siguiente agente se una a la misma familia.
+No. Funciona encima de ellos. Tu agente de programación sigue haciendo el trabajo; PassionCode.ai le da un hogar, cuentas, su estado, memoria y evidencias, y deja que el siguiente agente se una al mismo proyecto.
 
 EMPIEZA CON UN AGENTE
 
-## La familia empieza
+## Tus agentes empiezan
 
 ## con un comando
 

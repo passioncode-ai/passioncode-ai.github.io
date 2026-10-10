@@ -177,6 +177,7 @@
     "02 / WHAT IT SAVES": "02 / 能节省什么",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "你的团队每月花在这些流程上的小时数，乘以智能体可能接手的比例，再乘以你每小时的成本。",
     "03 / REQUEST": "03 / 提交申请",
-    "04 / QUESTIONS": "04 / 问题"
+    "04 / QUESTIONS": "04 / 问题",
+    "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "只装在一个人的笔记本电脑上的智能体，只能帮到一个人。我们把智能体带到你的组织的机器上，把它们连接起来，并展示它们在做什么；基于开源工具，你的数据留在你的机器上，或你自己的云里"
   }
 }

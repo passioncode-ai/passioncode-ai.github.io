@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from pl/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | agent AI w roli CEO · wczesna wersja zapoznawcza dla macOS | PassionCode.ai
+Fabric | Dom dla Twoich projektów i ich agentów · wczesna wersja zapoznawcza na macOS | PassionCode.ai
 
-Fabric to nasz agent AI w roli CEO, dostępny jako wczesna wersja zapoznawcza dla macOS na Apple silicon i Intel. Trzyma tablicę projektu, decyzje, pracę i wydania w jednym miejscu, na Twoim Macu.
+Fabric to dom dla Twoich projektów i ich agentów, we wczesnej wersji zapoznawczej na macOS na Apple silicon i Intel. Trzyma tablicę, decyzje, pracę i wydania projektu w jednym miejscu, na Twoim Macu.
 
 Przejdź do treści
 
@@ -48,13 +48,13 @@ Pobierz
 
 FABRIC · WCZESNA WERSJA ZAPOZNAWCZA
 
-# Agent AI w roli CEO
+# Dom dla Twoich projektów
 
-# Dom dla pracy
+# i ich agentów
 
-Fabric to agent, który budujemy, by koordynował innych agentów wokół projektu i trzymał jego cel, kontekst i decyzje razem z pracą, gdy zmieniają się ludzie, modele i sesje
+Fabric trzyma na Twoim Macu cel, tablicę, decyzje i wydania każdego projektu, dla każdego agenta, który przy nim pracuje. Budujemy go tak, by działał jako CEO Twoich agentów
 
-W RODZINIE Wspólny dom wszystkich agentów projektu: jego cel, tablica, decyzje i wydania. Cała rodzina
+W ZESTAWIE NARZĘDZI Wspólny dom wszystkich agentów projektu: jego cel, tablica, decyzje i wydania. To kroki 2 i 5 w części „Jak to działa”. Wszystkie narzędzia
 
 Pobierz na macOS
 
@@ -66,25 +66,25 @@ Poznaj sposób pracy
 
 Wczesna wersja zapoznawcza 0.3.4 · macOS na Apple silicon i Intel
 
-PROJEKT PONAD CZATEM
+PIERWSZY EKRAN · CZTERY AKCJE
 
-Cel
+Utwórz agenta
 
-Co chcemy osiągnąć?
+Nadaj mu nazwę, opisz, co robi, wybierz jego folder i agenta kodującego
 
-Zespół
+Dostosuj agenta
 
-Kto odpowiada za którą część pracy?
+Przenieś takiego, który powstał gdzie indziej, na nowej gałęzi
 
-Uprawnienia
+Otwórz projekt
 
-Co może zrobić każdy agent?
+Folder albo folder z wieloma projektami
 
-Dowody
+Utwórz projekt
 
-Skąd wiemy, że się udało?
+Nowy dom dla jego celu, tablicy i wydań
 
-Ilustracja modelu, który budujemy
+Sama praca agenta odbywa się w konsoli Twojego agenta kodującego
 
 PROBLEM
 
@@ -146,7 +146,7 @@ JAK TO BUDUJEMY
 
 ## Odpowiedzialność zostaje po stronie ludzi
 
-CEO oznacza rolę koordynacyjną. To Ty decydujesz, do czego służy projekt i na co agent ma pozwolenie.
+Koordynacja to kierunek, w którym zmierza Fabric, i nigdy nie zastąpi Ciebie. To Ty decydujesz, czemu służy projekt i co wolno każdemu agentowi.
 
 UPRAWNIENIA
 

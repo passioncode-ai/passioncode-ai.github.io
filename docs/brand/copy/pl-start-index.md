@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Pierwsze kroki | Zainstaluj miejsce pracy dla agentów AI | PassionCode.ai
 
-Zainstaluj skille PassionCode.ai, dodaj Fabric, utwórz pierwszego agenta Fabric w Claude Code lub Codex, przekształć istniejący projekt, uruchom go w Fabric Dashboards i dodaj kolejnego agenta do tej samej rodziny. Za darmo i na otwartym kodzie.
+Zainstaluj skille PassionCode.ai, dodaj Fabric, utwórz pierwszego agenta Fabric w Claude Code lub Codex albo dostosuj istniejący projekt, uruchom go w Fabric Dashboards i dodaj kolejnego agenta do tego samego projektu. Bezpłatnie i na otwartym kodzie.
 
 Przejdź do treści
 
@@ -50,7 +50,7 @@ Pierwsze kroki · za darmo i na otwartym kodzie
 
 # Od pustego Maca do pierwszego agenta
 
-Koniec z agentami, które gniją i nie rozmawiają ze sobą. Pięć kroków, około dwudziestu minut, a każdy przydaje się sam z siebie
+Buduj agentów, którzy działają dalej i wiedzą, co zrobili pozostali. Pięć kroków, około dwudziestu minut, a każdy przydaje się sam z siebie
 
 Wymaga Node.js 18+ oraz Claude Code lub Codex Fabric wymaga macOS na Apple silicon lub Intel
 
@@ -64,7 +64,7 @@ Dodaj Fabric
 
 03
 
-Utwórz lub przekształć agenta
+Utwórz lub dostosuj agenta
 
 04
 
@@ -84,7 +84,7 @@ Współtwórz
 
 ### Zainstaluj skille
 
-Launcher PassionCode.ai instaluje skille Fabric Agent Adapter, Observatory Log i zasady pracy w Twoim agencie do programowania. Bez konta i bez klucza.
+Launcher PassionCode.ai instaluje w Twoim agencie kodującym skille Fabric Agent Adapter, Observatory Log i zasady pracy. Bez konta i bez klucza. Nie instaluje Fabric: to następny krok, osobne pobranie.
 
 npx @passioncode-ai/passioncode@latest update
 
@@ -94,7 +94,7 @@ Launcher 0.1.31 · po instalacji uruchom agenta ponownie · automatyczne aktuali
 
 ### Dodaj Fabric
 
-Fabric to agent AI w roli CEO: każdy projekt dostaje jedno miejsce na swój cel, tablicę, decyzje i wydania. To wczesna wersja zapoznawcza: wymaga Dockera i Supabase CLI, a jej czat zapisuje wiadomości, ale jeszcze nie odpowiada.
+Fabric to dom dla Twoich projektów i ich agentów: każdy projekt trzyma tam swój cel, tablicę, decyzje i wydania. Pierwszy ekran oferuje cztery akcje: utwórz agenta, dostosuj takiego, którego już masz, otwórz projekt albo utwórz nowy. To wczesna wersja zapoznawcza: wymaga Dockera i Supabase CLI, a jej czat zapisuje wiadomości, ale jeszcze nie odpowiada.
 
 Pobierz Fabric
 
@@ -110,13 +110,13 @@ Apple silicon i Intel · podpisana i notaryzowana przez Apple · SHA-256 4d8e8da
 
 03
 
-### Utwórz lub przekształć agenta
+### Utwórz lub dostosuj agenta
 
-W Claude Code lub Codex poproś o to, czego potrzebujesz. Skill Fabric Agent Adapter zbuduje usługę zgodną z Fabric: kontrakt, panel, testy i test zgodności.
+W Claude Code lub Codex poproś o to, czego potrzebujesz, albo zacznij od akcji tworzenia i dostosowania w Fabric; w obu przypadkach praca odbywa się w konsoli Twojego agenta kodującego. Skill Fabric Agent Adapter najpierw zadaje pytania i pokazuje plan, zanim cokolwiek zmieni; dostosowanie odbywa się na nowej gałęzi fabric-adapter. Dostajesz kontrakt, panel, testy i raport zgodności.
 
 nowy Utwórz agenta Fabric, który każdego ranka sprawdza opinie o naszej aplikacji w sklepie i przygotowuje szkice odpowiedzi
 
-przekształć Dostosuj to repozytorium do Fabric
+dostosuj Dostosuj to repozytorium do Fabric
 
 04
 
@@ -134,7 +134,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 05
 
-### Dodaj kolejnego agenta i zobacz rodzinę
+### Dodaj kolejnego agenta do tego samego projektu
 
 Zbuduj następnego agenta w ten sam sposób i daj mu ten sam projekt w Fabric. Claude Code, Kilo Code i Hermes Agent uruchomione z Fabric dzielą tablicę, pamięć i przekazania tego projektu, więc jeden podejmuje pracę tam, gdzie skończył drugi. Którzy agenci łączą się dziś
 
@@ -144,7 +144,7 @@ NARZĘDZIE, KTÓRE POLECAMY
 
 ## to, co zaczęli
 
-Do zmian wprowadzanych przez Twoich agentów polecamy task-pipeline, odrębny skill na otwartym kodzie z rodziny sshlg-skills – prowadzi każdą zmianę od zlecenia do odbioru i nie idzie dalej, dopóki nie przejdzie każda kontrola.
+Do zmian wprowadzanych przez Twoich agentów polecamy task-pipeline, odrębny skill na otwartym kodzie z kolekcji sshlg-skills: prowadzi każdą zmianę od zlecenia do odbioru i nie idzie dalej, dopóki nie przejdzie każda kontrola.
 
 npx sshlg-skills install
 

@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Visão | De um agente a uma organização AI-native | PassionCode.ai
 
-Por que agentes se degradam quando nada os mantém coesos, o que é um arcabouço (harness) e como a PassionCode.ai faz um agente crescer até virar uma família, uma equipe e uma organização. Local primeiro, código aberto, sobre o Claude Code, o Codex e o que vier depois.
+Por que os agentes desandam quando nada os mantém unidos, os quatro princípios com que a PassionCode.ai constrói e como um agente cresce até virar uma equipe e uma organização. Local primeiro, código aberto, por cima do Claude Code, do Codex e do que vier depois.
 
 Ir para o conteúdo
 
@@ -50,13 +50,13 @@ A visão · em outubro de 2026
 
 # De um agente a uma organização AI-native
 
-Agentes são fáceis de começar e difíceis de manter. Estamos construindo o arcabouço que os mantém unidos, para que cada novo agente fortaleça a família
+Agentes são fáceis de começar e difíceis de manter. Estamos construindo o que os mantém unidos, para que cada novo agente fortaleça os outros
 
 Local primeiro, código aberto, sem dependência de fornecedor Por cima do Claude Code, do Codex e do que vier depois
 
 01
 
-O arcabouço que falta
+O que sustenta um agente
 
 02
 
@@ -66,13 +66,13 @@ No que acreditamos
 
 O caminho
 
-01 / O ARCABOUÇO QUE FALTA
+01 / O QUE SUSTENTA UM AGENTE
 
 ## O problema não é o modelo
 
 ## O que o sustenta é
 
-A maioria das organizações já experimenta com agentes, mas no máximo 10% os escalam em uma única função. Um agente criado sozinho esquece tudo entre as sessões, perde o controle das suas contas, não deixa evidências e não conversa com o próximo. Um arcabouço (harness) é tudo o que existe em volta de um modelo e mantém um agente confiável. Os laboratórios também usam a palavra: Anthropic, OpenAI.
+A maioria das organizações já experimenta com agentes, mas no máximo 10% os escalam em uma única função. Um agente criado sozinho esquece tudo entre as sessões e perde o controle das suas contas. Não deixa registro do que fez, e o próximo agente não sabe nada sobre ele. Ao que o mantém coeso damos o nome de arcabouço (harness): tudo o que existe em volta de um modelo e mantém um agente funcionando ao longo do tempo. Os laboratórios também usam a palavra: Anthropic, OpenAI.
 
 01
 
@@ -88,9 +88,9 @@ Cada agente roda na conta em que deve rodar, com seus limites à vista. Isso é 
 
 03
 
-### Saúde e controle
+### Estado e controle
 
-Cada serviço de agente, com seu estado, gasto e atualizações, em uma só janela que pessoas e agentes podem operar. Isso é o Fabric Dashboards.
+Cada serviço de agente, o que ele está fazendo e o que gasta, numa só janela que pessoas e agentes podem controlar. Isso é o Fabric Dashboards.
 
 04
 
@@ -106,7 +106,7 @@ O que mudou, o que foi decidido e o que precisa de atenção, com a prova ao lad
 
 Os projetos são o eixoCada agente trabalha para um projeto, e o projeto guarda o propósito, as decisões e os releases, então o trabalho sobrevive à sessão que o fez.
 
-O trabalho melhora a si mesmoCada execução deixa evidências, e o Observatory as guarda hoje. Retrospectivas que as transformam em lições para o próximo agente são a direção.
+O trabalho melhora a si mesmoCada execução deixa evidências que você pode abrir, e o Observatory as guarda hoje. Retrospectivas que as transformam em lições para o próximo agente são a direção.
 
 Qualquer agente, nas suas máquinasNeutro quanto a fornecedores, local primeiro e de código aberto sob a GNU AGPL-3.0, por cima do Claude Code, do Codex e do que vier depois.
 
@@ -120,7 +120,7 @@ Dentro de cada mudança, recomendamos o task-pipeline, uma skill de código aber
 
 ## cada uma útil por si só
 
-A mesma família cresce de uma pessoa até uma organização inteira. Cada etapa diz se funciona hoje ou se é onde estamos construindo.
+A mesma configuração cresce de uma pessoa até uma organização inteira. Cada etapa diz se funciona hoje ou se é onde estamos construindo.
 
 01
 
@@ -130,6 +130,8 @@ DISPONÍVEL AGORA
 
 Seu agente de programação cria um agente para uma tarefa, com contrato, painel e testes.
 
+Como funciona, passo 3
+
 02
 
 DISPONÍVEL AGORA
@@ -137,6 +139,8 @@ DISPONÍVEL AGORA
 ### Dois agentes que conversam
 
 Agentes conectados ao Fabric compartilham o quadro, a memória e as passagens de bastão de um projeto, e assim um continua de onde o outro parou.
+
+Como funciona, passo 5
 
 03
 
@@ -150,9 +154,9 @@ Os agentes se alinham em um só processo: um prepara, o seguinte confere, uma pe
 
 DISPONÍVEL AGORA, EM PARTE
 
-### Uma família que cuida de si mesma
+### Agentes em ordem
 
-O Dashboards mostra a saúde e os gastos de cada agente, as ferramentas se atualizam sozinhas e o Observatory guarda o que mudou. Agentes que cuidam uns dos outros são a direção.
+O Dashboards mostra o estado e os gastos de cada agente, as ferramentas se atualizam sozinhas e o Observatory guarda o que mudou. Agentes que cuidam uns dos outros são a direção.
 
 05
 
@@ -170,17 +174,19 @@ DIREÇÃO
 
 Os agentes chegam a todos os ambientes de trabalho. As pessoas atuam como especialistas que verificam o trabalho dos agentes e constroem agentes próprios, e esses agentes se espalham pela rede.
 
+Como funciona, passo 6
+
 PERGUNTAS
 
 ## Antes de começar
 
 A PassionCode.ai substitui o Claude Code ou o Codex?
 
-Não. Ela funciona por cima deles. Seu agente de programação continua fazendo o trabalho; a PassionCode.ai dá a ele um lar, contas, monitoramento de saúde, memória e evidências, e deixa o próximo agente entrar na mesma família.
+Não. Ela funciona por cima deles. Seu agente de programação continua fazendo o trabalho; a PassionCode.ai dá a ele uma casa, contas, o estado dele, memória e evidências, e deixa o próximo agente entrar no mesmo projeto.
 
 COMECE COM UM AGENTE
 
-## A família começa
+## Seus agentes começam
 
 ## com um comando
 

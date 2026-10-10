@@ -52,9 +52,9 @@ FABRIC INBOX · VISTA PREVIA DE DESARROLLO
 
 # Lo importante primero
 
-Reúne los buzones de Gmail y Cloudflare en una sola lista, con el correo importante primero y agentes para tus propios dominios que responden lo que permites y redactan borradores del resto
+Reúne los buzones de Gmail y Cloudflare en una sola lista, con el correo importante primero. Los agentes de tus propios dominios responden lo que permites y dejan el resto como borrador
 
-EN LA FAMILIA Correo: las direcciones que los agentes leen y responden dentro de la política que defines. Toda la familia
+EN EL CONJUNTO DE HERRAMIENTAS Correo: las direcciones que los agentes leen y responden dentro de la política que defines. Es el paso 5 de «Cómo funciona». Todas las herramientas
 
 Descargar para macOS
 
@@ -175,11 +175,11 @@ En la app, abre Settings → Agent access. Elige un nombre, un nivel (read, mail
 
 La app muestra el comando completo: claude mcp add --transport http fabric-inbox https://<your-server>/mcp con los dos encabezados de la clave. Después pide list_accounts.
 
-02 / LA FAMILIA PASSIONCODE
+02 / EL CONJUNTO DE HERRAMIENTAS DE PASSIONCODE
 
 ## Cada herramienta con su función
 
-Inbox se encarga del correo. Switchboard gestiona las cuentas de Claude Code y Codex. Project Observatory mantiene a la vista los proyectos en los que trabajan esos agentes. Fabric es el agente de IA con rol de CEO que estamos construyendo para coordinar el trabajo.
+Inbox se encarga del correo. Switchboard gestiona las cuentas de Claude Code y Codex. Project Observatory mantiene a la vista los proyectos en los que trabajan esos agentes. Fabric, en vista previa temprana, es el hogar de tus proyectos y sus agentes.
 
 Conocer Switchboard
 
@@ -215,7 +215,7 @@ Sí. Fabric Inbox es de código abierto bajo la GNU AGPL-3.0. Para los usos que 
 
 ¿Inbox es el agente Fabric?
 
-No. Inbox es un cliente de correo; sus agentes responden a tus direcciones dentro de las reglas que defines. Fabric es nuestro agente de IA con rol de CEO, en vista previa temprana. Pertenecen al mismo conjunto de herramientas y tienen funciones distintas.
+No. Inbox es un cliente de correo; sus agentes responden a tus direcciones dentro de las reglas que defines. Fabric, en vista previa temprana, es el hogar de tus proyectos y sus agentes. Pertenecen al mismo conjunto de herramientas y tienen funciones distintas.
 
 PassionCode
 

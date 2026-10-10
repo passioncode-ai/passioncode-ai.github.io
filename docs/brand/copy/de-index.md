@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from de/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode.ai | Open-Source-Arbeitsplatz für KI-Agenten
+PassionCode.ai | Das agentenunabhängige Betriebssystem für AI-native Teams
 
-Bau dir deinen eigenen Arbeitsplatz für KI-Agenten. Fabric, der CEO-KI-Agent, führt das Projekt; dein Coding-Agent erstellt neue Agenten und wandelt die um, die du schon hast; Fabric Dashboards, Switchboard und Project Observatory lassen sie laufen und behalten sie im Blick. Open Source und kostenlos.
+Baue einen Arbeitsplatz, an dem Agenten die Arbeit erledigen und du alles siehst. Fabric ist das Zuhause für deine Projekte und ihre Agenten; dein Coding-Agent erstellt neue Agenten und passt die an, die du schon hast; Switchboard, Fabric Dashboards und Project Observatory lassen sie laufen und zeigen, was sie getan haben. Open Source und kostenlos.
 
 Zum Inhalt springen
 
@@ -52,7 +52,7 @@ Vom Vibe Coding zum Passion Coding
 
 Baue einen Arbeitsplatz, an dem Agenten die Arbeit erledigen und du alles siehst
 
-Fabric, unser CEO-KI-Agent, hält Zweck, Entscheidungen und Releases jedes Projekts fest. Dein Coding-Agent erstellt neue Agenten und wandelt die um, die du schon hast. Open Source, auf deinen eigenen Rechnern, und kostenlos
+Fabric ist das Zuhause für deine Projekte und ihre Agenten. Dein Coding-Agent erstellt neue Agenten und passt die an, die du schon hast. Open Source, auf deinen eigenen Rechnern, und kostenlos
 
 Für dich, kostenlos
 
@@ -76,25 +76,105 @@ Mail
 
 Deine Agenten
 
-FABRIC · CEO-KI-AGENT
+FABRIC · ZUHAUSE FÜR DEINE PROJEKTE
 
 01 / WARUM
 
-## Ohne Harness
+## Dein Agent läuft eine Woche lang
 
-## verrotten Agenten
+## Dann fällt alles auseinander
 
-Ihre Accounts sind verstreut, zwischen den Sitzungen vergessen sie alles, sie hinterlassen keinen Nachweis ihrer Arbeit und reden nicht miteinander.
+Er läuft auf dem falschen Account oder stößt an ein Limit. Er vergisst, was er gestern gelernt hat, und niemand kann sagen, was er geändert hat. Der nächste Agent, den du baust, fängt bei null an.
 
-Ein Zuhause für deine AgentenPassionCode.ai ist ein lokaler Open-Source-Arbeitsplatz für die Arbeit mit KI-Agenten. Er gibt jedem ein Zuhause, Accounts, Gesundheitsstatus, Gedächtnis und Nachweise.
+Auf deinen Rechnern, als Open SourcePassionCode.ai ist ein lokaler Open-Source-Arbeitsplatz für die Arbeit mit KI-Agenten, unter der GNU AGPL-3.0. Er läuft auf deinen eigenen Rechnern, ohne Anmeldung und ohne Bindung.
 
-Obendrauf auf dem, was du nutztClaude Code, Codex und alles, was danach kommt, mit dem Abo, das du schon hast.
+Mit den Agenten, die du schon hastClaude Code, Codex und alles, was danach kommt, mit dem Abo, das du schon hast.
 
-Deins, durch und durchOpen Source unter der GNU AGPL-3.0, auf deinen Rechnern und mit deinen Accounts. Ohne Anmeldung und ohne Bindung.
+Ein Protokoll zum NachlesenDas Board des Projekts hält Entscheidungen, Aufgaben und Releases fest. Observatory listet auf, was sich geändert hat, mit Nachweisen und einem nächsten Schritt. Jeder Download nennt Version und SHA-256.
 
-Lies die Vision: warum Agenten ein Harness brauchen und wie die Familie wächst
+Lies die Vision: was einen Agenten am Laufen hält und wie aus einem Agenten eine Organisation wird
 
-02 / ZWEI WEGE REIN
+02 / SO FUNKTIONIERT ES
+
+## Von einem Befehl
+
+## zu Agenten, die zusammenarbeiten
+
+Sechs Schritte, in der Reihenfolge, in der du sie gehst. Jeder sagt, ob er heute funktioniert, als Vorschau funktioniert oder ob wir noch daran bauen.
+
+01
+
+JETZT VERFÜGBAR
+
+### Einstieg
+
+Terminalnpx @passioncode-ai/passioncode@latest update
+
+Ein Befehl installiert die Skills in Claude Code oder Codex. Fabric lädst du separat als Vorschau herunter.
+
+Skills installieren
+
+02
+
+VORSCHAU
+
+### Einrichten
+
+AgentEinen erstellen oder einen anderswo gebauten anpassen
+
+ProjektEinen Ordner öffnen oder ein Projekt erstellen
+
+Der erste Bildschirm von Fabric bietet vier Aktionen in zwei Paaren.
+
+Was Fabric heute kann
+
+03
+
+JETZT VERFÜGBAR
+
+### Erster Agent
+
+neuErstelle einen Fabric-Agenten, der aus gemergten Pull Requests Release Notes entwirft
+
+anpassenPasse dieses Repository an Fabric an
+
+Dein Coding-Agent stellt seine Fragen und zeigt seinen Plan, bevor er etwas ändert.
+
+Einen Agenten erstellen oder anpassen
+
+04
+
+JETZT VERFÜGBAR
+
+### Wachsen
+
+Jeder Agent läuft auf dem richtigen Account, mit Dashboard und Ausgaben in einem Fenster.
+
+Fabric Dashboards
+
+05
+
+TEILWEISE JETZT VERFÜGBAR
+
+### Zusammenarbeiten und im Blick behalten
+
+In der Vorschau von Fabric teilen Agenten Board und Übergaben eines Projekts; Observatory zeigt, was sich geändert hat, mit Nachweisen.
+
+Project Observatory
+
+06
+
+ENTWICKLUNGSRICHTUNG
+
+### Organisation
+
+EnterpriseAgenten je nach Rolle ausgerollt, Arbeit zwischen deinen Rechnern verteilt
+
+Dasselbe auf den Rechnern eines ganzen Teams – auf Anfrage, während wir daran bauen.
+
+Für deine Organisation
+
+03 / ZWEI WEGE REIN
 
 ## Für dich,
 
@@ -120,21 +200,21 @@ Schätzung und Anfrage
 
 →
 
-03 / DIE TOOLS
+04 / DIE TOOLS
 
 ## Tools, die du heute nutzen kannst
 
-Jedes funktioniert für sich und ist zusammen besser. Die Versionen sind die aktuellen Releases.
+Jedes funktioniert für sich, und der Schritt zeigt, wo es oben ins Spiel kommt. Die Versionen sind die aktuellen Releases.
 
 Fabric
 
-Der CEO-KI-Agent: ein Zuhause für Zweck, Board, Entscheidungen und Releases jedes Projekts.
+Das Zuhause für deine Projekte und ihre Agenten: Zweck, Board, Entscheidungen und Releases jedes Projekts.
 
 Frühe Vorschau
 
 0.3.4
 
-· macOS
+· macOS · Schritte 2 und 5
 
 ↗
 
@@ -146,7 +226,7 @@ Release
 
 0.6.15
 
-· macOS + Windows
+· macOS + Windows · Schritt 4
 
 ↗
 
@@ -158,7 +238,7 @@ Release
 
 0.6.7
 
-· macOS
+· macOS · Schritt 4
 
 ↗
 
@@ -170,7 +250,7 @@ Release
 
 0.21.0
 
-· macOS + Linux
+· macOS + Linux · Schritt 5
 
 ↗
 
@@ -182,7 +262,7 @@ Entwicklungsvorschau
 
 0.13.0
 
-· macOS
+· macOS · Schritt 5
 
 ↗
 
@@ -194,13 +274,13 @@ CLI
 
 0.1.31
 
-· Node.js 18+
+· Node.js 18+ · Schritte 1 und 3
 
 ↗
 
 Vorschau heißt unfertig: Fabric ist in der frühen Vorschau und seine Unterhaltung antwortet noch nicht; Fabric Inbox ist in der Entwicklungsvorschau, und Antworten mit echten Modellen sind noch nicht verifiziert. Jede Produktseite nennt vor dem Download Voraussetzungen und Einschränkungen. Maschinenlesbare Versionen: /api/releases.
 
-04 / OPEN SOURCE
+05 / OPEN SOURCE
 
 ## Nutze die Tools
 
@@ -210,7 +290,7 @@ Fabric, Fabric Inbox, Switchboard, Observatory und Fabric Dashboards sind Open S
 
 Veröffentlichte Versionen behalten die Lizenz, mit der sie erschienen sind: MIT für Switchboard bis 0.3.1-beta.1, Observatory bis 0.8.1 und Fabric Dashboards 0.1.0; PolyForm Noncommercial oder Internal Use für Switchboard 0.4.0-beta.1, Observatory 0.8.2 bis 0.9.1 sowie Fabric Dashboards 0.2.0 und 0.3.0. Die Vorschau von Fabric 0.2.0 entstand, bevor der Quellcode von Fabric veröffentlicht wurde. PassionCode auf GitHub besuchen ↗
 
-05 / FRAGEN
+06 / FRAGEN
 
 ## Fragen, die zuerst gestellt werden
 

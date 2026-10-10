@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from fr/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | Agent IA dans le rôle de CEO · préversion pour macOS | PassionCode.ai
+Fabric | Le foyer de vos projets et de leurs agents · préversion pour macOS | PassionCode.ai
 
-Fabric est notre agent IA dans le rôle de CEO, aujourd’hui en préversion pour macOS sur Apple silicon et Intel. Il réunit le tableau, les décisions, le travail et les versions d’un projet au même endroit, sur votre Mac.
+Fabric est le foyer de vos projets et de leurs agents, en préversion pour macOS sur Apple silicon et Intel. Il réunit le tableau, les décisions, le travail et les versions d’un projet au même endroit, sur votre Mac.
 
 Aller au contenu
 
@@ -48,13 +48,13 @@ Télécharger
 
 FABRIC · PRÉVERSION
 
-# Un agent IA dans le rôle de CEO
+# Un foyer pour vos projets
 
-# Un lieu unique pour le travail
+# et leurs agents
 
-Fabric est l’agent que nous construisons pour coordonner d’autres agents autour d’un projet, en gardant son objectif, son contexte et ses décisions avec le travail, même quand les personnes, les modèles et les sessions changent
+Fabric conserve l’objectif, le tableau, les décisions et les versions de chaque projet sur votre Mac, pour chaque agent qui y travaille. Nous le construisons pour qu’il devienne le CEO de vos agents
 
-DANS LA FAMILLE Le lieu commun à tous les agents d’un projet : son objectif, son tableau, ses décisions et ses versions. Toute la famille
+DANS LA BOÎTE À OUTILS Le lieu commun à tous les agents d’un projet : son objectif, son tableau, ses décisions et ses versions. Étapes 2 et 5 de « Comment ça marche ». Tous les outils
 
 Télécharger pour macOS
 
@@ -66,25 +66,25 @@ Voir le fonctionnement
 
 Préversion 0.3.4 · macOS sur Apple silicon et Intel
 
-UN PROJET, AU-DELÀ DU CHAT
+LE PREMIER ÉCRAN · QUATRE ACTIONS
 
-Objectif
+Créer un agent
 
-Que cherchons-nous à accomplir ?
+Nommez-le, dites ce qu’il fait, choisissez son dossier et son agent de code
 
-Équipe
+Adapter un agent
 
-Qui est responsable de chaque partie du travail ?
+Reprenez un agent construit ailleurs, sur une nouvelle branche
 
-Pouvoirs
+Ouvrir un projet
 
-Que peut faire chaque agent ?
+Un dossier, ou un dossier de projets
 
-Preuves
+Créer un projet
 
-Comment savoir que ça a marché ?
+Un nouveau foyer pour son objectif, son tableau et ses versions
 
-Une illustration du modèle que nous construisons
+Le travail sur l’agent lui-même se fait dans la console de votre agent de code
 
 LE PROBLÈME
 
@@ -146,7 +146,7 @@ COMMENT NOUS LE CONSTRUISONS
 
 ## Les personnes restent responsables
 
-CEO désigne un rôle de coordination. C’est vous qui décidez à quoi sert le projet et ce que l’agent a le droit de faire.
+La coordination est la direction que prend Fabric, et elle ne vous remplace jamais. C’est vous qui décidez à quoi sert le projet et ce que chaque agent a le droit de faire.
 
 POUVOIRS
 

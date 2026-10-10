@@ -52,9 +52,9 @@ PROJECT OBSERVATORY · PAR PASSIONCODE
 
 # De nouveau en vue
 
-Voyez ce qui a changé dans les projets de vos agents, ce qui demande votre attention et où des clés API connues ont laissé une copie, dans un tableau de bord local disponible en anglais ou en russe
+Voyez ce qui a changé dans les projets de vos agents et ce qui vous attend en premier, y compris là où une clé API connue a laissé une copie, dans un tableau de bord local disponible en anglais ou en russe
 
-DANS LA FAMILLE Mémoire et preuves : ce qui a changé dans chaque projet, ce qui a été décidé et ce qui demande votre attention. Toute la famille
+DANS LA BOÎTE À OUTILS Mémoire et preuves : ce qui a changé dans chaque projet, ce qui a été décidé et ce qui demande votre attention. Étape 5 de « Comment ça marche ». Tous les outils
 
 Commencer
 
@@ -190,7 +190,7 @@ Non. Switchboard gère vos comptes Claude Code et Codex. Observatory garde en vu
 
 Et Fabric ?
 
-Fabric est notre agent IA dans le rôle de CEO, en préversion, centré sur la coordination des agents et des projets. Observatory est disponible dès maintenant comme outil local distinct. Découvrir Fabric.
+Fabric, en préversion, est le foyer de vos projets et de leurs agents. Observatory est disponible dès maintenant comme outil local distinct. Découvrir Fabric.
 
 Puis-je l’examiner ou le compiler moi-même ?
 

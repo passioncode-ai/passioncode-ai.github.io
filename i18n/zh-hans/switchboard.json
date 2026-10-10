@@ -125,6 +125,14 @@
     "Developer ID signed. Not yet notarized by Apple; macOS may block the first launch. Read the installation notes before opening.": "已使用 Developer ID 签名，尚未通过 Apple 公证；macOS 可能会拦截首次启动。打开前请阅读安装说明。",
     "Or install the PassionCode plugin": "或者安装 PassionCode 插件",
     "installs the PassionCode skills, including Switchboard’s skill and its MCP server, for Claude Code and other agents on the machine.": "会为这台电脑上的 Claude Code 和其他智能体安装 PassionCode 技能，包括 Switchboard 的技能及其 MCP 服务器。",
-    ", was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.": "，以 PolyForm Noncommercial or Internal Use 发布，并保持该许可证；下一个版本是首个采用 AGPL 的版本。"
+    ", was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.": "，以 PolyForm Noncommercial or Internal Use 发布，并保持该许可证；下一个版本是首个采用 AGPL 的版本。",
+    "Keep your Claude Code and Codex CLI accounts in one local workbench: see the usage each one reports, and choose which account handles the next request": "把 Claude Code 和 Codex CLI 账号放在同一个本地工作台：查看每个账号上报的用量，并选择由哪个账号处理下一次请求",
+    "IN THE TOOLKIT": "工具包成员",
+    "The accounts: which account each agent runs on, with its usage limits in view. Step 4 of": "账号：每个智能体运行在哪个账号上，并可查看其用量限制。第 4 步：",
+    "how it works": "工作原理",
+    "Switchboard 0.6.13 accounts in its dark theme: the account in use for Claude Code and Codex CLI, two pools of Claude Code accounts with their usage and reset times, and one project rule. Synthetic demo data, with the demo banner at the top.": "Switchboard 0.6.13 的账号界面，深色主题：正在用于 Claude Code 和 Codex CLI 的账号、两个附带用量和重置时间的 Claude Code 账号池，以及一条项目规则。合成的演示数据，顶部有演示横幅。",
+    "Browser demo of 0.6.13 · no real accounts, credentials or provider requests": "0.6.13 的浏览器演示 · 无真实账号、凭据或服务商请求",
+    "Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit.": "Switchboard 是现已可用的账号管理工具。Fabric 是你的项目及其智能体的家，目前为早期预览版。两者都属于 PassionCode 工具包。",
+    "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你查看这些智能体正在处理的项目。Fabric Dashboards 在一个窗口中显示你 Mac 上的本地智能体服务。Fabric 是你的项目及其智能体的家，目前为早期预览版。"
   }
 }

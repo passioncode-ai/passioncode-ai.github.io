@@ -52,9 +52,9 @@ FABRIC INBOX · PRÉVERSION DE DÉVELOPPEMENT
 
 # L’important d’abord
 
-Réunissez vos boîtes Gmail et Cloudflare dans une seule liste, le courrier important en premier, avec des agents sur vos propres domaines qui répondent à ce que vous autorisez et préparent un brouillon pour le reste
+Réunissez vos boîtes Gmail et Cloudflare dans une seule liste, le courrier important en premier. Des agents sur vos propres domaines répondent à ce que vous autorisez et laissent le reste en brouillon
 
-DANS LA FAMILLE Courrier : les adresses que les agents lisent et auxquelles ils répondent selon la politique que vous définissez. Toute la famille
+DANS LA BOÎTE À OUTILS Courrier : les adresses que les agents lisent et auxquelles ils répondent selon la politique que vous définissez. Étape 5 de « Comment ça marche ». Tous les outils
 
 Télécharger pour macOS
 
@@ -175,11 +175,11 @@ Dans l’application, ouvrez Settings → Agent access. Choisissez un nom, un ni
 
 L’application affiche la commande complète : claude mcp add --transport http fabric-inbox https://<your-server>/mcp avec les deux en-têtes de la clé. Demandez ensuite list_accounts.
 
-02 / LA FAMILLE PASSIONCODE
+02 / LA BOÎTE À OUTILS PASSIONCODE
 
 ## Un outil, un rôle
 
-Inbox s’occupe du courrier. Switchboard gère les comptes Claude Code et Codex. Project Observatory garde en vue les projets sur lesquels travaillent ces agents. Fabric est l’agent IA dans le rôle de CEO que nous construisons pour coordonner le travail.
+Inbox s’occupe du courrier. Switchboard gère les comptes Claude Code et Codex. Project Observatory garde en vue les projets sur lesquels travaillent ces agents. Fabric, en préversion, est le foyer de vos projets et de leurs agents.
 
 Découvrir Switchboard
 
@@ -215,7 +215,7 @@ Oui. Fabric Inbox est open source sous licence GNU AGPL-3.0. Pour les usages que
 
 Inbox est-il l’agent Fabric ?
 
-Non. Inbox est un client de messagerie ; ses agents répondent sur vos adresses dans le cadre des règles que vous fixez. Fabric est notre agent IA dans le rôle de CEO, en préversion. Les deux font partie de la même boîte à outils, avec des rôles différents.
+Non. Inbox est un client de messagerie ; ses agents répondent sur vos adresses dans le cadre des règles que vous fixez. Fabric, en préversion, est le foyer de vos projets et de leurs agents. Les deux font partie de la même boîte à outils, avec des rôles différents.
 
 PassionCode
 

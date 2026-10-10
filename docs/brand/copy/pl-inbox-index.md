@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric Inbox | Poczta, w której najważniejsze jest na górze · wersja zapoznawcza na macOS | PassionCode.ai
 
-Fabric Inbox to narzędzie pocztowe z rodziny Fabric, które działa samodzielnie: skrzynki Gmail i Cloudflare w jednej liście z ważną pocztą na górze oraz agenci na Twoich własnych adresach. Rozwojowa wersja zapoznawcza na macOS.
+Fabric Inbox to narzędzie pocztowe Fabric, które działa samodzielnie: skrzynki Gmail i Cloudflare w jednej liście z ważną pocztą na górze oraz agenci na Twoich własnych adresach. Rozwojowa wersja zapoznawcza na macOS.
 
 Przejdź do treści
 
@@ -52,9 +52,9 @@ FABRIC INBOX · ROZWOJOWA WERSJA ZAPOZNAWCZA
 
 # Ważne na górze
 
-Zbierz skrzynki Gmail i Cloudflare w jednej liście, z ważną pocztą na górze, oraz agentów dla własnych domen, którzy odpowiadają na to, na co pozwolisz, a resztę przygotowują jako szkice
+Zbierz skrzynki Gmail i Cloudflare w jedną listę, z ważną pocztą na górze. Agenci dla Twoich własnych domen odpowiadają na to, na co pozwolisz, a resztę zostawiają jako szkic
 
-W RODZINIE Poczta: adresy, które agenci czytają i na które odpowiadają w ramach ustawionej przez Ciebie reguły. Cała rodzina
+W ZESTAWIE NARZĘDZI Poczta: adresy, z których agenci czytają i na które odpowiadają w ramach ustawionej przez Ciebie polityki. To krok 5 w części „Jak to działa”. Wszystkie narzędzia
 
 Pobierz na macOS
 
@@ -175,11 +175,11 @@ W aplikacji otwórz Settings → Agent access. Wybierz nazwę, poziom (read, mai
 
 Aplikacja wypisuje całe polecenie: claude mcp add --transport http fabric-inbox https://<your-server>/mcp z dwoma nagłówkami klucza. Potem poproś o list_accounts.
 
-02 / RODZINA PASSIONCODE
+02 / ZESTAW NARZĘDZI PASSIONCODE
 
 ## Narzędzie z własnym zadaniem
 
-Inbox zajmuje się pocztą. Switchboard zarządza kontami Claude Code i Codex. Project Observatory trzyma w polu widzenia projekty, nad którymi pracują ci agenci. Fabric to agent CEO AI, którego budujemy, by koordynował pracę.
+Inbox obsługuje pocztę. Switchboard zarządza kontami Claude Code i Codex. Project Observatory trzyma w polu widzenia projekty, nad którymi pracują ci agenci. Fabric, we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów.
 
 Poznaj Switchboard
 
@@ -215,7 +215,7 @@ Tak. Fabric Inbox ma otwarty kod na licencji GNU AGPL-3.0. Na zastosowania, któ
 
 Czy Inbox to agent Fabric?
 
-Nie. Inbox to klient poczty; jego agenci odpowiadają na Twoje adresy w ramach reguł, które ustawisz. Fabric to nasz agent CEO AI, we wczesnej wersji zapoznawczej. Oba należą do tego samego zestawu narzędzi i mają różne role.
+Nie. Inbox to klient poczty; jego agenci odpowiadają na Twoje adresy w ramach reguł, które ustawisz. Fabric, we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów. Należą do tego samego zestawu narzędzi i mają różne role.
 
 PassionCode
 

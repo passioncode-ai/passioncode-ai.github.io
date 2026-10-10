@@ -67,6 +67,14 @@
     ". It began as Cloudflare’s Agentic Inbox template, which keeps its own Apache-2.0 notice. The": "。它最初源自 Cloudflare 的 Agentic Inbox 模板，该模板保留其自有的 Apache-2.0 声明。",
     "includes the source, tests and release notes.": "包含源代码、测试和版本说明。",
     "Is Inbox the Fabric agent?": "Inbox 就是 Fabric 智能体吗？",
-    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "不是。Inbox 是邮件客户端；它的智能体在你设定的规则范围内回复你的地址。"
+    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "不是。Inbox 是邮件客户端；它的智能体在你设定的规则范围内回复你的地址。",
+    "Bring Gmail and Cloudflare mailboxes into one list, important mail first. Agents for your own domains answer what you allow and leave the rest as a draft": "把 Gmail 和 Cloudflare 邮箱放进同一个列表，重要邮件优先。你自己域名上的智能体回复你允许的内容，其余留成草稿",
+    "IN THE TOOLKIT": "工具包成员",
+    "Mail: the addresses agents read and answer within the policy you set. Step 5 of": "邮件：智能体在你设定的策略内读取和回复的地址。第 5 步，见",
+    "how it works": "工作原理",
+    "All the tools": "全部工具",
+    "02 / THE PASSIONCODE TOOLKIT": "02 / PASSIONCODE 工具包",
+    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox 处理邮件。Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你随时看到这些智能体正在做的项目。Fabric 处于早期预览阶段，是你的项目及其智能体的家。",
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "，处于早期预览阶段，是你的项目及其智能体的家。它们属于同一个工具包，各有不同的角色。"
   }
 }

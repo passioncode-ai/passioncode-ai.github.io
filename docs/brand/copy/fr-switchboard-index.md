@@ -52,9 +52,9 @@ FABRIC SWITCHBOARD · PAR PASSIONCODE
 
 # Un changement plus clair
 
-Réunissez vos comptes Claude Code et Codex CLI dans un seul poste de travail local pour vérifier l’usage déclaré, séparer comptes professionnels et personnels et choisir ce qui traite votre prochaine requête
+Réunissez vos comptes Claude Code et Codex CLI dans un seul poste de travail local : voyez l’usage que chacun déclare et choisissez le compte qui traite la prochaine requête
 
-DANS LA FAMILLE Les comptes : le compte sur lequel tourne chaque agent, avec ses limites d’usage sous les yeux. Toute la famille
+DANS LA BOÎTE À OUTILS Les comptes : le compte sur lequel tourne chaque agent, avec ses limites d’usage sous les yeux. Étape 4 de « Comment ça marche ». Tous les outils
 
 Télécharger Switchboard
 
@@ -160,7 +160,7 @@ DANS SWITCHBOARD
 
 L’interface réelle de Switchboard, présentée avec des comptes de démonstration fictifs.
 
-Démo dans le navigateur · aucun compte réel, aucun identifiant, aucune requête vers un fournisseur
+Démo de la 0.6.13 dans le navigateur · aucun compte réel, aucun identifiant, aucune requête vers un fournisseur
 
 UN POSTE DE TRAVAIL LOCAL
 
@@ -285,7 +285,7 @@ Les sessions gérées envoient leurs requêtes via un proxy local et suivent la 
 
 Switchboard et Fabric, est-ce la même chose ?
 
-Switchboard est l’outil de gestion de comptes disponible aujourd’hui. Fabric est notre agent IA dans le rôle de CEO, en préversion, consacré à la coordination des agents et des projets. Les deux font partie de la boîte à outils PassionCode. Découvrir ce que nous construisons avec Fabric.
+Switchboard est l’outil de gestion de comptes disponible aujourd’hui. Fabric, en préversion, est le foyer de vos projets et de leurs agents. Les deux font partie de la boîte à outils PassionCode. Découvrir ce que nous construisons avec Fabric.
 
 Quels agents fonctionnent avec Switchboard ?
 
@@ -309,7 +309,7 @@ FAIT PARTIE DE LA BOÎTE À OUTILS PASSIONCODE
 
 ## de l’installation
 
-Switchboard gère les comptes Claude Code et Codex. Project Observatory garde sous les yeux les projets sur lesquels travaillent ces agents. Fabric Dashboards affiche dans une seule fenêtre les services d’agents locaux de votre Mac. Fabric, notre agent IA dans le rôle de CEO, est en préversion.
+Switchboard gère les comptes Claude Code et Codex. Project Observatory garde sous les yeux les projets sur lesquels travaillent ces agents. Fabric Dashboards affiche dans une seule fenêtre les services d’agents locaux de votre Mac. Fabric, le foyer de vos projets et de leurs agents, est en préversion.
 
 Découvrir Observatory
 

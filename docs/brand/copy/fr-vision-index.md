@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Vision | D’un agent à une organisation AI-native | PassionCode.ai
 
-Pourquoi les agents se dégradent quand rien ne les tient ensemble, ce qu’est un harness, et comment PassionCode.ai fait grandir un agent jusqu’à une famille, une équipe et une organisation. En local d’abord, open source, par-dessus Claude Code, Codex et ce qui viendra ensuite.
+Pourquoi les agents se défont quand rien ne les tient ensemble, les quatre principes qui guident PassionCode.ai, et comment un agent devient une équipe puis une organisation. En local d’abord, open source, par-dessus Claude Code, Codex et ce qui viendra ensuite.
 
 Aller au contenu
 
@@ -50,13 +50,13 @@ La vision · état en octobre 2026
 
 # D’un agent à une organisation AI-native
 
-Les agents sont faciles à lancer et difficiles à garder. Nous construisons le harness qui les tient ensemble, pour que chaque nouvel agent renforce la famille
+Les agents sont faciles à lancer et difficiles à garder. Nous construisons ce qui les tient ensemble, pour que chaque nouvel agent renforce les autres
 
 En local d’abord, open source, indépendant des fournisseurs Par-dessus Claude Code, Codex et ce qui viendra ensuite
 
 01
 
-Le harness qui manque
+Ce qui tient un agent
 
 02
 
@@ -66,13 +66,13 @@ Ce que nous croyons
 
 Le chemin
 
-01 / LE HARNESS QUI MANQUE
+01 / CE QUI TIENT UN AGENT
 
 ## Le problème n’est pas le modèle
 
 ## mais ce qui le tient
 
-La plupart des organisations expérimentent déjà avec des agents, mais 10 % au plus les déploient à grande échelle dans une même fonction. Un agent construit seul oublie tout d’une session à l’autre, perd la trace de ses comptes, ne laisse aucune preuve et ne parle pas au suivant. Un harness est tout ce qui entoure un modèle et le rend fiable. Les laboratoires emploient aussi le mot : Anthropic, OpenAI.
+La plupart des organisations expérimentent déjà avec des agents, mais 10 % au plus les déploient à grande échelle dans une même fonction. Un agent construit seul oublie tout d’une session à l’autre et perd de vue ses comptes. Il ne laisse aucune trace de ce qu’il a fait, et l’agent suivant ne sait rien de lui. Ce qui le tient ensemble, nous l’appelons un harness : tout ce qui entoure un modèle et maintient un agent au travail dans la durée. Les laboratoires emploient aussi le mot : Anthropic, OpenAI.
 
 01
 
@@ -88,9 +88,9 @@ Chaque agent tourne sur le bon compte, avec ses limites sous les yeux. C’est F
 
 03
 
-### Santé et contrôle
+### État et contrôle
 
-Chaque service d’agent, son état, ses dépenses et ses mises à jour, dans une seule fenêtre que les personnes comme les agents peuvent piloter. C’est Fabric Dashboards.
+Chaque service d’agent, ce qu’il fait et ce qu’il dépense, dans une seule fenêtre que les personnes comme les agents peuvent piloter. C’est Fabric Dashboards.
 
 04
 
@@ -106,7 +106,7 @@ Ce qui a changé, ce qui a été décidé et ce qui demande de l’attention, av
 
 Les projets sont l’axeChaque agent travaille pour un projet, et le projet garde l’objectif, les décisions et les versions, de sorte que le travail survit à la session qui l’a fait.
 
-Le travail s’améliore tout seulChaque exécution laisse des preuves, et Observatory les conserve dès aujourd’hui. Des rétrospectives qui en font des leçons pour le prochain agent sont la direction.
+Le travail s’améliore tout seulUne exécution laisse des preuves que vous pouvez consulter, et Observatory les conserve dès aujourd’hui. Des rétrospectives qui en tirent des leçons pour l’agent suivant : c’est l’orientation.
 
 N’importe quel agent, sur vos machinesIndépendant des fournisseurs, local d’abord et open source sous licence GNU AGPL-3.0, par-dessus Claude Code, Codex et ce qui viendra ensuite.
 
@@ -120,7 +120,7 @@ Pour la discipline à l’intérieur de chaque changement, nous recommandons tas
 
 ## chacune utile en soi
 
-La même famille grandit d’une personne à toute une organisation. Chaque étape indique si elle fonctionne aujourd’hui ou si c’est là que nous construisons.
+Le même dispositif grandit d’une personne à toute une organisation. Chaque étape indique si elle fonctionne aujourd’hui ou si c’est là que nous construisons.
 
 01
 
@@ -130,6 +130,8 @@ DISPONIBLE MAINTENANT
 
 Votre agent de code construit un agent pour une tâche, avec un contrat, un tableau de bord et des tests.
 
+Comment ça marche, étape 3
+
 02
 
 DISPONIBLE MAINTENANT
@@ -137,6 +139,8 @@ DISPONIBLE MAINTENANT
 ### Deux agents qui se parlent
 
 Les agents connectés à Fabric partagent le tableau, la mémoire et les passations d’un même projet : l’un reprend là où l’autre s’est arrêté.
+
+Comment ça marche, étape 5
 
 03
 
@@ -150,9 +154,9 @@ Les agents s’enchaînent en un seul processus : l’un prépare, le suivant v�
 
 DISPONIBLE EN PARTIE
 
-### Une famille qui veille sur elle-même
+### Des agents bien entretenus
 
-Dashboards montre la santé et les dépenses de chaque agent, les outils se mettent à jour seuls, et Observatory garde ce qui a changé. Des agents qui se surveillent entre eux sont la direction.
+Dashboards montre l’état et les dépenses de chaque agent, les outils se mettent à jour seuls, et Observatory garde ce qui a changé. Des agents qui veillent les uns sur les autres : c’est l’orientation.
 
 05
 
@@ -170,17 +174,19 @@ ORIENTATION
 
 Les agents arrivent à chaque poste de travail. Les personnes deviennent les experts qui vérifient le travail des agents et construisent leurs propres agents, et ces agents se diffusent dans le réseau.
 
+Comment ça marche, étape 6
+
 QUESTIONS
 
 ## Avant de commencer
 
 PassionCode.ai remplace-t-il Claude Code ou Codex ?
 
-Non. Il fonctionne par-dessus. Votre agent de code continue de faire le travail ; PassionCode.ai lui donne un foyer, des comptes, un suivi de santé, une mémoire et des preuves, et permet à l’agent suivant de rejoindre la même famille.
+Non. Il fonctionne par-dessus. Votre agent de code continue de faire le travail ; PassionCode.ai lui donne un foyer, des comptes, son état, une mémoire et des preuves, et permet à l’agent suivant de rejoindre le même projet.
 
 COMMENCEZ PAR UN AGENT
 
-## La famille commence
+## Vos agents commencent
 
 ## par une seule commande
 

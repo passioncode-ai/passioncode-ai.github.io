@@ -48,6 +48,26 @@
     ", a separate open-source skill that does not move on until each gate passes.": "，这是一个独立的开源技能，每道关卡通过之前不会继续往下走。",
     "How to install it": "如何安装",
     "03 / THE PATH": "03 / 路径",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "安装技能并构建第一个智能体，或带上整个组织：PassionCode for Enterprise 正在开发中，按需提供。"
+    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "安装技能并构建第一个智能体，或带上整个组织：PassionCode for Enterprise 正在开发中，按需提供。",
+    "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "为什么没有东西托住时智能体会散掉，PassionCode.ai 依据的四项原则，以及一个智能体如何长成团队和组织。本地优先，开源，构建在 Claude Code、Codex 以及之后出现的工具之上。",
+    "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "什么让智能体持续工作，一个智能体如何长成团队和组织，以及今天已经可用的部分。",
+    "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "什么让智能体持续工作，PassionCode.ai 依据的四项原则，以及一个智能体如何长成团队和组织，每个阶段都标注现已可用或发展方向。",
+    "No. It works on top of them. Your coding agent keeps doing the work; PassionCode.ai gives it a home, accounts, its state, memory and evidence, and lets the next agent join the same project.": "不会。它构建在这些工具之上。你的编码智能体继续干活；PassionCode.ai 给它一个家、账号、状态、记忆和证据，并让下一个智能体加入同一个项目。",
+    "Agents are easy to start and hard to keep. We are building what holds them together, so each new agent makes the others stronger": "智能体容易启动，难在持续。我们在构建把它们托在一起的东西，让每个新智能体都使其他智能体更强。",
+    "What holds an agent": "什么托住一个智能体",
+    "01 / WHAT HOLDS AN AGENT": "01 / 什么托住一个智能体",
+    "in any one function. An agent built alone forgets between sessions and loses track of its accounts. It leaves no record of what it did, and the next agent knows nothing about it. We call what holds it together": "在任何一个职能里，孤立的智能体在会话之间会遗忘，也跟不上自己的账号。它不留下自己做过什么的记录，下一个智能体对它一无所知。我们把托住它的东西称为",
+    "a harness": "支撑框架（harness）",
+    ": everything around a model that keeps an agent working over time. The labs use the word too:": "：模型周围的一切，让智能体随时间持续工作。实验室也用这个词：",
+    "State and control": "状态与控制",
+    "Every agent service, what it is doing and what it spends, in one window that people and agents can drive. That is Fabric Dashboards.": "每个智能体服务、它正在做什么、花费多少，都在一个窗口里，人和智能体都能操作。这就是 Fabric Dashboards。",
+    "A run leaves evidence you can open, and Observatory keeps it today. Retrospectives that turn it into lessons the next agent learns from are the direction.": "一次运行会留下你可以打开的证据，Observatory 今天已经保存这些证据。把证据变成下一个智能体可学习经验的复盘，是发展方向。",
+    "The same setup grows from one person to a whole organization. Each stage says whether it works today or is where we are building.": "同一套东西可以从一个人扩展到整个组织。每个阶段都标明今天已可用，还是我们正在构建的方向。",
+    "How it works, step 3": "工作原理，第 3 步",
+    "How it works, step 5": "工作原理，第 5 步",
+    "Agents kept in good order": "让智能体保持有序",
+    "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards 显示每个智能体的状态和花费，工具自行更新，Observatory 保存变化。智能体相互照看是发展方向。",
+    "How it works, step 6": "工作原理，第 6 步",
+    "Your agents start": "你的智能体开始"
   }
 }

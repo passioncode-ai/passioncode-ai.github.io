@@ -52,9 +52,9 @@ FABRIC SWITCHBOARD · OD PASSIONCODE
 
 # Przełączanie bez zgadywania
 
-Trzymaj konta Claude Code i Codex CLI w jednym lokalnym warsztacie: sprawdzaj zgłaszane użycie, oddzielaj konta służbowe od prywatnych i wybieraj, które obsłuży następne żądanie
+Trzymaj konta Claude Code i Codex CLI w jednym lokalnym warsztacie: zobacz zużycie, które zgłasza każde z nich, i wybierz, które konto obsłuży następne żądanie
 
-W RODZINIE Konta: na którym koncie działa każdy agent, z limitami użycia na widoku. Cała rodzina
+W ZESTAWIE NARZĘDZI Konta: na którym koncie pracuje każdy agent, z limitami zużycia na widoku. To krok 4 w części „Jak to działa”. Wszystkie narzędzia
 
 Pobierz Switchboard
 
@@ -160,7 +160,7 @@ WEWNĄTRZ SWITCHBOARD
 
 Prawdziwy interfejs Switchboard z syntetycznymi kontami demonstracyjnymi.
 
-Demo w przeglądarce · bez prawdziwych kont, danych logowania i żądań do dostawców
+Demo 0.6.13 w przeglądarce · bez prawdziwych kont, danych uwierzytelniających i żądań do dostawców
 
 LOKALNY WARSZTAT
 
@@ -285,7 +285,7 @@ Sesje zarządzane wysyłają żądania przez lokalne proxy i przy kolejnych żą
 
 Czy Switchboard to to samo co Fabric?
 
-Switchboard to narzędzie do zarządzania kontami dostępne już dziś. Fabric to nasz agent AI w roli CEO, we wczesnej wersji zapoznawczej, skupiony na koordynowaniu agentów i projektów. Oba należą do zestawu narzędzi PassionCode. Zobacz, co budujemy w Fabric.
+Switchboard to narzędzie do zarządzania kontami dostępne już dziś. Fabric, we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów. Oba należą do zestawu narzędzi PassionCode. Zobacz, co budujemy w Fabric.
 
 Które agenty działają ze Switchboard?
 
@@ -309,7 +309,7 @@ CZĘŚĆ ZESTAWU NARZĘDZI PASSIONCODE
 
 ## całego środowiska
 
-Switchboard zarządza kontami Claude Code i Codex. Project Observatory pokazuje projekty, nad którymi pracują te agenty. Fabric Dashboards pokazuje lokalne usługi agentów na Twoim Macu w jednym oknie. Fabric, nasz agent AI w roli CEO, jest we wczesnej wersji zapoznawczej.
+Switchboard zarządza kontami Claude Code i Codex. Project Observatory trzyma w polu widzenia projekty, nad którymi pracują ci agenci. Fabric Dashboards pokazuje w jednym oknie lokalne usługi agentów na Twoim Macu. Fabric, dom dla Twoich projektów i ich agentów, jest we wczesnej wersji zapoznawczej.
 
 Poznaj Observatory
 
