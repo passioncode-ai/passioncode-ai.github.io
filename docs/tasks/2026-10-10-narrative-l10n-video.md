@@ -236,7 +236,32 @@ The copy agent's deterministic check (no model, no charge), register `marketing`
 content hash equals the sha-256 of the text sent. `native-naturalness` and `claim-evidence` were not run (no
 generation model connected).
 
-CHECKSTABLE
+| Page | Locale | Report id | Score | Findings |
+|---|---|---|---|---|
+| / | en-US | `088c1273-64e5-4437-84b4-07742b965b86` | 100, pass | 3 × rule of three, all content ("decisions, tasks and releases"; "with the evidence and a next step"; "the account it should, with its dashboard and spend"); the rhythm one (proof 1, "AGPL-3.0, on your machines and your accounts") was rewritten. 0 clichés |
+| /vision/ | en-US | `db419ef3-478c-40e8-8226-3831f3ad8cde` | 100, pass | 3 × rule of three, content (a project's purpose, board, decisions and releases; "what changed, what was decided and what needs attention"). 0 clichés |
+| /start/ | en-US | `d93cfb47-95e2-4b09-a796-575c3c39c12e` | 100, pass | 3 × rule of three, content (what the launcher installs; what adapting produces). 0 clichés |
+| /business/ | en-US | `670c87ad-26ca-4a96-9f89-ffc49186ba4e` | 100, pass | 3 × rule of three, in unchanged sentences. 0 clichés |
+| /fabric/ | en-US | `e9e9f7a6-8160-4b07-a343-5026ad1ed1a2` | 100, pass | 3 × rule of three, content (the Create form's fields; the project home). 0 clichés |
+| /switchboard/ | en-US | `d58c6350-8256-4813-91ff-66c15a7edae0` | 100, pass | 3 × rule of three, in unchanged sentences. 0 clichés |
+| /dashboards/ | en-US | `d33aeddc-657b-4a1c-84fd-7c24a0d97e40` | 100, pass | 3 × rule of three, content (the toolkit line's state, spend and control). 0 clichés |
+| /observatory/ | en-US | `26f1700a-5dea-4f98-91d6-ebcf9c1d038f` | 100, pass | 3 × rule of three, content. 0 clichés |
+| /inbox/ | en-US | `b38519c0-9c2a-4698-b2cb-202c760d8012` | 100, pass | 3 × rule of three, in unchanged sentences. 0 clichés |
+| / | ru-RU | `09b7d853-2edd-4bb6-895c-dc8d68d95da6` | 100, pass | 6 × "AGPL" all caps (false positive, a licence name); 1 × «ё» mixed («чём» and «чем» are different words). 0 no-break-space findings. 0 clichés |
+| /vision/ | ru-RU | `a4664ae3-5729-436b-b5b4-71157f0824b0` | 100, pass | 2 × no-break space, both at an inline-element boundary («к» before the `<em>`, «но» before a link); 1 × "AGPL". 1,95 clichés per 1 000 words (baseline 2) |
+| /start/ | ru-RU | `90f29b08-8144-4e66-bc53-4ed860e384a4` | 100, pass | 1 × no-break space at the `<em>` boundary («до»); 2 × space before punctuation, both where a `<code>` span was left out of the checked prose. The real stray space after `fabric-adapter` was fixed. 0 clichés |
+| /business/ | ru-RU | `2b3da57a-7c20-40ad-919c-cfb93d7e96a2` | 100, pass | 2 × «который» chain in unchanged sentences; 1 × "AGPL". 0 clichés |
+| /fabric/ | ru-RU | `54a63458-c1c8-454f-8744-557d65642c6c` | 100, pass | 3 × "AGPL"; 1 × «ё» mixed (as on home). 0 clichés |
+| /switchboard/ | ru-RU | `9b64a770-9c7f-40ca-93c2-641e90206289` | 100, pass | 11 × all caps (AGPL, CLI, MCP); 2 × no-break space at link boundaries; 3 × space before punctuation where `<code>` was left out; 1 × «который» chain, unchanged sentence. 0,97 clichés |
+| /dashboards/ | ru-RU | `3d720450-e8d9-4f4b-b96f-c213c49e34bf` | 100, pass | 3 × all caps; 2 × no-break space at link boundaries; 3 × space before punctuation where `<code>` was left out; 1 × decimal comma on the version "0.6" (false positive); «сервисы» 27 times (the product is about services). 0 clichés |
+| /observatory/ | ru-RU | `2eb96a57-e95a-4343-889f-6882ff3d8c08` | 100, pass | 10 × all caps; 3 × no-break space at link or code boundaries; 7 × space before punctuation where `<code>` was left out. 0 clichés |
+| /inbox/ | ru-RU | `37223ec7-5094-41ce-b592-ee6326790d06` | 100, pass | 10 × all caps; 2 × no-break space at link boundaries; 2 × space before punctuation where `<code>` was left out; 1 × «который» chain and 1 × verbal-noun chain, both in unchanged sentences (the chain in the new toolkit line was rewritten). 1,6 clichés |
+
+All 18 reports: no blocking rule, no voice-rule finding (bans, forbidden terms), cliché density at or under the
+baseline. Each English report caps "rule of three" at three findings; the Russian reports have none. A remaining
+Russian no-break-space finding sits where the space belongs to the page markup between a catalog fragment and a link,
+`<code>` or `<em>`, which a catalog value cannot carry. The first report for /ru/start/ (`4b3ba246-…`) is void: its
+no-break spaces arrived as plain spaces; the re-run's hash matches.
 
 **Other languages (W8/W9).** Not translated. `.l10n-todo.json` (delete before merge) lists 143 English strings per
 language (pl and ko 146: they also need the three state labels on the home page; zh-hans and ja 142: they already had
