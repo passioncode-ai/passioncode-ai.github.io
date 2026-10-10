@@ -50,6 +50,26 @@
     ", a separate open-source skill that does not move on until each gate passes.": ", una skill de código abierto aparte que no avanza hasta que se supera cada verificación.",
     "How to install it": "Cómo instalarla",
     "03 / THE PATH": "03 / EL CAMINO",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Instala las skills y crea el primer agente, o lleva contigo a toda una organización: PassionCode for Enterprise está en desarrollo y se ofrece bajo solicitud."
+    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Instala las skills y crea el primer agente, o lleva contigo a toda una organización: PassionCode for Enterprise está en desarrollo y se ofrece bajo solicitud.",
+    "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "Por qué los agentes se desmoronan cuando nada los mantiene unidos, los cuatro principios con los que construye PassionCode.ai y cómo un agente crece hasta ser un equipo y una organización. Local primero, código abierto, sobre Claude Code, Codex y lo que venga después.",
+    "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "Qué mantiene a un agente funcionando, cómo un agente crece hasta ser un equipo y una organización, y qué funciona hoy.",
+    "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "Qué mantiene a un agente funcionando, los cuatro principios con los que construye PassionCode.ai y cómo un agente crece hasta ser un equipo y una organización, cada etapa marcada como disponible hoy o como dirección.",
+    "No. It works on top of them. Your coding agent keeps doing the work; PassionCode.ai gives it a home, accounts, its state, memory and evidence, and lets the next agent join the same project.": "No. Funciona encima de ellos. Tu agente de programación sigue haciendo el trabajo; PassionCode.ai le da un hogar, cuentas, su estado, memoria y evidencias, y deja que el siguiente agente se una al mismo proyecto.",
+    "Agents are easy to start and hard to keep. We are building what holds them together, so each new agent makes the others stronger": "Los agentes son fáciles de empezar y difíciles de mantener. Estamos construyendo lo que los mantiene unidos, para que cada agente nuevo haga más fuertes a los demás",
+    "What holds an agent": "Lo que sostiene a un agente",
+    "01 / WHAT HOLDS AN AGENT": "01 / LO QUE SOSTIENE A UN AGENTE",
+    "in any one function. An agent built alone forgets between sessions and loses track of its accounts. It leaves no record of what it did, and the next agent knows nothing about it. We call what holds it together": "en una sola función. Un agente creado a solas olvida entre sesiones y pierde el rastro de sus cuentas. No deja registro de lo que hizo, y el siguiente agente no sabe nada de él. A lo que lo mantiene unido lo llamamos",
+    "a harness": "arnés (harness)",
+    ": everything around a model that keeps an agent working over time. The labs use the word too:": ": todo lo que rodea a un modelo y mantiene a un agente funcionando con el tiempo. Los laboratorios también usan la palabra:",
+    "State and control": "Estado y control",
+    "Every agent service, what it is doing and what it spends, in one window that people and agents can drive. That is Fabric Dashboards.": "Cada servicio de agente, lo que está haciendo y lo que gasta, en una sola ventana que personas y agentes pueden manejar. Eso es Fabric Dashboards.",
+    "A run leaves evidence you can open, and Observatory keeps it today. Retrospectives that turn it into lessons the next agent learns from are the direction.": "Cada ejecución deja evidencias que puedes abrir, y Observatory las guarda hoy. Las retrospectivas que las convierten en lecciones para el siguiente agente son la dirección.",
+    "The same setup grows from one person to a whole organization. Each stage says whether it works today or is where we are building.": "La misma configuración crece de una persona a toda una organización. Cada etapa indica si funciona hoy o si es hacia donde estamos construyendo.",
+    "How it works, step 3": "Cómo funciona, paso 3",
+    "How it works, step 5": "Cómo funciona, paso 5",
+    "Agents kept in good order": "Agentes en buen orden",
+    "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards muestra el estado y el gasto de cada agente, las herramientas se actualizan solas y Observatory guarda lo que cambió. Que los agentes se cuiden entre sí es la dirección.",
+    "How it works, step 6": "Cómo funciona, paso 6",
+    "Your agents start": "Tus agentes empiezan"
   }
 }

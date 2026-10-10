@@ -89,6 +89,12 @@
     "OPEN SOURCE · LOCAL FIRST": "CÓDIGO ABIERTO · LOCAL PRIMERO",
     "Your projects, your evidence": "Tus proyectos, tu evidencia",
     "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "Configura un espacio de trabajo privado, observa tus propias carpetas y cuéntanos dónde debe mejorar.",
-    "Report an issue": "Informar de un problema"
+    "Report an issue": "Informar de un problema",
+    "See what changed across your agents’ projects and what needs you first, including where a known API key left a copy, in a local dashboard available in English or Russian": "Ve qué cambió en los proyectos de tus agentes y qué te necesita primero, incluido dónde dejó una copia una clave de API conocida, en un panel local disponible en inglés o ruso",
+    "IN THE TOOLKIT": "EN EL CONJUNTO DE HERRAMIENTAS",
+    "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "Memoria y evidencias: qué cambió en cada proyecto, qué se decidió y qué necesita atención. Es el paso 5 de",
+    "how it works": "«Cómo funciona»",
+    "All the tools": "Todas las herramientas",
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, en vista previa temprana, es el hogar de tus proyectos y sus agentes. Observatory está disponible ahora como una herramienta local independiente."
   }
 }
