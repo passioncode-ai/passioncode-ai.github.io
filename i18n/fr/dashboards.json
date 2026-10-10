@@ -80,6 +80,12 @@
     "The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.": "L’application se met à jour seule : une version doit porter la signature de l’organisation et correspondre à ses sommes de contrôle avant de s’installer, et l’installation attend tant qu’une console ou une commande tourne. L’installation automatique peut être désactivée dans les réglages.",
     "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "Dans Settings → Estate updates, l’application surveille le Fabric Agent Contract et les skills PassionCode.ai, et peut mettre à jour les skills en arrière-plan après avoir vérifié qui les a publiés. Cette option est désactivée par défaut.",
     "English or Russian": "Anglais ou russe",
-    "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Settings → Language : comme sur ce Mac, anglais ou russe. La fenêtre, le menu et l’icône de la barre des menus changent aussitôt."
+    "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Settings → Language : comme sur ce Mac, anglais ou russe. La fenêtre, le menu et l’icône de la barre des menus changent aussitôt.",
+    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Voyez tous les services d’agents de votre Mac dans une seule application : ce qui vous attend passe en premier, et le tableau de bord propre à chaque service s’ouvre juste à côté",
+    "IN THE TOOLKIT": "DANS LA BOÎTE À OUTILS",
+    "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "État, dépenses et contrôle : chaque service d’agent, ce qu’il fait, ce qu’il dépense et ses mises à jour dans une seule fenêtre. Étape 4 de",
+    "how it works": "« Comment ça marche »",
+    "All the tools": "Tous les outils",
+    "The skills kept current": "Des skills toujours à jour"
   }
 }
