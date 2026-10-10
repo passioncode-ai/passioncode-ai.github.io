@@ -11,7 +11,7 @@ Homepage directory → independent tools → concrete Observatory-to-Dashboards 
 
 Fabric agents branch of FLW-03: Fabric "Before you open it" → which coding agents Fabric works with → /fabric/agents/ → level tables with official sites → Download for macOS (Fabric #download) or an agent's own site (SCN-018, SCR-12).
 
-Vision branch of FLW-03: header Vision, the home path note or /business/ → /vision/ → sources → harness → principles → the path with labelled stages → today and direction → trust → For you, free (/start/) or For your organization (/business/) (SCN-020, SCR-13).
+Vision branch of FLW-03: header Vision, the home Why note or /business/ → /vision/ → the missing harness → four principles → the path with labelled stages → For you, free (/start/) or For your organization (/business/) (SCN-020, SCR-13).
 
 Dashboards branch of FLW-01: directory → /dashboards/ → requirements and separately installed service note → `/dashboards/download/macos` (the current release, SHA-256 beside it) → release notes. MCP setup is visible on the same page. Every version and checksum a visitor reads is the current release, written at the edge (SCN-016).
 
@@ -24,7 +24,7 @@ Legacy Observatory links ending in `#start` retain that fragment after the old h
 Hero → vision (do what you love; the boundary between today and the direction) → How it works (four steps with current versions) → paths: Install and use it → /start/ (launcher command → Fabric download → create or convert an agent → Fabric Dashboards + MCP → optional Switchboard, Observatory, Inbox) | Make it better → /start/#contribute (repository → AGENTS.md + CONTRIBUTING.md → test command → pull request = CLA) | companies → FLW-06.
 
 ## FLW-06 — Request a company workplace
-Any entry (header For organizations, hero For your organization, paths card, organization teaser, /vision/, footer, license notes, /start/ closing) → /business/ → the organization path and Enterprise offer → segments → estimate formula → five-step form (goals/company → processes with live estimate → setup → budget → contact + consent) → POST /api/leads → stored in D1 → notification to the commercial mailbox, receipt to the sender, signed copy to the Platform → reference shown (or /business/thanks/ without JavaScript). Refusals return to the step with the reason; the email address is the fallback, never the main path.
+Any entry (header For organizations, hero For your organization, the home door card, /vision/ closing, footer, license notes, /start/ closing) → /business/ → the Enterprise offer (in development, on request) → estimate formula → five-step form (goals/company → processes with live estimate → setup → budget → contact + consent) → POST /api/leads → stored in D1 → notification to the commercial mailbox, receipt to the sender, signed copy to the Platform → reference shown (or /business/thanks/ without JavaScript). Refusals return to the step with the reason; the email address is the fallback, never the main path.
 
 ## FLW-07 — Switch language
 Any page → header language switch → the same page in the other language at `/<code>/<path>` (English at `/`) → continue in that language: every internal link, the form and its confirmation stay under the prefix; downloads, release notes and source links are the same in every language. The address alone decides the language (no redirect by browser language, no cookie), so a shared link opens in the language it was copied in. SCN-019.

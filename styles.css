@@ -690,7 +690,7 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
  .fabric-hero h1 { font-size: clamp(2.8rem,10vw,4rem); }
 }
 .author-signature { margin-top: 18px; font-size: 13px; color: var(--ink-muted); }
-.author-signature a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+.author-signature a, .about-lead a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
 .home-hero .hero-mark::after { content: none; }
 
 /* Project Observatory's product card shows the real dashboard instead of an illustration. */
@@ -799,6 +799,7 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 
 /* Three paths */
 .path-grid, .option-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--pc-space-5); }
+.path-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .path-card, .option-card { display: flex; flex-direction: column; padding: var(--pc-space-6); border: 1px solid var(--pc-border-strong); border-radius: var(--pc-radius-panel); background: var(--pc-panel); transition: border-color var(--pc-duration-state) ease, transform var(--pc-duration-state) var(--ease-out); }
 .path-card:hover { border-color: var(--pc-accent); transform: translateY(-2px); }
 .path-card h3, .option-card h3 { font-size: 24px; letter-spacing: -.03em; margin: 18px 0 12px; }

@@ -57,7 +57,7 @@ See [foundation](foundation.md).
 - **Persona:** P-01
 - **Feature:** Direction
 - **Traces:** ST-04, FLW-03
-- **Entry point:** /#toolkit or /fabric/
+- **Entry point:** / (the tools, #products; the old /#toolkit address lands in #why) or /fabric/
 - **Preconditions:** none
 - **Steps:**
   1. Read the work cycle → account setup uses Switchboard, compatible local services appear in Dashboards, and the wider Fabric coordination loop remains in development.
@@ -80,11 +80,11 @@ See [foundation](foundation.md).
 - **Entry point:** /#about
 - **Preconditions:** none
 - **Steps:**
-  1. Follow About in navigation or footer → a short builder introduction is visible.
+  1. Follow About in navigation or footer → the founder note (2026-10-10): Sergey, a co-founder of Nicegram (60 million users, operator statement), started PassionCode as his own workplace for AI agents; it grew into a way for anyone to turn their setup into an agent workspace and for an organization to become AI-native; open source under the GNU AGPL-3.0, free for personal use, a commercial license for what the AGPL does not cover.
   2. Follow Follow on Twitter → the public profile linked by the operator’s authenticated GitHub account opens.
-- **Expected result:** A visitor can follow the author without signing up on PassionCode.
-- **Alt paths:** footer social link; Fabric Follow the build reaches the same About section.
-- **UI elements:** About, Follow on Twitter, public profile handle
+- **Expected result:** A visitor knows who builds PassionCode and can follow him without signing up.
+- **Alt paths:** footer social link; Fabric Follow the build reaches the same About section; the Nicegram link opens nicegram.me.
+- **UI elements:** About, founder note, Nicegram link, Follow on Twitter, public profile handle
 - **States covered:** static populated content; external network/login wall.
 - **Errors & recovery:** Twitter may require login; return to website or inspect public GitHub releases instead.
 - **Status:** draft
@@ -305,34 +305,34 @@ rather than replaces, the browser review recorded above.
 - **Entry point:** / (hero → For you, free) or /start/
 - **Preconditions:** Node.js 18+ and Claude Code or Codex; Fabric needs macOS on Apple silicon, Docker and the Supabase CLI
 - **Steps:**
-  1. Read the hero and the vision (do what you love) → the promise and its boundary: today one command and a coding agent; a conversation with Fabric is the direction.
-  2. Read The path → six stages from one agent to an organization, each labelled available now, available now in part, or direction; then How it works → four steps, each naming its current version.
-  3. Follow For you, free → /start/ → read the thesis (stop building agents that rot and don’t talk to each other); copy the launcher command, download Fabric (current version and SHA-256 beside the button), ask the coding agent to create or adapt an agent, install Fabric Dashboards and connect it over MCP.
+  1. Read the hero, then Why (#why) → without a harness agents rot; PassionCode.ai is a local, open-source workspace on top of Claude Code, Codex and what comes next, on the subscription the visitor already has.
+  2. Read Two ways in (#start) → For you (free, about twenty minutes) or For organizations; the tools (#products) each show their status and current version, previews marked as unfinished.
+  3. Follow For you, free or Get started → /start/ → read the thesis (stop building agents that rot and don’t talk to each other); copy the launcher command, download Fabric (current version and SHA-256 beside the button), ask the coding agent to create or adapt an agent, install Fabric Dashboards and connect it over MCP.
   4. Step 5 → build the next agent the same way and give it the same Fabric project; see both in Dashboards. The task-pipeline recommendation follows, marked as a separate open-source project.
 - **Expected result:** The visitor has the skills installed, knows the exact prompt that creates or converts an agent and how the second agent joins the same family, without believing Fabric already replies or that a chain of agents has shipped.
 - **Alt paths:** stop after any step; jump with the on-page table of contents; copy buttons or manual selection without JavaScript.
-- **UI elements:** hero actions, vision principles, onboarding rail, /start/ steps, copy buttons, download buttons
-- **States covered:** success; no-JS (complete page, no copy buttons); reduced motion (static rail and map).
+- **UI elements:** hero actions, why list, two door cards, tool cards, /start/ steps, copy buttons, download buttons
+- **States covered:** success; no-JS (complete page, no copy buttons); reduced motion (static map).
 - **Errors & recovery:** the command fails → the launcher README (linked); download unavailable → release notes link.
 - **Status:** draft
-- **Coverage:** index.html (#path, #vision, #toolkit, #start), start/index.html (#family, #pipeline); scripts/check-site.mjs.
+- **Coverage:** index.html (#why, #start, #products; #path, #vision and #toolkit kept as legacy anchors), start/index.html (#family, #pipeline); scripts/check-site.mjs.
 - **Product:** unobserved
 
 ### SCN-014: Request an AI workplace for an organization
 - **Persona:** P-02
 - **Feature:** Commercial
 - **Traces:** ST-07, FLW-06
-- **Entry point:** /business/ (from the header "For organizations", the homepage hero "For your organization", paths, organization teaser, /vision/, footer, /start/ closing, license notes)
+- **Entry point:** /business/ (from the header "For organizations", the homepage hero "For your organization", the home door card, the /vision/ closing, footer, /start/ closing, license notes)
 - **Preconditions:** none
 - **Steps:**
-  1. Read Bringing your organization into AI → pilot, workplaces, agents on every machine, people as the experts, each labelled; designed for 1 to 1000 people. Read who it is for → six segments with the processes agents take over.
-  2. Read the estimate → the formula, the share table and a worked example.
-  3. Fill five steps → goals and company; processes, today's state, tools, hours and hourly cost (the estimate updates as they type); setup and hosting; budget and timing; contact and consent.
-  4. Read PassionCode for Enterprise → four offer-level capabilities, each labelled direction or available now, and the trust block (data, no lock-in, signed releases; analytics on agents and outcomes, never stealth).
+  1. Read the hero → make the organization AI-native, data on its own machines or cloud; the four-step funnel (tell us, estimate, pilot, rollout); designed for 1 to 1000 people.
+  2. Read PassionCode for Enterprise (#enterprise) → in development and offered on request; what we set up: machines onboarded, agents rolled out, routing between machines, model access through each machine's local agent (keys stay on it), activity and usage analytics, administration, custom builds signed by PassionCode.ai.
+  3. Read the estimate → the formula, the share table and a worked example.
+  4. Fill five steps → goals and company; processes, today's state, tools, hours and hourly cost (the estimate updates as they type); setup and hosting; budget and timing; contact and consent.
   5. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
 - **Expected result:** A complete, validated lead reaches PassionCode.ai with a server-computed estimate, and the visitor knows when to expect a reply.
 - **Alt paths:** without JavaScript the form is one page and lands on /business/thanks/; a reload keeps unsent answers in the browser; email commercial@passioncode.ai instead.
-- **UI elements:** hero funnel, organization cycle, case grid, formula card, Enterprise option cards, trust block, five-step form with progress, estimate output, status line
+- **UI elements:** hero funnel, Enterprise list, formula card, five-step form with progress, estimate output, status line, three FAQs
 - **States covered:** empty, partial (draft), invalid (per-step errors), too fast or expired form (refused with a reason), rate-limited, sending, success, network failure (answers kept), service not configured (503 naming the email).
 - **Errors & recovery:** every refusal names the field or the reason; the email address is offered whenever the form cannot take the request.
 - **Status:** draft
@@ -416,18 +416,17 @@ rather than replaces, the browser review recorded above.
 - **Persona:** P-01, P-02
 - **Feature:** Vision
 - **Traces:** ST-01, ST-04, ST-07, FLW-03
-- **Entry point:** the header "Vision", the footer, the home page's path note, /business/ "Read the vision", a search result for /vision/
+- **Entry point:** the header "Vision", the footer, the home page's Why note, /business/ "Read the vision", a search result for /vision/
 - **Preconditions:** none
 - **Steps:**
-  1. Read the hook → agent sprawl with four dated, linked sources (McKinsey, Gartner twice, Fortune on the NANDA report) and the caveat on that report's method.
-  2. Read The missing harness → what a harness is, that Anthropic and OpenAI use the word (linked), and which tool is which part of it.
-  3. Read the six principles, then the path → six stages, each with an example for a solo founder, a small team and a department, each labelled available now or direction.
-  4. Read Today and direction and Trust → what downloads today, what is being built in order; security, data, no lock-in, reliability, people (analytics on agents and outcomes, never stealth).
-  5. Choose a door → For you, free (/start/) or For your organization (/business/).
+  1. Read The missing harness → why agents rot (one linked McKinsey figure), what a harness is (Anthropic and OpenAI use the word, linked), and which tool is which of its four parts.
+  2. Read the four principles → projects are the axis; the work improves itself (Observatory keeps the evidence today, retrospectives are the direction); vendor-neutral, local first, open source; analytics, never surveillance. The task-pipeline note links to /start/#pipeline.
+  3. Read the path → six stages, each labelled available now, available now in part, or direction.
+  4. Choose a door → For you, free (/start/) or For your organization (/business/).
 - **Expected result:** The visitor can say what PassionCode.ai is for (a harness on top of the coding agents they already use), which parts work today, and where to go next, without reading any stage as a shipped promise.
 - **Alt paths:** the on-page table of contents; the recommended task-pipeline skill (external, marked as not part of PassionCode.ai); /ru/vision/.
-- **UI elements:** hero, page TOC, source cards and list, harness cycle, principles list, path cycle with stage examples, today grid, trust cards, recommendation block with copy button, organization teaser, FAQ, closing doors
-- **States covered:** success; no-JS (complete page, no copy button); reduced motion; 390 px (one column).
+- **UI elements:** hero, page TOC, harness cycle, principles list, task-pipeline note, path cycle, FAQ, closing doors (with PassionCode for Enterprise named)
+- **States covered:** success; no-JS (complete page); reduced motion; 390 px (one column).
 - **Errors & recovery:** an external source moved → the dated citation still names the publisher and date.
 - **Status:** draft
 - **Coverage:** vision/index.html, i18n/ru/vision.json; scripts/check-site.mjs (/vision/ block).

@@ -50,7 +50,7 @@ Português (Brasil)
 
 # 빈 Mac에서 첫 에이전트까지
 
-방치되어 낡고 서로 대화하지 못하는 에이전트는 이제 그만 만드세요. 다섯 단계, 약 20분이면 첫 에이전트에서 눈에 보이는 패밀리까지 갑니다. 각 단계는 그 자체로 쓸모가 있으니, 결과가 충분하다 싶은 곳에서 멈춰도 됩니다
+서로 대화하지 못하고 썩어 가는 에이전트를 만드는 일은 이제 그만. 다섯 단계, 약 20분, 각 단계는 그 자체로 쓸모가 있습니다
 
 Node.js 18+와 Claude Code 또는 Codex 필요 Fabric은 Apple silicon 기반 macOS 필요
 
@@ -84,11 +84,11 @@ Fabric 추가
 
 ### 스킬 설치
 
-PassionCode.ai 런처는 Fabric Agent Adapter 스킬, Observatory Log, 작업 규칙을 Claude Code, Codex 등 지원되는 에이전트에 설치합니다. 계정도 키도 필요 없습니다.
+PassionCode.ai 런처가 Fabric Agent Adapter 스킬, Observatory Log, 작업 규칙을 코딩 에이전트에 설치합니다. 계정도 키도 필요 없습니다.
 
 npx @passioncode-ai/passioncode@latest update
 
-런처 0.1.31 · 고정된 버전으로 패밀리 구성 요소를 설치합니다 · 설치 후 에이전트를 다시 시작하세요. 자동 업데이트는 기본으로 켜져 있습니다. 원하지 않으면 자동 업데이트 끄기 방법을 확인하세요.
+런처 0.1.31 · 설치 후 에이전트를 다시 시작하세요 · 자동 업데이트가 켜져 있습니다. 자동 업데이트 끄기
 
 02
 
@@ -118,8 +118,6 @@ Claude Code나 Codex에서 필요한 것을 요청하세요. Fabric Agent Adapte
 
 변환 이 저장소를 Fabric에 맞게 변환해 줘
 
-기존 에이전트, MCP 서버, 명령줄 툴의 코드는 그대로 유지됩니다. 어댑터가 Fabric에 필요한 부분을 주변에 추가합니다. 어댑터 빠른 시작 · 계약
-
 04
 
 ### 실행하고 확인
@@ -134,17 +132,11 @@ Fabric Dashboards 다운로드
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-그다음 작업에 필요한 것을 추가하세요. Fabric Switchboard (에이전트에 계정이 여러 개 필요할 때), Project Observatory (프로젝트 전반의 변경 사항 확인), Fabric Inbox (메일 처리).
-
 05
 
 ### 다음 에이전트 추가, 패밀리 확인
 
-작업에 필요해지면 같은 방식으로 다음 에이전트를 만들고, Fabric에서 같은 프로젝트를 맡기세요. Fabric에서 시작한 Claude Code, Kilo Code, Hermes Agent는 그 프로젝트의 보드, 메모리, 인계를 함께 사용하므로 한쪽이 멈춘 곳에서 다른 쪽이 이어받습니다. Fabric Dashboards는 둘의 상태와 지출을 한 창에 보여 줍니다.
-
-다음 작성된 리뷰 답글 초안을 보드용 주간 요약으로 만드는 Fabric 에이전트를 만들어 줘
-
-새 에이전트는 기억해야 할 스크립트 하나가 더 늘어나는 대신, 이미 눈에 보이는 패밀리에 합류합니다. 패밀리가 커지는 방식 · 지금 연결되는 에이전트
+다음 에이전트도 같은 방식으로 만들고 Fabric의 같은 프로젝트를 주세요. Fabric에서 시작한 Claude Code, Kilo Code, Hermes Agent는 그 프로젝트의 보드, 메모리, 인계를 공유하므로, 한 에이전트가 멈춘 곳에서 다른 에이전트가 이어받습니다. 오늘 연결되는 에이전트
 
 추천 툴
 
@@ -152,7 +144,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 ## 끝내는 에이전트
 
-에이전트가 만드는 변경에는 다음 스킬을 권장합니다: task-pipeline, 별도의 오픈 소스 스킬로, sshlg-skills 패밀리에 속합니다. 브리프와 계획에서 테스트, 배포, 수락까지 게이트가 있는 단계를 거쳐 변경을 진행하며, 각 게이트를 통과해야 다음으로 넘어갑니다.
+에이전트가 만드는 변경에는 다음 스킬을 권장합니다: task-pipeline, 별도의 오픈 소스 스킬로, sshlg-skills 패밀리에 속합니다. 브리프에서 승인까지 모든 변경을 이끌며, 각 관문을 통과하기 전에는 다음으로 넘어가지 않습니다.
 
 npx sshlg-skills install
 
@@ -164,19 +156,7 @@ GitHub의 task-pipeline · PassionCode.ai에 속하지 않으며 PassionCode.ai 
 
 ## 풀 리퀘스트 보내기
 
-모든 제품 저장소는 공개되어 있습니다. 각 저장소는 테스트 명령을 AGENTS.md에, 빠른 시작을 README에 적어 둡니다. 코딩 에이전트가 둘을 읽고 나머지를 처리할 수 있습니다.
-
-### 저장소 선택
-
-사용하는 제품을 포크하거나 조직 저장소 둘러보기. 라벨이 붙은 이슈가 시작하기 좋습니다.
-
-### 게이트 실행
-
-저장소의 AGENTS.md와 조직의 CONTRIBUTING.md를 읽고, 변경한 뒤, 테스트 명령이 통과할 때까지 실행하세요.
-
-### 풀 리퀘스트 열기
-
-풀 리퀘스트를 여는 것은 저장소의 CLA.md에 동의한다는 뜻이며, 체크할 칸은 없습니다. 모든 풀 리퀘스트를 검토하고 답변합니다.
+모든 제품 저장소는 공개되어 있으며, 테스트 명령은 AGENTS.md에 적혀 있습니다. 조직의 CONTRIBUTING.md를 따라 풀 리퀘스트를 여세요. 풀 리퀘스트를 열면 동의하는 것으로 간주되는 문서는 저장소의 CLA.md.
 
 fabric
 
@@ -199,8 +179,6 @@ okolos
 fabric-vr
 
 passioncode-ai.github.io
-
-일부 저장소는 내부용이며 협업자에게만 보입니다. 팀의 지식 베이스와 조직 맵이 그렇습니다. 팀에 합류하고 싶으신가요? Sergey에게 메일 보내기.
 
 조직용
 

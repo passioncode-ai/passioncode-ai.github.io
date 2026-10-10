@@ -1,3 +1,52 @@
+# Current handoff — a simpler, shorter site, 2026-10-10
+
+Objective (operator, 2026-10-10): the site was too long and complex, above all where it converts organizations and
+describes the vision. Keep the home hero and its narrative; after it, and on /vision/, /business/ and /start/, keep
+only the key values and moments. About becomes a short founder note. Branch `agent/site-simplify`, draft PR (the
+locale gate cannot pass until eight languages are translated). Not deployed.
+
+Done (English source and Russian):
+- Home after the hero (2022 → 719 words): Why (#why: without a harness agents rot; a local, open-source workspace on
+  top of Claude Code, Codex and what comes next, on the subscription you already have) → Two ways in (#start: For you /
+  For organizations) → the tools (#products, one line + status + version each, the preview note) → open source
+  (#source, license line and license-history region) → three FAQs → the founder note (#about). The closing block,
+  the path, the vision band, How it works, three paths, For builders, the organization teaser and the source cards
+  are gone; their addresses stay as legacy anchors.
+- /vision/ (1773 → 637 words): the missing harness (one McKinsey figure, the definition, its four parts) → four
+  principles (projects are the axis; the work improves itself, marked direction beyond today's evidence; any agent,
+  local first, open source; analytics, never surveillance) with the task-pipeline note → the six labelled stages →
+  one FAQ → closing doors naming PassionCode for Enterprise.
+- /business/ (1892 → 941 words, of which the unchanged form is 425): hero "Make your organization AI-native" and the
+  funnel → PassionCode for Enterprise (in development, on request): machines onboarded, agents rolled out, routing
+  between machines, model access through each machine's local agent, activity and usage analytics, administration,
+  custom builds signed by us; data on your machines or your own cloud → the estimate → the form → three FAQs.
+  No wording about assessing people; the private-terms denylist finds nothing in the diff.
+- /start/ (740 → 485 words with commands): five steps, the "stop building agents that rot" line, the task-pipeline
+  recommendation and a one-paragraph contribute section with the repository list.
+- `docs/brand/facts.md`: rows "founder" and "Nicegram users" (operator statement 2026-10-10, not independently
+  verified, review 2027-01-10); "vision", "commercial path", "family roles" and "agent sprawl sources" follow the pages.
+- `scripts/check-site.mjs` pins the new structure (and the founder note, the license line, "keys never leave the
+  machine", analytics never framed as a judgement of people); UX scenarios SCN-007/008/013/014/020, flows and screens; `llms.txt`;
+  `docs/brand/strings.md`; `styles.css` (`.path-grid-two`, the founder-note link colour).
+- i18n: Russian catalog rewritten (94 new strings, 414 obsolete removed) and `/ru/` regenerated. The other eight
+  catalogs had their obsolete entries removed; their 94 new strings each are NOT translated.
+
+Checks run: `node scripts/check-site.mjs`, `check-brand-lock`, `check-design-tokens`, `test_display_copy.py`,
+`check_display_copy.py`, `extract-public-copy.py --check`, `npm run build` — all pass. Failing, only because eight
+languages are untranslated: `node scripts/build-locale.mjs --check` (784 problems = 8 × 94 strings + 32 stale pages),
+three tests in `scripts/locales.test.mjs` and "the live-version rewriter runs on every language's pages" in
+`scripts/check-worker.mjs`. Brand lint (super-ux `brand_lint.py docs/brand`): no B063, no new error class; totals
+465E/353W on main → 428E/323W. Browser (managed Chrome, `dist/` served statically): /, /ru/, /vision/, /business/,
+/start/ and their /ru/ versions at 1280 px and 390 px, no horizontal overflow; the estimate still computes.
+
+Next task: translate `.l10n-todo.json` (repository root, on this branch only) into `i18n/<code>/` for de, fr, pl, ko,
+es, pt-br, zh-hans and ja — `add` lists the 94 English keys per catalog file, `reference` keeps each language's removed
+translations to reuse — then `npm run locales`, `python3 scripts/extract-public-copy.py`, `npm run check`,
+`npm run build`, delete `.l10n-todo.json`, mark the PR ready. After merge and deploy: `verify-live.py`, and update
+fabric-workspace `knowledge/` (vision principles and the Enterprise offer) in the same run.
+
+---
+
 # Current handoff — ten languages live and polished, 2026-10-10
 
 Objective (operator): deploy the ten languages and polish them. Branches `agent/site-l10n-polish` (PR #78),
