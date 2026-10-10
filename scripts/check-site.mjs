@@ -150,11 +150,15 @@ for (const block of sitemap.match(/<url>[\s\S]*?<\/url>/g)) {
 assert.match(sitemap, /xmlns:xhtml="http:\/\/www\.w3\.org\/1999\/xhtml"/, 'sitemap declares the xhtml namespace')
 console.log(`PASS: ${PAGES.length} static pages, metadata, CSP-safe markup, anchors, live values, shared header and footer`)
 
-// ---- the homepage: vision, onboarding, three paths, honest previews --------------------------
+// ---- the homepage: the hero, why, two doors, the tools, source, FAQ, the founder note ---------
+// Simplified 2026-10-10 (operator): the hero and its narrative are unchanged; after it, one beat
+// of problem and answer, the two doors, the tools with their status, the license line, a short
+// FAQ and the founder note. Removed sections keep their addresses as legacy anchors.
 const home = read('index.html')
-for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'CEO AI agent', 'Do what you love', 'is where Fabric is heading', 'does not reply yet', 'real-model replies are not yet verified', 'Fabric will do this for you from a conversation', 'href="/start/"', 'href="/business/"', 'href="/start/#contribute"', 'href="/vision/"', 'since version 0.3.2, Fabric send anonymous usage counts', 'id="path"', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available']) assert.ok(home.includes(text), `homepage missing ${text}`)
-for (const id of ['path', 'vision', 'toolkit', 'start', 'products', 'extend', 'companies', 'source', 'faq', 'about', 'launcher']) assert.ok(home.includes(`id="${id}"`), `homepage section #${id}`)
-for (const name of ['PassionCode.ai launcher', 'Fabric Agent Adapter', 'Fabric Agent Contract', 'Fabric VR', 'Okolos', 'Fabric Dashboards', 'Project Observatory', 'Fabric Inbox', 'Fabric Switchboard']) assert.ok(home.includes(name), `homepage names ${name}`)
+for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'CEO AI agent', 'does not reply yet', 'real-model replies are not yet verified', 'href="/start/"', 'href="/business/"', 'href="/vision/"', 'since version 0.3.2, Fabric send anonymous usage counts', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available', '<!-- license-history -->', 'local, open-source workspace', 'the subscription you already have', 'co-founder of <a href="https://nicegram.me">Nicegram</a>, which has 60 million users', 'free for personal use; a commercial license covers what the AGPL does not']) assert.ok(home.includes(text), `homepage missing ${text}`)
+for (const id of ['why', 'start', 'products', 'source', 'faq', 'about', 'path', 'vision', 'toolkit', 'extend', 'companies', 'launcher']) assert.ok(home.includes(`id="${id}"`), `homepage section or legacy anchor #${id}`)
+for (const name of ['PassionCode.ai launcher', 'Fabric Dashboards', 'Project Observatory', 'Fabric Inbox', 'Fabric Switchboard']) assert.ok(home.includes(name), `homepage names ${name}`)
+assert.equal((home.match(/<details><summary>/g) || []).length, 3, 'homepage: a short FAQ')
 for (const path of ['/switchboard/', '/dashboards/', '/observatory/', '/inbox/', '/fabric/']) assert.ok(home.includes(`href="${path}"`), `homepage links ${path}`)
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
 assert.ok(home.includes('"@type": "FAQPage"'), 'homepage FAQ structured data')
@@ -167,13 +171,16 @@ assert.ok(start.includes('"position": 5'), '/start/: the HowTo names the fifth s
 
 // ---- /vision/: sources, the harness, the path, today against direction ------------------------
 const vision = read('vision/index.html')
-for (const text of ['https://www.mckinsey.com/', 'https://www.gartner.com/en/newsroom/press-releases/2025-06-25', 'https://www.gartner.com/en/newsroom/press-releases/2026-04-28', 'https://fortune.com/2025/08/18/', 'Read it as a signal, not a measurement', 'https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents', 'https://openai.com/index/harness-engineering/', 'https://github.com/ssheleg/sshlg-skills', 'AVAILABLE NOW', 'DIRECTION', 'href="/start/"', 'href="/business/"', '"@type": "FAQPage"']) assert.ok(vision.includes(text), `/vision/ missing ${text}`)
-for (const id of ['problem', 'harness', 'beliefs', 'path', 'today', 'trust', 'pipeline', 'organizations', 'faq']) assert.ok(vision.includes(`id="${id}"`), `/vision/ #${id}`)
+for (const text of ['https://www.mckinsey.com/', 'https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents', 'https://openai.com/index/harness-engineering/', 'https://github.com/ssheleg/sshlg-skills', 'Projects are the axis', 'The work improves itself', 'are the direction', 'Analytics, never surveillance', 'AVAILABLE NOW', 'DIRECTION', 'href="/start/"', 'href="/business/"', '"@type": "FAQPage"']) assert.ok(vision.includes(text), `/vision/ missing ${text}`)
+for (const id of ['harness', 'beliefs', 'path', 'pipeline', 'faq', 'problem', 'today', 'trust', 'organizations']) assert.ok(vision.includes(`id="${id}"`), `/vision/ #${id}`)
 assert.equal((vision.match(/<li class="reveal"><span class="cycle-number">0[1-6]<\/span><p class="availability">/g) || []).length, 6, '/vision/: every stage of the path says whether it works today')
 
 // ---- /business/: the funnel form agrees with what the Worker accepts --------------------------
 const business = read('business/index.html')
-for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"', 'PassionCode for Enterprise', 'Designed for 1 to 1000 people', 'id="organization"', 'id="enterprise"', 'Visible, never stealth']) assert.ok(business.includes(text), `/business/ missing ${text}`)
+for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"', 'PassionCode for Enterprise', 'Designed for 1 to 1000 people', 'id="organization"', 'id="enterprise"', 'is in development', 'keys never leave the machine that holds them', 'on your machines or in your own cloud', 'there is no fixed package']) assert.ok(business.includes(text), `/business/ missing ${text}`)
+// Analytics in public copy are about agents and outcomes; the page never frames them as a
+// judgement of people (operator rule, docs/brand/terminology.md "PassionCode for Enterprise").
+assert.ok(!/\b(?:employee|staff|people)\b[^.]{0,40}\b(?:scor|assess|evaluat|performance)/i.test(currentWords(business)), '/business/: analytics are about agents, never a judgement of people')
 const formValues = name => [...business.matchAll(new RegExp(`name="${name.replace('.', '\\.')}" value="([^"]+)"`, 'g'))].map(m => m[1])
 const selectValues = name => {
   const block = new RegExp(`<select name="${name.replace('.', '\\.')}"[^>]*>([\\s\\S]*?)</select>`).exec(business)
