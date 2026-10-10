@@ -9,8 +9,6 @@
     "FABRIC INBOX · DEVELOPMENT PREVIEW": "FABRIC INBOX · 開発中のプレビュー版",
     "Your mail": "あなたのメール",
     "Important first": "大事なものを先頭に",
-    "Bring Gmail and Cloudflare mailboxes into one list, with important mail first and agents for your own domains that answer what you allow and draft the rest": "GmailとCloudflareのメールボックスを1つのリストにまとめ、大事なメールを先頭に表示します。お持ちのドメインには、許可した内容に返信し、残りは下書きにするエージェントを置けます",
-    "Mail: the addresses agents read and answer within the policy you set.": "メール：エージェントが読み、あなたが決めたポリシーの範囲で返信するアドレス。",
     "See what it does": "機能を見る",
     "· macOS 12 or later · open source under AGPL-3.0": "· macOS 12以降 · AGPL-3.0のオープンソース",
     "FABRIC INBOX / MAIL + AGENTS": "FABRIC INBOX / メール + エージェント",
@@ -56,9 +54,7 @@
     ". Choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.": "を開きます。名前、レベル（read、mail、admin）、送信を許可するかどうかを選びます。シークレットは1回だけ表示されます。",
     "The app prints the whole command:": "アプリがコマンド全体を表示します：",
     "with the key’s two headers. Then ask for": "キーの2つのヘッダーが含まれます。その後、次のように依頼します：",
-    "02 / THE PASSIONCODE FAMILY": "02 / PASSIONCODEファミリー",
     "A tool with its own job": "それぞれに役割のあるツール",
-    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric is the CEO AI agent we’re building to coordinate the work.": "Inboxはメールを扱います。SwitchboardはClaude CodeとCodexのアカウントを管理します。Project Observatoryは、それらのエージェントが作業するプロジェクトを見渡せるようにします。Fabricは、作業を調整するために開発中のCEO AIエージェントです。",
     "Where Inbox stands": "Inboxの現状",
     "Where does my mail go?": "メールはどこに届きますか？",
     "To the server the app creates in your own Cloudflare account. Gmail accounts connect through an OAuth client from your own Google Cloud project.": "アプリがお客様自身のCloudflareアカウントに作成するサーバーに届きます。Gmailアカウントは、ご自身のGoogle Cloudプロジェクトで作成したOAuthクライアント経由で接続します。",
@@ -71,7 +67,6 @@
     ". It began as Cloudflare’s Agentic Inbox template, which keeps its own Apache-2.0 notice. The": "から入手できます。もとはCloudflareのAgentic Inboxテンプレートで、そのApache-2.0の表示はそのまま残しています。",
     "includes the source, tests and release notes.": "にソース、テスト、リリースノートが含まれます。",
     "Is Inbox the Fabric agent?": "InboxはFabricのエージェントですか？",
-    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "いいえ。Inboxはメールクライアントで、そのエージェントはあなたが決めたルールの範囲でアドレスに対応します。",
-    "is our CEO AI agent, in early preview. They belong to the same toolkit and have different roles.": "は私たちのCEO AIエージェントで、早期プレビュー版です。同じツールキットに属し、役割が異なります。"
+    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "いいえ。Inboxはメールクライアントで、そのエージェントはあなたが決めたルールの範囲でアドレスに対応します。"
   }
 }

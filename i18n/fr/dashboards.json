@@ -8,7 +8,6 @@
     "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "Vos services d’agents",
     "One place to look": "Un seul endroit où regarder",
-    "See what is running, what needs attention and what happened last, with each service’s own dashboard in one Mac app": "Voyez ce qui tourne, ce qui demande votre attention et ce qui s’est passé en dernier, avec le tableau de bord propre à chaque service, dans une seule application Mac",
     "Download for macOS ↓": "Télécharger pour macOS ↓",
     "View source ↗": "Code source ↗",
     "Release": "Version",
@@ -69,7 +68,6 @@
     "you already use": "que vous utilisez déjà",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "Suivez vos projets avec Observatory. Configurez vos comptes avec Switchboard. N’ajoutez que les outils dont votre travail a besoin.",
     "Explore the tools ↗": "Découvrir les outils ↗",
-    "Health, spend and control: every agent service, its state, its spend and its updates in one window.": "État, dépenses et contrôle : chaque service d’agent, son état, ses dépenses et ses mises à jour dans une seule fenêtre.",
     "IN 0.6": "DANS LA 0.6",
     "Spend, a console": "Dépenses, une console",
     "and updates you can trust": "et des mises à jour fiables",
@@ -80,7 +78,6 @@
     "A real terminal opens next to a service’s dashboard, running Claude Code, Codex or another runtime in that agent’s repository. Where Fabric Switchboard binds the folder to a project, the session starts on that project’s account.": "Un vrai terminal s’ouvre à côté du tableau de bord d’un service et lance Claude Code, Codex ou un autre runtime dans le dépôt de cet agent. Lorsque Fabric Switchboard associe le dossier à un projet, la session démarre sur le compte de ce projet.",
     "Updates that are checked first": "Des mises à jour vérifiées avant tout",
     "The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.": "L’application se met à jour seule : une version doit porter la signature de l’organisation et correspondre à ses sommes de contrôle avant de s’installer, et l’installation attend tant qu’une console ou une commande tourne. L’installation automatique peut être désactivée dans les réglages.",
-    "The family kept current": "La famille d’agents tenue à jour",
     "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "Dans Settings → Estate updates, l’application surveille le Fabric Agent Contract et les skills PassionCode.ai, et peut mettre à jour les skills en arrière-plan après avoir vérifié qui les a publiés. Cette option est désactivée par défaut.",
     "English or Russian": "Anglais ou russe",
     "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Settings → Language : comme sur ce Mac, anglais ou russe. La fenêtre, le menu et l’icône de la barre des menus changent aussitôt."

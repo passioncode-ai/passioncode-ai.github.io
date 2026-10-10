@@ -29,6 +29,7 @@ const publicFiles = [
   'design-system/tokens.css',
   'assets/switchboard-mark.svg',
   'assets/switchboard-demo.jpg',
+  'assets/switchboard-accounts.jpg',
   'assets/observatory-mark.svg',
   'assets/observatory-demo.jpg',
   'robots.txt',

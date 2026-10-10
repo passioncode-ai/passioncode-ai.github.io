@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | CEO AI agent · early preview for macOS | PassionCode.ai
+Fabric | The home for your projects and their agents · early preview for macOS | PassionCode.ai
 
-Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.
+Fabric is the home for your projects and their agents, an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.
 
 Skip to content
 
@@ -48,13 +48,13 @@ Download
 
 FABRIC · EARLY PREVIEW
 
-# A CEO AI agent
+# A home for your projects
 
-# A home for the work
+# and their agents
 
-Fabric is the agent we’re building to coordinate other agents around a project, keeping its purpose, context and decisions with the work as people, models and sessions change
+Fabric keeps each project’s purpose, board, decisions and releases on your Mac, for every agent that works on it. We are building it to act as the CEO of your agents
 
-IN THE FAMILY The home every agent of a project shares: its purpose, board, decisions and releases. The whole family
+IN THE TOOLKIT The home every agent of a project shares: its purpose, board, decisions and releases. Steps 2 and 5 of how it works. All the tools
 
 Download for macOS
 
@@ -66,25 +66,25 @@ Explore the workflow
 
 Early preview 0.3.4 · macOS on Apple silicon and Intel
 
-A PROJECT, BEYOND THE CHAT
+THE FIRST SCREEN · FOUR ACTIONS
 
-Purpose
+Create an agent
 
-What are we trying to achieve?
+Name it, say what it does, choose its folder and coding agent
 
-Team
+Adapt an agent
 
-Who owns each part of the work?
+Bring one built elsewhere, on a new branch
 
-Authority
+Open a project
 
-What can each agent do?
+A folder, or a folder of them
 
-Evidence
+Create a project
 
-How do we know it worked?
+A new home for its purpose, board and releases
 
-An illustration of the model we’re building
+The agent work itself runs in your coding agent’s console
 
 THE PROBLEM
 
@@ -146,7 +146,7 @@ HOW WE’RE BUILDING IT
 
 ## People remain accountable
 
-CEO describes a coordination role. You decide what the project is for and what the agent is allowed to do.
+Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.
 
 AUTHORITY
 

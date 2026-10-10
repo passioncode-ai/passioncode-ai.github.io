@@ -1,25 +1,8 @@
 {
   "page": "fabric/index.html",
   "strings": {
-    "Fabric | CEO AI agent · early preview for macOS | PassionCode.ai": "Fabric | CEO AIエージェント · macOS向け早期プレビュー版 | PassionCode.ai",
-    "Fabric — CEO AI agent, early preview": "Fabric — CEO AIエージェント、早期プレビュー版",
     "FABRIC · EARLY PREVIEW": "FABRIC · 早期プレビュー版",
-    "A CEO AI agent": "CEO AIエージェント",
-    "A home for the work": "作業のための拠点",
-    "Fabric is the agent we’re building to coordinate other agents around a project, keeping its purpose, context and decisions with the work as people, models and sessions change": "Fabricは、プロジェクトの目的、コンテキスト、決定を作業とともに保ちながら、人やモデル、セッションが入れ替わっても他のエージェントを調整できるように開発中のエージェントです",
-    "The home every agent of a project shares: its purpose, board, decisions and releases.": "プロジェクトの全エージェントが共有する拠点。目的、ボード、決定、リリースがそろいます。",
     "Explore the workflow": "ワークフローを見る",
-    "Illustrative project brief": "プロジェクト概要の例",
-    "A PROJECT, BEYOND THE CHAT": "チャットを超えたプロジェクト",
-    "Purpose": "目的",
-    "What are we trying to achieve?": "何を達成しようとしていますか？",
-    "Team": "チーム",
-    "Who owns each part of the work?": "作業の各部分は誰が担当しますか？",
-    "Authority": "権限",
-    "What can each agent do?": "各エージェントは何ができますか？",
-    "Evidence": "エビデンス",
-    "How do we know it worked?": "うまくいったことをどう確かめますか？",
-    "An illustration of the model we’re building": "開発中のモデルのイメージ図です",
     "A project lasts longer": "プロジェクトは",
     "than a conversation": "会話よりも長く続きます",
     "An agent can finish a task while the team still loses the reason behind it. Context gets spread across chats, decisions need repeating and someone has to put the work back together.": "エージェントがタスクを終えても、その理由がチームから失われることがあります。コンテキストはチャットに散らばり、決定は繰り返し説明する必要があり、誰かが作業をつなぎ直さなければなりません。",
@@ -50,7 +33,6 @@
     "Releases · what went in, why, and what confirms it": "リリース · 何が入り、なぜで、何がそれを裏付けるか",
     "HOW WE’RE BUILDING IT": "どのように作っているか",
     "People remain accountable": "責任は人にあります",
-    "CEO describes a coordination role. You decide what the project is for and what the agent is allowed to do.": "CEOは調整役を表します。プロジェクトの目的と、エージェントに許可することを決めるのはあなたです。",
     "AUTHORITY": "権限",
     "Permission stays explicit": "許可は明示的です",
     "Goals, responsibilities and limits belong to the project. Confidence from an agent is not permission to act.": "目標、責任、制限はプロジェクトのものです。エージェントの確信は、実行の許可にはなりません。",
@@ -80,7 +62,6 @@
     "Back to the toolkit": "ツールキットに戻る",
     "· macOS on Apple silicon and Intel": "· Apple silicon・Intel搭載のmacOS",
     "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon・Intel（ユニバーサル）· macOS 13以降",
-    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabricは私たちのCEO AIエージェントで、現在はApple siliconおよびIntel搭載のmacOS向け早期プレビュー版です。プロジェクトのボード、決定、作業、リリースを、お使いのMac上の一か所にまとめます。",
     "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "DMGを開き、FabricをApplicationsにドラッグします。同じDMGがApple silicon搭載MacとIntel Macの両方で動作します。"
   }
 }

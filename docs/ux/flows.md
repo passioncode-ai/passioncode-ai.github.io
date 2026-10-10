@@ -11,7 +11,7 @@ Homepage directory → independent tools → concrete Observatory-to-Dashboards 
 
 Fabric agents branch of FLW-03: Fabric "Before you open it" → which coding agents Fabric works with → /fabric/agents/ → level tables with official sites → Download for macOS (Fabric #download) or an agent's own site (SCN-018, SCR-12).
 
-Vision branch of FLW-03: header Vision, the home Why note or /business/ → /vision/ → the missing harness → four principles → the path with labelled stages → For you, free (/start/) or For your organization (/business/) (SCN-020, SCR-13).
+Vision branch of FLW-03: header Vision, the home Why note or /business/ → /vision/ → what holds an agent (the one definition of "harness") → four principles → the path with labelled stages (stages 1, 2, 6 → /#how) → For you, free (/start/) or For your organization (/business/) (SCN-020, SCR-13).
 
 Dashboards branch of FLW-01: directory → /dashboards/ → requirements and separately installed service note → `/dashboards/download/macos` (the current release, SHA-256 beside it) → release notes. MCP setup is visible on the same page. Every version and checksum a visitor reads is the current release, written at the edge (SCN-016).
 
@@ -21,7 +21,7 @@ For builders → launcher command and requirements → public setup/update contr
 Legacy Observatory links ending in `#start` retain that fragment after the old host redirects; `/observatory/#start` aliases the actual setup section, alongside `#get-started`.
 
 ## FLW-05 — Get started (personal use and contribution)
-Hero → vision (do what you love; the boundary between today and the direction) → How it works (four steps with current versions) → paths: Install and use it → /start/ (launcher command → Fabric download → create or convert an agent → Fabric Dashboards + MCP → optional Switchboard, Observatory, Inbox) | Make it better → /start/#contribute (repository → AGENTS.md + CONTRIBUTING.md → test command → pull request = CLA) | companies → FLW-06.
+Hero → Why (the problem in the reader's words, three proofs) → How it works (#how: six steps — Enter, Onboard, First agent, Grow, Work together and watch, Organization — each labelled available now, preview or direction; SCN-021) → paths: Install and use it → /start/ (launcher command, which installs the skills → Fabric, a separate preview download → create or adapt an agent → Fabric Dashboards + MCP → the next agent in the same project; optional Switchboard, Observatory, Inbox) | Make it better → /start/#contribute (repository → AGENTS.md + CONTRIBUTING.md → test command → pull request = CLA) | companies → FLW-06. Step 06 of How it works (Organization, direction) also leads to FLW-06.
 
 ## FLW-06 — Request a company workplace
 Any entry (header For organizations, hero For your organization, the home door card, /vision/ closing, footer, license notes, /start/ closing) → /business/ → the Enterprise offer (in development, on request) → estimate formula → five-step form (goals/company → processes with live estimate → setup → budget → contact + consent) → POST /api/leads → stored in D1 → notification to the commercial mailbox, receipt to the sender, signed copy to the Platform → reference shown (or /business/thanks/ without JavaScript). Refusals return to the step with the reason; the email address is the fallback, never the main path.

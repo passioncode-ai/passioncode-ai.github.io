@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode.ai | Open-source workplace for AI agents
+PassionCode.ai | The agent-agnostic operating system for AI-native teams
 
-Build your own workplace for AI agents. Fabric, the CEO AI agent, keeps the project; your coding agent creates new agents and converts the ones you have; Fabric Dashboards, Switchboard and Project Observatory run and watch them. Open source and free.
+Build a workplace where agents do the work, and you see all of it. Fabric is the home for your projects and their agents; your coding agent creates new agents and adapts the ones you have; Switchboard, Fabric Dashboards and Project Observatory run them and show what they did. Open source and free.
 
 Skip to content
 
@@ -52,7 +52,7 @@ From vibe coding to passion coding
 
 Build a workplace where agents do the work, and you see all of it
 
-Fabric, our CEO AI agent, keeps each project’s purpose, decisions and releases. Your coding agent creates new agents and converts the ones you already have. Open source, running on your own machines, and free
+Fabric is the home for your projects and their agents. Your coding agent creates new agents and adapts the ones you already have. Open source, running on your own machines, and free
 
 For you, free
 
@@ -76,25 +76,105 @@ Mail
 
 Your agents
 
-FABRIC · CEO AI AGENT
+FABRIC · HOME FOR YOUR PROJECTS
 
 01 / WHY
 
-## Without a harness,
+## Your agent works for a week
 
-## agents rot
+## Then it falls apart
 
-Their accounts are scattered, they forget everything between sessions, they leave no evidence of what they did, and they don’t talk to each other.
+It runs on the wrong account or hits a limit. It forgets what it learned yesterday, and nobody can say what it changed. The next agent you build starts from zero.
 
-A home for your agentsPassionCode.ai is a local, open-source workspace for working with AI agents. It gives each one a home, accounts, health, memory and evidence.
+On your machines, as open sourcePassionCode.ai is a local, open-source workspace for working with AI agents, under the GNU AGPL-3.0. It runs on your own machines, with no sign-up and no lock-in.
 
-On top of what you useClaude Code, Codex and what comes next, on the subscription you already have.
+With the agents you already haveClaude Code, Codex and what comes next, on the subscription you already have.
 
-Yours, all the way downOpen source under the GNU AGPL-3.0, on your machines and your accounts. No sign-up and no lock-in.
+A record you can openThe project board keeps decisions, tasks and releases. Observatory lists what changed, with the evidence and a next step. Every download names its version and SHA-256.
 
-Read the vision: why agents need a harness, and how the family grows
+Read the vision: what keeps an agent working, and how one agent grows into an organization
 
-02 / TWO WAYS IN
+02 / HOW IT WORKS
+
+## From one command
+
+## to agents that work together
+
+Six steps, in the order you take them. Each one says whether it works today, works as a preview or is where we are building.
+
+01
+
+AVAILABLE NOW
+
+### Enter
+
+terminalnpx @passioncode-ai/passioncode@latest update
+
+One command installs the skills into Claude Code or Codex. Fabric is a separate preview download.
+
+Install the skills
+
+02
+
+PREVIEW
+
+### Onboard
+
+agentCreate one, or adapt one built elsewhere
+
+projectOpen a folder, or create a project
+
+Fabric’s first screen offers four actions in two pairs.
+
+What Fabric does today
+
+03
+
+AVAILABLE NOW
+
+### First agent
+
+newCreate a Fabric agent that drafts release notes from merged pull requests
+
+adaptAdapt this repository to Fabric
+
+Your coding agent asks its questions and shows its plan before it changes anything.
+
+Create or adapt an agent
+
+04
+
+AVAILABLE NOW
+
+### Grow
+
+Each agent runs on the account it should, with its dashboard and spend in one window.
+
+Fabric Dashboards
+
+05
+
+AVAILABLE NOW, IN PART
+
+### Work together and watch
+
+Agents share a project’s board and hand-offs in Fabric’s preview; Observatory shows what changed, with the evidence.
+
+Project Observatory
+
+06
+
+DIRECTION
+
+### Organization
+
+enterpriseAgents rolled out per role, and work routed between your machines
+
+The same across a team’s machines, offered on request while we build it.
+
+For your organization
+
+03 / TWO WAYS IN
 
 ## For you,
 
@@ -120,21 +200,21 @@ Estimate and request
 
 →
 
-03 / THE TOOLS
+04 / THE TOOLS
 
 ## Tools you can use today
 
-Each one works on its own and is better together. The versions are the current releases.
+Each one works on its own, and the step says where it comes in above. The versions are the current releases.
 
 Fabric
 
-The CEO AI agent: a home for each project’s purpose, board, decisions and releases.
+The home for your projects and their agents: each project’s purpose, board, decisions and releases.
 
 Early preview
 
 0.3.4
 
-· macOS
+· macOS · steps 2 and 5
 
 ↗
 
@@ -146,7 +226,7 @@ Release
 
 0.6.15
 
-· macOS + Windows
+· macOS + Windows · step 4
 
 ↗
 
@@ -158,7 +238,7 @@ Release
 
 0.6.7
 
-· macOS
+· macOS · step 4
 
 ↗
 
@@ -170,7 +250,7 @@ Release
 
 0.21.0
 
-· macOS + Linux
+· macOS + Linux · step 5
 
 ↗
 
@@ -182,7 +262,7 @@ Development preview
 
 0.13.0
 
-· macOS
+· macOS · step 5
 
 ↗
 
@@ -194,13 +274,13 @@ CLI
 
 0.1.31
 
-· Node.js 18+
+· Node.js 18+ · steps 1 and 3
 
 ↗
 
 Preview means unfinished: Fabric is in early preview and its conversation does not reply yet; Fabric Inbox is in development preview and real-model replies are not yet verified. Each product page lists requirements and limits before the download. Machine-readable versions: /api/releases.
 
-04 / OPEN SOURCE
+05 / OPEN SOURCE
 
 ## Use the tools
 
@@ -210,7 +290,7 @@ Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open so
 
 Released versions keep the license they shipped with: MIT for Switchboard up to 0.3.1-beta.1, Observatory up to 0.8.1 and Fabric Dashboards 0.1.0; PolyForm Noncommercial or Internal Use for Switchboard 0.4.0-beta.1, Observatory 0.8.2 to 0.9.1, and Fabric Dashboards 0.2.0 and 0.3.0. The Fabric 0.2.0 preview was built before Fabric’s source was published. Visit PassionCode on GitHub ↗
 
-05 / QUESTIONS
+06 / QUESTIONS
 
 ## Questions people ask first
 

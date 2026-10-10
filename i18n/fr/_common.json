@@ -59,7 +59,6 @@
     "A chain": "Une chaîne",
     "Agents line up into one process: one prepares, the next checks, a person approves.": "Les agents s’enchaînent en un seul processus : l’un prépare, le suivant vérifie, une personne valide.",
     "AVAILABLE NOW, IN PART": "DISPONIBLE EN PARTIE",
-    "A family that looks after itself": "Une famille qui veille sur elle-même",
     "A team": "Une équipe",
     "An organization": "Une organisation",
     "A TOOL WE RECOMMEND": "UN OUTIL QUE NOUS RECOMMANDONS",
@@ -69,8 +68,6 @@
     ", a separate open-source skill from the": ", un skill open source distinct, issu de la famille",
     "sshlg-skills": "sshlg-skills",
     "task-pipeline on GitHub": "task-pipeline sur GitHub",
-    "· it is not part of PassionCode.ai and needs nothing from it": "· il ne fait pas partie de PassionCode.ai et n’en dépend en rien",
-    "IN THE FAMILY": "DANS LA FAMILLE",
-    "The whole family": "Toute la famille"
+    "· it is not part of PassionCode.ai and needs nothing from it": "· il ne fait pas partie de PassionCode.ai et n’en dépend en rien"
   }
 }

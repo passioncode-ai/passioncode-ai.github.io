@@ -29,3 +29,18 @@ Contract: brand-contract v1
 | fabric.agents | which coding agents Fabric works with | fabric/index.html | SCN-013 | proposed | copy |
 | download.fabric.macos | Download for macOS | fabric/agents/index.html | SCN-013 | proposed | copy |
 | switchboard.explore | Explore Switchboard | fabric/agents/index.html | SCN-013 | proposed | copy |
+
+| journey.install | Install the skills | index.html | SCN-021 | proposed | copy |
+| journey.fabric | What Fabric does today | index.html | SCN-021 | proposed | copy |
+| journey.build | Create or adapt an agent | index.html | SCN-021 | proposed | copy |
+| journey.dashboards | Fabric Dashboards | index.html | SCN-021 | proposed | copy |
+| journey.observatory | Project Observatory | index.html | SCN-021 | proposed | copy |
+| journey.organization | For your organization | index.html | SCN-021 | proposed | copy |
+| toolkit.how.fabric | how it works | fabric/index.html | SCN-021 | proposed | copy |
+| toolkit.how.switchboard | how it works | switchboard/index.html | SCN-021 | proposed | copy |
+| toolkit.how.dashboards | how it works | dashboards/index.html | SCN-021 | proposed | copy |
+| toolkit.how.inbox | how it works | inbox/index.html | SCN-021 | proposed | copy |
+| toolkit.all.fabric | All the tools | fabric/index.html | SCN-004 | proposed | copy |
+| toolkit.all.switchboard | All the tools | switchboard/index.html | SCN-004 | proposed | copy |
+| toolkit.all.dashboards | All the tools | dashboards/index.html | SCN-004 | proposed | copy |
+| toolkit.all.inbox | All the tools | inbox/index.html | SCN-004 | proposed | copy |

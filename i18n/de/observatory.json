@@ -8,7 +8,6 @@
     "PROJECT OBSERVATORY · BY PASSIONCODE": "PROJECT OBSERVATORY · VON PASSIONCODE",
     "Your projects": "Deine Projekte",
     "Back in view": "Wieder im Blick",
-    "See what changed across your agents’ projects, what needs attention and where known API keys left a copy, in a local dashboard available in English or Russian": "Sieh, was sich in den Projekten deiner Agenten geändert hat, was Aufmerksamkeit braucht und wo bekannte API-Schlüssel eine Kopie hinterlassen haben – in einem lokalen Dashboard auf Englisch oder Russisch",
     "View source": "Quellcode ansehen",
     "Open source · macOS + Linux · Python 3.11+": "Open Source · macOS + Linux · Python 3.11+",
     "ONE VIEW / YOUR PROJECTS": "EIN BLICK / DEINE PROJEKTE",
@@ -80,7 +79,6 @@
     "Is it the same thing as Switchboard?": "Ist das dasselbe wie Switchboard?",
     "No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps the projects those agents work on in view. Both are open-source PassionCode tools you can use today.": "Nein. Switchboard verwaltet deine Accounts für Claude Code und Codex. Observatory behält die Projekte im Blick, an denen diese Agenten arbeiten. Beide sind Open-Source-Tools von PassionCode, die du heute schon nutzen kannst.",
     "And Fabric?": "Und Fabric?",
-    "Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Observatory is available now as a separate local tool.": "Fabric ist unser KI-Agent in der Rolle des CEO, als frühe Vorschauversion, mit dem Fokus auf die Koordination von Agenten und Projekten. Observatory ist schon jetzt als eigenständiges lokales Tool verfügbar.",
     "Explore Fabric": "Mehr über Fabric",
     "Can I inspect or build it myself?": "Kann ich es selbst prüfen oder bauen?",
     "Yes. Project Observatory is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from": "Ja. Project Observatory ist Open Source unter der GNU AGPL-3.0. Für eine Nutzung, die die AGPL nicht abdeckt, gibt es eine kommerzielle Lizenz über",
@@ -91,7 +89,6 @@
     "OPEN SOURCE · LOCAL FIRST": "OPEN SOURCE · LOKAL ZUERST",
     "Your projects, your evidence": "Deine Projekte, deine Belege",
     "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "Leg einen privaten Workspace an, beobachte deine eigenen Ordner und sag uns, wo es besser werden muss.",
-    "Report an issue": "Problem melden",
-    "Memory and evidence: what changed in each project, what was decided and what needs attention.": "Gedächtnis und Belege: was sich in jedem Projekt geändert hat, was entschieden wurde und was Aufmerksamkeit braucht."
+    "Report an issue": "Problem melden"
   }
 }

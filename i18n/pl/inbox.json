@@ -11,10 +11,6 @@
     "FABRIC INBOX · DEVELOPMENT PREVIEW": "FABRIC INBOX · ROZWOJOWA WERSJA ZAPOZNAWCZA",
     "Your mail": "Twoja poczta",
     "Important first": "Ważne na górze",
-    "Bring Gmail and Cloudflare mailboxes into one list, with important mail first and agents for your own domains that answer what you allow and draft the rest": "Zbierz skrzynki Gmail i Cloudflare w jednej liście, z ważną pocztą na górze, oraz agentów dla własnych domen, którzy odpowiadają na to, na co pozwolisz, a resztę przygotowują jako szkice",
-    "IN THE FAMILY": "W RODZINIE",
-    "Mail: the addresses agents read and answer within the policy you set.": "Poczta: adresy, które agenci czytają i na które odpowiadają w ramach ustawionej przez Ciebie reguły.",
-    "The whole family": "Cała rodzina",
     "Download for macOS": "Pobierz na macOS",
     "See what it does": "Zobacz, co potrafi",
     "Development preview": "Wersja zapoznawcza",
@@ -73,9 +69,7 @@
     "Connect your agent": "Podłącz swojego agenta",
     "The app prints the whole command:": "Aplikacja wypisuje całe polecenie:",
     "with the key’s two headers. Then ask for": "z dwoma nagłówkami klucza. Potem poproś o",
-    "02 / THE PASSIONCODE FAMILY": "02 / RODZINA PASSIONCODE",
     "A tool with its own job": "Narzędzie z własnym zadaniem",
-    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric is the CEO AI agent we’re building to coordinate the work.": "Inbox zajmuje się pocztą. Switchboard zarządza kontami Claude Code i Codex. Project Observatory trzyma w polu widzenia projekty, nad którymi pracują ci agenci. Fabric to agent CEO AI, którego budujemy, by koordynował pracę.",
     "Explore Switchboard": "Poznaj Switchboard",
     "Explore Observatory": "Poznaj Observatory",
     "Meet Fabric": "Poznaj Fabric",
@@ -94,7 +88,6 @@
     "repository": "repozytorium",
     "includes the source, tests and release notes.": "kod źródłowy, testy i uwagi do wydania.",
     "Is Inbox the Fabric agent?": "Czy Inbox to agent Fabric?",
-    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "Nie. Inbox to klient poczty; jego agenci odpowiadają na Twoje adresy w ramach reguł, które ustawisz.",
-    "is our CEO AI agent, in early preview. They belong to the same toolkit and have different roles.": "to nasz agent CEO AI, we wczesnej wersji zapoznawczej. Oba należą do tego samego zestawu narzędzi i mają różne role."
+    "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "Nie. Inbox to klient poczty; jego agenci odpowiadają na Twoje adresy w ramach reguł, które ustawisz."
   }
 }

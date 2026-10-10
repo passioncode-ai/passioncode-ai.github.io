@@ -52,9 +52,9 @@ FABRIC SWITCHBOARD · BY PASSIONCODE
 
 # A clearer switch
 
-Keep Claude Code and Codex CLI accounts in one local workbench to check reported usage, separate work from personal accounts and choose what handles your next request
+Keep your Claude Code and Codex CLI accounts in one local workbench: see the usage each one reports, and choose which account handles the next request
 
-IN THE FAMILY The accounts: which account each agent runs on, with its usage limits in view. The whole family
+IN THE TOOLKIT The accounts: which account each agent runs on, with its usage limits in view. Step 4 of how it works. All the tools
 
 Download Switchboard
 
@@ -160,7 +160,7 @@ INSIDE SWITCHBOARD
 
 The actual Switchboard interface, shown with synthetic demo accounts.
 
-Browser demo · no real accounts, credentials or provider requests
+Browser demo of 0.6.13 · no real accounts, credentials or provider requests
 
 A LOCAL WORKBENCH
 
@@ -285,7 +285,7 @@ Managed sessions send requests through a local proxy and follow your selected ro
 
 Is Switchboard the same thing as Fabric?
 
-Switchboard is the account-management tool available today. Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Both belong to the PassionCode toolkit. Explore what we’re building with Fabric.
+Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit. Explore what we’re building with Fabric.
 
 Which agents work with Switchboard?
 
@@ -309,7 +309,7 @@ PART OF THE PASSIONCODE TOOLKIT
 
 ## of the setup
 
-Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, our CEO AI agent, is in early preview.
+Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.
 
 Explore Observatory
 

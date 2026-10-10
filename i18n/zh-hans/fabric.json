@@ -1,25 +1,8 @@
 {
   "page": "fabric/index.html",
   "strings": {
-    "Fabric | CEO AI agent · early preview for macOS | PassionCode.ai": "Fabric | CEO AI 智能体 · macOS 早期预览版 | PassionCode.ai",
-    "Fabric — CEO AI agent, early preview": "Fabric — CEO AI 智能体，早期预览版",
     "FABRIC · EARLY PREVIEW": "FABRIC · 早期预览版",
-    "A CEO AI agent": "一个 CEO AI 智能体",
-    "A home for the work": "工作有了归处",
-    "Fabric is the agent we’re building to coordinate other agents around a project, keeping its purpose, context and decisions with the work as people, models and sessions change": "Fabric 是我们正在打造的智能体，围绕项目协调其他智能体，让项目的目标、上下文和决策始终跟着工作走，不论人、模型和会话如何更替",
-    "The home every agent of a project shares: its purpose, board, decisions and releases.": "项目中所有智能体共用的归处：目标、看板、决策和版本。",
     "Explore the workflow": "了解工作流程",
-    "Illustrative project brief": "项目简介示例",
-    "A PROJECT, BEYOND THE CHAT": "项目，不止于聊天",
-    "Purpose": "目标",
-    "What are we trying to achieve?": "我们想要达成什么？",
-    "Team": "团队",
-    "Who owns each part of the work?": "工作的每个部分由谁负责？",
-    "Authority": "权限",
-    "What can each agent do?": "每个智能体可以做什么？",
-    "Evidence": "凭证",
-    "How do we know it worked?": "怎么知道它起了作用？",
-    "An illustration of the model we’re building": "我们正在构建的模型示意",
     "A project lasts longer": "项目的存续时间",
     "than a conversation": "比一次对话更长",
     "An agent can finish a task while the team still loses the reason behind it. Context gets spread across chats, decisions need repeating and someone has to put the work back together.": "智能体可以完成一项任务，团队却仍然丢掉任务背后的原因。上下文散落在各个聊天里，决策需要重复说明，还得有人把工作重新拼起来。",
@@ -50,7 +33,6 @@
     "Releases · what went in, why, and what confirms it": "版本 · 纳入了什么、为什么、由什么确认",
     "HOW WE’RE BUILDING IT": "我们如何构建它",
     "People remain accountable": "责任仍在人",
-    "CEO describes a coordination role. You decide what the project is for and what the agent is allowed to do.": "CEO 指的是一种协调角色。项目为了什么，以及智能体被允许做什么，由你决定。",
     "AUTHORITY": "权限",
     "Permission stays explicit": "许可保持明确",
     "Goals, responsibilities and limits belong to the project. Confidence from an agent is not permission to act.": "目标、职责和限制属于项目。智能体有把握，并不等于获得了行动的许可。",
@@ -80,7 +62,6 @@
     "Back to the toolkit": "返回工具集",
     "· macOS on Apple silicon and Intel": "· 适用于搭载 Apple silicon 或 Intel 的 macOS",
     "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon 和 Intel（通用）· macOS 13 或更高版本",
-    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric 是我们的 CEO AI 智能体，目前是适用于搭载 Apple silicon 或 Intel 的 macOS 的早期预览版。它把项目的看板、决策、工作和版本集中在一处，就在你的 Mac 上。",
     "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "打开 DMG，把 Fabric 拖到“应用程序”。同一个 DMG 可在搭载 Apple silicon 和 Intel 的 Mac 上运行。"
   }
 }

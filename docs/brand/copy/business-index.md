@@ -50,7 +50,7 @@ Enterprise · for organizations
 
 # Make your organization AI-native
 
-We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud
+An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud
 
 Estimate and request
 

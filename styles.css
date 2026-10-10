@@ -1054,6 +1054,15 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .family-line a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
 .trust-block { margin-top: var(--pc-space-6); }
 
+/* How it works (home #how, SITE-028 W6): the six journey steps on the path grid. Each step is a
+   picture (a synthetic product shot) or a text card built from .step-prompt; no new motion, the
+   steps reveal like the rest of the page. The video slot stays [hidden] until W10 ships. */
+.journey-steps .product-screenshot { margin: var(--pc-space-2) 0 var(--pc-space-4); }
+.journey-steps .step-prompt { margin: var(--pc-space-2) 0 0; }
+.journey-steps .step-prompt + p:not(.step-prompt) { margin-top: var(--pc-space-4); }
+.journey-steps .step-prompt code { overflow-wrap: anywhere; font-size: var(--pc-type-meta); }
+.home-video[hidden] { display: none; }
+
 /* Chinese and Japanese (docs/DEPLOYMENT.md#languages): system CJK faces after the Latin stack, no
    negative tracking, taller headings (a CJK glyph fills its whole em), CJK line breaking. */
 :root:lang(zh-Hans) { --pc-font: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", "Segoe UI", sans-serif; }
