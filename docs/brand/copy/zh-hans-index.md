@@ -62,7 +62,7 @@ Português (Brasil)
 
 ↗
 
-基于 AGPL-3.0 开源 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
+基于 AGPL-3.0 开源 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.6.7 · Observatory 0.21.0
 
 账号
 
@@ -144,7 +144,7 @@ Fabric Switchboard
 
 版本
 
-0.6.15
+0.6.16
 
 · macOS + Windows
 
@@ -180,7 +180,7 @@ Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智�
 
 开发预览版
 
-0.13.0
+0.14.0
 
 · macOS
 
@@ -192,7 +192,7 @@ PassionCode.ai 启动器
 
 CLI
 
-0.1.31
+0.1.32
 
 · Node.js 18+
 

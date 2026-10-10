@@ -88,7 +88,7 @@ PassionCode.ai 런처가 Fabric Agent Adapter 스킬, Observatory Log, 작업 �
 
 npx @passioncode-ai/passioncode@latest update
 
-런처 0.1.31 · 설치 후 에이전트를 다시 시작하세요 · 자동 업데이트가 켜져 있습니다. 자동 업데이트 끄기
+런처 0.1.32 · 설치 후 에이전트를 다시 시작하세요 · 자동 업데이트가 켜져 있습니다. 자동 업데이트 끄기
 
 02
 

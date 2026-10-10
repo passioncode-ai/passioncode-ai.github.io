@@ -62,7 +62,7 @@ Para tu organización
 
 ↗
 
-Código abierto bajo AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
+Código abierto bajo AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.6.7 · Observatory 0.21.0
 
 Cuentas
 
@@ -144,7 +144,7 @@ Elige la cuenta con la que se ejecuta cada agente, con los límites de uso a la 
 
 Versión
 
-0.6.15
+0.6.16
 
 · macOS + Windows
 
@@ -180,7 +180,7 @@ El correo de Gmail y de Cloudflare en una sola lista, lo importante primero; los
 
 Vista previa de desarrollo
 
-0.13.0
+0.14.0
 
 · macOS
 
@@ -192,7 +192,7 @@ Un solo comando instala las skills que enseñan a los agentes a construir con Fa
 
 CLI
 
-0.1.31
+0.1.32
 
 · Node.js 18+
 
