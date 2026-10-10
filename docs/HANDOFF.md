@@ -2,8 +2,8 @@
 
 Objective (operator, 2026-10-10): the site was too long and complex, above all where it converts organizations and
 describes the vision. Keep the home hero and its narrative; after it, and on /vision/, /business/ and /start/, keep
-only the key values and moments. About becomes a short founder note. Branch `agent/site-simplify`, draft PR (the
-locale gate cannot pass until eight languages are translated). Not deployed.
+only the key values and moments. About becomes a short founder note. Branch `agent/site-simplify`, PR #80, merged as
+`30eb36b` and deployed 2026-10-10.
 
 Done (English source and Russian):
 - Home after the hero (2022 → 719 words): Why (#why: without a harness agents rot; a local, open-source workspace on
@@ -39,11 +39,17 @@ three tests in `scripts/locales.test.mjs` and "the live-version rewriter runs on
 465E/353W on main → 428E/323W. Browser (managed Chrome, `dist/` served statically): /, /ru/, /vision/, /business/,
 /start/ and their /ru/ versions at 1280 px and 390 px, no horizontal overflow; the estimate still computes.
 
-Next task: translate `.l10n-todo.json` (repository root, on this branch only) into `i18n/<code>/` for de, fr, pl, ko,
-es, pt-br, zh-hans and ja — `add` lists the 94 English keys per catalog file, `reference` keeps each language's removed
-translations to reuse — then `npm run locales`, `python3 scripts/extract-public-copy.py`, `npm run check`,
-`npm run build`, delete `.l10n-todo.json`, mark the PR ready. After merge and deploy: `verify-live.py`, and update
-fabric-workspace `knowledge/` (vision principles and the Enterprise offer) in the same run.
+Completed 2026-10-10: the eight remaining catalogs were translated (es/pt-br `6a619e4`, de/fr `82b1079`, pl/ko
+`7b33e5a`, zh-hans/ja `53f1c8e`); `.l10n-todo.json` deleted; every locale regenerated; the Russian /start/ dash after
+task-pipeline got its space; the releases were synced (Switchboard 0.6.15, launcher 0.1.31) and the facts row
+"Switchboard release" follows. `npm run check`, `npm test`, `npm run build`, `releases:check` passed locally; PR #80
+merged (`30eb36b`), deployed from that commit with `npm run deploy`, and `scripts/verify-live.py` passed: 183 assets,
+150 pages (15 in each of 10 languages), hreflang on 130, 7 download routes, 23 not-found addresses
+([receipt](evidence/2026-10-10-site-simplify/live.json)). Translators' open wording questions (blunt "agents rot",
+"health", "gate", link-adjacent fragments) belong to the native-speaker review, SITE-026.
+
+Next task: update fabric-workspace `knowledge/` (vision principles and the PassionCode for Enterprise offer as the
+site now states them) under that repository's lease, then continue SITE-026 (native-speaker review per language).
 
 ---
 
