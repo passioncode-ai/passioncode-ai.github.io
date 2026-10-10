@@ -60,6 +60,15 @@
     "FOR ORGANIZATIONS": "組織向け",
     "Want it running": "チーム全体での",
     "for your whole team?": "運用をご希望ですか？",
-    "We map your processes, estimate what agents can take over, and set it up with you or for you.": "プロセスを洗い出し、エージェントが引き受けられる範囲を見積もり、お客様とともに、またはお客様に代わってセットアップします。"
+    "We map your processes, estimate what agents can take over, and set it up with you or for you.": "プロセスを洗い出し、エージェントが引き受けられる範囲を見積もり、お客様とともに、またはお客様に代わってセットアップします。",
+    "Stop building agents that rot and don’t talk to each other. Five steps, about twenty minutes, each useful on its own": "傷んでしまい、互いに話せないエージェントを作るのは、もうやめましょう。5つのステップ、約20分で、どれも単独で役立ちます",
+    "The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key.": "PassionCode.ai ランチャーが、Fabric Agent Adapter スキル、Observatory Log、作業ルールをコーディングエージェントにインストールします。アカウントもキーも不要です。",
+    "· restart your agent afterwards · automatic updates are on;": "· インストール後にエージェントを再起動 · 自動更新はオン；",
+    "Build the next agent the same way and give it the same project in Fabric. Claude Code, Kilo Code and Hermes Agent started from Fabric share that project’s board, memory and hand-offs, so one picks up where the other stopped.": "次のエージェントも同じ方法で作り、Fabric の同じプロジェクトに割り当てます。Fabric から起動した Claude Code、Kilo Code、Hermes Agent は、そのプロジェクトのボード、メモリ、引き継ぎを共有するので、1つのエージェントが止めたところから別のエージェントが続けられます。",
+    "Which agents connect today": "現在つながるエージェント",
+    "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "ファミリーに属します。ブリーフから受け入れまで各変更を運び、各ゲートを通過するまで次へ進みません。",
+    "Every product repository is public and names its test command in": "すべてのプロダクトのリポジトリは公開されており、テストコマンドは",
+    ". Follow the organization’s": "に書かれています。組織の",
+    "and open a pull request; opening it is your agreement to the repository’s": "に従って、プルリクエストを開いてください。開くと、次のリポジトリ規約に同意したことになります："
   }
 }

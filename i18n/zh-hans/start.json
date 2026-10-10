@@ -60,6 +60,15 @@
     "FOR ORGANIZATIONS": "面向组织",
     "Want it running": "想让它在",
     "for your whole team?": "整个团队中运行吗？",
-    "We map your processes, estimate what agents can take over, and set it up with you or for you.": "我们梳理你的流程，评估智能体能接手哪些工作，并与你一起或为你完成搭建。"
+    "We map your processes, estimate what agents can take over, and set it up with you or for you.": "我们梳理你的流程，评估智能体能接手哪些工作，并与你一起或为你完成搭建。",
+    "Stop building agents that rot and don’t talk to each other. Five steps, about twenty minutes, each useful on its own": "别再构建会腐坏、彼此不交流的智能体了。五个步骤，大约二十分钟，每一步单独也有用",
+    "The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key.": "PassionCode.ai 启动器会把 Fabric Agent Adapter 技能、Observatory Log 和工作规则安装到你的编码智能体中。无需账号，也无需密钥。",
+    "· restart your agent afterwards · automatic updates are on;": "· 之后请重启你的智能体 · 已开启自动更新；",
+    "Build the next agent the same way and give it the same project in Fabric. Claude Code, Kilo Code and Hermes Agent started from Fabric share that project’s board, memory and hand-offs, so one picks up where the other stopped.": "以同样的方式构建下一个智能体，并让它加入 Fabric 中的同一个项目。从 Fabric 启动的 Claude Code、Kilo Code 和 Hermes Agent 共用该项目的看板、记忆和交接，因此一个智能体可以从另一个停下的地方接着做。",
+    "Which agents connect today": "目前可以连接哪些智能体",
+    "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "系列：它把每项变更从简报一路带到验收，每道关卡通过之前不会继续往下走。",
+    "Every product repository is public and names its test command in": "所有产品仓库都是公开的，测试命令写在",
+    ". Follow the organization’s": " 中。请遵循组织的",
+    "and open a pull request; opening it is your agreement to the repository’s": "并提交 pull request；提交即表示你同意仓库的"
   }
 }
