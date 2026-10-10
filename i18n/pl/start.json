@@ -59,7 +59,7 @@
     "Agents that finish": "Agenci, którzy kończą",
     "what they start": "to, co zaczęli",
     "task-pipeline": "task-pipeline",
-    ", a separate open-source skill from the": ", odrębny skill na otwartym kodzie z rodziny",
+    ", a separate open-source skill from the": ", odrębny skill na otwartym kodzie z kolekcji",
     "sshlg-skills": "sshlg-skills",
     "task-pipeline on GitHub": "task-pipeline na GitHubie",
     "· it is not part of PassionCode.ai and needs nothing from it": "· nie jest częścią PassionCode.ai i niczego od niego nie wymaga",
@@ -70,6 +70,18 @@
     ". Follow the organization’s": ". Zastosuj się do pliku",
     "and open a pull request; opening it is your agreement to the repository’s": "organizacji i otwórz pull request; jego otwarcie oznacza Twoją zgodę na zapisy z pliku",
     "Apple silicon and Intel · signed and notarized · SHA-256": "Apple silicon i Intel · podpisana i notaryzowana przez Apple · SHA-256",
-    "Fabric needs macOS on Apple silicon or Intel": "Fabric wymaga macOS na Apple silicon lub Intel"
+    "Fabric needs macOS on Apple silicon or Intel": "Fabric wymaga macOS na Apple silicon lub Intel",
+    "Install the PassionCode.ai skills, add Fabric, create your first Fabric agent with Claude Code or Codex or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project. Free and open source.": "Zainstaluj skille PassionCode.ai, dodaj Fabric, utwórz pierwszego agenta Fabric w Claude Code lub Codex albo dostosuj istniejący projekt, uruchom go w Fabric Dashboards i dodaj kolejnego agenta do tego samego projektu. Bezpłatnie i na otwartym kodzie.",
+    "Install the skills, add Fabric, create a Fabric agent or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project.": "Zainstaluj skille, dodaj Fabric, utwórz agenta Fabric albo dostosuj istniejący projekt, uruchom go w Fabric Dashboards i dodaj kolejnego agenta do tego samego projektu.",
+    "Download the Fabric early preview for macOS on Apple silicon or Intel, a separate download from the skills, and open or create your first project.": "Pobierz wczesną wersję zapoznawczą Fabric na macOS na Apple silicon lub Intel, osobno od skilli, i otwórz albo utwórz swój pierwszy projekt.",
+    "Create or adapt an agent": "Utwórz lub dostosuj agenta",
+    "Add the next agent to the same project": "Dodaj kolejnego agenta do tego samego projektu",
+    "Build agents that keep working and know what the others did. Five steps, about twenty minutes, each useful on its own": "Buduj agentów, którzy działają dalej i wiedzą, co zrobili pozostali. Pięć kroków, około dwudziestu minut, a każdy przydaje się sam z siebie",
+    "The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key. It does not install Fabric: that is the next step, a separate download.": "Launcher PassionCode.ai instaluje w Twoim agencie kodującym skille Fabric Agent Adapter, Observatory Log i zasady pracy. Bez konta i bez klucza. Nie instaluje Fabric: to następny krok, osobne pobranie.",
+    "Fabric is the home for your projects and their agents: each project keeps its purpose, board, decisions and releases there. Its first screen offers four actions: create an agent, adapt one you already have, open a project or create one. It is an early preview: it needs Docker and the Supabase CLI, and its conversation saves messages but does not reply yet.": "Fabric to dom dla Twoich projektów i ich agentów: każdy projekt trzyma tam swój cel, tablicę, decyzje i wydania. Pierwszy ekran oferuje cztery akcje: utwórz agenta, dostosuj takiego, którego już masz, otwórz projekt albo utwórz nowy. To wczesna wersja zapoznawcza: wymaga Dockera i Supabase CLI, a jej czat zapisuje wiadomości, ale jeszcze nie odpowiada.",
+    "In Claude Code or Codex, ask for what you need, or start from Fabric’s Create and Adapt actions; the work runs in your coding agent’s console either way. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything; adapting works on a new": "W Claude Code lub Codex poproś o to, czego potrzebujesz, albo zacznij od akcji tworzenia i dostosowania w Fabric; w obu przypadkach praca odbywa się w konsoli Twojego agenta kodującego. Skill Fabric Agent Adapter najpierw zadaje pytania i pokazuje plan, zanim cokolwiek zmieni; dostosowanie odbywa się na nowej gałęzi",
+    "branch. You get a contract, a dashboard, tests and a conformance report.": ". Dostajesz kontrakt, panel, testy i raport zgodności.",
+    "adapt": "dostosuj",
+    "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": ": prowadzi każdą zmianę od zlecenia do odbioru i nie idzie dalej, dopóki nie przejdzie każda kontrola."
   }
 }

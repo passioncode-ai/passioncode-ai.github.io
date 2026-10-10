@@ -183,6 +183,7 @@
     "02 / WHAT IT SAVES": "02 / ILE TO OSZCZĘDZA",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "Godziny, które Twój zespół co miesiąc spędza na tych procesach, razy część, którą agenci realistycznie mogą przejąć, razy koszt Twojej godziny pracy.",
     "03 / REQUEST": "03 / ZGŁOSZENIE",
-    "04 / QUESTIONS": "04 / PYTANIA"
+    "04 / QUESTIONS": "04 / PYTANIA",
+    "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "Agent, który żyje na laptopie jednej osoby, pomaga jednej osobie. Wprowadzamy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, co robią, na narzędziach o otwartym kodzie, z Twoimi danymi na Twoich komputerach albo w Twojej własnej chmurze"
   }
 }
