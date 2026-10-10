@@ -2,7 +2,6 @@
   "page": "fabric/index.html",
   "strings": {
     "Fabric | CEO AI agent · early preview for macOS | PassionCode.ai": "Fabric | ИИ-агент в роли CEO · ранняя предварительная версия для macOS | PassionCode.ai",
-    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric — наш ИИ-агент в роли CEO, сейчас в ранней предварительной версии для macOS на Apple silicon. Он хранит доску задач, решения, работу и релизы проекта в одном месте — на вашем Mac.",
     "Fabric — CEO AI agent, early preview": "Fabric — ИИ-агент в роли CEO, ранняя предварительная версия",
     "Download": "Скачать",
     "FABRIC · EARLY PREVIEW": "FABRIC · РАННЯЯ ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ",
@@ -12,7 +11,6 @@
     "Download for macOS": "Скачать для macOS",
     "Explore the workflow": "Как устроена работа",
     "Early preview": "Ранняя предварительная версия",
-    "· macOS on Apple silicon": "· macOS на Apple silicon",
     "Illustrative project brief": "Пример описания проекта",
     "A PROJECT, BEYOND THE CHAT": "ПРОЕКТ — БОЛЬШЕ, ЧЕМ ЧАТ",
     "Purpose": "Цель",
@@ -70,9 +68,7 @@
     "for your Mac": "для вашего Mac",
     "Latest preview:": "Последняя предварительная версия:",
     ". Fabric runs on your Mac with a local database; your projects stay on this machine.": ". Fabric работает на вашем Mac с локальной базой данных; ваши проекты остаются на этой машине.",
-    "Apple silicon (arm64) · macOS 13 or later": "Apple silicon (arm64) · macOS 13 или новее",
     "DMG installer · Developer ID signed and notarized by Apple": "Установщик DMG · подписан Developer ID и нотаризован Apple",
-    "Open the DMG and drag Fabric to Applications. Intel Macs are not supported in this preview.": "Откройте DMG и перетащите Fabric в «Программы». Mac на Intel в этой предварительной версии не поддерживаются.",
     "Before you open it": "Прежде чем открыть",
     "Fabric starts its own local database with the Supabase CLI inside Docker.": "Fabric запускает собственную локальную базу данных через Supabase CLI внутри Docker.",
     "Docker Desktop or OrbStack, running": "Запущенный Docker Desktop или OrbStack",
@@ -92,6 +88,10 @@
     "Download Switchboard": "Скачать Switchboard",
     "Back to the toolkit": "Ко всем инструментам",
     "This is an early preview. You can keep projects, a board of decisions, tasks, goals, a pulse of the work and releases with their receipts. The conversation with Fabric saves your messages, but Fabric does not reply yet. A newer version does not upgrade an existing database on its own; it tells you the command to run. Agents registered on this Mac can ask Fabric, through its local agent hub, for access to a connected product such as Fabric Inbox; you allow or deny each request and can revoke it in Settings. Since 0.3.2, Fabric sends anonymous usage counts — counts and kinds only, never names, paths or content; turn them off in Settings → Share usage counts, which applies to every PassionCode.ai app on your Mac.": "Это ранняя предварительная версия. В ней можно вести проекты, доску решений, задачи, цели, пульс работы и релизы с квитанциями. Чат с Fabric сохраняет ваши сообщения, но Fabric пока не отвечает. Новая версия не обновляет существующую базу данных сама — она подскажет, какую команду выполнить. Агенты, зарегистрированные на этом Mac, могут через локальный хаб агентов Fabric запросить доступ к подключённому продукту, например к Fabric Inbox; вы разрешаете или отклоняете каждый запрос и можете отозвать доступ в настройках. С версии 0.3.2 Fabric отправляет анонимные счётчики использования — только количество и типы событий, без имён, путей и содержимого; отключить их можно в «Настройки → Делиться счётчиками использования», и это действует для всех приложений PassionCode.ai на вашем Mac.",
-    "The home every agent of a project shares: its purpose, board, decisions and releases.": "Общий дом всех агентов проекта: его цель, доска, решения и релизы."
+    "The home every agent of a project shares: its purpose, board, decisions and releases.": "Общий дом всех агентов проекта: его цель, доска, решения и релизы.",
+    "· macOS on Apple silicon and Intel": "· macOS на Apple silicon и Intel",
+    "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon и Intel (универсальный) · macOS 13 или новее",
+    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric — наш ИИ-агент в роли CEO, сейчас в ранней предварительной версии для macOS на Apple silicon и Intel. Он хранит доску задач, решения, работу и релизы проекта в одном месте — на вашем Mac.",
+    "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "Откройте DMG и перетащите Fabric в «Программы». Один и тот же DMG работает на Mac с Apple silicon и с Intel."
   }
 }

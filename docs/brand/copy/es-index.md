@@ -62,7 +62,7 @@ Para tu organización
 
 ↗
 
-Código abierto bajo AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
+Código abierto bajo AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
 
 Cuentas
 
@@ -132,7 +132,7 @@ El agente de IA que hace de CEO: un lugar para el propósito, el tablero, las de
 
 Vista previa temprana
 
-0.3.3
+0.3.4
 
 · macOS
 
@@ -168,7 +168,7 @@ Qué ha cambiado en cada proyecto y qué requiere atención, con las pruebas.
 
 Versión
 
-0.20.1
+0.21.0
 
 · macOS + Linux
 

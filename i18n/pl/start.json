@@ -9,7 +9,6 @@
     "Install the skills": "Zainstaluj skille",
     "Run npx @passioncode-ai/passioncode@latest update and restart your agent.": "Uruchom npx @passioncode-ai/passioncode@latest update i zrestartuj swojego agenta.",
     "Add Fabric": "Dodaj Fabric",
-    "Download the Fabric early preview for macOS on Apple silicon and open your first project.": "Pobierz wczesną wersję zapoznawczą Fabric dla macOS na Apple silicon i otwórz swój pierwszy projekt.",
     "Create or convert an agent": "Utwórz lub przekształć agenta",
     "Ask your coding agent to create a Fabric agent, or to adapt an existing project to Fabric.": "Poproś swojego agenta kodującego, aby utworzył agenta Fabric albo dostosował istniejący projekt do Fabric.",
     "Run it and see it": "Uruchom i zobacz",
@@ -18,7 +17,6 @@
     "From an empty Mac to": "Od pustego Maca do",
     "your first agent": "pierwszego agenta",
     "Needs Node.js 18+ and Claude Code or Codex": "Wymaga Node.js 18+ oraz Claude Code lub Codex",
-    "Fabric needs macOS on Apple silicon": "Fabric wymaga macOS na Apple silicon",
     "On this page": "Na tej stronie",
     "Contribute": "Współtwórz",
     "Steps": "Kroki",
@@ -28,7 +26,6 @@
     "Download Fabric": "Pobierz Fabric",
     "for macOS": "dla macOS",
     "Requirements and limits": "Wymagania i ograniczenia",
-    "Apple silicon · signed and notarized · SHA-256": "Apple silicon · podpisana i notaryzowana przez Apple · SHA-256",
     "release notes": "informacje o wydaniu",
     "In Claude Code or Codex, ask for what you need. The Fabric Agent Adapter skill builds a Fabric-compatible service: a contract, a dashboard, tests and a conformance check.": "W Claude Code lub Codex poproś o to, czego potrzebujesz. Skill Fabric Agent Adapter zbuduje usługę zgodną z Fabric: kontrakt, panel, testy i test zgodności.",
     "new": "nowy",
@@ -81,6 +78,9 @@
     "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "– prowadzi każdą zmianę od zlecenia do odbioru i nie idzie dalej, dopóki nie przejdzie każda kontrola.",
     "Every product repository is public and names its test command in": "Repozytorium każdego produktu jest publiczne, a polecenie do testów podano w",
     ". Follow the organization’s": ". Zastosuj się do pliku",
-    "and open a pull request; opening it is your agreement to the repository’s": "organizacji i otwórz pull request; jego otwarcie oznacza Twoją zgodę na zapisy z pliku"
+    "and open a pull request; opening it is your agreement to the repository’s": "organizacji i otwórz pull request; jego otwarcie oznacza Twoją zgodę na zapisy z pliku",
+    "Apple silicon and Intel · signed and notarized · SHA-256": "Apple silicon i Intel · podpisana i notaryzowana przez Apple · SHA-256",
+    "Download the Fabric early preview for macOS on Apple silicon or Intel and open your first project.": "Pobierz wczesną wersję zapoznawczą Fabric dla macOS na Apple silicon lub Intel i otwórz swój pierwszy projekt.",
+    "Fabric needs macOS on Apple silicon or Intel": "Fabric wymaga macOS na Apple silicon lub Intel"
   }
 }

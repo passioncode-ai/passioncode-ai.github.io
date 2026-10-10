@@ -2,7 +2,6 @@
   "page": "fabric/index.html",
   "strings": {
     "Fabric | CEO AI agent · early preview for macOS | PassionCode.ai": "Fabric | CEO AIエージェント · macOS向け早期プレビュー版 | PassionCode.ai",
-    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabricは私たちのCEO AIエージェントで、現在はApple silicon搭載のmacOS向け早期プレビュー版です。プロジェクトのボード、決定、作業、リリースを、お使いのMac上の一か所にまとめます。",
     "Fabric — CEO AI agent, early preview": "Fabric — CEO AIエージェント、早期プレビュー版",
     "FABRIC · EARLY PREVIEW": "FABRIC · 早期プレビュー版",
     "A CEO AI agent": "CEO AIエージェント",
@@ -10,7 +9,6 @@
     "Fabric is the agent we’re building to coordinate other agents around a project, keeping its purpose, context and decisions with the work as people, models and sessions change": "Fabricは、プロジェクトの目的、コンテキスト、決定を作業とともに保ちながら、人やモデル、セッションが入れ替わっても他のエージェントを調整できるように開発中のエージェントです",
     "The home every agent of a project shares: its purpose, board, decisions and releases.": "プロジェクトの全エージェントが共有する拠点。目的、ボード、決定、リリースがそろいます。",
     "Explore the workflow": "ワークフローを見る",
-    "· macOS on Apple silicon": "· Apple silicon搭載のmacOS",
     "Illustrative project brief": "プロジェクト概要の例",
     "A PROJECT, BEYOND THE CHAT": "チャットを超えたプロジェクト",
     "Purpose": "目的",
@@ -65,8 +63,6 @@
     "GET FABRIC": "FABRICを入手",
     "An early preview": "早期プレビュー版",
     ". Fabric runs on your Mac with a local database; your projects stay on this machine.": "。FabricはMac上でローカルデータベースとともに動作し、プロジェクトはこのマシンの中にとどまります。",
-    "Apple silicon (arm64) · macOS 13 or later": "Apple silicon（arm64）· macOS 13以降",
-    "Open the DMG and drag Fabric to Applications. Intel Macs are not supported in this preview.": "DMGを開き、FabricをApplicationsにドラッグします。このプレビュー版ではIntel Macはサポートされていません。",
     "Fabric starts its own local database with the Supabase CLI inside Docker.": "FabricはDocker内のSupabase CLIで、専用のローカルデータベースを起動します。",
     "Docker Desktop or OrbStack, running": "Docker DesktopまたはOrbStack（起動中）",
     "Supabase CLI:": "Supabase CLI：",
@@ -81,6 +77,10 @@
     "PART OF THE SAME TOOLKIT": "同じツールキットの一部",
     "Switchboard manages the accounts": "Switchboardはアカウントを管理します",
     "The account-management tool runs independently of Fabric.": "アカウント管理ツールは、Fabricとは独立して動作します。",
-    "Back to the toolkit": "ツールキットに戻る"
+    "Back to the toolkit": "ツールキットに戻る",
+    "· macOS on Apple silicon and Intel": "· Apple silicon・Intel搭載のmacOS",
+    "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon・Intel（ユニバーサル）· macOS 13以降",
+    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabricは私たちのCEO AIエージェントで、現在はApple siliconおよびIntel搭載のmacOS向け早期プレビュー版です。プロジェクトのボード、決定、作業、リリースを、お使いのMac上の一か所にまとめます。",
+    "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "DMGを開き、FabricをApplicationsにドラッグします。同じDMGがApple silicon搭載MacとIntel Macの両方で動作します。"
   }
 }

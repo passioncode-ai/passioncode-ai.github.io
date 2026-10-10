@@ -62,7 +62,7 @@ CEO AI 에이전트 Fabric이 각 프로젝트의 목적, 결정, 릴리스를 �
 
 ↗
 
-AGPL-3.0 오픈 소스 Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
+AGPL-3.0 오픈 소스 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
 
 계정
 
@@ -132,7 +132,7 @@ CEO AI 에이전트: 각 프로젝트의 목적, 보드, 결정, 릴리스를 �
 
 초기 프리뷰
 
-0.3.3
+0.3.4
 
 · macOS
 
@@ -168,7 +168,7 @@ Project Observatory
 
 릴리스
 
-0.20.1
+0.21.0
 
 · macOS + Linux
 

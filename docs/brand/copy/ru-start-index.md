@@ -52,7 +52,7 @@ Português (Brasil)
 
 Хватит собирать агентов, которые гниют и не общаются друг с другом. Пять шагов, около двадцати минут, и каждый полезен сам по себе
 
-Нужны Node.js 18+ и Claude Code или Codex Для Fabric нужен macOS на Apple silicon
+Нужны Node.js 18+ и Claude Code или Codex Для Fabric нужен macOS на Apple silicon или Intel
 
 01
 
@@ -98,7 +98,7 @@ Fabric — ИИ-агент в роли CEO: у каждого проекта п�
 
 Скачать Fabric
 
-0.3.3
+0.3.4
 
 для macOS
 
@@ -106,7 +106,7 @@ Fabric — ИИ-агент в роли CEO: у каждого проекта п�
 
 Требования и ограничения
 
-Apple silicon · подписано и нотаризовано · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · заметки к релизу
+Apple silicon и Intel · подписано и нотаризовано · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · заметки к релизу
 
 03
 

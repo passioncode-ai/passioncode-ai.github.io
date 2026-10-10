@@ -62,7 +62,7 @@ Dla Twojej organizacji
 
 ↗
 
-Otwarty kod na licencji AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
+Otwarty kod na licencji AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
 
 Konta
 
@@ -132,7 +132,7 @@ Agent AI w roli CEO: jedno miejsce na cel, tablicę, decyzje i wydania każdego 
 
 Wczesna wersja zapoznawcza
 
-0.3.3
+0.3.4
 
 · macOS
 
@@ -168,7 +168,7 @@ Co zmieniło się w każdym projekcie i co wymaga uwagi — wraz z dowodami.
 
 Wydanie
 
-0.20.1
+0.21.0
 
 · macOS + Linux
 

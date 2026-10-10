@@ -1,23 +1,23 @@
 {
   "schema": "releases/1",
-  "generatedAt": "2026-10-10T02:23:59.049Z",
+  "generatedAt": "2026-10-10T17:48:58.662Z",
   "products": {
     "fabric": {
       "key": "fabric",
       "name": "Fabric",
       "repository": "passioncode-ai/fabric",
       "page": "/fabric/",
-      "version": "0.3.3",
-      "tag": "v0.3.3",
+      "version": "0.3.4",
+      "tag": "v0.3.4",
       "prerelease": true,
-      "publishedAt": "2026-10-09T22:20:26Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric/releases/tag/v0.3.3",
+      "publishedAt": "2026-10-10T17:28:26Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric/releases/tag/v0.3.4",
       "assets": {
         "macos": {
-          "name": "Fabric-0.3.3-arm64.dmg",
-          "url": "https://github.com/passioncode-ai/fabric/releases/download/v0.3.3/Fabric-0.3.3-arm64.dmg",
-          "sha256": "88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446",
-          "size": 168656657
+          "name": "Fabric-0.3.4-universal.dmg",
+          "url": "https://github.com/passioncode-ai/fabric/releases/download/v0.3.4/Fabric-0.3.4-universal.dmg",
+          "sha256": "4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653",
+          "size": 268982785
         }
       }
     },
@@ -89,23 +89,23 @@
       "name": "Project Observatory",
       "repository": "passioncode-ai/project-observatory-dashboard",
       "page": "/observatory/",
-      "version": "0.20.1",
-      "tag": "v0.20.1",
+      "version": "0.21.0",
+      "tag": "v0.21.0",
       "prerelease": false,
-      "publishedAt": "2026-10-09T10:21:33Z",
-      "releaseUrl": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/tag/v0.20.1",
+      "publishedAt": "2026-10-10T16:34:16Z",
+      "releaseUrl": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/tag/v0.21.0",
       "assets": {
         "wheel": {
-          "name": "project_observatory-0.20.1-py3-none-any.whl",
-          "url": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.20.1/project_observatory-0.20.1-py3-none-any.whl",
-          "sha256": "8eedd9bb3d0e78072a305339295c3b9aa59ecf73923b1b764a5a711eefdc425f",
-          "size": 2883426
+          "name": "project_observatory-0.21.0-py3-none-any.whl",
+          "url": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.21.0/project_observatory-0.21.0-py3-none-any.whl",
+          "sha256": "3bd1d14616c1e301f5909ab270df90c2de7c8bc8853093df234615c9ed4f302b",
+          "size": 2916531
         },
         "macos": {
-          "name": "ProjectObservatory-0.20.1-macos.zip",
-          "url": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.20.1/ProjectObservatory-0.20.1-macos.zip",
-          "sha256": "1e88ef38991c5865ee3afd9fb1eddaf070de22deedf58cda49dbee03fb2437f2",
-          "size": 742629
+          "name": "ProjectObservatory-0.21.0-macos.zip",
+          "url": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.21.0/ProjectObservatory-0.21.0-macos.zip",
+          "sha256": "73802b4f6e7389e480e29143034048319a400333809ac763cefa76fd528a2edc",
+          "size": 742637
         }
       }
     },

@@ -12,7 +12,6 @@
     "Install the skills": "Skills installieren",
     "Run npx @passioncode-ai/passioncode@latest update and restart your agent.": "Führe npx @passioncode-ai/passioncode@latest update aus und starte deinen Agenten neu.",
     "Add Fabric": "Fabric hinzufügen",
-    "Download the Fabric early preview for macOS on Apple silicon and open your first project.": "Lade die frühe Vorschau von Fabric für macOS auf Apple silicon herunter und öffne dein erstes Projekt.",
     "Create or convert an agent": "Agenten erstellen oder umwandeln",
     "Ask your coding agent to create a Fabric agent, or to adapt an existing project to Fabric.": "Bitte deinen Coding-Agenten, einen Fabric-Agenten zu erstellen oder ein bestehendes Projekt an Fabric anzupassen.",
     "Run it and see it": "Laufen lassen und ansehen",
@@ -23,7 +22,6 @@
     "From an empty Mac to": "Vom leeren Mac zu",
     "your first agent": "deinem ersten Agenten",
     "Needs Node.js 18+ and Claude Code or Codex": "Braucht Node.js 18+ und Claude Code oder Codex",
-    "Fabric needs macOS on Apple silicon": "Fabric braucht macOS auf Apple silicon",
     "On this page": "Auf dieser Seite",
     "Add the next agent": "Den nächsten Agenten hinzufügen",
     "Contribute": "Mitwirken",
@@ -34,7 +32,6 @@
     "Download Fabric": "Fabric herunterladen",
     "for macOS": "für macOS",
     "Requirements and limits": "Voraussetzungen und Einschränkungen",
-    "Apple silicon · signed and notarized · SHA-256": "Apple silicon · signiert und notarisiert · SHA-256",
     "release notes": "Release Notes",
     "In Claude Code or Codex, ask for what you need. The Fabric Agent Adapter skill builds a Fabric-compatible service: a contract, a dashboard, tests and a conformance check.": "Bitte in Claude Code oder Codex um das, was du brauchst. Der Skill des Fabric Agent Adapter baut einen Fabric-kompatiblen Dienst: einen Vertrag, ein Dashboard, Tests und eine Konformitätsprüfung.",
     "new": "neu",
@@ -72,6 +69,9 @@
     "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "Familie: Er führt jede Änderung vom Briefing bis zur Abnahme und geht erst weiter, wenn jedes Gate bestanden ist.",
     "Every product repository is public and names its test command in": "Jedes Produkt-Repository ist öffentlich und nennt seinen Testbefehl in",
     ". Follow the organization’s": ". Befolge die Regeln der Organisation in",
-    "and open a pull request; opening it is your agreement to the repository’s": "und öffne einen Pull Request; das Öffnen ist deine Zustimmung zur Datei"
+    "and open a pull request; opening it is your agreement to the repository’s": "und öffne einen Pull Request; das Öffnen ist deine Zustimmung zur Datei",
+    "Apple silicon and Intel · signed and notarized · SHA-256": "Apple silicon und Intel · signiert und notarisiert · SHA-256",
+    "Download the Fabric early preview for macOS on Apple silicon or Intel and open your first project.": "Lade die frühe Vorschau von Fabric für macOS auf Apple silicon oder Intel herunter und öffne dein erstes Projekt.",
+    "Fabric needs macOS on Apple silicon or Intel": "Fabric braucht macOS auf Apple silicon oder Intel"
   }
 }

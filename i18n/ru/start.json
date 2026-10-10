@@ -9,7 +9,6 @@
     "Install the skills": "Установите скилы",
     "Run npx @passioncode-ai/passioncode@latest update and restart your agent.": "Выполните npx @passioncode-ai/passioncode@latest update и перезапустите агента.",
     "Add Fabric": "Добавьте Fabric",
-    "Download the Fabric early preview for macOS on Apple silicon and open your first project.": "Скачайте раннюю предварительную версию Fabric для macOS на Apple silicon и откройте первый проект.",
     "Create or convert an agent": "Создайте или адаптируйте агента",
     "Ask your coding agent to create a Fabric agent, or to adapt an existing project to Fabric.": "Попросите своего агента для программирования создать агента Fabric или адаптировать к Fabric существующий проект.",
     "Run it and see it": "Запустите и посмотрите",
@@ -18,7 +17,6 @@
     "From an empty Mac to": "От пустого Mac до",
     "your first agent": "первого агента",
     "Needs Node.js 18+ and Claude Code or Codex": "Нужны Node.js 18+ и Claude Code или Codex",
-    "Fabric needs macOS on Apple silicon": "Для Fabric нужен macOS на Apple silicon",
     "On this page": "На этой странице",
     "Contribute": "Участие",
     "Steps": "Шаги",
@@ -28,7 +26,6 @@
     "Download Fabric": "Скачать Fabric",
     "for macOS": "для macOS",
     "Requirements and limits": "Требования и ограничения",
-    "Apple silicon · signed and notarized · SHA-256": "Apple silicon · подписано и нотаризовано · SHA-256",
     "release notes": "заметки к релизу",
     "In Claude Code or Codex, ask for what you need. The Fabric Agent Adapter skill builds a Fabric-compatible service: a contract, a dashboard, tests and a conformance check.": "Попросите в Claude Code или Codex то, что вам нужно. Скил Fabric Agent Adapter соберёт сервис, совместимый с Fabric: контракт, дашборд, тесты и проверку соответствия.",
     "new": "создание",
@@ -72,6 +69,9 @@
     "family: it carries each change from the brief to the acceptance and does not move on until each gate passes.": ": он ведёт каждое изменение от брифа до приёмки и не идёт дальше, пока не пройдена каждая проверка.",
     "Every product repository is public and names its test command in": "Репозитории всех продуктов открыты, и в каждом команда для тестов указана в",
     ". Follow the organization’s": ". Следуйте",
-    "and open a pull request; opening it is your agreement to the repository’s": "организации и откройте pull request; открывая его, вы соглашаетесь с"
+    "and open a pull request; opening it is your agreement to the repository’s": "организации и откройте pull request; открывая его, вы соглашаетесь с",
+    "Apple silicon and Intel · signed and notarized · SHA-256": "Apple silicon и Intel · подписано и нотаризовано · SHA-256",
+    "Download the Fabric early preview for macOS on Apple silicon or Intel and open your first project.": "Скачайте раннюю предварительную версию Fabric для macOS на Apple silicon или Intel и откройте первый проект.",
+    "Fabric needs macOS on Apple silicon or Intel": "Для Fabric нужен macOS на Apple silicon или Intel"
   }
 }

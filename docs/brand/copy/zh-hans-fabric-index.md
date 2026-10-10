@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric | CEO AI 智能体 · macOS 早期预览版 | PassionCode.ai
 
-Fabric 是我们的 CEO AI 智能体，目前是适用于搭载 Apple silicon 的 macOS 的早期预览版。它把项目的看板、决策、工作和版本集中在一处，就在你的 Mac 上。
+Fabric 是我们的 CEO AI 智能体，目前是适用于搭载 Apple silicon 或 Intel 的 macOS 的早期预览版。它把项目的看板、决策、工作和版本集中在一处，就在你的 Mac 上。
 
 跳到正文
 
@@ -64,7 +64,7 @@ Fabric 是我们正在打造的智能体，围绕项目协调其他智能体，�
 
 ↓
 
-早期预览版 0.3.3 · 适用于搭载 Apple silicon 的 macOS
+早期预览版 0.3.4 · 适用于搭载 Apple silicon 或 Intel 的 macOS
 
 项目，不止于聊天
 
@@ -172,20 +172,20 @@ CEO 指的是一种协调角色。项目为了什么，以及智能体被允许�
 
 ## 适用于你的 Mac
 
-最新预览版：0.3.3。Fabric 在你的 Mac 上运行，使用本地数据库；你的项目只留在这台机器上。
+最新预览版：0.3.4。Fabric 在你的 Mac 上运行，使用本地数据库；你的项目只留在这台机器上。
 
 ⌘
 
 ### macOS
 
-Apple silicon (arm64) · macOS 13 或更高版本
+Apple silicon 和 Intel（通用）· macOS 13 或更高版本
 DMG 安装包 · 已使用 Developer ID 签名并通过 Apple 公证
 
 下载 macOS 版
 
 ↓
 
-打开 DMG，把 Fabric 拖到“应用程序”。此预览版不支持 Intel Mac。
+打开 DMG，把 Fabric 拖到“应用程序”。同一个 DMG 可在搭载 Apple silicon 和 Intel 的 Mac 上运行。
 
 ☰
 
@@ -211,7 +211,7 @@ Supabase CLI：brew install supabase/tap/supabase
 
 这是早期预览版。你可以保存项目、决策看板、任务、目标、工作脉搏，以及附有凭据的版本。与 Fabric 的对话会保存你的消息，但 Fabric 还不会回答。新版本不会自动升级现有数据库，而是会告诉你需要运行的命令。在这台 Mac 上注册的智能体可以通过 Fabric 的本地智能体中枢，向 Fabric 申请访问已连接的产品，例如 Fabric Inbox；每个请求由你允许或拒绝，也可以随时在设置中撤销。自 0.3.2 起，Fabric 会发送匿名的使用次数统计，只有次数和类别，绝不包含名称、路径或内容；可在“设置 → 分享使用次数”中关闭，此设置适用于你 Mac 上的每一个 PassionCode.ai 应用。
 
-Fabric 是开源的，采用 GNU AGPL-3.0 许可证；对于 AGPL 未涵盖的使用方式，可向以下地址获取商业许可证：passioncode.ai/business。该 0.3.3 预览版由 CI 根据这份公开源代码构建、签名并公证。
+Fabric 是开源的，采用 GNU AGPL-3.0 许可证；对于 AGPL 未涵盖的使用方式，可向以下地址获取商业许可证：passioncode.ai/business。该 0.3.4 预览版由 CI 根据这份公开源代码构建、签名并公证。
 
 同一套工具集的一部分
 

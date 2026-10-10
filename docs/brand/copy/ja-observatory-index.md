@@ -128,13 +128,13 @@ OBSERVATORY を入手
 
 ## 自分のワークスペースから始めましょう
 
-最新のリリース：0.20.1。最初のローカル観察に API キーは不要です。セットアップはコーディングエージェントに任せることも、ご自身で実行することもできます。
+最新のリリース：0.21.0。最初のローカル観察に API キーは不要です。セットアップはコーディングエージェントに任せることも、ご自身で実行することもできます。
 
 01
 
 ### リリースをインストール
 
-ダウンロード対象：project_observatory-0.20.1-py3-none-any.whlとSHA256SUMS（取得元：リリース 0.20.1）。確認にはshasum -a 256 -c SHA256SUMS --ignore-missingを使います。その後、SQLite 拡張に対応した分離済みの Python 3.11+ 環境で、pip install --no-depsで wheel を、続けて[full] extra を-c "$(project-observatory full-path)/requirements-full.lock"付きでインストールします。これはリリースがテストされた依存関係セットです。macOS では Homebrew の Python を使ってください。
+ダウンロード対象：project_observatory-0.21.0-py3-none-any.whlとSHA256SUMS（取得元：リリース 0.21.0）。確認にはshasum -a 256 -c SHA256SUMS --ignore-missingを使います。その後、SQLite 拡張に対応した分離済みの Python 3.11+ 環境で、pip install --no-depsで wheel を、続けて[full] extra を-c "$(project-observatory full-path)/requirements-full.lock"付きでインストールします。これはリリースがテストされた依存関係セットです。macOS では Homebrew の Python を使ってください。
 
 02
 
@@ -166,9 +166,9 @@ MCP サーバーは stdio で動作します：claude mcp add observatory --scop
 
 ↗
 
-Mac アプリ：ProjectObservatory-0.20.1-macos.zip。Developer ID で署名され、Apple による公証済みで、macOS 14 以降向けです。ダッシュボードが開き、上でインストールしたエンジンを使います。検証には上記と同じファイルを使います：SHA256SUMS。
+Mac アプリ：ProjectObservatory-0.21.0-macos.zip。Developer ID で署名され、Apple による公証済みで、macOS 14 以降向けです。ダッシュボードが開き、上でインストールしたエンジンを使います。検証には上記と同じファイルを使います：SHA256SUMS。
 
-現在のリリース 0.20.1は AGPL です。0.10.0 以降のすべてのリリースがそうで、0.10.0 が AGPL 下での最初のリリースです。0.9.1 以前は、リリース時のライセンスのままです。
+現在のリリース 0.21.0は AGPL です。0.10.0 以降のすべてのリリースがそうで、0.10.0 が AGPL 下での最初のリリースです。0.9.1 以前は、リリース時のライセンスのままです。
 
 既知の値のスキャンは、選択したアーティファクトを、ローカルで既知のキーと照合します。未知のシークレットは検出できず、コピーが残っていないことの証明もできません。また、ローカルにコピーがあっても、他の誰かがキーを入手した証拠にはなりません。プロバイダー側での実際のローテーションと外部の MCP ホストは、オフラインのテストスイートの対象外です。
 

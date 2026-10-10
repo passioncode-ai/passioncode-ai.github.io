@@ -62,7 +62,7 @@ Pour votre organisation
 
 ↗
 
-Open source sous licence AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
+Open source sous licence AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
 
 Comptes
 
@@ -132,7 +132,7 @@ L’agent IA dans le rôle de CEO : un seul endroit pour l’objectif, le tablea
 
 Préversion
 
-0.3.3
+0.3.4
 
 · macOS
 
@@ -168,7 +168,7 @@ Ce qui a changé dans chaque projet et ce qui demande votre attention, preuves �
 
 Version
 
-0.20.1
+0.21.0
 
 · macOS + Linux
 

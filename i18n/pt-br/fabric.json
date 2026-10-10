@@ -2,7 +2,6 @@
   "page": "fabric/index.html",
   "strings": {
     "Fabric | CEO AI agent · early preview for macOS | PassionCode.ai": "Fabric | Agente de IA no papel de CEO · prévia inicial para macOS | PassionCode.ai",
-    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric é o nosso agente de IA no papel de CEO, hoje em prévia inicial para macOS em Apple silicon. Ele mantém o quadro, as decisões, o trabalho e os releases de um projeto num só lugar, no seu Mac.",
     "Fabric — CEO AI agent, early preview": "Fabric — agente de IA no papel de CEO, prévia inicial",
     "Download": "Baixar",
     "FABRIC · EARLY PREVIEW": "FABRIC · PRÉVIA INICIAL",
@@ -13,7 +12,6 @@
     "Download for macOS": "Baixar para macOS",
     "Explore the workflow": "Conhecer o fluxo de trabalho",
     "Early preview": "Prévia inicial",
-    "· macOS on Apple silicon": "· macOS em Apple silicon",
     "Illustrative project brief": "Exemplo ilustrativo de briefing de projeto",
     "A PROJECT, BEYOND THE CHAT": "UM PROJETO, ALÉM DO CHAT",
     "Purpose": "Propósito",
@@ -71,9 +69,7 @@
     "for your Mac": "para o seu Mac",
     "Latest preview:": "Prévia mais recente:",
     ". Fabric runs on your Mac with a local database; your projects stay on this machine.": ". O Fabric roda no seu Mac com um banco de dados local; seus projetos ficam nesta máquina.",
-    "Apple silicon (arm64) · macOS 13 or later": "Apple silicon (arm64) · macOS 13 ou mais recente",
     "DMG installer · Developer ID signed and notarized by Apple": "Instalador DMG · assinado com Developer ID e notarizado pela Apple",
-    "Open the DMG and drag Fabric to Applications. Intel Macs are not supported in this preview.": "Abra o DMG e arraste o Fabric para Aplicativos. Macs Intel não são compatíveis com esta prévia.",
     "Before you open it": "Antes de abrir",
     "Fabric starts its own local database with the Supabase CLI inside Docker.": "O Fabric inicia o próprio banco de dados local com a Supabase CLI dentro do Docker.",
     "Docker Desktop or OrbStack, running": "Docker Desktop ou OrbStack, em execução",
@@ -92,6 +88,10 @@
     "Switchboard manages the accounts": "O Switchboard gerencia as contas",
     "The account-management tool runs independently of Fabric.": "A ferramenta de gerenciamento de contas funciona independentemente do Fabric.",
     "Download Switchboard": "Baixar o Switchboard",
-    "Back to the toolkit": "Voltar ao conjunto de ferramentas"
+    "Back to the toolkit": "Voltar ao conjunto de ferramentas",
+    "· macOS on Apple silicon and Intel": "· macOS em Apple silicon e Intel",
+    "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon e Intel (universal) · macOS 13 ou mais recente",
+    "Fabric is our CEO AI agent, now an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.": "Fabric é o nosso agente de IA no papel de CEO, hoje em prévia inicial para macOS em Apple silicon e Intel. Ele mantém o quadro, as decisões, o trabalho e os releases de um projeto num só lugar, no seu Mac.",
+    "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "Abra o DMG e arraste o Fabric para Aplicativos. O mesmo DMG roda em Macs com Apple silicon e Intel."
   }
 }

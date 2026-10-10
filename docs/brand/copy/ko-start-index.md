@@ -52,7 +52,7 @@ Português (Brasil)
 
 서로 대화하지 못하고 썩어 가는 에이전트를 만드는 일은 이제 그만. 다섯 단계, 약 20분, 각 단계는 그 자체로 쓸모가 있습니다
 
-Node.js 18+와 Claude Code 또는 Codex 필요 Fabric은 Apple silicon 기반 macOS 필요
+Node.js 18+와 Claude Code 또는 Codex 필요 Fabric은 Apple silicon 또는 Intel 기반 macOS 필요
 
 01
 
@@ -98,7 +98,7 @@ Fabric은 CEO AI 에이전트입니다. 각 프로젝트에 목적, 보드, 결�
 
 Fabric 다운로드
 
-0.3.3
+0.3.4
 
 macOS용
 
@@ -106,7 +106,7 @@ macOS용
 
 요구 사항과 제한
 
-Apple silicon · 서명 및 공증 완료 · SHA-256 88922ad23da5190cb330bee837b23e687fdac0f039d1fef13e5d80ddee492446 · 릴리스 노트
+Apple silicon 및 Intel · 서명 및 공증 완료 · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · 릴리스 노트
 
 03
 

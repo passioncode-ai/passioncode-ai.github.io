@@ -128,13 +128,13 @@ OBSERVATORY INSTALLIEREN
 
 ## Fang mit deinem eigenen Workspace an
 
-Aktuelles Release: 0.20.1. Für die erste lokale Beobachtung brauchst du keinen API-Schlüssel. Überlass die Einrichtung deinem Coding-Agenten oder erledige sie selbst.
+Aktuelles Release: 0.21.0. Für die erste lokale Beobachtung brauchst du keinen API-Schlüssel. Überlass die Einrichtung deinem Coding-Agenten oder erledige sie selbst.
 
 01
 
 ### Installiere das Release
 
-Download project_observatory-0.20.1-py3-none-any.whl und SHA256SUMS aus Release 0.20.1, prüfe sie mit shasum -a 256 -c SHA256SUMS --ignore-missing, installiere dann in einer isolierten Umgebung mit Python 3.11+ und Unterstützung für SQLite-Erweiterungen per pip install --no-deps erst das Wheel und danach sein Extra [full] mit -c "$(project-observatory full-path)/requirements-full.lock", dem Satz an Abhängigkeiten, mit dem das Release getestet wurde. Unter macOS nimm das Python aus Homebrew.
+Download project_observatory-0.21.0-py3-none-any.whl und SHA256SUMS aus Release 0.21.0, prüfe sie mit shasum -a 256 -c SHA256SUMS --ignore-missing, installiere dann in einer isolierten Umgebung mit Python 3.11+ und Unterstützung für SQLite-Erweiterungen per pip install --no-deps erst das Wheel und danach sein Extra [full] mit -c "$(project-observatory full-path)/requirements-full.lock", dem Satz an Abhängigkeiten, mit dem das Release getestet wurde. Unter macOS nimm das Python aus Homebrew.
 
 02
 
@@ -166,9 +166,9 @@ Alle Releases
 
 ↗
 
-Mac-App: ProjectObservatory-0.20.1-macos.zip, mit einer Developer ID signiert und von Apple notarisiert, für macOS 14+. Sie öffnet sich mit dem Dashboard und nutzt die oben installierte Engine; prüfe sie anhand derselben SHA256SUMS.
+Mac-App: ProjectObservatory-0.21.0-macos.zip, mit einer Developer ID signiert und von Apple notarisiert, für macOS 14+. Sie öffnet sich mit dem Dashboard und nutzt die oben installierte Engine; prüfe sie anhand derselben SHA256SUMS.
 
-Das aktuelle Release, 0.20.1, steht unter der AGPL, wie jedes Release seit 0.10.0, dem ersten unter der AGPL; 0.9.1 und früher behalten die Lizenz, mit der sie erschienen sind.
+Das aktuelle Release, 0.21.0, steht unter der AGPL, wie jedes Release seit 0.10.0, dem ersten unter der AGPL; 0.9.1 und früher behalten die Lizenz, mit der sie erschienen sind.
 
 Der Abgleich bekannter Werte vergleicht ausgewählte Artefakte mit Schlüsseln, die lokal bereits bekannt sind. Er kann keine unbekannten Secrets finden und nicht beweisen, dass keine Kopie mehr existiert, und eine lokale Kopie ist kein Beleg dafür, dass jemand anderes an einen Schlüssel gelangt ist. Die Rotation bei echten Anbietern und externe MCP-Hosts liegen außerhalb der Offline-Testsuite.
 
