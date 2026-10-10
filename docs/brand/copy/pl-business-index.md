@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode for Enterprise | Miejsce pracy dla agentów AI dla organizacji | PassionCode.ai
 
-PassionCode.ai wprowadza Twoją organizację w świat AI: mierzony pilotaż, miejsce pracy dla każdej roli i agenci na komputerze każdego pracownika, na narzędziach o otwartym kodzie, które należą do Ciebie. Zaprojektowane dla 1 do 1000 osób. PassionCode for Enterprise dodaje analitykę agentów i procesów, kontrolę i reguły oraz Twoją chmurę lub naszą.
+PassionCode for Enterprise robi z organizacji organizację AI-native: komputery podłączone, agenci wdrożeni i przekazujący sobie pracę między komputerami, klucze modeli zostają na każdym komputerze, analityka aktywności i użycia, administracja i własne podpisane kompilacje. Dane zostają na Twoich komputerach albo w Twojej chmurze. Dla zespołów od 1 do 1000 osób.
 
 Przejdź do treści
 
@@ -48,15 +48,15 @@ Pobierz narzędzia
 
 Enterprise · dla organizacji
 
-# Twoje procesy, prowadzone przez własnych agentów
+# Uczyń swoją organizację AI-native
 
-Mapujemy, jak pracuje Twój zespół, szacujemy, ile godzin mogą przejąć agenci, i budujemy miejsce pracy dla agentów razem z Tobą albo za Ciebie — na narzędziach o otwartym kodzie, Twoich komputerach lub w Twojej chmurze, z modelami, które wybierzecie
+Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, co robią, na narzędziach o otwartym kodzie, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze
 
 Szacunek i zapytanie
 
 ↓
 
-Zobacz, co przejmują agenci
+Co dla Ciebie konfigurujemy
 
 ↓
 
@@ -70,129 +70,37 @@ Odpowiadamy w ciągu dwóch dni roboczych Zaprojektowane dla 1 do 1000 osób · 
 
 04Wdrożeniemiejsca pracy dla ról
 
-01 / WPROWADZENIE ORGANIZACJI W AI
+01 / PASSIONCODE FOR ENTERPRISE
 
-## Od pilotażu
+## Co dla Ciebie konfigurujemy
 
-## do agentów na każdym komputerze
+## dla Twojej organizacji
 
-Ta sama droga, którą przechodzi jedna osoba, w skali Twojej organizacji. Każdy krok jest mierzony, zanim zacznie się następny, i każdy mówi, czy działa już dziś, czy dopiero go budujemy.
+PassionCode for Enterprise jest w rozwoju: pilotaże już dziś idą na narzędziach o otwartym kodzie, a samą edycję oferujemy na zapytanie.
 
-01
+Komputery dołączają do organizacjiKażdy komputer jest podłączany raz, razem ze swoimi agentami, kontami i zasadami.
 
-DOSTĘPNE TERAZ
+Agenci wdrożeniAgenci potrzebni w danej roli trafiają na komputery osób, które ją pełnią.
 
-### Pilotaż
+Przekazywanie między komputeramiAgent na jednym komputerze przekazuje pracę agentowi na innym.
 
-Jeden proces, jedno miejsce pracy dla agentów, mierzone względem własnego punktu odniesienia: godziny, koszt i każde działanie agentów.
+Dostęp do modeli zostaje lokalnyModele wywołuje własny lokalny agent każdego komputera, więc klucze nigdy nie opuszczają komputera, na którym są przechowywane.
 
-02
+Analityka aktywności i użyciaCo działało, w którym procesie, z czego korzystało i ile kosztowało.
 
-DOSTĘPNE TERAZ
+AdministracjaCo wolno każdemu agentowi oraz do jakich kont i danych ma dostęp, ustawiane raz dla całej organizacji.
 
-### Miejsca pracy
+Własne kompilacje, podpisane przez nasTwoja własna kompilacja narzędzi, podpisana przez PassionCode.ai.
 
-Miejsce pracy dla każdej roli: jej agenci, konta, na których działają, to, co wolno im robić, i jedno okno, w którym wszystko widać.
+Twoje dane zostają na Twoich komputerach albo w Twojej chmurze. Przeczytaj wizję
 
-03
-
-DOSTĘPNE TERAZ, CZĘŚCIOWO
-
-### Agenci na każdym komputerze
-
-Agenci trafiają na komputery ludzi, którzy ich potrzebują. Dziś instalujemy ich razem z Twoim zespołem; wdrażanie i aktualizowanie z jednego miejsca to kierunek, w którym zmierzamy.
-
-04
-
-KIERUNEK
-
-### Ludzie jako eksperci
-
-Pracownicy stają się człowiekiem w pętli: weryfikują to, co przygotowują agenci, i budują własnych agentów, które rozchodzą się po organizacji.
-
-Zaprojektowane dla 1 do 1000 osób. Jedna osoba zaczyna za darmo od przewodnika; zespół dziesięciu osób dostaje miejsce pracy dla każdej roli; dział stu osób dostaje mierzone wdrożenie; organizacja tysiąca osób dostaje PassionCode for Enterprise. Przeczytaj wizję
-
-02 / DLA KOGO
-
-## To samo miejsce pracy,
-
-## dopasowane do pracy
-
-Agenci przejmują powtarzalną część procesu — zbieranie, szkicowanie, sprawdzanie, raportowanie — a decyzję zostawiają człowiekowi, z dowodami obok.
-
-APLIKACJE MOBILNE I GRY
-
-### Wydawcy
-
-Notatki do wydań i opisy w sklepach ze scalonych zmian, w każdej wersji językowej
-
-Zrzuty ekranu i materiały reklamowe do sklepów, tworzone i sprawdzane pod kątem wytycznych
-
-Odpowiedzi na recenzje szkicowane codziennie, eskalacje kierowane do właściwej osoby
-
-Listy kontrolne wydań, które nie wychodzą, dopóki dowody nie są zielone
-
-SAAS
-
-### Zespoły produktowe
-
-Skrzynka wsparcia sortowana według ważności, odpowiedzi szkicowane zgodnie z regułami odpowiedzi
-
-Cotygodniowe raporty produktowe i przychodowe składane z Twoich własnych danych
-
-Code review, uruchomienia QA i changelogi prowadzone przez agentów, zatwierdzane przez inżynierów
-
-E-maile powitalne i dokumentacja aktualizowane razem z każdym wydaniem
-
-MARKETING
-
-### Agencje i zespoły wewnętrzne
-
-Warianty kreacji reklamowych z jednego briefu, każdy ze źródłem i kosztem
-
-Raporty z kampanii dla każdego klienta, każda liczba prześledzona do platformy
-
-Treści i strony SEO szkicowane w głosie marki, sprawdzane przed publikacją
-
-Kilka kont modeli i klientów rozdzielonych dzięki Switchboard
-
-E-COMMERCE
-
-### Sklepy internetowe
-
-Opisy produktów i tłumaczenia w całym katalogu
-
-Monitorowanie cen i stanów magazynowych z alertami, które nazywają zmianę
-
-Odpowiedzi na pytania klientów na podstawie Twoich zasad, zwroty zostają po stronie ludzi
-
-STUDIA PROGRAMISTYCZNE
-
-### Outsourcing i agencje
-
-Jeden widok każdego projektu klienta: aktywność, ustalenia i to, co się przeterminowało
-
-Agenci na wielu kontach i w wielu repozytoriach bez rozsypanych poświadczeń
-
-Raporty dla klientów generowane z samej pracy
-
-OPERACJE
-
-### Finanse i back office
-
-Faktury, uzgodnienia i listy kontrolne zamknięcia miesiąca przygotowane do podpisu
-
-Cykliczne raporty z arkuszy i eksportów księgowych
-
-Każde działanie agenta zapisane na potrzeby audytu
-
-03 / ILE TO OSZCZĘDZA
+02 / ILE TO OSZCZĘDZA
 
 ## Szacunek to arytmetyka,
 
 ## którą możesz sprawdzić
 
-Godziny, które Twój zespół spędza miesięcznie na tych procesach, razy udział, który agenci mogą realnie przejąć, razy koszt godziny. Udział jest niższy, gdy praca jest już częściowo zautomatyzowana, bo zostaje mniej ręcznego wysiłku do usunięcia.
+Godziny, które Twój zespół co miesiąc spędza na tych procesach, razy część, którą agenci realistycznie mogą przejąć, razy koszt Twojej godziny pracy.
 
 godzin tygodniowo × 4,33×udział przejmowany przez agentów×pełny koszt godziny
 
@@ -222,109 +130,7 @@ Przykład: 40 godzin tygodniowo głównie ręcznej pracy po 50 USD za godzinę t
 
 To szacunek, a nie obietnica. Pilotaż mierzy rzeczywistą liczbę względem Twojego własnego punktu odniesienia, zanim cokolwiek zostanie wdrożone.
 
-04 / JAK PRACUJEMY
-
-## Najpierw pomiar,
-
-## potem wdrożenie
-
-01
-
-### Mapowanie
-
-Rozmowa, w której przejdziemy przez wskazane przez Ciebie procesy: kto co robi, jak często, gdzie są dane i czego nie wolno automatyzować.
-
-02
-
-### Pilotaż
-
-Jeden proces, jedno miejsce pracy dla agentów, mierzone względem własnego punktu odniesienia. Widzisz godziny, koszt i każde działanie agentów.
-
-03
-
-### Wdrażanie
-
-Miejsce pracy dla każdej roli: agenci, Fabric Dashboards, żeby ich widzieć, Switchboard tam, gdzie agenci potrzebują kilku kont, Project Observatory ponad projektami.
-
-04
-
-### Prowadzenie
-
-Twój zespół prowadzi to sam albo my prowadzimy to dla Ciebie. Aktualizacje, nowi agenci i wsparcie w miarę, jak zmieniają się procesy.
-
-05 / PASSIONCODE FOR ENTERPRISE
-
-## Dla organizacji
-
-## które potrzebują integracji
-
-PassionCode for Enterprise to wydanie dla organizacji, które chcą wpiąć miejsce pracy w sposób, w jaki już działają. Jest w rozwoju: pilotaże działają dziś na narzędziach o otwartym kodzie, a wydanie oferujemy na zapytanie.
-
-KIERUNEK
-
-### Analityka agentów i procesów
-
-Którzy agenci działali, w jakich procesach, ile kosztowali i co zatwierdzili ludzie — we wszystkich miejscach pracy.
-
-KIERUNEK
-
-### Kontrola i reguły
-
-Co wolno każdemu agentowi, do jakich kont i danych ma dostęp i które wydania mogą się instalować — ustawiane raz dla całej organizacji.
-
-KIERUNEK
-
-### Pomoc pracownikom w automatyzacji
-
-Osoby, które znają tę pracę, dostają pomoc w zamianie jej na własnych agentów, sprawdzanych, zanim trafią do kogokolwiek innego.
-
-DOSTĘPNE TERAZ
-
-### Twoja chmura lub nasza
-
-Uruchom to na własnym koncie w chmurze albo hostowane przez PassionCode.ai. Modele działają na Twoich własnych kontach u dostawców.
-
-ZAUFANIE
-
-### Co się nie zmienia
-
-Twoje dane zostają na Twoich kontach; aplikacje wysyłają tylko anonimowe liczniki użycia i można je wyłączyć
-
-Otwarty kod na licencji GNU AGPL-3.0, otwarty kontrakt i dowolny agent programistyczny: bez uzależnienia od dostawcy
-
-Wydania są podpisane i sprawdzane przed instalacją
-
-LUDZIE
-
-### Widoczne, nigdy po cichu
-
-Analityka dotyczy agentów i wyników procesów, a nie oceniania ludzi
-
-To, co jest mierzone, widzą osoby, których to dotyczy
-
-Ludzie ustalają, co wolno agentom, i zatwierdzają to, co ważne
-
-06 / TWÓJ WYBÓR
-
-## Miejsce pracy należy do Ciebie
-
-## niezależnie od sposobu uruchomienia
-
-### Uruchamiamy sami
-
-Całość to otwarty kod na licencji GNU AGPL-3.0, za darmo. Zacznij od przewodnika; poproś nas o licencję komercyjną, jeśli Twoje użycie jej wymaga.
-
-### Wdrożenie z naszym wsparciem
-
-Budujemy pierwszych agentów razem z Twoim zespołem, szkolimy osoby, które będą się nimi opiekować, i pozostajemy pod telefonem, dopóki wszystko się nie ułoży.
-
-### Zrobione za Ciebie
-
-Budujemy, hostujemy i prowadzimy miejsce pracy oraz jego agentów i raportujemy, co zrobili i ile to kosztowało.
-
-Miejsce uruchomienia to też Twój wybór: komputery Twojego zespołu, Twoje konto w chmurze albo hosting PassionCode.ai. Modele działają na Twoich własnych kontach u dostawców.
-
-07 / ZAPYTANIE
+03 / ZGŁOSZENIE
 
 ## Opowiedz nam o swoim zespole
 
@@ -598,7 +404,7 @@ Wyślij zapytanie →
 
 Wolisz e-mail? Napisz na commercial@passioncode.ai.
 
-08 / PYTANIA
+04 / PYTANIA
 
 ## Zanim zapytasz
 
@@ -606,25 +412,9 @@ Ile to kosztuje?
 
 Narzędzia są darmowe i mają otwarty kod. Płacisz za naszą pracę dla Ciebie — mapowanie, budowanie, hosting, wsparcie — oraz za licencję komercyjną, jeśli jej potrzebujesz. Cenę podajemy w propozycji, gdy zrozumiemy Twoje procesy; nie ma stałego pakietu.
 
-Czy musimy korzystać z Twojej chmury?
-
-Nie. Miejsce pracy może działać na komputerach Twojego zespołu, na Twoim koncie w chmurze albo być hostowane przez PassionCode.ai. Twoje dane i konta modeli w każdym wariancie pozostają Twoje.
-
-Jakich modeli i agentów możemy używać?
-
-Dowolnych. Miejsce pracy nie jest przywiązane do jednego agenta: Claude Code, Kilo Code i Hermes Agent łączą się z Fabric już dziś, Codex i Cline działają w jego wnętrzu, a kolejne są planowane. Każdy agent, serwer MCP lub narzędzie, które już uruchamiasz, staje się usługą zgodną z Fabric.
-
-Czy analityka obserwuje naszych pracowników?
-
-Nie. Analityka dotyczy agentów i wyników procesów: co działało, ile kosztowało, co zatwierdzono. Nic nie dzieje się po cichu, a to, co jest mierzone, widzą osoby, których to dotyczy.
-
 Kiedy potrzebujemy licencji komercyjnej?
 
 Narzędzia są na licencji GNU AGPL-3.0. Użycie wewnętrzne oraz zmiany publikowane na tej samej licencji niczego nie wymagają. Zamknięty produkt, który je zawiera, albo zmodyfikowana usługa hostowana, której kodu nie publikujecie, wymaga licencji komercyjnej.
-
-Co dzieje się z odpowiedziami w tym formularzu?
-
-Używamy ich wyłącznie, żeby odpowiedzieć i przygotować propozycję, i przechowujemy je nie dłużej niż 24 miesiące. Nasza informacja o prywatności zawiera szczegóły.
 
 PassionCode
 

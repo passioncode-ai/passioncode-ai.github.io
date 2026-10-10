@@ -50,7 +50,7 @@ Premiers pas · gratuit et open source
 
 # D’un Mac vide à votre premier agent
 
-Cessez de construire des agents qui se périment et ne se parlent pas. Cinq étapes, une vingtaine de minutes, du premier agent à une famille que vous voyez. Chaque étape est utile en soi : arrêtez-vous dès que le résultat vous suffit
+Arrêtez de construire des agents qui pourrissent et ne se parlent pas. Cinq étapes, environ vingt minutes, chacune utile seule
 
 Nécessite Node.js 18+ et Claude Code ou Codex Fabric nécessite macOS sur Apple silicon
 
@@ -84,11 +84,11 @@ Contribuer
 
 ### Installez les skills
 
-Le lanceur PassionCode.ai installe les skills de Fabric Agent Adapter, Observatory Log et les règles de travail dans Claude Code, Codex et les autres agents pris en charge. Sans compte et sans clé.
+Le lanceur PassionCode.ai installe les skills Fabric Agent Adapter, Observatory Log et les règles de travail dans votre agent de code. Sans compte et sans clé.
 
 npx @passioncode-ai/passioncode@latest update
 
-Lanceur 0.1.31 · il installe les membres de la famille aux versions qu’il épingle · redémarrez ensuite votre agent. Les mises à jour automatiques sont activées par défaut ; désactivez-les si vous préférez.
+Lanceur 0.1.31 · redémarrez ensuite votre agent · les mises à jour automatiques sont activées ; désactivez-les
 
 02
 
@@ -118,8 +118,6 @@ nouveau Créez un agent Fabric qui consulte chaque matin les avis sur notre app 
 
 adapter Adaptez ce dépôt à Fabric
 
-Un agent, un serveur MCP ou un outil en ligne de commande existant garde son code ; l’adaptateur ajoute autour de lui ce dont Fabric a besoin. Démarrage rapide de l’adaptateur · le contrat
-
 04
 
 ### Lancez-le et regardez-le
@@ -134,17 +132,11 @@ Télécharger Fabric Dashboards
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-Ajoutez ensuite ce que votre travail demande : Fabric Switchboard quand les agents ont besoin de plusieurs comptes, Project Observatory pour voir ce qui a changé d’un projet à l’autre, Fabric Inbox pour le courrier.
-
 05
 
 ### Ajoutez l’agent suivant et voyez la famille
 
-Quand le travail le demande, construisez l’agent suivant de la même façon et donnez-lui le même projet dans Fabric. Claude Code, Kilo Code et Hermes Agent lancés depuis Fabric partagent le tableau, la mémoire et les passations de ce projet : l’un reprend là où l’autre s’est arrêté. Fabric Dashboards affiche les deux, avec leur état et leurs dépenses, dans une seule fenêtre.
-
-suivant Créez un agent Fabric qui transforme les réponses d’avis rédigées en un résumé hebdomadaire pour le tableau
-
-Chaque nouvel agent rejoint une famille que vous voyez déjà, au lieu de devenir un script de plus à retenir. Comment la famille grandit · quels agents sont connectés aujourd’hui
+Construisez le prochain agent de la même façon et donnez-lui le même projet dans Fabric. Claude Code, Kilo Code et Hermes Agent lancés depuis Fabric partagent le tableau, la mémoire et les passations de ce projet : l’un reprend là où l’autre s’est arrêté. Quels agents se connectent aujourd’hui
 
 UN OUTIL QUE NOUS RECOMMANDONS
 
@@ -152,7 +144,7 @@ UN OUTIL QUE NOUS RECOMMANDONS
 
 ## ce qu’ils commencent
 
-Pour les changements que font vos agents, nous recommandons task-pipeline, un skill open source distinct, issu de la famille sshlg-skills famille. Il fait passer un changement par des étapes à validation, du brief et du plan jusqu’aux tests, au déploiement et à la recette, et n’avance pas tant que chaque validation n’est pas passée.
+Pour les changements que font vos agents, nous recommandons task-pipeline, un skill open source distinct, issu de la famille sshlg-skills famille : il mène chaque changement du brief à la recette et n’avance pas tant que chaque validation n’est pas passée.
 
 npx sshlg-skills install
 
@@ -164,19 +156,7 @@ CONTRIBUER
 
 ## Envoyez une pull request
 
-Chaque dépôt de produit est public. Chacun indique sa commande de test dans AGENTS.md et son démarrage rapide dans le README ; votre agent de code peut lire les deux et faire le reste.
-
-### Choisissez un dépôt
-
-Faites un fork du produit que vous utilisez, ou parcourez l’organisation. Les tickets marqués d’une étiquette sont un bon point de départ.
-
-### Lancez sa validation
-
-Lisez le fichier AGENTS.md du dépôt et celui de l’organisation : CONTRIBUTING.md, puis faites la modification et lancez la commande de test jusqu’à ce qu’elle passe.
-
-### Ouvrez la pull request
-
-L’ouvrir vaut acceptation du fichier CLA.mddu dépôt ; il n’y a aucune case à cocher. Nous examinons chaque pull request et nous répondons.
+Chaque dépôt de produit est public et indique sa commande de test dans AGENTS.md. Suivez les règles de l’organisation dans CONTRIBUTING.md et ouvrez une pull request ; en l’ouvrant, vous acceptez le fichier CLA.md.
 
 fabric
 
@@ -199,8 +179,6 @@ okolos
 fabric-vr
 
 passioncode-ai.github.io
-
-Quelques dépôts sont internes et visibles uniquement des collaborateurs : la base de connaissances de l’équipe et la carte de l’organisation. Envie de rejoindre l’équipe ? Écrivez à Sergey.
 
 POUR LES ORGANISATIONS
 

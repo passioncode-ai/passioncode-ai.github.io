@@ -30,6 +30,7 @@
       "logo": "https://passioncode.ai/assets/icon-1024.png",
       "description": "AIネイティブなチームのためのツールキット：CEO AIエージェントの Fabric、そのツール、あらゆるエージェントを Fabric 互換にするコントラクト。GNU AGPL-3.0 のオープンソースで、商用ライセンスもご用意しています。",
       "sameAs": ["https://github.com/passioncode-ai", "https://x.com/sshlg93"],
+      "founder": { "@type": "Person", "name": "Sergey", "sameAs": ["https://x.com/sshlg93"] },
       "contactPoint": [{ "@type": "ContactPoint", "contactType": "sales", "email": "commercial@passioncode.ai", "url": "https://passioncode.ai/ja/business/" }]
     },
     {
@@ -46,9 +47,8 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "PassionCode.ai は無料ですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。すべてのツールは GNU AGPL-3.0 のオープンソースで、無料でダウンロード、利用、調査、変更できます。クローズドな製品に組み込む場合や、変更したホスト型サービスをソースを公開せずに運用する場合には、商用ライセンスをご利用いただけます。" } },
-    { "@type": "Question", "name": "どのエージェントに対応していますか？", "acceptedAnswer": { "@type": "Answer", "text": "特定のエージェントに依存しません。現在は Claude Code と Codex に対応しており、あらゆるエージェント、MCP サーバー、コマンドラインツールを Fabric Agent Adapter で Fabric 互換のサービスにできます。" } },
-    { "@type": "Question", "name": "既存のプロジェクトやエージェントを Fabric エージェントにするには？", "acceptedAnswer": { "@type": "Answer", "text": "PassionCode.ai ランチャーをインストールし（npx @passioncode-ai/passioncode@latest update）、コーディングエージェントにプロジェクトを Fabric に適合させるよう依頼します。Fabric Agent Adapter スキルが、コントラクト、ダッシュボード、適合性チェックを備えたサービスとして包みます。" } },
-    { "@type": "Question", "name": "PassionCode.ai で自社向けにセットアップしてもらえますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。passioncode.ai/business/ でチームとプロセスをお知らせいただければ、見積もりと提案をお返しします：ガイド付きオンボーディング、または私たちが構築・運用するワークプレース。" } }
+    { "@type": "Question", "name": "どのエージェントに対応していますか？", "acceptedAnswer": { "@type": "Answer", "text": "特定のエージェントに縛られません。Claude Code、Kilo Code、Hermes Agent は現在 Fabric に接続でき、Codex と Cline は Fabric の中で動作します。ほかにも対応を予定しています。" } },
+    { "@type": "Question", "name": "データはどこに送られますか？", "acceptedAnswer": { "@type": "Answer", "text": "作業内容はお使いのコンピュータと、ご自身のクラウドアカウントの中に留まります。Fabric Switchboard と、バージョン 0.3.2 以降の Fabric は、匿名の利用回数を送信します。送るのは回数と種類のみで、名前、パス、内容は送りません。Switchboard の「About」ウィンドウ、または Fabric の設定でオフにできます。" } }
   ]
 }</script>
 </head>
@@ -66,7 +66,7 @@
   <p class="hero-reframe">エージェントが働き、そのすべてが見えるワークプレースを作る</p>
   <p class="hero-body">CEO AIエージェントの Fabric が、各プロジェクトの目的、決定事項、リリースを管理します。コーディングエージェントが新しいエージェントを作成し、お手持ちのエージェントを変換します。オープンソースで、お使いのマシン上で動作し、無料です</p>
   <div class="hero-actions"><a class="button button-primary" href="/ja/start/">個人向け（無料）<span aria-hidden="true">→</span></a><a class="button button-secondary" href="/ja/business/">組織向け <span aria-hidden="true">↗</span></a></div>
-  <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> AGPL-3.0 のオープンソース <span>Fabric <span data-live="fabric.version">0.3.3</span> · Switchboard <span data-live="switchboard.version">0.6.14</span> · Dashboards <span data-live="dashboards.version">0.6.7</span> · Observatory <span data-live="observatory.version">0.20.1</span></span></p>
+  <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> AGPL-3.0 のオープンソース <span>Fabric <span data-live="fabric.version">0.3.3</span> · Switchboard <span data-live="switchboard.version">0.6.15</span> · Dashboards <span data-live="dashboards.version">0.6.7</span> · Observatory <span data-live="observatory.version">0.20.1</span></span></p>
  </div>
  <div class="workplace-map" aria-hidden="true">
   <svg viewBox="0 0 480 480" class="map-lines">
@@ -84,114 +84,54 @@
  </div>
 </section>
 
-<section class="section growth-path" id="path" aria-labelledby="path-title">
- <div class="section-heading story-heading"><p class="section-number">道のり</p><h2 id="path-title">1つのエージェントから<br>AIネイティブな組織へ</h2><p>まず1つの仕事に1つのエージェントから始め、作業が必要とするたびに次を加えます。エージェントは、見渡せて、信頼でき、育てられる1つのファミリーに加わり、そのファミリーはチームとともに成長します。</p></div>
- <ol class="work-cycle path-cycle">
-  <li class="reveal"><span class="cycle-number">01</span><p class="availability">現在利用可能</p><h3>エージェント1つ</h3><p>Claude Code、Codex、その他のコーディングエージェントで、1つの仕事のためのエージェントを作ります。Fabric Agent Adapter スキルが、コントラクト、ダッシュボード、テストを与えます。</p></li>
-  <li class="reveal"><span class="cycle-number">02</span><p class="availability">現在利用可能</p><h3>対話する2つのエージェント</h3><p>Fabric に接続したエージェントは、1つのプロジェクトのボード、メモリ、引き継ぎを共有します。1つのエージェントが、別のエージェントの止めたところから再開でき、すべての引き継ぎを読めます。</p></li>
-  <li class="reveal"><span class="cycle-number">03</span><p class="availability">今後の方向性</p><h3>チェーン</h3><p>エージェントが1つのプロセスとして連なります。1つが準備し、次が確認し、人が承認します。</p></li>
-  <li class="reveal"><span class="cycle-number">04</span><p class="availability">一部は現在利用可能</p><h3>自ら面倒を見るファミリー</h3><p>Fabric Dashboards が各エージェントの状態とコストを表示し、ツールは自動で更新されます。Project Observatory は、何が変わり何が決まったかを記録します。エージェント同士が見守り合うことが、目指す方向です。</p></li>
-  <li class="reveal"><span class="cycle-number">05</span><p class="availability">今後の方向性</p><h3>チーム</h3><p>同じループに人を招きます。それぞれがワークプレースと、役割に応じたエージェント、許可された操作を持ちます。</p></li>
-  <li class="reveal"><span class="cycle-number">06</span><p class="availability">今後の方向性</p><h3>組織</h3><p>エージェントがすべてのワークプレースに行き渡り、人が確認し、自分のエージェントを作り、組織は仕事の進み方を見渡せます。</p></li>
- </ol>
+<section class="section" id="why" aria-labelledby="why-title">
+ <span id="path" class="legacy-anchor" aria-hidden="true"></span><span id="vision" class="legacy-anchor" aria-hidden="true"></span><span id="toolkit" class="legacy-anchor" aria-hidden="true"></span><span id="shift" class="legacy-anchor" aria-hidden="true"></span><span id="how" class="legacy-anchor" aria-hidden="true"></span>
+ <div class="section-heading story-heading"><p class="section-number">01 / 理由</p><h2 id="why-title">ハーネスがなければ、<br>エージェントは傷んでいく</h2><p>アカウントはバラバラで、セッションをまたぐとすべてを忘れ、何をしたかの証跡も残さず、互いに話すこともありません。</p></div>
+ <ul class="vision-principles">
+  <li><strong>エージェントの拠点</strong><span>PassionCode.ai は、AIエージェントと働くためのローカルのオープンソース・ワークスペースです。各エージェントに、拠点、アカウント、状態管理、メモリ、証跡を用意します。</span></li>
+  <li><strong>お使いのツールの上で</strong><span>Claude Code や Codex、そしてその先のツールを、すでにお持ちのサブスクリプションでお使いいただけます。</span></li>
+  <li><strong>すべてがあなたのもの</strong><span>GNU AGPL-3.0 のオープンソースで、お使いのマシンとアカウント上で動きます。登録は不要で、ロックインもありません。</span></li>
+ </ul>
  <p class="section-note"><a href="/ja/vision/">ビジョンを読む：エージェントにハーネスが必要な理由と、ファミリーの育ち方</a></p>
 </section>
 
-<section class="section vision" id="vision" aria-labelledby="vision-title">
- <div class="vision-copy">
-  <p class="section-number">ビジョン</p>
-  <h2 id="vision-title">好きなことに集中<br><em>残りはエージェントに</em></h2>
-  <p class="vision-lead">ツールをつなぐ連鎖を組み、各部品のつながりを学び、機械にできる仕事を手作業でこなすのは終わりにしましょう。言葉から始めます——必要なものを作って——そしてワークプレースを一緒に育てます。エージェントが1つずつ日々の作業を引き受けるので、毎週、本当に楽しめる仕事の時間が増えていきます。</p>
-  <ul class="vision-principles">
-   <li><strong>ゼロから始める</strong><span>パイプラインではなく言葉で。結果を伝えれば、エージェントが手順を作ります。</span></li>
-   <li><strong>ローカルでオープンソース</strong><span>お使いのマシン上で、誰でも読めるコードで、GNU AGPL-3.0 のもとで動作します。</span></li>
-   <li><strong>設計から安全</strong><span>各エージェントにできることを設定でき、すべての操作に証跡が残ります。</span></li>
-   <li><strong>自由に形づくれる</strong><span>何もないところから何にでも。手作業でも、エージェントでも設定できます。</span></li>
-   <li><strong>あらゆるエージェント</strong><span>現在 Claude Code、Kilo Code、Hermes Agent が Fabric に接続でき、Codex と Cline は Fabric の中で動作します。対応エージェントは今後も増やす予定です。<a href="/ja/fabric/agents/">どのエージェントが、どのレベルか</a></span></li>
-  </ul>
-  <p class="section-note">現在の状態：1つのコマンドとコーディングエージェントで始めます。Fabric との会話から始められるようにすることが、Fabric の目指す方向です。</p>
- </div>
- <figure class="vision-meter reveal" aria-labelledby="meter-caption">
-  <div class="meter-row"><span class="meter-label">最初の週</span><span class="meter-bar"><span class="meter-routine share-78"></span></span></div>
-  <div class="meter-row"><span class="meter-label">最初の月</span><span class="meter-bar"><span class="meter-routine share-52"></span></span></div>
-  <div class="meter-row"><span class="meter-label">最初の四半期</span><span class="meter-bar"><span class="meter-routine share-30"></span></span></div>
-  <p class="meter-legend"><span class="legend-routine">日々の作業</span><span class="legend-creative">自分の仕事</span></p>
-  <figcaption id="meter-caption">方向性を示すイラストであり、計測値ではありません。エージェントが日々の作業を担うほど、1週間のうち自分の時間が増えます</figcaption>
- </figure>
-</section>
-
-<section class="section onboarding" id="toolkit" aria-labelledby="toolkit-title">
- <span id="shift" class="legacy-anchor" aria-hidden="true"></span><span id="how" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading story-heading"><p class="section-number">01 / 仕組み</p><h2 id="toolkit-title">空っぽの Mac から<br>エージェントが働く状態まで</h2><p>4つのステップは、どれも単独で役に立ちます。必要なものから始め、作業が求めたときに残りを加えてください。</p></div>
- <ol class="onboarding-steps">
-  <li class="reveal"><span class="step-index">01</span><div><h3>ワークプレースを作る</h3><p>1つのコマンドでエージェントスキルをインストールし、続いて Fabric を追加します。Fabric は CEO AIエージェントで、各プロジェクトの目的、ボード、決定事項、リリースの置き場を提供します。</p><pre><code>npx @passioncode-ai/passioncode@latest update</code></pre><p class="step-meta">Fabric 早期プレビュー版 <span data-live="fabric.version">0.3.3</span> Apple silicon 搭載の macOS 向け · ランチャー <span data-live="launcher.version">0.1.31</span></p><a class="text-link" href="/ja/start/">ステップバイステップガイド <span aria-hidden="true">→</span></a></div></li>
-  <li class="reveal"><span class="step-index">02</span><div><h3>エージェントを作る</h3><p>必要なエージェントを Claude Code や Codex に依頼します：リリースの公開担当、サポートの振り分け担当、週次レポートなど。Fabric Agent Adapter スキルが、独自のコントラクト、ダッシュボード、テストを備えたサービスとして構築します。将来は Fabric が会話からこれを行います。現時点では、同じスキルを使ってコーディングエージェントが行います。</p><p class="step-prompt"><span>あなた</span> マージされたプルリクエストからリリースノートの下書きを作る Fabric エージェントを作成して</p></div></li>
-  <li class="reveal"><span class="step-index">03</span><div><h3>お手持ちのものを変換する</h3><p>エージェント、MCP サーバー、コマンドラインツール、プロジェクト全体を、書き直さずに Fabric 互換のサービスにできます。適合性プローブが、足りない点を教えます。</p><p class="step-prompt"><span>あなた</span> このリポジトリを Fabric に対応させる</p><p class="step-meta">Fabric Agent Adapter <span data-live="adapter.version">0.8.1</span> · <a href="https://github.com/passioncode-ai/fabric-agent-contract">Fabric Agent Contract</a></p></div></li>
-  <li class="reveal"><span class="step-index">04</span><div><h3>実行して、すべてを見渡す</h3><p>Fabric Dashboards はすべてのサービスを1つのウィンドウに表示し、エージェントによる起動と停止も可能にします。Switchboard は各エージェントが使うアカウントを選びます。Project Observatory は、すべてのプロジェクトで何が変わったかを証跡つきで示します。</p><a class="text-link" href="#products">ツールを選ぶ <span aria-hidden="true">↓</span></a></div></li>
- </ol>
- <div class="onboarding-promise reveal"><p><strong>すみずみまで、あなたのもの。</strong> すべてお使いのマシンとアカウントで動作します。すべてのコードは GitHub で GNU AGPL-3.0 のもとに公開されています。登録も料金も不要で、特定のモデルやベンダーへの囲い込みもありません。</p></div>
-</section>
-
 <section class="section paths" id="start" aria-labelledby="paths-title">
- <div class="section-heading story-heading"><p class="section-number">02 / 道を選ぶ</p><h2 id="paths-title">使う、改良する、<br>または仕事で運用する</h2></div>
- <div class="path-grid">
-  <article class="path-card reveal"><p class="availability">個人利用 · 無料</p><h3>インストールして使う</h3><p>アプリをダウンロードし、スキルをインストールして、自分のエージェントを作れます。オープンソースで、アカウントも料金も不要です。</p><a class="button button-primary" href="/ja/start/">はじめる <span aria-hidden="true">→</span></a></article>
-  <article class="path-card reveal"><p class="availability">コントリビュート · GITHUB</p><h3>より良くする</h3><p>どの製品もソース、Issue、テストコマンドを公開しています。プルリクエストを開いてください。すべてレビューします。開いた時点で CLA に同意したことになります。</p><a class="button button-secondary" href="/ja/start/#contribute">コントリビュートの方法 <span aria-hidden="true">↗</span></a></article>
-  <article class="path-card path-card-commercial reveal"><p class="availability">企業向け · 商用</p><h3>チームのための AI ワークプレース</h3><p>プロセスを整理し、エージェントが引き受けられる範囲を見積もり、ワークプレースを一緒に、または代行して設定します。必要な場合は商用ライセンスが含まれます。</p><a class="button button-primary" href="/ja/business/">見積もりとご依頼 <span aria-hidden="true">→</span></a></article>
+ <span id="companies" class="legacy-anchor" aria-hidden="true"></span>
+ <div class="section-heading story-heading"><p class="section-number">02 / 2つの入り口</p><h2 id="paths-title">あなたのために、<br>または組織のために</h2></div>
+ <div class="path-grid path-grid-two">
+  <article class="path-card reveal"><p class="availability">個人利用 · 無料</p><h3>自分だけのエージェントワークスペース</h3><p>1つのコマンドでスキルをインストールし、Claude Code か Codex で最初のエージェントを作り、必要になったときにツールを追加します。所要時間は約20分です。</p><a class="button button-primary" href="/ja/start/">はじめる <span aria-hidden="true">→</span></a></article>
+  <article class="path-card path-card-commercial reveal"><p class="availability">組織 · ENTERPRISE</p><h3>AIネイティブな組織</h3><p>組織のマシンにエージェントを導入し、つなぎ、何をしているかが見える状態にします。データはお客様のマシン上、または自社のクラウド上に置かれます。</p><a class="button button-primary" href="/ja/business/">見積もりとご依頼 <span aria-hidden="true">→</span></a></article>
  </div>
 </section>
 
 <section class="section product-directory" id="products" aria-labelledby="products-title">
- <div class="section-heading"><p class="section-number">03 / ツール</p><h2 id="products-title">今日から使えるツール</h2><p>各ツールには専用のダウンロードとリリースがあり、単独でも使え、組み合わせるとさらに役立ちます。以下のバージョンは現在のリリースです。</p></div>
+ <span id="extend" class="legacy-anchor" aria-hidden="true"></span><span id="launcher" class="legacy-anchor" aria-hidden="true"></span>
+ <div class="section-heading"><p class="section-number">03 / ツール</p><h2 id="products-title">今日から使えるツール</h2><p>どのツールも単体で使え、組み合わせるとさらに力を発揮します。表示のバージョンは現在のリリースです。</p></div>
  <div class="tool-directory">
-  <a class="tool-choice reveal" href="/ja/fabric/"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric</strong><span>CEO AIエージェント：各プロジェクトの目的、ボード、決定事項、リリースの置き場。</span><em class="family-role">ファミリー内の役割：プロジェクトの全エージェントが共有する拠点</em><small>早期プレビュー版 <span data-live="fabric.version">0.3.3</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-  <a class="tool-choice reveal" href="/ja/switchboard/"><img src="/assets/switchboard-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Switchboard</strong><span>各エージェントが使うアカウントを、利用上限を確認しながら選べます。</span><em class="family-role">ファミリー内の役割：アカウント</em><small>リリース <span data-live="switchboard.version">0.6.14</span> · macOS + Windows</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-  <a class="tool-choice reveal" href="/ja/dashboards/"><img src="/assets/dashboards-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Dashboards</strong><span>ローカルのエージェントサービスをすべて1つのウィンドウで、あなた自身またはエージェントが操作できます。</span><em class="family-role">ファミリー内の役割：状態、コスト、制御</em><small>リリース <span data-live="dashboards.version">0.6.7</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-  <a class="tool-choice reveal" href="/ja/observatory/"><img src="/assets/observatory-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Project Observatory</strong><span>すべてのプロジェクトで何が変わり、何に注意が必要かを、証跡つきで確認できます。</span><em class="family-role">ファミリー内の役割：メモリと証跡</em><small>リリース <span data-live="observatory.version">0.20.1</span> · macOS + Linux</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-  <a class="tool-choice reveal" href="/ja/inbox/"><img src="/assets/inbox-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Inbox</strong><span>Gmail と Cloudflare のメールを1つのリストに集約し、重要なものを先頭に表示します。エージェントはポリシーに従って返信します。</span><em class="family-role">ファミリー内の役割：メール</em><small>開発プレビュー版 <span data-live="inbox.version">0.13.0</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-  <a class="tool-choice reveal" href="/ja/#extend"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>PassionCode.ai ランチャー</strong><span>1つのコマンドで、Fabric でエージェントを構築する方法を教えるスキルをインストールします。</span><em class="family-role">ファミリー内の役割：スキルとその更新</em><small>CLI <span data-live="launcher.version">0.1.31</span> · Node.js 18+</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ja/fabric/"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric</strong><span>CEO AIエージェント：各プロジェクトの目的、ボード、決定事項、リリースの置き場。</span><small>早期プレビュー版 <span data-live="fabric.version">0.3.3</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ja/switchboard/"><img src="/assets/switchboard-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Switchboard</strong><span>各エージェントが使うアカウントを、利用上限を確認しながら選べます。</span><small>リリース <span data-live="switchboard.version">0.6.15</span> · macOS + Windows</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ja/dashboards/"><img src="/assets/dashboards-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Dashboards</strong><span>ローカルのエージェントサービスをすべて1つのウィンドウで、あなた自身またはエージェントが操作できます。</span><small>リリース <span data-live="dashboards.version">0.6.7</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ja/observatory/"><img src="/assets/observatory-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Project Observatory</strong><span>すべてのプロジェクトで何が変わり、何に注意が必要かを、証跡つきで確認できます。</span><small>リリース <span data-live="observatory.version">0.20.1</span> · macOS + Linux</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ja/inbox/"><img src="/assets/inbox-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Inbox</strong><span>Gmail と Cloudflare のメールを1つのリストに集約し、重要なものを先頭に表示します。エージェントはポリシーに従って返信します。</span><small>開発プレビュー版 <span data-live="inbox.version">0.13.0</span> · macOS</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <a class="tool-choice reveal" href="/ja/start/#launcher"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>PassionCode.ai ランチャー</strong><span>1つのコマンドで、Fabric でエージェントを構築する方法を教えるスキルをインストールします。</span><small>CLI <span data-live="launcher.version">0.1.31</span> · Node.js 18+</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
  </div>
  <p class="section-note">プレビューは未完成を意味します：Fabric は早期プレビュー版で会話にはまだ返信できず、Fabric Inbox は開発プレビュー版で実際のモデルによる返信は未検証です。各製品ページには、ダウンロード前に動作要件と制限が記載されています。機械可読バージョン：<a href="/api/releases">/api/releases</a>。</p>
 </section>
 
-<section class="section" id="extend" aria-labelledby="extend-title">
- <div class="section-heading story-heading"><p class="section-number">04 / 開発者向け</p><h2 id="extend-title">お手持ちのエージェントで<br>自分のワークフローを作る</h2><p>Claude Code、Codex、または作業に合う別のエージェントを使えます。スキルをインストールするか、MCP で個々のツールを接続するか、自分のサービスを Fabric のオープンなコントラクトに対応させてください。</p></div>
- <div class="extend-grid">
-  <article class="setup-panel reveal" id="launcher"><p class="availability">まずスキルから</p><h3>PassionCode.ai ランチャー</h3><p>1つのコマンドで、Fabric Agent Adapter、Observatory Log、組織の作業ルールをインストールします。Fabric アプリもアカウントも不要です。</p><pre><code>npx @passioncode-ai/passioncode@latest update</code></pre><p class="section-note">Node.js 18+。インストール後にエージェントを再起動してください。自動更新は既定でオンで、オフにもできます。</p><a class="text-link" href="https://github.com/passioncode-ai/passioncode#quick-start-for-a-new-teammate">セットアップと更新の設定 ↗</a></article>
-  <article class="setup-panel reveal"><p class="availability">サービスを作る</p><h3>Fabric Agent Adapter</h3><p>自分のプロジェクトやエージェントを Fabric 互換のサービスにします。キットとスキルがセットアップを案内し、適合性プローブがコントラクトを確認します。互換サービスは Fabric Dashboards に表示されます。</p><p>スキーマとプロトコルは次にあります：<a class="text-link" href="https://github.com/passioncode-ai/fabric-agent-contract">Fabric Agent Contract</a>。</p><a class="text-link" href="https://github.com/passioncode-ai/fabric-agent-adapter#quick-start-for-a-new-teammate">最初のサービスを作る ↗</a></article>
- </div>
- <div class="source-projects"><article class="reveal"><p class="availability">開発中 · ソースからビルド</p><h3>Fabric VR</h3><p>Fabric のリモートサーフェス。まず Meta Quest に対応します。ヘッドセットとソースからのビルドが必要で、公開リリースはまだありません。</p><a class="text-link" href="https://github.com/passioncode-ai/fabric-vr">Fabric VR を見る ↗</a></article><article class="reveal"><p class="availability">プレアルファ · ソースからビルド</p><h3>Okolos</h3><p>PassionCode.ai のブラウザセキュリティ拡張機能です。AI に向けて仕込まれた隠れた指示を取り除きます。ビルドできるソースを公開していますが、公開リリースはまだありません。</p><a class="text-link" href="https://github.com/passioncode-ai/okolos">Okolos を見る ↗</a></article></div>
-</section>
-
-<section class="section business-teaser" id="companies" aria-labelledby="companies-title">
- <div class="teaser-copy reveal"><p class="section-number">05 / 組織向け</p><h2 id="companies-title">あなたのプロセスを、<br>あなたのエージェントが運用</h2><p>モバイルアプリの公開、SaaS チーム、マーケティング代理店：同じワークプレースが仕事に合わせて適応します。チームの現在の働き方を教えていただければ、契約の前に、エージェントが引き受けられる時間の見積もりをご覧いただけます。1人から1000人までを想定しており、統合が必要な組織には PassionCode for Enterprise をご用意しています。</p><a class="button button-primary" href="/ja/business/#request">引き受けられる時間を見積もる <span aria-hidden="true">→</span></a></div>
- <ul class="teaser-list reveal" aria-label="代表的なプロセス">
-  <li><span>リリースとストア公開</span><small>ノート、掲載情報、スクリーンショット、レビューへの返信</small></li>
-  <li><span>マーケティングのクリエイティブとレポート</span><small>バリエーション、キャンペーンレポート、クライアントへの報告</small></li>
-  <li><span>サポートと共有インボックス</span><small>振り分け、下書き、ポリシーに基づくルーティング</small></li>
-  <li><span>エンジニアリングと QA</span><small>レビュー、チェック、リリースゲート、証跡</small></li>
- </ul>
-</section>
-
 <section class="section" id="source" aria-labelledby="source-title">
  <span id="open-source" class="legacy-anchor" aria-hidden="true"></span><span id="foundation" class="legacy-anchor" aria-hidden="true"></span><span id="pipeline" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading story-heading"><p class="section-number">06 / オープンソース</p><h2 id="source-title">ツールを使う<br>ソースを読む</h2><p>Fabric、Fabric Inbox、Switchboard、Observatory、Fabric Dashboards は AGPL-3.0 のオープンソースです。中身を確認し、ソースからビルドし、修正を提供できます。AGPL がカバーしない用途には、商用ライセンスをご利用いただけます。</p></div>
- <div class="source-grid"><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric"><span class="source-meta">公開リポジトリ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric</h3><p>CEO AIエージェント：デスクトップアプリ、カーネル、決定事項、リリース手順。</p><span class="source-path">github.com/passioncode-ai/fabric</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric-switchboard"><span class="source-meta">公開リポジトリ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric Switchboard</h3><p>デスクトップアプリ、CLI、ビルド手順、Issue、リリースノート。</p><span class="source-path">github.com/passioncode-ai/fabric-switchboard</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric-dashboards"><span class="source-meta">公開リポジトリ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric Dashboards</h3><p>macOS アプリ、テスト、運用手順書、チェックサム付きのリリースノート。</p><span class="source-path">github.com/passioncode-ai/fabric-dashboards</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/project-observatory-dashboard"><span class="source-meta">公開リポジトリ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Project Observatory</h3><p>ローカルダッシュボード、CLI、セットアップガイド、テスト、セキュリティモデル。</p><span class="source-path">github.com/passioncode-ai/project-observatory-dashboard</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric-inbox"><span class="source-meta">公開リポジトリ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric Inbox</h3><p>Mac アプリ、メールサーバー、エージェントツール、テスト、チェックサム付きのリリースノート。</p><span class="source-path">github.com/passioncode-ai/fabric-inbox</span></a><a class="source-card reveal" href="https://github.com/passioncode-ai/fabric-agent-adapter"><span class="source-meta">公開リポジトリ · AGPL-3.0 <span aria-hidden="true">↗</span></span><h3>Fabric Agent Adapter</h3><p>Agent Skills、Python と Node のキット、適合性プローブ。</p><span class="source-path">github.com/passioncode-ai/fabric-agent-adapter</span></a></div>
- <p class="section-note"><!-- license-history -->リリース済みのバージョンは、公開時のライセンスのままです：Switchboard 0.3.1-beta.1 まで、Observatory 0.8.1 まで、Fabric Dashboards 0.1.0 は MIT。Switchboard 0.4.0-beta.1、Observatory 0.8.2 から 0.9.1、Fabric Dashboards 0.2.0 と 0.3.0 は PolyForm Noncommercial または Internal Use です。<!-- /license-history --> Fabric 0.2.0 プレビューは、Fabric のソースが公開される前にビルドされました。商用ライセンスをご利用いただけます：<a href="/ja/business/">ご利用内容をお知らせください</a>。<a href="https://github.com/passioncode-ai">GitHub の PassionCode を見る <span aria-hidden="true">↗</span></a></p>
+ <div class="section-heading story-heading"><p class="section-number">04 / オープンソース</p><h2 id="source-title">ツールを使う<br>ソースを読む</h2><p>Fabric、Fabric Inbox、Switchboard、Observatory、Fabric Dashboards は AGPL-3.0 のオープンソースです。中身を確認し、ソースからビルドし、修正を提供できます。AGPL がカバーしない用途には、商用ライセンスをご利用いただけます。</p></div>
+ <p class="section-note"><!-- license-history -->リリース済みのバージョンは、公開時のライセンスのままです：Switchboard 0.3.1-beta.1 まで、Observatory 0.8.1 まで、Fabric Dashboards 0.1.0 は MIT。Switchboard 0.4.0-beta.1、Observatory 0.8.2 から 0.9.1、Fabric Dashboards 0.2.0 と 0.3.0 は PolyForm Noncommercial または Internal Use です。<!-- /license-history --> Fabric 0.2.0 プレビュー版は、Fabric のソースコードが公開される前にビルドされたものです。<a href="https://github.com/passioncode-ai">GitHub の PassionCode を見る <span aria-hidden="true">↗</span></a></p>
 </section>
 
 <section class="section faq" id="faq" aria-labelledby="faq-title">
- <div class="section-heading"><p class="section-number">07 / ご質問</p><h2 id="faq-title">よくあるご質問</h2></div>
+ <div class="section-heading"><p class="section-number">05 / よくある質問</p><h2 id="faq-title">よくあるご質問</h2></div>
  <details><summary>PassionCode.ai は無料ですか？</summary><p>はい。すべてのツールは GNU AGPL-3.0 のオープンソースで、無料でダウンロード、利用、調査、変更できます。クローズドな製品に組み込む場合や、変更したホスト型サービスをソースを公開せずに運用する場合には、商用ライセンスをご利用いただけます。</p></details>
- <details><summary>どのエージェントに対応していますか？</summary><p>特定のエージェントに依存しません。現在 Claude Code、Kilo Code、Hermes Agent が Fabric に接続でき、Codex と Cline は Fabric の中で動作します。今後も対応を増やす予定です：<a href="/ja/fabric/agents/">レベル別の一覧</a>。あらゆるエージェント、MCP サーバー、コマンドラインツールを Fabric Agent Adapter で Fabric 互換のサービスにできます。</p></details>
- <details><summary>既存のプロジェクトやエージェントを Fabric エージェントにするには？</summary><p>PassionCode.ai ランチャーをインストールし（<code>npx @passioncode-ai/passioncode@latest update</code>）、コーディングエージェントにプロジェクトを Fabric に適合させるよう依頼します。Fabric Agent Adapter スキルが、コントラクト、ダッシュボード、適合性チェックを備えたサービスとして包みます。<a href="/ja/start/#build">ガイド</a>で手順を確認できます。</p></details>
- <details><summary>Fabric は自分でエージェントを作りますか？</summary><p>まだです。Fabric は早期プレビュー版で、各プロジェクトのボード、決定事項、リリースを管理しますが、会話にはまだ返信できません。会話からエージェントを作ることが目指す方向で、現時点ではコーディングエージェントが Fabric Agent Adapter スキルで行います。</p></details>
+ <details><summary>どのエージェントに対応していますか？</summary><p>特定のエージェントに依存しません。現在 Claude Code、Kilo Code、Hermes Agent が Fabric に接続でき、Codex と Cline は Fabric の中で動作します。今後も対応を増やす予定です：<a href="/ja/fabric/agents/">レベル別の一覧</a>。</p></details>
  <details><summary>データはどこに送られますか？</summary><p>作業内容はお使いのコンピュータと、ご自身のクラウドアカウントの中に留まります。Fabric Switchboard と、バージョン 0.3.2 以降の Fabric は、匿名の利用回数を送信します。送るのは回数と種類のみで、名前、パス、内容は送りません。Switchboard の「About」ウィンドウ、または Fabric の設定でオフにできます。<a href="/ja/privacy/">送信される内容の詳細</a>。</p></details>
- <details><summary>PassionCode.ai で自社向けにセットアップしてもらえますか？</summary><p>はい。<a href="/ja/business/">チームとプロセスをお知らせいただければ</a>、見積もりと提案をお返しします：ガイド付きオンボーディング、または私たちが構築・運用するワークプレース。</p></details>
 </section>
 
-<section class="section about-section" id="about" aria-labelledby="about-title"><div><p class="section-number">08 / 概要</p><h2 id="about-title">一緒に作る、<br>その仕事を</h2></div><div class="about-copy"><p class="about-lead">Sergey です。日常の仕事にすでに AI エージェントが含まれているチームのために、PassionCode を作っています。</p><p>出発点は実践的です：まずセットアップを管理しやすくし、次に仕事の進め方に構造をもたらします。Switchboard、Observatory、Fabric Dashboards は現在ご利用いただけます。CEO AIエージェントの Fabric は開発中で、早期プレビュー版です。</p><p>開発の様子、決定事項、次のリリースをフォローしてください。</p><a class="button button-secondary" href="https://x.com/sshlg93">Twitter でフォロー <span aria-hidden="true">↗</span></a><p class="author-signature">Sergey · <a href="https://x.com/sshlg93">@sshlg93</a></p></div></section>
-<section class="closing" aria-labelledby="closing-title"><img src="/assets/passioncode-mark.svg" width="72" height="72" alt=""><p class="section-number">まず1つの便利なツールから</p><h2 id="closing-title">あなたのワークプレースは<br>1つのコマンドから始まります</h2><p>スキルをインストールし、最初のエージェントを作り、仕事で役立つと感じたら残りを追加してください。</p><div class="hero-actions closing-actions"><a class="button button-primary" href="/ja/start/">無料で始める <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/ja/business/">組織向け <span aria-hidden="true">↗</span></a></div></section>
+<section class="section about-section" id="about" aria-labelledby="about-title"><div><p class="section-number">紹介</p><h2 id="about-title">ひとこと<br>創業者より</h2></div><div class="about-copy"><p class="about-lead">私は Sergey です。<a href="https://nicegram.me">Nicegram</a>の共同創業者です。同社のユーザーは6,000万人です。</p><p>PassionCode は、もともと自分がAIエージェントと働くための場所として作り始めました。やがて、誰もが自分の環境をエージェントのワークスペースに変え、組織がAIネイティブになるための手段へと育ちました。</p><p>GNU AGPL-3.0 のオープンソースで、個人利用は無料です。AGPL がカバーしない用途には、商用ライセンスが対応します。</p><a class="button button-secondary" href="https://x.com/sshlg93">Twitter でフォロー <span aria-hidden="true">↗</span></a><p class="author-signature">Sergey · <a href="https://x.com/sshlg93">@sshlg93</a></p></div></section>
 </main>
 <footer class="story-footer">
  <div><a class="brand footer-brand" href="/ja/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>バイブコーディングからパッションコーディングへ</p></div>

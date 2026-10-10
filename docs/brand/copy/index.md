@@ -62,7 +62,7 @@ For your organization
 
 ↗
 
-Open source under AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.14 · Dashboards 0.6.7 · Observatory 0.20.1
+Open source under AGPL-3.0 Fabric 0.3.3 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.20.1
 
 Accounts
 
@@ -144,7 +144,7 @@ Choose the account each agent runs on, with usage limits in view.
 
 Release
 
-0.6.14
+0.6.15
 
 · macOS + Windows
 
