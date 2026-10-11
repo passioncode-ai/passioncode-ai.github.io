@@ -1,3 +1,47 @@
+# Current handoff — SITE-029: the short request and the agent prompt on /business/, 2026-10-11
+
+Objective (operator, 2026-10-11, decisions ON-1…ON-6): bring every form down to the minimum, offer a copy-prompt that
+lets the visitor's coding agent ask the questions and send the request (POST /api/leads, only after an explicit yes),
+and apply the copy decisions (ROI allowed with no unprovable figure; the CFO and the CTO or CIO named once; no spend
+level of ours, no team-level views, limits as a record labelled direction). PR #99 merged as `9cbbe1d` and deployed
+from `main` 2026-10-11: Worker version `f29184cd-da31-4f62-853c-ff09b8350dba`; `scripts/verify-live.py` PASS (208
+assets, 150 pages in ten languages, hreflang on 130, 7 download routes, 23 not-found addresses, and the intake smoke
+in dry-run mode: token 200, a valid agent request 200 `valid`, one without an email 400), receipt
+[evidence/2026-10-11-agent-request/live.json](evidence/2026-10-11-agent-request/live.json).
+
+Done ([evidence](evidence/2026-10-11-agent-request/README.md)):
+- The one form on the site (`/business/`, ten languages) went from five steps and 30 fields to `contact.message`
+  (required), `contact.email` (required) and `goals` (optional, one of seven; first "See what our agents cost and
+  deliver"); no consent box, the privacy notice (version 2026-10-11) gives the basis. SCN-014, SCR-09, FLW-06, ST-07.
+- "Let your coding agent ask", ahead of the form (SCN-022): the prompt in the page's language with the JSON and the
+  commands in English; Copy in `assets/site.js`; the plain text at `/<code>/business/agent-request.txt`, written by
+  `npm run locales` (`scripts/agent-prompt.mjs`) and linked from `llms.txt`.
+- Worker: `lead/2` (form and agent; `lead/1` still accepted from open pages), `GET /api/leads/token`, an agent's
+  own `id` as the idempotency key, `?dry_run=1`, empty optional values ignored; `lead/2` is not forwarded to the
+  Platform yet (SITE-031). How abuse stays bounded: docs/DEPLOYMENT.md "Requests from a coding agent".
+- Copy: #spend ON-1/ON-2/ON-6; `scripts/check-site.mjs` guards ON-2 (titles once), ON-4 and ON-5. "Convert" became
+  "adapt" in the goal label (decided term).
+- Release sync at the coordinator's note: Dashboards 0.7.1 (Windows and Linux builds; /dashboards/ and the home tools
+  line name them; updates automatic on macOS only, said on the page), Inbox 0.14.1, Observatory 0.22.0; facts rows
+  under the lease.
+- Ten languages: en and ru native; de, fr, es, pt-br, pl, ko, ja translated here; zh-Hans through the copy agent's
+  write capability only (three jobs, about $0.12). Copy checks pass with no blocking rule; "ROI" is still banned by
+  the saved voice v1 (SITE-032).
+
+Checks run: `npm run locales -- --check`, `python3 scripts/extract-public-copy.py --check`, `npm run check` (exit
+0), `npm test` 110/110, `npm run build`, `npm run releases:check`; WebKit against a local Worker (en and ru, 390 and
+1280 px, no-JS run), the agent curl flow against the local Worker; private-terms count 0. The deploy ran
+`npm run build` and `wrangler deploy` on `9cbbe1d` directly after `npm run deploy` stopped in its build step on a
+full disk (431 MiB free at the time, other sessions' use); `9cbbe1d` has the same tree as `c1318d4`, where the
+whole gate passed.
+
+Open: SITE-030 (Inbox, Observatory and the Dashboards "Mac" lines), SITE-031 (Platform `lead/2`), SITE-032 (voice
+v2 without the ROI ban); SITE-026 native review now also covers the new request strings.
+
+Next task: SITE-030 — Inbox 0.14.1 and Observatory 0.22.0 platform copy, then the Dashboards meta and hero lines.
+
+---
+
 # Current handoff — SITE-028 W5: sample-data mockups from the products' own interfaces, 2026-10-11
 
 Objective (operator, 2026-10-11, re-scoping W5): "давай мокапы а не скриншоты, у нас весь UI тестовый есть" — replace
