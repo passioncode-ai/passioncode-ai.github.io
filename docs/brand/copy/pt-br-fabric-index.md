@@ -142,6 +142,16 @@ O quadro · o que espera pela sua decisão
 
 Releases · o que entrou, por quê e o que confirma
 
+Criar um agente · um nome, uma frase, uma pasta, um agente de programação
+
+Adaptar um agente · o Fabric lê a pasta e nada mais
+
+O console depois de “Criar” · as perguntas, uma de cada vez
+
+O console depois de “Adaptar” · o plano antes de qualquer mudança
+
+As telas Criar e Adaptar são a própria interface do Fabric, renderizada a partir do código-fonte com dados de exemplo. O texto do console é um exemplo escrito do que o agente de programação faz, não uma gravação.
+
 COMO ESTAMOS CONSTRUINDO
 
 ## As pessoas continuam responsáveis

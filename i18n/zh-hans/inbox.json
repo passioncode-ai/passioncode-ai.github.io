@@ -75,6 +75,8 @@
     "All the tools": "全部工具",
     "02 / THE PASSIONCODE TOOLKIT": "02 / PASSIONCODE 工具包",
     "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox 处理邮件。Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你随时看到这些智能体正在做的项目。Fabric 处于早期预览阶段，是你的项目及其智能体的家。",
-    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "，处于早期预览阶段，是你的项目及其智能体的家。它们属于同一个工具包，各有不同的角色。"
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "，处于早期预览阶段，是你的项目及其智能体的家。它们属于同一个工具包，各有不同的角色。",
+    "Fabric Inbox, all inboxes: three addresses at example.test, important mail first with two agents among the senders, and a release-notes draft open with Reply and Forward. Synthetic demo data.": "Fabric Inbox，全部收件箱：example.test 上三个地址，重要邮件置顶，发件人中有两个智能体，一篇发布说明草稿已打开，显示「回复」和「转发」按钮。合成演示数据。",
+    "All inboxes · sample addresses and mail, no real accounts": "全部收件箱 · 示例地址和邮件，无真实账号"
   }
 }

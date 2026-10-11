@@ -142,6 +142,16 @@ El tablero · lo que espera tu decisión
 
 Versiones · qué incluyen, por qué y qué lo confirma
 
+Crear un agente · un nombre, una frase, una carpeta, un agente de programación
+
+Adaptar un agente · Fabric lee la carpeta y nada más
+
+La consola después de «Crear» · las preguntas, una a una
+
+La consola después de «Adaptar» · el plan antes de cualquier cambio
+
+Las pantallas Crear y Adaptar son la propia interfaz de Fabric, generada desde su código fuente con datos de ejemplo. El texto de la consola es un ejemplo escrito de lo que hace el agente de programación, no una grabación.
+
 CÓMO LO ESTAMOS CONSTRUYENDO
 
 ## Las personas siguen siendo responsables

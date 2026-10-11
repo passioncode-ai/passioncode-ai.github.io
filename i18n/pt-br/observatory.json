@@ -16,7 +16,6 @@
     "INSIDE OBSERVATORY": "POR DENTRO DO OBSERVATORY",
     "What needs attention, first": "O que precisa de atenção, primeiro",
     "The actual Observatory overview, rendered by the engine over a fictional company’s projects.": "A visão geral real do Observatory, gerada pelo motor sobre os projetos de uma empresa fictícia.",
-    "The Project Observatory overview in its dark theme: five findings ordered from critical to info, project and activity counters, and a card for every section. Synthetic demo data.": "A visão geral do Project Observatory no tema escuro: cinco achados ordenados de crítico a informativo, contadores de projetos e de atividade e um card para cada seção. Dados de demonstração sintéticos.",
     "Synthetic demo estate · no real projects, repositories or credentials": "Ambiente de demonstração sintético · sem projetos, repositórios ou credenciais reais",
     "A LOCAL OBSERVATORY": "UM OBSERVATORY LOCAL",
     "Less guessing": "Menos adivinhação",
@@ -95,6 +94,7 @@
     "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "Memória e evidências: o que mudou em cada projeto, o que foi decidido e o que precisa de atenção. É o passo 5 de",
     "how it works": "“Como funciona”",
     "All the tools": "Todas as ferramentas",
-    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "O Fabric, em prévia inicial, é a casa dos seus projetos e dos agentes deles. O Observatory está disponível agora como uma ferramenta local separada."
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "O Fabric, em prévia inicial, é a casa dos seus projetos e dos agentes deles. O Observatory está disponível agora como uma ferramenta local separada.",
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "A visão geral do Project Observatory: cinco achados ordenados de crítico a informativo e, em seguida, os contadores de projetos e de atividade. Dados de demonstração sintéticos."
   }
 }

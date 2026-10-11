@@ -100,6 +100,8 @@ AGENTEN, IN DEINEN REGELN
 
 Ein Agent hat eigene Anweisungen, eigenes Wissen und eigene Tools und kann mehrere Adressen bedienen. Er sendet eine Antwort nur, wenn sie auf seinem Wissen beruht, zu einem von dir erlaubten Thema passt und sein Tageslimit einhält. Alles andere wartet als Entwurf samt Begründung.
 
+Alle Posteingänge · Beispieladressen und -mails, keine echten Accounts
+
 FABRIC INBOX HOLEN
 
 ## Eine Entwicklungsvorschau

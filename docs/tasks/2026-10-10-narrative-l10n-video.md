@@ -269,6 +269,13 @@ one prompt), and keeps the 92–100 obsolete entries per language under `referen
 `node scripts/build-locale.mjs --check` fails with 1 148 untranslated strings and 72 pages waiting for them, and three
 tests in `scripts/locales.test.mjs` fail for the same reason; every other step of `npm run check` passes.
 
+**W5, re-scoped 2026-10-11 (operator: "давай мокапы а не скриншоты, у нас весь UI тестовый есть").** No throwaway
+macOS user: steps 02 and 03, /fabric/, /inbox/ and /observatory/ show sample-data mockups rendered from each product's
+own interface (Fabric's renderer over a sample bridge, Observatory's `tools/demo_estate.py`, Inbox's preview fixture),
+2560×1600, a visible «Sample data» chip, a Russian twin; the coding agent's console text is a written example and the
+pages say so. Record: [docs/evidence/2026-10-11-mockups/README.md](../evidence/2026-10-11-mockups/README.md). The
+paragraph below describes the state before this change.
+
 **Open, and what blocks screenshots and the video.**
 - W5 captures: no safe image exists of Fabric's first screen (SCR-70), Create (SCR-74), Adapt (SCR-75), a coding
   agent's console or Inbox. They need the throwaway macOS user and Docker sign-in that only the operator can set up

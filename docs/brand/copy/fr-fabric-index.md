@@ -142,6 +142,16 @@ Le tableau · ce qui attend votre décision
 
 Versions · ce qui est entré, pourquoi, et ce qui le confirme
 
+Créer un agent · un nom, une phrase, un dossier, un agent de code
+
+Adapter un agent · Fabric lit le dossier et rien d’autre
+
+La console après « Créer » · les questions, une à une
+
+La console après « Adapter » · le plan avant toute modification
+
+Les écrans Créer et Adapter sont l’interface même de Fabric, rendue à partir de son code source avec des données d’exemple. Le texte de la console est un exemple rédigé de ce que fait l’agent de code, pas un enregistrement.
+
 COMMENT NOUS LE CONSTRUISONS
 
 ## Les personnes restent responsables

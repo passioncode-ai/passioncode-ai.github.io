@@ -1,3 +1,43 @@
+# Current handoff — SITE-028 W5: sample-data mockups from the products' own interfaces, 2026-10-11
+
+Objective (operator, 2026-10-11, re-scoping W5): "давай мокапы а не скриншоты, у нас весь UI тестовый есть" — replace
+the missing real screenshots with mockups rendered from each product's own test or demo interface. No throwaway macOS
+user, no real account, no real data. Branch `agent/site-mockups`.
+
+Done ([capture record](evidence/2026-10-11-mockups/README.md), harness in `evidence/2026-10-11-mockups/harness/`):
+- Home How it works: step 02 shows Fabric's first run with the four actions (`assets/journey-2-2.jpg`), step 03 the
+  coding agent's console asking the intake questions (`journey-3-3.jpg`, a written example, said in its alt text).
+- /fabric/: Create and Adapt screens (`journey-3-1`, `3-2`) and the console after each (`3-3`, `3-4`), with a note
+  that the screens are Fabric's own interface on sample data and the console text is a written example.
+- /observatory/: `observatory-overview.jpg` (engine 0.21.0 over its own fictional demo estate, dark as shipped).
+- /inbox/: `inbox-overview.jpg` (the web interface against its preview fixture with synthetic people and agents).
+- Every image 2560×1600, ≤ 320 KB, a visible «Sample data» / «Пример данных» chip, and a `-ru.jpg` twin that the
+  Russian pages pick up through `localizedAsset` (`scripts/locales.mjs`, docs/DEPLOYMENT.md#languages); the other
+  eight languages show the English image. `scripts/check-site.mjs` pins size, pixels, twin, publication and the
+  sample-data alt; `scripts/locales.test.mjs` the language swap.
+- 13 new strings in ten languages: en and ru native; de, fr, es, pt-br, pl, ko, ja translated from English here;
+  zh-Hans by the copy agent's write capability only (one string per call; calls with several strings and parallel
+  calls returned no text — a copy-agent defect to report to its owner; about $0.16 charged in all, failed calls included). Copy-agent rule checks:
+  en 100 pass, ru 100 pass, zh no findings.
+- docs/ux SCN-021, SCN-007, SCR-04, SCR-05, SCR-06 home; the plan's W5 status; SITE-028 row.
+
+Checks run on the branch: `npm run locales -- --check`, `npm run check` (exit 0), `npm test` 100/100,
+`npm run build`; WebKit pass of /, /fabric/, /inbox/, /observatory/ at 390 and 1280 px in en and ru (and de at 1280):
+no horizontal overflow, no broken image, the Russian pages load the `-ru` images. Private-terms count scan of the
+diff, of every image's visible text and of the harness: 0.
+
+Adjacent defects found (owners' repositories, not changed here): Fabric's session window header has no contrast in
+the light theme (shot in dark instead); Fabric's floating conversation button covers the start screens' primary
+buttons at a 1280 px window; Fabric Inbox's `npm run dev` fails in workerd on a large icon chunk (a local build was
+used); Observatory's demo writes finding sentences in English only, so the Russian shot mixes languages.
+
+Open: W10 home video (now has pictures to build on); native review (SITE-026); steps 04 and 05 keep the older dark
+synthetic shots (Dashboards 0.4-era, Fabric 0.3.2 board) and can be re-rendered the same way.
+
+Next task: merge and deploy this branch, record the live receipt, then W10.
+
+---
+
 # Current handoff — organization narrative on /business/, 2026-10-11
 
 Objective (operator, 2026-10-11): package a market narrative (finance as the internal champion of an AI purchase;

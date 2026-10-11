@@ -100,6 +100,8 @@ AGENTS, WITHIN YOUR RULES
 
 An agent has its own instructions, knowledge and tools and can serve several addresses. It sends an answer only when it rests on its knowledge, fits a topic you allowed and stays within its daily limit. Everything else waits as a draft with the reason.
 
+All inboxes · sample addresses and mail, no real accounts
+
 GET FABRIC INBOX
 
 ## A development preview

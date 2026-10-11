@@ -1,0 +1,21 @@
+const { webkit } = require('playwright')
+const fs = require('fs')
+const [url, out, mode] = process.argv.slice(2)
+;(async () => {
+  const b = await webkit.launch()
+  const ctx = await b.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 2, colorScheme: 'light', reducedMotion: 'reduce', locale: mode === 'ru' ? 'ru-RU' : 'en-US' })
+  await ctx.addInitScript(() => { try { localStorage.setItem('fabric-inbox:theme', 'light') } catch {} })
+  const p = await ctx.newPage()
+  p.on('console', m => { if (m.type() === 'error') console.log('console:', m.text().slice(0, 200)) })
+  await p.goto(url, { waitUntil: 'networkidle' })
+  await p.evaluate(() => document.fonts.ready)
+  await p.waitForTimeout(1500)
+  if (process.env.OPEN) {
+    const row = p.getByText(process.env.OPEN, { exact: false }).first()
+    await row.click(); await p.waitForLoadState('networkidle'); await p.waitForTimeout(1500)
+  }
+  await p.screenshot({ path: out })
+  fs.writeFileSync(out.replace(/\.png$/, '.txt'), await p.evaluate(() => document.body.innerText))
+  console.log('url now', p.url())
+  await b.close()
+})()

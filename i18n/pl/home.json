@@ -135,6 +135,8 @@
     "DIRECTION": "KIERUNEK",
     "AVAILABLE NOW": "DOSTĘPNE TERAZ",
     "AVAILABLE NOW, IN PART": "DOSTĘPNE TERAZ, W CZĘŚCI",
-    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze."
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze.",
+    "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "Pierwsze uruchomienie Fabric, krok 3 z 3: utwórz agenta albo dostosuj takiego, który powstał gdzie indziej, otwórz projekt albo utwórz nowy. Syntetyczne dane demonstracyjne.",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "Konsola agenta kodującego, którą Fabric otwiera po „Utwórz”: agent zadaje drugie z sześciu pytań wstępnych dla release-notes-agent. Napisany przykład, nie nagranie."
   }
 }

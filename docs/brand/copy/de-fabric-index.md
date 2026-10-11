@@ -142,6 +142,16 @@ Das Board · was auf deine Entscheidung wartet
 
 Releases · was drin ist, warum, und was es bestätigt
 
+Einen Agenten erstellen · ein Name, ein Satz, ein Ordner, ein Coding-Agent
+
+Einen Agenten anpassen · Fabric liest den Ordner und sonst nichts
+
+Die Konsole nach „Erstellen“ · die Fragen, eine nach der anderen
+
+Die Konsole nach „Anpassen“ · der Plan vor jeder Änderung
+
+Die Bildschirme „Erstellen“ und „Anpassen“ sind die eigene Oberfläche von Fabric, aus dem Quellcode mit Beispieldaten gerendert. Der Konsolentext ist ein geschriebenes Beispiel dafür, was der Coding-Agent tut, keine Aufzeichnung.
+
 WIE WIR ES BAUEN
 
 ## Menschen bleiben verantwortlich

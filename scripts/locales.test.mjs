@@ -6,10 +6,10 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
-import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
-import { alternates, applyChrome, counterpartRoute, langTag, LANG_TAGS, languageSwitch, loadCatalog, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceUrl, translateMessages } from './locales.mjs'
+import { alternates, applyChrome, counterpartRoute, langTag, LANG_TAGS, languageSwitch, loadCatalog, localizedAsset, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceAsset, sourceUrl, translateMessages } from './locales.mjs'
 import { LOCALES, NOINDEX, PAGES, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { buildLocale, generate } from './build-locale.mjs'
 import { rewriteSource } from '../worker/live.js'
@@ -30,6 +30,27 @@ test('page links move under /ru/; assets, the API, downloads and other sites do 
   assert.equal(sourceUrl('/ru/start/'), '/start/')
   assert.equal(sourceUrl('https://passioncode.ai/ru/'), 'https://passioncode.ai/')
   assert.equal(sourceUrl('/api/leads?lang=ru'), '/api/leads')
+})
+
+test('a picture with an own-language file shows it; other languages keep the English one; structure compares equal', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'pc-assets-'))
+  try {
+    mkdirSync(join(dir, 'assets'))
+    for (const f of ['shot.jpg', 'shot-ru.jpg', 'plain.jpg']) writeFileSync(join(dir, 'assets', f), '')
+    assert.equal(localizedAsset('/assets/shot.jpg', 'ru', dir), '/assets/shot-ru.jpg')
+    assert.equal(localizedAsset('/assets/shot.jpg', 'de', dir), '/assets/shot.jpg', 'no German file: the English picture')
+    assert.equal(localizedAsset('/assets/plain.jpg', 'ru', dir), '/assets/plain.jpg')
+    assert.equal(localizedAsset('/assets/shot.jpg', 'en', dir), '/assets/shot.jpg')
+    assert.equal(localizedAsset('/styles.css', 'ru', dir), '/styles.css', 'only images under /assets/')
+  } finally { rmSync(dir, { recursive: true, force: true }) }
+  assert.equal(sourceAsset('/assets/journey-2-2-ru.jpg'), '/assets/journey-2-2.jpg')
+  assert.equal(sourceAsset('/assets/journey-2-2.jpg'), '/assets/journey-2-2.jpg')
+  // On the site: the Russian home page shows the Russian first run, the German one the English.
+  const home = read('index.html')
+  assert.ok(home.includes('src="/assets/journey-2-2.jpg"'))
+  assert.ok(read('ru/index.html').includes('src="/assets/journey-2-2-ru.jpg"'))
+  assert.ok(read('de/index.html').includes('src="/assets/journey-2-2.jpg"'))
+  assert.equal(skeletonDiff(skeleton(home), skeleton(read('ru/index.html'))), null)
 })
 
 test('the language switch leads to the same page in the other language; the 404 page to the other home', () => {

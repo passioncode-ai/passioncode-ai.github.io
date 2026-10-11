@@ -142,6 +142,16 @@ The board · what waits for your decision
 
 Releases · what went in, why, and what confirms it
 
+Create an agent · a name, one sentence, a folder, a coding agent
+
+Adapt an agent · Fabric reads the folder and nothing else
+
+The console after Create · the questions, one at a time
+
+The console after Adapt · the plan before any change
+
+The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.
+
 HOW WE’RE BUILDING IT
 
 ## People remain accountable

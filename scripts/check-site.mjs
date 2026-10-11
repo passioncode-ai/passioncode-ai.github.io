@@ -158,6 +158,23 @@ console.log(`PASS: ${PAGES.length} static pages, metadata, CSP-safe markup, anch
 const home = read('index.html')
 for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'the home for your projects and their agents', 'does not reply yet', 'real-model replies are not yet verified', 'href="/start/"', 'href="/business/"', 'href="/vision/"', 'since version 0.3.2, Fabric send anonymous usage counts', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available', '<!-- license-history -->', 'local, open-source workspace', 'the subscription you already have', 'co-founder of <a href="https://nicegram.me">Nicegram</a>, which has 60 million users', 'free for personal use; a commercial license covers what the AGPL does not']) assert.ok(home.includes(text), `homepage missing ${text}`)
 for (const id of ['why', 'how', 'start', 'products', 'source', 'faq', 'about', 'path', 'vision', 'toolkit', 'extend', 'companies', 'launcher']) assert.ok(home.includes(`id="${id}"`), `homepage section or legacy anchor #${id}`)
+// Sample-data mockups (SITE-028 W5, docs/evidence/2026-10-11-mockups/README.md): each rendered from a
+// product's own interface with sample data, 2560×1600, a visible "Sample data" chip, an -ru twin for
+// the Russian pages (scripts/locales.mjs localizedAsset), within the size budget, and published.
+const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journey-3-3.jpg', 'journey-3-4.jpg', 'observatory-overview.jpg', 'inbox-overview.jpg']
+{
+  const built = read('scripts/build-site.mjs')
+  const jpegSize = buf => { for (let i = 2; i < buf.length;) { const marker = buf[i + 1]; const len = buf.readUInt16BE(i + 2); if (marker >= 0xc0 && marker <= 0xc2) return [buf.readUInt16BE(i + 7), buf.readUInt16BE(i + 5)]; i += 2 + len } return null }
+  for (const image of MOCKUPS) for (const file of [image, image.replace(/\.jpg$/, '-ru.jpg')]) {
+    const buf = readFileSync(resolve(root, 'assets', file))
+    assert.deepEqual(jpegSize(buf), [2560, 1600], `assets/${file}: 1280×800 at 2x`)
+    assert.ok(buf.length <= 320 * 1024, `assets/${file}: ${buf.length} bytes is over the 320 KB budget`)
+    assert.ok(built.includes(`'assets/${file}'`), `assets/${file} is published by scripts/build-site.mjs`)
+  }
+  for (const file of SOURCE_PAGES) for (const [, image, alt] of read(file).matchAll(/<img src="\/assets\/([^"]+)"[^>]*alt="([^"]*)"/g)) {
+    if (MOCKUPS.includes(image)) assert.match(alt, /Synthetic demo data\.$|A written example, not a recording\.$/, `${file}: ${image} says it shows sample data`)
+  }
+}
 // How it works (SITE-028 W6, docs/ux/scenarios.md SCN-021): the six journey steps of
 // docs/brand/narrative.md §3, each with its state label; pictures only from the synthetic shots the
 // journey truth table marks reusable; the home video slot stays hidden and holds no player until W10.
@@ -166,7 +183,7 @@ for (const id of ['why', 'how', 'start', 'products', 'source', 'faq', 'about', '
   assert.ok(how.length > 100, 'homepage: the How it works section')
   const labels = [...how.matchAll(/<li class="reveal"><span class="cycle-number">0([1-6])<\/span><p class="availability">([^<]+)<\/p><h3>([^<]+)<\/h3>/g)].map(m => `${m[1]} ${m[3]}: ${m[2]}`)
   assert.deepEqual(labels, ['1 Enter: AVAILABLE NOW', '2 Onboard: PREVIEW', '3 First agent: AVAILABLE NOW', '4 Grow: AVAILABLE NOW', '5 Work together and watch: AVAILABLE NOW, IN PART', '6 Organization: DIRECTION'], 'homepage: six journey steps, each with its state')
-  const SAFE = new Set(['dashboards-overview.jpg', 'fabric-board.jpg', 'fabric-home.jpg', 'fabric-releases.jpg', 'dashboards-service-dashboard.jpg', 'observatory-demo.jpg', 'switchboard-accounts.jpg'])
+  const SAFE = new Set(['dashboards-overview.jpg', 'fabric-board.jpg', 'fabric-home.jpg', 'fabric-releases.jpg', 'dashboards-service-dashboard.jpg', 'observatory-demo.jpg', 'switchboard-accounts.jpg', ...MOCKUPS])
   for (const [, image] of how.matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #how: ${image} is not a synthetic shot the journey truth table marks reusable`)
   assert.ok(how.includes('Fabric is a separate preview download'), 'homepage step 1: the launcher installs the skills, Fabric is a separate download')
   assert.match(how, /<figure class="home-video" id="video" hidden>(?:(?!<\/figure>)[\s\S])*<\/figure>/, 'homepage: the video slot is reserved and hidden')

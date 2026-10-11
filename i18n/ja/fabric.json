@@ -84,6 +84,15 @@
     "Create a project": "プロジェクトを作成",
     "A new home for its purpose, board and releases": "目的、ボード、リリースのための新しい拠点",
     "The agent work itself runs in your coding agent’s console": "エージェントの作業そのものは、コーディングエージェントのコンソールで進みます",
-    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "調整はFabricが目指す方向であり、あなたの代わりになることはありません。プロジェクトの目的と、各エージェントに許可することを決めるのはあなたです。"
+    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "調整はFabricが目指す方向であり、あなたの代わりになることはありません。プロジェクトの目的と、各エージェントに許可することを決めるのはあなたです。",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "「作成」のあとにFabricが開くコーディングエージェントのコンソール：release-notes-agentについて、最初の6つの質問のうち2つ目を尋ねています。録画ではなく、文章で書いた例です。",
+    "Create an agent: the name release-notes-agent, what it will do in one sentence, where its folder goes and which coding agent does the work. Synthetic demo data.": "エージェントの作成：名前release-notes-agent、何をするかを一文で、フォルダーの場所、作業を担うコーディングエージェント。合成デモデータです。",
+    "Create an agent · a name, one sentence, a folder, a coding agent": "エージェントを作成 · 名前、一文、フォルダー、コーディングエージェント",
+    "Adapt an existing agent: the four steps, what Fabric read from the folder legacy-reports-agent, and the coding agent that will do the work. Synthetic demo data.": "既存のエージェントを対応させる：4つのステップ、Fabricがlegacy-reports-agentフォルダーから読み取った内容、作業を担うコーディングエージェント。合成デモデータです。",
+    "Adapt an agent · Fabric reads the folder and nothing else": "エージェントを対応させる · Fabricが読むのはフォルダーだけ",
+    "The console after Create · the questions, one at a time": "「作成」後のコンソール · 質問はひとつずつ",
+    "The coding agent’s console after Adapt: the plan for legacy-reports-agent with its profile, effects, branch and every file that would change, waiting for a yes. A written example, not a recording.": "「対応させる」のあとのコーディングエージェントのコンソール：legacy-reports-agentの計画として、プロファイル、効果、ブランチ、変更されるすべてのファイルを示し、承認を待っています。録画ではなく、文章で書いた例です。",
+    "The console after Adapt · the plan before any change": "「対応させる」後のコンソール · 変更の前に計画",
+    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "「作成」と「対応させる」の画面は、Fabric自身のインターフェースをサンプルデータでソースから描画したものです。コンソールの文章は、コーディングエージェントが行うことを書いた例で、録画ではありません。"
   }
 }
