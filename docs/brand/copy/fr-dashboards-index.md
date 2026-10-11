@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric Dashboards | Vos services d’agents locaux, réunis
 
-Une seule fenêtre sur Mac pour vos services d’agents locaux. Voyez ce qui demande votre attention, ouvrez les tableaux de bord et laissez vos agents utiliser les mêmes outils via MCP.
+Une seule fenêtre pour vos services d’agents locaux sur macOS, Windows et Linux. Voyez ce qui demande votre attention, ouvrez les tableaux de bord et laissez vos agents utiliser les mêmes outils via MCP.
 
 Aller au contenu
 
@@ -52,7 +52,7 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 
 # Un seul endroit où regarder
 
-Voyez tous les services d’agents de votre Mac dans une seule application : ce qui vous attend passe en premier, et le tableau de bord propre à chaque service s’ouvre juste à côté
+Voyez tous les services d’agents de votre ordinateur dans une seule application : ce qui vous attend passe en premier, et le tableau de bord propre à chaque service s’ouvre juste à côté
 
 DANS LA BOÎTE À OUTILS État, dépenses et contrôle : chaque service d’agent, ce qu’il fait, ce qu’il dépense et ses mises à jour dans une seule fenêtre. Étape 4 de « Comment ça marche ». Tous les outils
 
@@ -82,7 +82,7 @@ Le tableau de bord d’un service, ouvert dans l’application
 
 ## les outils qui font le travail
 
-Fabric Dashboards détecte les services compatibles sur votre Mac. Chaque service garde son propre rôle ; vous disposez d’un endroit commun pour les inspecter et les piloter.
+Fabric Dashboards détecte les services compatibles sur votre ordinateur. Chaque service garde son propre rôle ; vous disposez d’un endroit commun pour les inspecter et les piloter.
 
 ### Voyez ce qui vous attend
 

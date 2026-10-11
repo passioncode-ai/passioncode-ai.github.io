@@ -250,7 +250,7 @@ Wydanie
 
 0.22.0
 
-· macOS + Linux · krok 5
+· macOS + Windows + Linux · krok 5
 
 ↗
 
@@ -260,9 +260,9 @@ Poczta Gmail i Cloudflare na jednej liście, ważne na górze; agenci odpowiadaj
 
 Wersja zapoznawcza w rozwoju
 
-0.14.1
+0.15.0
 
-· macOS · krok 5
+· macOS + Windows + Linux · krok 5
 
 ↗
 

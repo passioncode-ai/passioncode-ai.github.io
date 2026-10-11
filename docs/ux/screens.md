@@ -48,7 +48,7 @@ Every screen exists in every language of `i18n/locales.json` (Russian at `/ru/�
 **Answers:** What does Project Observatory show, what does it read, and how do I start?
 **Indexable:** yes; canonical product URL, SoftwareApplication data and sitemap.
 **Without JS:** complete copy, setup steps, source and guide links, native details/summary FAQ.
-**Entity:** Project Observatory, open-source (AGPL-3.0) local dashboard from PassionCode.ai (English or Russian interface).
+**Entity:** Project Observatory, open-source (AGPL-3.0) local dashboard from PassionCode.ai (English or Russian interface) for macOS, Windows and Linux; since 0.22.0 a desktop app on each (SITE-030, 2026-10-11: JSON-LD `operatingSystem` «macOS; Windows; Linux»).
 
 ### SCR-03: Design system
 **Scenarios:** SCN-005, SCN-010. Shared identity and product marks (including Fabric Dashboards), color roles, typography and reusable CSS.
@@ -71,13 +71,13 @@ Screens describe public website behavior, not acceptance of native Switchboard o
 **Entity:** Fabric, the home for your projects and their agents within PassionCode.ai, in early preview.
 
 ### SCR-06: Fabric Inbox
-**Scenarios:** SCN-009. Development-preview hero with Download for macOS, what it does, Get Fabric Inbox (requirements, checksum, release notes, limits), For agents (key and MCP command), toolkit context and FAQ.
+**Scenarios:** SCN-009. Development-preview hero with Download for macOS (the line under it names macOS 12+, Windows and Linux), what it does, Get Fabric Inbox (macOS card, a «Windows and Linux» card since SITE-030 2026-10-11 linking the latest release page, Before you open it, checksum, release notes, limits), For agents (key and MCP command), toolkit context and FAQ.
 **Web surface:** public
 **Route:** https://passioncode.ai/inbox/
 **Answers:** What does Inbox do and can I use it today?
 **Indexable:** yes; canonical URL, SoftwareApplication data naming the selected release and the AGPL, and sitemap. The download redirect is noindex.
 **Without JS:** all content, the download link, checksum, agent steps, sibling product links and native FAQ.
-**Entity:** Fabric Inbox, Fabric's mail tool from PassionCode.ai, a desktop mail client in development preview, open source under AGPL-3.0.
+**Entity:** Fabric Inbox, Fabric's mail tool from PassionCode.ai, a desktop mail client in development preview for macOS, Windows and Linux, open source under AGPL-3.0.
 
 Inbox falsifier: a reader could mistake the preview for a finished product or a working generic IMAP/Outlook offering. The development-preview status appears in the first viewport, and the unverified parts are repeated beside the download. Composition follows the existing product page; no new animation or visual direction is introduced.
 
@@ -88,7 +88,7 @@ Inbox falsifier: a reader could mistake the preview for a finished product or a 
 **Answers:** What does Fabric Dashboards do, which services appear, and how do I install it?
 **Indexable:** yes; canonical URL, sitemap and versioned SoftwareApplication data.
 **Without JS:** complete page, download/checksum, MCP command and native FAQ.
-**Entity:** Fabric Dashboards, desktop service dashboard from PassionCode.ai for macOS, and since 0.7.1 Windows and Linux, AGPL-3.0; the version is live from the release snapshot.
+**Entity:** Fabric Dashboards, desktop service dashboard from PassionCode.ai for macOS, and since 0.7.1 Windows and Linux, AGPL-3.0; the version is live from the release snapshot. Since SITE-030 (2026-10-11) the meta description, hero and services lines say «on your computer» / «on macOS, Windows and Linux» instead of «on your Mac».
 
 Simplification 2026-10-10: existing components only (section heading, principles list, path cards with a two-column modifier, tool cards, FAQ details, about section); no new motion. The launcher card leads to /start/#launcher. Falsifiers: a product lacks a next action; a preview appears finished; the founder note adds biography beyond facts.md; a door card or tool card clips at 390 px.
 

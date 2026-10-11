@@ -270,7 +270,7 @@ console.log('PASS: homepage vision and paths, /start/ guide, /business/ form ↔
 
 // ---- product pages: honest disclosures stay -------------------------------------------------
 const product = read('switchboard/index.html')
-for (const text of [release.version, release.releaseUrl, 'not yet Authenticode-signed', 'tracked openly in the repository', 'Before you open it', 'href="/observatory/"', ...LICENSE_WORDING]) assert.ok(product.includes(text), `switchboard missing ${text}`)
+for (const text of [release.version, release.releaseUrl, 'Authenticode-signed since 0.6.16', 'tracked openly in the repository', 'Before you open it', 'href="/observatory/"', ...LICENSE_WORDING]) assert.ok(product.includes(text), `switchboard missing ${text}`)
 assert.deepEqual(checkSwitchboardPage(product, release), [], 'switchboard/index.html: release-bound sections')
 assert.equal(release.tag, snapshot.products.switchboard.tag, 'switchboard/release.json follows releases/current.json — run npm run releases:sync')
 for (const os of ['macos', 'windows']) assert.ok(product.includes(`href="/switchboard/download/${os}"`))
@@ -289,13 +289,13 @@ for (const action of ['Create an agent', 'Adapt an agent', 'Open a project', 'Cr
 assert.ok(!/source is private/i.test(fabric), 'Fabric source is public since 2026-09-30')
 
 const inbox = read('inbox/index.html')
-for (const text of ['Development preview', 'General IMAP and Outlook', 'not yet been tried with a real model call', 'href="/fabric/"', 'href="/inbox/download/macos"', 'Settings → Agent access', '/mcp', 'href="https://github.com/passioncode-ai/fabric-inbox"', ...LICENSE_WORDING]) assert.ok(inbox.includes(text), `Inbox missing ${text}`)
+for (const text of ['Development preview', 'General IMAP and Outlook', 'not yet been tried with a real model call', 'href="/fabric/"', 'href="/inbox/download/macos"', 'Settings → Agent access', '/mcp', 'href="https://github.com/passioncode-ai/fabric-inbox"', 'Authenticode-signed since 0.14.1', 'a copy installed from the .deb does not', ...LICENSE_WORDING]) assert.ok(inbox.includes(text), `Inbox missing ${text}`)
 
 const dashboards = read('dashboards/index.html')
 for (const text of ['macOS 13', 'Apple silicon', 'Intel', 'list_services', 'Services are installed separately', 'Release 0.3.1 is the first under the AGPL', 'href="/dashboards/download/macos"', ...LICENSE_WORDING]) assert.ok(dashboards.includes(text), `Dashboards missing ${text}`)
 
 const observatory = read('observatory/index.html')
-for (const text of ['requirements-full.lock', 'observatory_overview', 'notarized by Apple', 'first under the AGPL', '0.8.2 to 0.9.1 under PolyForm', 'SHA256SUMS', 'claude mcp add observatory', 'https://github.com/passioncode-ai/project-observatory-dashboard', ...LICENSE_WORDING, 'English or Russian', 'cannot find unknown secrets', 'Synthetic demo']) assert.ok(observatory.includes(text), `observatory missing ${text}`)
+for (const text of ['requirements-full.lock', 'observatory_overview', 'notarized by Apple', 'first under the AGPL', '0.8.2 to 0.9.1 under PolyForm', 'SHA256SUMS', 'claude mcp add observatory', 'https://github.com/passioncode-ai/project-observatory-dashboard', ...LICENSE_WORDING, 'English or Russian', 'cannot find unknown secrets', 'Synthetic demo', 'it does not install the engine', 'Python 3.13 or newer']) assert.ok(observatory.includes(text), `observatory missing ${text}`)
 assert.match(observatory, /id="get-started"[^>]*><span id="start"/, 'legacy #start lands in the Observatory setup section')
 assert.ok(read('design-system/index.html').includes('/assets/dashboards-mark.svg'), 'design system shows the Fabric Dashboards mark')
 

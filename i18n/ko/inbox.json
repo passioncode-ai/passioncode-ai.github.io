@@ -1,8 +1,6 @@
 {
   "page": "inbox/index.html",
   "strings": {
-    "Fabric Inbox | Mail with what matters first · macOS preview | PassionCode.ai": "Fabric Inbox | 중요한 메일부터 보는 메일 · macOS 프리뷰 | PassionCode.ai",
-    "Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS.": "Fabric Inbox는 Fabric의 메일 도구이며 단독으로 사용할 수 있습니다. Gmail과 Cloudflare 메일함을 중요한 메일이 먼저 오는 하나의 목록으로 모으고, 내 주소에는 에이전트를 둘 수 있습니다. macOS용 개발 프리뷰입니다.",
     "PassionCode.ai passion fruit mark": "PassionCode.ai 패션프루트 마크",
     "Fabric Inbox": "Fabric Inbox",
     "Desktop mail client in development preview: Gmail and Cloudflare mailboxes in one triaged list, addresses answered by agents under a reply policy, a server created in your own Cloudflare account, and every function available to agents over MCP.": "개발 프리뷰 단계의 데스크톱 메일 클라이언트입니다. Gmail과 Cloudflare 메일함을 분류된 하나의 목록으로 보여 주고, 답장 정책에 따라 에이전트가 주소별로 응답하며, 서버는 내 Cloudflare 계정에 만들어집니다. 모든 기능을 MCP로 에이전트가 사용할 수 있습니다.",
@@ -14,7 +12,6 @@
     "Download for macOS": "macOS용 다운로드",
     "See what it does": "기능 살펴보기",
     "Development preview": "개발 프리뷰",
-    "· macOS 12 or later · open source under AGPL-3.0": "· macOS 12 이상 · 오픈 소스(AGPL-3.0)",
     "FABRIC INBOX / MAIL + AGENTS": "FABRIC INBOX / 메일 + 에이전트",
     "IMPORTANT": "중요",
     "ANSWERED": "답변 완료",
@@ -33,9 +30,7 @@
     "An agent has its own instructions, knowledge and tools and can serve several addresses. It sends an answer only when it rests on its knowledge, fits a topic you allowed and stays within its daily limit. Everything else waits as a draft with the reason.": "에이전트는 고유한 지침, 지식, 도구를 갖고 여러 주소를 맡을 수 있습니다. 답장은 자신의 지식에 근거하고, 허용된 주제에 맞고, 하루 한도 안일 때만 보냅니다. 나머지는 이유와 함께 초안으로 남습니다.",
     "GET FABRIC INBOX": "FABRIC INBOX 받기",
     "A development preview": "개발 프리뷰",
-    "for your Mac": "Mac용",
     "Latest preview:": "최신 프리뷰:",
-    ". The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.": ". Mac 앱은 내 Cloudflare 계정에 메일 서버를 만들고 엽니다. 메일은 내 계정에 그대로 남습니다.",
     "macOS": "macOS",
     "Universal · Apple silicon + Intel · macOS 12 or later": "유니버설 · Apple silicon + Intel · macOS 12 이상",
     "DMG installer · Developer ID signed and notarized by Apple": "DMG 설치 파일 · Developer ID 서명 및 Apple 공증 완료",
@@ -98,6 +93,16 @@
     "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox는 메일을 다룹니다. Switchboard는 Claude Code와 Codex 계정을 관리합니다. Project Observatory는 그 에이전트들이 작업하는 프로젝트를 한눈에 보여 줍니다. 초기 프리뷰 단계인 Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다.",
     ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "은 초기 프리뷰 단계이며, 내 프로젝트와 그 에이전트를 위한 집입니다. 둘은 같은 툴킷에 속하지만 역할이 다릅니다.",
     "Fabric Inbox, all inboxes: three addresses at example.test, important mail first with two agents among the senders, and a release-notes draft open with Reply and Forward. Synthetic demo data.": "Fabric Inbox 전체 받은편지함: example.test의 주소 3개, 중요한 메일이 먼저 오고 보낸 사람 중 에이전트가 2개 있으며, 릴리스 노트 초안이 답장 및 전달 버튼과 함께 열려 있습니다. 가상의 데모 데이터입니다.",
-    "All inboxes · sample addresses and mail, no real accounts": "전체 받은편지함 · 샘플 주소와 메일, 실제 계정 없음"
+    "All inboxes · sample addresses and mail, no real accounts": "전체 받은편지함 · 샘플 주소와 메일, 실제 계정 없음",
+    "Fabric Inbox | Mail with what matters first · desktop preview | PassionCode.ai": "Fabric Inbox | 중요한 메일부터 보는 메일 · 데스크톱 프리뷰 | PassionCode.ai",
+    "Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS, Windows and Linux.": "Fabric Inbox는 Fabric의 메일 도구이며 단독으로 사용할 수 있습니다. Gmail과 Cloudflare 메일함을 중요한 메일이 먼저 오는 하나의 목록으로 모으고, 내 주소에는 에이전트를 둘 수 있습니다. macOS, Windows, Linux용 개발 프리뷰입니다.",
+    "· macOS 12+ · Windows · Linux · open source under AGPL-3.0": "· macOS 12+ · Windows · Linux · 오픈 소스(AGPL-3.0)",
+    "for Mac, Windows and Linux": "Mac, Windows, Linux용",
+    ". The app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.": ". 앱은 내 Cloudflare 계정에 메일 서버를 만들고 엽니다. 메일은 내 계정에 그대로 남습니다.",
+    "Windows and Linux": "Windows와 Linux",
+    "Release": "릴리스",
+    "also ships a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed since 0.14.1, and a Linux AppImage and .deb for x64 and arm64.": "에는 관리자 권한이 필요 없는 x64와 arm64용 Windows 설치 파일(0.14.1부터 Authenticode 서명)과 x64와 arm64용 Linux AppImage와 .deb도 포함됩니다.",
+    "Windows and Linux downloads": "Windows와 Linux 다운로드",
+    "The Windows app and the AppImage update themselves; a copy installed from the .deb does not, so install the next .deb. On Linux the app keeps your sign-in in the Secret Service (GNOME Keyring or KWallet) and will not start without one.": "Windows 앱과 AppImage는 스스로 업데이트됩니다. .deb로 설치한 사본은 그렇지 않으므로 다음 .deb를 설치하세요. Linux에서는 앱이 로그인 정보를 Secret Service(GNOME Keyring 또는 KWallet)에 보관하며, 이것이 없으면 시작하지 않습니다."
   }
 }

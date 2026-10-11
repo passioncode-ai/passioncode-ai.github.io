@@ -104,7 +104,7 @@ Download for Windows
 
 ↓
 
-Built natively on Windows, not yet Authenticode-signed, so SmartScreen may show a warning. The installer includes the CLI.
+Built natively on Windows. The installer, the app and the CLI are Authenticode-signed since 0.6.16. The installer includes the CLI.
 
 ☰
 
@@ -116,7 +116,7 @@ Claude Code or Codex CLI, installed separately. Switchboard includes no provider
 
 macOS 14 or later, on Apple silicon or Intel.
 
-Windows x64 with WebView2. The Windows build is not yet Authenticode-signed.
+Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.
 
 The app keeps running in the menu bar after you close its window, and opens at login; quit it from its menu.
 

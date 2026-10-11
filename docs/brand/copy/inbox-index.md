@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from inbox/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Inbox | Mail with what matters first · macOS preview | PassionCode.ai
+Fabric Inbox | Mail with what matters first · desktop preview | PassionCode.ai
 
-Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS.
+Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS, Windows and Linux.
 
 Skip to content
 
@@ -64,7 +64,7 @@ See what it does
 
 ↓
 
-Development preview 0.14.1 · macOS 12 or later · open source under AGPL-3.0
+Development preview 0.15.0 · macOS 12+ · Windows · Linux · open source under AGPL-3.0
 
 FABRIC INBOX / MAIL + AGENTS
 
@@ -106,9 +106,9 @@ GET FABRIC INBOX
 
 ## A development preview
 
-## for your Mac
+## for Mac, Windows and Linux
 
-Latest preview: 0.14.1. The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
+Latest preview: 0.15.0. The app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
 
 ⌘
 
@@ -122,6 +122,18 @@ Download for macOS
 ↓
 
 Open the DMG and drag Fabric Inbox to Applications.
+
+⊞
+
+### Windows and Linux
+
+Release 0.15.0 also ships a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed since 0.14.1, and a Linux AppImage and .deb for x64 and arm64.
+
+Windows and Linux downloads
+
+↗
+
+The Windows app and the AppImage update themselves; a copy installed from the .deb does not, so install the next .deb. On Linux the app keeps your sign-in in the Secret Service (GNOME Keyring or KWallet) and will not start without one.
 
 ☰
 
@@ -139,7 +151,7 @@ The setup guide lists every setting.
 
 macOS DMG · SHA-256
 
-e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993
+6c90597998ce664c7a3757b48b6c8345b95bf087fbe3a84387cde31d0480f7d7
 
 Compare before opening: shasum -a 256 in Terminal. A different value means a different file; download it again.
 

@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from zh-hans/inbox/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Inbox | 重要邮件优先 · macOS 预览版 | PassionCode.ai
+Fabric Inbox | 重要邮件优先 · 桌面预览版 | PassionCode.ai
 
-Fabric Inbox 是 Fabric 的邮件工具，可独立使用：把 Gmail 和 Cloudflare 邮箱放进同一个列表，重要邮件优先，并让智能体负责你自己的地址。macOS 开发中的预览版。
+Fabric Inbox 是 Fabric 的邮件工具，可独立使用：把 Gmail 和 Cloudflare 邮箱放进同一个列表，重要邮件优先，并让智能体负责你自己的地址。macOS、Windows 和 Linux 开发中的预览版。
 
 跳到正文
 
@@ -64,7 +64,7 @@ FABRIC INBOX · 开发中的预览版
 
 ↓
 
-开发预览版 0.14.1 · macOS 12 或更高版本 · 以 AGPL-3.0 开源
+开发预览版 0.15.0 · macOS 12+ · Windows · Linux · 以 AGPL-3.0 开源
 
 FABRIC INBOX / 邮件 + 智能体
 
@@ -106,9 +106,9 @@ Inbox 以同样的方式分拣每个账号，并让你域名下的地址有智�
 
 ## 开发中的预览版
 
-## 适用于你的 Mac
+## 适用于 Mac、Windows 和 Linux
 
-最新预览版：0.14.1。Mac 应用会在你自己的 Cloudflare 账号中创建它的邮件服务器并将其打开；你的邮件只留在你自己的账号里。
+最新预览版：0.15.0。应用会在你自己的 Cloudflare 账号中创建邮件服务器并将其打开；你的邮件只留在你自己的账号里。
 
 ⌘
 
@@ -122,6 +122,18 @@ DMG 安装包 · 已使用 Developer ID 签名并通过 Apple 公证
 ↓
 
 打开 DMG，把 Fabric Inbox 拖到“应用程序”。
+
+⊞
+
+### Windows 和 Linux
+
+版本 0.15.0 同时提供 Windows 安装程序（x64 和 arm64，无需管理员权限，自 0.14.1 起已使用 Authenticode 签名），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。
+
+下载 Windows 和 Linux 版本
+
+↗
+
+Windows 应用和 AppImage 会自动更新；通过 .deb 安装的副本不会自动更新，请安装下一个 .deb。在 Linux 上，应用将你的登录信息保存在 Secret Service（GNOME Keyring 或 KWallet）中，没有它则无法启动。
 
 ☰
 
@@ -139,7 +151,7 @@ DMG 安装包 · 已使用 Developer ID 签名并通过 Apple 公证
 
 macOS DMG · SHA-256
 
-e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993
+6c90597998ce664c7a3757b48b6c8345b95bf087fbe3a84387cde31d0480f7d7
 
 打开前请比对：shasum -a 256（终端）。值不同说明文件不同，请重新下载。
 

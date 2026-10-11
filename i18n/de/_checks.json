@@ -33,10 +33,11 @@
       "Entwicklungsvorschau",
       "noch nicht mit einem echten Modellaufruf ausprobiert",
       "IMAP- und Outlook",
-      "href=\"/inbox/download/macos\""
+      "href=\"/inbox/download/macos\"",
+      "seit 0.14.1 mit Authenticode signiert"
     ],
     "switchboard/index.html": [
-      "noch nicht mit Authenticode signiert",
+      "seit 0.6.16 mit Authenticode signiert",
       "offen im Repository verfolgt",
       "href=\"/switchboard/download/windows\""
     ],

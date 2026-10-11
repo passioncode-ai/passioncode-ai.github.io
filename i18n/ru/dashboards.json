@@ -2,7 +2,6 @@
   "page": "dashboards/index.html",
   "strings": {
     "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Все локальные сервисы агентов вместе",
-    "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Одно окно на Mac для ваших локальных сервисов агентов. Смотрите, что требует внимания, открывайте дашборды, а агенты пусть пользуются теми же инструментами по MCP.",
     "One window for local agent services that speak fabric-service/0.1.": "Одно окно для локальных сервисов агентов, которые поддерживают fabric-service/0.1.",
     "Download": "Скачать",
     "Your agent services": "Ваши сервисы агентов",
@@ -22,7 +21,6 @@
     "01 / KEEP THE WORK IN VIEW": "01 / РАБОТА НА ВИДУ",
     "A window into": "Окно в",
     "the tools doing the work": "инструменты, которые делают работу",
-    "Fabric Dashboards discovers compatible services on your Mac. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards находит совместимые сервисы на вашем Mac. У каждого сервиса остаётся своя задача, а у вас появляется общее место, где можно следить за ними и управлять ими.",
     "See what needs you": "Смотрите, что ждёт вас",
     "Service state, latest activity and attention items appear together. A slow probe is not immediately treated as an outage.": "Состояние сервиса, последняя активность и то, что требует внимания, показаны вместе. Медленный ответ на проверку не сразу считается сбоем.",
     "Open the actual dashboard": "Открывайте настоящий дашборд",
@@ -79,7 +77,6 @@
     "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "Раздел обновлений окружения в настройках следит за Fabric Agent Contract и навыками (skills) PassionCode.ai и может обновлять навыки в фоне, проверив, кто их опубликовал. По умолчанию этот переключатель выключен.",
     "English or Russian": "Английский или русский",
     "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Настройки → Язык: как на этом Mac, English или Русский. Окно, меню и трей переключаются сразу.",
-    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Все сервисы агентов на вашем Mac — в одном приложении: сначала то, что требует вас, а рядом открывается собственный дашборд каждого сервиса",
     "IN THE TOOLKIT": "В НАБОРЕ",
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "Состояние, расходы и управление: что делает каждый сервис агентов, сколько тратит и какие у него обновления, видно в одном окне. Это шаг 4 в разделе",
     "how it works": "«Как это работает»",
@@ -89,6 +86,9 @@
     "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
     "Windows and Linux": "Windows и Linux",
     "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "также включает подписанный установщик для Windows на x64 и arm64, а для Linux — AppImage и .deb на x64 и arm64. Обновления пока приходят автоматически только на macOS: на Windows и Linux следующий релиз нужно установить самостоятельно.",
-    "Windows and Linux downloads": "Загрузки для Windows и Linux"
+    "Windows and Linux downloads": "Загрузки для Windows и Linux",
+    "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Одно окно для ваших локальных сервисов агентов на macOS, Windows и Linux. Смотрите, что требует внимания, открывайте дашборды, а агенты пусть пользуются теми же инструментами по MCP.",
+    "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Все сервисы агентов на вашем компьютере — в одном приложении: сначала то, что требует вас, а рядом открывается собственный дашборд каждого сервиса",
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards находит совместимые сервисы на вашем компьютере. У каждого сервиса остаётся своя задача, а у вас появляется общее место, где можно следить за ними и управлять ими."
   }
 }

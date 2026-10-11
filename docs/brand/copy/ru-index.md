@@ -250,7 +250,7 @@ Project Observatory
 
 0.22.0
 
-· macOS + Linux · шаг 5
+· macOS + Windows + Linux · шаг 5
 
 ↗
 
@@ -260,9 +260,9 @@ Fabric Inbox
 
 Предварительная версия в разработке
 
-0.14.1
+0.15.0
 
-· macOS · шаг 5
+· macOS + Windows + Linux · шаг 5
 
 ↗
 

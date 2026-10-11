@@ -32,10 +32,11 @@
       "Предварительная версия в разработке",
       "ещё не проверялись с вызовом реальной модели",
       "IMAP и Outlook",
-      "href=\"/inbox/download/macos\""
+      "href=\"/inbox/download/macos\"",
+      "с подписью Authenticode начиная с 0.14.1"
     ],
     "switchboard/index.html": [
-      "пока без подписи Authenticode",
+      "подписаны Authenticode начиная с 0.6.16",
       "открыто ведётся в репозитории",
       "href=\"/switchboard/download/windows\""
     ],

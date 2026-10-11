@@ -1,0 +1,146 @@
+{
+ "what": "WebKit (Playwright webkit, Playwright 1.63.0) against a local Worker (`wrangler dev --local-protocol https`) on branch agent/site-030, 2026-10-11",
+ "pages": [
+  {
+   "url": "/inbox/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/inbox/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/observatory/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/observatory/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/dashboards/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/dashboards/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/switchboard/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/switchboard/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/inbox/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/inbox/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/observatory/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/observatory/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/dashboards/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/dashboards/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/switchboard/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/switchboard/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0
+  }
+ ],
+ "result": "PASS"
+}

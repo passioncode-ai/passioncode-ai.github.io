@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Project Observatory | 에이전트가 작업하는 프로젝트를 위한 로컬 대시보드 | PassionCode.ai
 
-프로젝트 전반에서 무엇이 바뀌었는지, 무엇에 주의가 필요한지, 알려진 API 키의 사본이 어디에 남았는지 확인하세요. Project Observatory는 PassionCode.ai의 오픈 소스 로컬 대시보드이며 영어 또는 러시아어로 사용할 수 있습니다.
+프로젝트 전반에서 무엇이 바뀌었는지, 무엇에 주의가 필요한지, 알려진 API 키의 사본이 어디에 남았는지 확인하세요. Project Observatory는 macOS, Windows, Linux용 PassionCode.ai의 오픈 소스 로컬 대시보드이며 영어 또는 러시아어로 사용할 수 있습니다.
 
 본문으로 건너뛰기
 
@@ -64,7 +64,7 @@ PROJECT OBSERVATORY · PASSIONCODE 제작
 
 ↗
 
-오픈 소스 · macOS + Linux · Python 3.11+
+오픈 소스 · macOS + Windows + Linux · Python 3.11+, Windows는 3.13+
 
 한 화면 / 내 프로젝트
 
@@ -134,7 +134,7 @@ OBSERVATORY 받기
 
 ### 릴리스 설치
 
-다운로드: project_observatory-0.22.0-py3-none-any.whl 및 SHA256SUMS (출처: 릴리스 0.22.0), 확인 명령: shasum -a 256 -c SHA256SUMS --ignore-missing. 그다음 SQLite 확장을 지원하는 격리된 Python 3.11+ 환경에서 pip install --no-deps으로 wheel을 설치하고, 이어서 [full] extra를 다음 옵션과 함께 설치합니다: -c "$(project-observatory full-path)/requirements-full.lock", 즉 이 릴리스를 테스트한 의존성 세트입니다. macOS에서는 Homebrew Python을 사용하세요.
+다운로드: project_observatory-0.22.0-py3-none-any.whl 및 SHA256SUMS (출처: 릴리스 0.22.0), 확인 명령: shasum -a 256 -c SHA256SUMS --ignore-missing. 그다음 SQLite 확장을 지원하는 격리된 Python 3.11+ 환경에서 pip install --no-deps으로 wheel을 설치하고, 이어서 [full] extra를 다음 옵션과 함께 설치합니다: -c "$(project-observatory full-path)/requirements-full.lock", 즉 이 릴리스를 테스트한 의존성 세트입니다. macOS에서는 Homebrew Python을 사용하세요. Windows에서는 Python 3.13 이상과 설치 가이드의 PowerShell 단계를 사용하세요.
 
 02
 
@@ -166,7 +166,9 @@ MCP 서버는 stdio로 동작합니다: claude mcp add observatory --scope user 
 
 ↗
 
-Mac 앱: ProjectObservatory-0.22.0-macos.zip, Developer ID로 서명되고 Apple 공증을 받았으며 macOS 14+용입니다. 대시보드로 열리고 위에서 설치한 엔진을 사용합니다. 검증에는 위에서 받은 것과 같은 파일을 사용하세요: SHA256SUMS.
+Mac 앱: ProjectObservatory-0.22.0-macos.zip, Apple silicon과 Intel 모두를 위한 하나의 앱으로, Developer ID로 서명되고 Apple 공증을 받았으며 macOS 14+용입니다. 대시보드로 열리고 위에서 설치한 엔진을 사용합니다. 검증에는 위에서 받은 것과 같은 파일을 사용하세요: SHA256SUMS.
+
+Windows와 Linux 앱(0.22.0부터): 관리자 권한이 필요 없는 x64와 arm64용 Windows 설치 파일(Authenticode 서명)과 Linux x64와 arm64용 AppImage와 .deb는 릴리스 0.22.0에서 받을 수 있습니다. Mac 앱처럼 대시보드로 열리고 위에서 설치한 엔진이 필요하며, 엔진을 직접 설치하지는 않습니다. 스스로 업데이트되지만 .deb로 설치한 사본은 예외이므로 다음 .deb를 설치하세요.
 
 현재 릴리스 0.22.0는 AGPL 라이선스입니다. 최초의 AGPL 릴리스인 0.10.0 이후 모든 릴리스가 같으며, 0.9.1 및 이전 버전은 배포 당시의 라이선스를 유지합니다.
 

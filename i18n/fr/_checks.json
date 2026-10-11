@@ -33,10 +33,11 @@
       "Préversion de développement",
       "pas encore été testées avec un véritable appel de modèle",
       "IMAP générique et d",
-      "href=\"/inbox/download/macos\""
+      "href=\"/inbox/download/macos\"",
+      "signé avec Authenticode depuis la 0.14.1"
     ],
     "switchboard/index.html": [
-      "pas encore signé avec Authenticode",
+      "signés avec Authenticode depuis la 0.6.16",
       "suivie publiquement dans le dépôt",
       "href=\"/switchboard/download/windows\""
     ],

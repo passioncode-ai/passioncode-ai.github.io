@@ -33,10 +33,11 @@
       "开发中的预览版",
       "尚未用真实的模型调用试过",
       "IMAP 和 Outlook",
-      "href=\"/inbox/download/macos\""
+      "href=\"/inbox/download/macos\"",
+      "自 0.14.1 起已使用 Authenticode 签名"
     ],
     "switchboard/index.html": [
-      "尚未使用 Authenticode 签名",
+      "自 0.6.16 起，安装程序、应用和 CLI 均已使用 Authenticode 签名",
       "href=\"/switchboard/download/windows\""
     ],
     "dashboards/index.html": [

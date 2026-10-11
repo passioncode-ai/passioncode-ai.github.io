@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric Dashboards | Seus serviços de agentes locais, reunidos
 
-Uma janela do Mac para os seus serviços de agentes locais. Veja o que precisa de atenção, abra painéis e deixe seus agentes usarem as mesmas ferramentas via MCP.
+Uma janela para os seus serviços de agentes locais no macOS, Windows e Linux. Veja o que precisa de atenção, abra painéis e deixe seus agentes usarem as mesmas ferramentas via MCP.
 
 Ir para o conteúdo
 
@@ -52,7 +52,7 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 
 # Um só lugar para olhar
 
-Veja todos os serviços de agentes do seu Mac num só app: o que precisa de você vem primeiro, e o painel de cada serviço abre ao lado
+Veja todos os serviços de agentes do seu computador num só app: o que precisa de você vem primeiro, e o painel de cada serviço abre ao lado
 
 NO CONJUNTO DE FERRAMENTAS Estado, gastos e controle: cada serviço de agente, o que ele está fazendo, o que gasta e as atualizações dele numa só janela. É o passo 4 de “Como funciona”. Todas as ferramentas
 
@@ -82,7 +82,7 @@ O painel próprio de um serviço, aberto no app
 
 ## as ferramentas que fazem o trabalho
 
-O Fabric Dashboards descobre os serviços compatíveis no seu Mac. Cada serviço mantém a própria função; você ganha um lugar comum para inspecioná-los e controlá-los.
+O Fabric Dashboards descobre os serviços compatíveis no seu computador. Cada serviço mantém a própria função; você ganha um lugar comum para inspecioná-los e controlá-los.
 
 ### Veja o que precisa de você
 

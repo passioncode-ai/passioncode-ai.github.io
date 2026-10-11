@@ -2,7 +2,6 @@
   "page": "dashboards/index.html",
   "strings": {
     "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Los servicios de agentes de tu Mac, juntos",
-    "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Una sola ventana del Mac para tus servicios de agentes locales. Ve qué necesita atención, abre paneles y deja que tus agentes usen las mismas herramientas mediante MCP.",
     "One window for local agent services that speak fabric-service/0.1.": "Una ventana para los servicios de agentes locales que hablan fabric-service/0.1.",
     "Download": "Descargar",
     "Your agent services": "Tus servicios de agentes",
@@ -22,7 +21,6 @@
     "01 / KEEP THE WORK IN VIEW": "01 / TEN EL TRABAJO A LA VISTA",
     "A window into": "Una ventana a",
     "the tools doing the work": "las herramientas que hacen el trabajo",
-    "Fabric Dashboards discovers compatible services on your Mac. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards descubre los servicios compatibles en tu Mac. Cada servicio conserva su propia función; tú obtienes un lugar común para inspeccionarlos y controlarlos.",
     "See what needs you": "Ve qué te necesita",
     "Service state, latest activity and attention items appear together. A slow probe is not immediately treated as an outage.": "El estado del servicio, la actividad más reciente y los puntos que requieren atención aparecen juntos. Una comprobación lenta no se trata de inmediato como una caída.",
     "Open the actual dashboard": "Abre el panel real",
@@ -79,7 +77,6 @@
     "you already use": "que ya usas",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "Inspecciona proyectos con Observatory. Configura cuentas con Switchboard. Añade solo las herramientas que tu trabajo necesite.",
     "Explore the tools ↗": "Conocer las herramientas ↗",
-    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Ve todos los servicios de agentes de tu Mac en una sola app: primero lo que te necesita, y el panel propio de cada servicio se abre al lado",
     "IN THE TOOLKIT": "EN EL CONJUNTO DE HERRAMIENTAS",
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "Estado, gasto y control: cada servicio de agente, lo que está haciendo, lo que gasta y sus actualizaciones en una sola ventana. Es el paso 4 de",
     "how it works": "«Cómo funciona»",
@@ -89,6 +86,9 @@
     "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
     "Windows and Linux": "Windows y Linux",
     "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "también incluye un instalador firmado para Windows en x64 y arm64, y un AppImage y un .deb para Linux en x64 y arm64. Por ahora las actualizaciones automáticas solo funcionan en macOS: en Windows y Linux, instala tú la siguiente versión.",
-    "Windows and Linux downloads": "Descargas para Windows y Linux"
+    "Windows and Linux downloads": "Descargas para Windows y Linux",
+    "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Una sola ventana para tus servicios de agentes locales en macOS, Windows y Linux. Ve qué necesita atención, abre paneles y deja que tus agentes usen las mismas herramientas mediante MCP.",
+    "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Ve todos los servicios de agentes de tu equipo en una sola app: primero lo que te necesita, y el panel propio de cada servicio se abre al lado",
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards descubre los servicios compatibles en tu equipo. Cada servicio conserva su propia función; tú obtienes un lugar común para inspeccionarlos y controlarlos."
   }
 }

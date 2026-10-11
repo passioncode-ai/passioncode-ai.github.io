@@ -250,7 +250,7 @@ Release
 
 0.22.0
 
-· macOS + Linux · step 5
+· macOS + Windows + Linux · step 5
 
 ↗
 
@@ -260,9 +260,9 @@ Gmail and Cloudflare mail in one list, important first; agents answer by policy.
 
 Development preview
 
-0.14.1
+0.15.0
 
-· macOS · step 5
+· macOS + Windows + Linux · step 5
 
 ↗
 

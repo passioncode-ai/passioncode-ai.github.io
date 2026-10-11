@@ -104,7 +104,7 @@ ZIP 压缩包 · 需要 WebView2
 
 ↓
 
-在 Windows 上原生构建，尚未使用 Authenticode 签名，因此 SmartScreen 可能显示警告。安装程序包含 CLI。
+在 Windows 上原生构建。自 0.6.16 起，安装程序、应用和 CLI 均已使用 Authenticode 签名。安装程序包含 CLI。
 
 ☰
 
@@ -116,7 +116,7 @@ Switchboard 管理账号并启动官方 CLI，不会取代它们。
 
 macOS 14 或更高版本，Apple 芯片或 Intel 均可。
 
-带 WebView2 的 Windows x64。Windows 版本尚未使用 Authenticode 签名。
+Windows x64，含 WebView2。自 0.6.16 起，Windows 构建已使用 Authenticode 签名。
 
 关闭窗口后，应用会继续在菜单栏中运行，并在登录时自动打开；请从其菜单中退出。
 

@@ -31,10 +31,11 @@
       "vista previa de desarrollo",
       "todavía no se han probado con una llamada real a un modelo",
       "IMAP y de Outlook",
-      "href=\"/inbox/download/macos\""
+      "href=\"/inbox/download/macos\"",
+      "firmado con Authenticode desde la 0.14.1"
     ],
     "switchboard/index.html": [
-      "aún sin firma Authenticode",
+      "firmados con Authenticode desde la 0.6.16",
       "se sigue abiertamente en el repositorio",
       "href=\"/switchboard/download/windows\""
     ],

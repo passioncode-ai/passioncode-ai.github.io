@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric Dashboards | Deine lokalen Agentendienste an einem Ort
 
-Ein Mac-Fenster für deine lokalen Agentendienste. Sieh, was Aufmerksamkeit braucht, öffne Dashboards und lass deine Agenten dieselben Tools über MCP nutzen.
+Ein Fenster für deine lokalen Agentendienste unter macOS, Windows und Linux. Sieh, was Aufmerksamkeit braucht, öffne Dashboards und lass deine Agenten dieselben Tools über MCP nutzen.
 
 Zum Inhalt springen
 
@@ -52,7 +52,7 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 
 # Alles an einem Ort
 
-Sieh jeden Agentendienst auf deinem Mac in einer App: Was dich braucht, steht oben, und das eigene Dashboard jedes Dienstes öffnet sich direkt daneben
+Sieh jeden Agentendienst auf deinem Computer in einer App: Was dich braucht, steht oben, und das eigene Dashboard jedes Dienstes öffnet sich direkt daneben
 
 IM TOOLKIT Zustand, Ausgaben und Steuerung: jeder Agentendienst, was er gerade tut, was er ausgibt und seine Updates in einem Fenster. Schritt 4 in „So funktioniert es“. Alle Tools
 
@@ -82,7 +82,7 @@ Das eigene Dashboard eines Dienstes, in der App geöffnet
 
 ## die Tools, die die Arbeit erledigen
 
-Fabric Dashboards findet kompatible Dienste auf deinem Mac. Jeder Dienst behält seine eigene Aufgabe; du bekommst einen gemeinsamen Ort, um sie zu prüfen und zu steuern.
+Fabric Dashboards findet kompatible Dienste auf deinem Computer. Jeder Dienst behält seine eigene Aufgabe; du bekommst einen gemeinsamen Ort, um sie zu prüfen und zu steuern.
 
 ### Sieh, was dich braucht
 

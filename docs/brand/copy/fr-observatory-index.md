@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Project Observatory | Tableau de bord local pour les projets menés par des agents | PassionCode.ai
 
-Voyez ce qui a changé dans vos projets, ce qui demande votre attention et où des clés API connues ont laissé une copie. Project Observatory est un tableau de bord local open source de PassionCode.ai, en anglais ou en russe.
+Voyez ce qui a changé dans vos projets, ce qui demande votre attention et où des clés API connues ont laissé une copie. Project Observatory est un tableau de bord local open source de PassionCode.ai pour macOS, Windows et Linux, en anglais ou en russe.
 
 Aller au contenu
 
@@ -64,7 +64,7 @@ Code source
 
 ↗
 
-Open source · macOS + Linux · Python 3.11+
+Open source · macOS + Windows + Linux · Python 3.11+, 3.13+ sous Windows
 
 UNE VUE / VOS PROJETS
 
@@ -134,7 +134,7 @@ Dernière version : 0.22.0. Aucune clé API n’est nécessaire pour la premièr
 
 ### Installez la version
 
-Télécharger project_observatory-0.22.0-py3-none-any.whl et SHA256SUMS depuis la version 0.22.0, les vérifier avec shasum -a 256 -c SHA256SUMS --ignore-missing, puis, dans un environnement Python 3.11+ isolé qui prend en charge les extensions SQLite, exécuter pip install --no-deps sur le wheel, puis sur son extra [full] avec -c "$(project-observatory full-path)/requirements-full.lock", l’ensemble de dépendances avec lequel la version a été testée. Sur macOS, utilisez le Python de Homebrew.
+Télécharger project_observatory-0.22.0-py3-none-any.whl et SHA256SUMS depuis la version 0.22.0, les vérifier avec shasum -a 256 -c SHA256SUMS --ignore-missing, puis, dans un environnement Python 3.11+ isolé qui prend en charge les extensions SQLite, exécuter pip install --no-deps sur le wheel, puis sur son extra [full] avec -c "$(project-observatory full-path)/requirements-full.lock", l’ensemble de dépendances avec lequel la version a été testée. Sur macOS, utilisez le Python de Homebrew. Sous Windows, utilisez Python 3.13 ou ultérieur et les étapes PowerShell du guide d’installation.
 
 02
 
@@ -166,7 +166,9 @@ Toutes les versions
 
 ↗
 
-Application Mac : ProjectObservatory-0.22.0-macos.zip, signée avec un Developer ID et notarisée par Apple, pour macOS 14+. Elle s’ouvre sur le tableau de bord et utilise le moteur installé ci-dessus ; vérifiez-la avec le même SHA256SUMS.
+Application Mac : ProjectObservatory-0.22.0-macos.zip, une seule application pour Apple silicon et Intel, signée avec un Developer ID et notarisée par Apple, pour macOS 14+. Elle s’ouvre sur le tableau de bord et utilise le moteur installé ci-dessus ; vérifiez-la avec le même SHA256SUMS.
+
+Application Windows et Linux, depuis la 0.22.0 : un installateur Windows pour x64 et arm64 qui ne demande pas de droits d’administrateur, signé avec Authenticode, et un AppImage et un .deb pour Linux x64 et arm64, dans la version 0.22.0. Comme l’application Mac, elle s’ouvre sur le tableau de bord et a besoin du moteur installé ci-dessus ; elle n’installe pas le moteur. Elle se met à jour d’elle-même, sauf une copie installée depuis le .deb : installez le .deb suivant.
 
 La version actuelle, 0.22.0, est sous AGPL, comme toutes les versions depuis la 0.10.0, la première sous AGPL ; la 0.9.1 et les précédentes conservent la licence avec laquelle elles sont sorties.
 

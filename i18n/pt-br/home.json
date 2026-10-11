@@ -119,14 +119,13 @@
     "The home for your projects and their agents: each project’s purpose, board, decisions and releases.": "A casa dos seus projetos e dos agentes deles: o propósito, o quadro, as decisões e os releases de cada projeto.",
     "· macOS · steps 2 and 5": "· macOS · passos 2 e 5",
     "· macOS + Windows · step 4": "· macOS + Windows · passo 4",
-    "· macOS + Linux · step 5": "· macOS + Linux · passo 5",
-    "· macOS · step 5": "· macOS · passo 5",
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · passos 1 e 3",
     "05 / OPEN SOURCE": "05 / CÓDIGO ABERTO",
     "06 / QUESTIONS": "06 / PERGUNTAS",
     "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "Levamos agentes para as máquinas da sua organização, conectamos todos e mostramos quanto cada um custou e o que entregou, com os seus dados nas suas máquinas ou na sua própria nuvem.",
     "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "A primeira execução do Fabric, etapa 3 de 3: criar um agente ou adaptar um feito em outro lugar, abrir um projeto ou criar um. Dados de demonstração sintéticos.",
     "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "O console do agente de programação que o Fabric abre depois de “Criar”: ele faz a segunda de seis perguntas iniciais para o release-notes-agent. Um exemplo escrito, não uma gravação.",
-    "· macOS + Windows + Linux · step 4": "· macOS + Windows + Linux · passo 4"
+    "· macOS + Windows + Linux · step 4": "· macOS + Windows + Linux · passo 4",
+    "· macOS + Windows + Linux · step 5": "· macOS + Windows + Linux · passo 5"
   }
 }
