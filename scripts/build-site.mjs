@@ -50,6 +50,10 @@ const publicFiles = [
   'assets/journey-3-3-ru.jpg',
   'assets/journey-3-4.jpg',
   'assets/journey-3-4-ru.jpg',
+  // The home video (SITE-028 W10): the English and Russian cuts, their posters, and captions in
+  // every language (docs/evidence/2026-10-11-video/README.md).
+  ...['', '-ru'].flatMap(suffix => [`assets/video/home${suffix}.mp4`, `assets/video/home${suffix}.webm`, `assets/video/home${suffix}.jpg`]),
+  ...LOCALES.map(locale => `assets/video/home${locale === 'en' ? '' : `-${locale}`}.vtt`),
   'robots.txt',
   'sitemap.xml',
   'assets/passioncode-mark.svg',
