@@ -1,3 +1,40 @@
+# Current handoff — SITE-028 released: journey, new terms, ten languages, 2026-10-11
+
+Objective (operator, 2026-10-10): show how the system works and bring the approved narrative and terms into every
+language: en and ru native, seven languages from English, zh-Hans by Chinese models only (D4). PR #87 merged as
+`7ae4e16` and deployed 2026-10-11: Worker version `fb458c49-cbe4-489c-b167-296afbd1fba8`; `scripts/verify-live.py`
+PASS (184 assets, 150 pages in ten languages, hreflang on 130, 7 download routes, 23 not-found addresses),
+receipt [docs/evidence/2026-10-11-narrative-l10n/live.json](evidence/2026-10-11-narrative-l10n/live.json).
+
+Done: W1 narrative and W2 voice (PR #84); W6 home *How it works* and W7 en/ru copy (above); W8 de, fr, es, pt-br, pl,
+ko, ja translated from English by agents, each page run through the copy agent's rule check with the saved voice
+(scores are reported only for en and ru; the other locales get the language-independent rules and the voice's bans,
+plus a native-editor self-review); W9 zh-Hans translated by `qwen/qwen3.8-max-0902`, reviewed by
+`deepseek/deepseek-v4-pro-0813`, then a Qwen term-consistency pass (家, 工作原理, 证据, 技能, 现已可用, 部分现已可用,
+预览版, 发展方向), 142 strings, about $1.09 through OpenRouter; the disclosure 还不会回复 kept. Release sync on the same
+branch: Switchboard 0.6.16 (Windows Authenticode-signed), Fabric Inbox 0.14.0 (Windows and Linux), adapter 0.8.3,
+launcher 0.1.32; facts rows updated with receipts.
+
+Checks run on `7ae4e16`: `npm run check` (exit 0), `npm test` 98/98, `npm run build`; WebKit (Safari engine) visual
+pass of the nine pages at 390 and 1280 px in every language (agents for de, fr, es, pt-br, pl, ko, ja; zh-hans in
+this run): no horizontal overflow, no broken images. Private-terms count scan of every pushed diff: 0.
+
+Open, in order:
+1. CJK headings: Japanese (and possibly Chinese) headings break mid-word at 390 px (home hero 「非依｜存」,
+   /observatory/ 「渡｜す」). Fix in the generator and CSS: BudouX phrases → `<wbr>` for ja and zh-hans headings plus
+   `word-break: keep-all` under `:lang(ja)` / `:lang(zh-Hans)`; never in titles, meta or attributes. A first agent run
+   stopped at a session limit before any commit.
+2. Native-speaker review (SITE-026): de "evidence" (Belege vs Nachweise), fr "foyer" vs "maison", pt-br "casa" vs
+   "lar" and two words for hand-offs, es "TOOLKIT DE PASSIONCODE" vs "conjunto de herramientas", pl "agenci" vs
+   "agenty", ja spacing between Japanese and Latin names, zh "家" for home.
+3. W5 screenshots for steps 02 and 03 (Fabric first screen, Create/Adapt, a coding agent's console) and Inbox: need
+   the throwaway macOS demo user with Docker Desktop and Claude Code (an administrator password is a human gate).
+4. W10 home video (about 75 s, AI narrator en+ru, subtitles in ten languages) after W5; the video slot stays hidden.
+
+Next task: item 1.
+
+---
+
 # Current handoff — the product journey and the new terms, en and ru (SITE-028 W6, W7), 2026-10-10
 
 Objective (operator, 2026-10-10): show how the system works, from entry to working agents, and rewrite the copy along
