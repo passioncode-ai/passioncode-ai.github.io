@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode for Enterprise | AI agent workplace for organizations | PassionCode.ai
 
-PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, activity and usage analytics, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for 1 to 1000 people.
+PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for 1 to 1000 people.
 
 Skip to content
 
@@ -50,7 +50,7 @@ Enterprise · for organizations
 
 # Make your organization AI-native
 
-An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud
+An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, on open-source tools, with your data on your machines or in your own cloud
 
 Estimate and request
 
@@ -94,7 +94,47 @@ Custom builds, signed by usYour own build of the tools, signed by PassionCode.ai
 
 Your data stays on your machines or in your own cloud. Read the vision
 
-02 / WHAT IT SAVES
+02 / FOR FINANCE AND ENGINEERING
+
+## One view of what agents cost
+
+## and what they delivered
+
+Engineering wants more agents; finance wants every dollar spent on them explained. Both are asking one question: what did each agent cost, and what did it deliver? When the answer is a record both of them open, adding an agent becomes a decision with numbers behind it.
+
+01
+
+AVAILABLE NOW
+
+### Does the work run through agents, or beside them?
+
+The estimate starts from how each process runs today: by hand, with scripts, with a chat assistant now and then, or with agents already doing parts of it. The pilot then measures one process against your own baseline.
+
+The estimate
+
+02
+
+AVAILABLE NOW
+
+### Which agents are worth what they cost?
+
+On each Mac, Fabric Dashboards shows what every agent spent today, in 7 and in 30 days, by model and against its own budget, from the agent’s own usage report; a cost nobody knows reads “unknown”, never $0. Switchboard shows how much of each Claude Code or Codex account’s usage limit is used and when it resets, so subscriptions are read apart from calls paid per use. Observatory shows what changed in each project, with the evidence.
+
+Fabric Dashboards
+
+03
+
+DIRECTION
+
+### Which setups work best, and how do they reach the rest?
+
+Spend and results joined per project and workflow. Limits finance sets once and agents check before they spend, with a request above a limit filed as a record while the work goes on. A setup that works, rolled out as a workplace per role.
+
+Estimate and request
+
+About agents and workflows, never a ranking of people.
+
+03 / THE ESTIMATE
 
 ## The estimate is arithmetic
 
@@ -130,7 +170,7 @@ Example: 40 hours a week of mostly manual work at $50 an hour is 173 hours a mon
 
 An estimate, not a promise. The pilot measures the real number against your own baseline before anything is rolled out.
 
-03 / REQUEST
+04 / REQUEST
 
 ## Tell us about your team
 
@@ -404,7 +444,7 @@ Send request →
 
 Prefer email? Write to commercial@passioncode.ai.
 
-04 / QUESTIONS
+05 / QUESTIONS
 
 ## Before you ask
 
@@ -415,6 +455,10 @@ The tools are free and open source. You pay for the work we do for you — mappi
 When do we need a commercial license?
 
 The tools are under the GNU AGPL-3.0. Internal use, and changes you publish under the same license, need nothing. A closed product that includes them, or a modified hosted service whose source you do not publish, needs a commercial license.
+
+Is this a way to watch people?
+
+No. The analytics are about agents and workflows: what each agent cost and what it delivered. They never rank people.
 
 PassionCode
 

@@ -194,7 +194,7 @@ ORGANIZATIONS · ENTERPRISE
 
 ### An AI-native organization
 
-We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.
+We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.
 
 Estimate and request
 

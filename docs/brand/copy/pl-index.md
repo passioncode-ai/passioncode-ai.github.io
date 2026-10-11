@@ -194,7 +194,7 @@ ORGANIZACJE · ENTERPRISE
 
 ### Organizacja AI-native
 
-Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, co robią, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze.
+Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze.
 
 Szacunek i zapytanie
 

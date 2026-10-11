@@ -194,7 +194,7 @@ ORGANIZACIONES · ENTERPRISE
 
 ### Una organización AI-native
 
-Llevamos agentes a los equipos de tu organización, los conectamos y mostramos lo que hacen, con tus datos en tus equipos o en tu propia nube.
+Llevamos agentes a los equipos de tu organización, los conectamos y mostramos lo que costó cada uno y lo que aportó, con tus datos en tus equipos o en tu propia nube.
 
 Estimación y solicitud
 

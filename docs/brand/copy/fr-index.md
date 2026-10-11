@@ -194,7 +194,7 @@ ORGANISATIONS · ENTERPRISE
 
 ### Une organisation AI-native
 
-Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce qu’ils font, avec vos données sur vos machines ou dans votre propre cloud.
+Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce que chacun a coûté et ce qu’il a apporté, avec vos données sur vos machines ou dans votre propre cloud.
 
 Estimation et demande
 

@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode for Enterprise | Miejsce pracy dla agentów AI dla organizacji | PassionCode.ai
 
-PassionCode for Enterprise robi z organizacji organizację AI-native: komputery podłączone, agenci wdrożeni i przekazujący sobie pracę między komputerami, klucze modeli zostają na każdym komputerze, analityka aktywności i użycia, administracja i własne podpisane kompilacje. Dane zostają na Twoich komputerach albo w Twojej chmurze. Dla zespołów od 1 do 1000 osób.
+PassionCode for Enterprise robi z organizacji organizację AI-native: komputery podłączone, agenci wdrożeni i przekazujący sobie pracę między komputerami, klucze modeli zostają na każdym komputerze, ile kosztował każdy agent i co dostarczył, administracja i własne podpisane kompilacje. Dane zostają na Twoich komputerach albo w Twojej chmurze. Dla zespołów od 1 do 1000 osób.
 
 Przejdź do treści
 
@@ -50,7 +50,7 @@ Enterprise · dla organizacji
 
 # Uczyń swoją organizację AI-native
 
-Agent, który żyje na laptopie jednej osoby, pomaga jednej osobie. Wprowadzamy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, co robią, na narzędziach o otwartym kodzie, z Twoimi danymi na Twoich komputerach albo w Twojej własnej chmurze
+Agent, który żyje na laptopie jednej osoby, pomaga jednej osobie. Wprowadzamy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył, na narzędziach o otwartym kodzie, z Twoimi danymi na Twoich komputerach albo w Twojej własnej chmurze
 
 Szacunek i zapytanie
 
@@ -94,7 +94,47 @@ Własne kompilacje, podpisane przez nasTwoja własna kompilacja narzędzi, podpi
 
 Twoje dane zostają na Twoich komputerach albo w Twojej chmurze. Przeczytaj wizję
 
-02 / ILE TO OSZCZĘDZA
+02 / DLA FINANSÓW I INŻYNIERII
+
+## Jeden widok tego, ile kosztują agenci
+
+## i co dostarczyli
+
+Inżynieria chce więcej agentów, finanse chcą wiedzieć, na co poszedł każdy wydany na nich dolar. Obie strony zadają to samo pytanie: ile kosztował każdy agent i co dostarczył? Kiedy odpowiedzią jest zapis, który otwierają obie, dodanie agenta staje się decyzją popartą liczbami.
+
+01
+
+DOSTĘPNE TERAZ
+
+### Czy praca idzie przez agentów, czy obok nich?
+
+Szacunek zaczyna się od tego, jak każdy proces działa dziś: ręcznie, na skryptach, z asystentem czatowym od czasu do czasu albo z agentami, którzy już prowadzą jego część. Potem pilotaż mierzy jeden proces względem Twojego własnego punktu odniesienia.
+
+Szacunek
+
+02
+
+DOSTĘPNE TERAZ
+
+### Którzy agenci są warci tego, co kosztują?
+
+Na każdym Macu Fabric Dashboards pokazuje, ile każdy agent wydał dziś, w 7 i w 30 dni, według modelu i względem własnego budżetu, na podstawie raportu użycia samego agenta; koszt, którego nikt nie zna, widać jako „nieznany”, nigdy jako 0 USD. Switchboard pokazuje, jaka część limitu użycia każdego konta Claude Code lub Codex jest zużyta i kiedy się odnowi, więc subskrypcje widać osobno od wywołań płaconych za użycie. Observatory pokazuje, co zmieniło się w każdym projekcie, z dowodami.
+
+Fabric Dashboards
+
+03
+
+KIERUNEK
+
+### Co działa najlepiej i jak przenieść to na resztę?
+
+Wydatki i wyniki zestawione według projektu i procesu. Limity, które finanse ustalają raz, a agenci sprawdzają przed wydaniem pieniędzy; prośba powyżej limitu zostaje zapisana, a praca toczy się dalej. Sposób pracy, który działa, wdrożony jako miejsce pracy dla każdej roli.
+
+Szacunek i zapytanie
+
+Chodzi o agentów i procesy, nigdy o ranking ludzi.
+
+03 / SZACUNEK
 
 ## Szacunek to arytmetyka,
 
@@ -130,7 +170,7 @@ Przykład: 40 godzin tygodniowo głównie ręcznej pracy po 50 USD za godzinę t
 
 To szacunek, a nie obietnica. Pilotaż mierzy rzeczywistą liczbę względem Twojego własnego punktu odniesienia, zanim cokolwiek zostanie wdrożone.
 
-03 / ZGŁOSZENIE
+04 / ZGŁOSZENIE
 
 ## Opowiedz nam o swoim zespole
 
@@ -404,7 +444,7 @@ Wyślij zapytanie →
 
 Wolisz e-mail? Napisz na commercial@passioncode.ai.
 
-04 / PYTANIA
+05 / PYTANIA
 
 ## Zanim zapytasz
 
@@ -415,6 +455,10 @@ Narzędzia są darmowe i mają otwarty kod. Płacisz za naszą pracę dla Ciebie
 Kiedy potrzebujemy licencji komercyjnej?
 
 Narzędzia są na licencji GNU AGPL-3.0. Użycie wewnętrzne oraz zmiany publikowane na tej samej licencji niczego nie wymagają. Zamknięty produkt, który je zawiera, albo zmodyfikowana usługa hostowana, której kodu nie publikujecie, wymaga licencji komercyjnej.
+
+Czy to sposób na pilnowanie ludzi?
+
+Nie. Analityka dotyczy agentów i procesów: ile kosztował każdy agent i co dostarczył. Nigdy nie układa rankingu ludzi.
 
 PassionCode
 

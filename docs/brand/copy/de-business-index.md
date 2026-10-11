@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode for Enterprise | Arbeitsplatz für KI-Agenten für Organisationen | PassionCode.ai
 
-PassionCode for Enterprise macht eine Organisation AI-native: Rechner angebunden, Agenten ausgerollt und zwischen ihnen vermittelt, Modellschlüssel auf jedem Rechner behalten, Aktivitäts- und Nutzungsanalytics, Administration und eigene signierte Builds. Deine Daten bleiben auf deinen Rechnern oder in deiner eigenen Cloud. Ausgelegt für 1 bis 1000 Personen.
+PassionCode for Enterprise macht eine Organisation AI-native: Rechner angebunden, Agenten ausgerollt und zwischen ihnen vermittelt, Modellschlüssel auf jedem Rechner behalten, was jeder Agent gekostet und was er geliefert hat, Administration und eigene signierte Builds. Deine Daten bleiben auf deinen Rechnern oder in deiner eigenen Cloud. Ausgelegt für 1 bis 1000 Personen.
 
 Zum Inhalt springen
 
@@ -50,7 +50,7 @@ Enterprise · für Organisationen
 
 # Mach deine Organisation AI-native
 
-Ein Agent, der auf dem Laptop einer einzelnen Person lebt, hilft genau einer Person. Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was sie tun – auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud
+Ein Agent, der auf dem Laptop einer einzelnen Person lebt, hilft genau einer Person. Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was jeder gekostet und was er geliefert hat – auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud
 
 Schätzung und Anfrage
 
@@ -94,7 +94,47 @@ Eigene Builds, von uns signiertDein eigener Build der Tools, signiert von Passio
 
 Deine Daten bleiben auf deinen Rechnern oder in deiner eigenen Cloud. Lies die Vision
 
-02 / WAS ES SPART
+02 / FÜR FINANZEN UND ENGINEERING
+
+## Ein Blick darauf, was Agenten kosten
+
+## und was sie geliefert haben
+
+Das Engineering will mehr Agenten, die Finanzabteilung will jeden Dollar erklärt haben, der dafür ausgegeben wird. Beide stellen dieselbe Frage: Was hat jeder Agent gekostet, und was hat er geliefert? Wenn die Antwort ein Datensatz ist, den beide öffnen, wird ein weiterer Agent zu einer Entscheidung mit Zahlen dahinter.
+
+01
+
+JETZT VERFÜGBAR
+
+### Läuft die Arbeit über Agenten oder neben ihnen her?
+
+Die Schätzung beginnt damit, wie jeder Prozess heute läuft: von Hand, mit Skripten, ab und zu mit einem Chat-Assistenten oder schon teilweise mit Agenten. Danach misst der Pilot einen Prozess an deiner eigenen Ausgangslage.
+
+Die Schätzung
+
+02
+
+JETZT VERFÜGBAR
+
+### Welche Agenten sind ihr Geld wert?
+
+Auf jedem Mac zeigt Fabric Dashboards, was jeder Agent heute, in 7 und in 30 Tagen ausgegeben hat, nach Modell und gemessen an seinem eigenen Budget, aus dem Nutzungsbericht des Agenten selbst; Kosten, die niemand kennt, stehen als „unbekannt“ da, nie als 0 $. Switchboard zeigt, wie viel vom Nutzungslimit jedes Kontos von Claude Code oder Codex verbraucht ist und wann es zurückgesetzt wird, sodass Abos getrennt von nutzungsbasiert bezahlten Aufrufen zu lesen sind. Observatory zeigt, was sich in jedem Projekt geändert hat, mit Nachweisen.
+
+Fabric Dashboards
+
+03
+
+ENTWICKLUNGSRICHTUNG
+
+### Was funktioniert am besten, und wie erreicht es den Rest?
+
+Ausgaben und Ergebnisse, zusammengeführt pro Projekt und Workflow. Limits, die die Finanzabteilung einmal festlegt und die Agenten prüfen, bevor sie Geld ausgeben; eine Anfrage über einem Limit wird als Datensatz abgelegt, während die Arbeit weiterläuft. Ein Setup, das funktioniert, ausgerollt als Arbeitsplatz pro Rolle.
+
+Schätzung und Anfrage
+
+Es geht um Agenten und Workflows, nie um ein Ranking von Menschen.
+
+03 / DIE SCHÄTZUNG
 
 ## Die Schätzung ist Rechnen,
 
@@ -130,7 +170,7 @@ Beispiel: 40 Stunden pro Woche überwiegend manuelle Arbeit bei 50 $ pro Stunde 
 
 Eine Schätzung, kein Versprechen. Der Pilot misst die tatsächliche Zahl an deiner eigenen Ausgangslage, bevor irgendetwas ausgerollt wird.
 
-03 / ANFRAGE
+04 / ANFRAGE
 
 ## Erzähl uns von deinem Team
 
@@ -404,7 +444,7 @@ Anfrage senden →
 
 Lieber per E-Mail? Schreib an commercial@passioncode.ai.
 
-04 / FRAGEN
+05 / FRAGEN
 
 ## Bevor du fragst
 
@@ -415,6 +455,10 @@ Die Tools sind kostenlos und Open Source. Du bezahlst für die Arbeit, die wir f
 Wann brauchen wir eine kommerzielle Lizenz?
 
 Die Tools stehen unter der GNU AGPL-3.0. Interne Nutzung und Änderungen, die du unter derselben Lizenz veröffentlichst, brauchen nichts. Ein geschlossenes Produkt, das sie enthält, oder ein veränderter gehosteter Dienst, dessen Quellcode du nicht veröffentlichst, braucht eine kommerzielle Lizenz.
+
+Ist das ein Weg, Menschen zu überwachen?
+
+Nein. Die Analysen drehen sich um Agenten und Workflows: was jeder Agent gekostet und was er geliefert hat. Sie erstellen nie eine Rangliste von Menschen.
 
 PassionCode
 

@@ -108,13 +108,15 @@ Each page answers one question first. Anything that answers another question lin
 | `/` home | What is this, and is it for me? | The promise (hero), the problem in one beat, the journey in six steps, the three proofs | /start/ or /business/ |
 | `/vision/` | Why do agents need this, and where is it going? | What holds an agent together over time, four principles, the path from one agent to an organization, each stage labelled | /start/ or /business/ |
 | `/start/` | How do I get from nothing to my first working agent today? | Journey steps 1–5 as instructions, with the commands, downloads and their limits | the product pages, /business/ |
-| `/business/` | What would it take, and cost, to run this across my organization? | What we set up, the estimate formula, the request form | the form |
+| `/business/` | What would it take, and cost, to run this across my organization? | What we set up; for finance and engineering, what each agent cost and what it delivered ([narrative-org.md](narrative-org.md), 2026-10-11); the estimate formula; the request form | the form |
 | `/fabric/` | What does Fabric do today, and what is it becoming? | The four actions (preview), the project home, the board; the conversation that does not reply yet; the operating loop as direction | /fabric/agents/, /start/ |
 | `/fabric/agents/` | Does my coding agent work with Fabric? | The three levels and which agent is at which | /fabric/ download |
 | `/switchboard/` | How do I keep my agents' accounts and limits straight? | Accounts by provider, usage limits, the next request's account | download |
 | `/dashboards/` | How do I see and control every agent I run? | One window: state, spend, each service's own dashboard, a console beside it | download |
 | `/observatory/` | What changed across my projects, and what needs me? | Findings first, with their evidence and a next step | install |
 | `/inbox/` | Can agents answer my mail without me losing control? | Important mail first; an agent answers only within the topics and limits you set, the rest waits as a draft | download |
+
+The organization's own message house — the champion, the one question it keeps asking after the pilot, three stages, proofs and objections — is [narrative-org.md](narrative-org.md).
 
 ## 6. Words we own, words we ban
 
