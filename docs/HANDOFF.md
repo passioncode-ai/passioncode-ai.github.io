@@ -1,3 +1,45 @@
+# Current handoff — SITE-030: platform copy for the 2026-10-11 releases, 2026-10-11
+
+Objective (operator, 2026-10-11): three product pages lagged behind the day's releases; fix them in all ten languages,
+stating only what each release proves, and fix the same stale lines wherever else they appear. PR #102 merged as
+`6c9a39e` and deployed from `main` 2026-10-11: Worker version `706e5b19-148a-4461-bb86-7bb0fc5722a9`;
+`scripts/verify-live.py` PASS (208 assets, 150 pages in ten languages, hreflang on 130, 7 download routes, 23 not-found
+addresses, intake dry run), receipt [evidence/2026-10-11-site-030/live.json](evidence/2026-10-11-site-030/live.json).
+
+Done ([evidence and the before/after of every claim](evidence/2026-10-11-site-030/README.md)):
+- /inbox/: macOS, Windows and Linux in the title, meta, JSON-LD and hero; a «Windows and Linux» download card — Windows
+  installer x64/arm64 with no administrator rights, Authenticode-signed since 0.14.1 (receipts `SIGNED`, installer
+  `Valid`), Linux AppImage and .deb; the Windows app and the AppImage update themselves, a .deb copy does not; Linux
+  needs a Secret Service. No claim that SmartScreen never warns.
+- /observatory/: the 0.22.0 Windows and Linux app (signed Windows installer, AppImage and .deb, x64/arm64; needs the
+  engine installed first and does not install it; a .deb copy is updated by the next .deb), Python 3.13+ on Windows,
+  the Mac app universal again (re-downloaded: notarized, `x86_64 arm64`, macOS 14).
+- /dashboards/: «One Mac window» / «on your Mac» became «on macOS, Windows and Linux» / «on your computer».
+- Found on the way: /switchboard/ still said its Windows build was not Authenticode-signed; 0.6.16 signs the setup, the
+  app and the CLI (receipts). Page, `scripts/check-site.mjs` and every `_checks.json` disclosure now say signed.
+- Home tools list, llms.txt, README; facts rows *Inbox role and status*, *Inbox download*, *Observatory release*,
+  *Observatory platforms*, *Windows support* (under the lease); terminology glossary; UX SCN-006, SCN-009, SCR-04,
+  SCR-06, SCR-07.
+- Inbox 0.15.0 was published at 12:14 UTC during the task; `npm run releases:sync` moved the site to it (its Windows
+  installers are signed too). Its new features are not on /inbox/ yet: SITE-033.
+- Ten languages: en and ru native; de, fr, es, pt-br, pl, ko, ja translated here; zh-Hans by one copy-agent write job
+  (batched, about $0.05). Copy checks with the saved voice v2 (`1657e5b3…` v1, marketing): en 100, ru 100, no blocking
+  rule (advisory: lists of three systems, Russian no-break spaces); zh-Hans no findings.
+
+Checks run: `npm run locales -- --check`, `python3 scripts/extract-public-copy.py`, `npm run check`, `npm test`
+110/110, `npm run build`, `npm run releases:check` — all exit 0 on the branch, and `npm run deploy` re-ran check and
+build on `6c9a39e`. WebKit (Playwright webkit) against a local Worker over HTTPS: en and ru, /inbox/, /observatory/,
+/dashboards/, /switchboard/ and home at 390 and 1280 px — 20/20 status 200, no horizontal overflow, no broken image
+([visual.json](evidence/2026-10-11-site-030/visual.json)). Private-terms count of the diff: 0.
+
+Open: SITE-033 (Inbox 0.15.0 features); /switchboard/ still offers only macOS and Windows x64 although 0.6.15+ ships
+Windows arm64 and Linux builds (a download-route decision, not changed here); /business/ #spend says «On each Mac» for
+Dashboards' Spend page, left as is because no release note says Spend works on Windows or Linux; SITE-031, SITE-026.
+
+Next task: SITE-033 — Fabric Inbox 0.15.0 on /inbox/ (agent console, agent-run setup) in ten languages.
+
+---
+
 # Current handoff — SITE-029: the short request and the agent prompt on /business/, 2026-10-11
 
 Objective (operator, 2026-10-11, decisions ON-1…ON-6): bring every form down to the minimum, offer a copy-prompt that
