@@ -62,7 +62,7 @@ Dla Twojej organizacji
 
 ↗
 
-Otwarty kod na licencji AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.1 · Observatory 0.22.0
+Otwarty kod na licencji AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.3 · Observatory 0.22.0
 
 Konta
 
@@ -236,7 +236,7 @@ Wszystkie lokalne usługi agentów w jednym oknie, sterowane przez Ciebie lub pr
 
 Wydanie
 
-0.7.1
+0.7.3
 
 · macOS + Windows + Linux · krok 4
 
