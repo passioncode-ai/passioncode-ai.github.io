@@ -1,3 +1,54 @@
+# Current handoff — SITE-033: Fabric Inbox 0.15 on /inbox/, Dashboards 0.7.4 updates, 2026-10-11
+
+Objective (operator, 2026-10-11): /inbox/ describes what Fabric Inbox 0.15.x adds, stating only what the release notes
+prove and keeping every limitation; the coordinator's add-on: /dashboards/ said updates were macOS-only, false since
+Dashboards 0.7.4. PR #107 merged as `2dbc9c3` and deployed from `main`: Worker version
+`3d735e87-9d54-4da3-8bbf-9730bcde3297`; `scripts/verify-live.py` PASS (208 assets, 150 pages in ten languages, hreflang
+on 130, 7 download routes, 23 not-found addresses, intake dry run), receipt
+[evidence/2026-10-11-site-033/live.json](evidence/2026-10-11-site-033/live.json); before/after of every claim with its
+release evidence, copy checks and the WebKit run: [evidence](evidence/2026-10-11-site-033/README.md).
+
+Done:
+- /inbox/:
+  - a «New in 0.15» block directly after the hero, covering the agent console (works from 0.15.1, not in the Mac App
+    Store version), setup by the coding agent and mail the server could not take;
+  - For agents in three steps (the sentence for the agent, a key by hand, the MCP command);
+  - Before you open it names «Use the server your agent set up»;
+  - the macOS card says a Mac copy older than 0.15.2 cannot update itself.
+- The hero is unchanged: the page's one question and the voice's Density axis.
+- /dashboards/: since 0.7.4 the Windows app and the AppImage update themselves, and a .deb copy takes the next .deb.
+- `releases:sync`: Observatory 0.23.0, Dashboards 0.7.4, Inbox 0.15.2.
+- Registers and docs:
+  - facts rows *Inbox role and status*, *Dashboards role and status* and *Observatory release*, edited under the lease;
+  - SCN-009, SCN-010, SCR-06, FLW-01, llms.txt and the strings registry;
+  - disclosure guards in `scripts/check-site.mjs` and every `_checks.json`.
+- Ten languages: en and ru native; de, fr, es, pt-br, pl, ko and ja hand-translated; zh-Hans by the copy agent's write
+  capability (three jobs, $0.092).
+- Copy checks with voice v2: en 100 and ru 100; no blocking rule in any language.
+
+Checks run:
+- `npm run locales -- --check`, `extract-public-copy.py`, `npm run check`, `npm test`, `npm run build` and
+  `npm run releases:check`: all exit 0. CI `check` passed on #107.
+- WebKit check on /inbox/ and /dashboards/, en and ru, 390 and 1280 px: 8/8 with no overflow.
+- Private-terms count: 0.
+- Brand lint: no new finding.
+
+Notes:
+- Copylot's database container stopped once, when the disk filled to about 0.4 GiB through other sessions' use. It
+  was restarted with `docker start copylot-m01-local-db-1`, and its doctor then reported the database answering.
+- Disk free was 1.9–5 GiB during the task; the worktree is removed.
+
+Open:
+- Inbox 0.15.2's remote tool as an agent's knowledge base, and Observatory 0.23.0's features (disk guard, meter,
+  harness scan), are not described on their pages. Facts rows record them as not on the page.
+- The Russian form of Serge Khurs's name.
+- SITE-031 (Platform `lead/2`).
+- SITE-026 (native review of the new strings).
+
+Next task: SITE-031 — forward `lead/2` requests to the Platform.
+
+---
+
 # Current handoff — SITE-034: the founders' story on home and /business/, 2026-10-11
 
 Objective (operator, 2026-10-11): the home About becomes the founders' story in Sergey Sheleg's first person — two
