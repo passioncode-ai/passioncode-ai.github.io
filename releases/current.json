@@ -1,6 +1,6 @@
 {
   "schema": "releases/1",
-  "generatedAt": "2026-10-10T23:52:47.723Z",
+  "generatedAt": "2026-10-11T02:51:46.698Z",
   "products": {
     "fabric": {
       "key": "fabric",
@@ -114,11 +114,11 @@
       "name": "Fabric Agent Adapter",
       "repository": "passioncode-ai/fabric-agent-adapter",
       "page": "/start/#build",
-      "version": "0.8.3",
-      "tag": "v0.8.3",
+      "version": "0.9.0",
+      "tag": "v0.9.0",
       "prerelease": false,
-      "publishedAt": "2026-10-10T19:00:39Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-agent-adapter/releases/tag/v0.8.3",
+      "publishedAt": "2026-10-11T01:08:34Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-agent-adapter/releases/tag/v0.9.0",
       "npm": "@passioncode-ai/fabric-agent-adapter",
       "assets": {}
     },
@@ -127,11 +127,11 @@
       "name": "PassionCode.ai launcher",
       "repository": "passioncode-ai/passioncode",
       "page": "/start/#launcher",
-      "version": "0.1.32",
-      "tag": "v0.1.32",
+      "version": "0.1.33",
+      "tag": "v0.1.33",
       "prerelease": false,
-      "publishedAt": "2026-10-10T21:36:51Z",
-      "releaseUrl": "https://github.com/passioncode-ai/passioncode/releases/tag/v0.1.32",
+      "publishedAt": "2026-10-11T01:40:07Z",
+      "releaseUrl": "https://github.com/passioncode-ai/passioncode/releases/tag/v0.1.33",
       "npm": "@passioncode-ai/passioncode",
       "assets": {}
     }

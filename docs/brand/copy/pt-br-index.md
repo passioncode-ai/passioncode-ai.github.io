@@ -272,7 +272,7 @@ Um comando instala as skills que ensinam os agentes a construir com o Fabric.
 
 CLI
 
-0.1.32
+0.1.33
 
 · Node.js 18+ · passos 1 e 3
 

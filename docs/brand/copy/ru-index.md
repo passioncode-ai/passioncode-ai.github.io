@@ -272,7 +272,7 @@ Fabric Inbox
 
 CLI
 
-0.1.32
+0.1.33
 
 · Node.js 18+ · шаги 1 и 3
 

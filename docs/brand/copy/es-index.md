@@ -272,7 +272,7 @@ Un solo comando instala las skills que enseñan a los agentes a construir con Fa
 
 CLI
 
-0.1.32
+0.1.33
 
 · Node.js 18+ · pasos 1 y 3
 
