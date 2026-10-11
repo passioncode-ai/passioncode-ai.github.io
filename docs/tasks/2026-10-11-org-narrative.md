@@ -51,6 +51,12 @@ hand: Q1 "绕开" → "只在一旁用到" (closer to "beside"), "工作场所" 
 | WebKit (Playwright 1.63, webkit-2359) at 390 and 1280 px: /business/, /ru/business/, /, /ru/ | status 200, no horizontal overflow, no broken image, no page error; three labels per language; three FAQs; [webkit.json](../evidence/2026-10-11-org-narrative/webkit.json) |
 | private-terms count scan of the diff | 0; no source newsletter or startup name in the diff |
 
+## Release
+
+PR #93 merged as `6a6b527`; PR #94 (release sync: launcher 0.1.33, adapter 0.9.0) merged as `5e41381`; deployed
+from `main` as Worker version `3023bc40-9e71-4265-8f05-2224f60807ae`; `scripts/verify-live.py` PASS,
+[live.json](../evidence/2026-10-11-org-narrative/live.json).
+
 ## Open
 
 The operator's decisions ON-1…ON-6 in [narrative-org.md §8](../brand/narrative-org.md#8-open-decisions-for-the-operator).
