@@ -88,7 +88,7 @@ O launcher da PassionCode.ai instala no seu agente de programação as skills do
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.1.33 · reinicie o seu agente depois · as atualizações automáticas estão ativadas; desative-as
+Launcher 0.1.36 · reinicie o seu agente depois · as atualizações automáticas estão ativadas; desative-as
 
 02
 
@@ -126,7 +126,7 @@ O Fabric Dashboards mostra todos os serviços de agentes locais em uma só janel
 
 Baixar o Fabric Dashboards
 
-0.7.4
+0.7.5
 
 ↓
 

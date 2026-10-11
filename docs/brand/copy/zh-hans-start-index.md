@@ -88,7 +88,7 @@ PassionCode.ai 启动器会把 Fabric Agent Adapter 技能、Observatory Log 和
 
 npx @passioncode-ai/passioncode@latest update
 
-启动器 0.1.33 · 之后请重启你的智能体 · 已开启自动更新；关闭自动更新
+启动器 0.1.36 · 之后请重启你的智能体 · 已开启自动更新；关闭自动更新
 
 02
 
@@ -126,7 +126,7 @@ Fabric Dashboards 在一个窗口中显示每个本地智能体服务；你的�
 
 下载 Fabric Dashboards
 
-0.7.4
+0.7.5
 
 ↓
 
