@@ -104,7 +104,7 @@ Für Windows herunterladen
 
 ↓
 
-Nativ unter Windows gebaut und noch nicht mit Authenticode signiert, daher kann SmartScreen eine Warnung anzeigen. Der Installer enthält die CLI.
+Nativ unter Windows gebaut. Installer, App und CLI sind seit 0.6.16 mit Authenticode signiert. Der Installer enthält die CLI.
 
 ☰
 
@@ -116,7 +116,7 @@ Claude Code oder Codex CLI, separat installiert. Switchboard enthält weder ein 
 
 macOS 14 oder neuer, auf Apple silicon oder Intel.
 
-Windows x64 mit WebView2. Der Windows-Build ist noch nicht mit Authenticode signiert.
+Windows x64 mit WebView2. Der Windows-Build ist seit 0.6.16 mit Authenticode signiert.
 
 Die App läuft nach dem Schließen ihres Fensters in der Menüleiste weiter und startet bei der Anmeldung; beende sie über ihr Menü.
 

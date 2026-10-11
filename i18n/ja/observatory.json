@@ -2,12 +2,10 @@
   "page": "observatory/index.html",
   "strings": {
     "Project Observatory | Local dashboard for agent-operated projects | PassionCode.ai": "Project Observatory | エージェントが運用するプロジェクトのローカルダッシュボード | PassionCode.ai",
-    "See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is an open-source local dashboard from PassionCode.ai, in English or Russian.": "プロジェクト全体の変更点、対応が必要なもの、既知の API キーのコピーが残っている場所を確認できます。Project Observatory は PassionCode.ai のオープンソースのローカルダッシュボードで、英語またはロシア語で使えます。",
     "Open-source local dashboard for the projects coding agents work on: project inventory, Git activity, findings, metrics and known-value credential exposure checks. English or Russian interface.": "コーディングエージェントが扱うプロジェクト向けのオープンソースのローカルダッシュボード：プロジェクトの一覧、Git のアクティビティ、検出事項、メトリクス、既知の値による認証情報の露出チェック。インターフェースは英語またはロシア語です。",
     "PROJECT OBSERVATORY · BY PASSIONCODE": "PROJECT OBSERVATORY · BY PASSIONCODE",
     "Your projects": "あなたのプロジェクトを",
     "Back in view": "もう一度見える状態に",
-    "Open source · macOS + Linux · Python 3.11+": "オープンソース · macOS + Linux · Python 3.11+",
     "ONE VIEW / YOUR PROJECTS": "一つのビューで / あなたのプロジェクト",
     "PROJECTS": "プロジェクト",
     "FINDINGS": "検出事項",
@@ -47,7 +45,6 @@
     ", then, in an isolated Python 3.11+ environment with SQLite extension support,": "を使います。その後、SQLite 拡張に対応した分離済みの Python 3.11+ 環境で、",
     "the wheel and then its": "で wheel を、続けて",
     "extra with": "extra を",
-    ", the dependency set the release was tested with. On macOS, use Homebrew Python.": "付きでインストールします。これはリリースがテストされた依存関係セットです。macOS では Homebrew の Python を使ってください。",
     "Create a private workspace": "プライベートワークスペースを作成",
     ", then choose the folder to observe with": "。続いて、観察するフォルダを次で選びます：",
     ". Configuration, keys and history stay outside the installed code.": "。設定、キー、履歴は、インストールしたコードとは別の場所に保存されます。",
@@ -59,7 +56,6 @@
     "Installation guide": "インストールガイド",
     "Onboarding &amp; integrations": "オンボーディングと連携",
     "Mac app:": "Mac アプリ：",
-    ", signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same": "。Developer ID で署名され、Apple による公証済みで、macOS 14 以降向けです。ダッシュボードが開き、上でインストールしたエンジンを使います。検証には上記と同じファイルを使います：",
     "The current release,": "現在のリリース",
     ", is under the AGPL, like every release since 0.10.0, the first under the AGPL; 0.9.1 and earlier keep the license they shipped with.": "は AGPL です。0.10.0 以降のすべてのリリースがそうで、0.10.0 が AGPL 下での最初のリリースです。0.9.1 以前は、リリース時のライセンスのままです。",
     "Known-value scanning compares selected artifacts with keys already known locally. It cannot find unknown secrets or prove that no copy remains, and a local copy is not evidence that anyone else obtained a key. Live provider rotation and external MCP hosts are outside the offline test suite.": "既知の値のスキャンは、選択したアーティファクトを、ローカルで既知のキーと照合します。未知のシークレットは検出できず、コピーが残っていないことの証明もできません。また、ローカルにコピーがあっても、他の誰かがキーを入手した証拠にはなりません。プロバイダー側での実際のローテーションと外部の MCP ホストは、オフラインのテストスイートの対象外です。",
@@ -83,6 +79,12 @@
     "how it works": "使い方のステップ 5 です",
     "All the tools": "すべてのツール",
     "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "早期プレビュー版の Fabric は、プロジェクトとそのエージェントのための拠点です。Observatory は、別のローカルツールとして今すぐ使えます。",
-    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "Project Observatoryの概要画面：重大から情報まで順に並んだ5件の検出事項と、プロジェクトとアクティビティのカウンター。合成デモデータです。"
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "Project Observatoryの概要画面：重大から情報まで順に並んだ5件の検出事項と、プロジェクトとアクティビティのカウンター。合成デモデータです。",
+    "See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is an open-source local dashboard from PassionCode.ai for macOS, Windows and Linux, in English or Russian.": "プロジェクト全体の変更点、対応が必要なもの、既知の API キーのコピーが残っている場所を確認できます。Project Observatory は PassionCode.ai のオープンソースのローカルダッシュボードで、macOS、Windows、Linux で動き、英語またはロシア語で使えます。",
+    "Open source · macOS + Windows + Linux · Python 3.11+, 3.13+ on Windows": "オープンソース · macOS + Windows + Linux · Python 3.11+（Windows は 3.13+）",
+    ", the dependency set the release was tested with. On macOS, use Homebrew Python. On Windows, use Python 3.13 or newer and the PowerShell steps in the installation guide.": "付きでインストールします。これはリリースがテストされた依存関係セットです。macOS では Homebrew の Python を使ってください。Windows では Python 3.13 以降を使い、インストールガイドの PowerShell の手順に従ってください。",
+    ", one app for Apple silicon and Intel, signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same": "。Apple silicon と Intel の両方で動く一つのアプリで、Developer ID で署名され、Apple による公証済みで、macOS 14 以降向けです。ダッシュボードが開き、上でインストールしたエンジンを使います。検証には上記と同じファイルを使います：",
+    "Windows and Linux app, since 0.22.0: a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed, and an AppImage and .deb for Linux x64 and arm64, on": "Windows と Linux 向けアプリ（0.22.0 から）：管理者権限の要らない x64 と arm64 向けの Windows インストーラー（Authenticode 署名済み）と、Linux x64 と arm64 向けの AppImage と .deb は、",
+    ". Like the Mac app, it opens on the dashboard and needs the engine installed above; it does not install the engine. It updates itself, except a copy installed from the .deb: install the next .deb.": "で入手できます。Mac アプリと同じくダッシュボードが開き、上でインストールしたエンジンが必要です。エンジン自体はインストールしません。.deb からインストールしたものを除き、自動でアップデートされます。.deb の場合は次の .deb をインストールしてください。"
   }
 }

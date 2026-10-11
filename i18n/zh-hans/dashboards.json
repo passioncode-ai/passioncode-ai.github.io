@@ -2,7 +2,6 @@
   "page": "dashboards/index.html",
   "strings": {
     "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | 你的本地智能体服务，汇聚一处",
-    "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "在一个 Mac 窗口里查看你的本地智能体服务：看哪些需要处理，打开各自的仪表盘，也让你的智能体通过 MCP 使用同样的工具。",
     "One window for local agent services that speak fabric-service/0.1.": "一个窗口，汇集所有支持 fabric-service/0.1 的本地智能体服务。",
     "Your agent services": "你的智能体服务",
     "One place to look": "一处查看全部",
@@ -20,7 +19,6 @@
     "01 / KEEP THE WORK IN VIEW": "01 / 让工作始终在视野中",
     "A window into": "一扇窗，",
     "the tools doing the work": "看见干活的工具",
-    "Fabric Dashboards discovers compatible services on your Mac. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards 会发现你 Mac 上兼容的服务。每个服务各司其职；你得到一个统一的地方来查看和控制它们。",
     "See what needs you": "看哪些需要你",
     "Service state, latest activity and attention items appear together. A slow probe is not immediately treated as an outage.": "服务状态、最新活动和需要关注的事项集中显示。探测偶尔变慢，不会被立刻当作故障。",
     "Open the actual dashboard": "打开真正的仪表盘",
@@ -75,7 +73,6 @@
     "you already use": "服务开始",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "用 Observatory 查看项目，用 Switchboard 配置账号，只添加你的工作需要的工具。",
     "Explore the tools ↗": "了解这些工具 ↗",
-    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "在一个应用里查看你 Mac 上的每个智能体服务：需要你处理的排在最前，每个服务自己的仪表盘就在旁边打开",
     "IN THE TOOLKIT": "工具包成员",
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "状态、花费与控制：每个智能体服务在做什么、花了多少以及它的更新，都在一个窗口里。第 4 步，见",
     "how it works": "工作原理",
@@ -85,6 +82,9 @@
     "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
     "Windows and Linux": "Windows 和 Linux",
     "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "同时提供了签名的 Windows 安装包（x64 和 arm64），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。目前仅 macOS 支持自动更新：Windows 和 Linux 需要你自行安装下一个版本。",
-    "Windows and Linux downloads": "下载 Windows 和 Linux 版本"
+    "Windows and Linux downloads": "下载 Windows 和 Linux 版本",
+    "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "在一个窗口里查看你在 macOS、Windows 和 Linux 上的本地智能体服务：看哪些需要处理，打开各自的仪表盘，也让你的智能体通过 MCP 使用同样的工具。",
+    "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "在一个应用里查看你电脑上的每个智能体服务：需要你处理的排在最前，每个服务自己的仪表盘就在旁边打开",
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards 会发现你电脑上兼容的服务。每个服务各司其职；你得到一个统一的地方来查看和控制它们。"
   }
 }

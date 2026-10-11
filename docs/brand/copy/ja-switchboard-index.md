@@ -104,7 +104,7 @@ Windows 版をダウンロード
 
 ↓
 
-Windows 上でネイティブにビルドされています。Authenticode 署名はまだ行われていないため、SmartScreen が警告を表示することがあります。インストーラーには CLI が含まれます。
+Windows 上でネイティブにビルドされています。インストーラー、アプリ、CLI は 0.6.16 から Authenticode 署名済みです。インストーラーには CLI が含まれます。
 
 ☰
 
@@ -116,7 +116,7 @@ Claude Code または Codex CLI を別途インストールしてください。
 
 macOS 14 以降（Apple silicon または Intel）。
 
-WebView2 を備えた Windows x64。Windows 版はまだ Authenticode 署名されていません。
+WebView2 を備えた Windows x64。Windows 版は 0.6.16 から Authenticode 署名済みです。
 
 ウィンドウを閉じてもアプリはメニューバーで動き続け、ログイン時に起動します。終了するには、そのメニューから行ってください。
 

@@ -22,11 +22,9 @@
     "x64 · Desktop installer + CLI": "x64 · 桌面安装程序 + CLI",
     "ZIP archive · WebView2 required": "ZIP 压缩包 · 需要 WebView2",
     "Download for Windows": "下载 Windows 版",
-    "Built natively on Windows, not yet Authenticode-signed, so SmartScreen may show a warning. The installer includes the CLI.": "在 Windows 上原生构建，尚未使用 Authenticode 签名，因此 SmartScreen 可能显示警告。安装程序包含 CLI。",
     "Switchboard manages accounts and launches the official CLIs. It does not replace them.": "Switchboard 管理账号并启动官方 CLI，不会取代它们。",
     "Claude Code or Codex CLI, installed separately. Switchboard includes no provider subscription or API credits.": "需单独安装 Claude Code 或 Codex CLI。Switchboard 不包含任何服务商订阅或 API 额度。",
     "macOS 14 or later, on Apple silicon or Intel.": "macOS 14 或更高版本，Apple 芯片或 Intel 均可。",
-    "Windows x64 with WebView2. The Windows build is not yet Authenticode-signed.": "带 WebView2 的 Windows x64。Windows 版本尚未使用 Authenticode 签名。",
     "The app keeps running in the menu bar after you close its window, and opens at login; quit it from its menu.": "关闭窗口后，应用会继续在菜单栏中运行，并在登录时自动打开；请从其菜单中退出。",
     "SHA-256 checksums": "SHA-256 校验和",
     "macOS ZIP · SHA-256": "macOS ZIP · SHA-256",
@@ -133,6 +131,8 @@
     "Switchboard 0.6.13 accounts in its dark theme: the account in use for Claude Code and Codex CLI, two pools of Claude Code accounts with their usage and reset times, and one project rule. Synthetic demo data, with the demo banner at the top.": "Switchboard 0.6.13 的账号界面，深色主题：正在用于 Claude Code 和 Codex CLI 的账号、两个附带用量和重置时间的 Claude Code 账号池，以及一条项目规则。合成的演示数据，顶部有演示横幅。",
     "Browser demo of 0.6.13 · no real accounts, credentials or provider requests": "0.6.13 的浏览器演示 · 无真实账号、凭据或服务商请求",
     "Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit.": "Switchboard 是现已可用的账号管理工具。Fabric 是你的项目及其智能体的家，目前为早期预览版。两者都属于 PassionCode 工具包。",
-    "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你查看这些智能体正在处理的项目。Fabric Dashboards 在一个窗口中显示你 Mac 上的本地智能体服务。Fabric 是你的项目及其智能体的家，目前为早期预览版。"
+    "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你查看这些智能体正在处理的项目。Fabric Dashboards 在一个窗口中显示你 Mac 上的本地智能体服务。Fabric 是你的项目及其智能体的家，目前为早期预览版。",
+    "Built natively on Windows. The installer, the app and the CLI are Authenticode-signed since 0.6.16. The installer includes the CLI.": "在 Windows 上原生构建。自 0.6.16 起，安装程序、应用和 CLI 均已使用 Authenticode 签名。安装程序包含 CLI。",
+    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "Windows x64，含 WebView2。自 0.6.16 起，Windows 构建已使用 Authenticode 签名。"
   }
 }

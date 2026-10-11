@@ -1,8 +1,6 @@
 {
   "page": "inbox/index.html",
   "strings": {
-    "Fabric Inbox | Mail with what matters first · macOS preview | PassionCode.ai": "Fabric Inbox | 重要邮件优先 · macOS 预览版 | PassionCode.ai",
-    "Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS.": "Fabric Inbox 是 Fabric 的邮件工具，可独立使用：把 Gmail 和 Cloudflare 邮箱放进同一个列表，重要邮件优先，并让智能体负责你自己的地址。macOS 开发中的预览版。",
     "Desktop mail client in development preview: Gmail and Cloudflare mailboxes in one triaged list, addresses answered by agents under a reply policy, a server created in your own Cloudflare account, and every function available to agents over MCP.": "处于开发中预览阶段的桌面邮件客户端：Gmail 和 Cloudflare 邮箱汇入同一个分拣后的列表，各地址由智能体按回复策略应答，服务器创建在你自己的 Cloudflare 账号中，所有功能都可通过 MCP 供智能体使用。",
     "Products": "产品",
     "GitHub": "GitHub",
@@ -10,7 +8,6 @@
     "Your mail": "你的邮件",
     "Important first": "重要的优先",
     "See what it does": "看看它能做什么",
-    "· macOS 12 or later · open source under AGPL-3.0": "· macOS 12 或更高版本 · 以 AGPL-3.0 开源",
     "FABRIC INBOX / MAIL + AGENTS": "FABRIC INBOX / 邮件 + 智能体",
     "IMPORTANT": "重要",
     "ANSWERED": "已回复",
@@ -29,7 +26,6 @@
     "An agent has its own instructions, knowledge and tools and can serve several addresses. It sends an answer only when it rests on its knowledge, fits a topic you allowed and stays within its daily limit. Everything else waits as a draft with the reason.": "智能体有自己的指令、知识和工具，可以负责多个地址。只有当回答确实基于它的知识、属于你允许的话题，并且没有超出每日上限时，它才会发送。其余的都会作为草稿等待，并附上原因。",
     "GET FABRIC INBOX": "获取 FABRIC INBOX",
     "A development preview": "开发中的预览版",
-    ". The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.": "。Mac 应用会在你自己的 Cloudflare 账号中创建它的邮件服务器并将其打开；你的邮件只留在你自己的账号里。",
     "Universal · Apple silicon + Intel · macOS 12 or later": "通用版 · Apple silicon + Intel · macOS 12 或更高版本",
     "Open the DMG and drag Fabric Inbox to Applications.": "打开 DMG，把 Fabric Inbox 拖到“应用程序”。",
     "On first open, choose": "首次打开时，选择",
@@ -77,6 +73,16 @@
     "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox 处理邮件。Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你随时看到这些智能体正在做的项目。Fabric 处于早期预览阶段，是你的项目及其智能体的家。",
     ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "，处于早期预览阶段，是你的项目及其智能体的家。它们属于同一个工具包，各有不同的角色。",
     "Fabric Inbox, all inboxes: three addresses at example.test, important mail first with two agents among the senders, and a release-notes draft open with Reply and Forward. Synthetic demo data.": "Fabric Inbox，全部收件箱：example.test 上三个地址，重要邮件置顶，发件人中有两个智能体，一篇发布说明草稿已打开，显示「回复」和「转发」按钮。合成演示数据。",
-    "All inboxes · sample addresses and mail, no real accounts": "全部收件箱 · 示例地址和邮件，无真实账号"
+    "All inboxes · sample addresses and mail, no real accounts": "全部收件箱 · 示例地址和邮件，无真实账号",
+    "Fabric Inbox | Mail with what matters first · desktop preview | PassionCode.ai": "Fabric Inbox | 重要邮件优先 · 桌面预览版 | PassionCode.ai",
+    "Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS, Windows and Linux.": "Fabric Inbox 是 Fabric 的邮件工具，可独立使用：把 Gmail 和 Cloudflare 邮箱放进同一个列表，重要邮件优先，并让智能体负责你自己的地址。macOS、Windows 和 Linux 开发中的预览版。",
+    "· macOS 12+ · Windows · Linux · open source under AGPL-3.0": "· macOS 12+ · Windows · Linux · 以 AGPL-3.0 开源",
+    "for Mac, Windows and Linux": "适用于 Mac、Windows 和 Linux",
+    ". The app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.": "。应用会在你自己的 Cloudflare 账号中创建邮件服务器并将其打开；你的邮件只留在你自己的账号里。",
+    "Windows and Linux": "Windows 和 Linux",
+    "Release": "版本",
+    "also ships a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed since 0.14.1, and a Linux AppImage and .deb for x64 and arm64.": "同时提供 Windows 安装程序（x64 和 arm64，无需管理员权限，自 0.14.1 起已使用 Authenticode 签名），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。",
+    "Windows and Linux downloads": "下载 Windows 和 Linux 版本",
+    "The Windows app and the AppImage update themselves; a copy installed from the .deb does not, so install the next .deb. On Linux the app keeps your sign-in in the Secret Service (GNOME Keyring or KWallet) and will not start without one.": "Windows 应用和 AppImage 会自动更新；通过 .deb 安装的副本不会自动更新，请安装下一个 .deb。在 Linux 上，应用将你的登录信息保存在 Secret Service（GNOME Keyring 或 KWallet）中，没有它则无法启动。"
   }
 }

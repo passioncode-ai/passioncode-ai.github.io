@@ -26,12 +26,10 @@
     "x64 · Desktop installer + CLI": "x64 · instalator desktopowy + CLI",
     "ZIP archive · WebView2 required": "Archiwum ZIP · wymaga WebView2",
     "Download for Windows": "Pobierz na Windows",
-    "Built natively on Windows, not yet Authenticode-signed, so SmartScreen may show a warning. The installer includes the CLI.": "Zbudowany natywnie na Windows, jeszcze bez podpisu Authenticode, więc SmartScreen może pokazać ostrzeżenie. Instalator zawiera CLI.",
     "Before you open it": "Zanim go otworzysz",
     "Switchboard manages accounts and launches the official CLIs. It does not replace them.": "Switchboard zarządza kontami i uruchamia oficjalne CLI. Nie zastępuje ich.",
     "Claude Code or Codex CLI, installed separately. Switchboard includes no provider subscription or API credits.": "Claude Code lub Codex CLI, instalowane osobno. Switchboard nie zawiera subskrypcji u dostawcy ani kredytów API.",
     "macOS 14 or later, on Apple silicon or Intel.": "macOS 14 lub nowszy, na Apple silicon lub Intel.",
-    "Windows x64 with WebView2. The Windows build is not yet Authenticode-signed.": "Windows x64 z WebView2. Wersja na Windows nie ma jeszcze podpisu Authenticode.",
     "The app keeps running in the menu bar after you close its window, and opens at login; quit it from its menu.": "Po zamknięciu okna aplikacja działa dalej na pasku menu i uruchamia się przy logowaniu; zakończysz ją z jej menu.",
     "Release notes &amp; checksums": "Informacje o wydaniu i sumy kontrolne",
     "Installation notes": "Uwagi o instalacji",
@@ -126,6 +124,8 @@
     "Switchboard 0.6.13 accounts in its dark theme: the account in use for Claude Code and Codex CLI, two pools of Claude Code accounts with their usage and reset times, and one project rule. Synthetic demo data, with the demo banner at the top.": "Konta w Switchboard 0.6.13 w ciemnym motywie: konto używane przez Claude Code i Codex CLI, dwie pule kont Claude Code z ich zużyciem i czasami resetu oraz jedna reguła projektu. Syntetyczne dane demonstracyjne, z banerem demo u góry.",
     "Browser demo of 0.6.13 · no real accounts, credentials or provider requests": "Demo 0.6.13 w przeglądarce · bez prawdziwych kont, danych uwierzytelniających i żądań do dostawców",
     "Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit.": "Switchboard to narzędzie do zarządzania kontami dostępne już dziś. Fabric, we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów. Oba należą do zestawu narzędzi PassionCode.",
-    "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard zarządza kontami Claude Code i Codex. Project Observatory trzyma w polu widzenia projekty, nad którymi pracują ci agenci. Fabric Dashboards pokazuje w jednym oknie lokalne usługi agentów na Twoim Macu. Fabric, dom dla Twoich projektów i ich agentów, jest we wczesnej wersji zapoznawczej."
+    "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard zarządza kontami Claude Code i Codex. Project Observatory trzyma w polu widzenia projekty, nad którymi pracują ci agenci. Fabric Dashboards pokazuje w jednym oknie lokalne usługi agentów na Twoim Macu. Fabric, dom dla Twoich projektów i ich agentów, jest we wczesnej wersji zapoznawczej.",
+    "Built natively on Windows. The installer, the app and the CLI are Authenticode-signed since 0.6.16. The installer includes the CLI.": "Zbudowany natywnie na Windows. Instalator, aplikacja i CLI mają podpis Authenticode od wersji 0.6.16. Instalator zawiera CLI.",
+    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "Windows x64 z WebView2. Wersja na Windows ma podpis Authenticode od wersji 0.6.16."
   }
 }

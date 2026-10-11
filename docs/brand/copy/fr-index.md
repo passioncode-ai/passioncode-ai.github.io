@@ -250,7 +250,7 @@ Version
 
 0.22.0
 
-· macOS + Linux · étape 5
+· macOS + Windows + Linux · étape 5
 
 ↗
 
@@ -260,9 +260,9 @@ Le courrier Gmail et Cloudflare dans une seule liste, l’important en premier ;
 
 Préversion de développement
 
-0.14.1
+0.15.0
 
-· macOS · étape 5
+· macOS + Windows + Linux · étape 5
 
 ↗
 

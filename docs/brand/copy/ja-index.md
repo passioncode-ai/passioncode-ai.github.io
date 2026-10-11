@@ -250,7 +250,7 @@ Project Observatory
 
 0.22.0
 
-· macOS + Linux · ステップ5
+· macOS + Windows + Linux · ステップ5
 
 ↗
 
@@ -260,9 +260,9 @@ Gmail と Cloudflare のメールを1つのリストに集約し、重要なも�
 
 開発プレビュー版
 
-0.14.1
+0.15.0
 
-· macOS · ステップ5
+· macOS + Windows + Linux · ステップ5
 
 ↗
 

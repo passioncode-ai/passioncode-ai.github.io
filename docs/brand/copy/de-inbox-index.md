@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from de/inbox/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Inbox | Mail, bei der das Wichtige zuerst kommt · macOS-Vorschau | PassionCode.ai
+Fabric Inbox | Mail, bei der das Wichtige zuerst kommt · Desktop-Vorschau | PassionCode.ai
 
-Fabric Inbox ist das Mail-Tool von Fabric und funktioniert eigenständig: Gmail- und Cloudflare-Postfächer in einer Liste, wichtige Mails zuerst, und Agenten auf deinen eigenen Adressen. Entwicklungsvorschau für macOS.
+Fabric Inbox ist das Mail-Tool von Fabric und funktioniert eigenständig: Gmail- und Cloudflare-Postfächer in einer Liste, wichtige Mails zuerst, und Agenten auf deinen eigenen Adressen. Entwicklungsvorschau für macOS, Windows und Linux.
 
 Zum Inhalt springen
 
@@ -64,7 +64,7 @@ Ansehen, was es kann
 
 ↓
 
-Entwicklungsvorschau 0.14.1 · macOS 12 oder neuer · Open Source unter AGPL-3.0
+Entwicklungsvorschau 0.15.0 · macOS 12+ · Windows · Linux · Open Source unter AGPL-3.0
 
 FABRIC INBOX / MAIL + AGENTEN
 
@@ -106,9 +106,9 @@ FABRIC INBOX HOLEN
 
 ## Eine Entwicklungsvorschau
 
-## für deinen Mac
+## für Mac, Windows und Linux
 
-Neueste Vorschau: 0.14.1. Die Mac-App erstellt ihren Mailserver in deinem eigenen Cloudflare-Account und öffnet ihn; deine Mail bleibt bei deinen Accounts.
+Neueste Vorschau: 0.15.0. Die App erstellt ihren Mailserver in deinem eigenen Cloudflare-Account und öffnet ihn; deine Mail bleibt bei deinen Accounts.
 
 ⌘
 
@@ -122,6 +122,18 @@ Für macOS herunterladen
 ↓
 
 Öffne das DMG und ziehe Fabric Inbox in den Ordner „Programme“.
+
+⊞
+
+### Windows und Linux
+
+Release 0.15.0 enthält außerdem einen Windows-Installer für x64 und arm64, der keine Administratorrechte braucht und seit 0.14.1 mit Authenticode signiert ist, sowie ein Linux-AppImage und ein .deb für x64 und arm64.
+
+Downloads für Windows und Linux
+
+↗
+
+Die Windows-App und das AppImage aktualisieren sich selbst; eine aus dem .deb installierte Kopie nicht, installiere also das nächste .deb. Unter Linux bewahrt die App deine Anmeldung im Secret Service (GNOME Keyring oder KWallet) auf und startet ohne ihn nicht.
 
 ☰
 
@@ -139,7 +151,7 @@ Die Einrichtungsanleitung listet jede Einstellung auf.
 
 macOS-DMG · SHA-256
 
-e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993
+6c90597998ce664c7a3757b48b6c8345b95bf087fbe3a84387cde31d0480f7d7
 
 Vor dem Öffnen vergleichen: shasum -a 256 im Terminal. Ein abweichender Wert bedeutet eine andere Datei; lade sie erneut herunter.
 

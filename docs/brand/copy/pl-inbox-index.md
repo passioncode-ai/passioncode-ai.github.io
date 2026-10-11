@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from pl/inbox/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Inbox | Poczta, w której najważniejsze jest na górze · wersja zapoznawcza na macOS | PassionCode.ai
+Fabric Inbox | Poczta, w której najważniejsze jest na górze · wersja zapoznawcza na komputer | PassionCode.ai
 
-Fabric Inbox to narzędzie pocztowe Fabric, które działa samodzielnie: skrzynki Gmail i Cloudflare w jednej liście z ważną pocztą na górze oraz agenci na Twoich własnych adresach. Rozwojowa wersja zapoznawcza na macOS.
+Fabric Inbox to narzędzie pocztowe Fabric, które działa samodzielnie: skrzynki Gmail i Cloudflare w jednej liście z ważną pocztą na górze oraz agenci na Twoich własnych adresach. Rozwojowa wersja zapoznawcza na macOS, Windows i Linuksa.
 
 Przejdź do treści
 
@@ -64,7 +64,7 @@ Zobacz, co potrafi
 
 ↓
 
-Wersja zapoznawcza 0.14.1 · macOS 12 lub nowszy · otwarty kod na licencji AGPL-3.0
+Wersja zapoznawcza 0.15.0 · macOS 12+ · Windows · Linux · otwarty kod na licencji AGPL-3.0
 
 FABRIC INBOX / POCZTA + AGENCI
 
@@ -106,9 +106,9 @@ POBIERZ FABRIC INBOX
 
 ## Rozwojowa wersja zapoznawcza
 
-## na Twojego Maca
+## na Maca, Windows i Linuksa
 
-Najnowsza wersja zapoznawcza: 0.14.1. Aplikacja na Maca tworzy swój serwer pocztowy na Twoim własnym koncie Cloudflare i go otwiera; Twoja poczta zostaje przy Twoich kontach.
+Najnowsza wersja zapoznawcza: 0.15.0. Aplikacja tworzy swój serwer pocztowy na Twoim własnym koncie Cloudflare i go otwiera; Twoja poczta zostaje przy Twoich kontach.
 
 ⌘
 
@@ -122,6 +122,18 @@ Pobierz na macOS
 ↓
 
 Otwórz DMG i przeciągnij Fabric Inbox do Aplikacji.
+
+⊞
+
+### Windows i Linux
+
+Wydanie 0.15.0 zawiera też instalator dla Windows x64 i arm64, który nie wymaga uprawnień administratora, z podpisem Authenticode od wersji 0.14.1, oraz AppImage i .deb dla Linuksa x64 i arm64.
+
+Pobieranie dla Windows i Linuksa
+
+↗
+
+Aplikacja na Windows i AppImage aktualizują się same; kopia zainstalowana z pakietu .deb nie, więc zainstaluj kolejny .deb. Na Linuksie aplikacja trzyma Twoje logowanie w Secret Service (GNOME Keyring lub KWallet) i bez niego się nie uruchomi.
 
 ☰
 
@@ -139,7 +151,7 @@ Szczegóły w przewodniku konfiguracji — wymieniono w nim każde ustawienie.
 
 macOS DMG · SHA-256
 
-e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993
+6c90597998ce664c7a3757b48b6c8345b95bf087fbe3a84387cde31d0480f7d7
 
 Porównaj przed otwarciem: shasum -a 256 w Terminalu. Inna wartość oznacza inny plik; pobierz go ponownie.
 

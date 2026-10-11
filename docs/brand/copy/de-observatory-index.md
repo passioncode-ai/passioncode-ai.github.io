@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Project Observatory | Lokales Dashboard für Projekte, an denen Agenten arbeiten | PassionCode.ai
 
-Sieh, was sich in deinen Projekten geändert hat, was Aufmerksamkeit braucht und wo bekannte API-Schlüssel eine Kopie hinterlassen haben. Project Observatory ist ein lokales Open-Source-Dashboard von PassionCode.ai, auf Englisch oder Russisch.
+Sieh, was sich in deinen Projekten geändert hat, was Aufmerksamkeit braucht und wo bekannte API-Schlüssel eine Kopie hinterlassen haben. Project Observatory ist ein lokales Open-Source-Dashboard von PassionCode.ai für macOS, Windows und Linux, auf Englisch oder Russisch.
 
 Zum Inhalt springen
 
@@ -64,7 +64,7 @@ Quellcode ansehen
 
 ↗
 
-Open Source · macOS + Linux · Python 3.11+
+Open Source · macOS + Windows + Linux · Python 3.11+, unter Windows 3.13+
 
 EIN BLICK / DEINE PROJEKTE
 
@@ -134,7 +134,7 @@ Aktuelles Release: 0.22.0. Für die erste lokale Beobachtung brauchst du keinen 
 
 ### Installiere das Release
 
-Download project_observatory-0.22.0-py3-none-any.whl und SHA256SUMS aus Release 0.22.0, prüfe sie mit shasum -a 256 -c SHA256SUMS --ignore-missing, installiere dann in einer isolierten Umgebung mit Python 3.11+ und Unterstützung für SQLite-Erweiterungen per pip install --no-deps erst das Wheel und danach sein Extra [full] mit -c "$(project-observatory full-path)/requirements-full.lock", dem Satz an Abhängigkeiten, mit dem das Release getestet wurde. Unter macOS nimm das Python aus Homebrew.
+Download project_observatory-0.22.0-py3-none-any.whl und SHA256SUMS aus Release 0.22.0, prüfe sie mit shasum -a 256 -c SHA256SUMS --ignore-missing, installiere dann in einer isolierten Umgebung mit Python 3.11+ und Unterstützung für SQLite-Erweiterungen per pip install --no-deps erst das Wheel und danach sein Extra [full] mit -c "$(project-observatory full-path)/requirements-full.lock", dem Satz an Abhängigkeiten, mit dem das Release getestet wurde. Unter macOS nimm das Python aus Homebrew. Unter Windows nimm Python 3.13 oder neuer und die PowerShell-Schritte aus der Installationsanleitung.
 
 02
 
@@ -166,7 +166,9 @@ Alle Releases
 
 ↗
 
-Mac-App: ProjectObservatory-0.22.0-macos.zip, mit einer Developer ID signiert und von Apple notarisiert, für macOS 14+. Sie öffnet sich mit dem Dashboard und nutzt die oben installierte Engine; prüfe sie anhand derselben SHA256SUMS.
+Mac-App: ProjectObservatory-0.22.0-macos.zip, eine App für Apple silicon und Intel, mit einer Developer ID signiert und von Apple notarisiert, für macOS 14+. Sie öffnet sich mit dem Dashboard und nutzt die oben installierte Engine; prüfe sie anhand derselben SHA256SUMS.
+
+App für Windows und Linux, seit 0.22.0: ein Windows-Installer für x64 und arm64, der keine Administratorrechte braucht, mit Authenticode signiert, sowie ein AppImage und ein .deb für Linux x64 und arm64, im Release 0.22.0. Wie die Mac-App öffnet sie sich mit dem Dashboard und braucht die oben installierte Engine; die Engine installiert sie nicht. Sie aktualisiert sich selbst, außer einer Kopie aus dem .deb: Installiere das nächste .deb.
 
 Das aktuelle Release, 0.22.0, steht unter der AGPL, wie jedes Release seit 0.10.0, dem ersten unter der AGPL; 0.9.1 und früher behalten die Lizenz, mit der sie erschienen sind.
 

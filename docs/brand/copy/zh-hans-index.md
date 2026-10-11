@@ -250,7 +250,7 @@ Project Observatory
 
 0.22.0
 
-· macOS + Linux · 步骤 5
+· macOS + Windows + Linux · 步骤 5
 
 ↗
 
@@ -260,9 +260,9 @@ Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智�
 
 开发预览版
 
-0.14.1
+0.15.0
 
-· macOS · 步骤 5
+· macOS + Windows + Linux · 步骤 5
 
 ↗
 

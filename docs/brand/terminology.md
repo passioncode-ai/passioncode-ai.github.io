@@ -70,9 +70,9 @@ languages through the saved Tone of Voice ([voice.md](voice.md)).
 | work cycle | The jobs the toolkit is designed around; available account setup is distinct from Fabric’s planned project workflow. |
 | build pipeline | Public product availability and current development direction, with no promised dates. |
 
-| Inbox | Short form of Fabric Inbox, Fabric's mail tool: a desktop mail client in development preview for macOS. |
-| Observatory | Short form of Project Observatory, the local project dashboard. |
-| Dashboards | Short form of Fabric Dashboards, the macOS app that shows local agent services in one window. |
+| Inbox | Short form of Fabric Inbox, Fabric's mail tool: a desktop mail client in development preview for macOS, Windows and Linux (Windows and Linux since 0.14.0). |
+| Observatory | Short form of Project Observatory, the local project dashboard: the engine on macOS, Linux and Windows, with a Mac app and, since 0.22.0, a Windows and Linux app. |
+| Dashboards | Short form of Fabric Dashboards, the desktop app that shows local agent services in one window: macOS, and since 0.7.1 Windows and Linux. |
 | open source | Public source under the GNU AGPL-3.0: use, study, change and share it; a modified version you share or run as a service for others publishes its source. A closed product or an unpublished hosted service needs the commercial license. Released versions keep their earlier license (MIT or PolyForm). |
 
 | agent workplace | A composable setup of independent tools, agent skills and public protocols; not a claim that Fabric’s complete coordination loop has shipped. |

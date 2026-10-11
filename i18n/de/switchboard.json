@@ -27,12 +27,10 @@
     "x64 · Desktop installer + CLI": "x64 · Desktop-Installer + CLI",
     "ZIP archive · WebView2 required": "ZIP-Archiv · WebView2 erforderlich",
     "Download for Windows": "Für Windows herunterladen",
-    "Built natively on Windows, not yet Authenticode-signed, so SmartScreen may show a warning. The installer includes the CLI.": "Nativ unter Windows gebaut und noch nicht mit Authenticode signiert, daher kann SmartScreen eine Warnung anzeigen. Der Installer enthält die CLI.",
     "Before you open it": "Bevor du es öffnest",
     "Switchboard manages accounts and launches the official CLIs. It does not replace them.": "Switchboard verwaltet Accounts und startet die offiziellen CLIs. Es ersetzt sie nicht.",
     "Claude Code or Codex CLI, installed separately. Switchboard includes no provider subscription or API credits.": "Claude Code oder Codex CLI, separat installiert. Switchboard enthält weder ein Anbieter-Abo noch API-Guthaben.",
     "macOS 14 or later, on Apple silicon or Intel.": "macOS 14 oder neuer, auf Apple silicon oder Intel.",
-    "Windows x64 with WebView2. The Windows build is not yet Authenticode-signed.": "Windows x64 mit WebView2. Der Windows-Build ist noch nicht mit Authenticode signiert.",
     "The app keeps running in the menu bar after you close its window, and opens at login; quit it from its menu.": "Die App läuft nach dem Schließen ihres Fensters in der Menüleiste weiter und startet bei der Anmeldung; beende sie über ihr Menü.",
     "SHA-256 checksums": "SHA-256-Prüfsummen",
     "macOS ZIP · SHA-256": "macOS-ZIP · SHA-256",
@@ -153,6 +151,8 @@
     "Switchboard 0.6.13 accounts in its dark theme: the account in use for Claude Code and Codex CLI, two pools of Claude Code accounts with their usage and reset times, and one project rule. Synthetic demo data, with the demo banner at the top.": "Accounts in Switchboard 0.6.13 im dunklen Theme: der aktive Account für Claude Code und Codex CLI, zwei Pools von Claude-Code-Accounts mit Nutzung und Reset-Zeiten und eine Projektregel. Synthetische Demodaten, mit dem Demo-Banner oben.",
     "Browser demo of 0.6.13 · no real accounts, credentials or provider requests": "Browser-Demo von 0.6.13 · keine echten Accounts, Zugangsdaten oder Anbieteranfragen",
     "Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit.": "Switchboard ist das Tool zur Account-Verwaltung, das es heute gibt. Fabric, in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten. Beide gehören zum PassionCode-Toolkit.",
-    "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard verwaltet Accounts für Claude Code und Codex. Project Observatory behält die Projekte im Blick, an denen diese Agenten arbeiten. Fabric Dashboards zeigt die lokalen Agentendienste auf deinem Mac in einem Fenster. Fabric, das Zuhause für deine Projekte und ihre Agenten, ist in früher Vorschau."
+    "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard verwaltet Accounts für Claude Code und Codex. Project Observatory behält die Projekte im Blick, an denen diese Agenten arbeiten. Fabric Dashboards zeigt die lokalen Agentendienste auf deinem Mac in einem Fenster. Fabric, das Zuhause für deine Projekte und ihre Agenten, ist in früher Vorschau.",
+    "Built natively on Windows. The installer, the app and the CLI are Authenticode-signed since 0.6.16. The installer includes the CLI.": "Nativ unter Windows gebaut. Installer, App und CLI sind seit 0.6.16 mit Authenticode signiert. Der Installer enthält die CLI.",
+    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "Windows x64 mit WebView2. Der Windows-Build ist seit 0.6.16 mit Authenticode signiert."
   }
 }

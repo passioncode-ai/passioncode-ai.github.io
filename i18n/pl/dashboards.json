@@ -2,7 +2,6 @@
   "page": "dashboards/index.html",
   "strings": {
     "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Twoje lokalne usługi agentów w jednym miejscu",
-    "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Jedno okno na Macu dla Twoich lokalnych usług agentów. Zobacz, co wymaga uwagi, otwieraj panele i pozwól agentom korzystać z tych samych narzędzi przez MCP.",
     "PassionCode.ai passion fruit mark": "Znak PassionCode.ai w kształcie marakui",
     "Fabric Dashboards": "Fabric Dashboards",
     "One window for local agent services that speak fabric-service/0.1.": "Jedno okno dla lokalnych usług agentów, które mówią protokołem fabric-service/0.1.",
@@ -24,7 +23,6 @@
     "01 / KEEP THE WORK IN VIEW": "01 / TRZYMAJ PRACĘ W POLU WIDZENIA",
     "A window into": "Okno na",
     "the tools doing the work": "narzędzia, które wykonują pracę",
-    "Fabric Dashboards discovers compatible services on your Mac. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards wykrywa zgodne usługi na Twoim Macu. Każda usługa zachowuje swoje zadanie; Ty dostajesz wspólne miejsce, by je sprawdzać i nimi sterować.",
     "See what needs you": "Zobacz, co wymaga Ciebie",
     "Service state, latest activity and attention items appear together. A slow probe is not immediately treated as an outage.": "Stan usługi, ostatnia aktywność i sprawy wymagające uwagi pojawiają się razem. Wolna sonda nie jest od razu uznawana za awarię.",
     "Open the actual dashboard": "Otwórz prawdziwy panel",
@@ -86,7 +84,6 @@
     "you already use": "z których już korzystasz",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "Sprawdzaj projekty w Observatory. Konfiguruj konta w Switchboard. Dodawaj tylko te narzędzia, których potrzebuje Twoja praca.",
     "Explore the tools ↗": "Poznaj narzędzia ↗",
-    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Zobacz wszystkie usługi agentów na Twoim Macu w jednej aplikacji: najpierw to, co wymaga Twojej uwagi, a obok otwiera się własny panel każdej usługi",
     "IN THE TOOLKIT": "W ZESTAWIE NARZĘDZI",
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "Stan, wydatki i kontrola: co robi każda usługa agentów, ile wydaje i jakie ma aktualizacje, w jednym oknie. To krok 4 w części",
     "how it works": "„Jak to działa”",
@@ -96,6 +93,9 @@
     "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
     "Windows and Linux": "Windows i Linux",
     "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "zawiera też podpisany instalator dla Windows na x64 i arm64 oraz AppImage i .deb dla Linuksa na x64 i arm64. Na razie automatyczne aktualizacje działają tylko na macOS: na Windows i Linuksie kolejne wydanie instalujesz sam.",
-    "Windows and Linux downloads": "Pobieranie dla Windows i Linuksa"
+    "Windows and Linux downloads": "Pobieranie dla Windows i Linuksa",
+    "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Jedno okno dla Twoich lokalnych usług agentów na macOS, Windows i Linuksie. Zobacz, co wymaga uwagi, otwieraj panele i pozwól agentom korzystać z tych samych narzędzi przez MCP.",
+    "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Zobacz wszystkie usługi agentów na Twoim komputerze w jednej aplikacji: najpierw to, co wymaga Twojej uwagi, a obok otwiera się własny panel każdej usługi",
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards wykrywa zgodne usługi na Twoim komputerze. Każda usługa zachowuje swoje zadanie; Ty dostajesz wspólne miejsce, by je sprawdzać i nimi sterować."
   }
 }

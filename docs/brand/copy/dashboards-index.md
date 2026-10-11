@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric Dashboards | Your local agent services, together
 
-One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.
+One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.
 
 Skip to content
 
@@ -52,7 +52,7 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 
 # One place to look
 
-See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it
+See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it
 
 IN THE TOOLKIT State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of how it works. All the tools
 
@@ -82,7 +82,7 @@ A service’s own dashboard, opened in the app
 
 ## the tools doing the work
 
-Fabric Dashboards discovers compatible services on your Mac. Each service keeps its own job; you get a shared place to inspect and control them.
+Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.
 
 ### See what needs you
 

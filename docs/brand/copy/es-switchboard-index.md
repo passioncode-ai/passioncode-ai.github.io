@@ -104,7 +104,7 @@ Descargar para Windows
 
 ↓
 
-Compilada de forma nativa en Windows, aún sin firma Authenticode, por lo que SmartScreen puede mostrar una advertencia. El instalador incluye la CLI.
+Compilada de forma nativa en Windows. El instalador, la app y la CLI están firmados con Authenticode desde la 0.6.16. El instalador incluye la CLI.
 
 ☰
 
@@ -116,7 +116,7 @@ Claude Code o Codex CLI, instalados por separado. Switchboard no incluye ninguna
 
 macOS 14 o posterior, en Apple silicon o Intel.
 
-Windows x64 con WebView2. La versión para Windows aún no está firmada con Authenticode.
+Windows x64 con WebView2. La versión para Windows está firmada con Authenticode desde la 0.6.16.
 
 La app sigue ejecutándose en la barra de menús después de cerrar su ventana y se abre al iniciar sesión; ciérrala desde su menú.
 

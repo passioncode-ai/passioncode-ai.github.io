@@ -33,10 +33,11 @@
       "개발 프리뷰",
       "아직 실제 모델 호출로 시험하지 않았고",
       "IMAP과 Outlook",
-      "href=\"/inbox/download/macos\""
+      "href=\"/inbox/download/macos\"",
+      "0.14.1부터 Authenticode 서명"
     ],
     "switchboard/index.html": [
-      "아직 Authenticode로 서명되지 않았으므로",
+      "0.6.16부터 Authenticode로 서명되어 있습니다",
       "저장소에 공개적으로 기록됩니다",
       "href=\"/switchboard/download/windows\""
     ],

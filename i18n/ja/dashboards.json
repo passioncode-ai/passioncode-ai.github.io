@@ -2,7 +2,6 @@
   "page": "dashboards/index.html",
   "strings": {
     "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | ローカルのエージェントサービスを一か所に",
-    "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Mac のウィンドウ一つで、ローカルのエージェントサービスを確認できます。対応が必要なものを把握し、ダッシュボードを開き、エージェントも MCP 経由で同じツールを使えます。",
     "One window for local agent services that speak fabric-service/0.1.": "fabric-service/0.1 に対応するローカルのエージェントサービスを、一つのウィンドウで扱えます。",
     "Your agent services": "あなたのエージェントサービス",
     "One place to look": "見る場所は一つ",
@@ -20,7 +19,6 @@
     "01 / KEEP THE WORK IN VIEW": "01 / 作業を見える状態に",
     "A window into": "作業を担うツールへの",
     "the tools doing the work": "窓口",
-    "Fabric Dashboards discovers compatible services on your Mac. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards は、Mac 上の対応サービスを検出します。各サービスの役割はそのままで、確認と操作のための共通の場所が加わります。",
     "See what needs you": "対応が必要なものを把握",
     "Service state, latest activity and attention items appear together. A slow probe is not immediately treated as an outage.": "サービスの状態、最新のアクティビティ、要対応の項目がまとめて表示されます。応答の遅いプローブが、すぐに障害と判定されることはありません。",
     "Open the actual dashboard": "実際のダッシュボードを開く",
@@ -75,7 +73,6 @@
     "you already use": "サービスから始めましょう",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "プロジェクトの確認は Observatory で、アカウントの設定は Switchboard で行います。ツールは、作業に必要なものだけを追加してください。",
     "Explore the tools ↗": "ツールを見る ↗",
-    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Mac 上のすべてのエージェントサービスを一つのアプリで確認できます。対応が必要なものが先頭に来て、各サービス自身のダッシュボードがその横に開きます",
     "IN THE TOOLKIT": "ツールキットの一員",
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "状態、支出、操作：すべてのエージェントサービスについて、何をしているか、どれだけ使っているか、アップデートの状況を一つのウィンドウで確認できます。",
     "how it works": "使い方のステップ 4 です",
@@ -85,6 +82,9 @@
     "· macOS 13+ · Windows · Linux": "· macOS 13 以降 · Windows · Linux",
     "Windows and Linux": "Windows と Linux",
     "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "には、x64 と arm64 向けの署名済み Windows インストーラーと、x64 と arm64 向けの Linux AppImage と .deb も含まれます。自動アップデートは今のところ macOS のみです。Windows と Linux では、次のリリースをご自身でインストールしてください。",
-    "Windows and Linux downloads": "Windows と Linux のダウンロード"
+    "Windows and Linux downloads": "Windows と Linux のダウンロード",
+    "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "macOS、Windows、Linux のローカルのエージェントサービスを、ウィンドウ一つで確認できます。対応が必要なものを把握し、ダッシュボードを開き、エージェントも MCP 経由で同じツールを使えます。",
+    "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "お使いのコンピューター上のすべてのエージェントサービスを一つのアプリで確認できます。対応が必要なものが先頭に来て、各サービス自身のダッシュボードがその横に開きます",
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards は、お使いのコンピューター上の対応サービスを検出します。各サービスの役割はそのままで、確認と操作のための共通の場所が加わります。"
   }
 }

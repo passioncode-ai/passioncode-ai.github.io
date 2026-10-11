@@ -250,7 +250,7 @@ Project Observatory
 
 0.22.0
 
-· macOS + Linux · 5단계
+· macOS + Windows + Linux · 5단계
 
 ↗
 
@@ -260,9 +260,9 @@ Gmail과 Cloudflare 메일을 한 목록에 모아 중요한 것부터 보여 �
 
 개발 프리뷰
 
-0.14.1
+0.15.0
 
-· macOS · 5단계
+· macOS + Windows + Linux · 5단계
 
 ↗
 

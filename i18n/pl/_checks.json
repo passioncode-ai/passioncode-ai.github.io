@@ -31,10 +31,11 @@
       "Rozwojowa wersja zapoznawcza",
       "nie zostały jeszcze wypróbowane z prawdziwym wywołaniem modelu",
       "IMAP i Outlook",
-      "href=\"/inbox/download/macos\""
+      "href=\"/inbox/download/macos\"",
+      "z podpisem Authenticode od wersji 0.14.1"
     ],
     "switchboard/index.html": [
-      "jeszcze bez podpisu Authenticode",
+      "mają podpis Authenticode od wersji 0.6.16",
       "prowadzone jawnie w repozytorium",
       "href=\"/switchboard/download/windows\""
     ],

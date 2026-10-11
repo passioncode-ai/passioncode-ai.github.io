@@ -1,10 +1,10 @@
 {
-  "tag": "v0.14.1",
-  "version": "0.14.1",
+  "tag": "v0.15.0",
+  "version": "0.15.0",
   "repository": "passioncode-ai/fabric-inbox",
-  "releaseUrl": "https://github.com/passioncode-ai/fabric-inbox/releases/tag/v0.14.1",
+  "releaseUrl": "https://github.com/passioncode-ai/fabric-inbox/releases/tag/v0.15.0",
   "downloads": {
-    "macos": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.14.1/Fabric-Inbox-0.14.1.dmg"
+    "macos": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.15.0/Fabric-Inbox-0.15.0.dmg"
   },
-  "sha256": "e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993"
+  "sha256": "6c90597998ce664c7a3757b48b6c8345b95bf087fbe3a84387cde31d0480f7d7"
 }

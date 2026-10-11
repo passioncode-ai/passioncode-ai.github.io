@@ -1,6 +1,6 @@
 {
   "schema": "releases/1",
-  "generatedAt": "2026-10-11T11:38:59.836Z",
+  "generatedAt": "2026-10-11T12:36:05.975Z",
   "products": {
     "fabric": {
       "key": "fabric",
@@ -51,17 +51,17 @@
       "name": "Fabric Inbox",
       "repository": "passioncode-ai/fabric-inbox",
       "page": "/inbox/",
-      "version": "0.14.1",
-      "tag": "v0.14.1",
+      "version": "0.15.0",
+      "tag": "v0.15.0",
       "prerelease": false,
-      "publishedAt": "2026-10-11T10:57:48Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-inbox/releases/tag/v0.14.1",
+      "publishedAt": "2026-10-11T12:14:50Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-inbox/releases/tag/v0.15.0",
       "assets": {
         "macos": {
-          "name": "Fabric-Inbox-0.14.1.dmg",
-          "url": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.14.1/Fabric-Inbox-0.14.1.dmg",
-          "sha256": "e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993",
-          "size": 253028582
+          "name": "Fabric-Inbox-0.15.0.dmg",
+          "url": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.15.0/Fabric-Inbox-0.15.0.dmg",
+          "sha256": "6c90597998ce664c7a3757b48b6c8345b95bf087fbe3a84387cde31d0480f7d7",
+          "size": 253271055
         }
       }
     },

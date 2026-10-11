@@ -1,8 +1,6 @@
 {
   "page": "inbox/index.html",
   "strings": {
-    "Fabric Inbox | Mail with what matters first · macOS preview | PassionCode.ai": "Fabric Inbox | Mail, bei der das Wichtige zuerst kommt · macOS-Vorschau | PassionCode.ai",
-    "Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS.": "Fabric Inbox ist das Mail-Tool von Fabric und funktioniert eigenständig: Gmail- und Cloudflare-Postfächer in einer Liste, wichtige Mails zuerst, und Agenten auf deinen eigenen Adressen. Entwicklungsvorschau für macOS.",
     "Desktop mail client in development preview: Gmail and Cloudflare mailboxes in one triaged list, addresses answered by agents under a reply policy, a server created in your own Cloudflare account, and every function available to agents over MCP.": "Desktop-Mailprogramm in der Entwicklungsvorschau: Gmail- und Cloudflare-Postfächer in einer sortierten Liste, Adressen, die Agenten nach einer Antwortrichtlinie beantworten, ein Server in deinem eigenen Cloudflare-Account und jede Funktion für Agenten über MCP verfügbar.",
     "Products": "Produkte",
     "GitHub": "GitHub",
@@ -12,7 +10,6 @@
     "Download for macOS": "Für macOS herunterladen",
     "See what it does": "Ansehen, was es kann",
     "Development preview": "Entwicklungsvorschau",
-    "· macOS 12 or later · open source under AGPL-3.0": "· macOS 12 oder neuer · Open Source unter AGPL-3.0",
     "FABRIC INBOX / MAIL + AGENTS": "FABRIC INBOX / MAIL + AGENTEN",
     "IMPORTANT": "WICHTIG",
     "ANSWERED": "BEANTWORTET",
@@ -31,9 +28,7 @@
     "An agent has its own instructions, knowledge and tools and can serve several addresses. It sends an answer only when it rests on its knowledge, fits a topic you allowed and stays within its daily limit. Everything else waits as a draft with the reason.": "Ein Agent hat eigene Anweisungen, eigenes Wissen und eigene Tools und kann mehrere Adressen bedienen. Er sendet eine Antwort nur, wenn sie auf seinem Wissen beruht, zu einem von dir erlaubten Thema passt und sein Tageslimit einhält. Alles andere wartet als Entwurf samt Begründung.",
     "GET FABRIC INBOX": "FABRIC INBOX HOLEN",
     "A development preview": "Eine Entwicklungsvorschau",
-    "for your Mac": "für deinen Mac",
     "Latest preview:": "Neueste Vorschau:",
-    ". The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.": ". Die Mac-App erstellt ihren Mailserver in deinem eigenen Cloudflare-Account und öffnet ihn; deine Mail bleibt bei deinen Accounts.",
     "Universal · Apple silicon + Intel · macOS 12 or later": "Universal · Apple silicon + Intel · macOS 12 oder neuer",
     "DMG installer · Developer ID signed and notarized by Apple": "DMG-Installer · mit Developer ID signiert und von Apple notarisiert",
     "Open the DMG and drag Fabric Inbox to Applications.": "Öffne das DMG und ziehe Fabric Inbox in den Ordner „Programme“.",
@@ -94,6 +89,16 @@
     "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox kümmert sich um Mail. Switchboard verwaltet Accounts für Claude Code und Codex. Project Observatory behält die Projekte im Blick, an denen diese Agenten arbeiten. Fabric, in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten.",
     ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": ", in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten. Sie gehören zum selben Toolkit und haben unterschiedliche Rollen.",
     "Fabric Inbox, all inboxes: three addresses at example.test, important mail first with two agents among the senders, and a release-notes draft open with Reply and Forward. Synthetic demo data.": "Fabric Inbox, alle Posteingänge: drei Adressen unter example.test, wichtige Mail zuerst, darunter zwei Agenten als Absender, und ein geöffneter Entwurf der Release Notes mit Antworten und Weiterleiten. Synthetische Demodaten.",
-    "All inboxes · sample addresses and mail, no real accounts": "Alle Posteingänge · Beispieladressen und -mails, keine echten Accounts"
+    "All inboxes · sample addresses and mail, no real accounts": "Alle Posteingänge · Beispieladressen und -mails, keine echten Accounts",
+    "Fabric Inbox | Mail with what matters first · desktop preview | PassionCode.ai": "Fabric Inbox | Mail, bei der das Wichtige zuerst kommt · Desktop-Vorschau | PassionCode.ai",
+    "Fabric Inbox is Fabric’s mail tool and works on its own: Gmail and Cloudflare mailboxes in one list with important mail first, and agents on your own addresses. Development preview for macOS, Windows and Linux.": "Fabric Inbox ist das Mail-Tool von Fabric und funktioniert eigenständig: Gmail- und Cloudflare-Postfächer in einer Liste, wichtige Mails zuerst, und Agenten auf deinen eigenen Adressen. Entwicklungsvorschau für macOS, Windows und Linux.",
+    "· macOS 12+ · Windows · Linux · open source under AGPL-3.0": "· macOS 12+ · Windows · Linux · Open Source unter AGPL-3.0",
+    "for Mac, Windows and Linux": "für Mac, Windows und Linux",
+    ". The app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.": ". Die App erstellt ihren Mailserver in deinem eigenen Cloudflare-Account und öffnet ihn; deine Mail bleibt bei deinen Accounts.",
+    "Windows and Linux": "Windows und Linux",
+    "Release": "Release",
+    "also ships a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed since 0.14.1, and a Linux AppImage and .deb for x64 and arm64.": "enthält außerdem einen Windows-Installer für x64 und arm64, der keine Administratorrechte braucht und seit 0.14.1 mit Authenticode signiert ist, sowie ein Linux-AppImage und ein .deb für x64 und arm64.",
+    "Windows and Linux downloads": "Downloads für Windows und Linux",
+    "The Windows app and the AppImage update themselves; a copy installed from the .deb does not, so install the next .deb. On Linux the app keeps your sign-in in the Secret Service (GNOME Keyring or KWallet) and will not start without one.": "Die Windows-App und das AppImage aktualisieren sich selbst; eine aus dem .deb installierte Kopie nicht, installiere also das nächste .deb. Unter Linux bewahrt die App deine Anmeldung im Secret Service (GNOME Keyring oder KWallet) auf und startet ohne ihn nicht."
   }
 }

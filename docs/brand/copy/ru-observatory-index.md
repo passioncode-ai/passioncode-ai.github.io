@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Project Observatory | Локальный дашборд для проектов, над которыми работают агенты | PassionCode.ai
 
-Смотрите, что изменилось во всех ваших проектах, что требует внимания и где известные ключи API оставили копию. Project Observatory — локальный дашборд с открытым кодом от PassionCode.ai, на английском или русском.
+Смотрите, что изменилось во всех ваших проектах, что требует внимания и где известные ключи API оставили копию. Project Observatory — локальный дашборд с открытым кодом от PassionCode.ai для macOS, Windows и Linux, на английском или русском.
 
 Перейти к содержанию
 
@@ -64,7 +64,7 @@ PROJECT OBSERVATORY · ОТ PASSIONCODE
 
 ↗
 
-Открытый код · macOS + Linux · Python 3.11+
+Открытый код · macOS + Windows + Linux · Python 3.11+, на Windows 3.13+
 
 ОДИН ЭКРАН / ВАШИ ПРОЕКТЫ
 
@@ -134,7 +134,7 @@ CLI, инструменты MCP и плагин для Claude Code опираю�
 
 ### Установите релиз
 
-Скачать project_observatory-0.22.0-py3-none-any.whl и SHA256SUMS из релиза 0.22.0, проверить их командой shasum -a 256 -c SHA256SUMS --ignore-missing, затем в изолированном окружении Python 3.11+ с поддержкой расширений SQLite выполнить pip install --no-deps для wheel, а потом для его дополнения [full] с -c "$(project-observatory full-path)/requirements-full.lock" — это набор зависимостей, с которым релиз тестировался. На macOS используйте Python из Homebrew.
+Скачать project_observatory-0.22.0-py3-none-any.whl и SHA256SUMS из релиза 0.22.0, проверить их командой shasum -a 256 -c SHA256SUMS --ignore-missing, затем в изолированном окружении Python 3.11+ с поддержкой расширений SQLite выполнить pip install --no-deps для wheel, а потом для его дополнения [full] с -c "$(project-observatory full-path)/requirements-full.lock" — это набор зависимостей, с которым релиз тестировался. На macOS используйте Python из Homebrew. На Windows — Python 3.13 или новее и шаги для PowerShell из руководства по установке.
 
 02
 
@@ -166,7 +166,9 @@ MCP-сервер работает через stdio: claude mcp add observatory -
 
 ↗
 
-Приложение для Mac: ProjectObservatory-0.22.0-macos.zip, подписано Developer ID и нотаризовано Apple, для macOS 14+. Оно открывается на дашборде и использует движок, установленный выше; проверьте его по тому же SHA256SUMS.
+Приложение для Mac: ProjectObservatory-0.22.0-macos.zip, одно приложение для Apple silicon и Intel, подписано Developer ID и нотаризовано Apple, для macOS 14+. Оно открывается на дашборде и использует движок, установленный выше; проверьте его по тому же SHA256SUMS.
+
+Приложение для Windows и Linux, с 0.22.0: установщик для Windows x64 и arm64 без прав администратора, с подписью Authenticode, и AppImage и .deb для Linux x64 и arm64 — на странице релиза 0.22.0. Как и приложение для Mac, оно открывается на дашборде и требует движок, установленный выше; само оно движок не устанавливает. Оно обновляется само, кроме копии из .deb: установите следующий .deb.
 
 Текущий релиз, 0.22.0, выпущен под AGPL, как и все релизы начиная с 0.10.0 — первого под AGPL; 0.9.1 и более ранние сохраняют лицензию, с которой вышли.
 

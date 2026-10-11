@@ -2,7 +2,6 @@
   "page": "dashboards/index.html",
   "strings": {
     "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Vos services d’agents locaux, réunis",
-    "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Une seule fenêtre sur Mac pour vos services d’agents locaux. Voyez ce qui demande votre attention, ouvrez les tableaux de bord et laissez vos agents utiliser les mêmes outils via MCP.",
     "One window for local agent services that speak fabric-service/0.1.": "Une seule fenêtre pour les services d’agents locaux qui parlent fabric-service/0.1.",
     "Download": "Télécharger",
     "Your agent services": "Vos services d’agents",
@@ -22,7 +21,6 @@
     "01 / KEEP THE WORK IN VIEW": "01 / LE TRAVAIL SOUS LES YEUX",
     "A window into": "Une fenêtre sur",
     "the tools doing the work": "les outils qui font le travail",
-    "Fabric Dashboards discovers compatible services on your Mac. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards détecte les services compatibles sur votre Mac. Chaque service garde son propre rôle ; vous disposez d’un endroit commun pour les inspecter et les piloter.",
     "See what needs you": "Voyez ce qui vous attend",
     "Service state, latest activity and attention items appear together. A slow probe is not immediately treated as an outage.": "L’état du service, sa dernière activité et les points qui demandent votre attention s’affichent ensemble. Une sonde lente n’est pas aussitôt traitée comme une panne.",
     "Open the actual dashboard": "Ouvrez le vrai tableau de bord",
@@ -79,7 +77,6 @@
     "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "Dans Settings → Estate updates, l’application surveille le Fabric Agent Contract et les skills PassionCode.ai, et peut mettre à jour les skills en arrière-plan après avoir vérifié qui les a publiés. Cette option est désactivée par défaut.",
     "English or Russian": "Anglais ou russe",
     "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Settings → Language : comme sur ce Mac, anglais ou russe. La fenêtre, le menu et l’icône de la barre des menus changent aussitôt.",
-    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Voyez tous les services d’agents de votre Mac dans une seule application : ce qui vous attend passe en premier, et le tableau de bord propre à chaque service s’ouvre juste à côté",
     "IN THE TOOLKIT": "DANS LA BOÎTE À OUTILS",
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "État, dépenses et contrôle : chaque service d’agent, ce qu’il fait, ce qu’il dépense et ses mises à jour dans une seule fenêtre. Étape 4 de",
     "how it works": "« Comment ça marche »",
@@ -89,6 +86,9 @@
     "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
     "Windows and Linux": "Windows et Linux",
     "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "comprend aussi un installateur Windows signé pour x64 et arm64, ainsi qu’un AppImage et un .deb Linux pour x64 et arm64. Les mises à jour ne sont automatiques que sur macOS pour l’instant : sur Windows et Linux, installez vous-même la version suivante.",
-    "Windows and Linux downloads": "Téléchargements Windows et Linux"
+    "Windows and Linux downloads": "Téléchargements Windows et Linux",
+    "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Une seule fenêtre pour vos services d’agents locaux sur macOS, Windows et Linux. Voyez ce qui demande votre attention, ouvrez les tableaux de bord et laissez vos agents utiliser les mêmes outils via MCP.",
+    "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Voyez tous les services d’agents de votre ordinateur dans une seule application : ce qui vous attend passe en premier, et le tableau de bord propre à chaque service s’ouvre juste à côté",
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards détecte les services compatibles sur votre ordinateur. Chaque service garde son propre rôle ; vous disposez d’un endroit commun pour les inspecter et les piloter."
   }
 }

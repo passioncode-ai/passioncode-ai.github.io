@@ -250,7 +250,7 @@ Release
 
 0.22.0
 
-· macOS + Linux · passo 5
+· macOS + Windows + Linux · passo 5
 
 ↗
 
@@ -260,9 +260,9 @@ E-mails do Gmail e do Cloudflare em uma só lista, os importantes primeiro; os a
 
 Prévia em desenvolvimento
 
-0.14.1
+0.15.0
 
-· macOS · passo 5
+· macOS + Windows + Linux · passo 5
 
 ↗
 

@@ -250,7 +250,7 @@ Versión
 
 0.22.0
 
-· macOS + Linux · paso 5
+· macOS + Windows + Linux · paso 5
 
 ↗
 
@@ -260,9 +260,9 @@ El correo de Gmail y de Cloudflare en una sola lista, lo importante primero; los
 
 Vista previa de desarrollo
 
-0.14.1
+0.15.0
 
-· macOS · paso 5
+· macOS + Windows + Linux · paso 5
 
 ↗
 

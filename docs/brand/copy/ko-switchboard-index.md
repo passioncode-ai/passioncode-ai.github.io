@@ -104,7 +104,7 @@ Windows용 다운로드
 
 ↓
 
-Windows에서 직접 빌드했으며 아직 Authenticode로 서명되지 않았으므로 SmartScreen에 경고가 표시될 수 있습니다. 설치 프로그램에 CLI가 포함되어 있습니다.
+Windows에서 직접 빌드했습니다. 설치 프로그램, 앱, CLI는 0.6.16부터 Authenticode로 서명되어 있습니다. 설치 프로그램에 CLI가 포함되어 있습니다.
 
 ☰
 
@@ -116,7 +116,7 @@ Claude Code 또는 Codex CLI를 따로 설치해야 합니다. Switchboard에는
 
 macOS 14 이상, Apple silicon 또는 Intel.
 
-WebView2가 있는 Windows x64. Windows 빌드는 아직 Authenticode로 서명되지 않았습니다.
+WebView2가 있는 Windows x64. Windows 빌드는 0.6.16부터 Authenticode로 서명되어 있습니다.
 
 창을 닫아도 앱은 메뉴 막대에서 계속 실행되며 로그인할 때 열립니다. 종료는 앱 메뉴에서 하세요.
 

@@ -2,14 +2,12 @@
   "page": "observatory/index.html",
   "strings": {
     "Project Observatory | Local dashboard for agent-operated projects | PassionCode.ai": "Project Observatory | Panel local para proyectos operados por agentes | PassionCode.ai",
-    "See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is an open-source local dashboard from PassionCode.ai, in English or Russian.": "Ve qué cambió en tus proyectos, qué necesita atención y dónde dejaron una copia las claves de API conocidas. Project Observatory es un panel local de código abierto de PassionCode.ai, en inglés o ruso.",
     "Open-source local dashboard for the projects coding agents work on: project inventory, Git activity, findings, metrics and known-value credential exposure checks. English or Russian interface.": "Panel local de código abierto para los proyectos en los que trabajan los agentes de programación: inventario de proyectos, actividad de Git, hallazgos, métricas y comprobaciones de exposición de credenciales de valor conocido. Interfaz en inglés o ruso.",
     "Download": "Descargar",
     "PROJECT OBSERVATORY · BY PASSIONCODE": "PROJECT OBSERVATORY · DE PASSIONCODE",
     "Your projects": "Tus proyectos",
     "Back in view": "De nuevo a la vista",
     "View source": "Ver código fuente",
-    "Open source · macOS + Linux · Python 3.11+": "Código abierto · macOS + Linux · Python 3.11+",
     "ONE VIEW / YOUR PROJECTS": "UNA VISTA / TUS PROYECTOS",
     "PROJECTS": "PROYECTOS",
     "FINDINGS": "HALLAZGOS",
@@ -50,7 +48,6 @@
     ", then, in an isolated Python 3.11+ environment with SQLite extension support,": ", y luego, en un entorno aislado de Python 3.11+ con soporte para extensiones de SQLite, ejecuta",
     "the wheel and then its": "para el wheel y después para su extra",
     "extra with": "con",
-    ", the dependency set the release was tested with. On macOS, use Homebrew Python.": ", el conjunto de dependencias con el que se probó la versión. En macOS, usa Python de Homebrew.",
     "Create a private workspace": "Crea un espacio de trabajo privado",
     ", then choose the folder to observe with": ", y luego elige la carpeta que quieres observar con",
     ". Configuration, keys and history stay outside the installed code.": ". La configuración, las claves y el historial se quedan fuera del código instalado.",
@@ -64,7 +61,6 @@
     "Onboarding &amp; integrations": "Puesta en marcha e integraciones",
     "All releases": "Todas las versiones",
     "Mac app:": "App para Mac:",
-    ", signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same": ", firmada con Developer ID y notarizada por Apple, para macOS 14+. Se abre en el panel y usa el motor instalado arriba; compárala con el mismo",
     "The current release,": "La versión actual,",
     ", is under the AGPL, like every release since 0.10.0, the first under the AGPL; 0.9.1 and earlier keep the license they shipped with.": ", está bajo la AGPL, como todas las versiones desde la 0.10.0, la primera bajo la AGPL; la 0.9.1 y las anteriores conservan la licencia con la que se publicaron.",
     "Known-value scanning compares selected artifacts with keys already known locally. It cannot find unknown secrets or prove that no copy remains, and a local copy is not evidence that anyone else obtained a key. Live provider rotation and external MCP hosts are outside the offline test suite.": "El análisis de valores conocidos compara artefactos seleccionados con claves ya conocidas localmente. No puede encontrar secretos desconocidos ni demostrar que no queda ninguna copia, y una copia local no es prueba de que otra persona haya obtenido una clave. La rotación en vivo con proveedores y los hosts MCP externos quedan fuera de la suite de pruebas sin conexión.",
@@ -95,6 +91,12 @@
     "how it works": "«Cómo funciona»",
     "All the tools": "Todas las herramientas",
     "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, en vista previa temprana, es el hogar de tus proyectos y sus agentes. Observatory está disponible ahora como una herramienta local independiente.",
-    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "La vista general de Project Observatory: cinco hallazgos ordenados de crítico a informativo y, después, los contadores de proyectos y de actividad. Datos de demostración sintéticos."
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "La vista general de Project Observatory: cinco hallazgos ordenados de crítico a informativo y, después, los contadores de proyectos y de actividad. Datos de demostración sintéticos.",
+    "See what changed across your projects, what needs attention and where known API keys left a copy. Project Observatory is an open-source local dashboard from PassionCode.ai for macOS, Windows and Linux, in English or Russian.": "Ve qué cambió en tus proyectos, qué necesita atención y dónde dejaron una copia las claves de API conocidas. Project Observatory es un panel local de código abierto de PassionCode.ai para macOS, Windows y Linux, en inglés o ruso.",
+    "Open source · macOS + Windows + Linux · Python 3.11+, 3.13+ on Windows": "Código abierto · macOS + Windows + Linux · Python 3.11+, 3.13+ en Windows",
+    ", the dependency set the release was tested with. On macOS, use Homebrew Python. On Windows, use Python 3.13 or newer and the PowerShell steps in the installation guide.": ", el conjunto de dependencias con el que se probó la versión. En macOS, usa Python de Homebrew. En Windows, usa Python 3.13 o posterior y los pasos de PowerShell de la guía de instalación.",
+    ", one app for Apple silicon and Intel, signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same": ", una sola app para Apple silicon e Intel, firmada con Developer ID y notarizada por Apple, para macOS 14+. Se abre en el panel y usa el motor instalado arriba; compárala con el mismo",
+    "Windows and Linux app, since 0.22.0: a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed, and an AppImage and .deb for Linux x64 and arm64, on": "App para Windows y Linux, desde la 0.22.0: un instalador de Windows para x64 y arm64 que no necesita permisos de administrador, firmado con Authenticode, y un AppImage y un .deb para Linux x64 y arm64, en",
+    ". Like the Mac app, it opens on the dashboard and needs the engine installed above; it does not install the engine. It updates itself, except a copy installed from the .deb: install the next .deb.": ". Como la app para Mac, se abre en el panel y necesita el motor instalado arriba; no instala el motor. Se actualiza sola, salvo una copia instalada desde el .deb: instala el siguiente .deb."
   }
 }
