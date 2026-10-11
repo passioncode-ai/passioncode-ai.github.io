@@ -335,10 +335,12 @@ for (const action of ['Create an agent', 'Adapt an agent', 'Open a project', 'Cr
 assert.ok(!/source is private/i.test(fabric), 'Fabric source is public since 2026-09-30')
 
 const inbox = read('inbox/index.html')
-for (const text of ['Development preview', 'General IMAP and Outlook', 'not yet been tried with a real model call', 'href="/fabric/"', 'href="/inbox/download/macos"', 'Settings → Agent access', '/mcp', 'href="https://github.com/passioncode-ai/fabric-inbox"', 'Authenticode-signed since 0.14.1', 'a copy installed from the .deb does not', ...LICENSE_WORDING]) assert.ok(inbox.includes(text), `Inbox missing ${text}`)
+for (const text of ['Development preview', 'General IMAP and Outlook', 'not yet been tried with a real model call', 'href="/fabric/"', 'href="/inbox/download/macos"', 'Settings → Agent access', '/mcp', 'href="https://github.com/passioncode-ai/fabric-inbox"', 'Authenticode-signed since 0.14.1', 'a copy installed from the .deb does not', 'The Mac App Store version does not have the console', 'in 0.15.0 it could not start', 'revoked when the session ends', 'A Mac copy older than 0.15.2 cannot update itself', ...LICENSE_WORDING]) assert.ok(inbox.includes(text), `Inbox missing ${text}`)
 
 const dashboards = read('dashboards/index.html')
-for (const text of ['macOS 13', 'Apple silicon', 'Intel', 'list_services', 'Services are installed separately', 'Release 0.3.1 is the first under the AGPL', 'href="/dashboards/download/macos"', ...LICENSE_WORDING]) assert.ok(dashboards.includes(text), `Dashboards missing ${text}`)
+for (const text of ['macOS 13', 'Apple silicon', 'Intel', 'list_services', 'Services are installed separately', 'Release 0.3.1 is the first under the AGPL', 'href="/dashboards/download/macos"', 'a copy installed from the .deb does not', ...LICENSE_WORDING]) assert.ok(dashboards.includes(text), `Dashboards missing ${text}`)
+// Since 0.7.4 (SITE-033) the Windows app and the AppImage update themselves; the old macOS-only line is false.
+assert.ok(!dashboards.includes('automatic on macOS only'), 'Dashboards still says updates are automatic on macOS only')
 
 const observatory = read('observatory/index.html')
 for (const text of ['requirements-full.lock', 'observatory_overview', 'notarized by Apple', 'first under the AGPL', '0.8.2 to 0.9.1 under PolyForm', 'SHA256SUMS', 'claude mcp add observatory', 'https://github.com/passioncode-ai/project-observatory-dashboard', ...LICENSE_WORDING, 'English or Russian', 'cannot find unknown secrets', 'Synthetic demo', 'it does not install the engine', 'Python 3.13 or newer']) assert.ok(observatory.includes(text), `observatory missing ${text}`)

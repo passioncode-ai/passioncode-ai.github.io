@@ -34,7 +34,10 @@
       "pas encore été testées avec un véritable appel de modèle",
       "IMAP générique et d",
       "href=\"/inbox/download/macos\"",
-      "signé avec Authenticode depuis la 0.14.1"
+      "signé avec Authenticode depuis la 0.14.1",
+      "La version du Mac App Store n’a pas la console",
+      "dans 0.15.0, elle ne démarrait pas",
+      "Une copie Mac antérieure à 0.15.2 ne peut pas se mettre à jour elle-même"
     ],
     "switchboard/index.html": [
       "signés avec Authenticode depuis la 0.6.16",

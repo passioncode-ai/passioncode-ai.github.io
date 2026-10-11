@@ -1,0 +1,209 @@
+{
+ "what": "WebKit (Playwright webkit, playwright-core 1.63.0) against the built dist/ served over local HTTP, branch agent/site-033, 2026-10-11T20:59:26.105Z; reduced motion on",
+ "pages": [
+  {
+   "url": "/inbox/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0,
+   "elementsOutsideViewport": 0,
+   "newSection": {
+    "top": 801,
+    "width": 362,
+    "height": 1428
+   },
+   "newIsFirstAfterHero": true,
+   "newTitle": "Your coding agent / at work in Inbox",
+   "newCards": [
+    "Your agent in a side panel",
+    "No address or secret to copy",
+    "Mail the server could not take"
+   ],
+   "newColumns": 1,
+   "agentSteps": 3,
+   "guideLink": true,
+   "heroTitle": "Your mail / Important first"
+  },
+  {
+   "url": "/inbox/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0,
+   "elementsOutsideViewport": 0,
+   "newSection": {
+    "top": 794,
+    "width": 1180,
+    "height": 916
+   },
+   "newIsFirstAfterHero": true,
+   "newTitle": "Your coding agent / at work in Inbox",
+   "newCards": [
+    "Your agent in a side panel",
+    "No address or secret to copy",
+    "Mail the server could not take"
+   ],
+   "newColumns": 3,
+   "agentSteps": 3,
+   "guideLink": true,
+   "heroTitle": "Your mail / Important first"
+  },
+  {
+   "url": "/ru/inbox/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0,
+   "elementsOutsideViewport": 0,
+   "newSection": {
+    "top": 888,
+    "width": 362,
+    "height": 1693
+   },
+   "newIsFirstAfterHero": true,
+   "newTitle": "Ваш агент для программирования / работает в Inbox",
+   "newCards": [
+    "Ваш агент в боковой панели",
+    "Без копирования адресов и секретов",
+    "Почта, которую сервер не смог принять"
+   ],
+   "newColumns": 1,
+   "agentSteps": 3,
+   "guideLink": true,
+   "heroTitle": "Ваша почта / Сначала важное"
+  },
+  {
+   "url": "/ru/inbox/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0,
+   "elementsOutsideViewport": 0,
+   "newSection": {
+    "top": 824,
+    "width": 1180,
+    "height": 1066
+   },
+   "newIsFirstAfterHero": true,
+   "newTitle": "Ваш агент для программирования / работает в Inbox",
+   "newCards": [
+    "Ваш агент в боковой панели",
+    "Без копирования адресов и секретов",
+    "Почта, которую сервер не смог принять"
+   ],
+   "newColumns": 3,
+   "agentSteps": 3,
+   "guideLink": true,
+   "heroTitle": "Ваша почта / Сначала важное"
+  },
+  {
+   "url": "/dashboards/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0,
+   "elementsOutsideViewport": 0,
+   "newSection": {
+    "top": 2918,
+    "width": 362,
+    "height": 1855
+   },
+   "newIsFirstAfterHero": false,
+   "newTitle": "Spend, a console / and updates you can trust",
+   "newCards": [
+    "Every limit on Spend",
+    "An agent console beside the dashboard",
+    "Updates that are checked first",
+    "The skills kept current",
+    "English or Russian"
+   ],
+   "newColumns": 1,
+   "agentSteps": 0,
+   "guideLink": false,
+   "heroTitle": "Your agent services / One place to look",
+   "dashboardsUpdateLine": "Release 0.7.4 also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Since 0.7.4 the Windows app and the AppImage update themselves; a copy installed from the .deb does not, so install the next .deb."
+  },
+  {
+   "url": "/dashboards/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0,
+   "elementsOutsideViewport": 0,
+   "newSection": {
+    "top": 3142,
+    "width": 1180,
+    "height": 1094
+   },
+   "newIsFirstAfterHero": false,
+   "newTitle": "Spend, a console / and updates you can trust",
+   "newCards": [
+    "Every limit on Spend",
+    "An agent console beside the dashboard",
+    "Updates that are checked first",
+    "The skills kept current",
+    "English or Russian"
+   ],
+   "newColumns": 3,
+   "agentSteps": 0,
+   "guideLink": false,
+   "heroTitle": "Your agent services / One place to look",
+   "dashboardsUpdateLine": "Release 0.7.4 also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Since 0.7.4 the Windows app and the AppImage update themselves; a copy installed from the .deb does not, so install the next .deb."
+  },
+  {
+   "url": "/ru/dashboards/",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0,
+   "elementsOutsideViewport": 0,
+   "newSection": {
+    "top": 3341,
+    "width": 362,
+    "height": 2062
+   },
+   "newIsFirstAfterHero": false,
+   "newTitle": "Расходы, консоль / и обновления, которым можно доверять",
+   "newCards": [
+    "Все лимиты на странице расходов",
+    "Консоль агента рядом с дашбордом",
+    "Обновления, которые сначала проверяются",
+    "Навыки всегда актуальны",
+    "Английский или русский"
+   ],
+   "newColumns": 1,
+   "agentSteps": 0,
+   "guideLink": false,
+   "heroTitle": "Ваши сервисы агентов / Всё в одном месте",
+   "dashboardsUpdateLine": "Релиз 0.7.4 также включает подписанный установщик для Windows на x64 и arm64, а для Linux — AppImage и .deb на x64 и arm64. Начиная с 0.7.4 приложение для Windows и AppImage обновляются сами; копия, установленная из .deb, — нет: установите следующий .deb."
+  },
+  {
+   "url": "/ru/dashboards/",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "brokenImages": 0,
+   "elementsOutsideViewport": 0,
+   "newSection": {
+    "top": 3309,
+    "width": 1180,
+    "height": 1212
+   },
+   "newIsFirstAfterHero": false,
+   "newTitle": "Расходы, консоль / и обновления, которым можно доверять",
+   "newCards": [
+    "Все лимиты на странице расходов",
+    "Консоль агента рядом с дашбордом",
+    "Обновления, которые сначала проверяются",
+    "Навыки всегда актуальны",
+    "Английский или русский"
+   ],
+   "newColumns": 3,
+   "agentSteps": 0,
+   "guideLink": false,
+   "heroTitle": "Ваши сервисы агентов / Всё в одном месте",
+   "dashboardsUpdateLine": "Релиз 0.7.4 также включает подписанный установщик для Windows на x64 и arm64, а для Linux — AppImage и .deb на x64 и arm64. Начиная с 0.7.4 приложение для Windows и AppImage обновляются сами; копия, установленная из .deb, — нет: установите следующий .deb."
+  }
+ ]
+}

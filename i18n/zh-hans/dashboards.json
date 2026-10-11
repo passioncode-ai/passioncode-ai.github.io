@@ -81,7 +81,7 @@
     "FABRIC DASHBOARDS · macOS + Windows + Linux": "FABRIC DASHBOARDS · macOS + Windows + Linux",
     "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
     "Windows and Linux": "Windows 和 Linux",
-    "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "同时提供了签名的 Windows 安装包（x64 和 arm64），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。目前仅 macOS 支持自动更新：Windows 和 Linux 需要你自行安装下一个版本。",
+    "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Since 0.7.4 the Windows app and the AppImage update themselves; a copy installed from the .deb does not, so install the next .deb.": "同时提供了签名的 Windows 安装包（x64 和 arm64），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。从 0.7.4 起，Windows 应用和 AppImage 会自动更新；通过 .deb 安装的不会，需要你手动安装下一个 .deb。",
     "Windows and Linux downloads": "下载 Windows 和 Linux 版本",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "在一个窗口里查看你在 macOS、Windows 和 Linux 上的本地智能体服务：看哪些需要处理，打开各自的仪表盘，也让你的智能体通过 MCP 使用同样的工具。",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "在一个应用里查看你电脑上的每个智能体服务：需要你处理的排在最前，每个服务自己的仪表盘就在旁边打开",

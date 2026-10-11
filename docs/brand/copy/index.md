@@ -62,7 +62,7 @@ For your organization
 
 ↗
 
-Open source under AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.3 · Observatory 0.22.0
+Open source under AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.4 · Observatory 0.23.0
 
 Accounts
 
@@ -238,7 +238,7 @@ Every local agent service in one window, driven by you or by agents.
 
 Release
 
-0.7.3
+0.7.4
 
 · macOS + Windows + Linux · step 4
 
@@ -250,7 +250,7 @@ What changed in every project, what needs attention, with the evidence.
 
 Release
 
-0.22.0
+0.23.0
 
 · macOS + Windows + Linux · step 5
 
@@ -262,7 +262,7 @@ Gmail and Cloudflare mail in one list, important first; agents answer by policy.
 
 Development preview
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · step 5
 

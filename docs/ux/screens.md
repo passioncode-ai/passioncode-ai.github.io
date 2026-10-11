@@ -71,7 +71,7 @@ Screens describe public website behavior, not acceptance of native Switchboard o
 **Entity:** Fabric, the home for your projects and their agents within PassionCode.ai, in early preview.
 
 ### SCR-06: Fabric Inbox
-**Scenarios:** SCN-009. Development-preview hero with Download for macOS (the line under it names macOS 12+, Windows and Linux), what it does, Get Fabric Inbox (macOS card, a «Windows and Linux» card since SITE-030 2026-10-11 linking the latest release page, Before you open it, checksum, release notes, limits), For agents (key and MCP command), toolkit context and FAQ.
+**Scenarios:** SCN-009. Development-preview hero with Download for macOS (the line under it names macOS 12+, Windows and Linux), New in 0.15 (since SITE-033 2026-10-11: agent console, setup by the coding agent, mail the server could not take, in the page's feature-grid style; the hero headline and line stay on the page's one question), what it does, Get Fabric Inbox (macOS card, a «Windows and Linux» card since SITE-030 2026-10-11 linking the latest release page, Before you open it, checksum, release notes, limits), For agents (three steps: the sentence for the coding agent, a key by hand, the MCP command), toolkit context and FAQ.
 **Web surface:** public
 **Route:** https://passioncode.ai/inbox/
 **Answers:** What does Inbox do and can I use it today?

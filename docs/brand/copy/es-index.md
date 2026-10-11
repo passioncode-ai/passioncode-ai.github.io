@@ -62,7 +62,7 @@ Para tu organización
 
 ↗
 
-Código abierto bajo AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.3 · Observatory 0.22.0
+Código abierto bajo AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.4 · Observatory 0.23.0
 
 Cuentas
 
@@ -238,7 +238,7 @@ Todos los servicios locales de agentes en una sola ventana, manejados por ti o p
 
 Versión
 
-0.7.3
+0.7.4
 
 · macOS + Windows + Linux · paso 4
 
@@ -250,7 +250,7 @@ Qué ha cambiado en cada proyecto y qué requiere atención, con las pruebas.
 
 Versión
 
-0.22.0
+0.23.0
 
 · macOS + Windows + Linux · paso 5
 
@@ -262,7 +262,7 @@ El correo de Gmail y de Cloudflare en una sola lista, lo importante primero; los
 
 Vista previa de desarrollo
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · paso 5
 

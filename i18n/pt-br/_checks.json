@@ -32,7 +32,10 @@
       "ainda não foram testadas com uma chamada real a um modelo",
       "IMAP em geral e a Outlook",
       "href=\"/inbox/download/macos\"",
-      "com assinatura Authenticode desde a 0.14.1"
+      "com assinatura Authenticode desde a 0.14.1",
+      "A versão da Mac App Store não tem o console",
+      "na 0.15.0 ele não iniciava",
+      "Uma cópia para Mac anterior à 0.15.2 não consegue se atualizar sozinha"
     ],
     "switchboard/index.html": [
       "têm assinatura Authenticode desde a 0.6.16",
