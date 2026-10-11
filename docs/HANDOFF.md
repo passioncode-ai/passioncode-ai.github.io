@@ -21,6 +21,9 @@ Done ([capture record](evidence/2026-10-11-mockups/README.md), harness in `evide
   zh-Hans by the copy agent's write capability only (one string per call; calls with several strings and parallel
   calls returned no text — a copy-agent defect to report to its owner; about $0.16 charged in all, failed calls included). Copy-agent rule checks:
   en 100 pass, ru 100 pass, zh no findings.
+  Reported to the copy agent's owner and fixed there as WR-01 (2026-10-11): empty
+  reasoning pieces no longer stall a job, three jobs run at once, a run with no text now fails as `execution-failed`.
+  Batched and parallel zh-Hans-CN calls work again; the one-string-per-call workaround is no longer needed.
 - docs/ux SCN-021, SCN-007, SCR-04, SCR-05, SCR-06 home; the plan's W5 status; SITE-028 row.
 
 Checks run on the branch: `npm run locales -- --check`, `npm run check` (exit 0), `npm test` 100/100,
