@@ -98,6 +98,15 @@
     "Create a project": "프로젝트 만들기",
     "A new home for its purpose, board and releases": "목적, 보드, 릴리스를 담을 새 집",
     "The agent work itself runs in your coding agent’s console": "에이전트 작업 자체는 코딩 에이전트의 콘솔에서 진행됩니다",
-    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "조율은 Fabric이 나아가는 방향이며, 사용자를 대신하지 않습니다. 프로젝트의 목적과 각 에이전트에게 허용할 일은 사용자가 정합니다."
+    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "조율은 Fabric이 나아가는 방향이며, 사용자를 대신하지 않습니다. 프로젝트의 목적과 각 에이전트에게 허용할 일은 사용자가 정합니다.",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "‘만들기’ 후 Fabric이 여는 코딩 에이전트 콘솔: release-notes-agent에 대한 여섯 가지 시작 질문 중 두 번째를 묻습니다. 녹화가 아니라 직접 쓴 예시입니다.",
+    "Create an agent: the name release-notes-agent, what it will do in one sentence, where its folder goes and which coding agent does the work. Synthetic demo data.": "에이전트 만들기: 이름 release-notes-agent, 한 문장으로 쓴 하는 일, 폴더 위치, 작업을 맡을 코딩 에이전트. 가상의 데모 데이터입니다.",
+    "Create an agent · a name, one sentence, a folder, a coding agent": "에이전트 만들기 · 이름, 한 문장, 폴더, 코딩 에이전트",
+    "Adapt an existing agent: the four steps, what Fabric read from the folder legacy-reports-agent, and the coding agent that will do the work. Synthetic demo data.": "기존 에이전트를 Fabric에 맞추기: 네 단계, Fabric이 legacy-reports-agent 폴더에서 읽은 내용, 작업을 맡을 코딩 에이전트. 가상의 데모 데이터입니다.",
+    "Adapt an agent · Fabric reads the folder and nothing else": "에이전트를 Fabric에 맞추기 · Fabric은 폴더만 읽습니다",
+    "The console after Create · the questions, one at a time": "‘만들기’ 후 콘솔 · 질문은 한 번에 하나씩",
+    "The coding agent’s console after Adapt: the plan for legacy-reports-agent with its profile, effects, branch and every file that would change, waiting for a yes. A written example, not a recording.": "‘맞추기’ 후 코딩 에이전트 콘솔: legacy-reports-agent에 대한 계획으로 프로필, 효과, 브랜치, 바뀔 모든 파일을 보여 주고 승인을 기다립니다. 녹화가 아니라 직접 쓴 예시입니다.",
+    "The console after Adapt · the plan before any change": "‘맞추기’ 후 콘솔 · 바꾸기 전에 보여 주는 계획",
+    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "만들기와 맞추기 화면은 Fabric 자체 인터페이스를 소스 코드에서 샘플 데이터로 렌더링한 것입니다. 콘솔 텍스트는 코딩 에이전트가 하는 일을 직접 쓴 예시이며 녹화가 아닙니다."
   }
 }

@@ -135,6 +135,8 @@
     "06 / QUESTIONS": "06 / PYTANIA",
     "DIRECTION": "KIERUNEK",
     "AVAILABLE NOW": "DOSTĘPNE TERAZ",
-    "AVAILABLE NOW, IN PART": "DOSTĘPNE TERAZ, W CZĘŚCI"
+    "AVAILABLE NOW, IN PART": "DOSTĘPNE TERAZ, W CZĘŚCI",
+    "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "Pierwsze uruchomienie Fabric, krok 3 z 3: utwórz agenta albo dostosuj takiego, który powstał gdzie indziej, otwórz projekt albo utwórz nowy. Syntetyczne dane demonstracyjne.",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "Konsola agenta kodującego, którą Fabric otwiera po „Utwórz”: agent zadaje drugie z sześciu pytań wstępnych dla release-notes-agent. Napisany przykład, nie nagranie."
   }
 }

@@ -98,6 +98,15 @@
     "Create a project": "Utwórz projekt",
     "A new home for its purpose, board and releases": "Nowy dom dla jego celu, tablicy i wydań",
     "The agent work itself runs in your coding agent’s console": "Sama praca agenta odbywa się w konsoli Twojego agenta kodującego",
-    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "Koordynacja to kierunek, w którym zmierza Fabric, i nigdy nie zastąpi Ciebie. To Ty decydujesz, czemu służy projekt i co wolno każdemu agentowi."
+    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "Koordynacja to kierunek, w którym zmierza Fabric, i nigdy nie zastąpi Ciebie. To Ty decydujesz, czemu służy projekt i co wolno każdemu agentowi.",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "Konsola agenta kodującego, którą Fabric otwiera po „Utwórz”: agent zadaje drugie z sześciu pytań wstępnych dla release-notes-agent. Napisany przykład, nie nagranie.",
+    "Create an agent: the name release-notes-agent, what it will do in one sentence, where its folder goes and which coding agent does the work. Synthetic demo data.": "Utwórz agenta: nazwa release-notes-agent, w jednym zdaniu, co będzie robić, gdzie trafi jego folder i który agent kodujący wykona pracę. Syntetyczne dane demonstracyjne.",
+    "Create an agent · a name, one sentence, a folder, a coding agent": "Utwórz agenta · nazwa, jedno zdanie, folder, agent kodujący",
+    "Adapt an existing agent: the four steps, what Fabric read from the folder legacy-reports-agent, and the coding agent that will do the work. Synthetic demo data.": "Dostosuj istniejącego agenta: cztery kroki, to, co Fabric odczytał z folderu legacy-reports-agent, i agent kodujący, który wykona pracę. Syntetyczne dane demonstracyjne.",
+    "Adapt an agent · Fabric reads the folder and nothing else": "Dostosuj agenta · Fabric czyta folder i nic więcej",
+    "The console after Create · the questions, one at a time": "Konsola po „Utwórz” · pytania, jedno po drugim",
+    "The coding agent’s console after Adapt: the plan for legacy-reports-agent with its profile, effects, branch and every file that would change, waiting for a yes. A written example, not a recording.": "Konsola agenta kodującego po „Dostosuj”: plan dla legacy-reports-agent z profilem, efektami, gałęzią i każdym plikiem, który by się zmienił; agent czeka na „tak”. Napisany przykład, nie nagranie.",
+    "The console after Adapt · the plan before any change": "Konsola po „Dostosuj” · plan przed jakąkolwiek zmianą",
+    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "Ekrany Utwórz i Dostosuj to własny interfejs Fabric, wyrenderowany z jego kodu źródłowego na przykładowych danych. Tekst w konsoli to napisany przykład tego, co robi agent kodujący, a nie nagranie."
   }
 }

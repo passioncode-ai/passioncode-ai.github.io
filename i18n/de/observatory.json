@@ -16,7 +16,6 @@
     "INSIDE OBSERVATORY": "EIN BLICK IN OBSERVATORY",
     "What needs attention, first": "Zuerst, was Aufmerksamkeit braucht",
     "The actual Observatory overview, rendered by the engine over a fictional company’s projects.": "Die echte Übersicht von Observatory, von der Engine aus den Projekten eines fiktiven Unternehmens erzeugt.",
-    "The Project Observatory overview in its dark theme: five findings ordered from critical to info, project and activity counters, and a card for every section. Synthetic demo data.": "Die Übersicht von Project Observatory im dunklen Theme: fünf Befunde, geordnet von kritisch bis Info, Zähler für Projekte und Aktivität und eine Karte für jeden Bereich. Synthetische Demodaten.",
     "Synthetic demo estate · no real projects, repositories or credentials": "Synthetischer Demobestand · keine echten Projekte, Repositories oder Zugangsdaten",
     "A LOCAL OBSERVATORY": "EIN LOKALES OBSERVATORIUM",
     "Less guessing": "Weniger raten",
@@ -95,6 +94,7 @@
     "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "Gedächtnis und Nachweise: was sich in jedem Projekt geändert hat, was entschieden wurde und was Aufmerksamkeit braucht. Schritt 5 in",
     "how it works": "„So funktioniert es“",
     "All the tools": "Alle Tools",
-    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten. Observatory ist schon jetzt als eigenständiges lokales Tool verfügbar."
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, in früher Vorschau, ist das Zuhause für deine Projekte und ihre Agenten. Observatory ist schon jetzt als eigenständiges lokales Tool verfügbar.",
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "Die Übersicht von Project Observatory: fünf Befunde, geordnet von kritisch bis Info, danach die Zähler für Projekte und Aktivität. Synthetische Demodaten."
   }
 }

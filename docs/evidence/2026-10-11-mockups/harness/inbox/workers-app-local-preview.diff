@@ -1,0 +1,11 @@
+--- a/workers/app.ts
++++ b/workers/app.ts
+@@ -70,7 +70,7 @@
+ // Cloudflare Access JWT validation middleware (production only)
+ app.use("*", async (c, next) => {
+ 	// Skip validation in development
+-	if (import.meta.env.DEV) {
++	if (import.meta.env.DEV || import.meta.env.VITE_LOCAL_PREVIEW === "1") {
+ 		return next();
+ 	}
+ 

@@ -96,6 +96,8 @@
     "All the tools": "Wszystkie narzędzia",
     "02 / THE PASSIONCODE TOOLKIT": "02 / ZESTAW NARZĘDZI PASSIONCODE",
     "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox obsługuje pocztę. Switchboard zarządza kontami Claude Code i Codex. Project Observatory trzyma w polu widzenia projekty, nad którymi pracują ci agenci. Fabric, we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów.",
-    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": ", we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów. Należą do tego samego zestawu narzędzi i mają różne role."
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": ", we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów. Należą do tego samego zestawu narzędzi i mają różne role.",
+    "Fabric Inbox, all inboxes: three addresses at example.test, important mail first with two agents among the senders, and a release-notes draft open with Reply and Forward. Synthetic demo data.": "Fabric Inbox, wszystkie skrzynki: trzy adresy w example.test, najpierw ważna poczta, wśród nadawców dwóch agentów, i otwarty szkic informacji o wydaniu z przyciskami Odpowiedz i Przekaż dalej. Syntetyczne dane demonstracyjne.",
+    "All inboxes · sample addresses and mail, no real accounts": "Wszystkie skrzynki · przykładowe adresy i wiadomości, bez prawdziwych kont"
   }
 }

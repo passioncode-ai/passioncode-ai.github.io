@@ -16,7 +16,6 @@
     "INSIDE OBSERVATORY": "DANS OBSERVATORY",
     "What needs attention, first": "D’abord, ce qui demande votre attention",
     "The actual Observatory overview, rendered by the engine over a fictional company’s projects.": "La vraie vue d’ensemble d’Observatory, générée par le moteur à partir des projets d’une entreprise fictive.",
-    "The Project Observatory overview in its dark theme: five findings ordered from critical to info, project and activity counters, and a card for every section. Synthetic demo data.": "La vue d’ensemble de Project Observatory en thème sombre : cinq constats classés de critique à info, des compteurs de projets et d’activité, et une carte pour chaque section. Données de démonstration synthétiques.",
     "Synthetic demo estate · no real projects, repositories or credentials": "Parc de démonstration synthétique · aucun projet, dépôt ni identifiant réel",
     "A LOCAL OBSERVATORY": "UN OBSERVATOIRE LOCAL",
     "Less guessing": "Moins de suppositions",
@@ -95,6 +94,7 @@
     "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "Mémoire et preuves : ce qui a changé dans chaque projet, ce qui a été décidé et ce qui demande votre attention. Étape 5 de",
     "how it works": "« Comment ça marche »",
     "All the tools": "Tous les outils",
-    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, en préversion, est le foyer de vos projets et de leurs agents. Observatory est disponible dès maintenant comme outil local distinct."
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, en préversion, est le foyer de vos projets et de leurs agents. Observatory est disponible dès maintenant comme outil local distinct.",
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "La vue d’ensemble de Project Observatory : cinq constats classés de critique à info, puis les compteurs de projets et d’activité. Données de démonstration synthétiques."
   }
 }

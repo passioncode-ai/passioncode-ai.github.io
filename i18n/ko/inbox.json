@@ -96,6 +96,8 @@
     "All the tools": "모든 도구",
     "02 / THE PASSIONCODE TOOLKIT": "02 / PASSIONCODE 툴킷",
     "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox는 메일을 다룹니다. Switchboard는 Claude Code와 Codex 계정을 관리합니다. Project Observatory는 그 에이전트들이 작업하는 프로젝트를 한눈에 보여 줍니다. 초기 프리뷰 단계인 Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다.",
-    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "은 초기 프리뷰 단계이며, 내 프로젝트와 그 에이전트를 위한 집입니다. 둘은 같은 툴킷에 속하지만 역할이 다릅니다."
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "은 초기 프리뷰 단계이며, 내 프로젝트와 그 에이전트를 위한 집입니다. 둘은 같은 툴킷에 속하지만 역할이 다릅니다.",
+    "Fabric Inbox, all inboxes: three addresses at example.test, important mail first with two agents among the senders, and a release-notes draft open with Reply and Forward. Synthetic demo data.": "Fabric Inbox 전체 받은편지함: example.test의 주소 3개, 중요한 메일이 먼저 오고 보낸 사람 중 에이전트가 2개 있으며, 릴리스 노트 초안이 답장 및 전달 버튼과 함께 열려 있습니다. 가상의 데모 데이터입니다.",
+    "All inboxes · sample addresses and mail, no real accounts": "전체 받은편지함 · 샘플 주소와 메일, 실제 계정 없음"
   }
 }

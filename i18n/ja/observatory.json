@@ -14,7 +14,6 @@
     "INSIDE OBSERVATORY": "OBSERVATORY の中身",
     "What needs attention, first": "まず、対応が必要なものから",
     "The actual Observatory overview, rendered by the engine over a fictional company’s projects.": "実際の Observatory の概要画面。架空の会社のプロジェクトをエンジンが描画したものです。",
-    "The Project Observatory overview in its dark theme: five findings ordered from critical to info, project and activity counters, and a card for every section. Synthetic demo data.": "ダークテーマの Project Observatory の概要画面：重大から情報まで順に並んだ 5 件の検出事項、プロジェクトとアクティビティのカウンター、各セクションのカード。デモ用の合成データです。",
     "Synthetic demo estate · no real projects, repositories or credentials": "合成データによるデモ環境 · 実際のプロジェクト、リポジトリ、認証情報は含みません",
     "A LOCAL OBSERVATORY": "ローカルの OBSERVATORY",
     "Less guessing": "推測を減らし、",
@@ -83,6 +82,7 @@
     "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "メモリと証跡：各プロジェクトで何が変わり、何が決まり、何に対応が必要かを確認できます。",
     "how it works": "使い方のステップ 5 です",
     "All the tools": "すべてのツール",
-    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "早期プレビュー版の Fabric は、プロジェクトとそのエージェントのための拠点です。Observatory は、別のローカルツールとして今すぐ使えます。"
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "早期プレビュー版の Fabric は、プロジェクトとそのエージェントのための拠点です。Observatory は、別のローカルツールとして今すぐ使えます。",
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "Project Observatoryの概要画面：重大から情報まで順に並んだ5件の検出事項と、プロジェクトとアクティビティのカウンター。合成デモデータです。"
   }
 }

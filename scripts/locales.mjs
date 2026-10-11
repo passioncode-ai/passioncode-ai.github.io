@@ -93,6 +93,24 @@ export function localizeUrl (value, locale) {
   if (!pagePath(path) || inLocale(path)) return value
   return (absolute ? ORIGIN : '') + `/${locale}` + rest
 }
+// A picture of a product's interface in a language (SITE-028 W5): `/assets/<name>.<ext>` becomes
+// `/assets/<name>-<locale>.<ext>` when that file exists, so a page in Russian shows the Russian
+// interface; every other language keeps the English picture. Only images under /assets/.
+const SITE_ROOT = resolve(import.meta.dirname, '..')
+const ASSET_IMAGE = /^\/assets\/([^"?#]+)\.(jpg|jpeg|png|webp)$/
+export function localizedAsset (src, locale, root = SITE_ROOT) {
+  const m = ASSET_IMAGE.exec(src)
+  if (!m || locale === SOURCE_LOCALE) return src
+  const own = `/assets/${m[1]}-${locale}.${m[2]}`
+  return existsSync(resolve(root, own.slice(1))) ? own : src
+}
+// The inverse, for comparing two pages' structure.
+export function sourceAsset (src) {
+  const m = ASSET_IMAGE.exec(src)
+  if (!m) return src
+  for (const locale of TRANSLATED_LOCALES) if (m[1].endsWith(`-${locale}`)) return `/assets/${m[1].slice(0, -locale.length - 1)}.${m[2]}`
+  return src
+}
 // The inverse, for comparing two pages' structure.
 export function sourceUrl (value) {
   for (const locale of TRANSLATED_LOCALES) {
@@ -337,6 +355,10 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
           if (next !== value) tag = setAttr(tag, a, next)
         }
         if (name === 'meta' && attr(tag, 'property') === 'og:url') tag = setAttr(tag, 'content', localizeUrl(attr(tag, 'content'), locale))
+        if (name === 'img' && attr(tag, 'src') !== undefined) {
+          const src = localizedAsset(attr(tag, 'src'), locale)
+          if (src !== attr(tag, 'src')) tag = setAttr(tag, 'src', src)
+        }
       }
       if (!verbatim() && !isSwitch) {
         for (const a of TEXT_ATTRS) {
@@ -426,7 +448,7 @@ export function skeleton (html) {
     const attrs = [...token.matchAll(/\s([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:="([^"]*)")?/g)]
       .filter(([, a]) => !DROPPED_ATTRS.has(a))
       .filter(([, a]) => !(name === 'meta' && a === 'content' && TEXT_META.has(attr(token, 'name') || attr(token, 'property'))))
-      .map(([, a, v = '']) => `${a}=${['href', 'action'].includes(a) || (a === 'content' && attr(token, 'property') === 'og:url') ? sourceUrl(v) : v}`)
+      .map(([, a, v = '']) => `${a}=${['href', 'action'].includes(a) || (a === 'content' && attr(token, 'property') === 'og:url') ? sourceUrl(v) : name === 'img' && a === 'src' ? sourceAsset(v) : v}`)
       .sort()
     out.push(`<${name}${attrs.length ? ' ' + attrs.join(' ') : ''}>`)
   }

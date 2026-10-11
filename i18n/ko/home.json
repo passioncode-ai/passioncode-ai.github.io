@@ -135,6 +135,8 @@
     "· macOS · step 5": "· macOS · 5단계",
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · 1단계, 3단계",
     "05 / OPEN SOURCE": "05 / 오픈 소스",
-    "06 / QUESTIONS": "06 / 질문"
+    "06 / QUESTIONS": "06 / 질문",
+    "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "Fabric 첫 실행, 3단계 중 3단계: 에이전트를 새로 만들거나 다른 곳에서 만든 에이전트를 Fabric에 맞추고, 프로젝트를 열거나 새로 만듭니다. 가상의 데모 데이터입니다.",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "‘만들기’ 후 Fabric이 여는 코딩 에이전트 콘솔: release-notes-agent에 대한 여섯 가지 시작 질문 중 두 번째를 묻습니다. 녹화가 아니라 직접 쓴 예시입니다."
   }
 }

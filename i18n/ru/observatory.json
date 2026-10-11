@@ -16,7 +16,6 @@
     "INSIDE OBSERVATORY": "ВНУТРИ OBSERVATORY",
     "What needs attention, first": "Сначала — то, что требует внимания",
     "The actual Observatory overview, rendered by the engine over a fictional company’s projects.": "Настоящий обзор Observatory, построенный движком по проектам вымышленной компании.",
-    "The Project Observatory overview in its dark theme: five findings ordered from critical to info, project and activity counters, and a card for every section. Synthetic demo data.": "Обзор Project Observatory в тёмной теме: пять находок от критичных до информационных, счётчики проектов и активности и карточка для каждого раздела. Синтетические демо-данные.",
     "Synthetic demo estate · no real projects, repositories or credentials": "Синтетический демо-набор · без реальных проектов, репозиториев и учётных данных",
     "A LOCAL OBSERVATORY": "ЛОКАЛЬНАЯ ОБСЕРВАТОРИЯ",
     "Less guessing": "Меньше догадок",
@@ -95,6 +94,7 @@
     "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "Память и подтверждения: что изменилось в каждом проекте, что решили и что требует внимания. Это шаг 5 в разделе",
     "how it works": "«Как это работает»",
     "All the tools": "Все инструменты",
-    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, пока в ранней предварительной версии, — дом для ваших проектов и их агентов. Observatory доступен уже сейчас как отдельный локальный инструмент."
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, пока в ранней предварительной версии, — дом для ваших проектов и их агентов. Observatory доступен уже сейчас как отдельный локальный инструмент.",
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "Обзор Project Observatory: пять находок от критичных до информационных, затем счётчики проектов и активности. Синтетические демо-данные."
   }
 }

@@ -1,0 +1,15 @@
+// node obs-shot.js <pagesDir> <locale> <outBase> <theme>
+const { webkit } = require('playwright')
+const [dir, locale, out, theme] = process.argv.slice(2)
+;(async () => {
+  const b = await webkit.launch()
+  const ctx = await b.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 2, colorScheme: theme, reducedMotion: 'reduce', locale })
+  const p = await ctx.newPage()
+  await p.goto('file://' + dir + '/index.html', { waitUntil: 'load' })
+  await p.evaluate((t) => { document.documentElement.setAttribute('data-theme', t) }, theme)
+  await p.evaluate(() => document.fonts.ready)
+  await p.waitForTimeout(600)
+  await p.screenshot({ path: out + '.png' })
+  require('fs').writeFileSync(out + '.txt', await p.evaluate(() => document.body.innerText))
+  await b.close()
+})()

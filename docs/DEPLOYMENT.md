@@ -216,6 +216,11 @@ Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry
   `worker/i18n.js`; `sitemap.xml` with every version of every indexed page and its alternates; the
   "Languages" section of `llms.txt`. The thanks and 404 pages stay `noindex` in every language and carry
   no alternates; every other page is indexed in every language.
+- **Pictures of an interface** (SITE-028 W5, 2026-10-11): an `<img>` whose `src` is `/assets/<name>.<ext>` shows
+  `/assets/<name>-<code>.<ext>` on that language's pages when the file exists (`localizedAsset` in
+  `scripts/locales.mjs`); otherwise every language shows the English picture. The structure gate compares `src` with
+  the language suffix removed (`sourceAsset`). Today only Russian twins exist (the products' interfaces speak English
+  and Russian); `scripts/check-site.mjs` requires one for each sample-data mockup.
 - **The gate** (`npm run locales -- --check`, inside `npm run check`) fails on an English fragment or
   message with no translation (a changed English sentence is a new key, so it is reported until
   translated), an unused catalog entry, a translation that carries markup or changes its `{placeholders}`,

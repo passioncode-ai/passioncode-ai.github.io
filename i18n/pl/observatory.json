@@ -18,7 +18,6 @@
     "INSIDE OBSERVATORY": "WEWNĄTRZ OBSERVATORY",
     "What needs attention, first": "Najpierw to, co wymaga uwagi",
     "The actual Observatory overview, rendered by the engine over a fictional company’s projects.": "Prawdziwy przegląd Observatory, wygenerowany przez silnik na projektach fikcyjnej firmy.",
-    "The Project Observatory overview in its dark theme: five findings ordered from critical to info, project and activity counters, and a card for every section. Synthetic demo data.": "Przegląd Project Observatory w ciemnym motywie: pięć ustaleń od krytycznych po informacyjne, liczniki projektów i aktywności oraz karta dla każdej sekcji. Syntetyczne dane demonstracyjne.",
     "Synthetic demo estate · no real projects, repositories or credentials": "Syntetyczny zbiór demonstracyjny · bez prawdziwych projektów, repozytoriów ani danych uwierzytelniających",
     "A LOCAL OBSERVATORY": "LOKALNE OBSERVATORIUM",
     "Less guessing": "Mniej zgadywania",
@@ -98,6 +97,7 @@
     "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "Pamięć i dowody: co zmieniło się w każdym projekcie, co postanowiono i co wymaga uwagi. To krok 5 w części",
     "how it works": "„Jak to działa”",
     "All the tools": "Wszystkie narzędzia",
-    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów. Observatory jest dostępne już teraz jako osobne lokalne narzędzie."
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, we wczesnej wersji zapoznawczej, to dom dla Twoich projektów i ich agentów. Observatory jest dostępne już teraz jako osobne lokalne narzędzie.",
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "Przegląd Project Observatory: pięć ustaleń od krytycznych po informacyjne, a potem liczniki projektów i aktywności. Syntetyczne dane demonstracyjne."
   }
 }

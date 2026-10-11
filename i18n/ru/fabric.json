@@ -95,6 +95,15 @@
     "Create a project": "Создать проект",
     "A new home for its purpose, board and releases": "Новый дом для его цели, доски и релизов",
     "The agent work itself runs in your coding agent’s console": "Сама работа агента идёт в консоли вашего агента для программирования",
-    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "Координация — то, куда движется Fabric, и она никогда не заменит вас. Зачем нужен проект и что разрешено каждому агенту, решаете вы."
+    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "Координация — то, куда движется Fabric, и она никогда не заменит вас. Зачем нужен проект и что разрешено каждому агенту, решаете вы.",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "Консоль агента для программирования, которую Fabric открывает после «Создать»: агент задаёт второй из шести вводных вопросов для release-notes-agent. Написанный пример, а не запись сеанса.",
+    "Create an agent: the name release-notes-agent, what it will do in one sentence, where its folder goes and which coding agent does the work. Synthetic demo data.": "«Создать агента»: имя release-notes-agent, одним предложением — что он будет делать, где будет его папка и какой агент для программирования делает работу. Синтетические демо-данные.",
+    "Create an agent · a name, one sentence, a folder, a coding agent": "Создать агента · имя, одно предложение, папка, агент для программирования",
+    "Adapt an existing agent: the four steps, what Fabric read from the folder legacy-reports-agent, and the coding agent that will do the work. Synthetic demo data.": "«Адаптировать агента»: четыре шага, то, что Fabric прочитал в папке legacy-reports-agent, и агент для программирования, который сделает работу. Синтетические демо-данные.",
+    "Adapt an agent · Fabric reads the folder and nothing else": "Адаптировать агента · Fabric читает папку и больше ничего",
+    "The console after Create · the questions, one at a time": "Консоль после «Создать» · вопросы по одному",
+    "The coding agent’s console after Adapt: the plan for legacy-reports-agent with its profile, effects, branch and every file that would change, waiting for a yes. A written example, not a recording.": "Консоль агента для программирования после «Адаптировать»: план для legacy-reports-agent — профиль, эффекты, ветка и каждый файл, который изменится; агент ждёт «да». Написанный пример, а не запись сеанса.",
+    "The console after Adapt · the plan before any change": "Консоль после «Адаптировать» · план до любых изменений",
+    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "Экраны «Создать» и «Адаптировать» — собственный интерфейс Fabric, отрисованный из его исходного кода на демо-данных. Текст в консоли — написанный пример того, что делает агент для программирования, а не запись сеанса."
   }
 }

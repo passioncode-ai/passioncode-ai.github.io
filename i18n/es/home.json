@@ -125,6 +125,8 @@
     "· macOS · step 5": "· macOS · paso 5",
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · pasos 1 y 3",
     "05 / OPEN SOURCE": "05 / CÓDIGO ABIERTO",
-    "06 / QUESTIONS": "06 / PREGUNTAS"
+    "06 / QUESTIONS": "06 / PREGUNTAS",
+    "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "El primer inicio de Fabric, paso 3 de 3: crear un agente o adaptar uno creado en otro sitio, abrir un proyecto o crear uno. Datos de demostración sintéticos.",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "La consola del agente de programación que Fabric abre después de «Crear»: hace la segunda de seis preguntas iniciales para release-notes-agent. Un ejemplo escrito, no una grabación."
   }
 }
