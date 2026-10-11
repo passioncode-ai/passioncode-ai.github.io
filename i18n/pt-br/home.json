@@ -56,7 +56,6 @@
     "Install the skills with one command, build your first agent with Claude Code or Codex, and add each tool when the work asks for it. About twenty minutes.": "Instale as skills com um único comando, crie seu primeiro agente com Claude Code ou Codex e adicione cada ferramenta quando o trabalho pedir. Cerca de vinte minutos.",
     "ORGANIZATIONS · ENTERPRISE": "ORGANIZAÇÕES · ENTERPRISE",
     "An AI-native organization": "Uma organização AI-native",
-    "We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.": "Levamos agentes para as máquinas da sua organização, conectamos todos e mostramos o que eles fazem, com os seus dados nas suas máquinas ou na sua própria nuvem.",
     "The Fabric 0.2.0 preview was built before Fabric’s source was published.": "A prévia do Fabric 0.2.0 foi gerada antes de o código-fonte do Fabric ser publicado.",
     "ABOUT": "SOBRE",
     "A note": "Uma nota",
@@ -126,6 +125,7 @@
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · passos 1 e 3",
     "05 / OPEN SOURCE": "05 / CÓDIGO ABERTO",
     "06 / QUESTIONS": "06 / PERGUNTAS",
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "Levamos agentes para as máquinas da sua organização, conectamos todos e mostramos quanto cada um custou e o que entregou, com os seus dados nas suas máquinas ou na sua própria nuvem.",
     "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "A primeira execução do Fabric, etapa 3 de 3: criar um agente ou adaptar um feito em outro lugar, abrir um projeto ou criar um. Dados de demonstração sintéticos.",
     "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "O console do agente de programação que o Fabric abre depois de “Criar”: ele faz a segunda de seis perguntas iniciais para o release-notes-agent. Um exemplo escrito, não uma gravação."
   }

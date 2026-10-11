@@ -1,4 +1,25 @@
-# Current handoff — SITE-028 released: journey, new terms, ten languages, 2026-10-11
+# Current handoff — organization narrative on /business/, 2026-10-11
+
+Objective (operator, 2026-10-11): package a market narrative (finance as the internal champion of an AI purchase;
+"what does our AI spend earn") for the organization offer, in the brand pack and on /business/. Done in this branch
+(`agent/site-org-narrative`): [docs/brand/narrative-org.md](brand/narrative-org.md) (message house, open decisions
+ON-1…ON-6); /business/ hero line, new section 02 / FOR FINANCE AND ENGINEERING (`#spend`, three labelled stages),
+03 / THE ESTIMATE (was WHAT IT SAVES), a third FAQ; the home "For organizations" card; all ten languages (zh-Hans
+through the copy agent's write capability only); facts rows under lease; SCN-014. Receipt, checks and spend:
+[tasks/2026-10-11-org-narrative.md](tasks/2026-10-11-org-narrative.md). The private note is in fabric-workspace
+`knowledge/vision.md` (PR #105, merged `72f62d9`).
+
+Released 2026-10-11: PR #93 merged as `6a6b527`; the first deploy's `verify-live.py` failed only on / and /start/
+(the live Worker already showed launcher 0.1.33), so PR #94 (`npm run releases:sync`: launcher 0.1.33, adapter
+0.9.0, facts rows under lease) merged as `5e41381` and was deployed from `main`: Worker version
+`3023bc40-9e71-4265-8f05-2224f60807ae`, `scripts/verify-live.py` PASS (184 assets, 150 pages in ten languages,
+hreflang on 130, 7 download routes, 23 not-found addresses), receipt
+[evidence/2026-10-11-org-narrative/live.json](evidence/2026-10-11-org-narrative/live.json).
+
+Next task: the operator answers ON-1…ON-6; then ON-3 (a form goal "See what our agents cost and deliver":
+`assets/lead-options.js`, the Worker's accepted values, every catalog, `scripts/check-site.mjs` parity).
+
+## Previous handoff — SITE-028 released: journey, new terms, ten languages, 2026-10-11
 
 Objective (operator, 2026-10-10): show how the system works and bring the approved narrative and terms into every
 language: en and ru native, seven languages from English, zh-Hans by Chinese models only (D4). PR #87 merged as

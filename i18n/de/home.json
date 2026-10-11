@@ -56,7 +56,6 @@
     "Install the skills with one command, build your first agent with Claude Code or Codex, and add each tool when the work asks for it. About twenty minutes.": "Installiere die Skills mit einem Befehl, baue deinen ersten Agenten mit Claude Code oder Codex und füge jedes Tool hinzu, wenn die Arbeit es verlangt. Etwa zwanzig Minuten.",
     "ORGANIZATIONS · ENTERPRISE": "ORGANISATIONEN · ENTERPRISE",
     "An AI-native organization": "Eine AI-native Organisation",
-    "We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.": "Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was sie tun – mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud.",
     "The Fabric 0.2.0 preview was built before Fabric’s source was published.": "Die Vorschau von Fabric 0.2.0 entstand, bevor der Quellcode von Fabric veröffentlicht wurde.",
     "ABOUT": "ÜBER UNS",
     "A note": "Eine Notiz",
@@ -126,6 +125,7 @@
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · Schritte 1 und 3",
     "05 / OPEN SOURCE": "05 / OPEN SOURCE",
     "06 / QUESTIONS": "06 / FRAGEN",
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was jeder gekostet und was er geliefert hat – mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud.",
     "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "Der erste Start von Fabric, Schritt 3 von 3: einen Agenten erstellen oder einen anderswo gebauten anpassen, ein Projekt öffnen oder eines erstellen. Synthetische Demodaten.",
     "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "Die Konsole des Coding-Agenten, die Fabric nach „Erstellen“ öffnet: Er stellt die zweite von sechs Einstiegsfragen für release-notes-agent. Ein geschriebenes Beispiel, keine Aufzeichnung."
   }

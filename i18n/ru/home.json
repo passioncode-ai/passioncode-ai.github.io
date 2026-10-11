@@ -56,7 +56,6 @@
     "Install the skills with one command, build your first agent with Claude Code or Codex, and add each tool when the work asks for it. About twenty minutes.": "Установите навыки одной командой, соберите первого агента в Claude Code или Codex и добавляйте инструменты, когда этого попросит работа. Около двадцати минут.",
     "ORGANIZATIONS · ENTERPRISE": "ОРГАНИЗАЦИЯМ · ENTERPRISE",
     "An AI-native organization": "AI-native организация",
-    "We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.": "Мы приводим агентов на машины вашей организации, связываем их между собой и показываем, что они делают, а данные остаются на ваших машинах или в вашем облаке.",
     "The Fabric 0.2.0 preview was built before Fabric’s source was published.": "Предварительная версия Fabric 0.2.0 собрана до публикации исходного кода Fabric.",
     "ABOUT": "О ПРОЕКТЕ",
     "A note": "Несколько слов",
@@ -126,6 +125,7 @@
     "05 / OPEN SOURCE": "05 / ОТКРЫТЫЙ КОД",
     "06 / QUESTIONS": "06 / ВОПРОСЫ",
     "PassionCode.ai is a local, open-source workspace for working with AI agents, under the GNU AGPL-3.0. It runs on your own machines, with no sign-up and no lock-in.": "PassionCode.ai — локальное рабочее пространство для работы с ИИ-агентами, с открытым кодом под GNU AGPL-3.0. Оно работает на ваших машинах, без регистрации и без привязки.",
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "Мы приводим агентов на машины вашей организации, связываем их между собой и показываем, сколько стоил каждый и какой результат он дал, а данные остаются на ваших машинах или в вашем облаке.",
     "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "Первый запуск Fabric, шаг 3 из 3: создать агента или адаптировать сделанного в другом месте, открыть проект или создать его. Синтетические демо-данные.",
     "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "Консоль агента для программирования, которую Fabric открывает после «Создать»: агент задаёт второй из шести вводных вопросов для release-notes-agent. Написанный пример, а не запись сеанса."
   }

@@ -194,7 +194,7 @@ ORGANIZACIONES · ENTERPRISE
 
 ### Una organización AI-native
 
-Llevamos agentes a los equipos de tu organización, los conectamos y mostramos lo que hacen, con tus datos en tus equipos o en tu propia nube.
+Llevamos agentes a los equipos de tu organización, los conectamos y mostramos lo que costó cada uno y lo que aportó, con tus datos en tus equipos o en tu propia nube.
 
 Estimación y solicitud
 
@@ -272,7 +272,7 @@ Un solo comando instala las skills que enseñan a los agentes a construir con Fa
 
 CLI
 
-0.1.32
+0.1.33
 
 · Node.js 18+ · pasos 1 y 3
 

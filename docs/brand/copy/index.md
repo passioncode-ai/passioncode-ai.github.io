@@ -194,7 +194,7 @@ ORGANIZATIONS · ENTERPRISE
 
 ### An AI-native organization
 
-We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.
+We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.
 
 Estimate and request
 
@@ -272,7 +272,7 @@ One command installs the skills that teach agents to build with Fabric.
 
 CLI
 
-0.1.32
+0.1.33
 
 · Node.js 18+ · steps 1 and 3
 

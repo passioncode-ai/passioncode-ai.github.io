@@ -194,7 +194,7 @@ ORGANIZACJE · ENTERPRISE
 
 ### Organizacja AI-native
 
-Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, co robią, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze.
+Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze.
 
 Szacunek i zapytanie
 
@@ -272,7 +272,7 @@ Jedna komenda instaluje skille, które uczą agentów budować z Fabric.
 
 CLI
 
-0.1.32
+0.1.33
 
 · Node.js 18+ · kroki 1 i 3
 

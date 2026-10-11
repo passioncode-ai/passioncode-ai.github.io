@@ -194,7 +194,7 @@ ORGANISATIONS · ENTERPRISE
 
 ### Une organisation AI-native
 
-Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce qu’ils font, avec vos données sur vos machines ou dans votre propre cloud.
+Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce que chacun a coûté et ce qu’il a apporté, avec vos données sur vos machines ou dans votre propre cloud.
 
 Estimation et demande
 
@@ -272,7 +272,7 @@ Une commande installe les skills qui apprennent aux agents à construire avec Fa
 
 CLI
 
-0.1.32
+0.1.33
 
 · Node.js 18+ · étapes 1 et 3
 
