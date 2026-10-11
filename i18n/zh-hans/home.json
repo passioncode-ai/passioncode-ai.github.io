@@ -118,6 +118,8 @@
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · 步骤 1 和 3",
     "05 / OPEN SOURCE": "05 / 开源",
     "06 / QUESTIONS": "06 / 常见问题",
-    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "我们把智能体带到你组织的机器上，把它们连接起来，让你看到每个智能体花了多少、交付了什么；数据留在你自己的机器或你自己的云上。"
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "我们把智能体带到你组织的机器上，把它们连接起来，让你看到每个智能体花了多少、交付了什么；数据留在你自己的机器或你自己的云上。",
+    "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "Fabric 首次运行，第 3 步（共 3 步）：创建智能体或适配在其他位置构建的智能体，打开项目或创建项目。合成演示数据。",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "Fabric 在点击「创建」后打开的编码智能体控制台：它正在询问 release-notes-agent 的六个入门问题中的第二个。这是一个文字示例，而非录屏。"
   }
 }

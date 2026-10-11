@@ -100,6 +100,8 @@ DES AGENTS, DANS VOS RÈGLES
 
 Un agent a ses propres instructions, connaissances et outils, et peut servir plusieurs adresses. Il n’envoie une réponse que si elle s’appuie sur ses connaissances, relève d’un sujet que vous avez autorisé et reste dans sa limite quotidienne. Tout le reste attend en brouillon, avec la raison.
 
+Toutes les boîtes · adresses et messages d’exemple, sans vrais comptes
+
 OBTENIR FABRIC INBOX
 
 ## Une préversion de développement

@@ -142,6 +142,16 @@ Tablica · co czeka na Twoją decyzję
 
 Wydania · co weszło, dlaczego i co to potwierdza
 
+Utwórz agenta · nazwa, jedno zdanie, folder, agent kodujący
+
+Dostosuj agenta · Fabric czyta folder i nic więcej
+
+Konsola po „Utwórz” · pytania, jedno po drugim
+
+Konsola po „Dostosuj” · plan przed jakąkolwiek zmianą
+
+Ekrany Utwórz i Dostosuj to własny interfejs Fabric, wyrenderowany z jego kodu źródłowego na przykładowych danych. Tekst w konsoli to napisany przykład tego, co robi agent kodujący, a nie nagranie.
+
 JAK TO BUDUJEMY
 
 ## Odpowiedzialność zostaje po stronie ludzi

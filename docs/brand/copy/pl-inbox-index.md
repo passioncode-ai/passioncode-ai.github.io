@@ -100,6 +100,8 @@ AGENCI W RAMACH TWOICH REGUŁ
 
 Agent ma własne instrukcje, wiedzę i narzędzia i może obsługiwać kilka adresów. Wysyła odpowiedź tylko wtedy, gdy opiera się ona na jego wiedzy, mieści się w dozwolonym przez Ciebie temacie i w dziennym limicie. Cała reszta czeka jako szkic z podanym powodem.
 
+Wszystkie skrzynki · przykładowe adresy i wiadomości, bez prawdziwych kont
+
 POBIERZ FABRIC INBOX
 
 ## Rozwojowa wersja zapoznawcza

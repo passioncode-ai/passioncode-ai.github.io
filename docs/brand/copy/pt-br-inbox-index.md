@@ -100,6 +100,8 @@ AGENTES, DENTRO DAS SUAS REGRAS
 
 Um agente tem as próprias instruções, conhecimento e ferramentas e pode atender vários endereços. Ele só envia uma resposta quando ela se baseia no conhecimento dele, se encaixa num tópico que você permitiu e respeita o limite diário. Todo o resto espera como rascunho, com o motivo.
 
+Todas as caixas · endereços e e-mails de exemplo, sem contas reais
+
 BAIXAR O FABRIC INBOX
 
 ## Uma prévia de desenvolvimento

@@ -14,7 +14,6 @@
     "INSIDE OBSERVATORY": "Observatory 内部",
     "What needs attention, first": "先看需要处理的事",
     "The actual Observatory overview, rendered by the engine over a fictional company’s projects.": "真实的 Observatory 概览，由引擎基于一家虚构公司的项目渲染。",
-    "The Project Observatory overview in its dark theme: five findings ordered from critical to info, project and activity counters, and a card for every section. Synthetic demo data.": "深色主题下的 Project Observatory 概览：五条发现项按从严重到提示排序，附有项目和活动计数，每个板块各有一张卡片。为合成演示数据。",
     "Synthetic demo estate · no real projects, repositories or credentials": "合成的演示环境 · 不含真实项目、仓库或凭据",
     "A LOCAL OBSERVATORY": "一个本地的 OBSERVATORY",
     "Less guessing": "少一些猜测",
@@ -81,6 +80,7 @@
     "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "记忆与证据：每个项目发生了什么变化、做出了什么决定、哪些需要处理。第 5 步，见",
     "how it works": "工作原理",
     "All the tools": "全部工具",
-    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric 目前处于早期预览阶段，是你的项目及其智能体的家。Observatory 现已作为独立的本地工具提供。"
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric 目前处于早期预览阶段，是你的项目及其智能体的家。Observatory 现已作为独立的本地工具提供。",
+    "The Project Observatory overview: five findings ordered from critical to info, then the project and activity counters. Synthetic demo data.": "Project Observatory 概览：五个发现项按严重程度从高到低排列，随后是项目和活动计数器。合成演示数据。"
   }
 }

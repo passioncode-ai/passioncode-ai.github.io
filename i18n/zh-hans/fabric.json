@@ -84,6 +84,15 @@
     "Create a project": "创建项目",
     "A new home for its purpose, board and releases": "为项目的目标、看板和版本创建一个新的家",
     "The agent work itself runs in your coding agent’s console": "智能体的实际工作在编码智能体的控制台中运行",
-    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "协调是 Fabric 的发展方向，它不会取代你。项目为了什么、每个智能体被允许做什么，都由你决定。"
+    "Coordination is where Fabric is going, and it never replaces you. You decide what the project is for and what each agent is allowed to do.": "协调是 Fabric 的发展方向，它不会取代你。项目为了什么、每个智能体被允许做什么，都由你决定。",
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "Fabric 在点击「创建」后打开的编码智能体控制台：它正在询问 release-notes-agent 的六个入门问题中的第二个。这是一个文字示例，而非录屏。",
+    "Create an agent: the name release-notes-agent, what it will do in one sentence, where its folder goes and which coding agent does the work. Synthetic demo data.": "创建一个智能体：名称为 release-notes-agent，用一句话说明它的功能、文件夹存放位置，以及由哪个编码智能体执行工作。合成演示数据。",
+    "Create an agent · a name, one sentence, a folder, a coding agent": "创建一个智能体 · 一个名称，一句话，一个文件夹，一个编码智能体",
+    "Adapt an existing agent: the four steps, what Fabric read from the folder legacy-reports-agent, and the coding agent that will do the work. Synthetic demo data.": "适配现有智能体：四个步骤，Fabric 从 legacy-reports-agent 文件夹中读取的内容，以及将执行工作的编码智能体。合成演示数据。",
+    "Adapt an agent · Fabric reads the folder and nothing else": "适配智能体 · Fabric 读取文件夹，仅此而已",
+    "The console after Create · the questions, one at a time": "点击「创建」后的控制台 · 逐一提出问题",
+    "The coding agent’s console after Adapt: the plan for legacy-reports-agent with its profile, effects, branch and every file that would change, waiting for a yes. A written example, not a recording.": "按下「适配」后，编码智能体的控制台显示 legacy-reports-agent 的计划：配置文件、影响范围、分支、所有将要变更的文件，等待确认。这是书面示例，不是录制回放。",
+    "The console after Adapt · the plan before any change": "「适配」后的控制台 · 任何变更前的计划",
+    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "「创建」和「适配」界面是 Fabric 自身的界面，使用示例数据从其源代码渲染而成。控制台文本是编码智能体工作方式的文字示例，并非录屏。"
   }
 }
