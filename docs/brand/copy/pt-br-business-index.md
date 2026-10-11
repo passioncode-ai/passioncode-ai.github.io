@@ -50,7 +50,7 @@ Enterprise · para organizações
 
 # Torne a sua organização AI-native
 
-Levamos agentes para as máquinas da sua organização, conectamos todos e mostramos o que eles fazem, com ferramentas de código aberto e com os seus dados nas suas máquinas ou na sua própria nuvem
+Um agente que vive no notebook de uma pessoa ajuda uma pessoa. Levamos agentes para as máquinas da sua organização, conectamos todos e mostramos o que eles fazem, com ferramentas de código aberto e com os seus dados nas suas máquinas ou na sua própria nuvem
 
 Estimativa e solicitação
 

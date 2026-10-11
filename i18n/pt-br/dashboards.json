@@ -8,8 +8,6 @@
     "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "Seus serviços de agentes",
     "One place to look": "Um só lugar para olhar",
-    "See what is running, what needs attention and what happened last, with each service’s own dashboard in one Mac app": "Veja o que está rodando, o que precisa de atenção e o que aconteceu por último, com o painel de cada serviço num só app para Mac",
-    "Health, spend and control: every agent service, its state, its spend and its updates in one window.": "Saúde, gastos e controle: cada serviço de agente, seu estado, seus gastos e suas atualizações numa só janela.",
     "Download for macOS ↓": "Baixar para macOS ↓",
     "View source ↗": "Ver código-fonte ↗",
     "Release": "Release",
@@ -43,7 +41,6 @@
     "A real terminal opens next to a service’s dashboard, running Claude Code, Codex or another runtime in that agent’s repository. Where Fabric Switchboard binds the folder to a project, the session starts on that project’s account.": "Um terminal de verdade abre ao lado do painel de um serviço, executando Claude Code, Codex ou outro runtime no repositório desse agente. Onde o Fabric Switchboard vincula a pasta a um projeto, a sessão começa na conta desse projeto.",
     "Updates that are checked first": "Atualizações verificadas antes",
     "The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.": "O app se atualiza sozinho: um release precisa trazer a assinatura da organização e bater com os checksums antes de ser instalado, e espera enquanto um console ou um comando estiver em execução. A instalação automática pode ser desativada em Ajustes.",
-    "The family kept current": "A família sempre atualizada",
     "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "A seção de atualizações do ambiente em Ajustes acompanha o Fabric Agent Contract e as skills da PassionCode.ai, e pode atualizar as skills em segundo plano depois de verificar quem as publicou. Essa opção vem desativada por padrão.",
     "English or Russian": "Inglês ou russo",
     "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Ajustes → Idioma: como neste Mac, English ou Русский. A janela, o menu e a bandeja mudam de uma vez.",
@@ -83,6 +80,12 @@
     "Start with the services": "Comece pelos serviços",
     "you already use": "que você já usa",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "Inspecione projetos com o Observatory. Configure contas com o Switchboard. Adicione só as ferramentas de que o seu trabalho precisa.",
-    "Explore the tools ↗": "Conhecer as ferramentas ↗"
+    "Explore the tools ↗": "Conhecer as ferramentas ↗",
+    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Veja todos os serviços de agentes do seu Mac num só app: o que precisa de você vem primeiro, e o painel de cada serviço abre ao lado",
+    "IN THE TOOLKIT": "NO CONJUNTO DE FERRAMENTAS",
+    "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "Estado, gastos e controle: cada serviço de agente, o que ele está fazendo, o que gasta e as atualizações dele numa só janela. É o passo 4 de",
+    "how it works": "“Como funciona”",
+    "All the tools": "Todas as ferramentas",
+    "The skills kept current": "As skills sempre atualizadas"
   }
 }

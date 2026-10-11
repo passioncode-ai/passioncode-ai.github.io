@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from pt-br/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode.ai | Ambiente de trabalho de código aberto para agentes de IA
+PassionCode.ai | O sistema operacional para qualquer agente, para equipes AI-native
 
-Monte o seu próprio ambiente de trabalho para agentes de IA. O Fabric, o agente de IA que atua como CEO, cuida do projeto; o seu agente de programação cria novos agentes e adapta os que você já tem; o Fabric Dashboards, o Switchboard e o Project Observatory os executam e acompanham. Código aberto e gratuito.
+Monte um ambiente de trabalho em que os agentes fazem o trabalho e você vê tudo. O Fabric é a casa dos seus projetos e dos agentes deles; o seu agente de programação cria novos agentes e adapta os que você já tem; o Switchboard, o Fabric Dashboards e o Project Observatory colocam esses agentes para rodar e mostram o que eles fizeram. Código aberto e gratuito.
 
 Ir para o conteúdo
 
@@ -52,7 +52,7 @@ Do vibe coding ao passion coding
 
 Monte um ambiente de trabalho em que os agentes fazem o trabalho e você vê tudo
 
-O Fabric, nosso agente de IA que atua como CEO, guarda o propósito, as decisões e os releases de cada projeto. O seu agente de programação cria novos agentes e adapta os que você já tem. Código aberto, rodando nas suas próprias máquinas e gratuito
+O Fabric é a casa dos seus projetos e dos agentes deles. O seu agente de programação cria novos agentes e adapta os que você já tem. Código aberto, rodando nas suas próprias máquinas, e gratuito
 
 Para você, grátis
 
@@ -62,7 +62,7 @@ Para a sua organização
 
 ↗
 
-Código aberto sob a AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.15 · Dashboards 0.6.7 · Observatory 0.21.0
+Código aberto sob a AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.6.7 · Observatory 0.21.0
 
 Contas
 
@@ -76,25 +76,105 @@ E-mail
 
 Seus agentes
 
-FABRIC · AGENTE DE IA COMO CEO
+FABRIC · A CASA DOS SEUS PROJETOS
 
 01 / POR QUÊ
 
-## Sem um arcabouço (harness),
+## Seu agente funciona por uma semana
 
-## agentes se degradam
+## Depois, tudo desanda
 
-As contas ficam espalhadas, eles esquecem tudo entre as sessões, não deixam evidências do que fizeram e não conversam entre si.
+Ele roda na conta errada ou bate num limite. Esquece o que aprendeu ontem, e ninguém sabe dizer o que ele mudou. O próximo agente que você cria começa do zero.
 
-Um lar para os seus agentesA PassionCode.ai é um espaço de trabalho local e de código aberto para trabalhar com agentes de IA. Ela dá a cada um deles um lar, contas, saúde, memória e evidências.
+Nas suas máquinas, em código abertoA PassionCode.ai é um espaço de trabalho local e de código aberto para trabalhar com agentes de IA, sob a GNU AGPL-3.0. Roda nas suas próprias máquinas, sem cadastro e sem dependência de fornecedor.
 
-Por cima do que você já usaClaude Code, Codex e o que vier depois, na assinatura que você já tem.
+Com os agentes que você já temClaude Code, Codex e o que vier depois, na assinatura que você já tem.
 
-Seu, de ponta a pontaCódigo aberto sob a GNU AGPL-3.0, nas suas máquinas e com as suas contas. Sem cadastro e sem dependência.
+Um registro que você pode abrirO quadro do projeto guarda decisões, tarefas e releases. O Observatory lista o que mudou, com as evidências e um próximo passo. Cada download informa a versão e o SHA-256.
 
-Leia a visão: por que os agentes precisam de um arcabouço (harness) e como a família cresce
+Leia a visão: o que mantém um agente funcionando e como um agente cresce até virar uma organização
 
-02 / DUAS FORMAS DE COMEÇAR
+02 / COMO FUNCIONA
+
+## De um comando
+
+## a agentes que trabalham juntos
+
+Seis passos, na ordem em que você os dá. Cada um diz se funciona hoje, se funciona como prévia ou se é onde estamos construindo.
+
+01
+
+DISPONÍVEL AGORA
+
+### Entrada
+
+terminalnpx @passioncode-ai/passioncode@latest update
+
+Um comando instala as skills no Claude Code ou no Codex. O Fabric é um download à parte, em prévia.
+
+Instale as skills
+
+02
+
+PRÉVIA
+
+### Primeiros passos
+
+agenteCrie um ou adapte um feito em outro lugar
+
+projetoAbra uma pasta ou crie um projeto
+
+A primeira tela do Fabric oferece quatro ações em dois pares.
+
+O que o Fabric faz hoje
+
+03
+
+DISPONÍVEL AGORA
+
+### Primeiro agente
+
+novoCrie um agente Fabric que redija notas de versão a partir dos pull requests mesclados
+
+adaptarAdapte este repositório ao Fabric
+
+Seu agente de programação faz as perguntas dele e mostra o plano antes de mudar qualquer coisa.
+
+Crie ou adapte um agente
+
+04
+
+DISPONÍVEL AGORA
+
+### Crescer
+
+Cada agente roda na conta certa, com o painel e os gastos dele numa só janela.
+
+Fabric Dashboards
+
+05
+
+DISPONÍVEL AGORA, EM PARTE
+
+### Trabalhar juntos e acompanhar
+
+Os agentes compartilham o quadro e as passagens de trabalho de um projeto na prévia do Fabric; o Observatory mostra o que mudou, com as evidências.
+
+Project Observatory
+
+06
+
+DIREÇÃO
+
+### Organização
+
+empresasAgentes distribuídos por função e trabalho roteado entre as suas máquinas
+
+O mesmo nas máquinas de uma equipe, oferecido sob solicitação enquanto o construímos.
+
+Para a sua organização
+
+03 / DUAS FORMAS DE COMEÇAR
 
 ## Para você,
 
@@ -120,21 +200,21 @@ Estimativa e solicitação
 
 →
 
-03 / AS FERRAMENTAS
+04 / AS FERRAMENTAS
 
 ## Ferramentas que você pode usar hoje
 
-Cada uma funciona sozinha e fica melhor em conjunto. As versões são as atuais.
+Cada uma funciona sozinha, e o passo diz onde ela entra acima. As versões são as atuais.
 
 Fabric
 
-O agente de IA que atua como CEO: um lugar para o propósito, o quadro, as decisões e os releases de cada projeto.
+A casa dos seus projetos e dos agentes deles: o propósito, o quadro, as decisões e os releases de cada projeto.
 
 Prévia inicial
 
 0.3.4
 
-· macOS
+· macOS · passos 2 e 5
 
 ↗
 
@@ -144,9 +224,9 @@ Escolha a conta em que cada agente roda, com os limites de uso à vista.
 
 Release
 
-0.6.15
+0.6.16
 
-· macOS + Windows
+· macOS + Windows · passo 4
 
 ↗
 
@@ -158,7 +238,7 @@ Release
 
 0.6.7
 
-· macOS
+· macOS · passo 4
 
 ↗
 
@@ -170,7 +250,7 @@ Release
 
 0.21.0
 
-· macOS + Linux
+· macOS + Linux · passo 5
 
 ↗
 
@@ -180,9 +260,9 @@ E-mails do Gmail e do Cloudflare em uma só lista, os importantes primeiro; os a
 
 Prévia em desenvolvimento
 
-0.13.0
+0.14.0
 
-· macOS
+· macOS · passo 5
 
 ↗
 
@@ -192,15 +272,15 @@ Um comando instala as skills que ensinam os agentes a construir com o Fabric.
 
 CLI
 
-0.1.31
+0.1.32
 
-· Node.js 18+
+· Node.js 18+ · passos 1 e 3
 
 ↗
 
 Prévia significa inacabado: o Fabric está em prévia inicial e a conversa dele ainda não responde; o Fabric Inbox está em prévia de desenvolvimento e as respostas com um modelo real ainda não foram verificadas. A página de cada produto lista os requisitos e os limites antes do download. Versões em formato legível por máquina: /api/releases.
 
-04 / CÓDIGO ABERTO
+05 / CÓDIGO ABERTO
 
 ## Use as ferramentas
 
@@ -210,7 +290,7 @@ Fabric, Fabric Inbox, Switchboard, Observatory e Fabric Dashboards são de códi
 
 As versões já lançadas mantêm a licença com que saíram: MIT para o Switchboard até a 0.3.1-beta.1, o Observatory até a 0.8.1 e o Fabric Dashboards 0.1.0; PolyForm Noncommercial ou Internal Use para o Switchboard 0.4.0-beta.1, o Observatory da 0.8.2 à 0.9.1 e o Fabric Dashboards 0.2.0 e 0.3.0. A prévia do Fabric 0.2.0 foi gerada antes de o código-fonte do Fabric ser publicado. PassionCode no GitHub ↗
 
-05 / PERGUNTAS
+06 / PERGUNTAS
 
 ## Perguntas mais frequentes
 

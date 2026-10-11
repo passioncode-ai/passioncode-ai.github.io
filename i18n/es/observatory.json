@@ -8,8 +8,6 @@
     "PROJECT OBSERVATORY · BY PASSIONCODE": "PROJECT OBSERVATORY · DE PASSIONCODE",
     "Your projects": "Tus proyectos",
     "Back in view": "De nuevo a la vista",
-    "See what changed across your agents’ projects, what needs attention and where known API keys left a copy, in a local dashboard available in English or Russian": "Ve qué cambió en los proyectos de tus agentes, qué necesita atención y dónde dejaron una copia las claves de API conocidas, en un panel local disponible en inglés o ruso",
-    "Memory and evidence: what changed in each project, what was decided and what needs attention.": "Memoria y evidencia: qué cambió en cada proyecto, qué se decidió y qué necesita atención.",
     "View source": "Ver código fuente",
     "Open source · macOS + Linux · Python 3.11+": "Código abierto · macOS + Linux · Python 3.11+",
     "ONE VIEW / YOUR PROJECTS": "UNA VISTA / TUS PROYECTOS",
@@ -81,7 +79,6 @@
     "Is it the same thing as Switchboard?": "¿Es lo mismo que Switchboard?",
     "No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps the projects those agents work on in view. Both are open-source PassionCode tools you can use today.": "No. Switchboard gestiona tus cuentas de Claude Code y Codex. Observatory mantiene a la vista los proyectos en los que trabajan esos agentes. Ambas son herramientas de código abierto de PassionCode que puedes usar hoy.",
     "And Fabric?": "¿Y Fabric?",
-    "Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Observatory is available now as a separate local tool.": "Fabric es nuestro agente de IA con rol de CEO, en vista previa temprana, centrado en coordinar agentes y proyectos. Observatory está disponible ahora como una herramienta local independiente.",
     "Explore Fabric": "Conocer Fabric",
     "Can I inspect or build it myself?": "¿Puedo inspeccionarlo o compilarlo yo mismo?",
     "Yes. Project Observatory is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from": "Sí. Project Observatory es de código abierto bajo la GNU AGPL-3.0. Para los usos que la AGPL no cubre, hay una licencia comercial disponible en",
@@ -92,6 +89,12 @@
     "OPEN SOURCE · LOCAL FIRST": "CÓDIGO ABIERTO · LOCAL PRIMERO",
     "Your projects, your evidence": "Tus proyectos, tu evidencia",
     "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "Configura un espacio de trabajo privado, observa tus propias carpetas y cuéntanos dónde debe mejorar.",
-    "Report an issue": "Informar de un problema"
+    "Report an issue": "Informar de un problema",
+    "See what changed across your agents’ projects and what needs you first, including where a known API key left a copy, in a local dashboard available in English or Russian": "Ve qué cambió en los proyectos de tus agentes y qué te necesita primero, incluido dónde dejó una copia una clave de API conocida, en un panel local disponible en inglés o ruso",
+    "IN THE TOOLKIT": "EN EL CONJUNTO DE HERRAMIENTAS",
+    "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "Memoria y evidencias: qué cambió en cada proyecto, qué se decidió y qué necesita atención. Es el paso 5 de",
+    "how it works": "«Cómo funciona»",
+    "All the tools": "Todas las herramientas",
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric, en vista previa temprana, es el hogar de tus proyectos y sus agentes. Observatory está disponible ahora como una herramienta local independiente."
   }
 }

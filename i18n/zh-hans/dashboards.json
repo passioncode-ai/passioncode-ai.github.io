@@ -7,8 +7,6 @@
     "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "你的智能体服务",
     "One place to look": "一处查看全部",
-    "See what is running, what needs attention and what happened last, with each service’s own dashboard in one Mac app": "一个 Mac 应用就能看到哪些服务在运行、哪些需要处理、最近发生了什么，每个服务自己的仪表盘也在其中",
-    "Health, spend and control: every agent service, its state, its spend and its updates in one window.": "健康、花费与控制：每个智能体服务的状态、花费和更新，都在一个窗口里。",
     "Download for macOS ↓": "下载 macOS 版 ↓",
     "View source ↗": "查看源代码 ↗",
     "· macOS 13+ · Apple silicon + Intel": "· macOS 13+ · Apple silicon + Intel",
@@ -41,7 +39,6 @@
     "A real terminal opens next to a service’s dashboard, running Claude Code, Codex or another runtime in that agent’s repository. Where Fabric Switchboard binds the folder to a project, the session starts on that project’s account.": "在服务仪表盘旁边打开一个真实的终端，在该智能体的仓库中运行 Claude Code、Codex 或其他运行环境。如果 Fabric Switchboard 已把该文件夹绑定到某个项目，会话就使用该项目的账号启动。",
     "Updates that are checked first": "先检查再安装的更新",
     "The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.": "应用会自行更新：版本必须带有组织签名并与校验和一致才会安装，且在控制台或命令仍在运行时会等待。你可以在“设置”中关闭自动安装。",
-    "The family kept current": "让智能体家族保持最新",
     "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "Settings → Estate updates 会监视 Fabric Agent Contract 和 PassionCode.ai 技能，并可在核对发布者之后于后台更新这些技能。该开关默认关闭。",
     "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Settings → Language：跟随这台 Mac，可选 English 或 Русский。窗口、菜单和托盘会同时切换。",
     "02 / GET FABRIC DASHBOARDS": "02 / 获取 Fabric Dashboards",
@@ -79,6 +76,12 @@
     "Start with the services": "从你已经在用的",
     "you already use": "服务开始",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "用 Observatory 查看项目，用 Switchboard 配置账号，只添加你的工作需要的工具。",
-    "Explore the tools ↗": "了解这些工具 ↗"
+    "Explore the tools ↗": "了解这些工具 ↗",
+    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "在一个应用里查看你 Mac 上的每个智能体服务：需要你处理的排在最前，每个服务自己的仪表盘就在旁边打开",
+    "IN THE TOOLKIT": "工具包成员",
+    "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "状态、花费与控制：每个智能体服务在做什么、花了多少以及它的更新，都在一个窗口里。第 4 步：",
+    "how it works": "工作原理",
+    "All the tools": "全部工具",
+    "The skills kept current": "技能保持最新"
   }
 }

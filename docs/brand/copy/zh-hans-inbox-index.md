@@ -52,9 +52,9 @@ FABRIC INBOX · 开发中的预览版
 
 # 重要的优先
 
-把 Gmail 和 Cloudflare 邮箱汇入同一个列表，重要邮件优先；你自己域名下的地址由智能体负责，能回复的按你允许的范围回复，其余起草成草稿
+把 Gmail 和 Cloudflare 邮箱放进同一个列表，重要邮件优先。你自己域名上的智能体回复你允许的内容，其余留成草稿
 
-家族成员 邮件：智能体读取并在你设定的策略范围内回复的地址。完整家族
+工具包成员 邮件：智能体在你设定的策略内读取和回复的地址。第 5 步，见工作原理。全部工具
 
 下载 macOS 版
 
@@ -64,7 +64,7 @@ FABRIC INBOX · 开发中的预览版
 
 ↓
 
-开发预览版 0.13.0 · macOS 12 或更高版本 · 以 AGPL-3.0 开源
+开发预览版 0.14.0 · macOS 12 或更高版本 · 以 AGPL-3.0 开源
 
 FABRIC INBOX / 邮件 + 智能体
 
@@ -106,7 +106,7 @@ Inbox 以同样的方式分拣每个账号，并让你域名下的地址有智�
 
 ## 适用于你的 Mac
 
-最新预览版：0.13.0。Mac 应用会在你自己的 Cloudflare 账号中创建它的邮件服务器并将其打开；你的邮件只留在你自己的账号里。
+最新预览版：0.14.0。Mac 应用会在你自己的 Cloudflare 账号中创建它的邮件服务器并将其打开；你的邮件只留在你自己的账号里。
 
 ⌘
 
@@ -137,7 +137,7 @@ DMG 安装包 · 已使用 Developer ID 签名并通过 Apple 公证
 
 macOS DMG · SHA-256
 
-7709361f9a2f98cd125bbabd9433c320859c85e9f11c96367aa66aee21350a37
+ade939562ca8a035402f92927c308af4882d1b260abad879f7d41adcc7a14a24
 
 打开前请比对：shasum -a 256（终端）。值不同说明文件不同，请重新下载。
 
@@ -175,11 +175,11 @@ macOS DMG · SHA-256
 
 应用会输出完整的命令：claude mcp add --transport http fabric-inbox https://<your-server>/mcp 其中带有密钥的两个请求头。然后让智能体调用 list_accounts。
 
-02 / PASSIONCODE 家族
+02 / PASSIONCODE 工具包
 
 ## 各有各的职责
 
-Inbox 处理邮件。Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让这些智能体所处理的项目一目了然。Fabric 是我们正在打造的 CEO AI 智能体，负责协调这些工作。
+Inbox 处理邮件。Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你随时看到这些智能体正在做的项目。Fabric 处于早期预览阶段，是你的项目及其智能体的家。
 
 了解 Switchboard
 
@@ -215,7 +215,7 @@ Inbox 处理邮件。Switchboard 管理 Claude Code 和 Codex 账号。Project O
 
 Inbox 就是 Fabric 智能体吗？
 
-不是。Inbox 是邮件客户端；它的智能体在你设定的规则范围内回复你的地址。Fabric 是我们的 CEO AI 智能体，目前是早期预览版。它们属于同一套工具集，但职责不同。
+不是。Inbox 是邮件客户端；它的智能体在你设定的规则范围内回复你的地址。Fabric，处于早期预览阶段，是你的项目及其智能体的家。它们属于同一个工具包，各有不同的角色。
 
 PassionCode
 

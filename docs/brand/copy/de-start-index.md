@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Loslegen | Installiere deinen Arbeitsplatz für KI-Agenten | PassionCode.ai
 
-Installiere die PassionCode.ai-Skills, füge Fabric hinzu, erstelle mit Claude Code oder Codex deinen ersten Fabric-Agenten, wandle ein bestehendes Projekt um, lass es in Fabric Dashboards laufen und füge den nächsten Agenten derselben Familie hinzu. Kostenlos und Open Source.
+Installiere die PassionCode.ai-Skills, füge Fabric hinzu, erstelle mit Claude Code oder Codex deinen ersten Fabric-Agenten oder passe ein bestehendes Projekt an, lass ihn in Fabric Dashboards laufen und füge den nächsten Agenten demselben Projekt hinzu. Kostenlos und Open Source.
 
 Zum Inhalt springen
 
@@ -50,7 +50,7 @@ Loslegen · kostenlos und Open Source
 
 # Vom leeren Mac zu deinem ersten Agenten
 
-Schluss mit Agenten, die verrotten und nicht miteinander reden. Fünf Schritte, etwa zwanzig Minuten, jeder für sich nützlich
+Baue Agenten, die weiterarbeiten und wissen, was die anderen getan haben. Fünf Schritte, etwa zwanzig Minuten, jeder für sich nützlich
 
 Braucht Node.js 18+ und Claude Code oder Codex Fabric braucht macOS auf Apple silicon oder Intel
 
@@ -64,7 +64,7 @@ Fabric hinzufügen
 
 03
 
-Agenten erstellen oder umwandeln
+Einen Agenten erstellen oder anpassen
 
 04
 
@@ -84,17 +84,17 @@ Mitwirken
 
 ### Skills installieren
 
-Der PassionCode.ai-Launcher installiert die Fabric-Agent-Adapter-Skills, Observatory Log und die Arbeitsregeln in deinen Coding-Agenten. Ohne Account und ohne Schlüssel.
+Der PassionCode.ai-Launcher installiert die Fabric-Agent-Adapter-Skills, Observatory Log und die Arbeitsregeln in deinen Coding-Agenten. Ohne Account und ohne Schlüssel. Fabric installiert er nicht: Das ist der nächste Schritt, ein separater Download.
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.1.31 · danach den Agenten neu starten · automatische Updates sind an; schalte sie ab,
+Launcher 0.1.32 · danach den Agenten neu starten · automatische Updates sind an; schalte sie ab,
 
 02
 
 ### Fabric hinzufügen
 
-Fabric ist der CEO-KI-Agent: Jedes Projekt bekommt ein Zuhause für Zweck, Board, Entscheidungen und Releases. Es ist eine frühe Vorschau: Es braucht Docker und die Supabase CLI, und seine Unterhaltung speichert Nachrichten, antwortet aber noch nicht.
+Fabric ist das Zuhause für deine Projekte und ihre Agenten: Jedes Projekt hält dort Zweck, Board, Entscheidungen und Releases. Der erste Bildschirm bietet vier Aktionen: einen Agenten erstellen, einen vorhandenen anpassen, ein Projekt öffnen oder eines erstellen. Es ist eine frühe Vorschau: Es braucht Docker und die Supabase CLI, und seine Unterhaltung speichert Nachrichten, antwortet aber noch nicht.
 
 Fabric herunterladen
 
@@ -110,13 +110,13 @@ Apple silicon und Intel · signiert und notarisiert · SHA-256 4d8e8da80bcf490fe
 
 03
 
-### Agenten erstellen oder umwandeln
+### Einen Agenten erstellen oder anpassen
 
-Bitte in Claude Code oder Codex um das, was du brauchst. Der Skill des Fabric Agent Adapter baut einen Fabric-kompatiblen Dienst: einen Vertrag, ein Dashboard, Tests und eine Konformitätsprüfung.
+Bitte in Claude Code oder Codex um das, was du brauchst, oder starte in Fabric mit den Aktionen zum Erstellen und Anpassen; die Arbeit läuft in beiden Fällen in der Konsole deines Coding-Agenten. Der Skill des Fabric Agent Adapter stellt zuerst seine Fragen und zeigt seinen Plan, bevor er etwas ändert; das Anpassen läuft auf einem neuen Branch fabric-adapter. Du bekommst einen Vertrag, ein Dashboard, Tests und einen Konformitätsbericht.
 
 neu Erstelle einen Fabric-Agenten, der jeden Morgen unsere App-Store-Rezensionen prüft und Antworten entwirft
 
-umwandeln Passe dieses Repository an Fabric an
+anpassen Passe dieses Repository an Fabric an
 
 04
 
@@ -134,7 +134,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 05
 
-### Den nächsten Agenten hinzufügen und die Familie sehen
+### Den nächsten Agenten zum selben Projekt hinzufügen
 
 Baue den nächsten Agenten genauso und gib ihm dasselbe Projekt in Fabric. Claude Code, Kilo Code und Hermes Agent, die aus Fabric gestartet werden, teilen Board, Gedächtnis und Übergaben dieses Projekts, sodass einer dort weitermacht, wo der andere aufgehört hat. Welche Agenten sich heute verbinden
 
@@ -144,7 +144,7 @@ EIN TOOL, DAS WIR EMPFEHLEN
 
 ## was sie anfangen
 
-Für die Änderungen, die deine Agenten vornehmen, empfehlen wir die task-pipeline– ein eigenständiger Open-Source-Skill aus der Familie sshlg-skills Familie: Er führt jede Änderung vom Briefing bis zur Abnahme und geht erst weiter, wenn jedes Gate bestanden ist.
+Für die Änderungen, die deine Agenten vornehmen, empfehlen wir die task-pipeline– ein eigenständiger Open-Source-Skill aus der Sammlung sshlg-skills: Er führt jede Änderung vom Briefing bis zur Abnahme und geht erst weiter, wenn jedes Gate bestanden ist.
 
 npx sshlg-skills install
 

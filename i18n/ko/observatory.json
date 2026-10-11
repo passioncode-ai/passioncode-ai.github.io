@@ -10,10 +10,6 @@
     "PROJECT OBSERVATORY · BY PASSIONCODE": "PROJECT OBSERVATORY · PASSIONCODE 제작",
     "Your projects": "내 프로젝트",
     "Back in view": "다시 한눈에",
-    "See what changed across your agents’ projects, what needs attention and where known API keys left a copy, in a local dashboard available in English or Russian": "에이전트가 작업하는 프로젝트에서 무엇이 바뀌었는지, 무엇에 주의가 필요한지, 알려진 API 키의 사본이 어디에 남았는지 영어 또는 러시아어로 쓸 수 있는 로컬 대시보드에서 확인하세요",
-    "IN THE FAMILY": "패밀리 소개",
-    "Memory and evidence: what changed in each project, what was decided and what needs attention.": "기억과 증거: 각 프로젝트에서 무엇이 바뀌었고, 무엇이 결정되었고, 무엇에 주의가 필요한지.",
-    "The whole family": "전체 패밀리",
     "View source": "소스 보기",
     "Open source · macOS + Linux · Python 3.11+": "오픈 소스 · macOS + Linux · Python 3.11+",
     "ONE VIEW / YOUR PROJECTS": "한 화면 / 내 프로젝트",
@@ -35,7 +31,7 @@
     "Commits, working-tree state and work that exists only on this machine, across every project in scope, with the week-by-week shape of each.": "범위에 포함된 모든 프로젝트의 커밋, 작업 트리 상태, 이 머신에만 있는 작업을 프로젝트별 주간 추이와 함께 보여 줍니다.",
     "03 / FINDINGS": "03 / 발견 항목",
     "Start with what matters": "중요한 것부터",
-    "Findings come with their evidence and a next step, ordered from critical to info. Silenced findings keep who silenced them, when and why.": "발견 항목에는 근거와 다음 단계가 함께 제공되며, 심각도 높음부터 정보까지 정렬됩니다. 무시 처리된 발견 항목에는 누가, 언제, 왜 무시했는지가 남습니다.",
+    "Findings come with their evidence and a next step, ordered from critical to info. Silenced findings keep who silenced them, when and why.": "발견 항목에는 증거와 다음 단계가 함께 제공되며, 심각도 높음부터 정보까지 정렬됩니다. 무시 처리된 발견 항목에는 누가, 언제, 왜 무시했는지가 남습니다.",
     "04 / KEYS": "04 / 키",
     "Find copies of known keys": "알려진 키의 사본 찾기",
     "Credential metadata stays separate from values. Selected transcripts, logs and SQLite stores are compared with keys already known locally; findings never repeat a value.": "자격 증명 메타데이터는 값과 분리되어 있습니다. 선택한 대화 기록, 로그, SQLite 저장소를 로컬에 이미 알려진 키와 비교하며, 발견 항목에는 값이 다시 나타나지 않습니다.",
@@ -85,7 +81,6 @@
     "Is it the same thing as Switchboard?": "Switchboard와 같은 것인가요?",
     "No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps the projects those agents work on in view. Both are open-source PassionCode tools you can use today.": "아니요. Switchboard는 Claude Code와 Codex 계정을 관리합니다. Observatory는 그 에이전트들이 작업하는 프로젝트를 한눈에 보여 줍니다. 둘 다 오늘 바로 쓸 수 있는 PassionCode 오픈 소스 도구입니다.",
     "And Fabric?": "Fabric은요?",
-    "Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Observatory is available now as a separate local tool.": "Fabric은 초기 프리뷰 단계의 CEO AI 에이전트로, 에이전트와 프로젝트의 조율에 집중합니다. Observatory는 지금 별도의 로컬 도구로 사용할 수 있습니다.",
     "Explore Fabric": "Fabric 자세히 보기",
     "Can I inspect or build it myself?": "직접 살펴보거나 빌드할 수 있나요?",
     "Yes. Project Observatory is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from": "예. Project Observatory는 GNU AGPL-3.0 오픈 소스입니다. AGPL이 다루지 않는 용도에는 다음 주소에서 상용 라이선스를 받을 수 있습니다:",
@@ -97,6 +92,12 @@
     "OPEN SOURCE · LOCAL FIRST": "오픈 소스 · 로컬 우선",
     "Your projects, your evidence": "내 프로젝트, 내 증거",
     "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "비공개 워크스페이스를 만들고, 내 폴더를 관찰하고, 개선이 필요한 부분을 알려 주세요.",
-    "Report an issue": "문제 보고"
+    "Report an issue": "문제 보고",
+    "See what changed across your agents’ projects and what needs you first, including where a known API key left a copy, in a local dashboard available in English or Russian": "에이전트가 작업하는 프로젝트에서 무엇이 바뀌었는지, 무엇부터 내 확인이 필요한지, 알려진 API 키의 사본이 어디에 남았는지까지 영어 또는 러시아어로 쓸 수 있는 로컬 대시보드에서 확인하세요",
+    "IN THE TOOLKIT": "툴킷 안에서",
+    "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "메모리와 증거: 각 프로젝트에서 무엇이 바뀌었고, 무엇이 결정되었고, 무엇에 주의가 필요한지 보여 줍니다.",
+    "how it works": "작동 방식의 5단계입니다",
+    "All the tools": "모든 도구",
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "초기 프리뷰 단계인 Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. Observatory는 지금 별도의 로컬 도구로 사용할 수 있습니다."
   }
 }

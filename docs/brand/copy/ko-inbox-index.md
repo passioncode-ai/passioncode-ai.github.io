@@ -52,9 +52,9 @@ FABRIC INBOX · 개발 프리뷰
 
 # 중요한 메일 먼저
 
-Gmail과 Cloudflare 메일함을 하나의 목록으로 모아 중요한 메일을 먼저 보여 주고, 내 도메인의 에이전트가 허용한 메일에는 답하고 나머지는 초안으로 남깁니다
+Gmail과 Cloudflare 메일함을 하나의 목록으로 모으고, 중요한 메일을 먼저 보여 줍니다. 내 도메인의 에이전트는 허용한 메일에만 답하고 나머지는 초안으로 남깁니다
 
-패밀리 안에서 메일: 에이전트가 정해 둔 정책 안에서 읽고 답하는 주소입니다. 전체 패밀리
+툴킷 안에서 메일: 에이전트가 정해 둔 정책 안에서 읽고 답하는 주소입니다. 작동 방식의 5단계입니다. 모든 도구
 
 macOS용 다운로드
 
@@ -64,7 +64,7 @@ macOS용 다운로드
 
 ↓
 
-개발 프리뷰 0.13.0 · macOS 12 이상 · 오픈 소스(AGPL-3.0)
+개발 프리뷰 0.14.0 · macOS 12 이상 · 오픈 소스(AGPL-3.0)
 
 FABRIC INBOX / 메일 + 에이전트
 
@@ -106,7 +106,7 @@ FABRIC INBOX 받기
 
 ## Mac용
 
-최신 프리뷰: 0.13.0. Mac 앱은 내 Cloudflare 계정에 메일 서버를 만들고 엽니다. 메일은 내 계정에 그대로 남습니다.
+최신 프리뷰: 0.14.0. Mac 앱은 내 Cloudflare 계정에 메일 서버를 만들고 엽니다. 메일은 내 계정에 그대로 남습니다.
 
 ⌘
 
@@ -137,7 +137,7 @@ Gmail의 경우: 내 Google Cloud 프로젝트의 OAuth 클라이언트
 
 macOS DMG · SHA-256
 
-7709361f9a2f98cd125bbabd9433c320859c85e9f11c96367aa66aee21350a37
+ade939562ca8a035402f92927c308af4882d1b260abad879f7d41adcc7a14a24
 
 열기 전에 비교하세요: shasum -a 256 터미널에서 확인합니다. 값이 다르면 다른 파일이므로 다시 다운로드하세요.
 
@@ -175,11 +175,11 @@ macOS DMG · SHA-256
 
 앱이 전체 명령을 출력합니다: claude mcp add --transport http fabric-inbox https://<your-server>/mcp 여기에는 키의 헤더 두 개가 포함됩니다. 그다음 요청할 항목: list_accounts.
 
-02 / PASSIONCODE 패밀리
+02 / PASSIONCODE 툴킷
 
 ## 각자 맡은 일이 있는 도구
 
-Inbox는 메일을 다룹니다. Switchboard는 Claude Code와 Codex 계정을 관리합니다. Project Observatory는 그 에이전트들이 작업하는 프로젝트를 한눈에 보여 줍니다. Fabric은 이 작업을 조율하도록 우리가 만들고 있는 CEO AI 에이전트입니다.
+Inbox는 메일을 다룹니다. Switchboard는 Claude Code와 Codex 계정을 관리합니다. Project Observatory는 그 에이전트들이 작업하는 프로젝트를 한눈에 보여 줍니다. 초기 프리뷰 단계인 Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다.
 
 Switchboard 살펴보기
 
@@ -215,7 +215,7 @@ Fabric 만나보기
 
 Inbox가 Fabric 에이전트인가요?
 
-아닙니다. Inbox는 메일 클라이언트이며, Inbox의 에이전트는 내가 정한 규칙 안에서 내 주소로 온 메일에 답합니다. Fabric은 초기 프리뷰 단계의 CEO AI 에이전트입니다. 둘은 같은 툴킷에 속하지만 역할이 다릅니다.
+아닙니다. Inbox는 메일 클라이언트이며, Inbox의 에이전트는 내가 정한 규칙 안에서 내 주소로 온 메일에 답합니다. Fabric은 초기 프리뷰 단계이며, 내 프로젝트와 그 에이전트를 위한 집입니다. 둘은 같은 툴킷에 속하지만 역할이 다릅니다.
 
 PassionCode
 

@@ -50,7 +50,7 @@ Enterprise · für Organisationen
 
 # Mach deine Organisation AI-native
 
-Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was sie tun – auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud
+Ein Agent, der auf dem Laptop einer einzelnen Person lebt, hilft genau einer Person. Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was sie tun – auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud
 
 Schätzung und Anfrage
 
@@ -158,7 +158,7 @@ Wiederkehrende Abläufe automatisieren
 
 Agenten für unsere eigenen Prozesse bauen
 
-Unsere bestehenden Agenten oder Projekte umwandeln
+Unsere bestehenden Agenten oder Projekte anpassen
 
 Eine kommerzielle Lizenz für ein geschlossenes Produkt oder einen Dienst
 

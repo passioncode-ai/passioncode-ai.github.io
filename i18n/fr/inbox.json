@@ -9,7 +9,6 @@
     "FABRIC INBOX · DEVELOPMENT PREVIEW": "FABRIC INBOX · PRÉVERSION DE DÉVELOPPEMENT",
     "Your mail": "Votre courrier",
     "Important first": "L’important d’abord",
-    "Bring Gmail and Cloudflare mailboxes into one list, with important mail first and agents for your own domains that answer what you allow and draft the rest": "Réunissez vos boîtes Gmail et Cloudflare dans une seule liste, le courrier important en premier, avec des agents sur vos propres domaines qui répondent à ce que vous autorisez et préparent un brouillon pour le reste",
     "Download for macOS": "Télécharger pour macOS",
     "See what it does": "Ce qu’il fait",
     "Development preview": "Préversion de développement",
@@ -67,9 +66,7 @@
     "Connect your agent": "Connectez votre agent",
     "The app prints the whole command:": "L’application affiche la commande complète :",
     "with the key’s two headers. Then ask for": "avec les deux en-têtes de la clé. Demandez ensuite",
-    "02 / THE PASSIONCODE FAMILY": "02 / LA FAMILLE PASSIONCODE",
     "A tool with its own job": "Un outil, un rôle",
-    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric is the CEO AI agent we’re building to coordinate the work.": "Inbox s’occupe du courrier. Switchboard gère les comptes Claude Code et Codex. Project Observatory garde en vue les projets sur lesquels travaillent ces agents. Fabric est l’agent IA dans le rôle de CEO que nous construisons pour coordonner le travail.",
     "Explore Switchboard": "Découvrir Switchboard",
     "Explore Observatory": "Découvrir Observatory",
     "Meet Fabric": "Découvrir Fabric",
@@ -88,7 +85,13 @@
     "includes the source, tests and release notes.": "contient le code source, les tests et les notes de version.",
     "Is Inbox the Fabric agent?": "Inbox est-il l’agent Fabric ?",
     "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "Non. Inbox est un client de messagerie ; ses agents répondent sur vos adresses dans le cadre des règles que vous fixez.",
-    "is our CEO AI agent, in early preview. They belong to the same toolkit and have different roles.": "est notre agent IA dans le rôle de CEO, en préversion. Les deux font partie de la même boîte à outils, avec des rôles différents.",
-    "Mail: the addresses agents read and answer within the policy you set.": "Courrier : les adresses que les agents lisent et auxquelles ils répondent selon la politique que vous définissez."
+    "Bring Gmail and Cloudflare mailboxes into one list, important mail first. Agents for your own domains answer what you allow and leave the rest as a draft": "Réunissez vos boîtes Gmail et Cloudflare dans une seule liste, le courrier important en premier. Des agents sur vos propres domaines répondent à ce que vous autorisez et laissent le reste en brouillon",
+    "IN THE TOOLKIT": "DANS LA BOÎTE À OUTILS",
+    "Mail: the addresses agents read and answer within the policy you set. Step 5 of": "Courrier : les adresses que les agents lisent et auxquelles ils répondent selon la politique que vous définissez. Étape 5 de",
+    "how it works": "« Comment ça marche »",
+    "All the tools": "Tous les outils",
+    "02 / THE PASSIONCODE TOOLKIT": "02 / LA BOÎTE À OUTILS PASSIONCODE",
+    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox s’occupe du courrier. Switchboard gère les comptes Claude Code et Codex. Project Observatory garde en vue les projets sur lesquels travaillent ces agents. Fabric, en préversion, est le foyer de vos projets et de leurs agents.",
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": ", en préversion, est le foyer de vos projets et de leurs agents. Les deux font partie de la même boîte à outils, avec des rôles différents."
   }
 }

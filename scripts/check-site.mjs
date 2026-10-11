@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
-import { PAGES, NOINDEX, TRANSLATED_LOCALES } from './pages.mjs'
+import { PAGES, NOINDEX, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { LEAD_OPTIONS } from '../assets/lead-options.js'
 import { alternates, langTag, languageSwitch, LOCALES, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
@@ -22,6 +22,7 @@ const currentWords = html => html
   .replace(/<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g, '')
   .replace(/<!-- license-history -->[\s\S]*?<!-- \/license-history -->/g, '')
   .replace(/\s(?:id|href)="[^"]*"/g, '')
+  .replace(/\u00a0/g, ' ')
 const downloadPaths = new Set(['/switchboard/download/macos', '/switchboard/download/windows', '/fabric/download/macos', '/inbox/download/macos', '/dashboards/download/macos', '/observatory/download/macos', '/observatory/download/wheel'])
 const apiPaths = new Set(['/api/releases', '/api/leads'])
 // The only scripts a page may load: the site's own progressive enhancement. Content never
@@ -155,8 +156,31 @@ console.log(`PASS: ${PAGES.length} static pages, metadata, CSP-safe markup, anch
 // of problem and answer, the two doors, the tools with their status, the license line, a short
 // FAQ and the founder note. Removed sections keep their addresses as legacy anchors.
 const home = read('index.html')
-for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'CEO AI agent', 'does not reply yet', 'real-model replies are not yet verified', 'href="/start/"', 'href="/business/"', 'href="/vision/"', 'since version 0.3.2, Fabric send anonymous usage counts', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available', '<!-- license-history -->', 'local, open-source workspace', 'the subscription you already have', 'co-founder of <a href="https://nicegram.me">Nicegram</a>, which has 60 million users', 'free for personal use; a commercial license covers what the AGPL does not']) assert.ok(home.includes(text), `homepage missing ${text}`)
-for (const id of ['why', 'start', 'products', 'source', 'faq', 'about', 'path', 'vision', 'toolkit', 'extend', 'companies', 'launcher']) assert.ok(home.includes(`id="${id}"`), `homepage section or legacy anchor #${id}`)
+for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'the home for your projects and their agents', 'does not reply yet', 'real-model replies are not yet verified', 'href="/start/"', 'href="/business/"', 'href="/vision/"', 'since version 0.3.2, Fabric send anonymous usage counts', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available', '<!-- license-history -->', 'local, open-source workspace', 'the subscription you already have', 'co-founder of <a href="https://nicegram.me">Nicegram</a>, which has 60 million users', 'free for personal use; a commercial license covers what the AGPL does not']) assert.ok(home.includes(text), `homepage missing ${text}`)
+for (const id of ['why', 'how', 'start', 'products', 'source', 'faq', 'about', 'path', 'vision', 'toolkit', 'extend', 'companies', 'launcher']) assert.ok(home.includes(`id="${id}"`), `homepage section or legacy anchor #${id}`)
+// How it works (SITE-028 W6, docs/ux/scenarios.md SCN-021): the six journey steps of
+// docs/brand/narrative.md §3, each with its state label; pictures only from the synthetic shots the
+// journey truth table marks reusable; the home video slot stays hidden and holds no player until W10.
+{
+  const how = home.slice(home.indexOf('<section class="section journey" id="how"'), home.indexOf('</section>', home.indexOf('id="how"')))
+  assert.ok(how.length > 100, 'homepage: the How it works section')
+  const labels = [...how.matchAll(/<li class="reveal"><span class="cycle-number">0([1-6])<\/span><p class="availability">([^<]+)<\/p><h3>([^<]+)<\/h3>/g)].map(m => `${m[1]} ${m[3]}: ${m[2]}`)
+  assert.deepEqual(labels, ['1 Enter: AVAILABLE NOW', '2 Onboard: PREVIEW', '3 First agent: AVAILABLE NOW', '4 Grow: AVAILABLE NOW', '5 Work together and watch: AVAILABLE NOW, IN PART', '6 Organization: DIRECTION'], 'homepage: six journey steps, each with its state')
+  const SAFE = new Set(['dashboards-overview.jpg', 'fabric-board.jpg', 'fabric-home.jpg', 'fabric-releases.jpg', 'dashboards-service-dashboard.jpg', 'observatory-demo.jpg', 'switchboard-accounts.jpg'])
+  for (const [, image] of how.matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #how: ${image} is not a synthetic shot the journey truth table marks reusable`)
+  assert.ok(how.includes('Fabric is a separate preview download'), 'homepage step 1: the launcher installs the skills, Fabric is a separate download')
+  assert.match(how, /<figure class="home-video" id="video" hidden>(?:(?!<\/figure>)[\s\S])*<\/figure>/, 'homepage: the video slot is reserved and hidden')
+  assert.ok(!/<video|<iframe/.test(how), 'homepage: no video player until W10 ships a cut')
+}
+// Decided terms (operator 2026-10-10, docs/brand/terminology.md): Fabric is "the home for your
+// projects and their agents" and "CEO" appears once, on /fabric/ (D-T5); the product pages say
+// IN THE TOOLKIT (D-T4); "harness" is named on /vision/ only (D-T1).
+for (const file of SOURCE_PAGES) {
+  const words = read(file).replace(/https?:\/\/[^"\s]+/g, '')
+  if (file !== 'fabric/index.html') assert.ok(!/\bCEO\b/.test(words), `${file}: "CEO" belongs to /fabric/ only (D-T5)`)
+  assert.ok(!words.includes('IN THE FAMILY'), `${file}: the label is IN THE TOOLKIT (D-T4)`)
+  if (!['vision/index.html', 'fabric/agents/index.html', 'switchboard/agents/index.html'].includes(file)) assert.ok(!/\bharness\b/i.test(words.replace(/id="harness"|#harness/g, '')), `${file}: "harness" is named on /vision/ only (D-T1)`)
+}
 for (const name of ['PassionCode.ai launcher', 'Fabric Dashboards', 'Project Observatory', 'Fabric Inbox', 'Fabric Switchboard']) assert.ok(home.includes(name), `homepage names ${name}`)
 assert.equal((home.match(/<details><summary>/g) || []).length, 3, 'homepage: a short FAQ')
 for (const path of ['/switchboard/', '/dashboards/', '/observatory/', '/inbox/', '/fabric/']) assert.ok(home.includes(`href="${path}"`), `homepage links ${path}`)
@@ -240,6 +264,9 @@ assert.ok(fabric.includes('Early preview'), 'Fabric is labelled an early preview
 for (const text of ['Apple silicon', 'Docker', 'Supabase CLI', 'does not reply yet', 'local agent hub', 'allow or deny each request', 'href="https://github.com/passioncode-ai/fabric"', ...LICENSE_WORDING]) assert.ok(fabric.includes(text), `Fabric page must say: ${text}`)
 assert.ok(!fabric.includes('no MCP entry of its own'), 'the Fabric page no longer claims it has no agent entry: 0.3.1 ships the hub')
 for (const image of ['fabric-home.jpg', 'fabric-board.jpg', 'fabric-releases.jpg']) assert.ok(fabric.includes(`/assets/${image}`), `Fabric preview ${image}`)
+assert.equal((fabric.match(/\bCEO\b/g) || []).length, 1, 'Fabric names CEO once, as the direction (D-T5)')
+assert.ok(fabric.includes('act as the CEO of your agents'), 'Fabric: CEO is the direction')
+for (const action of ['Create an agent', 'Adapt an agent', 'Open a project', 'Create a project']) assert.ok(fabric.includes(`<dt>${action}</dt>`), `Fabric names its first screen's action: ${action}`)
 assert.ok(!/source is private/i.test(fabric), 'Fabric source is public since 2026-09-30')
 
 const inbox = read('inbox/index.html')
@@ -261,7 +288,8 @@ for (const locale of TRANSLATED_LOCALES) {
   const { disclosures } = CHECKS[locale]
   assert.deepEqual(Object.keys(disclosures).sort(), [...DISCLOSURE_PAGES].sort(), `i18n/${locale}/_checks.json: disclosures for every product page`)
   for (const [page, texts] of Object.entries(disclosures)) {
-    const html = read(`${locale}/${page}`)
+    // A no-break space (U+00A0, the Russian typesetting after short words, W7) reads as a space here.
+    const html = read(`${locale}/${page}`).replace(/\u00a0/g, ' ')
     for (const text of texts) assert.ok(html.includes(text), `${locale}/${page} must say: ${text}`)
   }
   // The live version is the same number in every language.

@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from de/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | KI-Agent in der Rolle des CEO · frühe Vorschau für macOS | PassionCode.ai
+Fabric | Das Zuhause für deine Projekte und ihre Agenten · frühe Vorschau für macOS | PassionCode.ai
 
-Fabric ist unser KI-Agent in der Rolle des CEO, jetzt als frühe Vorschau für macOS auf Apple silicon und Intel. Er hält Board, Entscheidungen, Arbeit und Releases eines Projekts an einem Ort – auf deinem Mac.
+Fabric ist das Zuhause für deine Projekte und ihre Agenten, eine frühe Vorschau für macOS auf Apple silicon und Intel. Es hält Board, Entscheidungen, Arbeit und Releases eines Projekts an einem Ort – auf deinem Mac.
 
 Zum Inhalt springen
 
@@ -48,13 +48,13 @@ Download
 
 FABRIC · FRÜHE VORSCHAU
 
-# Ein KI-Agent in der Rolle des CEO
+# Ein Zuhause für deine Projekte
 
-# Ein Zuhause für die Arbeit
+# und ihre Agenten
 
-Fabric ist der Agent, den wir bauen, um andere Agenten rund um ein Projekt zu koordinieren – damit Zweck, Kontext und Entscheidungen bei der Arbeit bleiben, auch wenn sich Menschen, Modelle und Sitzungen ändern
+Fabric hält Zweck, Board, Entscheidungen und Releases jedes Projekts auf deinem Mac fest, für jeden Agenten, der daran arbeitet. Wir bauen es zum CEO deiner Agenten aus
 
-IN DER FAMILIE Das gemeinsame Zuhause aller Agenten eines Projekts: Zweck, Board, Entscheidungen und Releases. Die ganze Familie
+IM TOOLKIT Das gemeinsame Zuhause aller Agenten eines Projekts: Zweck, Board, Entscheidungen und Releases. Schritte 2 und 5 in „So funktioniert es“. Alle Tools
 
 Für macOS herunterladen
 
@@ -66,25 +66,25 @@ Den Workflow ansehen
 
 Frühe Vorschau 0.3.4 · macOS auf Apple silicon und Intel
 
-EIN PROJEKT, MEHR ALS DER CHAT
+DER ERSTE BILDSCHIRM · VIER AKTIONEN
 
-Zweck
+Agenten erstellen
 
-Was wollen wir erreichen?
+Gib ihm einen Namen, beschreib seine Aufgabe, wähle Ordner und Coding-Agenten
 
-Team
+Agenten anpassen
 
-Wer ist für welchen Teil der Arbeit verantwortlich?
+Hol einen anderswo gebauten herein, auf einem neuen Branch
 
-Befugnisse
+Projekt öffnen
 
-Was darf jeder Agent tun?
+Ein Ordner oder ein Ordner mit mehreren Projekten
 
-Belege
+Projekt erstellen
 
-Woher wissen wir, dass es funktioniert hat?
+Ein neues Zuhause für Zweck, Board und Releases
 
-Eine Veranschaulichung des Modells, das wir bauen
+Die eigentliche Arbeit am Agenten läuft in der Konsole deines Coding-Agenten
 
 DAS PROBLEM
 
@@ -146,7 +146,7 @@ WIE WIR ES BAUEN
 
 ## Menschen bleiben verantwortlich
 
-CEO beschreibt eine koordinierende Rolle. Du entscheidest, wofür das Projekt da ist und was der Agent tun darf.
+Koordination ist die Richtung, in die sich Fabric entwickelt, und sie ersetzt dich nie. Du entscheidest, wofür das Projekt da ist und was jeder Agent tun darf.
 
 BEFUGNISSE
 

@@ -7,8 +7,6 @@
     "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "あなたのエージェントサービス",
     "One place to look": "見る場所は一つ",
-    "See what is running, what needs attention and what happened last, with each service’s own dashboard in one Mac app": "稼働中のもの、対応が必要なもの、直近の出来事を確認できます。各サービス自身のダッシュボードも、一つの Mac アプリにまとまります",
-    "Health, spend and control: every agent service, its state, its spend and its updates in one window.": "稼働状況、支出、操作：すべてのエージェントサービスの状態、支出、アップデートを一つのウィンドウで確認できます。",
     "Download for macOS ↓": "macOS 版をダウンロード ↓",
     "View source ↗": "ソースを見る ↗",
     "· macOS 13+ · Apple silicon + Intel": "· macOS 13 以降 · Apple silicon と Intel",
@@ -41,7 +39,6 @@
     "A real terminal opens next to a service’s dashboard, running Claude Code, Codex or another runtime in that agent’s repository. Where Fabric Switchboard binds the folder to a project, the session starts on that project’s account.": "サービスのダッシュボードの横で本物のターミナルが開き、そのエージェントのリポジトリで Claude Code、Codex、その他のランタイムを実行します。Fabric Switchboard がフォルダをプロジェクトに紐付けている場合、セッションはそのプロジェクトのアカウントで始まります。",
     "Updates that are checked first": "事前に検証されるアップデート",
     "The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.": "アプリは自動で更新されます。リリースは、組織の署名を備え、チェックサムと一致している場合にのみインストールされ、コンソールやコマンドの実行中は待機します。自動インストールは設定でオフにできます。",
-    "The family kept current": "常に最新のファミリー",
     "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "設定 → Estate updates では、Fabric Agent Contract と PassionCode.ai のスキルを監視し、公開元を確認したうえで、スキルをバックグラウンドで更新できます。このスイッチは初期状態ではオフです。",
     "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "設定 → 言語：Mac の設定に合わせるか、English または Русский を選べます。ウィンドウ、メニュー、トレイは同時に切り替わります。",
     "02 / GET FABRIC DASHBOARDS": "02 / FABRIC DASHBOARDS を入手",
@@ -79,6 +76,12 @@
     "Start with the services": "すでに使っている",
     "you already use": "サービスから始めましょう",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "プロジェクトの確認は Observatory で、アカウントの設定は Switchboard で行います。ツールは、作業に必要なものだけを追加してください。",
-    "Explore the tools ↗": "ツールを見る ↗"
+    "Explore the tools ↗": "ツールを見る ↗",
+    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Mac 上のすべてのエージェントサービスを一つのアプリで確認できます。対応が必要なものが先頭に来て、各サービス自身のダッシュボードがその横に開きます",
+    "IN THE TOOLKIT": "ツールキットの一員",
+    "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "状態、支出、操作：すべてのエージェントサービスについて、何をしているか、どれだけ使っているか、アップデートの状況を一つのウィンドウで確認できます。",
+    "how it works": "使い方のステップ 4 です",
+    "All the tools": "すべてのツール",
+    "The skills kept current": "最新に保たれるスキル"
   }
 }

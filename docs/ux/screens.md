@@ -6,7 +6,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 
 | ID | Screen | Scenarios |
 |---|---|---|
-| SCR-01 | Home | SCN-001, SCN-006, SCN-007, SCN-008, SCN-010 |
+| SCR-01 | Home | SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-021 |
 | SCR-02 | Switchboard | SCN-002, SCN-003, SCN-004, SCN-011 |
 | SCR-03 | Design system | SCN-005, SCN-010 |
 | SCR-04 | Observatory | SCN-006 |
@@ -23,7 +23,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 Every screen exists in every language of `i18n/locales.json` (Russian at `/ru/…`), generated from the English one with the same structure (docs/DEPLOYMENT.md#languages). The shared header carries the language switch beside its action: one text link to the same page in the other language with two languages, a `<details>` menu listing every language with three or more (SCN-019).
 
 ### SCR-01: Home
-**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012, SCN-013, SCN-016. Reading order (2026-10-10, simplified: one question per section, about 700 words after the hero): hero (unchanged: canonical headline, narrative, two doors — For you, free → /start/ and For your organization → /business/; current versions, the workplace map) → Why (#why: without a harness agents rot; a local, open-source workspace on top of Claude Code, Codex and what comes next, on the subscription you already have; link to /vision/) → Two ways in (#start: For you and For organizations cards) → the tools (#products, one line, status and current version each; the preview note) → open source (#source, the license line and license-history region) → three FAQs → About (#about, the founder note). The removed sections keep their addresses as legacy anchors (#path, #vision, #toolkit, #shift, #how in #why; #companies in #start; #extend, #launcher in #products; #open-source, #foundation, #pipeline in #source). Header navigation since 2026-10-09: Vision · For you · For organizations · The tools · About (every page but Inbox). Footer: Get started, Vision, For organizations, the products, Privacy and the commercial address.
+**Scenarios:** SCN-001, SCN-006, SCN-007, SCN-008, SCN-010, SCN-012, SCN-013, SCN-016, SCN-021. Reading order (since 2026-10-10, W6 of SITE-028; narrative approved the same day): hero (unchanged headline and line under it; the intro line and the map label say what Fabric does today, D-T5; two doors — For you, free → /start/ and For your organization → /business/; current versions, the workplace map) → Why (#why: the problem in the reader's words — an agent works for a week, then falls apart — and the three proofs: local and open source, the agents and subscription you already have, a record you can open; link to /vision/) → How it works (#how, SCN-021: six steps in three columns, two at 1000 px, one at 620 px; each with its state label, one picture and a one-line caption; steps 01–03 and 06 are text cards from existing components, steps 04 and 05 the synthetic `dashboards-overview.jpg` and `fabric-board.jpg`; a `hidden` slot for the home video, no player until W10 ships) → Two ways in (#start) → the tools (#products, one line, status, current version and journey step each; the preview note) → open source (#source) → three FAQs → About (#about). The removed sections keep their addresses as legacy anchors (#path, #vision, #toolkit, #shift in #why; #companies in #start; #extend, #launcher in #products; #open-source, #foundation, #pipeline in #source); #how is now the How it works section itself. Header navigation since 2026-10-09: Vision · For you · For organizations · The tools · About (every page but Inbox). Footer: Get started, Vision, For organizations, the products, Privacy and the commercial address.
 **Web surface:** public
 **Route:** https://passioncode.ai/
 **Answers:** What is PassionCode and which product can I use today?
@@ -32,7 +32,7 @@ Every screen exists in every language of `i18n/locales.json` (Russian at `/ru/�
 **Entity:** PassionCode.ai organization/toolkit, linked to Switchboard and Fabric.
 
 ### SCR-02: Switchboard
-**Scenarios:** SCN-002/003/004/011. Reading order: hero → Get Switchboard (macOS and Windows cards, a full-width Before you open it card with CLI/OS/Windows requirements, SHA-256 list, release links, beta note) → The problem (limits run out; rotation keeps the session open) → synthetic screenshot → features → For agents (only for a selected release ≥ 0.4.0-beta.1: `switchboard mcp`, project rules, connect commands, the plugin line once the launcher lists it) → first session → FAQ → Part of the PassionCode toolkit → closing.
+**Scenarios:** SCN-002/003/004/011. Reading order: hero (with the IN THE TOOLKIT line) → Get Switchboard (macOS and Windows cards, a full-width Before you open it card with CLI/OS/Windows requirements, SHA-256 list, release links, beta note) → The problem (limits run out; rotation keeps the session open) → synthetic screenshot (`switchboard-accounts.jpg` since 2026-10-10: Switchboard 0.6.13's browser demo, its SYNTHETIC DEMO banner visible, accounts at `example.test`; it replaces the 0.3.1-era `switchboard-demo.jpg`) → features → For agents (only for a selected release ≥ 0.4.0-beta.1: `switchboard mcp`, project rules, connect commands, the plugin line once the launcher lists it) → first session → FAQ → Part of the PassionCode toolkit → closing.
 **Release-bound parts:** only `data-release-*` elements, the `<!-- release:NAME -->` regions (`macos-note`, `checksums`, `license-current`, `agents`) and the JSON-LD `softwareVersion`/`license` change with `switchboard/release.json`; `scripts/switchboard-release.mjs` renders them, `npm run check` asserts the page equals the render and that the MIT-history sentence still names v0.3.1-beta.1.
 **Web surface:** public
 **Route:** https://passioncode.ai/switchboard/
@@ -62,13 +62,13 @@ Every screen exists in every language of `i18n/locales.json` (Russian at `/ru/�
 Screens describe public website behavior, not acceptance of native Switchboard or Fabric runtime.
 
 ### SCR-05: Fabric
-**Scenarios:** SCN-007, SCN-008. Early-preview hero with Download for macOS, illustrative project brief, the actual window on synthetic demo data (home, board, releases), intended operating loop, people/authority principles, Get Fabric with requirements (the "Before you open it" card links /fabric/agents/, SCR-08), limits, the MCP status (no entry for other agents yet), the public source and its license, and links back to About or Switchboard.
+**Scenarios:** SCN-007, SCN-008. Early-preview hero (since 2026-10-10: "the home for your projects and their agents", the one "CEO" on the site as the direction, D-T5; the IN THE TOOLKIT line) with Download for macOS, the first screen's four actions in the side card (create an agent, adapt one, open a project, create one; text, not a screenshot), the actual window on synthetic demo data (home, board, releases), intended operating loop, people/authority principles, Get Fabric with requirements (the "Before you open it" card links /fabric/agents/, SCR-08), limits, the MCP status (no entry for other agents yet), the public source and its license, and links back to About or Switchboard.
 **Web surface:** public
 **Route:** https://passioncode.ai/fabric/
 **Answers:** What is Fabric and what is being built?
 **Indexable:** yes; canonical URL, WebPage data and sitemap. The download redirect is noindex.
 **Without JS:** all content, navigation, requirements and the download link. No fake functional agent demo or waitlist.
-**Entity:** Fabric, the CEO AI agent within PassionCode.ai, in early preview.
+**Entity:** Fabric, the home for your projects and their agents within PassionCode.ai, in early preview.
 
 ### SCR-06: Fabric Inbox
 **Scenarios:** SCN-009. Development-preview hero with Download for macOS, what it does, Get Fabric Inbox (requirements, checksum, release notes, limits), For agents (key and MCP command), toolkit context and FAQ.
@@ -93,7 +93,7 @@ Inbox falsifier: a reader could mistake the preview for a finished product or a 
 Simplification 2026-10-10: existing components only (section heading, principles list, path cards with a two-column modifier, tool cards, FAQ details, about section); no new motion. The launcher card leads to /start/#launcher. Falsifiers: a product lacks a next action; a preview appears finished; the founder note adds biography beyond facts.md; a door card or tool card clips at 390 px.
 
 ### SCR-08: Get started
-**Scenarios:** SCN-013, SCN-015. Hero with the thesis (stop building agents that rot and don’t talk to each other) and an on-page table of contents → five steps (#launcher, #fabric, #build, #run, #family) with copyable commands and current versions → the task-pipeline recommendation (#pipeline, separate open-source project) → #contribute (one paragraph with AGENTS.md, CONTRIBUTING.md and CLA.md, the public repository list) → closing to /business/. Simplified 2026-10-10 to about 450 words.
+**Scenarios:** SCN-013, SCN-015. Hero with the thesis (agents that keep working and know about each other) and an on-page table of contents → five steps (#launcher: the skills, not Fabric; #fabric: a separate preview download and its four actions; #build: create or adapt; #run; #family: the next agent in the same project) with copyable commands and current versions → the task-pipeline recommendation (#pipeline, separate open-source project) → #contribute (one paragraph with AGENTS.md, CONTRIBUTING.md and CLA.md, the public repository list) → closing to /business/. Simplified 2026-10-10 to about 450 words.
 **Web surface:** public
 **Route:** https://passioncode.ai/start/
 **Answers:** How do I install the workplace and make my first agent?
@@ -123,14 +123,14 @@ Simplification 2026-10-10: existing components only (section heading, principles
 **Answers:** Which coding agents does Fabric work with, and what does "works with" mean?
 **Indexable:** yes; canonical URL, WebPage data with `dateModified` and a breadcrumb, sitemap.
 **Without JS:** the whole answer, every table and every official-site link.
-**Entity:** Fabric, the CEO AI agent within PassionCode.ai; the agents are named with their own official sites.
+**Entity:** Fabric, the home for your projects and their agents within PassionCode.ai; the agents are named with their own official sites.
 Falsifiers: an agent appears at two levels or a planned agent reads as connected; a table clips at 320 px; the page quotes an OpenRouter share as a number; the date is missing. Existing tokens and section patterns only; the one new component is a token-styled table.
 
 ### SCR-13: Vision
-**Scenarios:** SCN-020. Since 2026-10-10 (about 600 words): hero (From one agent to an AI-native organization; local first, open source, vendor-neutral) with a table of contents → the missing harness (#harness: one McKinsey figure, the definition, its four parts mapped to the tools) → four principles (#beliefs: projects are the axis, the work improves itself, any agent on your machines, analytics never surveillance; the task-pipeline note #pipeline) → the path (#path, six labelled stages) → FAQ → closing with both doors, naming PassionCode for Enterprise. #problem, #today, #trust and #organizations stay as legacy anchors.
+**Scenarios:** SCN-020. Since 2026-10-10 (about 600 words): hero (From one agent to an AI-native organization; local first, open source, vendor-neutral) with a table of contents → what holds an agent (#harness: one McKinsey figure, the site's only definition of "harness", D-T1; its four parts mapped to the tools: a home, accounts, state and control, memory and evidence) → four principles (#beliefs: projects are the axis, the work improves itself, any agent on your machines, analytics never surveillance; the task-pipeline note #pipeline) → the path (#path, six labelled stages; stages 1, 2 and 6 link to their step of the home page's How it works) → FAQ → closing with both doors, naming PassionCode for Enterprise. #problem, #today, #trust and #organizations stay as legacy anchors.
 **Web surface:** public
 **Route:** https://passioncode.ai/vision/
-**Answers:** Why do agents need a harness, how does one agent grow into an organization, and what works today?
+**Answers:** Why do agents need something to hold them together, how does one agent grow into an organization, and what works today?
 **Indexable:** yes; canonical URL, Article and FAQPage data, sitemap, hreflang with every language version.
 **Without JS:** the whole page; the install command is selectable text.
 Falsifiers: a stage without an availability label; a figure without its source link; "the work improves itself" read as shipped; the page reading as if PassionCode.ai replaces the coding agents; a three-column path or stage examples clipping at 390 px.

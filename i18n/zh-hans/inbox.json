@@ -9,8 +9,6 @@
     "FABRIC INBOX · DEVELOPMENT PREVIEW": "FABRIC INBOX · 开发中的预览版",
     "Your mail": "你的邮件",
     "Important first": "重要的优先",
-    "Bring Gmail and Cloudflare mailboxes into one list, with important mail first and agents for your own domains that answer what you allow and draft the rest": "把 Gmail 和 Cloudflare 邮箱汇入同一个列表，重要邮件优先；你自己域名下的地址由智能体负责，能回复的按你允许的范围回复，其余起草成草稿",
-    "Mail: the addresses agents read and answer within the policy you set.": "邮件：智能体读取并在你设定的策略范围内回复的地址。",
     "See what it does": "看看它能做什么",
     "· macOS 12 or later · open source under AGPL-3.0": "· macOS 12 或更高版本 · 以 AGPL-3.0 开源",
     "FABRIC INBOX / MAIL + AGENTS": "FABRIC INBOX / 邮件 + 智能体",
@@ -56,9 +54,7 @@
     ". Choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.": "。选择名称、级别（read、mail 或 admin），以及它是否可以发送。密钥只显示一次。",
     "The app prints the whole command:": "应用会输出完整的命令：",
     "with the key’s two headers. Then ask for": "其中带有密钥的两个请求头。然后让智能体调用",
-    "02 / THE PASSIONCODE FAMILY": "02 / PASSIONCODE 家族",
     "A tool with its own job": "各有各的职责",
-    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric is the CEO AI agent we’re building to coordinate the work.": "Inbox 处理邮件。Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让这些智能体所处理的项目一目了然。Fabric 是我们正在打造的 CEO AI 智能体，负责协调这些工作。",
     "Where Inbox stands": "Inbox 的现状",
     "Where does my mail go?": "我的邮件会去哪里？",
     "To the server the app creates in your own Cloudflare account. Gmail accounts connect through an OAuth client from your own Google Cloud project.": "去往应用在你自己的 Cloudflare 账号中创建的服务器。Gmail 账号通过来自你自己的 Google Cloud 项目的 OAuth 客户端连接。",
@@ -72,6 +68,13 @@
     "includes the source, tests and release notes.": "包含源代码、测试和版本说明。",
     "Is Inbox the Fabric agent?": "Inbox 就是 Fabric 智能体吗？",
     "No. Inbox is a mail client; its agents answer your addresses within the rules you set.": "不是。Inbox 是邮件客户端；它的智能体在你设定的规则范围内回复你的地址。",
-    "is our CEO AI agent, in early preview. They belong to the same toolkit and have different roles.": "是我们的 CEO AI 智能体，目前是早期预览版。它们属于同一套工具集，但职责不同。"
+    "Bring Gmail and Cloudflare mailboxes into one list, important mail first. Agents for your own domains answer what you allow and leave the rest as a draft": "把 Gmail 和 Cloudflare 邮箱放进同一个列表，重要邮件优先。你自己域名上的智能体回复你允许的内容，其余留成草稿",
+    "IN THE TOOLKIT": "工具包成员",
+    "Mail: the addresses agents read and answer within the policy you set. Step 5 of": "邮件：智能体在你设定的策略内读取和回复的地址。第 5 步，见",
+    "how it works": "工作原理",
+    "All the tools": "全部工具",
+    "02 / THE PASSIONCODE TOOLKIT": "02 / PASSIONCODE 工具包",
+    "Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.": "Inbox 处理邮件。Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你随时看到这些智能体正在做的项目。Fabric 处于早期预览阶段，是你的项目及其智能体的家。",
+    ", in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.": "，处于早期预览阶段，是你的项目及其智能体的家。它们属于同一个工具包，各有不同的角色。"
   }
 }

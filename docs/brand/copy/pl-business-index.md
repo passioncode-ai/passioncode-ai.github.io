@@ -50,7 +50,7 @@ Enterprise · dla organizacji
 
 # Uczyń swoją organizację AI-native
 
-Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, co robią, na narzędziach o otwartym kodzie, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze
+Agent, który żyje na laptopie jednej osoby, pomaga jednej osobie. Wprowadzamy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, co robią, na narzędziach o otwartym kodzie, z Twoimi danymi na Twoich komputerach albo w Twojej własnej chmurze
 
 Szacunek i zapytanie
 

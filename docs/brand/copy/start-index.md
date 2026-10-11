@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Get started | Install your AI agent workplace | PassionCode.ai
 
-Install the PassionCode.ai skills, add Fabric, create your first Fabric agent with Claude Code or Codex, convert an existing project, run it in Fabric Dashboards and add the next agent to the same family. Free and open source.
+Install the PassionCode.ai skills, add Fabric, create your first Fabric agent with Claude Code or Codex or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project. Free and open source.
 
 Skip to content
 
@@ -50,7 +50,7 @@ Get started · free and open source
 
 # From an empty Mac to your first agent
 
-Stop building agents that rot and don’t talk to each other. Five steps, about twenty minutes, each useful on its own
+Build agents that keep working and know what the others did. Five steps, about twenty minutes, each useful on its own
 
 Needs Node.js 18+ and Claude Code or Codex Fabric needs macOS on Apple silicon or Intel
 
@@ -64,7 +64,7 @@ Add Fabric
 
 03
 
-Create or convert an agent
+Create or adapt an agent
 
 04
 
@@ -84,17 +84,17 @@ Contribute
 
 ### Install the skills
 
-The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key.
+The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key. It does not install Fabric: that is the next step, a separate download.
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.1.31 · restart your agent afterwards · automatic updates are on; turn them off
+Launcher 0.1.32 · restart your agent afterwards · automatic updates are on; turn them off
 
 02
 
 ### Add Fabric
 
-Fabric is the CEO AI agent: each project gets a home for its purpose, board, decisions and releases. It is an early preview: it needs Docker and the Supabase CLI, and its conversation saves messages but does not reply yet.
+Fabric is the home for your projects and their agents: each project keeps its purpose, board, decisions and releases there. Its first screen offers four actions: create an agent, adapt one you already have, open a project or create one. It is an early preview: it needs Docker and the Supabase CLI, and its conversation saves messages but does not reply yet.
 
 Download Fabric
 
@@ -110,13 +110,13 @@ Apple silicon and Intel · signed and notarized · SHA-256 4d8e8da80bcf490fed955
 
 03
 
-### Create or convert an agent
+### Create or adapt an agent
 
-In Claude Code or Codex, ask for what you need. The Fabric Agent Adapter skill builds a Fabric-compatible service: a contract, a dashboard, tests and a conformance check.
+In Claude Code or Codex, ask for what you need, or start from Fabric’s Create and Adapt actions; the work runs in your coding agent’s console either way. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything; adapting works on a new fabric-adapter branch. You get a contract, a dashboard, tests and a conformance report.
 
 new Create a Fabric agent that checks our app store reviews every morning and drafts replies
 
-convert Adapt this repository to Fabric
+adapt Adapt this repository to Fabric
 
 04
 
@@ -134,7 +134,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 05
 
-### Add the next agent and see the family
+### Add the next agent to the same project
 
 Build the next agent the same way and give it the same project in Fabric. Claude Code, Kilo Code and Hermes Agent started from Fabric share that project’s board, memory and hand-offs, so one picks up where the other stopped. Which agents connect today
 
@@ -144,7 +144,7 @@ A TOOL WE RECOMMEND
 
 ## what they start
 
-For the changes your agents make, we recommend task-pipeline, a separate open-source skill from the sshlg-skills family: it carries each change from the brief to the acceptance and does not move on until each gate passes.
+For the changes your agents make, we recommend task-pipeline, a separate open-source skill from the sshlg-skills collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.
 
 npx sshlg-skills install
 

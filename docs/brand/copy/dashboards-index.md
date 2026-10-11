@@ -52,9 +52,9 @@ FABRIC DASHBOARDS · macOS
 
 # One place to look
 
-See what is running, what needs attention and what happened last, with each service’s own dashboard in one Mac app
+See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it
 
-IN THE FAMILY Health, spend and control: every agent service, its state, its spend and its updates in one window. The whole family
+IN THE TOOLKIT State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of how it works. All the tools
 
 Download for macOS ↓
 
@@ -116,7 +116,7 @@ A real terminal opens next to a service’s dashboard, running Claude Code, Code
 
 The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.
 
-### The family kept current
+### The skills kept current
 
 Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.
 

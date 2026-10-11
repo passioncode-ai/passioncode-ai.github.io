@@ -27,6 +27,7 @@
 | SCN-018 | Check which coding agents Fabric works with | Fabric agents | P-01 | ST-04, FLW-03 | draft | pending |
 | SCN-019 | Read the site in another language | Languages | P-01, P-02 | ST-01, ST-07, FLW-07 | draft | pending |
 | SCN-020 | Read the vision and choose a door | Vision | P-01, P-02 | ST-01, ST-04, ST-07, FLW-03 | draft | pending |
+| SCN-021 | See how it works, from entry to working agents | Journey | P-01, P-02 | ST-01, ST-04, ST-06, FLW-05 | draft | pending |
 
 ## Personas
 
@@ -41,7 +42,7 @@ See [foundation](foundation.md).
 - **Entry point:** /
 - **Preconditions:** none
 - **Steps:**
-  1. Read the teams headline → the agent workplace and independent tools are explained; the early product directory names six useful entry points and their availability.
+  1. Read the teams headline → the agent workplace and independent tools are explained; How it works (#how, SCN-021) shows the six steps from entry to an organization with their state; the product directory names six useful entry points, their availability and the journey step each one serves.
   2. Follow the primary Explore the tools → the available-tools section on the homepage opens.
   3. Follow the secondary Download Switchboard → the Switchboard product download section opens.
 - **Expected result:** Product roles and available downloads are clear.
@@ -62,9 +63,9 @@ See [foundation](foundation.md).
 - **Steps:**
   1. Read the work cycle → account setup uses Switchboard, compatible local services appear in Dashboards, and the wider Fabric coordination loop remains in development.
   2. Read the build pipeline → releases, previews and in-development work are distinct, with no promised release date.
-  3. Follow Explore Fabric → its own page explains project purpose, agents, authority and evidence, shows the actual window on synthetic demo data, and labels the build an early preview.
+  3. Follow Explore Fabric → its own page leads with what Fabric does today: the home for your projects and their agents, its first screen's four actions (create an agent, adapt one built elsewhere, open a project, create one), the actual window on synthetic demo data, and the early-preview label. "CEO" appears once, as the direction (D-T5, 2026-10-10).
   4. Read Get Fabric → the requirements (Apple silicon, Docker, Supabase CLI) and the preview's limits sit beside the macOS download → the download redirects to the public release asset.
-- **Expected result:** Reader understands what the preview does today and what it needs before downloading, without assuming a shipped integrated platform, an Intel build or a Fabric that replies.
+- **Expected result:** Reader understands what the preview does today and what it needs before downloading (one universal DMG for Apple silicon and Intel since 0.3.4), without assuming a shipped integrated platform, a coordinating "CEO" that already works or a Fabric that replies.
 - **Alt paths:** direct product URL; narrow-screen or keyboard navigation; return to available Switchboard.
 - **UI elements:** Work cycle, build pipeline, Explore Fabric, Follow the build, Download for macOS, release notes and checksum, Switchboard link
 - **States covered:** static populated content; network error.
@@ -139,7 +140,7 @@ See [foundation](foundation.md).
 - **Steps:**
   1. Expand FAQ → managed/isolated and Fabric differences are explained.
   2. Follow View source → the public repository opens; the FAQ says Switchboard is open source under the GNU AGPL-3.0, names the commercial-license contact, that releases up to and including v0.3.1-beta.1 remain MIT, and the license of the current download (0.4.0-beta.1 was released under PolyForm; the selected 0.4.1-beta.1 release is the first under the AGPL).
-  3. Read Part of the PassionCode toolkit → Observatory, Fabric Dashboards and Fabric links explain what the other tools do.
+  3. Read Part of the PassionCode toolkit → Observatory, Fabric Dashboards and Fabric links explain what the other tools do; the hero's IN THE TOOLKIT line (since 2026-10-10, was IN THE FAMILY) names Switchboard's one role and links All the tools.
 - **Expected result:** Reader can inspect source without GitHub authentication.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
 - **UI elements:** FAQ summaries, View source, Report an issue, toolkit links (Explore Observatory, Fabric Dashboards release, Meet Fabric, All the tools)
@@ -305,17 +306,18 @@ rather than replaces, the browser review recorded above.
 - **Entry point:** / (hero → For you, free) or /start/
 - **Preconditions:** Node.js 18+ and Claude Code or Codex; Fabric needs macOS on Apple silicon, Docker and the Supabase CLI
 - **Steps:**
-  1. Read the hero, then Why (#why) → without a harness agents rot; PassionCode.ai is a local, open-source workspace on top of Claude Code, Codex and what comes next, on the subscription the visitor already has.
+  1. Read the hero, then Why (#why) → the problem in the visitor's own words (an agent works for a week, then runs on the wrong account, forgets, nobody knows what it changed, the next one starts from zero) and the three proofs (local and open source; the agents and subscription you already have; a record you can open); then How it works (#how, SCN-021).
   2. Read Two ways in (#start) → For you (free, about twenty minutes) or For organizations; the tools (#products) each show their status and current version, previews marked as unfinished.
-  3. Follow For you, free or Get started → /start/ → read the thesis (stop building agents that rot and don’t talk to each other); copy the launcher command, download Fabric (current version and SHA-256 beside the button), ask the coding agent to create or adapt an agent, install Fabric Dashboards and connect it over MCP.
+  3. Follow For you, free or Get started → /start/ → copy the launcher command (it installs the skills, not Fabric); download Fabric separately (preview; current version and SHA-256 beside the button; its first screen's four actions named); ask the coding agent to create or adapt an agent; install Fabric Dashboards and connect it over MCP.
   4. Step 5 → build the next agent the same way and give it the same Fabric project; see both in Dashboards. The task-pipeline recommendation follows, marked as a separate open-source project.
-- **Expected result:** The visitor has the skills installed, knows the exact prompt that creates or converts an agent and how the second agent joins the same family, without believing Fabric already replies or that a chain of agents has shipped.
+  5. Russian (/ru/start/) says «навыки (skills)» at first use, then «навыки» (D-T6).
+- **Expected result:** The visitor has the skills installed, knows the exact prompt that creates or adapts an agent and how the second agent joins the same project, without believing the launcher installs Fabric, that Fabric already replies or that a chain of agents has shipped.
 - **Alt paths:** stop after any step; jump with the on-page table of contents; copy buttons or manual selection without JavaScript.
 - **UI elements:** hero actions, why list, two door cards, tool cards, /start/ steps, copy buttons, download buttons
 - **States covered:** success; no-JS (complete page, no copy buttons); reduced motion (static map).
 - **Errors & recovery:** the command fails → the launcher README (linked); download unavailable → release notes link.
 - **Status:** draft
-- **Coverage:** index.html (#why, #start, #products; #path, #vision and #toolkit kept as legacy anchors), start/index.html (#family, #pipeline); scripts/check-site.mjs.
+- **Coverage:** index.html (#why, #how, #start, #products; #path, #vision and #toolkit kept as legacy anchors), start/index.html (#family, #pipeline); scripts/check-site.mjs.
 - **Product:** unobserved
 
 ### SCN-014: Request an AI workplace for an organization
@@ -419,15 +421,36 @@ rather than replaces, the browser review recorded above.
 - **Entry point:** the header "Vision", the footer, the home page's Why note, /business/ "Read the vision", a search result for /vision/
 - **Preconditions:** none
 - **Steps:**
-  1. Read The missing harness → why agents rot (one linked McKinsey figure), what a harness is (Anthropic and OpenAI use the word, linked), and which tool is which of its four parts.
+  1. Read What holds an agent (#harness) → why agents fall apart (one linked McKinsey figure), the one place on the site that names and defines "harness" (Anthropic and OpenAI use the word, linked; D-T1), and which tool is which of its four parts (a home; accounts; state and control; memory and evidence).
   2. Read the four principles → projects are the axis; the work improves itself (Observatory keeps the evidence today, retrospectives are the direction); vendor-neutral, local first, open source; analytics, never surveillance. The task-pipeline note links to /start/#pipeline.
-  3. Read the path → six stages, each labelled available now, available now in part, or direction.
+  3. Read the path → six stages, each labelled available now, available now in part, or direction; stages 1, 2 and 6 link to the matching step of How it works on the home page (/#how).
   4. Choose a door → For you, free (/start/) or For your organization (/business/).
-- **Expected result:** The visitor can say what PassionCode.ai is for (a harness on top of the coding agents they already use), which parts work today, and where to go next, without reading any stage as a shipped promise.
+- **Expected result:** The visitor can say what PassionCode.ai is for (what keeps agents working, on top of the coding agents they already use), which parts work today, and where to go next, without reading any stage as a shipped promise.
 - **Alt paths:** the on-page table of contents; the recommended task-pipeline skill (external, marked as not part of PassionCode.ai); /ru/vision/.
 - **UI elements:** hero, page TOC, harness cycle, principles list, task-pipeline note, path cycle, FAQ, closing doors (with PassionCode for Enterprise named)
 - **States covered:** success; no-JS (complete page); reduced motion; 390 px (one column).
 - **Errors & recovery:** an external source moved → the dated citation still names the publisher and date.
 - **Status:** draft
 - **Coverage:** vision/index.html, i18n/ru/vision.json; scripts/check-site.mjs (/vision/ block).
+- **Product:** unobserved
+
+### SCN-021: See how it works, from entry to working agents
+- **Persona:** P-01, P-02
+- **Feature:** Journey
+- **Traces:** ST-01, ST-04, ST-06, FLW-05
+- **Entry point:** /#how (after the hero and Why on the home page); /vision/ path stages 1, 2 and 6; the legacy /#how address
+- **Preconditions:** none
+- **Steps:**
+  1. Scroll past Why → How it works (#how): six numbered steps from [narrative §3](../brand/narrative.md#3-the-journey-six-steps), each with its state label (AVAILABLE NOW, PREVIEW, AVAILABLE NOW, IN PART or DIRECTION), one picture and a one-line caption.
+  2. Read step 01 Enter → the launcher command as a text card; the caption says the command installs the skills into Claude Code or Codex and that Fabric is a separate preview download (no promise that one command opens Fabric).
+  3. Read steps 02 Onboard and 03 First agent → text cards, not screenshots (no safe capture of Fabric's first screen or of a coding agent's console exists yet, [journey truth](../tasks/2026-10-10-journey-truth.md) §3): Fabric's four actions in two pairs; the two prompts that create or adapt an agent in the coding agent's console.
+  4. Read steps 04 Grow and 05 Work together and watch → the synthetic Fabric Dashboards overview and the synthetic Fabric board, each captioned as demo data; step 05 says which parts are preview (Fabric's board) and which are available (Observatory).
+  5. Read step 06 Organization → marked DIRECTION; its link leads to /business/ (SCN-014).
+- **Expected result:** The visitor can name the order of the work and what each step uses, and can tell available from preview from direction at every step, without seeing a placeholder, an empty video player or a Fabric that replies.
+- **Alt paths:** the reserved home video slot stays `hidden` until W10 ships a cut with poster, captions and a reduced-motion fallback, so no player exists on the page; without JavaScript every step, picture and label is present; at 390 px the steps stack in one column and images keep their aspect ratio; reduced motion shows them without the reveal.
+- **UI elements:** section heading, six step cards (number, state label, title, image or text card, caption), the launcher command card, the four-action card, the two prompt cards, two figures with alt text, the For your organization link
+- **States covered:** static populated; images lazy-loaded (dimensions reserved, no layout shift); image failed to load (alt text describes the screen); video slot hidden (not yet ready).
+- **Errors & recovery:** an image fails → its alt text and caption still say what it shows and that it is synthetic; nothing on the step depends on the image.
+- **Status:** draft
+- **Coverage:** index.html#how; styles.css (journey block); scripts/check-site.mjs (six labelled steps, the hidden video slot, only listed images).
 - **Product:** unobserved

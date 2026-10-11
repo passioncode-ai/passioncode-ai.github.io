@@ -50,7 +50,7 @@ Enterprise · pour les organisations
 
 # Rendez votre organisation AI-native
 
-Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce qu’ils font, sur des outils open source, avec vos données sur vos machines ou dans votre propre cloud
+Un agent qui vit sur l’ordinateur portable d’une seule personne n’aide que cette personne. Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce qu’ils font, sur des outils open source, avec vos données sur vos machines ou dans votre propre cloud
 
 Estimation et demande
 

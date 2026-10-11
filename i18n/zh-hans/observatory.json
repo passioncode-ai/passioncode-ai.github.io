@@ -7,8 +7,6 @@
     "PROJECT OBSERVATORY · BY PASSIONCODE": "PROJECT OBSERVATORY · BY PASSIONCODE",
     "Your projects": "你的项目",
     "Back in view": "重新尽在眼前",
-    "See what changed across your agents’ projects, what needs attention and where known API keys left a copy, in a local dashboard available in English or Russian": "在本地仪表盘里查看智能体所处理的项目有什么变化、哪些需要处理，以及已知的 API 密钥在哪里留下了副本，界面提供英文和俄文",
-    "Memory and evidence: what changed in each project, what was decided and what needs attention.": "记忆与证据：每个项目发生了什么变化、做出了什么决定、哪些需要处理。",
     "Open source · macOS + Linux · Python 3.11+": "开源 · macOS + Linux · Python 3.11+",
     "ONE VIEW / YOUR PROJECTS": "一个视图 / 你的项目",
     "PROJECTS": "项目",
@@ -72,12 +70,17 @@
     "Is it the same thing as Switchboard?": "它和 Switchboard 是一回事吗？",
     "No. Switchboard manages your Claude Code and Codex accounts. Observatory keeps the projects those agents work on in view. Both are open-source PassionCode tools you can use today.": "不是。Switchboard 管理你的 Claude Code 和 Codex 账号，Observatory 则让这些智能体所处理的项目保持在视野中。两者都是你现在就能用的开源 PassionCode 工具。",
     "And Fabric?": "那 Fabric 呢？",
-    "Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Observatory is available now as a separate local tool.": "Fabric 是我们的 CEO AI 智能体，处于早期预览阶段，专注于协调智能体和项目。Observatory 现在就可使用，是一个独立的本地工具。",
     "Explore Fabric": "了解 Fabric",
     "Yes. Project Observatory is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from": "是的。Project Observatory 是开源的，采用 GNU AGPL-3.0 许可证。如果你的用途不在 AGPL 涵盖范围内，可向以下地址申请商业许可证：",
     "Released versions keep their license: 0.8.1 and earlier under MIT, 0.8.2 to 0.9.1 under PolyForm Noncommercial or Internal Use.": "已发布的版本沿用各自的许可证：0.8.1 及更早版本采用 MIT，0.8.2 至 0.9.1 采用 PolyForm Noncommercial or Internal Use。",
     "includes the source, tests, the security model and release notes.": "包含源代码、测试、安全模型和版本说明。",
     "Your projects, your evidence": "你的项目，你的证据",
-    "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "建立私有工作空间，观察你自己的文件夹，并告诉我们哪里还需要改进。"
+    "Set up a private workspace, observe your own folders, and tell us where it needs to improve.": "建立私有工作空间，观察你自己的文件夹，并告诉我们哪里还需要改进。",
+    "See what changed across your agents’ projects and what needs you first, including where a known API key left a copy, in a local dashboard available in English or Russian": "在一个本地仪表盘中，查看你的智能体所处理的项目有哪些变化、哪些事需要你先处理，包括已知的 API 密钥在哪里留下了副本。界面提供英文和俄文。",
+    "IN THE TOOLKIT": "工具包成员",
+    "Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of": "记忆与证据：每个项目发生了什么变化、做出了什么决定、哪些需要处理。这是",
+    "how it works": "工作原理",
+    "All the tools": "全部工具",
+    "Fabric, in early preview, is the home for your projects and their agents. Observatory is available now as a separate local tool.": "Fabric 目前处于早期预览阶段，是你的项目及其智能体的家。Observatory 现已作为独立的本地工具提供。"
   }
 }

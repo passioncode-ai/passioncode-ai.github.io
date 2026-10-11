@@ -52,9 +52,9 @@ FABRIC INBOX · DEVELOPMENT PREVIEW
 
 # Important first
 
-Bring Gmail and Cloudflare mailboxes into one list, with important mail first and agents for your own domains that answer what you allow and draft the rest
+Bring Gmail and Cloudflare mailboxes into one list, important mail first. Agents for your own domains answer what you allow and leave the rest as a draft
 
-IN THE FAMILY Mail: the addresses agents read and answer within the policy you set. The whole family
+IN THE TOOLKIT Mail: the addresses agents read and answer within the policy you set. Step 5 of how it works. All the tools
 
 Download for macOS
 
@@ -64,7 +64,7 @@ See what it does
 
 ↓
 
-Development preview 0.13.0 · macOS 12 or later · open source under AGPL-3.0
+Development preview 0.14.0 · macOS 12 or later · open source under AGPL-3.0
 
 FABRIC INBOX / MAIL + AGENTS
 
@@ -106,7 +106,7 @@ GET FABRIC INBOX
 
 ## for your Mac
 
-Latest preview: 0.13.0. The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
+Latest preview: 0.14.0. The Mac app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
 
 ⌘
 
@@ -137,7 +137,7 @@ The setup guide lists every setting.
 
 macOS DMG · SHA-256
 
-7709361f9a2f98cd125bbabd9433c320859c85e9f11c96367aa66aee21350a37
+ade939562ca8a035402f92927c308af4882d1b260abad879f7d41adcc7a14a24
 
 Compare before opening: shasum -a 256 in Terminal. A different value means a different file; download it again.
 
@@ -175,11 +175,11 @@ In the app, open Settings → Agent access. Choose a name, a level (read, mail o
 
 The app prints the whole command: claude mcp add --transport http fabric-inbox https://<your-server>/mcp with the key’s two headers. Then ask for list_accounts.
 
-02 / THE PASSIONCODE FAMILY
+02 / THE PASSIONCODE TOOLKIT
 
 ## A tool with its own job
 
-Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric is the CEO AI agent we’re building to coordinate the work.
+Inbox handles mail. Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric, in early preview, is the home for your projects and their agents.
 
 Explore Switchboard
 
@@ -215,7 +215,7 @@ Yes. Fabric Inbox is open source under the GNU AGPL-3.0. For use the AGPL doesn�
 
 Is Inbox the Fabric agent?
 
-No. Inbox is a mail client; its agents answer your addresses within the rules you set. Fabric is our CEO AI agent, in early preview. They belong to the same toolkit and have different roles.
+No. Inbox is a mail client; its agents answer your addresses within the rules you set. Fabric, in early preview, is the home for your projects and their agents. They belong to the same toolkit and have different roles.
 
 PassionCode
 

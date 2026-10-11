@@ -161,7 +161,6 @@
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "오픈 소스 PassionCode.ai 도구로 조직을 AI-native로 만듭니다. 컴퓨터 연결, 에이전트 배포와 컴퓨터 간 작업 전달, 각 컴퓨터의 로컬 에이전트를 통한 모델 접근, 활동·사용 분석, 관리, PassionCode.ai가 서명한 맞춤 빌드, 필요한 경우 상용 라이선스를 제공합니다. 개발 중이며 요청 시 제공됩니다.",
     "Make your organization": "조직을",
     "AI-native": "AI-native로 만드세요",
-    "We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "조직의 컴퓨터에 에이전트를 들여와 서로 연결하고 무엇을 하는지 보여 드립니다. 오픈 소스 도구 위에서, 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다",
     "What we set up": "우리가 설정해 드리는 것",
     "01 / PASSIONCODE FOR ENTERPRISE": "01 / PASSIONCODE FOR ENTERPRISE",
     "for your organization": "조직을 위해",
@@ -184,6 +183,7 @@
     "02 / WHAT IT SAVES": "02 / 절감되는 것",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "팀이 매달 이 프로세스에 쓰는 시간에, 에이전트가 현실적으로 맡을 수 있는 비율과 한 시간의 비용을 곱한 값입니다.",
     "03 / REQUEST": "03 / 요청",
-    "04 / QUESTIONS": "04 / 질문"
+    "04 / QUESTIONS": "04 / 질문",
+    "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "한 사람의 노트북에 있는 에이전트는 그 한 사람만 돕습니다. 조직의 컴퓨터에 에이전트를 들여와 서로 연결하고 무엇을 하는지 보여 드립니다. 오픈 소스 도구 위에서, 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다"
   }
 }

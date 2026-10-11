@@ -158,7 +158,6 @@
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "Rendre une organisation AI-native avec les outils open source de PassionCode.ai : raccorder ses machines, déployer des agents et acheminer le travail entre eux, accès aux modèles via l’agent local de chaque machine, analytique d’activité et d’usage, administration, builds sur mesure signés par PassionCode.ai, et la licence commerciale là où elle est nécessaire. En cours de développement, proposé sur demande.",
     "Make your organization": "Rendez votre organisation",
     "AI-native": "AI-native",
-    "We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce qu’ils font, sur des outils open source, avec vos données sur vos machines ou dans votre propre cloud",
     "What we set up": "Ce que nous mettons en place",
     "01 / PASSIONCODE FOR ENTERPRISE": "01 / PASSIONCODE FOR ENTERPRISE",
     "for your organization": "pour votre organisation",
@@ -181,6 +180,7 @@
     "02 / WHAT IT SAVES": "02 / CE QUE CELA ÉCONOMISE",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "Les heures que votre équipe consacre chaque mois à ces processus, multipliées par la part que les agents peuvent raisonnablement reprendre, multipliées par ce que coûte une heure.",
     "03 / REQUEST": "03 / DEMANDE",
-    "04 / QUESTIONS": "04 / QUESTIONS"
+    "04 / QUESTIONS": "04 / QUESTIONS",
+    "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "Un agent qui vit sur l’ordinateur portable d’une seule personne n’aide que cette personne. Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce qu’ils font, sur des outils open source, avec vos données sur vos machines ou dans votre propre cloud"
   }
 }

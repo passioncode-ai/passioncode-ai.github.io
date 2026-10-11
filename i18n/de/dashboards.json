@@ -8,7 +8,6 @@
     "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "Deine Agentendienste",
     "One place to look": "Alles an einem Ort",
-    "See what is running, what needs attention and what happened last, with each service’s own dashboard in one Mac app": "Sieh, was läuft, was Aufmerksamkeit braucht und was zuletzt passiert ist – mit dem eigenen Dashboard jedes Dienstes in einer Mac-App",
     "Download for macOS ↓": "Für macOS herunterladen ↓",
     "View source ↗": "Quellcode ansehen ↗",
     "Release": "Release",
@@ -69,7 +68,6 @@
     "you already use": "die du schon nutzt",
     "Inspect projects with Observatory. Configure accounts with Switchboard. Add only the tools your work needs.": "Behalte Projekte mit Observatory im Blick. Richte Accounts mit Switchboard ein. Füge nur die Tools hinzu, die deine Arbeit braucht.",
     "Explore the tools ↗": "Alle Tools ansehen ↗",
-    "Health, spend and control: every agent service, its state, its spend and its updates in one window.": "Zustand, Ausgaben und Steuerung: jeder Agentendienst mit seinem Status, seinen Ausgaben und seinen Updates in einem Fenster.",
     "IN 0.6": "IN 0.6",
     "Spend, a console": "Ausgaben, eine Konsole",
     "and updates you can trust": "und Updates, denen du vertrauen kannst",
@@ -80,9 +78,14 @@
     "A real terminal opens next to a service’s dashboard, running Claude Code, Codex or another runtime in that agent’s repository. Where Fabric Switchboard binds the folder to a project, the session starts on that project’s account.": "Neben dem Dashboard eines Dienstes öffnet sich ein echtes Terminal, in dem Claude Code, Codex oder eine andere Runtime im Repository dieses Agenten läuft. Wo Fabric Switchboard den Ordner einem Projekt zuordnet, startet die Sitzung mit dem Account dieses Projekts.",
     "Updates that are checked first": "Updates, die zuerst geprüft werden",
     "The app updates itself: a release must carry the organization’s signature and match its checksums before it installs, and it waits while a console or a command runs. Automatic install can be turned off in Settings.": "Die App aktualisiert sich selbst: Ein Release muss die Signatur der Organisation tragen und zu ihren Prüfsummen passen, bevor es installiert wird, und es wartet, solange eine Konsole oder ein Befehl läuft. Die automatische Installation lässt sich unter Settings abschalten.",
-    "The family kept current": "Die Agentenfamilie bleibt aktuell",
     "Settings → Estate updates watches the Fabric Agent Contract and the PassionCode.ai skills, and can update the skills in the background after checking who published them. That switch is off by default.": "Settings → Estate updates beobachtet den Fabric Agent Contract und die Skills von PassionCode.ai und kann die Skills im Hintergrund aktualisieren, nachdem geprüft wurde, wer sie veröffentlicht hat. Dieser Schalter ist standardmäßig aus.",
     "English or Russian": "Englisch oder Russisch",
-    "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Settings → Language: wie auf diesem Mac, Englisch oder Russisch. Fenster, Menü und das Symbol in der Menüleiste wechseln sofort."
+    "Settings → Language: as on this Mac, English or Русский. The window, the menu and the tray switch at once.": "Settings → Language: wie auf diesem Mac, Englisch oder Russisch. Fenster, Menü und das Symbol in der Menüleiste wechseln sofort.",
+    "See every agent service on your Mac in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Sieh jeden Agentendienst auf deinem Mac in einer App: Was dich braucht, steht oben, und das eigene Dashboard jedes Dienstes öffnet sich direkt daneben",
+    "IN THE TOOLKIT": "IM TOOLKIT",
+    "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "Zustand, Ausgaben und Steuerung: jeder Agentendienst, was er gerade tut, was er ausgibt und seine Updates in einem Fenster. Schritt 4 in",
+    "how it works": "„So funktioniert es“",
+    "All the tools": "Alle Tools",
+    "The skills kept current": "Die Skills bleiben aktuell"
   }
 }

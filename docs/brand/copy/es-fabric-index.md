@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from es/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | Agente de IA con rol de CEO · vista previa temprana para macOS | PassionCode.ai
+Fabric | El hogar de tus proyectos y sus agentes · vista previa temprana para macOS | PassionCode.ai
 
-Fabric es nuestro agente de IA con rol de CEO, ahora en vista previa temprana para macOS en Apple silicon e Intel. Reúne en un solo lugar, en tu Mac, el tablero, las decisiones, el trabajo y las versiones de un proyecto.
+Fabric es el hogar de tus proyectos y sus agentes, en vista previa temprana para macOS en Apple silicon e Intel. Reúne en un solo lugar, en tu Mac, el tablero, las decisiones, el trabajo y las versiones de un proyecto.
 
 Saltar al contenido
 
@@ -48,13 +48,13 @@ Descargar
 
 FABRIC · VISTA PREVIA TEMPRANA
 
-# Un agente de IA con rol de CEO
+# Un hogar para tus proyectos
 
-# Un hogar para el trabajo
+# y sus agentes
 
-Fabric es el agente que estamos construyendo para coordinar a otros agentes en torno a un proyecto y mantener su propósito, su contexto y sus decisiones junto al trabajo, aunque cambien las personas, los modelos y las sesiones
+Fabric guarda en tu Mac el propósito, el tablero, las decisiones y las versiones de cada proyecto, para todos los agentes que trabajan en él. Lo estamos construyendo para que actúe como el CEO de tus agentes
 
-EN LA FAMILIA El hogar que comparten todos los agentes de un proyecto: su propósito, su tablero, sus decisiones y sus versiones. Toda la familia
+EN EL CONJUNTO DE HERRAMIENTAS El hogar que comparten todos los agentes de un proyecto: su propósito, su tablero, sus decisiones y sus versiones. Son los pasos 2 y 5 de «Cómo funciona». Todas las herramientas
 
 Descargar para macOS
 
@@ -66,25 +66,25 @@ Ver cómo funciona el trabajo
 
 Vista previa temprana 0.3.4 · macOS en Apple silicon e Intel
 
-UN PROYECTO, MÁS ALLÁ DEL CHAT
+LA PRIMERA PANTALLA · CUATRO ACCIONES
 
-Propósito
+Crear un agente
 
-¿Qué queremos lograr?
+Ponle nombre, di qué hace, elige su carpeta y su agente de programación
 
-Equipo
+Adaptar un agente
 
-¿Quién es responsable de cada parte del trabajo?
+Trae uno creado en otro sitio, en una rama nueva
 
-Autoridad
+Abrir un proyecto
 
-¿Qué puede hacer cada agente?
+Una carpeta, o una carpeta con varios proyectos
 
-Evidencia
+Crear un proyecto
 
-¿Cómo sabemos que funcionó?
+Un hogar nuevo para su propósito, su tablero y sus versiones
 
-Una ilustración del modelo que estamos construyendo
+El trabajo del agente se hace en la consola de tu agente de programación
 
 EL PROBLEMA
 
@@ -146,7 +146,7 @@ CÓMO LO ESTAMOS CONSTRUYENDO
 
 ## Las personas siguen siendo responsables
 
-CEO describe un rol de coordinación. Tú decides para qué sirve el proyecto y qué puede hacer el agente.
+La coordinación es hacia donde va Fabric, y nunca te sustituye. Tú decides para qué sirve el proyecto y qué puede hacer cada agente.
 
 AUTORIDAD
 

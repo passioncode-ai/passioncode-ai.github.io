@@ -52,9 +52,9 @@ FABRIC SWITCHBOARD · PAR PASSIONCODE
 
 # Un changement plus clair
 
-Réunissez vos comptes Claude Code et Codex CLI dans un seul poste de travail local pour vérifier l’usage déclaré, séparer comptes professionnels et personnels et choisir ce qui traite votre prochaine requête
+Réunissez vos comptes Claude Code et Codex CLI dans un seul poste de travail local : voyez l’usage que chacun déclare et choisissez le compte qui traite la prochaine requête
 
-DANS LA FAMILLE Les comptes : le compte sur lequel tourne chaque agent, avec ses limites d’usage sous les yeux. Toute la famille
+DANS LA BOÎTE À OUTILS Les comptes : le compte sur lequel tourne chaque agent, avec ses limites d’usage sous les yeux. Étape 4 de « Comment ça marche ». Tous les outils
 
 Télécharger Switchboard
 
@@ -78,7 +78,7 @@ OBTENIR SWITCHBOARD
 
 ## Choisissez votre plateforme
 
-Dernière version : 0.6.15. Les deux téléchargements incluent l’application de bureau et la switchboard CLI.
+Dernière version : 0.6.16. Les deux téléchargements incluent l’application de bureau et la switchboard CLI.
 
 ⌘
 
@@ -122,11 +122,11 @@ L’application reste active dans la barre des menus après la fermeture de sa f
 
 ZIP macOS · SHA-256
 
-1479f39c25ec2a410643cbed1143ee3552f9cfb5a072a9b2f6d501a50278bbc8
+df7b94a8843711d80891ec91e800585eb1fd4db1440c735975615d1f4d3c7905
 
 ZIP Windows · SHA-256
 
-418449ad2807828c09b1cfdf1e176bf83d44e10c28eb7fdbe4deaff9f4e33613
+dfba522d80e4153d45614a04506d8093c0c3374e9d23068b87f4ed29cf13c2a2
 
 À comparer avant l’ouverture : shasum -a 256 dans Terminal, Get-FileHash dans PowerShell. Une valeur différente signifie un fichier différent : téléchargez-le de nouveau.
 
@@ -160,7 +160,7 @@ DANS SWITCHBOARD
 
 L’interface réelle de Switchboard, présentée avec des comptes de démonstration fictifs.
 
-Démo dans le navigateur · aucun compte réel, aucun identifiant, aucune requête vers un fournisseur
+Démo de la 0.6.13 dans le navigateur · aucun compte réel, aucun identifiant, aucune requête vers un fournisseur
 
 UN POSTE DE TRAVAIL LOCAL
 
@@ -285,7 +285,7 @@ Les sessions gérées envoient leurs requêtes via un proxy local et suivent la 
 
 Switchboard et Fabric, est-ce la même chose ?
 
-Switchboard est l’outil de gestion de comptes disponible aujourd’hui. Fabric est notre agent IA dans le rôle de CEO, en préversion, consacré à la coordination des agents et des projets. Les deux font partie de la boîte à outils PassionCode. Découvrir ce que nous construisons avec Fabric.
+Switchboard est l’outil de gestion de comptes disponible aujourd’hui. Fabric, en préversion, est le foyer de vos projets et de leurs agents. Les deux font partie de la boîte à outils PassionCode. Découvrir ce que nous construisons avec Fabric.
 
 Quels agents fonctionnent avec Switchboard ?
 
@@ -301,7 +301,7 @@ Les versions publiées comptent les installations, les jours d’utilisation et 
 
 Puis-je l’examiner ou le compiler moi-même ?
 
-Oui. Switchboard est open source sous licence GNU AGPL-3.0. Pour un usage que l’AGPL ne couvre pas, une licence commerciale est disponible auprès de passioncode.ai/business. Les versions jusqu’à v0.3.1-beta.1 incluse ont été publiées sous licence MIT et restent disponibles sous cette licence. Le téléchargement actuel, 0.6.15, est publié sous AGPL. La v0.4.0-beta.1 a été publiée sous PolyForm Noncommercial or Internal Use et conserve cette licence. Le dépôt comprend les instructions de compilation, le code source, les tests et les preuves de publication.
+Oui. Switchboard est open source sous licence GNU AGPL-3.0. Pour un usage que l’AGPL ne couvre pas, une licence commerciale est disponible auprès de passioncode.ai/business. Les versions jusqu’à v0.3.1-beta.1 incluse ont été publiées sous licence MIT et restent disponibles sous cette licence. Le téléchargement actuel, 0.6.16, est publié sous AGPL. La v0.4.0-beta.1 a été publiée sous PolyForm Noncommercial or Internal Use et conserve cette licence. Le dépôt comprend les instructions de compilation, le code source, les tests et les preuves de publication.
 
 FAIT PARTIE DE LA BOÎTE À OUTILS PASSIONCODE
 
@@ -309,7 +309,7 @@ FAIT PARTIE DE LA BOÎTE À OUTILS PASSIONCODE
 
 ## de l’installation
 
-Switchboard gère les comptes Claude Code et Codex. Project Observatory garde sous les yeux les projets sur lesquels travaillent ces agents. Fabric Dashboards affiche dans une seule fenêtre les services d’agents locaux de votre Mac. Fabric, notre agent IA dans le rôle de CEO, est en préversion.
+Switchboard gère les comptes Claude Code et Codex. Project Observatory garde sous les yeux les projets sur lesquels travaillent ces agents. Fabric Dashboards affiche dans une seule fenêtre les services d’agents locaux de votre Mac. Fabric, le foyer de vos projets et de leurs agents, est en préversion.
 
 Découvrir Observatory
 

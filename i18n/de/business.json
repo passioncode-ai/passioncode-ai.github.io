@@ -55,7 +55,7 @@
     "choose any": "beliebig wählbar",
     "Automate recurring operations": "Wiederkehrende Abläufe automatisieren",
     "Build agents for our own processes": "Agenten für unsere eigenen Prozesse bauen",
-    "Convert our existing agents or projects": "Unsere bestehenden Agenten oder Projekte umwandeln",
+    "Convert our existing agents or projects": "Unsere bestehenden Agenten oder Projekte anpassen",
     "A commercial license for a closed product or service": "Eine kommerzielle Lizenz für ein geschlossenes Produkt oder einen Dienst",
     "Have PassionCode.ai host and run it": "PassionCode.ai soll es hosten und betreiben",
     "Onboard and train our team": "Unser Team onboarden und schulen",
@@ -158,7 +158,6 @@
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "Eine Organisation AI-native machen mit den Open-Source-Tools von PassionCode.ai: ihre Rechner anbinden, Agenten ausrollen und Arbeit zwischen ihnen vermitteln, Modellzugriff über den lokalen Agenten jedes Rechners, Aktivitäts- und Nutzungsanalytics, Administration, eigene Builds, signiert von PassionCode.ai, und die kommerzielle Lizenz, wo sie nötig ist. In Entwicklung, auf Anfrage.",
     "Make your organization": "Mach deine Organisation",
     "AI-native": "AI-native",
-    "We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was sie tun – auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud",
     "What we set up": "Was wir einrichten",
     "01 / PASSIONCODE FOR ENTERPRISE": "01 / PASSIONCODE FOR ENTERPRISE",
     "for your organization": "für deine Organisation",
@@ -181,6 +180,7 @@
     "02 / WHAT IT SAVES": "02 / WAS ES SPART",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "Stunden, die dein Team pro Monat für die Prozesse aufwendet, mal dem Anteil, den Agenten plausibel übernehmen können, mal dem, was dich eine Stunde kostet.",
     "03 / REQUEST": "03 / ANFRAGE",
-    "04 / QUESTIONS": "04 / FRAGEN"
+    "04 / QUESTIONS": "04 / FRAGEN",
+    "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what they do, on open-source tools, with your data on your machines or in your own cloud": "Ein Agent, der auf dem Laptop einer einzelnen Person lebt, hilft genau einer Person. Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was sie tun – auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud"
   }
 }

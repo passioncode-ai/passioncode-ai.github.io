@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Empezar | Instala tu espacio de trabajo para agentes de IA | PassionCode.ai
 
-Instala las skills de PassionCode.ai, añade Fabric, crea tu primer agente de Fabric con Claude Code o Codex, convierte un proyecto existente, ejecútalo en Fabric Dashboards y añade el siguiente agente a la misma familia. Gratis y de código abierto.
+Instala las skills de PassionCode.ai, añade Fabric, crea tu primer agente de Fabric con Claude Code o Codex o adapta un proyecto existente, ejecútalo en Fabric Dashboards y añade el siguiente agente al mismo proyecto. Gratis y de código abierto.
 
 Saltar al contenido
 
@@ -50,7 +50,7 @@ Empezar · gratis y de código abierto
 
 # De un Mac vacío a tu primer agente
 
-Deja de crear agentes que se pudren y no hablan entre sí. Cinco pasos, unos veinte minutos, cada uno útil por sí solo
+Crea agentes que sigan funcionando y sepan lo que hicieron los demás. Cinco pasos, unos veinte minutos, cada uno útil por sí solo
 
 Requiere Node.js 18+ y Claude Code o Codex Fabric requiere macOS en Apple silicon o Intel
 
@@ -64,7 +64,7 @@ Añade Fabric
 
 03
 
-Crea o convierte un agente
+Crea o adapta un agente
 
 04
 
@@ -84,17 +84,17 @@ Contribuir
 
 ### Instala las skills
 
-El launcher de PassionCode.ai instala en tu agente de programación las skills de Fabric Agent Adapter, Observatory Log y las reglas de trabajo. Sin cuenta y sin clave.
+El launcher de PassionCode.ai instala en tu agente de programación las skills de Fabric Agent Adapter, Observatory Log y las reglas de trabajo. Sin cuenta y sin clave. No instala Fabric: ese es el siguiente paso, una descarga aparte.
 
 npx @passioncode-ai/passioncode@latest update
 
-Lanzador 0.1.31 · reinicia tu agente después · las actualizaciones automáticas están activadas; desactívalas
+Lanzador 0.1.32 · reinicia tu agente después · las actualizaciones automáticas están activadas; desactívalas
 
 02
 
 ### Añade Fabric
 
-Fabric es el agente de IA que hace de CEO: cada proyecto recibe un hogar para su propósito, tablero, decisiones y versiones. Es una vista previa temprana: requiere Docker y la CLI de Supabase, y su conversación guarda los mensajes pero todavía no responde.
+Fabric es el hogar de tus proyectos y sus agentes: cada proyecto guarda allí su propósito, su tablero, sus decisiones y sus versiones. Su primera pantalla ofrece cuatro acciones: crear un agente, adaptar uno que ya tienes, abrir un proyecto o crear uno. Es una vista previa temprana: requiere Docker y la CLI de Supabase, y su conversación guarda los mensajes pero todavía no responde.
 
 Descargar Fabric
 
@@ -110,13 +110,13 @@ Apple silicon e Intel · firmado y notarizado · SHA-256 4d8e8da80bcf490fed955dd
 
 03
 
-### Crea o convierte un agente
+### Crea o adapta un agente
 
-En Claude Code o Codex, pide lo que necesites. La skill Fabric Agent Adapter construye un servicio compatible con Fabric: un contrato, un panel, pruebas y una comprobación de conformidad.
+En Claude Code o Codex, pide lo que necesites, o empieza desde las acciones de Fabric para crear y adaptar; en ambos casos, el trabajo se hace en la consola de tu agente de programación. La skill Fabric Agent Adapter hace primero sus preguntas y muestra su plan antes de cambiar nada; la adaptación se hace en una rama nueva fabric-adapter. Obtienes un contrato, un panel, pruebas y un informe de conformidad.
 
 nuevo Crea un agente de Fabric que revise cada mañana las reseñas de nuestra app en la tienda y redacte las respuestas
 
-convertir Adapta este repositorio a Fabric
+adaptar Adapta este repositorio a Fabric
 
 04
 
@@ -134,7 +134,7 @@ claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboard
 
 05
 
-### Añade el siguiente agente y mira la familia
+### Añade el siguiente agente al mismo proyecto
 
 Crea el siguiente agente del mismo modo y dale el mismo proyecto en Fabric. Claude Code, Kilo Code y Hermes Agent iniciados desde Fabric comparten el tablero, la memoria y los traspasos de ese proyecto, así que uno retoma donde lo dejó el otro. Qué agentes se conectan hoy
 
@@ -144,7 +144,7 @@ UNA HERRAMIENTA QUE RECOMENDAMOS
 
 ## lo que empiezan
 
-Para los cambios que hacen tus agentes, recomendamos la task-pipeline, una skill de código abierto independiente que forma parte de la familia sshlg-skills familia: lleva cada cambio del brief a la aceptación y no avanza hasta que se supera cada verificación.
+Para los cambios que hacen tus agentes, recomendamos la task-pipeline, una skill de código abierto independiente de la colección sshlg-skills: lleva cada cambio del brief a la aceptación y no avanza hasta que se supera cada verificación.
 
 npx sshlg-skills install
 

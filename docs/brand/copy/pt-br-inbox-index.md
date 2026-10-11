@@ -52,9 +52,9 @@ FABRIC INBOX · PRÉVIA DE DESENVOLVIMENTO
 
 # o importante primeiro
 
-Reúna caixas do Gmail e da Cloudflare numa só lista, com os e-mails importantes primeiro e agentes para os seus próprios domínios que respondem o que você permitir e deixam o resto como rascunho
+Reúna as caixas do Gmail e da Cloudflare numa só lista, com os e-mails importantes primeiro. Agentes para os seus próprios domínios respondem o que você permite e deixam o resto como rascunho
 
-NA FAMÍLIA E-mail: os endereços que os agentes leem e respondem dentro da política que você definir. A família inteira
+NO CONJUNTO DE FERRAMENTAS E-mail: os endereços que os agentes leem e respondem dentro da política que você define. É o passo 5 de “Como funciona”. Todas as ferramentas
 
 Baixar para macOS
 
@@ -64,7 +64,7 @@ Ver o que ele faz
 
 ↓
 
-Prévia de desenvolvimento 0.13.0 · macOS 12 ou mais recente · código aberto sob a AGPL-3.0
+Prévia de desenvolvimento 0.14.0 · macOS 12 ou mais recente · código aberto sob a AGPL-3.0
 
 FABRIC INBOX / E-MAIL + AGENTES
 
@@ -106,7 +106,7 @@ BAIXAR O FABRIC INBOX
 
 ## para o seu Mac
 
-Prévia mais recente: 0.13.0. O app para Mac cria o servidor de e-mail na sua própria conta da Cloudflare e o abre; seu e-mail permanece com as suas contas.
+Prévia mais recente: 0.14.0. O app para Mac cria o servidor de e-mail na sua própria conta da Cloudflare e o abre; seu e-mail permanece com as suas contas.
 
 ⌘
 
@@ -137,7 +137,7 @@ O guia de configuração lista todas as configurações.
 
 DMG para macOS · SHA-256
 
-7709361f9a2f98cd125bbabd9433c320859c85e9f11c96367aa66aee21350a37
+ade939562ca8a035402f92927c308af4882d1b260abad879f7d41adcc7a14a24
 
 Compare antes de abrir: shasum -a 256 no Terminal. Um valor diferente significa um arquivo diferente; baixe-o de novo.
 
@@ -175,11 +175,11 @@ No app, abra Settings → Agent access. Escolha um nome, um nível (leitura, e-m
 
 O app imprime o comando completo: claude mcp add --transport http fabric-inbox https://<your-server>/mcp com os dois cabeçalhos da chave. Depois peça list_accounts.
 
-02 / A FAMÍLIA PASSIONCODE
+02 / O CONJUNTO DE FERRAMENTAS DA PASSIONCODE
 
 ## Uma ferramenta com a própria função
 
-O Inbox cuida do e-mail. O Switchboard gerencia contas do Claude Code e do Codex. O Project Observatory mantém à vista os projetos em que esses agentes trabalham. O Fabric é o agente de IA no papel de CEO que estamos construindo para coordenar o trabalho.
+O Inbox cuida do e-mail. O Switchboard gerencia contas do Claude Code e do Codex. O Project Observatory mantém à vista os projetos em que esses agentes trabalham. O Fabric, em prévia inicial, é a casa dos seus projetos e dos agentes deles.
 
 Conhecer o Switchboard
 
@@ -215,7 +215,7 @@ Sim. O Fabric Inbox é código aberto sob a GNU AGPL-3.0. Para usos que a AGPL n
 
 O Inbox é o agente Fabric?
 
-Não. O Inbox é um cliente de e-mail; os agentes dele respondem aos seus endereços dentro das regras que você definir. Fabric é o nosso agente de IA no papel de CEO, em prévia inicial. Os dois fazem parte do mesmo conjunto de ferramentas e têm papéis diferentes.
+Não. O Inbox é um cliente de e-mail; os agentes dele respondem aos seus endereços dentro das regras que você definir. Fabric, em prévia inicial, é a casa dos seus projetos e dos agentes deles. Eles fazem parte do mesmo conjunto de ferramentas e têm papéis diferentes.
 
 PassionCode
 

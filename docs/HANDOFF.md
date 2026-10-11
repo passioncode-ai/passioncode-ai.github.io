@@ -1,3 +1,28 @@
+# Current handoff — the product journey and the new terms, en and ru (SITE-028 W6, W7), 2026-10-10
+
+Objective (operator, 2026-10-10): show how the system works, from entry to working agents, and rewrite the copy along
+the approved narrative and the six decided terms. Branch `agent/site-w6-journey`, draft PR (W8/W9 still to translate).
+Entry point: [plan, "Status: W6 and W7" and "W7 checks"](tasks/2026-10-10-narrative-l10n-video.md#status-w6-and-w7-2026-10-10-branch-agentsite-w6-journey).
+
+Done: PR #84 merged (narrative approved; D-T1…D-T6 in `brand/terminology.md`; voice "PassionCode.ai — site voice"
+`c2ca25b8…` v1 in `brand/voice.md`). On this branch: home How it works (#how, six labelled steps, two synthetic shots,
+four text cards, a hidden video slot); the English and Russian copy of home, /vision/, /start/, the /business/ hero and
+the product pages' leads and IN THE TOOLKIT lines; "CEO" once on /fabric/; `llms.txt`; `/switchboard/` shows the 0.6.13
+synthetic demo; facts rows *Fabric release* (0.3.4), *Fabric onboarding* (new), *toolkit roles*, *vision*, *CEO name
+and status*; scenarios SCN-021 (new) and SCN-001/004/007/013/020, screens, flows; `scripts/check-site.mjs` guards the
+terms, the steps and the video slot.
+
+Checks run: `node scripts/check-site.mjs`, `check-brand-lock`, `check-design-tokens`, `build-switchboard-agents --check`,
+`test_display_copy.py`, `check_display_copy.py`, `extract-public-copy.py --check`, `npm run build` — pass. Failing only
+because eight languages are untranslated: `build-locale.mjs --check` and three tests in `scripts/locales.test.mjs`.
+Copy checks, word counts, the WebKit visual check and the brand lint are in the plan.
+
+Next task: W8 — translate the 143 strings in `.l10n-todo.json` into de, fr, pl, ko, es, pt-br and ja from English
+with the saved voice, then W9 for zh-hans; run `npm run locales`, delete `.l10n-todo.json`, `npm run check`, mark the
+PR ready. In parallel the operator sets up the W5 demo user so steps 02 and 03 can get real screenshots.
+
+---
+
 # Current handoff — a simpler, shorter site, 2026-10-10
 
 Objective (operator, 2026-10-10): the site was too long and complex, above all where it converts organizations and

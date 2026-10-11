@@ -52,9 +52,9 @@ FABRIC SWITCHBOARD · BY PASSIONCODE
 
 # A clearer switch
 
-Keep Claude Code and Codex CLI accounts in one local workbench to check reported usage, separate work from personal accounts and choose what handles your next request
+Keep your Claude Code and Codex CLI accounts in one local workbench: see the usage each one reports, and choose which account handles the next request
 
-IN THE FAMILY The accounts: which account each agent runs on, with its usage limits in view. The whole family
+IN THE TOOLKIT The accounts: which account each agent runs on, with its usage limits in view. Step 4 of how it works. All the tools
 
 Download Switchboard
 
@@ -78,7 +78,7 @@ GET SWITCHBOARD
 
 ## Pick your platform
 
-Latest release: 0.6.15. Both downloads include the desktop app and the switchboard CLI.
+Latest release: 0.6.16. Both downloads include the desktop app and the switchboard CLI.
 
 ⌘
 
@@ -122,11 +122,11 @@ The app keeps running in the menu bar after you close its window, and opens at l
 
 macOS ZIP · SHA-256
 
-1479f39c25ec2a410643cbed1143ee3552f9cfb5a072a9b2f6d501a50278bbc8
+df7b94a8843711d80891ec91e800585eb1fd4db1440c735975615d1f4d3c7905
 
 Windows ZIP · SHA-256
 
-418449ad2807828c09b1cfdf1e176bf83d44e10c28eb7fdbe4deaff9f4e33613
+dfba522d80e4153d45614a04506d8093c0c3374e9d23068b87f4ed29cf13c2a2
 
 Compare before opening: shasum -a 256 in Terminal, Get-FileHash in PowerShell. A different value means a different file; download it again.
 
@@ -160,7 +160,7 @@ INSIDE SWITCHBOARD
 
 The actual Switchboard interface, shown with synthetic demo accounts.
 
-Browser demo · no real accounts, credentials or provider requests
+Browser demo of 0.6.13 · no real accounts, credentials or provider requests
 
 A LOCAL WORKBENCH
 
@@ -285,7 +285,7 @@ Managed sessions send requests through a local proxy and follow your selected ro
 
 Is Switchboard the same thing as Fabric?
 
-Switchboard is the account-management tool available today. Fabric is our CEO AI agent, in early preview, focused on coordinating agents and projects. Both belong to the PassionCode toolkit. Explore what we’re building with Fabric.
+Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit. Explore what we’re building with Fabric.
 
 Which agents work with Switchboard?
 
@@ -301,7 +301,7 @@ Release builds count installs, days of use and how many accounts are connected, 
 
 Can I inspect or build it myself?
 
-Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from passioncode.ai/business. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.6.15, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
+Yes. Switchboard is open source under the GNU AGPL-3.0. For use the AGPL doesn’t cover, a commercial license is available from passioncode.ai/business. Releases up to and including v0.3.1-beta.1 were published under MIT and remain available under it. The current download, 0.6.16, is released under the AGPL. v0.4.0-beta.1 was released under PolyForm Noncommercial or Internal Use and keeps that license. The repository includes build instructions, source, tests and release evidence.
 
 PART OF THE PASSIONCODE TOOLKIT
 
@@ -309,7 +309,7 @@ PART OF THE PASSIONCODE TOOLKIT
 
 ## of the setup
 
-Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, our CEO AI agent, is in early preview.
+Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.
 
 Explore Observatory
 

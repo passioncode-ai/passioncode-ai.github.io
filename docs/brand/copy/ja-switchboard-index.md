@@ -52,9 +52,9 @@ FABRIC SWITCHBOARD · BY PASSIONCODE
 
 # わかりやすい切り替え
 
-Claude Code と Codex CLI のアカウントを 1 つのローカル作業環境にまとめ、報告された使用量の確認、仕事用と個人用アカウントの分離、次のリクエストを処理するアカウントの選択ができます。
+Claude Code と Codex CLI のアカウントを 1 つのローカル作業環境にまとめましょう。各アカウントが報告する使用量を確認し、次のリクエストを処理するアカウントを選べます
 
-ファミリーの一員 アカウント：各エージェントがどのアカウントで動くかを、使用量の上限とあわせて確認できます。ファミリー全体を見る
+ツールキットの一員 アカウント：各エージェントがどのアカウントで動くかを、使用量の上限とあわせて確認できます。使い方のステップ 4 です。すべてのツール
 
 Switchboard をダウンロード
 
@@ -78,7 +78,7 @@ SWITCHBOARD を入手
 
 ## プラットフォームを選択
 
-最新のリリース：0.6.15。どちらのダウンロードにも、デスクトップアプリとswitchboard CLI が含まれます。
+最新のリリース：0.6.16。どちらのダウンロードにも、デスクトップアプリとswitchboard CLI が含まれます。
 
 ⌘
 
@@ -122,11 +122,11 @@ WebView2 を備えた Windows x64。Windows 版はまだ Authenticode 署名さ�
 
 macOS ZIP · SHA-256
 
-1479f39c25ec2a410643cbed1143ee3552f9cfb5a072a9b2f6d501a50278bbc8
+df7b94a8843711d80891ec91e800585eb1fd4db1440c735975615d1f4d3c7905
 
 Windows ZIP · SHA-256
 
-418449ad2807828c09b1cfdf1e176bf83d44e10c28eb7fdbe4deaff9f4e33613
+dfba522d80e4153d45614a04506d8093c0c3374e9d23068b87f4ed29cf13c2a2
 
 開く前に比較してください：shasum -a 256（ターミナル）、Get-FileHash（PowerShell）で確認できます。値が異なる場合は別のファイルです。もう一度ダウンロードしてください。
 
@@ -160,7 +160,7 @@ SWITCHBOARD の中身
 
 実際の Switchboard の画面です。アカウントは合成したデモ用のものです。
 
-ブラウザーデモ · 実際のアカウント、認証情報、プロバイダーへのリクエストはありません
+0.6.13 のブラウザーデモ · 実際のアカウント、認証情報、プロバイダーへのリクエストはありません
 
 ローカルの作業環境
 
@@ -285,7 +285,7 @@ Switchboard は Claude Code や Codex の代わりになりますか？
 
 Switchboard は Fabric と同じものですか？
 
-Switchboard は、現在ご利用いただけるアカウント管理ツールです。Fabric は、エージェントとプロジェクトの調整に取り組む、早期プレビュー版の CEO AI エージェントです。どちらも PassionCode のツールキットに含まれます。Fabric で作っているものを見る。
+Switchboard は、現在ご利用いただけるアカウント管理ツールです。早期プレビュー版の Fabric は、プロジェクトとそのエージェントのための拠点です。どちらも PassionCode のツールキットに含まれます。Fabric で作っているものを見る。
 
 Switchboard はどのエージェントで使えますか？
 
@@ -301,7 +301,7 @@ Switchboard はデータを送信しますか？
 
 自分でソースを確認したり、ビルドしたりできますか？
 
-はい。Switchboard は GNU AGPL-3.0 に基づくオープンソースです。AGPL がカバーしない用途には、次の窓口から商用ライセンスを利用できます：passioncode.ai/business。v0.3.1-beta.1 までのリリースは MIT ライセンスで公開されており、引き続きそのライセンスで利用できます。現在のダウンロード版（0.6.15）は AGPL の下でリリースされています。v0.4.0-beta.1 は PolyForm Noncommercial or Internal Use の下でリリースされ、そのライセンスのままです。 このリポジトリには、ビルド手順、ソース、テスト、リリースの証跡があります。
+はい。Switchboard は GNU AGPL-3.0 に基づくオープンソースです。AGPL がカバーしない用途には、次の窓口から商用ライセンスを利用できます：passioncode.ai/business。v0.3.1-beta.1 までのリリースは MIT ライセンスで公開されており、引き続きそのライセンスで利用できます。現在のダウンロード版（0.6.16）は AGPL の下でリリースされています。v0.4.0-beta.1 は PolyForm Noncommercial or Internal Use の下でリリースされ、そのライセンスのままです。 このリポジトリには、ビルド手順、ソース、テスト、リリースの証跡があります。
 
 PASSIONCODE ツールキットの一部
 
@@ -309,7 +309,7 @@ PASSIONCODE ツールキットの一部
 
 ## セットアップの一部です
 
-Switchboard は Claude Code と Codex のアカウントを管理します。Project Observatory は、それらのエージェントが作業するプロジェクトを把握できる状態に保ちます。Fabric Dashboards は、Mac 上のローカルのエージェントサービスを 1 つのウィンドウに表示します。当社の CEO AI エージェントである Fabric は、早期プレビュー版です。
+Switchboard は Claude Code と Codex のアカウントを管理します。Project Observatory は、それらのエージェントが作業するプロジェクトを把握できる状態に保ちます。Fabric Dashboards は、Mac 上のローカルのエージェントサービスを 1 つのウィンドウに表示します。プロジェクトとそのエージェントのための拠点である Fabric は、早期プレビュー版です。
 
 Observatory を見る
 
