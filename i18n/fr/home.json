@@ -56,7 +56,6 @@
     "Install the skills with one command, build your first agent with Claude Code or Codex, and add each tool when the work asks for it. About twenty minutes.": "Installez les skills en une commande, construisez votre premier agent avec Claude Code ou Codex, puis ajoutez chaque outil quand le travail le demande. Environ vingt minutes.",
     "ORGANIZATIONS · ENTERPRISE": "ORGANISATIONS · ENTERPRISE",
     "An AI-native organization": "Une organisation AI-native",
-    "We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.": "Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce qu’ils font, avec vos données sur vos machines ou dans votre propre cloud.",
     "The Fabric 0.2.0 preview was built before Fabric’s source was published.": "La préversion de Fabric 0.2.0 a été construite avant la publication du code source de Fabric.",
     "ABOUT": "À PROPOS",
     "A note": "Un mot",
@@ -125,6 +124,7 @@
     "· macOS · step 5": "· macOS · étape 5",
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · étapes 1 et 3",
     "05 / OPEN SOURCE": "05 / OPEN SOURCE",
-    "06 / QUESTIONS": "06 / QUESTIONS"
+    "06 / QUESTIONS": "06 / QUESTIONS",
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce que chacun a coûté et ce qu’il a apporté, avec vos données sur vos machines ou dans votre propre cloud."
   }
 }

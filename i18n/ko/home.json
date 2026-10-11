@@ -63,7 +63,6 @@
     "Install the skills with one command, build your first agent with Claude Code or Codex, and add each tool when the work asks for it. About twenty minutes.": "명령 하나로 스킬을 설치하고, Claude Code나 Codex로 첫 에이전트를 만들고, 일이 필요로 할 때 도구를 하나씩 추가하세요. 약 20분이면 됩니다.",
     "ORGANIZATIONS · ENTERPRISE": "조직용 · ENTERPRISE",
     "An AI-native organization": "AI-native 조직",
-    "We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.": "조직의 컴퓨터에 에이전트를 들여와 서로 연결하고 무엇을 하는지 보여 드립니다. 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다.",
     "The Fabric 0.2.0 preview was built before Fabric’s source was published.": "Fabric 0.2.0 프리뷰는 Fabric의 소스가 공개되기 전에 만들어졌습니다.",
     "ABOUT": "소개",
     "A note": "창업자의",
@@ -135,6 +134,7 @@
     "· macOS · step 5": "· macOS · 5단계",
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · 1단계, 3단계",
     "05 / OPEN SOURCE": "05 / 오픈 소스",
-    "06 / QUESTIONS": "06 / 질문"
+    "06 / QUESTIONS": "06 / 질문",
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "조직의 컴퓨터에 에이전트를 들여와 서로 연결하고 각 에이전트가 얼마를 썼고 무엇을 해냈는지 보여 드립니다. 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다."
   }
 }

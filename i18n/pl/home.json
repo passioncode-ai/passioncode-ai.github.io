@@ -63,7 +63,6 @@
     "Install the skills with one command, build your first agent with Claude Code or Codex, and add each tool when the work asks for it. About twenty minutes.": "Zainstaluj skille jednym poleceniem, zbuduj pierwszego agenta w Claude Code lub Codex i dodawaj kolejne narzędzia, gdy praca tego zażąda. Około dwudziestu minut.",
     "ORGANIZATIONS · ENTERPRISE": "ORGANIZACJE · ENTERPRISE",
     "An AI-native organization": "Organizacja AI-native",
-    "We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.": "Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, co robią, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze.",
     "The Fabric 0.2.0 preview was built before Fabric’s source was published.": "Wersja zapoznawcza Fabric 0.2.0 powstała, zanim opublikowano kod źródłowy Fabric.",
     "ABOUT": "O PROJEKCIE",
     "A note": "Kilka słów",
@@ -135,6 +134,7 @@
     "06 / QUESTIONS": "06 / PYTANIA",
     "DIRECTION": "KIERUNEK",
     "AVAILABLE NOW": "DOSTĘPNE TERAZ",
-    "AVAILABLE NOW, IN PART": "DOSTĘPNE TERAZ, W CZĘŚCI"
+    "AVAILABLE NOW, IN PART": "DOSTĘPNE TERAZ, W CZĘŚCI",
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "Przenosimy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze."
   }
 }

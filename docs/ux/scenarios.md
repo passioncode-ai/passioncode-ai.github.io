@@ -327,14 +327,15 @@ rather than replaces, the browser review recorded above.
 - **Entry point:** /business/ (from the header "For organizations", the homepage hero "For your organization", the home door card, the /vision/ closing, footer, /start/ closing, license notes)
 - **Preconditions:** none
 - **Steps:**
-  1. Read the hero → make the organization AI-native, data on its own machines or cloud; the four-step funnel (tell us, estimate, pilot, rollout); designed for 1 to 1000 people.
+  1. Read the hero → make the organization AI-native, agents connected with what each one cost and what it delivered shown, data on its own machines or cloud; the four-step funnel (tell us, estimate, pilot, rollout); designed for 1 to 1000 people.
   2. Read PassionCode for Enterprise (#enterprise) → in development and offered on request; what we set up: machines onboarded, agents rolled out, routing between machines, model access through each machine's local agent (keys stay on it), activity and usage analytics, administration, custom builds signed by PassionCode.ai.
-  3. Read the estimate → the formula, the share table and a worked example.
-  4. Fill five steps → goals and company; processes, today's state, tools, hours and hourly cost (the estimate updates as they type); setup and hosting; budget and timing; contact and consent.
-  5. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
+  3. Read For finance and engineering (#spend, since 2026-10-11, [narrative-org.md](../brand/narrative-org.md)) → the one question (what did each agent cost, and what did it deliver?) in three labelled stages: does the work run through agents (AVAILABLE NOW: the estimate), which agents are worth what they cost (AVAILABLE NOW: Fabric Dashboards Spend, Switchboard usage limits, Observatory), which setups work best and how they reach the rest (DIRECTION); each stage links on (#estimate, /dashboards/, #request); the note says it is about agents and workflows, never a ranking of people.
+  4. Read the estimate (03 / THE ESTIMATE) → the formula, the share table and a worked example.
+  5. Fill five steps → goals and company; processes, today's state, tools, hours and hourly cost (the estimate updates as they type); setup and hosting; budget and timing; contact and consent.
+  6. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
 - **Expected result:** A complete, validated lead reaches PassionCode.ai with a server-computed estimate, and the visitor knows when to expect a reply.
 - **Alt paths:** without JavaScript the form is one page and lands on /business/thanks/; a reload keeps unsent answers in the browser; email commercial@passioncode.ai instead.
-- **UI elements:** hero funnel, Enterprise list, formula card, five-step form with progress, estimate output, status line, three FAQs
+- **UI elements:** hero funnel, Enterprise list, the finance-and-engineering stages (three labelled cards with links), formula card, five-step form with progress, estimate output, status line, three FAQs (cost, commercial license, "Is this a way to watch people?")
 - **States covered:** empty, partial (draft), invalid (per-step errors), too fast or expired form (refused with a reason), rate-limited, sending, success, network failure (answers kept), service not configured (503 naming the email).
 - **Errors & recovery:** every refusal names the field or the reason; the email address is offered whenever the form cannot take the request.
 - **Status:** draft

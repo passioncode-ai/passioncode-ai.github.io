@@ -1,4 +1,18 @@
-# Current handoff — SITE-028 released: journey, new terms, ten languages, 2026-10-11
+# Current handoff — organization narrative on /business/, 2026-10-11
+
+Objective (operator, 2026-10-11): package a market narrative (finance as the internal champion of an AI purchase;
+"what does our AI spend earn") for the organization offer, in the brand pack and on /business/. Done in this branch
+(`agent/site-org-narrative`): [docs/brand/narrative-org.md](brand/narrative-org.md) (message house, open decisions
+ON-1…ON-6); /business/ hero line, new section 02 / FOR FINANCE AND ENGINEERING (`#spend`, three labelled stages),
+03 / THE ESTIMATE (was WHAT IT SAVES), a third FAQ; the home "For organizations" card; all ten languages (zh-Hans
+through the copy agent's write capability only); facts rows under lease; SCN-014. Receipt, checks and spend:
+[tasks/2026-10-11-org-narrative.md](tasks/2026-10-11-org-narrative.md). The private note is in fabric-workspace
+`knowledge/vision.md` (PR #105, merged `72f62d9`).
+
+Next task: the operator answers ON-1…ON-6; then ON-3 (a form goal "See what our agents cost and deliver":
+`assets/lead-options.js`, the Worker's accepted values, every catalog, `scripts/check-site.mjs` parity).
+
+## Previous handoff — SITE-028 released: journey, new terms, ten languages, 2026-10-11
 
 Objective (operator, 2026-10-10): show how the system works and bring the approved narrative and terms into every
 language: en and ru native, seven languages from English, zh-Hans by Chinese models only (D4). PR #87 merged as

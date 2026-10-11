@@ -1,0 +1,174 @@
+[
+ {
+  "width": 390,
+  "path": "/business/",
+  "status": 200,
+  "errors": [],
+  "overflow": 0,
+  "wide": [],
+  "broken": [],
+  "spend": {
+   "labels": [
+    "AVAILABLE NOW",
+    "AVAILABLE NOW",
+    "DIRECTION"
+   ],
+   "h2": "One view of what agents cost\nand what they delivered",
+   "h3": [
+    "Does the work run through agents, or beside them?",
+    "Which agents are worth what they cost?",
+    "Which setups work best, and how do they reach the rest?"
+   ]
+  },
+  "faq": [
+   "What does it cost?",
+   "When do we need a commercial license?",
+   "Is this a way to watch people?"
+  ]
+ },
+ {
+  "width": 390,
+  "path": "/ru/business/",
+  "status": 200,
+  "errors": [],
+  "overflow": 0,
+  "wide": [],
+  "broken": [],
+  "spend": {
+   "labels": [
+    "ДОСТУПНО СЕЙЧАС",
+    "ДОСТУПНО СЕЙЧАС",
+    "НАПРАВЛЕНИЕ"
+   ],
+   "h2": "В одном месте: сколько стоили агенты\nи какой результат они дали",
+   "h3": [
+    "Работа идёт через агентов или рядом с ними?",
+    "Какие агенты стоят своих денег?",
+    "Что работает лучше всего и как перенести это на остальную работу?"
+   ]
+  },
+  "faq": [
+   "Сколько это стоит?",
+   "Когда нужна коммерческая лицензия?",
+   "Это способ следить за людьми?"
+  ]
+ },
+ {
+  "width": 390,
+  "path": "/",
+  "status": 200,
+  "errors": [],
+  "overflow": 0,
+  "wide": [],
+  "broken": [],
+  "spend": null,
+  "faq": [
+   "Is PassionCode.ai free?",
+   "Which agents does it work with?",
+   "Where does my data go?"
+  ],
+  "card": "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud."
+ },
+ {
+  "width": 390,
+  "path": "/ru/",
+  "status": 200,
+  "errors": [],
+  "overflow": 0,
+  "wide": [],
+  "broken": [],
+  "spend": null,
+  "faq": [
+   "PassionCode.ai — это бесплатно?",
+   "С какими агентами это работает?",
+   "Куда уходят мои данные?"
+  ],
+  "card": "Мы приводим агентов на машины вашей организации, связываем их между собой и показываем, сколько стоил каждый и какой результат он дал, а данные остаются на ваших машинах или в вашем облаке."
+ },
+ {
+  "width": 1280,
+  "path": "/business/",
+  "status": 200,
+  "errors": [],
+  "overflow": 0,
+  "wide": [],
+  "broken": [],
+  "spend": {
+   "labels": [
+    "AVAILABLE NOW",
+    "AVAILABLE NOW",
+    "DIRECTION"
+   ],
+   "h2": "One view of what agents cost\nand what they delivered",
+   "h3": [
+    "Does the work run through agents, or beside them?",
+    "Which agents are worth what they cost?",
+    "Which setups work best, and how do they reach the rest?"
+   ]
+  },
+  "faq": [
+   "What does it cost?",
+   "When do we need a commercial license?",
+   "Is this a way to watch people?"
+  ]
+ },
+ {
+  "width": 1280,
+  "path": "/ru/business/",
+  "status": 200,
+  "errors": [],
+  "overflow": 0,
+  "wide": [],
+  "broken": [],
+  "spend": {
+   "labels": [
+    "ДОСТУПНО СЕЙЧАС",
+    "ДОСТУПНО СЕЙЧАС",
+    "НАПРАВЛЕНИЕ"
+   ],
+   "h2": "В одном месте: сколько стоили агенты\nи какой результат они дали",
+   "h3": [
+    "Работа идёт через агентов или рядом с ними?",
+    "Какие агенты стоят своих денег?",
+    "Что работает лучше всего и как перенести это на остальную работу?"
+   ]
+  },
+  "faq": [
+   "Сколько это стоит?",
+   "Когда нужна коммерческая лицензия?",
+   "Это способ следить за людьми?"
+  ]
+ },
+ {
+  "width": 1280,
+  "path": "/",
+  "status": 200,
+  "errors": [],
+  "overflow": 0,
+  "wide": [],
+  "broken": [],
+  "spend": null,
+  "faq": [
+   "Is PassionCode.ai free?",
+   "Which agents does it work with?",
+   "Where does my data go?"
+  ],
+  "card": "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud."
+ },
+ {
+  "width": 1280,
+  "path": "/ru/",
+  "status": 200,
+  "errors": [],
+  "overflow": 0,
+  "wide": [],
+  "broken": [],
+  "spend": null,
+  "faq": [
+   "PassionCode.ai — это бесплатно?",
+   "С какими агентами это работает?",
+   "Куда уходят мои данные?"
+  ],
+  "card": "Мы приводим агентов на машины вашей организации, связываем их между собой и показываем, сколько стоил каждый и какой результат он дал, а данные остаются на ваших машинах или в вашем облаке."
+ }
+]

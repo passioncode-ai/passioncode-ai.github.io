@@ -50,7 +50,6 @@
     "Install the skills with one command, build your first agent with Claude Code or Codex, and add each tool when the work asks for it. About twenty minutes.": "用一条命令安装技能，用 Claude Code 或 Codex 构建你的第一个智能体，工作需要哪个工具时再添加哪个。大约二十分钟。",
     "ORGANIZATIONS · ENTERPRISE": "组织 · ENTERPRISE",
     "An AI-native organization": "AI 原生组织",
-    "We bring agents onto your organization’s machines, connect them and show what they do, with your data on your machines or in your own cloud.": "我们把智能体带到你组织的机器上，把它们连接起来，让你看到它们在做什么；数据留在你自己的机器或你自己的云上。",
     "The Fabric 0.2.0 preview was built before Fabric’s source was published.": "Fabric 0.2.0 预览版构建于 Fabric 源码公开之前。",
     "ABOUT": "关于",
     "A note": "写在前面",
@@ -118,6 +117,7 @@
     "· macOS · step 5": "· macOS · 步骤 5",
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · 步骤 1 和 3",
     "05 / OPEN SOURCE": "05 / 开源",
-    "06 / QUESTIONS": "06 / 常见问题"
+    "06 / QUESTIONS": "06 / 常见问题",
+    "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "我们把智能体带到你组织的机器上，把它们连接起来，让你看到每个智能体花了多少、交付了什么；数据留在你自己的机器或你自己的云上。"
   }
 }
