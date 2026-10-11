@@ -26,6 +26,22 @@ Promise: choose useful tools today, adapt them to your workflow, and see the bou
 Vision (operator, 2026-10-05): do what you love — agents take the rest. Start with words, the workplace grows with you, and every week leaves more room for creative work. Local, open source, safe, yours to shape, run by the agent subscription you already have. Copy states it as the direction and names today's start (one command and a coding agent).
 Commercial register (/business/): the same voice speaking to a company lead — concrete processes, the formula behind every number, no fixed package, no promised price.
 
+## Saved Tone of Voice v2 (2026-10-11, current)
+Use this one. It is v1 below with one change for the operator's decision ON-1 (SITE-032): the ban on "ROI" is removed, and
+a rule is added: "ROI is allowed (operator ON-1): never state a ROI number, payback period or savings figure we cannot
+prove; the model use is: See the ROI of each agent: what it cost and what it delivered." Everything else matches v1.
+The copy agent's tools always start a draft as a new voice, so v2 has a new voiceId.
+
+| Field | Value |
+|---|---|
+| Name | PassionCode.ai — site voice v2 |
+| voiceId (resourceId) | `1657e5b3-e994-417c-b3e7-4f6a8c5052f2` |
+| Version | 1 |
+| Content hash | `8a4c0a7e199cc29fc1be031fd7c1684a6f60cf63b257e2d43aa33e186056b73d` |
+| voiceRef | `{"voiceId": "1657e5b3-e994-417c-b3e7-4f6a8c5052f2", "version": 1}` |
+| Checked | 2026-10-11, rule check en-US, register marketing, "See the ROI of each agent: what it cost and what it delivered.": no findings, score 100 (report `8f35612b-866f-4f3e-adb8-06c77fade11c`); with v1 the same text is flagged `voice-literal-ban` "ROI" |
+| Supersedes | v1 `c2ca25b8…` below, which stays immutable for the record |
+
 ## Saved Tone of Voice (2026-10-10)
 The voice above, the approved narrative and the decided terms are saved as a private, immutable Tone of Voice in our copy agent (internal tooling, never named on a page). Copy checks and translations pass it as `voiceRef {voiceId, version}`. A saved voice never changes: a later change is a new draft and a new voice, recorded here.
 

@@ -197,7 +197,7 @@ our copy tool, which is internal and never named on a public page or in `llms.tx
 
 | Field | Value |
 |---|---|
-| Saved voice | "PassionCode.ai — site voice", voiceId `c2ca25b8-aad6-4e92-9ada-b3b8a880cc7e`, version 1, content hash `29392ff21493342a027f022b41de081f5bcc1e432c5f849778412b85a1c4808d` |
+| Saved voice | "PassionCode.ai — site voice", voiceId `c2ca25b8-aad6-4e92-9ada-b3b8a880cc7e`, version 1, content hash `29392ff21493342a027f022b41de081f5bcc1e432c5f849778412b85a1c4808d`; superseded on 2026-10-11 by v2 `1657e5b3-e994-417c-b3e7-4f6a8c5052f2` version 1, which allows "ROI" (ON-1, [voice.md](voice.md#saved-tone-of-voice-v2-2026-10-11-current)) |
 | Saved from | a new draft, `bd778985-6cfe-4ea9-a99b-c6413fecec85` revision 1, re-derived from this file and [voice.md](voice.md) with the six decided terms (§6). The review draft `b4f63ab7-b080-406c-8cc8-9b20735163b0` revision 1 (operation `a832a2b5-89c4-4f84-93f1-76fccaf492ff`) predates the decisions and was not saved |
 | Contents | primary locale en-US; the five axes and twelve secondary traits; 28 rules and 32 bans; 42 lexicon entries (every product name do-not-translate, the license wording required and the banned phrases forbidden, in each of the ten locales; the decided terms preferred and their rejected forms forbidden in en-US and ru-RU); overlays for ru-RU, de-DE, fr-FR, pl-PL, ko-KR, es-ES, pt-BR, ja-JP, zh-Hans-CN; channels web and ui; 4 positive examples (the hero, the problem in en and ru, Fabric today) and 4 negative (one live, three constructed) |
 | Built from | [voice.md](voice.md) axes, locale registers and bans; this file's words, decided terms and proofs; `i18n/<code>/_checks.json` banned phrases and license wording |
