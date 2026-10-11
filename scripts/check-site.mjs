@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readFileSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 import { PAGES, NOINDEX, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
@@ -198,8 +198,40 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
   const SAFE = new Set(['dashboards-overview.jpg', 'fabric-board.jpg', 'fabric-home.jpg', 'fabric-releases.jpg', 'dashboards-service-dashboard.jpg', 'observatory-demo.jpg', 'switchboard-accounts.jpg', ...MOCKUPS])
   for (const [, image] of how.matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #how: ${image} is not a synthetic shot the journey truth table marks reusable`)
   assert.ok(how.includes('Fabric is a separate preview download'), 'homepage step 1: the launcher installs the skills, Fabric is a separate download')
-  assert.match(how, /<figure class="home-video" id="video" hidden>(?:(?!<\/figure>)[\s\S])*<\/figure>/, 'homepage: the video slot is reserved and hidden')
-  assert.ok(!/<video|<iframe/.test(how), 'homepage: no video player until W10 ships a cut')
+  // The home video (SITE-028 W10, docs/evidence/2026-10-11-video/README.md): click to play, never
+  // autoplays or loops, loads nothing but its poster before play, captions on by default; the
+  // Russian cut and every language's captions exist, are published and stay within budget.
+  const video = /<figure class="home-video" id="video">([\s\S]*?)<\/figure>/.exec(how)?.[1]
+  assert.ok(video, 'homepage: the video block in #how')
+  assert.equal((video.match(/<video /g) || []).length, 1, 'homepage: one player')
+  assert.ok(!/<iframe/.test(how), 'homepage: no embedded third-party player')
+  const tag = /<video [^>]*>/.exec(video)[0]
+  for (const a of ['controls', 'preload="none"', 'playsinline', 'poster="/assets/video/home.jpg"', 'width="1920"', 'height="1080"']) assert.ok(tag.includes(a), `homepage video: ${a}`)
+  for (const a of ['autoplay', 'loop', 'muted']) assert.ok(!new RegExp(`\\s${a}\\b`).test(tag), `homepage video: no ${a} (motion doctrine: a rendered file owes a control and no autoplay)`)
+  assert.ok(video.includes('<source src="/assets/video/home.webm" type="video/webm">') && video.includes('<source src="/assets/video/home.mp4" type="video/mp4">'), 'homepage video: WebM and MP4')
+  assert.ok(/<track kind="captions" src="\/assets\/video\/home\.vtt" srclang="en" label="Captions" default>/.test(video), 'homepage video: English captions on by default')
+  assert.match(video, /<figcaption id="video-note">[^<]*sample data[^<]*written example[^<]*<\/figcaption>/, 'homepage video: says it shows sample data and a written example')
+  const built = read('scripts/build-site.mjs')
+  assert.ok(built.includes('assets/video/home${suffix}.mp4') && built.includes('assets/video/home${locale === \'en\' ? \'\' : `-${locale}`}.vtt`).filter(file => existsSync'), 'scripts/build-site.mjs publishes the home video files')
+  for (const suffix of ['', '-ru']) {
+    for (const ext of ['mp4', 'webm']) {
+      const size = statSync(resolve(root, `assets/video/home${suffix}.${ext}`)).size
+      assert.ok(size <= 8 * 1024 * 1024, `assets/video/home${suffix}.${ext}: ${size} bytes is over the 8 MB budget`)
+    }
+    const poster = readFileSync(resolve(root, `assets/video/home${suffix}.jpg`))
+    assert.ok(poster.length <= 320 * 1024, `assets/video/home${suffix}.jpg: ${poster.length} bytes is over the 320 KB budget`)
+  }
+  // English and Russian captions are required; another language's captions are optional (until they
+  // exist, its page shows the English captions marked srclang="en", scripts/locales.mjs).
+  for (const locale of LOCALES) {
+    const file = `assets/video/home${locale === 'en' ? '' : `-${locale}`}.vtt`
+    if (!['en', 'ru'].includes(locale) && !existsSync(resolve(root, file))) continue
+    const vtt = read(file)
+    assert.ok(vtt.startsWith('WEBVTT\n'), `${file}: a WebVTT file`)
+    assert.ok((vtt.match(/ --> /g) || []).length >= 8, `${file}: captions for the whole narration`)
+    const last = Math.max(...[...vtt.matchAll(/--> 00:(\d\d):(\d\d\.\d{3})/g)].map(m => +m[1] * 60 + +m[2]))
+    assert.ok(last > 40 && last < 50, `${file}: the last caption ends with the narration (${last} s)`)
+  }
 }
 // Decided terms (operator 2026-10-10, docs/brand/terminology.md): Fabric is "the home for your
 // projects and their agents" and "CEO" appears once, on /fabric/ (D-T5); the product pages say

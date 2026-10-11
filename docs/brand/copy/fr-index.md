@@ -174,6 +174,8 @@ La même chose sur les machines de toute une équipe, proposée sur demande pend
 
 Pour votre organisation
 
+Les étapes ci-dessus en moins d’une minute, commentées et sous-titrées. Les écrans montrent des données de démonstration ; la console de l’agent de code est un exemple rédigé
+
 03 / DEUX FAÇONS D’ENTRER
 
 ## Pour vous,

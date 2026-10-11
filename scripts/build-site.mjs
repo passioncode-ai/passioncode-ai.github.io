@@ -1,4 +1,4 @@
-import { cpSync, mkdirSync, rmSync } from 'node:fs'
+import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { PAGES } from './pages.mjs'
 import { LOCALES, localizedFile } from './locales.mjs'
@@ -50,6 +50,10 @@ const publicFiles = [
   'assets/journey-3-3-ru.jpg',
   'assets/journey-3-4.jpg',
   'assets/journey-3-4-ru.jpg',
+  // The home video (SITE-028 W10): the English and Russian cuts, their posters, and captions in
+  // every language (docs/evidence/2026-10-11-video/README.md).
+  ...['', '-ru'].flatMap(suffix => [`assets/video/home${suffix}.mp4`, `assets/video/home${suffix}.webm`, `assets/video/home${suffix}.jpg`]),
+  ...LOCALES.map(locale => `assets/video/home${locale === 'en' ? '' : `-${locale}`}.vtt`).filter(file => existsSync(resolve(root, file))),
   'robots.txt',
   'sitemap.xml',
   'assets/passioncode-mark.svg',

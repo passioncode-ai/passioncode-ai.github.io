@@ -53,6 +53,39 @@ test('a picture with an own-language file shows it; other languages keep the Eng
   assert.equal(skeletonDiff(skeleton(home), skeleton(read('ru/index.html'))), null)
 })
 
+test('the home video: each language takes its own poster, video and captions file where one exists; srclang names the captions', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'pc-media-'))
+  try {
+    mkdirSync(join(dir, 'assets', 'video'), { recursive: true })
+    for (const f of ['home.mp4', 'home-ru.mp4', 'home.vtt', 'home-ru.vtt', 'home-de.vtt']) writeFileSync(join(dir, 'assets', 'video', f), '')
+    assert.equal(localizedAsset('/assets/video/home.mp4', 'ru', dir), '/assets/video/home-ru.mp4')
+    assert.equal(localizedAsset('/assets/video/home.mp4', 'de', dir), '/assets/video/home.mp4', 'no German cut: the English video')
+    assert.equal(localizedAsset('/assets/video/home.vtt', 'de', dir), '/assets/video/home-de.vtt', 'German captions over the English video')
+    assert.equal(localizedAsset('/assets/video/home.vtt', 'fr', dir), '/assets/video/home.vtt')
+  } finally { rmSync(dir, { recursive: true, force: true }) }
+  assert.equal(sourceAsset('/assets/video/home-de.vtt'), '/assets/video/home.vtt')
+  assert.equal(sourceAsset('/assets/video/home-pt-br.vtt'), '/assets/video/home.vtt')
+  assert.equal(sourceAsset('/assets/video/home-ru.webm'), '/assets/video/home.webm')
+  // On the site: Russian has its own narrated cut; every other language the English cut with captions in its language.
+  const home = read('index.html')
+  for (const src of ['poster="/assets/video/home.jpg"', 'src="/assets/video/home.webm"', 'src="/assets/video/home.mp4"', 'src="/assets/video/home.vtt"', 'srclang="en"']) assert.ok(home.includes(src), `home: ${src}`)
+  const ru = read('ru/index.html')
+  for (const src of ['poster="/assets/video/home-ru.jpg"', 'src="/assets/video/home-ru.webm"', 'src="/assets/video/home-ru.mp4"', 'src="/assets/video/home-ru.vtt"', 'srclang="ru"']) assert.ok(ru.includes(src), `ru: ${src}`)
+  for (const locale of Object.keys(LANG_TAGS).filter(l => !['en', 'ru'].includes(l))) {
+    const page = read(`${locale}/index.html`)
+    assert.ok(page.includes('src="/assets/video/home.mp4"'), `${locale}: the English cut`)
+    // Captions in the page's language where that file exists; until then the English captions, marked English.
+    if (existsSync(resolve(import.meta.dirname, '..', `assets/video/home-${locale}.vtt`))) {
+      assert.ok(page.includes(`src="/assets/video/home-${locale}.vtt"`), `${locale}: captions in its language`)
+      assert.ok(page.includes(`srclang="${LANG_TAGS[locale]}"`), `${locale}: srclang ${LANG_TAGS[locale]}`)
+    } else {
+      assert.ok(page.includes('src="/assets/video/home.vtt" srclang="en"'), `${locale}: English captions, marked English`)
+    }
+    assert.equal(skeletonDiff(skeleton(home), skeleton(page)), null, `${locale}: same structure as the English home`)
+  }
+  assert.equal(skeletonDiff(skeleton(home), skeleton(ru)), null)
+})
+
 test('the language switch leads to the same page in the other language; the 404 page to the other home', () => {
   assert.equal(counterpartRoute('start/index.html', 'ru'), '/ru/start/')
   assert.equal(counterpartRoute('start/index.html', 'en'), '/start/')

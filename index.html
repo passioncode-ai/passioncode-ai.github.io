@@ -108,7 +108,14 @@
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">AVAILABLE NOW, IN PART</p><h3>Work together and watch</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="Fabric’s board: questions agents stopped on and results waiting for review, each with its project and owner. Synthetic demo data."></figure><p>Agents share a project’s board and hand-offs in Fabric’s preview; Observatory shows what changed, with the evidence.</p><a href="/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">DIRECTION</p><h3>Organization</h3><p class="step-prompt"><span>enterprise</span>Agents rolled out per role, and work routed between your machines</p><p>The same across a team’s machines, offered on request while we build it.</p><a href="/business/">For your organization</a></li>
  </ol>
- <figure class="home-video" id="video" hidden><!-- SITE-028 W10: the home video goes here once the operator approves the cut, with a poster, captions and a reduced-motion fallback. Until then the slot stays hidden and holds no player. --></figure>
+ <figure class="home-video" id="video"><!-- SITE-028 W10: click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
+  <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="How it works, a narrated video" aria-describedby="video-note">
+   <source src="/assets/video/home.webm" type="video/webm">
+   <source src="/assets/video/home.mp4" type="video/mp4">
+   <track kind="captions" src="/assets/video/home.vtt" srclang="en" label="Captions" default>
+  </video>
+  <figcaption id="video-note">The steps above in under a minute, narrated, with captions. The screens show sample data; the coding agent’s console is a written example</figcaption>
+ </figure>
 </section>
 
 <section class="section paths" id="start" aria-labelledby="paths-title">

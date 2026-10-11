@@ -1055,7 +1055,10 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .journey-steps .step-prompt { margin: var(--pc-space-2) 0 0; }
 .journey-steps .step-prompt + p:not(.step-prompt) { margin-top: var(--pc-space-4); }
 .journey-steps .step-prompt code { overflow-wrap: anywhere; font-size: var(--pc-type-meta); }
-.home-video[hidden] { display: none; }
+/* SITE-028 W10: the home video, click to play. The box keeps 16:9 before the poster arrives, so nothing moves. */
+.home-video { margin: var(--pc-space-6) 0 0; }
+.home-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--bg-raised); border: 1px solid var(--line-strong); border-radius: var(--radius-sm); }
+.home-video figcaption { margin-top: var(--pc-space-2); color: var(--ink-muted); font-size: var(--pc-type-meta); }
 
 /* Chinese and Japanese (docs/DEPLOYMENT.md#languages): system CJK faces after the Latin stack, no
    negative tracking, taller headings (a CJK glyph fills its whole em), CJK line breaking. */

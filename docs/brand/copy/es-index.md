@@ -174,6 +174,8 @@ Lo mismo en las máquinas de un equipo, bajo solicitud mientras lo construimos.
 
 Para tu organización
 
+Los pasos de arriba en menos de un minuto, narrados y con subtítulos. Las pantallas muestran datos de demostración; la consola del agente de programación es un ejemplo escrito
+
 03 / DOS FORMAS DE EMPEZAR
 
 ## Para ti,

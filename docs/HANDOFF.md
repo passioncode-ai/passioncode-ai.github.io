@@ -1,3 +1,24 @@
+# Current handoff — SITE-028 W10: the home video, 2026-10-12 (pull request open, waiting for the operator's approval of the cut)
+
+Objective (operator via the main session, 2026-10-11): a 30–45 s home-page video built from the site's sample-data
+mockups, telling the home narrative, an AI narrator in en and ru (plan decision D3), captions, poster, MP4 and WebM
+under about 8 MB each, made only through our media pipeline. The W10 plan requires the operator to approve the cut
+before it ships, so the pull request is opened and not merged or deployed.
+
+Done on `agent/site-video` (record: [evidence/2026-10-11-video/README.md](evidence/2026-10-11-video/README.md)): the
+en cut (44.6 s; MP4 3.65 MB, WebM 3.68 MB, poster 92 KB) and the ru cut (48.8 s; MP4 4.17 MB, WebM 4.03 MB, poster
+97 KB); captions en and ru (word for word), de, es and fr (translated cue for cue); the click-to-play player in
+`index.html#how`; poster, cut and captions follow the page's language (`scripts/locales.mjs`); checks and tests;
+three strings in nine catalogs; SCN-021, the home screen entry, a *Home video* facts row. An en timing slip (one
+second late on the first beats) was found against a transcription and fixed before the PR.
+
+Open: the operator's approval of the cut (the media pipeline holds both renders at their final choice for the
+operator); captions for pl, ko, pt-br, zh-hans and ja, after the pipeline reconciles the one translation call whose
+outcome is unknown ($0.004); then merge, deploy, `scripts/verify-live.py`, and a receipt PR.
+
+Next task: when the operator approves the cut, merge the PR, deploy (`docs/DEPLOYMENT.md`), run
+`python3 scripts/verify-live.py --output docs/evidence/2026-10-11-video/live.json`, and open the receipt PR.
+
 # Current handoff — SITE-033: Fabric Inbox 0.15 on /inbox/, Dashboards 0.7.4 updates, 2026-10-11
 
 Objective (operator, 2026-10-11): /inbox/ describes what Fabric Inbox 0.15.x adds, stating only what the release notes
