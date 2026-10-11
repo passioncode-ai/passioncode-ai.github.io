@@ -272,7 +272,7 @@ PassionCode.ai ランチャー
 
 CLI
 
-0.1.32
+0.1.33
 
 · Node.js 18+ · ステップ1・3
 
