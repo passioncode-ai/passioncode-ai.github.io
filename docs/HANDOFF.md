@@ -2,7 +2,9 @@
 
 Objective (operator, 2026-10-11, re-scoping W5): "давай мокапы а не скриншоты, у нас весь UI тестовый есть" — replace
 the missing real screenshots with mockups rendered from each product's own test or demo interface. No throwaway macOS
-user, no real account, no real data. Branch `agent/site-mockups`.
+user, no real account, no real data. PR #96 merged as `b603cf7` and deployed 2026-10-11: Worker version
+`a9e1c92c-9fef-4e5d-b1c4-3ff271bcce3c`; `scripts/verify-live.py` PASS (198 assets, 150 pages in ten languages, hreflang
+on 130, 7 download routes, 23 not-found addresses), receipt [evidence/2026-10-11-mockups/live.json](evidence/2026-10-11-mockups/live.json).
 
 Done ([capture record](evidence/2026-10-11-mockups/README.md), harness in `evidence/2026-10-11-mockups/harness/`):
 - Home How it works: step 02 shows Fabric's first run with the four actions (`assets/journey-2-2.jpg`), step 03 the
@@ -34,7 +36,7 @@ used); Observatory's demo writes finding sentences in English only, so the Russi
 Open: W10 home video (now has pictures to build on); native review (SITE-026); steps 04 and 05 keep the older dark
 synthetic shots (Dashboards 0.4-era, Fabric 0.3.2 board) and can be re-rendered the same way.
 
-Next task: merge and deploy this branch, record the live receipt, then W10.
+Next task: W10 home video on these pictures, or SITE-026 native review.
 
 ---
 
