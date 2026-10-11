@@ -1,0 +1,194 @@
+{
+ "tool": "Playwright 1.63 WebKit, dist/ served on 127.0.0.1 with byte ranges, 2026-10-12",
+ "note": "preload reads 'metadata' because the check set it to load the metadata; the page ships preload=\"none\" (scripts/check-site.mjs)",
+ "results": [
+  {
+   "url": "dist/ on 127.0.0.1/",
+   "width": 390,
+   "status": 200,
+   "boxBeforePoster": {
+    "w": 362,
+    "h": 203.625
+   },
+   "box": {
+    "w": 362,
+    "h": 203.6,
+    "ratio": 1.778
+   },
+   "autoplay": false,
+   "controls": true,
+   "loop": false,
+   "preloadAttr": "metadata",
+   "poster": {
+    "ok": true,
+    "w": 1920,
+    "h": 1080
+   },
+   "src": [
+    "/assets/video/home.webm",
+    "/assets/video/home.mp4"
+   ],
+   "track": {
+    "src": "/assets/video/home.vtt",
+    "srclang": "en",
+    "label": "Captions",
+    "default": true,
+    "cues": 14
+   },
+   "before": {
+    "networkState": 2,
+    "readyState": 0
+   },
+   "meta": {
+    "duration": 44.608,
+    "w": 1920,
+    "h": 1080,
+    "current": "/assets/video/home.webm"
+   },
+   "overflowX": 0,
+   "caption": "The steps above in under a minute, narrated, with captions. The screens show sample data; the coding agent’s console is a written example",
+   "errors": []
+  },
+  {
+   "url": "dist/ on 127.0.0.1/",
+   "width": 1280,
+   "status": 200,
+   "boxBeforePoster": {
+    "w": 1180,
+    "h": 663.75
+   },
+   "box": {
+    "w": 1180,
+    "h": 663.8,
+    "ratio": 1.778
+   },
+   "autoplay": false,
+   "controls": true,
+   "loop": false,
+   "preloadAttr": "metadata",
+   "poster": {
+    "ok": true,
+    "w": 1920,
+    "h": 1080
+   },
+   "src": [
+    "/assets/video/home.webm",
+    "/assets/video/home.mp4"
+   ],
+   "track": {
+    "src": "/assets/video/home.vtt",
+    "srclang": "en",
+    "label": "Captions",
+    "default": true,
+    "cues": 14
+   },
+   "before": {
+    "networkState": 2,
+    "readyState": 0
+   },
+   "meta": {
+    "duration": 44.608,
+    "w": 1920,
+    "h": 1080,
+    "current": "/assets/video/home.webm"
+   },
+   "overflowX": 0,
+   "caption": "The steps above in under a minute, narrated, with captions. The screens show sample data; the coding agent’s console is a written example",
+   "errors": []
+  },
+  {
+   "url": "dist/ on 127.0.0.1/ru/",
+   "width": 390,
+   "status": 200,
+   "boxBeforePoster": {
+    "w": 362,
+    "h": 203.625
+   },
+   "box": {
+    "w": 362,
+    "h": 203.6,
+    "ratio": 1.778
+   },
+   "autoplay": false,
+   "controls": true,
+   "loop": false,
+   "preloadAttr": "metadata",
+   "poster": {
+    "ok": true,
+    "w": 1920,
+    "h": 1080
+   },
+   "src": [
+    "/assets/video/home-ru.webm",
+    "/assets/video/home-ru.mp4"
+   ],
+   "track": {
+    "src": "/assets/video/home-ru.vtt",
+    "srclang": "ru",
+    "label": "Субтитры",
+    "default": true,
+    "cues": 14
+   },
+   "before": {
+    "networkState": 2,
+    "readyState": 0
+   },
+   "meta": {
+    "duration": 48.808,
+    "w": 1920,
+    "h": 1080,
+    "current": "/assets/video/home-ru.webm"
+   },
+   "overflowX": 0,
+   "caption": "Шаги выше меньше чем за минуту, с озвучкой и субтитрами. На экранах — демо-данные; консоль агента для программирования — написанный пример",
+   "errors": []
+  },
+  {
+   "url": "dist/ on 127.0.0.1/ru/",
+   "width": 1280,
+   "status": 200,
+   "boxBeforePoster": {
+    "w": 1180,
+    "h": 663.75
+   },
+   "box": {
+    "w": 1180,
+    "h": 663.8,
+    "ratio": 1.778
+   },
+   "autoplay": false,
+   "controls": true,
+   "loop": false,
+   "preloadAttr": "metadata",
+   "poster": {
+    "ok": true,
+    "w": 1920,
+    "h": 1080
+   },
+   "src": [
+    "/assets/video/home-ru.webm",
+    "/assets/video/home-ru.mp4"
+   ],
+   "track": {
+    "src": "/assets/video/home-ru.vtt",
+    "srclang": "ru",
+    "label": "Субтитры",
+    "default": true,
+    "cues": 14
+   },
+   "before": {
+    "networkState": 2,
+    "readyState": 0
+   },
+   "meta": {
+    "duration": 48.808,
+    "w": 1920,
+    "h": 1080,
+    "current": "/assets/video/home-ru.webm"
+   },
+   "overflowX": 0,
+   "caption": "Шаги выше меньше чем за минуту, с озвучкой и субтитрами. На экранах — демо-данные; консоль агента для программирования — написанный пример",
+   "errors": []
+  }
+ ]
+}

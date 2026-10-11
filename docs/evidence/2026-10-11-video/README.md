@@ -48,15 +48,15 @@ No channel record exists for a video in `docs/brand/channels.md`; the narration 
 Rendered by the media pipeline from `harness/gen.py` (composition v5 for en, v4 for ru; they differ only in en's
 first three beats, see below), 1920×1080, 30 fps, H.264 + AAC stereo; masters stay with the pipeline. The site files
 are web encodes of those masters made by [`harness/webenc.sh`](harness/webenc.sh) (MP4: H.264 High 4.0, CRF 26,
-`+faststart`, AAC 96 kbps mono; WebM: VP9 CRF 38, Opus 64 kbps mono; poster: one real frame of the cut).
+`+faststart`, AAC 96 kbps mono; WebM: VP9 CRF 38, Opus 64 kbps mono; poster: one real frame of the cut; container metadata stripped).
 
 | File | Duration | Size | Budget |
 |---|---|---|---|
 | `assets/video/home.mp4` | 44.60 s | 3 654 750 B | ≤ 8 MB |
-| `assets/video/home.webm` | 44.61 s | 3 675 393 B | ≤ 8 MB |
+| `assets/video/home.webm` | 44.61 s | 3 675 051 B | ≤ 8 MB |
 | `assets/video/home.jpg` (frame at 20 s: Fabric's four actions) | — | 92 396 B | ≤ 320 KB |
 | `assets/video/home-ru.mp4` | 48.80 s | 4 166 666 B | ≤ 8 MB |
-| `assets/video/home-ru.webm` | 48.81 s | 4 027 102 B | ≤ 8 MB |
+| `assets/video/home-ru.webm` | 48.81 s | 4 026 760 B | ≤ 8 MB |
 | `assets/video/home-ru.jpg` (frame at 22 s) | — | 97 008 B | ≤ 320 KB |
 
 The masters measure −13.6 LUFS integrated (en). The en cut runs 44.6 s, inside the brief's 30–45 s; the ru cut
@@ -83,6 +83,23 @@ sentence-end pauses (0.44–0.54 s) and stand.
 
 A page without its own captions file shows the English one and says so (`srclang="en"`); `scripts/locales.mjs` does
 this the same way it picks a picture's `-ru` twin.
+
+## Checks (2026-10-12, after merging `origin/main` at `d3f254d`)
+
+| Gate | Result |
+|---|---|
+| `npm run locales -- --check` | exit 0: 10 languages, 15 pages each |
+| `python3 scripts/extract-public-copy.py` | exit 0: 150 public HTML text projections |
+| `npm run check` | exit 0 (111 tests pass; display copy 150 pages; 150 projections) |
+| `npm test` | exit 0: 111 pass, 0 fail |
+| `npm run build` | exit 0: 219 public entries in `dist/` |
+| `npm run releases:check` | exit 3: drift on the adapter (0.11.1, was 0.9.0) and the launcher (0.1.35, was 0.1.33), the same on `origin/main`; not this change's, left to a release sync |
+
+WebKit ([visual.json](visual.json)), `/` and `/ru/` at 390 and 1280 px: HTTP 200, no horizontal overflow, the video box
+16:9 before and after the poster (362×203.6 and 1180×663.8), the poster loads (1920×1080), WebKit picks the WebM and
+reads its duration (44.61 s en, 48.81 s ru), the page's captions load (14 cues each, `srclang` en and ru, default on),
+no autoplay, no loop, no page errors. A first caption line was found ending in a full stop by the display-copy check
+and fixed in all ten languages.
 
 ## Not yet
 
