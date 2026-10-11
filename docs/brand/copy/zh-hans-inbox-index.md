@@ -74,6 +74,32 @@ FABRIC INBOX / 邮件 + 智能体
 
 已回复
 
+0.15 新功能
+
+## 你的编码智能体
+
+## 在 Inbox 中工作
+
+0.15 版本将 Claude Code 或 Codex 放在你的邮件旁边，让它帮你配置 Inbox。控制台从 0.15.1 开始可用：0.15.0 中无法启动。智能体如何连接 ↓
+
+智能体控制台
+
+### 智能体在侧边面板中
+
+Claude Code 或 Codex 运行在邮件窗口右侧，已连接到这个 Inbox，能执行应用中的所有操作。用工具栏按钮打开它，View → Agent Console 或 ⌃⌘T（Windows 和 Linux 上为 Ctrl+Shift+T）。每个会话获得一个你选定级别的密钥，会话结束时自动撤销。Mac App Store 版本没有控制台。
+
+由你的智能体配置
+
+### 无需复制地址或密钥
+
+你的编码智能体在你的 Cloudflare 账户中创建服务器，然后在你于应用中允许后自行连接。你粘贴令牌、登录并选择 Allow。欢迎界面提供 Use the server your agent set up。
+
+未收取的邮件
+
+### 服务器未能收取的邮件
+
+当一封邮件既无法接受也无法拒绝时，域名的设置会列出它是发给谁的、什么时间、以及原因。发件人可能收到了退信，这样你知道该问谁。
+
 01 / 它能做什么
 
 ## 少读一些
@@ -139,7 +165,7 @@ Windows 应用和 AppImage 会自动更新；通过 .deb 安装的副本不会�
 
 ### 打开之前
 
-首次打开时，选择 Create my server on Cloudflare。
+首次打开时，选择 Create my server on Cloudflare。如果你的编码智能体创建了服务器，改为选择 Use the server your agent set up。
 
 一个 Cloudflare 账号；免费套餐即可
 
@@ -179,15 +205,21 @@ macOS DMG · SHA-256
 
 01
 
-### 创建密钥
+### 给你的智能体一句话
 
-在应用中，打开 Settings → Agent access。选择名称、级别（read、mail 或 admin），以及它是否可以发送。密钥只显示一次。
+在应用中，打开 Settings → Agent access。它首先显示要给你的编码智能体的那句话。智能体在你的 Cloudflare 账户中创建服务器，并在你选择 Allow 后自行连接；你无需复制任何地址或密钥。智能体的操作步骤在智能体配置指南。
 
 02
 
+### 或者自己创建密钥
+
+在同一界面，选择名称、级别（read、mail 或 admin）以及是否允许发送。密钥只显示一次。
+
+03
+
 ### 连接你的智能体
 
-应用会输出完整的命令：claude mcp add --transport http fabric-inbox https://<your-server>/mcp 其中带有密钥的两个请求头。然后让智能体调用 list_accounts。
+对于你自己创建的密钥，应用会输出完整命令：claude mcp add --transport http fabric-inbox https://<your-server>/mcp 其中带有密钥的两个请求头。然后让智能体调用 list_accounts。
 
 02 / PASSIONCODE 工具包
 

@@ -32,7 +32,9 @@
       "todavía no se han probado con una llamada real a un modelo",
       "IMAP y de Outlook",
       "href=\"/inbox/download/macos\"",
-      "firmado con Authenticode desde la 0.14.1"
+      "firmado con Authenticode desde la 0.14.1",
+      "La versión de la Mac App Store no tiene la consola",
+      "en 0.15.0 no arrancaba"
     ],
     "switchboard/index.html": [
       "firmados con Authenticode desde la 0.6.16",

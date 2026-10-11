@@ -23,6 +23,8 @@ Contract: brand-contract v1
 | dashboards.download | Download Fabric Dashboards | dashboards/index.html | SCN-010 | proposed | copy |
 | inbox.what | See what it does | inbox/index.html | SCN-009 | proposed | copy |
 | download.inbox.macos | Download for macOS | inbox/index.html | SCN-009 | proposed | copy |
+| inbox.new.agents | How an agent connects | inbox/index.html | SCN-009 | proposed | copy |
+| inbox.agents.guide | setup guide for agents | inbox/index.html | SCN-009 | proposed | copy |
 | switchboard.family.observatory | Explore Observatory | switchboard/index.html | SCN-004 | proposed | copy |
 | switchboard.family.dashboards | Fabric Dashboards release | switchboard/index.html | SCN-004 | proposed | copy |
 | switchboard.family.fabric | Meet Fabric | switchboard/index.html | SCN-004 | proposed | copy |

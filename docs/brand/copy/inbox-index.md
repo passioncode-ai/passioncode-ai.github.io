@@ -74,6 +74,32 @@ IMPORTANT
 
 ANSWERED
 
+NEW IN 0.15
+
+## Your coding agent
+
+## at work in Inbox
+
+Release 0.15 puts Claude Code or Codex beside your mail and lets it set Inbox up for you. The console works from 0.15.1: in 0.15.0 it could not start. How an agent connects ↓
+
+AGENT CONSOLE
+
+### Your agent in a side panel
+
+Claude Code or Codex runs on the right of the mail window, already connected to this Inbox, and can do anything the app does. Open it with the toolbar button, View → Agent Console or ⌃⌘T (Ctrl+Shift+T on Windows and Linux). Each session gets its own key at the level you choose, revoked when the session ends. The Mac App Store version does not have the console.
+
+SET UP BY YOUR AGENT
+
+### No address or secret to copy
+
+Your coding agent creates the server in your Cloudflare account, then connects itself once you allow it in the app. You paste the token, sign in and choose Allow. The welcome screen offers Use the server your agent set up.
+
+MAIL NOT TAKEN
+
+### Mail the server could not take
+
+When a message could be neither accepted nor refused, the domain’s settings list whom it was for, when and why. Its sender may have had a bounce, so you know whom to ask.
+
 01 / WHAT IT DOES
 
 ## Less to read
@@ -139,7 +165,7 @@ The Windows app and the AppImage update themselves; a copy installed from the .d
 
 ### Before you open it
 
-On first open, choose Create my server on Cloudflare.
+On first open, choose Create my server on Cloudflare. If your coding agent made the server, choose Use the server your agent set up instead.
 
 A Cloudflare account; the free plan works
 
@@ -179,15 +205,21 @@ Your server answers the Model Context Protocol at /mcp. Each function of the app
 
 01
 
-### Make a key
+### Give your agent one sentence
 
-In the app, open Settings → Agent access. Choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.
+In the app, open Settings → Agent access. It first shows the sentence to give your coding agent. The agent creates the server in your Cloudflare account and connects itself once you choose Allow; you copy no address and no secret. The agent’s steps are in the setup guide for agents.
 
 02
 
+### Or make a key yourself
+
+On the same screen, choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.
+
+03
+
 ### Connect your agent
 
-The app prints the whole command: claude mcp add --transport http fabric-inbox https://<your-server>/mcp with the key’s two headers. Then ask for list_accounts.
+For a key you made, the app prints the whole command: claude mcp add --transport http fabric-inbox https://<your-server>/mcp with the key’s two headers. Then ask for list_accounts.
 
 02 / THE PASSIONCODE TOOLKIT
 

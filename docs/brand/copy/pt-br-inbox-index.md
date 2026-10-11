@@ -74,6 +74,32 @@ IMPORTANTE
 
 RESPONDIDO
 
+NOVO NA 0.15
+
+## Seu agente de programação
+
+## trabalhando no Inbox
+
+A versão 0.15 coloca o Claude Code ou o Codex ao lado do seu e-mail e deixa que ele configure o Inbox para você. O console funciona a partir da 0.15.1: na 0.15.0 ele não iniciava. Como um agente se conecta ↓
+
+CONSOLE DO AGENTE
+
+### Seu agente num painel lateral
+
+O Claude Code ou o Codex roda à direita da janela de e-mail, já conectado a este Inbox, e pode fazer tudo o que o app faz. Abra o console pelo botão da barra de ferramentas, View → Agent Console ou ⌃⌘T (Ctrl+Shift+T no Windows e no Linux). Cada sessão recebe a própria chave, no nível que você escolher, revogada quando a sessão termina. A versão da Mac App Store não tem o console.
+
+CONFIGURADO PELO SEU AGENTE
+
+### Nenhum endereço nem segredo para copiar
+
+Seu agente de programação cria o servidor na sua conta da Cloudflare e depois se conecta sozinho quando você permite no app. Você cola o token, entra e escolhe Allow. A tela de boas-vindas oferece Use the server your agent set up.
+
+E-MAIL NÃO RECEBIDO
+
+### O e-mail que o servidor não conseguiu receber
+
+Quando uma mensagem não pôde ser nem aceita nem recusada, as configurações do domínio mostram para quem ela era, quando e por quê. O remetente pode ter recebido um aviso de devolução, então você sabe a quem perguntar.
+
 01 / O QUE ELE FAZ
 
 ## Menos para ler
@@ -139,7 +165,7 @@ O app do Windows e o AppImage se atualizam sozinhos; uma cópia instalada pelo .
 
 ### Antes de abrir
 
-Na primeira abertura, escolha Create my server on Cloudflare.
+Na primeira abertura, escolha Create my server on Cloudflare. Se foi o seu agente de programação que criou o servidor, escolha Use the server your agent set up em vez disso.
 
 Uma conta da Cloudflare; o plano gratuito funciona
 
@@ -179,15 +205,21 @@ Seu servidor responde ao Model Context Protocol em /mcp. Cada função do app ta
 
 01
 
-### Crie uma chave
+### Dê uma frase ao seu agente
 
-No app, abra Settings → Agent access. Escolha um nome, um nível (leitura, e-mail ou admin) e se ela pode enviar. O segredo é mostrado uma única vez.
+No app, abra Settings → Agent access. Primeiro aparece a frase para dar ao seu agente de programação. O agente cria o servidor na sua conta da Cloudflare e se conecta sozinho quando você escolhe Allow; você não copia nenhum endereço nem segredo. Os passos do agente estão no guia de configuração para agentes.
 
 02
 
+### Ou crie uma chave você mesmo
+
+Na mesma tela, escolha um nome, um nível (leitura, e-mail ou admin) e se ela pode enviar. O segredo é mostrado uma única vez.
+
+03
+
 ### Conecte seu agente
 
-O app imprime o comando completo: claude mcp add --transport http fabric-inbox https://<your-server>/mcp com os dois cabeçalhos da chave. Depois peça list_accounts.
+Para uma chave que você criou, o app mostra o comando completo: claude mcp add --transport http fabric-inbox https://<your-server>/mcp com os dois cabeçalhos da chave. Depois peça list_accounts.
 
 02 / O CONJUNTO DE FERRAMENTAS DA PASSIONCODE
 

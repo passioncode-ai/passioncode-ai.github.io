@@ -126,7 +126,7 @@ O Fabric Dashboards mostra todos os serviços de agentes locais em uma só janel
 
 Baixar o Fabric Dashboards
 
-0.7.3
+0.7.4
 
 ↓
 

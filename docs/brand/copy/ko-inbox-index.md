@@ -74,6 +74,32 @@ FABRIC INBOX / 메일 + 에이전트
 
 답변 완료
 
+0.15의 새 기능
+
+## 코딩 에이전트가
+
+## Inbox 안에서 일합니다
+
+0.15 릴리스는 Claude Code나 Codex를 메일 옆에 두고, 에이전트가 Inbox를 대신 설정하게 합니다. 콘솔은 0.15.1부터 작동합니다. 0.15.0에서는 시작되지 않았습니다. 에이전트 연결 방법 ↓
+
+에이전트 콘솔
+
+### 사이드 패널 속 에이전트
+
+Claude Code나 Codex가 메일 창 오른쪽 패널에서 실행되며, 이미 이 Inbox에 연결되어 앱이 하는 모든 일을 할 수 있습니다. 도구 막대의 콘솔 버튼, View → Agent Console 또는 ⌃⌘T(Windows와 Linux에서는 Ctrl+Shift+T)로 엽니다. 세션마다 내가 고른 수준의 키가 따로 발급되고, 세션이 끝나면 그 키는 폐기됩니다. Mac App Store 버전에는 콘솔이 없습니다.
+
+에이전트가 설정
+
+### 복사할 주소도 시크릿도 없습니다
+
+코딩 에이전트가 내 Cloudflare 계정에 서버를 만들고, 앱에서 허용하면 스스로 연결합니다. 나는 토큰을 붙여 넣고, 로그인하고, Allow를 고르면 됩니다. 시작 화면에는 다음 항목이 있습니다: Use the server your agent set up.
+
+받지 못한 메일
+
+### 서버가 받지 못한 메일
+
+메시지를 받을 수도 거부할 수도 없었을 때, 도메인 설정에 누구에게 온 메일인지, 언제, 왜 그랬는지 표시됩니다. 보낸 사람이 반송 알림을 받았을 수 있으니 누구에게 물어볼지 알 수 있습니다.
+
 01 / 기능
 
 ## 읽을 메일은 줄이고
@@ -139,7 +165,7 @@ Windows 앱과 AppImage는 스스로 업데이트됩니다. .deb로 설치한 �
 
 ### 열기 전에
 
-처음 열 때 선택할 항목: Create my server on Cloudflare.
+처음 열 때 선택할 항목: Create my server on Cloudflare. 코딩 에이전트가 서버를 만들었다면 대신 다음을 선택합니다: Use the server your agent set up.
 
 Cloudflare 계정(무료 요금제 가능)
 
@@ -179,15 +205,21 @@ macOS DMG · SHA-256
 
 01
 
-### 키 만들기
+### 에이전트에게 한 문장을 주세요
 
-앱에서 다음을 엽니다: Settings → Agent access. 이름, 수준(read, mail 또는 admin), 발송 허용 여부를 선택합니다. 시크릿은 한 번만 표시됩니다.
+앱에서 다음을 엽니다: Settings → Agent access. 먼저 코딩 에이전트에게 줄 문장이 표시됩니다. 에이전트가 내 Cloudflare 계정에 서버를 만들고, 내가 Allow를 고르면 스스로 연결합니다. 주소도 시크릿도 복사하지 않습니다. 에이전트의 단계는 다음 문서에 있습니다: 에이전트용 설정 가이드.
 
 02
 
+### 또는 키를 직접 만드세요
+
+같은 화면에서 이름, 수준(read, mail 또는 admin), 발송 허용 여부를 선택합니다. 시크릿은 한 번만 표시됩니다.
+
+03
+
 ### 에이전트 연결
 
-앱이 전체 명령을 출력합니다: claude mcp add --transport http fabric-inbox https://<your-server>/mcp 여기에는 키의 헤더 두 개가 포함됩니다. 그다음 요청할 항목: list_accounts.
+직접 만든 키라면 앱이 전체 명령을 보여 줍니다: claude mcp add --transport http fabric-inbox https://<your-server>/mcp 여기에는 키의 헤더 두 개가 포함됩니다. 그다음 요청할 항목: list_accounts.
 
 02 / PASSIONCODE 툴킷
 

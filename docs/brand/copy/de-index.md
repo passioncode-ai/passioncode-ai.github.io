@@ -62,7 +62,7 @@ Für deine Organisation
 
 ↗
 
-Open Source unter AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.3 · Observatory 0.22.0
+Open Source unter AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.4 · Observatory 0.23.0
 
 Accounts
 
@@ -236,7 +236,7 @@ Jeder lokale Agentendienst in einem Fenster, gesteuert von dir oder von Agenten.
 
 Release
 
-0.7.3
+0.7.4
 
 · macOS + Windows + Linux · Schritt 4
 
@@ -248,7 +248,7 @@ Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht – mit N
 
 Release
 
-0.22.0
+0.23.0
 
 · macOS + Windows + Linux · Schritt 5
 

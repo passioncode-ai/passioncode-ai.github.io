@@ -34,7 +34,9 @@
       "아직 실제 모델 호출로 시험하지 않았고",
       "IMAP과 Outlook",
       "href=\"/inbox/download/macos\"",
-      "0.14.1부터 Authenticode 서명"
+      "0.14.1부터 Authenticode 서명",
+      "Mac App Store 버전에는 콘솔이 없습니다",
+      "0.15.0에서는 시작되지 않았습니다"
     ],
     "switchboard/index.html": [
       "0.6.16부터 Authenticode로 서명되어 있습니다",

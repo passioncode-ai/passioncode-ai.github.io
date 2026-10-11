@@ -34,7 +34,9 @@
       "ещё не проверялись с вызовом реальной модели",
       "IMAP и Outlook",
       "href=\"/inbox/download/macos\"",
-      "с подписью Authenticode начиная с 0.14.1"
+      "с подписью Authenticode начиная с 0.14.1",
+      "В версии из Mac App Store консоли нет",
+      "в 0.15.0 она не запускалась"
     ],
     "switchboard/index.html": [
       "подписаны Authenticode начиная с 0.6.16",
