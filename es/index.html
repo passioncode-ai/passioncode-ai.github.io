@@ -108,7 +108,14 @@
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">DISPONIBLE AHORA, EN PARTE</p><h3>Trabajar juntos y observar</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="El tablero de Fabric: preguntas en las que se detuvieron los agentes y resultados que esperan revisión, cada uno con su proyecto y su responsable. Datos de demostración sintéticos."></figure><p>Los agentes comparten el tablero y los traspasos de un proyecto en la vista previa de Fabric; Observatory muestra qué cambió, con las evidencias.</p><a href="/es/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">DIRECCIÓN</p><h3>Organización</h3><p class="step-prompt"><span>empresas</span>Agentes desplegados por rol y trabajo enrutado entre tus máquinas</p><p>Lo mismo en las máquinas de un equipo, bajo solicitud mientras lo construimos.</p><a href="/es/business/">Para tu organización</a></li>
  </ol>
- <figure class="home-video" id="video" hidden><!-- SITE-028 W10: the home video goes here once the operator approves the cut, with a poster, captions and a reduced-motion fallback. Until then the slot stays hidden and holds no player. --></figure>
+ <figure class="home-video" id="video"><!-- SITE-028 W10: click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
+  <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="Cómo funciona: un vídeo narrado" aria-describedby="video-note">
+   <source src="/assets/video/home.webm" type="video/webm">
+   <source src="/assets/video/home.mp4" type="video/mp4">
+   <track kind="captions" src="/assets/video/home-es.vtt" srclang="es" label="Subtítulos" default>
+  </video>
+  <figcaption id="video-note">Los pasos de arriba en menos de un minuto, narrados y con subtítulos. Las pantallas muestran datos de demostración; la consola del agente de programación es un ejemplo escrito</figcaption>
+ </figure>
 </section>
 
 <section class="section paths" id="start" aria-labelledby="paths-title">

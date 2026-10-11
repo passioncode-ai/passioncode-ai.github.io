@@ -174,6 +174,8 @@ The same across a team’s machines, offered on request while we build it.
 
 For your organization
 
+The steps above in under a minute, narrated, with captions. The screens show sample data; the coding agent’s console is a written example
+
 03 / TWO WAYS IN
 
 ## For you,

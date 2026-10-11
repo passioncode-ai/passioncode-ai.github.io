@@ -108,7 +108,14 @@
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">일부 지금 사용 가능</p><h3>함께 일하고 지켜보기</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="Fabric 보드: 에이전트가 멈춘 질문과 검토를 기다리는 결과. 각 항목에 프로젝트와 담당자가 표시됩니다. 가상의 데모 데이터입니다."></figure><p>Fabric 프리뷰에서 에이전트는 한 프로젝트의 보드와 인계를 함께 씁니다. Observatory는 무엇이 바뀌었는지 증거와 함께 보여 줍니다.</p><a href="/ko/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">방향</p><h3>조직</h3><p class="step-prompt"><span>엔터프라이즈</span>역할별로 배치되는 에이전트와 컴퓨터 사이에서 배분되는 작업</p><p>같은 구성을 팀의 여러 컴퓨터로 넓힙니다. 만드는 동안에는 요청 시 제공합니다.</p><a href="/ko/business/">조직용</a></li>
  </ol>
- <figure class="home-video" id="video" hidden><!-- SITE-028 W10: the home video goes here once the operator approves the cut, with a poster, captions and a reduced-motion fallback. Until then the slot stays hidden and holds no player. --></figure>
+ <figure class="home-video" id="video"><!-- SITE-028 W10: click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
+  <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="작동 방식: 내레이션 영상" aria-describedby="video-note">
+   <source src="/assets/video/home.webm" type="video/webm">
+   <source src="/assets/video/home.mp4" type="video/mp4">
+   <track kind="captions" src="/assets/video/home.vtt" srclang="en" label="자막" default>
+  </video>
+  <figcaption id="video-note">위의 단계를 1분 안에 보여 주는, 내레이션과 자막이 있는 영상입니다. 화면은 데모 데이터이며, 코딩 에이전트의 콘솔은 직접 쓴 예시입니다</figcaption>
+ </figure>
 </section>
 
 <section class="section paths" id="start" aria-labelledby="paths-title">

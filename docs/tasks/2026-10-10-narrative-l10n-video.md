@@ -288,14 +288,13 @@ paragraph below describes the state before this change.
   those pages in the registry makes the linter audit about 80 older unregistered strings on them, which is its own task.
 - `design-system/` still says "One family" for the product marks (out of this change's scope).
 
-### Status: W10 (2026-10-11, branch `agent/site-video`, not merged)
+### Status: W10 (2026-10-12, pull request open, not merged)
 
-Script (en, ru), narration (AI narrator, en and ru, D3), composition built on the W5 mockups, captions for en and ru,
-the click-to-play player and its checks are on the branch; the rendered cut is not, because the media pipeline's
-render could not run on this machine that night (load, then disk below the render's 8 GB floor). The cut is about
-44.6 s (en) and 48.8 s (ru), 16:9, inside D3's "75 s" and the 30–45 s brief for en; ru runs 3.8 s longer than 45 s
-because its narration is longer. Record and resume steps: [evidence/2026-10-11-video](../evidence/2026-10-11-video/README.md).
-The operator has not yet seen the cut (the plan's acceptance: "the operator approves the cut").
+Script (en, ru), narration (AI narrator, en and ru, D3), the composition built on the W5 mockups, the en cut (44.6 s)
+and the ru cut (48.8 s, longer because its narration is), captions in en, ru, de, es and fr (English captions on the
+other five languages until theirs are made), the click-to-play player and its checks. 16:9, inside D3's "75 s".
+Record: [evidence/2026-10-11-video](../evidence/2026-10-11-video/README.md). Waiting for the operator to approve the
+cut (this plan's W10 acceptance) before merge and deploy.
 
 ## 4. Decisions for the operator
 

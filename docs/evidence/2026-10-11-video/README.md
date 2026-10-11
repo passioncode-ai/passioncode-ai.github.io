@@ -43,35 +43,49 @@ voice v2 `1657e5b3…` version 1, no model, no charge:
 No channel record exists for a video in `docs/brand/channels.md`; the narration was written in the home page's register
 (reported, not added: the channel is a brand-voice decision).
 
-## Status at handoff (2026-10-11 23:58): blocked on the render, not merged
+## The cut (2026-10-12)
 
-Done and on this branch:
-- the narration, en and ru, delivered as WAV by the media pipeline (en 42.24 s, ru 46.48 s, 48 kHz mono);
-- the composition (`harness/gen.py`), checked frame by frame in WebKit at 1920×1080 (en 10 frames, ru 8) and,
-  with the HyperFrames runtime loaded, render-ready in under a second;
-- captions `assets/video/home.vtt` and `home-ru.vtt`, word for word the narration, 14 cues each;
-- the player in `index.html#how` (controls, `preload="none"`, poster, captions track, no autoplay or loop),
-  `styles.css`, `scripts/build-site.mjs`, `scripts/locales.mjs` (poster, sources and captions follow the page's
-  language; `srclang` follows the captions file), `scripts/locales.test.mjs`, `scripts/check-site.mjs`, the three new
-  strings in nine catalogs, SCN-021 and the home screen entry.
+Rendered by the media pipeline from `harness/gen.py` (composition v5 for en, v4 for ru; they differ only in en's
+first three beats, see below), 1920×1080, 30 fps, H.264 + AAC stereo; masters stay with the pipeline. The site files
+are web encodes of those masters made by [`harness/webenc.sh`](harness/webenc.sh) (MP4: H.264 High 4.0, CRF 26,
+`+faststart`, AAC 96 kbps mono; WebM: VP9 CRF 38, Opus 64 kbps mono; poster: one real frame of the cut).
 
-Not done: the rendered cut. Every render attempt failed in the pipeline's render check
-(300 s limit) while the machine's load average stood at 400–790; once the load fell below 150 (23:43), the render
-paused because the disk had 6.3 GB free of the 8 GB it requires, and by 23:55 the disk had 1.6 GB free (swap
-20.3 of 21.5 GB). Nothing was spent on the renders. Because the cut is missing, the branch does not pass its gates yet:
-`node --test scripts/locales.test.mjs` 2026-10-11 23:59 → 23 tests, 19 pass, 4 fail (the new video test, the
-own-language picture test's structure comparison, catalog currency, and adding a language), all of them waiting for
-the video files, the eight other languages' captions and `npm run locales`; `npm run check` was not run.
+| File | Duration | Size | Budget |
+|---|---|---|---|
+| `assets/video/home.mp4` | 44.60 s | 3 654 750 B | ≤ 8 MB |
+| `assets/video/home.webm` | 44.61 s | 3 675 393 B | ≤ 8 MB |
+| `assets/video/home.jpg` (frame at 20 s: Fabric's four actions) | — | 92 396 B | ≤ 320 KB |
+| `assets/video/home-ru.mp4` | 48.80 s | 4 166 666 B | ≤ 8 MB |
+| `assets/video/home-ru.webm` | 48.81 s | 4 027 102 B | ≤ 8 MB |
+| `assets/video/home-ru.jpg` (frame at 22 s) | — | 97 008 B | ≤ 320 KB |
 
-Resume, in order:
-1. Free disk to at least 8 GB (operator: close idle sessions or reboot; swap is what holds it) and wait for a
-   load average below 150.
-2. Retry the paused en render in the media pipeline (same job, nothing new to approve), then build and order the ru
-   render from `harness/gen.py ru` the same way. Choose each cut after reading its frames.
-3. `harness/webenc.sh <master> assets/video/home 20` and `... assets/video/home-ru 22`: MP4 (H.264, faststart), WebM
-   (VP9/Opus) and a poster frame; each video must stay within 8 MB, each poster within 320 KB.
-4. Order captions for de, es, fr, ja, ko, pl, pt-BR and zh-Hans from the en cut through the media pipeline's subtitles
-   recipe (glossary: Fabric, Switchboard, Fabric Dashboards, Project Observatory, Observatory, Fabric Inbox,
-   PassionCode.ai); convert each `.srt` to `assets/video/home-<code>.vtt` (`pt-br`, `zh-hans` as the file suffix).
-5. `npm run locales`, then the gates: `npm run locales -- --check`, `python3 scripts/extract-public-copy.py`,
-   `npm run check`, `npm test`, `npm run build`, `npm run releases:check`; WebKit at 390 and 1280 px in en and ru.
+The masters measure −13.6 LUFS integrated (en). The en cut runs 44.6 s, inside the brief's 30–45 s; the ru cut
+48.8 s, because the Russian narration is 4.2 s longer.
+
+**A timing fix found on the way.** A transcription of the en cut (with word timings) showed that the narration's
+second sentence ends at 7.41 s, not 8.86 s as read from its pauses alone; the first render put the three failure lines
+and the cut to beat 2 about a second after the voice. Composition v5 moves them to 2.25, 4.25, 5.6 and 7.85 s and
+`home.vtt` cues 2–5 to the same sentence ends; the Russian timings were checked against the same pattern of
+sentence-end pauses (0.44–0.54 s) and stand.
+
+**Render check findings (warnings, not errors).** The pipeline's render check sampled text contrast at five times; 3 of
+35 text samples at 42.1 s fall below its threshold: the tool cards under "Coordination between agents", dimmed to
+45 % on purpose so the direction line reads first.
+
+## Captions
+
+| Page | Captions file | Source |
+|---|---|---|
+| en | `home.vtt` | the narration script, word for word, timed on the narration |
+| ru | `home-ru.vtt` | the same, Russian |
+| de, es, fr | `home-de.vtt`, `home-es.vtt`, `home-fr.vtt` | the media pipeline's subtitles recipe: a transcription of the en cut with word timings, cut into cues, each translated cue for cue with the product names kept |
+| pl, ko, pt-br, zh-hans, ja | `home.vtt`, marked `srclang="en"` | their translations did not come back: one translation call returned without a cue and its outcome awaits reconciliation in the pipeline's ledger, so no second order was placed for them yet |
+
+A page without its own captions file shows the English one and says so (`srclang="en"`); `scripts/locales.mjs` does
+this the same way it picks a picture's `-ru` twin.
+
+## Not yet
+
+- The operator has not seen the cut. The plan's acceptance for W10 is "the operator approves the cut": this branch
+  is opened as a pull request for that review and is not merged or deployed.
+- Captions for pl, ko, pt-br, zh-hans and ja, once the open ledger row is reconciled.

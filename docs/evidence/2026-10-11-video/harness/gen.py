@@ -19,7 +19,7 @@ VO = Path(os.environ["NARRATION_DIR"])
 
 # Sentence starts in the delivered narration, seconds.
 T = {
-    "en": dict(c1=2.4, c2=5.5, c3=7.9, s3=8.95, s4=13.12, s5=17.74, s6=24.22, s7=28.54, s8=31.18,
+    "en": dict(c1=2.25, c2=4.25, c3=5.6, s3=7.85, s4=13.12, s5=17.74, s6=24.22, s7=28.54, s8=31.18,
                obs=34.08, s9=36.62, s10=38.84, vo=42.24, end=44.6),
     "ru": dict(c1=3.6, c2=5.4, c3=6.9, s3=9.69, s4=14.23, s5=19.54, s6=26.22, s7=31.11, s8=33.89,
                obs=36.76, s9=39.91, s10=42.45, vo=46.48, end=48.8),

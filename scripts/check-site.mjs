@@ -212,7 +212,7 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
   assert.ok(/<track kind="captions" src="\/assets\/video\/home\.vtt" srclang="en" label="Captions" default>/.test(video), 'homepage video: English captions on by default')
   assert.match(video, /<figcaption id="video-note">[^<]*sample data[^<]*written example[^<]*<\/figcaption>/, 'homepage video: says it shows sample data and a written example')
   const built = read('scripts/build-site.mjs')
-  assert.ok(built.includes('assets/video/home${suffix}.mp4') && built.includes('assets/video/home${locale === \'en\' ? \'\' : `-${locale}`}.vtt'), 'scripts/build-site.mjs publishes the home video files')
+  assert.ok(built.includes('assets/video/home${suffix}.mp4') && built.includes('assets/video/home${locale === \'en\' ? \'\' : `-${locale}`}.vtt`).filter(file => existsSync'), 'scripts/build-site.mjs publishes the home video files')
   for (const suffix of ['', '-ru']) {
     for (const ext of ['mp4', 'webm']) {
       const size = statSync(resolve(root, `assets/video/home${suffix}.${ext}`)).size
@@ -221,10 +221,16 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
     const poster = readFileSync(resolve(root, `assets/video/home${suffix}.jpg`))
     assert.ok(poster.length <= 320 * 1024, `assets/video/home${suffix}.jpg: ${poster.length} bytes is over the 320 KB budget`)
   }
+  // English and Russian captions are required; another language's captions are optional (until they
+  // exist, its page shows the English captions marked srclang="en", scripts/locales.mjs).
   for (const locale of LOCALES) {
-    const vtt = read(`assets/video/home${locale === 'en' ? '' : `-${locale}`}.vtt`)
-    assert.ok(vtt.startsWith('WEBVTT\n'), `assets/video/home-${locale}.vtt: a WebVTT file`)
-    assert.ok((vtt.match(/ --> /g) || []).length >= 8, `assets/video/home-${locale}.vtt: captions for the whole narration`)
+    const file = `assets/video/home${locale === 'en' ? '' : `-${locale}`}.vtt`
+    if (!['en', 'ru'].includes(locale) && !existsSync(resolve(root, file))) continue
+    const vtt = read(file)
+    assert.ok(vtt.startsWith('WEBVTT\n'), `${file}: a WebVTT file`)
+    assert.ok((vtt.match(/ --> /g) || []).length >= 8, `${file}: captions for the whole narration`)
+    const last = Math.max(...[...vtt.matchAll(/--> 00:(\d\d):(\d\d\.\d{3})/g)].map(m => +m[1] * 60 + +m[2]))
+    assert.ok(last > 40 && last < 50, `${file}: the last caption ends with the narration (${last} s)`)
   }
 }
 // Decided terms (operator 2026-10-10, docs/brand/terminology.md): Fabric is "the home for your

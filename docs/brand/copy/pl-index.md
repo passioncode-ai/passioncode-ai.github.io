@@ -174,6 +174,8 @@ To samo na maszynach całego zespołu, na zapytanie, póki to budujemy.
 
 Dla Twojej organizacji
 
+Powyższe kroki w niecałą minutę, z narracją i napisami. Ekrany pokazują dane demonstracyjne; konsola agenta kodującego to napisany przykład
+
 03 / DWA WEJŚCIA
 
 ## Dla Ciebie,

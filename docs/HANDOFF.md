@@ -1,24 +1,23 @@
-# Current handoff — SITE-028 W10: the home video, 2026-10-11 (blocked on the render, branch `agent/site-video`, not merged)
+# Current handoff — SITE-028 W10: the home video, 2026-10-12 (pull request open, waiting for the operator's approval of the cut)
 
 Objective (operator via the main session, 2026-10-11): a 30–45 s home-page video built from the site's sample-data
-mockups, telling the home narrative (what keeps an agent working; tools available today, coordination as the
-direction), an AI narrator in en and ru (plan decision D3), captions, poster, MP4 and WebM under about 8 MB each,
-made only through our media pipeline, then released.
+mockups, telling the home narrative, an AI narrator in en and ru (plan decision D3), captions, poster, MP4 and WebM
+under about 8 MB each, made only through our media pipeline. The W10 plan requires the operator to approve the cut
+before it ships, so the pull request is opened and not merged or deployed.
 
 Done on `agent/site-video` (record: [evidence/2026-10-11-video/README.md](evidence/2026-10-11-video/README.md)): the
-script in en and ru (copy rule checks pass, report ids in the record); the narration delivered by the media pipeline
-(en 42.24 s, ru 46.48 s); the composition (`harness/gen.py`), checked frame by frame in WebKit; en and ru captions;
-the click-to-play player in `index.html#how` and its checks and tests; asset localization for the video's poster,
-sources and captions in `scripts/locales.mjs`; three strings in nine catalogs; SCN-021 and the home screen entry.
+en cut (44.6 s; MP4 3.65 MB, WebM 3.68 MB, poster 92 KB) and the ru cut (48.8 s; MP4 4.17 MB, WebM 4.03 MB, poster
+97 KB); captions en and ru (word for word), de, es and fr (translated cue for cue); the click-to-play player in
+`index.html#how`; poster, cut and captions follow the page's language (`scripts/locales.mjs`); checks and tests;
+three strings in nine catalogs; SCN-021, the home screen entry, a *Home video* facts row. An en timing slip (one
+second late on the first beats) was found against a transcription and fixed before the PR.
 
-Blocked: the rendered cut. The media pipeline's render check timed out under a machine load average of 400–790; when
-the load fell, the render paused for disk (8 GB needed, 6.3 GB free, then 1.6 GB at 23:55 with swap full). No money
-was spent on renders. `npm run check` and the locales tests fail on this branch until the cut and the other
-captions exist, by design.
+Open: the operator's approval of the cut (the media pipeline holds both renders at their final choice for the
+operator); captions for pl, ko, pt-br, zh-hans and ja, after the pipeline reconciles the one translation call whose
+outcome is unknown ($0.004); then merge, deploy, `scripts/verify-live.py`, and a receipt PR.
 
-Next task: free the disk to 8 GB or more and let the load settle (operator), then follow "Resume, in order" in the
-record: retry the paused en render, order the ru render, web-encode both, order the eight other languages' captions,
-`npm run locales`, the gates, WebKit 390/1280 en+ru, PR, deploy, `scripts/verify-live.py`.
+Next task: when the operator approves the cut, merge the PR, deploy (`docs/DEPLOYMENT.md`), run
+`python3 scripts/verify-live.py --output docs/evidence/2026-10-11-video/live.json`, and open the receipt PR.
 
 # Current handoff — SITE-034: the founders' story on home and /business/, 2026-10-11
 

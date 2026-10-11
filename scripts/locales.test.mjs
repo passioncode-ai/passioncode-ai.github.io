@@ -74,8 +74,13 @@ test('the home video: each language takes its own poster, video and captions fil
   for (const locale of Object.keys(LANG_TAGS).filter(l => !['en', 'ru'].includes(l))) {
     const page = read(`${locale}/index.html`)
     assert.ok(page.includes('src="/assets/video/home.mp4"'), `${locale}: the English cut`)
-    assert.ok(page.includes(`src="/assets/video/home-${locale}.vtt"`), `${locale}: captions in its language`)
-    assert.ok(page.includes(`srclang="${LANG_TAGS[locale]}"`), `${locale}: srclang ${LANG_TAGS[locale]}`)
+    // Captions in the page's language where that file exists; until then the English captions, marked English.
+    if (existsSync(resolve(import.meta.dirname, '..', `assets/video/home-${locale}.vtt`))) {
+      assert.ok(page.includes(`src="/assets/video/home-${locale}.vtt"`), `${locale}: captions in its language`)
+      assert.ok(page.includes(`srclang="${LANG_TAGS[locale]}"`), `${locale}: srclang ${LANG_TAGS[locale]}`)
+    } else {
+      assert.ok(page.includes('src="/assets/video/home.vtt" srclang="en"'), `${locale}: English captions, marked English`)
+    }
     assert.equal(skeletonDiff(skeleton(home), skeleton(page)), null, `${locale}: same structure as the English home`)
   }
   assert.equal(skeletonDiff(skeleton(home), skeleton(ru)), null)

@@ -174,6 +174,8 @@ O mesmo nas máquinas de uma equipe, oferecido sob solicitação enquanto o cons
 
 Para a sua organização
 
+Os passos acima em menos de um minuto, narrados e com legendas. As telas mostram dados de demonstração; o console do agente de programação é um exemplo escrito
+
 03 / DUAS FORMAS DE COMEÇAR
 
 ## Para você,

@@ -108,7 +108,14 @@
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">ЧАСТИЧНО ДОСТУПНО СЕЙЧАС</p><h3>Вместе и на виду</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="Доска Fabric: вопросы, на которых остановились агенты, и результаты, которые ждут проверки, — у каждого свой проект и ответственный. Синтетические демо-данные."></figure><p>В предварительной версии Fabric агенты делят доску проекта и передают друг другу работу; Observatory показывает, что изменилось, с подтверждениями.</p><a href="/ru/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">НАПРАВЛЕНИЕ</p><h3>Организация</h3><p class="step-prompt"><span>для организаций</span>Агенты по ролям и работа, которая переходит между вашими машинами</p><p>То же самое на машинах всей команды; пока мы это строим, доступно по запросу.</p><a href="/ru/business/">Для вашей организации</a></li>
  </ol>
- <figure class="home-video" id="video" hidden><!-- SITE-028 W10: the home video goes here once the operator approves the cut, with a poster, captions and a reduced-motion fallback. Until then the slot stays hidden and holds no player. --></figure>
+ <figure class="home-video" id="video"><!-- SITE-028 W10: click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
+  <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home-ru.jpg" aria-label="Как это работает: видео с озвучкой" aria-describedby="video-note">
+   <source src="/assets/video/home-ru.webm" type="video/webm">
+   <source src="/assets/video/home-ru.mp4" type="video/mp4">
+   <track kind="captions" src="/assets/video/home-ru.vtt" srclang="ru" label="Субтитры" default>
+  </video>
+  <figcaption id="video-note">Шаги выше меньше чем за минуту, с озвучкой и субтитрами. На экранах — демо-данные; консоль агента для программирования — написанный пример</figcaption>
+ </figure>
 </section>
 
 <section class="section paths" id="start" aria-labelledby="paths-title">
