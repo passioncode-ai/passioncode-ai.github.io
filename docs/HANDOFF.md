@@ -1,3 +1,22 @@
+# Current handoff — SITE-034: the founders' story on home and /business/, 2026-10-11
+
+Objective (operator, 2026-10-11): the home About becomes the founders' story in Sergey Sheleg's first person — two
+co-founders who run teams built an AI-native agent-team setup for their own work, packaged it as software, opened it,
+and now bring it to organizations; no links to publications on the page. PR #104 merged as `cb7a5d7` and deployed from
+`main`: Worker version `901dee65-056c-4b90-9005-1102b788b8ab`; `scripts/verify-live.py` PASS (208 assets, 150 pages in
+ten languages, hreflang on 130, 7 download routes, 23 not-found addresses, intake dry run), receipt
+[evidence/2026-10-11-founders/live.json](evidence/2026-10-11-founders/live.json); WebKit 390/1280 en+ru
+[visual.json](evidence/2026-10-11-founders/visual.json); [evidence](evidence/2026-10-11-founders/README.md).
+
+Done: home #about "How we got here" (Sergey Sheleg; co-founder Serge Khurs), the /business/ #founders block before the
+form, JSON-LD with two founders, "Twitter" → "X"; facts rows for both founders, Nicegram installs (operator's statement),
+Ultimate Guitar as company scale, Teslasuit (its blog's interview listing); ten languages (zh-Hans by the copy agent's
+write capability, two jobs, $0.0646); copy checks with voice v2: en 100, ru 100, no blocking rule anywhere. Inbox
+0.15.1 synced on the way (`releases:sync`).
+
+Open: the Russian form of Serge Khurs's name («Сергей Хурс») awaits the operator's confirmation; SITE-033 (Inbox 0.15
+features on /inbox/); SITE-031 (Platform `lead/2`). Next task: SITE-033.
+
 # Current handoff — SITE-030: platform copy for the 2026-10-11 releases, 2026-10-11
 
 Objective (operator, 2026-10-11): three product pages lagged behind the day's releases; fix them in all ten languages,
