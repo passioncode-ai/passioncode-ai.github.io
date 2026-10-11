@@ -70,6 +70,14 @@ Enterprise · 面向组织
 
 04推广每个角色一个工作空间
 
+关于我们
+
+## 我们先为自己的团队搭建了它
+
+PassionCode 有两位联合创始人，我们都带团队：Sergey Sheleg，Nicegram 联合创始人兼 CPO；Serge Khurs，Teslasuit 联合创始人兼 CTO。
+
+我们先为自己搭了这套系统，今天它就在跑我们自己的工作。现在我们把它带给你的组织：接入你的系统，帮你引入智能体来跑你的流程。我们怎么走到这里的 →
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## 我们会设置什么
@@ -296,6 +304,6 @@ GitHub 与源代码
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

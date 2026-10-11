@@ -126,6 +126,6 @@ Prywatność
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

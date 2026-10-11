@@ -269,6 +269,6 @@ Datenschutz
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

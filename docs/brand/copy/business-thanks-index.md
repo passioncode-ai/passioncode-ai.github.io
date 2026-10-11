@@ -92,6 +92,6 @@ Privacy
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

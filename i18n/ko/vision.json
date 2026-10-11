@@ -4,7 +4,6 @@
     "Vision | From one agent to an AI-native organization | PassionCode.ai": "비전 | 하나의 에이전트에서 AI-native 조직까지 | PassionCode.ai",
     "The PassionCode.ai vision": "PassionCode.ai 비전",
     "From one agent to an AI-native organization": "하나의 에이전트에서 AI-native 조직까지",
-    "Sergey": "세르게이",
     "Does PassionCode.ai replace Claude Code or Codex?": "PassionCode.ai는 Claude Code나 Codex를 대체하나요?",
     "Get the tools": "도구 다운로드",
     "The vision · as of October 2026": "비전 · 2026년 10월 기준",
@@ -83,6 +82,7 @@
     "Agents kept in good order": "잘 관리되는 에이전트",
     "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards는 각 에이전트의 상태와 지출을 보여 주고, 도구는 스스로 업데이트하며, Observatory는 무엇이 바뀌었는지 보관합니다. 에이전트가 서로를 지켜보는 것은 앞으로의 방향입니다.",
     "How it works, step 6": "작동 방식 6단계",
-    "Your agents start": "내 에이전트는"
+    "Your agents start": "내 에이전트는",
+    "Sergey Sheleg": "Sergey Sheleg"
   }
 }

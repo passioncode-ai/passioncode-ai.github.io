@@ -126,6 +126,6 @@ GitHub 与源代码
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

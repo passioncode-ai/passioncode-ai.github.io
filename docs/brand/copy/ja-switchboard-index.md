@@ -373,6 +373,6 @@ GitHub とソース
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

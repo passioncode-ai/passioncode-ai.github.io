@@ -4,7 +4,6 @@
     "Vision | From one agent to an AI-native organization | PassionCode.ai": "ビジョン | 1つのエージェントからAIネイティブな組織へ | PassionCode.ai",
     "The PassionCode.ai vision": "PassionCode.ai のビジョン",
     "From one agent to an AI-native organization": "1つのエージェントからAIネイティブな組織へ",
-    "Sergey": "Sergey",
     "Does PassionCode.ai replace Claude Code or Codex?": "PassionCode.ai は Claude Code や Codex の代わりになりますか？",
     "The vision · as of October 2026": "ビジョン · 2026年10月時点",
     "From one agent to an": "1つのエージェントから",
@@ -68,6 +67,7 @@
     "Agents kept in good order": "整った状態に保たれるエージェント",
     "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards が各エージェントの状態と支出を示し、ツールは自動で更新され、Observatory が変更を記録します。エージェント同士が見守り合うことは、これから目指す方向です。",
     "How it works, step 6": "使い方：ステップ6",
-    "Your agents start": "エージェントは、"
+    "Your agents start": "エージェントは、",
+    "Sergey Sheleg": "Sergey Sheleg"
   }
 }

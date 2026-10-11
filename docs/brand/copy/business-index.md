@@ -70,6 +70,14 @@ Reply within two business days Designed for 1 to 1000 people · the estimate com
 
 04Rolloutworkplaces per role
 
+WHO WE ARE
+
+## We built it for our own teams first
+
+PassionCode has two co-founders, and we both run teams: Sergey Sheleg, co-founder and CPO of Nicegram, and Serge Khurs, co-founder and CTO of Teslasuit.
+
+We built this setup for ourselves, and it runs our own work today. Now we bring it to your organization: we connect it to your systems and help you bring in agents that run your processes. How we got here →
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## What we set up
@@ -296,6 +304,6 @@ Privacy
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

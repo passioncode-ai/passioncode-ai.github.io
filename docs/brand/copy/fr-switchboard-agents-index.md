@@ -452,6 +452,6 @@ Confidentialité
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

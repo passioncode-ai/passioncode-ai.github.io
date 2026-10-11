@@ -260,7 +260,7 @@ Gmail and Cloudflare mail in one list, important first; agents answer by policy.
 
 Development preview
 
-0.15.0
+0.15.1
 
 · macOS + Windows + Linux · step 5
 
@@ -308,21 +308,29 @@ Your work stays on your computers and your own cloud accounts. Fabric Switchboar
 
 ABOUT
 
-## A note
+## How we got here
 
-## from the founder
+I’m Sergey Sheleg, co-founder and CPO of Nicegram, the alternative Telegram client with more than 60 million installs, and co-founder of eSIM Plus. Before that I led Android and growth product at Ultimate Guitar, whose apps reach more than 350 million people. I work across product, growth, marketing, AI and blockchain.
 
-I’m Sergey, a co-founder of Nicegram, which has 60 million users.
+My co-founder at PassionCode is Serge Khurs, co-founder and CTO of Teslasuit, a full-body suit with haptics, muscle stimulation, sensors and motion tracking for healthcare, training, industry and defense. Today he advises large international digital companies as an engineer in AI and backend systems.
 
-I started building PassionCode as my own workplace for working with AI agents. It grew into a way for anyone to turn their own setup into an agent workspace, and for an organization to become AI-native.
+We both run teams, and we both started the same way: setting up our own workplaces for agents. We experimented, worked out how a workplace should be arranged, and kept tuning our own internal processes, bringing years of technical and product experience to it.
+
+Over time it became a setup for an AI-native agent team: how the workplace looks, how a system of agents is built, and how it fits into an organization. We packaged it as software so it works the same way every time. It runs our own work today.
+
+Then we saw it would help far more people than the two of us: anyone who works with AI agents, in development, marketing, finance, advertising or any routine that can be automated. The software adapts to the work, so we made it open source. Install it, adapt your workplace, make it agentic, and use Claude Code the way it is meant to be used.
+
+In our teams we kept seeing the same problem. People hand part of a task to a chat and pass the result back to a person, and the process stays the same. The process is what has to change.
+
+That is what we do for organizations. If you want agents to take over routine work in real business processes, we connect PassionCode to your systems and help you bring in custom agents that run those processes. Tell us about your processes →
 
 It is open source under the GNU AGPL-3.0 and free for personal use; a commercial license covers what the AGPL does not.
 
-Follow on Twitter
+Follow on X
 
 ↗
 
-Sergey · @sshlg93
+Sergey Sheleg · co-founder, PassionCode
 
 PassionCode
 
@@ -356,6 +364,6 @@ Privacy
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

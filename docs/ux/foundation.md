@@ -16,7 +16,7 @@ Priority: should. As P-01, inspect source, license, releases and shared design l
 ## ST-04 — Understand the direction
 Priority: must. As P-01, understand how account setup, project context, coordination and review fit together, and distinguish a downloadable tool from work in development.
 ## ST-05 — Follow the builder
-Priority: should. As P-01, find who is building the toolkit and follow their public updates on Twitter.
+Priority: should. As P-01, find who is building the toolkit and follow their public updates on X.
 
 ## ST-06 — Adapt the workplace
 Priority: must. As P-01, install agent skills or build a compatible service, and distinguish source-build projects from published binaries.
