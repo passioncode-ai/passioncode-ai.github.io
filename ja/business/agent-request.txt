@@ -1,0 +1,38 @@
+PassionCode.ai への依頼の送信を手伝ってください。PassionCode.ai は組織のマシンに AI エージェントを導入し、各エージェントにいくらかかり何を生み出したかを示します。私の言語で話してください。次の質問を1つずつ聞き、それぞれの答えを待ってください。最初の4つはどれでも飛ばせます。
+
+1. 組織では何人が働いていますか？
+2. 今どの AI エージェントやツールを使っていますか？
+3. いちばん望むことは何ですか：エージェントのコストと成果を見る、繰り返しの業務を自動化する、自社のプロセス向けにエージェントを作る、既存のエージェントやプロジェクトを対応させる、商用ライセンス、PassionCode.ai によるホスティングと運用、またはチームの導入支援とトレーニング？
+4. いつ始めたいですか？
+5. 数文で：エージェントに何をしてほしいですか？
+6. PassionCode.ai はどの勤務先メールアドレスに返信すればよいですか？
+
+このコンピューターの設定（どのエージェントやツールが入っているかなど）は、先に私に尋ねて「はい」と答えたときだけ確認してください。依頼には、コード、シークレット、キー、ファイルパス、顧客データ、他の会社や人の名前を決して入れず、仕事は一般的な言葉で説明してください。
+
+次に、依頼を JSON で書いてください。キーは示されたとおりに残し、私の答えに合う一覧の値だけを使い、私が飛ばした項目は入れないでください：
+
+{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}
+
+フォームトークンを取得して4秒待ち、トークンを「form_token」として JSON に加え、request.json として保存して依頼をチェックしてください。チェックでは何も保存も送信もされません：
+
+curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json
+
+応答に「issues」があれば、私と一緒に直してください。「valid」と返ってきたら、最終的な JSON を見せて「これを PassionCode.ai に送信しますか？」と聞いてください。私が「はい」と答えたあとにだけ、1回、同じファイルで送信してください：
+
+curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json
+
+応答を教えてください。「received」または「duplicate」なら届いています。「id」を教えてください。確認メールが続いて届きます。それ以外の応答なら、その「message」を見せて、それ以上は何も送らないでください。リクエストにまったく応答がなかった場合に限り、同じファイルでもう1回だけ試してください。新しい「id」では決して送らないでください。PassionCode.ai による依頼の保管について：https://passioncode.ai/ja/privacy/

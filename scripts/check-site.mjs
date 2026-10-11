@@ -222,48 +222,50 @@ for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'n
 // Analytics in public copy are about agents and outcomes; the page never frames them as a
 // judgement of people (operator rule, docs/brand/terminology.md "PassionCode for Enterprise").
 assert.ok(!/\b(?:employee|staff|people)\b[^.]{0,40}\b(?:scor|assess|evaluat|performance)/i.test(currentWords(business)), '/business/: analytics are about agents, never a judgement of people')
-const formValues = name => [...business.matchAll(new RegExp(`name="${name.replace('.', '\\.')}" value="([^"]+)"`, 'g'))].map(m => m[1])
 const selectValues = name => {
   const block = new RegExp(`<select name="${name.replace('.', '\\.')}"[^>]*>([\\s\\S]*?)</select>`).exec(business)
   assert.ok(block, `/business/ select ${name}`)
   return [...block[1].matchAll(/<option value="([^"]+)">/g)].map(m => m[1])
 }
-const same = (actual, group, where) => assert.deepEqual([...actual].sort(), Object.keys(LEAD_OPTIONS[group]).sort(), `${where}: the form's answers differ from assets/lead-options.js ${group}`)
-same(formValues('goals'), 'goals', 'goals')
-same(formValues('processes.areas'), 'areas', 'processes.areas')
-same(formValues('processes.currentState'), 'currentState', 'processes.currentState')
-same(formValues('processes.tools'), 'tools', 'processes.tools')
-same(formValues('setup.mode'), 'mode', 'setup.mode')
-same(formValues('setup.hosting'), 'hosting', 'setup.hosting')
-same(formValues('setup.constraints'), 'constraints', 'setup.constraints')
-same(selectValues('company.industry'), 'industry', 'company.industry')
-same(selectValues('company.size'), 'size', 'company.size')
-same(selectValues('processes.currency'), 'currency', 'processes.currency')
-same(selectValues('budget.monthly'), 'monthly', 'budget.monthly')
-same(selectValues('budget.setup'), 'setup', 'budget.setup')
-same(selectValues('budget.timeline'), 'timeline', 'budget.timeline')
-for (const name of ['company.name', 'company.website', 'company.industryOther', 'company.agentUsers', 'processes.other', 'processes.hoursPerWeek', 'processes.hourlyCost', 'contact.name', 'contact.role', 'contact.email', 'contact.phone', 'contact.telegram', 'contact.message', 'consent.privacy', 'consent.marketing']) assert.ok(business.includes(`name="${name}"`), `/business/ field ${name}`)
+// Since 2026-10-11 (operator ON-3) the form asks for the minimum: what agents should do, a work
+// email and an optional goal. No other answer, and no consent box (Art. 6(1)(b), /privacy/).
+{
+  const form = /<form class="lead-form"[\s\S]*?<\/form>/.exec(business)[0]
+  const names = [...new Set([...form.matchAll(/\sname="([^"]+)"/g)].map(m => m[1]))]
+  assert.deepEqual(names, ['form_token', 'pc_hp', 'contact.message', 'contact.email', 'goals'], '/business/: the short form carries exactly its three fields, the token and the trap')
+  assert.ok(/<textarea name="contact\.message"[^>]*\brequired\b/.test(form) && /<input type="email" name="contact\.email"[^>]*\brequired\b/.test(form), '/business/: the text and the email are required')
+  assert.ok(!/<select name="goals"[^>]*\brequired\b/.test(form), '/business/: the goal is optional')
+  assert.deepEqual(selectValues('goals'), Object.keys(LEAD_OPTIONS.goals), '/business/: the goal list is assets/lead-options.js goals, in its order')
+  assert.equal(selectValues('goals')[0], 'cost_and_results', '/business/: the finance goal comes first (ON-3)')
+}
+// The agent prompt (SCN-022) comes before the form, and the plain-text copy is linked.
+assert.ok(business.indexOf('data-copy-prompt') > 0 && business.indexOf('data-copy-prompt') < business.indexOf('<form class="lead-form"'), '/business/: the agent prompt is ahead of the form')
+for (const text of ['href="/business/agent-request.txt"', 'https://passioncode.ai/api/leads/token', "https://passioncode.ai/api/leads?dry_run=1", '"channel": "agent-prompt"', 'only after I say yes']) assert.ok(business.includes(text), `/business/ agent prompt missing ${text}`)
+// ON-2: the job titles appear once; ON-4: no spend level of our own is ever published.
+assert.equal((business.match(/\(the CFO and the CTO or CIO\)/g) || []).length, 1, '/business/: the champion\'s job titles appear once')
+// ON-4: our own spend levels (an organization ceiling, per-project limits) are never public.
+// ON-5: public copy stays at agents and workflows; no team-level views.
+for (const file of ['index.html', 'business/index.html', 'vision/index.html', 'start/index.html', 'dashboards/index.html']) {
+  const words = currentWords(read(file))
+  assert.ok(!/(?:ceiling|cap|limit)s?\b[^.<]{0,40}\$\s?\d[\d,]*|\$\s?\d[\d,]*[^.<]{0,30}\b(?:ceiling|cap|limit)/i.test(words), `${file}: no spend level of our own is published (ON-4)`)
+  assert.ok(!/\bteam[- ](?:level )?(?:views?|dashboards?|rankings?)\b/i.test(words), `${file}: no team-level views in public copy (ON-5)`)
+}
 // commercial@ is the contact, not the path: the page leads to the form.
 assert.equal((business.match(/mailto:commercial@passioncode.ai/g) || []).length, 2, '/business/: the email appears once in the page and once in the footer')
 // The English form shows every answer with the label assets/lead-options.js gives it: the visitor
 // reads the words, the Worker receives the values. A translated form is generated from it
 // (scripts/build-locale.mjs: same values, same field names, labels from the catalog).
-const GROUP_OF = { goals: 'goals', 'processes.areas': 'areas', 'processes.currentState': 'currentState', 'processes.tools': 'tools', 'setup.mode': 'mode', 'setup.hosting': 'hosting', 'setup.constraints': 'constraints', 'company.industry': 'industry', 'company.size': 'size', 'processes.currency': 'currency', 'budget.monthly': 'monthly', 'budget.setup': 'setup', 'budget.timeline': 'timeline' }
-const unescape = s => s.replace(/&amp;/g, '&').trim()
 {
   const shown = {}
-  for (const m of business.matchAll(/<input type="(?:checkbox|radio)" name="([a-zA-Z.]+)" value="([^"]+)"[^>]*>([^<]*)<\/label>/g)) if (GROUP_OF[m[1]]) (shown[GROUP_OF[m[1]]] ??= {})[m[2]] = unescape(m[3])
-  for (const sel of business.matchAll(/<select name="([a-zA-Z.]+)"[^>]*>([\s\S]*?)<\/select>/g)) {
-    for (const o of sel[2].matchAll(/<option value="([^"]+)">([^<]*)<\/option>/g)) (shown[GROUP_OF[sel[1]]] ??= {})[o[1]] = unescape(o[2])
-  }
-  for (const group of Object.values(GROUP_OF)) assert.deepEqual(shown[group], LEAD_OPTIONS[group], `/business/: the form's labels for ${group} differ from assets/lead-options.js`)
+  for (const o of /<select name="goals"[^>]*>([\s\S]*?)<\/select>/.exec(business)[1].matchAll(/<option value="([^"]+)">([^<]*)<\/option>/g)) shown[o[1]] = o[2].replace(/&amp;/g, '&').trim()
+  assert.deepEqual(shown, LEAD_OPTIONS.goals, '/business/: the form\'s goal labels differ from assets/lead-options.js')
 }
 for (const locale of TRANSLATED_LOCALES) {
   const form = read(`${locale}/business/index.html`)
-  for (const text of [`action="/api/leads?lang=${locale}" method="post"`, 'name="form_token"', 'name="pc_hp"', `href="/${locale}/privacy/"`, 'src="/assets/business.js"']) assert.ok(form.includes(text), `/${locale}/business/ missing ${text}`)
+  for (const text of [`action="/api/leads?lang=${locale}" method="post"`, 'name="form_token"', 'name="pc_hp"', `href="/${locale}/privacy/"`, 'src="/assets/business.js"', `href="/${locale}/business/agent-request.txt"`, '"channel": "agent-prompt"', 'https://passioncode.ai/api/leads/token']) assert.ok(form.includes(text), `/${locale}/business/ missing ${text}`)
 }
 const privacy = read('privacy/index.html')
-for (const text of ['GDPR Art. 6(1)(b)', '24 months', '30 days', 'Western Europe', 'Frankfurt', 'no cookies', 'VERSION 2026-10-08', 'since version 0.3.2, Fabric send anonymous usage counts']) assert.ok(privacy.includes(text), `/privacy/ missing ${text}`)
+for (const text of ['GDPR Art. 6(1)(b)', '24 months', '30 days', 'Western Europe', 'Frankfurt', 'no cookies', 'VERSION 2026-10-11', 'since version 0.3.2, Fabric send anonymous usage counts']) assert.ok(privacy.includes(text), `/privacy/ missing ${text}`)
 console.log('PASS: homepage vision and paths, /start/ guide, /business/ form ↔ Worker options, privacy notice')
 
 // ---- product pages: honest disclosures stay -------------------------------------------------

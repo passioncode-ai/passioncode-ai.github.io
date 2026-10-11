@@ -7,13 +7,11 @@
     "Fabric Dashboards": "Fabric Dashboards",
     "One window for local agent services that speak fabric-service/0.1.": "fabric-service/0.1을 쓰는 로컬 에이전트 서비스를 위한 하나의 창입니다.",
     "Download": "다운로드",
-    "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "내 에이전트 서비스",
     "One place to look": "한곳에서 확인",
     "Download for macOS ↓": "macOS용 다운로드 ↓",
     "View source ↗": "소스 보기 ↗",
     "Release": "릴리스",
-    "· macOS 13+ · Apple silicon + Intel": "· macOS 13 이상 · Apple silicon + Intel",
     "YOUR LOCAL SERVICES / TOGETHER": "내 로컬 서비스 / 한곳에서",
     "THE WINDOW": "창",
     "Every agent service": "모든 에이전트 서비스를",
@@ -93,6 +91,11 @@
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "상태, 지출, 제어: 모든 에이전트 서비스가 무엇을 하고 얼마를 쓰는지, 업데이트까지 한 창에서 봅니다.",
     "how it works": "작동 방식의 4단계입니다",
     "All the tools": "모든 도구",
-    "The skills kept current": "최신 상태로 유지되는 스킬"
+    "The skills kept current": "최신 상태로 유지되는 스킬",
+    "FABRIC DASHBOARDS · macOS + Windows + Linux": "FABRIC DASHBOARDS · macOS + Windows + Linux",
+    "· macOS 13+ · Windows · Linux": "· macOS 13 이상 · Windows · Linux",
+    "Windows and Linux": "Windows와 Linux",
+    "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "에는 x64와 arm64용 서명된 Windows 설치 파일, x64와 arm64용 Linux AppImage와 .deb도 포함됩니다. 자동 업데이트는 아직 macOS에서만 됩니다. Windows와 Linux에서는 다음 릴리스를 직접 설치하세요.",
+    "Windows and Linux downloads": "Windows와 Linux 다운로드"
   }
 }

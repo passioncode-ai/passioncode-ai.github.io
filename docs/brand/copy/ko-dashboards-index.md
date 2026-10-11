@@ -46,7 +46,7 @@ Português (Brasil)
 
 ↓
 
-FABRIC DASHBOARDS · macOS
+FABRIC DASHBOARDS · macOS + Windows + Linux
 
 # 내 에이전트 서비스
 
@@ -60,7 +60,7 @@ macOS용 다운로드 ↓
 
 소스 보기 ↗
 
-릴리스 0.6.7 · macOS 13 이상 · Apple silicon + Intel
+릴리스 0.7.1 · macOS 13 이상 · Windows · Linux
 
 내 로컬 서비스 / 한곳에서
 
@@ -132,11 +132,19 @@ Spend 페이지에는 각 에이전트에 적용된 한도가 나열됩니다. �
 
 ### macOS
 
-릴리스 0.6.7. Apple silicon과 Intel용 유니버설 DMG, macOS 13 이상. Developer ID 서명, 공증, 스테이플 완료.
+릴리스 0.7.1. Apple silicon과 Intel용 유니버설 DMG, macOS 13 이상. Developer ID 서명, 공증, 스테이플 완료.
 
 Fabric Dashboards 다운로드 ↓
 
 DMG를 열고 Fabric Dashboards를 응용 프로그램 폴더로 드래그한 다음 실행합니다. 앱은 로그인할 때 시작되며, 설정에서 바꿀 수 있습니다.
+
+### Windows와 Linux
+
+릴리스 0.7.1에는 x64와 arm64용 서명된 Windows 설치 파일, x64와 arm64용 Linux AppImage와 .deb도 포함됩니다. 자동 업데이트는 아직 macOS에서만 됩니다. Windows와 Linux에서는 다음 릴리스를 직접 설치하세요.
+
+Windows와 Linux 다운로드
+
+↗
 
 ### 열기 전에
 
@@ -146,7 +154,7 @@ DMG를 열고 Fabric Dashboards를 응용 프로그램 폴더로 드래그한 �
 
 DMG SHA-256
 
-d0e916fc1a9ee0586446c67474eb75156e770cc37dff302a3808703b4ec42e02
+2e479f19506ee4dd5d004c5b9c12861ca803b85baa885dd7522a950345c44d81
 
 릴리스 노트와 체크섬 ↗
 

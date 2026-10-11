@@ -1,0 +1,38 @@
+Help me send a request to PassionCode.ai, which brings AI agents onto an organization’s machines and shows what each agent cost and what it delivered. Talk to me in my language. Ask me these questions one at a time and wait for each answer; I may skip any of the first four.
+
+1. How many people work in our organization?
+2. Which AI agents and tools do we use now?
+3. What do we want most: to see what our agents cost and deliver, to automate recurring operations, to build agents for our own processes, to adapt our existing agents or projects, a commercial license, to have PassionCode.ai host and run it, or to onboard and train our team?
+4. When do we want to start?
+5. In a few sentences, what should agents do for us?
+6. Which work email should PassionCode.ai reply to?
+
+Look at this computer’s setup, such as which agents and tools are installed, only if you ask me first and I say yes. Never put code, secrets, keys, file paths, customer data or the names of other companies or people into the request: describe the work in general words.
+
+Then write the request as JSON. Keep the keys exactly as shown, use only the listed values that match my answers, and leave out what I skipped:
+
+{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}
+
+Get a form token, wait four seconds, add the token to the JSON as “form_token”, save it as request.json and check it. The check stores and sends nothing:
+
+curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json
+
+If the answer lists “issues”, fix them with me. When it says “valid”, show me the final JSON and ask: “Send this to PassionCode.ai?” Send it only after I say yes, once, with the same file:
+
+curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json
+
+Tell me the answer. “received” or “duplicate” means it arrived: give me the “id”; a receipt email follows. Any other answer: show me its “message” and send nothing more. Only if the request got no answer at all, try once more with the same file, never with a new “id”. How PassionCode.ai keeps the request: https://passioncode.ai/privacy/

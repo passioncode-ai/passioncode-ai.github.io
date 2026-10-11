@@ -4,12 +4,10 @@
     "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | ローカルのエージェントサービスを一か所に",
     "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Mac のウィンドウ一つで、ローカルのエージェントサービスを確認できます。対応が必要なものを把握し、ダッシュボードを開き、エージェントも MCP 経由で同じツールを使えます。",
     "One window for local agent services that speak fabric-service/0.1.": "fabric-service/0.1 に対応するローカルのエージェントサービスを、一つのウィンドウで扱えます。",
-    "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "あなたのエージェントサービス",
     "One place to look": "見る場所は一つ",
     "Download for macOS ↓": "macOS 版をダウンロード ↓",
     "View source ↗": "ソースを見る ↗",
-    "· macOS 13+ · Apple silicon + Intel": "· macOS 13 以降 · Apple silicon と Intel",
     "YOUR LOCAL SERVICES / TOGETHER": "ローカルのサービスを一か所に",
     "THE WINDOW": "ウィンドウ",
     "Every agent service": "すべてのエージェントサービスを",
@@ -82,6 +80,11 @@
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "状態、支出、操作：すべてのエージェントサービスについて、何をしているか、どれだけ使っているか、アップデートの状況を一つのウィンドウで確認できます。",
     "how it works": "使い方のステップ 4 です",
     "All the tools": "すべてのツール",
-    "The skills kept current": "最新に保たれるスキル"
+    "The skills kept current": "最新に保たれるスキル",
+    "FABRIC DASHBOARDS · macOS + Windows + Linux": "FABRIC DASHBOARDS · macOS + Windows + Linux",
+    "· macOS 13+ · Windows · Linux": "· macOS 13 以降 · Windows · Linux",
+    "Windows and Linux": "Windows と Linux",
+    "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "には、x64 と arm64 向けの署名済み Windows インストーラーと、x64 と arm64 向けの Linux AppImage と .deb も含まれます。自動アップデートは今のところ macOS のみです。Windows と Linux では、次のリリースをご自身でインストールしてください。",
+    "Windows and Linux downloads": "Windows と Linux のダウンロード"
   }
 }

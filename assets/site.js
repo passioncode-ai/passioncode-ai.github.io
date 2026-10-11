@@ -63,6 +63,39 @@ function copyButtons () {
     })
     pre.append(button)
   }
+  // The agent prompt on /business/ (SCN-022): prose, lists and code blocks copied as one plain
+  // text, the same text /business/agent-request.txt carries (scripts/agent-prompt.mjs).
+  for (const box of document.querySelectorAll('[data-copy-prompt]')) {
+    const button = document.createElement('button')
+    button.type = 'button'
+    button.className = 'button button-secondary copy-prompt'
+    button.textContent = t(M.copy)
+    button.setAttribute('aria-label', t(M.copyLabel, { text: box.getAttribute('aria-label') || '' }))
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(promptText(box))
+        button.textContent = t(M.copied)
+      } catch {
+        button.textContent = t(M.copyManual)
+        getSelection()?.selectAllChildren(box)
+      }
+      setTimeout(() => { button.textContent = t(M.copy) }, 1800)
+    })
+    box.after(button)
+  }
+}
+
+// One block per paragraph, list or code block, separated by a blank line; list items numbered.
+// Mirrors promptText in scripts/agent-prompt.mjs, which writes the plain-text copy.
+const squash = text => text.replace(/\s+/g, ' ').trim()
+function promptText (box) {
+  const blocks = []
+  for (const node of box.children) {
+    if (node.tagName === 'PRE') blocks.push(node.textContent.replace(/\s+$/, ''))
+    else if (node.tagName === 'OL') blocks.push([...node.children].map((li, i) => `${i + 1}. ${squash(li.textContent)}`).join('\n'))
+    else blocks.push(squash(node.textContent))
+  }
+  return blocks.join('\n\n') + '\n'
 }
 
 enableReveals()

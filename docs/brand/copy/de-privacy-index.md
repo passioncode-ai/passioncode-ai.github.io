@@ -46,11 +46,11 @@ Tools herunterladen
 
 ↓
 
-DATENSCHUTZHINWEIS · VERSION 2026-10-08
+DATENSCHUTZHINWEIS · VERSION 2026-10-11
 
 # Datenschutzhinweis
 
-passioncode.ai nutzt keine Analyse-Tools, keine Werbe-Tracker und keine Cookies. Die einzigen personenbezogenen Daten, die erhoben werden, sind deine Eingaben im Anfrageformular auf /business/.
+passioncode.ai nutzt keine Analyse-Tools, keine Werbe-Tracker und keine Cookies. Die einzigen personenbezogenen Daten, die erhoben werden, sind das, was du in einer Anfrage sendest, von /business/ aus, über das Formular oder über deinen Coding-Agenten.
 
 Dieser Hinweis wird auch in anderen Sprachen veröffentlicht. Weicht eine Übersetzung von dieser englischen Fassung ab, gilt die englische Fassung.
 
@@ -58,17 +58,17 @@ Dieser Hinweis wird auch in anderen Sprachen veröffentlicht. Weicht eine Übers
 
 PassionCode.ai, betrieben von Siarhei Sheleh, ist der Verantwortliche für die hier beschriebenen Daten. Kontakt: commercial@passioncode.ai oder contact@passioncode.ai.
 
-## Was das Formular erhebt
+## Was eine Anfrage erhebt
 
-Deine Antworten: Ziele, Unternehmen, Prozesse, Einrichtungswünsche, Budgetrahmen und Zeitplan.
+Was du schreibst: was Agenten für dich tun sollen und, wenn du eines wählst, ein wichtigstes Ziel. Eine Anfrage, die dein Coding-Agent sendet, kann außerdem die Größe deiner Organisation, die Agenten und Tools, die du nutzt, den gewünschten Start und den Namen enthalten, den sich der Agent selbst gibt.
 
-Deine Kontaktdaten: Name, Rolle, geschäftliche E-Mail-Adresse und, wenn du sie angibst, Telefonnummer und Telegram.
+Deine geschäftliche E-Mail-Adresse.
 
 Aus der Anfrage selbst: das Land, das Cloudflare für deine Verbindung meldet, der User-Agent-String deines Browsers und ein Einweg-Hash deiner IP-Adresse, der zur Missbrauchsabwehr dient. Die IP-Adresse selbst wird nicht gespeichert.
 
 ## Warum und auf welcher Grundlage
 
-Um deine Anfrage zu beantworten und ein Angebot vorzubereiten – Schritte, um die du vor einem möglichen Vertrag bittest (DSGVO Art. 6 Abs. 1 lit. b). Die Missbrauchsprüfungen beruhen auf unserem berechtigten Interesse, das Formular nutzbar zu halten (Art. 6 Abs. 1 lit. f). Produktneuigkeiten senden wir nur, wenn du dieses Kästchen ankreuzt, und du kannst diese Einwilligung jederzeit widerrufen (Art. 6 Abs. 1 lit. a).
+Um deine Anfrage zu beantworten und ein Angebot vorzubereiten – Schritte, um die du vor einem möglichen Vertrag bittest (DSGVO Art. 6 Abs. 1 lit. b); deshalb hat das Formular kein Einwilligungskästchen. Die Missbrauchsprüfungen beruhen auf unserem berechtigten Interesse, das Formular nutzbar zu halten (Art. 6 Abs. 1 lit. f). Produktneuigkeiten erhalten nur Menschen, die darum gebeten haben, und sie können diese Einwilligung jederzeit widerrufen (Art. 6 Abs. 1 lit. a).
 
 ## Wo die Daten gespeichert werden
 
@@ -80,7 +80,7 @@ Wir verkaufen die Daten nicht, geben sie nicht an Werbetreibende weiter und nutz
 
 ## Wie lange
 
-Die Kopie bei Cloudflare wird 30 Tage nach ihrem Eingang in unserem Backend gelöscht. Eine Anfrage, aus der keine Zusammenarbeit entstanden ist, wird 24 Monate nach ihrer letzten Aktualisierung gelöscht oder anonymisiert. Eine Anfrage, die zu einem Vertrag geführt hat, wird als Teil dieses Vertrags aufbewahrt.
+Die Kopie bei Cloudflare wird 30 Tage nach ihrem Eingang in unserem Backend gelöscht; eine Anfrage, die dort noch nicht angekommen ist, bleibt innerhalb der 24-Monats-Grenze bei Cloudflare. Eine Anfrage, aus der keine Zusammenarbeit entstanden ist, wird 24 Monate nach ihrer letzten Aktualisierung gelöscht oder anonymisiert. Eine Anfrage, die zu einem Vertrag geführt hat, wird als Teil dieses Vertrags aufbewahrt.
 
 ## Deine Rechte
 
@@ -88,7 +88,7 @@ Du kannst Auskunft über deine Daten sowie deren Berichtigung oder Löschung ver
 
 ## In deinem Browser
 
-Während du das Formular ausfüllst, werden deine noch nicht gesendeten Antworten nur im Speicher deines eigenen Browsers gehalten, damit ein Neuladen sie nicht verliert; sie werden entfernt, sobald die Anfrage gesendet ist.
+Während du im Formular schreibst, wird dein noch nicht gesendeter Text nur im Speicher deines eigenen Browsers gehalten, damit ein Neuladen ihn nicht verliert; er wird entfernt, sobald die Anfrage gesendet ist. Ein Coding-Agent, den du nutzt, bewahrt sein Gespräch mit dir nach seinen eigenen Bedingungen auf, nicht nach unseren.
 
 ## Die Apps
 

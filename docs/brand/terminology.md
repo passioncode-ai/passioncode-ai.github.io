@@ -11,7 +11,7 @@ Contract: brand-contract v1
 | open source under AGPL-3.0 | source-available, PolyForm (as the current license), MIT (as the current license) | every product with a page — Fabric, Fabric Inbox, Switchboard, Project Observatory, Fabric Dashboards — whose source is public (ADR-0092; Fabric and Fabric Inbox since 2026-09-30) |
 | commercial license | paid license, enterprise license, license on request | the license PassionCode.ai offers for use the AGPL does not cover; requested through passioncode.ai/business/ (commercial@passioncode.ai as the contact), no price or term |
 | agent workplace (for companies) | AI transformation, digital workforce | what /business/ sets up: the tools, the agents and their dashboards for a team's processes |
-| estimate | guaranteed savings, ROI | the /business/ arithmetic: hours a week × 4.33 × share × hourly cost, stated as an estimate |
+| estimate | guaranteed savings; a ROI number, payback period or savings figure we cannot prove | the /business/ arithmetic: hours a week × 4.33 × share × hourly cost, stated as an estimate. The word "ROI" is allowed since 2026-10-11 (operator ON-1, [narrative-org.md](narrative-org.md#8-operator-decisions-2026-10-11)), as in "the ROI of each agent: what it cost and what it delivered" |
 
 ## Entity and tier names: exact spelling
 | Name | Wrong forms seen |

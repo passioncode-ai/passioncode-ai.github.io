@@ -1,0 +1,38 @@
+帮我向 PassionCode.ai 发送一条需求。PassionCode.ai 把 AI 智能体引入组织的机器，并展示每个智能体的花费和交付。用我的语言和我交流。逐个问我以下问题，每个问题等我的回答；前四个我可以跳过。
+
+1. 我们组织有多少人？
+2. 我们现在用哪些 AI 智能体和工具？
+3. 我们最想要什么：看到智能体的花费和交付、自动化重复操作、为自己的流程构建智能体、适配现有的智能体或项目、商业许可证、由 PassionCode.ai 托管和运行，还是团队培训和上手？
+4. 我们想什么时候开始？
+5. 用几句话描述，智能体应该为我们做什么？
+6. PassionCode.ai 应该回复哪个工作邮箱？
+
+只有在先问我并得到我同意后，才查看这台电脑的配置，比如安装了哪些智能体和工具。不要把代码、机密、密钥、文件路径、客户数据或其他公司及人名放进需求里：用概括性的语言描述工作内容。
+
+然后把需求写成 JSON。键名保持原样，值只用与我回答匹配的选项，跳过的不写：
+
+{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}
+
+获取一个表单令牌，等四秒，把令牌作为 “form_token” 加入 JSON，保存为 request.json 并校验。校验不会存储或发送任何内容：
+
+curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json
+
+如果返回结果列出了 “issues”，和我一起修复。当结果显示 “valid” 时，给我看最终的 JSON 并问：“要发送给 PassionCode.ai 吗？”只在我确认后发送一次，用同一个文件：
+
+curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json
+
+告诉我返回结果。“received” 或 “duplicate” 表示已送达：把 “id” 给我，之后会收到确认邮件。其他任何结果：给我看它的 “message”，不再发送。只有当请求完全没有得到响应时，才用同一个文件重试一次，绝不使用新的 “id”。PassionCode.ai 如何保存这条需求：https://passioncode.ai/zh-hans/privacy/

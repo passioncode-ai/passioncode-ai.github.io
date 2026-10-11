@@ -62,7 +62,7 @@ What we set up
 
 Reply within two business days Designed for 1 to 1000 people · the estimate comes before any contract
 
-01Tell usteam, processes, budget
+01Tell usa few lines, or your agent asks
 
 02Estimatehours and money, with the formula
 
@@ -100,7 +100,7 @@ Your data stays on your machines or in your own cloud. Read the vision
 
 ## and what they delivered
 
-Engineering wants more agents; finance wants every dollar spent on them explained. Both are asking one question: what did each agent cost, and what did it deliver? When the answer is a record both of them open, adding an agent becomes a decision with numbers behind it.
+Finance and engineering (the CFO and the CTO or CIO) look at agents from two sides: engineering wants more of them, finance wants every dollar spent on them explained. Both are asking one question: what did each agent cost, and what did it deliver? That is the ROI of each agent. When the answer is a record both of them open, adding an agent becomes a decision with numbers behind it.
 
 01
 
@@ -128,7 +128,7 @@ DIRECTION
 
 ### Which setups work best, and how do they reach the rest?
 
-Spend and results joined per project and workflow. Limits finance sets once and agents check before they spend, with a request above a limit filed as a record while the work goes on. A setup that works, rolled out as a workplace per role.
+Spend and results joined per project and workflow. Limits finance sets once, kept as a record agents check before they spend; a request above a limit is filed as a record while the work goes on. A setup that works, rolled out as a workplace per role.
 
 Estimate and request
 
@@ -172,33 +172,69 @@ An estimate, not a promise. The pilot measures the real number against your own 
 
 04 / REQUEST
 
-## Tell us about your team
+## Tell us what agents
 
-Five short steps, about three minutes. You see the estimate as you go, and we reply within two business days.
+## should do for you
+
+Two short ways. Your coding agent can ask you a few questions and send the request after you say yes, or you write a few lines yourself. We reply within two business days.
+
+### Let your coding agent ask
+
+Copy this prompt into Claude Code, Codex or another coding agent. It asks you a few questions, one at a time, shows you the request and sends it only after you say yes.
+
+Help me send a request to PassionCode.ai, which brings AI agents onto an organization’s machines and shows what each agent cost and what it delivered. Talk to me in my language. Ask me these questions one at a time and wait for each answer; I may skip any of the first four.
+
+How many people work in our organization?
+
+Which AI agents and tools do we use now?
+
+What do we want most: to see what our agents cost and deliver, to automate recurring operations, to build agents for our own processes, to adapt our existing agents or projects, a commercial license, to have PassionCode.ai host and run it, or to onboard and train our team?
+
+When do we want to start?
+
+In a few sentences, what should agents do for us?
+
+Which work email should PassionCode.ai reply to?
+
+Look at this computer’s setup, such as which agents and tools are installed, only if you ask me first and I say yes. Never put code, secrets, keys, file paths, customer data or the names of other companies or people into the request: describe the work in general words.
+
+Then write the request as JSON. Keep the keys exactly as shown, use only the listed values that match my answers, and leave out what I skipped:
+
+{ "id": "a new random UUID v4: make it once, reuse it if you send again", "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans", "contact": { "email": "the work email", "message": "what agents should do, in my words, up to 4000 characters" }, "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"], "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" }, "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] }, "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" }, "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" } }
+
+Get a form token, wait four seconds, add the token to the JSON as “form_token”, save it as request.json and check it. The check stores and sends nothing:
+
+curl -s https://passioncode.ai/api/leads/token sleep 4 curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json
+
+If the answer lists “issues”, fix them with me. When it says “valid”, show me the final JSON and ask: “Send this to PassionCode.ai?” Send it only after I say yes, once, with the same file:
+
+curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json
+
+Tell me the answer. “received” or “duplicate” means it arrived: give me the “id”; a receipt email follows. Any other answer: show me its “message” and send nothing more. Only if the request got no answer at all, try once more with the same file, never with a new “id”. How PassionCode.ai keeps the request: https://passioncode.ai/privacy/
+
+The same prompt as plain text, for an agent to fetch: passioncode.ai/business/agent-request.txt
+
+### Or write it yourself
 
 Leave this field empty
 
-Goals
+What should agents do for your organization?
 
-Processes
+Work email
 
-Setup
+Main goal
 
-Budget
+optional
 
-Contact
+Choose…
 
-1 / 5
-
-What you want and who you are
-
-What do you want to achieve? choose any
+See what our agents cost and deliver
 
 Automate recurring operations
 
 Build agents for our own processes
 
-Convert our existing agents or projects
+Adapt our existing agents or projects
 
 A commercial license for a closed product or service
 
@@ -206,239 +242,7 @@ Have PassionCode.ai host and run it
 
 Onboard and train our team
 
-Company
-
-Website
-
-optional
-
-Industry
-
-Choose…
-
-Mobile apps and games publishing
-
-SaaS
-
-Marketing or advertising agency
-
-E-commerce and retail
-
-Fintech and payments
-
-Media and content
-
-Software studio or outsourcing
-
-Something else
-
-If something else
-
-optional
-
-Company size
-
-Choose…
-
-1–10 people
-
-11–50
-
-51–200
-
-201–1,000
-
-More than 1,000
-
-People who would work with agents
-
-optional
-
-2 / 5
-
-The processes
-
-Which processes take your team’s time? choose any
-
-Releases and store publishing
-
-Marketing creatives and ads
-
-Support and shared inboxes
-
-Analytics and reporting
-
-Engineering, code review and QA
-
-Sales and CRM
-
-Content and SEO
-
-Finance and back office
-
-Other
-
-Anything specific
-
-optional
-
-How does that work run today?
-
-Mostly manual
-
-Scripts and integrations
-
-Chat assistants used ad hoc
-
-Agents already run parts of it
-
-AI tools your team uses optional
-
-Claude Code
-
-Codex
-
-Cursor
-
-ChatGPT or Claude chat
-
-Other agents
-
-None yet
-
-Hours a week on these processes
-
-whole team
-
-Loaded cost of an hour
-
-Currency
-
-USD
-
-EUR
-
-GBP
-
-PLN
-
-Fill in the hours, the cost and how the work runs today to see the estimate.
-
-3 / 5
-
-How you want it set up
-
-Who does the setup?
-
-We set it up ourselves
-
-Guided onboarding with your team
-
-You build and run it for us
-
-Where should it run?
-
-Our own computers
-
-Our cloud account
-
-Hosted by PassionCode.ai
-
-Not decided
-
-Requirements optional
-
-Data must stay on our premises
-
-EU data residency
-
-NDA before details
-
-Single sign-on
-
-Audit trail of agent actions
-
-4 / 5
-
-Budget and timing
-
-Monthly budget for automation
-
-Choose…
-
-Under $1,000 a month
-
-$1,000–5,000
-
-$5,000–20,000
-
-$20,000–50,000
-
-More than $50,000
-
-Not sure yet
-
-One-time setup budget
-
-Choose…
-
-Under $5,000
-
-$5,000–20,000
-
-$20,000–50,000
-
-More than $50,000
-
-Not sure yet
-
-When do you want to start?
-
-Choose…
-
-As soon as possible
-
-This quarter
-
-Next quarter
-
-Exploring for now
-
-Ranges only help us propose the right scope; the estimate above is a useful anchor.
-
-5 / 5
-
-How to reach you
-
-Your name
-
-Role
-
-optional
-
-Work email
-
-Phone
-
-optional
-
-Telegram
-
-optional
-
-Anything else we should know
-
-optional
-
-I agree that PassionCode.ai keeps these answers to reply and prepare a proposal, as the
-
-privacy notice
-
-describes
-
-Send me occasional product news.
-
-optional
+We keep what you send only to reply, as the privacy notice describes.
 
 Send request →
 

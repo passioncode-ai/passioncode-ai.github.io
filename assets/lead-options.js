@@ -1,12 +1,15 @@
 // #region lead-options — docs: docs/ux/scenarios.md#scn-014-request-an-ai-workplace-for-a-company
-// The answers the /business/ form offers, shared by the page's script and the Worker that
-// validates a submission (worker/leads.js). The form's HTML carries the same values so it
-// works without JavaScript; scripts/check-site.mjs asserts the two agree.
+// The answers a request may carry, shared by the page's script and the Worker that validates a
+// submission (worker/leads.js). Since 2026-10-11 the /business/ form offers only `goals` (one,
+// optional); a coding agent's request (business/agent-request.txt) may add `size`, `tools` and
+// `timeline`; the other groups are kept for the former five-step form (lead/1), still accepted
+// from pages already open. scripts/check-site.mjs asserts the form agrees with `goals`.
 export const LEAD_OPTIONS = {
   goals: {
+    cost_and_results: 'See what our agents cost and deliver',
     automate_operations: 'Automate recurring operations',
     custom_agents: 'Build agents for our own processes',
-    convert_agents: 'Convert our existing agents or projects',
+    convert_agents: 'Adapt our existing agents or projects',
     commercial_license: 'A commercial license for a closed product or service',
     managed_hosting: 'Have PassionCode.ai host and run it',
     team_onboarding: 'Onboard and train our team'
@@ -96,5 +99,5 @@ export const LEAD_OPTIONS = {
 }
 
 // Bumped when the privacy notice changes; a submission records the version it agreed to.
-export const PRIVACY_VERSION = '2026-10-05'
+export const PRIVACY_VERSION = '2026-10-11'
 // #endregion lead-options

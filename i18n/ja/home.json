@@ -112,7 +112,6 @@
     "The home for your projects and their agents: each project’s purpose, board, decisions and releases.": "プロジェクトとそのエージェントのための拠点：各プロジェクトの目的、ボード、決定事項、リリース。",
     "· macOS · steps 2 and 5": "· macOS · ステップ2・5",
     "· macOS + Windows · step 4": "· macOS + Windows · ステップ4",
-    "· macOS · step 4": "· macOS · ステップ4",
     "· macOS + Linux · step 5": "· macOS + Linux · ステップ5",
     "· macOS · step 5": "· macOS · ステップ5",
     "· Node.js 18+ · steps 1 and 3": "· Node.js 18+ · ステップ1・3",
@@ -120,6 +119,7 @@
     "06 / QUESTIONS": "06 / よくある質問",
     "We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.": "組織のマシンにエージェントを導入し、つなぎ、それぞれにかかったコストと生み出した成果が見える状態にします。データはお客様のマシン上、または自社のクラウド上に置かれます。",
     "Fabric’s first run, step 3 of 3: create an agent or adapt one built elsewhere, open a project or create one. Synthetic demo data.": "Fabricの初回起動、ステップ3/3：エージェントを新しく作るか、ほかで作ったエージェントを対応させる。プロジェクトを開くか、新しく作成する。合成デモデータです。",
-    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "「作成」のあとにFabricが開くコーディングエージェントのコンソール：release-notes-agentについて、最初の6つの質問のうち2つ目を尋ねています。録画ではなく、文章で書いた例です。"
+    "The coding agent’s console that Fabric opens after Create: it asks the second of six intake questions for release-notes-agent. A written example, not a recording.": "「作成」のあとにFabricが開くコーディングエージェントのコンソール：release-notes-agentについて、最初の6つの質問のうち2つ目を尋ねています。録画ではなく、文章で書いた例です。",
+    "· macOS + Windows + Linux · step 4": "· macOS + Windows + Linux · ステップ4"
   }
 }

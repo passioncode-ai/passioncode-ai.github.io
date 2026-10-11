@@ -242,7 +242,9 @@ test('intake refuses: bad token, too fast, invalid answers, foreign origin, over
   assert.equal((await post(env, JSON.stringify({ ...answers(), form_token: await issueFormToken('form-secret') }))).status, 429)
   const invalid = await post(env, JSON.stringify({ goals: [], form_token: await oldToken() }))
   assert.equal(invalid.status, 400)
-  assert.ok((await invalid.json()).issues.length > 3)
+  assert.deepEqual((await invalid.json()).issues.map(i => i.path).sort(), ['contact.email', 'contact.message'], 'the short request asks for two things only')
+  const legacy = await post(env, JSON.stringify({ goals: [], company: { industry: 'saas' }, form_token: await oldToken() }))
+  assert.ok((await legacy.json()).issues.length > 3, 'the former five-step form is still validated whole')
   assert.equal((await post(env, '{}', { headers: { origin: 'https://evil.example' } })).status, 403)
   assert.equal((await post(env, 'x'.repeat(40000))).status, 413)
   const trap = await post(env, JSON.stringify({ ...answers(), pc_hp: 'spam', form_token: await oldToken() }))
@@ -257,6 +259,184 @@ test('intake is honest when it is not configured or rate-limited', async () => {
   assert.match((await off.json()).message, /commercial@passioncode.ai/)
   const limited = await post(baseEnv({ LEAD_LIMITER: { limit: async () => ({ success: false }) } }), JSON.stringify(answers()))
   assert.equal(limited.status, 429)
+})
+
+// ---- the short request (lead/2): the form and a coding agent (2026-10-11, ON-3) ------------
+
+const AGENT_ID = '0e8f6a7c-3b1d-4c2e-9f4a-5b6c7d8e9f01'
+const agentRequest = (extra = {}) => ({
+  id: AGENT_ID,
+  lang: 'en',
+  contact: { email: 'cfo@example.com', message: 'We run Claude Code in three teams and want to see what each agent costs and delivers.' },
+  goals: ['cost_and_results'],
+  company: { size: '51_200' },
+  processes: { tools: ['claude_code', 'codex'] },
+  budget: { timeline: 'this_quarter' },
+  source: { channel: 'agent-prompt', agent: 'Claude Code' },
+  ...extra
+})
+// An agent's curl: no Origin, no Referer, no browser.
+const curl = async (env, body, { path = '/api/leads', method = 'POST', ip = '198.51.100.9', c = ctx() } = {}) => {
+  const r = await worker.fetch(new Request(`https://passioncode.ai${path}`, { method, headers: { 'content-type': 'application/json', 'cf-connecting-ip': ip, 'user-agent': 'curl/8.7.1' }, body }), env, c)
+  await c.done()
+  return r
+}
+// The real limiter's shape: `limit` per key within the window.
+const limiter = (limit = 5) => { const seen = new Map(); return { seen, limit: async ({ key }) => { seen.set(key, (seen.get(key) || 0) + 1); return { success: seen.get(key) <= limit } } } }
+
+test('the short form: email, what agents should do and an optional goal; stored as lead/2 and never offered to the Platform', async () => {
+  const forwarded = []
+  const env = baseEnv({ PLATFORM_URL: 'https://api.example.test', PLATFORM_INTAKE_SECRET: 'k' })
+  const realFetch = globalThis.fetch
+  globalThis.fetch = async (...args) => { forwarded.push(args); return new Response('{}', { status: 201 }) }
+  try {
+    const id = 'aaaaaaaa-1111-4111-8111-111111111111'
+    const r = await post(env, JSON.stringify({ id, contact: { email: 'Lead@Example.com', message: 'Agents for our release notes.' }, goals: ['cost_and_results'], form_token: await oldToken() }))
+    assert.equal(r.status, 201)
+    const row = await env.DB.prepare('SELECT payload, forward_status, forward_error, notify_status, confirm_status FROM leads WHERE id = ?').bind(id).first()
+    const lead = JSON.parse(row.payload)
+    assert.equal(lead.schema, 'lead/2')
+    assert.equal(lead.source.channel, 'form')
+    assert.equal(lead.contact.email, 'lead@example.com')
+    assert.deepEqual(lead.privacy, { version: '2026-10-11', basis: 'request' })
+    assert.equal(lead.estimate, undefined)
+    assert.deepEqual([row.notify_status, row.confirm_status, row.forward_status], ['done', 'done', 'skipped'])
+    assert.match(row.forward_error, /^lead\/2: the Platform accepts lead\/1 only/)
+    assert.equal(forwarded.length, 0, 'the Platform is not offered a shape it refuses')
+    const [notify] = env.EMAIL.sent
+    assert.equal(notify.subject, 'Enquiry: example.com · See what our agents cost and deliver · form')
+    assert.match(notify.text, /What agents should do:\nAgents for our release notes\./)
+    // The goal is optional; a form without JavaScript posts the same three fields.
+    const plain = await post(env, `contact.email=a%40example.org&contact.message=Hello+there&form_token=${encodeURIComponent(await oldToken())}`, { type: 'application/x-www-form-urlencoded' })
+    assert.equal(plain.status, 303)
+    // Without JavaScript an untouched optional select still posts its empty value: no goal, not an error.
+    const untouched = await post(env, `contact.message=Hello+again&contact.email=b%40example.org&goals=&pc_hp=&form_token=${encodeURIComponent(await oldToken())}`, { type: 'application/x-www-form-urlencoded' })
+    assert.equal(untouched.status, 303)
+  } finally { globalThis.fetch = realFetch }
+})
+
+test('the former five-step form (lead/1) is still accepted, but never with the new goal', () => {
+  const context = { newId: () => '00000000-0000-4000-8000-000000000010', now: new Date(), ipHash: 'a'.repeat(64), country: '', userAgent: '' }
+  assert.equal(buildLead(answers(), context).lead.schema, 'lead/1')
+  const a = answers(); a.goals = ['cost_and_results']
+  const r = buildLead(a, context)
+  assert.equal(r.ok, false, 'the Platform\'s lead/1 has no such goal')
+  assert.deepEqual(r.issues.map(i => i.path), ['goals'])
+})
+
+test('a coding agent gets a form token without a page; the token is the page\'s, limited the same way', async () => {
+  const env = baseEnv({ LEAD_LIMITER: limiter(5) })
+  const r = await curl(env, undefined, { path: '/api/leads/token', method: 'GET' })
+  assert.equal(r.status, 200)
+  assert.equal(r.headers.get('cache-control'), 'no-store')
+  const body = await r.json()
+  assert.equal(await checkFormToken('form-secret', body.form_token, Date.now() + 3000), 'ok')
+  assert.equal(await checkFormToken('form-secret', body.form_token), 'too_fast', 'unusable for the first seconds, like the page\'s')
+  assert.deepEqual([body.usable_after_seconds, body.expires_in_seconds], [3, 86400])
+  for (let i = 0; i < 4; i++) await curl(env, undefined, { path: '/api/leads/token', method: 'GET' })
+  assert.equal((await curl(env, undefined, { path: '/api/leads/token', method: 'GET' })).status, 429, 'the sixth token in a minute from one address is refused')
+  assert.equal((await curl(env, '{}', { path: '/api/leads/token' })).status, 405)
+  const foreign = await worker.fetch(new Request('https://passioncode.ai/api/leads/token', { headers: { origin: 'https://evil.example' } }), env, ctx())
+  assert.equal(foreign.status, 403)
+  assert.equal((await curl(baseEnv({ FORM_TOKEN_SECRET: undefined }), undefined, { path: '/api/leads/token', method: 'GET' })).status, 503)
+})
+
+test('a valid agent request is accepted like a form request: stored, mailed, marked as an agent\'s, in its own language', async () => {
+  const env = baseEnv()
+  const r = await curl(env, JSON.stringify({ ...agentRequest({ lang: 'ru' }), form_token: await oldToken() }))
+  assert.equal(r.status, 201)
+  assert.deepEqual(await r.json(), { id: AGENT_ID, status: 'received', estimate: null })
+  const lead = JSON.parse((await env.DB.prepare('SELECT payload FROM leads WHERE id = ?').bind(AGENT_ID).first()).payload)
+  assert.deepEqual(lead.source.channel, 'agent-prompt')
+  assert.equal(lead.source.agent, 'Claude Code')
+  assert.equal(lead.source.locale, 'ru', 'the body\'s lang names the language when the address does not')
+  assert.equal(lead.source.page, '/ru/business/')
+  assert.deepEqual([lead.company.size, lead.processes.tools, lead.budget.timeline, lead.goals], ['51_200', ['claude_code', 'codex'], 'this_quarter', ['cost_and_results']])
+  const [notify, receipt] = env.EMAIL.sent
+  assert.match(notify.subject, /via a coding agent$/)
+  assert.match(notify.text, /through a coding agent \(Claude Code, its own name\) after the sender said yes/)
+  assert.match(notify.text, /Organization size: 51–200/)
+  assert.equal(receipt.to, 'cfo@example.com')
+  assert.equal(receipt.subject, t('ru', M.receiptSubject), 'the receipt is in the conversation\'s language')
+  // Uppercase ids (macOS uuidgen) are the same key.
+  const upper = await curl(env, JSON.stringify({ ...agentRequest(), id: AGENT_ID.toUpperCase(), lang: 'ru', form_token: await oldToken() }))
+  assert.equal((await upper.json()).status, 'duplicate')
+})
+
+test('an agent request without an email, a message or its own id is refused with the field named', async () => {
+  const env = baseEnv()
+  const noEmail = agentRequest(); noEmail.contact = { message: noEmail.contact.message }
+  const r = await curl(env, JSON.stringify({ ...noEmail, form_token: await oldToken() }))
+  assert.equal(r.status, 400)
+  const body = await r.json()
+  assert.equal(body.error, 'invalid')
+  assert.deepEqual(body.issues, [{ path: 'contact.email', message: 'required' }])
+  const noId = agentRequest(); delete noId.id
+  assert.deepEqual((await (await curl(env, JSON.stringify({ ...noId, form_token: await oldToken() }))).json()).issues.map(i => i.path), ['id'], 'an agent must bring its idempotency key')
+  assert.deepEqual((await (await curl(env, JSON.stringify({ ...agentRequest({ goals: ['world_domination'] }), form_token: await oldToken() }))).json()).issues.map(i => i.path), ['goals'])
+  assert.deepEqual((await (await curl(env, JSON.stringify({ ...agentRequest({ source: { channel: 'bot' } }), form_token: await oldToken() }))).json()).issues.map(i => i.path), ['source.channel'])
+  assert.equal((await curl(env, JSON.stringify(agentRequest()))).status, 400, 'no token, no request: an agent is trusted no more than the form')
+  assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 0)
+})
+
+test('an oversized agent request is refused before it is read', async () => {
+  const env = baseEnv()
+  const big = agentRequest(); big.contact.message = 'x'.repeat(40 * 1024)
+  const r = await curl(env, JSON.stringify({ ...big, form_token: await oldToken() }))
+  assert.equal(r.status, 413)
+  assert.equal((await r.json()).error, 'too_large')
+  const long = agentRequest(); long.contact.message = 'y'.repeat(4001)
+  assert.deepEqual((await (await curl(env, JSON.stringify({ ...long, form_token: await oldToken() }))).json()).issues.map(i => i.path), ['contact.message'], 'under the byte cap, the message still has its own limit')
+})
+
+test('the same idempotency key twice is one request: a retry is a duplicate, other answers a conflict', async () => {
+  const env = baseEnv()
+  const token = await oldToken()
+  assert.equal((await curl(env, JSON.stringify({ ...agentRequest(), form_token: token }))).status, 201)
+  const again = await curl(env, JSON.stringify({ ...agentRequest(), form_token: token }))
+  assert.equal(again.status, 200)
+  assert.deepEqual(await again.json(), { id: AGENT_ID, status: 'duplicate', estimate: null })
+  assert.equal(env.EMAIL.sent.length, 2, 'one notification and one receipt, not two of each')
+  const changed = agentRequest(); changed.contact = { ...changed.contact, message: 'Something else entirely.' }
+  const conflict = await curl(env, JSON.stringify({ ...changed, form_token: await oldToken() }))
+  assert.equal(conflict.status, 409)
+  assert.equal((await conflict.json()).error, 'conflict')
+  const fresh = await curl(env, JSON.stringify({ ...agentRequest({ id: 'bbbbbbbb-2222-4222-8222-222222222222' }), form_token: token }))
+  assert.equal(fresh.status, 409, 'a new id cannot reuse a spent token')
+  assert.equal((await fresh.json()).error, 'form_used')
+  assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 1)
+})
+
+test('agent requests share the per-address rate limit with the form', async () => {
+  const env = baseEnv({ LEAD_LIMITER: limiter(5) })
+  const statuses = []
+  for (let i = 0; i < 6; i++) statuses.push((await curl(env, JSON.stringify({ ...agentRequest({ id: `cccccccc-3333-4333-8333-00000000000${i}` }), form_token: await oldToken() }))).status)
+  assert.deepEqual(statuses, [201, 201, 201, 201, 201, 429])
+  const limited = await curl(env, JSON.stringify({ ...agentRequest(), form_token: await oldToken() }))
+  assert.equal((await limited.json()).error, 'rate_limited')
+  assert.equal((await post(env, JSON.stringify({ ...agentRequest(), form_token: await oldToken() }), { headers: { 'cf-connecting-ip': '198.51.100.9' } })).status, 429, 'the form from the same address waits too')
+  assert.equal(env.LEAD_LIMITER.seen.get('lead:198.51.100.9'), 8)
+})
+
+test('a dry run checks everything and changes nothing: no row, no mail, the token not spent', async () => {
+  const env = baseEnv({ LEAD_LIMITER: limiter(5) })
+  const token = await oldToken()
+  const r = await curl(env, JSON.stringify({ ...agentRequest(), form_token: token }), { path: '/api/leads?dry_run=1' })
+  assert.equal(r.status, 200)
+  const body = await r.json()
+  assert.equal(body.status, 'valid')
+  assert.equal(body.dryRun, true)
+  assert.equal(body.lead.schema, 'lead/2')
+  assert.equal(body.lead.client, undefined, 'the preview carries no client hashes')
+  assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM leads').first()).n, 0)
+  assert.equal((await env.DB.prepare('SELECT COUNT(*) AS n FROM form_tokens').first()).n, 0)
+  assert.equal(env.EMAIL.sent.length, 0)
+  const bad = await curl(env, JSON.stringify({ ...agentRequest({ contact: { message: 'hi there' } }), form_token: token }), { path: '/api/leads?dry_run=1' })
+  assert.equal(bad.status, 400)
+  assert.deepEqual((await bad.json()).issues.map(i => i.path), ['contact.email'])
+  assert.equal((await curl(env, JSON.stringify(agentRequest()), { path: '/api/leads?dry_run=1' })).status, 400, 'a dry run needs a valid token too')
+  assert.equal((await curl(env, JSON.stringify({ ...agentRequest(), form_token: token }))).status, 201, 'the same token then sends the real request')
+  assert.equal(env.LEAD_LIMITER.seen.get('lead:198.51.100.9'), 4, 'dry runs count against the limit')
 })
 
 test('a no-JavaScript submission is redirected to the thanks page; an invalid one gets a readable page', async () => {

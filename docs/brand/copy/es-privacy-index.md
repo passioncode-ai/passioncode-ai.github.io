@@ -46,11 +46,11 @@ Descargar
 
 ↓
 
-AVISO DE PRIVACIDAD · VERSIÓN 2026-10-08
+AVISO DE PRIVACIDAD · VERSIÓN 2026-10-11
 
 # Aviso de privacidad
 
-passioncode.ai no tiene analítica, ni rastreadores publicitarios, ni cookies. Los únicos datos personales que recoge son los que escribes en el formulario de solicitud de /business/.
+passioncode.ai no tiene analítica, ni rastreadores publicitarios, ni cookies. Los únicos datos personales que recoge son los que envías en una solicitud desde /business/, con su formulario o con tu agente de programación.
 
 Este aviso también se publica en otros idiomas. Si una traducción difiere de esta versión en inglés, prevalece la versión en inglés.
 
@@ -58,17 +58,17 @@ Este aviso también se publica en otros idiomas. Si una traducción difiere de e
 
 PassionCode.ai, gestionado por Siarhei Sheleh, es el responsable del tratamiento de los datos descritos aquí. Contacto: commercial@passioncode.ai o contact@passioncode.ai.
 
-## Qué recoge el formulario
+## Qué recoge una solicitud
 
-Tus respuestas: objetivos, empresa, procesos, preferencias de configuración, rangos de presupuesto y plazos.
+Lo que escribes: qué deben hacer los agentes por ti y, si eliges uno, un objetivo principal. Una solicitud que envía tu agente de programación también puede incluir el tamaño de tu organización, los agentes y herramientas que usas, cuándo quieres empezar y el nombre con el que el agente se presenta.
 
-Tus datos de contacto: nombre, cargo, correo de trabajo y, si los das, teléfono y Telegram.
+Tu correo de trabajo.
 
 De la propia solicitud: el país que Cloudflare indica para tu conexión, la cadena de user-agent de tu navegador y un hash unidireccional de tu dirección IP que se usa para frenar abusos. La dirección IP en sí no se almacena.
 
 ## Para qué y con qué base legal
 
-Para responder a tu solicitud y preparar una propuesta: pasos que pides antes de un posible contrato (RGPD, art. 6.1.b). Las comprobaciones contra abusos se basan en nuestro interés legítimo en mantener el formulario utilizable (art. 6.1.f). Las novedades de producto se envían solo si marcas esa casilla, y puedes retirar ese consentimiento en cualquier momento (art. 6.1.a).
+Para responder a tu solicitud y preparar una propuesta: pasos que pides antes de un posible contrato (RGPD, art. 6.1.b); por eso el formulario no tiene casilla de consentimiento. Las comprobaciones contra abusos se basan en nuestro interés legítimo en mantener el formulario utilizable (art. 6.1.f). Las novedades de producto solo se envían a quien las pidió, y puede retirar ese consentimiento en cualquier momento (art. 6.1.a).
 
 ## Dónde se guardan
 
@@ -80,7 +80,7 @@ No vendemos los datos, no los compartimos con anunciantes ni los usamos para ent
 
 ## Durante cuánto tiempo
 
-La copia en Cloudflare se elimina 30 días después de llegar a nuestro backend. Una solicitud que no llevó a trabajar juntos se elimina o se anonimiza 24 meses después de su última actualización. Una solicitud que pasó a ser un contrato se conserva como parte de ese contrato.
+La copia en Cloudflare se elimina 30 días después de llegar a nuestro backend; una solicitud que aún no ha llegado sigue allí dentro del límite de 24 meses. Una solicitud que no llevó a trabajar juntos se elimina o se anonimiza 24 meses después de su última actualización. Una solicitud que pasó a ser un contrato se conserva como parte de ese contrato.
 
 ## Tus derechos
 
@@ -88,7 +88,7 @@ Puedes solicitar una copia de tus datos, su rectificación o supresión, una lim
 
 ## En tu navegador
 
-Mientras rellenas el formulario, tus respuestas sin enviar se guardan solo en el almacenamiento de tu propio navegador para que recargar la página no las pierda; se eliminan cuando se envía la solicitud.
+Mientras escribes en el formulario, tu texto sin enviar se guarda solo en el almacenamiento de tu propio navegador para que recargar la página no lo pierda; se elimina cuando se envía la solicitud. Un agente de programación que uses guarda su conversación contigo según sus propias condiciones, no las nuestras.
 
 ## Las apps
 

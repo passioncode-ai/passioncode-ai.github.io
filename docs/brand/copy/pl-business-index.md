@@ -62,7 +62,7 @@ Co dla Ciebie konfigurujemy
 
 Odpowiadamy w ciągu dwóch dni roboczych Zaprojektowane dla 1 do 1000 osób · szacunek przychodzi przed jakąkolwiek umową
 
-01Opowiedz namzespół, procesy, budżet
+01Opowiedz namkilka zdań albo pytania od Twojego agenta
 
 02Szacunekgodziny i pieniądze, ze wzorem
 
@@ -100,7 +100,7 @@ Twoje dane zostają na Twoich komputerach albo w Twojej chmurze. Przeczytaj wizj
 
 ## i co dostarczyli
 
-Inżynieria chce więcej agentów, finanse chcą wiedzieć, na co poszedł każdy wydany na nich dolar. Obie strony zadają to samo pytanie: ile kosztował każdy agent i co dostarczył? Kiedy odpowiedzią jest zapis, który otwierają obie, dodanie agenta staje się decyzją popartą liczbami.
+Finanse i inżynieria (CFO oraz CTO lub CIO) patrzą na agentów z dwóch stron: inżynieria chce ich więcej, finanse chcą wiedzieć, na co poszedł każdy wydany na nich dolar. Obie strony zadają to samo pytanie: ile kosztował każdy agent i co dostarczył? To jest ROI każdego agenta. Kiedy odpowiedzią jest zapis, który otwierają obie, dodanie agenta staje się decyzją popartą liczbami.
 
 01
 
@@ -128,7 +128,7 @@ KIERUNEK
 
 ### Co działa najlepiej i jak przenieść to na resztę?
 
-Wydatki i wyniki zestawione według projektu i procesu. Limity, które finanse ustalają raz, a agenci sprawdzają przed wydaniem pieniędzy; prośba powyżej limitu zostaje zapisana, a praca toczy się dalej. Sposób pracy, który działa, wdrożony jako miejsce pracy dla każdej roli.
+Wydatki i wyniki zestawione według projektu i procesu. Limity, które finanse ustalają raz i zapisują, a agenci sprawdzają ten zapis przed wydaniem pieniędzy; prośba powyżej limitu zostaje zapisana, a praca toczy się dalej. Sposób pracy, który działa, wdrożony jako miejsce pracy dla każdej roli.
 
 Szacunek i zapytanie
 
@@ -172,33 +172,69 @@ To szacunek, a nie obietnica. Pilotaż mierzy rzeczywistą liczbę względem Two
 
 04 / ZGŁOSZENIE
 
-## Opowiedz nam o swoim zespole
+## Napisz, co agenci
 
-Pięć krótkich kroków, około trzech minut. Szacunek widzisz na bieżąco, a my odpowiadamy w ciągu dwóch dni roboczych.
+## mają dla Ciebie robić
+
+Dwie krótkie drogi. Twój agent kodujący zada Ci kilka pytań i wyśle zapytanie, gdy powiesz „tak”, albo sam napiszesz kilka zdań. Odpowiadamy w ciągu dwóch dni roboczych.
+
+### Niech zapyta Twój agent kodujący
+
+Skopiuj ten prompt do Claude Code, Codex lub innego agenta kodującego. Zada Ci kilka pytań, po jednym, pokaże zapytanie i wyśle je dopiero po Twoim „tak”.
+
+Pomóż mi wysłać zapytanie do PassionCode.ai, które wprowadza agentów AI na komputery organizacji i pokazuje, ile kosztował każdy agent i co dostarczył. Rozmawiaj ze mną w moim języku. Zadawaj te pytania po jednym i czekaj na każdą odpowiedź; każde z pierwszych czterech mogę pominąć.
+
+Ile osób pracuje w naszej organizacji?
+
+Jakich agentów i narzędzi AI używamy teraz?
+
+Czego chcemy najbardziej: widzieć, ile kosztują nasi agenci i co dostarczają; zautomatyzować powtarzalne operacje; zbudować agentów do naszych własnych procesów; dostosować naszych istniejących agentów lub projekty; licencji komercyjnej; żeby PassionCode.ai hostowało i prowadziło całość; czy wdrożyć i przeszkolić nasz zespół?
+
+Kiedy chcemy zacząć?
+
+W kilku zdaniach: co agenci mają dla nas robić?
+
+Na jaki służbowy e-mail PassionCode.ai ma odpowiedzieć?
+
+Zaglądaj do konfiguracji tego komputera (na przykład to, co jest na nim zainstalowane: agenci i narzędzia) tylko wtedy, gdy najpierw mnie zapytasz i powiem „tak”. Nigdy nie umieszczaj w zapytaniu kodu, sekretów, kluczy, ścieżek plików, danych klientów ani nazw innych firm czy osób: opisz pracę ogólnymi słowami.
+
+Potem zapisz zapytanie jako JSON. Zostaw klucze dokładnie tak, jak są pokazane, używaj tylko wymienionych wartości pasujących do moich odpowiedzi i pomiń to, co pominąłem:
+
+{ "id": "a new random UUID v4: make it once, reuse it if you send again", "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans", "contact": { "email": "the work email", "message": "what agents should do, in my words, up to 4000 characters" }, "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"], "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" }, "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] }, "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" }, "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" } }
+
+Pobierz token formularza, odczekaj cztery sekundy, dodaj token do JSON jako „form_token”, zapisz jako request.json i sprawdź zapytanie. Sprawdzenie niczego nie zapisuje ani nie wysyła:
+
+curl -s https://passioncode.ai/api/leads/token sleep 4 curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json
+
+Jeśli odpowiedź wymienia „issues”, popraw je razem ze mną. Gdy powie „valid”, pokaż mi końcowy JSON i zapytaj: „Wysłać to do PassionCode.ai?” Wyślij dopiero po moim „tak”, raz, tym samym plikiem:
+
+curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json
+
+Powiedz mi, jaka przyszła odpowiedź. „received” lub „duplicate” znaczy, że zapytanie dotarło: podaj mi „id”; potem przyjdzie e-mail z potwierdzeniem. Każda inna odpowiedź: pokaż mi jej „message” i niczego więcej nie wysyłaj. Tylko jeśli żądanie nie dostało żadnej odpowiedzi, spróbuj jeszcze raz z tym samym plikiem, nigdy z nowym „id”. Jak PassionCode.ai przechowuje zapytanie: https://passioncode.ai/pl/privacy/
+
+Ten sam prompt jako zwykły tekst, do pobrania przez agenta: passioncode.ai/pl/business/agent-request.txt
+
+### Albo napisz sam
 
 Zostaw to pole puste
 
-Cele
+Co agenci mają robić w Twojej organizacji?
 
-Procesy
+Służbowy e-mail
 
-Konfiguracja
+Główny cel
 
-Budżet
+opcjonalnie
 
-Kontakt
+Wybierz…
 
-1 / 5
-
-Czego chcesz i kim jesteś
-
-Co chcesz osiągnąć? wybierz dowolne
+Widzieć, ile kosztują nasi agenci i co dostarczają
 
 Zautomatyzować powtarzalne operacje
 
 Zbudować agentów dla naszych własnych procesów
 
-Przekształcić naszych istniejących agentów lub projekty
+Dostosować naszych istniejących agentów lub projekty
 
 Licencja komercyjna na zamknięty produkt lub usługę
 
@@ -206,239 +242,7 @@ Licencja komercyjna na zamknięty produkt lub usługę
 
 Wdrożyć i przeszkolić nasz zespół
 
-Firma
-
-Strona internetowa
-
-opcjonalnie
-
-Branża
-
-Wybierz…
-
-Publikowanie aplikacji mobilnych i gier
-
-SaaS
-
-Agencja marketingowa lub reklamowa
-
-E-commerce i handel detaliczny
-
-Fintech i płatności
-
-Media i treści
-
-Studio programistyczne lub outsourcing
-
-Coś innego
-
-Jeśli coś innego
-
-opcjonalnie
-
-Wielkość firmy
-
-Wybierz…
-
-1–10 osób
-
-11–50
-
-51–200
-
-201–1,000
-
-Ponad 1 000
-
-Osoby, które będą pracować z agentami
-
-opcjonalnie
-
-2 / 5
-
-Procesy
-
-Które procesy zabierają czas Twojemu zespołowi? wybierz dowolne
-
-Wydania i publikacja w sklepach
-
-Materiały marketingowe i reklamy
-
-Wsparcie i wspólne skrzynki
-
-Analityka i raportowanie
-
-Inżynieria, code review i QA
-
-Sprzedaż i CRM
-
-Treści i SEO
-
-Finanse i back office
-
-Inne
-
-Coś konkretnego
-
-opcjonalnie
-
-Jak ta praca wygląda dziś?
-
-Głównie ręcznie
-
-Skrypty i integracje
-
-Asystenci czatowi używani doraźnie
-
-Agenci już prowadzą część tej pracy
-
-Narzędzia AI, których używa Twój zespół opcjonalnie
-
-Claude Code
-
-Codex
-
-Cursor
-
-ChatGPT lub czat Claude
-
-Inni agenci
-
-Jeszcze żadne
-
-Godziny tygodniowo na te procesy
-
-cały zespół
-
-Pełny koszt godziny
-
-Waluta
-
-USD
-
-EUR
-
-GBP
-
-PLN
-
-Wpisz godziny, koszt i sposób, w jaki praca wygląda dziś, aby zobaczyć szacunek.
-
-3 / 5
-
-Jak chcesz to uruchomić
-
-Kto się tym zajmuje?
-
-Uruchamiamy sami
-
-Wdrożenie z naszym wsparciem, razem z Twoim zespołem
-
-Budujecie i prowadzicie to za nas
-
-Gdzie ma działać?
-
-Na naszych komputerach
-
-Na naszym koncie w chmurze
-
-Hostowane przez PassionCode.ai
-
-Jeszcze nie zdecydowaliśmy
-
-Wymagania opcjonalnie
-
-Dane muszą zostać w naszej siedzibie
-
-Rezydencja danych w UE
-
-NDA przed szczegółami
-
-Logowanie jednokrotne
-
-Ścieżka audytu działań agentów
-
-4 / 5
-
-Budżet i terminy
-
-Miesięczny budżet na automatyzację
-
-Wybierz…
-
-Poniżej 1000 USD miesięcznie
-
-1000–5000 USD
-
-5000–20 000 USD
-
-20 000–50 000 USD
-
-Ponad 50 000 USD
-
-Jeszcze nie wiemy
-
-Jednorazowy budżet na wdrożenie
-
-Wybierz…
-
-Poniżej 5000 USD
-
-5000–20 000 USD
-
-20 000–50 000 USD
-
-Ponad 50 000 USD
-
-Jeszcze nie wiemy
-
-Kiedy chcesz zacząć?
-
-Wybierz…
-
-Jak najszybciej
-
-W tym kwartale
-
-W następnym kwartale
-
-Na razie się rozglądamy
-
-Przedziały pomagają nam tylko zaproponować właściwy zakres; szacunek powyżej to dobry punkt odniesienia.
-
-5 / 5
-
-Jak się z Tobą skontaktować
-
-Imię i nazwisko
-
-Stanowisko
-
-opcjonalnie
-
-Służbowy e-mail
-
-Telefon
-
-opcjonalnie
-
-Telegram
-
-opcjonalnie
-
-Coś jeszcze, co powinniśmy wiedzieć
-
-opcjonalnie
-
-Zgadzam się, aby PassionCode.ai przechowywało te odpowiedzi, by odpowiedzieć i przygotować propozycję, tak jak
-
-informacja o prywatności
-
-to opisuje
-
-Chcę od czasu do czasu dostawać nowości o produkcie.
-
-opcjonalnie
+To, co wysyłasz, przechowujemy tylko po to, by odpowiedzieć, tak jak informacja o prywatności to opisuje.
 
 Wyślij zapytanie →
 

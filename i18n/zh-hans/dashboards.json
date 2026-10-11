@@ -4,12 +4,10 @@
     "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | 你的本地智能体服务，汇聚一处",
     "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "在一个 Mac 窗口里查看你的本地智能体服务：看哪些需要处理，打开各自的仪表盘，也让你的智能体通过 MCP 使用同样的工具。",
     "One window for local agent services that speak fabric-service/0.1.": "一个窗口，汇集所有支持 fabric-service/0.1 的本地智能体服务。",
-    "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "你的智能体服务",
     "One place to look": "一处查看全部",
     "Download for macOS ↓": "下载 macOS 版 ↓",
     "View source ↗": "查看源代码 ↗",
-    "· macOS 13+ · Apple silicon + Intel": "· macOS 13+ · Apple silicon + Intel",
     "YOUR LOCAL SERVICES / TOGETHER": "你的本地服务 / 汇聚一处",
     "THE WINDOW": "窗口",
     "Every agent service": "每个智能体服务",
@@ -82,6 +80,11 @@
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "状态、花费与控制：每个智能体服务在做什么、花了多少以及它的更新，都在一个窗口里。第 4 步，见",
     "how it works": "工作原理",
     "All the tools": "全部工具",
-    "The skills kept current": "技能保持最新"
+    "The skills kept current": "技能保持最新",
+    "FABRIC DASHBOARDS · macOS + Windows + Linux": "FABRIC DASHBOARDS · macOS + Windows + Linux",
+    "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
+    "Windows and Linux": "Windows 和 Linux",
+    "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "同时提供了签名的 Windows 安装包（x64 和 arm64），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。目前仅 macOS 支持自动更新：Windows 和 Linux 需要你自行安装下一个版本。",
+    "Windows and Linux downloads": "下载 Windows 和 Linux 版本"
   }
 }

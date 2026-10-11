@@ -4,7 +4,7 @@ import policyFile from '../releases/products.json' with { type: 'json' }
 import bundled from '../releases/current.json' with { type: 'json' }
 import { fetchSnapshot, mergeSnapshots, validSnapshot } from './releases.js'
 import { liveRewriter } from './live.js'
-import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, formPage, formToObject, issueFormToken, issueMessage, knownFields, leadLocale, MAX_BODY_BYTES, platformSignature, retryDue, sha256, storeLead } from './leads.js'
+import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, FORM_TOKEN_MAX_AGE_MS, FORM_TOKEN_MIN_AGE_MS, formPage, formToObject, issueFormToken, issueMessage, knownFields, leadLocale, MAX_BODY_BYTES, platformSignature, retryDue, sha256, storeLead } from './leads.js'
 import { M } from './messages.js'
 import { SOURCE_LOCALE, t } from './i18n.js'
 import { BUSINESS_PAGE, localeOfPath, MISSING_PATH, NOT_FOUND_PAGE, notFoundPath } from './routing.js'
@@ -163,9 +163,31 @@ async function readCapped (request, limit) {
   return new TextDecoder().decode(bytes)
 }
 
+// A fresh form token for a client that has no page to read it from: a coding agent that the
+// visitor pasted the published prompt into (business/agent-request.txt). It is the same token the
+// page carries — signed render time, a nonce spent once, unusable for 3 s, dead after 24 h — and
+// the same per-address limiter guards it, so a script gains nothing it could not take by loading
+// /business/.
+async function formTokenFor (request, env) {
+  if (!env.FORM_TOKEN_SECRET) return json({ error: 'unavailable', message: t(SOURCE_LOCALE, M.unavailable, { email: COMMERCIAL }) }, 503, { 'Cache-Control': 'no-store' })
+  if (env.LEAD_LIMITER) {
+    const { success } = await env.LEAD_LIMITER.limit({ key: `token:${request.headers.get('cf-connecting-ip') || ''}` })
+    if (!success) return json({ error: 'rate_limited', message: t(SOURCE_LOCALE, M.rateLimited) }, 429, { 'Cache-Control': 'no-store' })
+  }
+  return json({ form_token: await issueFormToken(env.FORM_TOKEN_SECRET), usable_after_seconds: FORM_TOKEN_MIN_AGE_MS / 1000, expires_in_seconds: FORM_TOKEN_MAX_AGE_MS / 1000 }, 200, { 'Cache-Control': 'no-store' })
+}
+
+// What a dry run (`?dry_run=1`) answers: the request as it would be stored, without the
+// client's hashes. Nothing is written, spent or sent.
+const preview = lead => Object.fromEntries(Object.entries(lead).filter(([k]) => !['client', 'submittedAt'].includes(k)))
+
 async function intake (request, env, ctx) {
   const scripted = (request.headers.get('content-type') || '').includes('application/json')
-  const locale = leadLocale(new URL(request.url).searchParams.get('lang'))
+  const params = new URL(request.url).searchParams
+  const dryRun = ['1', 'true'].includes(params.get('dry_run'))
+  // The page names its language in the address (?lang=ru); an agent may name it in the body
+  // (`lang`), read once the body is.
+  let locale = leadLocale(params.get('lang'))
   // `text` is the English message (worker/messages.js); the visitor reads it in the form's
   // language, issues included (L10N-04).
   const fail = (status, error, text, rawIssues) => {
@@ -192,9 +214,14 @@ async function intake (request, env, ctx) {
 
   let input
   try { input = scripted ? knownFields(JSON.parse(raw)) : formToObject(new URLSearchParams(raw)) } catch { return fail(400, 'invalid', M.invalidBody) }
+  if (!params.get('lang') && typeof input.lang === 'string') locale = leadLocale(input.lang)
   // A field people never see; anything in it is a bot filling every input. Counted in the logs
   // so a rise (or a browser that autofills it) shows up.
-  if (input.pc_hp) { log('leads.honeypot'); return scripted ? json({ id: crypto.randomUUID(), status: 'received' }, 201) : Response.redirect(thanks(), 303) }
+  if (input.pc_hp) {
+    log('leads.honeypot')
+    if (dryRun) return json({ status: 'valid', dryRun: true }, 200, { 'Cache-Control': 'no-store' })
+    return scripted ? json({ id: crypto.randomUUID(), status: 'received' }, 201) : Response.redirect(thanks(), 303)
+  }
   const token = await checkFormToken(env.FORM_TOKEN_SECRET, input.form_token)
   if (token !== 'ok') {
     log('leads.token_refused', { reason: token })
@@ -211,6 +238,12 @@ async function intake (request, env, ctx) {
     locale
   })
   if (!ok) return fail(400, 'invalid', M.invalid, issues)
+  // A dry run has passed every check a real request passes (limit, size, trap, token, answers)
+  // and stops here: the token is not spent and nothing is stored or sent.
+  if (dryRun) {
+    log('leads.dry_run', { schema: lead.schema, channel: lead.source.channel || 'form' })
+    return json({ status: 'valid', dryRun: true, lead: preview(lead) }, 200, { 'Cache-Control': 'no-store' })
+  }
 
   let stored
   try {
@@ -229,7 +262,7 @@ async function intake (request, env, ctx) {
     return fail(503, 'unavailable', M.storeFailed)
   }
   if (stored === 'conflict') return fail(409, 'conflict', M.conflict)
-  log('leads.received', { id: lead.id, stored })
+  log('leads.received', { id: lead.id, stored, schema: lead.schema, channel: lead.source.channel || 'form' })
   if (stored === 'stored') ctx.waitUntil(deliver(env, lead.id).then(r => log('leads.delivered', { id: lead.id, ...r })).catch(e => log('leads.deliver_failed', { id: lead.id, error: String(e.message || e) })))
   return scripted
     ? json({ id: lead.id, status: stored === 'duplicate' ? 'duplicate' : 'received', estimate: lead.estimate ?? null }, stored === 'duplicate' ? 200 : 201, { 'Cache-Control': 'no-store' })
@@ -266,6 +299,12 @@ export default {
       if (request.method !== 'GET' && request.method !== 'HEAD') return withHeaders(json({ error: 'method_not_allowed' }, 405, { Allow: 'GET, HEAD' }))
       const snapshot = await currentSnapshot(env)
       return withHeaders(json(snapshot, 200, { 'Cache-Control': 'public, max-age=60', 'Access-Control-Allow-Origin': '*' }))
+    }
+
+    if (url.pathname === '/api/leads/token' || url.pathname === '/api/leads/token/') {
+      if (request.method !== 'GET') return withHeaders(json({ error: 'method_not_allowed' }, 405, { Allow: 'GET' }))
+      if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return withHeaders(json({ error: 'forbidden_origin' }, 403))
+      return withHeaders(await formTokenFor(request, env))
     }
 
     if (url.pathname === '/api/leads' || url.pathname === '/api/leads/') {

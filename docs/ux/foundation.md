@@ -31,9 +31,9 @@ Runs operations, product or engineering in a team of 10–1,000 and is accountab
 When my team spends hours on repeatable processes, I want to see an estimate and a credible path, so I can decide to pilot without a sales call first.
 
 ## ST-07 — Request a workplace
-Priority: must. As P-02, describe the team, processes, setup preference and budget, see the savings estimate with its formula, and send the request; get a receipt and a reply within two business days.
+Priority: must. As P-02, say in a few words what agents should do and where to reply (or let my coding agent ask me and send it after I say yes), see the estimate formula, and send the request; get a receipt and a reply within two business days.
 ## ST-08 — Contribute
 Priority: should. As P-01, find the repository, its gate and the pull-request route (CLA by opening the PR) without a private link.
 
 ## Motion
-Motion level 5 of 10 (sheleg-design, announced 2026-10-05: VARIANCE 7 / MOTION 5 / DENSITY 4 on the site's own locked tokens). Entrances reveal sections once on scroll (`assets/site.js`, ease-out, ≤ 560 ms) and never hide content without JavaScript; the onboarding rail is the one scroll-scrubbed instrument (`animation-timeline: view()`, linear); the hero map's links flow and its nodes float in loops whose first and last frames match. `prefers-reduced-motion: reduce`, no JavaScript and print all render the static page. Form steps change in 240 ms; no animation on keyboard-driven controls.
+Motion level 5 of 10 (sheleg-design, announced 2026-10-05: VARIANCE 7 / MOTION 5 / DENSITY 4 on the site's own locked tokens). Entrances reveal sections once on scroll (`assets/site.js`, ease-out, ≤ 560 ms) and never hide content without JavaScript; the onboarding rail is the one scroll-scrubbed instrument (`animation-timeline: view()`, linear); the hero map's links flow and its nodes float in loops whose first and last frames match. `prefers-reduced-motion: reduce`, no JavaScript and print all render the static page. No animation on keyboard-driven controls.

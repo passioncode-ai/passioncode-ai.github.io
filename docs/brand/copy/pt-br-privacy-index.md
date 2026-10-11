@@ -46,11 +46,11 @@ Obter as ferramentas
 
 ↓
 
-AVISO DE PRIVACIDADE · VERSÃO 2026-10-08
+AVISO DE PRIVACIDADE · VERSÃO 2026-10-11
 
 # Aviso de privacidade
 
-O passioncode.ai não tem analytics, rastreadores de publicidade nem cookies. Os únicos dados pessoais que ele coleta são os que você digita no formulário de solicitação em /pt-br/business/.
+O passioncode.ai não tem analytics, rastreadores de publicidade nem cookies. Os únicos dados pessoais que ele coleta são os que você envia numa solicitação a partir de /pt-br/business/, pelo formulário ou pelo seu agente de programação.
 
 Este aviso também é publicado em outros idiomas. Se uma tradução diferir desta versão em inglês, prevalece a versão em inglês.
 
@@ -58,17 +58,17 @@ Este aviso também é publicado em outros idiomas. Se uma tradução diferir des
 
 O PassionCode.ai, dirigido por Siarhei Sheleh, é o controlador dos dados descritos aqui. Contato: commercial@passioncode.ai ou contact@passioncode.ai.
 
-## O que o formulário coleta
+## O que uma solicitação coleta
 
-Suas respostas: objetivos, empresa, processos, preferências de configuração, faixas de orçamento e prazos.
+O que você escreve: o que os agentes devem fazer por você e, se escolher um, um objetivo principal. Uma solicitação enviada pelo seu agente de programação também pode trazer o tamanho da sua organização, os agentes e ferramentas que você usa, quando quer começar e o nome que o agente dá a si mesmo.
 
-Seus dados de contato: nome, cargo, e-mail de trabalho e, se você os informar, telefone e Telegram.
+Seu e-mail de trabalho.
 
 Da própria requisição: o país que o Cloudflare informa para a sua conexão, a string de user-agent do seu navegador e um hash irreversível do seu endereço IP, usado para impedir abusos. O endereço IP em si não é armazenado.
 
 ## Por quê, e com que base legal
 
-Para responder à sua solicitação e preparar uma proposta — providências que você pede antes de um possível contrato (GDPR, art. 6(1)(b)). As verificações contra abuso se baseiam no nosso legítimo interesse em manter o formulário utilizável (art. 6(1)(f)). Novidades de produto só são enviadas se você marcar essa opção, e você pode retirar esse consentimento a qualquer momento (art. 6(1)(a)).
+Para responder à sua solicitação e preparar uma proposta — providências que você pede antes de um possível contrato (GDPR, art. 6(1)(b)); por isso o formulário não tem caixa de consentimento. As verificações contra abuso se baseiam no nosso legítimo interesse em manter o formulário utilizável (art. 6(1)(f)). Novidades de produto só vão para quem pediu, e essas pessoas podem retirar o consentimento a qualquer momento (art. 6(1)(a)).
 
 ## Onde os dados ficam
 
@@ -80,7 +80,7 @@ Não vendemos os dados, não os compartilhamos com anunciantes nem os usamos par
 
 ## Por quanto tempo
 
-A cópia no Cloudflare é excluída 30 dias depois de chegar ao nosso backend. Uma solicitação que não resultou em trabalho conjunto é excluída ou anonimizada 24 meses após a sua última atualização. Uma solicitação que virou contrato é mantida como parte desse contrato.
+A cópia no Cloudflare é excluída 30 dias depois de chegar ao nosso backend; uma solicitação que ainda não chegou lá fica no Cloudflare dentro do limite de 24 meses. Uma solicitação que não resultou em trabalho conjunto é excluída ou anonimizada 24 meses após a sua última atualização. Uma solicitação que virou contrato é mantida como parte desse contrato.
 
 ## Seus direitos
 
@@ -88,7 +88,7 @@ Você pode pedir uma cópia dos seus dados, a correção ou a exclusão deles, u
 
 ## No seu navegador
 
-Enquanto você preenche o formulário, as respostas ainda não enviadas ficam guardadas apenas no armazenamento do seu próprio navegador, para que uma recarga não as perca; elas são removidas quando a solicitação é enviada.
+Enquanto você escreve no formulário, o texto ainda não enviado fica guardado apenas no armazenamento do seu próprio navegador, para que uma recarga não o perca; ele é removido quando a solicitação é enviada. Um agente de programação que você usa guarda a conversa com você conforme os termos dele, não os nossos.
 
 ## Os apps
 

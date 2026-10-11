@@ -56,7 +56,7 @@
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> 2営業日以内に返信します <span>1人から1000人までの規模を想定 · 見積もりは契約の前にお出しします</span></p>
  </div>
  <ol class="hero-funnel" aria-label="依頼からワークプレースまでの流れ">
-  <li><span>01</span><strong>ご相談</strong><small>チーム、プロセス、予算</small></li>
+  <li><span>01</span><strong>ご相談</strong><small>数行で、またはエージェントが質問</small></li>
   <li><span>02</span><strong>見積もり</strong><small>時間と金額、計算式つき</small></li>
   <li><span>03</span><strong>パイロット</strong><small>1つのプロセスを計測</small></li>
   <li><span>04</span><strong>展開</strong><small>役割ごとのワークプレース</small></li>
@@ -79,11 +79,11 @@
 </section>
 
 <section class="section" id="spend" aria-labelledby="spend-title">
- <div class="section-heading story-heading"><p class="section-number">02 / 財務とエンジニアリングのために</p><h2 id="spend-title">エージェントの<wbr>コストと<wbr>成果を<br>ひとつの<wbr>画面で</h2><p>エンジニアリングはエージェントを増やしたい。財務は、そこに使う1ドルごとに説明がほしい。どちらも問いは同じです。各エージェントにいくらかかり、何を生み出したのか。その答えが両者の開くひとつの記録になれば、エージェントを増やすことは数字に裏づけられた判断になります。</p></div>
+ <div class="section-heading story-heading"><p class="section-number">02 / 財務とエンジニアリングのために</p><h2 id="spend-title">エージェントの<wbr>コストと<wbr>成果を<br>ひとつの<wbr>画面で</h2><p>財務とエンジニアリング（CFO と、CTO または CIO）は、エージェントを別々の側から見ています。エンジニアリングはエージェントを増やしたい。財務は、そこに使う1ドルごとに説明がほしい。どちらも問いは同じです。各エージェントにいくらかかり、何を生み出したのか。これが各エージェントの ROI です。その答えが両者の開くひとつの記録になれば、エージェントを増やすことは数字に裏づけられた判断になります。</p></div>
  <ol class="work-cycle path-cycle">
   <li class="reveal"><span class="cycle-number">01</span><p class="availability">現在利用可能</p><h3>仕事は<wbr>エージェントを<wbr>通っていますか、<wbr>それとも横で<wbr>使っているだけですか？</h3><p>見積もりは、各プロセスがいまどう動いているかから始まります。手作業か、スクリプトか、ときどき使うチャットアシスタントか、すでにエージェントが一部を担っているかです。そのうえで、パイロットで1つのプロセスをお客様自身のベースラインと比較して計測します。</p><a href="#estimate">見積もり</a></li>
   <li class="reveal"><span class="cycle-number">02</span><p class="availability">現在利用可能</p><h3>コストに<wbr>見合う<wbr>エージェントは<wbr>どれですか？</h3><p>各 Mac で Fabric Dashboards が、各エージェントの今日、7日間、30日間の支出を、モデル別に、そのエージェント自身の予算と比べて表示します。数字はエージェント自身の利用レポートから取られ、誰にもわからないコストは $0 ではなく「不明」と表示されます。Switchboard は、Claude Code や Codex の各アカウントの利用上限をどれだけ使ったか、いつリセットされるかを表示するので、サブスクリプションを従量課金の呼び出しと分けて読めます。Observatory は、各プロジェクトで何が変わったかを証跡とともに表示します。</p><a href="/ja/dashboards/">Fabric Dashboards</a></li>
-  <li class="reveal"><span class="cycle-number">03</span><p class="availability">今後の方向性</p><h3>何が<wbr>最も<wbr>う<wbr>まく<wbr>いき、<wbr>それを<wbr>どう<wbr>残りに<wbr>広げますか？</h3><p>プロジェクトとワークフローごとにまとめた支出と成果。財務が一度決め、エージェントが支出の前に確認する上限。上限を超える依頼は記録として残り、その間も仕事は止まりません。うまくいく構成を、役割ごとのワークプレースとして展開します。</p><a href="#request">見積もりとご依頼</a></li>
+  <li class="reveal"><span class="cycle-number">03</span><p class="availability">今後の方向性</p><h3>何が<wbr>最も<wbr>う<wbr>まく<wbr>いき、<wbr>それを<wbr>どう<wbr>残りに<wbr>広げますか？</h3><p>プロジェクトとワークフローごとにまとめた支出と成果。財務が一度決めて記録に残し、エージェントが支出の前にその記録を確認する上限。上限を超える依頼は記録として残り、その間も仕事は止まりません。うまくいく構成を、役割ごとのワークプレースとして展開します。</p><a href="#request">見積もりとご依頼</a></li>
  </ol>
  <p class="section-note">対象はエージェントとワークフローであり、人のランク付けは行いません。</p>
 </section>
@@ -101,134 +101,60 @@
 </section>
 
 <section class="section request-section" id="request" aria-labelledby="request-title">
- <div class="section-heading story-heading"><p class="section-number">04 / ご依頼</p><h2 id="request-title">チームに<wbr>ついて<wbr>教えてください</h2><p>短い5つのステップで、所要時間は約3分です。入力しながら見積もりを確認でき、2営業日以内に返信します。</p></div>
- <form class="lead-form" id="lead-form" action="/api/leads?lang=ja" method="post" novalidate>
-  <input type="hidden" name="form_token" value="">
-  <div class="trap" aria-hidden="true"><label>この欄は空のままにしてください <input type="text" name="pc_hp" tabindex="-1" autocomplete="off"></label></div>
-  <ol class="form-progress" aria-hidden="true"><li>目標</li><li>プロセス</li><li>セットアップ</li><li>予算</li><li>連絡先</li></ol>
-
-  <fieldset class="form-step" data-step="1">
-   <legend><span>1 / 5</span> ご希望とご担当者について</legend>
-   <div class="field"><p class="field-label" id="goals-label">何を実現したいですか？<small>複数選択可</small></p>
-    <div class="choices" role="group" aria-labelledby="goals-label">
-     <label><input type="checkbox" name="goals" value="automate_operations"> 定期的な運用業務を自動化する</label>
-     <label><input type="checkbox" name="goals" value="custom_agents"> 自社のプロセス向けにエージェントを構築する</label>
-     <label><input type="checkbox" name="goals" value="convert_agents"> 既存のエージェントやプロジェクトを変換する</label>
-     <label><input type="checkbox" name="goals" value="commercial_license"> クローズドな製品やサービス向けの商用ライセンス</label>
-     <label><input type="checkbox" name="goals" value="managed_hosting"> PassionCode.ai にホスティングと運用を任せる</label>
-     <label><input type="checkbox" name="goals" value="team_onboarding"> チームのオンボーディングと教育</label>
-    </div></div>
-   <div class="field-row">
-    <label class="field">会社名 <input type="text" name="company.name" required maxlength="200" autocomplete="organization"></label>
-    <label class="field">ウェブサイト <small>任意</small> <input type="text" name="company.website" maxlength="300" inputmode="url" autocomplete="url" placeholder="example.com"></label>
+ <div class="section-heading story-heading"><p class="section-number">04 / ご依頼</p><h2 id="request-title">エージェントに<wbr>してほしい<wbr>ことを<br>教えてください</h2><p>短い方法が2つあります。コーディングエージェントがいくつか質問し、あなたが「はい」と答えたら依頼を送信します。あるいは、ご自身で数行書いてください。2営業日以内に返信します。</p></div>
+ <div class="request-paths">
+  <div class="request-card agent-request" id="agent-request">
+   <h3>コーディングエージェントに<wbr>聞いて<wbr>もらう</h3>
+   <p>このプロンプトを Claude Code、Codex などのコーディングエージェントに貼り付けてください。質問を1つずつ行い、依頼内容を見せ、あなたが「はい」と答えたときだけ送信します。</p>
+   <div class="agent-prompt" id="agent-prompt" tabindex="0" role="region" aria-label="コーディングエージェント用のプロンプト" data-copy-prompt>
+    <p>PassionCode.ai への依頼の送信を手伝ってください。PassionCode.ai は組織のマシンに AI エージェントを導入し、各エージェントにいくらかかり何を生み出したかを示します。私の言語で話してください。次の質問を1つずつ聞き、それぞれの答えを待ってください。最初の4つはどれでも飛ばせます。</p>
+    <ol>
+     <li>組織では何人が働いていますか？</li>
+     <li>今どの AI エージェントやツールを使っていますか？</li>
+     <li>いちばん望むことは何ですか：エージェントのコストと成果を見る、繰り返しの業務を自動化する、自社のプロセス向けにエージェントを作る、既存のエージェントやプロジェクトを対応させる、商用ライセンス、PassionCode.ai によるホスティングと運用、またはチームの導入支援とトレーニング？</li>
+     <li>いつ始めたいですか？</li>
+     <li>数文で：エージェントに何をしてほしいですか？</li>
+     <li>PassionCode.ai はどの勤務先メールアドレスに返信すればよいですか？</li>
+    </ol>
+    <p>このコンピューターの設定（どのエージェントやツールが入っているかなど）は、先に私に尋ねて「はい」と答えたときだけ確認してください。依頼には、コード、シークレット、キー、ファイルパス、顧客データ、他の会社や人の名前を決して入れず、仕事は一般的な言葉で説明してください。</p>
+    <p>次に、依頼を JSON で書いてください。キーは示されたとおりに残し、私の答えに合う一覧の値だけを使い、私が飛ばした項目は入れないでください：</p>
+    <pre><code>{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}</code></pre>
+    <p>フォームトークンを取得して4秒待ち、トークンを「form_token」として JSON に加え、request.json として保存して依頼をチェックしてください。チェックでは何も保存も送信もされません：</p>
+    <pre><code>curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json</code></pre>
+    <p>応答に「issues」があれば、私と一緒に直してください。「valid」と返ってきたら、最終的な JSON を見せて「これを PassionCode.ai に送信しますか？」と聞いてください。私が「はい」と答えたあとにだけ、1回、同じファイルで送信してください：</p>
+    <pre><code>curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json</code></pre>
+    <p>応答を教えてください。「received」または「duplicate」なら届いています。「id」を教えてください。確認メールが続いて届きます。それ以外の応答なら、その「message」を見せて、それ以上は何も送らないでください。リクエストにまったく応答がなかった場合に限り、同じファイルでもう1回だけ試してください。新しい「id」では決して送らないでください。PassionCode.ai による依頼の保管について：https://passioncode.ai/ja/privacy/</p>
    </div>
-   <div class="field-row">
-    <label class="field">業種 <select name="company.industry" required><option value="">選択してください…</option><option value="mobile_publishing">モバイルアプリ・ゲームのパブリッシング</option><option value="saas">SaaS</option><option value="marketing_agency">マーケティング・広告エージェンシー</option><option value="ecommerce">EC・小売</option><option value="fintech">フィンテック・決済</option><option value="media_content">メディア・コンテンツ</option><option value="dev_studio">ソフトウェアスタジオ・アウトソーシング</option><option value="other">その他</option></select></label>
-    <label class="field">その他の場合 <small>任意</small> <input type="text" name="company.industryOther" maxlength="120"></label>
-   </div>
-   <div class="field-row">
-    <label class="field">会社の規模 <select name="company.size" required><option value="">選択してください…</option><option value="1_10">1～10人</option><option value="11_50">11–50</option><option value="51_200">51–200</option><option value="201_1000">201–1,000</option><option value="1000_plus">1,000人超</option></select></label>
-    <label class="field">エージェントを使って働く人数 <small>任意</small> <input type="number" name="company.agentUsers" min="0" max="100000" inputmode="numeric"></label>
-   </div>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="2">
-   <legend><span>2 / 5</span> プロセス</legend>
-   <div class="field"><p class="field-label" id="areas-label">チームの時間を取っているプロセスはどれですか？<small>複数選択可</small></p>
-    <div class="choices" role="group" aria-labelledby="areas-label">
-     <label><input type="checkbox" name="processes.areas" value="release_publishing"> リリースとストア公開</label>
-     <label><input type="checkbox" name="processes.areas" value="marketing_creatives"> マーケティングクリエイティブと広告</label>
-     <label><input type="checkbox" name="processes.areas" value="support_inbox"> サポートと共有インボックス</label>
-     <label><input type="checkbox" name="processes.areas" value="analytics_reporting"> 分析とレポート</label>
-     <label><input type="checkbox" name="processes.areas" value="engineering_qa"> エンジニアリング、コードレビュー、QA</label>
-     <label><input type="checkbox" name="processes.areas" value="sales_crm"> 営業と CRM</label>
-     <label><input type="checkbox" name="processes.areas" value="content_seo"> コンテンツと SEO</label>
-     <label><input type="checkbox" name="processes.areas" value="back_office"> 経理とバックオフィス</label>
-     <label><input type="checkbox" name="processes.areas" value="other"> その他</label>
-    </div></div>
-   <label class="field">具体的な内容 <small>任意</small> <textarea name="processes.other" rows="2" maxlength="500" placeholder="例：12本のアプリを公開し、9言語でリリースノートを書いています"></textarea></label>
-   <div class="field"><p class="field-label" id="state-label">その作業は現在どのように行っていますか？</p>
-    <div class="choices choices-inline" role="radiogroup" aria-labelledby="state-label">
-     <label><input type="radio" name="processes.currentState" value="manual" required> ほぼ手作業</label>
-     <label><input type="radio" name="processes.currentState" value="scripts"> スクリプトと連携</label>
-     <label><input type="radio" name="processes.currentState" value="ai_tools"> チャットアシスタントを都度利用</label>
-     <label><input type="radio" name="processes.currentState" value="agents"> エージェントがすでに一部を担当</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="tools-label">チームが使っている AI ツール <small>任意</small></p>
-    <div class="choices choices-inline" role="group" aria-labelledby="tools-label">
-     <label><input type="checkbox" name="processes.tools" value="claude_code"> Claude Code</label>
-     <label><input type="checkbox" name="processes.tools" value="codex"> Codex</label>
-     <label><input type="checkbox" name="processes.tools" value="cursor"> Cursor</label>
-     <label><input type="checkbox" name="processes.tools" value="chatgpt"> ChatGPT または Claude のチャット</label>
-     <label><input type="checkbox" name="processes.tools" value="other_agents"> その他のエージェント</label>
-     <label><input type="checkbox" name="processes.tools" value="none"> まだありません</label>
-    </div></div>
-   <div class="field-row field-row-3">
-    <label class="field">これらのプロセスにかかる週あたりの時間 <small>チーム全体</small> <input type="number" name="processes.hoursPerWeek" min="0" max="10000" step="1" inputmode="decimal"></label>
-    <label class="field">1時間あたりの総コスト <input type="number" name="processes.hourlyCost" min="0" max="10000" step="1" inputmode="decimal"></label>
-    <label class="field">通貨 <select name="processes.currency"><option value="USD">USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option><option value="PLN">PLN</option></select></label>
-   </div>
-   <output class="estimate-output" name="estimate" for="lead-form" aria-live="polite"><span class="estimate-empty">時間、コスト、現在の作業の進め方を入力すると、見積もりが表示されます。</span></output>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="3">
-   <legend><span>3 / 5</span> セットアップの希望</legend>
-   <div class="field"><p class="field-label" id="mode-label">セットアップは誰が行いますか？</p>
-    <div class="choices" role="radiogroup" aria-labelledby="mode-label">
-     <label><input type="radio" name="setup.mode" value="self_serve" required> 当社で構築する</label>
-     <label><input type="radio" name="setup.mode" value="guided"> チームと一緒にガイド付きオンボーディング</label>
-     <label><input type="radio" name="setup.mode" value="done_for_you"> お任せで構築・運用してほしい</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="hosting-label">どこで動かしますか？</p>
-    <div class="choices choices-inline" role="radiogroup" aria-labelledby="hosting-label">
-     <label><input type="radio" name="setup.hosting" value="own_machines" required> 自社のコンピューター</label>
-     <label><input type="radio" name="setup.hosting" value="own_cloud"> 自社のクラウドアカウント</label>
-     <label><input type="radio" name="setup.hosting" value="passioncode_cloud"> PassionCode.ai のホスティング</label>
-     <label><input type="radio" name="setup.hosting" value="undecided"> 未定</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="constraints-label">要件 <small>任意</small></p>
-    <div class="choices choices-inline" role="group" aria-labelledby="constraints-label">
-     <label><input type="checkbox" name="setup.constraints" value="on_prem"> データは自社の施設内にとどめる必要がある</label>
-     <label><input type="checkbox" name="setup.constraints" value="eu_residency"> EU データレジデンシー</label>
-     <label><input type="checkbox" name="setup.constraints" value="nda"> 詳細の前に NDA</label>
-     <label><input type="checkbox" name="setup.constraints" value="sso"> シングルサインオン</label>
-     <label><input type="checkbox" name="setup.constraints" value="audit_log"> エージェントの操作の監査証跡</label>
-    </div></div>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="4">
-   <legend><span>4 / 5</span> 予算と時期</legend>
-   <div class="field-row field-row-3">
-    <label class="field">自動化の月額予算 <select name="budget.monthly" required><option value="">選択してください…</option><option value="lt_1k">月額$1,000未満</option><option value="1k_5k">$1,000–5,000</option><option value="5k_20k">$5,000–20,000</option><option value="20k_50k">$20,000–50,000</option><option value="50k_plus">月額$50,000超</option><option value="unsure">まだ決まっていない</option></select></label>
-    <label class="field">一度きりのセットアップ予算 <select name="budget.setup" required><option value="">選択してください…</option><option value="lt_5k">$5,000未満</option><option value="5k_20k">$5,000–20,000</option><option value="20k_50k">$20,000–50,000</option><option value="50k_plus">月額$50,000超</option><option value="unsure">まだ決まっていない</option></select></label>
-    <label class="field">いつから始めたいですか？<select name="budget.timeline" required><option value="">選択してください…</option><option value="asap">できるだけ早く</option><option value="this_quarter">今四半期</option><option value="next_quarter">来四半期</option><option value="exploring">今は検討中</option></select></label>
-   </div>
-   <p class="field-hint">範囲は、適切な提案をするための目安にすぎません。上の見積もりが参考になります。</p>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="5">
-   <legend><span>5 / 5</span> ご連絡方法</legend>
-   <div class="field-row">
-    <label class="field">お名前 <input type="text" name="contact.name" required maxlength="120" autocomplete="name"></label>
-    <label class="field">役職 <small>任意</small> <input type="text" name="contact.role" maxlength="120" autocomplete="organization-title"></label>
-   </div>
-   <div class="field-row field-row-3">
-    <label class="field">勤務先のメールアドレス <input type="email" name="contact.email" required maxlength="254" autocomplete="email"></label>
-    <label class="field">電話番号 <small>任意</small> <input type="tel" name="contact.phone" maxlength="40" autocomplete="tel"></label>
-    <label class="field">Telegram <small>任意</small> <input type="text" name="contact.telegram" maxlength="64" placeholder="@name"></label>
-   </div>
-   <label class="field">その他お伝えしたいこと <small>任意</small> <textarea name="contact.message" rows="4" maxlength="4000"></textarea></label>
-   <label class="consent"><input type="checkbox" name="consent.privacy" value="yes" required> PassionCode.ai が、返信と提案書の作成のためにこれらの回答を保管することに同意します。内容は<a href="/ja/privacy/">プライバシー通知</a>に記載されています</label>
-   <label class="consent"><input type="checkbox" name="consent.marketing" value="yes"> 製品ニュースを時々受け取る。<small>任意</small></label>
-  </fieldset>
-
-  <div class="form-nav">
-   <button type="button" class="button button-secondary" data-action="back" hidden>戻る</button>
-   <button type="button" class="button button-primary" data-action="next" hidden>次へ <span aria-hidden="true">→</span></button>
-   <button type="submit" class="button button-primary" data-action="submit">依頼を送信 <span aria-hidden="true">→</span></button>
+   <p class="section-note">エージェントが取得できるプレーンテキスト版：<a href="/ja/business/agent-request.txt">passioncode.ai/ja/business/agent-request.txt</a></p>
   </div>
-  <p class="form-status" role="status" aria-live="polite"></p>
- </form>
+  <div class="request-card">
+   <h3>自分で<wbr>書く</h3>
+   <form class="lead-form" id="lead-form" action="/api/leads?lang=ja" method="post" novalidate>
+    <input type="hidden" name="form_token" value="">
+    <div class="trap" aria-hidden="true"><label>この欄は空のままにしてください <input type="text" name="pc_hp" tabindex="-1" autocomplete="off"></label></div>
+    <label class="field">組織でエージェントに何をしてほしいですか？<textarea name="contact.message" rows="5" required minlength="3" maxlength="4000" placeholder="例：12本のアプリを公開しており、各エージェントのコストと成果を見たい"></textarea></label>
+    <label class="field">勤務先のメールアドレス <input type="email" name="contact.email" required maxlength="254" autocomplete="email"></label>
+    <label class="field">主な目的 <small>任意</small> <select name="goals"><option value="">選択してください…</option><option value="cost_and_results">エージェントのコストと成果を見る</option><option value="automate_operations">定期的な運用業務を自動化する</option><option value="custom_agents">自社のプロセス向けにエージェントを構築する</option><option value="convert_agents">既存のエージェントやプロジェクトを対応させる</option><option value="commercial_license">クローズドな製品やサービス向けの商用ライセンス</option><option value="managed_hosting">PassionCode.ai にホスティングと運用を任せる</option><option value="team_onboarding">チームのオンボーディングと教育</option></select></label>
+    <p class="field-hint">送信内容は返信のためだけに保管します。詳しくは<a href="/ja/privacy/">プライバシー通知</a>をご覧ください。</p>
+    <div class="form-nav"><button type="submit" class="button button-primary" data-action="submit">依頼を送信 <span aria-hidden="true">→</span></button></div>
+    <p class="form-status" role="status" aria-live="polite"></p>
+   </form>
+  </div>
+ </div>
  <p class="section-note">メールをご希望の場合は、次の宛先へ：<a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a>。</p>
 </section>
 

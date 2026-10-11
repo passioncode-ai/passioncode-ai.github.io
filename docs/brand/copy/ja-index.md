@@ -62,7 +62,7 @@ Fabric は、プロジェクトとそのエージェントのための拠点で�
 
 ↗
 
-AGPL-3.0 のオープンソース Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.6.7 · Observatory 0.21.0
+AGPL-3.0 のオープンソース Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.1 · Observatory 0.22.0
 
 アカウント
 
@@ -236,9 +236,9 @@ Fabric Dashboards
 
 リリース
 
-0.6.7
+0.7.1
 
-· macOS · ステップ4
+· macOS + Windows + Linux · ステップ4
 
 ↗
 
@@ -248,7 +248,7 @@ Project Observatory
 
 リリース
 
-0.21.0
+0.22.0
 
 · macOS + Linux · ステップ5
 
@@ -260,7 +260,7 @@ Gmail と Cloudflare のメールを1つのリストに集約し、重要なも�
 
 開発プレビュー版
 
-0.14.0
+0.14.1
 
 · macOS · ステップ5
 

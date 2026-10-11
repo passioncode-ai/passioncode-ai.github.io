@@ -1,8 +1,8 @@
 Contract: brand-contract v1
 # Narrative for organizations: the message house for /business/
 
-Status: **draft for the operator**, written 2026-10-11 at the operator's request ("think how to package this narrative
-for us"). It extends the approved site narrative ([narrative.md](narrative.md), §5 row `/business/`) for one reader:
+Status: **applied**, written 2026-10-11 at the operator's request ("think how to package this narrative for us"); the
+operator answered the six open decisions the same day (§8, source: operator, 2026-10-11). It extends the approved site narrative ([narrative.md](narrative.md), §5 row `/business/`) for one reader:
 the organization that pays for agents. [voice.md](voice.md) still says how it sounds, [terminology.md](terminology.md)
 holds the words and [facts.md](facts.md) every number. A claim below without a receipt beside it is not published.
 
@@ -26,8 +26,9 @@ while each one's spend sits next to what it delivered. That makes finance a cham
 opposite of the usual role finance plays in an AI purchase.
 
 What the page may not do with this: name roles as ranks to please ("the CFO becomes the person in charge of AI"),
-or write the CEO (`\bCEO\b` is reserved for /fabric/, D-T5, `scripts/check-site.mjs`). The public page says
-"finance" and "engineering"; the roles are named here.
+or write the CEO (`\bCEO\b` is reserved for /fabric/, D-T5, `scripts/check-site.mjs`). The body text says "finance"
+and "engineering"; one place on /business/ (#spend) adds the job titles once, "(the CFO and the CTO or CIO)" (ON-2;
+`scripts/check-site.mjs` counts it).
 
 ## 2. The one question
 
@@ -80,20 +81,26 @@ machine each (Dashboards on macOS), and spend appears only for agents that repor
 - **Section 03 / THE ESTIMATE** replaces "02 / WHAT IT SAVES" ("savings" is banned in [terminology.md](terminology.md)).
 - **FAQ:** "Is this a way to watch people?" — "No. The analytics are about agents and workflows: what each agent
   cost and what it delivered. They never rank people."
-- The form and the estimate are unchanged (`scripts/check-site.mjs` keeps the form equal to `assets/lead-options.js`
-  and the Worker).
+- **The ROI of each agent** (ON-1): the #spend introduction names the one question "the ROI of each agent"; no ROI
+  number, payback period or savings figure appears.
+- **04 / REQUEST** (ON-3, since 2026-10-11): two short ways, the agent first. A prompt the visitor copies into a coding
+  agent, which asks one question at a time and sends the request only after an explicit yes (also published as
+  `/business/agent-request.txt`); and a form with three fields (what agents should do, the work email, an optional
+  goal). The goal list opens with "See what our agents cost and deliver", the champion's signal to the commercial
+  mailbox. The estimate is unchanged.
 
 ## 6. What we will not say
 
 | Not this | Why | Instead |
 |---|---|---|
-| ROI, return on AI spend, "pays off", "earns" | banned: the estimate cannot keep a return promise ([terminology.md](terminology.md)) | what each agent cost and what it delivered; an estimate the pilot measures |
+| a ROI number, payback period, savings figure or "pays off" we cannot prove | the estimate cannot keep a return promise; the word "ROI" itself is allowed since ON-1 | "the ROI of each agent: what it cost and what it delivered"; a pilot measured against the customer's own baseline |
 | "Spend as much as you like" | an open cheque reads as a promise and erases who decides | add agents while each one's spend sits next to what it delivered |
 | Which employees are slow; the gap between the best teams and the rest; adoption by person | analytics are about agents and outcomes, never surveillance of people | which agents and workflows work best, and how a working setup reaches the rest |
 | "The CFO becomes the person in charge of AI" | assigns a role in the customer's company; "CEO" is reserved for /fabric/ | finance and engineering agree on one record |
 | Single source of truth; AI-first transformation | jargon; "AI transformation" is banned | one record both open; the work runs through agents |
 | Token prices fall while total spend rises (Jevons) as a stated fact | true in the market review, but we hold no dated source of our own | keep for conversation; publish only with a cited source |
-| Our own estate's spend ceiling as a public number | the operator's private operating decision, and not yet enforced by a product | "limits set once", labelled direction |
+| Our own spend levels: the organization ceiling, per-project limits, any number of ours | never published (ON-4), whether or not a product enforces them | "limits finance sets once", labelled direction (ON-6) |
+| Team-level views, aggregates of several people | public copy stays at the agent and the workflow (ON-5) | which agents and workflows work best |
 
 ## 7. Objections and answers
 
@@ -106,16 +113,18 @@ machine each (Dashboards on macOS), and spend appears only for agents that repor
 | "Limits will slow the work down." | In the direction we build, a request above a limit becomes a record someone answers while the agent goes on with other work; nothing waits on a chat message (labelled direction). |
 | "Does our data leave?" | Spend, usage and findings are read on your machines; the edition keeps data on your machines or in your own cloud. |
 
-## 8. Open decisions for the operator
+## 8. Operator decisions (2026-10-11)
 
-| ID | Decision | Recommendation |
+Source: the operator, answering ON-1…ON-6 directly on 2026-10-11. Each is applied in the change named beside it.
+
+| ID | Decision (operator, 2026-10-11) | Applied |
 |---|---|---|
-| ON-1 | Keep the ban on "ROI" / "return", or allow "return on AI spend" under a criterion | **Keep the ban.** If it is ever allowed, only as a measured figure from a finished pilot, with both sides (cost and the delivered result) taken against the customer's baseline and the receipt beside it; never as a forecast. Not applied |
-| ON-2 | Name the champion's roles on the page (CFO, CTO/CIO) or keep "finance" and "engineering" | **Keep "finance" and "engineering"** on the page: it avoids titles that differ by company size, and the CEO check; roles stay in this file and in conversations |
-| ON-3 | Add a form goal such as "See what our agents cost and deliver" | **Yes, in a separate change**: it touches `assets/lead-options.js`, the Worker's accepted values and every catalog, and gives the commercial mailbox the champion's signal |
-| ON-4 | Publish our own spend levels (organization total, alert at 80%) as a public proof once a product enforces them | **Yes, after** a product enforces them (knowledge base `authority.md`, "each product's part"); until then, "limits set once" stays direction and no number is public |
-| ON-5 | Team-level views (aggregates of several people) in public copy | **Not now**: public copy stays at agents, workflows and projects until the knowledge base's thresholds and consent decisions for team views are made |
-| ON-6 | The answer to the market review's open question ("what else makes finance the owner of AI?") | Our answer is **authority as a record**: finance sets the levels once (organization, project, task), agents check them before they spend, approvals never block. Publish it as **direction** only, when ON-4 is met |
+| ON-1 | The word "ROI" is **allowed**. Truth still applies: never state a ROI number, payback period or savings figure we cannot prove; a pilot measured against the customer's baseline is the honest way to show it. "See the ROI of each agent: what it cost and what it delivered" is the model use | /business/ #spend; §6; [terminology.md](terminology.md) estimate row |
+| ON-2 | **Both**: the body text says "finance and engineering"; one place on /business/ adds the job titles once, "(the CFO and the CTO or CIO)" | /business/ #spend; §1 |
+| ON-3 | The request, **without a pile of fields**: every form down to the minimum, and a copy-prompt the visitor pastes into a coding agent (Claude Code, Codex or another) that asks the questions and sends the request. Decided with it: the agent POSTs to the existing `/api/leads`, shows the person the final request first and sends only after an explicit yes. New goal "See what our agents cost and deliver" | /business/ #request; SCN-014, SCN-022; `worker/leads.js` lead/2 |
+| ON-4 | **Never** publish our own spend levels (the monthly ceiling, per-project limits) | §6; `scripts/check-site.mjs` refuses a dollar limit of ours on the public pages |
+| ON-5 | **No team-level views** in public copy; the unit is the agent and the workflow only | §3, §6; `scripts/check-site.mjs` |
+| ON-6 | "Finance sets the limits once as a record agents check" is published **only as direction**, labelled as direction | /business/ #spend stage 03 (DIRECTION) |
 
 ## 9. Checks
 

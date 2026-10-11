@@ -1,29 +1,28 @@
-// #region business-form — docs: docs/ux/scenarios.md#scn-014-request-an-ai-workplace-for-a-company
-// The /business/ request form, enhanced. Without this script the form is one long page that
-// posts to /api/leads and lands on /business/thanks/. With it: five steps with a progress
-// bar, the savings estimate as you type, validation per step, a draft kept in this browser,
-// and a JSON submission that stays on the page.
-import { estimate, formatMoney } from './estimate.js'
+// #region business-form — docs: docs/ux/scenarios.md#scn-014-request-an-ai-workplace-for-an-organization
+// The /business/ short request form, enhanced. Without this script the form posts its three
+// fields to /api/leads and lands on /business/thanks/. With it: the text kept in this browser
+// until it is sent, the fields checked before sending, one request id per draft (a resend after
+// a lost answer is the same request), and a JSON submission that stays on the page.
+// The agent prompt beside the form (SCN-022) is copied by assets/site.js.
 
 // What this script says, in the page's language (<html lang>): English in assets/messages.js,
 // translated through assets/i18n.js (generated from i18n/<locale>/_scripts.json).
 import { M } from './messages.js'
-import { LOCALES, resolveLocale, t as translate } from './i18n.js'
+import { resolveLocale, t as translate } from './i18n.js'
 const locale = resolveLocale(document.documentElement.lang)
 const t = (message, params) => translate(locale, message, params)
 
 const form = document.getElementById('lead-form')
-const DRAFT_KEY = 'passioncode.business.draft.v1'
-const ID_KEY = 'passioncode.business.request-id.v1'
-const ARRAYS = new Set(['goals', 'processes.areas', 'processes.tools', 'setup.constraints'])
+// v2: the short form's draft; a draft of the former five-step form (v1) is not restored.
+const DRAFT_KEY = 'passioncode.business.draft.v2'
+const ID_KEY = 'passioncode.business.request-id.v2'
+const FIELDS = ['contact.message', 'contact.email', 'goals']
 
 const storage = {
   get () { try { return JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null') } catch { return null } },
   set (value) { try { localStorage.setItem(DRAFT_KEY, JSON.stringify(value)) } catch {} },
   clear () { try { localStorage.removeItem(DRAFT_KEY); localStorage.removeItem(ID_KEY) } catch {} }
 }
-// One id per request, kept with the draft: a resend after a lost answer is recognised by the
-// Worker as the same request, not a second one.
 let memoryId
 function requestId () {
   try {
@@ -34,158 +33,61 @@ function requestId () {
     return id
   } catch { return (memoryId ??= crypto.randomUUID()) }
 }
-const SAFE_NAME = /^[a-z]+(?:\.[a-zA-Z]+)*$/
 
-// The form's answers as the lead/1 shape the Worker validates (worker/leads.js).
+const field = name => form.elements[name]
+// The lead/2 shape the Worker validates (worker/leads.js buildShortLead).
 function collect () {
-  const out = {}
-  for (const element of form.elements) {
-    if (!element.name || element.name === 'form_token' || element.name === 'pc_hp' || element.disabled || !SAFE_NAME.test(element.name)) continue
-    if ((element.type === 'checkbox' || element.type === 'radio') && !element.checked) continue
-    const path = element.name.split('.')
-    let node = out
-    for (const part of path.slice(0, -1)) node = Object.hasOwn(node, part) ? node[part] : (node[part] = {})
-    const leaf = path.at(-1)
-    let value = element.value
-    if (element.name === 'consent.privacy' || element.name === 'consent.marketing') value = true
-    if (ARRAYS.has(element.name)) (node[leaf] ??= []).push(value)
-    else node[leaf] = value
-  }
-  for (const name of ARRAYS) {
-    const [a, b] = name.split('.')
-    if (b) { out[a] ??= {}; out[a][b] ??= [] } else out[a] ??= []
-  }
-  out.consent ??= {}
-  out.consent.privacy = out.consent.privacy === true
-  out.consent.marketing = out.consent.marketing === true
   const params = new URLSearchParams(location.search)
-  out.source = { referrer: document.referrer || '', utm: Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, params.get(`utm_${k}`) || ''])) }
-  return out
+  const goal = field('goals').value
+  return {
+    contact: { message: field('contact.message').value, email: field('contact.email').value },
+    goals: goal ? [goal] : [],
+    source: { channel: 'form', referrer: document.referrer || '', utm: Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, params.get(`utm_${k}`) || ''])) }
+  }
 }
-
 function restore (draft) {
   if (!draft) return
-  for (const element of form.elements) {
-    if (!element.name || !(element.name in draft)) continue
-    const saved = draft[element.name]
-    if (element.type === 'checkbox' || element.type === 'radio') element.checked = [].concat(saved).includes(element.value)
-    else element.value = saved
-  }
+  for (const name of FIELDS) if (typeof draft[name] === 'string' && field(name)) field(name).value = draft[name]
 }
-function snapshot () {
-  const draft = {}
-  for (const element of form.elements) {
-    if (!element.name || element.name === 'form_token' || element.name === 'pc_hp' || element.type === 'submit' || element.type === 'button') continue
-    if (element.type === 'checkbox' || element.type === 'radio') {
-      if (element.checked) draft[element.name] = element.type === 'checkbox' ? [...(draft[element.name] || []), element.value] : element.value
-    } else if (element.value) draft[element.name] = element.value
-  }
-  return draft
-}
+const snapshot = () => Object.fromEntries(FIELDS.map(name => [name, field(name).value]).filter(([, v]) => v))
 
-// ---- estimate -------------------------------------------------------------------------
-const output = form.querySelector('.estimate-output')
-function renderEstimate () {
-  const state = form.querySelector('[name="processes.currentState"]:checked')?.value
-  const e = estimate({
-    hoursPerWeek: form.elements['processes.hoursPerWeek'].value,
-    hourlyCost: form.elements['processes.hourlyCost'].value,
-    currentState: state,
-    currency: form.elements['processes.currency'].value
-  })
-  output.classList.toggle('has-value', Boolean(e))
-  output.replaceChildren()
-  if (!e) {
-    const span = document.createElement('span')
-    span.className = 'estimate-empty'
-    span.textContent = t(M.estimateEmpty)
-    output.append(span)
-    return
-  }
-  const lead = document.createElement('span')
-  lead.textContent = t(M.estimateLead)
-  const figure = document.createElement('strong')
-  figure.textContent = t(M.estimateFigure, { low: formatMoney(e.monthlySavings[0], e.currency, LOCALES[locale].intl), high: formatMoney(e.monthlySavings[1], e.currency, LOCALES[locale].intl) })
-  const detail = document.createElement('small')
-  detail.textContent = t(M.estimateDetail, { low: e.hoursSavedPerMonth[0].toLocaleString(LOCALES[locale].intl), high: e.hoursSavedPerMonth[1].toLocaleString(LOCALES[locale].intl) })
-  output.append(lead, figure, detail)
-}
-
-// ---- steps and validation ----------------------------------------------------------------
-const steps = [...form.querySelectorAll('.form-step')]
-const progress = [...form.querySelectorAll('.form-progress li')]
-const back = form.querySelector('[data-action="back"]')
-const next = form.querySelector('[data-action="next"]')
 const submit = form.querySelector('[data-action="submit"]')
 const status = form.querySelector('.form-status')
-let current = 0
 
-function clearErrors (scope) {
-  for (const e of scope.querySelectorAll('.field-error')) e.remove()
-  for (const e of scope.querySelectorAll('[aria-invalid]')) e.removeAttribute('aria-invalid')
-  for (const e of scope.querySelectorAll('.is-invalid')) e.classList.remove('is-invalid')
+function clearErrors () {
+  for (const e of form.querySelectorAll('.field-error')) e.remove()
+  for (const e of form.querySelectorAll('[aria-invalid]')) { e.removeAttribute('aria-invalid'); e.removeAttribute('aria-describedby') }
 }
 function flag (target, message) {
   const note = document.createElement('span')
   note.className = 'field-error'
-  note.id = `err-${Math.random().toString(36).slice(2, 8)}`
+  note.id = `err-${target.name.replace(/\W/g, '-')}`
   note.textContent = message
-  if (target.matches('input, select, textarea')) {
-    target.setAttribute('aria-invalid', 'true')
-    target.setAttribute('aria-describedby', note.id)
-    target.closest('label')?.append(note)
-  } else {
-    target.classList.add('is-invalid')
-    target.after(note)
-  }
+  target.setAttribute('aria-invalid', 'true')
+  target.setAttribute('aria-describedby', note.id)
+  target.closest('label')?.append(note)
 }
-function validate (step) {
-  clearErrors(step)
+function validate () {
+  clearErrors()
   let first = null
-  const fail = (target, message, focus) => { flag(target, message); first ??= focus || target }
-  for (const group of step.querySelectorAll('.choices[role="group"]')) {
-    const name = group.querySelector('input')?.name
-    if ((name === 'goals' || name === 'processes.areas') && !group.querySelector('input:checked')) fail(group, t(M.chooseAny), group.querySelector('input'))
-  }
-  for (const group of step.querySelectorAll('.choices[role="radiogroup"]')) {
-    if (group.querySelector('input[required]') && !group.querySelector('input:checked')) fail(group, t(M.chooseOne), group.querySelector('input'))
-  }
-  for (const field of step.querySelectorAll('input[required]:not([type="radio"]):not([type="checkbox"]), select[required]')) {
-    if (!field.value.trim()) fail(field, t(M.required))
-    else if (field.type === 'email' && !field.validity.valid) fail(field, t(M.email))
-  }
-  const consent = step.querySelector('[name="consent.privacy"]')
-  if (consent && !consent.checked) fail(consent.closest('.consent'), t(M.consent), consent)
+  const fail = (target, message) => { flag(target, message); first ??= target }
+  const message = field('contact.message')
+  if (message.value.trim().length < 3) fail(message, t(M.required))
+  const email = field('contact.email')
+  if (!email.value.trim()) fail(email, t(M.required))
+  else if (!email.validity.valid) fail(email, t(M.email))
   first?.focus()
   return !first
 }
 
-function show (index) {
-  current = index
-  steps.forEach((step, i) => step.classList.toggle('is-current', i === index))
-  progress.forEach((item, i) => { item.classList.toggle('is-current', i === index); item.classList.toggle('is-done', i < index) })
-  back.hidden = index === 0
-  next.hidden = index === steps.length - 1
-  submit.hidden = index !== steps.length - 1
-}
-
-back.addEventListener('click', () => { show(Math.max(0, current - 1)); steps[current].querySelector('legend')?.scrollIntoView({ block: 'nearest' }) })
-next.addEventListener('click', () => {
-  if (!validate(steps[current])) return
-  show(Math.min(steps.length - 1, current + 1))
-  const firstInput = steps[current].querySelector('input:not([type="hidden"]), select, textarea')
-  firstInput?.focus({ preventScroll: true })
-  form.scrollIntoView({ block: 'start' })
-})
-
 form.addEventListener('submit', async event => {
   event.preventDefault()
-  for (const [i, step] of steps.entries()) if (!validate(step)) { show(i); return }
+  if (!validate()) return
   submit.disabled = true
   status.className = 'form-status'
   status.textContent = t(M.sending)
   try {
-    const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...collect(), id: requestId(), form_token: form.elements.form_token.value, pc_hp: form.elements.pc_hp.value }) })
+    const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...collect(), id: requestId(), form_token: field('form_token').value, pc_hp: field('pc_hp').value }) })
     const body = await response.json().catch(() => ({}))
     if (response.ok) {
       storage.clear()
@@ -216,11 +118,7 @@ form.addEventListener('submit', async event => {
 })
 
 let saveTimer
-form.addEventListener('input', () => { renderEstimate(); clearTimeout(saveTimer); saveTimer = setTimeout(() => storage.set(snapshot()), 300) })
-form.addEventListener('change', renderEstimate)
+form.addEventListener('input', () => { clearTimeout(saveTimer); saveTimer = setTimeout(() => storage.set(snapshot()), 300) })
 
 restore(storage.get())
-renderEstimate()
-form.classList.add('is-stepped')
-show(0)
 // #endregion business-form

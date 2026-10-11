@@ -62,7 +62,7 @@ Fabric 是你的项目及其智能体的家。你的编码智能体可以创建�
 
 ↗
 
-基于 AGPL-3.0 开源 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.6.7 · Observatory 0.21.0
+基于 AGPL-3.0 开源 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.1 · Observatory 0.22.0
 
 账号
 
@@ -236,9 +236,9 @@ Fabric Dashboards
 
 版本
 
-0.6.7
+0.7.1
 
-· macOS · 步骤 4
+· macOS + Windows + Linux · 步骤 4
 
 ↗
 
@@ -248,7 +248,7 @@ Project Observatory
 
 版本
 
-0.21.0
+0.22.0
 
 · macOS + Linux · 步骤 5
 
@@ -260,7 +260,7 @@ Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智�
 
 开发预览版
 
-0.14.0
+0.14.1
 
 · macOS · 步骤 5
 

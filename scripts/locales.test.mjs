@@ -304,7 +304,25 @@ test('static dollar amounts in every catalog match what the estimate prints for 
     const sentence = Object.entries(strings).find(([k]) => k.includes('at $50 an hour'))[1]
     assert.ok(sentence.includes(money(50)), `${locale}: "${money(50)}" in the estimate example`)
     assert.ok(sentence.includes(range(2150, 4350).replace('–', locale === 'ja' ? '～' : locale === 'fr' ? ' à ' : '–')) || sentence.includes(money(2150)), `${locale}: the example's range follows the estimate's pattern`)
-    for (const [key, amounts] of [['Under $1,000 a month', [1000]], ['Under $5,000', [5000]], ['More than $50,000', [50000]]]) assert.ok(strings[key].includes(money(amounts[0])), `${locale}: "${strings[key]}" writes ${amounts[0]} as ${money(amounts[0])}`)
-    for (const [key, [a, b]] of [['$1,000–5,000', [1000, 5000]], ['$5,000–20,000', [5000, 20000]], ['$20,000–50,000', [20000, 50000]]]) assert.equal(strings[key], range(a, b), `${locale}: ${key}`)
+    // The budget ranges left the form on 2026-10-11 (operator ON-3); none may come back untested.
+    for (const key of Object.keys(strings)) assert.ok(!/^(?:Under |More than )?\$\d/.test(key), `${locale}: a dollar answer "${key}" needs its amount checked here`)
+  }
+})
+
+test('the agent prompt is published as plain text in every language, equal to the page, keys and URLs in English (SCN-022)', async () => {
+  const { promptText, PROMPT_FILE } = await import('./agent-prompt.mjs')
+  const SOURCE_LOCALE = 'en'
+  const english = read(PROMPT_FILE)
+  for (const locale of LOCALES) {
+    const page = read(locale === SOURCE_LOCALE ? 'business/index.html' : `${locale}/business/index.html`)
+    const file = locale === SOURCE_LOCALE ? PROMPT_FILE : `${locale}/${PROMPT_FILE}`
+    const text = read(file)
+    assert.equal(text, promptText(page), `${file} is the page's prompt`)
+    for (const verbatim of ['"channel": "agent-prompt"', '"contact": {', 'cost_and_results', 'curl -s https://passioncode.ai/api/leads/token', "'https://passioncode.ai/api/leads?dry_run=1'", 'curl -s -X POST https://passioncode.ai/api/leads ']) assert.ok(text.includes(verbatim), `${file}: ${verbatim} stays as written`)
+    assert.ok(page.includes(`href="${locale === SOURCE_LOCALE ? '' : `/${locale}`}/${PROMPT_FILE}"`), `${locale}: the page links its own plain-text copy`)
+    if (locale !== SOURCE_LOCALE) {
+      assert.notEqual(text, english, `${file} is in its own language`)
+      assert.ok(text.includes(`https://passioncode.ai/${locale}/privacy/`), `${file} links that language's privacy notice`)
+    }
   }
 })

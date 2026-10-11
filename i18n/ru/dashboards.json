@@ -5,13 +5,11 @@
     "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Одно окно на Mac для ваших локальных сервисов агентов. Смотрите, что требует внимания, открывайте дашборды, а агенты пусть пользуются теми же инструментами по MCP.",
     "One window for local agent services that speak fabric-service/0.1.": "Одно окно для локальных сервисов агентов, которые поддерживают fabric-service/0.1.",
     "Download": "Скачать",
-    "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "Ваши сервисы агентов",
     "One place to look": "Всё в одном месте",
     "Download for macOS ↓": "Скачать для macOS ↓",
     "View source ↗": "Исходный код ↗",
     "Release": "Релиз",
-    "· macOS 13+ · Apple silicon + Intel": "· macOS 13+ · Apple silicon + Intel",
     "YOUR LOCAL SERVICES / TOGETHER": "ВАШИ ЛОКАЛЬНЫЕ СЕРВИСЫ / ВМЕСТЕ",
     "THE WINDOW": "ОКНО",
     "Every agent service": "Все сервисы агентов",
@@ -86,6 +84,11 @@
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "Состояние, расходы и управление: что делает каждый сервис агентов, сколько тратит и какие у него обновления, видно в одном окне. Это шаг 4 в разделе",
     "how it works": "«Как это работает»",
     "All the tools": "Все инструменты",
-    "The skills kept current": "Навыки всегда актуальны"
+    "The skills kept current": "Навыки всегда актуальны",
+    "FABRIC DASHBOARDS · macOS + Windows + Linux": "FABRIC DASHBOARDS · macOS + Windows + Linux",
+    "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
+    "Windows and Linux": "Windows и Linux",
+    "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "также включает подписанный установщик для Windows на x64 и arm64, а для Linux — AppImage и .deb на x64 и arm64. Обновления пока приходят автоматически только на macOS: на Windows и Linux следующий релиз нужно установить самостоятельно.",
+    "Windows and Linux downloads": "Загрузки для Windows и Linux"
   }
 }

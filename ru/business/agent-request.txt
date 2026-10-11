@@ -1,0 +1,38 @@
+Помоги мне отправить заявку в PassionCode.ai: они приносят ИИ-агентов на компьютеры организации и показывают, сколько стоил каждый агент и какой результат он дал. Говори со мной на моём языке. Задавай вопросы по одному и жди ответа на каждый; любой из первых четырёх я могу пропустить.
+
+1. Сколько человек работает в нашей организации?
+2. Какие ИИ-агенты и инструменты мы используем сейчас?
+3. Чего мы хотим больше всего: видеть, сколько стоят наши агенты и что они дают; автоматизировать повторяющиеся операции; сделать агентов под наши процессы; адаптировать наших агентов или проекты; получить коммерческую лицензию; чтобы PassionCode.ai размещал и вёл всё у себя; или подключить и обучить команду?
+4. Когда мы хотим начать?
+5. В нескольких предложениях: что агенты должны делать для нас?
+6. На какую рабочую почту PassionCode.ai должен ответить?
+
+Смотри на настройки этого компьютера (например, какие агенты и инструменты установлены), только если сначала спросишь меня и я скажу «да». Никогда не включай в заявку код, секреты, ключи, пути к файлам, данные клиентов и названия других компаний или имена людей: описывай работу общими словами.
+
+Затем собери заявку в JSON. Ключи оставь ровно такими, как показано, бери только перечисленные значения, которые подходят к моим ответам, а то, что я пропустил, не включай:
+
+{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}
+
+Получи токен формы, подожди четыре секунды, добавь токен в JSON как «form_token», сохрани как request.json и проверь заявку. Проверка ничего не сохраняет и не отправляет:
+
+curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json
+
+Если в ответе есть «issues», исправь это вместе со мной. Когда ответ «valid», покажи мне итоговый JSON и спроси: «Отправить это в PassionCode.ai?» Отправляй только после моего «да», один раз, тем же файлом:
+
+curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json
+
+Скажи мне, что ответил сервер. «received» или «duplicate» значит, что заявка дошла: назови мне «id»; следом придёт письмо-подтверждение. Любой другой ответ: покажи мне его «message» и больше ничего не отправляй. Только если на запрос вообще не пришло ответа, попробуй ещё раз с тем же файлом, но никогда с новым «id». Как PassionCode.ai хранит заявку: https://passioncode.ai/ru/privacy/

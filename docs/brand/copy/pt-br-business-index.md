@@ -62,7 +62,7 @@ O que configuramos
 
 Resposta em até dois dias úteis Pensado para 1 a 1000 pessoas · a estimativa vem antes de qualquer contrato
 
-01Conte para nósequipe, processos, orçamento
+01Conte para nósalgumas linhas, ou seu agente pergunta
 
 02Estimativahoras e dinheiro, com a fórmula
 
@@ -100,7 +100,7 @@ Seus dados ficam nas suas máquinas ou na sua própria nuvem. Leia a visão
 
 ## e do que eles entregaram
 
-A engenharia quer mais agentes; o financeiro quer que cada dólar gasto com eles tenha explicação. Os dois fazem a mesma pergunta: quanto custou cada agente e o que ele entregou? Quando a resposta é um registro que os dois abrem, adicionar um agente vira uma decisão com números por trás.
+Financeiro e engenharia (o CFO e o CTO ou CIO) olham para os agentes de dois lados: a engenharia quer mais agentes, o financeiro quer que cada dólar gasto com eles tenha explicação. Os dois fazem a mesma pergunta: quanto custou cada agente e o que ele entregou? Esse é o ROI de cada agente. Quando a resposta é um registro que os dois abrem, adicionar um agente vira uma decisão com números por trás.
 
 01
 
@@ -128,7 +128,7 @@ DIREÇÃO
 
 ### O que funciona melhor e como levar isso ao resto?
 
-Gastos e resultados reunidos por projeto e por fluxo de trabalho. Limites que o financeiro define uma vez e que os agentes conferem antes de gastar; um pedido acima de um limite vira um registro enquanto o trabalho continua. Um jeito de trabalhar que funciona, implantado como ambiente de trabalho por função.
+Gastos e resultados reunidos por projeto e por fluxo de trabalho. Limites que o financeiro define uma vez e guarda como um registro que os agentes conferem antes de gastar; um pedido acima de um limite vira um registro enquanto o trabalho continua. Um jeito de trabalhar que funciona, implantado como ambiente de trabalho por função.
 
 Estimativa e solicitação
 
@@ -172,33 +172,69 @@ Exemplo: 40 horas por semana de trabalho quase todo manual a US$ 50 por hora sã
 
 04 / SOLICITAÇÃO
 
-## Conte sobre a sua equipe
+## Conte o que os agentes
 
-Cinco etapas curtas, cerca de três minutos. Você vê a estimativa conforme avança, e respondemos em até dois dias úteis.
+## devem fazer por você
+
+Dois caminhos curtos. Seu agente de programação faz algumas perguntas e envia a solicitação quando você disser sim, ou você mesmo escreve algumas linhas. Respondemos em até dois dias úteis.
+
+### Deixe seu agente de programação perguntar
+
+Copie este prompt no Claude Code, no Codex ou em outro agente de programação. Ele faz algumas perguntas, uma de cada vez, mostra a solicitação e só envia depois do seu sim.
+
+Me ajude a enviar uma solicitação para a PassionCode.ai, que leva agentes de IA para as máquinas de uma organização e mostra quanto custou cada agente e o que ele entregou. Fale comigo no meu idioma. Faça estas perguntas uma de cada vez e espere cada resposta; posso pular qualquer uma das quatro primeiras.
+
+Quantas pessoas trabalham na nossa organização?
+
+Quais agentes e ferramentas de IA usamos hoje?
+
+O que mais queremos: ver quanto nossos agentes custam e o que entregam; automatizar operações recorrentes; criar agentes para os nossos próprios processos; adaptar nossos agentes ou projetos existentes; uma licença comercial; que a PassionCode.ai hospede e opere tudo; ou integrar e treinar a nossa equipe?
+
+Quando queremos começar?
+
+Em poucas frases, o que os agentes devem fazer por nós?
+
+Para qual e-mail de trabalho a PassionCode.ai deve responder?
+
+Olhe a configuração deste computador (por exemplo, quais agentes e ferramentas estão instalados) só se você me perguntar antes e eu disser sim. Nunca coloque na solicitação código, segredos, chaves, caminhos de arquivos, dados de clientes nem nomes de outras empresas ou pessoas: descreva o trabalho em termos gerais.
+
+Depois escreva a solicitação em JSON. Mantenha as chaves exatamente como estão, use só os valores listados que combinam com as minhas respostas e deixe de fora o que eu pulei:
+
+{ "id": "a new random UUID v4: make it once, reuse it if you send again", "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans", "contact": { "email": "the work email", "message": "what agents should do, in my words, up to 4000 characters" }, "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"], "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" }, "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] }, "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" }, "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" } }
+
+Pegue um token de formulário, espere quatro segundos, adicione o token ao JSON como “form_token”, salve como request.json e verifique a solicitação. A verificação não salva nem envia nada:
+
+curl -s https://passioncode.ai/api/leads/token sleep 4 curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json
+
+Se a resposta listar “issues”, corrija junto comigo. Quando disser “valid”, me mostre o JSON final e pergunte: “Envio isto para a PassionCode.ai?” Envie só depois do meu sim, uma vez, com o mesmo arquivo:
+
+curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json
+
+Me diga a resposta. “received” ou “duplicate” significa que chegou: me passe o “id”; um e-mail de confirmação vem em seguida. Qualquer outra resposta: me mostre a “message” dela e não envie mais nada. Só se a requisição não tiver recebido resposta nenhuma, tente mais uma vez com o mesmo arquivo, nunca com um “id” novo. Como a PassionCode.ai guarda a solicitação: https://passioncode.ai/pt-br/privacy/
+
+O mesmo prompt em texto simples, para um agente buscar: passioncode.ai/pt-br/business/agent-request.txt
+
+### Ou escreva você mesmo
 
 Deixe este campo em branco
 
-Objetivos
+O que os agentes devem fazer na sua organização?
 
-Processos
+E-mail de trabalho
 
-Configuração
+Objetivo principal
 
-Orçamento
+opcional
 
-Contato
+Escolha…
 
-1 / 5
-
-O que você quer e quem você é
-
-O que você quer alcançar? escolha quantos quiser
+Ver quanto nossos agentes custam e o que entregam
 
 Automatizar operações recorrentes
 
 Criar agentes para os nossos próprios processos
 
-Converter nossos agentes ou projetos existentes
+Adaptar nossos agentes ou projetos existentes
 
 Uma licença comercial para um produto ou serviço fechado
 
@@ -206,239 +242,7 @@ Pedir que a PassionCode.ai hospede e opere
 
 Fazer o onboarding e o treinamento da nossa equipe
 
-Empresa
-
-Site
-
-opcional
-
-Setor
-
-Escolha…
-
-Publicação de apps e jogos para celular
-
-SaaS
-
-Agência de marketing ou publicidade
-
-E-commerce e varejo
-
-Fintech e pagamentos
-
-Mídia e conteúdo
-
-Estúdio de software ou terceirização
-
-Outro
-
-Se for outro
-
-opcional
-
-Tamanho da empresa
-
-Escolha…
-
-1–10 pessoas
-
-11–50
-
-51–200
-
-201–1.000
-
-Mais de 1.000
-
-Pessoas que trabalhariam com agentes
-
-opcional
-
-2 / 5
-
-Os processos
-
-Quais processos tomam o tempo da sua equipe? escolha quantos quiser
-
-Lançamentos e publicação em lojas
-
-Criativos de marketing e anúncios
-
-Suporte e caixas de entrada compartilhadas
-
-Análises e relatórios
-
-Engenharia, revisão de código e QA
-
-Vendas e CRM
-
-Conteúdo e SEO
-
-Financeiro e back office
-
-Outros
-
-Algo específico
-
-opcional
-
-Como esse trabalho é feito hoje?
-
-Quase todo manual
-
-Scripts e integrações
-
-Assistentes de chat usados de forma pontual
-
-Agentes já executam partes do trabalho
-
-Ferramentas de IA que a sua equipe usa opcional
-
-Claude Code
-
-Codex
-
-Cursor
-
-ChatGPT ou chat do Claude
-
-Outros agentes
-
-Nenhuma ainda
-
-Horas por semana nesses processos
-
-equipe toda
-
-Custo de uma hora com encargos
-
-Moeda
-
-USD
-
-EUR
-
-GBP
-
-PLN
-
-Preencha as horas, o custo e como o trabalho é feito hoje para ver a estimativa.
-
-3 / 5
-
-Como você quer a configuração
-
-Quem faz a configuração?
-
-Montamos por conta própria
-
-Onboarding guiado com a sua equipe
-
-Vocês constroem e operam para nós
-
-Onde deve rodar?
-
-Nos nossos computadores
-
-Na nossa conta de nuvem
-
-Hospedado pela PassionCode.ai
-
-Ainda não decidimos
-
-Requisitos opcional
-
-Os dados devem ficar nas nossas instalações
-
-Residência de dados na UE
-
-NDA antes dos detalhes
-
-Login único (SSO)
-
-Trilha de auditoria das ações dos agentes
-
-4 / 5
-
-Orçamento e prazo
-
-Orçamento mensal para automação
-
-Escolha…
-
-Menos de US$ 1.000 por mês
-
-US$ 1.000–5.000
-
-US$ 5.000–20.000
-
-US$ 20.000–50.000
-
-Mais de US$ 50.000
-
-Ainda não sei
-
-Orçamento único de configuração
-
-Escolha…
-
-Menos de US$ 5.000
-
-US$ 5.000–20.000
-
-US$ 20.000–50.000
-
-Mais de US$ 50.000
-
-Ainda não sei
-
-Quando você quer começar?
-
-Escolha…
-
-O quanto antes
-
-Neste trimestre
-
-No próximo trimestre
-
-Só explorando por enquanto
-
-As faixas servem apenas para propormos o escopo certo; a estimativa acima é uma boa referência.
-
-5 / 5
-
-Como falar com você
-
-Seu nome
-
-Cargo
-
-opcional
-
-E-mail de trabalho
-
-Telefone
-
-opcional
-
-Telegram
-
-opcional
-
-Mais alguma coisa que devemos saber
-
-opcional
-
-Concordo que a PassionCode.ai guarde estas respostas para responder e preparar uma proposta, conforme o
-
-aviso de privacidade
-
-descreve
-
-Quero receber novidades ocasionais sobre os produtos.
-
-opcional
+Guardamos o que você envia só para responder, conforme o aviso de privacidade descreve.
 
 Enviar solicitação →
 

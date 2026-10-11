@@ -28,6 +28,7 @@
 | SCN-019 | Read the site in another language | Languages | P-01, P-02 | ST-01, ST-07, FLW-07 | draft | pending |
 | SCN-020 | Read the vision and choose a door | Vision | P-01, P-02 | ST-01, ST-04, ST-07, FLW-03 | draft | pending |
 | SCN-021 | See how it works, from entry to working agents | Journey | P-01, P-02 | ST-01, ST-04, ST-06, FLW-05 | draft | pending |
+| SCN-022 | Let a coding agent ask and send the request | Commercial | P-02 | ST-07, FLW-06 | draft | pending |
 
 ## Personas
 
@@ -216,7 +217,7 @@ See [foundation](foundation.md).
 - **Steps:**
   1. Choose Fabric Dashboards in the directory → its own page explains local services and independent use.
   2. Read download requirements → 0.3.1 universal DMG, signed/notarized, macOS 13+, separately installed compatible services and empty-list behavior are named.
-  3. Follow Download Fabric Dashboards → the pinned public DMG; inspect checksum and release notes.
+  3. Follow Download Fabric Dashboards → the current release's DMG (macOS); inspect checksum and release notes. On Windows or Linux (since 0.7.1): the "Windows and Linux" card → the release page with the signed Windows installers and the Linux AppImage and .deb; the card says updates there are installed by hand for now.
   4. Read For your agents → MCP registration command and list_services proving call; follow Observatory or Adapter to add a service.
 - **Expected result:** Reader can obtain the app without assuming it installs services or requires Fabric.
 - **Alt paths:** direct release link, keyboard, mobile; source and installation guide.
@@ -329,17 +330,18 @@ rather than replaces, the browser review recorded above.
 - **Steps:**
   1. Read the hero → make the organization AI-native, agents connected with what each one cost and what it delivered shown, data on its own machines or cloud; the four-step funnel (tell us, estimate, pilot, rollout); designed for 1 to 1000 people.
   2. Read PassionCode for Enterprise (#enterprise) → in development and offered on request; what we set up: machines onboarded, agents rolled out, routing between machines, model access through each machine's local agent (keys stay on it), activity and usage analytics, administration, custom builds signed by PassionCode.ai.
-  3. Read For finance and engineering (#spend, since 2026-10-11, [narrative-org.md](../brand/narrative-org.md)) → the one question (what did each agent cost, and what did it deliver?) in three labelled stages: does the work run through agents (AVAILABLE NOW: the estimate), which agents are worth what they cost (AVAILABLE NOW: Fabric Dashboards Spend, Switchboard usage limits, Observatory), which setups work best and how they reach the rest (DIRECTION); each stage links on (#estimate, /dashboards/, #request); the note says it is about agents and workflows, never a ranking of people.
+  3. Read For finance and engineering (#spend, since 2026-10-11, [narrative-org.md](../brand/narrative-org.md)) → finance and engineering named once by role (the CFO and the CTO or CIO, ON-2); the one question (what did each agent cost, and what did it deliver?: the ROI of each agent, ON-1) in three labelled stages: does the work run through agents (AVAILABLE NOW: the estimate), which agents are worth what they cost (AVAILABLE NOW: Fabric Dashboards Spend, Switchboard usage limits, Observatory), which setups work best and how they reach the rest (DIRECTION, including limits finance sets once as a record agents check, ON-6); each stage links on (#estimate, /dashboards/, #request); the note says it is about agents and workflows, never a ranking of people (ON-5).
   4. Read the estimate (03 / THE ESTIMATE) → the formula, the share table and a worked example.
-  5. Fill five steps → goals and company; processes, today's state, tools, hours and hourly cost (the estimate updates as they type); setup and hosting; budget and timing; contact and consent.
+  5. Reach 04 / REQUEST → two ways side by side, the agent first (SCN-022); the short form: one free-text field ("What should agents do for your organization?"), the work email, and an optional main goal (seven answers, the first "See what our agents cost and deliver"); a line under it says the answers are kept only to reply, linking /privacy/.
   6. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
-- **Expected result:** A complete, validated lead reaches PassionCode.ai with a server-computed estimate, and the visitor knows when to expect a reply.
-- **Alt paths:** without JavaScript the form is one page and lands on /business/thanks/; a reload keeps unsent answers in the browser; email commercial@passioncode.ai instead.
-- **UI elements:** hero funnel, Enterprise list, the finance-and-engineering stages (three labelled cards with links), formula card, five-step form with progress, estimate output, status line, three FAQs (cost, commercial license, "Is this a way to watch people?")
-- **States covered:** empty, partial (draft), invalid (per-step errors), too fast or expired form (refused with a reason), rate-limited, sending, success, network failure (answers kept), service not configured (503 naming the email).
+- **Expected result:** A validated request (schema `lead/2`, channel `form`) reaches PassionCode.ai, and the visitor knows when to expect a reply. Everything else (size, tools, budget, timing) is asked in the reply, not in the form.
+- **Design rationale (2026-10-11, operator ON-3: "bring every form down to the minimum"):** the reply needs only an address to answer and what to answer about, so email and the free text are the two required fields. The goal is optional and one choice: it routes the request (the cost-and-results goal is the finance signal) without adding a decision the visitor must make. The consent checkbox is gone: answering a request is a step the visitor asks for (GDPR Art. 6(1)(b), /privacy/), so a notice line replaces it; the product-news checkbox is gone with it. The former five-step form (company, industry, size, processes, hours and cost with a live estimate, setup, hosting, budgets, name, role, phone, Telegram) is retired; the Worker still accepts it as `lead/1` from pages already open in a browser.
+- **Alt paths:** without JavaScript the form posts to /api/leads and lands on /business/thanks/; a reload keeps the unsent text in the browser; email commercial@passioncode.ai instead; let a coding agent ask (SCN-022).
+- **UI elements:** hero funnel, Enterprise list, the finance-and-engineering stages (three labelled cards with links), formula card, the two request paths (agent prompt with Copy, short form with three fields), status line, three FAQs (cost, commercial license, "Is this a way to watch people?")
+- **States covered:** empty, partial (draft kept in the browser), invalid (the field named), too fast or expired form (refused with a reason), rate-limited, sending, success (reference shown), duplicate resend (same reference), network failure (text kept), service not configured (503 naming the email).
 - **Errors & recovery:** every refusal names the field or the reason; the email address is offered whenever the form cannot take the request.
 - **Status:** draft
-- **Coverage:** business/index.html, assets/business.js, assets/estimate.js, assets/lead-options.js, worker/leads.js; scripts/check-worker.mjs (intake, refusals, delivery, retries), scripts/check-site.mjs (form ↔ options parity).
+- **Coverage:** business/index.html, assets/business.js, assets/lead-options.js, worker/leads.js (`buildShortLead`); scripts/check-worker.mjs (short form, legacy `lead/1`, refusals, delivery, retries), scripts/check-site.mjs (form ↔ options parity, three fields only).
 - **Product:** unobserved
 
 ### SCN-015: Contribute a pull request
@@ -386,8 +388,8 @@ rather than replaces, the browser review recorded above.
 - **Entry point:** /privacy/ (from the consent line, the form FAQ and the footer)
 - **Preconditions:** none
 - **Steps:**
-  1. Read what is collected, why, where it is stored, for how long and how to have it erased.
-- **Expected result:** The lead can agree knowingly; nothing is collected outside the form.
+  1. Read what is collected (the form: the text, the work email, an optional goal; through a coding agent also the organization size, the tools, the timing and the agent's name), why (Art. 6(1)(b): answering the request the person asked for, so no consent box), where it is stored, for how long and how to have it erased.
+- **Expected result:** The lead knows what happens to the request before sending it; nothing is collected outside the request.
 - **Alt paths:** none.
 - **UI elements:** legal page
 - **States covered:** static.
@@ -454,4 +456,26 @@ rather than replaces, the browser review recorded above.
 - **Errors & recovery:** an image fails → its alt text and caption still say what it shows and that it is synthetic; nothing on the step depends on the image.
 - **Status:** draft
 - **Coverage:** index.html#how; styles.css (journey block); scripts/check-site.mjs (six labelled steps, the hidden video slot, only listed images; the mockups' size, 2x pixels, -ru twin, budget and sample-data alt); scripts/locales.mjs `localizedAsset`.
+- **Product:** unobserved
+
+### SCN-022: Let a coding agent ask and send the request
+- **Persona:** P-02
+- **Feature:** Commercial
+- **Traces:** ST-07, FLW-06
+- **Entry point:** /business/#request ("Or let your coding agent ask", shown ahead of the short form); /business/agent-request.txt (plain text, linked from llms.txt) for an agent that fetches it itself; each language's own copy at /<code>/business/agent-request.txt.
+- **Preconditions:** the visitor runs a coding agent that can make HTTPS requests (Claude Code, Codex or another).
+- **Steps:**
+  1. Read the one-line explanation and the prompt in the page's language → the JSON keys, the values and the commands stay English.
+  2. Press Copy → the whole prompt is on the clipboard and the button says Copied (without JavaScript or clipboard access the text stays selectable; the button says "Select and copy").
+  3. Paste it into the agent → it asks one question at a time: organization size, the agents and tools in use, the main goal (the form's seven, including cost and results), timing, what agents should do, the work email; it looks at the local setup only after asking and hearing yes, and keeps code, secrets, keys, paths, customer data and the names of third parties out of the request.
+  4. The agent takes a form token (GET /api/leads/token), checks the request with `?dry_run=1` (nothing stored or sent) and fixes what the answer's `issues` name, together with the person.
+  5. The agent shows the final JSON and asks "Send this to PassionCode.ai?" → sends only after an explicit yes, once, with the same `id` and token.
+  6. The agent reports the answer: 201 `received` or 200 `duplicate` with the reference; a receipt email follows in the conversation's language (`lang`).
+- **Expected result:** A validated request (schema `lead/2`, channel `agent-prompt`, the agent's name as it gave it) reaches the commercial mailbox exactly like a form request, with no more trust: same rate limit, token, trap, size cap and receipt caps.
+- **Alt paths:** the person declines → nothing is sent; the network fails before an answer → one retry with the same `id`, never a second request with a new one; the agent cannot reach the network → the person uses the short form (SCN-014).
+- **UI elements:** the agent block (heading, one line, the prompt box, Copy button, the plain-text link), the agent's own conversation.
+- **States covered:** copy works, copy refused (select manually), no JavaScript (selectable), dry run valid, dry run invalid (issues listed), too fast (wait and repeat once), rate-limited, duplicate, conflict (same id, other answers: start a new request), oversize (413), service not configured (503 naming the email).
+- **Errors & recovery:** every refusal carries an English `error` code and a `message` in the request's language; the prompt tells the agent to show the message and never to resend silently.
+- **Status:** draft
+- **Coverage:** business/index.html (#agent-request), business/agent-request.txt and its language copies (written by `npm run locales`), assets/site.js (prompt copy), worker/index.js (`/api/leads/token`, `?dry_run=1`), worker/leads.js; scripts/check-worker.mjs (valid agent request, missing email, oversized body, duplicate key, rate limit, dry run, token), scripts/locales.test.mjs (the plain text equals the page's prompt).
 - **Product:** unobserved

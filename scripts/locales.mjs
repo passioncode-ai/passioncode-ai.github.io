@@ -80,8 +80,11 @@ export const pageRoute = (sourceFile, locale) => prefixOf(locale) + routeOf(sour
 // A link to a page of this site (not an asset, an API route or a download redirect): the root,
 // anything ending in a slash, or the not-found page's own file.
 function pagePath (path) {
-  return path === '/' || path.endsWith('/') || path === '/404.html'
+  return path === '/' || path.endsWith('/') || path === '/404.html' || LOCALIZED_FILES.has(path)
 }
+// Files other than pages that every language publishes in its own words under its prefix: the
+// /business/ agent prompt as plain text (scripts/agent-prompt.mjs).
+const LOCALIZED_FILES = new Set(['/business/agent-request.txt'])
 const inLocale = path => TRANSLATED_LOCALES.some(l => path === `/${l}/` || path.startsWith(`/${l}/`))
 // Moves a site-relative or absolute passioncode.ai page URL under /<locale>/; anything else is kept.
 export function localizeUrl (value, locale) {

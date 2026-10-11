@@ -46,7 +46,7 @@ Português (Brasil)
 
 ↓
 
-FABRIC DASHBOARDS · macOS
+FABRIC DASHBOARDS · macOS + Windows + Linux
 
 # 你的智能体服务
 
@@ -60,7 +60,7 @@ FABRIC DASHBOARDS · macOS
 
 查看源代码 ↗
 
-版本 0.6.7 · macOS 13+ · Apple silicon + Intel
+版本 0.7.1 · macOS 13+ · Windows · Linux
 
 你的本地服务 / 汇聚一处
 
@@ -132,11 +132,19 @@ Settings → Language：跟随这台 Mac，可选 English 或 Русский。�
 
 ### macOS
 
-版本 0.6.7。适用于 Apple silicon 和 Intel 的通用 DMG，需要 macOS 13 或更高版本。已使用 Developer ID 签名、公证并装订。
+版本 0.7.1。适用于 Apple silicon 和 Intel 的通用 DMG，需要 macOS 13 或更高版本。已使用 Developer ID 签名、公证并装订。
 
 下载 Fabric Dashboards ↓
 
 打开 DMG，把 Fabric Dashboards 拖到“应用程序”，然后打开它。应用会在登录时启动；你可以在“设置”中更改。
+
+### Windows 和 Linux
+
+版本 0.7.1 同时提供了签名的 Windows 安装包（x64 和 arm64），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。目前仅 macOS 支持自动更新：Windows 和 Linux 需要你自行安装下一个版本。
+
+下载 Windows 和 Linux 版本
+
+↗
 
 ### 打开之前
 
@@ -146,7 +154,7 @@ Settings → Language：跟随这台 Mac，可选 English 或 Русский。�
 
 DMG SHA-256
 
-d0e916fc1a9ee0586446c67474eb75156e770cc37dff302a3808703b4ec42e02
+2e479f19506ee4dd5d004c5b9c12861ca803b85baa885dd7522a950345c44d81
 
 版本说明与校验和 ↗
 

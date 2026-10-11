@@ -56,7 +56,7 @@
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Ответ в течение двух рабочих дней <span>Для команд от 1 до 1000 человек · оценка — до любого договора</span></p>
  </div>
  <ol class="hero-funnel" aria-label="Как заявка превращается в рабочее место">
-  <li><span>01</span><strong>Расскажите</strong><small>команда, процессы, бюджет</small></li>
+  <li><span>01</span><strong>Расскажите</strong><small>пара строк — или вопросы от вашего агента</small></li>
   <li><span>02</span><strong>Оценка</strong><small>часы и деньги, с формулой</small></li>
   <li><span>03</span><strong>Пилот</strong><small>один процесс, с замерами</small></li>
   <li><span>04</span><strong>Развёртывание</strong><small>рабочие места по ролям</small></li>
@@ -79,11 +79,11 @@
 </section>
 
 <section class="section" id="spend" aria-labelledby="spend-title">
- <div class="section-heading story-heading"><p class="section-number">02 / ДЛЯ ФИНАНСОВ И РАЗРАБОТКИ</p><h2 id="spend-title">В одном месте: сколько стоили агенты<br>и какой результат они дали</h2><p>Разработка хочет больше агентов, финансы — понимать, за что заплачен каждый доллар. Обе стороны задают один вопрос: сколько стоил каждый агент и какой результат он дал? Когда ответ — одна запись, которую открывают и те и другие, новый агент становится решением, подкреплённым цифрами.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">02 / ДЛЯ ФИНАНСОВ И РАЗРАБОТКИ</p><h2 id="spend-title">В одном месте: сколько стоили агенты<br>и какой результат они дали</h2><p>Финансы и разработка (CFO и CTO или CIO) смотрят на агентов с двух сторон: разработка хочет больше агентов, финансы — понимать, за что заплачен каждый доллар. Обе стороны задают один вопрос: сколько стоил каждый агент и какой результат он дал? Это и есть ROI каждого агента. Когда ответ — одна запись, которую открывают и те и другие, новый агент становится решением, подкреплённым цифрами.</p></div>
  <ol class="work-cycle path-cycle">
   <li class="reveal"><span class="cycle-number">01</span><p class="availability">ДОСТУПНО СЕЙЧАС</p><h3>Работа идёт через агентов или рядом с ними?</h3><p>Оценка начинается с того, как каждый процесс устроен сегодня: вручную, на скриптах, с чат-ассистентом от случая к случаю или агенты уже ведут часть работы. Затем пилот измеряет один процесс относительно вашего исходного уровня.</p><a href="#estimate">Оценка</a></li>
   <li class="reveal"><span class="cycle-number">02</span><p class="availability">ДОСТУПНО СЕЙЧАС</p><h3>Какие агенты стоят своих денег?</h3><p>На каждом Mac Fabric Dashboards показывает, сколько каждый агент потратил сегодня, за 7 и за 30 дней, по моделям и относительно собственного бюджета, — по отчёту самого агента об использовании; стоимость, которую никто не знает, видна как «неизвестно», а не 0 $. Switchboard показывает, какая часть лимита каждого аккаунта Claude Code или Codex израсходована и когда лимит обновится, поэтому подписки видны отдельно от вызовов с оплатой за использование. Observatory показывает, что изменилось в каждом проекте, с подтверждениями.</p><a href="/ru/dashboards/">Fabric Dashboards</a></li>
-  <li class="reveal"><span class="cycle-number">03</span><p class="availability">НАПРАВЛЕНИЕ</p><h3>Что работает лучше всего и как перенести это на остальную работу?</h3><p>Расходы и результаты, сведённые по проектам и процессам. Лимиты, которые финансы задают один раз, а агенты проверяют перед каждой тратой; запрос сверх лимита сохраняется как запись, а работа тем временем продолжается. Удачная схема работы, развёрнутая как рабочее место для каждой роли.</p><a href="#request">Оценка и заявка</a></li>
+  <li class="reveal"><span class="cycle-number">03</span><p class="availability">НАПРАВЛЕНИЕ</p><h3>Что работает лучше всего и как перенести это на остальную работу?</h3><p>Расходы и результаты, сведённые по проектам и процессам. Лимиты, которые финансы задают один раз и хранят как запись, а агенты сверяются с ней перед каждой тратой; запрос сверх лимита сохраняется как запись, а работа тем временем продолжается. Удачная схема работы, развёрнутая как рабочее место для каждой роли.</p><a href="#request">Оценка и заявка</a></li>
  </ol>
  <p class="section-note">Речь об агентах и процессах, а не о рейтинге людей.</p>
 </section>
@@ -101,134 +101,60 @@
 </section>
 
 <section class="section request-section" id="request" aria-labelledby="request-title">
- <div class="section-heading story-heading"><p class="section-number">04 / ЗАЯВКА</p><h2 id="request-title">Расскажите о своей команде</h2><p>Пять коротких шагов, около трёх минут. Оценка видна по ходу заполнения, а ответим мы в течение двух рабочих дней.</p></div>
- <form class="lead-form" id="lead-form" action="/api/leads?lang=ru" method="post" novalidate>
-  <input type="hidden" name="form_token" value="">
-  <div class="trap" aria-hidden="true"><label>Оставьте это поле пустым <input type="text" name="pc_hp" tabindex="-1" autocomplete="off"></label></div>
-  <ol class="form-progress" aria-hidden="true"><li>Цели</li><li>Процессы</li><li>Внедрение</li><li>Бюджет</li><li>Контакты</li></ol>
-
-  <fieldset class="form-step" data-step="1">
-   <legend><span>1 / 5</span> Чего вы хотите и кто вы</legend>
-   <div class="field"><p class="field-label" id="goals-label">Чего вы хотите добиться? <small>можно несколько</small></p>
-    <div class="choices" role="group" aria-labelledby="goals-label">
-     <label><input type="checkbox" name="goals" value="automate_operations"> Автоматизировать повторяющиеся операции</label>
-     <label><input type="checkbox" name="goals" value="custom_agents"> Создать агентов под наши процессы</label>
-     <label><input type="checkbox" name="goals" value="convert_agents"> Адаптировать наших существующих агентов или проекты</label>
-     <label><input type="checkbox" name="goals" value="commercial_license"> Коммерческая лицензия для закрытого продукта или сервиса</label>
-     <label><input type="checkbox" name="goals" value="managed_hosting"> Хостинг и сопровождение силами PassionCode.ai</label>
-     <label><input type="checkbox" name="goals" value="team_onboarding"> Внедрить и обучить нашу команду</label>
-    </div></div>
-   <div class="field-row">
-    <label class="field">Компания <input type="text" name="company.name" required maxlength="200" autocomplete="organization"></label>
-    <label class="field">Сайт <small>необязательно</small> <input type="text" name="company.website" maxlength="300" inputmode="url" autocomplete="url" placeholder="example.com"></label>
+ <div class="section-heading story-heading"><p class="section-number">04 / ЗАЯВКА</p><h2 id="request-title">Расскажите, что агенты<br>должны делать для вас</h2><p>Два коротких пути. Ваш агент для программирования задаст несколько вопросов и отправит заявку, когда вы скажете «да», — или напишите пару строк сами. Ответим в течение двух рабочих дней.</p></div>
+ <div class="request-paths">
+  <div class="request-card agent-request" id="agent-request">
+   <h3>Пусть спросит ваш агент</h3>
+   <p>Скопируйте этот промпт в Claude Code, Codex или другого агента для программирования. Он задаст несколько вопросов по одному, покажет заявку и отправит её только после вашего «да».</p>
+   <div class="agent-prompt" id="agent-prompt" tabindex="0" role="region" aria-label="Промпт для вашего агента" data-copy-prompt>
+    <p>Помоги мне отправить заявку в PassionCode.ai: они приносят ИИ-агентов на компьютеры организации и показывают, сколько стоил каждый агент и какой результат он дал. Говори со мной на моём языке. Задавай вопросы по одному и жди ответа на каждый; любой из первых четырёх я могу пропустить.</p>
+    <ol>
+     <li>Сколько человек работает в нашей организации?</li>
+     <li>Какие ИИ-агенты и инструменты мы используем сейчас?</li>
+     <li>Чего мы хотим больше всего: видеть, сколько стоят наши агенты и что они дают; автоматизировать повторяющиеся операции; сделать агентов под наши процессы; адаптировать наших агентов или проекты; получить коммерческую лицензию; чтобы PassionCode.ai размещал и вёл всё у себя; или подключить и обучить команду?</li>
+     <li>Когда мы хотим начать?</li>
+     <li>В нескольких предложениях: что агенты должны делать для нас?</li>
+     <li>На какую рабочую почту PassionCode.ai должен ответить?</li>
+    </ol>
+    <p>Смотри на настройки этого компьютера (например, какие агенты и инструменты установлены), только если сначала спросишь меня и я скажу «да». Никогда не включай в заявку код, секреты, ключи, пути к файлам, данные клиентов и названия других компаний или имена людей: описывай работу общими словами.</p>
+    <p>Затем собери заявку в JSON. Ключи оставь ровно такими, как показано, бери только перечисленные значения, которые подходят к моим ответам, а то, что я пропустил, не включай:</p>
+    <pre><code>{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}</code></pre>
+    <p>Получи токен формы, подожди четыре секунды, добавь токен в JSON как «form_token», сохрани как request.json и проверь заявку. Проверка ничего не сохраняет и не отправляет:</p>
+    <pre><code>curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json</code></pre>
+    <p>Если в ответе есть «issues», исправь это вместе со мной. Когда ответ «valid», покажи мне итоговый JSON и спроси: «Отправить это в PassionCode.ai?» Отправляй только после моего «да», один раз, тем же файлом:</p>
+    <pre><code>curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json</code></pre>
+    <p>Скажи мне, что ответил сервер. «received» или «duplicate» значит, что заявка дошла: назови мне «id»; следом придёт письмо-подтверждение. Любой другой ответ: покажи мне его «message» и больше ничего не отправляй. Только если на запрос вообще не пришло ответа, попробуй ещё раз с тем же файлом, но никогда с новым «id». Как PassionCode.ai хранит заявку: https://passioncode.ai/ru/privacy/</p>
    </div>
-   <div class="field-row">
-    <label class="field">Отрасль <select name="company.industry" required><option value="">Выберите…</option><option value="mobile_publishing">Издание мобильных приложений и игр</option><option value="saas">SaaS</option><option value="marketing_agency">Маркетинговое или рекламное агентство</option><option value="ecommerce">E-commerce и розница</option><option value="fintech">Финтех и платежи</option><option value="media_content">Медиа и контент</option><option value="dev_studio">Студия разработки или аутсорс</option><option value="other">Другое</option></select></label>
-    <label class="field">Если другое <small>необязательно</small> <input type="text" name="company.industryOther" maxlength="120"></label>
-   </div>
-   <div class="field-row">
-    <label class="field">Размер компании <select name="company.size" required><option value="">Выберите…</option><option value="1_10">1–10 человек</option><option value="11_50">11–50</option><option value="51_200">51–200</option><option value="201_1000">201–1 000</option><option value="1000_plus">Больше 1 000</option></select></label>
-    <label class="field">Сколько человек будут работать с агентами <small>необязательно</small> <input type="number" name="company.agentUsers" min="0" max="100000" inputmode="numeric"></label>
-   </div>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="2">
-   <legend><span>2 / 5</span> Процессы</legend>
-   <div class="field"><p class="field-label" id="areas-label">Какие процессы отнимают время команды? <small>можно несколько</small></p>
-    <div class="choices" role="group" aria-labelledby="areas-label">
-     <label><input type="checkbox" name="processes.areas" value="release_publishing"> Релизы и публикация в сторах</label>
-     <label><input type="checkbox" name="processes.areas" value="marketing_creatives"> Маркетинговые креативы и реклама</label>
-     <label><input type="checkbox" name="processes.areas" value="support_inbox"> Поддержка и общие почтовые ящики</label>
-     <label><input type="checkbox" name="processes.areas" value="analytics_reporting"> Аналитика и отчётность</label>
-     <label><input type="checkbox" name="processes.areas" value="engineering_qa"> Разработка, код-ревью и QA</label>
-     <label><input type="checkbox" name="processes.areas" value="sales_crm"> Продажи и CRM</label>
-     <label><input type="checkbox" name="processes.areas" value="content_seo"> Контент и SEO</label>
-     <label><input type="checkbox" name="processes.areas" value="back_office"> Финансы и бэк-офис</label>
-     <label><input type="checkbox" name="processes.areas" value="other"> Другое</label>
-    </div></div>
-   <label class="field">Что-то конкретное <small>необязательно</small> <textarea name="processes.other" rows="2" maxlength="500" placeholder="например, мы выпускаем 12 приложений и пишем заметки к релизам на 9 языках"></textarea></label>
-   <div class="field"><p class="field-label" id="state-label">Как эта работа устроена сегодня?</p>
-    <div class="choices choices-inline" role="radiogroup" aria-labelledby="state-label">
-     <label><input type="radio" name="processes.currentState" value="manual" required> В основном вручную</label>
-     <label><input type="radio" name="processes.currentState" value="scripts"> Скрипты и интеграции</label>
-     <label><input type="radio" name="processes.currentState" value="ai_tools"> Чат-ассистенты от случая к случаю</label>
-     <label><input type="radio" name="processes.currentState" value="agents"> Агенты уже ведут часть работы</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="tools-label">ИИ-инструменты, которыми пользуется команда <small>необязательно</small></p>
-    <div class="choices choices-inline" role="group" aria-labelledby="tools-label">
-     <label><input type="checkbox" name="processes.tools" value="claude_code"> Claude Code</label>
-     <label><input type="checkbox" name="processes.tools" value="codex"> Codex</label>
-     <label><input type="checkbox" name="processes.tools" value="cursor"> Cursor</label>
-     <label><input type="checkbox" name="processes.tools" value="chatgpt"> Чат ChatGPT или Claude</label>
-     <label><input type="checkbox" name="processes.tools" value="other_agents"> Другие агенты</label>
-     <label><input type="checkbox" name="processes.tools" value="none"> Пока никаких</label>
-    </div></div>
-   <div class="field-row field-row-3">
-    <label class="field">Часов в неделю на эти процессы <small>на всю команду</small> <input type="number" name="processes.hoursPerWeek" min="0" max="10000" step="1" inputmode="decimal"></label>
-    <label class="field">Полная стоимость часа <input type="number" name="processes.hourlyCost" min="0" max="10000" step="1" inputmode="decimal"></label>
-    <label class="field">Валюта <select name="processes.currency"><option value="USD">USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option><option value="PLN">PLN</option></select></label>
-   </div>
-   <output class="estimate-output" name="estimate" for="lead-form" aria-live="polite"><span class="estimate-empty">Укажите часы, стоимость и то, как работа устроена сегодня, — и увидите оценку.</span></output>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="3">
-   <legend><span>3 / 5</span> Как организовать внедрение</legend>
-   <div class="field"><p class="field-label" id="mode-label">Кто занимается внедрением?</p>
-    <div class="choices" role="radiogroup" aria-labelledby="mode-label">
-     <label><input type="radio" name="setup.mode" value="self_serve" required> Своими силами</label>
-     <label><input type="radio" name="setup.mode" value="guided"> Внедрение вместе с вашей командой</label>
-     <label><input type="radio" name="setup.mode" value="done_for_you"> Вы строите и ведёте всё за нас</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="hosting-label">Где всё должно работать?</p>
-    <div class="choices choices-inline" role="radiogroup" aria-labelledby="hosting-label">
-     <label><input type="radio" name="setup.hosting" value="own_machines" required> На наших компьютерах</label>
-     <label><input type="radio" name="setup.hosting" value="own_cloud"> В нашем облачном аккаунте</label>
-     <label><input type="radio" name="setup.hosting" value="passioncode_cloud"> На хостинге PassionCode.ai</label>
-     <label><input type="radio" name="setup.hosting" value="undecided"> Пока не решили</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="constraints-label">Требования <small>необязательно</small></p>
-    <div class="choices choices-inline" role="group" aria-labelledby="constraints-label">
-     <label><input type="checkbox" name="setup.constraints" value="on_prem"> Данные должны оставаться у нас</label>
-     <label><input type="checkbox" name="setup.constraints" value="eu_residency"> Хранение данных в ЕС</label>
-     <label><input type="checkbox" name="setup.constraints" value="nda"> NDA до обсуждения деталей</label>
-     <label><input type="checkbox" name="setup.constraints" value="sso"> Единый вход (SSO)</label>
-     <label><input type="checkbox" name="setup.constraints" value="audit_log"> Журнал действий агентов для аудита</label>
-    </div></div>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="4">
-   <legend><span>4 / 5</span> Бюджет и сроки</legend>
-   <div class="field-row field-row-3">
-    <label class="field">Ежемесячный бюджет на автоматизацию <select name="budget.monthly" required><option value="">Выберите…</option><option value="lt_1k">До 1 000 $ в месяц</option><option value="1k_5k">1 000–5 000 $</option><option value="5k_20k">5 000–20 000 $</option><option value="20k_50k">20 000–50 000 $</option><option value="50k_plus">Больше 50 000 $</option><option value="unsure">Пока не знаем</option></select></label>
-    <label class="field">Разовый бюджет на внедрение <select name="budget.setup" required><option value="">Выберите…</option><option value="lt_5k">До 5 000 $</option><option value="5k_20k">5 000–20 000 $</option><option value="20k_50k">20 000–50 000 $</option><option value="50k_plus">Больше 50 000 $</option><option value="unsure">Пока не знаем</option></select></label>
-    <label class="field">Когда хотите начать? <select name="budget.timeline" required><option value="">Выберите…</option><option value="asap">Как можно скорее</option><option value="this_quarter">В этом квартале</option><option value="next_quarter">В следующем квартале</option><option value="exploring">Пока присматриваемся</option></select></label>
-   </div>
-   <p class="field-hint">Диапазоны нужны только для того, чтобы предложить подходящий объём; оценка выше — хороший ориентир.</p>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="5">
-   <legend><span>5 / 5</span> Как с вами связаться</legend>
-   <div class="field-row">
-    <label class="field">Ваше имя <input type="text" name="contact.name" required maxlength="120" autocomplete="name"></label>
-    <label class="field">Должность <small>необязательно</small> <input type="text" name="contact.role" maxlength="120" autocomplete="organization-title"></label>
-   </div>
-   <div class="field-row field-row-3">
-    <label class="field">Рабочая почта <input type="email" name="contact.email" required maxlength="254" autocomplete="email"></label>
-    <label class="field">Телефон <small>необязательно</small> <input type="tel" name="contact.phone" maxlength="40" autocomplete="tel"></label>
-    <label class="field">Telegram <small>необязательно</small> <input type="text" name="contact.telegram" maxlength="64" placeholder="@name"></label>
-   </div>
-   <label class="field">Что ещё нам стоит знать <small>необязательно</small> <textarea name="contact.message" rows="4" maxlength="4000"></textarea></label>
-   <label class="consent"><input type="checkbox" name="consent.privacy" value="yes" required> Соглашаюсь с тем, что PassionCode.ai хранит эти ответы, чтобы ответить и подготовить предложение, как описано в <a href="/ru/privacy/">уведомлении о конфиденциальности</a> </label>
-   <label class="consent"><input type="checkbox" name="consent.marketing" value="yes"> Иногда присылать мне новости о продуктах. <small>необязательно</small></label>
-  </fieldset>
-
-  <div class="form-nav">
-   <button type="button" class="button button-secondary" data-action="back" hidden>Назад</button>
-   <button type="button" class="button button-primary" data-action="next" hidden>Далее <span aria-hidden="true">→</span></button>
-   <button type="submit" class="button button-primary" data-action="submit">Отправить заявку <span aria-hidden="true">→</span></button>
+   <p class="section-note">Тот же промпт простым текстом, чтобы агент мог забрать его сам: <a href="/ru/business/agent-request.txt">passioncode.ai/ru/business/agent-request.txt</a></p>
   </div>
-  <p class="form-status" role="status" aria-live="polite"></p>
- </form>
+  <div class="request-card">
+   <h3>Или напишите сами</h3>
+   <form class="lead-form" id="lead-form" action="/api/leads?lang=ru" method="post" novalidate>
+    <input type="hidden" name="form_token" value="">
+    <div class="trap" aria-hidden="true"><label>Оставьте это поле пустым <input type="text" name="pc_hp" tabindex="-1" autocomplete="off"></label></div>
+    <label class="field">Что агенты должны делать в вашей организации? <textarea name="contact.message" rows="5" required minlength="3" maxlength="4000" placeholder="например, мы выпускаем 12 приложений и хотим видеть, сколько стоит каждый агент и что он даёт"></textarea></label>
+    <label class="field">Рабочая почта <input type="email" name="contact.email" required maxlength="254" autocomplete="email"></label>
+    <label class="field">Главная цель <small>необязательно</small> <select name="goals"><option value="">Выберите…</option><option value="cost_and_results">Видеть, сколько стоят наши агенты и что они дают</option><option value="automate_operations">Автоматизировать повторяющиеся операции</option><option value="custom_agents">Создать агентов под наши процессы</option><option value="convert_agents">Адаптировать наших существующих агентов или проекты</option><option value="commercial_license">Коммерческая лицензия для закрытого продукта или сервиса</option><option value="managed_hosting">Хостинг и сопровождение силами PassionCode.ai</option><option value="team_onboarding">Внедрить и обучить нашу команду</option></select></label>
+    <p class="field-hint">Отправленное мы храним только для ответа, как описано в <a href="/ru/privacy/">уведомлении о конфиденциальности</a>.</p>
+    <div class="form-nav"><button type="submit" class="button button-primary" data-action="submit">Отправить заявку <span aria-hidden="true">→</span></button></div>
+    <p class="form-status" role="status" aria-live="polite"></p>
+   </form>
+  </div>
+ </div>
  <p class="section-note">Удобнее письмом? Напишите на <a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a>.</p>
 </section>
 

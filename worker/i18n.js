@@ -110,7 +110,8 @@ export const CATALOGS = {
     "choose at least {n}": "выберите не меньше {n}",
     "a web address": "адрес сайта",
     "a work email address": "рабочий адрес почты",
-    "agree to the privacy notice to send the request": "чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности"
+    "agree to the privacy notice to send the request": "чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности",
+    "a request id: a UUID v4, made once and reused for a retry": "идентификатор заявки: UUID v4, созданный один раз и повторяемый при повторной отправке"
   },
   "de": {
     "Request not sent": "Anfrage nicht gesendet",
@@ -153,7 +154,8 @@ export const CATALOGS = {
     "choose at least {n}": "wähle mindestens {n} aus",
     "a web address": "eine Webadresse",
     "a work email address": "eine geschäftliche E-Mail-Adresse",
-    "agree to the privacy notice to send the request": "stimme dem Datenschutzhinweis zu, um die Anfrage zu senden"
+    "agree to the privacy notice to send the request": "stimme dem Datenschutzhinweis zu, um die Anfrage zu senden",
+    "a request id: a UUID v4, made once and reused for a retry": "eine Anfrage-ID: eine UUID v4, einmal erzeugt und bei einem erneuten Versuch wiederverwendet"
   },
   "fr": {
     "Request not sent": "Demande non envoyée",
@@ -198,7 +200,8 @@ export const CATALOGS = {
     "choose at least {n}": "choisissez-en au moins {n}",
     "a web address": "une adresse web",
     "a work email address": "une adresse e-mail professionnelle",
-    "agree to the privacy notice to send the request": "acceptez la politique de confidentialité pour envoyer la demande"
+    "agree to the privacy notice to send the request": "acceptez la politique de confidentialité pour envoyer la demande",
+    "a request id: a UUID v4, made once and reused for a retry": "un identifiant de demande : un UUID v4, créé une fois et réutilisé pour une nouvelle tentative"
   },
   "pl": {
     "Request not sent": "Zgłoszenie niewysłane",
@@ -245,7 +248,8 @@ export const CATALOGS = {
     "choose at least {n}": "wybierz co najmniej {n}",
     "a web address": "adres strony internetowej",
     "a work email address": "służbowy adres e-mail",
-    "agree to the privacy notice to send the request": "aby wysłać zgłoszenie, zaakceptuj informację o prywatności"
+    "agree to the privacy notice to send the request": "aby wysłać zgłoszenie, zaakceptuj informację o prywatności",
+    "a request id: a UUID v4, made once and reused for a retry": "identyfikator zapytania: UUID v4, utworzony raz i używany ponownie przy kolejnej próbie"
   },
   "ko": {
     "Request not sent": "요청이 전송되지 않았습니다",
@@ -286,7 +290,8 @@ export const CATALOGS = {
     "choose at least {n}": "{n}개 이상 선택하세요",
     "a web address": "웹 주소",
     "a work email address": "업무용 이메일 주소",
-    "agree to the privacy notice to send the request": "요청을 보내려면 개인정보 처리방침에 동의하세요"
+    "agree to the privacy notice to send the request": "요청을 보내려면 개인정보 처리방침에 동의하세요",
+    "a request id: a UUID v4, made once and reused for a retry": "요청 ID: 한 번 만들고 재시도할 때 다시 쓰는 UUID v4"
   },
   "es": {
     "Request not sent": "Solicitud no enviada",
@@ -331,7 +336,8 @@ export const CATALOGS = {
     "choose at least {n}": "elige al menos {n}",
     "a web address": "una dirección web",
     "a work email address": "un correo de trabajo",
-    "agree to the privacy notice to send the request": "acepta el aviso de privacidad para enviar la solicitud"
+    "agree to the privacy notice to send the request": "acepta el aviso de privacidad para enviar la solicitud",
+    "a request id: a UUID v4, made once and reused for a retry": "un id de solicitud: un UUID v4, creado una vez y reutilizado en un reintento"
   },
   "pt-br": {
     "Request not sent": "Solicitação não enviada",
@@ -376,7 +382,8 @@ export const CATALOGS = {
     "choose at least {n}": "escolha pelo menos {n}",
     "a web address": "um endereço da web",
     "a work email address": "um e-mail de trabalho",
-    "agree to the privacy notice to send the request": "concorde com o aviso de privacidade para enviar a solicitação"
+    "agree to the privacy notice to send the request": "concorde com o aviso de privacidade para enviar a solicitação",
+    "a request id: a UUID v4, made once and reused for a retry": "um id de solicitação: um UUID v4, criado uma vez e reutilizado numa nova tentativa"
   },
   "zh-hans": {
     "Request not sent": "申请未发送",
@@ -417,7 +424,8 @@ export const CATALOGS = {
     "choose at least {n}": "请至少选择 {n} 项",
     "a web address": "网址",
     "a work email address": "工作邮箱地址",
-    "agree to the privacy notice to send the request": "请同意隐私声明后再提交申请"
+    "agree to the privacy notice to send the request": "请同意隐私声明后再提交申请",
+    "a request id: a UUID v4, made once and reused for a retry": "需求标识：一个 UUID v4，生成一次，重试时复用"
   },
   "ja": {
     "Request not sent": "送信されていません",
@@ -458,7 +466,8 @@ export const CATALOGS = {
     "choose at least {n}": "{n}つ以上選択してください",
     "a web address": "ウェブアドレス",
     "a work email address": "勤務先のメールアドレス",
-    "agree to the privacy notice to send the request": "ご依頼を送信するには、プライバシー通知への同意が必要です"
+    "agree to the privacy notice to send the request": "ご依頼を送信するには、プライバシー通知への同意が必要です",
+    "a request id: a UUID v4, made once and reused for a retry": "依頼 ID：一度だけ作成し、再試行でも使い回す UUID v4"
   }
 }
 export const { resolveLocale, t, tn } = translator({ source: SOURCE_LOCALE, locales: LOCALES, catalogs: CATALOGS })

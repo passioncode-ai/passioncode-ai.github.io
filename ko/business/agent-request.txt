@@ -1,0 +1,38 @@
+PassionCode.ai에 요청을 보내도록 도와줘. PassionCode.ai는 조직의 컴퓨터에 AI 에이전트를 도입하고, 각 에이전트에 얼마가 들었고 무엇을 해냈는지 보여 줘. 내 언어로 말해 줘. 아래 질문을 한 번에 하나씩 묻고 답을 기다려 줘. 처음 네 개는 건너뛸 수도 있어.
+
+1. 우리 조직에는 몇 명이 일하나요?
+2. 지금 어떤 AI 에이전트와 도구를 쓰고 있나요?
+3. 가장 원하는 것은 무엇인가요: 에이전트의 비용과 성과 보기, 반복 업무 자동화, 우리 프로세스용 에이전트 구축, 기존 에이전트나 프로젝트를 맞추기, 상용 라이선스, PassionCode.ai가 호스팅하고 운영, 또는 팀 온보딩과 교육?
+4. 언제 시작하고 싶나요?
+5. 몇 문장으로, 에이전트가 우리를 위해 무엇을 해야 하나요?
+6. PassionCode.ai가 어느 업무용 이메일로 답하면 되나요?
+
+이 컴퓨터의 설정(예: 어떤 에이전트와 도구가 설치되어 있는지)은 먼저 나에게 묻고 내가 동의할 때만 봐 줘. 요청에는 코드, 비밀 값, 키, 파일 경로, 고객 데이터, 다른 회사나 사람의 이름을 절대 넣지 말고, 일은 일반적인 말로 설명해 줘.
+
+그다음 요청을 JSON으로 작성해 줘. 키는 보이는 그대로 두고, 내 답에 맞는 나열된 값만 쓰고, 내가 건너뛴 항목은 빼 줘:
+
+{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}
+
+양식 토큰을 받고 4초 기다린 뒤, 토큰을 JSON에 “form_token”으로 넣어 request.json으로 저장하고 요청을 검사해 줘. 검사는 아무것도 저장하거나 보내지 않아:
+
+curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json
+
+응답에 “issues”가 있으면 나와 함께 고쳐 줘. “valid”라고 하면 최종 JSON을 보여 주고 “이걸 PassionCode.ai에 보낼까요?”라고 물어 줘. 내가 동의한 뒤에만, 한 번, 같은 파일로 보내 줘:
+
+curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json
+
+응답을 알려 줘. “received” 또는 “duplicate”이면 도착한 거야. “id”를 알려 주면 확인 메일이 뒤따라 와. 다른 응답이면 그 “message”를 보여 주고 더는 아무것도 보내지 마. 요청에 아무 응답도 없었을 때만 같은 파일로 한 번 더 시도하고, 새 “id”로는 절대 보내지 마. PassionCode.ai가 요청을 보관하는 방식: https://passioncode.ai/ko/privacy/

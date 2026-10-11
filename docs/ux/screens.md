@@ -14,7 +14,7 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-06 | Fabric Inbox | SCN-009 |
 | SCR-07 | Fabric Dashboards | SCN-010, SCN-016 |
 | SCR-08 | Get started | SCN-013, SCN-015 |
-| SCR-09 | For organizations (Enterprise) | SCN-014 |
+| SCR-09 | For organizations (Enterprise) | SCN-014, SCN-022 |
 | SCR-10 | Request received | SCN-014 |
 | SCR-11 | Privacy notice | SCN-017 |
 | SCR-12 | Fabric: supported coding agents | SCN-018 |
@@ -88,7 +88,7 @@ Inbox falsifier: a reader could mistake the preview for a finished product or a 
 **Answers:** What does Fabric Dashboards do, which services appear, and how do I install it?
 **Indexable:** yes; canonical URL, sitemap and versioned SoftwareApplication data.
 **Without JS:** complete page, download/checksum, MCP command and native FAQ.
-**Entity:** Fabric Dashboards, macOS service dashboard from PassionCode.ai, AGPL-3.0, release 0.3.1.
+**Entity:** Fabric Dashboards, desktop service dashboard from PassionCode.ai for macOS, and since 0.7.1 Windows and Linux, AGPL-3.0; the version is live from the release snapshot.
 
 Simplification 2026-10-10: existing components only (section heading, principles list, path cards with a two-column modifier, tool cards, FAQ details, about section); no new motion. The launcher card leads to /start/#launcher. Falsifiers: a product lacks a next action; a preview appears finished; the founder note adds biography beyond facts.md; a door card or tool card clips at 390 px.
 
@@ -101,12 +101,12 @@ Simplification 2026-10-10: existing components only (section heading, principles
 **Without JS:** complete; commands are selectable text.
 
 ### SCR-09: For organizations (Enterprise)
-**Scenarios:** SCN-014. Since 2026-10-10: hero ("Make your organization AI-native", designed for 1 to 1000 people) with the four-step funnel → PassionCode for Enterprise (#enterprise: in development, offered on request; seven things we set up — machines onboarded, agents rolled out, routing between machines, model access through each machine's local agent, activity and usage analytics, administration, custom signed builds; data on your machines or your own cloud; no codename, internals or wording about assessing people) → estimate formula (#estimate) → the request form (#request, unchanged) → three FAQs. #organization, #cases, #engagement and #options stay as legacy anchors.
+**Scenarios:** SCN-014, SCN-022. Since 2026-10-10: hero ("Make your organization AI-native", designed for 1 to 1000 people) with the four-step funnel → PassionCode for Enterprise (#enterprise: in development, offered on request; seven things we set up — machines onboarded, agents rolled out, routing between machines, model access through each machine's local agent, activity and usage analytics, administration, custom signed builds; data on your machines or your own cloud; no codename, internals or wording about assessing people) → For finance and engineering (#spend) → estimate formula (#estimate) → 04 / REQUEST (#request, since 2026-10-11): two cards, the agent prompt first (#agent-request: one line, the prompt in the page's language with English JSON and commands, a Copy button added by script, a link to the plain-text copy) and the short form (free text, work email, optional goal, a privacy line; one column below 900 px, the agent card on top) → three FAQs. #organization, #cases, #engagement and #options stay as legacy anchors.
 **Web surface:** public
 **Route:** https://passioncode.ai/business/
 **Answers:** How does my organization move into AI with agents it owns, what could they take over, and how do I start?
 **Indexable:** yes; Service and FAQPage structured data.
-**Without JS:** the form is one page posting to /api/leads; the estimate formula and example are static text.
+**Without JS:** the short form posts to /api/leads; the prompt is selectable text with no Copy button; the estimate formula and example are static text.
 
 ### SCR-10: Request received
 **Scenarios:** SCN-014. Confirmation for the no-JavaScript path, with the email fallback.

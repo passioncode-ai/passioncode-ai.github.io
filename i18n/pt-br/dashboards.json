@@ -5,13 +5,11 @@
     "One Mac window for your local agent services. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Uma janela do Mac para os seus serviços de agentes locais. Veja o que precisa de atenção, abra painéis e deixe seus agentes usarem as mesmas ferramentas via MCP.",
     "One window for local agent services that speak fabric-service/0.1.": "Uma janela para serviços de agentes locais que falam fabric-service/0.1.",
     "Download": "Baixar",
-    "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "Seus serviços de agentes",
     "One place to look": "Um só lugar para olhar",
     "Download for macOS ↓": "Baixar para macOS ↓",
     "View source ↗": "Ver código-fonte ↗",
     "Release": "Release",
-    "· macOS 13+ · Apple silicon + Intel": "· macOS 13+ · Apple silicon + Intel",
     "YOUR LOCAL SERVICES / TOGETHER": "SEUS SERVIÇOS LOCAIS / REUNIDOS",
     "THE WINDOW": "A JANELA",
     "Every agent service": "Todos os serviços de agentes",
@@ -86,6 +84,11 @@
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "Estado, gastos e controle: cada serviço de agente, o que ele está fazendo, o que gasta e as atualizações dele numa só janela. É o passo 4 de",
     "how it works": "“Como funciona”",
     "All the tools": "Todas as ferramentas",
-    "The skills kept current": "As skills sempre atualizadas"
+    "The skills kept current": "As skills sempre atualizadas",
+    "FABRIC DASHBOARDS · macOS + Windows + Linux": "FABRIC DASHBOARDS · macOS + Windows + Linux",
+    "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
+    "Windows and Linux": "Windows e Linux",
+    "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "também traz um instalador assinado para Windows em x64 e arm64, e um AppImage e um .deb para Linux em x64 e arm64. Por enquanto as atualizações automáticas existem só no macOS: no Windows e no Linux, instale você mesmo a próxima versão.",
+    "Windows and Linux downloads": "Downloads para Windows e Linux"
   }
 }
