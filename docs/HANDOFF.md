@@ -17,7 +17,7 @@ Done ([capture record](evidence/2026-10-11-mockups/README.md), harness in `evide
   sample-data alt; `scripts/locales.test.mjs` the language swap.
 - 13 new strings in ten languages: en and ru native; de, fr, es, pt-br, pl, ko, ja translated from English here;
   zh-Hans by the copy agent's write capability only (one string per call; calls with several strings and parallel
-  calls returned no text — a copy-agent defect to report to its owner; about $0.13 in all). Copy-agent rule checks:
+  calls returned no text — a copy-agent defect to report to its owner; about $0.16 charged in all, failed calls included). Copy-agent rule checks:
   en 100 pass, ru 100 pass, zh no findings.
 - docs/ux SCN-021, SCN-007, SCR-04, SCR-05, SCR-06 home; the plan's W5 status; SITE-028 row.
 
