@@ -31,10 +31,10 @@ $1.09) is recorded by the copy agent. Every further zh-* change goes through the
 (locale zh-Hans-CN, a per-call charge limit).
 
 Open, in order:
-1. zh-Hans follow-ups, through the copy agent's write capability, then its rule check (it now checks zh typography and
-   script): "adapt" is 改造 on home and 适配 on /start/ and /fabric/ (pick one); the "Step N of" fragments before the
-   *how it works* link read three ways (`第 4 步：`, `第 5 步，见`, `这是`) — use one. The local copy agent was not
-   reachable on 2026-10-11 (ECONNREFUSED), so its zh check has not run on the 142 strings.
+1. Done 2026-10-11: zh-Hans follow-ups through the copy agent's write capability (Qwen, jobs
+   `job_96d88a08…` cut short at $0.028 and `job_dcbe0adf…` $0.015): "adapt" is 适配 everywhere; the "Step N of"
+   fragments end "第 N 步，见" before the *how it works* link. The copy agent's zh rule check (typography, script,
+   voice bans) passes on all 142 strings (report `733f0250`) and on the revised ones (`0f8df12a`).
 2. Native-speaker review (SITE-026): de "evidence" (Belege vs Nachweise), fr "foyer" vs "maison", pt-br "casa" vs
    "lar" and two words for hand-offs, es "TOOLKIT DE PASSIONCODE" vs "conjunto de herramientas", pl "agenci" vs
    "agenty", ja spacing between Japanese and Latin names, zh "家" for home.
@@ -42,7 +42,7 @@ Open, in order:
    the throwaway macOS demo user with Docker Desktop and Claude Code (an administrator password is a human gate).
 4. W10 home video (about 75 s, AI narrator en+ru, subtitles in ten languages) after W5; the video slot stays hidden.
 
-Next task: item 1 (zh follow-ups) when the copy agent is reachable; otherwise item 2.
+Next task: item 2 (native-speaker review), or item 3 once the operator creates the demo macOS user.
 
 ---
 

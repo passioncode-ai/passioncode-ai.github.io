@@ -64,7 +64,7 @@ Português (Brasil)
 
 03
 
-创建或改造一个智能体
+创建或适配一个智能体
 
 04
 
@@ -110,7 +110,7 @@ Apple silicon 和 Intel · 已签名并公证 · SHA-256 4d8e8da80bcf490fed955dd
 
 03
 
-### 创建或改造一个智能体
+### 创建或适配一个智能体
 
 在 Claude Code 或 Codex 中，直接说出你的需求，或从 Fabric 的创建和适配操作开始；无论哪种方式，工作都在你的编码智能体控制台中运行。Fabric Agent Adapter 技能会先提出问题，并在修改任何内容前展示计划；适配会在新的 fabric-adapter 分支上进行。你会得到一份契约、一个仪表盘、测试和一份符合性报告。
 

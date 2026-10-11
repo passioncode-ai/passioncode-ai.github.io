@@ -128,7 +128,7 @@
     ", was released under PolyForm Noncommercial or Internal Use and keeps that license; the next release is the first under the AGPL.": "，以 PolyForm Noncommercial or Internal Use 发布，并保持该许可证；下一个版本是首个采用 AGPL 的版本。",
     "Keep your Claude Code and Codex CLI accounts in one local workbench: see the usage each one reports, and choose which account handles the next request": "把 Claude Code 和 Codex CLI 账号放在同一个本地工作台：查看每个账号上报的用量，并选择由哪个账号处理下一次请求",
     "IN THE TOOLKIT": "工具包成员",
-    "The accounts: which account each agent runs on, with its usage limits in view. Step 4 of": "账号：每个智能体运行在哪个账号上，并可查看其用量限制。第 4 步：",
+    "The accounts: which account each agent runs on, with its usage limits in view. Step 4 of": "账号：每个智能体运行在哪个账号上，并可查看其用量限制。第 4 步，见",
     "how it works": "工作原理",
     "Switchboard 0.6.13 accounts in its dark theme: the account in use for Claude Code and Codex CLI, two pools of Claude Code accounts with their usage and reset times, and one project rule. Synthetic demo data, with the demo banner at the top.": "Switchboard 0.6.13 的账号界面，深色主题：正在用于 Claude Code 和 Codex CLI 的账号、两个附带用量和重置时间的 Claude Code 账号池，以及一条项目规则。合成的演示数据，顶部有演示横幅。",
     "Browser demo of 0.6.13 · no real accounts, credentials or provider requests": "0.6.13 的浏览器演示 · 无真实账号、凭据或服务商请求",
