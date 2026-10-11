@@ -92,6 +92,6 @@ GitHub и исходный код
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

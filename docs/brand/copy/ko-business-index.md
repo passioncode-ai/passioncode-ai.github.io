@@ -70,6 +70,14 @@ Enterprise · 조직용
 
 04확대 적용역할별 업무 공간
 
+만든 사람들
+
+## 먼저 우리 팀을 위해 만들었습니다
+
+PassionCode의 공동 창업자는 두 명이고, 둘 다 팀을 이끌고 있습니다. Nicegram의 공동 창업자이자 CPO인 Sergey Sheleg, 그리고 Teslasuit의 공동 창업자이자 CTO인 Serge Khurs입니다.
+
+우리는 이 구성을 우리 자신을 위해 만들었고, 지금 우리 일이 이 위에서 돌아갑니다. 이제 이것을 조직에 가져갑니다. 조직의 시스템에 연결하고, 조직의 프로세스를 실행할 에이전트를 도입하도록 돕습니다. 우리가 여기까지 온 과정 →
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## 우리가 설정해 드리는 것
@@ -296,6 +304,6 @@ GitHub 및 소스 코드
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

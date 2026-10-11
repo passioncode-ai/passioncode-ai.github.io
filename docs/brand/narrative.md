@@ -28,7 +28,7 @@ Three promises compete on the site today (plan finding N1). They stop competing 
 2. **"Build your own workplace for AI agents"** (home `<title>` and meta) becomes a description of what the
    hero means, never a second headline. W7 aligns the home `<title>` and meta with the hero's words.
 3. **"Do what you love — agents take the rest"** (fabric-workspace `knowledge/vision.md`, operator 2026-10-05) is
-   the *reason* behind the product. It belongs in the founder note and the /vision/ closing, as direction, never
+   the *reason* behind the product. It belongs in the founders' story (home #about, "How we got here", since 2026-10-11: two co-founders, told in the first person by Sergey Sheleg) and the /vision/ closing, as direction, never
    in a hero.
 
 ## 2. Problem, in the reader's words

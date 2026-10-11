@@ -23,7 +23,6 @@
     "Design system": "Designsystem",
     "Privacy": "Datenschutz",
     "commercial@passioncode.ai": "commercial@passioncode.ai",
-    "Twitter": "Twitter",
     "Fabric Switchboard": "Fabric Switchboard",
     "Fabric Dashboards": "Fabric Dashboards",
     "Project Observatory": "Project Observatory",
@@ -68,6 +67,7 @@
     ", a separate open-source skill from the": "– ein eigenständiger Open-Source-Skill aus der Sammlung",
     "sshlg-skills": "sshlg-skills",
     "task-pipeline on GitHub": "task-pipeline auf GitHub",
-    "· it is not part of PassionCode.ai and needs nothing from it": "· der Skill gehört nicht zu PassionCode.ai und braucht nichts davon"
+    "· it is not part of PassionCode.ai and needs nothing from it": "· der Skill gehört nicht zu PassionCode.ai und braucht nichts davon",
+    "X": "X"
   }
 }

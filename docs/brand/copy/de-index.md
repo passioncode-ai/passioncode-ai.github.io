@@ -260,7 +260,7 @@ Gmail und Cloudflare-Mail in einer Liste, Wichtiges zuerst; Agenten antworten na
 
 Entwicklungsvorschau
 
-0.15.0
+0.15.1
 
 · macOS + Windows + Linux · Schritt 5
 
@@ -308,21 +308,29 @@ Deine Arbeit bleibt auf deinen Rechnern und in deinen eigenen Cloud-Accounts. Fa
 
 ÜBER UNS
 
-## Eine Notiz
+## Wie es dazu kam
 
-## vom Gründer
+Ich bin Sergey Sheleg, Mitgründer und CPO von Nicegram, dem alternativen Telegram-Client mit mehr als 60 Millionen Installationen, und Mitgründer von eSIM Plus. Davor habe ich bei Ultimate Guitar Android und das Growth-Produkt geleitet; die Apps des Unternehmens erreichen mehr als 350 Millionen Menschen. Ich arbeite an der Schnittstelle von Produkt, Wachstum, Marketing, KI und Blockchain.
 
-Ich bin Sergey, Mitgründer von Nicegram, das 60 Millionen Nutzer hat.
+Mein Mitgründer bei PassionCode ist Serge Khurs, Mitgründer und CTO von Teslasuit, einem Ganzkörperanzug mit Haptik, Muskelstimulation, Sensoren und Motion-Tracking für Medizin, Training, Industrie und Verteidigung. Heute berät er große internationale Digitalunternehmen als Ingenieur für KI und Backend-Systeme.
 
-Ich habe PassionCode als meinen eigenen Arbeitsplatz für die Arbeit mit KI-Agenten gebaut. Daraus wurde ein Weg, wie jeder sein eigenes Setup in einen Agenten-Arbeitsplatz verwandeln kann und wie eine Organisation AI-native wird.
+Wir leiten beide Teams, und wir haben beide gleich angefangen: Wir haben unsere eigenen Arbeitsplätze für Agenten eingerichtet. Wir haben experimentiert, herausgefunden, wie ein Arbeitsplatz aufgebaut sein sollte, und unsere internen Abläufe immer weiter verfeinert, mit vielen Jahren Erfahrung in Technik und Produkt.
+
+Mit der Zeit wurde daraus ein Aufbau für ein AI-natives Team aus Agenten: wie der Arbeitsplatz aussieht, wie ein System von Agenten entsteht und wie es in eine Organisation passt. Wir haben ihn als Software verpackt, damit er jedes Mal gleich funktioniert. Heute läuft unsere eigene Arbeit darauf.
+
+Dann haben wir gesehen, dass er weit mehr Menschen helfen kann als uns beiden: allen, die mit KI-Agenten arbeiten, in Entwicklung, Marketing, Finanzen, Werbung oder jeder Routine, die sich automatisieren lässt. Die Software passt sich der Arbeit an, also haben wir sie als Open Source veröffentlicht. Installier sie, pass deinen Arbeitsplatz an, mach ihn agentisch und nutze Claude Code so, wie es gedacht ist.
+
+In unseren Teams sahen wir immer wieder dasselbe Problem. Menschen geben einen Teil einer Aufgabe an einen Chat und reichen das Ergebnis an einen Menschen zurück, und der Prozess bleibt, wie er war. Ändern muss sich der Prozess.
+
+Genau das machen wir für Organisationen. Wenn Agenten Routinearbeit in echten Geschäftsprozessen übernehmen sollen, verbinden wir PassionCode mit deinen Systemen und helfen dir, eigene Agenten einzuführen, die diese Prozesse ausführen. Erzähl uns von deinen Prozessen →
 
 Es ist Open Source unter der GNU AGPL-3.0 und für den persönlichen Gebrauch kostenlos; eine kommerzielle Lizenz deckt ab, was die AGPL nicht abdeckt.
 
-Auf Twitter folgen
+Auf X folgen
 
 ↗
 
-Sergey · @sshlg93
+Sergey Sheleg · Mitgründer, PassionCode
 
 PassionCode
 
@@ -356,6 +364,6 @@ Datenschutz
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

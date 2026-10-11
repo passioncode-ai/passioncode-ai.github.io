@@ -25,7 +25,7 @@ Contract: brand-contract v1
 | Codex | CodeX |
 | Windows | WINDOWS |
 | macOS | MacOS |
-| Twitter | twitter |
+| X (the platform, formerly Twitter; links read "X" since 2026-10-11) | Twitter, twitter |
 | Sergey | sergey |
 
 ## Decided terms (operator, 2026-10-10)

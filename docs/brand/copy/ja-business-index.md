@@ -70,6 +70,14 @@ Enterprise · 組織向け
 
 04展開役割ごとのワークプレース
 
+私たちについて
+
+## まず自分たちのチームのために作りました
+
+PassionCodeには共同創業者が二人いて、どちらもチームを率いています。Nicegramの共同創業者兼CPOのSergey Shelegと、Teslasuitの共同創業者兼CTOのSerge Khursです。
+
+この仕組みは自分たちのために作ったもので、今では私たち自身の仕事がその上で動いています。これをお客様の組織に持ち込みます。お客様のシステムにつなぎ、お客様のプロセスを担うエージェントの導入を支援します。ここに至るまで →
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## 当社が構築するもの
@@ -296,6 +304,6 @@ GitHub とソース
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

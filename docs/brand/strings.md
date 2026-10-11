@@ -12,8 +12,9 @@ Contract: brand-contract v1
 | toolkit.explore | Explore the tools | index.html | SCN-001 | proposed | copy |
 | fabric.explore | Explore Fabric | index.html | SCN-007 | proposed | copy |
 | download.fabric.macos | Download for macOS | fabric/index.html | SCN-007 | proposed | copy |
-| author.follow | Follow on Twitter | index.html | SCN-008 | proposed | copy |
-| founder.nicegram | Nicegram | index.html | SCN-008 | proposed | copy |
+| author.follow | Follow on X | index.html | SCN-008 | proposed | copy |
+| about.request | Tell us about your processes | index.html (#about) | SCN-008, SCN-014 | proposed | copy |
+| founders.story | How we got here | business/index.html (#founders) | SCN-014, SCN-008 | proposed | copy |
 | door.start | Get started | index.html | SCN-013 | proposed | copy |
 | door.business | Estimate and request | index.html | SCN-014 | proposed | copy |
 | request.send | Send request | business/index.html (#request) | SCN-014 | proposed | copy |

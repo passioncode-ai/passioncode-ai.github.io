@@ -1,0 +1,141 @@
+{
+ "what": "WebKit (Playwright webkit, playwright-core 1.63.0, WebKit build 2359) against the built dist/ served over local HTTP, branch agent/site-founders, 2026-10-11; reduced motion on",
+ "pages": [
+  {
+   "url": "/#about",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "sectionWidth": 362,
+   "sectionHeight": 1980,
+   "elementsOutsideViewport": 0,
+   "paragraphs": 9,
+   "leadFontPx": 22,
+   "bodyFontPx": 16,
+   "bodyLineHeight": "28.799999px",
+   "linkColor": "rgb(255, 210, 26)",
+   "externalLinks": [
+    "https://x.com/sshlg93"
+   ],
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/#about",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "sectionWidth": 362,
+   "sectionHeight": 2305,
+   "elementsOutsideViewport": 0,
+   "paragraphs": 9,
+   "leadFontPx": 22,
+   "bodyFontPx": 16,
+   "bodyLineHeight": "28.799999px",
+   "linkColor": "rgb(255, 210, 26)",
+   "externalLinks": [
+    "https://x.com/sshlg93"
+   ],
+   "brokenImages": 0
+  },
+  {
+   "url": "/business/#founders",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "sectionWidth": 362,
+   "sectionHeight": 666,
+   "elementsOutsideViewport": 0,
+   "paragraphs": 2,
+   "leadFontPx": 22,
+   "bodyFontPx": 16,
+   "bodyLineHeight": "28.799999px",
+   "linkColor": "rgb(255, 210, 26)",
+   "externalLinks": [],
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/business/#founders",
+   "width": 390,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "sectionWidth": 362,
+   "sectionHeight": 695,
+   "elementsOutsideViewport": 0,
+   "paragraphs": 2,
+   "leadFontPx": 22,
+   "bodyFontPx": 16,
+   "bodyLineHeight": "28.799999px",
+   "linkColor": "rgb(255, 210, 26)",
+   "externalLinks": [],
+   "brokenImages": 0
+  },
+  {
+   "url": "/#about",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "sectionWidth": 1180,
+   "sectionHeight": 1515,
+   "elementsOutsideViewport": 0,
+   "paragraphs": 9,
+   "leadFontPx": 22,
+   "bodyFontPx": 16,
+   "bodyLineHeight": "28.799999px",
+   "linkColor": "rgb(255, 210, 26)",
+   "externalLinks": [
+    "https://x.com/sshlg93"
+   ],
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/#about",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "sectionWidth": 1180,
+   "sectionHeight": 1721,
+   "elementsOutsideViewport": 0,
+   "paragraphs": 9,
+   "leadFontPx": 22,
+   "bodyFontPx": 16,
+   "bodyLineHeight": "28.799999px",
+   "linkColor": "rgb(255, 210, 26)",
+   "externalLinks": [
+    "https://x.com/sshlg93"
+   ],
+   "brokenImages": 0
+  },
+  {
+   "url": "/business/#founders",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "sectionWidth": 1180,
+   "sectionHeight": 514,
+   "elementsOutsideViewport": 0,
+   "paragraphs": 2,
+   "leadFontPx": 22,
+   "bodyFontPx": 16,
+   "bodyLineHeight": "28.799999px",
+   "linkColor": "rgb(255, 210, 26)",
+   "externalLinks": [],
+   "brokenImages": 0
+  },
+  {
+   "url": "/ru/business/#founders",
+   "width": 1280,
+   "status": 200,
+   "horizontalOverflowPx": 0,
+   "sectionWidth": 1180,
+   "sectionHeight": 543,
+   "elementsOutsideViewport": 0,
+   "paragraphs": 2,
+   "leadFontPx": 22,
+   "bodyFontPx": 16,
+   "bodyLineHeight": "28.799999px",
+   "linkColor": "rgb(255, 210, 26)",
+   "externalLinks": [],
+   "brokenImages": 0
+  }
+ ]
+}

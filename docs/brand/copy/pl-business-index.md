@@ -70,6 +70,14 @@ Odpowiadamy w ciągu dwóch dni roboczych Zaprojektowane dla 1 do 1000 osób · 
 
 04Wdrożeniemiejsca pracy dla ról
 
+KIM JESTEŚMY
+
+## Najpierw zbudowaliśmy to dla własnych zespołów
+
+PassionCode ma dwóch współzałożycieli i obaj kierujemy zespołami: Sergey Sheleg, współzałożyciel i CPO Nicegram, oraz Serge Khurs, współzałożyciel i CTO Teslasuit.
+
+Zbudowaliśmy ten układ dla siebie i dziś opiera się na nim nasza własna praca. Teraz wnosimy go do Twojej organizacji: podłączamy go do Twoich systemów i pomagamy Ci wdrożyć agentów, którzy prowadzą Twoje procesy. Jak do tego doszliśmy →
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## Co dla Ciebie konfigurujemy
@@ -296,6 +304,6 @@ Prywatność
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

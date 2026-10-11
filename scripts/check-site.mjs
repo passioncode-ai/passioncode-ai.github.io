@@ -156,7 +156,19 @@ console.log(`PASS: ${PAGES.length} static pages, metadata, CSP-safe markup, anch
 // of problem and answer, the two doors, the tools with their status, the license line, a short
 // FAQ and the founder note. Removed sections keep their addresses as legacy anchors.
 const home = read('index.html')
-for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'the home for your projects and their agents', 'does not reply yet', 'real-model replies are not yet verified', 'href="/start/"', 'href="/business/"', 'href="/vision/"', 'since version 0.3.2, Fabric send anonymous usage counts', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available', '<!-- license-history -->', 'local, open-source workspace', 'the subscription you already have', 'co-founder of <a href="https://nicegram.me">Nicegram</a>, which has 60 million users', 'free for personal use; a commercial license covers what the AGPL does not']) assert.ok(home.includes(text), `homepage missing ${text}`)
+for (const text of ['The agent-agnostic operating system for', 'AI-native teams', 'From vibe coding to passion coding', 'the home for your projects and their agents', 'does not reply yet', 'real-model replies are not yet verified', 'href="/start/"', 'href="/business/"', 'href="/vision/"', 'since version 0.3.2, Fabric send anonymous usage counts', 'Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open source under AGPL-3.0', 'A commercial license is available', '<!-- license-history -->', 'local, open-source workspace', 'the subscription you already have', 'free for personal use; a commercial license covers what the AGPL does not']) assert.ok(home.includes(text), `homepage missing ${text}`)
+// The founders' story (operator 2026-10-11, docs/brand/facts.md rows *founders*, *Nicegram installs*,
+// *Ultimate Guitar scale*, *Serge Khurs*): first person, two co-founders, no links to publications or
+// sources, Nicegram counted in installs and never as "founded", and the request link to /business/.
+{
+  const about = home.slice(home.indexOf('<section class="section about-section" id="about"'), home.indexOf('</section>', home.indexOf('id="about"')))
+  for (const text of ['I’m Sergey Sheleg, co-founder and CPO of Nicegram', 'more than 60 million installs', 'whose apps reach more than 350 million people', 'Serge Khurs, co-founder and CTO of Teslasuit', 'It runs our own work today', 'href="/business/#request"', 'free for personal use; a commercial license covers what the AGPL does not', 'Follow on X', 'Sergey Sheleg · co-founder, PassionCode']) assert.ok(about.includes(text), `homepage #about missing ${text}`)
+  assert.deepEqual([...about.matchAll(/href="(https?:[^"]+)"/g)].map(m => m[1]), ['https://x.com/sshlg93'], 'homepage #about: the only external link is the X profile (no publications or sources)')
+  assert.ok(!/Nicegram[^.]{0,80}\busers\b|\b(?:founded|created) Nicegram|organic/i.test(about), 'homepage #about: Nicegram is counted in installs, never users or organic, and never "founded"')
+  const org = JSON.parse(/<script type="application\/ld\+json">(\{[\s\S]*?"@graph"[\s\S]*?\})<\/script>/.exec(home)[1])['@graph'].find(n => n['@type'] === 'Organization')
+  assert.deepEqual(org.founder.map(p => [p['@type'], p.name, (p.sameAs || []).join()]), [['Person', 'Sergey Sheleg', 'https://x.com/sshlg93'], ['Person', 'Serge Khurs', '']], 'homepage JSON-LD: the two co-founders')
+  for (const file of SOURCE_PAGES) assert.ok(!/>Twitter <span/.test(read(file)), `${file}: the footer names X, not Twitter`)
+}
 for (const id of ['why', 'how', 'start', 'products', 'source', 'faq', 'about', 'path', 'vision', 'toolkit', 'extend', 'companies', 'launcher']) assert.ok(home.includes(`id="${id}"`), `homepage section or legacy anchor #${id}`)
 // Sample-data mockups (SITE-028 W5, docs/evidence/2026-10-11-mockups/README.md): each rendered from a
 // product's own interface with sample data, 2560×1600, a visible "Sample data" chip, an -ru twin for
@@ -217,8 +229,9 @@ for (const id of ['harness', 'beliefs', 'path', 'pipeline', 'faq', 'problem', 't
 assert.equal((vision.match(/<li class="reveal"><span class="cycle-number">0[1-6]<\/span><p class="availability">/g) || []).length, 6, '/vision/: every stage of the path says whether it works today')
 
 // ---- /business/: the funnel form agrees with what the Worker accepts --------------------------
+// The founders' short version (#founders, 2026-10-11) sits ahead of the form and links to /#about.
 const business = read('business/index.html')
-for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"', 'PassionCode for Enterprise', 'Designed for 1 to 1000 people', 'id="organization"', 'id="enterprise"', 'is in development', 'keys never leave the machine that holds them', 'on your machines or in your own cloud', 'there is no fixed package']) assert.ok(business.includes(text), `/business/ missing ${text}`)
+for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"', 'PassionCode for Enterprise', 'Designed for 1 to 1000 people', 'id="organization"', 'id="founders"', 'href="/#about"', 'Serge Khurs, co-founder and CTO of Teslasuit', 'id="enterprise"', 'is in development', 'keys never leave the machine that holds them', 'on your machines or in your own cloud', 'there is no fixed package']) assert.ok(business.includes(text), `/business/ missing ${text}`)
 // Analytics in public copy are about agents and outcomes; the page never frames them as a
 // judgement of people (operator rule, docs/brand/terminology.md "PassionCode for Enterprise").
 assert.ok(!/\b(?:employee|staff|people)\b[^.]{0,40}\b(?:scor|assess|evaluat|performance)/i.test(currentWords(business)), '/business/: analytics are about agents, never a judgement of people')
@@ -240,6 +253,7 @@ const selectValues = name => {
 }
 // The agent prompt (SCN-022) comes before the form, and the plain-text copy is linked.
 assert.ok(business.indexOf('data-copy-prompt') > 0 && business.indexOf('data-copy-prompt') < business.indexOf('<form class="lead-form"'), '/business/: the agent prompt is ahead of the form')
+assert.ok(business.indexOf('id="founders"') > 0 && business.indexOf('id="founders"') < business.indexOf('id="enterprise"'), '/business/: the founders\' short version comes right after the hero, ahead of the form')
 for (const text of ['href="/business/agent-request.txt"', 'https://passioncode.ai/api/leads/token', "https://passioncode.ai/api/leads?dry_run=1", '"channel": "agent-prompt"', 'only after I say yes']) assert.ok(business.includes(text), `/business/ agent prompt missing ${text}`)
 // ON-2: the job titles appear once; ON-4: no spend level of our own is ever published.
 assert.equal((business.match(/\(the CFO and the CTO or CIO\)/g) || []).length, 1, '/business/: the champion\'s job titles appear once')

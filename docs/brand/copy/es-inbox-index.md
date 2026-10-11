@@ -64,7 +64,7 @@ Ver qué hace
 
 ↓
 
-Vista previa de desarrollo 0.15.0 · macOS 12+ · Windows · Linux · código abierto bajo la AGPL-3.0
+Vista previa de desarrollo 0.15.1 · macOS 12+ · Windows · Linux · código abierto bajo la AGPL-3.0
 
 FABRIC INBOX / CORREO + AGENTES
 
@@ -108,7 +108,7 @@ DESCARGAR FABRIC INBOX
 
 ## para Mac, Windows y Linux
 
-Última vista previa: 0.15.0. La app crea su servidor de correo en tu propia cuenta de Cloudflare y lo abre; tu correo se queda en tus cuentas.
+Última vista previa: 0.15.1. La app crea su servidor de correo en tu propia cuenta de Cloudflare y lo abre; tu correo se queda en tus cuentas.
 
 ⌘
 
@@ -127,7 +127,7 @@ Abre el DMG y arrastra Fabric Inbox a Aplicaciones.
 
 ### Windows y Linux
 
-La versión 0.15.0 también incluye un instalador de Windows para x64 y arm64 que no necesita permisos de administrador, firmado con Authenticode desde la 0.14.1, y un AppImage y un .deb de Linux para x64 y arm64.
+La versión 0.15.1 también incluye un instalador de Windows para x64 y arm64 que no necesita permisos de administrador, firmado con Authenticode desde la 0.14.1, y un AppImage y un .deb de Linux para x64 y arm64.
 
 Descargas para Windows y Linux
 
@@ -151,7 +151,7 @@ En la guía de configuración se enumeran todos los ajustes.
 
 DMG para macOS · SHA-256
 
-6c90597998ce664c7a3757b48b6c8345b95bf087fbe3a84387cde31d0480f7d7
+12910dee531c54b2a161ea4ef57807a27f2a6f992bb485379399a0c796f1afa8
 
 Compara antes de abrirlo: shasum -a 256 en Terminal. Un valor distinto significa un archivo distinto; descárgalo de nuevo.
 
@@ -263,6 +263,6 @@ Privacidad
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗

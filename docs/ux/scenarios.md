@@ -82,15 +82,15 @@ See [foundation](foundation.md).
 - **Entry point:** /#about
 - **Preconditions:** none
 - **Steps:**
-  1. Follow About in navigation or footer → the founder note (2026-10-10): Sergey, a co-founder of Nicegram (60 million users, operator statement), started PassionCode as his own workplace for AI agents; it grew into a way for anyone to turn their setup into an agent workspace and for an organization to become AI-native; open source under the GNU AGPL-3.0, free for personal use, a commercial license for what the AGPL does not cover.
-  2. Follow Follow on Twitter → the public profile linked by the operator’s authenticated GitHub account opens.
-- **Expected result:** A visitor knows who builds PassionCode and can follow him without signing up.
-- **Alt paths:** footer social link; Fabric Follow the build reaches the same About section; the Nicegram link opens nicegram.me.
-- **UI elements:** About, founder note, Nicegram link, Follow on Twitter, public profile handle
+  1. Follow About in navigation or footer → "How we got here" (since 2026-10-11, operator decision; facts.md rows *founders*, *Nicegram installs*, *Ultimate Guitar scale*): the founders' story in the first person by Sergey Sheleg, a story and not a CV, with no links to publications or sources. Who the two co-founders are (Sergey Sheleg: co-founder and CPO of Nicegram, more than 60 million installs, and co-founder of eSIM Plus, earlier Android and growth product at Ultimate Guitar; Serge Khurs: co-founder and CTO of Teslasuit, adviser to large digital companies in AI and backend systems) → they built it for themselves while setting up their own workplaces for agents → it became a setup for an AI-native agent team, packaged as software, that runs their own work today → open source because it helps anyone who works with agents → the problem they keep seeing (part of a task goes to a chat, the result back to a person, the process stays the same) → for organizations: connected to their systems, custom agents that run their processes, with "Tell us about your processes" → /business/#request; the license line; the signature "Sergey Sheleg · co-founder, PassionCode".
+  2. Follow Follow on X → the public profile linked by the operator’s authenticated GitHub account opens.
+- **Expected result:** A visitor knows who builds PassionCode and why, and can either follow Sergey without signing up or, for an organization, go to the request.
+- **Alt paths:** footer X link; Fabric Follow the build reaches the same About section; /business/ #founders (the short version) links back here; "Tell us about your processes" opens /business/#request (SCN-014).
+- **UI elements:** About, "How we got here", the story, Tell us about your processes, Follow on X, signature
 - **States covered:** static populated content; external network/login wall.
-- **Errors & recovery:** Twitter may require login; return to website or inspect public GitHub releases instead.
+- **Errors & recovery:** X may require login; return to website or inspect public GitHub releases instead.
 - **Status:** draft
-- **Coverage:** index.html and shared footer; Twitter identity verified from https://github.com/sshlg; browser verification pending.
+- **Coverage:** index.html #about and shared footer; `scripts/check-site.mjs` pins the story's facts, the single external link and the two founders in JSON-LD; X identity verified from https://github.com/sshlg; WebKit check at 390 and 1280 px, en and ru, 2026-10-11 (docs/evidence/2026-10-11-founders/).
 - **Product:** unobserved
 
 ### SCN-002: Download for macOS
@@ -329,11 +329,12 @@ rather than replaces, the browser review recorded above.
 - **Preconditions:** none
 - **Steps:**
   1. Read the hero → make the organization AI-native, agents connected with what each one cost and what it delivered shown, data on its own machines or cloud; the four-step funnel (tell us, estimate, pilot, rollout); designed for 1 to 1000 people.
-  2. Read PassionCode for Enterprise (#enterprise) → in development and offered on request; what we set up: machines onboarded, agents rolled out, routing between machines, model access through each machine's local agent (keys stay on it), activity and usage analytics, administration, custom builds signed by PassionCode.ai.
-  3. Read For finance and engineering (#spend, since 2026-10-11, [narrative-org.md](../brand/narrative-org.md)) → finance and engineering named once by role (the CFO and the CTO or CIO, ON-2); the one question (what did each agent cost, and what did it deliver?: the ROI of each agent, ON-1) in three labelled stages: does the work run through agents (AVAILABLE NOW: the estimate), which agents are worth what they cost (AVAILABLE NOW: Fabric Dashboards Spend, Switchboard usage limits, Observatory), which setups work best and how they reach the rest (DIRECTION, including limits finance sets once as a record agents check, ON-6); each stage links on (#estimate, /dashboards/, #request); the note says it is about agents and workflows, never a ranking of people (ON-5).
-  4. Read the estimate (03 / THE ESTIMATE) → the formula, the share table and a worked example.
-  5. Reach 04 / REQUEST → two ways side by side, the agent first (SCN-022); the short form: one free-text field ("What should agents do for your organization?"), the work email, and an optional main goal (seven answers, the first "See what our agents cost and deliver"); a line under it says the answers are kept only to reply, linking /privacy/.
-  6. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
+  2. Read Who we are (#founders, since 2026-10-11) → the two co-founders run teams, built the setup for themselves, it runs their work today, and they bring it to the organization; "How we got here" → /#about (SCN-008). Unnumbered, so the page still answers its one question.
+  3. Read PassionCode for Enterprise (#enterprise) → in development and offered on request; what we set up: machines onboarded, agents rolled out, routing between machines, model access through each machine's local agent (keys stay on it), activity and usage analytics, administration, custom builds signed by PassionCode.ai.
+  4. Read For finance and engineering (#spend, since 2026-10-11, [narrative-org.md](../brand/narrative-org.md)) → finance and engineering named once by role (the CFO and the CTO or CIO, ON-2); the one question (what did each agent cost, and what did it deliver?: the ROI of each agent, ON-1) in three labelled stages: does the work run through agents (AVAILABLE NOW: the estimate), which agents are worth what they cost (AVAILABLE NOW: Fabric Dashboards Spend, Switchboard usage limits, Observatory), which setups work best and how they reach the rest (DIRECTION, including limits finance sets once as a record agents check, ON-6); each stage links on (#estimate, /dashboards/, #request); the note says it is about agents and workflows, never a ranking of people (ON-5).
+  5. Read the estimate (03 / THE ESTIMATE) → the formula, the share table and a worked example.
+  6. Reach 04 / REQUEST → two ways side by side, the agent first (SCN-022); the short form: one free-text field ("What should agents do for your organization?"), the work email, and an optional main goal (seven answers, the first "See what our agents cost and deliver"); a line under it says the answers are kept only to reply, linking /privacy/.
+  7. Send → the request is stored before anything else, the commercial mailbox is notified, the sender gets a receipt; the page shows the reference.
 - **Expected result:** A validated request (schema `lead/2`, channel `form`) reaches PassionCode.ai, and the visitor knows when to expect a reply. Everything else (size, tools, budget, timing) is asked in the reply, not in the form.
 - **Design rationale (2026-10-11, operator ON-3: "bring every form down to the minimum"):** the reply needs only an address to answer and what to answer about, so email and the free text are the two required fields. The goal is optional and one choice: it routes the request (the cost-and-results goal is the finance signal) without adding a decision the visitor must make. The consent checkbox is gone: answering a request is a step the visitor asks for (GDPR Art. 6(1)(b), /privacy/), so a notice line replaces it; the product-news checkbox is gone with it. The former five-step form (company, industry, size, processes, hours and cost with a live estimate, setup, hosting, budgets, name, role, phone, Telegram) is retired; the Worker still accepts it as `lead/1` from pages already open in a browser.
 - **Alt paths:** without JavaScript the form posts to /api/leads and lands on /business/thanks/; a reload keeps the unsent text in the browser; email commercial@passioncode.ai instead; let a coding agent ask (SCN-022).
@@ -355,7 +356,7 @@ rather than replaces, the browser review recorded above.
   2. Read its AGENTS.md and the organization CONTRIBUTING.md; run the test command.
   3. Open the pull request → opening it is the CLA agreement.
 - **Expected result:** The contributor knows the gate and the route, and that internal repositories exist only for collaborators.
-- **Alt paths:** follow the builder on Twitter to join the team.
+- **Alt paths:** follow the builder on X to join the team.
 - **UI elements:** contribute steps, repository list
 - **States covered:** success; static.
 - **Errors & recovery:** none on the site.

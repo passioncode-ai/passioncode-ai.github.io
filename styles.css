@@ -691,7 +691,7 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
  .fabric-hero h1 { font-size: clamp(2.8rem,10vw,4rem); }
 }
 .author-signature { margin-top: 18px; font-size: 13px; color: var(--ink-muted); }
-.author-signature a, .about-lead a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+.author-signature a, .about-copy > p a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
 .home-hero .hero-mark::after { content: none; }
 
 /* Project Observatory's product card shows the real dashboard instead of an illustration. */

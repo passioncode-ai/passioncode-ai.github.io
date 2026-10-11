@@ -70,6 +70,14 @@ Respuesta en dos días hábiles Pensado para de 1 a 1000 personas · la estimaci
 
 04Despliegueespacios de trabajo por rol
 
+QUIÉNES SOMOS
+
+## Primero lo construimos para nuestros equipos
+
+PassionCode tiene dos cofundadores y los dos dirigimos equipos: Sergey Sheleg, cofundador y CPO de Nicegram, y Serge Khurs, cofundador y CTO de Teslasuit.
+
+Construimos esta configuración para nosotros y hoy nuestro propio trabajo funciona sobre ella. Ahora la llevamos a tu organización: la conectamos a tus sistemas y te ayudamos a incorporar agentes que llevan tus procesos. Cómo llegamos hasta aquí →
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## Lo que configuramos
@@ -296,6 +304,6 @@ Privacidad
 
 commercial@passioncode.ai
 
-Twitter
+X
 
 ↗
