@@ -3,12 +3,29 @@
 // happens, then delivered three ways — a notification to the commercial mailbox, a receipt
 // to the sender, and a signed copy to the PassionCode.ai Platform backend. Each delivery is
 // retried by the cron from D1, so a lead is never lost to a backend or mail outage.
+//
+// Two shapes (2026-10-11, operator ON-3: every form down to the minimum):
+//   lead/2 — the short request: what agents should do, a work email, an optional goal; sent by
+//            the /business/ form (`source.channel: "form"`) or by a coding agent the visitor
+//            pasted the published prompt into (`"agent-prompt"`, business/agent-request.txt).
+//            The agent is trusted no more than the form: same token, trap, limits and caps.
+//   lead/1 — the former five-step form, still accepted from pages already open in a browser,
+//            and the only shape the Platform takes today; a lead/2 waits in D1 (forward
+//            `skipped`) until the Platform accepts it (docs/DEPLOYMENT.md#commercial-enquiries).
 import { LEAD_OPTIONS, PRIVACY_VERSION } from '../assets/lead-options.js'
 import { estimate } from '../assets/estimate.js'
 import { ISSUES, M } from './messages.js'
 import { LOCALES, resolveLocale, SOURCE_LOCALE, t, tn } from './i18n.js'
 
 export const LEAD_SCHEMA = 'lead/1'
+export const SHORT_SCHEMA = 'lead/2'
+export const CHANNELS = ['form', 'agent-prompt']
+// The Platform's lead/1 goals (passioncode-platform src/modules/leads/schema.ts GOALS); a goal
+// added later (cost_and_results) is offered only by the short request.
+export const LEGACY_GOALS = ['automate_operations', 'custom_agents', 'convert_agents', 'commercial_license', 'managed_hosting', 'team_onboarding']
+// What the forward column says of a lead the Platform cannot take yet; the re-queue command in
+// docs/DEPLOYMENT.md#commercial-enquiries selects on it.
+export const SHORT_FORWARD_WAIT = 'lead/2: the Platform accepts lead/1 only; re-queue when it accepts lead/2'
 export const MAX_BODY_BYTES = 32 * 1024
 export const FORM_TOKEN_MIN_AGE_MS = 3000
 export const FORM_TOKEN_MAX_AGE_MS = 24 * 60 * 60 * 1000
@@ -17,7 +34,9 @@ export const MAX_ATTEMPTS = 12
 // form from being used to mail many strangers.
 export const RECEIPTS_PER_HOUR = 30
 
-const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/
+// Case-insensitive (macOS `uuidgen` prints capitals); stored lowercase.
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+const requestIdOf = v => typeof v === 'string' && UUID.test(v.trim()) ? v.trim().toLowerCase() : null
 // The Platform's own rule (zod `z.regexes.email`, passioncode-platform src/modules/leads/schema.ts):
 // an address this Worker accepts and the Platform refuses would be stored here and never delivered.
 export const EMAIL = /^(?:[A-Za-z0-9_'+\-]+\.)*[A-Za-z0-9_'+\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/
@@ -32,7 +51,7 @@ export const FINAL_STATUSES = new Set([400, 409, 413, 415, 422])
 // Only the form's own field names are read: a crafted name (`__proto__.x`) never reaches an
 // object, and every node has a null prototype, so nothing can change the isolate's Object.
 export const FORM_FIELDS = new Set([
-  'id', 'form_token', 'pc_hp',
+  'id', 'form_token', 'pc_hp', 'lang',
   'goals',
   'company.name', 'company.website', 'company.industry', 'company.industryOther', 'company.size', 'company.agentUsers',
   'processes.areas', 'processes.other', 'processes.currentState', 'processes.tools', 'processes.hoursPerWeek', 'processes.hourlyCost', 'processes.currency',
@@ -40,7 +59,7 @@ export const FORM_FIELDS = new Set([
   'budget.monthly', 'budget.setup', 'budget.timeline',
   'contact.name', 'contact.role', 'contact.email', 'contact.phone', 'contact.telegram', 'contact.message',
   'consent.privacy', 'consent.marketing',
-  'source.referrer', 'source.utm.source', 'source.utm.medium', 'source.utm.campaign', 'source.utm.term', 'source.utm.content'
+  'source.channel', 'source.agent', 'source.referrer', 'source.utm.source', 'source.utm.medium', 'source.utm.campaign', 'source.utm.term', 'source.utm.content'
 ])
 const ARRAY_FIELDS = new Set(['goals', 'processes.areas', 'processes.tools', 'setup.constraints'])
 export function formToObject (params) {
@@ -80,7 +99,8 @@ const str = (v, max, { min = 0, field, issues, multiline = false, truncate = fal
   // Control characters never survive; a single-line field (it may reach an email subject)
   // loses line breaks too.
   const s = (multiline ? raw.replace(/\r\n?/g, '\n').replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, ' ').replace(/[ \t]+\n/g, '\n') : raw.replace(/[\u0000-\u001f\u007f]+/g, ' ')).trim()
-  if (s.length < min) issues.push({ path: field, message: min > 1 ? made(ISSUES.atLeast, { n: min }) : made(ISSUES.required) })
+  // An empty answer is "required"; a too-short one names the length.
+  if (s.length < min) issues.push({ path: field, message: min > 1 && s.length > 0 ? made(ISSUES.atLeast, { n: min }) : made(ISSUES.required) })
   if (s.length > max && !truncate) issues.push({ path: field, message: made(ISSUES.atMost, { n: max }) })
   return s.slice(0, max)
 }
@@ -91,7 +111,8 @@ const pick = (v, options, field, issues) => {
 }
 const list = (v, options, field, issues, { min = 0 } = {}) => {
   const values = Array.isArray(v) ? v : (v == null || v === '' ? [] : [v])
-  const out = [...new Set(values.filter(x => typeof x === 'string'))]
+  // An empty value is no answer: an untouched optional <select> still posts it without JavaScript.
+  const out = [...new Set(values.filter(x => typeof x === 'string' && x !== ''))]
   if (out.some(x => !Object.hasOwn(options, x))) issues.push({ path: field, message: made(ISSUES.unknownAnswer) })
   if (out.length < min) issues.push({ path: field, message: min === 1 ? made(ISSUES.chooseAtLeastOne) : made(ISSUES.chooseAtLeast, { n: min }) })
   return out.filter(x => Object.hasOwn(options, x))
@@ -146,9 +167,65 @@ export function issueMessage (message, locale) {
   return message
 }
 
+// The former five-step form is recognised by an answer only it asked for; anything else is the
+// short request. A page opened before 2026-10-11 keeps working until its form token expires.
+const present = v => Array.isArray(v) ? v.length > 0 : (v !== undefined && v !== null && v !== '')
+export function isLegacyRequest (input) {
+  const i = input && typeof input === 'object' ? input : {}
+  return Boolean(i.setup) || [i.budget?.monthly, i.budget?.setup, i.processes?.areas, i.processes?.currentState, i.company?.industry].some(present)
+}
+
 // Returns { ok, lead, issues }. `context` carries what the server knows and the client
 // must not choose: id fallback, time, page, language, client hashes.
 export function buildLead (input, context) {
+  return isLegacyRequest(input) ? buildLegacyLead(input, context) : buildShortLead(input, context)
+}
+
+const optionalPick = (v, options, field, issues) => present(v) ? pick(v, options, field, issues) : null
+const client = (context, issues) => ({ ipHash: context.ipHash, country: /^[A-Za-z0-9]{2}$/.test(context.country || '') ? context.country : '', userAgent: str(context.userAgent || '', 400, { field: 'client.userAgent', issues, truncate: true }) })
+const utmOf = (utm, issues) => Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, str(utm[k], 120, { field: `source.utm.${k}`, issues, truncate: true })]))
+
+// lead/2: the short request. Required: a work email and what agents should do. An agent's
+// request must carry its own id (the idempotency key its prompt makes once and reuses), so a
+// retry can never become a second request.
+export function buildShortLead (input, context) {
+  const issues = []
+  const i = input && typeof input === 'object' ? input : {}
+  const contact = i.contact || {}
+  const source = i.source || {}
+  const email = str(contact.email, 254, { min: 3, field: 'contact.email', issues }).toLowerCase()
+  if (email && (!EMAIL.test(email) || email.split('@')[0].length > 64)) issues.push({ path: 'contact.email', message: made(ISSUES.workEmail) })
+  const channel = present(source.channel) ? pick(source.channel, Object.fromEntries(CHANNELS.map(c => [c, c])), 'source.channel', issues) || 'form' : 'form'
+  const id = requestIdOf(i.id)
+  if (!id && channel === 'agent-prompt') issues.push({ path: 'id', message: made(ISSUES.requestId) })
+  const locale = leadLocale(context.locale)
+  const lead = {
+    schema: SHORT_SCHEMA,
+    id: id || context.newId(),
+    submittedAt: context.now.toISOString(),
+    source: {
+      page: formPage(locale),
+      channel,
+      // What the agent calls itself, if it said; a label, never trusted for anything.
+      agent: channel === 'agent-prompt' ? str(source.agent, 60, { field: 'source.agent', issues, truncate: true }) : '',
+      referrer: referrer(source.referrer ?? context.referrer ?? ''),
+      locale,
+      utm: utmOf(source.utm || {}, issues)
+    },
+    goals: list(i.goals, LEAD_OPTIONS.goals, 'goals', issues),
+    company: { size: optionalPick(i.company?.size, LEAD_OPTIONS.size, 'company.size', issues) },
+    processes: { tools: list(i.processes?.tools, LEAD_OPTIONS.tools, 'processes.tools', issues) },
+    budget: { timeline: optionalPick(i.budget?.timeline, LEAD_OPTIONS.timeline, 'budget.timeline', issues) },
+    contact: { email, message: str(contact.message, 4000, { min: 3, field: 'contact.message', issues, multiline: true }) },
+    // No consent box: answering a request the person asked for is GDPR Art. 6(1)(b) (/privacy/).
+    privacy: { version: PRIVACY_VERSION, basis: 'request' },
+    client: client(context, issues)
+  }
+  return { ok: issues.length === 0, lead, issues }
+}
+
+// lead/1: the former five-step form, exactly as the Platform's schema takes it.
+export function buildLegacyLead (input, context) {
   const issues = []
   const i = input && typeof input === 'object' ? input : {}
   const company = i.company || {}
@@ -168,15 +245,15 @@ export function buildLead (input, context) {
   const locale = leadLocale(context.locale)
   const lead = {
     schema: LEAD_SCHEMA,
-    id: typeof i.id === 'string' && UUID.test(i.id) ? i.id : context.newId(),
+    id: requestIdOf(i.id) || context.newId(),
     submittedAt: context.now.toISOString(),
     source: {
       page: formPage(locale),
       referrer: referrer(i.source?.referrer ?? context.referrer ?? ''),
       locale,
-      utm: Object.fromEntries(['source', 'medium', 'campaign', 'term', 'content'].map(k => [k, str(utm[k], 120, { field: `source.utm.${k}`, issues, truncate: true })]))
+      utm: utmOf(utm, issues)
     },
-    goals: list(i.goals, LEAD_OPTIONS.goals, 'goals', issues, { min: 1 }),
+    goals: list(i.goals, Object.fromEntries(LEGACY_GOALS.map(g => [g, LEAD_OPTIONS.goals[g]])), 'goals', issues, { min: 1 }),
     company: {
       name: str(company.name, 200, { min: 1, field: 'company.name', issues }),
       website: url(company.website, 'company.website', issues),
@@ -213,7 +290,7 @@ export function buildLead (input, context) {
       message: str(contact.message, 4000, { field: 'contact.message', issues, multiline: true })
     },
     consent: { privacy: true, version: PRIVACY_VERSION, marketing: consent.marketing === true || consent.marketing === 'yes' || consent.marketing === 'on' || consent.marketing === 'true' },
-    client: { ipHash: context.ipHash, country: /^[A-Za-z0-9]{2}$/.test(context.country || '') ? context.country : '', userAgent: str(context.userAgent || '', 400, { field: 'client.userAgent', issues, truncate: true }) }
+    client: client(context, issues)
   }
   const e = estimate(lead.processes)
   if (e) lead.estimate = e
@@ -289,8 +366,11 @@ export async function findLead (db, lead) {
 export async function storeLead (db, lead) {
   const hash = await sha256(identity(lead))
   const firstRetry = new Date(Date.parse(lead.submittedAt) + FIRST_RETRY_MS).toISOString()
-  const r = await db.prepare(`INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING`)
-    .bind(lead.id, JSON.stringify(lead), hash, lead.contact.email, lead.submittedAt, firstRetry).run()
+  // A lead/2 is not offered to the Platform until it accepts that shape: it waits in D1 under
+  // the privacy notice's 24-month ceiling, and the mailbox still gets it at once.
+  const short = lead.schema === SHORT_SCHEMA
+  const r = await db.prepare(`INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at, forward_status, forward_error) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING`)
+    .bind(lead.id, JSON.stringify(lead), hash, lead.contact.email, lead.submittedAt, firstRetry, short ? 'skipped' : 'pending', short ? SHORT_FORWARD_WAIT : null).run()
   if ((r.meta?.changes ?? 0) === 1) return 'stored'
   const existing = await db.prepare('SELECT payload_hash FROM leads WHERE id = ?').bind(lead.id).first()
   return existing?.payload_hash === hash ? 'duplicate' : 'conflict'
@@ -302,7 +382,34 @@ const label = (group, value) => LEAD_OPTIONS[group]?.[value] ?? value ?? '—'
 const labels = (group, values) => (values || []).map(v => label(group, v)).join(', ') || '—'
 const money = (n, currency) => new Intl.NumberFormat('en', { style: 'currency', currency, maximumFractionDigits: 0 }).format(n)
 
+// The commercial mailbox's view of a short request: what the person (or their agent) said, and
+// where it came from. The agent's name is the agent's own claim.
+export function shortNotificationText (lead) {
+  const via = lead.source.channel === 'agent-prompt' ? `through a coding agent${lead.source.agent ? ` (${lead.source.agent}, its own name)` : ''} after the sender said yes` : 'through the /business/ form'
+  const locale = leadLocale(lead.source.locale)
+  return [
+    `New request ${via}`,
+    '',
+    `Email: ${lead.contact.email}`,
+    `Goal: ${labels('goals', lead.goals)}`,
+    lead.company.size && `Organization size: ${label('size', lead.company.size)}`,
+    lead.processes.tools.length > 0 && `Agents and tools now: ${labels('tools', lead.processes.tools)}`,
+    lead.budget.timeline && `Timing: ${label('timeline', lead.budget.timeline)}`,
+    '',
+    `What agents should do:\n${lead.contact.message}`,
+    '',
+    `Lead ${lead.id} (${lead.schema}) · ${lead.submittedAt} · country ${lead.client.country || '—'}`,
+    `Language: ${LOCALES[locale].englishName} (${locale})${locale === SOURCE_LOCALE ? '' : ` — reply in ${LOCALES[locale].englishName}`} · page ${lead.source.page}`,
+    lead.source.utm.source ? `UTM: ${Object.entries(lead.source.utm).filter(([, v]) => v).map(([k, v]) => `${k}=${v}`).join(' ')}` : null
+  ].filter(x => x !== null && x !== undefined && x !== false).join('\n')
+}
+export function notificationSubject (lead) {
+  if (lead.schema !== SHORT_SCHEMA) return `Enquiry: ${lead.company.name} · ${label('industry', lead.company.industry)} · ${label('monthly', lead.budget.monthly)}`
+  return `Enquiry: ${lead.contact.email.split('@')[1]} · ${lead.goals.length ? labels('goals', lead.goals) : 'no goal chosen'} · ${lead.source.channel === 'agent-prompt' ? 'via a coding agent' : 'form'}`
+}
+
 export function notificationText (lead) {
+  if (lead.schema === SHORT_SCHEMA) return shortNotificationText(lead)
   const e = lead.estimate
   return [
     `New enquiry from ${lead.contact.name}${lead.contact.role ? `, ${lead.contact.role}` : ''} at ${lead.company.name}`,
@@ -396,7 +503,7 @@ export async function deliver (env, id, { fetch: fetchImpl = fetch, now = new Da
       if (!env.EMAIL) throw new Error('no EMAIL binding')
       const to = String(env.LEAD_NOTIFY_TO || 'commercial@passioncode.ai').split(',').map(s => s.trim()).filter(Boolean)
       const text = notificationText(lead)
-      await env.EMAIL.send({ to, from, replyTo: lead.contact.email, subject: `Enquiry: ${lead.company.name} · ${label('industry', lead.company.industry)} · ${label('monthly', lead.budget.monthly)}`, text, html: asHtml(text) })
+      await env.EMAIL.send({ to, from, replyTo: lead.contact.email, subject: notificationSubject(lead), text, html: asHtml(text) })
       await mark(env.DB, id, 'notify', 'done'); result.notify = 'done'
     } catch (error) { await mark(env.DB, id, 'notify', 'pending', error.message); result.notify = 'retry' }
   }

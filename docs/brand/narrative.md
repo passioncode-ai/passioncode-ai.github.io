@@ -150,7 +150,7 @@ One action, one name, in every language. Where the en and ru columns disagree wi
 |---|---|---|---|
 | seamless | бесшовный | claims what nobody can show | the step that disappears |
 | fully autonomous | полностью автономный | erases who decides | the scope the agent is allowed |
-| guaranteed savings, ROI | гарантированная экономия | the estimate cannot keep it | an estimate the pilot measures |
+| guaranteed savings; a ROI figure we cannot prove (the word "ROI" itself is allowed since operator ON-1, 2026-10-11) | гарантированная экономия | the estimate cannot keep it | an estimate the pilot measures; the ROI of each agent as what it cost and what it delivered |
 | source-available | «исходники доступны» (as a license) | superseded by ADR-0092 | open source under the GNU AGPL-3.0 |
 | AI transformation, digital workforce | ИИ-трансформация, цифровые сотрудники | sales ceremony | agent workplace (for companies) |
 | swarm | рой агентов | hype; no product does it | your agents |

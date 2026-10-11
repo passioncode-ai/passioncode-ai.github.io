@@ -11,7 +11,7 @@ Public home: [passioncode.ai](https://passioncode.ai/). PassionCode.ai is the or
 - [Homepage](index.html): the hero, two doors (for you, for your organization), the growth path, product chooser with each tool's role in the family, launcher/Adapter setup and source-build projects.
 - [Vision](vision/index.html): agent sprawl with sources, the harness, principles, the path in six labelled stages, today and direction, trust.
 - [Get started](start/index.html): five steps from the launcher to the second agent in the same family, and contributing.
-- [For organizations](business/index.html): bringing an organization into AI, PassionCode for Enterprise at offer level, the estimate and the request form.
+- [For organizations](business/index.html): bringing an organization into AI, PassionCode for Enterprise at offer level, the estimate, and the request: a prompt for the visitor's coding agent ([plain text](business/agent-request.txt)) or a three-field form.
 - [Project Observatory](observatory/index.html): local project dashboard, setup and source.
 - [Fabric](fabric/index.html): CEO AI agent early preview, requirements and macOS download.
 - [Fabric Dashboards](dashboards/index.html): service dashboard, what the 0.6 releases added, the current DMG, requirements, checksum and MCP setup.

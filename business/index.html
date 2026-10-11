@@ -56,7 +56,7 @@
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Reply within two business days <span>Designed for 1 to 1000 people · the estimate comes before any contract</span></p>
  </div>
  <ol class="hero-funnel" aria-label="How a request turns into a workplace">
-  <li><span>01</span><strong>Tell us</strong><small>team, processes, budget</small></li>
+  <li><span>01</span><strong>Tell us</strong><small>a few lines, or your agent asks</small></li>
   <li><span>02</span><strong>Estimate</strong><small>hours and money, with the formula</small></li>
   <li><span>03</span><strong>Pilot</strong><small>one process, measured</small></li>
   <li><span>04</span><strong>Rollout</strong><small>workplaces per role</small></li>
@@ -79,11 +79,11 @@
 </section>
 
 <section class="section" id="spend" aria-labelledby="spend-title">
- <div class="section-heading story-heading"><p class="section-number">02 / FOR FINANCE AND ENGINEERING</p><h2 id="spend-title">One view of what agents cost<br>and what they delivered</h2><p>Engineering wants more agents; finance wants every dollar spent on them explained. Both are asking one question: what did each agent cost, and what did it deliver? When the answer is a record both of them open, adding an agent becomes a decision with numbers behind it.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">02 / FOR FINANCE AND ENGINEERING</p><h2 id="spend-title">One view of what agents cost<br>and what they delivered</h2><p>Finance and engineering (the CFO and the CTO or CIO) look at agents from two sides: engineering wants more of them, finance wants every dollar spent on them explained. Both are asking one question: what did each agent cost, and what did it deliver? That is the ROI of each agent. When the answer is a record both of them open, adding an agent becomes a decision with numbers behind it.</p></div>
  <ol class="work-cycle path-cycle">
   <li class="reveal"><span class="cycle-number">01</span><p class="availability">AVAILABLE NOW</p><h3>Does the work run through agents, or beside them?</h3><p>The estimate starts from how each process runs today: by hand, with scripts, with a chat assistant now and then, or with agents already doing parts of it. The pilot then measures one process against your own baseline.</p><a href="#estimate">The estimate</a></li>
   <li class="reveal"><span class="cycle-number">02</span><p class="availability">AVAILABLE NOW</p><h3>Which agents are worth what they cost?</h3><p>On each Mac, Fabric Dashboards shows what every agent spent today, in 7 and in 30 days, by model and against its own budget, from the agent’s own usage report; a cost nobody knows reads “unknown”, never $0. Switchboard shows how much of each Claude Code or Codex account’s usage limit is used and when it resets, so subscriptions are read apart from calls paid per use. Observatory shows what changed in each project, with the evidence.</p><a href="/dashboards/">Fabric Dashboards</a></li>
-  <li class="reveal"><span class="cycle-number">03</span><p class="availability">DIRECTION</p><h3>Which setups work best, and how do they reach the rest?</h3><p>Spend and results joined per project and workflow. Limits finance sets once and agents check before they spend, with a request above a limit filed as a record while the work goes on. A setup that works, rolled out as a workplace per role.</p><a href="#request">Estimate and request</a></li>
+  <li class="reveal"><span class="cycle-number">03</span><p class="availability">DIRECTION</p><h3>Which setups work best, and how do they reach the rest?</h3><p>Spend and results joined per project and workflow. Limits finance sets once, kept as a record agents check before they spend; a request above a limit is filed as a record while the work goes on. A setup that works, rolled out as a workplace per role.</p><a href="#request">Estimate and request</a></li>
  </ol>
  <p class="section-note">About agents and workflows, never a ranking of people.</p>
 </section>
@@ -101,134 +101,60 @@
 </section>
 
 <section class="section request-section" id="request" aria-labelledby="request-title">
- <div class="section-heading story-heading"><p class="section-number">04 / REQUEST</p><h2 id="request-title">Tell us about your team</h2><p>Five short steps, about three minutes. You see the estimate as you go, and we reply within two business days.</p></div>
- <form class="lead-form" id="lead-form" action="/api/leads" method="post" novalidate>
-  <input type="hidden" name="form_token" value="">
-  <div class="trap" aria-hidden="true"><label>Leave this field empty <input type="text" name="pc_hp" tabindex="-1" autocomplete="off"></label></div>
-  <ol class="form-progress" aria-hidden="true"><li>Goals</li><li>Processes</li><li>Setup</li><li>Budget</li><li>Contact</li></ol>
-
-  <fieldset class="form-step" data-step="1">
-   <legend><span>1 / 5</span> What you want and who you are</legend>
-   <div class="field"><p class="field-label" id="goals-label">What do you want to achieve? <small>choose any</small></p>
-    <div class="choices" role="group" aria-labelledby="goals-label">
-     <label><input type="checkbox" name="goals" value="automate_operations"> Automate recurring operations</label>
-     <label><input type="checkbox" name="goals" value="custom_agents"> Build agents for our own processes</label>
-     <label><input type="checkbox" name="goals" value="convert_agents"> Convert our existing agents or projects</label>
-     <label><input type="checkbox" name="goals" value="commercial_license"> A commercial license for a closed product or service</label>
-     <label><input type="checkbox" name="goals" value="managed_hosting"> Have PassionCode.ai host and run it</label>
-     <label><input type="checkbox" name="goals" value="team_onboarding"> Onboard and train our team</label>
-    </div></div>
-   <div class="field-row">
-    <label class="field">Company <input type="text" name="company.name" required maxlength="200" autocomplete="organization"></label>
-    <label class="field">Website <small>optional</small> <input type="text" name="company.website" maxlength="300" inputmode="url" autocomplete="url" placeholder="example.com"></label>
+ <div class="section-heading story-heading"><p class="section-number">04 / REQUEST</p><h2 id="request-title">Tell us what agents<br>should do for you</h2><p>Two short ways. Your coding agent can ask you a few questions and send the request after you say yes, or you write a few lines yourself. We reply within two business days.</p></div>
+ <div class="request-paths">
+  <div class="request-card agent-request" id="agent-request">
+   <h3>Let your coding agent ask</h3>
+   <p>Copy this prompt into Claude Code, Codex or another coding agent. It asks you a few questions, one at a time, shows you the request and sends it only after you say yes.</p>
+   <div class="agent-prompt" id="agent-prompt" tabindex="0" role="region" aria-label="Prompt for your coding agent" data-copy-prompt>
+    <p>Help me send a request to PassionCode.ai, which brings AI agents onto an organization’s machines and shows what each agent cost and what it delivered. Talk to me in my language. Ask me these questions one at a time and wait for each answer; I may skip any of the first four.</p>
+    <ol>
+     <li>How many people work in our organization?</li>
+     <li>Which AI agents and tools do we use now?</li>
+     <li>What do we want most: to see what our agents cost and deliver, to automate recurring operations, to build agents for our own processes, to adapt our existing agents or projects, a commercial license, to have PassionCode.ai host and run it, or to onboard and train our team?</li>
+     <li>When do we want to start?</li>
+     <li>In a few sentences, what should agents do for us?</li>
+     <li>Which work email should PassionCode.ai reply to?</li>
+    </ol>
+    <p>Look at this computer’s setup, such as which agents and tools are installed, only if you ask me first and I say yes. Never put code, secrets, keys, file paths, customer data or the names of other companies or people into the request: describe the work in general words.</p>
+    <p>Then write the request as JSON. Keep the keys exactly as shown, use only the listed values that match my answers, and leave out what I skipped:</p>
+    <pre><code>{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}</code></pre>
+    <p>Get a form token, wait four seconds, add the token to the JSON as “form_token”, save it as request.json and check it. The check stores and sends nothing:</p>
+    <pre><code>curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json</code></pre>
+    <p>If the answer lists “issues”, fix them with me. When it says “valid”, show me the final JSON and ask: “Send this to PassionCode.ai?” Send it only after I say yes, once, with the same file:</p>
+    <pre><code>curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json</code></pre>
+    <p>Tell me the answer. “received” or “duplicate” means it arrived: give me the “id”; a receipt email follows. Any other answer: show me its “message” and send nothing more. Only if the request got no answer at all, try once more with the same file, never with a new “id”. How PassionCode.ai keeps the request: https://passioncode.ai/privacy/</p>
    </div>
-   <div class="field-row">
-    <label class="field">Industry <select name="company.industry" required><option value="">Choose…</option><option value="mobile_publishing">Mobile apps and games publishing</option><option value="saas">SaaS</option><option value="marketing_agency">Marketing or advertising agency</option><option value="ecommerce">E-commerce and retail</option><option value="fintech">Fintech and payments</option><option value="media_content">Media and content</option><option value="dev_studio">Software studio or outsourcing</option><option value="other">Something else</option></select></label>
-    <label class="field">If something else <small>optional</small> <input type="text" name="company.industryOther" maxlength="120"></label>
-   </div>
-   <div class="field-row">
-    <label class="field">Company size <select name="company.size" required><option value="">Choose…</option><option value="1_10">1–10 people</option><option value="11_50">11–50</option><option value="51_200">51–200</option><option value="201_1000">201–1,000</option><option value="1000_plus">More than 1,000</option></select></label>
-    <label class="field">People who would work with agents <small>optional</small> <input type="number" name="company.agentUsers" min="0" max="100000" inputmode="numeric"></label>
-   </div>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="2">
-   <legend><span>2 / 5</span> The processes</legend>
-   <div class="field"><p class="field-label" id="areas-label">Which processes take your team’s time? <small>choose any</small></p>
-    <div class="choices" role="group" aria-labelledby="areas-label">
-     <label><input type="checkbox" name="processes.areas" value="release_publishing"> Releases and store publishing</label>
-     <label><input type="checkbox" name="processes.areas" value="marketing_creatives"> Marketing creatives and ads</label>
-     <label><input type="checkbox" name="processes.areas" value="support_inbox"> Support and shared inboxes</label>
-     <label><input type="checkbox" name="processes.areas" value="analytics_reporting"> Analytics and reporting</label>
-     <label><input type="checkbox" name="processes.areas" value="engineering_qa"> Engineering, code review and QA</label>
-     <label><input type="checkbox" name="processes.areas" value="sales_crm"> Sales and CRM</label>
-     <label><input type="checkbox" name="processes.areas" value="content_seo"> Content and SEO</label>
-     <label><input type="checkbox" name="processes.areas" value="back_office"> Finance and back office</label>
-     <label><input type="checkbox" name="processes.areas" value="other"> Other</label>
-    </div></div>
-   <label class="field">Anything specific <small>optional</small> <textarea name="processes.other" rows="2" maxlength="500" placeholder="e.g. we publish 12 apps and write release notes in 9 languages"></textarea></label>
-   <div class="field"><p class="field-label" id="state-label">How does that work run today?</p>
-    <div class="choices choices-inline" role="radiogroup" aria-labelledby="state-label">
-     <label><input type="radio" name="processes.currentState" value="manual" required> Mostly manual</label>
-     <label><input type="radio" name="processes.currentState" value="scripts"> Scripts and integrations</label>
-     <label><input type="radio" name="processes.currentState" value="ai_tools"> Chat assistants used ad hoc</label>
-     <label><input type="radio" name="processes.currentState" value="agents"> Agents already run parts of it</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="tools-label">AI tools your team uses <small>optional</small></p>
-    <div class="choices choices-inline" role="group" aria-labelledby="tools-label">
-     <label><input type="checkbox" name="processes.tools" value="claude_code"> Claude Code</label>
-     <label><input type="checkbox" name="processes.tools" value="codex"> Codex</label>
-     <label><input type="checkbox" name="processes.tools" value="cursor"> Cursor</label>
-     <label><input type="checkbox" name="processes.tools" value="chatgpt"> ChatGPT or Claude chat</label>
-     <label><input type="checkbox" name="processes.tools" value="other_agents"> Other agents</label>
-     <label><input type="checkbox" name="processes.tools" value="none"> None yet</label>
-    </div></div>
-   <div class="field-row field-row-3">
-    <label class="field">Hours a week on these processes <small>whole team</small> <input type="number" name="processes.hoursPerWeek" min="0" max="10000" step="1" inputmode="decimal"></label>
-    <label class="field">Loaded cost of an hour <input type="number" name="processes.hourlyCost" min="0" max="10000" step="1" inputmode="decimal"></label>
-    <label class="field">Currency <select name="processes.currency"><option value="USD">USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option><option value="PLN">PLN</option></select></label>
-   </div>
-   <output class="estimate-output" name="estimate" for="lead-form" aria-live="polite"><span class="estimate-empty">Fill in the hours, the cost and how the work runs today to see the estimate.</span></output>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="3">
-   <legend><span>3 / 5</span> How you want it set up</legend>
-   <div class="field"><p class="field-label" id="mode-label">Who does the setup?</p>
-    <div class="choices" role="radiogroup" aria-labelledby="mode-label">
-     <label><input type="radio" name="setup.mode" value="self_serve" required> We set it up ourselves</label>
-     <label><input type="radio" name="setup.mode" value="guided"> Guided onboarding with your team</label>
-     <label><input type="radio" name="setup.mode" value="done_for_you"> You build and run it for us</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="hosting-label">Where should it run?</p>
-    <div class="choices choices-inline" role="radiogroup" aria-labelledby="hosting-label">
-     <label><input type="radio" name="setup.hosting" value="own_machines" required> Our own computers</label>
-     <label><input type="radio" name="setup.hosting" value="own_cloud"> Our cloud account</label>
-     <label><input type="radio" name="setup.hosting" value="passioncode_cloud"> Hosted by PassionCode.ai</label>
-     <label><input type="radio" name="setup.hosting" value="undecided"> Not decided</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="constraints-label">Requirements <small>optional</small></p>
-    <div class="choices choices-inline" role="group" aria-labelledby="constraints-label">
-     <label><input type="checkbox" name="setup.constraints" value="on_prem"> Data must stay on our premises</label>
-     <label><input type="checkbox" name="setup.constraints" value="eu_residency"> EU data residency</label>
-     <label><input type="checkbox" name="setup.constraints" value="nda"> NDA before details</label>
-     <label><input type="checkbox" name="setup.constraints" value="sso"> Single sign-on</label>
-     <label><input type="checkbox" name="setup.constraints" value="audit_log"> Audit trail of agent actions</label>
-    </div></div>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="4">
-   <legend><span>4 / 5</span> Budget and timing</legend>
-   <div class="field-row field-row-3">
-    <label class="field">Monthly budget for automation <select name="budget.monthly" required><option value="">Choose…</option><option value="lt_1k">Under $1,000 a month</option><option value="1k_5k">$1,000–5,000</option><option value="5k_20k">$5,000–20,000</option><option value="20k_50k">$20,000–50,000</option><option value="50k_plus">More than $50,000</option><option value="unsure">Not sure yet</option></select></label>
-    <label class="field">One-time setup budget <select name="budget.setup" required><option value="">Choose…</option><option value="lt_5k">Under $5,000</option><option value="5k_20k">$5,000–20,000</option><option value="20k_50k">$20,000–50,000</option><option value="50k_plus">More than $50,000</option><option value="unsure">Not sure yet</option></select></label>
-    <label class="field">When do you want to start? <select name="budget.timeline" required><option value="">Choose…</option><option value="asap">As soon as possible</option><option value="this_quarter">This quarter</option><option value="next_quarter">Next quarter</option><option value="exploring">Exploring for now</option></select></label>
-   </div>
-   <p class="field-hint">Ranges only help us propose the right scope; the estimate above is a useful anchor.</p>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="5">
-   <legend><span>5 / 5</span> How to reach you</legend>
-   <div class="field-row">
-    <label class="field">Your name <input type="text" name="contact.name" required maxlength="120" autocomplete="name"></label>
-    <label class="field">Role <small>optional</small> <input type="text" name="contact.role" maxlength="120" autocomplete="organization-title"></label>
-   </div>
-   <div class="field-row field-row-3">
-    <label class="field">Work email <input type="email" name="contact.email" required maxlength="254" autocomplete="email"></label>
-    <label class="field">Phone <small>optional</small> <input type="tel" name="contact.phone" maxlength="40" autocomplete="tel"></label>
-    <label class="field">Telegram <small>optional</small> <input type="text" name="contact.telegram" maxlength="64" placeholder="@name"></label>
-   </div>
-   <label class="field">Anything else we should know <small>optional</small> <textarea name="contact.message" rows="4" maxlength="4000"></textarea></label>
-   <label class="consent"><input type="checkbox" name="consent.privacy" value="yes" required> I agree that PassionCode.ai keeps these answers to reply and prepare a proposal, as the <a href="/privacy/">privacy notice</a> describes</label>
-   <label class="consent"><input type="checkbox" name="consent.marketing" value="yes"> Send me occasional product news. <small>optional</small></label>
-  </fieldset>
-
-  <div class="form-nav">
-   <button type="button" class="button button-secondary" data-action="back" hidden>Back</button>
-   <button type="button" class="button button-primary" data-action="next" hidden>Next <span aria-hidden="true">→</span></button>
-   <button type="submit" class="button button-primary" data-action="submit">Send request <span aria-hidden="true">→</span></button>
+   <p class="section-note">The same prompt as plain text, for an agent to fetch: <a href="/business/agent-request.txt">passioncode.ai/business/agent-request.txt</a></p>
   </div>
-  <p class="form-status" role="status" aria-live="polite"></p>
- </form>
+  <div class="request-card">
+   <h3>Or write it yourself</h3>
+   <form class="lead-form" id="lead-form" action="/api/leads" method="post" novalidate>
+    <input type="hidden" name="form_token" value="">
+    <div class="trap" aria-hidden="true"><label>Leave this field empty <input type="text" name="pc_hp" tabindex="-1" autocomplete="off"></label></div>
+    <label class="field">What should agents do for your organization? <textarea name="contact.message" rows="5" required minlength="3" maxlength="4000" placeholder="e.g. we publish 12 apps and want to see what each agent costs and delivers"></textarea></label>
+    <label class="field">Work email <input type="email" name="contact.email" required maxlength="254" autocomplete="email"></label>
+    <label class="field">Main goal <small>optional</small> <select name="goals"><option value="">Choose…</option><option value="cost_and_results">See what our agents cost and deliver</option><option value="automate_operations">Automate recurring operations</option><option value="custom_agents">Build agents for our own processes</option><option value="convert_agents">Adapt our existing agents or projects</option><option value="commercial_license">A commercial license for a closed product or service</option><option value="managed_hosting">Have PassionCode.ai host and run it</option><option value="team_onboarding">Onboard and train our team</option></select></label>
+    <p class="field-hint">We keep what you send only to reply, as the <a href="/privacy/">privacy notice</a> describes.</p>
+    <div class="form-nav"><button type="submit" class="button button-primary" data-action="submit">Send request <span aria-hidden="true">→</span></button></div>
+    <p class="form-status" role="status" aria-live="polite"></p>
+   </form>
+  </div>
+ </div>
  <p class="section-note">Prefer email? Write to <a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a>.</p>
 </section>
 

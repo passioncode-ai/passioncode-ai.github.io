@@ -45,6 +45,7 @@ export const ISSUES = {
   chooseAtLeast: 'choose at least {n}',
   webAddress: 'a web address',
   workEmail: 'a work email address',
-  agreePrivacy: 'agree to the privacy notice to send the request'
+  agreePrivacy: 'agree to the privacy notice to send the request',
+  requestId: 'a request id: a UUID v4, made once and reused for a retry'
 }
 // #endregion messages

@@ -4,21 +4,13 @@
     "Copied": "コピーしました",
     "Select and copy": "選択してコピーしてください",
     "Copy: {text}": "コピー：{text}",
-    "Fill in the hours, the cost and how the work runs today to see the estimate.": "時間、コスト、現在の作業の進め方を入力すると、見積もりが表示されます。",
-    "Agents could take over about": "エージェントが引き受けられる作業は約",
-    "{low}–{high} a month": "月{low}～{high}",
-    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "月{low}～{high}時間です。上記の計算式による見積もりであり、お約束ではありません。実際の数値はパイロットで測定します。",
-    "Choose at least one.": "1つ以上選択してください。",
-    "Choose one.": "1つ選択してください。",
     "Required.": "必須です。",
     "A work email address.": "勤務先のメールアドレスを入力してください。",
-    "Agree to the privacy notice to send the request.": "ご依頼を送信するには、プライバシー通知への同意が必要です。",
     "Sending…": "送信中…",
     "Thank you — it reached us": "ありがとうございます。届きました",
     "We reply within two business days. A confirmation email usually follows within minutes.": "2営業日以内にご返信します。確認メールは通常、数分以内に届きます。",
     "Reference: {id}": "参照番号：{id}",
     "The request was not sent.": "ご依頼は送信されませんでした。",
-    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "ご依頼はブラウザから送信されていません。接続を確認して、もう一度送信してください。入力内容はここに保持されています。",
     "Request not sent": "送信されていません",
     "Your request was not sent": "ご依頼は送信されませんでした",
     "You can also write to {email}.": "{email} 宛てにメールでお送りいただくこともできます。",
@@ -57,6 +49,8 @@
     "choose at least {n}": "{n}つ以上選択してください",
     "a web address": "ウェブアドレス",
     "a work email address": "勤務先のメールアドレス",
-    "agree to the privacy notice to send the request": "ご依頼を送信するには、プライバシー通知への同意が必要です"
+    "agree to the privacy notice to send the request": "ご依頼を送信するには、プライバシー通知への同意が必要です",
+    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "依頼はブラウザーから送信されていません。接続を確認して、もう一度送信してください。入力した内容はここに残っています。",
+    "a request id: a UUID v4, made once and reused for a retry": "依頼 ID：一度だけ作成し、再試行でも使い回す UUID v4"
   }
 }

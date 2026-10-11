@@ -5,20 +5,13 @@
     "Copied": "Skopiowano",
     "Select and copy": "Zaznacz i skopiuj",
     "Copy: {text}": "Kopiuj: {text}",
-    "Agents could take over about": "Agenci mogliby przejąć około",
-    "{low}–{high} a month": "{low}–{high} miesięcznie",
-    "{low}–{high} hours a month. An estimate from the formula above, not a promise; the pilot measures the real number.": "{low}–{high} godz. miesięcznie. To szacunek według powyższego wzoru, a nie obietnica; rzeczywistą liczbę zmierzy pilotaż.",
-    "Choose at least one.": "Wybierz co najmniej jedną odpowiedź.",
-    "Choose one.": "Wybierz jedną odpowiedź.",
     "Required.": "Pole wymagane.",
     "A work email address.": "Podaj służbowy adres e-mail.",
-    "Agree to the privacy notice to send the request.": "Aby wysłać zgłoszenie, zaakceptuj informację o prywatności.",
     "Sending…": "Wysyłanie…",
     "Thank you — it reached us": "Dziękujemy — zgłoszenie do nas dotarło",
     "We reply within two business days. A confirmation email usually follows within minutes.": "Odpowiemy w ciągu dwóch dni roboczych. E-mail z potwierdzeniem zwykle przychodzi w ciągu kilku minut.",
     "Reference: {id}": "Numer zgłoszenia: {id}",
     "The request was not sent.": "Zgłoszenie nie zostało wysłane.",
-    "The request did not leave your browser — check your connection and send it again. Your answers are kept here.": "Zgłoszenie nie opuściło Twojej przeglądarki — sprawdź połączenie i wyślij je ponownie. Twoje odpowiedzi są tu zachowane.",
     "Request not sent": "Zgłoszenie niewysłane",
     "Your request was not sent": "Twoje zgłoszenie nie zostało wysłane",
     "You can also write to {email}.": "Możesz też napisać na {email}.",
@@ -64,6 +57,7 @@
     "a web address": "adres strony internetowej",
     "a work email address": "służbowy adres e-mail",
     "agree to the privacy notice to send the request": "aby wysłać zgłoszenie, zaakceptuj informację o prywatności",
-    "Fill in the hours, the cost and how the work runs today to see the estimate.": "Wpisz godziny, koszt i to, jak praca przebiega dziś — a zobaczysz szacunek."
+    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "Zapytanie nie opuściło Twojej przeglądarki — sprawdź połączenie i wyślij je ponownie. Twój tekst jest tu zachowany.",
+    "a request id: a UUID v4, made once and reused for a retry": "identyfikator zapytania: UUID v4, utworzony raz i używany ponownie przy kolejnej próbie"
   }
 }

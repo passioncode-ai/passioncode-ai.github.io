@@ -64,7 +64,7 @@ Zobacz, co potrafi
 
 ↓
 
-Wersja zapoznawcza 0.14.0 · macOS 12 lub nowszy · otwarty kod na licencji AGPL-3.0
+Wersja zapoznawcza 0.14.1 · macOS 12 lub nowszy · otwarty kod na licencji AGPL-3.0
 
 FABRIC INBOX / POCZTA + AGENCI
 
@@ -108,7 +108,7 @@ POBIERZ FABRIC INBOX
 
 ## na Twojego Maca
 
-Najnowsza wersja zapoznawcza: 0.14.0. Aplikacja na Maca tworzy swój serwer pocztowy na Twoim własnym koncie Cloudflare i go otwiera; Twoja poczta zostaje przy Twoich kontach.
+Najnowsza wersja zapoznawcza: 0.14.1. Aplikacja na Maca tworzy swój serwer pocztowy na Twoim własnym koncie Cloudflare i go otwiera; Twoja poczta zostaje przy Twoich kontach.
 
 ⌘
 
@@ -139,7 +139,7 @@ Szczegóły w przewodniku konfiguracji — wymieniono w nim każde ustawienie.
 
 macOS DMG · SHA-256
 
-ade939562ca8a035402f92927c308af4882d1b260abad879f7d41adcc7a14a24
+e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993
 
 Porównaj przed otwarciem: shasum -a 256 w Terminalu. Inna wartość oznacza inny plik; pobierz go ponownie.
 

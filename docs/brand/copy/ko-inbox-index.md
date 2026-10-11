@@ -64,7 +64,7 @@ macOS용 다운로드
 
 ↓
 
-개발 프리뷰 0.14.0 · macOS 12 이상 · 오픈 소스(AGPL-3.0)
+개발 프리뷰 0.14.1 · macOS 12 이상 · 오픈 소스(AGPL-3.0)
 
 FABRIC INBOX / 메일 + 에이전트
 
@@ -108,7 +108,7 @@ FABRIC INBOX 받기
 
 ## Mac용
 
-최신 프리뷰: 0.14.0. Mac 앱은 내 Cloudflare 계정에 메일 서버를 만들고 엽니다. 메일은 내 계정에 그대로 남습니다.
+최신 프리뷰: 0.14.1. Mac 앱은 내 Cloudflare 계정에 메일 서버를 만들고 엽니다. 메일은 내 계정에 그대로 남습니다.
 
 ⌘
 
@@ -139,7 +139,7 @@ Gmail의 경우: 내 Google Cloud 프로젝트의 OAuth 클라이언트
 
 macOS DMG · SHA-256
 
-ade939562ca8a035402f92927c308af4882d1b260abad879f7d41adcc7a14a24
+e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993
 
 열기 전에 비교하세요: shasum -a 256 터미널에서 확인합니다. 값이 다르면 다른 파일이므로 다시 다운로드하세요.
 

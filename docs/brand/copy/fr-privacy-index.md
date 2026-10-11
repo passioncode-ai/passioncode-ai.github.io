@@ -46,11 +46,11 @@ Obtenir les outils
 
 ↓
 
-POLITIQUE DE CONFIDENTIALITÉ · VERSION 2026-10-08
+POLITIQUE DE CONFIDENTIALITÉ · VERSION 2026-10-11
 
 # Politique de confidentialité
 
-passioncode.ai n’utilise ni outil d’analyse, ni traceur publicitaire, ni cookie. Les seules données personnelles qu’il collecte sont celles que vous saisissez dans le formulaire de demande sur /business/.
+passioncode.ai n’utilise ni outil d’analyse, ni traceur publicitaire, ni cookie. Les seules données personnelles qu’il collecte sont celles que vous envoyez dans une demande depuis /business/, par son formulaire ou par votre agent de code.
 
 Cette politique est aussi publiée dans d’autres langues. Si une traduction diffère de cette version anglaise, la version anglaise prévaut.
 
@@ -58,17 +58,17 @@ Cette politique est aussi publiée dans d’autres langues. Si une traduction di
 
 PassionCode.ai, exploité par Siarhei Sheleh, est le responsable du traitement des données décrites ici. Contact : commercial@passioncode.ai ou contact@passioncode.ai.
 
-## Ce que collecte le formulaire
+## Ce que collecte une demande
 
-Vos réponses : objectifs, entreprise, processus, préférences de mise en place, fourchettes de budget et calendrier.
+Ce que vous écrivez : ce que les agents doivent faire pour vous et, si vous en choisissez un, un objectif principal. Une demande envoyée par votre agent de code peut aussi indiquer la taille de votre organisation, les agents et outils que vous utilisez, quand vous voulez commencer et le nom que l’agent se donne.
 
-Vos coordonnées : nom, fonction, e-mail professionnel et, si vous les indiquez, téléphone et Telegram.
+Votre adresse e-mail professionnelle.
 
 Issues de la demande elle-même : le pays que Cloudflare indique pour votre connexion, la chaîne user-agent de votre navigateur et un hachage irréversible de votre adresse IP, utilisé pour limiter les abus. L’adresse IP elle-même n’est pas conservée.
 
 ## Finalités et bases juridiques
 
-Pour répondre à votre demande et préparer une proposition, c’est-à-dire des démarches que vous sollicitez avant un éventuel contrat (RGPD, art. 6, par. 1, point b)). Les contrôles anti-abus reposent sur notre intérêt légitime à garder le formulaire utilisable (art. 6, par. 1, point f)). Les nouveautés produit ne sont envoyées que si vous cochez cette case, et vous pouvez retirer ce consentement à tout moment (art. 6, par. 1, point a)).
+Pour répondre à votre demande et préparer une proposition, c’est-à-dire des démarches que vous sollicitez avant un éventuel contrat (RGPD, art. 6, par. 1, point b)) ; c’est pourquoi le formulaire n’a pas de case de consentement. Les contrôles anti-abus reposent sur notre intérêt légitime à garder le formulaire utilisable (art. 6, par. 1, point f)). Les nouveautés produit ne sont envoyées qu’aux personnes qui les ont demandées, et elles peuvent retirer ce consentement à tout moment (art. 6, par. 1, point a)).
 
 ## Où les données sont conservées
 
@@ -80,7 +80,7 @@ Nous ne vendons pas ces données, ne les partageons pas avec des annonceurs et n
 
 ## Durée de conservation
 
-La copie chez Cloudflare est supprimée 30 jours après son arrivée sur notre backend. Une demande qui n’a pas débouché sur une collaboration est supprimée ou anonymisée 24 mois après sa dernière mise à jour. Une demande devenue contrat est conservée avec ce contrat.
+La copie chez Cloudflare est supprimée 30 jours après son arrivée sur notre backend ; une demande qui n’y est pas encore arrivée y reste dans la limite de 24 mois. Une demande qui n’a pas débouché sur une collaboration est supprimée ou anonymisée 24 mois après sa dernière mise à jour. Une demande devenue contrat est conservée avec ce contrat.
 
 ## Vos droits
 
@@ -88,7 +88,7 @@ Vous pouvez demander une copie de vos données, leur rectification ou leur effac
 
 ## Dans votre navigateur
 
-Pendant que vous remplissez le formulaire, vos réponses non envoyées sont conservées uniquement dans le stockage de votre propre navigateur, afin qu’un rechargement ne les perde pas ; elles sont supprimées dès l’envoi de la demande.
+Pendant que vous écrivez dans le formulaire, votre texte non envoyé est conservé uniquement dans le stockage de votre propre navigateur, afin qu’un rechargement ne le perde pas ; il est supprimé dès l’envoi de la demande. Un agent de code que vous utilisez conserve sa conversation avec vous selon ses propres conditions, pas les nôtres.
 
 ## Les applications
 

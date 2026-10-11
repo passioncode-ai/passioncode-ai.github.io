@@ -1,6 +1,6 @@
 {
   "schema": "releases/1",
-  "generatedAt": "2026-10-11T02:51:46.698Z",
+  "generatedAt": "2026-10-11T11:38:59.836Z",
   "products": {
     "fabric": {
       "key": "fabric",
@@ -51,17 +51,17 @@
       "name": "Fabric Inbox",
       "repository": "passioncode-ai/fabric-inbox",
       "page": "/inbox/",
-      "version": "0.14.0",
-      "tag": "v0.14.0",
+      "version": "0.14.1",
+      "tag": "v0.14.1",
       "prerelease": false,
-      "publishedAt": "2026-10-10T18:30:04Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-inbox/releases/tag/v0.14.0",
+      "publishedAt": "2026-10-11T10:57:48Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-inbox/releases/tag/v0.14.1",
       "assets": {
         "macos": {
-          "name": "Fabric-Inbox-0.14.0.dmg",
-          "url": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.14.0/Fabric-Inbox-0.14.0.dmg",
-          "sha256": "ade939562ca8a035402f92927c308af4882d1b260abad879f7d41adcc7a14a24",
-          "size": 253030426
+          "name": "Fabric-Inbox-0.14.1.dmg",
+          "url": "https://github.com/passioncode-ai/fabric-inbox/releases/download/v0.14.1/Fabric-Inbox-0.14.1.dmg",
+          "sha256": "e6885a8be35e0343b7135fff4dfa84940cdeb70e5e7e7477f2abaf071a342993",
+          "size": 253028582
         }
       }
     },
@@ -70,17 +70,17 @@
       "name": "Fabric Dashboards",
       "repository": "passioncode-ai/fabric-dashboards",
       "page": "/dashboards/",
-      "version": "0.6.7",
-      "tag": "v0.6.7",
+      "version": "0.7.1",
+      "tag": "v0.7.1",
       "prerelease": false,
-      "publishedAt": "2026-10-09T17:07:37Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.6.7",
+      "publishedAt": "2026-10-11T11:34:25Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.7.1",
       "assets": {
         "macos": {
-          "name": "Fabric-Dashboards-0.6.7.dmg",
-          "url": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.6.7/Fabric-Dashboards-0.6.7.dmg",
-          "sha256": "d0e916fc1a9ee0586446c67474eb75156e770cc37dff302a3808703b4ec42e02",
-          "size": 250091719
+          "name": "Fabric-Dashboards-0.7.1.dmg",
+          "url": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.7.1/Fabric-Dashboards-0.7.1.dmg",
+          "sha256": "2e479f19506ee4dd5d004c5b9c12861ca803b85baa885dd7522a950345c44d81",
+          "size": 250166955
         }
       }
     },
@@ -89,23 +89,23 @@
       "name": "Project Observatory",
       "repository": "passioncode-ai/project-observatory-dashboard",
       "page": "/observatory/",
-      "version": "0.21.0",
-      "tag": "v0.21.0",
+      "version": "0.22.0",
+      "tag": "v0.22.0",
       "prerelease": false,
-      "publishedAt": "2026-10-10T16:34:16Z",
-      "releaseUrl": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/tag/v0.21.0",
+      "publishedAt": "2026-10-11T11:35:13Z",
+      "releaseUrl": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/tag/v0.22.0",
       "assets": {
         "wheel": {
-          "name": "project_observatory-0.21.0-py3-none-any.whl",
-          "url": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.21.0/project_observatory-0.21.0-py3-none-any.whl",
-          "sha256": "3bd1d14616c1e301f5909ab270df90c2de7c8bc8853093df234615c9ed4f302b",
-          "size": 2916531
+          "name": "project_observatory-0.22.0-py3-none-any.whl",
+          "url": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.22.0/project_observatory-0.22.0-py3-none-any.whl",
+          "sha256": "8aa760a0ebd7d7741f2a95b23d79600d171bb6c8d181d4d012c97bcef5f01cd0",
+          "size": 2957857
         },
         "macos": {
-          "name": "ProjectObservatory-0.21.0-macos.zip",
-          "url": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.21.0/ProjectObservatory-0.21.0-macos.zip",
-          "sha256": "73802b4f6e7389e480e29143034048319a400333809ac763cefa76fd528a2edc",
-          "size": 742637
+          "name": "ProjectObservatory-0.22.0-macos.zip",
+          "url": "https://github.com/passioncode-ai/project-observatory-dashboard/releases/download/v0.22.0/ProjectObservatory-0.22.0-macos.zip",
+          "sha256": "9f934ffccde61ef4227f4b7609c5d882e08af1e407a76b478d115574554251d6",
+          "size": 1315143
         }
       }
     },

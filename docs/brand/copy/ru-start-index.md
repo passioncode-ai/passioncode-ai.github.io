@@ -126,7 +126,7 @@ Fabric Dashboards показывает все локальные сервисы 
 
 Скачать Fabric Dashboards
 
-0.6.7
+0.7.1
 
 ↓
 

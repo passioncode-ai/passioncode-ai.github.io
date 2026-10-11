@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Compare a built static artifact and its download routes with a deployed site."""
+"""Compare a built static artifact and its download routes with a deployed site, and smoke-test the
+request intake in its dry-run mode only (docs/DEPLOYMENT.md#requests-from-a-coding-agent): a token,
+a valid request and a refused one, none of which stores a lead or sends an email."""
 import argparse
 import hashlib
 import json
@@ -7,6 +9,8 @@ import re
 from pathlib import Path
 import subprocess
 import tempfile
+import time
+import uuid
 from datetime import datetime, timezone
 
 parser = argparse.ArgumentParser(description=__doc__)
@@ -33,7 +37,7 @@ LANG_TAGS = {code: REGISTRY['locales'][code].get('lang', code) for code in ALL_L
 ORIGIN = 'https://passioncode.ai'
 HTML_LANG = re.compile(rb'<html lang="([^"]+)">')
 
-def fetch(path):
+def fetch(path, data=None):
     # urllib is denied by the live edge (403); use the existing curl transport.
     # No -L: redirect destinations must be inspected without following them.
     with tempfile.TemporaryDirectory(prefix='site-live-') as directory:
@@ -43,6 +47,7 @@ def fetch(path):
             'curl', '--silent', '--show-error', '--max-time', '30',
             '--proto', '=http,https', '--dump-header', str(header_file),
             '--output', str(body), '--write-out', '%{http_code}',
+            *(['--request', 'POST', '--header', 'Content-Type: application/json', '--data-binary', data] if data is not None else []),
             args.base_url.rstrip('/') + path,
         ], text=True)
         headers = {}
@@ -97,6 +102,24 @@ for product, platform, expected in routes:
                  'pass': status == 302 and headers.get('location') == expected
                  and headers.get('cache-control') == 'no-store'
                  and headers.get('x-robots-tag') == 'noindex'})
+# The request intake, as a coding agent reaches it (no browser, no Origin), in dry-run mode only:
+# nothing is stored, no token is spent, no email is sent. Never a real lead in production.
+status, headers, body = fetch('/api/leads/token')
+token = json.loads(body or b'{}').get('form_token', '') if status == 200 else ''
+rows.append({'path': '/api/leads/token', 'status': status, 'pass': status == 200 and bool(token) and headers.get('cache-control') == 'no-store'})
+time.sleep(4)
+smoke = {'id': str(uuid.uuid4()), 'lang': 'en', 'form_token': token,
+         'contact': {'email': 'verify-live@example.com', 'message': 'Dry-run smoke test from scripts/verify-live.py; never stored.'},
+         'goals': ['cost_and_results'], 'source': {'channel': 'agent-prompt', 'agent': 'verify-live'}}
+status, _, body = fetch('/api/leads?dry_run=1', json.dumps(smoke))
+answer = json.loads(body or b'{}')
+rows.append({'path': '/api/leads?dry_run=1 (valid agent request)', 'status': status, 'answer': answer.get('status'),
+             'pass': status == 200 and answer.get('status') == 'valid' and answer.get('dryRun') is True and answer.get('lead', {}).get('schema') == 'lead/2'})
+refused = {**smoke, 'contact': {'message': smoke['contact']['message']}}
+status, _, body = fetch('/api/leads?dry_run=1', json.dumps(refused))
+answer = json.loads(body or b'{}')
+rows.append({'path': '/api/leads?dry_run=1 (no email)', 'status': status, 'issues': [i.get('path') for i in answer.get('issues', [])],
+             'pass': status == 400 and [i.get('path') for i in answer.get('issues', [])] == ['contact.email']})
 not_found_paths = ['/docs/HANDOFF.md', '/.git/config', '/package.json', '/404', '/404.html', *(f'/{l}{p}' for l in LOCALES for p in ('/404', '/404.html'))]
 for path in not_found_paths:
     status, _, _ = fetch(path)

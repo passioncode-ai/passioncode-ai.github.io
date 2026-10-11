@@ -1,12 +1,16 @@
 import { cpSync, mkdirSync, rmSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { PAGES } from './pages.mjs'
+import { LOCALES, localizedFile } from './locales.mjs'
+import { PROMPT_FILE } from './agent-prompt.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const output = resolve(root, 'dist')
 
 const publicFiles = [
   ...PAGES,
+  // The /business/ agent prompt as plain text, in every language (npm run locales writes them).
+  ...LOCALES.map(locale => localizedFile(PROMPT_FILE, locale)),
   'llms.txt',
   'assets/site.js',
   'assets/business.js',

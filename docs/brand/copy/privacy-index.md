@@ -46,11 +46,11 @@ Get the tools
 
 ↓
 
-PRIVACY NOTICE · VERSION 2026-10-08
+PRIVACY NOTICE · VERSION 2026-10-11
 
 # Privacy notice
 
-passioncode.ai has no analytics, no advertising trackers and no cookies. The only personal data it collects is what you type into the request form on /business/.
+passioncode.ai has no analytics, no advertising trackers and no cookies. The only personal data it collects is what you send in a request from /business/, through its form or through your coding agent.
 
 This notice is also published in other languages. If a translation differs from this English version, the English version prevails.
 
@@ -58,17 +58,17 @@ This notice is also published in other languages. If a translation differs from 
 
 PassionCode.ai, run by Siarhei Sheleh, is the controller of the data described here. Contact: commercial@passioncode.ai or contact@passioncode.ai.
 
-## What the form collects
+## What a request collects
 
-Your answers: goals, company, processes, setup preferences, budget ranges and timing.
+What you write: what agents should do for you and, if you choose one, a main goal. A request your coding agent sends can also carry your organization’s size, the agents and tools you use, when you want to start, and the name the agent gives itself.
 
-Your contact details: name, role, work email and, if you give them, phone and Telegram.
+Your work email.
 
 From the request itself: the country Cloudflare reports for your connection, your browser’s user-agent string, and a one-way hash of your IP address used to stop abuse. The IP address itself is not stored.
 
 ## Why, and on what basis
 
-To answer your request and prepare a proposal — steps you ask for before a possible contract (GDPR Art. 6(1)(b)). The abuse checks rely on our legitimate interest in keeping the form usable (Art. 6(1)(f)). Product news is sent only if you tick that box, and you can withdraw that consent at any time (Art. 6(1)(a)).
+To answer your request and prepare a proposal — steps you ask for before a possible contract (GDPR Art. 6(1)(b)), which is why the form has no consent box. The abuse checks rely on our legitimate interest in keeping the form usable (Art. 6(1)(f)). Product news goes only to people who asked for it, and they can withdraw that consent at any time (Art. 6(1)(a)).
 
 ## Where it is kept
 
@@ -80,7 +80,7 @@ We do not sell the data, share it with advertisers, or use it to train models.
 
 ## How long
 
-The copy at Cloudflare is deleted 30 days after it reaches our backend. A request that did not lead to work together is deleted or anonymised 24 months after its last update. A request that became a contract is kept as part of that contract.
+The copy at Cloudflare is deleted 30 days after it reaches our backend; a request that has not reached it yet stays there under the 24-month limit. A request that did not lead to work together is deleted or anonymised 24 months after its last update. A request that became a contract is kept as part of that contract.
 
 ## Your rights
 
@@ -88,7 +88,7 @@ You can ask for a copy of your data, its correction or erasure, a restriction, o
 
 ## In your browser
 
-While you fill the form, your unsent answers are kept only in your own browser’s storage so a reload does not lose them; they are removed when the request is sent.
+While you write in the form, your unsent text is kept only in your own browser’s storage so a reload does not lose it; it is removed when the request is sent. A coding agent you use keeps its conversation with you under its own terms, not ours.
 
 ## The apps
 

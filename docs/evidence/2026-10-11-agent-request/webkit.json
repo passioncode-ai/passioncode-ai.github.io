@@ -1,0 +1,122 @@
+{
+  "engine": "WebKit (playwright-core 1.63.0, webkit-2359)",
+  "base": "https://localhost:8911",
+  "checkedAt": "2026-10-11T11:38:41.125Z",
+  "rows": [
+    {
+      "locale": "en",
+      "width": 390,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "agentFirst": true,
+      "agentLeftOrAbove": true,
+      "formFields": [
+        "form_token",
+        "pc_hp",
+        "contact.message",
+        "contact.email",
+        "goals"
+      ],
+      "screenshotCsp": 2,
+      "copyButton": [
+        "Copy",
+        "Copied"
+      ],
+      "copiedEqualsTxt": true,
+      "copiedChars": 2952,
+      "sent": true,
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "overflow": false,
+      "scrollWidth": 1280,
+      "brokenImages": 0,
+      "agentFirst": true,
+      "agentLeftOrAbove": true,
+      "formFields": [
+        "form_token",
+        "pc_hp",
+        "contact.message",
+        "contact.email",
+        "goals"
+      ],
+      "screenshotCsp": 2,
+      "copyButton": [
+        "Copy",
+        "Copied"
+      ],
+      "copiedEqualsTxt": true,
+      "copiedChars": 2952,
+      "sent": true,
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "agentFirst": true,
+      "agentLeftOrAbove": true,
+      "formFields": [
+        "form_token",
+        "pc_hp",
+        "contact.message",
+        "contact.email",
+        "goals"
+      ],
+      "screenshotCsp": 2,
+      "copyButton": [
+        "Копировать",
+        "Скопировано"
+      ],
+      "copiedEqualsTxt": true,
+      "copiedChars": 3163,
+      "sent": true,
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "width": 1280,
+      "overflow": false,
+      "scrollWidth": 1280,
+      "brokenImages": 0,
+      "agentFirst": true,
+      "agentLeftOrAbove": true,
+      "formFields": [
+        "form_token",
+        "pc_hp",
+        "contact.message",
+        "contact.email",
+        "goals"
+      ],
+      "screenshotCsp": 2,
+      "copyButton": [
+        "Копировать",
+        "Скопировано"
+      ],
+      "copiedEqualsTxt": true,
+      "copiedChars": 3163,
+      "sent": true,
+      "consoleErrors": [],
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "javascript": false,
+      "copyButtons": 0,
+      "promptVisible": true,
+      "overflow": false,
+      "landed": "/business/thanks/",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

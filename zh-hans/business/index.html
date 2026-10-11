@@ -56,7 +56,7 @@
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> 两个工作日内回复 <span>适用于 1 至 1000 人 · 先给出估算，再谈合同</span></p>
  </div>
  <ol class="hero-funnel" aria-label="一份需求如何变成工作空间">
-  <li><span>01</span><strong>告诉我们</strong><small>团队、流程、预算</small></li>
+  <li><span>01</span><strong>告诉我们</strong><small>写几行，或让你的智能体来问</small></li>
   <li><span>02</span><strong>估算</strong><small>工时和费用，附计算公式</small></li>
   <li><span>03</span><strong>试点</strong><small>一个流程，有衡量</small></li>
   <li><span>04</span><strong>推广</strong><small>每个角色一个工作空间</small></li>
@@ -79,11 +79,11 @@
 </section>
 
 <section class="section" id="spend" aria-labelledby="spend-title">
- <div class="section-heading story-heading"><p class="section-number">02 / 面向财务和工程</p><h2 id="spend-title">一个视图看清智能体的花费<br>和它们的交付</h2><p>工程团队想要更多智能体；财务想要每一笔花在智能体上的钱都有解释。两边问的是同一个问题：每个智能体花了多少，交付了什么？当答案是一份双方都能打开的记录，增加一个智能体就变成了一个有数字支撑的决定。</p></div>
+ <div class="section-heading story-heading"><p class="section-number">02 / 面向财务和工程</p><h2 id="spend-title">一个视图看清智能体的花费<br>和它们的交付</h2><p>财务和工程（CFO 与 CTO 或 CIO）从两个方向看智能体：工程想多用，财务要每一笔花销都有交代。两边问的是同一个问题：每个智能体花了多少，交付了什么？这就是每个智能体的 ROI。当答案是一份双方都能打开的记录时，增加一个智能体就变成了一个有数字支撑的决定。</p></div>
  <ol class="work-cycle path-cycle">
   <li class="reveal"><span class="cycle-number">01</span><p class="availability">现已可用</p><h3>工作是通过智能体运行的，还是只在一旁用到它们？</h3><p>估算从每个流程今天的运行方式开始：纯手工、用脚本、偶尔用聊天助手，或者已经有智能体在做其中一部分。试点随后用你自己的基线来衡量一个流程。</p><a href="#estimate">估算</a></li>
   <li class="reveal"><span class="cycle-number">02</span><p class="availability">现已可用</p><h3>哪些智能体值得它们的花费？</h3><p>在每台 Mac 上，Fabric Dashboards 显示每个智能体今天、近 7 天和近 30 天的花费，按模型拆分，对照它自己的预算，数据来自智能体自身的使用报告；没人知道的花费显示为“未知”，绝不显示 US$0。Switchboard 显示每个 Claude Code 或 Codex 账户的用量限额已用多少、何时重置，订阅费用和按次付费的调用分开显示。Observatory 显示每个项目里发生了什么变化，附带证据。</p><a href="/zh-hans/dashboards/">Fabric Dashboards</a></li>
-  <li class="reveal"><span class="cycle-number">03</span><p class="availability">发展方向</p><h3>哪些配置最有效，怎么让其余的也用起来？</h3><p>按项目和工作流把花费与结果关联。财务设定一次限额，智能体在花销前自行检查；超出限额的请求记为一条记录，工作继续进行。有效的配置推广为每个角色一个工作空间。</p><a href="#request">估算并提交申请</a></li>
+  <li class="reveal"><span class="cycle-number">03</span><p class="availability">发展方向</p><h3>哪些配置最有效，怎么让其余的也用起来？</h3><p>按项目和工作流把花费与结果关联起来。财务设定一次限额，存为记录，智能体在花销前检查；超出限额的请求会作为记录归档，工作继续进行。验证可行的方案，按角色部署为工作空间。</p><a href="#request">估算并提交申请</a></li>
  </ol>
  <p class="section-note">分析只针对智能体和工作流，绝不给人排名</p>
 </section>
@@ -101,134 +101,60 @@
 </section>
 
 <section class="section request-section" id="request" aria-labelledby="request-title">
- <div class="section-heading story-heading"><p class="section-number">04 / 提交申请</p><h2 id="request-title">介绍一下你的团队</h2><p>五个简短的步骤，大约三分钟。填写过程中你就能看到估算，我们会在两个工作日内回复。</p></div>
- <form class="lead-form" id="lead-form" action="/api/leads?lang=zh-hans" method="post" novalidate>
-  <input type="hidden" name="form_token" value="">
-  <div class="trap" aria-hidden="true"><label>请将此字段留空 <input type="text" name="pc_hp" tabindex="-1" autocomplete="off"></label></div>
-  <ol class="form-progress" aria-hidden="true"><li>目标</li><li>流程</li><li>搭建</li><li>预算</li><li>联系方式</li></ol>
-
-  <fieldset class="form-step" data-step="1">
-   <legend><span>1 / 5</span> 你想要什么，以及你是谁</legend>
-   <div class="field"><p class="field-label" id="goals-label">你想达成什么？<small>可多选</small></p>
-    <div class="choices" role="group" aria-labelledby="goals-label">
-     <label><input type="checkbox" name="goals" value="automate_operations"> 让日常运营自动化</label>
-     <label><input type="checkbox" name="goals" value="custom_agents"> 为我们自己的流程构建智能体</label>
-     <label><input type="checkbox" name="goals" value="convert_agents"> 转换我们现有的智能体或项目</label>
-     <label><input type="checkbox" name="goals" value="commercial_license"> 为闭源产品或服务申请商业许可证</label>
-     <label><input type="checkbox" name="goals" value="managed_hosting"> 由 PassionCode.ai 托管并运行</label>
-     <label><input type="checkbox" name="goals" value="team_onboarding"> 为我们的团队做上手指导和培训</label>
-    </div></div>
-   <div class="field-row">
-    <label class="field">公司 <input type="text" name="company.name" required maxlength="200" autocomplete="organization"></label>
-    <label class="field">网站 <small>可选</small> <input type="text" name="company.website" maxlength="300" inputmode="url" autocomplete="url" placeholder="example.com"></label>
+ <div class="section-heading story-heading"><p class="section-number">04 / 提交申请</p><h2 id="request-title">告诉我们智能体<br>应该为你做什么</h2><p>两种方式，都很短。你的编码智能体可以问你几个问题，你确认后它替你发送需求；或者你自己写几行。我们在两个工作日内回复。</p></div>
+ <div class="request-paths">
+  <div class="request-card agent-request" id="agent-request">
+   <h3>让你的编码智能体来问</h3>
+   <p>把下面的提示词复制到 Claude Code、Codex 或其他编码智能体中。它会逐个问你几个问题，展示需求内容，只在你确认后才发送。</p>
+   <div class="agent-prompt" id="agent-prompt" tabindex="0" role="region" aria-label="给编码智能体的提示词" data-copy-prompt>
+    <p>帮我向 PassionCode.ai 发送一条需求。PassionCode.ai 把 AI 智能体引入组织的机器，并展示每个智能体的花费和交付。用我的语言和我交流。逐个问我以下问题，每个问题等我的回答；前四个我可以跳过。</p>
+    <ol>
+     <li>我们组织有多少人？</li>
+     <li>我们现在用哪些 AI 智能体和工具？</li>
+     <li>我们最想要什么：看到智能体的花费和交付、自动化重复操作、为自己的流程构建智能体、适配现有的智能体或项目、商业许可证、由 PassionCode.ai 托管和运行，还是团队培训和上手？</li>
+     <li>我们想什么时候开始？</li>
+     <li>用几句话描述，智能体应该为我们做什么？</li>
+     <li>PassionCode.ai 应该回复哪个工作邮箱？</li>
+    </ol>
+    <p>只有在先问我并得到我同意后，才查看这台电脑的配置，比如安装了哪些智能体和工具。不要把代码、机密、密钥、文件路径、客户数据或其他公司及人名放进需求里：用概括性的语言描述工作内容。</p>
+    <p>然后把需求写成 JSON。键名保持原样，值只用与我回答匹配的选项，跳过的不写：</p>
+    <pre><code>{
+  "id": "a new random UUID v4: make it once, reuse it if you send again",
+  "lang": "the language we talk in: en, ru, de, fr, es, pt-br, pl, ko, ja or zh-hans",
+  "contact": {
+    "email": "the work email",
+    "message": "what agents should do, in my words, up to 4000 characters"
+  },
+  "goals": ["one of: cost_and_results, automate_operations, custom_agents, convert_agents, commercial_license, managed_hosting, team_onboarding"],
+  "company": { "size": "one of: 1_10, 11_50, 51_200, 201_1000, 1000_plus" },
+  "processes": { "tools": ["any of: claude_code, codex, cursor, chatgpt, other_agents, none"] },
+  "budget": { "timeline": "one of: asap, this_quarter, next_quarter, exploring" },
+  "source": { "channel": "agent-prompt", "agent": "your own name, such as Claude Code or Codex" }
+}</code></pre>
+    <p>获取一个表单令牌，等四秒，把令牌作为 “form_token” 加入 JSON，保存为 request.json 并校验。校验不会存储或发送任何内容：</p>
+    <pre><code>curl -s https://passioncode.ai/api/leads/token
+sleep 4
+curl -s -X POST 'https://passioncode.ai/api/leads?dry_run=1' -H 'Content-Type: application/json' --data @request.json</code></pre>
+    <p>如果返回结果列出了 “issues”，和我一起修复。当结果显示 “valid” 时，给我看最终的 JSON 并问：“要发送给 PassionCode.ai 吗？”只在我确认后发送一次，用同一个文件：</p>
+    <pre><code>curl -s -X POST https://passioncode.ai/api/leads -H 'Content-Type: application/json' --data @request.json</code></pre>
+    <p>告诉我返回结果。“received” 或 “duplicate” 表示已送达：把 “id” 给我，之后会收到确认邮件。其他任何结果：给我看它的 “message”，不再发送。只有当请求完全没有得到响应时，才用同一个文件重试一次，绝不使用新的 “id”。PassionCode.ai 如何保存这条需求：https://passioncode.ai/zh-hans/privacy/</p>
    </div>
-   <div class="field-row">
-    <label class="field">行业 <select name="company.industry" required><option value="">请选择…</option><option value="mobile_publishing">移动应用和游戏发行</option><option value="saas">SaaS</option><option value="marketing_agency">营销或广告机构</option><option value="ecommerce">电商和零售</option><option value="fintech">金融科技和支付</option><option value="media_content">媒体和内容</option><option value="dev_studio">软件工作室或外包</option><option value="other">其他</option></select></label>
-    <label class="field">如果选其他 <small>可选</small> <input type="text" name="company.industryOther" maxlength="120"></label>
-   </div>
-   <div class="field-row">
-    <label class="field">公司规模 <select name="company.size" required><option value="">请选择…</option><option value="1_10">1–10 人</option><option value="11_50">11–50</option><option value="51_200">51–200</option><option value="201_1000">201–1,000</option><option value="1000_plus">1,000 人以上</option></select></label>
-    <label class="field">将与智能体协作的人数 <small>可选</small> <input type="number" name="company.agentUsers" min="0" max="100000" inputmode="numeric"></label>
-   </div>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="2">
-   <legend><span>2 / 5</span> 流程</legend>
-   <div class="field"><p class="field-label" id="areas-label">哪些流程占用了团队的时间？<small>可多选</small></p>
-    <div class="choices" role="group" aria-labelledby="areas-label">
-     <label><input type="checkbox" name="processes.areas" value="release_publishing"> 版本发布与应用商店上架</label>
-     <label><input type="checkbox" name="processes.areas" value="marketing_creatives"> 营销创意和广告</label>
-     <label><input type="checkbox" name="processes.areas" value="support_inbox"> 支持与共享收件箱</label>
-     <label><input type="checkbox" name="processes.areas" value="analytics_reporting"> 分析和报告</label>
-     <label><input type="checkbox" name="processes.areas" value="engineering_qa"> 工程、代码审查和 QA</label>
-     <label><input type="checkbox" name="processes.areas" value="sales_crm"> 销售和 CRM</label>
-     <label><input type="checkbox" name="processes.areas" value="content_seo"> 内容和 SEO</label>
-     <label><input type="checkbox" name="processes.areas" value="back_office"> 财务与后台</label>
-     <label><input type="checkbox" name="processes.areas" value="other"> 其他</label>
-    </div></div>
-   <label class="field">具体说明 <small>可选</small> <textarea name="processes.other" rows="2" maxlength="500" placeholder="例如：我们发行 12 款应用，并用 9 种语言撰写版本说明"></textarea></label>
-   <div class="field"><p class="field-label" id="state-label">这项工作目前是如何运行的？</p>
-    <div class="choices choices-inline" role="radiogroup" aria-labelledby="state-label">
-     <label><input type="radio" name="processes.currentState" value="manual" required> 大部分靠手工</label>
-     <label><input type="radio" name="processes.currentState" value="scripts"> 脚本和集成</label>
-     <label><input type="radio" name="processes.currentState" value="ai_tools"> 临时使用聊天助手</label>
-     <label><input type="radio" name="processes.currentState" value="agents"> 智能体已经承担其中一部分</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="tools-label">你的团队使用的 AI 工具 <small>可选</small></p>
-    <div class="choices choices-inline" role="group" aria-labelledby="tools-label">
-     <label><input type="checkbox" name="processes.tools" value="claude_code"> Claude Code</label>
-     <label><input type="checkbox" name="processes.tools" value="codex"> Codex</label>
-     <label><input type="checkbox" name="processes.tools" value="cursor"> Cursor</label>
-     <label><input type="checkbox" name="processes.tools" value="chatgpt"> ChatGPT 或 Claude 聊天</label>
-     <label><input type="checkbox" name="processes.tools" value="other_agents"> 其他智能体</label>
-     <label><input type="checkbox" name="processes.tools" value="none"> 暂时没有</label>
-    </div></div>
-   <div class="field-row field-row-3">
-    <label class="field">这些流程每周的工时 <small>整个团队</small> <input type="number" name="processes.hoursPerWeek" min="0" max="10000" step="1" inputmode="decimal"></label>
-    <label class="field">每小时的综合成本 <input type="number" name="processes.hourlyCost" min="0" max="10000" step="1" inputmode="decimal"></label>
-    <label class="field">币种 <select name="processes.currency"><option value="USD">USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option><option value="PLN">PLN</option></select></label>
-   </div>
-   <output class="estimate-output" name="estimate" for="lead-form" aria-live="polite"><span class="estimate-empty">填写工时、成本以及目前工作的运行方式，即可看到估算。</span></output>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="3">
-   <legend><span>3 / 5</span> 你希望如何搭建</legend>
-   <div class="field"><p class="field-label" id="mode-label">由谁来搭建？</p>
-    <div class="choices" role="radiogroup" aria-labelledby="mode-label">
-     <label><input type="radio" name="setup.mode" value="self_serve" required> 我们自己搭建</label>
-     <label><input type="radio" name="setup.mode" value="guided"> 与你的团队一起做引导式上手</label>
-     <label><input type="radio" name="setup.mode" value="done_for_you"> 由你们为我们搭建并运行</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="hosting-label">希望运行在哪里？</p>
-    <div class="choices choices-inline" role="radiogroup" aria-labelledby="hosting-label">
-     <label><input type="radio" name="setup.hosting" value="own_machines" required> 我们自己的电脑</label>
-     <label><input type="radio" name="setup.hosting" value="own_cloud"> 我们的云账号</label>
-     <label><input type="radio" name="setup.hosting" value="passioncode_cloud"> 由 PassionCode.ai 托管</label>
-     <label><input type="radio" name="setup.hosting" value="undecided"> 尚未决定</label>
-    </div></div>
-   <div class="field"><p class="field-label" id="constraints-label">要求 <small>可选</small></p>
-    <div class="choices choices-inline" role="group" aria-labelledby="constraints-label">
-     <label><input type="checkbox" name="setup.constraints" value="on_prem"> 数据必须留在我们的场所内</label>
-     <label><input type="checkbox" name="setup.constraints" value="eu_residency"> 欧盟数据驻留</label>
-     <label><input type="checkbox" name="setup.constraints" value="nda"> 披露细节前先签 NDA</label>
-     <label><input type="checkbox" name="setup.constraints" value="sso"> 单点登录</label>
-     <label><input type="checkbox" name="setup.constraints" value="audit_log"> 智能体操作的审计记录</label>
-    </div></div>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="4">
-   <legend><span>4 / 5</span> 预算和时间</legend>
-   <div class="field-row field-row-3">
-    <label class="field">每月自动化预算 <select name="budget.monthly" required><option value="">请选择…</option><option value="lt_1k">每月低于 US$1,000</option><option value="1k_5k">US$1,000–5,000</option><option value="5k_20k">US$5,000–20,000</option><option value="20k_50k">US$20,000–50,000</option><option value="50k_plus">超过 US$50,000</option><option value="unsure">暂时不确定</option></select></label>
-    <label class="field">一次性搭建预算 <select name="budget.setup" required><option value="">请选择…</option><option value="lt_5k">低于 US$5,000</option><option value="5k_20k">US$5,000–20,000</option><option value="20k_50k">US$20,000–50,000</option><option value="50k_plus">超过 US$50,000</option><option value="unsure">暂时不确定</option></select></label>
-    <label class="field">你希望何时开始？<select name="budget.timeline" required><option value="">请选择…</option><option value="asap">越快越好</option><option value="this_quarter">本季度</option><option value="next_quarter">下季度</option><option value="exploring">目前只是了解</option></select></label>
-   </div>
-   <p class="field-hint">区间只是帮助我们提出合适的范围；上面的估算可以作为一个有用的参照。</p>
-  </fieldset>
-
-  <fieldset class="form-step" data-step="5">
-   <legend><span>5 / 5</span> 如何联系你</legend>
-   <div class="field-row">
-    <label class="field">你的姓名 <input type="text" name="contact.name" required maxlength="120" autocomplete="name"></label>
-    <label class="field">职位 <small>可选</small> <input type="text" name="contact.role" maxlength="120" autocomplete="organization-title"></label>
-   </div>
-   <div class="field-row field-row-3">
-    <label class="field">工作邮箱 <input type="email" name="contact.email" required maxlength="254" autocomplete="email"></label>
-    <label class="field">电话 <small>可选</small> <input type="tel" name="contact.phone" maxlength="40" autocomplete="tel"></label>
-    <label class="field">Telegram <small>可选</small> <input type="text" name="contact.telegram" maxlength="64" placeholder="@name"></label>
-   </div>
-   <label class="field">还有什么需要我们了解的 <small>可选</small> <textarea name="contact.message" rows="4" maxlength="4000"></textarea></label>
-   <label class="consent"><input type="checkbox" name="consent.privacy" value="yes" required> 我同意 PassionCode.ai 保留这些回答，用于回复和准备方案，具体见<a href="/zh-hans/privacy/">隐私声明</a>中的说明</label>
-   <label class="consent"><input type="checkbox" name="consent.marketing" value="yes"> 偶尔向我发送产品动态。<small>可选</small></label>
-  </fieldset>
-
-  <div class="form-nav">
-   <button type="button" class="button button-secondary" data-action="back" hidden>返回</button>
-   <button type="button" class="button button-primary" data-action="next" hidden>下一步 <span aria-hidden="true">→</span></button>
-   <button type="submit" class="button button-primary" data-action="submit">提交需求 <span aria-hidden="true">→</span></button>
+   <p class="section-note">同样的提示词，纯文本版本，供智能体获取：<a href="/zh-hans/business/agent-request.txt">passioncode.ai/zh-hans/business/agent-request.txt</a></p>
   </div>
-  <p class="form-status" role="status" aria-live="polite"></p>
- </form>
+  <div class="request-card">
+   <h3>或者自己写</h3>
+   <form class="lead-form" id="lead-form" action="/api/leads?lang=zh-hans" method="post" novalidate>
+    <input type="hidden" name="form_token" value="">
+    <div class="trap" aria-hidden="true"><label>请将此字段留空 <input type="text" name="pc_hp" tabindex="-1" autocomplete="off"></label></div>
+    <label class="field">智能体应该为你的组织做什么？<textarea name="contact.message" rows="5" required minlength="3" maxlength="4000" placeholder="例如：我们发布 12 个应用，想看到每个智能体的花费和交付"></textarea></label>
+    <label class="field">工作邮箱 <input type="email" name="contact.email" required maxlength="254" autocomplete="email"></label>
+    <label class="field">主要目标 <small>可选</small> <select name="goals"><option value="">请选择…</option><option value="cost_and_results">看到智能体的花费和交付</option><option value="automate_operations">让日常运营自动化</option><option value="custom_agents">为我们自己的流程构建智能体</option><option value="convert_agents">适配现有的智能体或项目</option><option value="commercial_license">为闭源产品或服务申请商业许可证</option><option value="managed_hosting">由 PassionCode.ai 托管并运行</option><option value="team_onboarding">为我们的团队做上手指导和培训</option></select></label>
+    <p class="field-hint">你发送的内容仅用于回复，具体见<a href="/zh-hans/privacy/">隐私声明</a>中的说明。</p>
+    <div class="form-nav"><button type="submit" class="button button-primary" data-action="submit">提交需求 <span aria-hidden="true">→</span></button></div>
+    <p class="form-status" role="status" aria-live="polite"></p>
+   </form>
+  </div>
+ </div>
  <p class="section-note">更喜欢邮件？请写信到 <a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a>。</p>
 </section>
 

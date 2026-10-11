@@ -295,8 +295,8 @@ Tables: `release_snapshot` (one row), `release_cache` (GitHub ETags and bodies),
 
 ## Commercial enquiries
 
-`POST /api/leads` takes the /business/ form as JSON (scripted) or form-encoded (no JavaScript).
-In order: same-origin check; the `LEAD_LIMITER` rate limit (5 a minute per address); a 32 KB cap
+`POST /api/leads` takes the /business/ form as JSON (scripted) or form-encoded (no JavaScript),
+and the same JSON from a coding agent ([below](#requests-from-a-coding-agent)). In order: same-origin check; the `LEAD_LIMITER` rate limit (5 a minute per address); a 32 KB cap
 counted in bytes as the body streams; only the form's own field names are read (`FORM_FIELDS`,
 null-prototype objects — a crafted `__proto__.x` name reaches nothing); the hidden `pc_hp` trap
 (answered as accepted, stored nowhere, logged as `leads.honeypot`); the signed `form_token` the
@@ -304,7 +304,14 @@ Worker writes into `/business/` on every render, with a random nonce (refused wh
 3 s or after 24 h, and spent once — a resend of the same request id is recognised as a duplicate
 before the token is spent); validation against `assets/lead-options.js` (`worker/leads.js`
 `buildLead`; control characters are removed and single-line fields lose line breaks; the savings
-estimate is recomputed with `assets/estimate.js`, never taken from the client). The browser sends
+estimate is recomputed with `assets/estimate.js`, never taken from the client). Two shapes are
+accepted (2026-10-11): **`lead/2`**, the short request (required: `contact.email` and
+`contact.message`, 3–4,000 characters; optional: one of seven `goals`; from an agent also
+`company.size`, `processes.tools`, `budget.timeline`, `source.channel: "agent-prompt"`,
+`source.agent`, `lang`), and **`lead/1`**, the former five-step form, recognised by an answer
+only it asked for (`setup`, `budget.monthly`, `budget.setup`, `processes.areas`,
+`processes.currentState`, `company.industry`) and validated whole as before, so a page opened
+before the change still sends. The browser sends
 one request id per draft, so a resend after a lost answer is the same lead. Then the lead is **written
 to D1 before anything is sent**, and three deliveries run, each retried by the cron with backoff
 (the cron's first look is 2 minutes after the request, then 2, 4, 8 … minutes, at most 6 hours
@@ -326,6 +333,18 @@ the visitor never typed (referrer, UTM values, user agent) is cut to size instea
 request. The request id does not cover the referrer, so a resend through another link is the same
 request; on a `409` the page drops its id, so the next send is a new request.
 
+**The Platform takes `lead/1` only** (passioncode-platform `src/modules/leads/schema.ts`, a strict
+schema). A `lead/2` is stored with `forward_status = 'skipped'` and the error `lead/2: the Platform
+accepts lead/1 only; re-queue when it accepts lead/2`; the notification and the receipt go out as
+for any lead, and the row stays in D1 under the 24-month ceiling. Once the Platform accepts
+`lead/2`, re-queue them all:
+
+```sh
+python3 "$(project-observatory full-path)/tools/use_secret.py" run --env prod \
+  passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npx wrangler d1 execute passioncode-site --remote \
+  --command "UPDATE leads SET forward_status = 'pending', forward_attempts = 0, forward_error = NULL, next_attempt_at = datetime('now') WHERE forward_status = 'skipped' AND forward_error LIKE 'lead/2:%'"
+```
+
 A delivery that ends as `failed` — at once, or after the last attempt — mails `LEAD_NOTIFY_TO`
 (subject "Enquiry delivery failed") and logs `leads.failed`; a failed notification is only logged.
 To re-queue a lead once the cause is fixed:
@@ -335,6 +354,35 @@ python3 "$(project-observatory full-path)/tools/use_secret.py" run --env prod \
   passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npx wrangler d1 execute passioncode-site --remote \
   --command "UPDATE leads SET forward_status = 'pending', forward_attempts = 0, next_attempt_at = datetime('now') WHERE id = '<lead id>'"
 ```
+
+### Requests from a coding agent
+
+Since 2026-10-11 (operator ON-3) /business/ publishes a prompt a visitor pastes into a coding agent
+(page section `#agent-request`; plain text at `/business/agent-request.txt` and
+`/<code>/business/agent-request.txt`, written by `npm run locales` from each language's page,
+`scripts/agent-prompt.mjs`). The agent asks the person one question at a time, shows the final JSON
+and sends it only after an explicit yes. It has no browser and no page to read a form token from,
+so the Worker gives it the same token another way, and trusts it no more than the form:
+
+- `GET /api/leads/token` answers `{form_token, usable_after_seconds: 3, expires_in_seconds: 86400}`,
+  `no-store`: the token the page carries (signed render time, a nonce spent once, refused within 3 s
+  and after 24 h). Its own `LEAD_LIMITER` key (`token:<address>`, 5 a minute) bounds how fast one
+  address mints them; a script could take the same token by loading /business/, so this path adds
+  nothing a bot did not already have. A foreign `Origin` is refused (403), and no CORS header is sent.
+- `POST /api/leads` runs every check in the same order for both: the per-address limit
+  (`lead:<address>`, shared with the form), the 32 KB byte cap, the known field names, the trap, the
+  token, the answers. An agent's request must carry its own `id` (a UUID v4, any case, stored
+  lowercase): it is the idempotency key. The same `id` with the same answers is `200 duplicate`
+  and sends nothing; with other answers `409 conflict`; a new `id` on a spent token `409 form_used`.
+  The prompt tells the agent to retry once at most, with the same file, and never with a new `id`.
+- `POST /api/leads?dry_run=1` does everything above and stops before storing: the token is not
+  spent, nothing is written or mailed, and the answer is `200 {status: "valid", dryRun: true, lead}`
+  (the lead as it would be stored, without the client hashes) or the usual refusal. Dry runs count
+  against the limit. It is also the production smoke test: `verify-live` and the release receipt
+  never create a real lead.
+- The receipt caps hold for every channel: one receipt per address a day, 30 an hour in all, so an
+  agent cannot be used to mail strangers. The language comes from `?lang=` or, for an agent, the
+  body's `lang`. The notification names the channel and the agent's name as the agent gave it.
 
 Retention: a forwarded lead leaves D1 after 30 days; nothing stays longer than 24 months
 (`/privacy/`). Secrets, set once with values on stdin (never in a file in the repository):

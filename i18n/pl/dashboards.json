@@ -7,13 +7,11 @@
     "Fabric Dashboards": "Fabric Dashboards",
     "One window for local agent services that speak fabric-service/0.1.": "Jedno okno dla lokalnych usług agentów, które mówią protokołem fabric-service/0.1.",
     "Download": "Pobierz",
-    "FABRIC DASHBOARDS · macOS": "FABRIC DASHBOARDS · macOS",
     "Your agent services": "Twoje usługi agentów",
     "One place to look": "Jedno miejsce, w które patrzysz",
     "Download for macOS ↓": "Pobierz na macOS ↓",
     "View source ↗": "Zobacz kod źródłowy ↗",
     "Release": "Wydanie",
-    "· macOS 13+ · Apple silicon + Intel": "· macOS 13+ · Apple silicon + Intel",
     "YOUR LOCAL SERVICES / TOGETHER": "TWOJE LOKALNE USŁUGI / RAZEM",
     "THE WINDOW": "OKNO",
     "Every agent service": "Każda usługa agenta",
@@ -93,6 +91,11 @@
     "State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of": "Stan, wydatki i kontrola: co robi każda usługa agentów, ile wydaje i jakie ma aktualizacje, w jednym oknie. To krok 4 w części",
     "how it works": "„Jak to działa”",
     "All the tools": "Wszystkie narzędzia",
-    "The skills kept current": "Skille zawsze aktualne"
+    "The skills kept current": "Skille zawsze aktualne",
+    "FABRIC DASHBOARDS · macOS + Windows + Linux": "FABRIC DASHBOARDS · macOS + Windows + Linux",
+    "· macOS 13+ · Windows · Linux": "· macOS 13+ · Windows · Linux",
+    "Windows and Linux": "Windows i Linux",
+    "also ships a signed Windows installer for x64 and arm64, and a Linux AppImage and .deb for x64 and arm64. Updates are automatic on macOS only for now: on Windows and Linux, install the next release yourself.": "zawiera też podpisany instalator dla Windows na x64 i arm64 oraz AppImage i .deb dla Linuksa na x64 i arm64. Na razie automatyczne aktualizacje działają tylko na macOS: na Windows i Linuksie kolejne wydanie instalujesz sam.",
+    "Windows and Linux downloads": "Pobieranie dla Windows i Linuksa"
   }
 }

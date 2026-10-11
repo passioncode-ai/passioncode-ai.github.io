@@ -6,7 +6,8 @@
 //     og:locale and the language switch;
 //   - assets/i18n.js and worker/i18n.js, the scripts' and the Worker's message catalogs;
 //   - sitemap.xml with every language version of every indexed page;
-//   - the "Languages" section of llms.txt.
+//   - the "Languages" section of llms.txt;
+//   - business/agent-request.txt in every language, the /business/ agent prompt as plain text.
 // Refuses to write while any English fragment or message has no translation, and lists them.
 //   --check    changes nothing; fails when a file differs from what it would write, a fragment or
 //              message is untranslated, a catalog entry is no longer used, a translation changes
@@ -18,6 +19,7 @@ import { dirname, resolve } from 'node:path'
 import { NOINDEX, REGISTRY, SOURCE_PAGES } from './pages.mjs'
 import { alternates, catalogFileOf, LANG_TAGS, LANGUAGE_NAMES, LOCALES, loadCatalog, localizePage, localizedFile, ORIGIN, pageRoute, skeleton, skeletonDiff, SOURCE_LOCALE, TRANSLATED_LOCALES, translateMessages } from './locales.mjs'
 import { renderSwitchboardPage } from './switchboard-release.mjs'
+import { PROMPT_FILE, promptText } from './agent-prompt.mjs'
 import { M as SCRIPT_MESSAGES } from '../assets/messages.js'
 import { ISSUES, M as WORKER_MESSAGES } from '../worker/messages.js'
 
@@ -140,6 +142,11 @@ export function generate ({ root = ROOT, manifest } = {}) {
         if (diff) problems.push(`${file}: structure differs from ${sourceFile} at element ${diff.index}: ${diff.source} ≠ ${diff.localized}`)
       }
       files[file] = html
+      if (sourceFile === 'business/index.html') {
+        const prompt = promptText(html)
+        if (prompt) files[localizedFile(PROMPT_FILE, locale)] = prompt
+        else problems.push(`${file}: no agent prompt (data-copy-prompt) to publish as ${PROMPT_FILE}`)
+      }
     }
   }
   Object.assign(files, messageModules(builds))
