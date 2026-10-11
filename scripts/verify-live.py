@@ -132,5 +132,5 @@ output.parent.mkdir(parents=True, exist_ok=True)
 output.write_text(json.dumps(result, indent=2) + '\n')
 pages = [r for r in rows if 'locale' in r]
 by_locale = ', '.join(f"{l} {sum(1 for r in pages if r['locale'] == l)}" for l in ALL_LOCALES)
-print(('PASS' if result['pass'] else 'FAIL') + f': {len(files)} assets ({len(pages)} pages: {by_locale}; hreflang on {sum(1 for r in rows if "hreflang" in r)}), {len(routes)} download routes and {len(not_found_paths)} not-found addresses; {output}')
+print(('PASS' if result['pass'] else 'FAIL') + f': {len(files)} assets ({len(pages)} pages: {by_locale}; hreflang on {sum(1 for r in rows if "hreflang" in r)}), {len(routes)} download routes, {len(not_found_paths)} not-found addresses and the intake in dry-run mode; {output}')
 raise SystemExit(0 if result['pass'] else 1)
