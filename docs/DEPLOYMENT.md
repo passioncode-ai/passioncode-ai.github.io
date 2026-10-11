@@ -241,7 +241,12 @@ Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry
   country, and it makes the browser pick Simplified glyphs. Both have one plural form (`other`).
   `tightenCjk` (`scripts/locales.mjs`) drops the English space around links between CJK characters;
   `"latinSpacing": false` (Japanese) also drops it beside Latin names. `styles.css` ends with the
-  CJK block: system CJK font stacks, no negative tracking, taller headings.
+  CJK block: system CJK font stacks, no negative tracking, taller headings. `"phraseBreaks": true`
+  (Japanese, 2026-10-11) cuts the text of h1–h3 into phrases with BudouX (`budoux`, a pinned dev
+  dependency) and marks each boundary with `<wbr>`; the CJK block sets `word-break: keep-all` on those
+  headings, so they wrap between phrases instead of inside a word (非依｜存). Titles, meta, attributes
+  and body text are not marked, and `skeleton` ignores `<wbr>`. Chinese is not segmented: BudouX's
+  Chinese model splits words, and Chinese breaks between any two characters by convention.
 
 - **Korean** (2026-10-10): `"attachParticles": true` in the registry makes `tightenCjk` drop the space
   the English source keeps between a closing `</a>`, `</code>`, `</em>`, `</strong>` or `</b>` and a Korean particle

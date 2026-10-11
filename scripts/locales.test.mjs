@@ -133,6 +133,20 @@ test('a translation decides its own edges: leading space, punctuation, or empty'
   assert.match(punct, /Документация<\/a>, если хотите\./, 'a translation opening with punctuation takes no leading space')
 })
 
+test('Japanese headings break between phrases, never inside a word; titles, meta, attributes and body text are untouched', () => {
+  const html = page('<h1 title="A system">An agent-agnostic operating system</h1><h3>Install <a href="/x/">the skills</a></h3><p>An agent-agnostic operating system</p>').replace('<title>Hello</title>', '<title>An agent-agnostic operating system</title><meta name="description" content="An agent-agnostic operating system">')
+  const strings = { 'An agent-agnostic operating system': 'エージェント非依存のオペレーティングシステム', 'A system': 'エージェント非依存のシステム', Install: 'インストール：', 'the skills': 'Fabric のスキルを入れる' }
+  const { html: out } = localizePage(html, { sourceFile: 'x/index.html', locale: 'ja', catalog: catalog(strings) })
+  assert.match(out, /<h1 title="エージェント非依存のシステム">エージェント非依存の<wbr>オペレーティングシステム<\/h1>/)
+  assert.match(out, /<a href="\/ja\/x\/">Fabric の<wbr>スキルを<wbr>入れる<\/a>/, 'a link inside a heading is a heading too; a Latin name is never split')
+  assert.match(out, /<p>エージェント非依存のオペレーティングシステム<\/p>/, 'body text keeps the browser’s own breaking')
+  assert.match(out, /<title>エージェント非依存のオペレーティングシステム<\/title>/)
+  assert.match(out, /content="エージェント非依存のオペレーティングシステム"/)
+  assert.equal(skeletonDiff(skeleton(html), skeleton(out)), null, '<wbr> is not part of the skeleton')
+  const { html: ru } = localizePage(page('<h1>An agent-agnostic operating system</h1>'), { sourceFile: 'x/index.html', locale: 'ru', catalog: catalog({ Hello: 'Привет', 'An agent-agnostic operating system': 'Операционная система для любых агентов' }) })
+  assert.doesNotMatch(ru, /<wbr>/, 'only a locale with phraseBreaks gets them')
+})
+
 test('a translation that carries markup or changes its placeholders is refused', () => {
   assert.throws(() => ru(page('<p>Plain</p>'), { Plain: '<b>Жирный</b>' }), /markup/)
   assert.throws(() => ru(page('<p>Hi {name}</p>'), { 'Hi {name}': 'Привет, {имя}' }), /placeholders/)

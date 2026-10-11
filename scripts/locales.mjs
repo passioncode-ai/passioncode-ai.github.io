@@ -11,6 +11,7 @@
 // page, English included (applyChrome).
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { loadDefaultJapaneseParser } from 'budoux'
 import { LOCALES, NOINDEX, REGISTRY, SOURCE_LOCALE, TRANSLATED_LOCALES } from './pages.mjs'
 
 export { LOCALES, SOURCE_LOCALE, TRANSLATED_LOCALES }
@@ -242,6 +243,27 @@ export function tightenCjk (html, locale) {
   for (const [pattern, replacement] of rules) out = out.replace(new RegExp(pattern, 'gu'), replacement)
   return out
 }
+// Japanese has no spaces, so a heading wraps wherever the line ends, often inside a word (非依｜存).
+// For a locale with `phraseBreaks` in the registry, the text of h1–h3 is cut into phrases by BudouX
+// and a <wbr> marks each boundary; styles.css sets `word-break: keep-all` on those headings, so the
+// line breaks only there. A boundary inside a Latin word or number is never marked. Titles, meta,
+// attributes and body text keep the browser's own breaking. Chinese is not segmented: BudouX's
+// Chinese model splits words (智｜能体), and Chinese typography breaks between any two characters.
+const PHRASE_TAGS = new Set(['h1', 'h2', 'h3'])
+const PHRASE_PARSERS = { ja: loadDefaultJapaneseParser }
+const parsers = {}
+const LATIN_EDGE = /[A-Za-z0-9]/
+export function phraseChunks (value, locale) {
+  const load = PHRASE_PARSERS[localeInfo(locale).phraseBreaks ? locale : '']
+  if (!load) return [value]
+  const chunks = []
+  for (const piece of (parsers[locale] ??= load()).parse(value)) {
+    const prev = chunks.at(-1)
+    if (prev !== undefined && (LATIN_EDGE.test(prev.at(-1)) && LATIN_EDGE.test(piece[0]) || /\s$/.test(prev) || /^\s/.test(piece))) chunks[chunks.length - 1] = prev + piece
+    else chunks.push(piece)
+  }
+  return chunks
+}
 const escapeText = s => s.replace(/&(?!(?:[a-z]+|#\d+|#x[0-9a-f]+);)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 // Returns { html, missing, used }: the page in `locale`, the English fragments with no
@@ -251,7 +273,7 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
   const own = catalog.pages[sourceFile] || {}
   const missing = []
   const used = new Set()
-  const translate = (text, where) => {
+  const translate = (text, where, phrases = false) => {
     const key = catalogKey(text)
     if (!key) return text
     // A fragment without letters (a number range, an arrow) needs no translation, but may have
@@ -269,7 +291,8 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
     // opens with closing punctuation (，。）) or ends with any (。、（) takes no space on that side.
     const lead = /^\s/.test(value) || /^[,.;:!?)»]/.test(value) || CJK_OPENS_WITH.test(value) ? '' : /^\s*/.exec(text)[0]
     const trail = /\s$/.test(value) || value === '' || CJK_ENDS_WITH.test(value) ? '' : /\s*$/.exec(text)[0]
-    return lead + escapeText(value) + trail
+    const body = phrases ? phraseChunks(value, locale).map(escapeText).join('<wbr>') : escapeText(value)
+    return lead + body + trail
   }
 
   const out = []
@@ -328,7 +351,8 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
       }
       continue
     }
-    out.push(verbatim() ? token : translate(token, `${region ? `release:${region} ` : ''}${stack.at(-1)?.name || 'text'}`))
+    const inHeading = stack.some(e => PHRASE_TAGS.has(e.name))
+    out.push(verbatim() ? token : translate(token, `${region ? `release:${region} ` : ''}${stack.at(-1)?.name || 'text'}`, inHeading))
   }
   return { html: applyChrome(tightenCjk(out.join(''), locale), { sourceFile, locale }), missing, used }
 }
@@ -382,6 +406,7 @@ export function skeleton (html) {
     if (token.startsWith('<!--')) { if (!skip && /^<!-- \/?release:/.test(token)) out.push(token); continue }
     if (!token.startsWith('<') || token === '<' || token.startsWith('<style') || token.startsWith('<!')) continue
     const name = tagName(token)
+    if (name === 'wbr') continue // a line-break hint (phraseBreaks), not structure
     if (isClose(token)) {
       const at = stack.lastIndexOf(name)
       const skipping = skip > 0
