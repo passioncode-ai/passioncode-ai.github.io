@@ -9,6 +9,13 @@ through the copy agent's write capability only); facts rows under lease; SCN-014
 [tasks/2026-10-11-org-narrative.md](tasks/2026-10-11-org-narrative.md). The private note is in fabric-workspace
 `knowledge/vision.md` (PR #105, merged `72f62d9`).
 
+Released 2026-10-11: PR #93 merged as `6a6b527`; the first deploy's `verify-live.py` failed only on / and /start/
+(the live Worker already showed launcher 0.1.33), so PR #94 (`npm run releases:sync`: launcher 0.1.33, adapter
+0.9.0, facts rows under lease) merged as `5e41381` and was deployed from `main`: Worker version
+`3023bc40-9e71-4265-8f05-2224f60807ae`, `scripts/verify-live.py` PASS (184 assets, 150 pages in ten languages,
+hreflang on 130, 7 download routes, 23 not-found addresses), receipt
+[evidence/2026-10-11-org-narrative/live.json](evidence/2026-10-11-org-narrative/live.json).
+
 Next task: the operator answers ON-1…ON-6; then ON-3 (a form goal "See what our agents cost and deliver":
 `assets/lead-options.js`, the Worker's accepted values, every catalog, `scripts/check-site.mjs` parity).
 
