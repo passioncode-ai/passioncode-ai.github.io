@@ -60,7 +60,7 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 
 Исходный код ↗
 
-Релиз 0.7.4 · macOS 13+ · Windows · Linux
+Релиз 0.7.5 · macOS 13+ · Windows · Linux
 
 ВАШИ ЛОКАЛЬНЫЕ СЕРВИСЫ / ВМЕСТЕ
 
@@ -132,7 +132,7 @@ Fabric Dashboards находит совместимые сервисы на ва
 
 ### macOS
 
-Релиз 0.7.4. Универсальный DMG для Apple silicon и Intel, macOS 13 или новее. Подписан Developer ID, нотаризован, тикет вшит (stapled).
+Релиз 0.7.5. Универсальный DMG для Apple silicon и Intel, macOS 13 или новее. Подписан Developer ID, нотаризован, тикет вшит (stapled).
 
 Скачать Fabric Dashboards ↓
 
@@ -140,7 +140,7 @@ Fabric Dashboards находит совместимые сервисы на ва
 
 ### Windows и Linux
 
-Релиз 0.7.4 также включает подписанный установщик для Windows на x64 и arm64, а для Linux — AppImage и .deb на x64 и arm64. Начиная с 0.7.4 приложение для Windows и AppImage обновляются сами; копия, установленная из .deb, — нет: установите следующий .deb.
+Релиз 0.7.5 также включает подписанный установщик для Windows на x64 и arm64, а для Linux — AppImage и .deb на x64 и arm64. Начиная с 0.7.4 приложение для Windows и AppImage обновляются сами; копия, установленная из .deb, — нет: установите следующий .deb.
 
 Загрузки для Windows и Linux
 
@@ -154,7 +154,7 @@ Fabric Dashboards находит совместимые сервисы на ва
 
 SHA-256 для DMG
 
-159167aeaf9bb31ccff1ea1024d5f485ae7fdac7e77021fd9d9046eab5c351c2
+aeedf76a0909439f17bbc693827d6c619329eacee8571031d369eb03029356aa
 
 Заметки к релизу и контрольные суммы ↗
 

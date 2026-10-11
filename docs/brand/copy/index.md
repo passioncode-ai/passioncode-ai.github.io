@@ -62,7 +62,7 @@ For your organization
 
 ↗
 
-Open source under AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.4 · Observatory 0.23.0
+Open source under AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.5 · Observatory 0.23.0
 
 Accounts
 
@@ -236,7 +236,7 @@ Every local agent service in one window, driven by you or by agents.
 
 Release
 
-0.7.4
+0.7.5
 
 · macOS + Windows + Linux · step 4
 
@@ -272,7 +272,7 @@ One command installs the skills that teach agents to build with Fabric.
 
 CLI
 
-0.1.33
+0.1.36
 
 · Node.js 18+ · steps 1 and 3
 

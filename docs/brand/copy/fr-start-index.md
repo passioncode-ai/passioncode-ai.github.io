@@ -88,7 +88,7 @@ Le lanceur PassionCode.ai installe les skills Fabric Agent Adapter, Observatory 
 
 npx @passioncode-ai/passioncode@latest update
 
-Lanceur 0.1.33 · redémarrez ensuite votre agent · les mises à jour automatiques sont activées ; désactivez-les
+Lanceur 0.1.36 · redémarrez ensuite votre agent · les mises à jour automatiques sont activées ; désactivez-les
 
 02
 
@@ -126,7 +126,7 @@ Fabric Dashboards affiche tous les services d’agents locaux dans une seule fen
 
 Télécharger Fabric Dashboards
 
-0.7.4
+0.7.5
 
 ↓
 
