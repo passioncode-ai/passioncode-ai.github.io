@@ -1073,6 +1073,10 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 :root:lang(zh-Hans) h2, :root:lang(zh-Hans) h3, :root:lang(ja) h2, :root:lang(ja) h3 { line-height: 1.35; }
 :root:lang(zh-Hans) .vision h2, :root:lang(ja) .vision h2 { font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.3; }
 :root:lang(zh-Hans) .editorial-statement, :root:lang(ja) .editorial-statement { line-height: 1.6; }
+/* Japanese headings wrap only between phrases: the locale generator marks each phrase boundary
+   with <wbr> (phraseBreaks in i18n/locales.json, scripts/locales.mjs phraseChunks); keep-all stops
+   the break inside a word (非依｜存), and overflow-wrap still breaks a phrase longer than the line. */
+:root:lang(ja) :is(h1, h2, h3), :root:lang(ja) :is(h1, h2, h3) em { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* Korean (docs/DEPLOYMENT.md#languages): words are separated by spaces, so lines break at spaces
    only (a word is never split unless it alone is wider than its column), and the negative or wide
