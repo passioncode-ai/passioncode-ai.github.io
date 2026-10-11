@@ -260,7 +260,7 @@ Gmail und Cloudflare-Mail in einer Liste, Wichtiges zuerst; Agenten antworten na
 
 Entwicklungsvorschau
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · Schritt 5
 

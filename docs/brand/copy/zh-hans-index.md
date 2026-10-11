@@ -260,7 +260,7 @@ Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智�
 
 开发预览版
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · 步骤 5
 

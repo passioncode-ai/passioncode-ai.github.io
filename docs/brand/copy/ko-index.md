@@ -260,7 +260,7 @@ Gmail과 Cloudflare 메일을 한 목록에 모아 중요한 것부터 보여 �
 
 개발 프리뷰
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · 5단계
 

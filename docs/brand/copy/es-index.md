@@ -260,7 +260,7 @@ El correo de Gmail y de Cloudflare en una sola lista, lo importante primero; los
 
 Vista previa de desarrollo
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · paso 5
 

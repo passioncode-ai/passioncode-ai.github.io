@@ -105,6 +105,7 @@
     "setup guide for agents": "智能体配置指南",
     "Or make a key yourself": "或者自己创建密钥",
     "On the same screen, choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.": "在同一界面，选择名称、级别（read、mail 或 admin）以及是否允许发送。密钥只显示一次。",
-    "For a key you made, the app prints the whole command:": "对于你自己创建的密钥，应用会输出完整命令："
+    "For a key you made, the app prints the whole command:": "对于你自己创建的密钥，应用会输出完整命令：",
+    "A Mac copy older than 0.15.2 cannot update itself: download 0.15.2 once and install it over the old one. Later releases install themselves again.": "0.15.2 之前的 Mac 版本无法自行更新：下载一次 0.15.2，直接覆盖安装。之后的版本恢复自动更新。"
   }
 }

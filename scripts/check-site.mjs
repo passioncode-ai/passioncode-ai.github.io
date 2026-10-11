@@ -303,7 +303,7 @@ for (const action of ['Create an agent', 'Adapt an agent', 'Open a project', 'Cr
 assert.ok(!/source is private/i.test(fabric), 'Fabric source is public since 2026-09-30')
 
 const inbox = read('inbox/index.html')
-for (const text of ['Development preview', 'General IMAP and Outlook', 'not yet been tried with a real model call', 'href="/fabric/"', 'href="/inbox/download/macos"', 'Settings → Agent access', '/mcp', 'href="https://github.com/passioncode-ai/fabric-inbox"', 'Authenticode-signed since 0.14.1', 'a copy installed from the .deb does not', 'The Mac App Store version does not have the console', 'in 0.15.0 it could not start', 'revoked when the session ends', ...LICENSE_WORDING]) assert.ok(inbox.includes(text), `Inbox missing ${text}`)
+for (const text of ['Development preview', 'General IMAP and Outlook', 'not yet been tried with a real model call', 'href="/fabric/"', 'href="/inbox/download/macos"', 'Settings → Agent access', '/mcp', 'href="https://github.com/passioncode-ai/fabric-inbox"', 'Authenticode-signed since 0.14.1', 'a copy installed from the .deb does not', 'The Mac App Store version does not have the console', 'in 0.15.0 it could not start', 'revoked when the session ends', 'A Mac copy older than 0.15.2 cannot update itself', ...LICENSE_WORDING]) assert.ok(inbox.includes(text), `Inbox missing ${text}`)
 
 const dashboards = read('dashboards/index.html')
 for (const text of ['macOS 13', 'Apple silicon', 'Intel', 'list_services', 'Services are installed separately', 'Release 0.3.1 is the first under the AGPL', 'href="/dashboards/download/macos"', 'a copy installed from the .deb does not', ...LICENSE_WORDING]) assert.ok(dashboards.includes(text), `Dashboards missing ${text}`)

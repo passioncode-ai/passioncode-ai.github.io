@@ -260,7 +260,7 @@ Poczta Gmail i Cloudflare na jednej liście, ważne na górze; agenci odpowiadaj
 
 Wersja zapoznawcza w rozwoju
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · krok 5
 

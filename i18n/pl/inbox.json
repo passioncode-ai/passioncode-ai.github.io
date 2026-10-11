@@ -125,6 +125,7 @@
     "setup guide for agents": "przewodnik konfiguracji dla agentów",
     "Or make a key yourself": "Albo utwórz klucz sam",
     "On the same screen, choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.": "Na tym samym ekranie wybierz nazwę, poziom (read, mail lub admin) i to, czy klucz może wysyłać. Sekret jest pokazywany tylko raz.",
-    "For a key you made, the app prints the whole command:": "Dla klucza, który utworzysz sam, aplikacja wypisuje całe polecenie:"
+    "For a key you made, the app prints the whole command:": "Dla klucza, który utworzysz sam, aplikacja wypisuje całe polecenie:",
+    "A Mac copy older than 0.15.2 cannot update itself: download 0.15.2 once and install it over the old one. Later releases install themselves again.": "Kopia na Maca starsza niż 0.15.2 nie zaktualizuje się sama: pobierz 0.15.2 raz i zainstaluj ją na starą. Kolejne wydania znów instalują się same."
   }
 }

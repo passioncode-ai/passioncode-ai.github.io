@@ -121,6 +121,7 @@
     "setup guide for agents": "руководстве по настройке для агентов",
     "Or make a key yourself": "Или создайте ключ сами",
     "On the same screen, choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.": "На том же экране выберите имя, уровень (read, mail или admin) и можно ли ключу отправлять письма. Секрет показывается один раз.",
-    "For a key you made, the app prints the whole command:": "Для ключа, который вы создали сами, приложение выводит команду целиком:"
+    "For a key you made, the app prints the whole command:": "Для ключа, который вы создали сами, приложение выводит команду целиком:",
+    "A Mac copy older than 0.15.2 cannot update itself: download 0.15.2 once and install it over the old one. Later releases install themselves again.": "Копия для Mac старше 0.15.2 не может обновиться сама: один раз скачайте 0.15.2 и установите поверх старой. Следующие релизы снова устанавливаются сами."
   }
 }

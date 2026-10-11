@@ -1,5 +1,5 @@
 {
- "what": "WebKit (Playwright webkit, playwright-core 1.63.0) against the built dist/ served over local HTTP, branch agent/site-033, 2026-10-11T20:32:32.277Z; reduced motion on",
+ "what": "WebKit (Playwright webkit, playwright-core 1.63.0) against the built dist/ served over local HTTP, branch agent/site-033, 2026-10-11T20:59:26.105Z; reduced motion on",
  "pages": [
   {
    "url": "/inbox/",

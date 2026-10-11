@@ -260,7 +260,7 @@ Gmail and Cloudflare mail in one list, important first; agents answer by policy.
 
 Development preview
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · step 5
 

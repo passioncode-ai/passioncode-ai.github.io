@@ -260,7 +260,7 @@ Gmail と Cloudflare のメールを1つのリストに集約し、重要なも�
 
 開発プレビュー版
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · ステップ5
 

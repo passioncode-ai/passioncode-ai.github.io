@@ -260,7 +260,7 @@ Le courrier Gmail et Cloudflare dans une seule liste, l’important en premier ;
 
 Préversion de développement
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · étape 5
 

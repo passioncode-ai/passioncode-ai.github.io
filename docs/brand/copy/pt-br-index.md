@@ -260,7 +260,7 @@ E-mails do Gmail e do Cloudflare em uma só lista, os importantes primeiro; os a
 
 Prévia em desenvolvimento
 
-0.15.1
+0.15.2
 
 · macOS + Windows + Linux · passo 5
 

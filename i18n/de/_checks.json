@@ -36,7 +36,8 @@
       "href=\"/inbox/download/macos\"",
       "seit 0.14.1 mit Authenticode signiert",
       "Die Version aus dem Mac App Store hat die Konsole nicht",
-      "In 0.15.0 startete sie nicht"
+      "In 0.15.0 startete sie nicht",
+      "Eine Mac-Kopie älter als 0.15.2 kann sich nicht selbst aktualisieren"
     ],
     "switchboard/index.html": [
       "seit 0.6.16 mit Authenticode signiert",
