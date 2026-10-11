@@ -62,7 +62,7 @@ Fabric は、プロジェクトとそのエージェントのための拠点で�
 
 ↗
 
-AGPL-3.0 のオープンソース Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.1 · Observatory 0.22.0
+AGPL-3.0 のオープンソース Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.3 · Observatory 0.22.0
 
 アカウント
 
@@ -236,7 +236,7 @@ Fabric Dashboards
 
 リリース
 
-0.7.1
+0.7.3
 
 · macOS + Windows + Linux · ステップ4
 

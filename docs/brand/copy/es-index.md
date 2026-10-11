@@ -62,7 +62,7 @@ Para tu organización
 
 ↗
 
-Código abierto bajo AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.1 · Observatory 0.22.0
+Código abierto bajo AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.3 · Observatory 0.22.0
 
 Cuentas
 
@@ -236,7 +236,7 @@ Todos los servicios locales de agentes en una sola ventana, manejados por ti o p
 
 Versión
 
-0.7.1
+0.7.3
 
 · macOS + Windows + Linux · paso 4
 

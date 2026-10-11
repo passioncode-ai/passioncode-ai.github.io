@@ -62,7 +62,7 @@ Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. 코딩 �
 
 ↗
 
-AGPL-3.0 오픈 소스 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.1 · Observatory 0.22.0
+AGPL-3.0 오픈 소스 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.3 · Observatory 0.22.0
 
 계정
 
@@ -236,7 +236,7 @@ Fabric Dashboards
 
 릴리스
 
-0.7.1
+0.7.3
 
 · macOS + Windows + Linux · 4단계
 
