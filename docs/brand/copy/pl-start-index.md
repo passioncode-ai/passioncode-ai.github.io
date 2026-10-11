@@ -88,7 +88,7 @@ Launcher PassionCode.ai instaluje w Twoim agencie kodującym skille Fabric Agent
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.1.33 · po instalacji uruchom agenta ponownie · automatyczne aktualizacje są włączone; możesz je wyłączyć
+Launcher 0.1.36 · po instalacji uruchom agenta ponownie · automatyczne aktualizacje są włączone; możesz je wyłączyć
 
 02
 
@@ -126,7 +126,7 @@ Fabric Dashboards pokazuje wszystkie lokalne usługi agentów w jednym oknie; Tw
 
 Pobierz Fabric Dashboards
 
-0.7.4
+0.7.5
 
 ↓
 

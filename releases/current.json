@@ -1,6 +1,6 @@
 {
   "schema": "releases/1",
-  "generatedAt": "2026-10-11T20:52:17.167Z",
+  "generatedAt": "2026-10-11T23:46:47.068Z",
   "products": {
     "fabric": {
       "key": "fabric",
@@ -70,17 +70,17 @@
       "name": "Fabric Dashboards",
       "repository": "passioncode-ai/fabric-dashboards",
       "page": "/dashboards/",
-      "version": "0.7.4",
-      "tag": "v0.7.4",
+      "version": "0.7.5",
+      "tag": "v0.7.5",
       "prerelease": false,
-      "publishedAt": "2026-10-11T20:01:02Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.7.4",
+      "publishedAt": "2026-10-11T23:15:54Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.7.5",
       "assets": {
         "macos": {
-          "name": "Fabric-Dashboards-0.7.4.dmg",
-          "url": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.7.4/Fabric-Dashboards-0.7.4.dmg",
-          "sha256": "159167aeaf9bb31ccff1ea1024d5f485ae7fdac7e77021fd9d9046eab5c351c2",
-          "size": 250177230
+          "name": "Fabric-Dashboards-0.7.5.dmg",
+          "url": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.7.5/Fabric-Dashboards-0.7.5.dmg",
+          "sha256": "aeedf76a0909439f17bbc693827d6c619329eacee8571031d369eb03029356aa",
+          "size": 250185606
         }
       }
     },
@@ -114,11 +114,11 @@
       "name": "Fabric Agent Adapter",
       "repository": "passioncode-ai/fabric-agent-adapter",
       "page": "/start/#build",
-      "version": "0.9.0",
-      "tag": "v0.9.0",
+      "version": "0.12.0",
+      "tag": "v0.12.0",
       "prerelease": false,
-      "publishedAt": "2026-10-11T01:08:34Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-agent-adapter/releases/tag/v0.9.0",
+      "publishedAt": "2026-10-11T23:16:06Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-agent-adapter/releases/tag/v0.12.0",
       "npm": "@passioncode-ai/fabric-agent-adapter",
       "assets": {}
     },
@@ -127,11 +127,11 @@
       "name": "PassionCode.ai launcher",
       "repository": "passioncode-ai/passioncode",
       "page": "/start/#launcher",
-      "version": "0.1.33",
-      "tag": "v0.1.33",
+      "version": "0.1.36",
+      "tag": "v0.1.36",
       "prerelease": false,
-      "publishedAt": "2026-10-11T01:40:07Z",
-      "releaseUrl": "https://github.com/passioncode-ai/passioncode/releases/tag/v0.1.33",
+      "publishedAt": "2026-10-11T23:21:25Z",
+      "releaseUrl": "https://github.com/passioncode-ai/passioncode/releases/tag/v0.1.36",
       "npm": "@passioncode-ai/passioncode",
       "assets": {}
     }
