@@ -32,7 +32,10 @@
       "nie zostały jeszcze wypróbowane z prawdziwym wywołaniem modelu",
       "IMAP i Outlook",
       "href=\"/inbox/download/macos\"",
-      "z podpisem Authenticode od wersji 0.14.1"
+      "z podpisem Authenticode od wersji 0.14.1",
+      "Wersja z Mac App Store nie ma konsoli",
+      "w 0.15.0 się nie uruchamiała",
+      "Kopia na Maca starsza niż 0.15.2 nie zaktualizuje się sama"
     ],
     "switchboard/index.html": [
       "mają podpis Authenticode od wersji 0.6.16",

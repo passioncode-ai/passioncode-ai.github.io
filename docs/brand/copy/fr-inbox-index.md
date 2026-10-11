@@ -64,7 +64,7 @@ Ce qu’il fait
 
 ↓
 
-Préversion de développement 0.15.1 · macOS 12+ · Windows · Linux · open source sous licence AGPL-3.0
+Préversion de développement 0.15.2 · macOS 12+ · Windows · Linux · open source sous licence AGPL-3.0
 
 FABRIC INBOX / COURRIER + AGENTS
 
@@ -73,6 +73,32 @@ IMPORTANT
 +
 
 RÉPONDU
+
+NOUVEAU DANS 0.15
+
+## Votre agent de code
+
+## au travail dans Inbox
+
+La version 0.15 place Claude Code ou Codex à côté de votre courrier et lui permet de configurer Inbox pour vous. La console fonctionne à partir de 0.15.1 : dans 0.15.0, elle ne démarrait pas. Comment un agent se connecte ↓
+
+CONSOLE D’AGENT
+
+### Votre agent dans un panneau latéral
+
+Claude Code ou Codex s’exécute à droite de la fenêtre du courrier, déjà connecté à cet Inbox, et peut faire tout ce que fait l’application. Ouvrez la console avec le bouton de la barre d’outils, View → Agent Console ou ⌃⌘T (Ctrl+Maj+T sous Windows et Linux). Chaque session reçoit sa propre clé, au niveau que vous choisissez, révoquée à la fin de la session. La version du Mac App Store n’a pas la console.
+
+CONFIGURÉ PAR VOTRE AGENT
+
+### Aucune adresse ni aucun secret à copier
+
+Votre agent de code crée le serveur dans votre compte Cloudflare, puis se connecte lui-même dès que vous l’autorisez dans l’application. Vous collez le jeton, vous vous connectez et vous choisissez Allow. L’écran d’accueil propose Use the server your agent set up.
+
+COURRIER NON PRIS EN CHARGE
+
+### Le courrier que le serveur n’a pas pu prendre
+
+Quand un message n’a pu être ni accepté ni refusé, les réglages du domaine indiquent à qui il était destiné, quand et pourquoi. Son expéditeur a peut-être reçu un avis de non-remise : vous savez qui contacter.
 
 01 / CE QU’IL FAIT
 
@@ -108,7 +134,7 @@ OBTENIR FABRIC INBOX
 
 ## pour Mac, Windows et Linux
 
-Dernière préversion : 0.15.1. L’application crée son serveur de messagerie dans votre propre compte Cloudflare et l’ouvre ; votre courrier reste dans vos comptes.
+Dernière préversion : 0.15.2. L’application crée son serveur de messagerie dans votre propre compte Cloudflare et l’ouvre ; votre courrier reste dans vos comptes.
 
 ⌘
 
@@ -123,11 +149,13 @@ Télécharger pour macOS
 
 Ouvrez le DMG et faites glisser Fabric Inbox dans Applications.
 
+Une copie Mac antérieure à 0.15.2 ne peut pas se mettre à jour elle-même : téléchargez 0.15.2 une fois et installez-la par-dessus l’ancienne. Les versions suivantes s’installent de nouveau d’elles-mêmes.
+
 ⊞
 
 ### Windows et Linux
 
-La version 0.15.1 fournit aussi un installateur Windows pour x64 et arm64 qui ne demande pas de droits d’administrateur, signé avec Authenticode depuis la 0.14.1, ainsi qu’un AppImage et un .deb Linux pour x64 et arm64.
+La version 0.15.2 fournit aussi un installateur Windows pour x64 et arm64 qui ne demande pas de droits d’administrateur, signé avec Authenticode depuis la 0.14.1, ainsi qu’un AppImage et un .deb Linux pour x64 et arm64.
 
 Téléchargements Windows et Linux
 
@@ -139,7 +167,7 @@ L’application Windows et l’AppImage se mettent à jour d’elles-mêmes ; un
 
 ### Avant de l’ouvrir
 
-Au premier lancement, choisissez Create my server on Cloudflare.
+Au premier lancement, choisissez Create my server on Cloudflare. Si votre agent de code a créé le serveur, choisissez plutôt Use the server your agent set up.
 
 Un compte Cloudflare ; l’offre gratuite suffit
 
@@ -151,7 +179,7 @@ Le guide d’installation détaille chaque réglage.
 
 DMG macOS · SHA-256
 
-12910dee531c54b2a161ea4ef57807a27f2a6f992bb485379399a0c796f1afa8
+1ba88842a12ff4302920fb9eec6d3368a79dcb482715cc5a90d4f37c18fc5526
 
 Comparez avant d’ouvrir : shasum -a 256 dans Terminal. Une valeur différente signifie un fichier différent ; téléchargez-le à nouveau.
 
@@ -179,15 +207,21 @@ Votre serveur répond au Model Context Protocol à l’adresse /mcp. Chaque fonc
 
 01
 
-### Créez une clé
+### Donnez une phrase à votre agent
 
-Dans l’application, ouvrez Settings → Agent access. Choisissez un nom, un niveau (read, mail ou admin) et si la clé peut envoyer. Le secret n’est affiché qu’une fois.
+Dans l’application, ouvrez Settings → Agent access. L’écran montre d’abord la phrase à donner à votre agent de code. L’agent crée le serveur dans votre compte Cloudflare et se connecte lui-même dès que vous choisissez Allow ; vous ne copiez ni adresse ni secret. Les étapes de l’agent sont dans le guide de configuration pour les agents.
 
 02
 
+### Ou créez une clé vous-même
+
+Sur le même écran, choisissez un nom, un niveau (read, mail ou admin) et si la clé peut envoyer. Le secret n’est affiché qu’une fois.
+
+03
+
 ### Connectez votre agent
 
-L’application affiche la commande complète : claude mcp add --transport http fabric-inbox https://<your-server>/mcp avec les deux en-têtes de la clé. Demandez ensuite list_accounts.
+Pour une clé que vous avez créée, l’application affiche la commande complète : claude mcp add --transport http fabric-inbox https://<your-server>/mcp avec les deux en-têtes de la clé. Demandez ensuite list_accounts.
 
 02 / LA BOÎTE À OUTILS PASSIONCODE
 

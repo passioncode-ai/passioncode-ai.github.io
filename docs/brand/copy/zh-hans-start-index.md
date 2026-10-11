@@ -126,7 +126,7 @@ Fabric Dashboards 在一个窗口中显示每个本地智能体服务；你的�
 
 下载 Fabric Dashboards
 
-0.7.3
+0.7.4
 
 ↓
 

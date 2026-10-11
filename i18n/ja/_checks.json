@@ -32,7 +32,10 @@
       "開発中のプレビュー版",
       "IMAPとOutlookへの対応は計画中です",
       "href=\"/inbox/download/macos\"",
-      "0.14.1 から Authenticode 署名済み"
+      "0.14.1 から Authenticode 署名済み",
+      "Mac App Store版にはコンソールがありません",
+      "0.15.0では起動できませんでした",
+      "0.15.2 より前の Mac 版は自動でアップデートできません"
     ],
     "switchboard/index.html": [
       "0.6.16 から Authenticode 署名済み",
