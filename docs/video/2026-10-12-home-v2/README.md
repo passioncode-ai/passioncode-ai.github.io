@@ -1,12 +1,20 @@
 # Home video v2 (SITE-041, 2026-10-12): record and handoff
 
-**Status: stopped on the machine's disk floor, partway.** Script, storyboard, look and motion direction, both
-narrations and the music bed are done and delivered by the media pipeline. The composition, the renders, captions,
-site integration, deploy and receipt are not started. Nothing on the live site changed.
+**Status: blocked on disk, renders queued and paused.** Script, storyboard, look and motion direction, both
+narrations, the music bed and the composition (en and ru) are done; both renders are ordered and paused by the
+render engine's own disk guard before rendering anything. Captions, site integration, deploy and receipt are not
+started. Nothing on the live site changed.
 
-Why it stopped: the operator's rule for this run is to stop, commit and report when free space on the data volume
-falls under 1.5 GiB. It fell from 5.0 GiB at the start of the run to 0.84 GiB (`df -h /System/Volumes/Data`, swap
-9.6 of 11 GiB in use) while nothing from this run had been rendered; the run's own files are a few megabytes.
+History of the stop:
+- First run: the operator's rule is to stop, commit and report when free space on the data volume falls under
+  1.5 GiB. It fell from 5.0 GiB at the start to 0.84 GiB (`df -h /System/Volumes/Data`, swap 9.6 of 11 GiB in use)
+  while nothing from this run had been rendered.
+- Resumed at 17:47 with 4.0 GiB free. The composition was built and checked frame by frame in WebKit. The first
+  en render was refused by the render lint for one bounce ease on the end card (`V038 bounce-easing`); the ease
+  became the piece's ease-out. The renders of en and ru then stopped before their first frame on the render
+  engine's guard: "Render not started: 4.0 GB free, 8 GB needed" (en), "4.8 GB free, 8 GB needed" (ru). The guard is
+  the engine operator's setting (`render.minFreeGb`) and was not lowered: it is what keeps the disk from reaching 0.
+  The pipeline's own pressure prune would free 0.78 GB, not enough to reach 8 GB, so it was not run.
 
 ## Done
 
@@ -32,19 +40,20 @@ pipeline's own delivery record (as for W10), and the delivered files sit in its 
 
 Precondition: at least 3 GiB free on `/System/Volumes/Data`; check before every render.
 
-1. Write the composition generator beside the W10 one (`docs/evidence/2026-10-11-video/harness/gen.py` is the
-   pattern: Inter from the pipeline's font folder, GSAP 3.14.2, the site's mockups, `design-system/tokens.css`
-   linked unmodified) to the storyboard and direction in [script.md](script.md). Audio: the delivered narration WAV
-   as an MP3 under 2 MB (the render check inlines up to 2 MB), starting at 0.5 s; the music as a second `<audio>`
-   with a `data-automation` volume lane: intro and end card about 0.6, under the voice about 0.17, faded out over
-   the last 1.6 s. Place the music so its full groove (12.85 s in the track) lands on the promise beat and its final
-   hit (90.0 s) on the end card: two clips of the same track (start and ending) crossfaded over 1 s under the voice
-   during the organization beat, their offsets differing by a whole number of 2.14 s bars (the track's measured
-   pulse is 1.07 s).
-2. Check frames locally in WebKit (the W10 `shot.cjs`), then order `video-render` per locale under project
-   `fabric` with `autonomy: "agent"` and `choice_mode: "agent"` (the recipe's final choice is otherwise a human
-   stop), keys `fabric/home-video-v2/en-1` and `fabric/home-video-v2/ru-1`, `size` 1920x1080.
-3. Measure the masters (duration, −14 LUFS target, music under voice), then a word-timed transcription of each cut
+1. Free space: the render engine needs 8 GB free on the data volume (its own guard). That is the operator's call:
+   free space on the machine, or decide to change the guard. Then resume the two paused orders with the pipeline's
+   retry (they keep their finished stages): keys `fabric/home-video-v2/en-2` and `fabric/home-video-v2/ru-2`
+   (`foundry jobs --project fabric`). They were ordered with `autonomy: "agent"` and `choice_mode: "agent"`, so the
+   final choice comes back to the agent. The composition is [harness/gen2.py](harness/gen2.py) (inputs in its
+   docstring); `harness/shot.cjs` snapshots frames in WebKit and `harness/sheet.py` makes a contact sheet. The
+   failed first en order (`fabric/home-video-v2/en-1`, lint) needs no action.
+2. Composition facts the next run can rely on: narration from 0.5 s; music as two clips of the same track
+   crossfaded under the voice one second after the organization beat starts, placed so the full groove lands on
+   the promise (within 0.05 s in both cuts) and the final hit on the end card, offsets differing by whole
+   multiples of the track's 1.07 s pulse; volume lanes: 0.6 before the promise and on the end card, 0.17 under the
+   voice, faded over the last 1.6 s; the narration MP3 carries +2 dB through a true-peak limiter so the mix lands
+   near −14 LUFS (measure it). Lengths: en 86.51 s (end card at 83.51 s), ru 90.19 s (end card at 87.19 s).
+3. Read the delivered masters: measure duration, loudness and music under voice; then (duration, −14 LUFS target, music under voice) a word-timed transcription of each cut
    through the pipeline's subtitles recipe to confirm the sentence starts before cutting captions.
 4. Captions in ten languages from the final scripts (en and ru word for word; the other eight translated cue for
    cue on the English cue timings, as `scripts/check-site.mjs` requires), posters, web encodes (W10's
