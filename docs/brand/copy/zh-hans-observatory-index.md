@@ -128,13 +128,13 @@ Observatory 内部
 
 ## 从你自己的工作空间开始
 
-最新版本：0.23.0。首次本地观察不需要 API 密钥。你可以交给编码智能体来完成安装，也可以自己动手。
+最新版本：0.24.4。首次本地观察不需要 API 密钥。你可以交给编码智能体来完成安装，也可以自己动手。
 
 01
 
 ### 安装发行包
 
-下载 project_observatory-0.23.0-py3-none-any.whl 和 SHA256SUMS，来自版本 0.23.0，用以下命令校验：shasum -a 256 -c SHA256SUMS --ignore-missing，然后在支持 SQLite 扩展的独立 Python 3.11+ 环境中，用 pip install --no-deps 安装该 wheel，再安装它的 [full] 额外依赖，参数为 -c "$(project-observatory full-path)/requirements-full.lock"，即该版本测试所用的依赖集合。在 macOS 上，请使用 Homebrew 的 Python。在 Windows 上，请使用 Python 3.13 或更新版本，并按照安装指南中的 PowerShell 步骤操作。
+下载 project_observatory-0.24.4-py3-none-any.whl 和 SHA256SUMS，来自版本 0.24.4，用以下命令校验：shasum -a 256 -c SHA256SUMS --ignore-missing，然后在支持 SQLite 扩展的独立 Python 3.11+ 环境中，用 pip install --no-deps 安装该 wheel，再安装它的 [full] 额外依赖，参数为 -c "$(project-observatory full-path)/requirements-full.lock"，即该版本测试所用的依赖集合。在 macOS 上，请使用 Homebrew 的 Python。在 Windows 上，请使用 Python 3.13 或更新版本，并按照安装指南中的 PowerShell 步骤操作。
 
 02
 
@@ -166,11 +166,11 @@ MCP 服务器使用 stdio：claude mcp add observatory --scope user -e OBSERVATO
 
 ↗
 
-Mac 应用：ProjectObservatory-0.23.0-macos.zip，一个同时适用于 Apple silicon 和 Intel 的应用，已用 Developer ID 签名并通过 Apple 公证，适用于 macOS 14+。它会打开仪表盘，并使用上面安装的引擎；校验请使用同一份 SHA256SUMS。
+Mac 应用：ProjectObservatory-0.24.4-macos.zip，一个同时适用于 Apple silicon 和 Intel 的应用，已用 Developer ID 签名并通过 Apple 公证，适用于 macOS 14+。它会打开仪表盘，并使用上面安装的引擎；校验请使用同一份 SHA256SUMS。
 
-Windows 和 Linux 应用，自 0.22.0 起：Windows 安装程序（x64 和 arm64，无需管理员权限，已使用 Authenticode 签名），以及 Linux 的 AppImage 和 .deb（x64 和 arm64），见版本 0.23.0。与 Mac 应用一样，它会打开仪表盘并需要上面安装的引擎；它不会安装引擎。它会自动更新，但通过 .deb 安装的副本除外：请安装下一个 .deb。
+Windows 和 Linux 应用，自 0.22.0 起：Windows 安装程序（x64 和 arm64，无需管理员权限，已使用 Authenticode 签名），以及 Linux 的 AppImage 和 .deb（x64 和 arm64），见版本 0.24.4。与 Mac 应用一样，它会打开仪表盘并需要上面安装的引擎；它不会安装引擎。它会自动更新，但通过 .deb 安装的副本除外：请安装下一个 .deb。
 
-校验它。当前版本 0.23.0采用 AGPL 许可证，自首个采用 AGPL 的 0.10.0 起的每个版本都是如此；0.9.1 及更早版本沿用其发布时的许可证。
+校验它。当前版本 0.24.4采用 AGPL 许可证，自首个采用 AGPL 的 0.10.0 起的每个版本都是如此；0.9.1 及更早版本沿用其发布时的许可证。
 
 已知值扫描会把选定的文件与本地已知的密钥比对。它无法找到未知的机密，也无法证明不再有任何副本；本地存在副本，并不能说明其他人拿到了密钥。实时的服务商轮换和外部 MCP 主机不在离线测试套件的范围内。
 

@@ -88,7 +88,7 @@ Le lanceur PassionCode.ai installe les skills Fabric Agent Adapter, Observatory 
 
 npx @passioncode-ai/passioncode@latest update
 
-Lanceur 0.1.39 · redémarrez ensuite votre agent · les mises à jour automatiques sont activées ; désactivez-les
+Lanceur 0.1.45 · redémarrez ensuite votre agent · les mises à jour automatiques sont activées ; désactivez-les
 
 02
 
@@ -98,7 +98,7 @@ Fabric est le foyer de vos projets et de leurs agents : chaque projet y garde so
 
 Télécharger Fabric
 
-0.3.4
+0.3.5
 
 pour macOS
 
@@ -106,7 +106,7 @@ pour macOS
 
 Prérequis et limites
 
-Apple silicon et Intel · signé et notarisé · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · notes de version
+Apple silicon et Intel · signé et notarisé · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · notes de version
 
 03
 
@@ -126,7 +126,7 @@ Fabric Dashboards affiche tous les services d’agents locaux dans une seule fen
 
 Télécharger Fabric Dashboards
 
-0.7.5
+0.7.6
 
 ↓
 

@@ -128,13 +128,13 @@ GET OBSERVATORY
 
 ## Start with your own workspace
 
-Latest release: 0.23.0. No API key is needed for the first local observation. Hand the setup to your coding agent, or run it yourself.
+Latest release: 0.24.4. No API key is needed for the first local observation. Hand the setup to your coding agent, or run it yourself.
 
 01
 
 ### Install the release
 
-Download project_observatory-0.23.0-py3-none-any.whl and SHA256SUMS from release 0.23.0, check them with shasum -a 256 -c SHA256SUMS --ignore-missing, then, in an isolated Python 3.11+ environment with SQLite extension support, pip install --no-deps the wheel and then its [full] extra with -c "$(project-observatory full-path)/requirements-full.lock", the dependency set the release was tested with. On macOS, use Homebrew Python. On Windows, use Python 3.13 or newer and the PowerShell steps in the installation guide.
+Download project_observatory-0.24.4-py3-none-any.whl and SHA256SUMS from release 0.24.4, check them with shasum -a 256 -c SHA256SUMS --ignore-missing, then, in an isolated Python 3.11+ environment with SQLite extension support, pip install --no-deps the wheel and then its [full] extra with -c "$(project-observatory full-path)/requirements-full.lock", the dependency set the release was tested with. On macOS, use Homebrew Python. On Windows, use Python 3.13 or newer and the PowerShell steps in the installation guide.
 
 02
 
@@ -166,11 +166,11 @@ All releases
 
 ↗
 
-Mac app: ProjectObservatory-0.23.0-macos.zip, one app for Apple silicon and Intel, signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same SHA256SUMS.
+Mac app: ProjectObservatory-0.24.4-macos.zip, one app for Apple silicon and Intel, signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same SHA256SUMS.
 
-Windows and Linux app, since 0.22.0: a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed, and an AppImage and .deb for Linux x64 and arm64, on release 0.23.0. Like the Mac app, it opens on the dashboard and needs the engine installed above; it does not install the engine. It updates itself, except a copy installed from the .deb: install the next .deb.
+Windows and Linux app, since 0.22.0: a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed, and an AppImage and .deb for Linux x64 and arm64, on release 0.24.4. Like the Mac app, it opens on the dashboard and needs the engine installed above; it does not install the engine. It updates itself, except a copy installed from the .deb: install the next .deb.
 
-The current release, 0.23.0, is under the AGPL, like every release since 0.10.0, the first under the AGPL; 0.9.1 and earlier keep the license they shipped with.
+The current release, 0.24.4, is under the AGPL, like every release since 0.10.0, the first under the AGPL; 0.9.1 and earlier keep the license they shipped with.
 
 Known-value scanning compares selected artifacts with keys already known locally. It cannot find unknown secrets or prove that no copy remains, and a local copy is not evidence that anyone else obtained a key. Live provider rotation and external MCP hosts are outside the offline test suite.
 

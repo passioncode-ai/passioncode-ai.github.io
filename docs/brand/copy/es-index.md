@@ -62,7 +62,7 @@ Para tu organización
 
 ↗
 
-Código abierto bajo AGPL-3.0 Fabric 0.3.4 · Switchboard 0.6.16 · Dashboards 0.7.5 · Observatory 0.23.0
+Código abierto bajo AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.18 · Dashboards 0.7.6 · Observatory 0.24.4
 
 Cuentas
 
@@ -214,7 +214,7 @@ El hogar de tus proyectos y sus agentes: el propósito, el tablero, las decision
 
 Vista previa temprana
 
-0.3.4
+0.3.5
 
 · macOS · pasos 2 y 5
 
@@ -226,7 +226,7 @@ Elige la cuenta con la que se ejecuta cada agente, con los límites de uso a la 
 
 Versión
 
-0.6.16
+0.6.18
 
 · macOS + Windows · paso 4
 
@@ -238,7 +238,7 @@ Todos los servicios locales de agentes en una sola ventana, manejados por ti o p
 
 Versión
 
-0.7.5
+0.7.6
 
 · macOS + Windows + Linux · paso 4
 
@@ -250,7 +250,7 @@ Qué ha cambiado en cada proyecto y qué requiere atención, con las pruebas.
 
 Versión
 
-0.23.0
+0.24.4
 
 · macOS + Windows + Linux · paso 5
 
@@ -262,7 +262,7 @@ El correo de Gmail y de Cloudflare en una sola lista, lo importante primero; los
 
 Vista previa de desarrollo
 
-0.15.2
+0.16.1
 
 · macOS + Windows + Linux · paso 5
 
@@ -274,7 +274,7 @@ Un solo comando instala las skills que enseñan a los agentes a construir con Fa
 
 CLI
 
-0.1.39
+0.1.45
 
 · Node.js 18+ · pasos 1 y 3
 
