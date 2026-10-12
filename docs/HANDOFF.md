@@ -1,3 +1,39 @@
+# Current handoff — SITE-035: home video captions in five more languages, 2026-10-12
+
+Objective (operator via the main session, 2026-10-12): the home video's captions for pl, ko, pt-br, zh-hans and ja,
+which showed the English captions marked English. Each cue keeps `home.vtt`'s timing; each page loads its own track,
+labelled in its own language. PR #112 merged as `1ba1d23` and deployed from `main`: Worker version
+`83ff5bef-6036-4450-9c7a-cc778a0043a6`; `scripts/verify-live.py` PASS (224 assets, 150 pages in ten languages,
+hreflang on 130, 7 download routes, 23 not-found addresses, intake dry run), receipt
+[evidence/2026-10-12-site-035/live.json](evidence/2026-10-12-site-035/live.json). Live spot-check: the five
+`/assets/video/home-<locale>.vtt` and the five home pages answer 200, and each page's `<track>` names its own file,
+`srclang` and label.
+
+Done (record: [evidence/2026-10-12-site-035/README.md](evidence/2026-10-12-site-035/README.md)):
+- Five captions files with `home.vtt`'s 14 cue ids and timings byte for byte, translated cue for cue.
+  - pl, ko, pt-br and ja were translated by hand, in each catalog's register and with the decided terms.
+  - zh-Hans is the copy agent's write output, used verbatim (one job, $0.0518).
+  - Product names stay in English; "preview" and "direction" are kept, not softened.
+- No page source changed: `scripts/locales.mjs` already picks the file and sets `srclang`.
+- `scripts/check-site.mjs` now requires captions in all ten languages, and requires the five to keep `home.vtt`'s
+  timing (negative-tested).
+- `releases:sync` brought in adapter 0.13.0 and launcher 0.1.37.
+- Updated the facts row *Home video* (under the lease), SCN-021, the home screen entry and the W10 record.
+
+Checks run:
+- Copy checks with voice v2, register marketing: 0 findings and no blocking rule in pl, ko, pt-br, zh-Hans and ja.
+- Gates, all exit 0 after `releases:sync`: `npm run locales -- --check`, `extract-public-copy.py`, `npm run check`,
+  `npm test` (111/111), `npm run build` (224 entries) and `npm run releases:check`. CI `check` passed on #112.
+- WebKit against a local Worker, `/pl/` and `/ja/` at 390 px: each page loads its own track with 14 cues on the
+  English timings ([webkit.json](evidence/2026-10-12-site-035/webkit.json)), 2/2 PASS.
+- Private-terms count: 0 in the change.
+
+Open:
+- Native-speaker review of these captions, together with the rest of these languages (SITE-026).
+- The full-quality masters still wait at the media pipeline's final-choice page (W10).
+
+Next task: SITE-026 (native review).
+
 # Current handoff — SITE-028 W10: the home video, 2026-10-12
 
 Objective: a short narrated video on the home page from the real product mockups (W10). The operator approved the cut on
