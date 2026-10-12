@@ -8,7 +8,7 @@ import { test } from 'node:test'
 import worker, { currentSnapshot, ingestReleases, refreshReleases } from '../worker/index.js'
 import { localeOfPath, MISSING_PATH, notFoundPath } from '../worker/routing.js'
 import { pushReleases } from './push-releases.mjs'
-import { buildLead, checkFormToken, confirmationText, deliver, formPage, formToObject, issueFormToken, issueMessage, knownFields, LEAD_LOCALES, notificationText, platformSignature, RECEIPTS_PER_HOUR, receiptSubject, retryDue, storeLead } from '../worker/leads.js'
+import { buildLead, checkFormToken, EMAIL, confirmationText, deliver, formPage, formToObject, issueFormToken, issueMessage, knownFields, LEAD_LOCALES, notificationText, platformSignature, RECEIPTS_PER_HOUR, receiptSubject, retryDue, storeLead } from '../worker/leads.js'
 import { ISSUES, M } from '../worker/messages.js'
 import { CATALOGS, LOCALES, SOURCE_LOCALE, t, tn } from '../worker/i18n.js'
 import { liveValue } from '../worker/live.js'
@@ -705,6 +705,33 @@ test('metadata the visitor never typed is cut to size, never fails the request',
   assert.equal(app.lead.source.referrer, '', 'only an http(s) referrer is kept (the Platform takes nothing else)')
   const odd = buildLead({ ...answers(), company: { ...answers().company, name: 'Acme \ud800 Ltd' } }, context)
   assert.equal(odd.lead.company.name, 'Acme � Ltd', 'a lone surrogate becomes a replacement character, not a Postgres error')
+})
+
+test('a cut inside an emoji drops its first half, never leaves a lone surrogate', () => {
+  const context = { newId: () => '00000000-0000-4000-8000-000000000012', now: new Date('2026-10-06T12:00:00Z'), ipHash: 'a'.repeat(64), country: 'PL', userAgent: `${'u'.repeat(399)}🙂` }
+  const a = answers(); a.source = { utm: { content: `${'c'.repeat(119)}🙂tail` } }
+  const r = buildLead(a, context)
+  assert.equal(r.ok, true, JSON.stringify(r.issues))
+  for (const [name, value, length] of [['userAgent', r.lead.client.userAgent, 399], ['utm.content', r.lead.source.utm.content, 119]]) {
+    assert.equal(value.length, length, name)
+    assert.ok(value.isWellFormed(), `${name} is well-formed text`)
+  }
+  const whole = buildLead({ ...answers(), source: { utm: { content: `${'c'.repeat(118)}🙂` } } }, context)
+  assert.equal(whole.lead.source.utm.content.slice(-2), '🙂', 'an emoji that fits whole is kept')
+})
+
+// The Platform's golden vectors (passioncode-platform test/fixtures/hmac-v1.json and the email
+// list in test/schema.test.ts): both sides run the same values, so a drift fails here too.
+test('the forward signature matches the Platform golden vector', async () => {
+  const body = '{"schema":"lead/2","contact":{"message":"Zażółć gęślą jaźń — agents"}}'
+  assert.equal(await platformSignature('golden-vector-secret-not-a-real-key-0123456789', '1790000000', body), 'v1=202cf79cf567e4649d875aef578389d448d1762cc75020814e7a7834e8799896')
+})
+
+test('the email golden list is accepted and refused as the Platform does', () => {
+  const accepted = ['alex@example.com', 'first.last+tag@sub.example.co.uk', "o'brien@example.com", 'a_b-c@example-studio.io']
+  const refused = ['josé@example.com', 'user@münchen.de', 'alex@example', 'alex..b@example.com', '.alex@example.com', 'alex@-example.com', 'alex example@example.com']
+  for (const email of accepted) assert.ok(EMAIL.test(email), email)
+  for (const email of refused) assert.ok(!EMAIL.test(email), email)
 })
 
 test('a resend through another link is the same request; a conflict lets the next send start fresh', async () => {

@@ -102,7 +102,10 @@ const str = (v, max, { min = 0, field, issues, multiline = false, truncate = fal
   // An empty answer is "required"; a too-short one names the length.
   if (s.length < min) issues.push({ path: field, message: min > 1 && s.length > 0 ? made(ISSUES.atLeast, { n: min }) : made(ISSUES.required) })
   if (s.length > max && !truncate) issues.push({ path: field, message: made(ISSUES.atMost, { n: max }) })
-  return s.slice(0, max)
+  // The limit counts UTF-16 units, as the Platform's does; a cut that lands inside an emoji drops
+  // its first half rather than leave a lone surrogate (PLAT-027).
+  const cut = s.slice(0, max)
+  return /[\ud800-\udbff]$/.test(cut) ? cut.slice(0, -1) : cut
 }
 const pick = (v, options, field, issues) => {
   if (typeof v === 'string' && Object.hasOwn(options, v)) return v
