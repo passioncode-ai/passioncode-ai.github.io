@@ -149,7 +149,7 @@ def build(loc: str, out: Path) -> dict:
         obs="observatory-overview.jpg", inbox="inbox-overview.jpg", board="fabric-board.jpg").items()}
     for f in set(pics.values()):
         shutil.copy2(SITE / "assets" / f, out / "assets" / f)
-        subprocess.run(["sips", "-Z", "1600", str(out / "assets" / f)], check=True, capture_output=True)
+        subprocess.run(["sips", "-Z", "1280", str(out / "assets" / f)], check=True, capture_output=True)
     for f in ["passioncode-mark.svg", "switchboard-mark.svg", "dashboards-mark.svg", "observatory-mark.svg", "inbox-mark.svg"]:
         shutil.copy2(SITE / "assets" / f, out / "assets" / f)
     shutil.copy2(SITE / "design-system" / "tokens.css", out / "tokens.css")
@@ -162,9 +162,9 @@ def build(loc: str, out: Path) -> dict:
     # The delivered WAVs stay the masters. The render check inlines an asset only up to 2 MB, so the composition
     # carries MP3s; the narration gets +2 dB through a true-peak limiter so the mix lands near -14 LUFS.
     ff = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i"]
-    subprocess.run(ff + [str(VO), "-af", "volume=2dB,alimiter=limit=0.84:level=false", "-c:a", "libmp3lame", "-b:a", "160k",
+    subprocess.run(ff + [str(VO), "-af", "volume=2dB,alimiter=limit=0.84:level=false", "-c:a", "libmp3lame", "-b:a", "128k",
                          "-ac", "1", "-ar", "48000", str(out / "assets/narration.mp3")], check=True)
-    subprocess.run(ff + [str(MUSIC), "-c:a", "libmp3lame", "-b:a", "144k", "-ac", "2", "-ar", "48000",
+    subprocess.run(ff + [str(MUSIC), "-c:a", "libmp3lame", "-b:a", "112k", "-ac", "2", "-ar", "48000",
                          str(out / "assets/music.mp3")], check=True)
 
     d = lambda s0, s1: f'data-start="{s0:.2f}" data-duration="{s1 - s0:.2f}"'

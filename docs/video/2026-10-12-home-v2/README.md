@@ -1,9 +1,7 @@
 # Home video v2 (SITE-041, 2026-10-12): record and handoff
 
-**Status: blocked on disk, renders queued and paused.** Script, storyboard, look and motion direction, both
-narrations, the music bed and the composition (en and ru) are done; both renders are ordered and paused by the
-render engine's own disk guard before rendering anything. Captions, site integration, deploy and receipt are not
-started. Nothing on the live site changed.
+**Status: stopped on disk again (2026-10-12, 22:01), renders not delivered.** Everything up to the composition
+is done (below). Nothing on the live site changed.
 
 History of the stop:
 - First run: the operator's rule is to stop, commit and report when free space on the data volume falls under
@@ -15,6 +13,15 @@ History of the stop:
   engine's guard: "Render not started: 4.0 GB free, 8 GB needed" (en), "4.8 GB free, 8 GB needed" (ru). The guard is
   the engine operator's setting (`render.minFreeGb`) and was not lowered: it is what keeps the disk from reaching 0.
   The pipeline's own pressure prune would free 0.78 GB, not enough to reach 8 GB, so it was not run.
+
+- Third attempt, 21:35: 9.5 GiB free after the operator's agent pruned old pipeline drafts. The paused en render
+  resumed (`fabric/home-video-v2/en-2`), ran about ten minutes and failed in the render check: "Navigation timeout
+  of 10000 ms exceeded" while the machine's load average was 255–320. The composition was made lighter (pictures at
+  1280 px, the narration MP3 at 128 kbps, the music at 112 kbps; `harness/gen2.py`) and ordered again
+  (`fabric/home-video-v2/en-3`). During that render free space fell from 9.4 GiB to 0.9 GiB within twelve minutes, so
+  the order was cancelled at 915 MiB free (no spend). The render engine's own temporary folder held 82 MB at that
+  moment, so most of the fall came from other work on the machine. The ru render (`fabric/home-video-v2/ru-2`) is
+  still paused on the engine's 8 GB guard; no ru-3 was ordered.
 
 ## Done
 
@@ -40,7 +47,11 @@ pipeline's own delivery record (as for W10), and the delivered files sit in its 
 
 Precondition: at least 3 GiB free on `/System/Volumes/Data`; check before every render.
 
-1. Free space: the render engine needs 8 GB free on the data volume (its own guard). That is the operator's call:
+1. Free space and load: the render engine needs 8 GB free (its own guard), the render itself consumed several
+   gigabytes on top of whatever else runs, and its check times out under a load average in the hundreds. Order the
+   lighter composition (`harness/gen2.py` at this commit) as `fabric/home-video-v2/en-4` and `ru-3`, one at a time,
+   only with 8 GB or more free and a quiet machine. The paused ru-2 and the failed en-2 can then be cancelled as
+   superseded. The render engine needs 8 GB free on the data volume (its own guard). That is the operator's call:
    free space on the machine, or decide to change the guard. Then resume the two paused orders with the pipeline's
    retry (they keep their finished stages): keys `fabric/home-video-v2/en-2` and `fabric/home-video-v2/ru-2`
    (`foundry jobs --project fabric`). They were ordered with `autonomy: "agent"` and `choice_mode: "agent"`, so the
