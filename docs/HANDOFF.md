@@ -1,3 +1,20 @@
+# Current handoff — SITE-028 W10: the home video, 2026-10-12
+
+Objective: a short narrated video on the home page from the real product mockups (W10). The operator approved the cut on
+2026-10-12. PR #109 merged as `7128f38` and deployed from `main`; `scripts/verify-live.py` PASS (219 assets, 150 pages
+in ten languages, hreflang on 130, 7 download routes, 23 not-found addresses, intake dry run), receipt
+[evidence/2026-10-11-video/live.json](evidence/2026-10-11-video/live.json); live spot-check: `/assets/video/home.mp4`
+(3.65 MB, 44.6 s), `home-ru.mp4` (4.17 MB, 48.8 s), posters and captions answer 200, `/ru/` loads the Russian cut.
+
+Done: a click-to-play player in How it works (no autoplay, `preload="none"`, poster only until play, captions on);
+en and ru narration; captions en, ru, de, es, fr; the other five languages show the English captions, labelled English.
+Spend $0.23 through the media pipeline. Evidence and resume steps:
+[evidence/2026-10-11-video/README.md](evidence/2026-10-11-video/README.md).
+
+Open: captions for pl, ko, pt-br, zh-hans, ja (the captions job waits for one incomplete translation call to be
+reconciled); the full-quality masters wait at the media pipeline's own final-choice page. Next task: those five caption
+files, then SITE-026 (native review).
+
 # Current handoff — SITE-028 W10: the home video, 2026-10-12 (pull request open, waiting for the operator's approval of the cut)
 
 Objective (operator via the main session, 2026-10-11): a 30–45 s home-page video built from the site's sample-data
