@@ -1,3 +1,22 @@
+# Current handoff — Nicegram: more than 57 million installs, 2026-10-12
+
+Objective (operator decision, 2026-10-12): the home About's Nicegram figure becomes "more than 57 million installs"
+in all ten languages; "more than 60 million installs" was not supported. Source: Nicegram's own fact
+*installs-count* (private, valid until 2027-01-12), facts row *Nicegram installs*.
+
+Done: PR #123 merged as `e5655b2` — `index.html` #about and the nine `i18n/*/home.json` catalogs (zh-Hans a
+digit-only edit 6000 万 → 5700 万, Copylot check 0 findings), the generated pages and copy projections, the pin in
+`scripts/check-site.mjs`, `i18n/ru/_checks.json`, the facts row (under the lease) and the About line in
+`docs/ux/scenarios.md`. JSON-LD, `llms.txt` and the /business/ founders block carry no figure. Deployed from `main` as
+Worker `6a2d5e35-07bb-4446-814c-5017dd5e3ccb`; `scripts/verify-live.py` PASS, 257 checks
+([live.json](evidence/2026-10-12-nicegram-57m/live.json)); every live home page (ten languages) carries the new
+figure and none the old one.
+
+Checks run: `npm run locales -- --check`, `extract-public-copy.py`, `npm run check`, `npm test` (114/114),
+`npm run build` (224 entries), `npm run releases:check`: all exit 0; CI `check` passed on #123.
+
+Next task: SITE-040 (the SITE-039 handoff below).
+
 # Current handoff — SITE-039: the home video near the top and a layout pass, 2026-10-12
 
 Objective (operator, 2026-10-12, paraphrased): the video is good, move it near the top; go over the whole layout and
