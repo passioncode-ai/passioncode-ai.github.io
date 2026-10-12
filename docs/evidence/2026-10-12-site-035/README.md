@@ -50,7 +50,7 @@ of each file as one text. No model was used and nothing was charged.
 Every report passed the voice's literal bans and forbidden terms, the language-independent checks, and locale
 typography (all but ko-KR, which has no typography pack). pl-PL and zh-Hans-CN also passed the advertising-law pack.
 The tool gives no humanization score for these locales; it has rules only for en and ru. Native-speaker review stays
-open with the rest of these languages (SITE-025).
+open with the rest of these languages (SITE-026).
 
 ## Checks
 
@@ -77,3 +77,15 @@ On `/pl/` and `/ja/`:
 - no horizontal overflow and no page errors.
 
 **Private terms.** Count only, against the local list: 0 in this change's added lines and new files.
+
+## Shipped
+
+PR #112 merged as `1ba1d23`. It was deployed from `main` with `npm run deploy`; Worker version
+`83ff5bef-6036-4450-9c7a-cc778a0043a6`.
+
+`python3 scripts/verify-live.py` PASS: 224 assets (150 pages in ten languages, hreflang on 130), 7 download routes,
+23 not-found addresses, and the intake in dry-run mode. Receipt: [live.json](live.json).
+
+Live spot-check on passioncode.ai: `/pl/`, `/ko/`, `/pt-br/`, `/zh-hans/` and `/ja/` each answer 200. Each names its
+own `home-<locale>.vtt`, which answers 200, with `srclang` pl, ko, pt-BR, zh-Hans or ja and label Napisy, 자막,
+Legendas, 字幕 or 字幕.
