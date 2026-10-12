@@ -78,7 +78,7 @@ OBTÉN SWITCHBOARD
 
 ## Elige tu plataforma
 
-Última versión: 0.6.16. Ambas descargas incluyen la app de escritorio y la switchboard CLI.
+Última versión: 0.6.18. Ambas descargas incluyen la app de escritorio y la switchboard CLI.
 
 ⌘
 
@@ -122,11 +122,11 @@ La app sigue ejecutándose en la barra de menús después de cerrar su ventana y
 
 ZIP de macOS · SHA-256
 
-df7b94a8843711d80891ec91e800585eb1fd4db1440c735975615d1f4d3c7905
+639db19c4e2e2a1363e87fbad7ab3652c8a92b5a985addcd06e8c8606a96ff64
 
 ZIP de Windows · SHA-256
 
-dfba522d80e4153d45614a04506d8093c0c3374e9d23068b87f4ed29cf13c2a2
+f93a1dc81afce64e87b0fceb34dfbdd9597fb9e233c7916f2d75f29c4426e1ee
 
 Compara antes de abrir: shasum -a 256 en Terminal, Get-FileHash en PowerShell. Un valor distinto significa un archivo distinto; vuelve a descargarlo.
 
@@ -301,7 +301,7 @@ Las versiones publicadas cuentan instalaciones, días de uso y cuántas cuentas 
 
 ¿Puedo revisarlo o compilarlo yo mismo?
 
-Sí. Switchboard es de código abierto bajo la GNU AGPL-3.0. Para el uso que la AGPL no cubre, hay una licencia comercial disponible en passioncode.ai/business. Las versiones hasta v0.3.1-beta.1 inclusive se publicaron bajo MIT y siguen disponibles bajo esa licencia. La descarga actual, 0.6.16, se publica bajo la AGPL. v0.4.0-beta.1 se publicó bajo PolyForm Noncommercial o Internal Use y conserva esa licencia. El repositorio incluye instrucciones de compilación, código fuente, pruebas y evidencias de las versiones.
+Sí. Switchboard es de código abierto bajo la GNU AGPL-3.0. Para el uso que la AGPL no cubre, hay una licencia comercial disponible en passioncode.ai/business. Las versiones hasta v0.3.1-beta.1 inclusive se publicaron bajo MIT y siguen disponibles bajo esa licencia. La descarga actual, 0.6.18, se publica bajo la AGPL. v0.4.0-beta.1 se publicó bajo PolyForm Noncommercial o Internal Use y conserva esa licencia. El repositorio incluye instrucciones de compilación, código fuente, pruebas y evidencias de las versiones.
 
 PARTE DEL TOOLKIT DE PASSIONCODE
 

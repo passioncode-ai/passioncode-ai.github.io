@@ -78,7 +78,7 @@ OBTENIR SWITCHBOARD
 
 ## Choisissez votre plateforme
 
-Dernière version : 0.6.16. Les deux téléchargements incluent l’application de bureau et la switchboard CLI.
+Dernière version : 0.6.18. Les deux téléchargements incluent l’application de bureau et la switchboard CLI.
 
 ⌘
 
@@ -122,11 +122,11 @@ L’application reste active dans la barre des menus après la fermeture de sa f
 
 ZIP macOS · SHA-256
 
-df7b94a8843711d80891ec91e800585eb1fd4db1440c735975615d1f4d3c7905
+639db19c4e2e2a1363e87fbad7ab3652c8a92b5a985addcd06e8c8606a96ff64
 
 ZIP Windows · SHA-256
 
-dfba522d80e4153d45614a04506d8093c0c3374e9d23068b87f4ed29cf13c2a2
+f93a1dc81afce64e87b0fceb34dfbdd9597fb9e233c7916f2d75f29c4426e1ee
 
 À comparer avant l’ouverture : shasum -a 256 dans Terminal, Get-FileHash dans PowerShell. Une valeur différente signifie un fichier différent : téléchargez-le de nouveau.
 
@@ -301,7 +301,7 @@ Les versions publiées comptent les installations, les jours d’utilisation et 
 
 Puis-je l’examiner ou le compiler moi-même ?
 
-Oui. Switchboard est open source sous licence GNU AGPL-3.0. Pour un usage que l’AGPL ne couvre pas, une licence commerciale est disponible auprès de passioncode.ai/business. Les versions jusqu’à v0.3.1-beta.1 incluse ont été publiées sous licence MIT et restent disponibles sous cette licence. Le téléchargement actuel, 0.6.16, est publié sous AGPL. La v0.4.0-beta.1 a été publiée sous PolyForm Noncommercial or Internal Use et conserve cette licence. Le dépôt comprend les instructions de compilation, le code source, les tests et les preuves de publication.
+Oui. Switchboard est open source sous licence GNU AGPL-3.0. Pour un usage que l’AGPL ne couvre pas, une licence commerciale est disponible auprès de passioncode.ai/business. Les versions jusqu’à v0.3.1-beta.1 incluse ont été publiées sous licence MIT et restent disponibles sous cette licence. Le téléchargement actuel, 0.6.18, est publié sous AGPL. La v0.4.0-beta.1 a été publiée sous PolyForm Noncommercial or Internal Use et conserve cette licence. Le dépôt comprend les instructions de compilation, le code source, les tests et les preuves de publication.
 
 FAIT PARTIE DE LA BOÎTE À OUTILS PASSIONCODE
 

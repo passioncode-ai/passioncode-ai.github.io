@@ -88,7 +88,7 @@ PassionCode.ai 런처가 Fabric Agent Adapter 스킬, Observatory Log, 작업 �
 
 npx @passioncode-ai/passioncode@latest update
 
-런처 0.1.39 · 설치 후 에이전트를 다시 시작하세요 · 자동 업데이트가 켜져 있습니다. 자동 업데이트 끄기
+런처 0.1.45 · 설치 후 에이전트를 다시 시작하세요 · 자동 업데이트가 켜져 있습니다. 자동 업데이트 끄기
 
 02
 
@@ -98,7 +98,7 @@ Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. 각 프�
 
 Fabric 다운로드
 
-0.3.4
+0.3.5
 
 macOS용
 
@@ -106,7 +106,7 @@ macOS용
 
 요구 사항과 제한
 
-Apple silicon 및 Intel · 서명 및 공증 완료 · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · 릴리스 노트
+Apple silicon 및 Intel · 서명 및 공증 완료 · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · 릴리스 노트
 
 03
 
@@ -126,7 +126,7 @@ Fabric Dashboards는 로컬 에이전트 서비스를 한 창에 모두 보여 �
 
 Fabric Dashboards 다운로드
 
-0.7.5
+0.7.6
 
 ↓
 

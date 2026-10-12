@@ -88,7 +88,7 @@ PassionCode.ai ランチャーが、Fabric Agent Adapter スキル、Observatory
 
 npx @passioncode-ai/passioncode@latest update
 
-ランチャー 0.1.39 · インストール後にエージェントを再起動 · 自動更新はオン；オフにする
+ランチャー 0.1.45 · インストール後にエージェントを再起動 · 自動更新はオン；オフにする
 
 02
 
@@ -98,7 +98,7 @@ Fabric は、プロジェクトとそのエージェントのための拠点で�
 
 Fabric をダウンロード
 
-0.3.4
+0.3.5
 
 （macOS 向け）
 
@@ -106,7 +106,7 @@ Fabric をダウンロード
 
 要件と制限
 
-Apple silicon・Intel · 署名・公証済み · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · リリースノート
+Apple silicon・Intel · 署名・公証済み · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · リリースノート
 
 03
 
@@ -126,7 +126,7 @@ Fabric Dashboards は、ローカルのエージェントサービスをすべ�
 
 Fabric Dashboards をダウンロード
 
-0.7.5
+0.7.6
 
 ↓
 

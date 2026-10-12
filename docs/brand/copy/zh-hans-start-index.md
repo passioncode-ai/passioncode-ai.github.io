@@ -88,7 +88,7 @@ PassionCode.ai 启动器会把 Fabric Agent Adapter 技能、Observatory Log 和
 
 npx @passioncode-ai/passioncode@latest update
 
-启动器 0.1.39 · 之后请重启你的智能体 · 已开启自动更新；关闭自动更新
+启动器 0.1.45 · 之后请重启你的智能体 · 已开启自动更新；关闭自动更新
 
 02
 
@@ -98,7 +98,7 @@ Fabric 是你的项目及其智能体的家：每个项目的目标、看板、�
 
 下载 Fabric
 
-0.3.4
+0.3.5
 
 macOS 版
 
@@ -106,7 +106,7 @@ macOS 版
 
 要求与限制
 
-Apple silicon 和 Intel · 已签名并公证 · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · 版本说明
+Apple silicon 和 Intel · 已签名并公证 · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · 版本说明
 
 03
 
@@ -126,7 +126,7 @@ Fabric Dashboards 在一个窗口中显示每个本地智能体服务；你的�
 
 下载 Fabric Dashboards
 
-0.7.5
+0.7.6
 
 ↓
 

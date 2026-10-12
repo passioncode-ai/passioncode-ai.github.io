@@ -88,7 +88,7 @@ O launcher da PassionCode.ai instala no seu agente de programação as skills do
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.1.39 · reinicie o seu agente depois · as atualizações automáticas estão ativadas; desative-as
+Launcher 0.1.45 · reinicie o seu agente depois · as atualizações automáticas estão ativadas; desative-as
 
 02
 
@@ -98,7 +98,7 @@ O Fabric é a casa dos seus projetos e dos agentes deles: cada projeto guarda al
 
 Baixar o Fabric
 
-0.3.4
+0.3.5
 
 para macOS
 
@@ -106,7 +106,7 @@ para macOS
 
 Requisitos e limites
 
-Apple silicon e Intel · assinado e notarizado · SHA-256 4d8e8da80bcf490fed955dd627ed64b76a1c53c50aa89de49ac6eaeed91f0653 · notas de versão
+Apple silicon e Intel · assinado e notarizado · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · notas de versão
 
 03
 
@@ -126,7 +126,7 @@ O Fabric Dashboards mostra todos os serviços de agentes locais em uma só janel
 
 Baixar o Fabric Dashboards
 
-0.7.5
+0.7.6
 
 ↓
 
