@@ -221,16 +221,23 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
     const poster = readFileSync(resolve(root, `assets/video/home${suffix}.jpg`))
     assert.ok(poster.length <= 320 * 1024, `assets/video/home${suffix}.jpg: ${poster.length} bytes is over the 320 KB budget`)
   }
-  // English and Russian captions are required; another language's captions are optional (until they
-  // exist, its page shows the English captions marked srclang="en", scripts/locales.mjs).
+  // Every language has its own captions (SITE-035, 2026-10-12). A language added later may start
+  // without them: its page then shows the English captions marked srclang="en" (scripts/locales.mjs),
+  // so only a language listed here is required.
+  const CAPTIONED = ['en', 'ru', 'de', 'fr', 'pl', 'ko', 'es', 'pt-br', 'zh-hans', 'ja']
   for (const locale of LOCALES) {
     const file = `assets/video/home${locale === 'en' ? '' : `-${locale}`}.vtt`
-    if (!['en', 'ru'].includes(locale) && !existsSync(resolve(root, file))) continue
+    if (!CAPTIONED.includes(locale) && !existsSync(resolve(root, file))) continue
     const vtt = read(file)
     assert.ok(vtt.startsWith('WEBVTT\n'), `${file}: a WebVTT file`)
     assert.ok((vtt.match(/ --> /g) || []).length >= 8, `${file}: captions for the whole narration`)
     const last = Math.max(...[...vtt.matchAll(/--> 00:(\d\d):(\d\d\.\d{3})/g)].map(m => +m[1] * 60 + +m[2]))
     assert.ok(last > 40 && last < 50, `${file}: the last caption ends with the narration (${last} s)`)
+    // Captions translated on the English cue timings keep every cue's timing (SITE-035).
+    if (['pl', 'ko', 'pt-br', 'zh-hans', 'ja'].includes(locale)) {
+      const timings = text => text.split('\n').filter(line => line.includes(' --> ')).join('\n')
+      assert.equal(timings(vtt), timings(read('assets/video/home.vtt')), `${file}: every cue keeps home.vtt's timing`)
+    }
   }
 }
 // Decided terms (operator 2026-10-10, docs/brand/terminology.md): Fabric is "the home for your
