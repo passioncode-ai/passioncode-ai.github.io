@@ -1,0 +1,188 @@
+{
+ "engine": "Playwright 1.63.0 WebKit (Safari engine), headless, reduced motion",
+ "pages": 15,
+ "locales": 10,
+ "widths": [
+  1440,
+  1024,
+  768,
+  390,
+  320
+ ],
+ "loads": 750,
+ "before": {
+  "revision": "ed93b2a (origin/main)",
+  "pagesWiderThanViewport": 73,
+  "pageErrors": 0,
+  "distortedImages": 0,
+  "maxHeaderHeightAt390": 166,
+  "maxHeaderHeightAt320": 205,
+  "smallLanguageMenu": "21 px tall"
+ },
+ "after": {
+  "revision": "this branch (agent/site-layout-video)",
+  "pagesWiderThanViewport": 0,
+  "pageErrors": 0,
+  "distortedImages": 0,
+  "maxHeaderHeightAt390": 115,
+  "maxHeaderHeightAt320": 115,
+  "textInsideCellPadding": "/de/fabric/agents/ 320 px: github.com/openai/codex 102 of 97 px, inside the cell padding, no page overflow"
+ },
+ "homeVideoTopPx": {
+  "/@1440": {
+   "before": 3507,
+   "after": 935
+  },
+  "/@1024": {
+   "before": 3273,
+   "after": 792
+  },
+  "/@768": {
+   "before": 3934,
+   "after": 775
+  },
+  "/@390": {
+   "before": 5394,
+   "after": 866
+  },
+  "/@320": {
+   "before": 5730,
+   "after": 929
+  },
+  "/ru/@1440": {
+   "before": 3839,
+   "after": 1018
+  },
+  "/ru/@1024": {
+   "before": 3564,
+   "after": 851
+  },
+  "/ru/@768": {
+   "before": 4138,
+   "after": 775
+  },
+  "/ru/@390": {
+   "before": 5876,
+   "after": 912
+  },
+  "/ru/@320": {
+   "before": 6327,
+   "after": 981
+  },
+  "/de/@1440": {
+   "before": 3707,
+   "after": 935
+  },
+  "/de/@1024": {
+   "before": 3386,
+   "after": 851
+  },
+  "/de/@768": {
+   "before": 4018,
+   "after": 775
+  },
+  "/de/@390": {
+   "before": 5757,
+   "after": 893
+  },
+  "/de/@320": {
+   "before": 6023,
+   "after": 937
+  },
+  "/ja/@1440": {
+   "before": 3967,
+   "after": 1147
+  },
+  "/ja/@1024": {
+   "before": 3552,
+   "after": 972
+  },
+  "/ja/@768": {
+   "before": 4049,
+   "after": 775
+  },
+  "/ja/@390": {
+   "before": 5661,
+   "after": 958
+  },
+  "/ja/@320": {
+   "before": 6012,
+   "after": 1033
+  }
+ },
+ "beforeOverflowing": [
+  "/dashboards/@320",
+  "/de/404.html@320",
+  "/de/@320",
+  "/de/business/@320",
+  "/de/business/thanks/@320",
+  "/de/dashboards/@320",
+  "/de/design-system/@320",
+  "/de/fabric/@320",
+  "/de/fabric/agents/@320",
+  "/de/observatory/@320",
+  "/de/privacy/@320",
+  "/de/start/@320",
+  "/de/switchboard/@320",
+  "/de/switchboard/agents/@320",
+  "/de/vision/@320",
+  "/design-system/@320",
+  "/es/404.html@320",
+  "/es/@320",
+  "/es/business/@320",
+  "/es/business/thanks/@320",
+  "/es/dashboards/@320",
+  "/es/design-system/@320",
+  "/es/fabric/@320",
+  "/es/fabric/agents/@320",
+  "/es/observatory/@320",
+  "/es/privacy/@320",
+  "/es/start/@320",
+  "/es/switchboard/@320",
+  "/es/switchboard/agents/@320",
+  "/es/vision/@320",
+  "/fabric/@320",
+  "/fabric/agents/@320",
+  "/fr/dashboards/@320",
+  "/fr/design-system/@320",
+  "/fr/fabric/@320",
+  "/fr/fabric/agents/@320",
+  "/fr/observatory/@320",
+  "/fr/switchboard/@320",
+  "/fr/switchboard/agents/@320",
+  "/observatory/@320",
+  "/pt-br/404.html@320",
+  "/pt-br/@320",
+  "/pt-br/business/@320",
+  "/pt-br/business/thanks/@320",
+  "/pt-br/dashboards/@320",
+  "/pt-br/design-system/@320",
+  "/pt-br/fabric/@320",
+  "/pt-br/fabric/agents/@320",
+  "/pt-br/observatory/@320",
+  "/pt-br/privacy/@320",
+  "/pt-br/start/@320",
+  "/pt-br/switchboard/@320",
+  "/pt-br/switchboard/agents/@320",
+  "/pt-br/vision/@320",
+  "/ru/404.html@320",
+  "/ru/@320",
+  "/ru/business/@320",
+  "/ru/business/thanks/@320",
+  "/ru/dashboards/@320",
+  "/ru/design-system/@320",
+  "/ru/fabric/@320",
+  "/ru/fabric/agents/@320",
+  "/ru/fabric/agents/@390",
+  "/ru/inbox/@320",
+  "/ru/observatory/@320",
+  "/ru/privacy/@320",
+  "/ru/privacy/@390",
+  "/ru/start/@320",
+  "/ru/switchboard/@320",
+  "/ru/switchboard/agents/@320",
+  "/ru/vision/@320",
+  "/switchboard/@320",
+  "/switchboard/agents/@320"
+ ]
+}

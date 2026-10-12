@@ -293,7 +293,7 @@ Claude Code, Codex and the other popular coding agents — Hermes, Kilo Code, Cl
 
 Can a project keep its own accounts?
 
-Yes. Create a project, add its folders — for example several related repositories — and choose its accounts. Sessions launched from those folders use only those accounts, automatic switching stays inside them, and agents working in other projects never switch to them.
+Yes. Create a project, add its folders (for example several related repositories) and choose its accounts. Sessions launched from those folders use only those accounts, automatic switching stays inside them, and agents working in other projects never switch to them.
 
 Does Switchboard send any data?
 

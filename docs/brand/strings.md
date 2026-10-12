@@ -3,22 +3,25 @@ Contract: brand-contract v1
 
 | Key | Text (primary) | Location | Scenario | Status | Kind |
 |---|---|---|---|---|---|
-| download.product | Download Switchboard | index.html | SCN-001 | proposed | copy |
+| download.product | Download Switchboard | switchboard/index.html | SCN-001, SCN-002 | proposed | copy |
 | download.macos | Download for macOS | switchboard/index.html | SCN-002 | proposed | copy |
 | download.windows | Download for Windows | switchboard/index.html | SCN-003 | proposed | copy |
 | source.view | View source | switchboard/index.html | SCN-004 | proposed | copy |
 | tokens.get | Get the CSS tokens | design-system/index.html | SCN-005 | proposed | copy |
 
-| toolkit.explore | Explore the tools | index.html | SCN-001 | proposed | copy |
-| fabric.explore | Explore Fabric | index.html | SCN-007 | proposed | copy |
+| toolkit.explore | Explore the tools | dashboards/index.html | SCN-010 | proposed | copy |
+| fabric.explore | Explore Fabric | observatory/index.html | SCN-007 | proposed | copy |
 | download.fabric.macos | Download for macOS | fabric/index.html | SCN-007 | proposed | copy |
 | author.follow | Follow on X | index.html | SCN-008 | proposed | copy |
-| about.request | Tell us about your processes | index.html (#about) | SCN-008, SCN-014 | proposed | copy |
-| founders.story | How we got here | business/index.html (#founders) | SCN-014, SCN-008 | proposed | copy |
+| about.request | Tell us about your processes | index.html | SCN-008, SCN-014 | proposed | copy |
+| founders.story | How we got here | business/index.html | SCN-014, SCN-008 | proposed | copy |
 | door.start | Get started | index.html | SCN-013 | proposed | copy |
 | door.business | Estimate and request | index.html | SCN-014 | proposed | copy |
-| request.send | Send request | business/index.html (#request) | SCN-014 | proposed | copy |
-| request.agent.copy | Copy | business/index.html (#agent-request), assets/site.js | SCN-022 | proposed | copy |
+| hero.door.personal | For you, free | index.html | SCN-001, SCN-013 | proposed | copy |
+| hero.door.organization | For your organization | index.html | SCN-001, SCN-014 | proposed | copy |
+| header.tools | Get the tools | index.html | SCN-001 | proposed | copy |
+| request.send | Send request | business/index.html | SCN-014 | proposed | copy |
+| request.agent.copy | Copy | assets/messages.js | SCN-022 | proposed | copy |
 
 | dashboards.download | Download Fabric Dashboards | dashboards/index.html | SCN-010 | proposed | copy |
 | inbox.what | See what it does | inbox/index.html | SCN-009 | proposed | copy |

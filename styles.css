@@ -1056,9 +1056,12 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .journey-steps .step-prompt + p:not(.step-prompt) { margin-top: var(--pc-space-4); }
 .journey-steps .step-prompt code { overflow-wrap: anywhere; font-size: var(--pc-type-meta); }
 /* SITE-028 W10: the home video, click to play. The box keeps 16:9 before the poster arrives, so nothing moves. */
-.home-video { margin: var(--pc-space-6) 0 0; }
+/* The home video (SITE-028 W10), directly under the hero since SITE-039: the hero's text stays the
+   page's answer above the fold; the player's 16:9 box is reserved, so nothing shifts when it loads. */
+.home-video { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; padding-bottom: clamp(72px, 9vw, 112px); }
+@media (max-width: 620px) { .home-video { width: calc(100vw - 28px); } }
 .home-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--bg-raised); border: 1px solid var(--line-strong); border-radius: var(--radius-sm); }
-.home-video figcaption { margin-top: var(--pc-space-2); color: var(--ink-muted); font-size: var(--pc-type-meta); }
+.home-video figcaption { max-width: 72ch; margin-top: var(--pc-space-3); color: var(--ink-muted); font-size: var(--pc-type-meta); }
 
 /* Chinese and Japanese (docs/DEPLOYMENT.md#languages): system CJK faces after the Latin stack, no
    negative tracking, taller headings (a CJK glyph fills its whole em), CJK line breaking. */
@@ -1083,4 +1086,57 @@ html:lang(ko) body * { letter-spacing: normal !important; }
 
 /* Long compound words (German "agentenunabhängige") must never widen a 390px page: headings
    hyphenate where the language allows and break as a last resort. */
-html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; overflow-wrap: anywhere; }
+html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: anywhere; }
+/* Russian (SITE-037): at phone width one long word («программирования,», «конфиденциальности») is
+   wider than the column at display size, so headings hyphenate there; wider screens keep whole words. */
+@media (max-width: 620px) { html:lang(ru) :is(h1, h2, h3) { hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 8 4 4; -webkit-hyphenate-limit-before: 4; -webkit-hyphenate-limit-after: 4; } }
+/* Every heading, every language: a word longer than its column breaks rather than widen the page. */
+:is(h1, h2, h3) { overflow-wrap: break-word; }
+
+/* Layout pass of 2026-10-12 (SITE-039), checked in WebKit at 1440, 1024, 768, 390 and 320 px. */
+/* The sticky header: Safari needs the prefixed blur; without it the page read through the bar. */
+.site-header { -webkit-backdrop-filter: blur(18px); }
+.site-header.is-scrolled { background: rgba(10, 7, 13, .96); }
+/* Header controls are at least 44 px tall to tap (the language menu was 20 px). */
+.lang-menu > summary, .header-download { min-height: 44px; display: inline-flex; align-items: center; }
+.header-download { padding-block: 0; gap: .3em; }
+@media (max-width: 620px) {
+  /* SITE-023: one row of navigation in every language. A row longer than the screen scrolls
+     sideways (keyboard focus scrolls it too), and its right edge fades to say there is more. */
+  .story-site .site-header { min-height: 0; row-gap: 4px; column-gap: 12px; grid-template-columns: minmax(0, 1fr) auto; }
+  .story-site .site-header nav { flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none;
+    margin-inline: -14px; padding-inline: 14px 24px; scroll-padding-inline: 14px 24px; column-gap: 18px;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 14px, #000 calc(100% - 24px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 14px, #000 calc(100% - 24px), transparent); }
+  .story-site .site-header nav::-webkit-scrollbar { display: none; }
+  .story-site .site-header nav a { flex: none; display: inline-flex; align-items: center; min-height: 40px; }
+  /* The scrolling row clips anything outside it, so the focus ring sits inside the link. */
+  .story-site .site-header nav a:focus-visible { outline-offset: -3px; }
+  .story-site [id] { scroll-margin-top: 128px; }
+}
+@media (max-width: 360px) {
+  /* 320 px: the brand and the two header controls fit one row. */
+  .story-site .site-header { column-gap: 10px; }
+  .brand { gap: 8px; font-size: 14px; }
+  .brand img { width: 28px; height: 28px; }
+  .header-actions { gap: 10px; }
+  .header-link, .lang-switch { font-size: 12px; }
+}
+@media (max-width: 360px) { .header-download { max-width: 8.5em; text-align: right; line-height: 1.25; } }
+@media (max-width: 620px) {
+  /* /fabric/agents/ at 320 px: a long word in a column head or cell (e.g. «ОФИЦИАЛЬНЫЙ») widened the table past the screen. */
+  .fabric-agent-table { table-layout: fixed; }
+  .fabric-agent-table th, .fabric-agent-table td { overflow-wrap: anywhere; hyphens: auto; -webkit-hyphens: auto; }
+  .fabric-agent-table thead th { letter-spacing: .04em; }
+}
+/* Below 340 px the long header actions of some languages (Português (Brasil), Tools herunterladen)
+   leave no room for the wordmark: the mark alone links home, and keeps its accessible name. */
+@media (max-width: 340px) { .site-header .brand > span { display: none; } }
+/* 621–900 px: the second header row reads as one group from the left, not spread edge to edge. */
+@media (max-width: 900px) and (min-width: 621px) { .story-site .site-header nav { justify-content: flex-start; column-gap: 28px; } }
+/* Footer links are at least 24 × 24 px (the X link was 19 px wide). */
+.story-footer nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; min-height: 24px; }
+/* /start/ steps at 320 px: the grid track took the widest step's min-content (a German download
+   button) and pushed every step past the screen; the track now fits the column and buttons wrap. */
+.setup-steps { grid-template-columns: minmax(0, 1fr); }
+.setup-steps .button { flex-wrap: wrap; text-align: center; padding-block: 10px; }

@@ -262,7 +262,7 @@ Wolisz e-mail? Napisz na commercial@passioncode.ai.
 
 Ile to kosztuje?
 
-Narzędzia są darmowe i mają otwarty kod. Płacisz za naszą pracę dla Ciebie — mapowanie, budowanie, hosting, wsparcie — oraz za licencję komercyjną, jeśli jej potrzebujesz. Cenę podajemy w propozycji, gdy zrozumiemy Twoje procesy; nie ma stałego pakietu.
+Narzędzia są darmowe i mają otwarty kod. Płacisz za naszą pracę dla Ciebie (mapowanie, budowanie, hosting, wsparcie) oraz za licencję komercyjną, jeśli jej potrzebujesz. Cenę podajemy w propozycji, gdy zrozumiemy Twoje procesy; nie ma stałego pakietu.
 
 Kiedy potrzebujemy licencji komercyjnej?
 

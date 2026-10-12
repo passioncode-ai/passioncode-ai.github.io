@@ -87,6 +87,15 @@
  </div>
 </section>
 
+<figure class="home-video" id="video"><!-- SITE-028 W10, near the top since SITE-039 (operator 2026-10-12): directly under the hero, whose text stays the page's answer. Click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
+ <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="Como funciona: um vídeo narrado" aria-describedby="video-note">
+  <source src="/assets/video/home.webm" type="video/webm">
+  <source src="/assets/video/home.mp4" type="video/mp4">
+  <track kind="captions" src="/assets/video/home-pt-br.vtt" srclang="pt-BR" label="Legendas" default>
+ </video>
+ <figcaption id="video-note">Como funciona, em menos de um minuto: narrado e com legendas. As telas mostram dados de demonstração; o console do agente de programação é um exemplo escrito</figcaption>
+</figure>
+
 <section class="section" id="why" aria-labelledby="why-title">
  <span id="path" class="legacy-anchor" aria-hidden="true"></span><span id="vision" class="legacy-anchor" aria-hidden="true"></span><span id="toolkit" class="legacy-anchor" aria-hidden="true"></span><span id="shift" class="legacy-anchor" aria-hidden="true"></span>
  <div class="section-heading story-heading"><p class="section-number">01 / POR QUÊ</p><h2 id="why-title">Seu agente funciona por uma semana<br>Depois, tudo desanda</h2><p>Ele roda na conta errada ou bate num limite. Esquece o que aprendeu ontem, e ninguém sabe dizer o que ele mudou. O próximo agente que você cria começa do zero.</p></div>
@@ -108,14 +117,6 @@
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">DISPONÍVEL AGORA, EM PARTE</p><h3>Trabalhar juntos e acompanhar</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="O quadro do Fabric: perguntas em que os agentes pararam e resultados à espera de revisão, cada um com seu projeto e responsável. Dados de demonstração sintéticos."></figure><p>Os agentes compartilham o quadro e as passagens de trabalho de um projeto na prévia do Fabric; o Observatory mostra o que mudou, com as evidências.</p><a href="/pt-br/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">DIREÇÃO</p><h3>Organização</h3><p class="step-prompt"><span>empresas</span>Agentes distribuídos por função e trabalho roteado entre as suas máquinas</p><p>O mesmo nas máquinas de uma equipe, oferecido sob solicitação enquanto o construímos.</p><a href="/pt-br/business/">Para a sua organização</a></li>
  </ol>
- <figure class="home-video" id="video"><!-- SITE-028 W10: click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
-  <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="Como funciona: um vídeo narrado" aria-describedby="video-note">
-   <source src="/assets/video/home.webm" type="video/webm">
-   <source src="/assets/video/home.mp4" type="video/mp4">
-   <track kind="captions" src="/assets/video/home-pt-br.vtt" srclang="pt-BR" label="Legendas" default>
-  </video>
-  <figcaption id="video-note">Os passos acima em menos de um minuto, narrados e com legendas. As telas mostram dados de demonstração; o console do agente de programação é um exemplo escrito</figcaption>
- </figure>
 </section>
 
 <section class="section paths" id="start" aria-labelledby="paths-title">

@@ -43,12 +43,12 @@ See [foundation](foundation.md).
 - **Entry point:** /
 - **Preconditions:** none
 - **Steps:**
-  1. Read the teams headline → the agent workplace and independent tools are explained; How it works (#how, SCN-021) shows the six steps from entry to an organization with their state; the product directory names six useful entry points, their availability and the journey step each one serves.
-  2. Follow the primary Explore the tools → the available-tools section on the homepage opens.
-  3. Follow the secondary Download Switchboard → the Switchboard product download section opens.
+  1. Read the teams headline → the agent workplace and independent tools are explained in text above the fold; directly under the hero the home video (#video, SCN-021) runs the journey in under a minute when asked; How it works (#how, SCN-021) shows the six steps from entry to an organization with their state; the product directory names six useful entry points, their availability and the journey step each one serves.
+  2. Follow the primary For you, free → /start/ (SCN-013); the secondary For your organization → /business/ (SCN-014).
+  3. Follow Get the tools in the header → the available-tools section (#products) on the homepage opens; each tool's page carries its own download (SCN-002).
 - **Expected result:** Product roles and available downloads are clear.
 - **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
-- **UI elements:** Navigation, work cycle, product features, Explore the tools, Download Switchboard, Fabric detail link
+- **UI elements:** Navigation (one row at phone width, scrolling sideways when longer than the screen, SITE-039), the home video, work cycle, product directory, For you, free, For your organization, Get the tools
 - **States covered:** success, error; static content has no application loading or empty state.
 - **Errors & recovery:** Missing network: browser error; reload.
 - **Status:** draft
@@ -442,7 +442,7 @@ rather than replaces, the browser review recorded above.
 - **Persona:** P-01, P-02
 - **Feature:** Journey
 - **Traces:** ST-01, ST-04, ST-06, FLW-05
-- **Entry point:** /#how (after the hero and Why on the home page); /vision/ path stages 1, 2 and 6; the legacy /#how address
+- **Entry point:** /#video (the home video, directly under the hero since SITE-039, 2026-10-12) and /#how (after Why on the home page); /vision/ path stages 1, 2 and 6; the legacy /#how address
 - **Preconditions:** none
 - **Steps:**
   1. Scroll past Why → How it works (#how): six numbered steps from [narrative §3](../brand/narrative.md#3-the-journey-six-steps), each with its state label (AVAILABLE NOW, PREVIEW, AVAILABLE NOW, IN PART or DIRECTION), one picture and a one-line caption.
@@ -450,14 +450,14 @@ rather than replaces, the browser review recorded above.
   3. Read steps 02 Onboard and 03 First agent → sample-data mockups rendered from Fabric's own interface (SITE-028 W5, 2026-10-11; [capture record](../evidence/2026-10-11-mockups/README.md)): step 02 shows the first run's third step with the four actions in two pairs; step 03 shows the coding agent's console asking the skill's intake questions, marked in its alt text as a written example, not a recording. Each picture carries a visible «Sample data» / «Пример данных» chip; the Russian pages show the Russian interface (`-ru.jpg`), the other languages the English one. The prompt cards stay under each picture.
   4. Read steps 04 Grow and 05 Work together and watch → the synthetic Fabric Dashboards overview and the synthetic Fabric board, each captioned as demo data; step 05 says which parts are preview (Fabric's board) and which are available (Observatory).
   5. Read step 06 Organization → marked DIRECTION; its link leads to /business/ (SCN-014).
-  6. Under the steps, the home video (SITE-028 W10, 2026-10-11; [record](../evidence/2026-10-11-video/README.md)) → a poster frame of the same mockups; pressing play runs the steps in under a minute with an AI narrator and captions on by default. The video shows the same sample-data mockups, labels each beat AVAILABLE NOW, PREVIEW or DIRECTION, marks the console as a written example and never shows Fabric replying. Russian pages play the Russian cut (Russian narration, Russian interface); the other eight languages play the English cut, each with captions in its own language, labelled in that language (German, Spanish and French since W10; Polish, Korean, Portuguese, Chinese and Japanese since 2026-10-12, SITE-035).
+  6. The home video (SITE-028 W10, 2026-10-11; [record](../evidence/2026-10-11-video/README.md)), directly under the hero since SITE-039 (operator 2026-10-12: near the top; it ended How it works before), so a visitor meets it before scrolling to the steps; its caption line says "How it works in under a minute" → a poster frame of the same mockups; pressing play runs the steps in under a minute with an AI narrator and captions on by default. The video shows the same sample-data mockups, labels each beat AVAILABLE NOW, PREVIEW or DIRECTION, marks the console as a written example and never shows Fabric replying. Russian pages play the Russian cut (Russian narration, Russian interface); the other eight languages play the English cut, each with captions in its own language, labelled in that language (German, Spanish and French since W10; Polish, Korean, Portuguese, Chinese and Japanese since 2026-10-12, SITE-035).
 - **Expected result:** The visitor can name the order of the work and what each step uses, and can tell available from preview from direction at every step, without seeing a placeholder, an empty video player or a Fabric that replies; the video adds nothing the steps do not say, and starts only when asked.
 - **Alt paths:** the video never autoplays, so reduced motion needs no other branch: the poster is still and nothing moves until the visitor presses play; it loads nothing but its poster before play (`preload="none"`), and its 16:9 box is reserved so the page does not shift; captions can be turned off in the player; a browser without WebM plays the MP4; without JavaScript the native player still works; without JavaScript every step, picture and label is present; at 390 px the steps stack in one column and images keep their aspect ratio; reduced motion shows them without the reveal.
 - **UI elements:** section heading, six step cards (number, state label, title, image or text card, caption), the launcher command card, the four-action card, the two prompt cards, four figures with alt text (two of them sample-data mockups with a visible chip), the For your organization link, the video (native controls, poster, captions track, a caption line saying it shows sample data and a written example)
 - **States covered:** static populated; images lazy-loaded (dimensions reserved, no layout shift); image failed to load (alt text describes the screen); video: poster before play, playing with captions, paused, ended (the poster's box stays), failed to load (the caption line still says what it shows; the steps carry the same content).
 - **Errors & recovery:** an image fails → its alt text and caption still say what it shows and that it is synthetic; nothing on the step depends on the image.
 - **Status:** draft
-- **Coverage:** index.html#how; styles.css (journey block); scripts/check-site.mjs (six labelled steps, the video's controls, no autoplay or loop, preload none, poster, captions in every language and its 8 MB budget, only listed images; the mockups' size, 2x pixels, -ru twin, budget and sample-data alt); scripts/locales.mjs `localizedAsset` (pictures, the video's poster, cut and captions); scripts/locales.test.mjs (each language's cut and captions, `srclang`).
+- **Coverage:** index.html#video and #how; styles.css (journey block, `.home-video`); scripts/check-site.mjs (six labelled steps, the video directly under the hero and not in #how, its controls, no autoplay or loop, preload none, poster, captions in every language and its 8 MB budget, only listed images; the mockups' size, 2x pixels, -ru twin, budget and sample-data alt); scripts/locales.mjs `localizedAsset` (pictures, the video's poster, cut and captions); scripts/locales.test.mjs (each language's cut and captions, `srclang`).
 - **Product:** unobserved
 
 ### SCN-022: Let a coding agent ask and send the request

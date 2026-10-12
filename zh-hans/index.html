@@ -87,6 +87,15 @@
  </div>
 </section>
 
+<figure class="home-video" id="video"><!-- SITE-028 W10, near the top since SITE-039 (operator 2026-10-12): directly under the hero, whose text stays the page's answer. Click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
+ <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="工作原理（带旁白的视频）" aria-describedby="video-note">
+  <source src="/assets/video/home.webm" type="video/webm">
+  <source src="/assets/video/home.mp4" type="video/mp4">
+  <track kind="captions" src="/assets/video/home-zh-hans.vtt" srclang="zh-Hans" label="字幕" default>
+ </video>
+ <figcaption id="video-note">用不到一分钟讲清工作原理，带旁白和字幕。画面为演示数据；编码智能体的控制台是文字示例</figcaption>
+</figure>
+
 <section class="section" id="why" aria-labelledby="why-title">
  <span id="path" class="legacy-anchor" aria-hidden="true"></span><span id="vision" class="legacy-anchor" aria-hidden="true"></span><span id="toolkit" class="legacy-anchor" aria-hidden="true"></span><span id="shift" class="legacy-anchor" aria-hidden="true"></span>
  <div class="section-heading story-heading"><p class="section-number">01 / 为什么</p><h2 id="why-title">你的智能体工作了一周<br>然后它散了架</h2><p>它跑在错误的账号上，或撞上了用量限制。它忘了昨天学到的东西，也没人能说清它改了什么。你下一个智能体又从零开始。</p></div>
@@ -108,14 +117,6 @@
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">部分现已可用</p><h3>协同工作，并随时查看</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="Fabric 看板：智能体卡住的问题，以及等待审阅的结果，每项都标明所属项目和负责人。合成演示数据。"></figure><p>在 Fabric 预览版中，智能体共享同一个项目看板并进行交接；Observatory 展示发生了什么变化，并附有证据。</p><a href="/zh-hans/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">发展方向</p><h3>组织</h3><p class="step-prompt"><span>企业</span>按角色部署智能体，工作在你的多台机器之间流转</p><p>同样的能力会覆盖团队的多台机器；我们正在构建，目前可按需提供。</p><a href="/zh-hans/business/">面向你的组织</a></li>
  </ol>
- <figure class="home-video" id="video"><!-- SITE-028 W10: click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
-  <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="工作原理（带旁白的视频）" aria-describedby="video-note">
-   <source src="/assets/video/home.webm" type="video/webm">
-   <source src="/assets/video/home.mp4" type="video/mp4">
-   <track kind="captions" src="/assets/video/home-zh-hans.vtt" srclang="zh-Hans" label="字幕" default>
-  </video>
-  <figcaption id="video-note">用不到一分钟讲完上面的步骤，带旁白和字幕。画面为演示数据；编码智能体的控制台是文字示例</figcaption>
- </figure>
 </section>
 
 <section class="section paths" id="start" aria-labelledby="paths-title">
@@ -154,7 +155,7 @@
  <details><summary>我的数据会去哪里？</summary><p>你的工作留在你自己的电脑和你自己的云账号上。Fabric Switchboard 以及自 0.3.2 版起的 Fabric 会发送匿名使用计数：只有次数和类别，绝不包含名称、路径或内容。你可以在 Switchboard 的“关于”窗口或 Fabric 的“设置”中关闭。<a href="/zh-hans/privacy/">具体发送了什么</a>。</p></details>
 </section>
 
-<section class="section about-section" id="about" aria-labelledby="about-title"><div><p class="section-number">关于</p><h2 id="about-title">我们怎么走到这里的</h2></div><div class="about-copy"><p class="about-lead">我是 Sergey Sheleg，Nicegram 的联合创始人兼 CPO。Nicegram 是一款 Telegram 第三方客户端，安装量超过 6000 万。同时我也是 eSIM Plus 的联合创始人。在此之前，我在 Ultimate Guitar 负责 Android 和增长产品，他们的应用触达超过 3.5 亿人。我的工作横跨产品、增长、营销、AI 和区块链。</p><p>我在 PassionCode 的联合创始人是 Serge Khurs，他是 Teslasuit 的联合创始人兼 CTO。Teslasuit 是一套全身套装，集成触觉反馈、肌肉电刺激、传感器和动作追踪，应用于医疗、训练、工业和国防领域。现在他为大型国际数字公司提供 AI 和后端系统方面的工程咨询。</p><p>我们两个人都带团队，起步方式也一样：先为自己的智能体搭建工作空间。我们不断试验，摸索出工作空间应该怎么组织，持续调优内部流程，把多年积累的技术和产品经验融进去。</p><p>慢慢地，它变成了一套面向 AI 原生智能体团队的方案：工作空间长什么样，智能体系统怎么搭建，怎么嵌入组织。我们把它做成了软件，让每次运行结果一致。今天它就在跑我们自己的工作。</p><p>后来我们发现，需要它的不止我们两个人：任何和 AI 智能体打交道的人——做开发、营销、财务、广告，或者任何可以自动化的重复工作——都用得上。这套软件会根据工作来调整，所以我们把它开源了。装上它，改造你的工作空间，让它变成智能体驱动的，然后用 Claude Code 本该有的方式去用它。</p><p>在我们的团队里，同一个问题反复出现。人们把任务的一部分丢给聊天窗口，拿到结果再交回给人，流程却一点没变。真正要改变的，是流程。</p><p>这就是我们为组织做的事。如果你想让智能体在真实的业务流程中接管重复工作，我们把 PassionCode 接入你的系统，帮你引入定制智能体来跑这些流程。<a href="/zh-hans/business/#request">告诉我们你的流程 <span aria-hidden="true">→</span></a></p><p>它基于 GNU AGPL-3.0 开源，个人使用免费；AGPL 未涵盖的使用方式，可通过商业许可证获得授权。</p><a class="button button-secondary" href="https://x.com/sshlg93">在 X 上关注 <span aria-hidden="true">↗</span></a><p class="author-signature">Sergey Sheleg · 联合创始人，PassionCode</p></div></section>
+<section class="section about-section" id="about" aria-labelledby="about-title"><div><p class="section-number">关于</p><h2 id="about-title">我们怎么走到这里的</h2></div><div class="about-copy"><p class="about-lead">我是 Sergey Sheleg，Nicegram 的联合创始人兼 CPO。Nicegram 是一款 Telegram 第三方客户端，安装量超过 6000 万。同时我也是 eSIM Plus 的联合创始人。在此之前，我在 Ultimate Guitar 负责 Android 和增长产品，他们的应用触达超过 3.5 亿人。我的工作横跨产品、增长、营销、AI 和区块链。</p><p>我在 PassionCode 的联合创始人是 Serge Khurs，他是 Teslasuit 的联合创始人兼 CTO。Teslasuit 是一套全身套装，集成触觉反馈、肌肉电刺激、传感器和动作追踪，应用于医疗、训练、工业和国防领域。现在他为大型国际数字公司提供 AI 和后端系统方面的工程咨询。</p><p>我们两个人都带团队，起步方式也一样：先为自己的智能体搭建工作空间。我们不断试验，摸索出工作空间应该怎么组织，持续调优内部流程，把多年积累的技术和产品经验融进去。</p><p>慢慢地，它变成了一套面向 AI 原生智能体团队的方案：工作空间长什么样，智能体系统怎么搭建，怎么嵌入组织。我们把它做成了软件，让每次运行结果一致。今天它就在跑我们自己的工作。</p><p>后来我们发现，需要它的不止我们两个人：任何和 AI 智能体打交道的人，无论是做开发、营销、财务、广告，还是任何可以自动化的重复工作，都用得上。这套软件会根据工作来调整，所以我们把它开源了。装上它，改造你的工作空间，让它变成智能体驱动的，然后用 Claude Code 本该有的方式去用它。</p><p>在我们的团队里，同一个问题反复出现。人们把任务的一部分丢给聊天窗口，拿到结果再交回给人，流程却一点没变。真正要改变的，是流程。</p><p>这就是我们为组织做的事。如果你想让智能体在真实的业务流程中接管重复工作，我们把 PassionCode 接入你的系统，帮你引入定制智能体来跑这些流程。<a href="/zh-hans/business/#request">告诉我们你的流程 <span aria-hidden="true">→</span></a></p><p>它基于 GNU AGPL-3.0 开源，个人使用免费；AGPL 未涵盖的使用方式，可通过商业许可证获得授权。</p><a class="button button-secondary" href="https://x.com/sshlg93">在 X 上关注 <span aria-hidden="true">↗</span></a><p class="author-signature">Sergey Sheleg · 联合创始人，PassionCode</p></div></section>
 </main>
 <footer class="story-footer">
  <div><a class="brand footer-brand" href="/zh-hans/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>从 vibe coding 到 passion coding</p></div>

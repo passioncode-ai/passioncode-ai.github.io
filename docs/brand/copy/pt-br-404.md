@@ -58,7 +58,7 @@ Ir para a página inicial
 
 Configurar as ferramentas
 
-Para empresas
+Para organizações
 
 PassionCode
 

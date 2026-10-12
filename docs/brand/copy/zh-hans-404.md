@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 找不到页面 | PassionCode.ai
 
-passioncode.ai 上没有这个地址对应的页面。请从工具、安装指南或企业页面开始。
+passioncode.ai 上没有这个地址对应的页面。请从工具、安装指南或面向组织的页面开始。
 
 跳到正文
 
@@ -58,7 +58,7 @@ Português (Brasil)
 
 安装工具
 
-面向企业
+组织
 
 PassionCode
 

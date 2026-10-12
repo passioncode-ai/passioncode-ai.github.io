@@ -262,7 +262,7 @@ Prefer email? Write to commercial@passioncode.ai.
 
 What does it cost?
 
-The tools are free and open source. You pay for the work we do for you — mapping, building, hosting, support — and a commercial license where you need one. The proposal names the price after we understand the processes; there is no fixed package.
+The tools are free and open source. You pay for the work we do for you (mapping, building, hosting, support) and a commercial license where you need one. The proposal names the price after we understand the processes; there is no fixed package.
 
 When do we need a commercial license?
 

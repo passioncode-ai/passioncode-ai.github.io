@@ -262,7 +262,7 @@ Prefere e-mail? Escreva para commercial@passioncode.ai.
 
 Quanto custa?
 
-As ferramentas são gratuitas e de código aberto. Você paga pelo trabalho que fazemos para você — mapeamento, construção, hospedagem, suporte — e por uma licença comercial onde precisar de uma. A proposta informa o preço depois que entendermos os processos; não existe pacote fixo.
+As ferramentas são gratuitas e de código aberto. Você paga pelo trabalho que fazemos para você (mapeamento, construção, hospedagem, suporte) e por uma licença comercial onde precisar de uma. A proposta informa o preço depois que entendermos os processos; não existe pacote fixo.
 
 Quando precisamos de uma licença comercial?
 

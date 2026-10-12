@@ -293,7 +293,7 @@ Claude Code, Codex und die anderen beliebten Coding-Agenten – Hermes, Kilo Cod
 
 Kann ein Projekt seine eigenen Accounts behalten?
 
-Ja. Lege ein Projekt an, füge seine Ordner hinzu – zum Beispiel mehrere zusammengehörige Repositories – und wähle seine Accounts. Sitzungen, die aus diesen Ordnern starten, nutzen nur diese Accounts, der automatische Wechsel bleibt innerhalb davon, und Agenten, die in anderen Projekten arbeiten, wechseln nie auf sie.
+Ja. Lege ein Projekt an, füge seine Ordner hinzu (zum Beispiel mehrere zusammengehörige Repositories) und wähle seine Accounts. Sitzungen, die aus diesen Ordnern starten, nutzen nur diese Accounts, der automatische Wechsel bleibt innerhalb davon, und Agenten, die in anderen Projekten arbeiten, wechseln nie auf sie.
 
 Sendet Switchboard Daten?
 
