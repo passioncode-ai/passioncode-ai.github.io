@@ -1,0 +1,94 @@
+{
+  "engine": "webkit",
+  "playwrightCore": "1.63.0",
+  "base": "https://127.0.0.1:8913",
+  "rows": [
+    {
+      "locale": "pl",
+      "width": 390,
+      "path": "/pl/",
+      "track": {
+        "src": "/assets/video/home-pl.vtt",
+        "srclang": "pl",
+        "label": "Napisy",
+        "default": true,
+        "readyState": 2,
+        "mode": "showing",
+        "language": "pl",
+        "cues": 14,
+        "overflow": false
+      },
+      "firstCue": {
+        "timing": "00:00:00.000 --> 00:00:01.700",
+        "text": "Twój agent działa przez tydzień."
+      },
+      "vttRequests": [
+        {
+          "url": "/assets/video/home-pl.vtt",
+          "status": 200
+        }
+      ],
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "trackSrc": true,
+        "srclang": true,
+        "label": true,
+        "defaultOn": true,
+        "loaded": true,
+        "fetchedOwnFile": true,
+        "noEnglishFetched": true,
+        "cueCount14": true,
+        "timingsAsEnglish": true,
+        "firstCueText": true,
+        "noOverflow": true,
+        "noPageErrors": true
+      },
+      "pass": true
+    },
+    {
+      "locale": "ja",
+      "width": 390,
+      "path": "/ja/",
+      "track": {
+        "src": "/assets/video/home-ja.vtt",
+        "srclang": "ja",
+        "label": "字幕",
+        "default": true,
+        "readyState": 2,
+        "mode": "showing",
+        "language": "ja",
+        "cues": 14,
+        "overflow": false
+      },
+      "firstCue": {
+        "timing": "00:00:00.000 --> 00:00:01.700",
+        "text": "エージェントは1週間は動きます。"
+      },
+      "vttRequests": [
+        {
+          "url": "/assets/video/home-ja.vtt",
+          "status": 200
+        }
+      ],
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "trackSrc": true,
+        "srclang": true,
+        "label": true,
+        "defaultOn": true,
+        "loaded": true,
+        "fetchedOwnFile": true,
+        "noEnglishFetched": true,
+        "cueCount14": true,
+        "timingsAsEnglish": true,
+        "firstCueText": true,
+        "noOverflow": true,
+        "noPageErrors": true
+      },
+      "pass": true
+    }
+  ],
+  "pass": true
+}

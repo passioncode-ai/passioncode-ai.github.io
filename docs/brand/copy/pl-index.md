@@ -274,7 +274,7 @@ Jedna komenda instaluje skille, które uczą agentów budować z Fabric.
 
 CLI
 
-0.1.36
+0.1.37
 
 · Node.js 18+ · kroki 1 i 3
 

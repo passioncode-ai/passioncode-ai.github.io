@@ -274,7 +274,7 @@ PassionCode.ai 启动器
 
 CLI
 
-0.1.36
+0.1.37
 
 · Node.js 18+ · 步骤 1 和 3
 

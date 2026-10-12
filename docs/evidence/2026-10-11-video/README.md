@@ -79,7 +79,7 @@ sentence-end pauses (0.44–0.54 s) and stand.
 | en | `home.vtt` | the narration script, word for word, timed on the narration |
 | ru | `home-ru.vtt` | the same, Russian |
 | de, es, fr | `home-de.vtt`, `home-es.vtt`, `home-fr.vtt` | the media pipeline's subtitles recipe: a transcription of the en cut with word timings, cut into cues, each translated cue for cue with the product names kept |
-| pl, ko, pt-br, zh-hans, ja | `home.vtt`, marked `srclang="en"` | their translations did not come back: one translation call returned without a cue and its outcome awaits reconciliation in the pipeline's ledger, so no second order was placed for them yet |
+| pl, ko, pt-br, zh-hans, ja | since 2026-10-12: `home-pl.vtt`, `home-ko.vtt`, `home-pt-br.vtt`, `home-zh-hans.vtt`, `home-ja.vtt` ([SITE-035](../2026-10-12-site-035/README.md)); before that `home.vtt`, marked `srclang="en"` | their translations did not come back: one translation call returned without a cue and its outcome awaits reconciliation in the pipeline's ledger, so no second order was placed for them yet |
 
 A page without its own captions file shows the English one and says so (`srclang="en"`); `scripts/locales.mjs` does
 this the same way it picks a picture's `-ru` twin.
@@ -105,4 +105,4 @@ and fixed in all ten languages.
 
 - The operator has not seen the cut. The plan's acceptance for W10 is "the operator approves the cut": this branch
   is opened as a pull request for that review and is not merged or deployed.
-- Captions for pl, ko, pt-br, zh-hans and ja, once the open ledger row is reconciled.
+- Captions for pl, ko, pt-br, zh-hans and ja, once the open ledger row is reconciled. Done 2026-10-12 without the pipeline (captions are text): [SITE-035](../2026-10-12-site-035/README.md).

@@ -274,7 +274,7 @@ PassionCode.ai 런처
 
 CLI
 
-0.1.36
+0.1.37
 
 · Node.js 18+ · 1단계, 3단계
 
