@@ -54,3 +54,14 @@ the audio.
 - WebKit (Playwright 1.64.0) over the built `dist/`, 14 Russian routes (including `/ru/404.html`) at 1280 and 390 px: all 200 with
   `lang="ru"`, no page errors, no "AI-native"/"Synthetic"/"demo data" left in visible text
   ([webkit.json](webkit.json)). Two 390 px pages overflow by one long h1 word, as they did on `main` (SITE-037).
+
+## Production (2026-10-12)
+
+PR #114 merged as `3100046`, then PR #115 (`38a6623`, `npm run releases:sync`: launcher 0.1.37 → 0.1.39, adapter
+0.13.0 → 0.15.0). The first deploy, Worker `23a9be64-7c44-4b49-9ff1-a126c98ca9f4`, failed `verify-live.py` on home
+and /start/ in every language only because the live rewriter already served launcher 0.1.39. Deployed again from
+`main` as Worker `44c232ef-e2ab-4955-b65e-dfa3fb4b2841`: `scripts/verify-live.py` PASS (224 assets, 150 pages,
+hreflang on 130, 7 download routes, 23 not-found addresses, intake dry run; [live.json](live.json)). Live WebKit
+over https://passioncode.ai, 14 Russian routes at 1280 and 390 px: 200 (404 for the unknown address, which shows the
+Russian not-found page), `lang="ru"` and no page errors on all 28; the two SITE-037 overflows remain
+([webkit-live.json](webkit-live.json)).
