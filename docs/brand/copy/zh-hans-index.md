@@ -312,7 +312,7 @@ PassionCode.ai 免费吗？
 
 ## 我们怎么走到这里的
 
-我是 Sergey Sheleg，Nicegram 的联合创始人兼 CPO。Nicegram 是一款 Telegram 第三方客户端，安装量超过 6000 万。同时我也是 eSIM Plus 的联合创始人。在此之前，我在 Ultimate Guitar 负责 Android 和增长产品，他们的应用触达超过 3.5 亿人。我的工作横跨产品、增长、营销、AI 和区块链。
+我是 Sergey Sheleg，Nicegram 的联合创始人兼 CPO。Nicegram 是一款 Telegram 第三方客户端，安装量超过 5700 万。同时我也是 eSIM Plus 的联合创始人。在此之前，我在 Ultimate Guitar 负责 Android 和增长产品，他们的应用触达超过 3.5 亿人。我的工作横跨产品、增长、营销、AI 和区块链。
 
 我在 PassionCode 的联合创始人是 Serge Khurs，他是 Teslasuit 的联合创始人兼 CTO。Teslasuit 是一套全身套装，集成触觉反馈、肌肉电刺激、传感器和动作追踪，应用于医疗、训练、工业和国防领域。现在他为大型国际数字公司提供 AI 和后端系统方面的工程咨询。
 

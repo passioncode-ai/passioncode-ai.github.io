@@ -312,7 +312,7 @@ Votre travail reste sur vos ordinateurs et dans vos propres comptes cloud. Fabri
 
 ## Comment nous en sommes arrivés là
 
-Je suis Sergey Sheleg, cofondateur et CPO de Nicegram, le client Telegram alternatif qui compte plus de 60 millions d’installations, et cofondateur d’eSIM Plus. Auparavant, j’ai dirigé Android et le produit croissance chez Ultimate Guitar, dont les applications touchent plus de 350 millions de personnes. Je travaille à la croisée du produit, de la croissance, du marketing, de l’IA et de la blockchain.
+Je suis Sergey Sheleg, cofondateur et CPO de Nicegram, le client Telegram alternatif qui compte plus de 57 millions d’installations, et cofondateur d’eSIM Plus. Auparavant, j’ai dirigé Android et le produit croissance chez Ultimate Guitar, dont les applications touchent plus de 350 millions de personnes. Je travaille à la croisée du produit, de la croissance, du marketing, de l’IA et de la blockchain.
 
 Mon cofondateur chez PassionCode est Serge Khurs, cofondateur et CTO de Teslasuit, une combinaison intégrale dotée de retour haptique, d’électrostimulation musculaire, de capteurs et de capture de mouvement, pour la santé, la formation, l’industrie et la défense. Aujourd’hui, il conseille de grandes entreprises numériques internationales en tant qu’ingénieur en IA et en systèmes backend.
 

@@ -312,7 +312,7 @@ PassionCode.ai는 무료인가요?
 
 ## 우리가 여기까지 온 과정
 
-저는 Sergey Sheleg입니다. 설치 수 6천만 회가 넘는 대체 Telegram 클라이언트 Nicegram의 공동 창업자이자 CPO이고, eSIM Plus의 공동 창업자입니다. 그전에는 Ultimate Guitar에서 Android와 그로스 제품을 이끌었습니다. 이 회사의 앱은 3억 5천만 명이 넘는 사람들에게 닿습니다. 저는 제품, 그로스, 마케팅, AI, 블록체인을 넘나들며 일합니다.
+저는 Sergey Sheleg입니다. 설치 수 5천700만 회가 넘는 대체 Telegram 클라이언트 Nicegram의 공동 창업자이자 CPO이고, eSIM Plus의 공동 창업자입니다. 그전에는 Ultimate Guitar에서 Android와 그로스 제품을 이끌었습니다. 이 회사의 앱은 3억 5천만 명이 넘는 사람들에게 닿습니다. 저는 제품, 그로스, 마케팅, AI, 블록체인을 넘나들며 일합니다.
 
 PassionCode를 함께 창업한 사람은 Serge Khurs입니다. 그는 Teslasuit의 공동 창업자이자 CTO입니다. Teslasuit은 햅틱, 근육 자극, 센서, 모션 트래킹을 갖춘 전신 슈트로, 의료, 훈련, 산업, 국방 분야에 쓰입니다. 지금은 AI와 백엔드 시스템 엔지니어로서 대형 글로벌 디지털 기업들에 자문하고 있습니다.
 

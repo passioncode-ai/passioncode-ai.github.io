@@ -13,7 +13,7 @@
       "href=\"/ru/business/\"",
       "открытый код под AGPL-3.0",
       "коммерческая лицензия",
-      "больше 60 миллионов установок"
+      "больше 57 миллионов установок"
     ],
     "start/index.html": [
       "npx @passioncode-ai/passioncode@latest update",
