@@ -262,7 +262,7 @@ Lieber per E-Mail? Schreib an commercial@passioncode.ai.
 
 Was kostet es?
 
-Die Tools sind kostenlos und Open Source. Du bezahlst für die Arbeit, die wir für dich leisten – Erfassung, Aufbau, Hosting, Support – und für eine kommerzielle Lizenz, wo du eine brauchst. Das Angebot nennt den Preis, nachdem wir die Prozesse verstanden haben; ein festes Paket gibt es nicht.
+Die Tools sind kostenlos und Open Source. Du bezahlst für die Arbeit, die wir für dich leisten (Erfassung, Aufbau, Hosting, Support) und für eine kommerzielle Lizenz, wo du eine brauchst. Das Angebot nennt den Preis, nachdem wir die Prozesse verstanden haben; ein festes Paket gibt es nicht.
 
 Wann brauchen wir eine kommerzielle Lizenz?
 

@@ -262,7 +262,7 @@ Vous préférez l’e-mail ? Écrivez à commercial@passioncode.ai.
 
 Combien ça coûte ?
 
-Les outils sont gratuits et open source. Vous payez le travail que nous faisons pour vous — cartographie, construction, hébergement, support — et une licence commerciale si vous en avez besoin. La proposition indique le prix une fois vos processus compris ; il n’existe pas de forfait fixe.
+Les outils sont gratuits et open source. Vous payez le travail que nous faisons pour vous (cartographie, construction, hébergement, support) et une licence commerciale si vous en avez besoin. La proposition indique le prix une fois vos processus compris ; il n’existe pas de forfait fixe.
 
 Quand a-t-on besoin d’une licence commerciale ?
 

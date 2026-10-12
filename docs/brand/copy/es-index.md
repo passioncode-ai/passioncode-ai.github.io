@@ -78,6 +78,8 @@ Tus agentes
 
 FABRIC · EL HOGAR DE TUS PROYECTOS
 
+Cómo funciona, en menos de un minuto: narrado y con subtítulos. Las pantallas muestran datos de demostración; la consola del agente de programación es un ejemplo escrito
+
 01 / POR QUÉ
 
 ## Tu agente funciona una semana
@@ -173,8 +175,6 @@ empresasAgentes desplegados por rol y trabajo enrutado entre tus máquinas
 Lo mismo en las máquinas de un equipo, bajo solicitud mientras lo construimos.
 
 Para tu organización
-
-Los pasos de arriba en menos de un minuto, narrados y con subtítulos. Las pantallas muestran datos de demostración; la consola del agente de programación es un ejemplo escrito
 
 03 / DOS FORMAS DE EMPEZAR
 

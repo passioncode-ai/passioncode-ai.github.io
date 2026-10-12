@@ -1,3 +1,34 @@
+# Current handoff — SITE-039: the home video near the top and a layout pass, 2026-10-12
+
+Objective (operator, 2026-10-12, paraphrased): the video is good, move it near the top; go over the whole layout and
+fix its defects; close the remaining copy questions; ship the update. Branch `agent/site-layout-video` from `main`
+`ed93b2a`. Record: [evidence/2026-10-12-site-039/README.md](evidence/2026-10-12-site-039/README.md).
+
+Done:
+- The home video sits directly under the hero in every language (`index.html#video`); the player itself is unchanged
+  (controls, `preload="none"`, poster, captions, reserved 16:9 box, no autoplay); its caption line says "How it works
+  in under a minute". Top of the player on `/` at 1440 px: 3507 → 935 px; at 390 px: 5394 → 866 px.
+- Layout pass in WebKit, 750 loads (15 pages × 10 languages × 5 widths): 73 → 0 loads wider than the screen.
+  SITE-037 (Russian h1) and SITE-023 (phone navigation in one row) closed; the 320 px header, /start/ steps and the
+  agents table fixed; Safari header blur; header controls 44 px, footer links 24 px.
+- Copy: the 404 page's "For companies" → "For organizations" (ten languages); dash asides in the /business/ cost FAQ
+  (and its JSON-LD) and the /switchboard/ project-accounts FAQ, with their translations; stale registry rows;
+  SCN-001's home actions. Brand lint errors 185 → 165.
+- Registers: facts row *Home video* (under the lease), SCN-001, SCN-021, the home screen entry, backlog SITE-023,
+  SITE-037, SITE-039, SITE-040, SITE-041.
+
+Checks run: `npm run check` exit 0; `npm test` 114/114; `npm run build` exit 0; `extract-public-copy.py --check`
+exit 0; `build-locale.mjs --check` exit 0; brand lint exit 2 (165 errors, was 185); WebKit audit and keyboard pass
+([webkit-audit.json](evidence/2026-10-12-site-039/webkit-audit.json)).
+
+Open: SITE-040 (compact hero or video beside it at wide widths; journey-step link size; the launcher command's line
+break), SITE-041 (Russian terms for "AI-native", "agent harness", "claims"; ru/de/fr locale profiles; numbers
+without facts rows), SITE-026 (native review).
+
+Next task: merge the PR when CI is green, deploy from `main` (`docs/DEPLOYMENT.md`), run
+`python3 scripts/verify-live.py --output docs/evidence/2026-10-12-site-039/live.json`, check `/` and `/ru/` at 1440
+and 390 px and the two SITE-037 pages in WebKit, and record the receipt; then SITE-040.
+
 # Current handoff — SITE-036: the Russian copy pass, 2026-10-12
 
 Objective (operator, 2026-10-12): «весь русский, особенно Fabric и вебсайт, … надо пересмотреть — выглядит очень

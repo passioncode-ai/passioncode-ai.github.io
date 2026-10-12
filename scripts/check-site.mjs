@@ -189,7 +189,7 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
 }
 // How it works (SITE-028 W6, docs/ux/scenarios.md SCN-021): the six journey steps of
 // docs/brand/narrative.md §3, each with its state label; pictures only from the synthetic shots the
-// journey truth table marks reusable; the home video slot stays hidden and holds no player until W10.
+// journey truth table marks reusable; the home video (W10) sits under the hero since SITE-039.
 {
   const how = home.slice(home.indexOf('<section class="section journey" id="how"'), home.indexOf('</section>', home.indexOf('id="how"')))
   assert.ok(how.length > 100, 'homepage: the How it works section')
@@ -201,10 +201,14 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
   // The home video (SITE-028 W10, docs/evidence/2026-10-11-video/README.md): click to play, never
   // autoplays or loops, loads nothing but its poster before play, captions on by default; the
   // Russian cut and every language's captions exist, are published and stay within budget.
-  const video = /<figure class="home-video" id="video">([\s\S]*?)<\/figure>/.exec(how)?.[1]
-  assert.ok(video, 'homepage: the video block in #how')
+  // Since SITE-039 (operator 2026-10-12) the player sits directly under the hero, before Why: the
+  // hero's text stays the page's answer, and the video is the next thing a visitor meets.
+  assert.ok(!how.includes('home-video'), 'homepage: the video moved out of #how (SITE-039)')
+  const afterHero = home.slice(home.indexOf('</section>', home.indexOf('class="hero home-hero"')), home.indexOf('<section class="section" id="why"'))
+  const video = /^<\/section>\s*<figure class="home-video" id="video">([\s\S]*?)<\/figure>\s*$/.exec(afterHero)?.[1]
+  assert.ok(video, 'homepage: the video block directly under the hero, before #why (SITE-039)')
   assert.equal((video.match(/<video /g) || []).length, 1, 'homepage: one player')
-  assert.ok(!/<iframe/.test(how), 'homepage: no embedded third-party player')
+  assert.ok(!/<iframe/.test(home), 'homepage: no embedded third-party player')
   const tag = /<video [^>]*>/.exec(video)[0]
   for (const a of ['controls', 'preload="none"', 'playsinline', 'poster="/assets/video/home.jpg"', 'width="1920"', 'height="1080"']) assert.ok(tag.includes(a), `homepage video: ${a}`)
   for (const a of ['autoplay', 'loop', 'muted']) assert.ok(!new RegExp(`\\s${a}\\b`).test(tag), `homepage video: no ${a} (motion doctrine: a rendered file owes a control and no autoplay)`)

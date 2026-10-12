@@ -2,7 +2,7 @@
   "page": "404.html",
   "strings": {
     "Page not found | PassionCode.ai": "Страница не найдена | PassionCode.ai",
-    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for companies.": "По этому адресу на passioncode.ai нет страницы. Начните с инструментов, руководства по установке или страницы для организаций.",
+    "This address has no page on passioncode.ai. Start from the tools, the setup guide or the page for organizations.": "По этому адресу на passioncode.ai нет страницы. Начните с инструментов, руководства по установке или страницы для организаций.",
     "Error 404": "Ошибка 404",
     "There is no page": "Здесь нет",
     "at this address": "такой страницы",

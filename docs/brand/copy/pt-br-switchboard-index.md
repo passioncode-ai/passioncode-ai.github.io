@@ -293,7 +293,7 @@ Claude Code, Codex e os outros agentes de programação populares — Hermes, Ki
 
 Um projeto pode ter as suas próprias contas?
 
-Sim. Crie um projeto, adicione as pastas dele — por exemplo, vários repositórios relacionados — e escolha as contas dele. As sessões iniciadas a partir dessas pastas usam somente essas contas, a troca automática fica restrita a elas, e agentes que trabalham em outros projetos nunca trocam para elas.
+Sim. Crie um projeto, adicione as pastas dele (por exemplo, vários repositórios relacionados) e escolha as contas dele. As sessões iniciadas a partir dessas pastas usam somente essas contas, a troca automática fica restrita a elas, e agentes que trabalham em outros projetos nunca trocam para elas.
 
 O Switchboard envia algum dado?
 

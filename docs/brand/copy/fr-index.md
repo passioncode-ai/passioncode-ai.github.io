@@ -78,6 +78,8 @@ Vos agents
 
 FABRIC · LE FOYER DE VOS PROJETS
 
+Comment ça marche, en moins d’une minute : commenté et sous-titré. Les écrans montrent des données de démonstration ; la console de l’agent de code est un exemple rédigé
+
 01 / POURQUOI
 
 ## Votre agent fonctionne une semaine
@@ -173,8 +175,6 @@ entrepriseDes agents déployés par rôle, et le travail réparti entre vos mach
 La même chose sur les machines de toute une équipe, proposée sur demande pendant que nous la construisons.
 
 Pour votre organisation
-
-Les étapes ci-dessus en moins d’une minute, commentées et sous-titrées. Les écrans montrent des données de démonstration ; la console de l’agent de code est un exemple rédigé
 
 03 / DEUX FAÇONS D’ENTRER
 

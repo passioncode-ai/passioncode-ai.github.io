@@ -87,6 +87,15 @@
  </div>
 </section>
 
+<figure class="home-video" id="video"><!-- SITE-028 W10, near the top since SITE-039 (operator 2026-10-12): directly under the hero, whose text stays the page's answer. Click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
+ <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home-ru.jpg" aria-label="Как это работает: видео с озвучкой" aria-describedby="video-note">
+  <source src="/assets/video/home-ru.webm" type="video/webm">
+  <source src="/assets/video/home-ru.mp4" type="video/mp4">
+  <track kind="captions" src="/assets/video/home-ru.vtt" srclang="ru" label="Субтитры" default>
+ </video>
+ <figcaption id="video-note">Как это работает: видео меньше минуты, с озвучкой и субтитрами. На экранах демо-данные, а консоль агента для программирования — пример, составленный вручную</figcaption>
+</figure>
+
 <section class="section" id="why" aria-labelledby="why-title">
  <span id="path" class="legacy-anchor" aria-hidden="true"></span><span id="vision" class="legacy-anchor" aria-hidden="true"></span><span id="toolkit" class="legacy-anchor" aria-hidden="true"></span><span id="shift" class="legacy-anchor" aria-hidden="true"></span>
  <div class="section-heading story-heading"><p class="section-number">01 / ЗАЧЕМ</p><h2 id="why-title">Вы настроили агента, и неделю он работает<br>Потом всё расползается</h2><p>Он запускается не под тем аккаунтом или упирается в лимит. Забывает то, что узнал вчера, и никто не может сказать, что он поменял. А следующего агента вы собираете с нуля.</p></div>
@@ -108,14 +117,6 @@
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">ЧАСТИЧНО ДОСТУПНО СЕЙЧАС</p><h3>Вместе и на виду</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="Доска Fabric: вопросы, на которых остановились агенты, и результаты, которые ждут проверки; у каждого указаны проект и ответственный. Данные вымышленные."></figure><p>В предварительной версии Fabric у агентов общая доска проекта и они передают работу друг другу, а Observatory показывает, что изменилось и чем это подтверждено.</p><a href="/ru/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">НАПРАВЛЕНИЕ</p><h3>Организация</h3><p class="step-prompt"><span>для организаций</span>Агенты для каждой роли и работа, которая переходит с одной вашей машины на другую</p><p>То же самое на машинах всей команды. Пока мы это строим, доступно по запросу.</p><a href="/ru/business/">Для вашей организации</a></li>
  </ol>
- <figure class="home-video" id="video"><!-- SITE-028 W10: click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
-  <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home-ru.jpg" aria-label="Как это работает: видео с озвучкой" aria-describedby="video-note">
-   <source src="/assets/video/home-ru.webm" type="video/webm">
-   <source src="/assets/video/home-ru.mp4" type="video/mp4">
-   <track kind="captions" src="/assets/video/home-ru.vtt" srclang="ru" label="Субтитры" default>
-  </video>
-  <figcaption id="video-note">Все шаги выше меньше чем за минуту, с озвучкой и субтитрами. На экранах демо-данные, а консоль агента для программирования — пример, составленный вручную</figcaption>
- </figure>
 </section>
 
 <section class="section paths" id="start" aria-labelledby="paths-title">

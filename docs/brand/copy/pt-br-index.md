@@ -78,6 +78,8 @@ Seus agentes
 
 FABRIC · A CASA DOS SEUS PROJETOS
 
+Como funciona, em menos de um minuto: narrado e com legendas. As telas mostram dados de demonstração; o console do agente de programação é um exemplo escrito
+
 01 / POR QUÊ
 
 ## Seu agente funciona por uma semana
@@ -173,8 +175,6 @@ empresasAgentes distribuídos por função e trabalho roteado entre as suas máq
 O mesmo nas máquinas de uma equipe, oferecido sob solicitação enquanto o construímos.
 
 Para a sua organização
-
-Os passos acima em menos de um minuto, narrados e com legendas. As telas mostram dados de demonstração; o console do agente de programação é um exemplo escrito
 
 03 / DUAS FORMAS DE COMEÇAR
 

@@ -78,6 +78,8 @@ Deine Agenten
 
 FABRIC · ZUHAUSE FÜR DEINE PROJEKTE
 
+So funktioniert es, in unter einer Minute: gesprochen und mit Untertiteln. Die Bildschirme zeigen Demodaten; die Konsole des Coding-Agenten ist ein geschriebenes Beispiel
+
 01 / WARUM
 
 ## Dein Agent läuft eine Woche lang
@@ -173,8 +175,6 @@ EnterpriseAgenten je nach Rolle ausgerollt, Arbeit zwischen deinen Rechnern vert
 Dasselbe auf den Rechnern eines ganzen Teams – auf Anfrage, während wir daran bauen.
 
 Für deine Organisation
-
-Die Schritte oben in unter einer Minute, gesprochen und mit Untertiteln. Die Bildschirme zeigen Demodaten; die Konsole des Coding-Agenten ist ein geschriebenes Beispiel
 
 03 / ZWEI WEGE REIN
 

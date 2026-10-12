@@ -293,7 +293,7 @@ Claude Code, Codex i inne popularne agenty kodujące — Hermes, Kilo Code, Clin
 
 Czy projekt może mieć własne konta?
 
-Tak. Utwórz projekt, dodaj jego foldery — na przykład kilka powiązanych repozytoriów — i wybierz jego konta. Sesje uruchamiane z tych folderów używają tylko tych kont, automatyczne przełączanie nie wychodzi poza nie, a agenty pracujące w innych projektach nigdy się na nie nie przełączą.
+Tak. Utwórz projekt, dodaj jego foldery (na przykład kilka powiązanych repozytoriów) i wybierz jego konta. Sesje uruchamiane z tych folderów używają tylko tych kont, automatyczne przełączanie nie wychodzi poza nie, a agenty pracujące w innych projektach nigdy się na nie nie przełączą.
 
 Czy Switchboard wysyła jakiekolwiek dane?
 

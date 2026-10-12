@@ -72,7 +72,7 @@ Aby odpowiedzieć na Twoje zgłoszenie i przygotować propozycję — czyli podj
 
 ## Gdzie dane są przechowywane
 
-Cloudflare, który obsługuje tę stronę, najpierw zapisuje zgłoszenie w bazie danych znajdującej się w Europie Zachodniej i wysyła dwa e-maile: jeden na naszą skrzynkę handlową, drugi — z potwierdzeniem — do Ciebie.
+Cloudflare, który obsługuje tę stronę, najpierw zapisuje zgłoszenie w bazie danych znajdującej się w Europie Zachodniej i wysyła dwa e-maile: jeden na naszą skrzynkę handlową, drugi, z potwierdzeniem, do Ciebie.
 
 PassionCode.ai Platform, nasz backend hostowany przez DigitalOcean we Frankfurcie (Niemcy), przechowuje je tak długo, jak wymaga tego nasza rozmowa.
 

@@ -87,6 +87,15 @@
  </div>
 </section>
 
+<figure class="home-video" id="video"><!-- SITE-028 W10, near the top since SITE-039 (operator 2026-10-12): directly under the hero, whose text stays the page's answer. Click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
+ <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="使い方（ナレーション付き動画）" aria-describedby="video-note">
+  <source src="/assets/video/home.webm" type="video/webm">
+  <source src="/assets/video/home.mp4" type="video/mp4">
+  <track kind="captions" src="/assets/video/home-ja.vtt" srclang="ja" label="字幕" default>
+ </video>
+ <figcaption id="video-note">使い方を1分足らずで紹介する、ナレーションと字幕付きの動画です。画面はデモデータで、コーディングエージェントのコンソールは文章で書いた例です</figcaption>
+</figure>
+
 <section class="section" id="why" aria-labelledby="why-title">
  <span id="path" class="legacy-anchor" aria-hidden="true"></span><span id="vision" class="legacy-anchor" aria-hidden="true"></span><span id="toolkit" class="legacy-anchor" aria-hidden="true"></span><span id="shift" class="legacy-anchor" aria-hidden="true"></span>
  <div class="section-heading story-heading"><p class="section-number">01 / 理由</p><h2 id="why-title">1週間は<wbr>動きます<br>そして、<wbr>破綻します</h2><p>間違ったアカウントで動いたり、上限に達したりします。昨日学んだことを忘れ、何を変えたのか誰にも説明できません。次に作るエージェントは、またゼロから始まります。</p></div>
@@ -108,14 +117,6 @@
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">一部は現在利用可能</p><h3>協力して、<wbr>見守る</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="Fabric のボード：エージェントが止まった質問とレビュー待ちの結果が、それぞれのプロジェクトと担当者とともに並びます。合成デモデータです。"></figure><p>Fabric のプレビュー版では、エージェントがプロジェクトのボードと引き継ぎを共有します。Observatory は、何が変わったかを証跡とともに示します。</p><a href="/ja/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">今後の方向性</p><h3>組織</h3><p class="step-prompt"><span>エンタープライズ</span>役割ごとに展開されるエージェントと、マシン間で振り分けられる作業</p><p>同じ仕組みをチームのマシン全体へ。開発中のため、ご依頼に応じて提供します。</p><a href="/ja/business/">組織向け</a></li>
  </ol>
- <figure class="home-video" id="video"><!-- SITE-028 W10: click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
-  <video controls preload="none" playsinline width="1920" height="1080" poster="/assets/video/home.jpg" aria-label="使い方（ナレーション付き動画）" aria-describedby="video-note">
-   <source src="/assets/video/home.webm" type="video/webm">
-   <source src="/assets/video/home.mp4" type="video/mp4">
-   <track kind="captions" src="/assets/video/home-ja.vtt" srclang="ja" label="字幕" default>
-  </video>
-  <figcaption id="video-note">上の手順を1分足らずで紹介する、ナレーションと字幕付きの動画です。画面はデモデータで、コーディングエージェントのコンソールは文章で書いた例です</figcaption>
- </figure>
 </section>
 
 <section class="section paths" id="start" aria-labelledby="paths-title">

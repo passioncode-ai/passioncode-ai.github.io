@@ -78,6 +78,8 @@ Twoi agenci
 
 FABRIC · DOM DLA TWOICH PROJEKTÓW
 
+Jak to działa, w niecałą minutę: z narracją i napisami. Ekrany pokazują dane demonstracyjne; konsola agenta kodującego to napisany przykład
+
 01 / DLACZEGO
 
 ## Twój agent działa przez tydzień
@@ -173,8 +175,6 @@ dla firmAgenci wdrażani według ról, a praca przekazywana między Twoimi maszy
 To samo na maszynach całego zespołu, na zapytanie, póki to budujemy.
 
 Dla Twojej organizacji
-
-Powyższe kroki w niecałą minutę, z narracją i napisami. Ekrany pokazują dane demonstracyjne; konsola agenta kodującego to napisany przykład
 
 03 / DWA WEJŚCIA
 

@@ -118,7 +118,7 @@
     "My co-founder at PassionCode is Serge Khurs, co-founder and CTO of Teslasuit, a full-body suit with haptics, muscle stimulation, sensors and motion tracking for healthcare, training, industry and defense. Today he advises large international digital companies as an engineer in AI and backend systems.": "我在 PassionCode 的联合创始人是 Serge Khurs，他是 Teslasuit 的联合创始人兼 CTO。Teslasuit 是一套全身套装，集成触觉反馈、肌肉电刺激、传感器和动作追踪，应用于医疗、训练、工业和国防领域。现在他为大型国际数字公司提供 AI 和后端系统方面的工程咨询。",
     "We both run teams, and we both started the same way: setting up our own workplaces for agents. We experimented, worked out how a workplace should be arranged, and kept tuning our own internal processes, bringing years of technical and product experience to it.": "我们两个人都带团队，起步方式也一样：先为自己的智能体搭建工作空间。我们不断试验，摸索出工作空间应该怎么组织，持续调优内部流程，把多年积累的技术和产品经验融进去。",
     "Over time it became a setup for an AI-native agent team: how the workplace looks, how a system of agents is built, and how it fits into an organization. We packaged it as software so it works the same way every time. It runs our own work today.": "慢慢地，它变成了一套面向 AI 原生智能体团队的方案：工作空间长什么样，智能体系统怎么搭建，怎么嵌入组织。我们把它做成了软件，让每次运行结果一致。今天它就在跑我们自己的工作。",
-    "Then we saw it would help far more people than the two of us: anyone who works with AI agents, in development, marketing, finance, advertising or any routine that can be automated. The software adapts to the work, so we made it open source. Install it, adapt your workplace, make it agentic, and use Claude Code the way it is meant to be used.": "后来我们发现，需要它的不止我们两个人：任何和 AI 智能体打交道的人——做开发、营销、财务、广告，或者任何可以自动化的重复工作——都用得上。这套软件会根据工作来调整，所以我们把它开源了。装上它，改造你的工作空间，让它变成智能体驱动的，然后用 Claude Code 本该有的方式去用它。",
+    "Then we saw it would help far more people than the two of us: anyone who works with AI agents, in development, marketing, finance, advertising or any routine that can be automated. The software adapts to the work, so we made it open source. Install it, adapt your workplace, make it agentic, and use Claude Code the way it is meant to be used.": "后来我们发现，需要它的不止我们两个人：任何和 AI 智能体打交道的人，无论是做开发、营销、财务、广告，还是任何可以自动化的重复工作，都用得上。这套软件会根据工作来调整，所以我们把它开源了。装上它，改造你的工作空间，让它变成智能体驱动的，然后用 Claude Code 本该有的方式去用它。",
     "In our teams we kept seeing the same problem. People hand part of a task to a chat and pass the result back to a person, and the process stays the same. The process is what has to change.": "在我们的团队里，同一个问题反复出现。人们把任务的一部分丢给聊天窗口，拿到结果再交回给人，流程却一点没变。真正要改变的，是流程。",
     "That is what we do for organizations. If you want agents to take over routine work in real business processes, we connect PassionCode to your systems and help you bring in custom agents that run those processes.": "这就是我们为组织做的事。如果你想让智能体在真实的业务流程中接管重复工作，我们把 PassionCode 接入你的系统，帮你引入定制智能体来跑这些流程。",
     "Tell us about your processes": "告诉我们你的流程",
@@ -126,6 +126,6 @@
     "Sergey Sheleg · co-founder, PassionCode": "Sergey Sheleg · 联合创始人，PassionCode",
     "How it works, a narrated video": "工作原理（带旁白的视频）",
     "Captions": "字幕",
-    "The steps above in under a minute, narrated, with captions. The screens show sample data; the coding agent’s console is a written example": "用不到一分钟讲完上面的步骤，带旁白和字幕。画面为演示数据；编码智能体的控制台是文字示例"
+    "How it works in under a minute: narrated, with captions. The screens show sample data; the coding agent’s console is a written example": "用不到一分钟讲清工作原理，带旁白和字幕。画面为演示数据；编码智能体的控制台是文字示例"
   }
 }
