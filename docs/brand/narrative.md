@@ -19,7 +19,7 @@ The home hero, **verbatim** (operator rule, 2026-10-09 and 2026-10-10; plan deci
 
 | | English (`index.html:65-66`) | Russian (`i18n/ru/home.json`) |
 |---|---|---|
-| Headline | The agent-agnostic operating system for AI-native teams | Операционная система для любых агентов в AI-native командах |
+| Headline | The agent-agnostic operating system for AI-native teams | Операционная система для команд с любыми ИИ-агентами (since 2026-10-12; was «Операционная система для любых агентов в AI-native командах») |
 | Line under it | Build a workplace where agents do the work, and you see all of it | Соберите рабочее место, где работу делают агенты, а вы видите всё |
 
 Three promises compete on the site today (plan finding N1). They stop competing when they are given one rank each:

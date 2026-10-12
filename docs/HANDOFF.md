@@ -1,3 +1,28 @@
+# Current handoff — SITE-036: the Russian copy pass, 2026-10-12
+
+Objective (operator, 2026-10-12): «весь русский, особенно Fabric и вебсайт, … надо пересмотреть — выглядит очень
+плохо». Every Russian string on passioncode.ai was reviewed as a native editor would: the 18 catalogs in `i18n/ru/`
+(pages, the header and footer, the scripts' and the Worker's messages, the /business/ agent prompt), then every
+`/ru/` page regenerated with `npm run locales`. Branch `agent/ru-copy-pass`; PR to `main` (see the PR for its
+number, merge and deploy).
+
+Done (record: [evidence/2026-10-12-ru-copy/README.md](evidence/2026-10-12-ru-copy/README.md)):
+- 340 of 1385 catalog strings changed; English pages, facts, numbers, URLs, anchors and disclosures unchanged.
+- The Russian hero is «Операционная система для команд с любыми ИИ-агентами» (was «…любых агентов в AI-native
+  командах»), the same line count in WebKit; facts row *homepage hero* (under the lease) and narrative §1 updated.
+- In-app names follow the products' own Russian interfaces (Inbox, Dashboards, Switchboard, Fabric dictionaries).
+
+Checks run: `npm run check` exit 0; `extract-public-copy.py --check` exit 0; `npm run build` exit 0; brand lint
+exit 2 as on `main` (182 errors, was 194; Russian B062 11 → 2; B063 0); WebKit 28/28 page loads 200 with
+`lang="ru"` and no page errors ([webkit.json](evidence/2026-10-12-ru-copy/webkit.json)).
+
+Open:
+- SITE-037: two Russian h1 overflow at 390 px by one long word (on `main` before this pass) — a design decision.
+- The Russian video captions (`home-ru.vtt`) were left as they are: they transcribe the Russian narration.
+- Native-speaker review of the other eight languages stays with SITE-026.
+
+Next task: SITE-037 (Russian h1 overflow at 390 px), then SITE-026.
+
 # Current handoff — SITE-035: home video captions in five more languages, 2026-10-12
 
 Objective (operator via the main session, 2026-10-12): the home video's captions for pl, ko, pt-br, zh-hans and ja,

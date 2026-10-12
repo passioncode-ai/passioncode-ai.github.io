@@ -88,7 +88,7 @@ export const CATALOGS = {
     "2. If it fits, we suggest a short call to map one process and agree how to measure it.": "2. Если задача нам подходит, предложим короткий созвон, чтобы разобрать один процесс и договориться, как его измерять.",
     "3. You get a written proposal: what we would set up, where it runs, and the license it needs.": "3. Вы получите письменное предложение: что мы настроим, где это будет работать и какая лицензия для этого нужна.",
     "Everything PassionCode.ai builds is open source under the GNU AGPL-3.0, so you can also start on your own today: {start}": "Всё, что делает PassionCode.ai, — открытый код под GNU AGPL-3.0, поэтому начать можно и самостоятельно уже сегодня: {start}",
-    "To add anything, reply to this email.": "Чтобы что-то добавить, просто ответьте на это письмо.",
+    "To add anything, reply to this email.": "Если хотите что-то добавить, ответьте на это письмо.",
     "Reference: {id}. We keep your request only to answer it: {privacy}": "Номер заявки: {id}. Мы храним заявку только для того, чтобы ответить на неё: {privacy}",
     "required": "обязательное поле",
     "at least {n} characters": {
@@ -111,7 +111,7 @@ export const CATALOGS = {
     "a web address": "адрес сайта",
     "a work email address": "рабочий адрес почты",
     "agree to the privacy notice to send the request": "чтобы отправить заявку, согласитесь с уведомлением о конфиденциальности",
-    "a request id: a UUID v4, made once and reused for a retry": "идентификатор заявки: UUID v4, созданный один раз и повторяемый при повторной отправке"
+    "a request id: a UUID v4, made once and reused for a retry": "идентификатор заявки: UUID v4, который создаётся один раз и не меняется при повторной отправке"
   },
   "de": {
     "Request not sent": "Anfrage nicht gesendet",
