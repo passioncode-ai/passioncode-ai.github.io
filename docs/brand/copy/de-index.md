@@ -274,7 +274,7 @@ Ein Befehl installiert die Skills, die Agenten beibringen, mit Fabric zu bauen.
 
 CLI
 
-0.1.37
+0.1.39
 
 · Node.js 18+ · Schritte 1 und 3
 
