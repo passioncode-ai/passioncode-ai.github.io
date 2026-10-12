@@ -3,8 +3,11 @@
 Objective (operator, 2026-10-12): «весь русский, особенно Fabric и вебсайт, … надо пересмотреть — выглядит очень
 плохо». Every Russian string on passioncode.ai was reviewed as a native editor would: the 18 catalogs in `i18n/ru/`
 (pages, the header and footer, the scripts' and the Worker's messages, the /business/ agent prompt), then every
-`/ru/` page regenerated with `npm run locales`. Branch `agent/ru-copy-pass`; PR to `main` (see the PR for its
-number, merge and deploy).
+`/ru/` page regenerated with `npm run locales`. PR #114 merged as `3100046`; PR #115 (`38a6623`, `releases:sync`:
+launcher 0.1.39, adapter 0.15.0, which the live rewriter already served) followed; deployed from `main` as Worker
+`44c232ef-e2ab-4955-b65e-dfa3fb4b2841`; `scripts/verify-live.py` PASS ([live.json](evidence/2026-10-12-ru-copy/live.json)).
+Live WebKit, 14 Russian routes at 1280 and 390 px: all `lang="ru"`, no page errors, the unknown address answers the
+Russian 404 ([webkit-live.json](evidence/2026-10-12-ru-copy/webkit-live.json)).
 
 Done (record: [evidence/2026-10-12-ru-copy/README.md](evidence/2026-10-12-ru-copy/README.md)):
 - 340 of 1385 catalog strings changed; English pages, facts, numbers, URLs, anchors and disclosures unchanged.
