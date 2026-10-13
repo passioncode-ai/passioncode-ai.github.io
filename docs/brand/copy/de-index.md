@@ -62,7 +62,7 @@ Für deine Organisation
 
 ↗
 
-Open Source unter AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.18 · Dashboards 0.7.6 · Observatory 0.24.4
+Open Source unter AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.28 · Dashboards 0.7.8 · Observatory 0.24.4
 
 Accounts
 
@@ -226,7 +226,7 @@ Wähle den Account, auf dem jeder Agent läuft, mit den Nutzungslimits im Blick.
 
 Release
 
-0.6.18
+0.6.28
 
 · macOS + Windows · Schritt 4
 
@@ -238,7 +238,7 @@ Jeder lokale Agentendienst in einem Fenster, gesteuert von dir oder von Agenten.
 
 Release
 
-0.7.6
+0.7.8
 
 · macOS + Windows + Linux · Schritt 4
 
@@ -262,7 +262,7 @@ Gmail und Cloudflare-Mail in einer Liste, Wichtiges zuerst; Agenten antworten na
 
 Entwicklungsvorschau
 
-0.16.1
+0.16.3
 
 · macOS + Windows + Linux · Schritt 5
 
@@ -274,7 +274,7 @@ Ein Befehl installiert die Skills, die Agenten beibringen, mit Fabric zu bauen.
 
 CLI
 
-0.1.45
+0.2.0
 
 · Node.js 18+ · Schritte 1 und 3
 

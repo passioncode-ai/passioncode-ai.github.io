@@ -62,7 +62,7 @@ Fabric — дом для ваших проектов и их агентов. В�
 
 ↗
 
-Открытый код под AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.18 · Dashboards 0.7.6 · Observatory 0.24.4
+Открытый код под AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.28 · Dashboards 0.7.8 · Observatory 0.24.4
 
 Аккаунты
 
@@ -226,7 +226,7 @@ Fabric Switchboard
 
 Релиз
 
-0.6.18
+0.6.28
 
 · macOS + Windows · шаг 4
 
@@ -238,7 +238,7 @@ Fabric Dashboards
 
 Релиз
 
-0.7.6
+0.7.8
 
 · macOS + Windows + Linux · шаг 4
 
@@ -262,7 +262,7 @@ Fabric Inbox
 
 Предварительная версия в разработке
 
-0.16.1
+0.16.3
 
 · macOS + Windows + Linux · шаг 5
 
@@ -274,7 +274,7 @@ Fabric Inbox
 
 CLI
 
-0.1.45
+0.2.0
 
 · Node.js 18+ · шаги 1 и 3
 

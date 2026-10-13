@@ -60,7 +60,7 @@ macOS용 다운로드 ↓
 
 소스 보기 ↗
 
-릴리스 0.7.6 · macOS 13 이상 · Windows · Linux
+릴리스 0.7.8 · macOS 13 이상 · Windows · Linux
 
 내 로컬 서비스 / 한곳에서
 
@@ -132,7 +132,7 @@ Spend 페이지에는 각 에이전트에 적용된 한도가 나열됩니다. �
 
 ### macOS
 
-릴리스 0.7.6. Apple silicon과 Intel용 유니버설 DMG, macOS 13 이상. Developer ID 서명, 공증, 스테이플 완료.
+릴리스 0.7.8. Apple silicon과 Intel용 유니버설 DMG, macOS 13 이상. Developer ID 서명, 공증, 스테이플 완료.
 
 Fabric Dashboards 다운로드 ↓
 
@@ -140,7 +140,7 @@ DMG를 열고 Fabric Dashboards를 응용 프로그램 폴더로 드래그한 �
 
 ### Windows와 Linux
 
-릴리스 0.7.6에는 x64와 arm64용 서명된 Windows 설치 파일, x64와 arm64용 Linux AppImage와 .deb도 포함됩니다. 0.7.4부터 Windows 앱과 AppImage는 스스로 업데이트됩니다. .deb로 설치한 사본은 그렇지 않으므로 다음 .deb를 설치하세요.
+릴리스 0.7.8에는 x64와 arm64용 서명된 Windows 설치 파일, x64와 arm64용 Linux AppImage와 .deb도 포함됩니다. 0.7.4부터 Windows 앱과 AppImage는 스스로 업데이트됩니다. .deb로 설치한 사본은 그렇지 않으므로 다음 .deb를 설치하세요.
 
 Windows와 Linux 다운로드
 
@@ -154,7 +154,7 @@ Windows와 Linux 다운로드
 
 DMG SHA-256
 
-afd66234f382dda50ec8a530eee235c857216f6c654b84c4f7c39bec90778107
+16159cfa3729fdabf4c02503cb24f2dbabf06a72ddd9d28bd675daaf075c461a
 
 릴리스 노트와 체크섬 ↗
 

@@ -78,7 +78,7 @@ SWITCHBOARD を入手
 
 ## プラットフォームを選択
 
-最新のリリース：0.6.18。どちらのダウンロードにも、デスクトップアプリとswitchboard CLI が含まれます。
+最新のリリース：0.6.28。どちらのダウンロードにも、デスクトップアプリとswitchboard CLI が含まれます。
 
 ⌘
 
@@ -122,11 +122,11 @@ WebView2 を備えた Windows x64。Windows 版は 0.6.16 から Authenticode �
 
 macOS ZIP · SHA-256
 
-639db19c4e2e2a1363e87fbad7ab3652c8a92b5a985addcd06e8c8606a96ff64
+4f40785cb78148f86188fea9dcea0845558f236354d9582be2abff28827e751d
 
 Windows ZIP · SHA-256
 
-f93a1dc81afce64e87b0fceb34dfbdd9597fb9e233c7916f2d75f29c4426e1ee
+bad0be36133ea1a118dbc6855dd116ac1e56a4ce9729ebaaac870d18f05b05e4
 
 開く前に比較してください：shasum -a 256（ターミナル）、Get-FileHash（PowerShell）で確認できます。値が異なる場合は別のファイルです。もう一度ダウンロードしてください。
 
@@ -301,7 +301,7 @@ Switchboard はデータを送信しますか？
 
 自分でソースを確認したり、ビルドしたりできますか？
 
-はい。Switchboard は GNU AGPL-3.0 に基づくオープンソースです。AGPL がカバーしない用途には、次の窓口から商用ライセンスを利用できます：passioncode.ai/business。v0.3.1-beta.1 までのリリースは MIT ライセンスで公開されており、引き続きそのライセンスで利用できます。現在のダウンロード版（0.6.18）は AGPL の下でリリースされています。v0.4.0-beta.1 は PolyForm Noncommercial or Internal Use の下でリリースされ、そのライセンスのままです。 このリポジトリには、ビルド手順、ソース、テスト、リリースの証跡があります。
+はい。Switchboard は GNU AGPL-3.0 に基づくオープンソースです。AGPL がカバーしない用途には、次の窓口から商用ライセンスを利用できます：passioncode.ai/business。v0.3.1-beta.1 までのリリースは MIT ライセンスで公開されており、引き続きそのライセンスで利用できます。現在のダウンロード版（0.6.28）は AGPL の下でリリースされています。v0.4.0-beta.1 は PolyForm Noncommercial or Internal Use の下でリリースされ、そのライセンスのままです。 このリポジトリには、ビルド手順、ソース、テスト、リリースの証跡があります。
 
 PASSIONCODE ツールキットの一部
 
