@@ -284,13 +284,19 @@ const curl = async (env, body, { path = '/api/leads', method = 'POST', ip = '198
 // The real limiter's shape: `limit` per key within the window.
 const limiter = (limit = 5) => { const seen = new Map(); return { seen, limit: async ({ key }) => { seen.set(key, (seen.get(key) || 0) + 1); return { success: seen.get(key) <= limit } } } }
 
-test('the short form: email, what agents should do and an optional goal; stored as lead/2 and never offered to the Platform', async () => {
+test('the short form: email, what agents should do and an optional goal; stored as lead/2 and forwarded (signed) like lead/1', async () => {
   const forwarded = []
   const env = baseEnv({ PLATFORM_URL: 'https://api.example.test', PLATFORM_INTAKE_SECRET: 'k' })
   const realFetch = globalThis.fetch
-  globalThis.fetch = async (...args) => { forwarded.push(args); return new Response('{}', { status: 201 }) }
+  globalThis.fetch = async (url, init) => { forwarded.push({ url: String(url), init }); return new Response('{"status":"received"}', { status: 201 }) }
   try {
     const id = 'aaaaaaaa-1111-4111-8111-111111111111'
+    // Stored as pending: the Platform takes lead/2 since its 0.2.0 (2026-10-12, leadV2Schema).
+    const { lead: built } = buildLead({ id, contact: { email: 'x@example.com', message: 'Agents for our notes.' } }, { newId: () => id, now: new Date(), ipHash: 'a'.repeat(64), country: '', userAgent: '' })
+    const scratch = baseEnv()
+    assert.equal(await storeLead(scratch.DB, built), 'stored')
+    const waiting = await scratch.DB.prepare('SELECT forward_status, forward_error FROM leads WHERE id = ?').bind(id).first()
+    assert.deepEqual([waiting.forward_status, waiting.forward_error], ['pending', null], 'a lead/2 waits for the Platform like a lead/1')
     const r = await post(env, JSON.stringify({ id, contact: { email: 'Lead@Example.com', message: 'Agents for our release notes.' }, goals: ['cost_and_results'], form_token: await oldToken() }))
     assert.equal(r.status, 201)
     const row = await env.DB.prepare('SELECT payload, forward_status, forward_error, notify_status, confirm_status FROM leads WHERE id = ?').bind(id).first()
@@ -300,9 +306,13 @@ test('the short form: email, what agents should do and an optional goal; stored 
     assert.equal(lead.contact.email, 'lead@example.com')
     assert.deepEqual(lead.privacy, { version: '2026-10-11', basis: 'request' })
     assert.equal(lead.estimate, undefined)
-    assert.deepEqual([row.notify_status, row.confirm_status, row.forward_status], ['done', 'done', 'skipped'])
-    assert.match(row.forward_error, /^lead\/2: the Platform accepts lead\/1 only/)
-    assert.equal(forwarded.length, 0, 'the Platform is not offered a shape it refuses')
+    assert.deepEqual([row.notify_status, row.confirm_status, row.forward_status], ['done', 'done', 'done'])
+    assert.equal(row.forward_error, null)
+    assert.equal(forwarded.length, 1, 'the Platform is offered the short request at once')
+    assert.equal(forwarded[0].url, 'https://api.example.test/v1/leads')
+    const ts = forwarded[0].init.headers['X-PC-Timestamp']
+    assert.equal(forwarded[0].init.headers['X-PC-Signature'], await platformSignature('k', ts, forwarded[0].init.body), 'signed with HMAC v1 like lead/1')
+    assert.deepEqual(JSON.parse(forwarded[0].init.body), lead, 'the stored payload is what is sent')
     const [notify] = env.EMAIL.sent
     assert.equal(notify.subject, 'Enquiry: example.com · See what our agents cost and deliver · form')
     assert.match(notify.text, /What agents should do:\nAgents for our release notes\./)

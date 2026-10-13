@@ -327,17 +327,22 @@ apart, 12 attempts, then marked failed; the Platform call times out after 10 s):
    forwarded once they are. Only `400`, `409`, `413`, `415` and `422` end a forward at once; any
    other answer (a `401` during a secret rotation, a `404` while a route deploys, `5xx`) is retried.
 
-The Worker accepts only what the Platform's `lead/1` schema accepts: the email rule is the
+The Worker accepts only what the Platform's `lead/1` and `lead/2` schemas accept: the email rule is the
 Platform's own (zod `z.regexes.email`), the referrer is kept only as an http(s) address, and what
 the visitor never typed (referrer, UTM values, user agent) is cut to size instead of failing the
 request. The request id does not cover the referrer, so a resend through another link is the same
 request; on a `409` the page drops its id, so the next send is a new request.
 
-**The Platform takes `lead/1` only** (passioncode-platform `src/modules/leads/schema.ts`, a strict
-schema). A `lead/2` is stored with `forward_status = 'skipped'` and the error `lead/2: the Platform
-accepts lead/1 only; re-queue when it accepts lead/2`; the notification and the receipt go out as
-for any lead, and the row stays in D1 under the 24-month ceiling. Once the Platform accepts
-`lead/2`, re-queue them all:
+**The Platform takes `lead/1` and `lead/2`** (passioncode-platform `src/modules/leads/schema.ts`,
+strict schemas `leadV1Schema` and `leadV2Schema`; `lead/2` since its release 0.2.0, 2026-10-12), with
+the same signature and the same answers (`201` received, `200` duplicate). Both are stored
+`forward_status = 'pending'` and forwarded alike (`scripts/check-worker.mjs`, "the short form …
+forwarded (signed) like lead/1").
+
+Before that fix (SITE-031) a Worker stored every `lead/2` with `forward_status = 'skipped'` and the
+error `lead/2: the Platform accepts lead/1 only; re-queue when it accepts lead/2`. After deploying
+the fixed Worker, re-queue any such row once (it changes nothing when D1 holds none; at
+2026-10-13 ~16:30 UTC the production `leads` table held 0 rows):
 
 ```sh
 python3 "$(project-observatory full-path)/tools/use_secret.py" run --env prod \
