@@ -93,10 +93,10 @@ Inbox falsifier: a reader could mistake the preview for a finished product or a 
 Simplification 2026-10-10: existing components only (section heading, principles list, path cards with a two-column modifier, tool cards, FAQ details, about section); no new motion. The launcher card leads to /start/#launcher. Falsifiers: a product lacks a next action; a preview appears finished; the founders’ story states a fact that has no row in facts.md, or links to a publication or source; a door card or tool card clips at 390 px.
 
 ### SCR-08: Get started
-**Scenarios:** SCN-013, SCN-015. Hero with the thesis (agents that keep working and know about each other) and an on-page table of contents → five steps (#launcher: the skills, not Fabric; #fabric: a separate preview download and its four actions; #build: create or adapt; #run; #family: the next agent in the same project) with copyable commands and current versions → the task-pipeline recommendation (#pipeline, separate open-source project) → #contribute (one paragraph with AGENTS.md, CONTRIBUTING.md and CLA.md, the public repository list) → closing to /business/. Simplified 2026-10-10 to about 450 words.
+**Scenarios:** SCN-013, SCN-015. Hero with the thesis (agents that keep working and know about each other) and an on-page table of contents → One command (#setup, since 2026-10-13: the `setup` command for a new or an existing computer, the `doctor` line, and the setup prompt #setup-prompt in the existing agent-prompt card with its Copy button; Fabric named as an early preview) → five steps, the manual path (#launcher: the skills, not Fabric; #fabric: a separate preview download and its four actions; #build: create or adapt; #run; #family: the next agent in the same project) with copyable commands and current versions → the task-pipeline recommendation (#pipeline, separate open-source project) → #contribute (one paragraph with AGENTS.md, CONTRIBUTING.md and CLA.md, the public repository list) → closing to /business/. Simplified 2026-10-10 to about 450 words.
 **Web surface:** public
 **Route:** https://passioncode.ai/start/
-**Answers:** How do I install the workplace and make my first agent?
+**Answers:** How do I install the workplace and make my first agent? How do I check and repair a setup I already have?
 **Indexable:** yes; HowTo structured data.
 **Without JS:** complete; commands are selectable text.
 

@@ -2,12 +2,12 @@
 <html lang="zh-Hans">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>开始使用 | 安装你的 AI 智能体工作空间 | PassionCode.ai</title><meta name="description" content="安装 PassionCode.ai 技能，添加 Fabric，用 Claude Code 或 Codex 创建你的第一个 Fabric 智能体，或适配现有项目，在 Fabric Dashboards 中运行它，并把下一个智能体加入同一个项目。免费且开源。">
+  <title>开始使用 | 安装你的 AI 智能体工作空间 | PassionCode.ai</title><meta name="description" content="一条命令安装 PassionCode.ai，或者把一条提示词交给 Claude Code 或 Codex：工具、对应的 MCP 服务器和技能。同一条命令也能检查并修复已有的配置。免费且开源。">
   <link rel="canonical" href="https://passioncode.ai/zh-hans/start/">
   <link rel="alternate" hreflang="en" href="https://passioncode.ai/start/"><link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/start/"><link rel="alternate" hreflang="de" href="https://passioncode.ai/de/start/"><link rel="alternate" hreflang="fr" href="https://passioncode.ai/fr/start/"><link rel="alternate" hreflang="pl" href="https://passioncode.ai/pl/start/"><link rel="alternate" hreflang="ko" href="https://passioncode.ai/ko/start/"><link rel="alternate" hreflang="es" href="https://passioncode.ai/es/start/"><link rel="alternate" hreflang="pt-BR" href="https://passioncode.ai/pt-br/start/"><link rel="alternate" hreflang="zh-Hans" href="https://passioncode.ai/zh-hans/start/"><link rel="alternate" hreflang="ja" href="https://passioncode.ai/ja/start/"><link rel="alternate" hreflang="x-default" href="https://passioncode.ai/start/">
   <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
   <meta property="og:type" content="article"><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="zh_CN"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="pl_PL"><meta property="og:locale:alternate" content="ko_KR"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="pt_BR"><meta property="og:locale:alternate" content="ja_JP">
-  <meta property="og:title" content="开始使用 PassionCode.ai"><meta property="og:description" content="从一台空白的 Mac 到第一批智能体开始工作，共五个步骤。免费且开源。">
+  <meta property="og:title" content="开始使用 PassionCode.ai"><meta property="og:description" content="从一台空 Mac 到第一批智能体开始工作：一条命令，或者手动五步完成。免费且开源。">
   <meta property="og:url" content="https://passioncode.ai/zh-hans/start/">
   <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
   <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "用 PassionCode.ai 搭建 AI 智能体工作空间",
-  "description": "安装技能，添加 Fabric，创建一个 Fabric 智能体或适配现有项目，在 Fabric Dashboards 中运行它，并把下一个智能体加入同一个项目。",
+  "description": "运行一条命令 npx @passioncode-ai/passioncode@latest setup，或者按五个步骤手动操作：安装技能、添加 Fabric、创建一个 Fabric 智能体或将现有项目接入、在 Fabric Dashboards 中运行它、再把下一个智能体加入同一个项目。",
   "totalTime": "PT20M",
   "tool": [{ "@type": "HowToTool", "name": "Claude Code 或 Codex" }, { "@type": "HowToTool", "name": "Node.js 18 或更高版本" }],
   "step": [
@@ -44,10 +44,25 @@
  <div class="hero-copy">
   <p class="eyebrow"><span></span> 开始使用 · 免费且开源</p>
   <h1 id="hero-title">从一台空白的 Mac <em>到你的第一个智能体</em></h1>
-  <p class="hero-body">构建能持续工作、并知道其他智能体做过什么的智能体。五个步骤，约二十分钟，每一步都可单独发挥作用</p>
+  <p class="hero-body">构建持续工作、并且知道其他智能体做过什么的智能体。一条命令安装工具，同一条命令之后也能检查它们</p>
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> 需要 Node.js 18+ 以及 Claude Code 或 Codex <span>Fabric 需要搭载 Apple silicon 或 Intel 的 macOS</span></p>
  </div>
- <nav class="page-toc" aria-label="本页内容"><a href="#launcher"><span>01</span> 安装技能</a><a href="#fabric"><span>02</span> 添加 Fabric</a><a href="#build"><span>03</span> 创建或适配一个智能体</a><a href="#run"><span>04</span> 运行并查看</a><a href="#family"><span>05</span> 添加下一个智能体</a><a href="#contribute"><span>+</span> 参与贡献</a></nav>
+ <nav class="page-toc" aria-label="本页内容"><a href="#setup"><span>→</span> 一条命令</a><a href="#launcher"><span>01</span> 安装技能</a><a href="#fabric"><span>02</span> 添加 Fabric</a><a href="#build"><span>03</span> 创建或适配一个智能体</a><a href="#run"><span>04</span> 运行并查看</a><a href="#family"><span>05</span> 添加下一个智能体</a><a href="#contribute"><span>+</span> 参与贡献</a></nav>
+</section>
+
+<section class="section setup-section" id="setup" aria-labelledby="setup-title">
+ <div class="section-heading story-heading"><p class="section-number">一条命令</p><h2 id="setup-title">安装一切，<br>或检查已有配置</h2><p>一条命令从签名发布版安装你选择的工具，将它们的 MCP 服务器连接到 Claude Code、Codex、Gemini CLI 和 Kimi Code，并添加技能。在已经配置好的电脑上，同一条命令会检查所有配置、修复问题并显示变更内容。</p></div>
+ <pre class="copyable"><code>npx @passioncode-ai/passioncode@latest setup</code></pre>
+ <p class="step-meta">需要 Node.js 18+ · 在 macOS 上安装应用；在 Linux 和 Windows 上安装技能和 MCP 服务器 · 签名、校验和或公证失败的内容不会安装 · 只检查不做任何更改：</p>
+ <pre class="copyable"><code>npx @passioncode-ai/passioncode@latest doctor</code></pre>
+ <div class="request-card agent-request" id="setup-agent">
+  <h3>或者让编码智能体来做</h3>
+  <p>把这条提示词复制到 Claude Code、Codex 或其他编码智能体中。它会运行命令，完成它能完成的部分，然后给你一份简短清单，列出只有你能做的事：登录、授予访问权限、在工具自己的提示中输入密钥。</p>
+  <div class="agent-prompt" id="setup-prompt" tabindex="0" role="region" aria-label="给编码智能体的安装提示词" data-copy-prompt>
+   <p>在这台电脑上安装 PassionCode.ai，如果已经安装过则检查并修复。运行 npx --yes @passioncode-ai/passioncode@latest setup --yes --json（需要 Node 18 或更高版本），阅读它的 JSON 输出：它会从签名发布版安装缺失的应用、技能和所有 MCP 服务器，修复问题，然后再次检查所有内容。不要手动下载或安装任何东西，也不要停止或终止正在运行的应用。然后逐一运行它列出的产品引导步骤中智能体可以执行的部分，不要在聊天中向我索要密钥或密码（工具会打开自己的隐藏提示），最后运行 npx --yes @passioncode-ai/passioncode@latest doctor。简要告诉我你安装或修复了什么、哪些仍然失败，以及只有我才能做的编号步骤（比如登录），并提醒我重启你以加载新的技能和 MCP 服务器。</p>
+  </div>
+ </div>
+ <p class="section-note">Fabric 是早期预览版：当你的电脑上有 Docker 和 Supabase CLI 时，这条命令会安装它；否则会告诉你还需要添加什么。想手动操作？下面的五个步骤是同样的配置，每次一个工具。</p>
 </section>
 
 <section class="section guide" aria-labelledby="steps-title">

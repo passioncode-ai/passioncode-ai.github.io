@@ -789,7 +789,7 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .step-index { position: absolute; left: -64px; top: 0; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--gold); background: var(--bg); color: var(--gold); font-family: var(--pc-font-data); font-size: 13px; z-index: 1; }
 .onboarding-steps h3 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); letter-spacing: -.04em; margin: 4px 0 14px; }
 .onboarding-steps p { color: var(--ink-soft); font-size: 17px; line-height: 1.7; max-width: 760px; }
-.onboarding-steps pre, .guide-steps pre { max-width: 720px; white-space: pre-wrap; overflow-wrap: anywhere; padding: var(--pc-space-4); background: var(--pc-bg); border: 1px solid var(--pc-border); border-radius: var(--pc-radius-control); font-size: var(--pc-type-body); }
+.onboarding-steps pre, .guide-steps pre, .setup-section pre { max-width: 720px; white-space: pre-wrap; overflow-wrap: anywhere; padding: var(--pc-space-4); background: var(--pc-bg); border: 1px solid var(--pc-border); border-radius: var(--pc-radius-control); font-size: var(--pc-type-body); }
 .step-meta { color: var(--ink-muted) !important; font-size: 13px !important; }
 .step-meta a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .step-prompt { display: flex; gap: 14px; align-items: baseline; max-width: 720px; padding: 14px 18px; border: 1px solid var(--pc-border); border-radius: var(--pc-radius-panel); background: var(--pc-panel); color: var(--ink) !important; font-size: 15px !important; }
@@ -833,6 +833,8 @@ summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 6px; }
 .copy-button { position: absolute; top: 8px; right: 8px; min-height: 30px; padding: 0 12px; border: 1px solid var(--pc-border-strong); border-radius: var(--pc-radius-pill); background: var(--pc-panel-raised); color: var(--ink-soft); font: 600 12px var(--font); cursor: pointer; }
 .copy-button:hover { color: var(--gold); border-color: var(--gold); }
 .copy-button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+/* The Copy button sits over the block's top-right corner: keep the command clear of it at every width (the localized label is up to ~7rem wide). */
+pre.copyable { padding-right: 7.5rem; }
 .contribute-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; counter-reset: contribute; }
 .contribute-steps li { padding-top: 24px; border-top: 1px solid var(--line-strong); counter-increment: contribute; }
 .contribute-steps li::before { content: "0" counter(contribute); color: var(--gold); font-family: var(--pc-font-data); font-size: 13px; }

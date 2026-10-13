@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Pierwsze kroki | Zainstaluj miejsce pracy dla agentów AI | PassionCode.ai
 
-Zainstaluj skille PassionCode.ai, dodaj Fabric, utwórz pierwszego agenta Fabric w Claude Code lub Codex albo dostosuj istniejący projekt, uruchom go w Fabric Dashboards i dodaj kolejnego agenta do tego samego projektu. Bezpłatnie i na otwartym kodzie.
+Skonfiguruj PassionCode.ai jednym poleceniem albo jednym promptem dla Claude Code lub Codex: narzędzia, ich serwery MCP i skille. To samo polecenie sprawdzi i naprawi konfigurację, którą już masz. Za darmo i na otwartym kodzie.
 
 Przejdź do treści
 
@@ -50,9 +50,13 @@ Pierwsze kroki · za darmo i na otwartym kodzie
 
 # Od pustego Maca do pierwszego agenta
 
-Buduj agentów, którzy działają dalej i wiedzą, co zrobili pozostali. Pięć kroków, około dwudziestu minut, a każdy przydaje się sam z siebie
+Twórz agentów, którzy pracują dalej i wiedzą, co zrobiły inne. Jedno polecenie konfiguruje narzędzia, a to samo polecenie sprawdza je później
 
 Wymaga Node.js 18+ oraz Claude Code lub Codex Fabric wymaga macOS na Apple silicon lub Intel
+
+→
+
+Jedno polecenie
 
 01
 
@@ -77,6 +81,28 @@ Dodaj kolejnego agenta
 +
 
 Współtwórz
+
+JEDNO POLECENIE
+
+## Skonfiguruj wszystko
+
+## albo sprawdź to, co masz
+
+Jedno polecenie instaluje wybrane narzędzia z ich podpisanych wydań, podłącza ich serwery MCP do Claude Code, Codex, Gemini CLI i Kimi Code oraz dodaje skille. Na komputerze, który jest już skonfigurowany, to samo polecenie sprawdza wszystko, naprawia to, co nie działa, i pokazuje, co się zmieniło.
+
+npx @passioncode-ai/passioncode@latest setup
+
+Wymaga Node.js 18+ · instaluje aplikacje na macOS; na Linuksie i Windows konfiguruje skille i serwery MCP · nie instaluje niczego, czego podpis, suma kontrolna lub notaryzacja się nie zgadza · aby tylko sprawdzić, niczego nie zmieniając:
+
+npx @passioncode-ai/passioncode@latest doctor
+
+### Albo zleć to swojemu agentowi kodującemu
+
+Skopiuj ten prompt do Claude Code, Codex lub innego agenta kodującego. Uruchomi polecenie, zrobi, co może, i da Ci krótką listę tego, co możesz zrobić tylko Ty: zalogować się, zezwolić na dostęp, wpisać klucz we własnym oknie narzędzia.
+
+Skonfiguruj PassionCode.ai na tym komputerze albo, jeśli jest już skonfigurowany, sprawdź go i napraw. Uruchom npx --yes @passioncode-ai/passioncode@latest setup --yes --json (wymaga Node 18 lub nowszego) i przeczytaj jego JSON: polecenie instaluje brakujące aplikacje z ich podpisanych wydań, skille i każdy serwer MCP, naprawia to, co nie działa, i sprawdza wszystko jeszcze raz. Niczego nie pobieraj ani nie instaluj ręcznie i nigdy nie zatrzymuj ani nie zabijaj działającej aplikacji. Następnie wykonaj każdy wymieniony krok wdrożenia produktu, który może wykonać agent, nigdy nie proś mnie o klucz ani hasło na czacie (narzędzia otwierają własne ukryte pola) i zakończ poleceniem npx --yes @passioncode-ai/passioncode@latest doctor. Powiedz mi krótko, co skonfigurowałeś lub naprawiłeś, co wciąż nie działa, i ponumerowane kroki, które mogę zrobić tylko ja, na przykład logowanie, i przypomnij mi, żebym Cię zrestartował, aby załadowały się nowe skille i serwery MCP.
+
+Fabric to wczesna wersja zapoznawcza: polecenie instaluje go, gdy na komputerze są Docker i Supabase CLI, a w przeciwnym razie mówi, co dodać. Wolisz ręcznie? Pięć kroków poniżej to ta sama konfiguracja, po jednym narzędziu.
 
 ## Kroki
 

@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Primeiros passos | Instale seu ambiente de trabalho de agentes de IA | PassionCode.ai</title><meta name="description" content="Instale as skills da PassionCode.ai, adicione o Fabric, crie seu primeiro agente Fabric com o Claude Code ou o Codex ou adapte um projeto existente, rode-o no Fabric Dashboards e adicione o próximo agente ao mesmo projeto. Gratuito e de código aberto.">
+  <title>Primeiros passos | Instale seu ambiente de trabalho de agentes de IA | PassionCode.ai</title><meta name="description" content="Configure o PassionCode.ai com um comando, ou com um prompt para o Claude Code ou o Codex: as ferramentas, seus servidores MCP e as skills. O mesmo comando verifica e corrige uma configuração que você já tem. Gratuito e de código aberto.">
   <link rel="canonical" href="https://passioncode.ai/pt-br/start/">
   <link rel="alternate" hreflang="en" href="https://passioncode.ai/start/"><link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/start/"><link rel="alternate" hreflang="de" href="https://passioncode.ai/de/start/"><link rel="alternate" hreflang="fr" href="https://passioncode.ai/fr/start/"><link rel="alternate" hreflang="pl" href="https://passioncode.ai/pl/start/"><link rel="alternate" hreflang="ko" href="https://passioncode.ai/ko/start/"><link rel="alternate" hreflang="es" href="https://passioncode.ai/es/start/"><link rel="alternate" hreflang="pt-BR" href="https://passioncode.ai/pt-br/start/"><link rel="alternate" hreflang="zh-Hans" href="https://passioncode.ai/zh-hans/start/"><link rel="alternate" hreflang="ja" href="https://passioncode.ai/ja/start/"><link rel="alternate" hreflang="x-default" href="https://passioncode.ai/start/">
   <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
   <meta property="og:type" content="article"><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="pt_BR"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="pl_PL"><meta property="og:locale:alternate" content="ko_KR"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="zh_CN"><meta property="og:locale:alternate" content="ja_JP">
-  <meta property="og:title" content="Primeiros passos com a PassionCode.ai"><meta property="og:description" content="De um Mac vazio aos seus primeiros agentes trabalhando, em cinco passos. Gratuito e de código aberto.">
+  <meta property="og:title" content="Primeiros passos com a PassionCode.ai"><meta property="og:description" content="De um Mac vazio aos seus primeiros agentes trabalhando: um comando, ou cinco passos à mão. Gratuito e de código aberto.">
   <meta property="og:url" content="https://passioncode.ai/pt-br/start/">
   <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
   <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "Monte um ambiente de trabalho de agentes de IA com a PassionCode.ai",
-  "description": "Instale as skills, adicione o Fabric, crie um agente Fabric ou adapte um projeto existente, rode-o no Fabric Dashboards e adicione o próximo agente ao mesmo projeto.",
+  "description": "Execute um comando, npx @passioncode-ai/passioncode@latest setup, ou siga cinco passos: instale as skills, adicione o Fabric, crie um agente Fabric ou adapte um projeto existente, execute-o no Fabric Dashboards e adicione o próximo agente ao mesmo projeto.",
   "totalTime": "PT20M",
   "tool": [{ "@type": "HowToTool", "name": "Claude Code ou Codex" }, { "@type": "HowToTool", "name": "Node.js 18 ou mais recente" }],
   "step": [
@@ -44,10 +44,25 @@
  <div class="hero-copy">
   <p class="eyebrow"><span></span> Primeiros passos · gratuito e de código aberto</p>
   <h1 id="hero-title">De um Mac vazio ao <em>seu primeiro agente</em></h1>
-  <p class="hero-body">Crie agentes que continuam funcionando e sabem o que os outros fizeram. Cinco passos, cerca de vinte minutos, cada um útil por si só</p>
+  <p class="hero-body">Crie agentes que continuam trabalhando e sabem o que os outros fizeram. Um comando configura as ferramentas, e o mesmo comando as verifica depois</p>
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Requer Node.js 18+ e Claude Code ou Codex <span>O Fabric requer macOS em Apple silicon ou Intel</span></p>
  </div>
- <nav class="page-toc" aria-label="Nesta página"><a href="#launcher"><span>01</span> Instale as skills</a><a href="#fabric"><span>02</span> Adicione o Fabric</a><a href="#build"><span>03</span> Crie ou adapte um agente</a><a href="#run"><span>04</span> Rode e veja funcionando</a><a href="#family"><span>05</span> Adicione o próximo agente</a><a href="#contribute"><span>+</span> Contribua</a></nav>
+ <nav class="page-toc" aria-label="Nesta página"><a href="#setup"><span>→</span> Um comando</a><a href="#launcher"><span>01</span> Instale as skills</a><a href="#fabric"><span>02</span> Adicione o Fabric</a><a href="#build"><span>03</span> Crie ou adapte um agente</a><a href="#run"><span>04</span> Rode e veja funcionando</a><a href="#family"><span>05</span> Adicione o próximo agente</a><a href="#contribute"><span>+</span> Contribua</a></nav>
+</section>
+
+<section class="section setup-section" id="setup" aria-labelledby="setup-title">
+ <div class="section-heading story-heading"><p class="section-number">UM COMANDO</p><h2 id="setup-title">Configure tudo,<br>ou verifique o que você já tem</h2><p>Um comando instala as ferramentas que você escolher a partir das versões assinadas, conecta seus servidores MCP ao Claude Code, Codex, Gemini CLI e Kimi Code, e adiciona as skills. Num computador que já está configurado, o mesmo comando verifica tudo, corrige o que está errado e mostra o que mudou.</p></div>
+ <pre class="copyable"><code>npx @passioncode-ai/passioncode@latest setup</code></pre>
+ <p class="step-meta">Requer Node.js 18+ · instala os apps no macOS; no Linux e no Windows configura as skills e os servidores MCP · não instala nada cuja assinatura, checksum ou notarização falhe · para verificar sem mudar nada:</p>
+ <pre class="copyable"><code>npx @passioncode-ai/passioncode@latest doctor</code></pre>
+ <div class="request-card agent-request" id="setup-agent">
+  <h3>Ou deixe seu agente de programação fazer isso</h3>
+  <p>Copie este prompt no Claude Code, no Codex ou em outro agente de programação. Ele executa o comando, termina o que pode e entrega uma lista curta do que só você pode fazer: entrar na conta, permitir acesso, digitar uma chave na janela da própria ferramenta.</p>
+  <div class="agent-prompt" id="setup-prompt" tabindex="0" role="region" aria-label="Prompt de configuração para seu agente de programação" data-copy-prompt>
+   <p>Configure o PassionCode.ai neste computador, ou verifique e corrija se ele já estiver configurado. Execute npx --yes @passioncode-ai/passioncode@latest setup --yes --json (requer Node 18 ou mais recente) e leia o JSON: o comando instala os apps que faltam a partir das versões assinadas, as skills e cada servidor MCP, corrige o que estiver errado e verifica tudo de novo. Não baixe nem instale nada à mão, e nunca pare nem mate um app em execução. Depois execute cada passo de integração de produto listado que um agente pode executar, nunca me peça uma chave ou senha no chat (as ferramentas abrem seu próprio campo oculto) e termine com npx --yes @passioncode-ai/passioncode@latest doctor. Diga brevemente o que você configurou ou corrigiu, o que ainda falha e os passos numerados que só eu posso fazer, como entrar na conta, e me lembre de reiniciar você para que as novas skills e os servidores MCP carreguem.</p>
+  </div>
+ </div>
+ <p class="section-note">O Fabric é uma prévia inicial: o comando o instala quando o Docker e a CLI do Supabase estão no seu computador e, se não, diz o que adicionar. Prefere fazer à mão? Os cinco passos abaixo são a mesma configuração, uma ferramenta por vez.</p>
 </section>
 
 <section class="section guide" aria-labelledby="steps-title">

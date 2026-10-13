@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>はじめる | AIエージェントワークプレースをインストール | PassionCode.ai</title><meta name="description" content="PassionCode.ai のスキルをインストールし、Fabric を追加し、Claude Code または Codex で最初の Fabric エージェントを作成するか既存のプロジェクトを Fabric に対応させ、Fabric Dashboards で動かし、同じプロジェクトに次のエージェントを加えます。無料のオープンソースです。">
+  <title>はじめる | AIエージェントワークプレースをインストール | PassionCode.ai</title><meta name="description" content="コマンド1つ、または Claude Code や Codex に貼るプロンプト1つで PassionCode.ai をセットアップできます。ツール、その MCP サーバー、スキルまでまとめて設定します。すでにある環境も、同じコマンドが点検して修復します。無料のオープンソース。">
   <link rel="canonical" href="https://passioncode.ai/ja/start/">
   <link rel="alternate" hreflang="en" href="https://passioncode.ai/start/"><link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/start/"><link rel="alternate" hreflang="de" href="https://passioncode.ai/de/start/"><link rel="alternate" hreflang="fr" href="https://passioncode.ai/fr/start/"><link rel="alternate" hreflang="pl" href="https://passioncode.ai/pl/start/"><link rel="alternate" hreflang="ko" href="https://passioncode.ai/ko/start/"><link rel="alternate" hreflang="es" href="https://passioncode.ai/es/start/"><link rel="alternate" hreflang="pt-BR" href="https://passioncode.ai/pt-br/start/"><link rel="alternate" hreflang="zh-Hans" href="https://passioncode.ai/zh-hans/start/"><link rel="alternate" hreflang="ja" href="https://passioncode.ai/ja/start/"><link rel="alternate" hreflang="x-default" href="https://passioncode.ai/start/">
   <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
   <meta property="og:type" content="article"><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="ja_JP"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="pl_PL"><meta property="og:locale:alternate" content="ko_KR"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="pt_BR"><meta property="og:locale:alternate" content="zh_CN">
-  <meta property="og:title" content="PassionCode.ai をはじめる"><meta property="og:description" content="何もない Mac から、最初のエージェントが動き出すまで、5 つのステップで進みます。無料のオープンソースです。">
+  <meta property="og:title" content="PassionCode.ai をはじめる"><meta property="og:description" content="空の Mac から、働く最初のエージェントまで。コマンド1つ、または手作業の5ステップ。無料のオープンソース。">
   <meta property="og:url" content="https://passioncode.ai/ja/start/">
   <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
   <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "PassionCode.ai で AIエージェントワークプレースを構築する",
-  "description": "スキルをインストールし、Fabric を追加し、Fabric エージェントを作成するか既存のプロジェクトを対応させ、Fabric Dashboards で動かして、同じプロジェクトに次のエージェントを加えます。",
+  "description": "コマンド1つ（npx @passioncode-ai/passioncode@latest setup）を実行するか、5つのステップに従います。スキルをインストールし、Fabric を追加し、Fabric エージェントを作成するか既存のプロジェクトを適合させ、Fabric Dashboards で動かし、次のエージェントを同じプロジェクトに追加します。",
   "totalTime": "PT20M",
   "tool": [{ "@type": "HowToTool", "name": "Claude Code または Codex" }, { "@type": "HowToTool", "name": "Node.js 18 以降" }],
   "step": [
@@ -44,10 +44,25 @@
  <div class="hero-copy">
   <p class="eyebrow"><span></span> はじめる · 無料のオープンソース</p>
   <h1 id="hero-title">何も<wbr>ない Mac から <em>最初の<wbr>エージェントまで</em></h1>
-  <p class="hero-body">働き続け、ほかのエージェントがしたことを把握しているエージェントを作りましょう。5つのステップ、約20分で、どれも単独で役立ちます</p>
+  <p class="hero-body">働き続け、ほかのエージェントがしたことを知っているエージェントを作りましょう。コマンド1つでツールをセットアップし、あとで同じコマンドが点検します</p>
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Node.js 18 以降と、Claude Code または Codex が必要です <span>Fabric には Apple silicon または Intel 搭載の macOS が必要です</span></p>
  </div>
- <nav class="page-toc" aria-label="このページの内容"><a href="#launcher"><span>01</span> スキルをインストール</a><a href="#fabric"><span>02</span> Fabric を追加</a><a href="#build"><span>03</span> エージェントの作成と対応</a><a href="#run"><span>04</span> 動かして確認</a><a href="#family"><span>05</span> 次のエージェントを追加</a><a href="#contribute"><span>+</span> コントリビュート</a></nav>
+ <nav class="page-toc" aria-label="このページの内容"><a href="#setup"><span>→</span> コマンド1つ</a><a href="#launcher"><span>01</span> スキルをインストール</a><a href="#fabric"><span>02</span> Fabric を追加</a><a href="#build"><span>03</span> エージェントの作成と対応</a><a href="#run"><span>04</span> 動かして確認</a><a href="#family"><span>05</span> 次のエージェントを追加</a><a href="#contribute"><span>+</span> コントリビュート</a></nav>
+</section>
+
+<section class="section setup-section" id="setup" aria-labelledby="setup-title">
+ <div class="section-heading story-heading"><p class="section-number">コマンド1つ</p><h2 id="setup-title">すべてを<wbr>セットアップ、<br>または<wbr>今ある<wbr>環境を<wbr>点検</h2><p>コマンド1つで、選んだツールを署名済みリリースからインストールし、その MCP サーバーを Claude Code、Codex、Gemini CLI、Kimi Code に接続し、スキルを追加します。すでにセットアップ済みのコンピューターでは、同じコマンドがすべてを点検し、問題を修復し、変わった点を示します。</p></div>
+ <pre class="copyable"><code>npx @passioncode-ai/passioncode@latest setup</code></pre>
+ <p class="step-meta">Node.js 18 以上が必要 · アプリは macOS にインストールされ、Linux と Windows ではスキルと MCP サーバーを設定します · 署名、チェックサム、公証のいずれかが合わないものは何もインストールしません · 何も変えずに点検だけするには：</p>
+ <pre class="copyable"><code>npx @passioncode-ai/passioncode@latest doctor</code></pre>
+ <div class="request-card agent-request" id="setup-agent">
+  <h3>または、<wbr>コーディングエージェントに<wbr>任せる</h3>
+  <p>このプロンプトを Claude Code、Codex などのコーディングエージェントに貼り付けてください。エージェントがコマンドを実行し、できることを済ませ、あなたにしかできないこと（サインイン、アクセスの許可、ツール自身の入力欄へのキー入力）だけを短い一覧で伝えます。</p>
+  <div class="agent-prompt" id="setup-prompt" tabindex="0" role="region" aria-label="コーディングエージェント用のセットアッププロンプト" data-copy-prompt>
+   <p>このコンピューターに PassionCode.ai をセットアップして。すでにセットアップ済みなら点検して修復して。npx --yes @passioncode-ai/passioncode@latest setup --yes --json を実行し（Node 18 以降が必要）、その JSON を読んで。このコマンドは足りないアプリを署名済みリリースからインストールし、スキルとすべての MCP サーバーを設定し、問題を修復して、すべてをもう一度点検する。何も手作業でダウンロードやインストールをせず、実行中のアプリを止めたり強制終了したりは絶対にしないで。そのあと、一覧にある製品のオンボーディング手順のうちエージェントが実行してよいものを実行し、チャットで私にキーやパスワードを絶対に尋ねず（ツールが自分の非表示の入力欄を開く）、最後に npx --yes @passioncode-ai/passioncode@latest doctor を実行して。何をセットアップまたは修復したか、何がまだ失敗しているか、サインインのように私にしかできない手順を番号付きで短く伝え、新しいスキルと MCP サーバーを読み込むためにあなたを再起動するよう私に知らせて。</p>
+  </div>
+ </div>
+ <p class="section-note">Fabric は早期プレビューです。Docker と Supabase CLI がコンピューターにあればコマンドがインストールし、なければ何を追加すればよいかを伝えます。手作業で進めたい場合は、下の5つのステップが同じセットアップをツールごとに行います。</p>
 </section>
 
 <section class="section guide" aria-labelledby="steps-title">

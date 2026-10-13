@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Get started | Install your AI agent workplace | PassionCode.ai</title><meta name="description" content="Install the PassionCode.ai skills, add Fabric, create your first Fabric agent with Claude Code or Codex or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project. Free and open source.">
+  <title>Get started | Install your AI agent workplace | PassionCode.ai</title><meta name="description" content="Set up PassionCode.ai with one command, or one prompt for Claude Code or Codex: the tools, their MCP servers and the skills. The same command checks and repairs a setup you already have. Free and open source.">
   <link rel="canonical" href="https://passioncode.ai/start/">
   <link rel="alternate" hreflang="en" href="https://passioncode.ai/start/"><link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/start/"><link rel="alternate" hreflang="de" href="https://passioncode.ai/de/start/"><link rel="alternate" hreflang="fr" href="https://passioncode.ai/fr/start/"><link rel="alternate" hreflang="pl" href="https://passioncode.ai/pl/start/"><link rel="alternate" hreflang="ko" href="https://passioncode.ai/ko/start/"><link rel="alternate" hreflang="es" href="https://passioncode.ai/es/start/"><link rel="alternate" hreflang="pt-BR" href="https://passioncode.ai/pt-br/start/"><link rel="alternate" hreflang="zh-Hans" href="https://passioncode.ai/zh-hans/start/"><link rel="alternate" hreflang="ja" href="https://passioncode.ai/ja/start/"><link rel="alternate" hreflang="x-default" href="https://passioncode.ai/start/">
   <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
   <meta property="og:type" content="article"><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="pl_PL"><meta property="og:locale:alternate" content="ko_KR"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="pt_BR"><meta property="og:locale:alternate" content="zh_CN"><meta property="og:locale:alternate" content="ja_JP">
-  <meta property="og:title" content="Get started with PassionCode.ai"><meta property="og:description" content="From an empty Mac to your first agents at work, in five steps. Free and open source.">
+  <meta property="og:title" content="Get started with PassionCode.ai"><meta property="og:description" content="From an empty Mac to your first agents at work: one command, or five steps by hand. Free and open source.">
   <meta property="og:url" content="https://passioncode.ai/start/">
   <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
   <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "Set up an AI agent workplace with PassionCode.ai",
-  "description": "Install the skills, add Fabric, create a Fabric agent or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project.",
+  "description": "Run one command, npx @passioncode-ai/passioncode@latest setup, or follow five steps: install the skills, add Fabric, create a Fabric agent or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project.",
   "totalTime": "PT20M",
   "tool": [{ "@type": "HowToTool", "name": "Claude Code or Codex" }, { "@type": "HowToTool", "name": "Node.js 18 or later" }],
   "step": [
@@ -44,10 +44,25 @@
  <div class="hero-copy">
   <p class="eyebrow"><span></span> Get started · free and open source</p>
   <h1 id="hero-title">From an empty Mac to <em>your first agent</em></h1>
-  <p class="hero-body">Build agents that keep working and know what the others did. Five steps, about twenty minutes, each useful on its own</p>
+  <p class="hero-body">Build agents that keep working and know what the others did. One command sets up the tools, and the same command checks them later</p>
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Needs Node.js 18+ and Claude Code or Codex <span>Fabric needs macOS on Apple silicon or Intel</span></p>
  </div>
- <nav class="page-toc" aria-label="On this page"><a href="#launcher"><span>01</span> Install the skills</a><a href="#fabric"><span>02</span> Add Fabric</a><a href="#build"><span>03</span> Create or adapt an agent</a><a href="#run"><span>04</span> Run it and see it</a><a href="#family"><span>05</span> Add the next agent</a><a href="#contribute"><span>+</span> Contribute</a></nav>
+ <nav class="page-toc" aria-label="On this page"><a href="#setup"><span>→</span> One command</a><a href="#launcher"><span>01</span> Install the skills</a><a href="#fabric"><span>02</span> Add Fabric</a><a href="#build"><span>03</span> Create or adapt an agent</a><a href="#run"><span>04</span> Run it and see it</a><a href="#family"><span>05</span> Add the next agent</a><a href="#contribute"><span>+</span> Contribute</a></nav>
+</section>
+
+<section class="section setup-section" id="setup" aria-labelledby="setup-title">
+ <div class="section-heading story-heading"><p class="section-number">ONE COMMAND</p><h2 id="setup-title">Set up everything,<br>or check what you have</h2><p>One command installs the tools you choose from their signed releases, connects their MCP servers to Claude Code, Codex, Gemini CLI and Kimi Code, and adds the skills. On a computer that is already set up, the same command checks everything, repairs what is wrong and shows what changed.</p></div>
+ <pre class="copyable"><code>npx @passioncode-ai/passioncode@latest setup</code></pre>
+ <p class="step-meta">Needs Node.js 18+ · installs the apps on macOS; on Linux and Windows it sets up the skills and MCP servers · it installs nothing whose signature, checksum or notarization fails · to check without changing anything:</p>
+ <pre class="copyable"><code>npx @passioncode-ai/passioncode@latest doctor</code></pre>
+ <div class="request-card agent-request" id="setup-agent">
+  <h3>Or let your coding agent do it</h3>
+  <p>Copy this prompt into Claude Code, Codex or another coding agent. It runs the command, finishes what it can and gives you a short list of what only you can do: sign in, allow access, type a key into the tool’s own prompt.</p>
+  <div class="agent-prompt" id="setup-prompt" tabindex="0" role="region" aria-label="Setup prompt for your coding agent" data-copy-prompt>
+   <p>Set up PassionCode.ai on this computer, or check and repair it if it is already set up. Run npx --yes @passioncode-ai/passioncode@latest setup --yes --json (it needs Node 18 or newer) and read its JSON: it installs the missing apps from their signed releases, the skills and every MCP server, repairs whatever is wrong, and checks everything again. Do not download or install anything by hand, and never stop or kill a running app. Then run each product onboarding step it lists that an agent may run, never ask me for a key or password in the chat (the tools open their own hidden prompts), and finish with npx --yes @passioncode-ai/passioncode@latest doctor. Tell me briefly what you set up or fixed, what still fails, and the numbered steps only I can do, such as signing in, and remind me to restart you so the new skills and MCP servers load.</p>
+  </div>
+ </div>
+ <p class="section-note">Fabric is an early preview: the command installs it when Docker and the Supabase CLI are on your computer, and otherwise tells you what to add. Prefer to do it by hand? The five steps below are the same setup, one tool at a time.</p>
 </section>
 
 <section class="section guide" aria-labelledby="steps-title">

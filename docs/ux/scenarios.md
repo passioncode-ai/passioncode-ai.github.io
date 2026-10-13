@@ -309,16 +309,16 @@ rather than replaces, the browser review recorded above.
 - **Steps:**
   1. Read the hero, then Why (#why) → the problem in the visitor's own words (an agent works for a week, then runs on the wrong account, forgets, nobody knows what it changed, the next one starts from zero) and the three proofs (local and open source; the agents and subscription you already have; a record you can open); then How it works (#how, SCN-021).
   2. Read Two ways in (#start) → For you (free, about twenty minutes) or For organizations; the tools (#products) each show their status and current version, previews marked as unfinished.
-  3. Follow For you, free or Get started → /start/ → copy the launcher command (it installs the skills, not Fabric); download Fabric separately (preview; current version and SHA-256 beside the button; its first screen's four actions named); ask the coding agent to create or adapt an agent; install Fabric Dashboards and connect it over MCP.
+  3. Follow For you, free or Get started → /start/ → One command (#setup, since 2026-10-13): copy `npx @passioncode-ai/passioncode@latest setup` (a new computer: installs the chosen tools from verified releases, their MCP servers for Claude Code, Codex, Gemini CLI and Kimi Code, and the skills; an existing one: checks, repairs, shows what changed; `doctor` checks only), or copy the setup prompt (#setup-prompt) into the coding agent, which runs it and lists what only the visitor can do. Fabric is named as an early preview needing Docker and the Supabase CLI. Or the manual path: copy the launcher command (it installs the skills, not Fabric); download Fabric separately (preview; current version and SHA-256 beside the button; its first screen's four actions named); ask the coding agent to create or adapt an agent; install Fabric Dashboards and connect it over MCP.
   4. Step 5 → build the next agent the same way and give it the same Fabric project; see both in Dashboards. The task-pipeline recommendation follows, marked as a separate open-source project.
   5. Russian (/ru/start/) says «навыки (skills)» at first use, then «навыки» (D-T6).
-- **Expected result:** The visitor has the skills installed, knows the exact prompt that creates or adapts an agent and how the second agent joins the same project, without believing the launcher installs Fabric, that Fabric already replies or that a chain of agents has shipped.
+- **Expected result:** The visitor has the tools, MCP servers and skills set up by one command (or the skills by the manual path), knows the same command checks and repairs later, knows the exact prompt that creates or adapts an agent and how the second agent joins the same project, without believing `update` installs Fabric, that setup skips verification, that Fabric already replies or that a chain of agents has shipped.
 - **Alt paths:** stop after any step; jump with the on-page table of contents; copy buttons or manual selection without JavaScript.
 - **UI elements:** hero actions, why list, two door cards, tool cards, /start/ steps, copy buttons, download buttons
 - **States covered:** success; no-JS (complete page, no copy buttons); reduced motion (static map).
-- **Errors & recovery:** the command fails → the launcher README (linked); download unavailable → release notes link.
+- **Errors & recovery:** the command fails → the launcher README (linked); setup lists every remaining problem with its fix and exits 1; download unavailable → release notes link.
 - **Status:** draft
-- **Coverage:** index.html (#why, #how, #start, #products; #path, #vision and #toolkit kept as legacy anchors), start/index.html (#family, #pipeline); scripts/check-site.mjs.
+- **Coverage:** index.html (#why, #how, #start, #products; #path, #vision and #toolkit kept as legacy anchors), start/index.html (#setup, #setup-prompt, #family, #pipeline); scripts/check-site.mjs ("the one command comes before the manual steps").
 - **Product:** unobserved
 
 ### SCN-014: Request an AI workplace for an organization
