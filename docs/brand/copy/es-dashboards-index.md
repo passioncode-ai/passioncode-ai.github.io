@@ -60,7 +60,7 @@ Descargar para macOS ↓
 
 Ver código fuente ↗
 
-Versión 0.7.6 · macOS 13+ · Windows · Linux
+Versión 0.7.8 · macOS 13+ · Windows · Linux
 
 TUS SERVICIOS LOCALES / JUNTOS
 
@@ -132,7 +132,7 @@ Ajustes → Language: como en este Mac, English o Русский. La ventana, el
 
 ### macOS
 
-Versión 0.7.6. DMG universal para Apple silicon e Intel, macOS 13 o posterior. Firmado con Developer ID, notarizado y con el ticket incorporado (stapled).
+Versión 0.7.8. DMG universal para Apple silicon e Intel, macOS 13 o posterior. Firmado con Developer ID, notarizado y con el ticket incorporado (stapled).
 
 Descargar Fabric Dashboards ↓
 
@@ -140,7 +140,7 @@ Abre el DMG, arrastra Fabric Dashboards a Aplicaciones y ábrelo. La app se inic
 
 ### Windows y Linux
 
-Versión 0.7.6 también incluye un instalador firmado para Windows en x64 y arm64, y un AppImage y un .deb para Linux en x64 y arm64. Desde 0.7.4, la app de Windows y el AppImage se actualizan solos; una copia instalada desde el .deb no, así que instala el siguiente .deb.
+Versión 0.7.8 también incluye un instalador firmado para Windows en x64 y arm64, y un AppImage y un .deb para Linux en x64 y arm64. Desde 0.7.4, la app de Windows y el AppImage se actualizan solos; una copia instalada desde el .deb no, así que instala el siguiente .deb.
 
 Descargas para Windows y Linux
 
@@ -154,7 +154,7 @@ Prueba Project Observatory, o crea tu propio servicio con el Fabric Agent Adapte
 
 DMG SHA-256
 
-afd66234f382dda50ec8a530eee235c857216f6c654b84c4f7c39bec90778107
+16159cfa3729fdabf4c02503cb24f2dbabf06a72ddd9d28bd675daaf075c461a
 
 Notas de la versión y sumas de verificación ↗
 
