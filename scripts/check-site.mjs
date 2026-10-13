@@ -262,7 +262,11 @@ assert.ok(home.includes('"@type": "FAQPage"'), 'homepage FAQ structured data')
 // ---- /start/: install, create, convert, run, contribute --------------------------------------
 const start = read('start/index.html')
 for (const text of ['npx @passioncode-ai/passioncode@latest update', 'href="/fabric/download/macos"', 'href="/dashboards/download/macos"', 'Docker and the Supabase CLI', 'does not reply yet', 'Adapt this repository to Fabric', 'CONTRIBUTING.md', 'CLA.md', '"@type": "HowTo"']) assert.ok(start.includes(text), `/start/ missing ${text}`)
-for (const id of ['launcher', 'fabric', 'build', 'run', 'family', 'pipeline', 'contribute']) assert.ok(start.includes(`id="${id}"`), `/start/ #${id}`)
+for (const id of ['setup', 'setup-prompt', 'launcher', 'fabric', 'build', 'run', 'family', 'pipeline', 'contribute']) assert.ok(start.includes(`id="${id}"`), `/start/ #${id}`)
+// The one command leads (operator 2026-10-13): setup for a new or an existing computer, doctor to
+// check only, and the copy-prompt; the five steps stay below it as the manual path.
+for (const text of ['npx @passioncode-ai/passioncode@latest setup', 'npx @passioncode-ai/passioncode@latest doctor', 'npx --yes @passioncode-ai/passioncode@latest setup --yes --json', 'data-copy-prompt']) assert.ok(start.includes(text), `/start/ missing ${text}`)
+assert.ok(start.indexOf('id="setup"') < start.indexOf('id="launcher"'), '/start/: the one command comes before the manual steps')
 assert.ok(start.includes('"position": 5'), '/start/: the HowTo names the fifth step')
 
 // ---- /vision/: sources, the harness, the path, today against direction ------------------------

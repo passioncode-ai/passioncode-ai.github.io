@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Get started | Install your AI agent workplace | PassionCode.ai
 
-Install the PassionCode.ai skills, add Fabric, create your first Fabric agent with Claude Code or Codex or adapt an existing project, run it in Fabric Dashboards and add the next agent to the same project. Free and open source.
+Set up PassionCode.ai with one command, or one prompt for Claude Code or Codex: the tools, their MCP servers and the skills. The same command checks and repairs a setup you already have. Free and open source.
 
 Skip to content
 
@@ -50,9 +50,13 @@ Get started · free and open source
 
 # From an empty Mac to your first agent
 
-Build agents that keep working and know what the others did. Five steps, about twenty minutes, each useful on its own
+Build agents that keep working and know what the others did. One command sets up the tools, and the same command checks them later
 
 Needs Node.js 18+ and Claude Code or Codex Fabric needs macOS on Apple silicon or Intel
+
+→
+
+One command
 
 01
 
@@ -77,6 +81,28 @@ Add the next agent
 +
 
 Contribute
+
+ONE COMMAND
+
+## Set up everything,
+
+## or check what you have
+
+One command installs the tools you choose from their signed releases, connects their MCP servers to Claude Code, Codex, Gemini CLI and Kimi Code, and adds the skills. On a computer that is already set up, the same command checks everything, repairs what is wrong and shows what changed.
+
+npx @passioncode-ai/passioncode@latest setup
+
+Needs Node.js 18+ · installs the apps on macOS; on Linux and Windows it sets up the skills and MCP servers · it installs nothing whose signature, checksum or notarization fails · to check without changing anything:
+
+npx @passioncode-ai/passioncode@latest doctor
+
+### Or let your coding agent do it
+
+Copy this prompt into Claude Code, Codex or another coding agent. It runs the command, finishes what it can and gives you a short list of what only you can do: sign in, allow access, type a key into the tool’s own prompt.
+
+Set up PassionCode.ai on this computer, or check and repair it if it is already set up. Run npx --yes @passioncode-ai/passioncode@latest setup --yes --json (it needs Node 18 or newer) and read its JSON: it installs the missing apps from their signed releases, the skills and every MCP server, repairs whatever is wrong, and checks everything again. Do not download or install anything by hand, and never stop or kill a running app. Then run each product onboarding step it lists that an agent may run, never ask me for a key or password in the chat (the tools open their own hidden prompts), and finish with npx --yes @passioncode-ai/passioncode@latest doctor. Tell me briefly what you set up or fixed, what still fails, and the numbered steps only I can do, such as signing in, and remind me to restart you so the new skills and MCP servers load.
+
+Fabric is an early preview: the command installs it when Docker and the Supabase CLI are on your computer, and otherwise tells you what to add. Prefer to do it by hand? The five steps below are the same setup, one tool at a time.
 
 ## Steps
 

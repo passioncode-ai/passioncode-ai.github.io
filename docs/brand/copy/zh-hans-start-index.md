@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 开始使用 | 安装你的 AI 智能体工作空间 | PassionCode.ai
 
-安装 PassionCode.ai 技能，添加 Fabric，用 Claude Code 或 Codex 创建你的第一个 Fabric 智能体，或适配现有项目，在 Fabric Dashboards 中运行它，并把下一个智能体加入同一个项目。免费且开源。
+一条命令安装 PassionCode.ai，或者把一条提示词交给 Claude Code 或 Codex：工具、对应的 MCP 服务器和技能。同一条命令也能检查并修复已有的配置。免费且开源。
 
 跳到正文
 
@@ -50,9 +50,13 @@ Português (Brasil)
 
 # 从一台空白的 Mac 到你的第一个智能体
 
-构建能持续工作、并知道其他智能体做过什么的智能体。五个步骤，约二十分钟，每一步都可单独发挥作用
+构建持续工作、并且知道其他智能体做过什么的智能体。一条命令安装工具，同一条命令之后也能检查它们
 
 需要 Node.js 18+ 以及 Claude Code 或 Codex Fabric 需要搭载 Apple silicon 或 Intel 的 macOS
+
+→
+
+一条命令
 
 01
 
@@ -77,6 +81,28 @@ Português (Brasil)
 +
 
 参与贡献
+
+一条命令
+
+## 安装一切，
+
+## 或检查已有配置
+
+一条命令从签名发布版安装你选择的工具，将它们的 MCP 服务器连接到 Claude Code、Codex、Gemini CLI 和 Kimi Code，并添加技能。在已经配置好的电脑上，同一条命令会检查所有配置、修复问题并显示变更内容。
+
+npx @passioncode-ai/passioncode@latest setup
+
+需要 Node.js 18+ · 在 macOS 上安装应用；在 Linux 和 Windows 上安装技能和 MCP 服务器 · 签名、校验和或公证失败的内容不会安装 · 只检查不做任何更改：
+
+npx @passioncode-ai/passioncode@latest doctor
+
+### 或者让编码智能体来做
+
+把这条提示词复制到 Claude Code、Codex 或其他编码智能体中。它会运行命令，完成它能完成的部分，然后给你一份简短清单，列出只有你能做的事：登录、授予访问权限、在工具自己的提示中输入密钥。
+
+在这台电脑上安装 PassionCode.ai，如果已经安装过则检查并修复。运行 npx --yes @passioncode-ai/passioncode@latest setup --yes --json（需要 Node 18 或更高版本），阅读它的 JSON 输出：它会从签名发布版安装缺失的应用、技能和所有 MCP 服务器，修复问题，然后再次检查所有内容。不要手动下载或安装任何东西，也不要停止或终止正在运行的应用。然后逐一运行它列出的产品引导步骤中智能体可以执行的部分，不要在聊天中向我索要密钥或密码（工具会打开自己的隐藏提示），最后运行 npx --yes @passioncode-ai/passioncode@latest doctor。简要告诉我你安装或修复了什么、哪些仍然失败，以及只有我才能做的编号步骤（比如登录），并提醒我重启你以加载新的技能和 MCP 服务器。
+
+Fabric 是早期预览版：当你的电脑上有 Docker 和 Supabase CLI 时，这条命令会安装它；否则会告诉你还需要添加什么。想手动操作？下面的五个步骤是同样的配置，每次一个工具。
 
 ## 步骤
 

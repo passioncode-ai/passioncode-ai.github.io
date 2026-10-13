@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Premiers pas | Installez votre espace de travail pour agents IA | PassionCode.ai
 
-Installez les skills PassionCode.ai, ajoutez Fabric, créez votre premier agent Fabric avec Claude Code ou Codex ou adaptez un projet existant, lancez-le dans Fabric Dashboards et ajoutez l’agent suivant au même projet. Gratuit et open source.
+Installez PassionCode.ai en une commande, ou avec un prompt pour Claude Code ou Codex : les outils, leurs serveurs MCP et les skills. La même commande vérifie et répare une installation existante. Gratuit et open source.
 
 Aller au contenu
 
@@ -50,9 +50,13 @@ Premiers pas · gratuit et open source
 
 # D’un Mac vide à votre premier agent
 
-Construisez des agents qui continuent de travailler et savent ce qu’ont fait les autres. Cinq étapes, environ vingt minutes, chacune utile seule
+Créez des agents qui continuent de travailler et savent ce que les autres ont fait. Une commande installe les outils, et la même commande les vérifie ensuite
 
 Nécessite Node.js 18+ et Claude Code ou Codex Fabric nécessite macOS sur Apple silicon ou Intel
+
+→
+
+Une commande
 
 01
 
@@ -77,6 +81,28 @@ Ajoutez l’agent suivant
 +
 
 Contribuer
+
+UNE COMMANDE
+
+## Tout installer,
+
+## ou vérifier ce que vous avez
+
+Une commande installe les outils que vous choisissez depuis leurs versions signées, connecte leurs serveurs MCP à Claude Code, Codex, Gemini CLI et Kimi Code, et ajoute les skills. Sur un ordinateur déjà configuré, la même commande vérifie tout, répare ce qui ne va pas et montre ce qui a changé.
+
+npx @passioncode-ai/passioncode@latest setup
+
+Nécessite Node.js 18+ · installe les applications sur macOS ; sur Linux et Windows, elle configure les skills et les serveurs MCP · elle n’installe rien dont la signature, la somme de contrôle ou la notarisation échoue · pour vérifier sans rien changer :
+
+npx @passioncode-ai/passioncode@latest doctor
+
+### Ou laissez votre agent de code s’en charger
+
+Copiez ce prompt dans Claude Code, Codex ou un autre agent de code. Il lance la commande, fait ce qu’il peut et vous donne une courte liste de ce que vous seul pouvez faire : vous connecter, autoriser un accès, saisir une clé dans la fenêtre propre à l’outil.
+
+Installe PassionCode.ai sur cet ordinateur, ou vérifie-le et répare-le s’il est déjà installé. Lance npx --yes @passioncode-ai/passioncode@latest setup --yes --json (il faut Node 18 ou plus récent) et lis son JSON : la commande installe les applications manquantes depuis leurs versions signées, les skills et chaque serveur MCP, répare ce qui ne va pas et vérifie tout à nouveau. Ne télécharge et n’installe rien à la main, et n’arrête ni ne tue jamais une application en cours d’exécution. Exécute ensuite chaque étape d’intégration de produit listée qu’un agent a le droit d’exécuter, ne me demande jamais de clé ni de mot de passe dans le chat (les outils ouvrent leur propre champ de saisie masqué), et termine par npx --yes @passioncode-ai/passioncode@latest doctor. Dis-moi brièvement ce que tu as installé ou réparé, ce qui échoue encore, et les étapes numérotées que je suis seul à pouvoir faire, comme me connecter, et rappelle-moi de te redémarrer pour que les nouveaux skills et serveurs MCP se chargent.
+
+Fabric est une préversion : la commande l’installe quand Docker et la CLI Supabase sont sur votre ordinateur, et sinon vous dit quoi ajouter. Vous préférez le faire à la main ? Les cinq étapes ci-dessous sont la même installation, un outil à la fois.
 
 ## Étapes
 
