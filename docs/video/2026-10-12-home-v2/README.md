@@ -1,73 +1,75 @@
-# Home video v2 (SITE-041, 2026-10-12): record and handoff
+# Home video v2 (SITE-043, 2026-10-12 → 2026-10-14): record
 
-**Status: stopped on disk again (2026-10-12, 22:01), renders not delivered.** Everything up to the composition
-is done (below). Nothing on the live site changed.
+The backlog id was SITE-041 in this folder's first commits; SITE-041 and SITE-042 were taken on `main` meanwhile, so
+the row is SITE-043.
 
-History of the stop:
-- First run: the operator's rule is to stop, commit and report when free space on the data volume falls under
-  1.5 GiB. It fell from 5.0 GiB at the start to 0.84 GiB (`df -h /System/Volumes/Data`, swap 9.6 of 11 GiB in use)
-  while nothing from this run had been rendered.
-- Resumed at 17:47 with 4.0 GiB free. The composition was built and checked frame by frame in WebKit. The first
-  en render was refused by the render lint for one bounce ease on the end card (`V038 bounce-easing`); the ease
-  became the piece's ease-out. The renders of en and ru then stopped before their first frame on the render
-  engine's guard: "Render not started: 4.0 GB free, 8 GB needed" (en), "4.8 GB free, 8 GB needed" (ru). The guard is
-  the engine operator's setting (`render.minFreeGb`) and was not lowered: it is what keeps the disk from reaching 0.
-  The pipeline's own pressure prune would free 0.78 GB, not enough to reach 8 GB, so it was not run.
+Operator request (2026-10-12): a more dynamic, branded explainer for the home page, with music, that explains the
+values, why it is for you and for an organization, how you work, how it is set up, the ecosystem and what it runs
+on; short but dense. It replaces the W10 cut ([record](../../evidence/2026-10-11-video/README.md)) in the same
+player directly under the hero (SITE-039): click to play, never autoplays, `preload="none"`, a poster that is a real
+frame, captions on by default.
 
-- Third attempt, 21:35: 9.5 GiB free after the operator's agent pruned old pipeline drafts. The paused en render
-  resumed (`fabric/home-video-v2/en-2`), ran about ten minutes and failed in the render check: "Navigation timeout
-  of 10000 ms exceeded" while the machine's load average was 255–320. The composition was made lighter (pictures at
-  1280 px, the narration MP3 at 128 kbps, the music at 112 kbps; `harness/gen2.py`) and ordered again
-  (`fabric/home-video-v2/en-3`). During that render free space fell from 9.4 GiB to 0.9 GiB within twelve minutes, so
-  the order was cancelled at 915 MiB free (no spend). The render engine's own temporary folder held 82 MB at that
-  moment, so most of the fall came from other work on the machine. The ru render (`fabric/home-video-v2/ru-2`) is
-  still paused on the engine's 8 GB guard; no ru-3 was ordered.
+- Script, storyboard, claims and their facts, look and motion: [script.md](script.md).
+- Narration as spoken: [narration-en.txt](narration-en.txt), [narration-ru.txt](narration-ru.txt).
+- Caption text per cue in ten languages: [captions-source.json](captions-source.json).
+- Word-timed transcriptions of the two cuts: [transcripts/](transcripts/).
+- What was made, by which recipe and provider, at what cost, with each file's SHA-256: [provenance.json](provenance.json).
+- WebKit check of the page: [visual.json](visual.json).
 
-## Done
+Everything audible and the rendered cuts were made through our media pipeline (Asset Foundry; the authored
+composition rendered by its HyperFrames route) under its budget and ledger; nothing was made by calling a provider
+directly. As for W10, the pipeline's order ids and manifests (which carry local paths) stay in its private delivery
+record; `provenance.json` keeps what a reader can check.
+
+## How it was made
 
 | Step | Result |
 |---|---|
-| Script, en and ru, each written natively | [script.md](script.md), [narration-en.txt](narration-en.txt), [narration-ru.txt](narration-ru.txt); rule check passes (en 98.1, ru 95.1) |
-| Storyboard | [script.md §Storyboard](script.md#storyboard): 21 beats with measured sentence starts, on-screen text and picture per beat |
-| Look and motion direction | [script.md §Look and motion](script.md#look-and-motion-sheleg-design-1641) |
-| Narration en and ru | the W10 narrator voice (D3), two takes each, the shorter take chosen on measurement: en 82.56 s, ru 86.24 s |
-| Music bed | instrumental, 96 s, two candidates, chosen on measurement (more room in the voice band, a sparse intro that opens into the full groove at 12.85 s, a resolved final hit at 90.0 s) |
+| Narration en, ru | the W10 narrator voice (plan decision D3), two takes each, the shorter chosen on measurement: en 82.56 s, ru 86.24 s ($0.186, $0.193). A first pair from a longer script (88.96 s, 96.08 s) was cancelled as too long and the script cut by about 10 % ($0.418 spent on it) |
+| Music bed | instrumental, 96 s, two candidates; chosen for more room in the voice band (its 1–4 kHz band 13.9 dB under its loudness against 11.7 dB), a sparse intro that opens at 12.85 s and a resolved final hit at 90.0 s ($0.48) |
+| Composition | [harness/gen2.py](harness/gen2.py): the site's `design-system/tokens.css` linked unmodified, Inter and JetBrains Mono (OFL), GSAP 3.14.2, the sample-data mockups, kinetic type, a chapter rail as the one clock; the music as two clips of the same track, its full groove on the promise and its final hit on the end card, 0.17 under the voice; frames checked in WebKit with [harness/shot.cjs](harness/shot.cjs) and [harness/sheet.py](harness/sheet.py) before ordering |
+| Renders | en (`fabric/home-video-v2/en-4`) and ru (`fabric/home-video-v2/ru-3`), $0 each (local render). Every frame sampled from both was read against the storyboard before the agent's final choice |
+| Timing check | a transcription of each delivered cut ($0.005 each): the English transcript matches the 200 narration words exactly; the Russian one differs only in transcription spellings (“ИИ агентами”, “Cloud” for Claude, one case ending), not in what was spoken. Sentence starts land within 0.13 s of the storyboard in both cuts |
+| Captions | [harness/vtt.py](harness/vtt.py) aligns each cue to the transcript words; English 26 cues and Russian 24 timed on their own cut; the other eight languages split into the same cues on the English timings (`scripts/check-site.mjs` checks pl, ko, pt-br, zh-hans and ja against `home.vtt`) |
+| Web files | [harness/webenc2.sh](harness/webenc2.sh): MP4 H.264 CRF 28 + AAC 112 kbps stereo, WebM VP9 CRF 40 + Opus 80 kbps stereo (W10's mono track would fold the music), poster one real frame (the promise) |
 
-A first pair of narrations from a longer script measured 88.96 s (en) and 96.08 s (ru), over the 60–90 s target
-once the music bookends are added; those orders were cancelled with that reason and the script was cut by about
-10 % before the takes above were ordered.
+Repaired on the way: the render lint refused one bounce ease on the end card (`V038`), replaced by the piece's
+ease-out; the first full en render (on 2026-10-12, with the machine's load average near 300) failed its check on a
+10 s navigation timeout and a second one was cancelled when free disk fell under 1 GB; the lighter composition
+rendered in under three minutes on 2026-10-14 on a quiet machine.
 
-All media came through the media pipeline under project `fabric`; its job ids, costs and manifests stay in the
-pipeline's own delivery record (as for W10), and the delivered files sit in its delivery folder under
-`passioncode-site/home-video-v2/` with one `<file>.manifest.json` each. Order keys:
-`fabric/home-video-v2/narration-en-2`, `fabric/home-video-v2/narration-ru-2`, `fabric/home-video-v2/music-1`
-(`foundry jobs --project fabric` lists them).
+## The cut
 
-## Next task (exact)
+| File | Duration | Size | Budget |
+|---|---|---|---|
+| `assets/video/home.mp4` | 86.53 s | 6 081 244 B | ≤ 8 MB |
+| `assets/video/home.webm` | 86.53 s | 5 833 488 B | ≤ 8 MB |
+| `assets/video/home.jpg` (frame at 19 s: the promise) | — | 82 441 B | ≤ 320 KB |
+| `assets/video/home-ru.mp4` | 90.20 s | 6 466 627 B | ≤ 8 MB |
+| `assets/video/home-ru.webm` | 90.20 s | 6 193 398 B | ≤ 8 MB |
+| `assets/video/home-ru.jpg` (frame at 19.5 s) | — | 79 057 B | ≤ 320 KB |
 
-Precondition: at least 3 GiB free on `/System/Volumes/Data`; check before every render.
+The files are about 1.6 times W10's (3.7–4.2 MB) for twice the running time, a busier picture and a stereo music
+track. Masters: en 86.53 s, −13.5 LUFS integrated, true peak −1.4 dBFS; ru 90.20 s, −13.4 LUFS, −1.6 dBFS.
 
-1. Free space and load: the render engine needs 8 GB free (its own guard), the render itself consumed several
-   gigabytes on top of whatever else runs, and its check times out under a load average in the hundreds. Order the
-   lighter composition (`harness/gen2.py` at this commit) as `fabric/home-video-v2/en-4` and `ru-3`, one at a time,
-   only with 8 GB or more free and a quiet machine. The paused ru-2 and the failed en-2 can then be cancelled as
-   superseded. The render engine needs 8 GB free on the data volume (its own guard). That is the operator's call:
-   free space on the machine, or decide to change the guard. Then resume the two paused orders with the pipeline's
-   retry (they keep their finished stages): keys `fabric/home-video-v2/en-2` and `fabric/home-video-v2/ru-2`
-   (`foundry jobs --project fabric`). They were ordered with `autonomy: "agent"` and `choice_mode: "agent"`, so the
-   final choice comes back to the agent. The composition is [harness/gen2.py](harness/gen2.py) (inputs in its
-   docstring); `harness/shot.cjs` snapshots frames in WebKit and `harness/sheet.py` makes a contact sheet. The
-   failed first en order (`fabric/home-video-v2/en-1`, lint) needs no action.
-2. Composition facts the next run can rely on: narration from 0.5 s; music as two clips of the same track
-   crossfaded under the voice one second after the organization beat starts, placed so the full groove lands on
-   the promise (within 0.05 s in both cuts) and the final hit on the end card, offsets differing by whole
-   multiples of the track's 1.07 s pulse; volume lanes: 0.6 before the promise and on the end card, 0.17 under the
-   voice, faded over the last 1.6 s; the narration MP3 carries +2 dB through a true-peak limiter so the mix lands
-   near −14 LUFS (measure it). Lengths: en 86.51 s (end card at 83.51 s), ru 90.19 s (end card at 87.19 s).
-3. Read the delivered masters: measure duration, loudness and music under voice; then (duration, −14 LUFS target, music under voice) a word-timed transcription of each cut
-   through the pipeline's subtitles recipe to confirm the sentence starts before cutting captions.
-4. Captions in ten languages from the final scripts (en and ru word for word; the other eight translated cue for
-   cue on the English cue timings, as `scripts/check-site.mjs` requires), posters, web encodes (W10's
-   `webenc.sh`), site integration (`index.html` figcaption "under a minute" → the new length in all ten catalogs;
-   the caption-length bounds in `scripts/check-site.mjs`; the *Home video* row of `facts.md` under its lease), the
-   gates, WebKit check, PR, deploy, `verify-live.py`, and the receipt with backlog row SITE-041.
+## Site changes
+
+- `index.html` and the nine catalogs: the player's label "PassionCode.ai explained, a narrated video" and the line
+  under it "PassionCode.ai in a minute and a half: what it is, who it is for and how it works, narrated, with
+  captions. The screens show sample data; the coding agent’s console is a written example", in each language.
+- `scripts/check-site.mjs`: the last caption must end between 78 and 92 s (was 40–50).
+- `docs/brand/facts.md` row *Home video*, `docs/ux/scenarios.md` (SCN-001 step 1, SCN-021 step 6 and its expected result).
+
+## Checks (2026-10-14)
+
+| Gate | Result |
+|---|---|
+| `npm run locales` | PASS: 10 languages, 15 pages each |
+| `npm run check` | exit 0 |
+| `npm run build` | PASS: 224 public entries in `dist/` |
+| `python3 scripts/extract-public-copy.py --check` | PASS: 150 projections |
+
+WebKit ([visual.json](visual.json)), `/` and `/ru/` at 1440 and 390 px from `dist/` on 127.0.0.1: HTTP 200, no
+horizontal overflow, nothing loaded before play (`readyState` 0, `preload="none"`), the 16:9 box, the poster
+decodes (1920×1080), WebKit picks the WebM and plays it (duration 86.533 s en, 90.2 s ru), captions load (26 cues
+`srclang` en, 24 cues `srclang` ru) and show a cue at 12 s, no autoplay, no loop, controls on, no page errors.

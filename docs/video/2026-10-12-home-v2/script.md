@@ -1,4 +1,4 @@
-# Home video v2: script and storyboard (SITE-041, 2026-10-12)
+# Home video v2: script and storyboard (SITE-043, 2026-10-12)
 
 Operator request, 2026-10-12: a more dynamic, branded explainer for the home page, with music, that explains the
 values, why it is for you and for an organization, how you work, how it is set up, the ecosystem and what it runs
@@ -57,8 +57,8 @@ yet), no closed module and no private agent, nothing about coordination between 
 
 Timings are seconds on the cut: the narration starts at 0.5 s, so a sentence start is its measured start in the
 narration (ffmpeg `silencedetect`, −40 dB, 0.22 s; sentence ends pause 0.40–0.61 s, clause pauses 0.22–0.37 s) plus
-0.5. To be confirmed against a word-timed transcription of the rendered cut before captions are cut (W10 found a
-one-second error that way).
+0.5. Confirmed on 2026-10-14 against word-timed transcriptions of both delivered cuts: every sentence starts within
+0.13 s of this table ([README](README.md#how-it-was-made)).
 
 | # | Chapter | en start | ru start | Narration (en) | On screen | Visual source |
 |---|---|---|---|---|---|---|
@@ -85,7 +85,7 @@ one-second error that way).
 | 21 | End | ≈83.3 | ≈87.0 | (music only: the track's final hit) | mark, passioncode.ai, "Open source under the GNU AGPL-3.0" | `passioncode-mark.svg` |
 
 Russian on-screen text is written in Russian, not subtitled over the English cut, and uses the `-ru` pictures where
-they exist. Expected lengths: en ≈ 86 s, ru ≈ 90 s.
+they exist. Delivered lengths: en 86.53 s, ru 90.20 s.
 
 ## Look and motion (sheleg-design 1.64.1)
 

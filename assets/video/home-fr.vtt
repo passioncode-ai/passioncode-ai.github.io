@@ -1,49 +1,121 @@
 WEBVTT
 
 1
-00:00:00.120 --> 00:00:04.880
-Votre agent fonctionne une semaine, puis il
-tourne sur le mauvais compte, oublie ce qu'il
+00:00:00.620 --> 00:00:02.390
+Votre agent fonctionne pendant une semaine.
 
 2
-00:00:04.940 --> 00:00:07.528
-a appris, et personne ne peut
-dire ce qu'il a modifié.
+00:00:02.720 --> 00:00:04.309
+Puis tout se défait.
 
 3
-00:00:07.940 --> 00:00:12.360
-Il lui faut un foyer, ses comptes, sa
-mémoire et un historique de ses actions.
+00:00:04.680 --> 00:00:05.830
+Le mauvais compte.
 
 4
-00:00:13.260 --> 00:00:17.180
-Fabric est le foyer de vos projets
-et de leurs agents en préversion.
+00:00:06.120 --> 00:00:07.730
+Il oublie ce qu’il a appris.
 
 5
-00:00:17.800 --> 00:00:23.640
-Il s'ouvre sur quatre actions : créer ou
-adapter un agent, ouvrir ou créer un projet.
+00:00:07.960 --> 00:00:10.210
+Et personne ne peut dire ce qu’il a modifié.
 
 6
-00:00:24.280 --> 00:00:27.980
-Votre agent de code pose d'abord
-ses questions et montre son plan.
+00:00:10.600 --> 00:00:13.460
+PassionCode.ai est le système
+d’exploitation ouvert à tous les agents,
 
 7
-00:00:28.600 --> 00:00:31.012
-Chaque agent tourne sur le compte approprié.
+00:00:13.500 --> 00:00:16.290
+pour les équipes AI-native :
 
 8
-00:00:31.240 --> 00:00:36.160
-Son tableau de bord et ses dépenses dans une
-fenêtre, et Observatory montre les changements.
+00:00:16.640 --> 00:00:20.390
+un espace de travail où les agents
+font le travail, et où vous voyez tout.
 
 9
-00:00:36.640 --> 00:00:38.405
-Les outils sont disponibles dès aujourd'hui.
+00:00:20.720 --> 00:00:23.470
+Il tourne sur vos machines, en open source,
 
 10
-00:00:38.880 --> 00:00:42.468
-La coordination entre agents est
-la direction que nous développons.
+00:00:23.560 --> 00:00:26.370
+avec les agents et les
+abonnements que vous avez déjà.
+
+11
+00:00:26.700 --> 00:00:29.010
+Leur travail laisse un historique
+que vous pouvez ouvrir.
+
+12
+00:00:29.340 --> 00:00:34.430
+Pour vous, tout commence par une commande :
+des skills pour Claude Code ou Codex.
+
+13
+00:00:34.700 --> 00:00:36.550
+Pas de compte, pas de clé.
+
+14
+00:00:36.960 --> 00:00:41.170
+Fabric, en préversion, est le foyer
+de vos projets et de leurs agents.
+
+15
+00:00:41.480 --> 00:00:44.990
+Votre agent de code montre son plan
+avant de modifier quoi que ce soit.
+
+16
+00:00:45.380 --> 00:00:49.690
+Switchboard : chaque agent sur le bon compte,
+ses limites en vue.
+
+17
+00:00:50.040 --> 00:00:54.230
+Dashboards : état,
+dépenses et contrôle dans une seule fenêtre.
+
+18
+00:00:54.580 --> 00:00:57.770
+Observatory : ce qui a changé,
+avec les preuves.
+
+19
+00:00:58.160 --> 00:00:59.790
+Inbox, en préversion :
+
+20
+00:01:00.040 --> 00:01:03.170
+un courrier auquel vos agents ne
+répondent que selon vos règles.
+
+21
+00:01:03.600 --> 00:01:07.490
+Les agents d’un même projet partagent son
+tableau, sa mémoire et les passations,
+
+22
+00:01:07.640 --> 00:01:09.870
+pour que l’un reprenne là
+où l’autre s’est arrêté.
+
+23
+00:01:10.280 --> 00:01:14.460
+Pour une organisation, nous installons des
+agents sur ses machines, nous les connectons,
+
+24
+00:01:14.500 --> 00:01:17.410
+et nous montrons ce que chacun
+a coûté et ce qu’il a apporté.
+
+25
+00:01:17.820 --> 00:01:20.610
+Les agents sont faciles à
+lancer et difficiles à garder.
+
+26
+00:01:20.920 --> 00:01:23.110
+Nous construisons ce qui les tient ensemble.

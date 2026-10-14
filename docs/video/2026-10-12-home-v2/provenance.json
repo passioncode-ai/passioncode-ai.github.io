@@ -1,0 +1,274 @@
+{
+ "assets": [
+  {
+   "asset": "home-video-v2-analysis-en-1-1.json",
+   "recipe": "video-analyze",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs"
+   ],
+   "cost_usd": 0.005296,
+   "final_gate": "UNKNOWN",
+   "rights": "allowed",
+   "delivered_at": "2026-10-14T02:59:26+00:00",
+   "sha256": "41ebc617ab5840baf76b385b729dde7916d0b83d0652cc36c7b5b82dd5e8f94b",
+   "duration_s": null,
+   "chosen_why": []
+  },
+  {
+   "asset": "home-video-v2-analysis-en-1-2.jpg",
+   "recipe": "video-analyze",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs"
+   ],
+   "cost_usd": 0.005296,
+   "final_gate": "UNKNOWN",
+   "rights": "allowed",
+   "delivered_at": "2026-10-14T02:59:26+00:00",
+   "sha256": "1d711c44185d1d60e2a103f91bcbe4463866a59fc2beb6ffb7526b6f3868d37a",
+   "duration_s": null,
+   "chosen_why": []
+  },
+  {
+   "asset": "home-video-v2-analysis-ru-1-1.json",
+   "recipe": "video-analyze",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs"
+   ],
+   "cost_usd": 0.00552,
+   "final_gate": "UNKNOWN",
+   "rights": "allowed",
+   "delivered_at": "2026-10-14T03:03:19+00:00",
+   "sha256": "c59825cc74980d2f03c2080ea19e95f22b9ecbe565d9556524b644546f2495fe",
+   "duration_s": null,
+   "chosen_why": []
+  },
+  {
+   "asset": "home-video-v2-analysis-ru-1-2.jpg",
+   "recipe": "video-analyze",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs"
+   ],
+   "cost_usd": 0.00552,
+   "final_gate": "UNKNOWN",
+   "rights": "allowed",
+   "delivered_at": "2026-10-14T03:03:19+00:00",
+   "sha256": "742542f6fed92e68ac2c389260fdd45bf1be0583d0bafbaed72db581af78edeb",
+   "duration_s": null,
+   "chosen_why": []
+  },
+  {
+   "asset": "home-video-v2-music-1.wav",
+   "recipe": "music-bed",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs",
+    "ffmpeg"
+   ],
+   "cost_usd": 0.48,
+   "final_gate": "PASS",
+   "rights": "allowed",
+   "delivered_at": "2026-10-12T15:42:27+00:00",
+   "sha256": "ddaae20e81631e441efc573e389b2ed96556f23e0ecfaf7689fa3672b8e0f359",
+   "duration_s": 96.026,
+   "chosen_why": [
+    "Agent choice, measured, not judged by ear: take 0 leaves more room for the narration (its 1-4 kHz band sits 13.9 dB under its integrated loudness against 11.7 dB for take 1, whose dense hi-hats fill the spectrum from 7.7 s), it builds from a sparse pulse (0-12.6 s) into the full groove at 12.8 s, which the cut can place on the promise beat, and it ends at about 90 s on a resolved decaying tail; LRA 3.8 LU vs 2.5 LU, so it has the lift the brief asked for. Both 96.0 s, no clipping found."
+   ]
+  },
+  {
+   "asset": "home-video-v2-narration-en-2.wav",
+   "recipe": "speech-line",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs",
+    "ffmpeg"
+   ],
+   "cost_usd": 0.18576,
+   "final_gate": "PASS",
+   "rights": "allowed",
+   "delivered_at": "2026-10-12T15:43:32+00:00",
+   "sha256": "bc3bb4dfdb5a0af370e9d7167db40333a4d0f2f1c388db861a97bdbd2ab5a1dc",
+   "duration_s": 82.56,
+   "chosen_why": [
+    "Agent choice (home video v2 narration, en), measured, not judged by ear: both takes passed the rough gate with the same pause pattern (25 pauses over 0.3 s, none over 0.9 s); take 0 is 1.4 s shorter (82.56 s vs 84.00 s), which keeps the cut under 90 s with the music bookends; peak -1.85 dBFS before normalization."
+   ]
+  },
+  {
+   "asset": "home-video-v2-narration-ru-2.wav",
+   "recipe": "speech-line",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs",
+    "ffmpeg"
+   ],
+   "cost_usd": 0.19296,
+   "final_gate": "PASS",
+   "rights": "allowed",
+   "delivered_at": "2026-10-12T15:43:33+00:00",
+   "sha256": "ba5a9e5ced973128f86d19aff91e73a8e42a2e30c05addcc961ebb866c490213",
+   "duration_s": 86.24,
+   "chosen_why": [
+    "Agent choice (home video v2 narration, ru), measured, not judged by ear: take 0 is 1.1 s shorter (86.24 s vs 87.36 s), the only way the Russian cut stays at about 90 s with the music bookends; 22 pauses over 0.3 s, none over 0.9 s; peak -1.91 dBFS."
+   ]
+  },
+  {
+   "asset": "home-video-v2-en-4.mp4",
+   "recipe": "video-render",
+   "project": "fabric",
+   "providers": [
+    "frame-agent"
+   ],
+   "cost_usd": 0.0,
+   "final_gate": "PASS",
+   "rights": "allowed",
+   "delivered_at": "2026-10-14T02:58:22+00:00",
+   "sha256": "d58d41d1f02c055be50e64a49fcebbe7d6d38cd23485eb5cc78a05e2013e8efc",
+   "duration_s": 86.533,
+   "chosen_why": [
+    "Agent choice, read against the storyboard (docs/video/2026-10-12-home-v2/script.md): 22 frames sampled from 1.5 s to 90 s match beats 1-21 in order and text (problem, promise verbatim, four value tiles, the launcher command the home page step 1 shows, Fabric four actions with PREVIEW, the plan marked as a written example, four tools with their labels, the project map with a hand-off, organizations labelled IN DEVELOPMENT ON REQUEST, vision, end card); no Fabric reply, sample-data chips present. Master 86.53 s, 1920x1080 30 fps H.264 + AAC, -13.5 LUFS integrated, true peak -1.4 dBFS, LRA 2.7 LU."
+   ]
+  },
+  {
+   "asset": "home-video-v2-ru-3.mp4",
+   "recipe": "video-render",
+   "project": "fabric",
+   "providers": [
+    "frame-agent"
+   ],
+   "cost_usd": 0.0,
+   "final_gate": "PASS",
+   "rights": "allowed",
+   "delivered_at": "2026-10-14T03:02:31+00:00",
+   "sha256": "e0eb22667268c5bb596585fd26f61505d705b526d33b634728028e27de1f4225",
+   "duration_s": 90.2,
+   "chosen_why": [
+    "Agent choice, read against the storyboard (docs/video/2026-10-12-home-v2/script.md): 21 frames from 2 s to 88 s match beats 1-21 with Russian on-screen text and the -ru mockups where they exist (Fabric, the plan, Observatory, Inbox; Switchboard and Dashboards have no Russian twin, as on the site); the promise line breaks as \"для команд / с любыми ИИ-агентами\"; labels ДОСТУПНО СЕЙЧАС, ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ, В РАЗРАБОТКЕ · ПО ЗАПРОСУ; no Fabric reply. Master 90.20 s, 1920x1080 30 fps, -13.4 LUFS integrated, true peak -1.6 dBFS, LRA 2.2 LU. One cosmetic note kept: the Dashboards role line wraps to two lines in Russian."
+   ]
+  }
+ ],
+ "site_files": [
+  {
+   "file": "assets/video/home.mp4",
+   "from": "home-video-v2-en-4.mp4",
+   "bytes": 6081244,
+   "sha256": "17453592ac03dd634eac5d61dd35fd47e3a061bc6bd3bb95242fe55c11000b48",
+   "duration_s": 86.533,
+   "made_by": "harness/webenc2.sh"
+  },
+  {
+   "file": "assets/video/home.webm",
+   "from": "home-video-v2-en-4.mp4",
+   "bytes": 5833488,
+   "sha256": "dc2cfcb37083d9c295666b23632ee40129737da78ad767808cf25c2905b7943f",
+   "duration_s": 86.533,
+   "made_by": "harness/webenc2.sh"
+  },
+  {
+   "file": "assets/video/home.jpg",
+   "from": "home-video-v2-en-4.mp4",
+   "bytes": 82441,
+   "sha256": "64531e8a6a4c1416847760000839d41fe5c7310f968249c12457364e82067e0d",
+   "duration_s": null,
+   "made_by": "harness/webenc2.sh"
+  },
+  {
+   "file": "assets/video/home-ru.mp4",
+   "from": "home-video-v2-ru-3.mp4",
+   "bytes": 6466627,
+   "sha256": "88fd931bbd69dda2221e1994ee8fdd37fc15ee723f9165c980b0cab66ea946f9",
+   "duration_s": 90.2,
+   "made_by": "harness/webenc2.sh"
+  },
+  {
+   "file": "assets/video/home-ru.webm",
+   "from": "home-video-v2-ru-3.mp4",
+   "bytes": 6193398,
+   "sha256": "ecd8b92ae296957715e1854efb07984f3bf833b14999002737895ebc4b80a72d",
+   "duration_s": 90.2,
+   "made_by": "harness/webenc2.sh"
+  },
+  {
+   "file": "assets/video/home-ru.jpg",
+   "from": "home-video-v2-ru-3.mp4",
+   "bytes": 79057,
+   "sha256": "b084ef0d8d92f1e2beb6585a12e80b2cf9b0ec7aa6bfbb8ac1283741045b10ae",
+   "duration_s": null,
+   "made_by": "harness/webenc2.sh"
+  },
+  {
+   "file": "assets/video/home-de.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2231,
+   "sha256": "2bc6ad1de6cc18c453221adeeb528ed0cc74c163af3d0f995095ecc869f7320f",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home-es.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2172,
+   "sha256": "374c02cede22cb14a796e10e569273a03406a16a391f80f07365d4bf74b1e693",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home-fr.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2322,
+   "sha256": "d3027245aca145fc6a31ad4145182afec4fe07a7215416471bfaabb90f602dcc",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home-ja.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2824,
+   "sha256": "65add68001008b1dcfcda570d2b40aebfbbc40e4c1a4357791c42a1c5c60332f",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home-ko.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2545,
+   "sha256": "8b593c2e5033fa3001271970c308a2d7328b31bff38dcd287c920a5a0ba0c7bd",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home-pl.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2183,
+   "sha256": "12f2eb9ed54fce031855723d07fa0774675adba93fbb3b866bac813bce4c5c5e",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home-pt-br.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2196,
+   "sha256": "13c50801d9676b33db57641f9538702f2487fe835eb264e1db561447ff8df672",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home-ru.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2923,
+   "sha256": "992c0960d678b382dc65140c8352977945ab4ad6d5f3961790f1c7b33e22974c",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home-zh-hans.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2221,
+   "sha256": "19c397d9141538a8b53bdd333f9b447cee8ccfa3245f424b682065d7fe7218fb",
+   "made_by": "harness/vtt.py"
+  },
+  {
+   "file": "assets/video/home.vtt",
+   "from": "captions-source.json + transcripts/",
+   "bytes": 2044,
+   "sha256": "4df5d3f3a798d055c879a254e73ef21b4d50b915f060358d0ece1d8ac6b6f580",
+   "made_by": "harness/vtt.py"
+  }
+ ],
+ "total_cost_usd": 0.869536,
+ "note": "cost_usd is per order; an order that delivered two files lists its cost on both, counted once in the total"
+}

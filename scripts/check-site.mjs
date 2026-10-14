@@ -198,7 +198,7 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
   const SAFE = new Set(['dashboards-overview.jpg', 'fabric-board.jpg', 'fabric-home.jpg', 'fabric-releases.jpg', 'dashboards-service-dashboard.jpg', 'observatory-demo.jpg', 'switchboard-accounts.jpg', ...MOCKUPS])
   for (const [, image] of how.matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #how: ${image} is not a synthetic shot the journey truth table marks reusable`)
   assert.ok(how.includes('Fabric is a separate preview download'), 'homepage step 1: the launcher installs the skills, Fabric is a separate download')
-  // The home video (SITE-028 W10, docs/evidence/2026-10-11-video/README.md): click to play, never
+  // The home video (SITE-028 W10; v2 since SITE-043, docs/video/2026-10-12-home-v2/README.md): click to play, never
   // autoplays or loops, loads nothing but its poster before play, captions on by default; the
   // Russian cut and every language's captions exist, are published and stay within budget.
   // Since SITE-039 (operator 2026-10-12) the player sits directly under the hero, before Why: the
@@ -236,7 +236,7 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
     assert.ok(vtt.startsWith('WEBVTT\n'), `${file}: a WebVTT file`)
     assert.ok((vtt.match(/ --> /g) || []).length >= 8, `${file}: captions for the whole narration`)
     const last = Math.max(...[...vtt.matchAll(/--> 00:(\d\d):(\d\d\.\d{3})/g)].map(m => +m[1] * 60 + +m[2]))
-    assert.ok(last > 40 && last < 50, `${file}: the last caption ends with the narration (${last} s)`)
+    assert.ok(last > 78 && last < 92, `${file}: the last caption ends with the narration (${last} s; the v2 cut, SITE-043: en 86.5 s, ru 90.2 s)`)
     // Captions translated on the English cue timings keep every cue's timing (SITE-035).
     if (['pl', 'ko', 'pt-br', 'zh-hans', 'ja'].includes(locale)) {
       const timings = text => text.split('\n').filter(line => line.includes(' --> ')).join('\n')

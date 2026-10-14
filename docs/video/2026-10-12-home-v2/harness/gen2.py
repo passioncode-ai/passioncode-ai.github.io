@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the HyperFrames composition for the passioncode.ai home video v2 (SITE-041), per locale.
+"""Build the HyperFrames composition for the passioncode.ai home video v2 (SITE-043), per locale.
 
 Usage: SITE_ROOT=... FONTS_DIR=... MONO_DIR=... GSAP_JS=... NARRATION_WAV=... MUSIC_WAV=... FABRIC_ICON=... \
        gen2.py LOCALE OUT_DIR

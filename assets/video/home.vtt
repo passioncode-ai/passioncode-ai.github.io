@@ -1,62 +1,116 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:01.700
+00:00:00.620 --> 00:00:02.390
 Your agent works for a week.
 
 2
-00:00:02.120 --> 00:00:03.960
-Then it runs on the wrong account,
+00:00:02.720 --> 00:00:04.309
+Then it falls apart.
 
 3
-00:00:04.190 --> 00:00:05.270
-forgets what it learned,
+00:00:04.680 --> 00:00:05.830
+The wrong account.
 
 4
-00:00:05.510 --> 00:00:07.410
-and nobody can say what it changed.
+00:00:06.120 --> 00:00:07.730
+It forgets what it learned.
 
 5
-00:00:07.900 --> 00:00:12.370
-It needs a home, its accounts, its memory
-and a record of what it did.
+00:00:07.960 --> 00:00:10.210
+And nobody can say what it changed.
 
 6
-00:00:13.130 --> 00:00:17.170
-Fabric is the home for your projects
-and their agents, in preview.
+00:00:10.600 --> 00:00:13.460
+PassionCode.ai is the agent-agnostic
 
 7
-00:00:17.740 --> 00:00:21.570
-It opens on four actions:
-create or adapt an agent,
+00:00:13.500 --> 00:00:16.290
+operating system for AI-native teams:
 
 8
-00:00:22.020 --> 00:00:23.640
-open or create a project.
+00:00:16.640 --> 00:00:20.390
+a workplace where agents do the work,
+and you see all of it.
 
 9
-00:00:24.220 --> 00:00:27.980
-Your coding agent asks its questions
-and shows its plan first.
+00:00:20.720 --> 00:00:23.470
+It runs on your machines, as open source,
 
 10
-00:00:28.540 --> 00:00:30.690
-Each agent runs on the account it should.
+00:00:23.560 --> 00:00:26.370
+with the agents and
+subscriptions you already have.
 
 11
-00:00:31.180 --> 00:00:33.760
-Its dashboard and spend sit in one window,
+00:00:26.700 --> 00:00:29.010
+Their work leaves a record you can open.
 
 12
-00:00:34.080 --> 00:00:36.070
-and Observatory shows what changed.
+00:00:29.340 --> 00:00:34.430
+For you, it starts with one command:
+skills for Claude Code or Codex.
 
 13
-00:00:36.620 --> 00:00:38.290
-The tools are available today.
+00:00:34.700 --> 00:00:36.550
+No account, no key.
 
 14
-00:00:38.840 --> 00:00:42.050
-Coordination between agents
-is the direction we are building.
+00:00:36.960 --> 00:00:41.170
+Fabric, in preview, is the home
+for your projects and their agents.
+
+15
+00:00:41.480 --> 00:00:44.990
+Your coding agent shows its
+plan before it changes anything.
+
+16
+00:00:45.380 --> 00:00:49.690
+Switchboard: each agent on the
+account it should, limits in view.
+
+17
+00:00:50.040 --> 00:00:54.230
+Dashboards: state,
+spend and control, in one window.
+
+18
+00:00:54.580 --> 00:00:57.770
+Observatory: what changed, with the evidence.
+
+19
+00:00:58.160 --> 00:00:59.790
+Inbox, in preview:
+
+20
+00:01:00.040 --> 00:01:03.170
+mail your agents answer
+only within your rules.
+
+21
+00:01:03.600 --> 00:01:07.490
+Agents in one project share its board,
+memory and hand-offs,
+
+22
+00:01:07.640 --> 00:01:09.870
+so one picks up where another stopped.
+
+23
+00:01:10.280 --> 00:01:14.460
+For an organization, we bring agents
+onto your machines, connect them,
+
+24
+00:01:14.500 --> 00:01:17.410
+and show what each one
+cost and what it delivered.
+
+25
+00:01:17.820 --> 00:01:20.610
+Agents are easy to start and hard to keep.
+
+26
+00:01:20.920 --> 00:01:23.110
+We are building what holds them together.
