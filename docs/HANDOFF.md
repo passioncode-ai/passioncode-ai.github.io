@@ -1,3 +1,26 @@
+# Current handoff — SITE-044: home video v3 live, 2026-10-14
+
+Objective (operator decision, 2026-10-14): re-render and re-voice the home video — the setup command as /start/
+shows it and what it sets up, a bridge saying the tools work with Fabric and on their own, the Together line on the
+facts. Record: [video/2026-10-12-home-v2/README.md §v3](video/2026-10-12-home-v2/README.md#v3-2026-10-14-re-voiced-and-re-rendered).
+
+Done: PR #134 merged as `e24e323` (cuts, captions in ten languages, facts row *Home video*, caption bound 78–98 s);
+#135 (`c6dbe96`) synced the moved release snapshot. Deployed from `main` as Worker version `def2748f` (deployment
+`f39caf74`); `scripts/verify-live.py` PASS, 257 checks ([live.json](evidence/2026-10-14-site-044/live.json)).
+
+For the parallel site agent (VideoObject JSON-LD and a transcript under the player, branch `agent/site-segments`):
+the transcript's source of truth is `docs/video/2026-10-12-home-v2/narration-en.txt` / `narration-ru.txt` (v3, what
+is spoken) and `captions-source.json` for the other languages; durations are 91.63 s (PT1M32S) en and 97.97 s
+(PT1M38S) ru. The Together wording used in the video is facts row *Fabric coding agents* / /vision/ path 02:
+"Agents connected to Fabric share one project's board, memory and hand-offs" (preview); home step 05 is yours.
+This change edited only `assets/video/*`, `docs/video/*`, the facts row *Home video* and the caption bound in
+`scripts/check-site.mjs`.
+
+Checks run: `npm run locales -- --check`, `npm run check`, `npm run build`, `extract-public-copy.py --check`,
+`npm run releases:check` (after #135), WebKit `/` and `/ru/` at 1440 and 390 px; CI `check` passed on #134 and #135.
+
+Next task: SITE-040 (the SITE-039 handoff below).
+
 # Current handoff — SITE-043: home video v2 live, 2026-10-14
 
 Objective (operator, 2026-10-12): a more dynamic, branded home video with music that explains the values, why it is
