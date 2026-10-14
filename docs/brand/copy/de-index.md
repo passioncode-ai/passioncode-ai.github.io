@@ -78,7 +78,7 @@ Deine Agenten
 
 FABRIC · ZUHAUSE FÜR DEINE PROJEKTE
 
-So funktioniert es, in unter einer Minute: gesprochen und mit Untertiteln. Die Bildschirme zeigen Demodaten; die Konsole des Coding-Agenten ist ein geschriebenes Beispiel
+PassionCode.ai in anderthalb Minuten: was es ist, für wen und wie es funktioniert, gesprochen und mit Untertiteln. Die Bildschirme zeigen Demodaten; die Konsole des Coding-Agenten ist ein geschriebenes Beispiel
 
 01 / WARUM
 

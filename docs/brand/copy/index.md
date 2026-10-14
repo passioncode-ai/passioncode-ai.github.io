@@ -78,7 +78,7 @@ Your agents
 
 FABRIC · HOME FOR YOUR PROJECTS
 
-How it works in under a minute: narrated, with captions. The screens show sample data; the coding agent’s console is a written example
+PassionCode.ai in a minute and a half: what it is, who it is for and how it works, narrated, with captions. The screens show sample data; the coding agent’s console is a written example
 
 01 / WHY
 

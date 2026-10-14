@@ -51,7 +51,7 @@ const publicFiles = [
   'assets/journey-3-4.jpg',
   'assets/journey-3-4-ru.jpg',
   // The home video (SITE-028 W10): the English and Russian cuts, their posters, and captions in
-  // every language (docs/evidence/2026-10-11-video/README.md).
+  // every language (v2 since SITE-043: docs/video/2026-10-12-home-v2/README.md).
   ...['', '-ru'].flatMap(suffix => [`assets/video/home${suffix}.mp4`, `assets/video/home${suffix}.webm`, `assets/video/home${suffix}.jpg`]),
   ...LOCALES.map(locale => `assets/video/home${locale === 'en' ? '' : `-${locale}`}.vtt`).filter(file => existsSync(resolve(root, file))),
   'robots.txt',

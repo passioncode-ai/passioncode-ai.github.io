@@ -78,7 +78,7 @@ Twoi agenci
 
 FABRIC · DOM DLA TWOICH PROJEKTÓW
 
-Jak to działa, w niecałą minutę: z narracją i napisami. Ekrany pokazują dane demonstracyjne; konsola agenta kodującego to napisany przykład
+PassionCode.ai w półtorej minuty: czym jest, dla kogo i jak działa, z narracją i napisami. Ekrany pokazują dane demonstracyjne; konsola agenta kodującego to napisany przykład
 
 01 / DLACZEGO
 

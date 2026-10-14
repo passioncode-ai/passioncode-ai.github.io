@@ -78,7 +78,7 @@ Vos agents
 
 FABRIC · LE FOYER DE VOS PROJETS
 
-Comment ça marche, en moins d’une minute : commenté et sous-titré. Les écrans montrent des données de démonstration ; la console de l’agent de code est un exemple rédigé
+PassionCode.ai en une minute et demie : ce que c’est, pour qui et comment ça marche, commenté et sous-titré. Les écrans montrent des données de démonstration ; la console de l’agent de code est un exemple rédigé
 
 01 / POURQUOI
 

@@ -1,0 +1,174 @@
+{
+ "tool": "Playwright WebKit, dist/ served on 127.0.0.1 with byte ranges",
+ "date": "2026-10-14",
+ "results": [
+  {
+   "path": "/",
+   "width": 1440,
+   "status": 200,
+   "before": {
+    "networkState": 2,
+    "readyState": 0,
+    "preload": "none"
+   },
+   "poster": {
+    "ok": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "/assets/video/home.jpg"
+   },
+   "box": {
+    "w": 1180,
+    "h": 663.8,
+    "ratio": 1.778
+   },
+   "autoplay": false,
+   "loop": false,
+   "controls": true,
+   "play": {
+    "duration": 86.533,
+    "current": "/assets/video/home.webm",
+    "w": 1920,
+    "h": 1080,
+    "time": 12.9,
+    "track": {
+     "src": "/assets/video/home.vtt",
+     "srclang": "en",
+     "default": true,
+     "cues": 26,
+     "active": "PassionCode.ai is the agent-agnostic"
+    }
+   },
+   "overflowX": 0,
+   "caption": "PassionCode.ai in a minute and a half: what it is, who it is for and how it works, narrated, with captions. The screens show sample data; the coding agent’s console is a written example",
+   "label": "PassionCode.ai explained, a narrated video",
+   "errors": []
+  },
+  {
+   "path": "/",
+   "width": 390,
+   "status": 200,
+   "before": {
+    "networkState": 2,
+    "readyState": 0,
+    "preload": "none"
+   },
+   "poster": {
+    "ok": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "/assets/video/home.jpg"
+   },
+   "box": {
+    "w": 362,
+    "h": 203.6,
+    "ratio": 1.778
+   },
+   "autoplay": false,
+   "loop": false,
+   "controls": true,
+   "play": {
+    "duration": 86.533,
+    "current": "/assets/video/home.webm",
+    "w": 1920,
+    "h": 1080,
+    "time": 12.9,
+    "track": {
+     "src": "/assets/video/home.vtt",
+     "srclang": "en",
+     "default": true,
+     "cues": 26,
+     "active": "PassionCode.ai is the agent-agnostic"
+    }
+   },
+   "overflowX": 0,
+   "caption": "PassionCode.ai in a minute and a half: what it is, who it is for and how it works, narrated, with captions. The screens show sample data; the coding agent’s console is a written example",
+   "label": "PassionCode.ai explained, a narrated video",
+   "errors": []
+  },
+  {
+   "path": "/ru/",
+   "width": 1440,
+   "status": 200,
+   "before": {
+    "networkState": 2,
+    "readyState": 0,
+    "preload": "none"
+   },
+   "poster": {
+    "ok": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "/assets/video/home-ru.jpg"
+   },
+   "box": {
+    "w": 1180,
+    "h": 663.8,
+    "ratio": 1.778
+   },
+   "autoplay": false,
+   "loop": false,
+   "controls": true,
+   "play": {
+    "duration": 90.2,
+    "current": "/assets/video/home-ru.webm",
+    "w": 1920,
+    "h": 1080,
+    "time": 12.9,
+    "track": {
+     "src": "/assets/video/home-ru.vtt",
+     "srclang": "ru",
+     "default": true,
+     "cues": 24,
+     "active": "PassionCode.ai — операционная система\nдля команд с любыми ИИ-агентами:"
+    }
+   },
+   "overflowX": 0,
+   "caption": "PassionCode.ai за полторы минуты: что это, для кого и как это работает, с озвучкой и субтитрами. На экранах демо-данные, а консоль агента для программирования — пример, составленный вручную",
+   "label": "PassionCode.ai за полторы минуты: видео с озвучкой",
+   "errors": []
+  },
+  {
+   "path": "/ru/",
+   "width": 390,
+   "status": 200,
+   "before": {
+    "networkState": 2,
+    "readyState": 0,
+    "preload": "none"
+   },
+   "poster": {
+    "ok": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "/assets/video/home-ru.jpg"
+   },
+   "box": {
+    "w": 362,
+    "h": 203.6,
+    "ratio": 1.778
+   },
+   "autoplay": false,
+   "loop": false,
+   "controls": true,
+   "play": {
+    "duration": 90.2,
+    "current": "/assets/video/home-ru.webm",
+    "w": 1920,
+    "h": 1080,
+    "time": 12.9,
+    "track": {
+     "src": "/assets/video/home-ru.vtt",
+     "srclang": "ru",
+     "default": true,
+     "cues": 24,
+     "active": "PassionCode.ai — операционная система\nдля команд с любыми ИИ-агентами:"
+    }
+   },
+   "overflowX": 0,
+   "caption": "PassionCode.ai за полторы минуты: что это, для кого и как это работает, с озвучкой и субтитрами. На экранах демо-данные, а консоль агента для программирования — пример, составленный вручную",
+   "label": "PassionCode.ai за полторы минуты: видео с озвучкой",
+   "errors": []
+  }
+ ]
+}
