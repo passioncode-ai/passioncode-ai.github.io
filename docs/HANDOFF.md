@@ -1,3 +1,22 @@
+# Current handoff — SITE-043: home video v2 live, 2026-10-14
+
+Objective (operator, 2026-10-12): a more dynamic, branded home video with music that explains the values, why it is
+for you and for an organization, how it is set up and the ecosystem. Record:
+[video/2026-10-12-home-v2/README.md](video/2026-10-12-home-v2/README.md).
+
+Done: PR #130 merged as `dc72841` — English 86.53 s and Russian 90.20 s cuts made through Asset Foundry (narration,
+music bed, HyperFrames renders, transcriptions; $0.87 delivered), captions in all ten languages timed on each cut's
+transcription, the player's label and caption line in ten languages, the facts row *Home video* (under the lease),
+SCN-001/SCN-021 and the caption-length check. PR #131 (`430dbc2`) synced the moved release snapshot. Deployed from
+`main` as Worker version `db355bef` (deployment `1ff877fa`); `scripts/verify-live.py` PASS, 257 checks
+([live.json](evidence/2026-10-14-site-043/live.json)); the live `home.mp4` matches the source byte for byte.
+
+Checks run: `npm run locales`, `npm run check`, `npm run build` (224 entries), `extract-public-copy.py --check`,
+WebKit `/` and `/ru/` at 1440 and 390 px ([visual.json](video/2026-10-12-home-v2/visual.json)); CI `check` passed on
+#130 and #131.
+
+Next task: SITE-040 (the SITE-039 handoff below).
+
 # Current handoff — Nicegram: more than 57 million installs, 2026-10-12
 
 Objective (operator decision, 2026-10-12): the home About's Nicegram figure becomes "more than 57 million installs"
