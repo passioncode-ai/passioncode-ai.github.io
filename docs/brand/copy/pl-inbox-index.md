@@ -64,7 +64,7 @@ Zobacz, co potrafi
 
 ↓
 
-Wersja zapoznawcza 0.16.3 · macOS 12+ · Windows · Linux · otwarty kod na licencji AGPL-3.0
+Wersja zapoznawcza 0.17.0 · macOS 12+ · Windows · Linux · otwarty kod na licencji AGPL-3.0
 
 FABRIC INBOX / POCZTA + AGENCI
 
@@ -134,7 +134,7 @@ POBIERZ FABRIC INBOX
 
 ## na Maca, Windows i Linuksa
 
-Najnowsza wersja zapoznawcza: 0.16.3. Aplikacja tworzy swój serwer pocztowy na Twoim własnym koncie Cloudflare i go otwiera; Twoja poczta zostaje przy Twoich kontach.
+Najnowsza wersja zapoznawcza: 0.17.0. Aplikacja tworzy swój serwer pocztowy na Twoim własnym koncie Cloudflare i go otwiera; Twoja poczta zostaje przy Twoich kontach.
 
 ⌘
 
@@ -155,7 +155,7 @@ Kopia na Maca starsza niż 0.15.2 nie zaktualizuje się sama: pobierz 0.15.2 raz
 
 ### Windows i Linux
 
-Wydanie 0.16.3 zawiera też instalator dla Windows x64 i arm64, który nie wymaga uprawnień administratora, z podpisem Authenticode od wersji 0.14.1, oraz AppImage i .deb dla Linuksa x64 i arm64.
+Wydanie 0.17.0 zawiera też instalator dla Windows x64 i arm64, który nie wymaga uprawnień administratora, z podpisem Authenticode od wersji 0.14.1, oraz AppImage i .deb dla Linuksa x64 i arm64.
 
 Pobieranie dla Windows i Linuksa
 
@@ -179,7 +179,7 @@ Szczegóły w przewodniku konfiguracji — wymieniono w nim każde ustawienie.
 
 macOS DMG · SHA-256
 
-b0fd30e549001259c1da52c8310defbcc70e9f7936dde578461105fc07d2373e
+703fabc72024a905cb1b1c2bf1eff1c3a8a7b253fe60e5b034cd016233a79c78
 
 Porównaj przed otwarciem: shasum -a 256 w Terminalu. Inna wartość oznacza inny plik; pobierz go ponownie.
 

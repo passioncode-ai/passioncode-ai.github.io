@@ -62,7 +62,7 @@ Pour votre organisation
 
 ↗
 
-Open source sous licence AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.30 · Dashboards 0.7.9 · Observatory 0.24.4
+Open source sous licence AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.31 · Dashboards 0.7.9 · Observatory 0.24.4
 
 Comptes
 
@@ -226,7 +226,7 @@ Choisissez le compte sur lequel tourne chaque agent, en gardant les limites d’
 
 Version
 
-0.6.30
+0.6.31
 
 · macOS + Windows · étape 4
 
@@ -262,7 +262,7 @@ Le courrier Gmail et Cloudflare dans une seule liste, l’important en premier ;
 
 Préversion de développement
 
-0.16.3
+0.17.0
 
 · macOS + Windows + Linux · étape 5
 
@@ -274,7 +274,7 @@ Une commande installe les skills qui apprennent aux agents à construire avec Fa
 
 CLI
 
-0.2.1
+0.2.2
 
 · Node.js 18+ · étapes 1 et 3
 

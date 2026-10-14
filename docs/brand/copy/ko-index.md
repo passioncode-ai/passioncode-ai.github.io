@@ -62,7 +62,7 @@ Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. 코딩 �
 
 ↗
 
-AGPL-3.0 오픈 소스 Fabric 0.3.5 · Switchboard 0.6.30 · Dashboards 0.7.9 · Observatory 0.24.4
+AGPL-3.0 오픈 소스 Fabric 0.3.5 · Switchboard 0.6.31 · Dashboards 0.7.9 · Observatory 0.24.4
 
 계정
 
@@ -226,7 +226,7 @@ Fabric Switchboard
 
 릴리스
 
-0.6.30
+0.6.31
 
 · macOS + Windows · 4단계
 
@@ -262,7 +262,7 @@ Gmail과 Cloudflare 메일을 한 목록에 모아 중요한 것부터 보여 �
 
 개발 프리뷰
 
-0.16.3
+0.17.0
 
 · macOS + Windows + Linux · 5단계
 
@@ -274,7 +274,7 @@ PassionCode.ai 런처
 
 CLI
 
-0.2.1
+0.2.2
 
 · Node.js 18+ · 1단계, 3단계
 
