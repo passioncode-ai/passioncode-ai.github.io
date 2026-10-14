@@ -114,7 +114,7 @@ O launcher da PassionCode.ai instala no seu agente de programação as skills do
 
 npx @passioncode-ai/passioncode@latest update
 
-Launcher 0.2.1 · reinicie o seu agente depois · as atualizações automáticas estão ativadas; desative-as
+Launcher 0.2.2 · reinicie o seu agente depois · as atualizações automáticas estão ativadas; desative-as
 
 02
 

@@ -64,7 +64,7 @@ macOS용 다운로드
 
 ↓
 
-개발 프리뷰 0.16.3 · macOS 12+ · Windows · Linux · 오픈 소스(AGPL-3.0)
+개발 프리뷰 0.17.0 · macOS 12+ · Windows · Linux · 오픈 소스(AGPL-3.0)
 
 FABRIC INBOX / 메일 + 에이전트
 
@@ -134,7 +134,7 @@ FABRIC INBOX 받기
 
 ## Mac, Windows, Linux용
 
-최신 프리뷰: 0.16.3. 앱은 내 Cloudflare 계정에 메일 서버를 만들고 엽니다. 메일은 내 계정에 그대로 남습니다.
+최신 프리뷰: 0.17.0. 앱은 내 Cloudflare 계정에 메일 서버를 만들고 엽니다. 메일은 내 계정에 그대로 남습니다.
 
 ⌘
 
@@ -155,7 +155,7 @@ DMG를 열고 Fabric Inbox를 응용 프로그램 폴더로 드래그합니다.
 
 ### Windows와 Linux
 
-릴리스 0.16.3에는 관리자 권한이 필요 없는 x64와 arm64용 Windows 설치 파일(0.14.1부터 Authenticode 서명)과 x64와 arm64용 Linux AppImage와 .deb도 포함됩니다.
+릴리스 0.17.0에는 관리자 권한이 필요 없는 x64와 arm64용 Windows 설치 파일(0.14.1부터 Authenticode 서명)과 x64와 arm64용 Linux AppImage와 .deb도 포함됩니다.
 
 Windows와 Linux 다운로드
 
@@ -179,7 +179,7 @@ Gmail의 경우: 내 Google Cloud 프로젝트의 OAuth 클라이언트
 
 macOS DMG · SHA-256
 
-b0fd30e549001259c1da52c8310defbcc70e9f7936dde578461105fc07d2373e
+703fabc72024a905cb1b1c2bf1eff1c3a8a7b253fe60e5b034cd016233a79c78
 
 열기 전에 비교하세요: shasum -a 256 터미널에서 확인합니다. 값이 다르면 다른 파일이므로 다시 다운로드하세요.
 

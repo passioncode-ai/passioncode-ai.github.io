@@ -62,7 +62,7 @@ Fabric 是你的项目及其智能体的家。你的编码智能体可以创建�
 
 ↗
 
-基于 AGPL-3.0 开源 Fabric 0.3.5 · Switchboard 0.6.30 · Dashboards 0.7.9 · Observatory 0.24.4
+基于 AGPL-3.0 开源 Fabric 0.3.5 · Switchboard 0.6.31 · Dashboards 0.7.9 · Observatory 0.24.4
 
 账号
 
@@ -226,7 +226,7 @@ Fabric Switchboard
 
 版本
 
-0.6.30
+0.6.31
 
 · macOS + Windows · 步骤 4
 
@@ -262,7 +262,7 @@ Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智�
 
 开发预览版
 
-0.16.3
+0.17.0
 
 · macOS + Windows + Linux · 步骤 5
 
@@ -274,7 +274,7 @@ PassionCode.ai 启动器
 
 CLI
 
-0.2.1
+0.2.2
 
 · Node.js 18+ · 步骤 1 和 3
 
