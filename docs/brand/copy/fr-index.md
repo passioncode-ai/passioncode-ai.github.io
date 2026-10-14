@@ -62,7 +62,7 @@ Pour votre organisation
 
 ↗
 
-Open source sous licence AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.28 · Dashboards 0.7.8 · Observatory 0.24.4
+Open source sous licence AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.30 · Dashboards 0.7.9 · Observatory 0.24.4
 
 Comptes
 
@@ -226,7 +226,7 @@ Choisissez le compte sur lequel tourne chaque agent, en gardant les limites d’
 
 Version
 
-0.6.28
+0.6.30
 
 · macOS + Windows · étape 4
 
@@ -238,7 +238,7 @@ Tous les services d’agents locaux dans une seule fenêtre, pilotés par vous o
 
 Version
 
-0.7.8
+0.7.9
 
 · macOS + Windows + Linux · étape 4
 
@@ -274,7 +274,7 @@ Une commande installe les skills qui apprennent aux agents à construire avec Fa
 
 CLI
 
-0.2.0
+0.2.1
 
 · Node.js 18+ · étapes 1 et 3
 

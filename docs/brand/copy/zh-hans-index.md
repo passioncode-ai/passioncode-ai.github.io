@@ -62,7 +62,7 @@ Fabric 是你的项目及其智能体的家。你的编码智能体可以创建�
 
 ↗
 
-基于 AGPL-3.0 开源 Fabric 0.3.5 · Switchboard 0.6.28 · Dashboards 0.7.8 · Observatory 0.24.4
+基于 AGPL-3.0 开源 Fabric 0.3.5 · Switchboard 0.6.30 · Dashboards 0.7.9 · Observatory 0.24.4
 
 账号
 
@@ -226,7 +226,7 @@ Fabric Switchboard
 
 版本
 
-0.6.28
+0.6.30
 
 · macOS + Windows · 步骤 4
 
@@ -238,7 +238,7 @@ Fabric Dashboards
 
 版本
 
-0.7.8
+0.7.9
 
 · macOS + Windows + Linux · 步骤 4
 
@@ -274,7 +274,7 @@ PassionCode.ai 启动器
 
 CLI
 
-0.2.0
+0.2.1
 
 · Node.js 18+ · 步骤 1 和 3
 
