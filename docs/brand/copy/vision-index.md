@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Get the tools
+Set up
 
 ↓
 
@@ -112,7 +112,11 @@ Any agent, on your machinesVendor-neutral, local first and open source under the
 
 Analytics, never surveillanceAnalytics are about agents and the outcomes of processes. Nothing watches people in secret.
 
-Inside each change we recommend task-pipeline, a separate open-source skill that does not move on until each gate passes. How to install it
+For the changes your agents make, we recommend task-pipeline, a separate open-source skill from the sshlg-skills collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.
+
+npx sshlg-skills install
+
+task-pipeline on GitHub · it is not part of PassionCode.ai and needs nothing from it
 
 03 / THE PATH
 
@@ -134,11 +138,11 @@ How it works, step 3
 
 02
 
-AVAILABLE NOW
+AVAILABLE NOW, IN PART
 
 ### Two agents that talk
 
-Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.
+Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.
 
 How it works, step 5
 
@@ -190,7 +194,7 @@ START WITH ONE AGENT
 
 ## with one command
 
-Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.
+Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.
 
 For you, free
 
@@ -225,6 +229,12 @@ Fabric
 GitHub & source
 
 About
+
+Investors
+
+Contributors
+
+Press
 
 Design system
 

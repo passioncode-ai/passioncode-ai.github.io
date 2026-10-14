@@ -1,11 +1,9 @@
 {
   "page": "dashboards/index.html",
   "strings": {
-    "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Twoje lokalne usługi agentów w jednym miejscu",
     "PassionCode.ai passion fruit mark": "Znak PassionCode.ai w kształcie marakui",
     "Fabric Dashboards": "Fabric Dashboards",
     "One window for local agent services that speak fabric-service/0.1.": "Jedno okno dla lokalnych usług agentów, które mówią protokołem fabric-service/0.1.",
-    "Download": "Pobierz",
     "Your agent services": "Twoje usługi agentów",
     "One place to look": "Jedno miejsce, w które patrzysz",
     "Download for macOS ↓": "Pobierz na macOS ↓",
@@ -96,6 +94,8 @@
     "Windows and Linux downloads": "Pobieranie dla Windows i Linuksa",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Jedno okno dla Twoich lokalnych usług agentów na macOS, Windows i Linuksie. Zobacz, co wymaga uwagi, otwieraj panele i pozwól agentom korzystać z tych samych narzędzi przez MCP.",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Zobacz wszystkie usługi agentów na Twoim komputerze w jednej aplikacji: najpierw to, co wymaga Twojej uwagi, a obok otwiera się własny panel każdej usługi",
-    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards wykrywa zgodne usługi na Twoim komputerze. Każda usługa zachowuje swoje zadanie; Ty dostajesz wspólne miejsce, by je sprawdzać i nimi sterować."
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards wykrywa zgodne usługi na Twoim komputerze. Każda usługa zachowuje swoje zadanie; Ty dostajesz wspólne miejsce, by je sprawdzać i nimi sterować.",
+    "Fabric Dashboards | Your local agent services, together | PassionCode.ai": "Fabric Dashboards | Twoje lokalne usługi agentów w jednym miejscu | PassionCode.ai",
+    "Set up everything with one command": "Skonfiguruj wszystko jednym poleceniem"
   }
 }

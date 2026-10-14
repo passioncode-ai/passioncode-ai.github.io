@@ -1,3 +1,31 @@
+# Current handoff — SITE-045: one door to setup, Fabric as the home, the About notes, 2026-10-14
+
+Objective (operator decisions D1–D4, given in chat 2026-10-14): keep the site small and make one door to start —
+`setup` everywhere a visitor starts, Fabric as the home with the four tools working with it and on their own, a short
+investors note (and contributors and press) in /#about, the video's text twins. Record:
+[evidence/2026-10-14-site-045/README.md](evidence/2026-10-14-site-045/README.md).
+
+Done (branch `agent/site-segments`): the pages, the ten languages' catalogs (written by this session, not by the copy
+agent, which was busy), `scripts/locales.mjs` `applyVideo` (transcript and VideoObject from the player's files; the
+v3 cut of #134 was picked up without an edit), `scripts/check-site.mjs` (a SITE-045 block: header door, footer
+anchors, About notes without figures, Fabric-first tools, VideoObject duration from the MP4, transcript = captions,
+/fabric/ works-with, product setup lines, /business/ one action; no `@latest update` taught as the way to start),
+facts rows *homepage hero*, *Launcher*, *toolkit roles*, *Fabric coding agents* and new *one door to setup*,
+*toolkit word (D2)*, *investors note (D3)*, *organization size* (under the lease), terminology D2, strings registry,
+SCN-001/007/008/013/014/015/020/021, screens and flows, DEPLOYMENT "The home video's text twins".
+
+Checks run: `npm run check` exit 0 (114 tests), `npm run build` (224 entries), `extract-public-copy.py --check`,
+brand lint unchanged in errors (165), ux lint unchanged (11), WebKit 1440/390 en and ru: no overflow, no page errors,
+copy buttons, transcript and the folded downloads work.
+
+Open: SITE-046 (Fabric's Windows and Linux downloads on /fabric/); SITE-018 (keep /fabric/agents/ current — moved to
+0.3.5 here); SITE-040, SITE-041, SITE-026 as before. Not changed on purpose: the Switchboard page's launcher-plugin
+region still says `update` (it installs a plugin, and is hidden while `launcherPlugin` is false; SITE-008).
+
+Next task: merge the PR when CI is green, deploy from `main` (`docs/DEPLOYMENT.md`), run
+`python3 scripts/verify-live.py --output docs/evidence/2026-10-14-site-045/live.json`, record the receipt in SITE-045;
+then SITE-046.
+
 # Current handoff — SITE-044: home video v3 live, 2026-10-14
 
 Objective (operator decision, 2026-10-14): re-render and re-voice the home video — the setup command as /start/

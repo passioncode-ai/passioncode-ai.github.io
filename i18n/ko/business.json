@@ -11,11 +11,9 @@
     "The tools are free and open source. You pay for the work we do for you (mapping, building, hosting, support) and a commercial license where you need one. The proposal names the price after we understand the processes; there is no fixed package.": "도구는 무료이며 오픈 소스입니다. 비용은 저희가 해 드리는 작업(프로세스 정리, 구축, 호스팅, 지원)과, 필요한 경우 상용 라이선스에 대해서만 발생합니다. 가격은 프로세스를 파악한 뒤 제안서에 명시하며, 정해진 패키지는 없습니다.",
     "When do we need a commercial license?": "상용 라이선스는 언제 필요한가요?",
     "The tools are under the GNU AGPL-3.0. Internal use, and changes you publish under the same license, need nothing. A closed product that includes them, or a modified hosted service whose source you do not publish, needs a commercial license.": "도구는 GNU AGPL-3.0을 따릅니다. 내부 사용과 같은 라이선스로 공개하는 변경 사항에는 아무것도 필요하지 않습니다. 도구를 포함한 비공개 제품이나, 소스를 공개하지 않는 수정된 호스팅 서비스에는 상용 라이선스가 필요합니다.",
-    "Get the tools": "도구 받기",
     "Enterprise · for organizations": "Enterprise · 조직용",
     "Estimate and request": "추정치와 문의",
     "Reply within two business days": "영업일 기준 2일 이내에 답변드립니다",
-    "Designed for 1 to 1000 people · the estimate comes before any contract": "1명부터 1000명까지를 염두에 두고 설계 · 계약 전에 추정치를 먼저 드립니다",
     "How a request turns into a workplace": "문의가 업무 공간이 되기까지",
     "Tell us": "알려 주세요",
     "Estimate": "추정치",
@@ -53,7 +51,6 @@
     "Send request": "요청 보내기",
     "Prefer email? Write to": "이메일이 편하신가요? 다음 주소로 보내 주세요:",
     "Before you ask": "문의 전에",
-    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for 1 to 1000 people.": "조직의 컴퓨터에 있는 에이전트를 연결하고 한눈에 볼 수 있게 합니다. 오픈 소스 도구 위에서, 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다. 1명에서 1,000명까지를 위해 설계되었습니다.",
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "오픈 소스 PassionCode.ai 도구로 조직을 AI-native로 만듭니다. 컴퓨터 연결, 에이전트 배포와 컴퓨터 간 작업 전달, 각 컴퓨터의 로컬 에이전트를 통한 모델 접근, 활동·사용 분석, 관리, PassionCode.ai가 서명한 맞춤 빌드, 필요한 경우 상용 라이선스를 제공합니다. 개발 중이며 요청 시 제공됩니다.",
     "Make your organization": "조직을",
     "AI-native": "AI-native로 만드세요",
@@ -77,7 +74,6 @@
     "Your own build of the tools, signed by PassionCode.ai.": "PassionCode.ai가 서명한, 조직 전용 도구 빌드입니다.",
     "Your data stays on your machines or in your own cloud.": "데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다.",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "팀이 매달 이 프로세스에 쓰는 시간에, 에이전트가 현실적으로 맡을 수 있는 비율과 한 시간의 비용을 곱한 값입니다.",
-    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for 1 to 1000 people.": "PassionCode for Enterprise는 조직을 AI-native로 만듭니다. 컴퓨터를 조직에 연결하고, 에이전트를 배포해 컴퓨터 사이에서 작업을 넘기고, 모델 키는 각 컴퓨터에 두며, 에이전트별 비용과 성과, 관리, 자체 서명 빌드를 제공합니다. 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다. 1명에서 1,000명까지를 위해 설계되었습니다.",
     "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, on open-source tools, with your data on your machines or in your own cloud": "한 사람의 노트북에 있는 에이전트는 그 한 사람만 돕습니다. 조직의 컴퓨터에 에이전트를 들여와 서로 연결하고 각 에이전트가 얼마를 썼고 무엇을 해냈는지 보여 드립니다. 오픈 소스 도구 위에서, 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다",
     "02 / FOR FINANCE AND ENGINEERING": "02 / 재무와 엔지니어링을 위해",
     "One view of what agents cost": "에이전트가 쓴 비용과",
@@ -132,6 +128,10 @@
     "We built it for our own teams first": "먼저 우리 팀을 위해 만들었습니다",
     "PassionCode has two co-founders, and we both run teams: Sergey Sheleg, co-founder and CPO of Nicegram, and Serge Khurs, co-founder and CTO of Teslasuit.": "PassionCode의 공동 창업자는 두 명이고, 둘 다 팀을 이끌고 있습니다. Nicegram의 공동 창업자이자 CPO인 Sergey Sheleg, 그리고 Teslasuit의 공동 창업자이자 CTO인 Serge Khurs입니다.",
     "We built this setup for ourselves, and it runs our own work today. Now we bring it to your organization: we connect it to your systems and help you bring in agents that run your processes.": "우리는 이 구성을 우리 자신을 위해 만들었고, 지금 우리 일이 이 위에서 돌아갑니다. 이제 이것을 조직에 가져갑니다. 조직의 시스템에 연결하고, 조직의 프로세스를 실행할 에이전트를 도입하도록 돕습니다.",
-    "How we got here": "우리가 여기까지 온 과정"
+    "How we got here": "우리가 여기까지 온 과정",
+    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise는 조직을 AI-native로 만듭니다. 컴퓨터를 조직에 연결하고, 에이전트를 배포해 컴퓨터 사이에서 작업을 넘기고, 모델 키는 각 컴퓨터에 두며, 에이전트별 비용과 성과, 관리, 자체 서명 빌드를 제공합니다. 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다. 한 사람부터 1,000명 이상까지를 위해 설계되었습니다.",
+    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "조직의 컴퓨터에 있는 에이전트를 연결하고 한눈에 볼 수 있게 합니다. 오픈 소스 도구 위에서, 데이터는 조직의 컴퓨터나 자체 클라우드에 남습니다. 한 사람부터 1,000명 이상까지를 위해 설계되었습니다.",
+    "Designed for one person to more than 1,000 · the estimate comes before any contract": "한 사람부터 1,000명 이상까지를 염두에 두고 설계 · 계약 전에 추정치를 먼저 드립니다",
+    "Try it on one machine first: setup, then doctor": "먼저 컴퓨터 한 대에서 시험해 보세요: setup, 그다음 doctor"
   }
 }

@@ -43,6 +43,12 @@ languages through the saved Tone of Voice ([voice.md](voice.md)).
 | D-T5 | Fabric, the home for your projects and their agents | Fabric — дом для ваших проектов и их агентов | lead with what it does today; "CEO" once on /fabric/ as direction ([facts.md](facts.md) row *CEO name and status*) |
 | D-T6 | skills | навыки | first use on a page «навыки (skills)», then «навыки»; never «скилы», «скиллы» |
 
+## Decided terms (operator, 2026-10-14)
+
+| ID | English | Русский | Rule |
+|---|---|---|---|
+| D2 (2026-10-14) | the toolkit; the tools; "work with Fabric, and on their own"; label IN THE TOOLKIT | инструменты; «работают с Fabric и сами по себе»; В НАБОРЕ | the public word stays "toolkit"; "modules" is the internal packaging term ("Fabric and its modules") and is never a public word; the site shows Fabric as the centre and the four tools as working with it and on their own (SITE-045) |
+
 ## Banned
 | Word or phrase | Why | Use instead |
 |---|---|---|
@@ -57,6 +63,7 @@ languages through the saved Tone of Voice ([voice.md](voice.md)).
 | the CEO AI agent / ИИ-агент в роли CEO (outside /fabric/) | the conversation does not reply yet (D-T5) | Fabric, the home for your projects and their agents |
 | доказательства, основание, следы работы (for evidence) | four Russian words for one thing (D-T2) | подтверждения |
 | скилы, скиллы | a calque (D-T6) | навыки, first use «навыки (skills)» |
+| module, modules / модуль, модули (for the tools, in public copy) | internal packaging term (operator D2, 2026-10-14) | the tools; work with Fabric, and on their own |
 | rot / гниют | blunt in translation ([narrative §6](narrative.md#6-words-we-own-words-we-ban)) | fall apart / разваливаются |
 
 ## Glossary
@@ -76,7 +83,7 @@ languages through the saved Tone of Voice ([voice.md](voice.md)).
 | open source | Public source under the GNU AGPL-3.0: use, study, change and share it; a modified version you share or run as a service for others publishes its source. A closed product or an unpublished hosted service needs the commercial license. Released versions keep their earlier license (MIT or PolyForm). |
 
 | agent workplace | A composable setup of independent tools, agent skills and public protocols; not a claim that Fabric’s complete coordination loop has shipped. |
-| PassionCode.ai launcher | CLI, not a desktop application bundle. `update` installs the listed skills and plugins; `setup` (since 0.2.0) also installs the apps from verified releases and registers their MCP servers, and checks and repairs an existing setup; `doctor` checks only. Changed 2026-10-13 (brand-voice row update in the /start/ one-command change). |
+| PassionCode.ai launcher | CLI, not a desktop application bundle. `update` installs the listed skills and plugins; `setup` (since 0.2.0) also installs the apps from verified releases and registers their MCP servers, and checks and repairs an existing setup; `doctor` checks only. Changed 2026-10-13 (brand-voice row update in the /start/ one-command change). Since 2026-10-14 (SITE-045) the site teaches `npx @passioncode-ai/passioncode@latest setup` as the way to start everywhere; `update` appears only where it means updating. |
 | Fabric Agent Adapter | Kits, skills and conformance probe for making a service or agent compatible with Fabric. |
 | harness | Everything around a model that makes an agent dependable over time: where it works, its tools and accounts, its memory, its checks and the record of what it did. Named and defined **once, on /vision/ only** (D-T1, 2026-10-10), where the labs' use of the word is linked (`/vision/#harness`). Every other page says it in the reader's words: "what keeps an agent working: its home, its accounts, its memory and a record of what it did". Russian on /vision/: «обвязка» with «(harness)» once; nowhere else. |
 | your agents / the tools | Since 2026-10-10 (D-T4) one word per thing: a person's agents are "your agents" («ваши агенты»); the products are "the tools" («инструменты»); the product pages' label is "IN THE TOOLKIT" («В НАБОРЕ»). "Family" («семья») is no longer used for either. Not "swarm", not "digital workforce". |

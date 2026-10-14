@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-获取工具
+安装设置
 
 ↓
 
@@ -112,7 +112,11 @@ Português (Brasil)
 
 分析，而非监视分析针对的是智能体和流程的结果。没有人会被暗中监视。
 
-在每一次变更中，我们推荐 task-pipeline，这是一个独立的开源技能，每道关卡通过之前不会继续往下走。如何安装
+对于你的智能体所做的改动，我们推荐 task-pipeline，一个独立的开源技能，来自 sshlg-skills 集合：它会把每项改动从简报带到验收，每个关卡通过后才继续。
+
+npx sshlg-skills install
+
+GitHub 上的 task-pipeline · 它不属于 PassionCode.ai，也不依赖 PassionCode.ai 的任何部分
 
 03 / 路径
 
@@ -134,11 +138,11 @@ Português (Brasil)
 
 02
 
-现已可用
+部分现已可用
 
 ### 两个相互沟通的智能体
 
-连接到 Fabric 的智能体共用一个项目的看板、记忆和交接，因此一个智能体可以从另一个停下的地方接着做。
+连接到 Fabric 的智能体共用一个项目的看板、记忆和交接，因此一个智能体可以从另一个停下的地方接着做。Fabric 是早期预览版。
 
 工作原理，第 5 步
 
@@ -190,7 +194,7 @@ PassionCode.ai 会取代 Claude Code 或 Codex 吗？
 
 ## 一条命令开始
 
-安装技能并构建第一个智能体，或带上整个组织：PassionCode for Enterprise 正在开发中，按需提供。
+用一条命令装好工具并构建第一个智能体，或带上整个组织：PassionCode for Enterprise 正在开发中，按需提供。
 
 个人使用，免费
 
@@ -225,6 +229,12 @@ Fabric
 GitHub 与源代码
 
 关于
+
+投资者
+
+参与贡献
+
+媒体
 
 设计系统
 

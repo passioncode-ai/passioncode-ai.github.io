@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Télécharger
+Installer
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC SWITCHBOARD · PAR PASSIONCODE
 Réunissez vos comptes Claude Code et Codex CLI dans un seul poste de travail local : voyez l’usage que chacun déclare et choisissez le compte qui traite la prochaine requête
 
 DANS LA BOÎTE À OUTILS Les comptes : le compte sur lequel tourne chaque agent, avec ses limites d’usage sous les yeux. Étape 4 de « Comment ça marche ». Tous les outils
+
+Tout installer en une commande →
 
 Télécharger Switchboard
 
@@ -366,6 +368,12 @@ Fabric
 GitHub et code source
 
 À propos
+
+Investisseurs
+
+Contribuer
+
+Presse
 
 Système de design
 

@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from ja/dashboards/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Dashboards | ローカルのエージェントサービスを一か所に
+Fabric Dashboards | ローカルのエージェントサービスを一か所に | PassionCode.ai
 
 macOS、Windows、Linux のローカルのエージェントサービスを、ウィンドウ一つで確認できます。対応が必要なものを把握し、ダッシュボードを開き、エージェントも MCP 経由で同じツールを使えます。
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 简体中文
 
-ダウンロード
+セットアップ
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 お使いのコンピューター上のすべてのエージェントサービスを一つのアプリで確認できます。対応が必要なものが先頭に来て、各サービス自身のダッシュボードがその横に開きます
 
 ツールキットの一員 状態、支出、操作：すべてのエージェントサービスについて、何をしているか、どれだけ使っているか、アップデートの状況を一つのウィンドウで確認できます。使い方のステップ 4 です。すべてのツール
+
+コマンド1つですべてをセットアップ →
 
 macOS 版をダウンロード ↓
 
@@ -223,6 +225,12 @@ Fabric
 GitHub とソース
 
 概要
+
+投資家の方へ
+
+コントリビュート
+
+報道関係の方へ
 
 デザインシステム
 

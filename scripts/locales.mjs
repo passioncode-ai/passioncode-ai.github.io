@@ -46,7 +46,7 @@ const VERBATIM_ATTRS = ['data-live', 'data-release-version', 'data-release-sha25
 const TEXT_ATTRS = ['alt', 'aria-label', 'title', 'placeholder', 'label']
 const TEXT_META = new Set(['description', 'twitter:title', 'twitter:description', 'og:title', 'og:description', 'og:image:alt'])
 // JSON-LD values that are identifiers, URLs, versions or codes, never prose.
-const LD_VERBATIM_KEYS = new Set(['@context', '@type', '@id', 'url', 'item', 'image', 'logo', 'sameAs', 'downloadUrl', 'installUrl', 'softwareVersion', 'license', 'operatingSystem', 'applicationCategory', 'email', 'telephone', 'priceCurrency', 'price', 'inLanguage', 'datePublished', 'dateModified', 'totalTime', 'codeRepository', 'contentUrl', 'fileSize', 'availability', 'areaServed', 'memoryRequirements', 'processorRequirements', 'storageRequirements', 'programmingLanguage', 'runtimePlatform', 'targetProduct', 'position', 'contactType'])
+const LD_VERBATIM_KEYS = new Set(['@context', '@type', '@id', 'url', 'item', 'image', 'logo', 'sameAs', 'downloadUrl', 'installUrl', 'softwareVersion', 'license', 'operatingSystem', 'applicationCategory', 'email', 'telephone', 'priceCurrency', 'price', 'inLanguage', 'datePublished', 'dateModified', 'totalTime', 'codeRepository', 'contentUrl', 'fileSize', 'availability', 'areaServed', 'memoryRequirements', 'processorRequirements', 'storageRequirements', 'programmingLanguage', 'runtimePlatform', 'targetProduct', 'position', 'contactType', 'duration', 'thumbnailUrl', 'embedUrl', 'uploadDate'])
 const HAS_LETTER = /[A-Za-z]/
 // Prose in any language, for comparing the language versions' structure.
 const ANY_LETTER = /\p{L}/u
@@ -117,6 +117,73 @@ export function sourceAsset (src) {
   if (!m) return src
   for (const locale of TRANSLATED_LOCALES) if (m[1].endsWith(`-${locale}`)) return `/assets/${m[1].slice(0, -locale.length - 1)}.${m[2]}`
   return src
+}
+// ---- the home video's text twins (SITE-045) ------------------------------------------------
+// The home video has two text twins, written from the video's own published files so they cannot
+// drift from what plays: the transcript under the player, between <!-- video-transcript --> and
+// <!-- /video-transcript -->, made from the captions file the page's <track> names (the same cues
+// docs/video/<record>/captions-source.json lists, timed by its harness), and the VideoObject
+// JSON-LD, whose thumbnail is the player's poster, whose content is the MP4 the page's <source>
+// names, whose duration is read from that MP4 and whose inLanguage is the cut's spoken language.
+// A new cut or new captions need only `npm run locales`; `--check` fails until it has run.
+const TRANSCRIPT = /(<!-- video-transcript\b[^>]*-->)[\s\S]*?(<!-- \/video-transcript -->)/
+export const blankTranscript = html => html.replace(TRANSCRIPT, '$1$2')
+// The length of an MP4 in seconds, from its movie header (moov → mvhd).
+export function mp4Seconds (file) {
+  const buf = readFileSync(file)
+  const box = (from, to, type) => {
+    for (let at = from; at + 8 <= to;) {
+      let size = buf.readUInt32BE(at)
+      const name = buf.toString('latin1', at + 4, at + 8)
+      let head = 8
+      if (size === 1) { size = Number(buf.readBigUInt64BE(at + 8)); head = 16 } else if (size === 0) size = to - at
+      if (size < head) break
+      if (name === type) return [at + head, at + size]
+      at += size
+    }
+    return null
+  }
+  const moov = box(0, buf.length, 'moov')
+  const mvhd = moov && box(moov[0], moov[1], 'mvhd')
+  if (!mvhd) throw new Error(`${file}: no movie header (moov/mvhd)`)
+  const v1 = buf[mvhd[0]] === 1
+  const scale = buf.readUInt32BE(mvhd[0] + (v1 ? 20 : 12))
+  const units = v1 ? Number(buf.readBigUInt64BE(mvhd[0] + 24)) : buf.readUInt32BE(mvhd[0] + 16)
+  return units / scale
+}
+// ISO 8601 duration, whole seconds: 86.53 → PT1M27S.
+export const isoDuration = seconds => {
+  const total = Math.round(seconds)
+  return `PT${Math.floor(total / 60) ? `${Math.floor(total / 60)}M` : ''}${total % 60}S`
+}
+// The spoken text of a WebVTT file: every cue's lines, in order, as one paragraph. Chinese and
+// Japanese join without spaces.
+export function vttText (vtt, locale) {
+  const glue = ['zh-hans', 'ja'].includes(locale) ? '' : ' '
+  const cues = vtt.replace(/\r/g, '').split(/\n{2,}/).filter(block => block.includes(' --> '))
+  return cues.map(block => block.split('\n').slice(block.split('\n').findIndex(l => l.includes(' --> ')) + 1)
+    .map(line => line.replace(/<[^>]+>/g, '').trim()).filter(Boolean).join(glue)).filter(Boolean).join(glue)
+}
+const assetFile = (url, root) => resolve(root, url.replace(ORIGIN, '').replace(/^\//, ''))
+export function applyVideo (html, locale, root = SITE_ROOT) {
+  const track = /<track kind="captions" src="(\/assets\/[^"]+\.vtt)"/.exec(html)?.[1]
+  if (track && TRANSCRIPT.test(html)) {
+    const text = vttText(readFileSync(assetFile(track, root), 'utf8'), locale)
+    html = html.replace(TRANSCRIPT, (_, open, close) => `${open}<p>${escapeText(text)}</p>${close}`)
+  }
+  if (!/"@type": "VideoObject"/.test(html)) return html
+  const mp4 = /<source src="(\/assets\/[^"]+\.mp4)" type="video\/mp4">/.exec(html)?.[1]
+  const poster = /<video [^>]*\bposter="(\/assets\/[^"]+)"/.exec(html)?.[1]
+  if (!mp4 || !poster) throw new Error('A VideoObject needs the page\'s <video poster> and its <source type="video/mp4">')
+  const spoken = LOCALES.find(l => l !== SOURCE_LOCALE && mp4.endsWith(`-${l}.mp4`)) ?? SOURCE_LOCALE
+  const values = { contentUrl: ORIGIN + mp4, thumbnailUrl: ORIGIN + poster, duration: isoDuration(mp4Seconds(assetFile(mp4, root))), inLanguage: LANG_TAGS[spoken] }
+  return html.replace(/(<script type="application\/ld\+json"[^>]*>)([\s\S]*?)(<\/script>)/g, (all, open, body, close) => {
+    if (!/"@type": "VideoObject"/.test(body)) return all
+    let out = body
+    for (const [key, value] of Object.entries(values)) out = out.replace(new RegExp(`("${key}": )"[^"]*"`), `$1${JSON.stringify(value)}`)
+    JSON.parse(out)
+    return open + out + close
+  })
 }
 // The inverse, for comparing two pages' structure.
 export function sourceUrl (value) {
@@ -294,7 +361,9 @@ const escapeText = s => s.replace(/&(?!(?:[a-z]+|#\d+|#x[0-9a-f]+);)/gi, '&amp;'
 // Returns { html, missing, used }: the page in `locale`, the English fragments with no
 // translation, and the catalog keys it read.
 export function localizePage (html, { sourceFile, locale, catalog }) {
-  if (locale === SOURCE_LOCALE) return { html: applyChrome(html, { sourceFile, locale }), missing: [], used: new Set() }
+  if (locale === SOURCE_LOCALE) return { html: applyChrome(applyVideo(html, locale), { sourceFile, locale }), missing: [], used: new Set() }
+  // The transcript is written from the captions file, never translated through the catalog.
+  html = blankTranscript(html)
   const own = catalog.pages[sourceFile] || {}
   const missing = []
   const used = new Set()
@@ -388,7 +457,7 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
     const inHeading = stack.some(e => PHRASE_TAGS.has(e.name))
     out.push(verbatim() ? token : translate(token, `${region ? `release:${region} ` : ''}${stack.at(-1)?.name || 'text'}`, inHeading))
   }
-  return { html: applyChrome(tightenCjk(out.join(''), locale), { sourceFile, locale }), missing, used }
+  return { html: applyChrome(applyVideo(tightenCjk(out.join(''), locale), locale), { sourceFile, locale }), missing, used }
 }
 const verbatimSwitch = stack => stack.some(e => e.switch)
 
@@ -429,7 +498,11 @@ export function skeleton (html) {
       const body = token.slice(/^<script\b[^>]*>/.exec(token)[0].length, -'</script>'.length)
       const walk = (node, key) => {
         if (Array.isArray(node)) return node.map(v => walk(v, key))
-        if (node && typeof node === 'object') return Object.fromEntries(Object.entries(node).map(([k, v]) => [k, walk(v, k)]))
+        if (node && typeof node === 'object') {
+          // A VideoObject names its own language's cut, poster, length and spoken language (applyVideo).
+          if (node['@type'] === 'VideoObject') node = { ...node, contentUrl: ORIGIN + sourceAsset(String(node.contentUrl).replace(ORIGIN, '')), thumbnailUrl: ORIGIN + sourceAsset(String(node.thumbnailUrl).replace(ORIGIN, '')), duration: '*', inLanguage: '*' }
+          return Object.fromEntries(Object.entries(node).map(([k, v]) => [k, walk(v, k)]))
+        }
         if (typeof node !== 'string') return node
         if (key === 'url' || key === 'item') return sourceUrl(node)
         return LD_VERBATIM_KEYS.has(key) || !ANY_LETTER.test(node) || /^(?:https?:|mailto:)/.test(node) ? node : '*'

@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Obtenir les outils
+Installer
 
 ↓
 
@@ -112,7 +112,11 @@ N’importe quel agent, sur vos machinesIndépendant des fournisseurs, local d�
 
 De l’analytique, jamais de la surveillanceLes analyses portent sur les agents et les résultats des processus. Rien ne surveille les personnes en secret.
 
-Pour la discipline à l’intérieur de chaque changement, nous recommandons task-pipeline, un skill open source distinct qui n’avance pas tant que chaque contrôle n’est pas franchi. Comment l’installer
+Pour les changements que font vos agents, nous recommandons task-pipeline, un skill open source distinct, issu de la collection sshlg-skills : il mène chaque changement du brief à la recette et n’avance pas tant que chaque validation n’est pas passée.
+
+npx sshlg-skills install
+
+task-pipeline sur GitHub · il ne fait pas partie de PassionCode.ai et n’en dépend en rien
 
 03 / LE CHEMIN
 
@@ -134,11 +138,11 @@ Comment ça marche, étape 3
 
 02
 
-DISPONIBLE MAINTENANT
+DISPONIBLE EN PARTIE
 
 ### Deux agents qui se parlent
 
-Les agents connectés à Fabric partagent le tableau, la mémoire et les passations d’un même projet : l’un reprend là où l’autre s’est arrêté.
+Les agents connectés à Fabric partagent le tableau, la mémoire et les passations d’un même projet : l’un reprend là où l’autre s’est arrêté. Fabric est en préversion.
 
 Comment ça marche, étape 5
 
@@ -190,7 +194,7 @@ COMMENCEZ PAR UN AGENT
 
 ## par une seule commande
 
-Installez les skills et construisez le premier agent, ou emmenez toute une organisation : PassionCode for Enterprise est en cours de développement et proposé sur demande.
+Installez les outils en une commande et construisez le premier agent, ou emmenez toute une organisation : PassionCode for Enterprise est en cours de développement et proposé sur demande.
 
 Pour vous, gratuitement
 
@@ -225,6 +229,12 @@ Fabric
 GitHub et code source
 
 À propos
+
+Investisseurs
+
+Contribuer
+
+Presse
 
 Système de design
 

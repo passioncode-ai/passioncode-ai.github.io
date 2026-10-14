@@ -17,7 +17,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { NOINDEX, REGISTRY, SOURCE_PAGES } from './pages.mjs'
-import { alternates, catalogFileOf, LANG_TAGS, LANGUAGE_NAMES, LOCALES, loadCatalog, localizePage, localizedFile, ORIGIN, pageRoute, skeleton, skeletonDiff, SOURCE_LOCALE, TRANSLATED_LOCALES, translateMessages } from './locales.mjs'
+import { alternates, applyVideo, catalogFileOf, LANG_TAGS, LANGUAGE_NAMES, LOCALES, loadCatalog, localizePage, localizedFile, ORIGIN, pageRoute, skeleton, skeletonDiff, SOURCE_LOCALE, TRANSLATED_LOCALES, translateMessages } from './locales.mjs'
 import { renderSwitchboardPage } from './switchboard-release.mjs'
 import { PROMPT_FILE, promptText } from './agent-prompt.mjs'
 import { M as SCRIPT_MESSAGES } from '../assets/messages.js'
@@ -138,7 +138,8 @@ export function generate ({ root = ROOT, manifest } = {}) {
     for (const entry of b.unused) problems.push(`i18n/${locale}: unused entry — ${entry}`)
     for (const { sourceFile, file, source, html } of b.pages) {
       if (locale !== SOURCE_LOCALE) {
-        const diff = skeletonDiff(skeleton(source), skeleton(html))
+        // The English page as it will be written: its video twins filled in (applyVideo).
+        const diff = skeletonDiff(skeleton(applyVideo(source, SOURCE_LOCALE)), skeleton(html))
         if (diff) problems.push(`${file}: structure differs from ${sourceFile} at element ${diff.index}: ${diff.source} ≠ ${diff.localized}`)
       }
       files[file] = html

@@ -11,7 +11,6 @@
     "For organizations": "组织",
     "The tools": "工具",
     "About": "关于",
-    "Get the tools": "获取工具",
     "commercial@passioncode.ai": "commercial@passioncode.ai",
     "From vibe coding to passion coding": "从 vibe coding 到 passion coding",
     "Footer navigation": "页脚导航",
@@ -53,9 +52,6 @@
     "Agents line up into one process: one prepares, the next checks, a person approves.": "智能体排成一个流程：一个负责准备，下一个负责检查，最后由人批准。",
     "A team": "团队",
     "An organization": "组织",
-    "A TOOL WE RECOMMEND": "我们推荐的工具",
-    "Agents that finish": "让智能体完成",
-    "what they start": "它们开始的工作",
     "task-pipeline": "task-pipeline",
     ", a separate open-source skill from the": "，一个独立的开源技能，来自",
     "sshlg-skills": "sshlg-skills",
@@ -104,6 +100,10 @@
     "Freebuff": "Freebuff",
     "Read the source": "阅读源代码",
     ".": "。",
-    "X": "X"
+    "X": "X",
+    "Set up": "安装设置",
+    "Investors": "投资者",
+    "Contributors": "参与贡献",
+    "Press": "媒体"
   }
 }

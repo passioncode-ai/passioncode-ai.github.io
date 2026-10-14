@@ -133,6 +133,7 @@
     "Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit.": "Switchboard は、現在ご利用いただけるアカウント管理ツールです。早期プレビュー版の Fabric は、プロジェクトとそのエージェントのための拠点です。どちらも PassionCode のツールキットに含まれます。",
     "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard は Claude Code と Codex のアカウントを管理します。Project Observatory は、それらのエージェントが作業するプロジェクトを把握できる状態に保ちます。Fabric Dashboards は、Mac 上のローカルのエージェントサービスを 1 つのウィンドウに表示します。プロジェクトとそのエージェントのための拠点である Fabric は、早期プレビュー版です。",
     "Built natively on Windows. The installer, the app and the CLI are Authenticode-signed since 0.6.16. The installer includes the CLI.": "Windows 上でネイティブにビルドされています。インストーラー、アプリ、CLI は 0.6.16 から Authenticode 署名済みです。インストーラーには CLI が含まれます。",
-    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "WebView2 を備えた Windows x64。Windows 版は 0.6.16 から Authenticode 署名済みです。"
+    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "WebView2 を備えた Windows x64。Windows 版は 0.6.16 から Authenticode 署名済みです。",
+    "Set up everything with one command": "コマンド1つですべてをセットアップ"
   }
 }

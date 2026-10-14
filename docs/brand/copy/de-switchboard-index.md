@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Download
+Einrichten
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC SWITCHBOARD · VON PASSIONCODE
 Behalte deine Accounts für Claude Code und Codex CLI in einer lokalen Werkbank: Sieh die Nutzung, die jeder meldet, und wähle, welcher Account die nächste Anfrage bearbeitet
 
 IM TOOLKIT Die Accounts: auf welchem Account jeder Agent läuft, mit seinen Nutzungslimits im Blick. Schritt 4 in „So funktioniert es“. Alle Tools
+
+Alles mit einem Befehl einrichten →
 
 Switchboard herunterladen
 
@@ -366,6 +368,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

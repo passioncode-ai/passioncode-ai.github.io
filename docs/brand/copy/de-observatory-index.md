@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Download
+Einrichten
 
 ↓
 
@@ -55,6 +55,8 @@ PROJECT OBSERVATORY · VON PASSIONCODE
 Sieh, was sich in den Projekten deiner Agenten geändert hat und was dich zuerst braucht, auch wo ein bekannter API-Schlüssel eine Kopie hinterlassen hat – in einem lokalen Dashboard auf Englisch oder Russisch
 
 IM TOOLKIT Gedächtnis und Nachweise: was sich in jedem Projekt geändert hat, was entschieden wurde und was Aufmerksamkeit braucht. Schritt 5 in „So funktioniert es“. Alle Tools
+
+Alles mit einem Befehl einrichten →
 
 Loslegen
 
@@ -237,6 +239,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

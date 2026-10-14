@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-获取工具
+安装设置
 
 ↓
 
@@ -52,7 +52,7 @@ Português (Brasil)
 
 搭建一个由智能体干活、你能看到全部过程的工作空间
 
-Fabric 是你的项目及其智能体的家。你的编码智能体可以创建新的智能体，也可以适配你已有的智能体。开源，在你自己的机器上运行，并且免费
+Fabric 是你的项目及其智能体的家。Switchboard、Dashboards、Observatory 和 Inbox 既能与它配合，也能单独使用。现在一条命令就能把它们全部装好
 
 个人使用，免费
 
@@ -79,6 +79,10 @@ Fabric 是你的项目及其智能体的家。你的编码智能体可以创建�
 FABRIC · 你的项目的家
 
 用一分半钟讲清 PassionCode.ai 是什么、为谁而做、如何工作，带旁白和字幕。画面为演示数据；编码智能体的控制台是文字示例
+
+阅读文字稿
+
+你的智能体能正常工作一周。然后一切开始散架。用错了账号。忘了学到的东西。也没人说得清它改了什么。PassionCode.ai是不绑定特定智能体的操作系统，面向 AI 原生团队：一个由智能体干活、你能看到全部过程的工作空间。它运行在你自己的机器上，开源，使用你已有的智能体和订阅。智能体做过的工作，都留下你能打开查看的记录。对你来说，一条命令就能装好 Fabric、它周围的工具和技能，你的编码智能体也能替你运行这条命令。Fabric 目前是预览版，是你的项目及其智能体的家。你的编码智能体会先展示计划，然后再做任何修改。每个工具都能配合 Fabric使用，也能单独使用。Switchboard：每个智能体都用对的账号，额度一目了然。Dashboards：状态、花费和控制，集中在一个窗口。Observatory：发生了什么变化，附带依据。Inbox 目前是预览版：智能体只按你的规则回复邮件。连接到 Fabric 的智能体共享同一项目的看板、记忆和工作交接，一个停下的地方，另一个就能接着做。对组织，我们把智能体部署到组织的机器上并连接起来，展示每个智能体花了多少、交付了什么。智能体容易启动，却难以长期维持。我们正在构建把它们凝聚在一起的东西。
 
 01 / 为什么
 
@@ -110,11 +114,11 @@ FABRIC · 你的项目的家
 
 ### 进入
 
-终端npx @passioncode-ai/passioncode@latest update
+终端npx @passioncode-ai/passioncode@latest setup
 
-一条命令即可把技能（skills）安装到 Claude Code 或 Codex 中。Fabric 是单独的预览版下载。
+PassionCode.ai 启动器的一条命令即可装好各个工具、它们的 MCP 服务器和技能（skills），也可以让你的编码智能体来运行。Fabric 是早期预览版，还需要 Docker 和 Supabase CLI。
 
-安装技能
+开始设置
 
 02
 
@@ -160,7 +164,7 @@ Fabric Dashboards
 
 ### 协同工作，并随时查看
 
-在 Fabric 预览版中，智能体共享同一个项目看板并进行交接；Observatory 展示发生了什么变化，并附有证据。
+连接到 Fabric 的智能体共用一个项目的看板、记忆和交接；Observatory 展示发生了什么变化，并附有证据。
 
 Project Observatory
 
@@ -186,7 +190,9 @@ Project Observatory
 
 ### 你自己的智能体工作空间
 
-用一条命令安装技能，用 Claude Code 或 Codex 构建你的第一个智能体，工作需要哪个工具时再添加哪个。大约二十分钟。
+用一条命令装好工具，再用 Claude Code 或 Codex 构建你的第一个智能体。大约二十分钟。
+
+npx @passioncode-ai/passioncode@latest setup
 
 开始使用
 
@@ -206,7 +212,7 @@ Project Observatory
 
 ## 现在就能使用的工具
 
-每个工具都可以单独使用，步骤说明对应上面的流程。版本号为当前发布版本。
+Fabric 是你的项目及其智能体的家。后面的四个工具既能与 Fabric 配合，也能单独使用。每个工具都标出它在“如何运作”中的步骤，版本号为当前发布版本。
 
 Fabric
 
@@ -219,6 +225,8 @@ Fabric
 · macOS · 步骤 2 和 5
 
 ↗
+
+可配合 Fabric，也可单独使用
 
 Fabric Switchboard
 
@@ -268,18 +276,6 @@ Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智�
 
 ↗
 
-PassionCode.ai 启动器
-
-一条命令安装技能，教智能体用 Fabric 来构建。
-
-CLI
-
-0.2.2
-
-· Node.js 18+ · 步骤 1 和 3
-
-↗
-
 预览版意味着尚未完成：Fabric 处于早期预览，它的对话功能还不能回复；Fabric Inbox 处于开发预览，真实模型的回复尚未验证。每个产品页面在下载前都会列出要求和限制。机器可读的版本信息：/api/releases。
 
 05 / 开源
@@ -302,7 +298,7 @@ PassionCode.ai 免费吗？
 
 它支持哪些智能体？
 
-它不绑定特定智能体。目前 Claude Code、Kilo Code 和 Hermes Agent 可连接 Fabric，Codex 和 Cline 在 Fabric 内运行，更多已在计划中：按层级列出的完整名单。
+它不绑定特定智能体。目前 Claude Code、Codex、Kilo Code、Hermes Agent 和 Kimi Code 可连接 Fabric，Cline 在 Fabric 内运行，更多已在计划中：按层级列出的完整名单。
 
 我的数据会去哪里？
 
@@ -334,6 +330,20 @@ PassionCode.ai 免费吗？
 
 Sergey Sheleg · 联合创始人，PassionCode
 
+### 致投资者
+
+PassionCode.ai 以 GNU AGPL-3.0 开源，个人使用免费。我们为组织提供商业许可和服务。上文介绍的两位联合创始人在打造它。联系：commercial@passioncode.ai
+
+### 致贡献者
+
+每个产品的仓库都是公开的，并写明了测试命令。发现问题就修复，然后提交拉取请求：如何贡献
+
+### 如果你要报道我们
+
+一句话介绍：PassionCode.ai 是面向 AI 原生团队的工具集，以 GNU AGPL-3.0 开源。
+
+视频 · 标志（SVG） · 标志（PNG） · commercial@passioncode.ai
+
 PassionCode
 
 .ai
@@ -359,6 +369,12 @@ Fabric
 GitHub 与源代码
 
 关于
+
+投资者
+
+参与贡献
+
+媒体
 
 设计系统
 

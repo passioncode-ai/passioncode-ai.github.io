@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Download
+Set up
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC · EARLY PREVIEW
 Fabric keeps each project’s purpose, board, decisions and releases on your Mac, for every agent that works on it. We are building it to act as the CEO of your agents
 
 IN THE TOOLKIT The home every agent of a project shares: its purpose, board, decisions and releases. Steps 2 and 5 of how it works. All the tools
+
+Set up everything with one command →
 
 Download for macOS
 
@@ -223,19 +225,55 @@ This is an early preview. You can keep projects, a board of decisions, tasks, go
 
 Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from passioncode.ai/business for use the AGPL doesn’t cover. The 0.3.5 preview is built, signed and notarized in CI from that public source.
 
-PART OF THE SAME TOOLKIT
+WORKS WITH FABRIC
 
-## Switchboard manages the accounts
+## Four tools around the home
 
-The account-management tool runs independently of Fabric.
+## Each also works on its own
 
-Download Switchboard
+Fabric keeps the project. These four tools work with Fabric, and on their own, so you can start with any one of them.
 
-↓
+Fabric Switchboard
 
-Back to the toolkit
+Choose the account each agent runs on, with usage limits in view.
 
 ↗
+
+Fabric Dashboards
+
+Every local agent service in one window, driven by you or by agents.
+
+↗
+
+Project Observatory
+
+What changed in every project, what needs attention, with the evidence.
+
+↗
+
+Fabric Inbox
+
+Gmail and Cloudflare mail in one list, important first; agents answer by policy.
+
+↗
+
+01
+
+AVAILABLE NOW
+
+### One command sets up all of it
+
+On a Mac, the four tools and Fabric (when Docker and the Supabase CLI are there), with their MCP servers and the skills, from verified releases. Run it again later and it checks and repairs.
+
+Set up
+
+02
+
+DIRECTION
+
+### Add a tool from inside Fabric
+
+Choosing and installing the tools without leaving Fabric is where we are building.
 
 PassionCode
 
@@ -262,6 +300,12 @@ Fabric
 GitHub & source
 
 About
+
+Investors
+
+Contributors
+
+Press
 
 Design system
 

@@ -42,9 +42,9 @@ Español
 
 日本語
 
-GitHub
+Configurar
 
-↗
+↓
 
 FABRIC INBOX · PRÉVIA DE DESENVOLVIMENTO
 
@@ -55,6 +55,8 @@ FABRIC INBOX · PRÉVIA DE DESENVOLVIMENTO
 Reúna as caixas do Gmail e da Cloudflare numa só lista, com os e-mails importantes primeiro. Agentes para os seus próprios domínios respondem o que você permite e deixam o resto como rascunho
 
 NO CONJUNTO DE FERRAMENTAS E-mail: os endereços que os agentes leem e respondem dentro da política que você define. É o passo 5 de “Como funciona”. Todas as ferramentas
+
+Configure tudo com um único comando →
 
 Baixar para macOS
 
@@ -290,6 +292,12 @@ Fabric
 GitHub e código-fonte
 
 Sobre
+
+Investidores
+
+Contribuir
+
+Imprensa
 
 Sistema de design
 

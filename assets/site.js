@@ -98,7 +98,24 @@ function promptText (box) {
   return blocks.join('\n\n') + '\n'
 }
 
+// A link to something inside a folded <details> (/start/#fabric, the manual downloads) opens it.
+// Without JavaScript the target is still on the page, one click away.
+function openLinkedDetails () {
+  const open = () => {
+    const id = decodeURIComponent(location.hash.slice(1))
+    const target = id ? document.getElementById(id) : null
+    const details = target?.closest('details')
+    if (details && !details.open) {
+      details.open = true
+      target.scrollIntoView()
+    }
+  }
+  window.addEventListener('hashchange', open)
+  open()
+}
+
 enableReveals()
 headerState()
 copyButtons()
+openLinkedDetails()
 // #endregion site-enhancement

@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode for Enterprise | Espacio de trabajo de agentes de IA para organizaciones | PassionCode.ai
 
-PassionCode for Enterprise vuelve AI-native a una organización: equipos incorporados, agentes desplegados y enrutados entre ellos, claves de modelos que se quedan en cada equipo, lo que costó cada agente y lo que aportó, administración y compilaciones propias firmadas. Tus datos se quedan en tus equipos o en tu propia nube. Pensado para de 1 a 1000 personas.
+PassionCode for Enterprise vuelve AI-native a una organización: equipos incorporados, agentes desplegados y enrutados entre ellos, claves de modelos que se quedan en cada equipo, lo que costó cada agente y lo que aportó, administración y compilaciones propias firmadas. Tus datos se quedan en tus equipos o en tu propia nube. Pensado para desde una persona hasta más de 1000.
 
 Saltar al contenido
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Descargar
+Configurar
 
 ↓
 
@@ -56,11 +56,7 @@ Estimación y solicitud
 
 ↓
 
-Lo que configuramos
-
-↓
-
-Respuesta en dos días hábiles Pensado para de 1 a 1000 personas · la estimación va antes que cualquier contrato
+Respuesta en dos días hábiles Pensado para desde una persona hasta más de 1000 · la estimación va antes que cualquier contrato
 
 01Cuéntanosunas líneas, o tu agente pregunta
 
@@ -101,6 +97,8 @@ AdministraciónQué puede hacer cada agente y a qué cuentas y datos puede acced
 Compilaciones propias, firmadas por nosotrosTu propia compilación de las herramientas, firmada por PassionCode.ai.
 
 Tus datos se quedan en tus equipos o en tu propia nube. Leer la visión
+
+Pruébalo primero en un equipo: setup y después doctor →
 
 02 / PARA FINANZAS E INGENIERÍA
 
@@ -297,6 +295,12 @@ Fabric
 GitHub y código fuente
 
 Acerca de
+
+Inversores
+
+Colaborar
+
+Prensa
 
 Sistema de diseño
 

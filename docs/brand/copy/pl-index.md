@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Pobierz narzędzia
+Skonfiguruj
 
 ↓
 
@@ -52,7 +52,7 @@ Od vibe coding do passion coding
 
 Zbuduj miejsce pracy, w którym pracują agenci, a Ty widzisz wszystko
 
-Fabric to dom dla Twoich projektów i ich agentów. Twój agent kodujący tworzy nowych agentów i dostosowuje tych, których już masz. Otwarty kod, działa na Twoich maszynach, bez opłat
+Fabric to dom dla Twoich projektów i ich agentów. Switchboard, Dashboards, Observatory i Inbox działają razem z nim i samodzielnie. Już dziś wszystko konfiguruje jedno polecenie
 
 Dla Ciebie, bezpłatnie
 
@@ -79,6 +79,10 @@ Twoi agenci
 FABRIC · DOM DLA TWOICH PROJEKTÓW
 
 PassionCode.ai w półtorej minuty: czym jest, dla kogo i jak działa, z narracją i napisami. Ekrany pokazują dane demonstracyjne; konsola agenta kodującego to napisany przykład
+
+Przeczytaj transkrypcję
+
+Twój agent działa przez tydzień. Potem wszystko się rozpada. Niewłaściwe konto. Zapomina, czego się nauczył. I nikt nie potrafi powiedzieć, co zmienił. PassionCode.ai to system operacyjny dla dowolnych agentów w zespołach AI-native: miejsce pracy, w którym pracują agenci, a Ty widzisz wszystko. Działa na Twoich maszynach, jako open source, z agentami i subskrypcjami, które już masz. Ich praca zostawia zapis, który możesz otworzyć. Dla Ciebie jedno polecenie instaluje Fabric, narzędzia wokół niego i skille, a Twój agent kodujący może je uruchomić za Ciebie. Fabric, w wersji zapoznawczej, to dom dla Twoich projektów i ich agentów. Twój agent kodujący pokazuje plan, zanim cokolwiek zmieni. Każde narzędzie działa z Fabric, a także samodzielnie. Switchboard: każdy agent na właściwym koncie, limity na widoku. Dashboards: stan, wydatki i kontrola w jednym oknie. Observatory: co się zmieniło, z dowodami. Inbox, w wersji zapoznawczej: poczta, na którą Twoi agenci odpowiadają tylko według Twoich zasad. Agenci połączeni z Fabric dzielą tablicę, pamięć i przekazania pracy jednego projektu, więc jeden kontynuuje tam, gdzie skończył drugi. Dla organizacji wdrażamy agentów na jej maszynach, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył. Agentów łatwo uruchomić i trudno utrzymać. Budujemy to, co trzyma ich razem.
 
 01 / DLACZEGO
 
@@ -110,11 +114,11 @@ DOSTĘPNE TERAZ
 
 ### Wejście
 
-terminalnpx @passioncode-ai/passioncode@latest update
+terminalnpx @passioncode-ai/passioncode@latest setup
 
-Jedno polecenie instaluje skille w Claude Code lub Codex. Fabric to osobne pobranie, w wersji zapoznawczej.
+Jedno polecenie launchera PassionCode.ai konfiguruje narzędzia, ich serwery MCP i skille, albo zleć je swojemu agentowi kodującemu. Fabric, wczesna wersja zapoznawcza, potrzebuje jeszcze Dockera i Supabase CLI.
 
-Zainstaluj skille
+Skonfiguruj
 
 02
 
@@ -160,7 +164,7 @@ DOSTĘPNE TERAZ, W CZĘŚCI
 
 ### Wspólna praca i podgląd
 
-W wersji zapoznawczej Fabric agenci dzielą tablicę i przekazania projektu; Observatory pokazuje, co się zmieniło, z dowodami.
+Agenci podłączeni do Fabric dzielą tablicę, pamięć i przekazania jednego projektu; Observatory pokazuje, co się zmieniło, z dowodami.
 
 Project Observatory
 
@@ -186,7 +190,9 @@ DLA SIEBIE · BEZPŁATNIE
 
 ### Własna przestrzeń robocza dla agentów
 
-Zainstaluj skille jednym poleceniem, zbuduj pierwszego agenta w Claude Code lub Codex i dodawaj kolejne narzędzia, gdy praca tego zażąda. Około dwudziestu minut.
+Skonfiguruj narzędzia jednym poleceniem, a potem zbuduj pierwszego agenta w Claude Code lub Codex. Około dwudziestu minut.
+
+npx @passioncode-ai/passioncode@latest setup
 
 Zacznij
 
@@ -206,7 +212,7 @@ Szacunek i zapytanie
 
 ## Narzędzia, z których możesz korzystać już dziś
 
-Każde działa samodzielnie, a krok powyżej mówi, gdzie wchodzi do gry. Wersje to bieżące wydania.
+Fabric to dom dla Twoich projektów i ich agentów. Cztery narzędzia za nim działają razem z Fabric i samodzielnie. Każde wskazuje swój krok z sekcji „Jak to działa”, a wersje to bieżące wydania.
 
 Fabric
 
@@ -219,6 +225,8 @@ Wczesna wersja zapoznawcza
 · macOS · kroki 2 i 5
 
 ↗
+
+Działają z Fabric i samodzielnie
 
 Fabric Switchboard
 
@@ -268,18 +276,6 @@ Wersja zapoznawcza w rozwoju
 
 ↗
 
-Launcher PassionCode.ai
-
-Jedna komenda instaluje skille, które uczą agentów budować z Fabric.
-
-CLI
-
-0.2.2
-
-· Node.js 18+ · kroki 1 i 3
-
-↗
-
 Wersja zapoznawcza oznacza niedokończoną: Fabric jest we wczesnej wersji zapoznawczej i jego czat jeszcze nie odpowiada; Fabric Inbox jest w wersji zapoznawczej w rozwoju, a odpowiedzi z prawdziwym modelem nie zostały jeszcze zweryfikowane. Strona każdego produktu podaje wymagania i ograniczenia przed pobraniem. Wersje w formie czytelnej dla maszyn: /api/releases.
 
 05 / OTWARTY KOD
@@ -302,7 +298,7 @@ Tak. Każde narzędzie ma otwarty kod na licencji GNU AGPL-3.0: możesz je bezp�
 
 Z którymi agentami to działa?
 
-Nie jest związany z jednym agentem. Claude Code, Kilo Code i Hermes Agent łączą się z Fabric już dziś, Codex i Cline działają wewnątrz niego, a kolejni są w planach: pełna lista według poziomów.
+Nie jest związany z jednym agentem. Claude Code, Codex, Kilo Code, Hermes Agent i Kimi Code łączą się z Fabric już dziś, Cline działa wewnątrz niego, a kolejni są w planach: pełna lista według poziomów.
 
 Dokąd trafiają moje dane?
 
@@ -334,6 +330,20 @@ Obserwuj na X
 
 Sergey Sheleg · współzałożyciel, PassionCode
 
+### Dla inwestorów
+
+PassionCode.ai to otwarty kod na licencji GNU AGPL-3.0, bezpłatny do użytku osobistego. Organizacje dostają licencję komercyjną i nasze usługi. Tworzą go dwaj współzałożyciele opisani wyżej. Kontakt: commercial@passioncode.ai
+
+### Dla współtwórców
+
+Repozytorium każdego produktu jest publiczne i podaje polecenie testów. Popraw, co znajdziesz, i wyślij pull request: jak współtworzyć
+
+### Jeśli piszesz o nas
+
+W jednym zdaniu: PassionCode.ai to zestaw narzędzi dla zespołów AI-native, otwarty kod na licencji GNU AGPL-3.0.
+
+Wideo · Logo, SVG · Logo, PNG · commercial@passioncode.ai
+
 PassionCode
 
 .ai
@@ -359,6 +369,12 @@ Fabric
 GitHub i kod źródłowy
 
 O projekcie
+
+Inwestorzy
+
+Współtwórcy
+
+Prasa
 
 System projektowy
 

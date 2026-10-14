@@ -1,0 +1,266 @@
+[
+ {
+  "url": "http://127.0.0.1:8790/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/start/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 4,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/fabric/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/business/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/vision/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/fabric/agents/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/design-system/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/dashboards/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/start/#setup"
+ },
+ {
+  "locale": "en",
+  "width": 1440,
+  "transcriptOpen": 1246,
+  "copyLabel": "Copied",
+  "byHandOpen": true,
+  "pairColumns": 2,
+  "promptLabel": "Copied",
+  "errors": []
+ },
+ {
+  "url": "http://127.0.0.1:8790/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/start/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 4,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/fabric/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/business/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/vision/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/fabric/agents/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/design-system/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/dashboards/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/start/#setup"
+ },
+ {
+  "locale": "en",
+  "width": 390,
+  "transcriptOpen": 1246,
+  "copyLabel": "Copied",
+  "byHandOpen": true,
+  "pairColumns": 1,
+  "promptLabel": "Copied",
+  "errors": []
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/start/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 4,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/fabric/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/business/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/vision/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/fabric/agents/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/design-system/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/dashboards/",
+  "width": 1440,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "locale": "ru/",
+  "width": 1440,
+  "transcriptOpen": 1327,
+  "copyLabel": "Скопировано",
+  "byHandOpen": true,
+  "pairColumns": 2,
+  "promptLabel": "Скопировано",
+  "errors": []
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/start/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 4,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/fabric/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/business/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/vision/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 1,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/fabric/agents/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/design-system/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "url": "http://127.0.0.1:8790/ru/dashboards/",
+  "width": 390,
+  "overflow": 0,
+  "copyButtons": 0,
+  "header": "/ru/start/#setup"
+ },
+ {
+  "locale": "ru/",
+  "width": 390,
+  "transcriptOpen": 1327,
+  "copyLabel": "Скопировано",
+  "byHandOpen": true,
+  "pairColumns": 1,
+  "promptLabel": "Скопировано",
+  "errors": []
+ }
+]

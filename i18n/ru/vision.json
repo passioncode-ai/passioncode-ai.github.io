@@ -26,7 +26,6 @@
     "Six stages": "Шесть этапов,",
     "Each one useful on its own": "каждый полезен сам по себе",
     "Your coding agent builds an agent for one job, with a contract, a dashboard and tests.": "Ваш агент для программирования собирает агента для одной задачи — с контрактом, дашбордом и тестами.",
-    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "У агентов, подключённых к Fabric, общие доска, память и передачи работы одного проекта, поэтому один продолжает с того места, где остановился другой.",
     "People join the same loops: each gets a workplace, the agents of their role and what they may do.": "Люди входят в те же циклы: каждый получает рабочее место, агентов для своей роли и свои права.",
     "Agents reach every workplace. People act as the experts who verify agents’ work and build agents of their own, and those agents spread through the network.": "Агенты есть на каждом рабочем месте. Люди становятся экспертами: проверяют работу агентов и собирают собственных, а те расходятся по сети.",
     "QUESTIONS": "ВОПРОСЫ",
@@ -45,11 +44,7 @@
     "Any agent, on your machines": "Любой агент, на ваших машинах",
     "Vendor-neutral, local first and open source under the GNU AGPL-3.0, on top of Claude Code, Codex and what comes next.": "Без привязки к поставщику, локально в первую очередь, открытый код под GNU AGPL-3.0. Работает поверх Claude Code, Codex и того, что появится дальше.",
     "Analytics, never surveillance": "Аналитика, а не слежка",
-    "Inside each change we recommend": "Для работы внутри каждого изменения мы рекомендуем",
-    ", a separate open-source skill that does not move on until each gate passes.": " — отдельный навык (skill) с открытым кодом: он не переходит к следующему этапу, пока не пройдены все проверки.",
-    "How to install it": "Как его установить",
     "03 / THE PATH": "03 / ПУТЬ",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Установите навыки и соберите первого агента или подключите всю организацию: PassionCode for Enterprise в разработке и доступен по запросу.",
     "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "Почему агенты разваливаются, когда их ничто не связывает, четыре принципа, по которым строится PassionCode.ai, и как из одного агента вырастают команда и организация. Локально, с открытым кодом, поверх Claude Code, Codex и того, что появится дальше.",
     "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "Что держит агента в работе, как из одного агента вырастают команда и организация и что работает уже сегодня.",
     "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "Что держит агента в работе, четыре принципа, по которым строится PassionCode.ai, и как из одного агента вырастают команда и организация — у каждого этапа пометка: доступно сейчас или направление.",
@@ -70,6 +65,10 @@
     "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards показывает состояние и расходы каждого агента, инструменты обновляются сами, а Observatory хранит, что изменилось. Агенты, которые присматривают друг за другом, — направление.",
     "How it works, step 6": "Как это работает, шаг 6",
     "Your agents start": "Ваши агенты начинаются",
-    "Sergey Sheleg": "Сергей Шелег"
+    "Sergey Sheleg": "Сергей Шелег",
+    "For the changes your agents make, we recommend": "Для изменений, которые делают ваши агенты, мы рекомендуем",
+    "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": ": он ведёт каждое изменение от брифа до приёмки и не переходит к следующему этапу, пока не пройдены все проверки.",
+    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "У агентов, подключённых к Fabric, общие доска, память и передачи работы одного проекта, поэтому один продолжает с того места, где остановился другой. Fabric — ранняя предварительная версия.",
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Настройте инструменты одной командой и соберите первого агента или подключите всю организацию: PassionCode for Enterprise в разработке и доступен по запросу."
   }
 }

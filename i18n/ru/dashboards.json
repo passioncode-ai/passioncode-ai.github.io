@@ -1,9 +1,7 @@
 {
   "page": "dashboards/index.html",
   "strings": {
-    "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Все локальные сервисы агентов в одном окне",
     "One window for local agent services that speak fabric-service/0.1.": "Одно окно для локальных сервисов агентов, которые поддерживают fabric-service/0.1.",
-    "Download": "Скачать",
     "Your agent services": "Ваши сервисы агентов",
     "One place to look": "Всё в одном месте",
     "Download for macOS ↓": "Скачать для macOS ↓",
@@ -89,6 +87,8 @@
     "Windows and Linux downloads": "Загрузки для Windows и Linux",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Одно окно для ваших локальных сервисов агентов на macOS, Windows и Linux. Смотрите, что требует внимания, открывайте дашборды, а вашим агентам те же инструменты доступны по MCP.",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Все сервисы агентов на вашем компьютере в одном приложении: сверху то, что ждёт вас, а рядом открывается собственный дашборд каждого сервиса",
-    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards находит совместимые сервисы на вашем компьютере. У каждого сервиса остаётся своя задача, а у вас появляется общее место, где можно следить за ними и управлять ими."
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards находит совместимые сервисы на вашем компьютере. У каждого сервиса остаётся своя задача, а у вас появляется общее место, где можно следить за ними и управлять ими.",
+    "Fabric Dashboards | Your local agent services, together | PassionCode.ai": "Fabric Dashboards | Все локальные сервисы агентов в одном окне | PassionCode.ai",
+    "Set up everything with one command": "Всё настраивается одной командой"
   }
 }

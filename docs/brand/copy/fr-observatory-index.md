@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Télécharger
+Installer
 
 ↓
 
@@ -55,6 +55,8 @@ PROJECT OBSERVATORY · PAR PASSIONCODE
 Voyez ce qui a changé dans les projets de vos agents et ce qui vous attend en premier, y compris là où une clé API connue a laissé une copie, dans un tableau de bord local disponible en anglais ou en russe
 
 DANS LA BOÎTE À OUTILS Mémoire et preuves : ce qui a changé dans chaque projet, ce qui a été décidé et ce qui demande votre attention. Étape 5 de « Comment ça marche ». Tous les outils
+
+Tout installer en une commande →
 
 Commencer
 
@@ -237,6 +239,12 @@ Fabric
 GitHub et code source
 
 À propos
+
+Investisseurs
+
+Contribuer
+
+Presse
 
 Système de design
 

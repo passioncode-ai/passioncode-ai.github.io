@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Télécharger
+Installer
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC · PRÉVERSION
 Fabric conserve l’objectif, le tableau, les décisions et les versions de chaque projet sur votre Mac, pour chaque agent qui y travaille. Nous le construisons pour qu’il devienne le CEO de vos agents
 
 DANS LA BOÎTE À OUTILS Le lieu commun à tous les agents d’un projet : son objectif, son tableau, ses décisions et ses versions. Étapes 2 et 5 de « Comment ça marche ». Tous les outils
+
+Tout installer en une commande →
 
 Télécharger pour macOS
 
@@ -223,19 +225,55 @@ Ceci est une préversion. Vous pouvez y tenir des projets, un tableau des décis
 
 Fabric est open source sous licence GNU AGPL-3.0 ; pour les usages que l’AGPL ne couvre pas, une licence commerciale est disponible sur passioncode.ai/business. La préversion 0.3.5 est compilée, signée et notarisée en CI à partir de ce code public.
 
-DANS LA MÊME BOÎTE À OUTILS
+FONCTIONNE AVEC FABRIC
 
-## Switchboard gère les comptes
+## Quatre outils autour du foyer
 
-L’outil de gestion des comptes fonctionne indépendamment de Fabric.
+## Chacun fonctionne aussi seul
 
-Télécharger Switchboard
+Fabric garde le projet. Ces quatre outils fonctionnent avec Fabric, et aussi seuls : vous pouvez commencer par n’importe lequel.
 
-↓
+Fabric Switchboard
 
-Retour à la boîte à outils
+Choisissez le compte sur lequel tourne chaque agent, en gardant les limites d’utilisation sous les yeux.
 
 ↗
+
+Fabric Dashboards
+
+Tous les services d’agents locaux dans une seule fenêtre, pilotés par vous ou par des agents.
+
+↗
+
+Project Observatory
+
+Ce qui a changé dans chaque projet et ce qui demande votre attention, preuves à l’appui.
+
+↗
+
+Fabric Inbox
+
+Le courrier Gmail et Cloudflare dans une seule liste, l’important en premier ; les agents répondent selon vos règles.
+
+↗
+
+01
+
+DISPONIBLE MAINTENANT
+
+### Une commande installe tout
+
+Sur un Mac, les quatre outils et Fabric (quand Docker et la CLI Supabase sont là), avec leurs serveurs MCP et les skills, depuis des publications vérifiées. Relancez-la plus tard : elle vérifie et répare.
+
+Installer
+
+02
+
+ORIENTATION
+
+### Ajouter un outil depuis Fabric
+
+Choisir et installer les outils sans quitter Fabric : c’est ce que nous construisons.
 
 PassionCode
 
@@ -262,6 +300,12 @@ Fabric
 GitHub et code source
 
 À propos
+
+Investisseurs
+
+Contribuer
+
+Presse
 
 Système de design
 

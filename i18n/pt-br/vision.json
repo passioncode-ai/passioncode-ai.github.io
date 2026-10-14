@@ -26,7 +26,6 @@
     "Six stages": "Seis etapas,",
     "Each one useful on its own": "cada uma útil por si só",
     "Your coding agent builds an agent for one job, with a contract, a dashboard and tests.": "Seu agente de programação cria um agente para uma tarefa, com contrato, painel e testes.",
-    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "Agentes conectados ao Fabric compartilham o quadro, a memória e as passagens de bastão de um projeto, e assim um continua de onde o outro parou.",
     "People join the same loops: each gets a workplace, the agents of their role and what they may do.": "As pessoas entram nos mesmos ciclos: cada uma recebe um ambiente de trabalho, os agentes do seu papel e o que pode fazer.",
     "Agents reach every workplace. People act as the experts who verify agents’ work and build agents of their own, and those agents spread through the network.": "Os agentes chegam a todos os ambientes de trabalho. As pessoas atuam como especialistas que verificam o trabalho dos agentes e constroem agentes próprios, e esses agentes se espalham pela rede.",
     "QUESTIONS": "PERGUNTAS",
@@ -45,11 +44,7 @@
     "Any agent, on your machines": "Qualquer agente, nas suas máquinas",
     "Vendor-neutral, local first and open source under the GNU AGPL-3.0, on top of Claude Code, Codex and what comes next.": "Neutro quanto a fornecedores, local primeiro e de código aberto sob a GNU AGPL-3.0, por cima do Claude Code, do Codex e do que vier depois.",
     "Analytics, never surveillance": "Análises, nunca vigilância",
-    "Inside each change we recommend": "Dentro de cada mudança, recomendamos o",
-    ", a separate open-source skill that does not move on until each gate passes.": ", uma skill de código aberto separada que não avança até que cada verificação seja aprovada.",
-    "How to install it": "Como instalá-lo",
     "03 / THE PATH": "03 / O CAMINHO",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Instale as skills e crie o primeiro agente, ou leve junto uma organização inteira: o PassionCode for Enterprise está em desenvolvimento e é oferecido sob solicitação.",
     "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "Por que os agentes desandam quando nada os mantém unidos, os quatro princípios com que a PassionCode.ai constrói e como um agente cresce até virar uma equipe e uma organização. Local primeiro, código aberto, por cima do Claude Code, do Codex e do que vier depois.",
     "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "O que mantém um agente funcionando, como um agente cresce até virar uma equipe e uma organização, e o que funciona hoje.",
     "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "O que mantém um agente funcionando, os quatro princípios com que a PassionCode.ai constrói e como um agente cresce até virar uma equipe e uma organização, cada etapa marcada como disponível agora ou direção.",
@@ -70,6 +65,10 @@
     "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "O Dashboards mostra o estado e os gastos de cada agente, as ferramentas se atualizam sozinhas e o Observatory guarda o que mudou. Agentes que cuidam uns dos outros são a direção.",
     "How it works, step 6": "Como funciona, passo 6",
     "Your agents start": "Seus agentes começam",
-    "Sergey Sheleg": "Sergey Sheleg"
+    "Sergey Sheleg": "Sergey Sheleg",
+    "For the changes your agents make, we recommend": "Para as mudanças que seus agentes fazem, recomendamos a",
+    "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": ": ela leva cada mudança do brief até a aceitação e não avança até que cada verificação seja aprovada.",
+    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "Agentes conectados ao Fabric compartilham o quadro, a memória e as passagens de trabalho de um projeto, e assim um continua de onde o outro parou. O Fabric é uma prévia inicial.",
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Configure as ferramentas com um único comando e crie o primeiro agente, ou leve junto uma organização inteira: o PassionCode for Enterprise está em desenvolvimento e é oferecido sob solicitação."
   }
 }

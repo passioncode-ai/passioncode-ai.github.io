@@ -19,7 +19,7 @@
     "start/index.html": [
       "Docker と Supabase CLI",
       "まだ応答しません",
-      "npx @passioncode-ai/passioncode@latest update",
+      "npx @passioncode-ai/passioncode@latest setup",
       "href=\"/fabric/download/macos\""
     ],
     "fabric/index.html": [

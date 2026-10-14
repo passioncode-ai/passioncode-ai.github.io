@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Pobierz narzędzia
+Skonfiguruj
 
 ↓
 
@@ -85,6 +85,12 @@ Fabric
 GitHub i kod źródłowy
 
 O projekcie
+
+Inwestorzy
+
+Współtwórcy
+
+Prasa
 
 System projektowy
 

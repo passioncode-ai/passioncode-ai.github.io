@@ -16,7 +16,7 @@
       "상용 라이선스"
     ],
     "start/index.html": [
-      "npx @passioncode-ai/passioncode@latest update",
+      "npx @passioncode-ai/passioncode@latest setup",
       "Docker와 Supabase CLI",
       "아직 응답하지 않습니다",
       "href=\"/fabric/download/macos\""

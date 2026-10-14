@@ -16,7 +16,7 @@
       "больше 57 миллионов установок"
     ],
     "start/index.html": [
-      "npx @passioncode-ai/passioncode@latest update",
+      "npx @passioncode-ai/passioncode@latest setup",
       "Docker и Supabase CLI",
       "пока не отвечает",
       "href=\"/fabric/download/macos\""

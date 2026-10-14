@@ -11,11 +11,9 @@
     "The tools are free and open source. You pay for the work we do for you (mapping, building, hosting, support) and a commercial license where you need one. The proposal names the price after we understand the processes; there is no fixed package.": "Narzędzia są darmowe i mają otwarty kod. Płacisz za naszą pracę dla Ciebie (mapowanie, budowanie, hosting, wsparcie) oraz za licencję komercyjną, jeśli jej potrzebujesz. Cenę podajemy w propozycji, gdy zrozumiemy Twoje procesy; nie ma stałego pakietu.",
     "When do we need a commercial license?": "Kiedy potrzebujemy licencji komercyjnej?",
     "The tools are under the GNU AGPL-3.0. Internal use, and changes you publish under the same license, need nothing. A closed product that includes them, or a modified hosted service whose source you do not publish, needs a commercial license.": "Narzędzia są na licencji GNU AGPL-3.0. Użycie wewnętrzne oraz zmiany publikowane na tej samej licencji niczego nie wymagają. Zamknięty produkt, który je zawiera, albo zmodyfikowana usługa hostowana, której kodu nie publikujecie, wymaga licencji komercyjnej.",
-    "Get the tools": "Pobierz narzędzia",
     "Enterprise · for organizations": "Enterprise · dla organizacji",
     "Estimate and request": "Szacunek i zapytanie",
     "Reply within two business days": "Odpowiadamy w ciągu dwóch dni roboczych",
-    "Designed for 1 to 1000 people · the estimate comes before any contract": "Zaprojektowane dla 1 do 1000 osób · szacunek przychodzi przed jakąkolwiek umową",
     "How a request turns into a workplace": "Jak zapytanie staje się miejscem pracy",
     "Tell us": "Opowiedz nam",
     "Estimate": "Szacunek",
@@ -53,7 +51,6 @@
     "Send request": "Wyślij zapytanie",
     "Prefer email? Write to": "Wolisz e-mail? Napisz na",
     "Before you ask": "Zanim zapytasz",
-    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for 1 to 1000 people.": "Agenci na komputerach Twojej organizacji, połączeni i widoczni, na narzędziach o otwartym kodzie, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze. Dla zespołów od 1 do 1000 osób.",
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "Zmiana organizacji w AI-native na otwartych narzędziach PassionCode.ai: podłączanie komputerów, wdrażanie agentów i przekazywanie pracy między nimi, dostęp do modeli przez lokalnego agenta każdego komputera, analityka aktywności i użycia, administracja, własne kompilacje podpisane przez PassionCode.ai oraz licencja komercyjna tam, gdzie jest potrzebna. W rozwoju, dostępne na zapytanie.",
     "Make your organization": "Uczyń swoją organizację",
     "AI-native": "AI-native",
@@ -77,7 +74,6 @@
     "Your own build of the tools, signed by PassionCode.ai.": "Twoja własna kompilacja narzędzi, podpisana przez PassionCode.ai.",
     "Your data stays on your machines or in your own cloud.": "Twoje dane zostają na Twoich komputerach albo w Twojej chmurze.",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "Godziny, które Twój zespół co miesiąc spędza na tych procesach, razy część, którą agenci realistycznie mogą przejąć, razy koszt Twojej godziny pracy.",
-    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for 1 to 1000 people.": "PassionCode for Enterprise robi z organizacji organizację AI-native: komputery podłączone, agenci wdrożeni i przekazujący sobie pracę między komputerami, klucze modeli zostają na każdym komputerze, ile kosztował każdy agent i co dostarczył, administracja i własne podpisane kompilacje. Dane zostają na Twoich komputerach albo w Twojej chmurze. Dla zespołów od 1 do 1000 osób.",
     "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, on open-source tools, with your data on your machines or in your own cloud": "Agent, który żyje na laptopie jednej osoby, pomaga jednej osobie. Wprowadzamy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył, na narzędziach o otwartym kodzie, z Twoimi danymi na Twoich komputerach albo w Twojej własnej chmurze",
     "02 / FOR FINANCE AND ENGINEERING": "02 / DLA FINANSÓW I INŻYNIERII",
     "One view of what agents cost": "Jeden widok tego, ile kosztują agenci",
@@ -132,6 +128,10 @@
     "We built it for our own teams first": "Najpierw zbudowaliśmy to dla własnych zespołów",
     "PassionCode has two co-founders, and we both run teams: Sergey Sheleg, co-founder and CPO of Nicegram, and Serge Khurs, co-founder and CTO of Teslasuit.": "PassionCode ma dwóch współzałożycieli i obaj kierujemy zespołami: Sergey Sheleg, współzałożyciel i CPO Nicegram, oraz Serge Khurs, współzałożyciel i CTO Teslasuit.",
     "We built this setup for ourselves, and it runs our own work today. Now we bring it to your organization: we connect it to your systems and help you bring in agents that run your processes.": "Zbudowaliśmy ten układ dla siebie i dziś opiera się na nim nasza własna praca. Teraz wnosimy go do Twojej organizacji: podłączamy go do Twoich systemów i pomagamy Ci wdrożyć agentów, którzy prowadzą Twoje procesy.",
-    "How we got here": "Jak do tego doszliśmy"
+    "How we got here": "Jak do tego doszliśmy",
+    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise robi z organizacji organizację AI-native: komputery podłączone, agenci wdrożeni i przekazujący sobie pracę między komputerami, klucze modeli zostają na każdym komputerze, ile kosztował każdy agent i co dostarczył, administracja i własne podpisane kompilacje. Dane zostają na Twoich komputerach albo w Twojej chmurze. Dla zespołów od jednej osoby do ponad 1000.",
+    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "Agenci na komputerach Twojej organizacji, połączeni i widoczni, na narzędziach o otwartym kodzie, a Twoje dane zostają na Twoich komputerach albo w Twojej chmurze. Dla zespołów od jednej osoby do ponad 1000.",
+    "Designed for one person to more than 1,000 · the estimate comes before any contract": "Dla zespołów od jednej osoby do ponad 1000 · szacunek przychodzi przed jakąkolwiek umową",
+    "Try it on one machine first: setup, then doctor": "Najpierw wypróbuj na jednym komputerze: setup, potem doctor"
   }
 }

@@ -50,16 +50,30 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "PassionCode.ai 免费吗？", "acceptedAnswer": { "@type": "Answer", "text": "免费。所有工具都基于 GNU AGPL-3.0 开源：你可以免费下载、使用、研究和修改。如果你要把它放进闭源产品，或运行修改后的托管服务而不公开其源代码，可以申请商业许可证。" } },
-    { "@type": "Question", "name": "它支持哪些智能体？", "acceptedAnswer": { "@type": "Answer", "text": "它不绑定任何一个智能体。Claude Code、Kilo Code 和 Hermes Agent 目前已接入 Fabric，Codex 和 Cline 在其中运行，更多智能体已在计划中。" } },
+    { "@type": "Question", "name": "它支持哪些智能体？", "acceptedAnswer": { "@type": "Answer", "text": "它不绑定任何一个智能体。Claude Code、Codex、Kilo Code、Hermes Agent 和 Kimi Code 目前已接入 Fabric，Cline 在其中运行，更多智能体已在计划中。" } },
     { "@type": "Question", "name": "我的数据会去哪里？", "acceptedAnswer": { "@type": "Answer", "text": "你的工作留在你自己的电脑和你自己的云账号上。Fabric Switchboard 以及自 0.3.2 版起的 Fabric 会发送匿名使用计数：只有次数和类别，绝不包含名称、路径或内容。你可以在 Switchboard 的“关于”窗口或 Fabric 的“设置”中关闭。" } }
   ]
+}</script>
+  <!-- The home video's structured data (SITE-045): contentUrl, thumbnailUrl, duration and inLanguage are written by npm run locales from the player's own files (scripts/locales.mjs applyVideo). -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://passioncode.ai/#video",
+  "name": "PassionCode.ai 介绍",
+  "description": "介绍 PassionCode.ai 是什么、为谁而做、如何工作，带旁白和字幕。画面为演示数据。",
+  "thumbnailUrl": "https://passioncode.ai/assets/video/home.jpg",
+  "contentUrl": "https://passioncode.ai/assets/video/home.mp4",
+  "duration": "PT1M32S",
+  "inLanguage": "en",
+  "uploadDate": "2026-10-14",
+  "publisher": { "@id": "https://passioncode.ai/#organization" }
 }</script>
 </head>
 <body class="story-site"><a class="skip-link" href="#main">跳到正文</a>
 <header class="site-header">
  <a class="brand" href="/zh-hans/" aria-label="PassionCode.ai 首页"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a>
  <nav aria-label="主导航"><a href="/zh-hans/vision/">愿景</a><a href="/zh-hans/start/">个人</a><a href="/zh-hans/business/">组织</a><a href="/zh-hans/#products">工具</a><a href="/zh-hans/#about">关于</a></nav>
- <div class="header-actions"><details class="lang-switch lang-menu"><summary aria-label="语言: 简体中文"><span lang="zh-Hans">简体中文</span></summary><ul><li><a href="/" hreflang="en" lang="en">English</a></li><li><a href="/ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li></ul></details><a class="header-link header-download" href="/zh-hans/#products">获取工具 <span aria-hidden="true">↓</span></a></div>
+ <div class="header-actions"><details class="lang-switch lang-menu"><summary aria-label="语言: 简体中文"><span lang="zh-Hans">简体中文</span></summary><ul><li><a href="/" hreflang="en" lang="en">English</a></li><li><a href="/ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li></ul></details><a class="header-link header-download" href="/zh-hans/start/#setup">安装设置 <span aria-hidden="true">↓</span></a></div>
 </header>
 <main id="main">
 <section class="hero home-hero" aria-labelledby="hero-title">
@@ -67,7 +81,7 @@
   <p class="eyebrow"><span></span> 从 vibe coding 到 passion coding</p>
   <h1 id="hero-title">不绑定特定智能体的操作系统，面向 <em>AI 原生团队</em></h1>
   <p class="hero-reframe">搭建一个由智能体干活、你能看到全部过程的工作空间</p>
-  <p class="hero-body">Fabric 是你的项目及其智能体的家。你的编码智能体可以创建新的智能体，也可以适配你已有的智能体。开源，在你自己的机器上运行，并且免费</p>
+  <p class="hero-body">Fabric 是你的项目及其智能体的家。Switchboard、Dashboards、Observatory 和 Inbox 既能与它配合，也能单独使用。现在一条命令就能把它们全部装好</p>
   <div class="hero-actions"><a class="button button-primary" href="/zh-hans/start/">个人使用，免费 <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/zh-hans/business/">面向你的组织 <span aria-hidden="true">↗</span></a></div>
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> 基于 AGPL-3.0 开源 <span>Fabric <span data-live="fabric.version">0.3.5</span> · Switchboard <span data-live="switchboard.version">0.6.31</span> · Dashboards <span data-live="dashboards.version">0.7.9</span> · Observatory <span data-live="observatory.version">0.24.4</span></span></p>
  </div>
@@ -94,6 +108,7 @@
   <track kind="captions" src="/assets/video/home-zh-hans.vtt" srclang="zh-Hans" label="字幕" default>
  </video>
  <figcaption id="video-note">用一分半钟讲清 PassionCode.ai 是什么、为谁而做、如何工作，带旁白和字幕。画面为演示数据；编码智能体的控制台是文字示例</figcaption>
+ <details class="video-transcript"><summary>阅读文字稿</summary><!-- video-transcript: written by npm run locales from the captions file the player names (scripts/locales.mjs applyVideo); edit the captions, never this text --><p>你的智能体能正常工作一周。然后一切开始散架。用错了账号。忘了学到的东西。也没人说得清它改了什么。PassionCode.ai是不绑定特定智能体的操作系统，面向 AI 原生团队：一个由智能体干活、你能看到全部过程的工作空间。它运行在你自己的机器上，开源，使用你已有的智能体和订阅。智能体做过的工作，都留下你能打开查看的记录。对你来说，一条命令就能装好 Fabric、它周围的工具和技能，你的编码智能体也能替你运行这条命令。Fabric 目前是预览版，是你的项目及其智能体的家。你的编码智能体会先展示计划，然后再做任何修改。每个工具都能配合 Fabric使用，也能单独使用。Switchboard：每个智能体都用对的账号，额度一目了然。Dashboards：状态、花费和控制，集中在一个窗口。Observatory：发生了什么变化，附带依据。Inbox 目前是预览版：智能体只按你的规则回复邮件。连接到 Fabric 的智能体共享同一项目的看板、记忆和工作交接，一个停下的地方，另一个就能接着做。对组织，我们把智能体部署到组织的机器上并连接起来，展示每个智能体花了多少、交付了什么。智能体容易启动，却难以长期维持。我们正在构建把它们凝聚在一起的东西。</p><!-- /video-transcript --></details>
 </figure>
 
 <section class="section" id="why" aria-labelledby="why-title">
@@ -108,13 +123,14 @@
 </section>
 
 <section class="section journey" id="how" aria-labelledby="how-title">
+ <span id="launcher" class="legacy-anchor" aria-hidden="true"></span>
  <div class="section-heading story-heading"><p class="section-number">02 / 工作原理</p><h2 id="how-title">从一条命令开始<br>到协同工作的智能体</h2><p>六个步骤，按使用顺序排列。每一步都会说明：现已可用、预览版，还是发展方向。</p></div>
  <ol class="work-cycle path-cycle journey-steps">
-  <li class="reveal"><span class="cycle-number">01</span><p class="availability">现已可用</p><h3>进入</h3><p class="step-prompt"><span>终端</span><code>npx @passioncode-ai/passioncode@latest update</code></p><p>一条命令即可把技能（skills）安装到 Claude Code 或 Codex 中。Fabric 是单独的预览版下载。</p><a href="/zh-hans/start/#launcher">安装技能</a></li>
+  <li class="reveal"><span class="cycle-number">01</span><p class="availability">现已可用</p><h3>进入</h3><p class="step-prompt"><span>终端</span><code>npx @passioncode-ai/passioncode@latest setup</code></p><p>PassionCode.ai 启动器的一条命令即可装好各个工具、它们的 MCP 服务器和技能（skills），也可以让你的编码智能体来运行。Fabric 是早期预览版，还需要 Docker 和 Supabase CLI。</p><a href="/zh-hans/start/#setup">开始设置</a></li>
   <li class="reveal"><span class="cycle-number">02</span><p class="availability">预览版</p><h3>接入</h3><figure class="product-screenshot"><img src="/assets/journey-2-2.jpg" width="1280" height="800" loading="lazy" alt="Fabric 首次运行，第 3 步（共 3 步）：创建智能体或适配在其他位置构建的智能体，打开项目或创建项目。合成演示数据。"></figure><p class="step-prompt"><span>智能体</span>创建一个，或适配在别处构建的智能体</p><p class="step-prompt"><span>项目</span>打开一个文件夹，或创建一个项目</p><p>Fabric 的首屏提供四个操作，分成两组。</p><a href="/zh-hans/fabric/">Fabric 目前能做什么</a></li>
   <li class="reveal"><span class="cycle-number">03</span><p class="availability">现已可用</p><h3>第一个智能体</h3><figure class="product-screenshot"><img src="/assets/journey-3-3.jpg" width="1280" height="800" loading="lazy" alt="Fabric 在点击「创建」后打开的编码智能体控制台：它正在询问 release-notes-agent 的六个入门问题中的第二个。这是一个文字示例，而非录屏。"></figure><p class="step-prompt"><span>新建</span>创建一个 Fabric 智能体，根据已合并的 pull request 起草版本说明</p><p class="step-prompt"><span>适配</span>让此仓库适配 Fabric</p><p>你的编码智能体会先提出问题、展示计划，然后再做任何修改。</p><a href="/zh-hans/start/#build">创建或适配一个智能体</a></li>
   <li class="reveal"><span class="cycle-number">04</span><p class="availability">现已可用</p><h3>扩展</h3><figure class="product-screenshot"><img src="/assets/dashboards-overview.jpg" width="1600" height="844" loading="lazy" alt="Fabric Dashboards 概览：六个示例智能体服务，其中两个需要关注。合成演示数据。"></figure><p>每个智能体都运行在它应该使用的账号上，看板和花费集中在一个窗口里。</p><a href="/zh-hans/dashboards/">Fabric Dashboards</a></li>
-  <li class="reveal"><span class="cycle-number">05</span><p class="availability">部分现已可用</p><h3>协同工作，并随时查看</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="Fabric 看板：智能体卡住的问题，以及等待审阅的结果，每项都标明所属项目和负责人。合成演示数据。"></figure><p>在 Fabric 预览版中，智能体共享同一个项目看板并进行交接；Observatory 展示发生了什么变化，并附有证据。</p><a href="/zh-hans/observatory/">Project Observatory</a></li>
+  <li class="reveal"><span class="cycle-number">05</span><p class="availability">部分现已可用</p><h3>协同工作，并随时查看</h3><figure class="product-screenshot"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="Fabric 看板：智能体卡住的问题，以及等待审阅的结果，每项都标明所属项目和负责人。合成演示数据。"></figure><p>连接到 Fabric 的智能体共用一个项目的看板、记忆和交接；Observatory 展示发生了什么变化，并附有证据。</p><a href="/zh-hans/observatory/">Project Observatory</a></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">发展方向</p><h3>组织</h3><p class="step-prompt"><span>企业</span>按角色部署智能体，工作在你的多台机器之间流转</p><p>同样的能力会覆盖团队的多台机器；我们正在构建，目前可按需提供。</p><a href="/zh-hans/business/">面向你的组织</a></li>
  </ol>
 </section>
@@ -123,21 +139,21 @@
  <span id="companies" class="legacy-anchor" aria-hidden="true"></span>
  <div class="section-heading story-heading"><p class="section-number">03 / 两种进入方式</p><h2 id="paths-title">为你自己，<br>或为你的组织</h2></div>
  <div class="path-grid path-grid-two">
-  <article class="path-card reveal"><p class="availability">个人使用 · 免费</p><h3>你自己的智能体工作空间</h3><p>用一条命令安装技能，用 Claude Code 或 Codex 构建你的第一个智能体，工作需要哪个工具时再添加哪个。大约二十分钟。</p><a class="button button-primary" href="/zh-hans/start/">开始使用 <span aria-hidden="true">→</span></a></article>
+  <article class="path-card reveal"><p class="availability">个人使用 · 免费</p><h3>你自己的智能体工作空间</h3><p>用一条命令装好工具，再用 Claude Code 或 Codex 构建你的第一个智能体。大约二十分钟。</p><pre class="copyable"><code>npx @passioncode-ai/passioncode@latest setup</code></pre><a class="button button-primary" href="/zh-hans/start/">开始使用 <span aria-hidden="true">→</span></a></article>
   <article class="path-card path-card-commercial reveal"><p class="availability">组织 · ENTERPRISE</p><h3>AI 原生组织</h3><p>我们把智能体带到你组织的机器上，把它们连接起来，让你看到每个智能体花了多少、交付了什么；数据留在你自己的机器或你自己的云上。</p><a class="button button-primary" href="/zh-hans/business/">估算并提交申请 <span aria-hidden="true">→</span></a></article>
  </div>
 </section>
 
 <section class="section product-directory" id="products" aria-labelledby="products-title">
- <span id="extend" class="legacy-anchor" aria-hidden="true"></span><span id="launcher" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading"><p class="section-number">04 / 工具</p><h2 id="products-title">现在就能使用的工具</h2><p>每个工具都可以单独使用，步骤说明对应上面的流程。版本号为当前发布版本。</p></div>
- <div class="tool-directory">
-  <a class="tool-choice reveal" href="/zh-hans/fabric/"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric</strong><span>你的项目及其智能体的家：每个项目的目标、看板、决策和版本发布。</span><small>早期预览版 <span data-live="fabric.version">0.3.5</span> · macOS · 步骤 2 和 5</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+ <span id="extend" class="legacy-anchor" aria-hidden="true"></span>
+ <div class="section-heading"><p class="section-number">04 / 工具</p><h2 id="products-title">现在就能使用的工具</h2><p>Fabric 是你的项目及其智能体的家。后面的四个工具既能与 Fabric 配合，也能单独使用。每个工具都标出它在“如何运作”中的步骤，版本号为当前发布版本。</p></div>
+ <div class="tool-directory tool-directory-four">
+  <a class="tool-choice tool-choice-home reveal" href="/zh-hans/fabric/"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric</strong><span>你的项目及其智能体的家：每个项目的目标、看板、决策和版本发布。</span><small>早期预览版 <span data-live="fabric.version">0.3.5</span> · macOS · 步骤 2 和 5</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
+  <p class="tool-directory-label">可配合 Fabric，也可单独使用</p>
   <a class="tool-choice reveal" href="/zh-hans/switchboard/"><img src="/assets/switchboard-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Switchboard</strong><span>选择每个智能体运行所用的账号，并随时看到用量限制。</span><small>版本 <span data-live="switchboard.version">0.6.31</span> · macOS + Windows · 步骤 4</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
   <a class="tool-choice reveal" href="/zh-hans/dashboards/"><img src="/assets/dashboards-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Dashboards</strong><span>在一个窗口里查看每个本地智能体服务，由你或智能体来操作。</span><small>版本 <span data-live="dashboards.version">0.7.9</span> · macOS + Windows + Linux · 步骤 4</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
   <a class="tool-choice reveal" href="/zh-hans/observatory/"><img src="/assets/observatory-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Project Observatory</strong><span>每个项目发生了什么变化、什么需要关注，都附有证据。</span><small>版本 <span data-live="observatory.version">0.24.4</span> · macOS + Windows + Linux · 步骤 5</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
   <a class="tool-choice reveal" href="/zh-hans/inbox/"><img src="/assets/inbox-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric Inbox</strong><span>Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智能体按策略回复。</span><small>开发预览版 <span data-live="inbox.version">0.17.0</span> · macOS + Windows + Linux · 步骤 5</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-  <a class="tool-choice reveal" href="/zh-hans/start/#launcher"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>PassionCode.ai 启动器</strong><span>一条命令安装技能，教智能体用 Fabric 来构建。</span><small>CLI <span data-live="launcher.version">0.2.2</span> · Node.js 18+ · 步骤 1 和 3</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
  </div>
  <p class="section-note">预览版意味着尚未完成：Fabric 处于早期预览，它的对话功能还不能回复；Fabric Inbox 处于开发预览，真实模型的回复尚未验证。每个产品页面在下载前都会列出要求和限制。机器可读的版本信息：<a href="/api/releases">/api/releases</a>。</p>
 </section>
@@ -151,14 +167,14 @@
 <section class="section faq" id="faq" aria-labelledby="faq-title">
  <div class="section-heading"><p class="section-number">06 / 常见问题</p><h2 id="faq-title">人们最先问的问题</h2></div>
  <details><summary>PassionCode.ai 免费吗？</summary><p>免费。所有工具都基于 GNU AGPL-3.0 开源：你可以免费下载、使用、研究和修改。如果你要把它放进闭源产品，或运行修改后的托管服务而不公开其源代码，可以申请商业许可证。</p></details>
- <details><summary>它支持哪些智能体？</summary><p>它不绑定特定智能体。目前 Claude Code、Kilo Code 和 Hermes Agent 可连接 Fabric，Codex 和 Cline 在 Fabric 内运行，更多已在计划中：<a href="/zh-hans/fabric/agents/">按层级列出的完整名单</a>。</p></details>
+ <details><summary>它支持哪些智能体？</summary><p>它不绑定特定智能体。目前 Claude Code、Codex、Kilo Code、Hermes Agent 和 Kimi Code 可连接 Fabric，Cline 在 Fabric 内运行，更多已在计划中：<a href="/zh-hans/fabric/agents/">按层级列出的完整名单</a>。</p></details>
  <details><summary>我的数据会去哪里？</summary><p>你的工作留在你自己的电脑和你自己的云账号上。Fabric Switchboard 以及自 0.3.2 版起的 Fabric 会发送匿名使用计数：只有次数和类别，绝不包含名称、路径或内容。你可以在 Switchboard 的“关于”窗口或 Fabric 的“设置”中关闭。<a href="/zh-hans/privacy/">具体发送了什么</a>。</p></details>
 </section>
 
-<section class="section about-section" id="about" aria-labelledby="about-title"><div><p class="section-number">关于</p><h2 id="about-title">我们怎么走到这里的</h2></div><div class="about-copy"><p class="about-lead">我是 Sergey Sheleg，Nicegram 的联合创始人兼 CPO。Nicegram 是一款 Telegram 第三方客户端，安装量超过 5700 万。同时我也是 eSIM Plus 的联合创始人。在此之前，我在 Ultimate Guitar 负责 Android 和增长产品，他们的应用触达超过 3.5 亿人。我的工作横跨产品、增长、营销、AI 和区块链。</p><p>我在 PassionCode 的联合创始人是 Serge Khurs，他是 Teslasuit 的联合创始人兼 CTO。Teslasuit 是一套全身套装，集成触觉反馈、肌肉电刺激、传感器和动作追踪，应用于医疗、训练、工业和国防领域。现在他为大型国际数字公司提供 AI 和后端系统方面的工程咨询。</p><p>我们两个人都带团队，起步方式也一样：先为自己的智能体搭建工作空间。我们不断试验，摸索出工作空间应该怎么组织，持续调优内部流程，把多年积累的技术和产品经验融进去。</p><p>慢慢地，它变成了一套面向 AI 原生智能体团队的方案：工作空间长什么样，智能体系统怎么搭建，怎么嵌入组织。我们把它做成了软件，让每次运行结果一致。今天它就在跑我们自己的工作。</p><p>后来我们发现，需要它的不止我们两个人：任何和 AI 智能体打交道的人，无论是做开发、营销、财务、广告，还是任何可以自动化的重复工作，都用得上。这套软件会根据工作来调整，所以我们把它开源了。装上它，改造你的工作空间，让它变成智能体驱动的，然后用 Claude Code 本该有的方式去用它。</p><p>在我们的团队里，同一个问题反复出现。人们把任务的一部分丢给聊天窗口，拿到结果再交回给人，流程却一点没变。真正要改变的，是流程。</p><p>这就是我们为组织做的事。如果你想让智能体在真实的业务流程中接管重复工作，我们把 PassionCode 接入你的系统，帮你引入定制智能体来跑这些流程。<a href="/zh-hans/business/#request">告诉我们你的流程 <span aria-hidden="true">→</span></a></p><p>它基于 GNU AGPL-3.0 开源，个人使用免费；AGPL 未涵盖的使用方式，可通过商业许可证获得授权。</p><a class="button button-secondary" href="https://x.com/sshlg93">在 X 上关注 <span aria-hidden="true">↗</span></a><p class="author-signature">Sergey Sheleg · 联合创始人，PassionCode</p></div></section>
+<section class="section about-section" id="about" aria-labelledby="about-title"><div><p class="section-number">关于</p><h2 id="about-title">我们怎么走到这里的</h2></div><div class="about-copy"><p class="about-lead">我是 Sergey Sheleg，Nicegram 的联合创始人兼 CPO。Nicegram 是一款 Telegram 第三方客户端，安装量超过 5700 万。同时我也是 eSIM Plus 的联合创始人。在此之前，我在 Ultimate Guitar 负责 Android 和增长产品，他们的应用触达超过 3.5 亿人。我的工作横跨产品、增长、营销、AI 和区块链。</p><p>我在 PassionCode 的联合创始人是 Serge Khurs，他是 Teslasuit 的联合创始人兼 CTO。Teslasuit 是一套全身套装，集成触觉反馈、肌肉电刺激、传感器和动作追踪，应用于医疗、训练、工业和国防领域。现在他为大型国际数字公司提供 AI 和后端系统方面的工程咨询。</p><p>我们两个人都带团队，起步方式也一样：先为自己的智能体搭建工作空间。我们不断试验，摸索出工作空间应该怎么组织，持续调优内部流程，把多年积累的技术和产品经验融进去。</p><p>慢慢地，它变成了一套面向 AI 原生智能体团队的方案：工作空间长什么样，智能体系统怎么搭建，怎么嵌入组织。我们把它做成了软件，让每次运行结果一致。今天它就在跑我们自己的工作。</p><p>后来我们发现，需要它的不止我们两个人：任何和 AI 智能体打交道的人，无论是做开发、营销、财务、广告，还是任何可以自动化的重复工作，都用得上。这套软件会根据工作来调整，所以我们把它开源了。装上它，改造你的工作空间，让它变成智能体驱动的，然后用 Claude Code 本该有的方式去用它。</p><p>在我们的团队里，同一个问题反复出现。人们把任务的一部分丢给聊天窗口，拿到结果再交回给人，流程却一点没变。真正要改变的，是流程。</p><p>这就是我们为组织做的事。如果你想让智能体在真实的业务流程中接管重复工作，我们把 PassionCode 接入你的系统，帮你引入定制智能体来跑这些流程。<a href="/zh-hans/business/#request">告诉我们你的流程 <span aria-hidden="true">→</span></a></p><p>它基于 GNU AGPL-3.0 开源，个人使用免费；AGPL 未涵盖的使用方式，可通过商业许可证获得授权。</p><a class="button button-secondary" href="https://x.com/sshlg93">在 X 上关注 <span aria-hidden="true">↗</span></a><p class="author-signature">Sergey Sheleg · 联合创始人，PassionCode</p><div class="about-doors"><div class="about-door" id="investors"><h3>致投资者</h3><p>PassionCode.ai 以 GNU AGPL-3.0 开源，个人使用免费。我们为组织提供商业许可和服务。上文介绍的两位联合创始人在打造它。联系：<a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a></p></div><div class="about-door" id="contributors"><h3>致贡献者</h3><p>每个产品的仓库都是公开的，并写明了测试命令。发现问题就修复，然后提交拉取请求：<a href="/zh-hans/start/#contribute">如何贡献</a></p></div><div class="about-door" id="press"><h3>如果你要报道我们</h3><p>一句话介绍：PassionCode.ai 是面向 AI 原生团队的工具集，以 GNU AGPL-3.0 开源。</p><p class="about-door-links"><a href="/zh-hans/#video">视频</a> · <a href="/assets/passioncode-mark.svg">标志（SVG）</a> · <a href="/assets/icon-1024.png">标志（PNG）</a> · <a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a></p></div></div></div></section>
 </main>
 <footer class="story-footer">
  <div><a class="brand footer-brand" href="/zh-hans/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>从 vibe coding 到 passion coding</p></div>
- <nav aria-label="页脚导航"><a href="/zh-hans/start/">开始使用</a><a href="/zh-hans/vision/">愿景</a><a href="/zh-hans/business/">组织</a><a href="/zh-hans/switchboard/">Switchboard</a><a href="/zh-hans/observatory/">Observatory</a><a href="/zh-hans/inbox/">Inbox</a><a href="/zh-hans/dashboards/">Dashboards</a><a href="/zh-hans/fabric/">Fabric</a><a href="/zh-hans/#source">GitHub 与源代码</a><a href="/zh-hans/#about">关于</a><a href="/zh-hans/design-system/">设计系统</a><a href="/zh-hans/privacy/">隐私</a><a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a><a href="https://x.com/sshlg93">X <span aria-hidden="true">↗</span></a></nav>
+ <nav aria-label="页脚导航"><a href="/zh-hans/start/">开始使用</a><a href="/zh-hans/vision/">愿景</a><a href="/zh-hans/business/">组织</a><a href="/zh-hans/switchboard/">Switchboard</a><a href="/zh-hans/observatory/">Observatory</a><a href="/zh-hans/inbox/">Inbox</a><a href="/zh-hans/dashboards/">Dashboards</a><a href="/zh-hans/fabric/">Fabric</a><a href="/zh-hans/#source">GitHub 与源代码</a><a href="/zh-hans/#about">关于</a><a href="/zh-hans/#investors">投资者</a><a href="/zh-hans/#contributors">参与贡献</a><a href="/zh-hans/#press">媒体</a><a href="/zh-hans/design-system/">设计系统</a><a href="/zh-hans/privacy/">隐私</a><a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a><a href="https://x.com/sshlg93">X <span aria-hidden="true">↗</span></a></nav>
 </footer>
 </body></html>

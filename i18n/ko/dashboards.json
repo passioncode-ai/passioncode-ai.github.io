@@ -1,11 +1,9 @@
 {
   "page": "dashboards/index.html",
   "strings": {
-    "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | 로컬 에이전트 서비스를 한곳에서",
     "PassionCode.ai passion fruit mark": "PassionCode.ai 패션프루트 마크",
     "Fabric Dashboards": "Fabric Dashboards",
     "One window for local agent services that speak fabric-service/0.1.": "fabric-service/0.1을 쓰는 로컬 에이전트 서비스를 위한 하나의 창입니다.",
-    "Download": "다운로드",
     "Your agent services": "내 에이전트 서비스",
     "One place to look": "한곳에서 확인",
     "Download for macOS ↓": "macOS용 다운로드 ↓",
@@ -96,6 +94,8 @@
     "Windows and Linux downloads": "Windows와 Linux 다운로드",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "macOS, Windows, Linux의 로컬 에이전트 서비스를 하나의 창에서 봅니다. 확인이 필요한 항목을 보고, 대시보드를 열고, 에이전트가 MCP로 같은 도구를 사용하게 할 수 있습니다.",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "내 컴퓨터의 모든 에이전트 서비스를 하나의 앱에서 보세요. 내 확인이 필요한 것이 먼저 보이고, 각 서비스의 대시보드가 바로 옆에 열립니다",
-    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards는 내 컴퓨터에서 호환되는 서비스를 찾아냅니다. 각 서비스는 자기 역할을 그대로 유지하고, 사용자는 서비스를 함께 점검하고 제어할 공용 공간을 얻습니다."
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards는 내 컴퓨터에서 호환되는 서비스를 찾아냅니다. 각 서비스는 자기 역할을 그대로 유지하고, 사용자는 서비스를 함께 점검하고 제어할 공용 공간을 얻습니다.",
+    "Fabric Dashboards | Your local agent services, together | PassionCode.ai": "Fabric Dashboards | 로컬 에이전트 서비스를 한곳에서 | PassionCode.ai",
+    "Set up everything with one command": "명령 하나로 모두 설정하기"
   }
 }

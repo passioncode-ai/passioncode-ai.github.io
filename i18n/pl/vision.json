@@ -5,7 +5,6 @@
     "The PassionCode.ai vision": "Wizja PassionCode.ai",
     "From one agent to an AI-native organization": "Od jednego agenta do organizacji AI-native",
     "Does PassionCode.ai replace Claude Code or Codex?": "Czy PassionCode.ai zastępuje Claude Code albo Codex?",
-    "Get the tools": "Pobierz narzędzia",
     "The vision · as of October 2026": "Wizja · stan na październik 2026",
     "From one agent to an": "Od jednego agenta do",
     "AI-native organization": "organizacji AI-native",
@@ -30,7 +29,6 @@
     "One agent": "Jeden agent",
     "Your coding agent builds an agent for one job, with a contract, a dashboard and tests.": "Twój agent do kodowania buduje agenta do jednego zadania, z kontraktem, dashboardem i testami.",
     "Two agents that talk": "Dwa agenty, które ze sobą rozmawiają",
-    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "Agenty podłączone do Fabric dzielą tablicę, pamięć i przekazania jednego projektu, więc jeden podejmuje pracę tam, gdzie skończył drugi.",
     "DIRECTION": "KIERUNEK",
     "A chain": "Łańcuch",
     "Agents line up into one process: one prepares, the next checks, a person approves.": "Agenty układają się w jeden proces: jeden przygotowuje, następny sprawdza, człowiek zatwierdza.",
@@ -58,11 +56,7 @@
     "Any agent, on your machines": "Dowolny agent, na Twoich komputerach",
     "Vendor-neutral, local first and open source under the GNU AGPL-3.0, on top of Claude Code, Codex and what comes next.": "Niezależne od dostawców, lokalne w pierwszej kolejności, z otwartym kodem na licencji GNU AGPL-3.0, na bazie Claude Code, Codex i tego, co przyjdzie potem.",
     "Analytics, never surveillance": "Analityka, nigdy inwigilacja",
-    "Inside each change we recommend": "Do pilnowania porządku w każdej zmianie polecamy",
-    ", a separate open-source skill that does not move on until each gate passes.": ", odrębny skill na otwartym kodzie, który nie idzie dalej, dopóki nie przejdzie każda kontrola.",
-    "How to install it": "Jak go zainstalować",
     "03 / THE PATH": "03 / DROGA",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Zainstaluj skille i zbuduj pierwszego agenta albo weź ze sobą całą organizację: PassionCode for Enterprise jest w rozwoju i dostępny na zapytanie.",
     "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "Dlaczego agenci się rozsypują, gdy nic ich nie spina, cztery zasady, według których powstaje PassionCode.ai, i jak jeden agent rozrasta się w zespół i organizację. Lokalnie w pierwszej kolejności, otwarty kod, na bazie Claude Code, Codex i tego, co przyjdzie potem.",
     "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "Co sprawia, że agent dalej działa, jak jeden agent rozrasta się w zespół i organizację i co działa już dziś.",
     "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "Co sprawia, że agent dalej działa, cztery zasady, według których powstaje PassionCode.ai, i jak jeden agent rozrasta się w zespół i organizację, a każdy etap jest oznaczony jako dostępny teraz albo kierunek.",
@@ -83,6 +77,14 @@
     "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards pokazuje stan i wydatki każdego agenta, narzędzia aktualizują się same, a Observatory przechowuje to, co się zmieniło. Agenci, którzy pilnują siebie nawzajem, to kierunek.",
     "How it works, step 6": "Jak to działa, krok 6",
     "Your agents start": "Twoi agenci startują",
-    "Sergey Sheleg": "Sergey Sheleg"
+    "Sergey Sheleg": "Sergey Sheleg",
+    "For the changes your agents make, we recommend": "Do zmian wprowadzanych przez Twoich agentów polecamy",
+    ", a separate open-source skill from the": ", odrębny skill na otwartym kodzie z kolekcji",
+    "sshlg-skills": "sshlg-skills",
+    "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": ": prowadzi każdą zmianę od zlecenia do odbioru i nie idzie dalej, dopóki nie przejdzie każda kontrola.",
+    "task-pipeline on GitHub": "task-pipeline na GitHubie",
+    "· it is not part of PassionCode.ai and needs nothing from it": "· nie jest częścią PassionCode.ai i niczego od niego nie wymaga",
+    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "Agenci podłączeni do Fabric dzielą tablicę, pamięć i przekazania jednego projektu, więc jeden podejmuje pracę tam, gdzie skończył drugi. Fabric to wczesna wersja zapoznawcza.",
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Skonfiguruj narzędzia jednym poleceniem i zbuduj pierwszego agenta albo weź ze sobą całą organizację: PassionCode for Enterprise jest w rozwoju i dostępny na zapytanie."
   }
 }

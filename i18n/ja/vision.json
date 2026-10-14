@@ -24,7 +24,6 @@
     "Six stages": "6つの段階。",
     "Each one useful on its own": "それぞれ単独で役立ちます",
     "Your coding agent builds an agent for one job, with a contract, a dashboard and tests.": "コーディングエージェントが、1つの仕事のためのエージェントを、コントラクト、ダッシュボード、テストとともに作ります。",
-    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "Fabric につながったエージェントは、1つのプロジェクトのボード、メモリ、引き継ぎを共有するので、1つのエージェントが止めたところから別のエージェントが続けられます。",
     "People join the same loops: each gets a workplace, the agents of their role and what they may do.": "人も同じループに加わります。それぞれがワークプレースと、自分の役割のエージェント、そしてできることの範囲を持ちます。",
     "Agents reach every workplace. People act as the experts who verify agents’ work and build agents of their own, and those agents spread through the network.": "エージェントはすべてのワークプレースに行き渡ります。人は、エージェントの仕事を検証し、自分のエージェントも作る専門家として働き、そのエージェントがネットワークを通じて広がります。",
     "QUESTIONS": "よくある質問",
@@ -43,11 +42,7 @@
     "Any agent, on your machines": "どのエージェントでも、お使いのマシンで",
     "Vendor-neutral, local first and open source under the GNU AGPL-3.0, on top of Claude Code, Codex and what comes next.": "ベンダー中立でローカルファースト、GNU AGPL-3.0 のオープンソースで、Claude Code や Codex、そしてその先のツールの上で動きます。",
     "Analytics, never surveillance": "分析であって、監視ではない",
-    "Inside each change we recommend": "各変更の中では、",
-    ", a separate open-source skill that does not move on until each gate passes.": "をおすすめします。これは独立したオープンソースのスキルで、各ゲートを通過するまで次へ進みません。",
-    "How to install it": "インストール方法",
     "03 / THE PATH": "03 / 道筋",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "スキルをインストールして最初のエージェントを作るか、組織ごと進めることもできます。PassionCode for Enterprise は開発中で、ご依頼に応じて提供します。",
     "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "支える仕組みがないとエージェントが崩れていく理由、PassionCode.ai が拠りどころとする4つの原則、そして1つのエージェントがチーム、組織へと育つ道筋を紹介します。ローカルファースト、オープンソースで、Claude Code や Codex、そしてその先のツールの上で動きます。",
     "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "エージェントが働き続けるために必要なもの、1つのエージェントがチーム、組織へと育つ道筋、そして今日使えるもの。",
     "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "エージェントが働き続けるために必要なもの、PassionCode.ai が拠りどころとする4つの原則、そして1つのエージェントがチーム、組織へと育つ道筋を紹介します。各段階には、今日使えるものか、目指す方向かを示しています。",
@@ -68,6 +63,10 @@
     "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards が各エージェントの状態と支出を示し、ツールは自動で更新され、Observatory が変更を記録します。エージェント同士が見守り合うことは、これから目指す方向です。",
     "How it works, step 6": "使い方：ステップ6",
     "Your agents start": "エージェントは、",
-    "Sergey Sheleg": "Sergey Sheleg"
+    "Sergey Sheleg": "Sergey Sheleg",
+    "For the changes your agents make, we recommend": "エージェントが加える変更には、",
+    "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "コレクションに含まれます。ブリーフから受け入れまで各変更を運び、各ゲートを通過するまで次へ進みません。",
+    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "Fabric につながったエージェントは、1つのプロジェクトのボード、メモリ、引き継ぎを共有するので、1つのエージェントが止めたところから別のエージェントが続けられます。Fabric は早期プレビューです。",
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "コマンド1つでツールをセットアップして最初のエージェントを作るか、組織ごと進めることもできます。PassionCode for Enterprise は開発中で、ご依頼に応じて提供します。"
   }
 }

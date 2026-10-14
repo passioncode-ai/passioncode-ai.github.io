@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from ko/design-system/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode 디자인 시스템 | 하나의 패밀리, 공통의 언어
+PassionCode 디자인 시스템 | 모든 도구, 공통의 언어
 
 PassionCode와 Switchboard의 시각 언어입니다. 어두운 표면, 노란색 액션, 제품 마크, 재사용 가능한 디자인 토큰을 담았습니다.
 
@@ -42,17 +42,17 @@ Português (Brasil)
 
 日本語
 
-다운로드
+설정하기
 
 ↓
 
 PASSIONCODE / 디자인 시스템 1.1
 
-# 하나의 패밀리
+# 모든 도구
 
 # 공통의 언어
 
-공통 색상 역할이 어두운 팔레트와 밝은 팔레트를 이어 주고, 노란색은 다음 액션을 강조합니다. 각 제품은 자기만의 마크를 패밀리의 패션프루트와 함께 씁니다
+공통 색상 역할이 어두운 팔레트와 밝은 팔레트를 이어 주고, 노란색은 다음 액션을 강조합니다. 각 제품은 자기만의 마크를 툴킷 공통의 패션프루트와 함께 씁니다
 
 CSS 토큰 받기
 
@@ -64,7 +64,7 @@ CSS 토큰 받기
 
 01 / 아이덴티티
 
-## 닮은 가족
+## 모든 도구에 하나의 모습
 
 PassionCode · 모 브랜드
 
@@ -159,6 +159,12 @@ Fabric
 GitHub 및 소스 코드
 
 소개
+
+투자자
+
+기여하기
+
+언론
 
 디자인 시스템
 

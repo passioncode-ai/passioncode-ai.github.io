@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Download
+Set up
 
 ↓
 
@@ -55,6 +55,8 @@ PROJECT OBSERVATORY · BY PASSIONCODE
 See what changed across your agents’ projects and what needs you first, including where a known API key left a copy, in a local dashboard available in English or Russian
 
 IN THE TOOLKIT Memory and evidence: what changed in each project, what was decided and what needs attention. Step 5 of how it works. All the tools
+
+Set up everything with one command →
 
 Get started
 
@@ -237,6 +239,12 @@ Fabric
 GitHub & source
 
 About
+
+Investors
+
+Contributors
+
+Press
 
 Design system
 

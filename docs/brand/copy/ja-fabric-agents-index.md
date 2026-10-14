@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabricが対応するコーディングエージェント | Fabric | PassionCode.ai
 
-2026年10月8日時点で、Fabric 0.3.2はClaude Code、Kilo Code、Hermes Agentと連携します。CodexとClineはFabricのツールなしでFabric内で動作し、さらに5つのエージェントが計画の次にあります。
+2026年10月14日時点で、Fabric 0.3.5はClaude Code、Codex、Kilo Code、Hermes Agent、Kimi Codeと連携します。ClineはFabricのツールなしでFabric内で動作し、さらに5つのエージェントが計画の次にあります。
 
 本文へスキップ
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 简体中文
 
-ダウンロード
+セットアップ
 
 ↓
 
@@ -54,9 +54,9 @@ FABRIC · 対応コーディングエージェント
 
 Fabricがプロジェクト内で起動できるエージェント、そのうちFabric独自のツールを使えるもの、これから対応するもの
 
-基準日：2026年10月8日 · リリース版アプリはFabric 0.3.2です
+基準日：2026年10月14日 · リリース版アプリはFabric 0.3.5です
 
-リリース版アプリでは、Fabricは次のエージェントと連携します。Claude Code, Kilo Code および Hermes Agent。プロジェクトのターミナルでエージェントを起動し、そのセッションの間、Fabricのツールを渡します。Codex および Cline はFabric内で動作しますが、Fabricのツールはまだ使えません。さらに5つのエージェントが計画の次にあり、その後に下に挙げたエージェントが続きます。Fabric Switchboardは、Claude CodeとCodexのサブスクリプションアカウントと、その他のエージェントのAPIキーアカウントをSwitchboard経由で切り替えます。
+リリース版アプリでは、Fabricは次のエージェントと連携します。Claude Code, Codex, Kilo Code, Hermes Agent および Kimi Code。プロジェクトのターミナルでエージェントを起動し、そのセッションの間、Fabricのツールを渡します。Cline はFabric内で動作しますが、Fabricのツールはまだ使えません。さらに5つのエージェントが計画の次にあり、その後に下に挙げたエージェントが続きます。Fabric Switchboardは、Claude CodeとCodexのサブスクリプションアカウントと、その他のエージェントのAPIキーアカウントをSwitchboard経由で切り替えます。
 
 01 / 「対応」の意味
 
@@ -90,9 +90,9 @@ Fabricはプロジェクトのフォルダでエージェントを起動する�
 
 ## セッション用のFabricのツール
 
-Claude Code、Kilo Code、Hermes Agentの3つで、いずれもリリース版アプリで利用できます。
+Claude Code、Codex、Kilo Code、Hermes Agent、Kimi Codeの5つで、いずれもリリース版アプリで利用できます。
 
-連携済みのエージェント（2026年10月8日時点）
+連携済みのエージェント（2026年10月14日時点）
 
 エージェント
 
@@ -106,6 +106,12 @@ claude.com
 
 リリース済み（Fabric 0.3）
 
+Codex
+
+github.com/openai/codex
+
+リリース済み（Fabric 0.3.5）
+
 Kilo Code
 
 kilo.ai
@@ -118,7 +124,13 @@ hermes-agent.nousresearch.com
 
 リリース済み（Fabric 0.3.2）
 
-Kilo Codeはセッション設定をKILO_CONFIG_CONTENT変数から読み込み、プロジェクト自身のkilo.jsonでは上書きできません。この動作は2026年10月5日にKilo 7.4.17で確認しました。Hermes Agentはオープンな Agent Client Protocol で接続します。Fabricがセッションを開き、ローカルのブリッジ経由でFabricのツールを渡します。こちらも同日にHermes 0.21.4で確認しました。Hermesは、応答する前に、自身のセットアップでモデルを選んでおく必要があります。
+Kimi Code
+
+kimi.com
+
+リリース済み（Fabric 0.3.5）
+
+Kilo Codeはセッション設定をKILO_CONFIG_CONTENT変数から読み込み、プロジェクト自身のkilo.jsonでは上書きできません。この動作は2026年10月5日にKilo 7.4.17で確認しました。Hermes Agentはオープンな Agent Client Protocol で接続します。Fabricがセッションを開き、ローカルのブリッジ経由でFabricのツールを渡します。こちらも同日にHermes 0.21.4で確認しました。Hermesは、応答する前に、自身のセットアップでモデルを選んでおく必要があります。Fabric 0.3.5以降、Kimi Codeも同じプロトコルで接続します。また、Fabricが起動するCodexのセッションは、そのセッション専用のホームを持ちます。ご自身のCodexの設定は読み込みませんが、プロジェクト自身のAGENTS.mdは引き続き適用されます。
 
 03 / FABRIC内で動作
 
@@ -128,19 +140,13 @@ Kilo Codeはセッション設定をKILO_CONFIG_CONTENT変数から読み込み�
 
 Fabricはプロジェクトフォルダでエージェントを起動します。エージェントはそこでFabricのツールなしで作業します。
 
-Fabric内で動作するエージェント（2026年10月8日時点）
+Fabric内で動作するエージェント（2026年10月14日時点）
 
 エージェント
 
 公式サイト
 
 現在の状況
-
-Codex
-
-github.com/openai/codex
-
-プロジェクトフォルダで動作、Fabricのツールはまだなし
 
 Cline
 
@@ -156,7 +162,7 @@ cline.bot
 
 次の5つをまとめて対応し、最後の9つは個別に判断します。いずれもFabricのツールはまだ使えません。
 
-計画中のコーディングエージェント（順序つき、2026年10月8日時点）
+計画中のコーディングエージェント（順序つき、2026年10月14日時点）
 
 エージェント
 
@@ -252,7 +258,7 @@ opencode.ai
 
 Zed、ZCode、Proto、CodeGPT、Freebuff、HackerAIは、他のプログラムから起動できないデスクトップアプリとエディタです。代わりにFabricのローカルハブのクライアントになれます。それぞれに専用の手順を文書化する必要があり、その手順は計画中で、まだ書かれていません。
 
-計画中のデスクトップアプリとエディタ（2026年10月8日時点）
+計画中のデスクトップアプリとエディタ（2026年10月14日時点）
 
 アプリ
 
@@ -353,6 +359,12 @@ Fabric
 GitHub とソース
 
 概要
+
+投資家の方へ
+
+コントリビュート
+
+報道関係の方へ
 
 デザインシステム
 

@@ -17,7 +17,7 @@
       "商业许可证"
     ],
     "start/index.html": [
-      "npx @passioncode-ai/passioncode@latest update",
+      "npx @passioncode-ai/passioncode@latest setup",
       "Docker 和 Supabase CLI",
       "还不会回复",
       "href=\"/fabric/download/macos\""

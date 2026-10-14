@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric 支持的编码智能体 | Fabric | PassionCode.ai
 
-截至 2026 年 10 月 8 日，Fabric 0.3.2 已连接 Claude Code、Kilo Code 和 Hermes Agent；Codex 和 Cline 可在 Fabric 中运行，但没有 Fabric 的工具；计划中接下来还有五个智能体。
+截至 2026 年 10 月 14 日，Fabric 0.3.5 已连接 Claude Code、Codex、Kilo Code、Hermes Agent 和 Kimi Code；Cline 可在 Fabric 中运行，但没有 Fabric 的工具；计划中接下来还有五个智能体。
 
 跳到正文
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-下载
+安装设置
 
 ↓
 
@@ -54,9 +54,9 @@ FABRIC · 受支持的编码智能体
 
 Fabric 能在你的项目里启动哪些智能体，其中哪些能用上 Fabric 自己的工具，以及接下来是哪些
 
-截至 2026 年 10 月 8 日 · 已发布的应用为 Fabric 0.3.2
+截至 2026 年 10 月 14 日 · 已发布的应用为 Fabric 0.3.5
 
-在已发布的应用中，Fabric 已连接 Claude Code, Kilo Code 和 Hermes Agent：它在项目的终端里启动智能体，并在该会话期间为其提供 Fabric 的工具。Codex 和 Cline 可在 Fabric 中运行，但还没有 Fabric 的工具。计划中接下来还有五个智能体，再往后是下面列出的其余智能体。Fabric Switchboard 为 Claude Code 和 Codex 切换订阅账号，其他智能体的 API 密钥账号则通过 Switchboard 切换。
+在已发布的应用中，Fabric 已连接 Claude Code, Codex, Kilo Code, Hermes Agent 和 Kimi Code：它在项目的终端里启动智能体，并在该会话期间为其提供 Fabric 的工具。Cline 可在 Fabric 中运行，但还没有 Fabric 的工具。计划中接下来还有五个智能体，再往后是下面列出的其余智能体。Fabric Switchboard 为 Claude Code 和 Codex 切换订阅账号，其他智能体的 API 密钥账号则通过 Switchboard 切换。
 
 01 / “支持”是什么意思
 
@@ -90,9 +90,9 @@ Fabric 在项目的文件夹中启动智能体，所以它处理的是该项目�
 
 ## 会话期间可用 Fabric 的工具
 
-Claude Code、Kilo Code 和 Hermes Agent，三个都已在发布的应用中。
+Claude Code、Codex、Kilo Code、Hermes Agent 和 Kimi Code，五个都已在发布的应用中。
 
-已连接的智能体，截至 2026 年 10 月 8 日
+已连接的智能体，截至 2026 年 10 月 14 日
 
 智能体
 
@@ -106,6 +106,12 @@ claude.com
 
 已发布，在 Fabric 0.3 中
 
+Codex
+
+github.com/openai/codex
+
+已发布，在 Fabric 0.3.5 中
+
 Kilo Code
 
 kilo.ai
@@ -118,7 +124,13 @@ hermes-agent.nousresearch.com
 
 已发布，在 Fabric 0.3.2 中
 
-Kilo Code 从其 KILO_CONFIG_CONTENT 变量读取会话设置，项目自身的 kilo.json 无法覆盖这些设置。我们于 2026 年 10 月 5 日在 Kilo 7.4.17 上验证了这一点。Hermes Agent 通过开放的 Agent Client Protocol 连接：Fabric 打开它的会话，并通过本地桥接把 Fabric 的工具交给它，同一天在 Hermes 0.21.4 上验证。Hermes 需要先在它自己的设置中选好模型，才能回答。
+Kimi Code
+
+kimi.com
+
+已发布，在 Fabric 0.3.5 中
+
+Kilo Code 从其 KILO_CONFIG_CONTENT 变量读取会话设置，项目自身的 kilo.json 无法覆盖这些设置。我们于 2026 年 10 月 5 日在 Kilo 7.4.17 上验证了这一点。Hermes Agent 通过开放的 Agent Client Protocol 连接：Fabric 打开它的会话，并通过本地桥接把 Fabric 的工具交给它，同一天在 Hermes 0.21.4 上验证。Hermes 需要先在它自己的设置中选好模型，才能回答。自 Fabric 0.3.5 起，Kimi Code 也通过同一协议连接；Fabric 启动的 Codex 会话会获得该会话专用的主目录：它不会读取你自己的 Codex 设置，而项目自己的 AGENTS.md 仍然适用。
 
 03 / 在 FABRIC 中运行
 
@@ -128,19 +140,13 @@ Kilo Code 从其 KILO_CONFIG_CONTENT 变量读取会话设置，项目自身的 
 
 Fabric 在项目文件夹中启动智能体。它在那里工作，但没有 Fabric 的工具。
 
-在 Fabric 中运行的智能体，截至 2026 年 10 月 8 日
+在 Fabric 中运行的智能体，截至 2026 年 10 月 14 日
 
 智能体
 
 官方网站
 
 当前状态
-
-Codex
-
-github.com/openai/codex
-
-在项目文件夹中运行，暂无 Fabric 的工具
 
 Cline
 
@@ -156,7 +162,7 @@ cline.bot
 
 接下来五个作为一组，最后九个我们逐个判断。它们都还没有 Fabric 的工具。
 
-计划中的编码智能体，按顺序，截至 2026 年 10 月 8 日
+计划中的编码智能体，按顺序，截至 2026 年 10 月 14 日
 
 智能体
 
@@ -252,7 +258,7 @@ opencode.ai
 
 Zed、ZCode、Proto、CodeGPT、Freebuff 和 HackerAI 是其他程序无法启动的桌面应用和编辑器。它们可以改为作为 Fabric 本地中枢的客户端。每一个都需要有各自记录在案的接入说明，这些说明已列入计划，尚未编写。
 
-计划中的桌面应用和编辑器，截至 2026 年 10 月 8 日
+计划中的桌面应用和编辑器，截至 2026 年 10 月 14 日
 
 应用
 
@@ -353,6 +359,12 @@ Fabric
 GitHub 与源代码
 
 关于
+
+投资者
+
+参与贡献
+
+媒体
 
 设计系统
 

@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from ko/dashboards/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Dashboards | 로컬 에이전트 서비스를 한곳에서
+Fabric Dashboards | 로컬 에이전트 서비스를 한곳에서 | PassionCode.ai
 
 macOS, Windows, Linux의 로컬 에이전트 서비스를 하나의 창에서 봅니다. 확인이 필요한 항목을 보고, 대시보드를 열고, 에이전트가 MCP로 같은 도구를 사용하게 할 수 있습니다.
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-다운로드
+설정하기
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 내 컴퓨터의 모든 에이전트 서비스를 하나의 앱에서 보세요. 내 확인이 필요한 것이 먼저 보이고, 각 서비스의 대시보드가 바로 옆에 열립니다
 
 툴킷 안에서 상태, 지출, 제어: 모든 에이전트 서비스가 무엇을 하고 얼마를 쓰는지, 업데이트까지 한 창에서 봅니다. 작동 방식의 4단계입니다. 모든 도구
+
+명령 하나로 모두 설정하기 →
 
 macOS용 다운로드 ↓
 
@@ -223,6 +225,12 @@ Fabric
 GitHub 및 소스 코드
 
 소개
+
+투자자
+
+기여하기
+
+언론
 
 디자인 시스템
 

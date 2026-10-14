@@ -42,9 +42,9 @@ Português (Brasil)
 
 日本語
 
-GitHub
+Installer
 
-↗
+↓
 
 FABRIC INBOX · PRÉVERSION DE DÉVELOPPEMENT
 
@@ -55,6 +55,8 @@ FABRIC INBOX · PRÉVERSION DE DÉVELOPPEMENT
 Réunissez vos boîtes Gmail et Cloudflare dans une seule liste, le courrier important en premier. Des agents sur vos propres domaines répondent à ce que vous autorisez et laissent le reste en brouillon
 
 DANS LA BOÎTE À OUTILS Courrier : les adresses que les agents lisent et auxquelles ils répondent selon la politique que vous définissez. Étape 5 de « Comment ça marche ». Tous les outils
+
+Tout installer en une commande →
 
 Télécharger pour macOS
 
@@ -290,6 +292,12 @@ Fabric
 GitHub et code source
 
 À propos
+
+Investisseurs
+
+Contribuer
+
+Presse
 
 Système de design
 

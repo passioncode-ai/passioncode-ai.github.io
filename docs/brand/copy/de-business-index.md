@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode for Enterprise | Arbeitsplatz für KI-Agenten für Organisationen | PassionCode.ai
 
-PassionCode for Enterprise macht eine Organisation AI-native: Rechner angebunden, Agenten ausgerollt und zwischen ihnen vermittelt, Modellschlüssel auf jedem Rechner behalten, was jeder Agent gekostet und was er geliefert hat, Administration und eigene signierte Builds. Deine Daten bleiben auf deinen Rechnern oder in deiner eigenen Cloud. Ausgelegt für 1 bis 1000 Personen.
+PassionCode for Enterprise macht eine Organisation AI-native: Rechner angebunden, Agenten ausgerollt und zwischen ihnen vermittelt, Modellschlüssel auf jedem Rechner behalten, was jeder Agent gekostet und was er geliefert hat, Administration und eigene signierte Builds. Deine Daten bleiben auf deinen Rechnern oder in deiner eigenen Cloud. Ausgelegt für eine Person bis mehr als 1000.
 
 Zum Inhalt springen
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Tools herunterladen
+Einrichten
 
 ↓
 
@@ -56,11 +56,7 @@ Schätzung und Anfrage
 
 ↓
 
-Was wir einrichten
-
-↓
-
-Antwort innerhalb von zwei Werktagen Ausgelegt für 1 bis 1000 Personen · die Schätzung kommt vor jedem Vertrag
+Antwort innerhalb von zwei Werktagen Ausgelegt für eine Person bis mehr als 1000 · die Schätzung kommt vor jedem Vertrag
 
 01Erzähl es unsein paar Zeilen, oder dein Agent fragt
 
@@ -101,6 +97,8 @@ AdministrationWas jeder Agent darf und auf welche Accounts und Daten er zugreife
 Eigene Builds, von uns signiertDein eigener Build der Tools, signiert von PassionCode.ai.
 
 Deine Daten bleiben auf deinen Rechnern oder in deiner eigenen Cloud. Lies die Vision
+
+Probier es zuerst auf einem Rechner aus: setup, dann doctor →
 
 02 / FÜR FINANZEN UND ENGINEERING
 
@@ -297,6 +295,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

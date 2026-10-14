@@ -1,9 +1,7 @@
 {
   "page": "dashboards/index.html",
   "strings": {
-    "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Deine lokalen Agentendienste an einem Ort",
     "One window for local agent services that speak fabric-service/0.1.": "Ein Fenster für lokale Agentendienste, die fabric-service/0.1 sprechen.",
-    "Download": "Download",
     "Your agent services": "Deine Agentendienste",
     "One place to look": "Alles an einem Ort",
     "Download for macOS ↓": "Für macOS herunterladen ↓",
@@ -89,6 +87,8 @@
     "Windows and Linux downloads": "Downloads für Windows und Linux",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Ein Fenster für deine lokalen Agentendienste unter macOS, Windows und Linux. Sieh, was Aufmerksamkeit braucht, öffne Dashboards und lass deine Agenten dieselben Tools über MCP nutzen.",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Sieh jeden Agentendienst auf deinem Computer in einer App: Was dich braucht, steht oben, und das eigene Dashboard jedes Dienstes öffnet sich direkt daneben",
-    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards findet kompatible Dienste auf deinem Computer. Jeder Dienst behält seine eigene Aufgabe; du bekommst einen gemeinsamen Ort, um sie zu prüfen und zu steuern."
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards findet kompatible Dienste auf deinem Computer. Jeder Dienst behält seine eigene Aufgabe; du bekommst einen gemeinsamen Ort, um sie zu prüfen und zu steuern.",
+    "Fabric Dashboards | Your local agent services, together | PassionCode.ai": "Fabric Dashboards | Deine lokalen Agentendienste an einem Ort | PassionCode.ai",
+    "Set up everything with one command": "Alles mit einem Befehl einrichten"
   }
 }

@@ -4,7 +4,6 @@
     "Switchboard | Claude Code &amp; Codex account manager | PassionCode.ai": "Switchboard | Gestor de cuentas de Claude Code y Codex | PassionCode.ai",
     "Manage Claude Code and Codex accounts, inspect usage limits and switch managed requests. Download Switchboard for macOS and Windows.": "Gestiona cuentas de Claude Code y Codex, revisa los límites de uso y cambia las solicitudes gestionadas. Descarga Switchboard para macOS y Windows.",
     "Local account manager for Claude Code and Codex CLI. Desktop app and CLI for macOS and Windows.": "Gestor local de cuentas para Claude Code y Codex CLI. App de escritorio y CLI para macOS y Windows.",
-    "Download": "Descargar",
     "FABRIC SWITCHBOARD · BY PASSIONCODE": "FABRIC SWITCHBOARD · DE PASSIONCODE",
     "Your accounts": "Tus cuentas",
     "A clearer switch": "Un cambio más claro",
@@ -153,6 +152,7 @@
     "Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit.": "Switchboard es la herramienta de gestión de cuentas disponible hoy. Fabric, en vista previa temprana, es el hogar de tus proyectos y sus agentes. Ambos forman parte del conjunto de herramientas de PassionCode.",
     "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard gestiona las cuentas de Claude Code y Codex. Project Observatory mantiene a la vista los proyectos en los que trabajan esos agentes. Fabric Dashboards muestra en una sola ventana los servicios locales de agentes de tu Mac. Fabric, el hogar de tus proyectos y sus agentes, está en vista previa temprana.",
     "Built natively on Windows. The installer, the app and the CLI are Authenticode-signed since 0.6.16. The installer includes the CLI.": "Compilada de forma nativa en Windows. El instalador, la app y la CLI están firmados con Authenticode desde la 0.6.16. El instalador incluye la CLI.",
-    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "Windows x64 con WebView2. La versión para Windows está firmada con Authenticode desde la 0.6.16."
+    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "Windows x64 con WebView2. La versión para Windows está firmada con Authenticode desde la 0.6.16.",
+    "Set up everything with one command": "Configúralo todo con un solo comando"
   }
 }

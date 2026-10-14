@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Obtenir les outils
+Installer
 
 ↓
 
@@ -119,6 +119,12 @@ Fabric
 GitHub et code source
 
 À propos
+
+Investisseurs
+
+Contribuer
+
+Presse
 
 Système de design
 
