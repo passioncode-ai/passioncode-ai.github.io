@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Write provenance.json for the home video v2 from the media pipeline's delivery manifests.
 
-Usage: provenance.py DELIVERY_DIR SITE_ROOT OUT_JSON
+Usage: provenance.py DELIVERY_DIR[,DELIVERY_DIR…] SITE_ROOT OUT_JSON EN_MASTER RU_MASTER
+
+Only the files the cut uses are listed: a delivery folder may hold superseded orders (v3 reuses v2's music).
 
 The manifests themselves stay with the pipeline: they carry local paths and order ids, which this public
 repository does not publish (docs/evidence/2026-10-11-video/README.md, same rule as W10). This file keeps
@@ -32,12 +34,14 @@ def providers(m: dict) -> list[str]:
 
 
 def main() -> None:
-    root, site, out = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
+    roots, site, out = [Path(r) for r in sys.argv[1].split(",")], Path(sys.argv[2]), Path(sys.argv[3])
+    masters = {"en": sys.argv[4], "ru": sys.argv[5]}
+    keep = set(sys.argv[6].split(",")) if len(sys.argv) > 6 else None
     assets, per_order = [], {}
-    for man in sorted(root.glob("*/*.manifest.json")):
+    for man in sorted(p for root in roots for p in root.glob("*/*.manifest.json")):
         m = json.load(open(man))
         f = man.with_name(man.name[: -len(".manifest.json")])
-        if not f.exists():
+        if not f.exists() or (keep is not None and f.name not in keep):
             continue
         per_order[m.get("job_id")] = (m.get("cost") or {}).get("usd") or 0  # one order may deliver several files
         assets.append({
@@ -50,7 +54,7 @@ def main() -> None:
             "chosen_why": [c.get("why") for c in m.get("chosen", []) if c.get("why")],
         })
     derived = []
-    for loc, master in (("en", "home-video-v2-en-4.mp4"), ("ru", "home-video-v2-ru-3.mp4")):
+    for loc, master in masters.items():
         sfx = "" if loc == "en" else "-ru"
         for ext in ("mp4", "webm", "jpg"):
             p = site / "assets" / "video" / f"home{sfx}.{ext}"

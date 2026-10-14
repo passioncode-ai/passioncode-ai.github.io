@@ -1,66 +1,6 @@
 {
  "assets": [
   {
-   "asset": "home-video-v2-analysis-en-1-1.json",
-   "recipe": "video-analyze",
-   "project": "fabric",
-   "providers": [
-    "elevenlabs"
-   ],
-   "cost_usd": 0.005296,
-   "final_gate": "UNKNOWN",
-   "rights": "allowed",
-   "delivered_at": "2026-10-14T02:59:26+00:00",
-   "sha256": "41ebc617ab5840baf76b385b729dde7916d0b83d0652cc36c7b5b82dd5e8f94b",
-   "duration_s": null,
-   "chosen_why": []
-  },
-  {
-   "asset": "home-video-v2-analysis-en-1-2.jpg",
-   "recipe": "video-analyze",
-   "project": "fabric",
-   "providers": [
-    "elevenlabs"
-   ],
-   "cost_usd": 0.005296,
-   "final_gate": "UNKNOWN",
-   "rights": "allowed",
-   "delivered_at": "2026-10-14T02:59:26+00:00",
-   "sha256": "1d711c44185d1d60e2a103f91bcbe4463866a59fc2beb6ffb7526b6f3868d37a",
-   "duration_s": null,
-   "chosen_why": []
-  },
-  {
-   "asset": "home-video-v2-analysis-ru-1-1.json",
-   "recipe": "video-analyze",
-   "project": "fabric",
-   "providers": [
-    "elevenlabs"
-   ],
-   "cost_usd": 0.00552,
-   "final_gate": "UNKNOWN",
-   "rights": "allowed",
-   "delivered_at": "2026-10-14T03:03:19+00:00",
-   "sha256": "c59825cc74980d2f03c2080ea19e95f22b9ecbe565d9556524b644546f2495fe",
-   "duration_s": null,
-   "chosen_why": []
-  },
-  {
-   "asset": "home-video-v2-analysis-ru-1-2.jpg",
-   "recipe": "video-analyze",
-   "project": "fabric",
-   "providers": [
-    "elevenlabs"
-   ],
-   "cost_usd": 0.00552,
-   "final_gate": "UNKNOWN",
-   "rights": "allowed",
-   "delivered_at": "2026-10-14T03:03:19+00:00",
-   "sha256": "742542f6fed92e68ac2c389260fdd45bf1be0583d0bafbaed72db581af78edeb",
-   "duration_s": null,
-   "chosen_why": []
-  },
-  {
    "asset": "home-video-v2-music-1.wav",
    "recipe": "music-bed",
    "project": "fabric",
@@ -79,43 +19,73 @@
    ]
   },
   {
-   "asset": "home-video-v2-narration-en-2.wav",
+   "asset": "home-video-v3-analysis-en-1-1.json",
+   "recipe": "video-analyze",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs"
+   ],
+   "cost_usd": 0.005608,
+   "final_gate": "UNKNOWN",
+   "rights": "allowed",
+   "delivered_at": "2026-10-14T17:31:41+00:00",
+   "sha256": "b8818fefefabb55ecc1ab807f6bddb6ea24a83d5c134e0233c16117ef7957c8e",
+   "duration_s": null,
+   "chosen_why": []
+  },
+  {
+   "asset": "home-video-v3-analysis-ru-1-1.json",
+   "recipe": "video-analyze",
+   "project": "fabric",
+   "providers": [
+    "elevenlabs"
+   ],
+   "cost_usd": 0.005996,
+   "final_gate": "UNKNOWN",
+   "rights": "allowed",
+   "delivered_at": "2026-10-14T17:35:28+00:00",
+   "sha256": "182555fe8bd0ec1a081daecffb3d58b06a8ddeb1ae929d44937947cdf23d8224",
+   "duration_s": null,
+   "chosen_why": []
+  },
+  {
+   "asset": "home-video-v3-narration-en-1.wav",
    "recipe": "speech-line",
    "project": "fabric",
    "providers": [
     "elevenlabs",
     "ffmpeg"
    ],
-   "cost_usd": 0.18576,
+   "cost_usd": 0.19936,
    "final_gate": "PASS",
    "rights": "allowed",
-   "delivered_at": "2026-10-12T15:43:32+00:00",
-   "sha256": "bc3bb4dfdb5a0af370e9d7167db40333a4d0f2f1c388db861a97bdbd2ab5a1dc",
-   "duration_s": 82.56,
+   "delivered_at": "2026-10-14T17:20:07+00:00",
+   "sha256": "2f8d0c6461c356de4da6ffbacb14f7fd2b9cec191f401108384a5ec1809e54da",
+   "duration_s": 87.68,
    "chosen_why": [
-    "Agent choice (home video v2 narration, en), measured, not judged by ear: both takes passed the rough gate with the same pause pattern (25 pauses over 0.3 s, none over 0.9 s); take 0 is 1.4 s shorter (82.56 s vs 84.00 s), which keeps the cut under 90 s with the music bookends; peak -1.85 dBFS before normalization."
+    "Agent choice (home video v3 narration, en), measured, not judged by ear: both takes have no pause over 0.9 s; take 1 is 0.56 s shorter (87.68 s vs 88.24 s), which keeps the cut nearer 90 s now that the script grew by the setup and bridge lines."
    ]
   },
   {
-   "asset": "home-video-v2-narration-ru-2.wav",
+   "asset": "home-video-v3-narration-ru-1.wav",
    "recipe": "speech-line",
    "project": "fabric",
    "providers": [
     "elevenlabs",
     "ffmpeg"
    ],
-   "cost_usd": 0.19296,
+   "cost_usd": 0.21232,
    "final_gate": "PASS",
    "rights": "allowed",
-   "delivered_at": "2026-10-12T15:43:33+00:00",
-   "sha256": "ba5a9e5ced973128f86d19aff91e73a8e42a2e30c05addcc961ebb866c490213",
-   "duration_s": 86.24,
+   "delivered_at": "2026-10-14T17:20:08+00:00",
+   "sha256": "d5574a0238fcc540a9efea20a36daa3f4e0598e2f3d11aab6f176380f2e23c59",
+   "duration_s": 94.0,
    "chosen_why": [
-    "Agent choice (home video v2 narration, ru), measured, not judged by ear: take 0 is 1.1 s shorter (86.24 s vs 87.36 s), the only way the Russian cut stays at about 90 s with the music bookends; 22 pauses over 0.3 s, none over 0.9 s; peak -1.91 dBFS."
+    "Agent choice (home video v3 narration, ru), measured, not judged by ear: take 1 is 1.12 s shorter (94.00 s vs 95.12 s); 24 pauses over 0.3 s, none over 0.9 s."
    ]
   },
   {
-   "asset": "home-video-v2-en-4.mp4",
+   "asset": "home-video-v3-en-1.mp4",
    "recipe": "video-render",
    "project": "fabric",
    "providers": [
@@ -124,15 +94,15 @@
    "cost_usd": 0.0,
    "final_gate": "PASS",
    "rights": "allowed",
-   "delivered_at": "2026-10-14T02:58:22+00:00",
-   "sha256": "d58d41d1f02c055be50e64a49fcebbe7d6d38cd23485eb5cc78a05e2013e8efc",
-   "duration_s": 86.533,
+   "delivered_at": "2026-10-14T17:30:55+00:00",
+   "sha256": "4d7f4c04ed31332e80ed680d4073788b8d54f8cd03062451891000840c711fcc",
+   "duration_s": 91.633,
    "chosen_why": [
-    "Agent choice, read against the storyboard (docs/video/2026-10-12-home-v2/script.md): 22 frames sampled from 1.5 s to 90 s match beats 1-21 in order and text (problem, promise verbatim, four value tiles, the launcher command the home page step 1 shows, Fabric four actions with PREVIEW, the plan marked as a written example, four tools with their labels, the project map with a hand-off, organizations labelled IN DEVELOPMENT ON REQUEST, vision, end card); no Fabric reply, sample-data chips present. Master 86.53 s, 1920x1080 30 fps H.264 + AAC, -13.5 LUFS integrated, true peak -1.4 dBFS, LRA 2.7 LU."
+    "Agent choice, read against the v3 storyboard: 24 frames from 1.5 s to 90 s; the start beat types the /start/ command exactly (npx @passioncode-ai/passioncode@latest setup), lists apps, skills and MCP servers, says Fabric is a preview needing Docker and the Supabase CLI, and shows the coding agent running it; the new bridge beat joins the four tools to Fabric and then lets them stand alone on \"and on its own\"; the Together title reads Agents connected to Fabric share one project (facts row Fabric coding agents, /vision/ path 02). Master 91.63 s, -13.4 LUFS, true peak -1.5 dBFS."
    ]
   },
   {
-   "asset": "home-video-v2-ru-3.mp4",
+   "asset": "home-video-v3-ru-1.mp4",
    "recipe": "video-render",
    "project": "fabric",
    "providers": [
@@ -141,134 +111,134 @@
    "cost_usd": 0.0,
    "final_gate": "PASS",
    "rights": "allowed",
-   "delivered_at": "2026-10-14T03:02:31+00:00",
-   "sha256": "e0eb22667268c5bb596585fd26f61505d705b526d33b634728028e27de1f4225",
-   "duration_s": 90.2,
+   "delivered_at": "2026-10-14T17:34:59+00:00",
+   "sha256": "59df938a0d480febc2172293a88d8aa4ed96a8b253aba50cd2cbb14f646df0b8",
+   "duration_s": 97.967,
    "chosen_why": [
-    "Agent choice, read against the storyboard (docs/video/2026-10-12-home-v2/script.md): 21 frames from 2 s to 88 s match beats 1-21 with Russian on-screen text and the -ru mockups where they exist (Fabric, the plan, Observatory, Inbox; Switchboard and Dashboards have no Russian twin, as on the site); the promise line breaks as \"для команд / с любыми ИИ-агентами\"; labels ДОСТУПНО СЕЙЧАС, ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ, В РАЗРАБОТКЕ · ПО ЗАПРОСУ; no Fabric reply. Master 90.20 s, 1920x1080 30 fps, -13.4 LUFS integrated, true peak -1.6 dBFS, LRA 2.2 LU. One cosmetic note kept: the Dashboards role line wraps to two lines in Russian."
+    "Agent choice, read against the v3 storyboard: 24 frames from 2 s to 96 s with Russian on-screen text and the -ru mockups; the start beat types the /start/ command (setup), lists apps, skills and MCP servers, the Fabric preview note and Или её запустит ваш агент для программирования; the bridge beat В наборе / и сам по себе; the Together title Агенты, подключённые к Fabric, делят один проект. Master 97.97 s, -14.4 LUFS integrated, true peak -1.5 dBFS."
    ]
   }
  ],
  "site_files": [
   {
    "file": "assets/video/home.mp4",
-   "from": "home-video-v2-en-4.mp4",
-   "bytes": 6081244,
-   "sha256": "17453592ac03dd634eac5d61dd35fd47e3a061bc6bd3bb95242fe55c11000b48",
-   "duration_s": 86.533,
+   "from": "home-video-v3-en-1.mp4",
+   "bytes": 6447628,
+   "sha256": "c7847ca73176f40fbc0bb0c953c2df51e673c3f8b3370e158a4e4e6492272ef9",
+   "duration_s": 91.633,
    "made_by": "harness/webenc2.sh"
   },
   {
    "file": "assets/video/home.webm",
-   "from": "home-video-v2-en-4.mp4",
-   "bytes": 5833488,
-   "sha256": "dc2cfcb37083d9c295666b23632ee40129737da78ad767808cf25c2905b7943f",
-   "duration_s": 86.533,
+   "from": "home-video-v3-en-1.mp4",
+   "bytes": 6049026,
+   "sha256": "876ff44483d131e0c9129ee89f7c94b502e5202afe41f555be33c2a6831e8649",
+   "duration_s": 91.638,
    "made_by": "harness/webenc2.sh"
   },
   {
    "file": "assets/video/home.jpg",
-   "from": "home-video-v2-en-4.mp4",
-   "bytes": 82441,
-   "sha256": "64531e8a6a4c1416847760000839d41fe5c7310f968249c12457364e82067e0d",
+   "from": "home-video-v3-en-1.mp4",
+   "bytes": 82472,
+   "sha256": "a41f0320c787b1dcf8d9bfbe181980483cceac2176cc45cd3406069329dd6906",
    "duration_s": null,
    "made_by": "harness/webenc2.sh"
   },
   {
    "file": "assets/video/home-ru.mp4",
-   "from": "home-video-v2-ru-3.mp4",
-   "bytes": 6466627,
-   "sha256": "88fd931bbd69dda2221e1994ee8fdd37fc15ee723f9165c980b0cab66ea946f9",
-   "duration_s": 90.2,
+   "from": "home-video-v3-ru-1.mp4",
+   "bytes": 6864873,
+   "sha256": "e24288936355553a64fdcb0ebe496524f54ac84e661b85dac28eadf684f96c08",
+   "duration_s": 97.967,
    "made_by": "harness/webenc2.sh"
   },
   {
    "file": "assets/video/home-ru.webm",
-   "from": "home-video-v2-ru-3.mp4",
-   "bytes": 6193398,
-   "sha256": "ecd8b92ae296957715e1854efb07984f3bf833b14999002737895ebc4b80a72d",
-   "duration_s": 90.2,
+   "from": "home-video-v3-ru-1.mp4",
+   "bytes": 6560740,
+   "sha256": "dcd74ea4b9d706e789fcccbc15f4361899c947cc6ffeeb4283923e7a12daaa3a",
+   "duration_s": 97.966,
    "made_by": "harness/webenc2.sh"
   },
   {
    "file": "assets/video/home-ru.jpg",
-   "from": "home-video-v2-ru-3.mp4",
-   "bytes": 79057,
-   "sha256": "b084ef0d8d92f1e2beb6585a12e80b2cf9b0ec7aa6bfbb8ac1283741045b10ae",
+   "from": "home-video-v3-ru-1.mp4",
+   "bytes": 78959,
+   "sha256": "743d70cb6e85689d3499b1790fa85a291b2f695320f0ef5aaf0d17aae7db714c",
    "duration_s": null,
    "made_by": "harness/webenc2.sh"
   },
   {
    "file": "assets/video/home-de.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2231,
-   "sha256": "2bc6ad1de6cc18c453221adeeb528ed0cc74c163af3d0f995095ecc869f7320f",
+   "bytes": 2408,
+   "sha256": "839d5a865ed4786b8a64e747fbe6e24db74d2ad3401568505b7c9c87433240fd",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home-es.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2172,
-   "sha256": "374c02cede22cb14a796e10e569273a03406a16a391f80f07365d4bf74b1e693",
+   "bytes": 2374,
+   "sha256": "475783ea1631a7a2c7dac58dd5a9bd5d55990111682fb0807e169f9d25c29ac7",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home-fr.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2322,
-   "sha256": "d3027245aca145fc6a31ad4145182afec4fe07a7215416471bfaabb90f602dcc",
+   "bytes": 2497,
+   "sha256": "43ca57019bd7c8241692763acb47d0fc3e67681cda66d84e8f2a8502ad08ce4c",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home-ja.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2824,
-   "sha256": "65add68001008b1dcfcda570d2b40aebfbbc40e4c1a4357791c42a1c5c60332f",
+   "bytes": 3050,
+   "sha256": "27774def9e3135dc8b4d37effb7e749de54b5d376bd771344ca32d31abff4d2a",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home-ko.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2545,
-   "sha256": "8b593c2e5033fa3001271970c308a2d7328b31bff38dcd287c920a5a0ba0c7bd",
+   "bytes": 2726,
+   "sha256": "b4fcdb6613f1d5f5102181c3ae387fecfe5932395d413df8776d9074290607e9",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home-pl.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2183,
-   "sha256": "12f2eb9ed54fce031855723d07fa0774675adba93fbb3b866bac813bce4c5c5e",
+   "bytes": 2356,
+   "sha256": "67c6dfcab4e3244062a1a9ed2d036f0cdecd9f765c5284236d27ae9ad4ea401e",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home-pt-br.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2196,
-   "sha256": "13c50801d9676b33db57641f9538702f2487fe835eb264e1db561447ff8df672",
+   "bytes": 2387,
+   "sha256": "c9e493e1d5ab21c49824a68e77ad073b20faff79827d82b6edb86f5a8e6a4683",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home-ru.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2923,
-   "sha256": "992c0960d678b382dc65140c8352977945ab4ad6d5f3961790f1c7b33e22974c",
+   "bytes": 3175,
+   "sha256": "ec18f403a0657a49871e54f78466e31a1fefc52260b62a51b187d5106ad06789",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home-zh-hans.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2221,
-   "sha256": "19c397d9141538a8b53bdd333f9b447cee8ccfa3245f424b682065d7fe7218fb",
+   "bytes": 2386,
+   "sha256": "ca27b97e7efacf1e41bf8876bb6c395647de6150971c2872ab113e6522b81a67",
    "made_by": "harness/vtt.py"
   },
   {
    "file": "assets/video/home.vtt",
    "from": "captions-source.json + transcripts/",
-   "bytes": 2044,
-   "sha256": "4df5d3f3a798d055c879a254e73ef21b4d50b915f060358d0ece1d8ac6b6f580",
+   "bytes": 2199,
+   "sha256": "b7f331f18707d85be0e9efa95b51d10d06352a91b0d29fc69338a72a9f380e62",
    "made_by": "harness/vtt.py"
   }
  ],
- "total_cost_usd": 0.869536,
+ "total_cost_usd": 0.903284,
  "note": "cost_usd is per order; an order that delivered two files lists its cost on both, counted once in the total"
 }

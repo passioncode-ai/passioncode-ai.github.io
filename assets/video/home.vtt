@@ -1,116 +1,124 @@
 WEBVTT
 
 1
-00:00:00.620 --> 00:00:02.390
+00:00:00.620 --> 00:00:02.410
 Your agent works for a week.
 
 2
-00:00:02.720 --> 00:00:04.309
+00:00:02.740 --> 00:00:04.330
 Then it falls apart.
 
 3
-00:00:04.680 --> 00:00:05.830
+00:00:04.640 --> 00:00:05.810
 The wrong account.
 
 4
-00:00:06.120 --> 00:00:07.730
+00:00:06.060 --> 00:00:07.630
 It forgets what it learned.
 
 5
-00:00:07.960 --> 00:00:10.210
+00:00:07.860 --> 00:00:10.190
 And nobody can say what it changed.
 
 6
-00:00:10.600 --> 00:00:13.460
+00:00:10.700 --> 00:00:13.720
 PassionCode.ai is the agent-agnostic
 
 7
-00:00:13.500 --> 00:00:16.290
+00:00:13.760 --> 00:00:16.570
 operating system for AI-native teams:
 
 8
-00:00:16.640 --> 00:00:20.390
+00:00:16.860 --> 00:00:20.610
 a workplace where agents do the work,
 and you see all of it.
 
 9
-00:00:20.720 --> 00:00:23.470
+00:00:20.940 --> 00:00:23.740
 It runs on your machines, as open source,
 
 10
-00:00:23.560 --> 00:00:26.370
+00:00:23.780 --> 00:00:26.650
 with the agents and
 subscriptions you already have.
 
 11
-00:00:26.700 --> 00:00:29.010
+00:00:27.040 --> 00:00:29.370
 Their work leaves a record you can open.
 
 12
-00:00:29.340 --> 00:00:34.430
-For you, it starts with one command:
-skills for Claude Code or Codex.
+00:00:29.820 --> 00:00:34.710
+For you, one command sets up Fabric,
+the tools around it and the skills,
 
 13
-00:00:34.700 --> 00:00:36.550
-No account, no key.
+00:00:34.840 --> 00:00:37.090
+and your coding agent can run it for you.
 
 14
-00:00:36.960 --> 00:00:41.170
+00:00:37.500 --> 00:00:41.770
 Fabric, in preview, is the home
 for your projects and their agents.
 
 15
-00:00:41.480 --> 00:00:44.990
+00:00:42.100 --> 00:00:45.530
 Your coding agent shows its
 plan before it changes anything.
 
 16
-00:00:45.380 --> 00:00:49.690
+00:00:45.840 --> 00:00:48.870
+Each tool works with Fabric, and on its own.
+
+17
+00:00:49.300 --> 00:00:53.690
 Switchboard: each agent on the
 account it should, limits in view.
 
-17
-00:00:50.040 --> 00:00:54.230
+18
+00:00:54.060 --> 00:00:58.370
 Dashboards: state,
 spend and control, in one window.
 
-18
-00:00:54.580 --> 00:00:57.770
+19
+00:00:58.740 --> 00:01:01.950
 Observatory: what changed, with the evidence.
 
-19
-00:00:58.160 --> 00:00:59.790
+20
+00:01:02.400 --> 00:01:04.050
 Inbox, in preview:
 
-20
-00:01:00.040 --> 00:01:03.170
+21
+00:01:04.260 --> 00:01:07.390
 mail your agents answer
 only within your rules.
 
-21
-00:01:03.600 --> 00:01:07.490
-Agents in one project share its board,
-memory and hand-offs,
-
 22
-00:01:07.640 --> 00:01:09.870
-so one picks up where another stopped.
+00:01:07.920 --> 00:01:11.170
+Agents connected to Fabric
+share one project’s board,
 
 23
-00:01:10.280 --> 00:01:14.460
+00:01:11.240 --> 00:01:12.730
+memory and hand-offs,
+
+24
+00:01:12.860 --> 00:01:15.070
+so one picks up where another stopped.
+
+25
+00:01:15.480 --> 00:01:19.830
 For an organization, we bring agents
 onto your machines, connect them,
 
-24
-00:01:14.500 --> 00:01:17.410
+26
+00:01:19.880 --> 00:01:22.670
 and show what each one
 cost and what it delivered.
 
-25
-00:01:17.820 --> 00:01:20.610
+27
+00:01:23.100 --> 00:01:25.830
 Agents are easy to start and hard to keep.
 
-26
-00:01:20.920 --> 00:01:23.110
+28
+00:01:26.140 --> 00:01:28.250
 We are building what holds them together.

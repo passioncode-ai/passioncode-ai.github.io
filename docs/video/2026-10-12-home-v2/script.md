@@ -1,5 +1,9 @@
 # Home video v2: script and storyboard (SITE-043, 2026-10-12)
 
+> **v3 (2026-10-14):** the setup sentence, a new bridge beat before the four tools and the Together line changed
+> ([README §v3](README.md#v3-2026-10-14-re-voiced-and-re-rendered)); the narration files are v3's, and v3's cue times are
+> measured, not tabled ([cues-v3.json](cues-v3.json)). The storyboard below keeps v2's beats and times for the record.
+
 Operator request, 2026-10-12: a more dynamic, branded explainer for the home page, with music, that explains the
 values, why it is for you and for an organization, how you work, how it is set up, the ecosystem and what it runs
 on. Short and dense. It replaces the W10 cut ([record](../../evidence/2026-10-11-video/README.md)).

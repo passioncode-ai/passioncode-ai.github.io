@@ -1,7 +1,56 @@
-# Home video v2 (SITE-043, 2026-10-12 → 2026-10-14): record
+# Home video (SITE-043 v2, 2026-10-14 v3): record
 
 The backlog id was SITE-041 in this folder's first commits; SITE-041 and SITE-042 were taken on `main` meanwhile, so
 the row is SITE-043.
+
+## v3 (2026-10-14): re-voiced and re-rendered
+
+Operator decision, 2026-10-14: the start beat shows the command /start/ shows, and says what it sets up; a short
+bridge says the tools work with Fabric and on their own; the Together line follows what the facts support. The
+public word stays "toolkit"; Fabric stays at the centre.
+
+| What changed | en | ru |
+|---|---|---|
+| Setup sentence (was "one command: skills for Claude Code or Codex. No account, no key.") | For you, one command sets up Fabric, the tools around it and the skills, and your coding agent can run it for you. | Начало — одна команда: она ставит Fabric, инструменты вокруг него и навыки, а запустить её может ваш агент для программирования. |
+| Bridge before the four tools (new) | Each tool works with Fabric, and on its own. | Каждый инструмент работает с Fabric и сам по себе. |
+| Together (was "Agents in one project share its board…") | Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where another stopped. | У агентов, подключённых к Fabric, общие доска, память и передачи работы проекта: один продолжает там, где остановился другой. |
+
+- The terminal card types `npx @passioncode-ai/passioncode@latest setup`, exactly the command card on /start/ (the
+  `--yes` form appears there only inside the copy-prompt for a coding agent), lists what it sets up (apps, skills,
+  MCP servers; facts row *Launcher*), says the apps install on macOS and Fabric, a preview, needs Docker and the
+  Supabase CLI, and shows "Or your coding agent runs it for you".
+- The Together title reads "Agents connected to Fabric share one project": the wording of facts row *Fabric coding
+  agents* (connected agents get the board, memory and hand-offs) and /vision/ path 02. Home step 05 ("Agents share a
+  project’s board and hand-offs in Fabric’s preview") is a parallel agent's change, not this one's.
+- Rule check (deterministic, no model): en 99.1 pass, ru 97.6 pass, 0 clichés; the remaining rule-of-three
+  suggestions are the decided terms ("state, spend and control", "board, memory and hand-offs") and the setup
+  sentence's three things the command installs.
+- Composition: [harness/gen3.py](harness/gen3.py), cue times measured by [harness/timing.py](harness/timing.py) on a
+  word-timed transcription of each delivered narration ([cues-v3.json](cues-v3.json)), not typed by hand. New
+  bridge beat: the four tool marks join Fabric, then the lines fade and the marks move apart on "and on its own".
+- Media, all through Asset Foundry under project `fabric`: narration en $0.199 and ru $0.212 (the W10/v2 voice, two
+  takes each, the shorter chosen: 87.68 s and 94.00 s), the v2 music bed reused ($0), renders en and ru $0, four
+  transcriptions $0.023 (two of the narrations to time the cues, two of the cuts to time the captions). New spend
+  for v3: $0.434. [provenance.json](provenance.json) lists the files the cut uses.
+- Timing check: every cue of the composition starts within 0.02 s of the transcribed word in both cuts; the
+  transcripts differ from the scripts only in spelling ("AI native", Russian case endings), not in what was said.
+- Captions rebuilt from [captions-source.json](captions-source.json) (25 cues per language): English 28 and Russian
+  25 cues on their own cuts, the other eight on the English timings. `scripts/check-site.mjs` now expects the last
+  caption between 78 and 98 s.
+
+| File | Duration | Size |
+|---|---|---|
+| `assets/video/home.mp4` | 91.63 s | 6 447 628 B |
+| `assets/video/home.webm` | 91.63 s | 6 049 026 B |
+| `assets/video/home.jpg` (19 s, the promise) | — | 82 472 B |
+| `assets/video/home-ru.mp4` | 97.97 s | 6 864 873 B |
+| `assets/video/home-ru.webm` | 97.97 s | 6 560 740 B |
+| `assets/video/home-ru.jpg` (19.5 s) | — | 78 959 B |
+
+Masters: en 91.63 s, −13.4 LUFS, true peak −1.5 dBFS; ru 97.97 s, −14.4 LUFS, −1.5 dBFS. The v2 section below is
+kept as the record of how the piece was first made; its file sizes and lengths are superseded by this table.
+
+## v2 (2026-10-12 → 2026-10-14)
 
 Operator request (2026-10-12): a more dynamic, branded explainer for the home page, with music, that explains the
 values, why it is for you and for an organization, how you work, how it is set up, the ecosystem and what it runs
@@ -73,3 +122,11 @@ WebKit ([visual.json](visual.json)), `/` and `/ru/` at 1440 and 390 px from `dis
 horizontal overflow, nothing loaded before play (`readyState` 0, `preload="none"`), the 16:9 box, the poster
 decodes (1920×1080), WebKit picks the WebM and plays it (duration 86.533 s en, 90.2 s ru), captions load (26 cues
 `srclang` en, 24 cues `srclang` ru) and show a cue at 12 s, no autoplay, no loop, controls on, no page errors.
+
+## v3 checks (2026-10-14)
+
+`npm run locales -- --check`, `npm run check` (exit 0), `npm run build` (224 entries), `extract-public-copy.py
+--check`: pass. WebKit ([visual.json](visual.json), now v3's), `/` and `/ru/` at 1440 and 390 px from `dist/`: HTTP 200,
+nothing loaded before play, the 16:9 box, the poster decodes, WebKit plays the WebM (91.634 s en, 97.966 s ru),
+captions load (28 cues `srclang` en, 25 `srclang` ru; at 31 s the English cue is the new setup line and the Russian
+cut sits in the pause before it), no autoplay or loop, controls on, no horizontal overflow, no page errors.
