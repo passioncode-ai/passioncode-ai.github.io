@@ -62,7 +62,7 @@ Dla Twojej organizacji
 
 ↗
 
-Otwarty kod na licencji AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.28 · Dashboards 0.7.8 · Observatory 0.24.4
+Otwarty kod na licencji AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.30 · Dashboards 0.7.9 · Observatory 0.24.4
 
 Konta
 
@@ -226,7 +226,7 @@ Wybieraj konto, na którym pracuje każdy agent, mając limity zużycia przed oc
 
 Wydanie
 
-0.6.28
+0.6.30
 
 · macOS + Windows · krok 4
 
@@ -238,7 +238,7 @@ Wszystkie lokalne usługi agentów w jednym oknie, sterowane przez Ciebie lub pr
 
 Wydanie
 
-0.7.8
+0.7.9
 
 · macOS + Windows + Linux · krok 4
 
@@ -274,7 +274,7 @@ Jedna komenda instaluje skille, które uczą agentów budować z Fabric.
 
 CLI
 
-0.2.0
+0.2.1
 
 · Node.js 18+ · kroki 1 i 3
 
