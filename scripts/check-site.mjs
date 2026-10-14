@@ -236,7 +236,7 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
     assert.ok(vtt.startsWith('WEBVTT\n'), `${file}: a WebVTT file`)
     assert.ok((vtt.match(/ --> /g) || []).length >= 8, `${file}: captions for the whole narration`)
     const last = Math.max(...[...vtt.matchAll(/--> 00:(\d\d):(\d\d\.\d{3})/g)].map(m => +m[1] * 60 + +m[2]))
-    assert.ok(last > 78 && last < 92, `${file}: the last caption ends with the narration (${last} s; the v2 cut, SITE-043: en 86.5 s, ru 90.2 s)`)
+    assert.ok(last > 78 && last < 98, `${file}: the last caption ends with the narration (${last} s; the v3 cut: en 91.6 s, ru 98.0 s)`)
     // Captions translated on the English cue timings keep every cue's timing (SITE-035).
     if (['pl', 'ko', 'pt-br', 'zh-hans', 'ja'].includes(locale)) {
       const timings = text => text.split('\n').filter(line => line.includes(' --> ')).join('\n')
