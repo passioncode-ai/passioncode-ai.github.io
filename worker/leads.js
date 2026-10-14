@@ -9,9 +9,9 @@
 //            the /business/ form (`source.channel: "form"`) or by a coding agent the visitor
 //            pasted the published prompt into (`"agent-prompt"`, business/agent-request.txt).
 //            The agent is trusted no more than the form: same token, trap, limits and caps.
-//   lead/1 — the former five-step form, still accepted from pages already open in a browser,
-//            and the only shape the Platform takes today; a lead/2 waits in D1 (forward
-//            `skipped`) until the Platform accepts it (docs/DEPLOYMENT.md#commercial-enquiries).
+//   lead/1 — the former five-step form, still accepted from pages already open in a browser.
+// The Platform takes both shapes (lead/2 since its 0.2.0, 2026-10-12), so both are forwarded
+// the same way (docs/DEPLOYMENT.md#commercial-enquiries).
 import { LEAD_OPTIONS, PRIVACY_VERSION } from '../assets/lead-options.js'
 import { estimate } from '../assets/estimate.js'
 import { ISSUES, M } from './messages.js'
@@ -23,9 +23,6 @@ export const CHANNELS = ['form', 'agent-prompt']
 // The Platform's lead/1 goals (passioncode-platform src/modules/leads/schema.ts GOALS); a goal
 // added later (cost_and_results) is offered only by the short request.
 export const LEGACY_GOALS = ['automate_operations', 'custom_agents', 'convert_agents', 'commercial_license', 'managed_hosting', 'team_onboarding']
-// What the forward column says of a lead the Platform cannot take yet; the re-queue command in
-// docs/DEPLOYMENT.md#commercial-enquiries selects on it.
-export const SHORT_FORWARD_WAIT = 'lead/2: the Platform accepts lead/1 only; re-queue when it accepts lead/2'
 export const MAX_BODY_BYTES = 32 * 1024
 export const FORM_TOKEN_MIN_AGE_MS = 3000
 export const FORM_TOKEN_MAX_AGE_MS = 24 * 60 * 60 * 1000
@@ -369,11 +366,8 @@ export async function findLead (db, lead) {
 export async function storeLead (db, lead) {
   const hash = await sha256(identity(lead))
   const firstRetry = new Date(Date.parse(lead.submittedAt) + FIRST_RETRY_MS).toISOString()
-  // A lead/2 is not offered to the Platform until it accepts that shape: it waits in D1 under
-  // the privacy notice's 24-month ceiling, and the mailbox still gets it at once.
-  const short = lead.schema === SHORT_SCHEMA
-  const r = await db.prepare(`INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at, forward_status, forward_error) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING`)
-    .bind(lead.id, JSON.stringify(lead), hash, lead.contact.email, lead.submittedAt, firstRetry, short ? 'skipped' : 'pending', short ? SHORT_FORWARD_WAIT : null).run()
+  const r = await db.prepare(`INSERT INTO leads (id, payload, payload_hash, email, created_at, next_attempt_at) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING`)
+    .bind(lead.id, JSON.stringify(lead), hash, lead.contact.email, lead.submittedAt, firstRetry).run()
   if ((r.meta?.changes ?? 0) === 1) return 'stored'
   const existing = await db.prepare('SELECT payload_hash FROM leads WHERE id = ?').bind(lead.id).first()
   return existing?.payload_hash === hash ? 'duplicate' : 'conflict'
