@@ -270,7 +270,8 @@ async function intake (request, env, ctx) {
 }
 // #endregion intake
 
-const DOWNLOAD = /^\/(fabric|switchboard|inbox|dashboards|observatory)\/download\/([a-z]+)\/?$/
+// A platform is a releases/products.json asset key: lowercase words joined by hyphens (windows-x64).
+const DOWNLOAD = /^\/(fabric|switchboard|inbox|dashboards|observatory)\/download\/([a-z0-9]+(?:-[a-z0-9]+)*)\/?$/
 
 export default {
   async fetch (request, env, ctx) {

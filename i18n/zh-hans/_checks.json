@@ -27,7 +27,11 @@
       "Fabric 还不会回答",
       "Intel",
       "href=\"/fabric/download/macos\"",
-      "商业许可证"
+      "商业许可证",
+      "href=\"/fabric/download/windows-x64\"",
+      "href=\"/fabric/download/linux-x64-deb\"",
+      "WSL2",
+      "scoop install supabase"
     ],
     "inbox/index.html": [
       "开发中的预览版",

@@ -12,6 +12,11 @@ Contract: brand-contract v1
 | toolkit.explore | Explore the tools | dashboards/index.html | SCN-010 | proposed | copy |
 | fabric.explore | Explore Fabric | observatory/index.html | SCN-007 | proposed | copy |
 | download.fabric.macos | Download for macOS | fabric/index.html | SCN-007 | proposed | copy |
+| download.fabric.hero | Download Fabric | fabric/index.html | SCN-007 | proposed | copy |
+| download.fabric.windows-x64 | Download for Windows x64 | fabric/index.html | SCN-007 | proposed | copy |
+| download.fabric.windows-arm64 | Windows on Arm (arm64) | fabric/index.html | SCN-007 | proposed | copy |
+| download.fabric.linux-x64-deb | Download the .deb for x64 | fabric/index.html | SCN-007 | proposed | copy |
+| download.fabric.linux-other | .deb for arm64 · AppImage for x64 · AppImage for arm64 | fabric/index.html | SCN-007 | proposed | copy |
 | author.follow | Follow on X | index.html | SCN-008 | proposed | copy |
 | about.request | Tell us about your processes | index.html | SCN-008, SCN-014 | proposed | copy |
 | founders.story | How we got here | business/index.html | SCN-014, SCN-008 | proposed | copy |

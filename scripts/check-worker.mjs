@@ -49,7 +49,7 @@ test('www redirects to the apex with path and query', async () => {
 
 test('downloads redirect to the current release asset, ignore the query, and fall through when unknown', async () => {
   const env = baseEnv({ DB: undefined })
-  const cases = [['switchboard', 'macos'], ['switchboard', 'windows'], ['fabric', 'macos'], ['inbox', 'macos'], ['dashboards', 'macos'], ['observatory', 'macos'], ['observatory', 'wheel']]
+  const cases = [['switchboard', 'macos'], ['switchboard', 'windows'], ['fabric', 'macos'], ['inbox', 'macos'], ['dashboards', 'macos'], ['observatory', 'macos'], ['observatory', 'wheel'], ...['windows-x64', 'windows-arm64', 'linux-x64-deb', 'linux-arm64-deb', 'linux-x64-appimage', 'linux-arm64-appimage'].map(p => ['fabric', p])]
   for (const [product, platform] of cases) {
     for (const suffix of ['', '/', '?next=https://example.com']) {
       const r = await worker.fetch(new Request(`https://passioncode.ai/${product}/download/${platform}${suffix}`), env, ctx())
@@ -59,7 +59,7 @@ test('downloads redirect to the current release asset, ignore the query, and fal
       assert.equal(r.headers.get('x-robots-tag'), 'noindex')
     }
   }
-  for (const path of ['/switchboard/download/linux', '/fabric/download/windows', '/inbox/download/macos/extra', '/adapter/download/macos']) {
+  for (const path of ['/switchboard/download/linux', '/fabric/download/windows', '/fabric/download/windows-', '/fabric/download/Windows-x64', '/fabric/download/linux--deb', '/inbox/download/macos/extra', '/adapter/download/macos']) {
     const r = await worker.fetch(new Request(`https://passioncode.ai${path}`), env, ctx())
     assert.equal(await r.text(), `asset ${path}`)
   }

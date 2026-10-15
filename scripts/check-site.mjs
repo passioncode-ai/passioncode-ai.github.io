@@ -23,7 +23,7 @@ const currentWords = html => html
   .replace(/<!-- license-history -->[\s\S]*?<!-- \/license-history -->/g, '')
   .replace(/\s(?:id|href)="[^"]*"/g, '')
   .replace(/\u00a0/g, ' ')
-const downloadPaths = new Set(['/switchboard/download/macos', '/switchboard/download/windows', '/fabric/download/macos', '/inbox/download/macos', '/dashboards/download/macos', '/observatory/download/macos', '/observatory/download/wheel'])
+const downloadPaths = new Set(['/switchboard/download/macos', '/switchboard/download/windows', '/fabric/download/macos', ...['windows-x64', 'windows-arm64', 'linux-x64-deb', 'linux-arm64-deb', 'linux-x64-appimage', 'linux-arm64-appimage'].map(p => `/fabric/download/${p}`), '/inbox/download/macos', '/dashboards/download/macos', '/observatory/download/macos', '/observatory/download/wheel'])
 const apiPaths = new Set(['/api/releases', '/api/leads'])
 // The only scripts a page may load: the site's own progressive enhancement. Content never
 // depends on them (each page is complete without JavaScript).
@@ -407,6 +407,10 @@ for (const os of ['macos', 'windows']) assert.ok(product.includes(`href="/switch
 
 const fabric = read('fabric/index.html')
 assert.ok(fabric.includes('href="/fabric/download/macos"'), 'Fabric offers its macOS download through the Worker route')
+// SITE-046: Fabric 0.3.5 ships Windows and Linux builds; the page offers every one of them through the Worker
+// route, and says what each system needs (Fabric README "Quick start", v0.3.5 notes) and what is not there yet.
+for (const platform of Object.keys(snapshot.products.fabric.assets)) assert.ok(fabric.includes(`href="/fabric/download/${platform}"`), `Fabric offers its ${platform} download through the Worker route`)
+for (const text of ['Docker Desktop or OrbStack', 'Docker Desktop with WSL2', 'Docker Engine', 'scoop install supabase', 'brew install supabase/tap/supabase', 'Prefer the .deb', 'Not yet on Windows and Linux', 'Not yet on Windows:']) assert.ok(fabric.includes(text), `Fabric page must say: ${text}`)
 assert.ok(fabric.includes('Early preview'), 'Fabric is labelled an early preview')
 // Since 0.3.1 Fabric has a local agent hub (Fabric ADR-0115, facts.md "Fabric MCP"): the page says what it does,
 // and the earlier "no MCP entry of its own" would now be false, so it must be gone.

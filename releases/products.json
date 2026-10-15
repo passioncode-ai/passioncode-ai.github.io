@@ -6,7 +6,15 @@
       "repository": "passioncode-ai/fabric",
       "page": "/fabric/",
       "channel": "prerelease",
-      "assets": { "macos": "Fabric-{version}-universal.dmg" }
+      "assets": {
+        "macos": "Fabric-{version}-universal.dmg",
+        "windows-x64": "Fabric-{version}-windows-x64-setup.exe",
+        "windows-arm64": "Fabric-{version}-windows-arm64-setup.exe",
+        "linux-x64-deb": "Fabric-{version}-linux-x64.deb",
+        "linux-arm64-deb": "Fabric-{version}-linux-arm64.deb",
+        "linux-x64-appimage": "Fabric-{version}-linux-x64.AppImage",
+        "linux-arm64-appimage": "Fabric-{version}-linux-arm64.AppImage"
+      }
     },
     "switchboard": {
       "name": "Fabric Switchboard",

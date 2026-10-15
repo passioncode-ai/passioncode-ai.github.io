@@ -97,7 +97,7 @@ export function npmEntryFor (key, policy, version, releases = []) {
   }
 }
 
-// Newer wins per product; a live answer never takes a product below the bundled snapshot
+// Newer wins per product (for the same tag, the union of both answers' assets); a live answer never takes a product below the bundled snapshot
 // (a deleted or yanked release must not silently downgrade a download) — except the release a
 // policy's `hold` names: holding is how an operator rolls a bad release back on purpose.
 export function mergeSnapshots (bundled, live, policies = {}) {
@@ -105,7 +105,11 @@ export function mergeSnapshots (bundled, live, policies = {}) {
   for (const [key, entry] of Object.entries(live?.products || {})) {
     const floor = products[key]
     const held = policies[key]?.hold && entry.tag === policies[key].hold
-    if (!floor || held || compareVersions(entry.version, floor.version) >= 0) products[key] = entry
+    if (!floor || held || compareVersions(entry.version, floor.version) >= 0) {
+      // The same release, read before a policy named more of its assets (a stored D1 answer from
+      // before a deploy): the floor's extra assets stay, so a new download route works at once.
+      products[key] = floor && entry.tag === floor.tag ? { ...entry, assets: { ...(floor.assets || {}), ...(entry.assets || {}) } } : entry
+    }
   }
   const times = [bundled?.generatedAt, live?.generatedAt].filter(Boolean).sort()
   return { schema: 'releases/1', generatedAt: times.at(-1) || null, products }

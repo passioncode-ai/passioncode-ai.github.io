@@ -25,7 +25,11 @@
       "Fabric jeszcze nie odpowiada",
       "Intel",
       "href=\"/fabric/download/macos\"",
-      "licencję komercyjną"
+      "licencję komercyjną",
+      "href=\"/fabric/download/windows-x64\"",
+      "href=\"/fabric/download/linux-x64-deb\"",
+      "WSL2",
+      "scoop install supabase"
     ],
     "inbox/index.html": [
       "Rozwojowa wersja zapoznawcza",

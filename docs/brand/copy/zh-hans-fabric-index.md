@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from zh-hans/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | 你的项目及其智能体的家 · macOS 早期预览版 | PassionCode.ai
+Fabric | 你的项目及其智能体的家 · macOS、Windows 和 Linux 早期预览版 | PassionCode.ai
 
-Fabric 是你的项目及其智能体的家，是适用于 Apple silicon 和 Intel 的 macOS 早期预览版。它把项目的看板、决策、工作和版本保存在同一个地方，就在你的 Mac 上。
+Fabric 是你的项目及其智能体的家，是适用于 macOS、Windows 和 Linux 的早期预览版。它把项目的看板、决策、工作和版本保存在同一个地方，就在你的电脑上。
 
 跳到正文
 
@@ -52,13 +52,13 @@ FABRIC · 早期预览版
 
 # 及其智能体
 
-Fabric 把每个项目的目标、看板、决策和版本保存在你的 Mac 上，供参与工作的每一个智能体使用。我们正在把它构建成你的智能体的 CEO
+Fabric 把每个项目的目标、看板、决策和版本保存在你的电脑上，供参与工作的每一个智能体使用。我们正在把它构建成你的智能体的 CEO
 
 工具包成员 一个项目里每个智能体共享的家：目标、看板、决策和版本。第 2 步和第 5 步，见工作原理。全部工具
 
 一条命令全部装好 →
 
-下载 macOS 版
+下载 Fabric
 
 ↓
 
@@ -66,7 +66,7 @@ Fabric 把每个项目的目标、看板、决策和版本保存在你的 Mac �
 
 ↓
 
-早期预览版 0.3.5 · 适用于搭载 Apple silicon 或 Intel 的 macOS
+早期预览版 0.3.5 · macOS、Windows 和 Linux
 
 首屏 · 四个操作
 
@@ -182,9 +182,9 @@ Fabric 把每个项目的目标、看板、决策和版本保存在你的 Mac �
 
 ## 早期预览版
 
-## 适用于你的 Mac
+## 适用于 Mac、Windows 和 Linux
 
-最新预览版：0.3.5。Fabric 在你的 Mac 上运行，使用本地数据库；你的项目只留在这台机器上。
+最新预览版：0.3.5。Fabric 在你的电脑上运行，使用本地数据库；你的项目只留在这台机器上。
 
 ⌘
 
@@ -199,19 +199,57 @@ DMG 安装包 · 已使用 Developer ID 签名并通过 Apple 公证
 
 打开 DMG，把 Fabric 拖到“应用程序”。同一个 DMG 可在搭载 Apple silicon 和 Intel 的 Mac 上运行。
 
+⊞
+
+### Windows
+
+x64（Intel 和 AMD）与 arm64 · Windows 安装程序
+为当前用户安装 · 已使用 Authenticode 签名
+
+下载 Windows x64 版
+
+↓
+
+Arm 版 Windows（arm64）↓
+
+运行安装程序。Fabric 打开的终端使用 PowerShell。
+
+>_
+
+### Linux
+
+x64 与 arm64
+.deb 软件包或 AppImage
+
+下载 x64 版 .deb
+
+↓
+
+arm64 版 .deb ↓
+
+x64 版 AppImage ↓
+
+arm64 版 AppImage ↓
+
+建议使用 .deb：它能打开 fabric:// 链接，并为注册 fabric-mcp 保持同一条路径。AppImage 每次启动都会挂载到新的路径。
+
 ☰
 
 ### 打开之前
 
 Fabric 会在 Docker 内用 Supabase CLI 启动自己的本地数据库。
 
-Docker Desktop 或 OrbStack，处于运行状态
+macOS：正在运行的 Docker Desktop 或 OrbStack，以及 Supabase CLI：brew install supabase/tap/supabase
 
-Supabase CLI：brew install supabase/tap/supabase
+Windows：正在运行的 Docker Desktop（WSL2），以及 Supabase CLI：scoop install supabase
+
+Linux：正在运行的 Docker Engine，以及 Supabase CLI
 
 已登录的 Claude Code 或 Codex CLI，供智能体执行工作
 
 如果缺少 Docker 或 CLI，Fabric 会在首次启动时告诉你缺的是哪一个。请参阅 Fabric 支持哪些编码智能体，以及每个智能体在其中能做什么。
+
+Windows 和 Linux 上暂不支持：Fabric 不读取编程智能体是否已登录，并会明确说明。Windows 上暂不支持：通过 Project Observatory 连接云产品的密钥。
 
 版本说明与校验和
 

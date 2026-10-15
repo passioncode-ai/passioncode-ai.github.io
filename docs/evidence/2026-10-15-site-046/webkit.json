@@ -1,0 +1,394 @@
+[
+ {
+  "width": 1440,
+  "path": "/fabric/",
+  "errors": [],
+  "overflow": false,
+  "cards": [
+   {
+    "h": "macOS",
+    "x": 130,
+    "y": 6549,
+    "w": 580,
+    "right": 710
+   },
+   {
+    "h": "Windows",
+    "x": 730,
+    "y": 6549,
+    "w": 580,
+    "right": 1310
+   },
+   {
+    "h": "Linux",
+    "x": 130,
+    "y": 6993,
+    "w": 580,
+    "right": 710
+   },
+   {
+    "h": "Before you open it",
+    "x": 730,
+    "y": 6993,
+    "w": 580,
+    "right": 1310
+   }
+  ],
+  "links": [
+   "/fabric/download/macos",
+   "/fabric/download/windows-x64",
+   "/fabric/download/windows-arm64",
+   "/fabric/download/linux-x64-deb",
+   "/fabric/download/linux-arm64-deb",
+   "/fabric/download/linux-x64-appimage",
+   "/fabric/download/linux-arm64-appimage"
+  ],
+  "over": [],
+  "hero": "Download Fabric\n↓",
+  "caption": "Early preview\n0.3.5\n· macOS, Windows and Linux",
+  "errors_note": "the one console line is Playwright refusing its own screenshot style under the CSP (seen on the live site too, and 0 errors before the screenshot)"
+ },
+ {
+  "width": 1440,
+  "path": "/ru/fabric/",
+  "errors": [],
+  "overflow": false,
+  "cards": [
+   {
+    "h": "macOS",
+    "x": 130,
+    "y": 6819,
+    "w": 580,
+    "right": 710
+   },
+   {
+    "h": "Windows",
+    "x": 730,
+    "y": 6819,
+    "w": 580,
+    "right": 1310
+   },
+   {
+    "h": "Linux",
+    "x": 130,
+    "y": 7285,
+    "w": 580,
+    "right": 710
+   },
+   {
+    "h": "Перед первым запуском",
+    "x": 730,
+    "y": 7285,
+    "w": 580,
+    "right": 1310
+   }
+  ],
+  "links": [
+   "/fabric/download/macos",
+   "/fabric/download/windows-x64",
+   "/fabric/download/windows-arm64",
+   "/fabric/download/linux-x64-deb",
+   "/fabric/download/linux-arm64-deb",
+   "/fabric/download/linux-x64-appimage",
+   "/fabric/download/linux-arm64-appimage"
+  ],
+  "over": [],
+  "hero": "Скачать Fabric\n↓",
+  "caption": "Ранняя предварительная версия\n0.3.5\n· macOS, Windows и Linux",
+  "errors_note": "the one console line is Playwright refusing its own screenshot style under the CSP (seen on the live site too, and 0 errors before the screenshot)"
+ },
+ {
+  "width": 1440,
+  "path": "/ja/fabric/",
+  "errors": [],
+  "overflow": false,
+  "cards": [
+   {
+    "h": "macOS",
+    "x": 130,
+    "y": 6952,
+    "w": 580,
+    "right": 710
+   },
+   {
+    "h": "Windows",
+    "x": 730,
+    "y": 6952,
+    "w": 580,
+    "right": 1310
+   },
+   {
+    "h": "Linux",
+    "x": 130,
+    "y": 7416,
+    "w": 580,
+    "right": 710
+   },
+   {
+    "h": "開く前に",
+    "x": 730,
+    "y": 7416,
+    "w": 580,
+    "right": 1310
+   }
+  ],
+  "links": [
+   "/fabric/download/macos",
+   "/fabric/download/windows-x64",
+   "/fabric/download/windows-arm64",
+   "/fabric/download/linux-x64-deb",
+   "/fabric/download/linux-arm64-deb",
+   "/fabric/download/linux-x64-appimage",
+   "/fabric/download/linux-arm64-appimage"
+  ],
+  "over": [],
+  "hero": "Fabricをダウンロード\n↓",
+  "caption": "早期プレビュー版\n0.3.5\n· macOS、Windows、Linux",
+  "errors_note": "the one console line is Playwright refusing its own screenshot style under the CSP (seen on the live site too, and 0 errors before the screenshot)"
+ },
+ {
+  "width": 1440,
+  "path": "/de/fabric/",
+  "errors": [],
+  "overflow": false,
+  "cards": [
+   {
+    "h": "macOS",
+    "x": 130,
+    "y": 6705,
+    "w": 580,
+    "right": 710
+   },
+   {
+    "h": "Windows",
+    "x": 730,
+    "y": 6705,
+    "w": 580,
+    "right": 1310
+   },
+   {
+    "h": "Linux",
+    "x": 130,
+    "y": 7171,
+    "w": 580,
+    "right": 710
+   },
+   {
+    "h": "Bevor du es öffnest",
+    "x": 730,
+    "y": 7171,
+    "w": 580,
+    "right": 1310
+   }
+  ],
+  "links": [
+   "/fabric/download/macos",
+   "/fabric/download/windows-x64",
+   "/fabric/download/windows-arm64",
+   "/fabric/download/linux-x64-deb",
+   "/fabric/download/linux-arm64-deb",
+   "/fabric/download/linux-x64-appimage",
+   "/fabric/download/linux-arm64-appimage"
+  ],
+  "over": [],
+  "hero": "Fabric herunterladen\n↓",
+  "caption": "Frühe Vorschau\n0.3.5\n· macOS, Windows und Linux",
+  "errors_note": "the one console line is Playwright refusing its own screenshot style under the CSP (seen on the live site too, and 0 errors before the screenshot)"
+ },
+ {
+  "width": 390,
+  "path": "/fabric/",
+  "errors": [],
+  "overflow": false,
+  "cards": [
+   {
+    "h": "macOS",
+    "x": 14,
+    "y": 7601,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Windows",
+    "x": 14,
+    "y": 8087,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Linux",
+    "x": 14,
+    "y": 8591,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Before you open it",
+    "x": 14,
+    "y": 9094,
+    "w": 362,
+    "right": 376
+   }
+  ],
+  "links": [
+   "/fabric/download/macos",
+   "/fabric/download/windows-x64",
+   "/fabric/download/windows-arm64",
+   "/fabric/download/linux-x64-deb",
+   "/fabric/download/linux-arm64-deb",
+   "/fabric/download/linux-x64-appimage",
+   "/fabric/download/linux-arm64-appimage"
+  ],
+  "over": [],
+  "hero": "Download Fabric\n↓",
+  "caption": "Early preview\n0.3.5\n· macOS, Windows and Linux",
+  "errors_note": "the one console line is Playwright refusing its own screenshot style under the CSP (seen on the live site too, and 0 errors before the screenshot)"
+ },
+ {
+  "width": 390,
+  "path": "/ru/fabric/",
+  "errors": [],
+  "overflow": false,
+  "cards": [
+   {
+    "h": "macOS",
+    "x": 14,
+    "y": 8126,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Windows",
+    "x": 14,
+    "y": 8612,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Linux",
+    "x": 14,
+    "y": 9117,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Перед первым запуском",
+    "x": 14,
+    "y": 9641,
+    "w": 362,
+    "right": 376
+   }
+  ],
+  "links": [
+   "/fabric/download/macos",
+   "/fabric/download/windows-x64",
+   "/fabric/download/windows-arm64",
+   "/fabric/download/linux-x64-deb",
+   "/fabric/download/linux-arm64-deb",
+   "/fabric/download/linux-x64-appimage",
+   "/fabric/download/linux-arm64-appimage"
+  ],
+  "over": [],
+  "hero": "Скачать Fabric\n↓",
+  "caption": "Ранняя предварительная версия\n0.3.5\n· macOS, Windows и Linux",
+  "errors_note": "the one console line is Playwright refusing its own screenshot style under the CSP (seen on the live site too, and 0 errors before the screenshot)"
+ },
+ {
+  "width": 390,
+  "path": "/ja/fabric/",
+  "errors": [],
+  "overflow": false,
+  "cards": [
+   {
+    "h": "macOS",
+    "x": 14,
+    "y": 7956,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Windows",
+    "x": 14,
+    "y": 8437,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Linux",
+    "x": 14,
+    "y": 8940,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "開く前に",
+    "x": 14,
+    "y": 9466,
+    "w": 362,
+    "right": 376
+   }
+  ],
+  "links": [
+   "/fabric/download/macos",
+   "/fabric/download/windows-x64",
+   "/fabric/download/windows-arm64",
+   "/fabric/download/linux-x64-deb",
+   "/fabric/download/linux-arm64-deb",
+   "/fabric/download/linux-x64-appimage",
+   "/fabric/download/linux-arm64-appimage"
+  ],
+  "over": [],
+  "hero": "Fabricをダウンロード\n↓",
+  "caption": "早期プレビュー版\n0.3.5\n· macOS、Windows、Linux",
+  "errors_note": "the one console line is Playwright refusing its own screenshot style under the CSP (seen on the live site too, and 0 errors before the screenshot)"
+ },
+ {
+  "width": 390,
+  "path": "/de/fabric/",
+  "errors": [],
+  "overflow": false,
+  "cards": [
+   {
+    "h": "macOS",
+    "x": 14,
+    "y": 8048,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Windows",
+    "x": 14,
+    "y": 8534,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Linux",
+    "x": 14,
+    "y": 9038,
+    "w": 362,
+    "right": 376
+   },
+   {
+    "h": "Bevor du es öffnest",
+    "x": 14,
+    "y": 9563,
+    "w": 362,
+    "right": 376
+   }
+  ],
+  "links": [
+   "/fabric/download/macos",
+   "/fabric/download/windows-x64",
+   "/fabric/download/windows-arm64",
+   "/fabric/download/linux-x64-deb",
+   "/fabric/download/linux-arm64-deb",
+   "/fabric/download/linux-x64-appimage",
+   "/fabric/download/linux-arm64-appimage"
+  ],
+  "over": [],
+  "hero": "Fabric herunterladen\n↓",
+  "caption": "Frühe Vorschau\n0.3.5\n· macOS, Windows und Linux",
+  "errors_note": "the one console line is Playwright refusing its own screenshot style under the CSP (seen on the live site too, and 0 errors before the screenshot)"
+ }
+]

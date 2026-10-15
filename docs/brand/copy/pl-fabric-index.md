@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from pl/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | Dom dla Twoich projektów i ich agentów · wczesna wersja zapoznawcza na macOS | PassionCode.ai
+Fabric | Dom dla Twoich projektów i ich agentów · wczesna wersja zapoznawcza na macOS, Windows i Linux | PassionCode.ai
 
-Fabric to dom dla Twoich projektów i ich agentów, we wczesnej wersji zapoznawczej na macOS na Apple silicon i Intel. Trzyma tablicę, decyzje, pracę i wydania projektu w jednym miejscu, na Twoim Macu.
+Fabric to dom dla Twoich projektów i ich agentów, we wczesnej wersji zapoznawczej na macOS, Windows i Linux. Trzyma tablicę, decyzje, pracę i wydania projektu w jednym miejscu, na Twoim komputerze.
 
 Przejdź do treści
 
@@ -52,13 +52,13 @@ FABRIC · WCZESNA WERSJA ZAPOZNAWCZA
 
 # i ich agentów
 
-Fabric trzyma na Twoim Macu cel, tablicę, decyzje i wydania każdego projektu, dla każdego agenta, który przy nim pracuje. Budujemy go tak, by działał jako CEO Twoich agentów
+Fabric trzyma na Twoim komputerze cel, tablicę, decyzje i wydania każdego projektu, dla każdego agenta, który przy nim pracuje. Budujemy go tak, by działał jako CEO Twoich agentów
 
 W ZESTAWIE NARZĘDZI Wspólny dom wszystkich agentów projektu: jego cel, tablica, decyzje i wydania. To kroki 2 i 5 w części „Jak to działa”. Wszystkie narzędzia
 
 Skonfiguruj wszystko jednym poleceniem →
 
-Pobierz na macOS
+Pobierz Fabric
 
 ↓
 
@@ -66,7 +66,7 @@ Poznaj sposób pracy
 
 ↓
 
-Wczesna wersja zapoznawcza 0.3.5 · macOS na Apple silicon i Intel
+Wczesna wersja zapoznawcza 0.3.5 · macOS, Windows i Linux
 
 PIERWSZY EKRAN · CZTERY AKCJE
 
@@ -182,9 +182,9 @@ POBIERZ FABRIC
 
 ## Wczesna wersja zapoznawcza
 
-## na Twojego Maca
+## na Maca, Windows i Linux
 
-Najnowsza wersja zapoznawcza: 0.3.5. Fabric działa na Twoim Macu z lokalną bazą danych; Twoje projekty zostają na tym komputerze.
+Najnowsza wersja zapoznawcza: 0.3.5. Fabric działa na Twoim komputerze z lokalną bazą danych; Twoje projekty zostają na tym komputerze.
 
 ⌘
 
@@ -199,19 +199,57 @@ Pobierz na macOS
 
 Otwórz plik DMG i przeciągnij Fabric do folderu Programy. Ten sam plik DMG działa na Makach z Apple silicon i z procesorem Intel.
 
+⊞
+
+### Windows
+
+x64 (Intel i AMD) oraz arm64 · instalator Windows
+Instaluje się dla Twojego użytkownika · podpis Authenticode
+
+Pobierz na Windows x64
+
+↓
+
+Windows na Arm (arm64) ↓
+
+Uruchom plik instalatora. Terminale, które otwiera Fabric, używają PowerShell.
+
+>_
+
+### Linux
+
+x64 i arm64
+Pakiet .deb lub AppImage
+
+Pobierz .deb na x64
+
+↓
+
+.deb na arm64 ↓
+
+AppImage na x64 ↓
+
+AppImage na arm64 ↓
+
+Wybierz raczej .deb: otwiera linki fabric:// i trzyma jedną ścieżkę do rejestracji fabric-mcp. AppImage przy każdym uruchomieniu montuje się pod nową ścieżką.
+
 ☰
 
 ### Zanim go otworzysz
 
 Fabric uruchamia własną lokalną bazę danych przez Supabase CLI w Dockerze.
 
-Docker Desktop lub OrbStack, uruchomiony
+Na macOS: uruchomiony Docker Desktop lub OrbStack i Supabase CLI: brew install supabase/tap/supabase
 
-Supabase CLI: brew install supabase/tap/supabase
+Na Windows: uruchomiony Docker Desktop z WSL2 i Supabase CLI: scoop install supabase
+
+Na Linuksie: uruchomiony Docker Engine i Supabase CLI
 
 Claude Code lub Codex CLI, zalogowany, aby agenci mogli pracować
 
 Jeśli brakuje Dockera lub CLI, Fabric przy pierwszym uruchomieniu powie, którego. Zobacz z którymi agentami kodującymi współpracuje Fabric i co każdy z nich może tam zrobić.
+
+Jeszcze nie na Windows i Linuksie: Fabric nie odczytuje, czy agent do kodowania jest zalogowany, i mówi o tym. Jeszcze nie na Windows: podłączanie sekretu produktu chmurowego przez Project Observatory.
 
 Informacje o wydaniu i suma kontrolna
 
