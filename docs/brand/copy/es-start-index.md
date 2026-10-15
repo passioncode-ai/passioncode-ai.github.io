@@ -48,11 +48,11 @@ Configurar
 
 Empezar · gratis y de código abierto
 
-# De un Mac vacío a tu primer agente
+# De un ordenador vacío a tu primer agente
 
 Crea agentes que siguen trabajando y saben lo que hicieron los demás. Un comando configura las herramientas, y el mismo comando las revisa después
 
-Requiere Node.js 18+ y Claude Code o Codex Fabric requiere macOS en Apple silicon o Intel
+Requiere Node.js 18+ y Claude Code o Codex Fabric requiere Docker y la CLI de Supabase en todos los sistemas
 
 →
 
@@ -80,13 +80,13 @@ UN COMANDO
 
 ## o revisa lo que ya tienes
 
-Un comando instala las herramientas que elijas desde sus versiones firmadas, conecta sus servidores MCP a Claude Code, Codex, Gemini CLI y Kimi Code, y añade las skills. En un ordenador que ya está configurado, el mismo comando lo revisa todo, repara lo que falla y muestra qué cambió.
+En macOS, un comando instala las herramientas que elijas desde sus versiones firmadas, conecta sus servidores MCP a Claude Code, Codex, Gemini CLI y Kimi Code, y añade las skills. En Windows y Linux, descarga las aplicaciones desde sus páginas y luego ejecuta el mismo comando para las skills y los servidores MCP. En un ordenador que ya está configurado, el mismo comando lo revisa todo, repara lo que falla y muestra qué cambió.
 
 ### Ejecútalo tú
 
 npx @passioncode-ai/passioncode@latest setup
 
-Necesita Node.js 18+ · instala las aplicaciones en macOS; en Linux y Windows configura las skills y los servidores MCP · no instala nada cuya firma, suma de comprobación o notarización falle · después reinicia tu agente de programación · para revisar sin cambiar nada:
+Necesita Node.js 18+ · no instala nada cuya firma, suma de comprobación o notarización falle · después reinicia tu agente de programación · para revisar sin cambiar nada:
 
 npx @passioncode-ai/passioncode@latest doctor
 
@@ -94,9 +94,9 @@ npx @passioncode-ai/passioncode@latest doctor
 
 Copia este prompt en Claude Code, Codex u otro agente de programación. Ejecuta el comando, termina lo que puede y te da una lista corta de lo que solo tú puedes hacer: iniciar sesión, permitir el acceso, escribir una clave en la ventana propia de la herramienta.
 
-Configura PassionCode.ai en este ordenador, o revísalo y repáralo si ya está configurado. Ejecuta npx --yes @passioncode-ai/passioncode@latest setup --yes --json (necesita Node 18 o posterior) y lee su JSON: instala las aplicaciones que faltan desde sus versiones firmadas, las skills y cada servidor MCP, repara lo que falle y lo revisa todo de nuevo. No descargues ni instales nada a mano, y nunca detengas ni mates una aplicación en ejecución. Después ejecuta cada paso de incorporación de producto de la lista que pueda hacer un agente, nunca me pidas una clave ni una contraseña en el chat (las herramientas abren su propio campo oculto) y termina con npx --yes @passioncode-ai/passioncode@latest doctor. Dime brevemente qué configuraste o reparaste, qué sigue fallando y los pasos numerados que solo yo puedo hacer, como iniciar sesión, y recuérdame que te reinicie para que se carguen las nuevas skills y los servidores MCP.
+Configura PassionCode.ai en este ordenador, o revísalo y repáralo si ya está configurado. Ejecuta npx --yes @passioncode-ai/passioncode@latest setup --yes --json (necesita Node 18 o posterior) y lee su JSON: en macOS instala las aplicaciones que faltan desde sus versiones firmadas, y en Windows y Linux indica en su lugar la página de descarga de cada aplicación; en todos los sistemas instala las skills y cada servidor MCP, repara lo que falle y lo revisa todo de nuevo. No descargues ni instales nada a mano, y nunca detengas ni mates una aplicación en ejecución. Después ejecuta cada paso de incorporación de producto de la lista que pueda hacer un agente, nunca me pidas una clave ni una contraseña en el chat (las herramientas abren su propio campo oculto) y termina con npx --yes @passioncode-ai/passioncode@latest doctor. Dime brevemente qué configuraste o reparaste, qué sigue fallando y los pasos numerados que solo yo puedo hacer, como iniciar sesión o, en Windows y Linux, instalar las aplicaciones desde sus páginas y volver a ejecutar el comando, y recuérdame que te reinicie para que se carguen las nuevas skills y los servidores MCP.
 
-Fabric es una vista previa temprana: el comando lo instala cuando Docker y la CLI de Supabase están en tu ordenador, y si no, te dice qué añadir.
+Fabric es una vista previa temprana y requiere Docker y la CLI de Supabase en todos los sistemas. En macOS, el comando lo instala cuando ambos están en tu ordenador, y si no, te dice qué añadir; en Windows y Linux, primero descárgalo desde la página de Fabric e instálalo.
 
 ¿Prefieres hacerlo a mano?
 
@@ -114,6 +114,8 @@ para macOS
 
 ↓
 
+Para Windows y Linux
+
 Requisitos y límites
 
 Apple silicon e Intel · firmado y notarizado · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · notas de la versión
@@ -129,6 +131,8 @@ Descargar Fabric Dashboards
 0.7.10
 
 ↓
+
+Para Windows y Linux
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 

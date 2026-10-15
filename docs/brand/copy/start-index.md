@@ -48,11 +48,11 @@ Set up
 
 Get started · free and open source
 
-# From an empty Mac to your first agent
+# From an empty computer to your first agent
 
 Build agents that keep working and know what the others did. One command sets up the tools, and the same command checks them later
 
-Needs Node.js 18+ and Claude Code or Codex Fabric needs macOS on Apple silicon or Intel
+Needs Node.js 18+ and Claude Code or Codex Fabric needs Docker and the Supabase CLI on every system
 
 →
 
@@ -80,13 +80,13 @@ ONE COMMAND
 
 ## or check what you have
 
-One command installs the tools you choose from their signed releases, connects their MCP servers to Claude Code, Codex, Gemini CLI and Kimi Code, and adds the skills. On a computer that is already set up, the same command checks everything, repairs what is wrong and shows what changed.
+On macOS, one command installs the tools you choose from their signed releases, connects their MCP servers to Claude Code, Codex, Gemini CLI and Kimi Code, and adds the skills. On Windows and Linux, download the apps from their pages, then run the same command for the skills and the MCP servers. On a computer that is already set up, the same command checks everything, repairs what is wrong and shows what changed.
 
 ### Run it yourself
 
 npx @passioncode-ai/passioncode@latest setup
 
-Needs Node.js 18+ · installs the apps on macOS; on Linux and Windows it sets up the skills and MCP servers · it installs nothing whose signature, checksum or notarization fails · restart your coding agent afterwards · to check without changing anything:
+Needs Node.js 18+ · it installs nothing whose signature, checksum or notarization fails · restart your coding agent afterwards · to check without changing anything:
 
 npx @passioncode-ai/passioncode@latest doctor
 
@@ -94,9 +94,9 @@ npx @passioncode-ai/passioncode@latest doctor
 
 Copy this prompt into Claude Code, Codex or another coding agent. It runs the command, finishes what it can and gives you a short list of what only you can do: sign in, allow access, type a key into the tool’s own prompt.
 
-Set up PassionCode.ai on this computer, or check and repair it if it is already set up. Run npx --yes @passioncode-ai/passioncode@latest setup --yes --json (it needs Node 18 or newer) and read its JSON: it installs the missing apps from their signed releases, the skills and every MCP server, repairs whatever is wrong, and checks everything again. Do not download or install anything by hand, and never stop or kill a running app. Then run each product onboarding step it lists that an agent may run, never ask me for a key or password in the chat (the tools open their own hidden prompts), and finish with npx --yes @passioncode-ai/passioncode@latest doctor. Tell me briefly what you set up or fixed, what still fails, and the numbered steps only I can do, such as signing in, and remind me to restart you so the new skills and MCP servers load.
+Set up PassionCode.ai on this computer, or check and repair it if it is already set up. Run npx --yes @passioncode-ai/passioncode@latest setup --yes --json (it needs Node 18 or newer) and read its JSON: on macOS it installs the missing apps from their signed releases, and on Windows and Linux it names each app's download page instead; everywhere it installs the skills and every MCP server, repairs whatever is wrong, and checks everything again. Do not download or install anything by hand, and never stop or kill a running app. Then run each product onboarding step it lists that an agent may run, never ask me for a key or password in the chat (the tools open their own hidden prompts), and finish with npx --yes @passioncode-ai/passioncode@latest doctor. Tell me briefly what you set up or fixed, what still fails, and the numbered steps only I can do, such as signing in or, on Windows and Linux, installing the apps from their pages and running the command again, and remind me to restart you so the new skills and MCP servers load.
 
-Fabric is an early preview: the command installs it when Docker and the Supabase CLI are on your computer, and otherwise tells you what to add.
+Fabric is an early preview and needs Docker and the Supabase CLI on every system. On macOS the command installs it when both are present, and otherwise tells you what to add; on Windows and Linux, download it from the Fabric page and install it first.
 
 Prefer to do it by hand?
 
@@ -114,6 +114,8 @@ for macOS
 
 ↓
 
+For Windows and Linux
+
 Requirements and limits
 
 Apple silicon and Intel · signed and notarized · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · release notes
@@ -129,6 +131,8 @@ Download Fabric Dashboards
 0.7.10
 
 ↓
+
+For Windows and Linux
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
