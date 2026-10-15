@@ -43,3 +43,12 @@ download page on passioncode.ai offers the Mac build until its own change"; this
   `/de/fabric/` at 1440 and 390 px: no horizontal overflow, nothing past the viewport in #download, seven download
   links, two columns at 1440 and one at 390, no page errors ([webkit.json](webkit.json),
   [webkit-check.cjs](webkit-check.cjs)).
+
+## Shipped
+
+PR #140 merged as `991691b` (CI `check` passed); `npm run releases:check` on `main` PASS. Deployed from `main` with
+`npm run deploy` as Worker version `2c9d1f94-d81b-412c-804e-ba3f95e9e7de`. `scripts/verify-live.py` PASS, 263 of 263
+checks: 224 assets (150 pages, 15 in each of ten languages), 13 download routes — `/fabric/download/macos`,
+`windows-x64`, `windows-arm64`, `linux-x64-deb`, `linux-arm64-deb`, `linux-x64-appimage` and `linux-arm64-appimage`
+each 302 to the v0.3.5 asset right after the deploy — 23 not-found addresses and the intake in dry-run mode
+([live.json](live.json)).
