@@ -68,9 +68,9 @@ Switchboard 可配合 Claude Code、Codex 以及其他热门编码智能体使�
 
 下面的每个智能体都可以使用 Switchboard 的工具：它能看到由哪个账号处理自己的请求、还剩多少额度，也可以切换账号。接受自定义端点的智能体还可以把请求经由 Switchboard 发送，由 Switchboard 为它们切换账号。部分智能体可以直接从 Switchboard 启动。
 
-仅工具。 智能体连接 Switchboard 的工具；它的请求仍发往自己的服务。
+仅工具。智能体连接 Switchboard 的工具；它的请求仍发往自己的服务。
 
-经由 Switchboard。 在智能体中设置一次即可；Switchboard 会给出需要填写的具体内容。
+经由 Switchboard。在智能体中设置一次即可；Switchboard 会给出需要填写的具体内容。
 
 从 Switchboard 启动。 Switchboard 在项目文件夹中启动智能体，并使用该文件夹的账号。
 

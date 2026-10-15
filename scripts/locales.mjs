@@ -324,6 +324,11 @@ export function tightenCjk (html, locale) {
     [`(${C}) +(<a\\b[^>]*>)(?=${C})`, '$1$2'],
     [`(${C}</a>) +(?=${C})`, '$1']
   ]
+  // A heading whose second half is emphasised (From an empty computer to <em>your first agent</em>)
+  // and an emphasised word inside a sentence inherit the English space at the join; between CJK
+  // characters (or after full-width punctuation closing the emphasis) it is dropped. Korean is
+  // written with spaces and keeps it: its Hangul is not in C.
+  rules.push([`(${C}) +(<(?:em|strong|b)\\b[^>]*>)(?=(?:<wbr>)?${C})`, '$1$2'], [`(${C}</(?:em|strong|b)>) +(?=${C})`, '$1'])
   // A space the English source keeps inside a bracket, against a link or a live value, is a typo in any language.
   rules.push([`(\\() +(?=<(?:a|code|em|strong|b|span)\\b)`, '$1'], [`(</(?:a|code|em|strong|b|span)>) +(?=\\))`, '$1'])
   // Korean particles (은/는, 을/를, 에, 에서, 로…) attach to the word before them, so the space the

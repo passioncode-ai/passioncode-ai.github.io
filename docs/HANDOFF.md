@@ -1,3 +1,24 @@
+# Current handoff — SITE-048: no space at an emphasis join in Chinese and Japanese — 2026-10-15
+
+Objective (backlog SITE-048): a heading whose second half is emphasised kept the English source's space at the
+join in languages written without spaces: zh-hans /start/ read "从一台空白的电脑 到你的第一个智能体". Record:
+[evidence/2026-10-15-site-048/README.md](evidence/2026-10-15-site-048/README.md).
+
+Done: the cause is the generator, not a catalog — `localizePage` keeps the English fragment's trailing space
+before `<em>`, and `tightenCjk` (`scripts/locales.mjs`) dropped it only around links and code. It now also drops it
+at an `<em>`/`<strong>`/`<b>` join between CJK characters (or after full-width punctuation closing the emphasis).
+Korean keeps it (written with spaces; Hangul is not in the CJK class), as do the spaced languages. One catalog value
+carried the same stray space (zh-hans /start/ meta description, `i18n/zh-hans/start.json`). Pages regenerated with
+`npm run locales`, copy projections refreshed; DEPLOYMENT "Languages" names the rule.
+
+Checks run: two new tests in `scripts/locales.test.mjs` (failed before the fix with 19 hits on 14 zh-hans/ja pages,
+pass after); `npm run check` exit 0; `npm run build` 224 entries; WebKit check (see the record).
+
+Open: kicker/caption spans (`<span>工具包成员</span> 状态…`, form `<small>`) keep their space on purpose: they are
+separate visual elements, not an emphasis join. SITE-040, SITE-041, SITE-026 as before.
+
+Next task: SITE-040.
+
 # Current handoff — SITE-047: /start/ says per system what setup installs — live, 2026-10-15
 
 Objective (backlog SITE-047): /start/ said "Fabric needs macOS on Apple silicon or Intel". Fabric 0.3.5 ships Windows and Linux builds, and the launcher installs apps only on macOS. Record: [evidence/2026-10-15-site-047/README.md](evidence/2026-10-15-site-047/README.md).
