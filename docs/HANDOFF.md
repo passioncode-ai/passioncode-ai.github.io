@@ -1,4 +1,4 @@
-# Current handoff — SITE-045: one door to setup, Fabric as the home, the About notes, 2026-10-14
+# Current handoff — SITE-045: one door to setup, Fabric as the home, the About notes — live, 2026-10-15
 
 Objective (operator decisions D1–D4, given in chat 2026-10-14): keep the site small and make one door to start —
 `setup` everywhere a visitor starts, Fabric as the home with the four tools working with it and on their own, a short
@@ -22,9 +22,13 @@ Open: SITE-046 (Fabric's Windows and Linux downloads on /fabric/); SITE-018 (kee
 0.3.5 here); SITE-040, SITE-041, SITE-026 as before. Not changed on purpose: the Switchboard page's launcher-plugin
 region still says `update` (it installs a plugin, and is hidden while `launcherPlugin` is false; SITE-008).
 
-Next task: merge the PR when CI is green, deploy from `main` (`docs/DEPLOYMENT.md`), run
-`python3 scripts/verify-live.py --output docs/evidence/2026-10-14-site-045/live.json`, record the receipt in SITE-045;
-then SITE-046.
+Shipped: #137 merged as `6729661` (rebased onto the video v3 of #134–#136; the transcript and VideoObject follow v3 —
+PT1M32S en, PT1M38S ru, transcript equal to `narration-en.txt`/`narration-ru.txt` word for word; terminal cards without
+`--yes`, which stays in the agent prompt only); #138 (`9719852`) synced the release snapshot; deployed from `main` as
+Worker version `8f40f4bd-db81-4546-967f-9a0f560c60d1`; `scripts/verify-live.py` PASS, 257 checks
+([live.json](evidence/2026-10-14-site-045/live.json)).
+
+Next task: SITE-046 (Fabric's Windows and Linux downloads on /fabric/), then SITE-040.
 
 # Current handoff — SITE-044: home video v3 live, 2026-10-14
 
