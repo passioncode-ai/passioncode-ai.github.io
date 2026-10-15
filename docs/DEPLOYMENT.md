@@ -260,7 +260,10 @@ Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry
   the script tag rather than `zh-CN` because it names what the text is (Simplified) and not a
   country, and it makes the browser pick Simplified glyphs. Both have one plural form (`other`).
   `tightenCjk` (`scripts/locales.mjs`) drops the English space around links between CJK characters;
-  `"latinSpacing": false` (Japanese) also drops it beside Latin names. `styles.css` ends with the
+  `"latinSpacing": false` (Japanese) also drops it beside Latin names. It also drops the English
+  space at an emphasis join (`<em>`, `<strong>`, `<b>`) between CJK characters, so a heading whose
+  second half is emphasised reads 从一台空白的电脑<em>到你的第一个智能体</em> (SITE-048); Korean,
+  written with spaces, keeps it. `styles.css` ends with the
   CJK block: system CJK font stacks, no negative tracking, taller headings. `"phraseBreaks": true`
   (Japanese, 2026-10-11) cuts the text of h1–h3 into phrases with BudouX (`budoux`, a pinned dev
   dependency) and marks each boundary with `<wbr>`; the CJK block sets `word-break: keep-all` on those

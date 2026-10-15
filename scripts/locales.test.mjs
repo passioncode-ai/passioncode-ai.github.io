@@ -201,6 +201,36 @@ test('Japanese headings break between phrases, never inside a word; titles, meta
   assert.doesNotMatch(ru, /<wbr>/, 'only a locale with phraseBreaks gets them')
 })
 
+test('a heading split by emphasis joins without a space in Chinese and Japanese, and keeps it in spaced languages', () => {
+  const html = page('<h1 id="t">From an empty computer to <em>your first agent</em></h1><p>We build <strong>around</strong> projects.</p>')
+  const strings = { zh: { 'From an empty computer to': '从一台空白的电脑', 'your first agent': '到你的第一个智能体', 'We build': '我们围绕', around: '项目', 'projects.': '来构建。' }, ja: { 'From an empty computer to': '何もないコンピューターから', 'your first agent': '最初のエージェントまで', 'We build': '私たちは', around: 'プロジェクト', 'projects.': 'を中心に作ります。' }, ko: { 'From an empty computer to': '빈 컴퓨터에서', 'your first agent': '첫 에이전트까지', 'We build': '우리는', around: '프로젝트를', 'projects.': '중심으로 만듭니다.' } }
+  const zh = localizePage(html, { sourceFile: 'x/index.html', locale: 'zh-hans', catalog: catalog(strings.zh) }).html
+  assert.match(zh, /<h1 id="t">从一台空白的电脑<em>到你的第一个智能体<\/em><\/h1>/)
+  assert.match(zh, /我们围绕<strong>项目<\/strong>来构建。/, 'inline emphasis between Chinese characters takes no space either side')
+  const ja = localizePage(html, { sourceFile: 'x/index.html', locale: 'ja', catalog: catalog(strings.ja) }).html
+  assert.match(ja, /から<em>最初の/, 'Japanese: no space at the join')
+  assert.match(ja, /私たちは<strong>プロジェクト<\/strong>を中心に/)
+  const ko = localizePage(html, { sourceFile: 'x/index.html', locale: 'ko', catalog: catalog(strings.ko) }).html
+  assert.match(ko, /빈 컴퓨터에서 <em>첫 에이전트까지<\/em>/, 'Korean separates words with spaces and keeps this one')
+  assert.match(ru(html, { 'From an empty computer to': 'С пустого компьютера', 'your first agent': 'до первого агента' }).html, /компьютера <em>до первого агента<\/em>/)
+})
+
+test('no generated Chinese or Japanese page puts a space between CJK text and an emphasis or a heading join', () => {
+  const C = '[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}、。，．：；！？（）「」『』【】〔〕〈〉《》ー]'
+  const join = new RegExp(`${C} +<(?:em|strong|b)\\b[^>]*>(?:<wbr>)?${C}|${C}</(?:em|strong|b)> +${C}`, 'u')
+  const heading = new RegExp(`<h([1-3])\\b[^>]*>(?:(?!</h\\1>)[\\s\\S])*?${C} +(?:<[^>]+>)*${C}`, 'u')
+  const bad = []
+  for (const locale of ['zh-hans', 'ja']) {
+    for (const source of SOURCE_PAGES) {
+      const file = source === 'index.html' ? `${locale}/index.html` : `${locale}/${source}`
+      if (!existsSync(resolve(root, file))) continue
+      const text = read(file).replace(/<script[\s\S]*?<\/script>/g, '')
+      for (const re of [join, heading]) { const m = re.exec(text); if (m) bad.push(`${file}: ${m[0].slice(-40)}`) }
+    }
+  }
+  assert.deepEqual(bad, [])
+})
+
 test('a translation that carries markup or changes its placeholders is refused', () => {
   assert.throws(() => ru(page('<p>Plain</p>'), { Plain: '<b>Жирный</b>' }), /markup/)
   assert.throws(() => ru(page('<p>Hi {name}</p>'), { 'Hi {name}': 'Привет, {имя}' }), /placeholders/)
