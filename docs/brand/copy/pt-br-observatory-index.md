@@ -130,13 +130,13 @@ BAIXAR O OBSERVATORY
 
 ## Comece pelo seu próprio espaço de trabalho
 
-Release mais recente: 0.24.4. Nenhuma chave de API é necessária para a primeira observação local. Entregue a configuração ao seu agente de programação ou execute-a você mesmo.
+Release mais recente: 0.24.5. Nenhuma chave de API é necessária para a primeira observação local. Entregue a configuração ao seu agente de programação ou execute-a você mesmo.
 
 01
 
 ### Instale o release
 
-Baixar project_observatory-0.24.4-py3-none-any.whl e SHA256SUMS do release 0.24.4, confira-os com shasum -a 256 -c SHA256SUMS --ignore-missing, depois, num ambiente Python 3.11+ isolado com suporte a extensões do SQLite, pip install --no-deps o wheel e depois o seu extra [full] com -c "$(project-observatory full-path)/requirements-full.lock", o conjunto de dependências com o qual o release foi testado. No macOS, use o Python do Homebrew. No Windows, use o Python 3.13 ou mais recente e os passos de PowerShell do guia de instalação.
+Baixar project_observatory-0.24.5-py3-none-any.whl e SHA256SUMS do release 0.24.5, confira-os com shasum -a 256 -c SHA256SUMS --ignore-missing, depois, num ambiente Python 3.11+ isolado com suporte a extensões do SQLite, pip install --no-deps o wheel e depois o seu extra [full] com -c "$(project-observatory full-path)/requirements-full.lock", o conjunto de dependências com o qual o release foi testado. No macOS, use o Python do Homebrew. No Windows, use o Python 3.13 ou mais recente e os passos de PowerShell do guia de instalação.
 
 02
 
@@ -168,11 +168,11 @@ Todos os releases
 
 ↗
 
-App para Mac: ProjectObservatory-0.24.4-macos.zip, um só app para Apple silicon e Intel, assinado com Developer ID e notarizado pela Apple, para macOS 14+. Ele abre no painel e usa o motor instalado acima; confira-o com o mesmo SHA256SUMS.
+App para Mac: ProjectObservatory-0.24.5-macos.zip, um só app para Apple silicon e Intel, assinado com Developer ID e notarizado pela Apple, para macOS 14+. Ele abre no painel e usa o motor instalado acima; confira-o com o mesmo SHA256SUMS.
 
-App para Windows e Linux, desde a 0.22.0: um instalador do Windows para x64 e arm64 que não exige direitos de administrador, com assinatura Authenticode, e um AppImage e um .deb para Linux x64 e arm64, no release 0.24.4. Como o app para Mac, ele abre no painel e precisa do motor instalado acima; ele não instala o motor. Ele se atualiza sozinho, exceto uma cópia instalada pelo .deb: instale o próximo .deb.
+App para Windows e Linux, desde a 0.22.0: um instalador do Windows para x64 e arm64 que não exige direitos de administrador, com assinatura Authenticode, e um AppImage e um .deb para Linux x64 e arm64, no release 0.24.5. Como o app para Mac, ele abre no painel e precisa do motor instalado acima; ele não instala o motor. Ele se atualiza sozinho, exceto uma cópia instalada pelo .deb: instale o próximo .deb.
 
-O release atual, 0.24.4, está sob a AGPL, como todos os releases desde a 0.10.0, a primeira sob a AGPL; a 0.9.1 e as anteriores mantêm a licença com a qual foram lançadas.
+O release atual, 0.24.5, está sob a AGPL, como todos os releases desde a 0.10.0, a primeira sob a AGPL; a 0.9.1 e as anteriores mantêm a licença com a qual foram lançadas.
 
 A varredura de valores conhecidos compara artefatos selecionados com chaves já conhecidas localmente. Ela não consegue encontrar segredos desconhecidos nem provar que nenhuma cópia restou, e uma cópia local não é prova de que alguém mais obteve uma chave. A rotação real nos provedores e os hosts MCP externos ficam fora da suíte de testes offline.
 
