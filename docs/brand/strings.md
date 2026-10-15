@@ -19,7 +19,7 @@ Contract: brand-contract v1
 | door.business | Estimate and request | index.html | SCN-014 | proposed | copy |
 | hero.door.personal | For you, free | index.html | SCN-001, SCN-013 | proposed | copy |
 | hero.door.organization | For your organization | index.html | SCN-001, SCN-014 | proposed | copy |
-| header.tools | Get the tools | index.html | SCN-001 | proposed | copy |
+| header.setup | Set up | index.html | SCN-001, SCN-013 | proposed | copy |
 | request.send | Send request | business/index.html | SCN-014 | proposed | copy |
 | request.agent.copy | Copy | assets/messages.js | SCN-022 | proposed | copy |
 
@@ -38,7 +38,7 @@ Contract: brand-contract v1
 | download.fabric.macos | Download for macOS | fabric/agents/index.html | SCN-013 | proposed | copy |
 | switchboard.explore | Explore Switchboard | fabric/agents/index.html | SCN-013 | proposed | copy |
 
-| journey.install | Install the skills | index.html | SCN-021 | proposed | copy |
+| journey.setup | Set it up | index.html | SCN-021 | proposed | copy |
 | journey.fabric | What Fabric does today | index.html | SCN-021 | proposed | copy |
 | journey.build | Create or adapt an agent | index.html | SCN-021 | proposed | copy |
 | journey.dashboards | Fabric Dashboards | index.html | SCN-021 | proposed | copy |
@@ -52,3 +52,20 @@ Contract: brand-contract v1
 | toolkit.all.switchboard | All the tools | switchboard/index.html | SCN-004 | proposed | copy |
 | toolkit.all.dashboards | All the tools | dashboards/index.html | SCN-004 | proposed | copy |
 | toolkit.all.inbox | All the tools | inbox/index.html | SCN-004 | proposed | copy |
+| footer.investors | Investors | index.html | SCN-008 | proposed | copy |
+| footer.contributors | Contributors | index.html | SCN-008, SCN-015 | proposed | copy |
+| footer.press | Press | index.html | SCN-008 | proposed | copy |
+| about.contribute | how to contribute | index.html | SCN-015 | proposed | copy |
+| press.video | The video | index.html | SCN-008 | proposed | copy |
+| press.logo.svg | Logo, SVG | index.html | SCN-008 | proposed | copy |
+| press.logo.png | Logo, PNG | index.html | SCN-008 | proposed | copy |
+| video.transcript | Read the transcript | index.html | SCN-021 | proposed | copy |
+| toolkit.setup.fabric | Set up everything with one command | fabric/index.html | SCN-007, SCN-013 | proposed | copy |
+| toolkit.setup.switchboard | Set up everything with one command | switchboard/index.html | SCN-013 | proposed | copy |
+| toolkit.setup.dashboards | Set up everything with one command | dashboards/index.html | SCN-013 | proposed | copy |
+| toolkit.setup.observatory | Set up everything with one command | observatory/index.html | SCN-013 | proposed | copy |
+| toolkit.setup.inbox | Set up everything with one command | inbox/index.html | SCN-013 | proposed | copy |
+| fabric.works.setup | Set up | fabric/index.html | SCN-007 | proposed | copy |
+| start.by-hand | Prefer to do it by hand? | start/index.html | SCN-013 | proposed | copy |
+| start.pipeline | what it does and how to install it | start/index.html | SCN-013, SCN-020 | proposed | copy |
+| business.try | Try it on one machine first: setup, then doctor | business/index.html | SCN-014 | proposed | copy |

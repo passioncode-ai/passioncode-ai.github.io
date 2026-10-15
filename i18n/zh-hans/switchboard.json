@@ -133,6 +133,7 @@
     "Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit.": "Switchboard 是现已可用的账号管理工具。Fabric 是你的项目及其智能体的家，目前为早期预览版。两者都属于 PassionCode 工具包。",
     "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard 管理 Claude Code 和 Codex 账号。Project Observatory 让你查看这些智能体正在处理的项目。Fabric Dashboards 在一个窗口中显示你 Mac 上的本地智能体服务。Fabric 是你的项目及其智能体的家，目前为早期预览版。",
     "Built natively on Windows. The installer, the app and the CLI are Authenticode-signed since 0.6.16. The installer includes the CLI.": "在 Windows 上原生构建。自 0.6.16 起，安装程序、应用和 CLI 均已使用 Authenticode 签名。安装程序包含 CLI。",
-    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "Windows x64，含 WebView2。自 0.6.16 起，Windows 构建已使用 Authenticode 签名。"
+    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "Windows x64，含 WebView2。自 0.6.16 起，Windows 构建已使用 Authenticode 签名。",
+    "Set up everything with one command": "一条命令全部装好"
   }
 }

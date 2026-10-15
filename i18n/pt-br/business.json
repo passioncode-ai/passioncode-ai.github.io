@@ -14,7 +14,6 @@
     "Enterprise · for organizations": "Enterprise · para organizações",
     "Estimate and request": "Estimativa e solicitação",
     "Reply within two business days": "Resposta em até dois dias úteis",
-    "Designed for 1 to 1000 people · the estimate comes before any contract": "Pensado para 1 a 1000 pessoas · a estimativa vem antes de qualquer contrato",
     "How a request turns into a workplace": "Como uma solicitação vira um ambiente de trabalho",
     "Tell us": "Conte para nós",
     "Estimate": "Estimativa",
@@ -52,7 +51,6 @@
     "Send request": "Enviar solicitação",
     "Prefer email? Write to": "Prefere e-mail? Escreva para",
     "Before you ask": "Antes de perguntar",
-    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for 1 to 1000 people.": "Agentes nas máquinas da sua organização, conectados e visíveis, com ferramentas de código aberto e com os seus dados nas suas máquinas ou na sua própria nuvem. Pensado para de 1 a 1000 pessoas.",
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "Tornar uma organização AI-native com ferramentas de código aberto da PassionCode.ai: integrar as máquinas, distribuir agentes e rotear o trabalho entre eles, acesso a modelos pelo agente local de cada máquina, análises de atividade e uso, administração, builds próprios assinados pela PassionCode.ai e a licença comercial quando necessário. Em desenvolvimento, oferecido sob solicitação.",
     "Make your organization": "Torne a sua organização",
     "AI-native": "AI-native",
@@ -76,7 +74,6 @@
     "Your own build of the tools, signed by PassionCode.ai.": "Seu próprio build das ferramentas, assinado pela PassionCode.ai.",
     "Your data stays on your machines or in your own cloud.": "Seus dados ficam nas suas máquinas ou na sua própria nuvem.",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "As horas que a sua equipe gasta por mês nos processos, vezes a parte que os agentes poderiam assumir de forma realista, vezes o quanto custa uma hora.",
-    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for 1 to 1000 people.": "O PassionCode for Enterprise torna uma organização AI-native: máquinas integradas, agentes distribuídos e roteados entre elas, chaves de modelos que ficam em cada máquina, quanto cada agente custou e o que entregou, administração e builds próprios assinados. Seus dados ficam nas suas máquinas ou na sua própria nuvem. Pensado para de 1 a 1000 pessoas.",
     "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, on open-source tools, with your data on your machines or in your own cloud": "Um agente que vive no notebook de uma pessoa ajuda uma pessoa. Levamos agentes para as máquinas da sua organização, conectamos todos e mostramos quanto cada um custou e o que entregou, com ferramentas de código aberto e com os seus dados nas suas máquinas ou na sua própria nuvem",
     "02 / FOR FINANCE AND ENGINEERING": "02 / PARA FINANÇAS E ENGENHARIA",
     "One view of what agents cost": "Uma só visão do quanto os agentes custam",
@@ -128,6 +125,10 @@
     "We built it for our own teams first": "Primeiro construímos para as nossas equipes",
     "PassionCode has two co-founders, and we both run teams: Sergey Sheleg, co-founder and CPO of Nicegram, and Serge Khurs, co-founder and CTO of Teslasuit.": "A PassionCode tem dois cofundadores, e nós dois lideramos equipes: Sergey Sheleg, cofundador e CPO do Nicegram, e Serge Khurs, cofundador e CTO da Teslasuit.",
     "We built this setup for ourselves, and it runs our own work today. Now we bring it to your organization: we connect it to your systems and help you bring in agents that run your processes.": "Construímos essa configuração para nós mesmos, e hoje o nosso próprio trabalho roda nela. Agora levamos isso para a sua organização: conectamos aos seus sistemas e ajudamos você a trazer agentes que conduzem os seus processos.",
-    "How we got here": "Como chegamos até aqui"
+    "How we got here": "Como chegamos até aqui",
+    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "O PassionCode for Enterprise torna uma organização AI-native: máquinas integradas, agentes distribuídos e roteados entre elas, chaves de modelos que ficam em cada máquina, quanto cada agente custou e o que entregou, administração e builds próprios assinados. Seus dados ficam nas suas máquinas ou na sua própria nuvem. Pensado para de uma pessoa a mais de 1000.",
+    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "Agentes nas máquinas da sua organização, conectados e visíveis, com ferramentas de código aberto e com os seus dados nas suas máquinas ou na sua própria nuvem. Pensado para de uma pessoa a mais de 1000.",
+    "Designed for one person to more than 1,000 · the estimate comes before any contract": "Pensado para de uma pessoa a mais de 1000 · a estimativa vem antes de qualquer contrato",
+    "Try it on one machine first: setup, then doctor": "Experimente primeiro em uma máquina: setup e depois doctor"
   }
 }

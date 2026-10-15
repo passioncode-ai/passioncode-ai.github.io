@@ -16,7 +16,7 @@ Vision branch of FLW-03: header Vision, the home Why note or /business/ → /vis
 Dashboards branch of FLW-01: directory → /dashboards/ → requirements and separately installed service note → `/dashboards/download/macos` (the current release, SHA-256 beside it) → release notes. MCP setup is visible on the same page. Every version and checksum a visitor reads is the current release, written at the edge (SCN-016).
 
 ## FLW-04 — Customize the workplace
-For builders → launcher command and requirements → public setup/update controls; Adapter → quick start → Agent Contract. VR/Okolos → source repositories, explicitly without a published binary. No private workspace or organization register is linked from visitor HTML.
+For builders → the header's Set up (every page, since SITE-045) or the For you card → /start/#setup: `setup` and `doctor`, or the copy-prompt for a coding agent; the manual downloads folded under "Prefer to do it by hand?"; Adapter → quick start → Agent Contract. VR/Okolos → source repositories, explicitly without a published binary. No private workspace or organization register is linked from visitor HTML.
 
 Legacy Observatory links ending in `#start` retain that fragment after the old host redirects; `/observatory/#start` aliases the actual setup section, alongside `#get-started`.
 

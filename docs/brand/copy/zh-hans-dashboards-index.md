@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from zh-hans/dashboards/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Dashboards | 你的本地智能体服务，汇聚一处
+Fabric Dashboards | 你的本地智能体服务，汇聚一处 | PassionCode.ai
 
 在一个窗口里查看你在 macOS、Windows 和 Linux 上的本地智能体服务：看哪些需要处理，打开各自的仪表盘，也让你的智能体通过 MCP 使用同样的工具。
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-下载
+安装设置
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 在一个应用里查看你电脑上的每个智能体服务：需要你处理的排在最前，每个服务自己的仪表盘就在旁边打开
 
 工具包成员 状态、花费与控制：每个智能体服务在做什么、花了多少以及它的更新，都在一个窗口里。第 4 步，见工作原理。全部工具
+
+一条命令全部装好 →
 
 下载 macOS 版 ↓
 
@@ -223,6 +225,12 @@ Fabric
 GitHub 与源代码
 
 关于
+
+投资者
+
+参与贡献
+
+媒体
 
 设计系统
 

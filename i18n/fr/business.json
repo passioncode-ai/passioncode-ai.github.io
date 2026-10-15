@@ -14,7 +14,6 @@
     "Enterprise · for organizations": "Enterprise · pour les organisations",
     "Estimate and request": "Estimation et demande",
     "Reply within two business days": "Réponse sous deux jours ouvrés",
-    "Designed for 1 to 1000 people · the estimate comes before any contract": "Conçu pour 1 à 1 000 personnes · l’estimation précède tout contrat",
     "How a request turns into a workplace": "Comment une demande devient un espace de travail",
     "Tell us": "Dites-nous",
     "Estimate": "Estimation",
@@ -52,7 +51,6 @@
     "Send request": "Envoyer la demande",
     "Prefer email? Write to": "Vous préférez l’e-mail ? Écrivez à",
     "Before you ask": "Avant de demander",
-    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for 1 to 1000 people.": "Des agents sur les machines de votre organisation, connectés et visibles, sur des outils open source, avec vos données sur vos machines ou dans votre propre cloud. Conçu pour 1 à 1 000 personnes.",
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "Rendre une organisation AI-native avec les outils open source de PassionCode.ai : raccorder ses machines, déployer des agents et acheminer le travail entre eux, accès aux modèles via l’agent local de chaque machine, analytique d’activité et d’usage, administration, builds sur mesure signés par PassionCode.ai, et la licence commerciale là où elle est nécessaire. En cours de développement, proposé sur demande.",
     "Make your organization": "Rendez votre organisation",
     "AI-native": "AI-native",
@@ -76,7 +74,6 @@
     "Your own build of the tools, signed by PassionCode.ai.": "Votre propre build des outils, signé par PassionCode.ai.",
     "Your data stays on your machines or in your own cloud.": "Vos données restent sur vos machines ou dans votre propre cloud.",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "Les heures que votre équipe consacre chaque mois à ces processus, multipliées par la part que les agents peuvent raisonnablement reprendre, multipliées par ce que coûte une heure.",
-    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for 1 to 1000 people.": "PassionCode for Enterprise rend une organisation AI-native : machines raccordées, agents déployés et acheminés entre elles, clés de modèles conservées sur chaque machine, ce que chaque agent a coûté et ce qu’il a apporté, administration et builds signés sur mesure. Vos données restent sur vos machines ou dans votre propre cloud. Conçu pour 1 à 1 000 personnes.",
     "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, on open-source tools, with your data on your machines or in your own cloud": "Un agent qui vit sur l’ordinateur portable d’une seule personne n’aide que cette personne. Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce que chacun a coûté et ce qu’il a apporté, sur des outils open source, avec vos données sur vos machines ou dans votre propre cloud",
     "02 / FOR FINANCE AND ENGINEERING": "02 / POUR LA FINANCE ET L’INGÉNIERIE",
     "One view of what agents cost": "Une seule vue sur ce que coûtent les agents",
@@ -128,6 +125,10 @@
     "We built it for our own teams first": "Nous l’avons d’abord construit pour nos équipes",
     "PassionCode has two co-founders, and we both run teams: Sergey Sheleg, co-founder and CPO of Nicegram, and Serge Khurs, co-founder and CTO of Teslasuit.": "PassionCode a deux cofondateurs, et nous dirigeons tous les deux des équipes : Sergey Sheleg, cofondateur et CPO de Nicegram, et Serge Khurs, cofondateur et CTO de Teslasuit.",
     "We built this setup for ourselves, and it runs our own work today. Now we bring it to your organization: we connect it to your systems and help you bring in agents that run your processes.": "Nous avons construit ce dispositif pour nous-mêmes, et notre propre travail repose sur lui aujourd’hui. Nous l’apportons maintenant à votre organisation : nous le connectons à vos systèmes et vous aidons à mettre en place des agents qui font tourner vos processus.",
-    "How we got here": "Comment nous en sommes arrivés là"
+    "How we got here": "Comment nous en sommes arrivés là",
+    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise rend une organisation AI-native : machines raccordées, agents déployés et acheminés entre elles, clés de modèles conservées sur chaque machine, ce que chaque agent a coûté et ce qu’il a apporté, administration et builds signés sur mesure. Vos données restent sur vos machines ou dans votre propre cloud. Conçu pour une personne comme pour plus de 1 000.",
+    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "Des agents sur les machines de votre organisation, connectés et visibles, sur des outils open source, avec vos données sur vos machines ou dans votre propre cloud. Conçu pour une personne comme pour plus de 1 000.",
+    "Designed for one person to more than 1,000 · the estimate comes before any contract": "Conçu pour une personne comme pour plus de 1 000 · l’estimation précède tout contrat",
+    "Try it on one machine first: setup, then doctor": "Essayez d’abord sur une machine : setup, puis doctor"
   }
 }

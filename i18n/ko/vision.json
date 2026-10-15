@@ -5,7 +5,6 @@
     "The PassionCode.ai vision": "PassionCode.ai 비전",
     "From one agent to an AI-native organization": "하나의 에이전트에서 AI-native 조직까지",
     "Does PassionCode.ai replace Claude Code or Codex?": "PassionCode.ai는 Claude Code나 Codex를 대체하나요?",
-    "Get the tools": "도구 다운로드",
     "The vision · as of October 2026": "비전 · 2026년 10월 기준",
     "From one agent to an": "하나의 에이전트에서",
     "AI-native organization": "AI-native 조직까지",
@@ -30,7 +29,6 @@
     "One agent": "에이전트 하나",
     "Your coding agent builds an agent for one job, with a contract, a dashboard and tests.": "코딩 에이전트가 하나의 일을 위한 에이전트를 만들고, 계약, 대시보드, 테스트를 함께 갖춥니다.",
     "Two agents that talk": "서로 대화하는 에이전트 둘",
-    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "Fabric에 연결된 에이전트는 한 프로젝트의 보드, 메모리, 인계를 공유하므로, 한 에이전트가 멈춘 곳에서 다른 에이전트가 이어받습니다.",
     "DIRECTION": "방향",
     "A chain": "체인",
     "Agents line up into one process: one prepares, the next checks, a person approves.": "에이전트가 하나의 프로세스로 이어집니다. 하나가 준비하고, 다음이 검사하고, 사람이 승인합니다.",
@@ -58,11 +56,7 @@
     "Any agent, on your machines": "어떤 에이전트든, 내 컴퓨터에서",
     "Vendor-neutral, local first and open source under the GNU AGPL-3.0, on top of Claude Code, Codex and what comes next.": "벤더 중립, 로컬 우선, GNU AGPL-3.0 오픈 소스이며, Claude Code, Codex, 그리고 앞으로 나올 것들 위에서 동작합니다.",
     "Analytics, never surveillance": "분석일 뿐, 감시는 아닙니다",
-    "Inside each change we recommend": "각 변경 작업 안에서는",
-    ", a separate open-source skill that does not move on until each gate passes.": "을 권장합니다. 각 관문을 통과하기 전에는 다음으로 넘어가지 않는, 별도의 오픈 소스 스킬입니다.",
-    "How to install it": "설치 방법",
     "03 / THE PATH": "03 / 경로",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "스킬을 설치하고 첫 에이전트를 만들거나, 조직 전체와 함께하세요. PassionCode for Enterprise는 개발 중이며 요청 시 제공됩니다.",
     "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "붙들어 주는 것이 없으면 에이전트가 왜 무너지는지, PassionCode.ai가 따르는 네 가지 원칙, 그리고 에이전트 하나가 팀과 조직으로 자라는 방식. 로컬 우선, 오픈 소스이며, Claude Code와 Codex, 그리고 앞으로 나올 도구 위에서 동작합니다.",
     "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "에이전트가 계속 일하게 하는 것, 에이전트 하나가 팀과 조직으로 자라는 과정, 그리고 오늘 실제로 되는 것.",
     "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "에이전트가 계속 일하게 하는 것, PassionCode.ai가 따르는 네 가지 원칙, 그리고 에이전트 하나가 팀과 조직으로 자라는 과정을 다룹니다. 각 단계에는 지금 사용 가능한지, 방향인지 표시되어 있습니다.",
@@ -83,6 +77,14 @@
     "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards는 각 에이전트의 상태와 지출을 보여 주고, 도구는 스스로 업데이트하며, Observatory는 무엇이 바뀌었는지 보관합니다. 에이전트가 서로를 지켜보는 것은 앞으로의 방향입니다.",
     "How it works, step 6": "작동 방식 6단계",
     "Your agents start": "내 에이전트는",
-    "Sergey Sheleg": "Sergey Sheleg"
+    "Sergey Sheleg": "Sergey Sheleg",
+    "For the changes your agents make, we recommend": "에이전트가 만드는 변경에는 다음 스킬을 권장합니다:",
+    ", a separate open-source skill from the": ", 별도의 오픈 소스 스킬로,",
+    "sshlg-skills": "sshlg-skills",
+    "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "컬렉션에 속합니다. 브리프에서 승인까지 각 변경을 이끌며, 각 관문을 통과하기 전에는 다음으로 넘어가지 않습니다.",
+    "task-pipeline on GitHub": "GitHub의 task-pipeline",
+    "· it is not part of PassionCode.ai and needs nothing from it": "· PassionCode.ai에 속하지 않으며 PassionCode.ai 없이도 동작합니다",
+    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "Fabric에 연결된 에이전트는 한 프로젝트의 보드, 메모리, 인계를 공유하므로, 한 에이전트가 멈춘 곳에서 다른 에이전트가 이어받습니다. Fabric은 초기 프리뷰입니다.",
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "명령 하나로 도구를 설정하고 첫 에이전트를 만들거나, 조직 전체와 함께하세요. PassionCode for Enterprise는 개발 중이며 요청 시 제공됩니다."
   }
 }

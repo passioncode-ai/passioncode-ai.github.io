@@ -42,7 +42,7 @@ Español
 
 日本語
 
-Baixar
+Configurar
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC · PRÉVIA INICIAL
 O Fabric guarda no seu Mac o propósito, o quadro, as decisões e os releases de cada projeto, para todos os agentes que trabalham nele. Estamos construindo o Fabric para atuar como o CEO dos seus agentes
 
 NO CONJUNTO DE FERRAMENTAS A casa que todos os agentes de um projeto compartilham: propósito, quadro, decisões e releases. São os passos 2 e 5 de “Como funciona”. Todas as ferramentas
+
+Configure tudo com um único comando →
 
 Baixar para macOS
 
@@ -223,19 +225,55 @@ Esta é uma prévia inicial. Você pode manter projetos, um quadro de decisões,
 
 O Fabric é código aberto sob a GNU AGPL-3.0, e uma licença comercial está disponível em passioncode.ai/business para usos que a AGPL não cobre. A 0.3.5 prévia é compilada, assinada e notarizada no CI a partir desse código público.
 
-PARTE DO MESMO CONJUNTO DE FERRAMENTAS
+FUNCIONA COM O FABRIC
 
-## O Switchboard gerencia as contas
+## Quatro ferramentas em volta da casa
 
-A ferramenta de gerenciamento de contas funciona independentemente do Fabric.
+## Cada uma também funciona sozinha
 
-Baixar o Switchboard
+O Fabric guarda o projeto. Estas quatro ferramentas funcionam com o Fabric e também sozinhas, então você pode começar por qualquer uma.
 
-↓
+Fabric Switchboard
 
-Voltar ao conjunto de ferramentas
+Escolha a conta em que cada agente roda, com os limites de uso à vista.
 
 ↗
+
+Fabric Dashboards
+
+Todos os serviços locais de agentes em uma só janela, controlados por você ou pelos agentes.
+
+↗
+
+Project Observatory
+
+O que mudou em cada projeto e o que precisa de atenção, com as evidências.
+
+↗
+
+Fabric Inbox
+
+E-mails do Gmail e do Cloudflare em uma só lista, os importantes primeiro; os agentes respondem conforme as regras.
+
+↗
+
+01
+
+DISPONÍVEL AGORA
+
+### Um único comando configura tudo
+
+No Mac, as quatro ferramentas e o Fabric (quando o Docker e a CLI do Supabase estão lá), com os servidores MCP e as skills, a partir de releases verificados. Rode de novo mais tarde e ele verifica e conserta.
+
+Configurar
+
+02
+
+DIREÇÃO
+
+### Adicionar uma ferramenta de dentro do Fabric
+
+Escolher e instalar as ferramentas sem sair do Fabric é o que estamos construindo.
 
 PassionCode
 
@@ -262,6 +300,12 @@ Fabric
 GitHub e código-fonte
 
 Sobre
+
+Investidores
+
+Contribuir
+
+Imprensa
 
 Sistema de design
 

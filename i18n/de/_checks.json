@@ -16,7 +16,7 @@
       "kommerzielle Lizenz"
     ],
     "start/index.html": [
-      "npx @passioncode-ai/passioncode@latest update",
+      "npx @passioncode-ai/passioncode@latest setup",
       "Docker und die Supabase CLI",
       "antwortet aber noch nicht",
       "href=\"/fabric/download/macos\""

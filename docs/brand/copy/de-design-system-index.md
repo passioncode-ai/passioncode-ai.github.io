@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from de/design-system/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode-Designsystem | Eine Familie, eine gemeinsame Sprache
+PassionCode-Designsystem | Jedes Tool, eine gemeinsame Sprache
 
 Die visuelle Sprache hinter PassionCode und Switchboard: dunkle Flächen, gelbe Aktionen, Produktzeichen und wiederverwendbare Design-Tokens.
 
@@ -42,17 +42,17 @@ Português (Brasil)
 
 日本語
 
-Herunterladen
+Einrichten
 
 ↓
 
 PASSIONCODE / DESIGNSYSTEM 1.1
 
-# Eine Familie
+# Jedes Tool
 
 # Eine gemeinsame Sprache
 
-Gemeinsame Farbrollen verbinden dunkle und helle Paletten, Gelb hebt die nächste Aktion hervor, und jedes Produkt stellt sein eigenes Zeichen neben die Passionsfrucht der Familie
+Gemeinsame Farbrollen verbinden dunkle und helle Paletten, Gelb hebt die nächste Aktion hervor, und jedes Produkt stellt sein eigenes Zeichen neben die Passionsfrucht des Toolkits
 
 CSS-Tokens herunterladen
 
@@ -64,7 +64,7 @@ Quellcode ansehen
 
 01 / IDENTITÄT
 
-## Erkennbar eine Familie
+## Ein Look für alle Tools
 
 PassionCode · die Dachmarke
 
@@ -159,6 +159,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

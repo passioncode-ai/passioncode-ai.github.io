@@ -1,9 +1,7 @@
 {
   "page": "dashboards/index.html",
   "strings": {
-    "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Seus serviços de agentes locais, reunidos",
     "One window for local agent services that speak fabric-service/0.1.": "Uma janela para serviços de agentes locais que falam fabric-service/0.1.",
-    "Download": "Baixar",
     "Your agent services": "Seus serviços de agentes",
     "One place to look": "Um só lugar para olhar",
     "Download for macOS ↓": "Baixar para macOS ↓",
@@ -89,6 +87,8 @@
     "Windows and Linux downloads": "Downloads para Windows e Linux",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Uma janela para os seus serviços de agentes locais no macOS, Windows e Linux. Veja o que precisa de atenção, abra painéis e deixe seus agentes usarem as mesmas ferramentas via MCP.",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Veja todos os serviços de agentes do seu computador num só app: o que precisa de você vem primeiro, e o painel de cada serviço abre ao lado",
-    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "O Fabric Dashboards descobre os serviços compatíveis no seu computador. Cada serviço mantém a própria função; você ganha um lugar comum para inspecioná-los e controlá-los."
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "O Fabric Dashboards descobre os serviços compatíveis no seu computador. Cada serviço mantém a própria função; você ganha um lugar comum para inspecioná-los e controlá-los.",
+    "Fabric Dashboards | Your local agent services, together | PassionCode.ai": "Fabric Dashboards | Seus serviços de agentes locais, reunidos | PassionCode.ai",
+    "Set up everything with one command": "Configure tudo com um único comando"
   }
 }

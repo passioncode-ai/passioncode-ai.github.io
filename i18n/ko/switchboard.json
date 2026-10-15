@@ -6,7 +6,6 @@
     "PassionCode.ai passion fruit mark": "PassionCode.ai 패션프루트 마크",
     "Fabric Switchboard": "Fabric Switchboard",
     "Local account manager for Claude Code and Codex CLI. Desktop app and CLI for macOS and Windows.": "Claude Code와 Codex CLI를 위한 로컬 계정 관리자. macOS와 Windows용 데스크톱 앱과 CLI.",
-    "Download": "다운로드",
     "FABRIC SWITCHBOARD · BY PASSIONCODE": "FABRIC SWITCHBOARD · BY PASSIONCODE",
     "Your accounts": "내 계정을",
     "A clearer switch": "더 분명하게 전환",
@@ -157,6 +156,7 @@
     "Switchboard is the account-management tool available today. Fabric, in early preview, is the home for your projects and their agents. Both belong to the PassionCode toolkit.": "Switchboard는 지금 사용할 수 있는 계정 관리 도구입니다. 초기 프리뷰 단계인 Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. 둘 다 PassionCode 툴킷에 속합니다.",
     "Switchboard manages Claude Code and Codex accounts. Project Observatory keeps the projects those agents work on in view. Fabric Dashboards shows the local agent services on your Mac in one window. Fabric, the home for your projects and their agents, is in early preview.": "Switchboard는 Claude Code와 Codex 계정을 관리합니다. Project Observatory는 에이전트가 작업하는 프로젝트를 한눈에 보여 줍니다. Fabric Dashboards는 Mac의 로컬 에이전트 서비스를 한 창에서 보여 줍니다. 내 프로젝트와 그 에이전트를 위한 집인 Fabric은 초기 프리뷰 단계입니다.",
     "Built natively on Windows. The installer, the app and the CLI are Authenticode-signed since 0.6.16. The installer includes the CLI.": "Windows에서 직접 빌드했습니다. 설치 프로그램, 앱, CLI는 0.6.16부터 Authenticode로 서명되어 있습니다. 설치 프로그램에 CLI가 포함되어 있습니다.",
-    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "WebView2가 있는 Windows x64. Windows 빌드는 0.6.16부터 Authenticode로 서명되어 있습니다."
+    "Windows x64 with WebView2. The Windows build is Authenticode-signed since 0.6.16.": "WebView2가 있는 Windows x64. Windows 빌드는 0.6.16부터 Authenticode로 서명되어 있습니다.",
+    "Set up everything with one command": "명령 하나로 모두 설정하기"
   }
 }

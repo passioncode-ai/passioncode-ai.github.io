@@ -42,9 +42,9 @@ Português (Brasil)
 
 日本語
 
-GitHub
+Skonfiguruj
 
-↗
+↓
 
 FABRIC INBOX · ROZWOJOWA WERSJA ZAPOZNAWCZA
 
@@ -55,6 +55,8 @@ FABRIC INBOX · ROZWOJOWA WERSJA ZAPOZNAWCZA
 Zbierz skrzynki Gmail i Cloudflare w jedną listę, z ważną pocztą na górze. Agenci dla Twoich własnych domen odpowiadają na to, na co pozwolisz, a resztę zostawiają jako szkic
 
 W ZESTAWIE NARZĘDZI Poczta: adresy, z których agenci czytają i na które odpowiadają w ramach ustawionej przez Ciebie polityki. To krok 5 w części „Jak to działa”. Wszystkie narzędzia
+
+Skonfiguruj wszystko jednym poleceniem →
 
 Pobierz na macOS
 
@@ -290,6 +292,12 @@ Fabric
 GitHub i kod źródłowy
 
 O projekcie
+
+Inwestorzy
+
+Współtwórcy
+
+Prasa
 
 System projektowy
 

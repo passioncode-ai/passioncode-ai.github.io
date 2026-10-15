@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Tools herunterladen
+Einrichten
 
 ↓
 
@@ -119,6 +119,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

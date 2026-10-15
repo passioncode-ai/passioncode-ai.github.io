@@ -1,16 +1,12 @@
 {
   "page": "design-system/index.html",
   "strings": {
-    "PassionCode design system | One family, a shared language": "PassionCode 设计系统 | 一个家族，一套共同语言",
     "The visual language behind PassionCode and Switchboard: dark surfaces, yellow actions, product marks and reusable design tokens.": "PassionCode 与 Switchboard 背后的视觉语言：深色界面、黄色操作、产品标志和可复用的设计令牌。",
     "PassionCode design system": "PassionCode 设计系统",
     "PASSIONCODE / DESIGN SYSTEM 1.1": "PASSIONCODE / 设计系统 1.1",
-    "One family": "一个家族",
     "A shared language": "一套共同语言",
-    "Shared color roles connect dark and light palettes, yellow highlights the next action, and each product pairs its own mark with the family’s passion fruit": "共用的颜色角色连接深色与浅色配色，黄色标出下一步操作，每个产品都将自己的标志与家族的百香果搭配使用",
     "Get the CSS tokens": "获取 CSS 令牌",
     "01 / IDENTITY": "01 / 标识",
-    "A family resemblance": "家族相似性",
     "PassionCode passion fruit": "PassionCode 百香果",
     "PassionCode · the parent brand": "PassionCode · 母品牌",
     "Yellow S on a black tile": "黑色方块上的黄色 S",
@@ -45,6 +41,10 @@
     "Familiar across products": "跨产品保持熟悉",
     "One primary action per task. Visible keyboard focus. Clear borders for secondary controls. Motion stays brief and respects reduced-motion preferences.": "每项任务一个主要操作。键盘焦点清晰可见。次要控件有明确的边框。动效保持简短，并遵从减少动效的偏好设置。",
     "Back to PassionCode": "返回 PassionCode",
-    "The marketing site, Switchboard and Project Observatory use the shared dark system. Version 1.1 adds an opt-in light palette for products adopting it. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.": "官网、Switchboard 和 Project Observatory 使用共用的深色系统。1.1 版为采用它的产品新增了可选的浅色配色。Fabric 现有的运行时正在单独对齐；本系统参考并不意味着每个界面都已迁移。"
+    "The marketing site, Switchboard and Project Observatory use the shared dark system. Version 1.1 adds an opt-in light palette for products adopting it. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.": "官网、Switchboard 和 Project Observatory 使用共用的深色系统。1.1 版为采用它的产品新增了可选的浅色配色。Fabric 现有的运行时正在单独对齐；本系统参考并不意味着每个界面都已迁移。",
+    "PassionCode design system | Every tool, a shared language": "PassionCode 设计系统 | 每个工具，一套共同语言",
+    "Every tool": "每个工具",
+    "Shared color roles connect dark and light palettes, yellow highlights the next action, and each product pairs its own mark with the toolkit’s passion fruit": "共用的颜色角色连接深色与浅色配色，黄色标出下一步操作，每个产品都将自己的标志与整套工具共用的百香果搭配使用",
+    "One look across the tools": "所有工具统一的外观"
   }
 }

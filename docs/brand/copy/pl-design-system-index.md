@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from pl/design-system/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-System projektowy PassionCode | Jedna rodzina, wspólny język
+System projektowy PassionCode | Każde narzędzie, wspólny język
 
 Język wizualny PassionCode i Switchboard: ciemne powierzchnie, żółte akcje, znaki produktów i wielokrotnego użytku tokeny projektowe.
 
@@ -42,17 +42,17 @@ Português (Brasil)
 
 日本語
 
-Pobierz
+Skonfiguruj
 
 ↓
 
 PASSIONCODE / SYSTEM PROJEKTOWY 1.1
 
-# Jedna rodzina
+# Każde narzędzie
 
 # Wspólny język
 
-Wspólne role kolorów łączą ciemną i jasną paletę, żółty wskazuje kolejną akcję, a każdy produkt łączy własny znak z marakują całej rodziny
+Wspólne role kolorów łączą ciemną i jasną paletę, żółty wskazuje kolejną akcję, a każdy produkt łączy własny znak z marakują całego zestawu
 
 Pobierz tokeny CSS
 
@@ -64,7 +64,7 @@ Zajrzyj do źródła
 
 01 / TOŻSAMOŚĆ
 
-## Rodzinne podobieństwo
+## Jeden wygląd wszystkich narzędzi
 
 PassionCode · marka nadrzędna
 
@@ -159,6 +159,12 @@ Fabric
 GitHub i kod źródłowy
 
 O projekcie
+
+Inwestorzy
+
+Współtwórcy
+
+Prasa
 
 System projektowy
 

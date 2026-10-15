@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-툴 받기
+설정하기
 
 ↓
 
@@ -60,21 +60,13 @@ Node.js 18+와 Claude Code 또는 Codex 필요 Fabric은 Apple silicon 또는 In
 
 01
 
-스킬 설치
+에이전트 만들기 또는 맞추기
 
 02
 
-Fabric 추가
-
-03
-
-에이전트 만들기 또는 맞추기
-
-04
-
 실행하고 확인
 
-05
+03
 
 다음 에이전트 추가
 
@@ -90,9 +82,11 @@ Fabric 추가
 
 명령 하나가 고른 도구를 서명된 릴리스에서 설치하고, 그 MCP 서버를 Claude Code, Codex, Gemini CLI, Kimi Code에 연결하고, 스킬을 추가합니다. 이미 설정된 컴퓨터에서는 같은 명령이 모든 것을 점검하고, 잘못된 것을 고치고, 바뀐 내용을 보여 줍니다.
 
+### 직접 실행하기
+
 npx @passioncode-ai/passioncode@latest setup
 
-Node.js 18+ 필요 · 앱은 macOS에 설치되며, Linux와 Windows에서는 스킬과 MCP 서버를 설정합니다 · 서명, 체크섬, 공증 중 하나라도 맞지 않으면 아무것도 설치하지 않습니다 · 아무것도 바꾸지 않고 점검만 하려면:
+Node.js 18+ 필요 · 앱은 macOS에 설치되며, Linux와 Windows에서는 스킬과 MCP 서버를 설정합니다 · 서명, 체크섬, 공증 중 하나라도 맞지 않으면 아무것도 설치하지 않습니다 · 실행 후 코딩 에이전트를 다시 시작하세요 · 아무것도 바꾸지 않고 점검만 하려면:
 
 npx @passioncode-ai/passioncode@latest doctor
 
@@ -102,21 +96,11 @@ npx @passioncode-ai/passioncode@latest doctor
 
 이 컴퓨터에 PassionCode.ai를 설정하고, 이미 설정되어 있다면 점검하고 고쳐 줘. npx --yes @passioncode-ai/passioncode@latest setup --yes --json를 실행하고(Node 18 이상 필요) 그 JSON을 읽어. 이 명령은 빠진 앱을 서명된 릴리스에서 설치하고, 스킬과 모든 MCP 서버를 설정하고, 잘못된 것을 고친 뒤, 모든 것을 다시 점검해. 아무것도 직접 내려받거나 설치하지 말고, 실행 중인 앱을 절대 멈추거나 강제 종료하지 마. 그다음 목록에 있는 제품 온보딩 단계 중 에이전트가 할 수 있는 것을 실행하고, 채팅에서 나에게 키나 비밀번호를 절대 묻지 말고(도구가 자체 비공개 입력 창을 열어), 마지막에 npx --yes @passioncode-ai/passioncode@latest doctor를 실행해. 무엇을 설정하거나 고쳤는지, 무엇이 아직 실패하는지, 로그인처럼 나만 할 수 있는 단계를 번호를 매겨 짧게 알려 주고, 새 스킬과 MCP 서버가 로드되도록 너를 재시작하라고 알려 줘.
 
-Fabric은 초기 프리뷰입니다. 컴퓨터에 Docker와 Supabase CLI가 있으면 명령이 설치하고, 없으면 무엇을 추가해야 하는지 알려 줍니다. 직접 하고 싶으신가요? 아래 다섯 단계가 같은 설정을 도구 하나씩 진행합니다.
+Fabric은 초기 프리뷰입니다. 컴퓨터에 Docker와 Supabase CLI가 있으면 명령이 설치하고, 없으면 무엇을 추가해야 하는지 알려 줍니다.
 
-## 단계
+직접 하고 싶으신가요?
 
 01
-
-### 스킬 설치
-
-PassionCode.ai 런처가 Fabric Agent Adapter 스킬, Observatory Log, 작업 규칙을 코딩 에이전트에 설치합니다. 계정도 키도 필요 없습니다. Fabric은 설치하지 않습니다. Fabric은 다음 단계에서 따로 내려받습니다.
-
-npx @passioncode-ai/passioncode@latest update
-
-런처 0.2.2 · 설치 후 에이전트를 다시 시작하세요 · 자동 업데이트가 켜져 있습니다. 자동 업데이트 끄기
-
-02
 
 ### Fabric 추가
 
@@ -134,21 +118,11 @@ macOS용
 
 Apple silicon 및 Intel · 서명 및 공증 완료 · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · 릴리스 노트
 
-03
+02
 
-### 에이전트 만들기 또는 맞추기
+### Fabric Dashboards 추가
 
-Claude Code나 Codex에서 필요한 것을 요청하거나, Fabric의 만들기(Create)와 맞추기(Adapt) 동작에서 시작하세요. 어느 쪽이든 작업은 코딩 에이전트의 콘솔에서 진행됩니다. Fabric Agent Adapter 스킬은 먼저 질문하고, 무엇이든 바꾸기 전에 계획을 보여 줍니다. 맞추기 작업은 새 fabric-adapter 브랜치에서 진행됩니다. 결과로 계약, 대시보드, 테스트, 적합성 보고서를 받습니다.
-
-새로 만들기 매일 아침 앱 스토어 리뷰를 확인하고 답글 초안을 쓰는 Fabric 에이전트를 만들어 줘
-
-맞추기 이 저장소를 Fabric에 맞춰 줘
-
-04
-
-### 실행하고 확인
-
-Fabric Dashboards는 로컬 에이전트 서비스를 한 창에 모두 보여 줍니다. 에이전트가 MCP로 서비스를 시작, 중지하고 열 수 있습니다.
+Fabric Dashboards는 모든 로컬 에이전트 서비스를 한 창에 보여 줍니다. 내려받은 뒤 MCP로 코딩 에이전트에 연결하세요.
 
 Fabric Dashboards 다운로드
 
@@ -158,23 +132,33 @@ Fabric Dashboards 다운로드
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-05
+Switchboard, Project Observatory, Fabric Inbox는 각각 따로 내려받습니다: Switchboard · Observatory · Inbox
+
+## 다음 단계
+
+01
+
+### 에이전트 만들기 또는 맞추기
+
+Claude Code나 Codex에서 필요한 것을 요청하거나, Fabric의 만들기(Create)와 맞추기(Adapt) 동작에서 시작하세요. 어느 쪽이든 작업은 코딩 에이전트의 콘솔에서 진행됩니다. Fabric Agent Adapter 스킬은 먼저 질문하고, 무엇이든 바꾸기 전에 계획을 보여 줍니다. 맞추기 작업은 새 fabric-adapter 브랜치에서 진행됩니다. 결과로 계약, 대시보드, 테스트, 적합성 보고서를 받습니다.
+
+새로 만들기 매일 아침 앱 스토어 리뷰를 확인하고 답글 초안을 쓰는 Fabric 에이전트를 만들어 줘
+
+맞추기 이 저장소를 Fabric에 맞춰 줘
+
+02
+
+### 실행하고 확인
+
+Fabric Dashboards는 모든 로컬 에이전트 서비스를 한 창에 보여 주며, 에이전트가 MCP로 서비스를 시작, 중지하고 열 수 있습니다. 같은 명령이 macOS에 설치하고 코딩 에이전트에 연결합니다.
+
+03
 
 ### 같은 프로젝트에 다음 에이전트 추가
 
-다음 에이전트도 같은 방식으로 만들고 Fabric의 같은 프로젝트를 주세요. Fabric에서 시작한 Claude Code, Kilo Code, Hermes Agent는 그 프로젝트의 보드, 메모리, 인계를 공유하므로, 한 에이전트가 멈춘 곳에서 다른 에이전트가 이어받습니다. 오늘 연결되는 에이전트
+다음 에이전트도 같은 방식으로 만들고 Fabric의 같은 프로젝트를 주세요. Fabric에 연결된 에이전트는 한 프로젝트의 보드, 메모리, 인계를 공유하므로, 한 에이전트가 멈춘 곳에서 다른 에이전트가 이어받습니다. 오늘 연결되는 에이전트
 
-추천 툴
-
-## 시작한 일을
-
-## 끝내는 에이전트
-
-에이전트가 만드는 변경에는 다음 스킬을 권장합니다: task-pipeline, 별도의 오픈 소스 스킬로, sshlg-skills 컬렉션에 속합니다. 브리프에서 승인까지 각 변경을 이끌며, 각 관문을 통과하기 전에는 다음으로 넘어가지 않습니다.
-
-npx sshlg-skills install
-
-GitHub의 task-pipeline · PassionCode.ai에 속하지 않으며 PassionCode.ai 없이도 동작합니다
+에이전트가 만드는 변경에는 별도의 오픈 소스 스킬인 task-pipeline을 권합니다: 하는 일과 설치 방법
 
 기여하기
 
@@ -243,6 +227,12 @@ Fabric
 GitHub 및 소스 코드
 
 소개
+
+투자자
+
+기여하기
+
+언론
 
 디자인 시스템
 

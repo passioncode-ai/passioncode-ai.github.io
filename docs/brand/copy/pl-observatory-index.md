@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Pobierz
+Skonfiguruj
 
 ↓
 
@@ -55,6 +55,8 @@ PROJECT OBSERVATORY · OD PASSIONCODE
 Zobacz, co zmieniło się w projektach Twoich agentów i co najpierw wymaga Twojej uwagi, w tym gdzie znany klucz API zostawił kopię, w lokalnym panelu dostępnym po angielsku lub po rosyjsku
 
 W ZESTAWIE NARZĘDZI Pamięć i dowody: co zmieniło się w każdym projekcie, co postanowiono i co wymaga uwagi. To krok 5 w części „Jak to działa”. Wszystkie narzędzia
+
+Skonfiguruj wszystko jednym poleceniem →
 
 Zacznij
 
@@ -237,6 +239,12 @@ Fabric
 GitHub i kod źródłowy
 
 O projekcie
+
+Inwestorzy
+
+Współtwórcy
+
+Prasa
 
 System projektowy
 

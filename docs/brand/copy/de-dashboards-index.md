@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from de/dashboards/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Dashboards | Deine lokalen Agentendienste an einem Ort
+Fabric Dashboards | Deine lokalen Agentendienste an einem Ort | PassionCode.ai
 
 Ein Fenster für deine lokalen Agentendienste unter macOS, Windows und Linux. Sieh, was Aufmerksamkeit braucht, öffne Dashboards und lass deine Agenten dieselben Tools über MCP nutzen.
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Download
+Einrichten
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 Sieh jeden Agentendienst auf deinem Computer in einer App: Was dich braucht, steht oben, und das eigene Dashboard jedes Dienstes öffnet sich direkt daneben
 
 IM TOOLKIT Zustand, Ausgaben und Steuerung: jeder Agentendienst, was er gerade tut, was er ausgibt und seine Updates in einem Fenster. Schritt 4 in „So funktioniert es“. Alle Tools
+
+Alles mit einem Befehl einrichten →
 
 Für macOS herunterladen ↓
 
@@ -223,6 +225,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

@@ -56,10 +56,6 @@
     "Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from": "FabricはGNU AGPL-3.0に基づくオープンソースです。AGPLの対象外となる用途向けの商用ライセンスは",
     "for use the AGPL doesn’t cover. The": "から入手できます。",
     "preview is built, signed and notarized in CI from that public source.": "プレビュー版は、その公開ソースからCIでビルド、署名、公証されています。",
-    "PART OF THE SAME TOOLKIT": "同じツールキットの一部",
-    "Switchboard manages the accounts": "Switchboardはアカウントを管理します",
-    "The account-management tool runs independently of Fabric.": "アカウント管理ツールは、Fabricとは独立して動作します。",
-    "Back to the toolkit": "ツールキットに戻る",
     "· macOS on Apple silicon and Intel": "· Apple silicon・Intel搭載のmacOS",
     "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon・Intel（ユニバーサル）· macOS 13以降",
     "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "DMGを開き、FabricをApplicationsにドラッグします。同じDMGがApple silicon搭載MacとIntel Macの両方で動作します。",
@@ -93,6 +89,20 @@
     "The console after Create · the questions, one at a time": "「作成」後のコンソール · 質問はひとつずつ",
     "The coding agent’s console after Adapt: the plan for legacy-reports-agent with its profile, effects, branch and every file that would change, waiting for a yes. A written example, not a recording.": "「対応させる」のあとのコーディングエージェントのコンソール：legacy-reports-agentの計画として、プロファイル、効果、ブランチ、変更されるすべてのファイルを示し、承認を待っています。録画ではなく、文章で書いた例です。",
     "The console after Adapt · the plan before any change": "「対応させる」後のコンソール · 変更の前に計画",
-    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "「作成」と「対応させる」の画面は、Fabric自身のインターフェースをサンプルデータでソースから描画したものです。コンソールの文章は、コーディングエージェントが行うことを書いた例で、録画ではありません。"
+    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "「作成」と「対応させる」の画面は、Fabric自身のインターフェースをサンプルデータでソースから描画したものです。コンソールの文章は、コーディングエージェントが行うことを書いた例で、録画ではありません。",
+    "Choose the account each agent runs on, with usage limits in view.": "各エージェントが使うアカウントを、利用上限を確認しながら選べます。",
+    "Every local agent service in one window, driven by you or by agents.": "ローカルのエージェントサービスをすべて1つのウィンドウで、あなた自身またはエージェントが操作できます。",
+    "What changed in every project, what needs attention, with the evidence.": "すべてのプロジェクトで何が変わり、何に注意が必要かを、証跡つきで確認できます。",
+    "Gmail and Cloudflare mail in one list, important first; agents answer by policy.": "Gmail と Cloudflare のメールを1つのリストに集約し、重要なものを先頭に表示します。エージェントはポリシーに従って返信します。",
+    "Fabric is the home for your projects and their agents, an early preview: it keeps each project’s purpose, board, decisions and releases on your Mac. Its conversation saves messages but does not reply yet.": "Fabric は、プロジェクトとそのエージェントのための拠点で、早期プレビュー版です。各プロジェクトの目的、ボード、決定、リリースをお使いの Mac に保管します。会話はメッセージを保存しますが、まだ返信しません。",
+    "Set up everything with one command": "コマンド1つですべてをセットアップ",
+    "WORKS WITH FABRIC": "FABRIC と連携",
+    "Four tools around the home": "拠点を囲む4つのツール",
+    "Each also works on its own": "どれも単体で動きます",
+    "Fabric keeps the project. These four tools work with Fabric, and on their own, so you can start with any one of them.": "Fabric はプロジェクトを保ちます。この4つのツールは Fabric と連携し、単体でも動くので、どれから始めてもかまいません。",
+    "One command sets up all of it": "コマンド1つですべてをセットアップ",
+    "On a Mac, the four tools and Fabric (when Docker and the Supabase CLI are there), with their MCP servers and the skills, from verified releases. Run it again later and it checks and repairs.": "Mac では、4つのツールと Fabric（Docker と Supabase CLI がある場合）を、MCP サーバーとスキルとともに、検証済みのリリースからセットアップします。あとでもう一度実行すれば、点検して修復します。",
+    "Add a tool from inside Fabric": "Fabric の中からツールを追加",
+    "Choosing and installing the tools without leaving Fabric is where we are building.": "Fabric から離れずにツールを選んでインストールできるようにすることが、私たちの取り組んでいる方向です。"
   }
 }

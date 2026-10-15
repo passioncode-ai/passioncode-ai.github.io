@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from es/design-system/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Sistema de diseño de PassionCode | Una familia, un lenguaje común
+Sistema de diseño de PassionCode | Cada herramienta, un lenguaje común
 
 El lenguaje visual de PassionCode y Switchboard: superficies oscuras, acciones en amarillo, marcas de producto y tokens de diseño reutilizables.
 
@@ -42,17 +42,17 @@ Português (Brasil)
 
 日本語
 
-Descargar
+Configurar
 
 ↓
 
 PASSIONCODE / SISTEMA DE DISEÑO 1.1
 
-# Una familia
+# Cada herramienta
 
 # Un lenguaje común
 
-Los roles de color compartidos conectan las paletas oscura y clara, el amarillo resalta la siguiente acción y cada producto combina su propia marca con la fruta de la pasión de la familia
+Los roles de color compartidos conectan las paletas oscura y clara, el amarillo resalta la siguiente acción y cada producto combina su propia marca con la fruta de la pasión del conjunto
 
 Descargar los tokens CSS
 
@@ -64,7 +64,7 @@ Ver el código fuente
 
 01 / IDENTIDAD
 
-## Un aire de familia
+## Un mismo aspecto en todas las herramientas
 
 PassionCode · la marca matriz
 
@@ -159,6 +159,12 @@ Fabric
 GitHub y código fuente
 
 Acerca de
+
+Inversores
+
+Colaborar
+
+Prensa
 
 Sistema de diseño
 

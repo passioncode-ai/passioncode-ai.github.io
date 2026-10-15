@@ -42,7 +42,7 @@ Español
 
 日本語
 
-Baixar
+Configurar
 
 ↓
 
@@ -445,6 +445,12 @@ Fabric
 GitHub e código-fonte
 
 Sobre
+
+Investidores
+
+Contribuir
+
+Imprensa
 
 Sistema de design
 

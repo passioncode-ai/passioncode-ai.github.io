@@ -13,7 +13,6 @@
     "The tools are under the GNU AGPL-3.0. Internal use, and changes you publish under the same license, need nothing. A closed product that includes them, or a modified hosted service whose source you do not publish, needs a commercial license.": "工具采用 GNU AGPL-3.0 许可证。内部使用，以及你在相同许可证下公开的修改，无需任何额外手续。如果是包含这些工具的闭源产品，或是未公开源代码的修改版托管服务，则需要商业许可证。",
     "Enterprise · for organizations": "Enterprise · 面向组织",
     "Reply within two business days": "两个工作日内回复",
-    "Designed for 1 to 1000 people · the estimate comes before any contract": "适用于 1 至 1000 人 · 先给出估算，再谈合同",
     "How a request turns into a workplace": "一份需求如何变成工作空间",
     "Tell us": "告诉我们",
     "Estimate": "估算",
@@ -51,7 +50,6 @@
     "Send request": "提交需求",
     "Prefer email? Write to": "更喜欢邮件？请写信到",
     "Before you ask": "提问之前",
-    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for 1 to 1000 people.": "智能体运行在你组织的机器上，彼此连接、清晰可见，基于开源工具，数据留在你的机器或你自己的云上。适用于 1 至 1000 人。",
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "基于开源的 PassionCode.ai 工具，让组织成为 AI 原生：接入组织的机器、部署智能体并在它们之间分配工作、通过每台机器自己的本地智能体访问模型、活动与使用分析、管理、由 PassionCode.ai 签名的定制构建，并在需要时提供商业许可证。开发中，按需提供。",
     "Make your organization": "让你的组织成为",
     "AI-native": "AI 原生",
@@ -75,7 +73,6 @@
     "Your own build of the tools, signed by PassionCode.ai.": "你自己的工具构建版本，由 PassionCode.ai 签名。",
     "Your data stays on your machines or in your own cloud.": "你的数据留在你的机器或你自己的云上。",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "你的团队每月花在这些流程上的小时数，乘以智能体可能接手的比例，再乘以你每小时的成本。",
-    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for 1 to 1000 people.": "PassionCode for Enterprise 让组织成为 AI 原生：机器接入组织、智能体部署并在机器之间传递工作、模型密钥留在各台机器上、每个智能体的花费与交付、管理，以及定制的签名构建。你的数据留在你的机器或你自己的云上。适用于 1 至 1000 人。",
     "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, on open-source tools, with your data on your machines or in your own cloud": "只装在一个人的笔记本电脑上的智能体，只能帮到一个人。我们把智能体带到你的组织的机器上，把它们连接起来，并展示每个智能体花了多少、交付了什么；基于开源工具，你的数据留在你的机器上，或你自己的云里",
     "02 / FOR FINANCE AND ENGINEERING": "02 / 面向财务和工程",
     "One view of what agents cost": "一个视图看清智能体的花费",
@@ -127,6 +124,10 @@
     "We built it for our own teams first": "我们先为自己的团队搭建了它",
     "PassionCode has two co-founders, and we both run teams: Sergey Sheleg, co-founder and CPO of Nicegram, and Serge Khurs, co-founder and CTO of Teslasuit.": "PassionCode 有两位联合创始人，我们都带团队：Sergey Sheleg，Nicegram 联合创始人兼 CPO；Serge Khurs，Teslasuit 联合创始人兼 CTO。",
     "We built this setup for ourselves, and it runs our own work today. Now we bring it to your organization: we connect it to your systems and help you bring in agents that run your processes.": "我们先为自己搭了这套系统，今天它就在跑我们自己的工作。现在我们把它带给你的组织：接入你的系统，帮你引入智能体来跑你的流程。",
-    "How we got here": "我们怎么走到这里的"
+    "How we got here": "我们怎么走到这里的",
+    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise 让组织成为 AI 原生：机器接入组织、智能体部署并在机器之间传递工作、模型密钥留在各台机器上、每个智能体的花费与交付、管理，以及定制的签名构建。你的数据留在你的机器或你自己的云上。适用于从 1 人到 1000 人以上。",
+    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "智能体运行在你组织的机器上，彼此连接、清晰可见，基于开源工具，数据留在你的机器或你自己的云上。适用于从 1 人到 1000 人以上。",
+    "Designed for one person to more than 1,000 · the estimate comes before any contract": "适用于从 1 人到 1000 人以上 · 先给出估算，再谈合同",
+    "Try it on one machine first: setup, then doctor": "先在一台机器上试用：先 setup，再 doctor"
   }
 }

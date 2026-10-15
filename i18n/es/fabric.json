@@ -1,7 +1,6 @@
 {
   "page": "fabric/index.html",
   "strings": {
-    "Download": "Descargar",
     "FABRIC · EARLY PREVIEW": "FABRIC · VISTA PREVIA TEMPRANA",
     "Download for macOS": "Descargar para macOS",
     "Explore the workflow": "Ver cómo funciona el trabajo",
@@ -66,11 +65,6 @@
     "Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from": "Fabric es de código abierto bajo la GNU AGPL-3.0, y hay una licencia comercial disponible en",
     "for use the AGPL doesn’t cover. The": "para los usos que la AGPL no cubre. La vista previa",
     "preview is built, signed and notarized in CI from that public source.": "se compila, se firma y se notariza en CI a partir de ese código público.",
-    "PART OF THE SAME TOOLKIT": "PARTE DEL MISMO CONJUNTO DE HERRAMIENTAS",
-    "Switchboard manages the accounts": "Switchboard gestiona las cuentas",
-    "The account-management tool runs independently of Fabric.": "La herramienta de gestión de cuentas funciona de forma independiente de Fabric.",
-    "Download Switchboard": "Descargar Switchboard",
-    "Back to the toolkit": "Volver a las herramientas",
     "· macOS on Apple silicon and Intel": "· macOS en Apple silicon e Intel",
     "Apple silicon and Intel (universal) · macOS 13 or later": "Apple silicon e Intel (universal) · macOS 13 o posterior",
     "Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.": "Abre el DMG y arrastra Fabric a Aplicaciones. El mismo DMG funciona en los Mac con Apple silicon e Intel.",
@@ -104,6 +98,20 @@
     "The console after Create · the questions, one at a time": "La consola después de «Crear» · las preguntas, una a una",
     "The coding agent’s console after Adapt: the plan for legacy-reports-agent with its profile, effects, branch and every file that would change, waiting for a yes. A written example, not a recording.": "La consola del agente de programación después de «Adaptar»: el plan para legacy-reports-agent con su perfil, efectos, rama y cada archivo que cambiaría, a la espera de un sí. Un ejemplo escrito, no una grabación.",
     "The console after Adapt · the plan before any change": "La consola después de «Adaptar» · el plan antes de cualquier cambio",
-    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "Las pantallas Crear y Adaptar son la propia interfaz de Fabric, generada desde su código fuente con datos de ejemplo. El texto de la consola es un ejemplo escrito de lo que hace el agente de programación, no una grabación."
+    "The Create and Adapt screens are Fabric’s own interface, rendered from its source with sample data. The console text is a written example of what the coding agent does, not a recording.": "Las pantallas Crear y Adaptar son la propia interfaz de Fabric, generada desde su código fuente con datos de ejemplo. El texto de la consola es un ejemplo escrito de lo que hace el agente de programación, no una grabación.",
+    "Choose the account each agent runs on, with usage limits in view.": "Elige la cuenta con la que se ejecuta cada agente, con los límites de uso a la vista.",
+    "Every local agent service in one window, driven by you or by agents.": "Todos los servicios locales de agentes en una sola ventana, manejados por ti o por agentes.",
+    "What changed in every project, what needs attention, with the evidence.": "Qué ha cambiado en cada proyecto y qué requiere atención, con las pruebas.",
+    "Gmail and Cloudflare mail in one list, important first; agents answer by policy.": "El correo de Gmail y de Cloudflare en una sola lista, lo importante primero; los agentes responden según las reglas.",
+    "Fabric is the home for your projects and their agents, an early preview: it keeps each project’s purpose, board, decisions and releases on your Mac. Its conversation saves messages but does not reply yet.": "Fabric es el hogar de tus proyectos y sus agentes, en vista previa temprana: guarda en tu Mac el propósito, el tablero, las decisiones y las versiones de cada proyecto. Su conversación guarda los mensajes, pero todavía no responde.",
+    "Set up everything with one command": "Configúralo todo con un solo comando",
+    "WORKS WITH FABRIC": "FUNCIONA CON FABRIC",
+    "Four tools around the home": "Cuatro herramientas alrededor del hogar",
+    "Each also works on its own": "Cada una funciona también por su cuenta",
+    "Fabric keeps the project. These four tools work with Fabric, and on their own, so you can start with any one of them.": "Fabric guarda el proyecto. Estas cuatro herramientas funcionan con Fabric y también por su cuenta, así que puedes empezar por cualquiera.",
+    "One command sets up all of it": "Un solo comando lo configura todo",
+    "On a Mac, the four tools and Fabric (when Docker and the Supabase CLI are there), with their MCP servers and the skills, from verified releases. Run it again later and it checks and repairs.": "En un Mac, las cuatro herramientas y Fabric (cuando están Docker y la CLI de Supabase), con sus servidores MCP y las skills, desde versiones verificadas. Vuelve a ejecutarlo más tarde y revisa y repara.",
+    "Add a tool from inside Fabric": "Añadir una herramienta desde Fabric",
+    "Choosing and installing the tools without leaving Fabric is where we are building.": "Elegir e instalar las herramientas sin salir de Fabric es lo que estamos construyendo."
   }
 }

@@ -216,6 +216,13 @@ Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry
   `worker/i18n.js`; `sitemap.xml` with every version of every indexed page and its alternates; the
   "Languages" section of `llms.txt`. The thanks and 404 pages stay `noindex` in every language and carry
   no alternates; every other page is indexed in every language.
+- **The home video's text twins** (SITE-045, 2026-10-14): the transcript under the player (between
+  `<!-- video-transcript -->` and `<!-- /video-transcript -->`) and the `VideoObject` JSON-LD are written by
+  `npm run locales` on every language's home page, English included, from the player's own files
+  (`applyVideo` in `scripts/locales.mjs`): the transcript from the captions file the page's `<track>` names, the
+  thumbnail from the poster, the content URL and duration from the MP4 the page's `<source>` names (duration read
+  from its movie header), `inLanguage` from the cut's spoken language. A new cut or new captions need only
+  `npm run locales`; `--check` (and `npm run check`) fails until it has run. Never edit the transcript by hand.
 - **Pictures of an interface** (SITE-028 W5, 2026-10-11): an `<img>` whose `src` is `/assets/<name>.<ext>` shows
   `/assets/<name>-<code>.<ext>` on that language's pages when the file exists (`localizedAsset` in
   `scripts/locales.mjs`); otherwise every language shows the English picture. The structure gate compares `src` with

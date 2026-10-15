@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-下载
+安装设置
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC SWITCHBOARD · PASSIONCODE 出品
 把 Claude Code 和 Codex CLI 账号放在同一个本地工作台：查看每个账号上报的用量，并选择由哪个账号处理下一次请求
 
 工具包成员 账号：每个智能体运行在哪个账号上，并可查看其用量限制。第 4 步，见工作原理。全部工具
+
+一条命令全部装好 →
 
 下载 Switchboard
 
@@ -366,6 +368,12 @@ Fabric
 GitHub 与源代码
 
 关于
+
+投资者
+
+参与贡献
+
+媒体
 
 设计系统
 

@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from fr/dashboards/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Dashboards | Vos services d’agents locaux, réunis
+Fabric Dashboards | Vos services d’agents locaux, réunis | PassionCode.ai
 
 Une seule fenêtre pour vos services d’agents locaux sur macOS, Windows et Linux. Voyez ce qui demande votre attention, ouvrez les tableaux de bord et laissez vos agents utiliser les mêmes outils via MCP.
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Télécharger
+Installer
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 Voyez tous les services d’agents de votre ordinateur dans une seule application : ce qui vous attend passe en premier, et le tableau de bord propre à chaque service s’ouvre juste à côté
 
 DANS LA BOÎTE À OUTILS État, dépenses et contrôle : chaque service d’agent, ce qu’il fait, ce qu’il dépense et ses mises à jour dans une seule fenêtre. Étape 4 de « Comment ça marche ». Tous les outils
+
+Tout installer en une commande →
 
 Télécharger pour macOS ↓
 
@@ -223,6 +225,12 @@ Fabric
 GitHub et code source
 
 À propos
+
+Investisseurs
+
+Contribuer
+
+Presse
 
 Système de design
 

@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Agentes de programação com os quais o Fabric funciona | Fabric | PassionCode.ai
 
-Em 8 de outubro de 2026, o Fabric 0.3.2 conecta Claude Code, Kilo Code e Hermes Agent, Codex e Cline rodam no Fabric sem as ferramentas dele, e outros cinco agentes são os próximos do plano.
+Em 14 de outubro de 2026, o Fabric 0.3.5 conecta Claude Code, Codex, Kilo Code, Hermes Agent e Kimi Code, o Cline roda no Fabric sem as ferramentas dele, e outros cinco agentes são os próximos do plano.
 
 Ir para o conteúdo
 
@@ -42,7 +42,7 @@ Español
 
 日本語
 
-Baixar
+Configurar
 
 ↓
 
@@ -54,9 +54,9 @@ FABRIC · AGENTES DE PROGRAMAÇÃO COMPATÍVEIS
 
 Quais agentes o Fabric pode iniciar no seu projeto, quais deles recebem as ferramentas próprias do Fabric e quais vêm a seguir
 
-Em 8 de outubro de 2026 · o app lançado é o Fabric 0.3.2
+Em 14 de outubro de 2026 · o app lançado é o Fabric 0.3.5
 
-No app lançado, o Fabric conecta Claude Code, Kilo Code e Hermes Agent: ele inicia o agente no terminal de um projeto e lhe dá as ferramentas do Fabric durante essa sessão. Codex e Cline rodam no Fabric, mas ainda não têm as ferramentas do Fabric. Outros cinco agentes vêm a seguir no plano, depois o restante da lista abaixo. O Fabric Switchboard alterna contas de assinatura para Claude Code e Codex, e contas com chave de API para os demais agentes por meio do Switchboard.
+No app lançado, o Fabric conecta Claude Code, Codex, Kilo Code, Hermes Agent e Kimi Code: ele inicia o agente no terminal de um projeto e lhe dá as ferramentas do Fabric durante essa sessão. Cline roda no Fabric, mas ainda não tem as ferramentas do Fabric. Outros cinco agentes vêm a seguir no plano, depois o restante da lista abaixo. O Fabric Switchboard alterna contas de assinatura para Claude Code e Codex, e contas com chave de API para os demais agentes por meio do Switchboard.
 
 01 / O QUE SIGNIFICA “FUNCIONA COM”
 
@@ -90,9 +90,9 @@ Pretendemos conectar o agente. O plano abaixo indica uma ordem, não datas.
 
 ## Ferramentas do Fabric na sessão
 
-Claude Code, Kilo Code e Hermes Agent, os três no app lançado.
+Claude Code, Codex, Kilo Code, Hermes Agent e Kimi Code, os cinco no app lançado.
 
-Agentes conectados, em 8 de outubro de 2026
+Agentes conectados, em 14 de outubro de 2026
 
 Agente
 
@@ -106,6 +106,12 @@ claude.com
 
 Lançado, no Fabric 0.3
 
+Codex
+
+github.com/openai/codex
+
+Lançado, no Fabric 0.3.5
+
 Kilo Code
 
 kilo.ai
@@ -118,7 +124,13 @@ hermes-agent.nousresearch.com
 
 Lançado, no Fabric 0.3.2
 
-O Kilo Code lê as configurações da sessão da sua KILO_CONFIG_CONTENT variável, e o arquivo kilo.json do próprio projeto não consegue substituí-las. Verificamos isso no Kilo 7.4.17 em 5 de outubro de 2026. O Hermes Agent se conecta pelo protocolo aberto Agent Client Protocol: o Fabric abre a sessão dele e entrega as ferramentas do Fabric por uma ponte local, verificado no Hermes 0.21.4 no mesmo dia. O Hermes precisa de um modelo escolhido na configuração dele antes de poder responder.
+Kimi Code
+
+kimi.com
+
+Lançado, no Fabric 0.3.5
+
+O Kilo Code lê as configurações da sessão da sua KILO_CONFIG_CONTENT variável, e o arquivo kilo.json do próprio projeto não consegue substituí-las. Verificamos isso no Kilo 7.4.17 em 5 de outubro de 2026. O Hermes Agent se conecta pelo protocolo aberto Agent Client Protocol: o Fabric abre a sessão dele e entrega as ferramentas do Fabric por uma ponte local, verificado no Hermes 0.21.4 no mesmo dia. O Hermes precisa de um modelo escolhido na configuração dele antes de poder responder. Desde o Fabric 0.3.5, o Kimi Code se conecta pelo mesmo protocolo, e uma sessão do Codex que o Fabric inicia ganha uma pasta própria para aquela sessão: ela não lê as suas configurações do Codex, enquanto o AGENTS.md do projeto continua valendo.
 
 03 / RODAM NO FABRIC
 
@@ -128,19 +140,13 @@ O Kilo Code lê as configurações da sessão da sua KILO_CONFIG_CONTENT variáv
 
 O Fabric inicia o agente na pasta do projeto. Ele trabalha ali sem as ferramentas do Fabric.
 
-Agentes que rodam no Fabric, em 8 de outubro de 2026
+Agentes que rodam no Fabric, em 14 de outubro de 2026
 
 Agente
 
 Site oficial
 
 Situação
-
-Codex
-
-github.com/openai/codex
-
-Roda na pasta do projeto, ainda sem ferramentas do Fabric
 
 Cline
 
@@ -156,7 +162,7 @@ Lançado, no Fabric 0.3.2; pergunta antes de cada ferramenta, ainda sem ferramen
 
 Cinco vêm a seguir, em grupo, e os últimos nove avaliamos caso a caso. Nenhum deles tem as ferramentas do Fabric ainda.
 
-Agentes de programação planejados, em ordem, em 8 de outubro de 2026
+Agentes de programação planejados, em ordem, em 14 de outubro de 2026
 
 Agente
 
@@ -252,7 +258,7 @@ Caso a caso
 
 Zed, ZCode, Proto, CodeGPT, Freebuff e HackerAI são apps de desktop e editores que outro programa não consegue iniciar. Em vez disso, eles podem ser clientes do hub local do Fabric. Cada um precisa de uma entrada documentada própria; essas entradas estão planejadas, mas ainda não foram escritas.
 
-Apps de desktop e editores planejados, em 8 de outubro de 2026
+Apps de desktop e editores planejados, em 14 de outubro de 2026
 
 App
 
@@ -353,6 +359,12 @@ Fabric
 GitHub e código-fonte
 
 Sobre
+
+Investidores
+
+Contribuir
+
+Imprensa
 
 Sistema de design
 

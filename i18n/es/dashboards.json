@@ -1,9 +1,7 @@
 {
   "page": "dashboards/index.html",
   "strings": {
-    "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Los servicios de agentes de tu Mac, juntos",
     "One window for local agent services that speak fabric-service/0.1.": "Una ventana para los servicios de agentes locales que hablan fabric-service/0.1.",
-    "Download": "Descargar",
     "Your agent services": "Tus servicios de agentes",
     "One place to look": "Un solo lugar donde mirar",
     "Download for macOS ↓": "Descargar para macOS ↓",
@@ -89,6 +87,8 @@
     "Windows and Linux downloads": "Descargas para Windows y Linux",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Una sola ventana para tus servicios de agentes locales en macOS, Windows y Linux. Ve qué necesita atención, abre paneles y deja que tus agentes usen las mismas herramientas mediante MCP.",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Ve todos los servicios de agentes de tu equipo en una sola app: primero lo que te necesita, y el panel propio de cada servicio se abre al lado",
-    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards descubre los servicios compatibles en tu equipo. Cada servicio conserva su propia función; tú obtienes un lugar común para inspeccionarlos y controlarlos."
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards descubre los servicios compatibles en tu equipo. Cada servicio conserva su propia función; tú obtienes un lugar común para inspeccionarlos y controlarlos.",
+    "Fabric Dashboards | Your local agent services, together | PassionCode.ai": "Fabric Dashboards | Los servicios de agentes de tu Mac, juntos | PassionCode.ai",
+    "Set up everything with one command": "Configúralo todo con un solo comando"
   }
 }

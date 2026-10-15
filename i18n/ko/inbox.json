@@ -4,7 +4,6 @@
     "PassionCode.ai passion fruit mark": "PassionCode.ai 패션프루트 마크",
     "Fabric Inbox": "Fabric Inbox",
     "Products": "제품",
-    "GitHub": "GitHub",
     "FABRIC INBOX · DEVELOPMENT PREVIEW": "FABRIC INBOX · 개발 프리뷰",
     "Your mail": "내 메일",
     "Important first": "중요한 메일 먼저",
@@ -126,6 +125,7 @@
     "Or make a key yourself": "또는 키를 직접 만드세요",
     "On the same screen, choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.": "같은 화면에서 이름, 수준(read, mail 또는 admin), 발송 허용 여부를 선택합니다. 시크릿은 한 번만 표시됩니다.",
     "For a key you made, the app prints the whole command:": "직접 만든 키라면 앱이 전체 명령을 보여 줍니다:",
-    "A Mac copy older than 0.15.2 cannot update itself: download 0.15.2 once and install it over the old one. Later releases install themselves again.": "0.15.2보다 오래된 Mac 사본은 스스로 업데이트할 수 없습니다. 0.15.2를 한 번 내려받아 이전 사본 위에 설치하세요. 그 뒤의 릴리스는 다시 스스로 설치됩니다."
+    "A Mac copy older than 0.15.2 cannot update itself: download 0.15.2 once and install it over the old one. Later releases install themselves again.": "0.15.2보다 오래된 Mac 사본은 스스로 업데이트할 수 없습니다. 0.15.2를 한 번 내려받아 이전 사본 위에 설치하세요. 그 뒤의 릴리스는 다시 스스로 설치됩니다.",
+    "Set up everything with one command": "명령 하나로 모두 설정하기"
   }
 }

@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Download
+Einrichten
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC · FRÜHE VORSCHAU
 Fabric hält Zweck, Board, Entscheidungen und Releases jedes Projekts auf deinem Mac fest, für jeden Agenten, der daran arbeitet. Wir bauen es zum CEO deiner Agenten aus
 
 IM TOOLKIT Das gemeinsame Zuhause aller Agenten eines Projekts: Zweck, Board, Entscheidungen und Releases. Schritte 2 und 5 in „So funktioniert es“. Alle Tools
+
+Alles mit einem Befehl einrichten →
 
 Für macOS herunterladen
 
@@ -223,19 +225,55 @@ Das ist eine frühe Vorschau. Du kannst Projekte, ein Board mit Entscheidungen, 
 
 Fabric ist Open Source unter der GNU AGPL-3.0, und eine kommerzielle Lizenz ist erhältlich über passioncode.ai/business für eine Nutzung, die die AGPL nicht abdeckt. Die 0.3.5 Vorschau wird in der CI aus diesem öffentlichen Quellcode gebaut, signiert und notarisiert.
 
-TEIL DESSELBEN TOOLKITS
+RUND UM FABRIC
 
-## Switchboard verwaltet die Accounts
+## Vier Tools rund um das Zuhause
 
-Das Tool zur Account-Verwaltung läuft unabhängig von Fabric.
+## Jedes funktioniert auch allein
 
-Switchboard herunterladen
+Fabric hält das Projekt. Diese vier Tools arbeiten mit Fabric und auch für sich allein, du kannst also mit jedem beginnen.
 
-↓
+Fabric Switchboard
 
-Zurück zum Toolkit
+Wähle den Account, auf dem jeder Agent läuft, mit den Nutzungslimits im Blick.
 
 ↗
+
+Fabric Dashboards
+
+Jeder lokale Agentendienst in einem Fenster, gesteuert von dir oder von Agenten.
+
+↗
+
+Project Observatory
+
+Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht – mit Nachweis.
+
+↗
+
+Fabric Inbox
+
+Gmail und Cloudflare-Mail in einer Liste, Wichtiges zuerst; Agenten antworten nach Richtlinie.
+
+↗
+
+01
+
+JETZT VERFÜGBAR
+
+### Ein Befehl richtet alles ein
+
+Auf einem Mac die vier Tools und Fabric (wenn Docker und die Supabase CLI da sind), mit ihren MCP-Servern und den Skills, aus geprüften Releases. Führe ihn später erneut aus, und er prüft und repariert.
+
+Einrichten
+
+02
+
+ENTWICKLUNGSRICHTUNG
+
+### Ein Tool direkt in Fabric hinzufügen
+
+Tools auswählen und installieren, ohne Fabric zu verlassen: daran bauen wir.
 
 PassionCode
 
@@ -262,6 +300,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

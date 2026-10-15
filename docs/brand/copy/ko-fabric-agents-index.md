@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric과 함께 쓸 수 있는 코딩 에이전트 | Fabric | PassionCode.ai
 
-2026년 10월 8일 기준, Fabric 0.3.2는 Claude Code, Kilo Code, Hermes Agent를 연결합니다. Codex와 Cline은 Fabric의 도구 없이 Fabric 안에서 실행되며, 에이전트 5개가 계획상 다음 순서입니다.
+2026년 10월 14일 기준, Fabric 0.3.5는 Claude Code, Codex, Kilo Code, Hermes Agent, Kimi Code를 연결합니다. Cline은 Fabric의 도구 없이 Fabric 안에서 실행되며, 에이전트 5개가 계획상 다음 순서입니다.
 
 본문으로 건너뛰기
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-다운로드
+설정하기
 
 ↓
 
@@ -54,9 +54,9 @@ FABRIC · 지원하는 코딩 에이전트
 
 Fabric이 프로젝트에서 시작할 수 있는 에이전트, 그중 Fabric 자체 도구를 받는 에이전트, 다음에 올 에이전트
 
-기준일: 2026년 10월 8일 · 릴리스된 앱은 Fabric 0.3.2
+기준일: 2026년 10월 14일 · 릴리스된 앱은 Fabric 0.3.5
 
-릴리스된 앱에서 Fabric이 연결하는 에이전트는 Claude Code, Kilo Code 및 Hermes Agent입니다. 프로젝트의 터미널에서 에이전트를 시작하고, 그 세션 동안 Fabric의 도구를 제공합니다. Codex 및 Cline은(는) Fabric 안에서 실행되지만 아직 Fabric의 도구는 없습니다. 계획상 에이전트 5개가 다음 순서이고, 그다음이 아래에 나열된 나머지입니다. Fabric Switchboard는 Claude Code와 Codex의 구독 계정을 전환하며, 다른 에이전트는 Switchboard를 통해 API 키 계정을 전환합니다.
+릴리스된 앱에서 Fabric이 연결하는 에이전트는 Claude Code, Codex, Kilo Code, Hermes Agent 및 Kimi Code입니다. 프로젝트의 터미널에서 에이전트를 시작하고, 그 세션 동안 Fabric의 도구를 제공합니다. Cline은 Fabric 안에서 실행되지만 아직 Fabric의 도구는 없습니다. 계획상 에이전트 5개가 다음 순서이고, 그다음이 아래에 나열된 나머지입니다. Fabric Switchboard는 Claude Code와 Codex의 구독 계정을 전환하며, 다른 에이전트는 Switchboard를 통해 API 키 계정을 전환합니다.
 
 01 / “함께 쓸 수 있다”의 의미
 
@@ -90,9 +90,9 @@ Fabric이 프로젝트 폴더에서 에이전트를 시작하므로 에이전트
 
 ## 세션 동안 Fabric의 도구 제공
 
-Claude Code, Kilo Code, Hermes Agent 세 가지 모두 릴리스된 앱에 있습니다.
+Claude Code, Codex, Kilo Code, Hermes Agent, Kimi Code 다섯 가지 모두 릴리스된 앱에 있습니다.
 
-연결된 에이전트, 2026년 10월 8일 기준
+연결된 에이전트, 2026년 10월 14일 기준
 
 에이전트
 
@@ -106,6 +106,12 @@ claude.com
 
 릴리스됨, Fabric 0.3
 
+Codex
+
+github.com/openai/codex
+
+릴리스됨, Fabric 0.3.5
+
 Kilo Code
 
 kilo.ai
@@ -118,7 +124,13 @@ hermes-agent.nousresearch.com
 
 릴리스됨, Fabric 0.3.2
 
-Kilo Code는 세션 설정을 KILO_CONFIG_CONTENT 변수에서 가져오며, 프로젝트 자체의 kilo.json은 이를 덮어쓸 수 없습니다. 2026년 10월 5일 Kilo 7.4.17에서 이를 확인했습니다.
+Kimi Code
+
+kimi.com
+
+릴리스됨, Fabric 0.3.5
+
+Kilo Code는 세션 설정을 KILO_CONFIG_CONTENT 변수에서 가져오며, 프로젝트 자체의 kilo.json은 이를 덮어쓸 수 없습니다. 2026년 10월 5일 Kilo 7.4.17에서 이를 확인했습니다. Hermes Agent는 개방형 Agent Client Protocol로 연결됩니다. Fabric이 세션을 열고 로컬 브리지를 통해 Fabric의 도구를 넘겨주며, 같은 날 Hermes 0.21.4에서 확인했습니다. Hermes가 답하려면 먼저 자체 설정에서 모델을 골라야 합니다. Fabric 0.3.5부터 Kimi Code도 같은 프로토콜로 연결되며, Fabric이 시작한 Codex 세션은 그 세션만의 홈 폴더를 받습니다. 내 Codex 설정은 읽지 않지만, 프로젝트의 AGENTS.md는 그대로 적용됩니다.
 
 03 / FABRIC에서 실행
 
@@ -128,19 +140,13 @@ Kilo Code는 세션 설정을 KILO_CONFIG_CONTENT 변수에서 가져오며, 프
 
 Fabric이 프로젝트 폴더에서 에이전트를 시작합니다. 에이전트는 Fabric의 도구 없이 그곳에서 작업합니다.
 
-Fabric에서 실행되는 에이전트, 2026년 10월 8일 기준
+Fabric에서 실행되는 에이전트, 2026년 10월 14일 기준
 
 에이전트
 
 공식 사이트
 
 현재 상태
-
-Codex
-
-github.com/openai/codex
-
-프로젝트 폴더에서 실행, 아직 Fabric 도구 없음
 
 Cline
 
@@ -156,7 +162,7 @@ cline.bot
 
 다음에는 5개를 묶어서 진행하고, 마지막 9개는 사례별로 검토합니다. 어느 것에도 아직 Fabric의 도구는 없습니다.
 
-계획된 코딩 에이전트, 순서대로, 2026년 10월 8일 기준
+계획된 코딩 에이전트, 순서대로, 2026년 10월 14일 기준
 
 에이전트
 
@@ -252,7 +258,7 @@ opencode.ai
 
 Zed, ZCode, Proto, CodeGPT, Freebuff, HackerAI는 다른 프로그램이 시작할 수 없는 데스크톱 앱과 에디터입니다. 대신 Fabric 로컬 허브의 클라이언트가 될 수 있습니다. 각각 문서화된 별도 항목이 필요하며, 이 항목들은 계획 단계이고 아직 작성되지 않았습니다.
 
-계획된 데스크톱 앱과 에디터, 2026년 10월 8일 기준
+계획된 데스크톱 앱과 에디터, 2026년 10월 14일 기준
 
 앱
 
@@ -353,6 +359,12 @@ Fabric
 GitHub 및 소스 코드
 
 소개
+
+투자자
+
+기여하기
+
+언론
 
 디자인 시스템
 

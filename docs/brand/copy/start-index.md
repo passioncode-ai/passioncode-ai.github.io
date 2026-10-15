@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Get the tools
+Set up
 
 ↓
 
@@ -60,21 +60,13 @@ One command
 
 01
 
-Install the skills
+Create or adapt an agent
 
 02
 
-Add Fabric
-
-03
-
-Create or adapt an agent
-
-04
-
 Run it and see it
 
-05
+03
 
 Add the next agent
 
@@ -90,9 +82,11 @@ ONE COMMAND
 
 One command installs the tools you choose from their signed releases, connects their MCP servers to Claude Code, Codex, Gemini CLI and Kimi Code, and adds the skills. On a computer that is already set up, the same command checks everything, repairs what is wrong and shows what changed.
 
+### Run it yourself
+
 npx @passioncode-ai/passioncode@latest setup
 
-Needs Node.js 18+ · installs the apps on macOS; on Linux and Windows it sets up the skills and MCP servers · it installs nothing whose signature, checksum or notarization fails · to check without changing anything:
+Needs Node.js 18+ · installs the apps on macOS; on Linux and Windows it sets up the skills and MCP servers · it installs nothing whose signature, checksum or notarization fails · restart your coding agent afterwards · to check without changing anything:
 
 npx @passioncode-ai/passioncode@latest doctor
 
@@ -102,21 +96,11 @@ Copy this prompt into Claude Code, Codex or another coding agent. It runs the co
 
 Set up PassionCode.ai on this computer, or check and repair it if it is already set up. Run npx --yes @passioncode-ai/passioncode@latest setup --yes --json (it needs Node 18 or newer) and read its JSON: it installs the missing apps from their signed releases, the skills and every MCP server, repairs whatever is wrong, and checks everything again. Do not download or install anything by hand, and never stop or kill a running app. Then run each product onboarding step it lists that an agent may run, never ask me for a key or password in the chat (the tools open their own hidden prompts), and finish with npx --yes @passioncode-ai/passioncode@latest doctor. Tell me briefly what you set up or fixed, what still fails, and the numbered steps only I can do, such as signing in, and remind me to restart you so the new skills and MCP servers load.
 
-Fabric is an early preview: the command installs it when Docker and the Supabase CLI are on your computer, and otherwise tells you what to add. Prefer to do it by hand? The five steps below are the same setup, one tool at a time.
+Fabric is an early preview: the command installs it when Docker and the Supabase CLI are on your computer, and otherwise tells you what to add.
 
-## Steps
+Prefer to do it by hand?
 
 01
-
-### Install the skills
-
-The PassionCode.ai launcher installs the Fabric Agent Adapter skills, Observatory Log and the working rules into your coding agent. No account and no key. It does not install Fabric: that is the next step, a separate download.
-
-npx @passioncode-ai/passioncode@latest update
-
-Launcher 0.2.2 · restart your agent afterwards · automatic updates are on; turn them off
-
-02
 
 ### Add Fabric
 
@@ -134,21 +118,11 @@ Requirements and limits
 
 Apple silicon and Intel · signed and notarized · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · release notes
 
-03
+02
 
-### Create or adapt an agent
+### Add Fabric Dashboards
 
-In Claude Code or Codex, ask for what you need, or start from Fabric’s Create and Adapt actions; the work runs in your coding agent’s console either way. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything; adapting works on a new fabric-adapter branch. You get a contract, a dashboard, tests and a conformance report.
-
-new Create a Fabric agent that checks our app store reviews every morning and drafts replies
-
-adapt Adapt this repository to Fabric
-
-04
-
-### Run it and see it
-
-Fabric Dashboards shows every local agent service in one window; your agent can start, stop and open them over MCP.
+Fabric Dashboards shows every local agent service in one window. Download it, then connect it to your coding agent over MCP.
 
 Download Fabric Dashboards
 
@@ -158,23 +132,33 @@ Download Fabric Dashboards
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-05
+Switchboard, Project Observatory and Fabric Inbox each have their own download: Switchboard · Observatory · Inbox
+
+## Next steps
+
+01
+
+### Create or adapt an agent
+
+In Claude Code or Codex, ask for what you need, or start from Fabric’s Create and Adapt actions; the work runs in your coding agent’s console either way. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything; adapting works on a new fabric-adapter branch. You get a contract, a dashboard, tests and a conformance report.
+
+new Create a Fabric agent that checks our app store reviews every morning and drafts replies
+
+adapt Adapt this repository to Fabric
+
+02
+
+### Run it and see it
+
+Fabric Dashboards shows every local agent service in one window; your agent can start, stop and open them over MCP. The one command installs it on macOS and connects it to your coding agent.
+
+03
 
 ### Add the next agent to the same project
 
-Build the next agent the same way and give it the same project in Fabric. Claude Code, Kilo Code and Hermes Agent started from Fabric share that project’s board, memory and hand-offs, so one picks up where the other stopped. Which agents connect today
+Build the next agent the same way and give it the same project in Fabric. Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Which agents connect today
 
-A TOOL WE RECOMMEND
-
-## Agents that finish
-
-## what they start
-
-For the changes your agents make, we recommend task-pipeline, a separate open-source skill from the sshlg-skills collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.
-
-npx sshlg-skills install
-
-task-pipeline on GitHub · it is not part of PassionCode.ai and needs nothing from it
+For the changes your agents make, we recommend task-pipeline, a separate open-source skill: what it does and how to install it
 
 CONTRIBUTE
 
@@ -243,6 +227,12 @@ Fabric
 GitHub & source
 
 About
+
+Investors
+
+Contributors
+
+Press
 
 Design system
 

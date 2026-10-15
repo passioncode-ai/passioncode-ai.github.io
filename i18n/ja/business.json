@@ -13,7 +13,6 @@
     "The tools are under the GNU AGPL-3.0. Internal use, and changes you publish under the same license, need nothing. A closed product that includes them, or a modified hosted service whose source you do not publish, needs a commercial license.": "ツールは GNU AGPL-3.0 で提供されます。社内での利用と、同じライセンスで公開する変更には、何も必要ありません。ツールを組み込んだクローズドな製品や、ソースを公開しない改変版のホスト型サービスには、商用ライセンスが必要です。",
     "Enterprise · for organizations": "Enterprise · 組織向け",
     "Reply within two business days": "2営業日以内に返信します",
-    "Designed for 1 to 1000 people · the estimate comes before any contract": "1人から1000人までの規模を想定 · 見積もりは契約の前にお出しします",
     "How a request turns into a workplace": "依頼からワークプレースまでの流れ",
     "Tell us": "ご相談",
     "Estimate": "見積もり",
@@ -51,7 +50,6 @@
     "Send request": "依頼を送信",
     "Prefer email? Write to": "メールをご希望の場合は、次の宛先へ：",
     "Before you ask": "ご質問の前に",
-    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for 1 to 1000 people.": "組織のマシン上のエージェントを、つなぎ、見える状態にします。オープンソースのツールで、データはお客様のマシンまたは自社クラウドに置かれます。1人から1000人の規模を想定しています。",
     "Making an organization AI-native on open-source PassionCode.ai tools: onboarding its machines, rolling out agents and routing work between them, model access through each machine's own local agent, activity and usage analytics, administration, custom builds signed by PassionCode.ai, and the commercial license where needed. In development, offered on request.": "オープンソースの PassionCode.ai ツールで、組織をAIネイティブにします。マシンの登録、エージェントの展開とエージェント間の作業の受け渡し、各マシンのローカルエージェントを通じたモデルへのアクセス、活動と利用状況の分析、管理、PassionCode.ai が署名するカスタムビルド、必要な場合の商用ライセンス。開発中で、ご依頼に応じて提供します。",
     "Make your organization": "組織を",
     "AI-native": "AIネイティブに",
@@ -75,7 +73,6 @@
     "Your own build of the tools, signed by PassionCode.ai.": "お客様専用のツールのビルドに、PassionCode.ai が署名します。",
     "Your data stays on your machines or in your own cloud.": "データはお客様のマシン、または自社クラウドに置かれます。",
     "Hours your team spends on the processes each month, times the share agents can plausibly take over, times what an hour costs you.": "チームが毎月これらのプロセスに費やす時間に、エージェントが引き受けられそうな割合と、1時間あたりのコストを掛けたものです。",
-    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for 1 to 1000 people.": "PassionCode for Enterprise は、組織をAIネイティブにします。マシンの組織への登録、エージェントの展開とマシン間での受け渡し、各マシンに残るモデルキー、エージェントごとのコストと成果、管理、署名付きカスタムビルドを提供します。データはお客様のマシンまたは自社クラウドに置かれます。1人から1000人の規模を想定しています。",
     "An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, on open-source tools, with your data on your machines or in your own cloud": "1人のノートPCにいるエージェントは、その1人しか助けません。組織のマシンにエージェントを導入し、つなぎ、それぞれにかかったコストと生み出した成果が見える状態にします。オープンソースのツールで、データはお客様のマシンまたは自社クラウドに置かれます",
     "02 / FOR FINANCE AND ENGINEERING": "02 / 財務とエンジニアリングのために",
     "One view of what agents cost": "エージェントのコストと成果を",
@@ -127,6 +124,10 @@
     "We built it for our own teams first": "まず自分たちのチームのために作りました",
     "PassionCode has two co-founders, and we both run teams: Sergey Sheleg, co-founder and CPO of Nicegram, and Serge Khurs, co-founder and CTO of Teslasuit.": "PassionCodeには共同創業者が二人いて、どちらもチームを率いています。Nicegramの共同創業者兼CPOのSergey Shelegと、Teslasuitの共同創業者兼CTOのSerge Khursです。",
     "We built this setup for ourselves, and it runs our own work today. Now we bring it to your organization: we connect it to your systems and help you bring in agents that run your processes.": "この仕組みは自分たちのために作ったもので、今では私たち自身の仕事がその上で動いています。これをお客様の組織に持ち込みます。お客様のシステムにつなぎ、お客様のプロセスを担うエージェントの導入を支援します。",
-    "How we got here": "ここに至るまで"
+    "How we got here": "ここに至るまで",
+    "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise は、組織をAIネイティブにします。マシンの組織への登録、エージェントの展開とマシン間での受け渡し、各マシンに残るモデルキー、エージェントごとのコストと成果、管理、署名付きカスタムビルドを提供します。データはお客様のマシンまたは自社クラウドに置かれます。1人から1000人を超える規模まで想定しています。",
+    "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "組織のマシン上のエージェントを、つなぎ、見える状態にします。オープンソースのツールで、データはお客様のマシンまたは自社クラウドに置かれます。1人から1000人を超える規模まで想定しています。",
+    "Designed for one person to more than 1,000 · the estimate comes before any contract": "1人から1000人を超える規模まで想定 · 見積もりは契約の前にお出しします",
+    "Try it on one machine first: setup, then doctor": "まずは1台のマシンで試せます：setup、次に doctor"
   }
 }

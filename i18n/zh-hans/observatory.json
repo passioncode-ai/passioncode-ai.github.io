@@ -83,6 +83,7 @@
     ", the dependency set the release was tested with. On macOS, use Homebrew Python. On Windows, use Python 3.13 or newer and the PowerShell steps in the installation guide.": "，即该版本测试所用的依赖集合。在 macOS 上，请使用 Homebrew 的 Python。在 Windows 上，请使用 Python 3.13 或更新版本，并按照安装指南中的 PowerShell 步骤操作。",
     ", one app for Apple silicon and Intel, signed with a Developer ID and notarized by Apple, for macOS 14+. It opens on the dashboard and uses the engine installed above; check it against the same": "，一个同时适用于 Apple silicon 和 Intel 的应用，已用 Developer ID 签名并通过 Apple 公证，适用于 macOS 14+。它会打开仪表盘，并使用上面安装的引擎；校验请使用同一份",
     "Windows and Linux app, since 0.22.0: a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed, and an AppImage and .deb for Linux x64 and arm64, on": "Windows 和 Linux 应用，自 0.22.0 起：Windows 安装程序（x64 和 arm64，无需管理员权限，已使用 Authenticode 签名），以及 Linux 的 AppImage 和 .deb（x64 和 arm64），见",
-    ". Like the Mac app, it opens on the dashboard and needs the engine installed above; it does not install the engine. It updates itself, except a copy installed from the .deb: install the next .deb.": "。与 Mac 应用一样，它会打开仪表盘并需要上面安装的引擎；它不会安装引擎。它会自动更新，但通过 .deb 安装的副本除外：请安装下一个 .deb。"
+    ". Like the Mac app, it opens on the dashboard and needs the engine installed above; it does not install the engine. It updates itself, except a copy installed from the .deb: install the next .deb.": "。与 Mac 应用一样，它会打开仪表盘并需要上面安装的引擎；它不会安装引擎。它会自动更新，但通过 .deb 安装的副本除外：请安装下一个 .deb。",
+    "Set up everything with one command": "一条命令全部装好"
   }
 }

@@ -42,9 +42,9 @@ Português (Brasil)
 
 日本語
 
-GitHub
+Einrichten
 
-↗
+↓
 
 FABRIC INBOX · ENTWICKLUNGSVORSCHAU
 
@@ -55,6 +55,8 @@ FABRIC INBOX · ENTWICKLUNGSVORSCHAU
 Bring Gmail- und Cloudflare-Postfächer in eine Liste, wichtige Mails zuerst. Agenten für deine eigenen Domains beantworten, was du erlaubst, und lassen den Rest als Entwurf liegen
 
 IM TOOLKIT Mail: die Adressen, die Agenten lesen und im Rahmen deiner Richtlinie beantworten. Schritt 5 in „So funktioniert es“. Alle Tools
+
+Alles mit einem Befehl einrichten →
 
 Für macOS herunterladen
 
@@ -290,6 +292,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

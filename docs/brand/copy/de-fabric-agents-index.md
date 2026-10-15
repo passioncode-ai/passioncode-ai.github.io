@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Coding-Agenten, mit denen Fabric arbeitet | Fabric | PassionCode.ai
 
-Stand 8. Oktober 2026: Fabric 0.3.2 verbindet Claude Code, Kilo Code und Hermes Agent, Codex und Cline laufen in Fabric ohne dessen Tools, und fünf weitere Agenten stehen als Nächstes im Plan.
+Stand 14. Oktober 2026: Fabric 0.3.5 verbindet Claude Code, Codex, Kilo Code, Hermes Agent und Kimi Code, Cline läuft in Fabric ohne dessen Tools, und fünf weitere Agenten stehen als Nächstes im Plan.
 
 Zum Inhalt springen
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Download
+Einrichten
 
 ↓
 
@@ -54,9 +54,9 @@ FABRIC · UNTERSTÜTZTE CODING-AGENTEN
 
 Welche Agenten Fabric in deinem Projekt starten kann, welche davon Fabrics eigene Tools bekommen und welche als Nächstes folgen
 
-Stand: 8. Oktober 2026 · die veröffentlichte App ist Fabric 0.3.2
+Stand: 14. Oktober 2026 · die veröffentlichte App ist Fabric 0.3.5
 
-In der veröffentlichten App verbindet Fabric Claude Code, Kilo Code und Hermes Agent: Es startet den Agenten im Terminal eines Projekts und gibt ihm für diese Sitzung die Tools von Fabric. Codex und Cline laufen in Fabric, haben aber noch nicht die Tools von Fabric. Fünf weitere Agenten folgen als Nächstes im Plan, danach die übrigen weiter unten. Fabric Switchboard wechselt Abo-Accounts für Claude Code und Codex sowie API-Key-Accounts für die anderen Agenten über Switchboard.
+In der veröffentlichten App verbindet Fabric Claude Code, Codex, Kilo Code, Hermes Agent und Kimi Code: Es startet den Agenten im Terminal eines Projekts und gibt ihm für diese Sitzung die Tools von Fabric. Cline läuft in Fabric, hat aber noch nicht die Tools von Fabric. Fünf weitere Agenten folgen als Nächstes im Plan, danach die übrigen weiter unten. Fabric Switchboard wechselt Abo-Accounts für Claude Code und Codex sowie API-Key-Accounts für die anderen Agenten über Switchboard.
 
 01 / WAS „UNTERSTÜTZT“ BEDEUTET
 
@@ -90,9 +90,9 @@ Wir wollen den Agenten verbinden. Der Plan unten nennt eine Reihenfolge, keine T
 
 ## Die Tools von Fabric für die Sitzung
 
-Claude Code, Kilo Code und Hermes Agent, alle drei in der veröffentlichten App.
+Claude Code, Codex, Kilo Code, Hermes Agent und Kimi Code, alle fünf in der veröffentlichten App.
 
-Verbundene Agenten, Stand 8. Oktober 2026
+Verbundene Agenten, Stand 14. Oktober 2026
 
 Agent
 
@@ -106,6 +106,12 @@ claude.com
 
 Veröffentlicht, in Fabric 0.3
 
+Codex
+
+github.com/openai/codex
+
+Veröffentlicht, in Fabric 0.3.5
+
 Kilo Code
 
 kilo.ai
@@ -118,7 +124,13 @@ hermes-agent.nousresearch.com
 
 Veröffentlicht, in Fabric 0.3.2
 
-Kilo Code übernimmt seine Sitzungseinstellungen aus seiner KILO_CONFIG_CONTENT -Variable, und die kilo.json eines Projekts kann sie nicht überschreiben. Wir haben das am 5. Oktober 2026 mit Kilo 7.4.17 geprüft. Hermes Agent verbindet sich über das offene Agent Client Protocol: Fabric öffnet seine Sitzung und gibt ihm die Tools von Fabric über eine lokale Brücke, am selben Tag mit Hermes 0.21.4 geprüft. Hermes braucht ein in der eigenen Einrichtung gewähltes Modell, bevor es antworten kann.
+Kimi Code
+
+kimi.com
+
+Veröffentlicht, in Fabric 0.3.5
+
+Kilo Code übernimmt seine Sitzungseinstellungen aus seiner KILO_CONFIG_CONTENT -Variable, und die kilo.json eines Projekts kann sie nicht überschreiben. Wir haben das am 5. Oktober 2026 mit Kilo 7.4.17 geprüft. Hermes Agent verbindet sich über das offene Agent Client Protocol: Fabric öffnet seine Sitzung und gibt ihm die Tools von Fabric über eine lokale Brücke, am selben Tag mit Hermes 0.21.4 geprüft. Hermes braucht ein in der eigenen Einrichtung gewähltes Modell, bevor es antworten kann. Seit Fabric 0.3.5 verbindet sich Kimi Code über dasselbe Protokoll, und eine Codex-Sitzung, die Fabric startet, bekommt für diese Sitzung ein eigenes Zuhause: Sie liest deine eigenen Codex-Einstellungen nicht, während die projekteigene AGENTS.md weiterhin gilt.
 
 03 / LÄUFT IN FABRIC
 
@@ -128,19 +140,13 @@ Kilo Code übernimmt seine Sitzungseinstellungen aus seiner KILO_CONFIG_CONTENT 
 
 Fabric startet den Agenten im Projektordner. Dort arbeitet er ohne die Tools von Fabric.
 
-Agenten, die in Fabric laufen, Stand 8. Oktober 2026
+Agenten, die in Fabric laufen, Stand 14. Oktober 2026
 
 Agent
 
 Offizielle Website
 
 Stand der Dinge
-
-Codex
-
-github.com/openai/codex
-
-Läuft im Projektordner, noch keine Fabric-Tools
 
 Cline
 
@@ -156,7 +162,7 @@ Veröffentlicht, in Fabric 0.3.2; fragt vor jedem Tool nach, noch keine Fabric-T
 
 Fünf folgen als Gruppe als Nächstes, die letzten neun nehmen wir Fall für Fall. Keiner von ihnen hat bisher die Tools von Fabric.
 
-Geplante Coding-Agenten in Reihenfolge, Stand 8. Oktober 2026
+Geplante Coding-Agenten in Reihenfolge, Stand 14. Oktober 2026
 
 Agent
 
@@ -252,7 +258,7 @@ Fall für Fall
 
 Zed, ZCode, Proto, CodeGPT, Freebuff und HackerAI sind Desktop-Apps und Editoren, die ein anderes Programm nicht starten kann. Sie können stattdessen Clients des lokalen Hubs von Fabric sein. Jeder braucht einen eigenen dokumentierten Eintrag, und diese Einträge sind geplant, aber noch nicht geschrieben.
 
-Geplante Desktop-Apps und Editoren, Stand 8. Oktober 2026
+Geplante Desktop-Apps und Editoren, Stand 14. Oktober 2026
 
 App
 
@@ -353,6 +359,12 @@ Fabric
 GitHub und Quellcode
 
 Über das Projekt
+
+Investoren
+
+Mitwirken
+
+Presse
 
 Designsystem
 

@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from zh-hans/design-system/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode 设计系统 | 一个家族，一套共同语言
+PassionCode 设计系统 | 每个工具，一套共同语言
 
 PassionCode 与 Switchboard 背后的视觉语言：深色界面、黄色操作、产品标志和可复用的设计令牌。
 
@@ -42,17 +42,17 @@ Português (Brasil)
 
 日本語
 
-下载
+安装设置
 
 ↓
 
 PASSIONCODE / 设计系统 1.1
 
-# 一个家族
+# 每个工具
 
 # 一套共同语言
 
-共用的颜色角色连接深色与浅色配色，黄色标出下一步操作，每个产品都将自己的标志与家族的百香果搭配使用
+共用的颜色角色连接深色与浅色配色，黄色标出下一步操作，每个产品都将自己的标志与整套工具共用的百香果搭配使用
 
 获取 CSS 令牌
 
@@ -64,7 +64,7 @@ PASSIONCODE / 设计系统 1.1
 
 01 / 标识
 
-## 家族相似性
+## 所有工具统一的外观
 
 PassionCode · 母品牌
 
@@ -159,6 +159,12 @@ Fabric
 GitHub 与源代码
 
 关于
+
+投资者
+
+参与贡献
+
+媒体
 
 设计系统
 

@@ -5,7 +5,7 @@ import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 import { PAGES, NOINDEX, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { LEAD_OPTIONS } from '../assets/lead-options.js'
-import { alternates, langTag, languageSwitch, LOCALES, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
+import { alternates, isoDuration, langTag, languageSwitch, LOCALES, mp4Seconds, vttText, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
 
 const root = resolve(import.meta.dirname, '..')
@@ -197,7 +197,9 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
   assert.deepEqual(labels, ['1 Enter: AVAILABLE NOW', '2 Onboard: PREVIEW', '3 First agent: AVAILABLE NOW', '4 Grow: AVAILABLE NOW', '5 Work together and watch: AVAILABLE NOW, IN PART', '6 Organization: DIRECTION'], 'homepage: six journey steps, each with its state')
   const SAFE = new Set(['dashboards-overview.jpg', 'fabric-board.jpg', 'fabric-home.jpg', 'fabric-releases.jpg', 'dashboards-service-dashboard.jpg', 'observatory-demo.jpg', 'switchboard-accounts.jpg', ...MOCKUPS])
   for (const [, image] of how.matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #how: ${image} is not a synthetic shot the journey truth table marks reusable`)
-  assert.ok(how.includes('Fabric is a separate preview download'), 'homepage step 1: the launcher installs the skills, Fabric is a separate download')
+  // Since SITE-045 (operator 2026-10-14) step 01 teaches setup, the way to start: the launcher sets up the tools,
+  // their MCP servers and the skills, or a coding agent runs it; Fabric still needs Docker and the Supabase CLI.
+  for (const text of ['<code>npx @passioncode-ai/passioncode@latest setup</code>', 'or let your coding agent run it', 'Docker and the Supabase CLI', 'href="/start/#setup"']) assert.ok(how.includes(text), `homepage step 1: ${text}`)
   // The home video (SITE-028 W10; v2 since SITE-043, docs/video/2026-10-12-home-v2/README.md): click to play, never
   // autoplays or loops, loads nothing but its poster before play, captions on by default; the
   // Russian cut and every language's captions exist, are published and stay within budget.
@@ -259,18 +261,85 @@ for (const path of ['/switchboard/', '/dashboards/', '/observatory/', '/inbox/',
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
 assert.ok(home.includes('"@type": "FAQPage"'), 'homepage FAQ structured data')
 
+// SITE-045 (operator decisions D1–D3, 2026-10-14; docs/brand/facts.md rows *homepage hero*, *one door to setup*,
+// *investors note*): one door to setup on every page, Fabric first as the home, the About notes, the video's twins.
+for (const file of SOURCE_PAGES) {
+  const header = read(file).match(/<header class="site-header">[\s\S]*?<\/header>/)[0]
+  assert.ok(header.includes('<a class="header-link header-download" href="/start/#setup">Set up <span aria-hidden="true">↓</span></a>'), `${file}: the header's one door is Set up → /start/#setup`)
+  const footer = read(file).match(/<footer class="story-footer">[\s\S]*?<\/footer>/)[0]
+  for (const href of ['/#investors', '/#contributors', '/#press']) assert.ok(footer.includes(`href="${href}"`), `${file}: the footer links ${href}`)
+}
+{
+  assert.match(home, /<h1 id="hero-title">The agent-agnostic operating system for <em>AI-native teams<\/em><\/h1>/, 'homepage: the H1 stays (D1)')
+  assert.ok(home.includes('<p class="hero-body">Fabric is the home for your projects and their agents. Switchboard, Dashboards, Observatory and Inbox work with it, and on their own. One command sets it all up today</p>'), 'homepage: the one subline under the H1 (D1)')
+  assert.ok(!/\bmodules?\b/i.test(currentWords(home).replace(/<[^>]+>/g, ' ')), 'homepage: "module" is not a public word (D2)')
+  const doors = home.slice(home.indexOf('id="start"'), home.indexOf('</section>', home.indexOf('id="start"')))
+  assert.ok(doors.includes('<pre class="copyable"><code>npx @passioncode-ai/passioncode@latest setup</code></pre>'), 'homepage For you card: the setup command to copy')
+  const tools = home.slice(home.indexOf('id="products"'), home.indexOf('</section>', home.indexOf('id="products"')))
+  const order = [...tools.matchAll(/<a class="tool-choice[^"]*" href="([^"]+)"/g)].map(m => m[1])
+  assert.deepEqual(order, ['/fabric/', '/switchboard/', '/dashboards/', '/observatory/', '/inbox/'], 'homepage #products: Fabric first, then the four; no launcher card')
+  assert.ok(tools.includes('tool-choice-home') && tools.includes('Work with Fabric, and on their own'), 'homepage #products: Fabric as the home, the four work with it and on their own')
+  const about = home.slice(home.indexOf('id="about"'), home.indexOf('</section>', home.indexOf('id="about"')))
+  for (const id of ['investors', 'contributors', 'press']) assert.ok(about.includes(`id="${id}"`), `homepage #about: the ${id} note`)
+  const investors = about.slice(about.indexOf('id="investors"'), about.indexOf('id="contributors"'))
+  for (const text of ['open source under the GNU AGPL-3.0 and free for personal use', 'commercial license and our services', 'co-founders', 'mailto:commercial@passioncode.ai']) assert.ok(investors.includes(text), `homepage #investors: ${text} (D3)`)
+  assert.ok(!/\$|€|\d+\s?%|\b(?:valuation|revenue|raise|round|ARR|MRR|price|term sheet)\b/i.test(investors.replace(/AGPL-3\.0/g, '')), 'homepage #investors: no figures, prices or terms (D3)')
+  assert.ok(about.includes('href="/start/#contribute"'), 'homepage #contributors: links /start/#contribute')
+  const press = about.slice(about.indexOf('id="press"'))
+  for (const href of ['/#video', '/assets/passioncode-mark.svg', '/assets/icon-1024.png', 'mailto:commercial@passioncode.ai']) assert.ok(press.includes(`href="${href}"`), `homepage #press: ${href}`)
+  // The video's twins come from its own files (scripts/locales.mjs applyVideo): the VideoObject and the transcript.
+  const ld = [...home.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1])).find(d => d['@type'] === 'VideoObject')
+  assert.ok(ld, 'homepage: VideoObject structured data')
+  assert.equal(ld.contentUrl, 'https://passioncode.ai/assets/video/home.mp4', 'homepage VideoObject: the English cut')
+  assert.equal(ld.thumbnailUrl, 'https://passioncode.ai/assets/video/home.jpg', 'homepage VideoObject: the poster')
+  assert.equal(ld.duration, isoDuration(mp4Seconds(resolve(root, 'assets/video/home.mp4'))), 'homepage VideoObject: the duration of home.mp4 — run npm run locales')
+  for (const key of ['name', 'description', 'uploadDate', 'inLanguage']) assert.ok(ld[key], `homepage VideoObject: ${key}`)
+  const transcript = /<details class="video-transcript"><summary>Read the transcript<\/summary><!-- video-transcript[^>]*--><p>([^<]+)<\/p><!-- \/video-transcript --><\/details>/.exec(home)?.[1]
+  assert.equal(transcript?.replace(/&amp;/g, '&'), vttText(read('assets/video/home.vtt'), 'en'), 'homepage: the transcript under the player is home.vtt — run npm run locales')
+}
+{
+  // /fabric/ answers what Fabric is; what works with it is one short section, available now vs direction.
+  const fabricPage = read('fabric/index.html')
+  const app = [...fabricPage.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1])).find(d => d['@type'] === 'SoftwareApplication')
+  assert.ok(app && app.name === 'Fabric' && app.softwareVersion === snapshot.products.fabric.version, '/fabric/: SoftwareApplication JSON-LD with the current version')
+  const works = fabricPage.slice(fabricPage.indexOf('id="works-with"'), fabricPage.indexOf('</section>', fabricPage.indexOf('id="works-with"')))
+  for (const href of ['/switchboard/', '/dashboards/', '/observatory/', '/inbox/', '/start/#setup']) assert.ok(works.includes(`href="${href}"`), `/fabric/ #works-with links ${href}`)
+  assert.ok(/AVAILABLE NOW<\/p><h3>One command sets up all of it/.test(works) && /DIRECTION<\/p><h3>Add a tool from inside Fabric/.test(works), '/fabric/ #works-with: setup today, installing from inside Fabric as direction')
+  for (const file of ['fabric/index.html', 'switchboard/index.html', 'dashboards/index.html', 'observatory/index.html', 'inbox/index.html']) assert.ok(read(file).includes('<p class="setup-line"><a href="/start/#setup">Set up everything with one command'), `${file}: one line to the setup`)
+  const businessPage = read('business/index.html')
+  const hero = businessPage.slice(businessPage.indexOf('business-hero'), businessPage.indexOf('</section>', businessPage.indexOf('business-hero')))
+  assert.deepEqual([...hero.matchAll(/<a class="button[^"]*" href="([^"]+)"/g)].map(m => m[1]), ['#request'], '/business/: one hero action, to the request')
+  assert.ok(businessPage.includes('href="/start/#setup">Try it on one machine first: setup, then doctor'), '/business/: the admin line to setup and doctor')
+  assert.ok(!/1 to 1000 people/.test(businessPage), '/business/: the size line agrees with the 1000_plus answer')
+}
+
 // ---- /start/: install, create, convert, run, contribute --------------------------------------
 const start = read('start/index.html')
-for (const text of ['npx @passioncode-ai/passioncode@latest update', 'href="/fabric/download/macos"', 'href="/dashboards/download/macos"', 'Docker and the Supabase CLI', 'does not reply yet', 'Adapt this repository to Fabric', 'CONTRIBUTING.md', 'CLA.md', '"@type": "HowTo"']) assert.ok(start.includes(text), `/start/ missing ${text}`)
-for (const id of ['setup', 'setup-prompt', 'launcher', 'fabric', 'build', 'run', 'family', 'pipeline', 'contribute']) assert.ok(start.includes(`id="${id}"`), `/start/ #${id}`)
+for (const text of ['npx @passioncode-ai/passioncode@latest setup', 'href="/fabric/download/macos"', 'href="/dashboards/download/macos"', 'Docker and the Supabase CLI', 'does not reply yet', 'Adapt this repository to Fabric', 'CONTRIBUTING.md', 'CLA.md', '"@type": "HowTo"']) assert.ok(start.includes(text), `/start/ missing ${text}`)
+for (const id of ['setup', 'setup-prompt', 'launcher', 'by-hand', 'fabric', 'dashboards', 'build', 'run', 'family', 'pipeline', 'contribute']) assert.ok(start.includes(`id="${id}"`), `/start/ #${id}`)
 // The one command leads (operator 2026-10-13): setup for a new or an existing computer, doctor to
 // check only, and the copy-prompt; the five steps stay below it as the manual path.
-for (const text of ['npx @passioncode-ai/passioncode@latest setup', 'npx @passioncode-ai/passioncode@latest doctor', 'npx --yes @passioncode-ai/passioncode@latest setup --yes --json', 'data-copy-prompt']) assert.ok(start.includes(text), `/start/ missing ${text}`)
-assert.ok(start.indexOf('id="setup"') < start.indexOf('id="launcher"'), '/start/: the one command comes before the manual steps')
-assert.ok(start.includes('"position": 5'), '/start/: the HowTo names the fifth step')
+for (const text of ['<code>npx @passioncode-ai/passioncode@latest setup</code>', '<code>npx @passioncode-ai/passioncode@latest doctor</code>', 'npx --yes @passioncode-ai/passioncode@latest setup --yes --json', 'data-copy-prompt']) assert.ok(start.includes(text), `/start/ missing ${text}`)
+assert.ok(start.indexOf('id="setup"') < start.indexOf('id="build"'), '/start/: the one command comes before the steps')
+// SITE-045 (operator 2026-10-14): the command and the copy-prompt side by side; the manual downloads folded into one
+// <details>; the launcher's `update` step gone (setup covers it); task-pipeline lives on /vision/ with one link here.
+{
+  const setup = start.slice(start.indexOf('id="setup"'), start.indexOf('</section>', start.indexOf('id="setup"')))
+  const pair = setup.slice(setup.indexOf('<div class="setup-pair">'), setup.indexOf('<details'))
+  assert.ok(pair.includes('id="setup-command"') && pair.includes('id="setup-prompt"'), '/start/: the command and the copy-prompt sit side by side')
+  assert.match(setup, /<details class="manual-setup" id="by-hand"><summary>Prefer to do it by hand\?<\/summary>[\s\S]*id="fabric"[\s\S]*id="dashboards"[\s\S]*<\/details>/, '/start/: the manual downloads are folded into one details')
+  assert.ok(!start.includes('npx sshlg-skills install'), '/start/: the task-pipeline install line lives on /vision/')
+  assert.ok(start.includes('href="/vision/#pipeline"'), '/start/: one link to task-pipeline on /vision/')
+  assert.ok(start.includes('"position": 4') && !start.includes('"position": 5'), '/start/: the HowTo has four steps')
+}
+// The terminal cards show the command without `--yes`; `--yes` belongs to the agent copy-prompt only (coordinator 2026-10-14).
+for (const file of SOURCE_PAGES) assert.ok(!/<code>npx --yes /.test(read(file)), `${file}: a terminal card shows the command without --yes`)
+// `update` updates the skills; it is never taught as the way to start (SITE-045).
+for (const file of [...SOURCE_PAGES, 'llms.txt']) assert.ok(!read(file).includes('@passioncode-ai/passioncode@latest update'), `${file}: the way to start is setup, not update`)
 
 // ---- /vision/: sources, the harness, the path, today against direction ------------------------
 const vision = read('vision/index.html')
+assert.ok(vision.includes('<pre class="copyable"><code>npx sshlg-skills install</code></pre>') && vision.includes('id="pipeline"'), '/vision/#pipeline: the task-pipeline recommendation and its install line (SITE-045)')
 for (const text of ['https://www.mckinsey.com/', 'https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents', 'https://openai.com/index/harness-engineering/', 'https://github.com/ssheleg/sshlg-skills', 'Projects are the axis', 'The work improves itself', 'are the direction', 'Analytics, never surveillance', 'AVAILABLE NOW', 'DIRECTION', 'href="/start/"', 'href="/business/"', '"@type": "FAQPage"']) assert.ok(vision.includes(text), `/vision/ missing ${text}`)
 for (const id of ['harness', 'beliefs', 'path', 'pipeline', 'faq', 'problem', 'today', 'trust', 'organizations']) assert.ok(vision.includes(`id="${id}"`), `/vision/ #${id}`)
 assert.equal((vision.match(/<li class="reveal"><span class="cycle-number">0[1-6]<\/span><p class="availability">/g) || []).length, 6, '/vision/: every stage of the path says whether it works today')
@@ -278,7 +347,7 @@ assert.equal((vision.match(/<li class="reveal"><span class="cycle-number">0[1-6]
 // ---- /business/: the funnel form agrees with what the Worker accepts --------------------------
 // The founders' short version (#founders, 2026-10-11) sits ahead of the form and links to /#about.
 const business = read('business/index.html')
-for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"', 'PassionCode for Enterprise', 'Designed for 1 to 1000 people', 'id="organization"', 'id="founders"', 'href="/#about"', 'Serge Khurs, co-founder and CTO of Teslasuit', 'id="enterprise"', 'is in development', 'keys never leave the machine that holds them', 'on your machines or in your own cloud', 'there is no fixed package']) assert.ok(business.includes(text), `/business/ missing ${text}`)
+for (const text of ['action="/api/leads" method="post"', 'name="form_token"', 'name="pc_hp"', 'href="/privacy/"', 'mailto:commercial@passioncode.ai', 'An estimate, not a promise', '"@type": "Service"', '"@type": "FAQPage"', 'src="/assets/business.js"', 'PassionCode for Enterprise', 'Designed for one person to more than 1,000', 'id="organization"', 'id="founders"', 'href="/#about"', 'Serge Khurs, co-founder and CTO of Teslasuit', 'id="enterprise"', 'is in development', 'keys never leave the machine that holds them', 'on your machines or in your own cloud', 'there is no fixed package']) assert.ok(business.includes(text), `/business/ missing ${text}`)
 // Analytics in public copy are about agents and outcomes; the page never frames them as a
 // judgement of people (operator rule, docs/brand/terminology.md "PassionCode for Enterprise").
 assert.ok(!/\b(?:employee|staff|people)\b[^.]{0,40}\b(?:scor|assess|evaluat|performance)/i.test(currentWords(business)), '/business/: analytics are about agents, never a judgement of people')
@@ -388,13 +457,14 @@ for (const key of ['fabric', 'inbox']) {
 console.log('PASS: product pages keep their disclosures; manifests follow the release snapshot')
 
 // /fabric/agents/ answers one question: which coding agents Fabric works with, and at which level.
-// The levels are the operator's statement of 2026-10-05, moved by the Fabric 0.3.2 release on 2026-10-08
+// The levels are the operator's statement of 2026-10-05, moved by the Fabric 0.3.2 release on 2026-10-08 and the
+// Fabric 0.3.5 release (2026-10-12: Codex and Kimi Code connect; recorded 2026-10-14, SITE-045)
 // (docs/brand/facts.md, "Fabric coding agents");
 // every agent sits in exactly one level, and the page never moves one up without a new fact row.
 const agentsPage = read('fabric/agents/index.html')
 const agentLevels = {
-  connected: ['Claude Code', 'Kilo Code', 'Hermes Agent'],
-  'runs-in-fabric': ['Codex', 'Cline'],
+  connected: ['Claude Code', 'Codex', 'Kilo Code', 'Hermes Agent', 'Kimi Code'],
+  'runs-in-fabric': ['Cline'],
   planned: ['omp (oh-my-pi)', 'pi', 'OpenClaw', 'OpenHands', 'Cursor CLI', 'Command Code', 'DeepSeek Harness', 'LangChain Deep Agents (dcode)', 'Letta', 'Strix', 'goose', 'Qwen Code', 'Gemini CLI', 'OpenCode', 'Zed', 'ZCode', 'Proto', 'CodeGPT', 'Freebuff', 'HackerAI']
 }
 const rowNames = html => [...html.matchAll(/<th scope="row">([^<]+)<\/th><td><a href="https:\/\/[^"]+">/g)].map(m => m[1])
@@ -407,7 +477,7 @@ for (const [level, names] of Object.entries(agentLevels)) {
   assert.deepEqual(rowNames(section), names, `fabric/agents: #${level} must list exactly ${names.join(', ')}, in order, each with its official site`)
 }
 assert.deepEqual(allRows, Object.values(agentLevels).flat(), 'fabric/agents: no agent outside its level table')
-for (const text of ['<time datetime="2026-10-08">8 October 2026</time>', 'the released app is Fabric 0.3.2', 'one-session credential', 'nothing is written into the agent’s own settings', '<code>KILO_CONFIG_CONTENT</code>', '<code>kilo.json</code>', 'Kilo 7.4.17', 'href="https://agentclientprotocol.com"', 'href="https://openrouter.ai/apps"', 'read on 5 October 2026', 'largest share', 'switches subscription accounts for Claude Code and Codex', 'href="/switchboard/agents/"', 'planned, not written yet']) assert.ok(agentsPage.includes(text), `fabric/agents must say: ${text}`)
+for (const text of ['<time datetime="2026-10-14">14 October 2026</time>', 'the released app is Fabric 0.3.5', 'one-session credential', 'nothing is written into the agent’s own settings', '<code>KILO_CONFIG_CONTENT</code>', '<code>kilo.json</code>', 'Kilo 7.4.17', 'href="https://agentclientprotocol.com"', 'href="https://openrouter.ai/apps"', 'read on 5 October 2026', 'largest share', 'switches subscription accounts for Claude Code and Codex', 'href="/switchboard/agents/"', 'planned, not written yet']) assert.ok(agentsPage.includes(text), `fabric/agents must say: ${text}`)
 assert.ok(!/\d+(?:\.\d+)?\s?%/.test(currentWords(agentsPage)), 'fabric/agents: OpenRouter shares are named as "largest", never as percentages')
 assert.ok(fabric.includes('href="/fabric/agents/"'), 'the Fabric page links its supported coding agents')
-console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one level, as of 2026-10-08`)
+console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one level, as of 2026-10-14`)

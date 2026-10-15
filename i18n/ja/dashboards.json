@@ -1,7 +1,6 @@
 {
   "page": "dashboards/index.html",
   "strings": {
-    "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | ローカルのエージェントサービスを一か所に",
     "One window for local agent services that speak fabric-service/0.1.": "fabric-service/0.1 に対応するローカルのエージェントサービスを、一つのウィンドウで扱えます。",
     "Your agent services": "あなたのエージェントサービス",
     "One place to look": "見る場所は一つ",
@@ -85,6 +84,8 @@
     "Windows and Linux downloads": "Windows と Linux のダウンロード",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "macOS、Windows、Linux のローカルのエージェントサービスを、ウィンドウ一つで確認できます。対応が必要なものを把握し、ダッシュボードを開き、エージェントも MCP 経由で同じツールを使えます。",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "お使いのコンピューター上のすべてのエージェントサービスを一つのアプリで確認できます。対応が必要なものが先頭に来て、各サービス自身のダッシュボードがその横に開きます",
-    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards は、お使いのコンピューター上の対応サービスを検出します。各サービスの役割はそのままで、確認と操作のための共通の場所が加わります。"
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards は、お使いのコンピューター上の対応サービスを検出します。各サービスの役割はそのままで、確認と操作のための共通の場所が加わります。",
+    "Fabric Dashboards | Your local agent services, together | PassionCode.ai": "Fabric Dashboards | ローカルのエージェントサービスを一か所に | PassionCode.ai",
+    "Set up everything with one command": "コマンド1つですべてをセットアップ"
   }
 }

@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Pobierz narzędzia
+Skonfiguruj
 
 ↓
 
@@ -60,21 +60,13 @@ Jedno polecenie
 
 01
 
-Zainstaluj skille
+Utwórz lub dostosuj agenta
 
 02
 
-Dodaj Fabric
-
-03
-
-Utwórz lub dostosuj agenta
-
-04
-
 Uruchom i zobacz
 
-05
+03
 
 Dodaj kolejnego agenta
 
@@ -90,9 +82,11 @@ JEDNO POLECENIE
 
 Jedno polecenie instaluje wybrane narzędzia z ich podpisanych wydań, podłącza ich serwery MCP do Claude Code, Codex, Gemini CLI i Kimi Code oraz dodaje skille. Na komputerze, który jest już skonfigurowany, to samo polecenie sprawdza wszystko, naprawia to, co nie działa, i pokazuje, co się zmieniło.
 
+### Uruchom sam
+
 npx @passioncode-ai/passioncode@latest setup
 
-Wymaga Node.js 18+ · instaluje aplikacje na macOS; na Linuksie i Windows konfiguruje skille i serwery MCP · nie instaluje niczego, czego podpis, suma kontrolna lub notaryzacja się nie zgadza · aby tylko sprawdzić, niczego nie zmieniając:
+Wymaga Node.js 18+ · instaluje aplikacje na macOS; na Linuksie i Windows konfiguruje skille i serwery MCP · nie instaluje niczego, czego podpis, suma kontrolna lub notaryzacja się nie zgadza · potem zrestartuj agenta kodującego · aby tylko sprawdzić, niczego nie zmieniając:
 
 npx @passioncode-ai/passioncode@latest doctor
 
@@ -102,21 +96,11 @@ Skopiuj ten prompt do Claude Code, Codex lub innego agenta kodującego. Uruchomi
 
 Skonfiguruj PassionCode.ai na tym komputerze albo, jeśli jest już skonfigurowany, sprawdź go i napraw. Uruchom npx --yes @passioncode-ai/passioncode@latest setup --yes --json (wymaga Node 18 lub nowszego) i przeczytaj jego JSON: polecenie instaluje brakujące aplikacje z ich podpisanych wydań, skille i każdy serwer MCP, naprawia to, co nie działa, i sprawdza wszystko jeszcze raz. Niczego nie pobieraj ani nie instaluj ręcznie i nigdy nie zatrzymuj ani nie zabijaj działającej aplikacji. Następnie wykonaj każdy wymieniony krok wdrożenia produktu, który może wykonać agent, nigdy nie proś mnie o klucz ani hasło na czacie (narzędzia otwierają własne ukryte pola) i zakończ poleceniem npx --yes @passioncode-ai/passioncode@latest doctor. Powiedz mi krótko, co skonfigurowałeś lub naprawiłeś, co wciąż nie działa, i ponumerowane kroki, które mogę zrobić tylko ja, na przykład logowanie, i przypomnij mi, żebym Cię zrestartował, aby załadowały się nowe skille i serwery MCP.
 
-Fabric to wczesna wersja zapoznawcza: polecenie instaluje go, gdy na komputerze są Docker i Supabase CLI, a w przeciwnym razie mówi, co dodać. Wolisz ręcznie? Pięć kroków poniżej to ta sama konfiguracja, po jednym narzędziu.
+Fabric to wczesna wersja zapoznawcza: polecenie instaluje go, gdy na komputerze są Docker i Supabase CLI, a w przeciwnym razie mówi, co dodać.
 
-## Kroki
+Wolisz ręcznie?
 
 01
-
-### Zainstaluj skille
-
-Launcher PassionCode.ai instaluje w Twoim agencie kodującym skille Fabric Agent Adapter, Observatory Log i zasady pracy. Bez konta i bez klucza. Nie instaluje Fabric: to następny krok, osobne pobranie.
-
-npx @passioncode-ai/passioncode@latest update
-
-Launcher 0.2.2 · po instalacji uruchom agenta ponownie · automatyczne aktualizacje są włączone; możesz je wyłączyć
-
-02
 
 ### Dodaj Fabric
 
@@ -134,21 +118,11 @@ Wymagania i ograniczenia
 
 Apple silicon i Intel · podpisana i notaryzowana przez Apple · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · informacje o wydaniu
 
-03
+02
 
-### Utwórz lub dostosuj agenta
+### Dodaj Fabric Dashboards
 
-W Claude Code lub Codex poproś o to, czego potrzebujesz, albo zacznij od akcji tworzenia i dostosowania w Fabric; w obu przypadkach praca odbywa się w konsoli Twojego agenta kodującego. Skill Fabric Agent Adapter najpierw zadaje pytania i pokazuje plan, zanim cokolwiek zmieni; dostosowanie odbywa się na nowej gałęzi fabric-adapter. Dostajesz kontrakt, panel, testy i raport zgodności.
-
-nowy Utwórz agenta Fabric, który każdego ranka sprawdza opinie o naszej aplikacji w sklepie i przygotowuje szkice odpowiedzi
-
-dostosuj Dostosuj to repozytorium do Fabric
-
-04
-
-### Uruchom i zobacz
-
-Fabric Dashboards pokazuje wszystkie lokalne usługi agentów w jednym oknie; Twój agent może je uruchamiać, zatrzymywać i otwierać przez MCP.
+Fabric Dashboards pokazuje każdą lokalną usługę agenta w jednym oknie. Pobierz aplikację, a potem połącz ją z agentem kodującym przez MCP.
 
 Pobierz Fabric Dashboards
 
@@ -158,23 +132,33 @@ Pobierz Fabric Dashboards
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
-05
+Switchboard, Project Observatory i Fabric Inbox mają własne pobrania: Switchboard · Observatory · Inbox
+
+## Kolejne kroki
+
+01
+
+### Utwórz lub dostosuj agenta
+
+W Claude Code lub Codex poproś o to, czego potrzebujesz, albo zacznij od akcji tworzenia i dostosowania w Fabric; w obu przypadkach praca odbywa się w konsoli Twojego agenta kodującego. Skill Fabric Agent Adapter najpierw zadaje pytania i pokazuje plan, zanim cokolwiek zmieni; dostosowanie odbywa się na nowej gałęzi fabric-adapter. Dostajesz kontrakt, panel, testy i raport zgodności.
+
+nowy Utwórz agenta Fabric, który każdego ranka sprawdza opinie o naszej aplikacji w sklepie i przygotowuje szkice odpowiedzi
+
+dostosuj Dostosuj to repozytorium do Fabric
+
+02
+
+### Uruchom i zobacz
+
+Fabric Dashboards pokazuje każdą lokalną usługę agenta w jednym oknie; Twój agent może je uruchamiać, zatrzymywać i otwierać przez MCP. To samo polecenie instaluje aplikację na macOS i łączy ją z agentem kodującym.
+
+03
 
 ### Dodaj kolejnego agenta do tego samego projektu
 
-Zbuduj następnego agenta w ten sam sposób i daj mu ten sam projekt w Fabric. Claude Code, Kilo Code i Hermes Agent uruchomione z Fabric dzielą tablicę, pamięć i przekazania tego projektu, więc jeden podejmuje pracę tam, gdzie skończył drugi. Którzy agenci łączą się dziś
+Zbuduj następnego agenta w ten sam sposób i daj mu ten sam projekt w Fabric. Agenci podłączeni do Fabric dzielą tablicę, pamięć i przekazania jednego projektu, więc jeden podejmuje pracę tam, gdzie skończył drugi. Którzy agenci łączą się dziś
 
-NARZĘDZIE, KTÓRE POLECAMY
-
-## Agenci, którzy kończą
-
-## to, co zaczęli
-
-Do zmian wprowadzanych przez Twoich agentów polecamy task-pipeline, odrębny skill na otwartym kodzie z kolekcji sshlg-skills: prowadzi każdą zmianę od zlecenia do odbioru i nie idzie dalej, dopóki nie przejdzie każda kontrola.
-
-npx sshlg-skills install
-
-task-pipeline na GitHubie · nie jest częścią PassionCode.ai i niczego od niego nie wymaga
+Do zmian, które wprowadzają Twoi agenci, polecamy task-pipeline, osobny skill o otwartym kodzie: co robi i jak go zainstalować
 
 WSPÓŁTWÓRZ
 
@@ -243,6 +227,12 @@ Fabric
 GitHub i kod źródłowy
 
 O projekcie
+
+Inwestorzy
+
+Współtwórcy
+
+Prasa
 
 System projektowy
 

@@ -1,9 +1,7 @@
 {
   "page": "dashboards/index.html",
   "strings": {
-    "Fabric Dashboards | Your local agent services, together": "Fabric Dashboards | Vos services d’agents locaux, réunis",
     "One window for local agent services that speak fabric-service/0.1.": "Une seule fenêtre pour les services d’agents locaux qui parlent fabric-service/0.1.",
-    "Download": "Télécharger",
     "Your agent services": "Vos services d’agents",
     "One place to look": "Un seul endroit où regarder",
     "Download for macOS ↓": "Télécharger pour macOS ↓",
@@ -89,6 +87,8 @@
     "Windows and Linux downloads": "Téléchargements Windows et Linux",
     "One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.": "Une seule fenêtre pour vos services d’agents locaux sur macOS, Windows et Linux. Voyez ce qui demande votre attention, ouvrez les tableaux de bord et laissez vos agents utiliser les mêmes outils via MCP.",
     "See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it": "Voyez tous les services d’agents de votre ordinateur dans une seule application : ce qui vous attend passe en premier, et le tableau de bord propre à chaque service s’ouvre juste à côté",
-    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards détecte les services compatibles sur votre ordinateur. Chaque service garde son propre rôle ; vous disposez d’un endroit commun pour les inspecter et les piloter."
+    "Fabric Dashboards discovers compatible services on your computer. Each service keeps its own job; you get a shared place to inspect and control them.": "Fabric Dashboards détecte les services compatibles sur votre ordinateur. Chaque service garde son propre rôle ; vous disposez d’un endroit commun pour les inspecter et les piloter.",
+    "Fabric Dashboards | Your local agent services, together | PassionCode.ai": "Fabric Dashboards | Vos services d’agents locaux, réunis | PassionCode.ai",
+    "Set up everything with one command": "Tout installer en une commande"
   }
 }

@@ -1,18 +1,13 @@
 {
   "page": "design-system/index.html",
   "strings": {
-    "PassionCode design system | One family, a shared language": "Sistema de design da PassionCode | Uma família, uma linguagem em comum",
     "The visual language behind PassionCode and Switchboard: dark surfaces, yellow actions, product marks and reusable design tokens.": "A linguagem visual da PassionCode e do Switchboard: superfícies escuras, ações em amarelo, marcas dos produtos e design tokens reutilizáveis.",
     "PassionCode design system": "Sistema de design da PassionCode",
-    "Download": "Baixar",
     "PASSIONCODE / DESIGN SYSTEM 1.1": "PASSIONCODE / SISTEMA DE DESIGN 1.1",
-    "One family": "Uma família",
     "A shared language": "Uma linguagem em comum",
-    "Shared color roles connect dark and light palettes, yellow highlights the next action, and each product pairs its own mark with the family’s passion fruit": "Papéis de cor compartilhados conectam as paletas escura e clara, o amarelo destaca a próxima ação e cada produto combina a própria marca com o maracujá da família",
     "Get the CSS tokens": "Baixar os tokens CSS",
     "Read the source": "Ver o código-fonte",
     "01 / IDENTITY": "01 / IDENTIDADE",
-    "A family resemblance": "Ar de família",
     "PassionCode passion fruit": "Maracujá da PassionCode",
     "PassionCode · the parent brand": "PassionCode · a marca-mãe",
     "Yellow S on a black tile": "S amarelo sobre um bloco preto",
@@ -49,6 +44,10 @@
     "One primary action per task. Visible keyboard focus. Clear borders for secondary controls. Motion stays brief and respects reduced-motion preferences.": "Uma ação principal por tarefa. Foco do teclado visível. Bordas nítidas nos controles secundários. O movimento é breve e respeita a preferência por movimento reduzido.",
     "Explore Switchboard": "Conheça o Switchboard",
     "Back to PassionCode": "Voltar para a PassionCode",
-    "The marketing site, Switchboard and Project Observatory use the shared dark system. Version 1.1 adds an opt-in light palette for products adopting it. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.": "O site institucional, o Switchboard e o Project Observatory usam o sistema escuro compartilhado. A versão 1.1 acrescenta uma paleta clara opcional para os produtos que a adotarem. A interface atual do Fabric está sendo alinhada à parte; esta referência não significa que todas as telas já migraram."
+    "The marketing site, Switchboard and Project Observatory use the shared dark system. Version 1.1 adds an opt-in light palette for products adopting it. Fabric’s existing runtime is being aligned separately; the system reference does not imply that every screen has migrated.": "O site institucional, o Switchboard e o Project Observatory usam o sistema escuro compartilhado. A versão 1.1 acrescenta uma paleta clara opcional para os produtos que a adotarem. A interface atual do Fabric está sendo alinhada à parte; esta referência não significa que todas as telas já migraram.",
+    "PassionCode design system | Every tool, a shared language": "Sistema de design da PassionCode | Cada ferramenta, uma linguagem em comum",
+    "Every tool": "Cada ferramenta",
+    "Shared color roles connect dark and light palettes, yellow highlights the next action, and each product pairs its own mark with the toolkit’s passion fruit": "Papéis de cor compartilhados conectam as paletas escura e clara, o amarelo destaca a próxima ação e cada produto combina a própria marca com o maracujá do conjunto",
+    "One look across the tools": "Uma mesma cara em todas as ferramentas"
   }
 }

@@ -42,9 +42,9 @@ Português (Brasil)
 
 日本語
 
-GitHub
+Set up
 
-↗
+↓
 
 FABRIC INBOX · DEVELOPMENT PREVIEW
 
@@ -55,6 +55,8 @@ FABRIC INBOX · DEVELOPMENT PREVIEW
 Bring Gmail and Cloudflare mailboxes into one list, important mail first. Agents for your own domains answer what you allow and leave the rest as a draft
 
 IN THE TOOLKIT Mail: the addresses agents read and answer within the policy you set. Step 5 of how it works. All the tools
+
+Set up everything with one command →
 
 Download for macOS
 
@@ -290,6 +292,12 @@ Fabric
 GitHub & source
 
 About
+
+Investors
+
+Contributors
+
+Press
 
 Design system
 

@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from dashboards/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric Dashboards | Your local agent services, together
+Fabric Dashboards | Your local agent services, together | PassionCode.ai
 
 One window for your local agent services on macOS, Windows and Linux. See what needs attention, open dashboards, and let your agents use the same tools over MCP.
 
@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Download
+Set up
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC DASHBOARDS · macOS + Windows + Linux
 See every agent service on your computer in one app: what needs you comes first, and each service’s own dashboard opens beside it
 
 IN THE TOOLKIT State, spend and control: every agent service, what it is doing, what it spends and its updates in one window. Step 4 of how it works. All the tools
+
+Set up everything with one command →
 
 Download for macOS ↓
 
@@ -223,6 +225,12 @@ Fabric
 GitHub & source
 
 About
+
+Investors
+
+Contributors
+
+Press
 
 Design system
 

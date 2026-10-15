@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-Descargar
+Configurar
 
 ↓
 
@@ -52,7 +52,7 @@ Del vibe coding al passion coding
 
 Crea un espacio de trabajo donde los agentes hacen el trabajo y tú lo ves todo
 
-Fabric es el hogar de tus proyectos y sus agentes. Tu agente de programación crea agentes nuevos y adapta los que ya tienes. Código abierto, en tus propias máquinas y gratis
+Fabric es el hogar de tus proyectos y sus agentes. Switchboard, Dashboards, Observatory e Inbox funcionan con él y también por su cuenta. Hoy un solo comando lo configura todo
 
 Para ti, gratis
 
@@ -79,6 +79,10 @@ Tus agentes
 FABRIC · EL HOGAR DE TUS PROYECTOS
 
 PassionCode.ai en un minuto y medio: qué es, para quién es y cómo funciona, narrado y con subtítulos. Las pantallas muestran datos de demostración; la consola del agente de programación es un ejemplo escrito
+
+Leer la transcripción
+
+Tu agente funciona durante una semana. Luego todo se desmorona. La cuenta equivocada. Olvida lo que aprendió. Y nadie puede decir qué cambió. PassionCode.ai es el sistema operativo para cualquier agente en equipos AI-native: un espacio de trabajo donde los agentes hacen el trabajo y tú lo ves todo. Funciona en tus máquinas, como código abierto, con los agentes y las suscripciones que ya tienes. Su trabajo deja un registro que puedes abrir. Para ti, un solo comando instala Fabric, las herramientas que lo rodean y las skills, y tu agente de programación puede ejecutarlo por ti. Fabric, en vista previa, es el hogar de tus proyectos y sus agentes. Tu agente de programación muestra su plan antes de cambiar nada. Cada herramienta funciona con Fabric, y también por sí sola. Switchboard: cada agente en la cuenta que le toca, con sus límites a la vista. Dashboards: estado, gasto y control en una sola ventana. Observatory: qué cambió, con las pruebas. Inbox, en vista previa: correo que tus agentes responden solo según tus reglas. Los agentes conectados a Fabric comparten el tablero, la memoria y los traspasos de un proyecto, así que uno sigue donde otro se detuvo. Para una organización, llevamos agentes a sus máquinas, los conectamos y mostramos cuánto costó cada uno y qué aportó. Los agentes son fáciles de iniciar y difíciles de mantener. Estamos construyendo lo que los mantiene unidos.
 
 01 / POR QUÉ
 
@@ -110,11 +114,11 @@ DISPONIBLE AHORA
 
 ### Entrar
 
-terminalnpx @passioncode-ai/passioncode@latest update
+terminalnpx @passioncode-ai/passioncode@latest setup
 
-Un solo comando instala las skills en Claude Code o Codex. Fabric es una descarga aparte, en vista previa.
+Un solo comando del launcher de PassionCode.ai configura las herramientas, sus servidores MCP y las skills, o deja que tu agente de programación lo ejecute. Fabric, una vista previa temprana, además necesita Docker y la CLI de Supabase.
 
-Instala las skills
+Configurarlo
 
 02
 
@@ -160,7 +164,7 @@ DISPONIBLE AHORA, EN PARTE
 
 ### Trabajar juntos y observar
 
-Los agentes comparten el tablero y los traspasos de un proyecto en la vista previa de Fabric; Observatory muestra qué cambió, con las evidencias.
+Los agentes conectados a Fabric comparten el tablero, la memoria y los traspasos de un proyecto; Observatory muestra qué cambió, con las evidencias.
 
 Project Observatory
 
@@ -186,7 +190,9 @@ USO PERSONAL · GRATIS
 
 ### Tu propio espacio de trabajo de agentes
 
-Instala las skills con un solo comando, crea tu primer agente con Claude Code o Codex y añade cada herramienta cuando el trabajo lo pida. Unos veinte minutos.
+Configura las herramientas con un solo comando y luego crea tu primer agente con Claude Code o Codex. Unos veinte minutos.
+
+npx @passioncode-ai/passioncode@latest setup
 
 Empezar
 
@@ -206,7 +212,7 @@ Estimación y solicitud
 
 ## Herramientas que puedes usar hoy
 
-Cada una funciona por sí sola, y el paso indica dónde entra arriba. Las versiones son las actuales.
+Fabric es el hogar de tus proyectos y sus agentes. Las cuatro herramientas que siguen funcionan con Fabric y también por su cuenta. Cada una indica su paso de «Cómo funciona», y las versiones son las actuales.
 
 Fabric
 
@@ -219,6 +225,8 @@ Vista previa temprana
 · macOS · pasos 2 y 5
 
 ↗
+
+Con Fabric y por su cuenta
 
 Fabric Switchboard
 
@@ -268,18 +276,6 @@ Vista previa de desarrollo
 
 ↗
 
-Launcher de PassionCode.ai
-
-Un solo comando instala las skills que enseñan a los agentes a construir con Fabric.
-
-CLI
-
-0.2.2
-
-· Node.js 18+ · pasos 1 y 3
-
-↗
-
 Vista previa significa sin terminar: Fabric está en vista previa temprana y su conversación todavía no responde; Fabric Inbox está en vista previa de desarrollo y las respuestas con un modelo real aún no están verificadas. Cada página de producto indica los requisitos y los límites antes de la descarga. Versiones legibles por máquina: /api/releases.
 
 05 / CÓDIGO ABIERTO
@@ -302,7 +298,7 @@ Sí. Cada herramienta es de código abierto bajo la GNU AGPL-3.0: puedes descarg
 
 ¿Con qué agentes funciona?
 
-No depende de un agente concreto. Claude Code, Kilo Code y Hermes Agent se conectan hoy a Fabric, Codex y Cline se ejecutan dentro de él, y hay más previstos: la lista completa, por nivel.
+No depende de un agente concreto. Claude Code, Codex, Kilo Code, Hermes Agent y Kimi Code se conectan hoy a Fabric, Cline se ejecuta dentro de él, y hay más previstos: la lista completa, por nivel.
 
 ¿Adónde van mis datos?
 
@@ -334,6 +330,20 @@ Seguir en X
 
 Sergey Sheleg · cofundador, PassionCode
 
+### Para inversores
+
+PassionCode.ai es de código abierto bajo la GNU AGPL-3.0 y gratis para uso personal. Las organizaciones tienen una licencia comercial y nuestros servicios. Lo construyen los dos cofundadores de arriba. Contacto: commercial@passioncode.ai
+
+### Para colaboradores
+
+Cada repositorio de producto es público e indica su comando de pruebas. Corrige lo que encuentres y envía un pull request: cómo colaborar
+
+### Si escribes sobre nosotros
+
+En una línea: PassionCode.ai es un conjunto de herramientas para equipos AI-native, de código abierto bajo la GNU AGPL-3.0.
+
+El vídeo · Logotipo, SVG · Logotipo, PNG · commercial@passioncode.ai
+
 PassionCode
 
 .ai
@@ -359,6 +369,12 @@ Fabric
 GitHub y código fuente
 
 Acerca de
+
+Inversores
+
+Colaborar
+
+Prensa
 
 Sistema de diseño
 

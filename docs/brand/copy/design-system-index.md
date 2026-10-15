@@ -2,7 +2,7 @@ Contract: brand-contract v1
 
 <!-- Generated from design-system/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-PassionCode design system | One family, a shared language
+PassionCode design system | Every tool, a shared language
 
 The visual language behind PassionCode and Switchboard: dark surfaces, yellow actions, product marks and reusable design tokens.
 
@@ -42,17 +42,17 @@ Português (Brasil)
 
 日本語
 
-Download
+Set up
 
 ↓
 
 PASSIONCODE / DESIGN SYSTEM 1.1
 
-# One family
+# Every tool
 
 # A shared language
 
-Shared color roles connect dark and light palettes, yellow highlights the next action, and each product pairs its own mark with the family’s passion fruit
+Shared color roles connect dark and light palettes, yellow highlights the next action, and each product pairs its own mark with the toolkit’s passion fruit
 
 Get the CSS tokens
 
@@ -64,7 +64,7 @@ Read the source
 
 01 / IDENTITY
 
-## A family resemblance
+## One look across the tools
 
 PassionCode · the parent brand
 
@@ -159,6 +159,12 @@ Fabric
 GitHub & source
 
 About
+
+Investors
+
+Contributors
+
+Press
 
 Design system
 

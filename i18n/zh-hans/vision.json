@@ -24,7 +24,6 @@
     "Six stages": "六个阶段",
     "Each one useful on its own": "每个阶段本身都有用",
     "Your coding agent builds an agent for one job, with a contract, a dashboard and tests.": "你的编码智能体为一项工作构建一个智能体，配有契约、仪表盘和测试。",
-    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "连接到 Fabric 的智能体共用一个项目的看板、记忆和交接，因此一个智能体可以从另一个停下的地方接着做。",
     "People join the same loops: each gets a workplace, the agents of their role and what they may do.": "人也加入同样的循环：每个人都有自己的工作空间、与其角色相应的智能体，以及被允许做的事。",
     "Agents reach every workplace. People act as the experts who verify agents’ work and build agents of their own, and those agents spread through the network.": "智能体覆盖每一个工作空间。人则作为专家来验证智能体的工作，并构建自己的智能体，这些智能体再通过网络传播开来。",
     "QUESTIONS": "问题",
@@ -43,11 +42,7 @@
     "Any agent, on your machines": "任意智能体，在你的机器上",
     "Vendor-neutral, local first and open source under the GNU AGPL-3.0, on top of Claude Code, Codex and what comes next.": "不绑定厂商、本地优先，基于 GNU AGPL-3.0 开源，构建在 Claude Code、Codex 以及之后出现的工具之上。",
     "Analytics, never surveillance": "分析，而非监视",
-    "Inside each change we recommend": "在每一次变更中，我们推荐",
-    ", a separate open-source skill that does not move on until each gate passes.": "，这是一个独立的开源技能，每道关卡通过之前不会继续往下走。",
-    "How to install it": "如何安装",
     "03 / THE PATH": "03 / 路径",
-    "Install the skills and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "安装技能并构建第一个智能体，或带上整个组织：PassionCode for Enterprise 正在开发中，按需提供。",
     "Why agents fall apart when nothing holds them together, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization. Local first, open source, on top of Claude Code, Codex and what comes next.": "为什么没有东西托住时智能体会散掉，PassionCode.ai 依据的四项原则，以及一个智能体如何长成团队和组织。本地优先，开源，构建在 Claude Code、Codex 以及之后出现的工具之上。",
     "What keeps an agent working, how one agent grows into a team and an organization, and what works today.": "什么让智能体持续工作，一个智能体如何长成团队和组织，以及今天已经可用的部分。",
     "What keeps an agent working, the four principles PassionCode.ai builds by, and how one agent grows into a team and an organization, each stage marked available now or direction.": "什么让智能体持续工作，PassionCode.ai 依据的四项原则，以及一个智能体如何长成团队和组织，每个阶段都标注现已可用或发展方向。",
@@ -68,6 +63,10 @@
     "Dashboards shows each agent’s state and spend, the tools update themselves, and Observatory keeps what changed. Agents watching over each other is the direction.": "Dashboards 显示每个智能体的状态和花费，工具自行更新，Observatory 保存变化。智能体相互照看是发展方向。",
     "How it works, step 6": "工作原理，第 6 步",
     "Your agents start": "你的智能体开始",
-    "Sergey Sheleg": "Sergey Sheleg"
+    "Sergey Sheleg": "Sergey Sheleg",
+    "For the changes your agents make, we recommend": "对于你的智能体所做的改动，我们推荐",
+    "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "集合：它会把每项改动从简报带到验收，每个关卡通过后才继续。",
+    "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "连接到 Fabric 的智能体共用一个项目的看板、记忆和交接，因此一个智能体可以从另一个停下的地方接着做。Fabric 是早期预览版。",
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "用一条命令装好工具并构建第一个智能体，或带上整个组织：PassionCode for Enterprise 正在开发中，按需提供。"
   }
 }

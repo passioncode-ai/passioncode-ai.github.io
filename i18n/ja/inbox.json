@@ -2,7 +2,6 @@
   "page": "inbox/index.html",
   "strings": {
     "Products": "プロダクト",
-    "GitHub": "GitHub",
     "FABRIC INBOX · DEVELOPMENT PREVIEW": "FABRIC INBOX · 開発中のプレビュー版",
     "Your mail": "あなたのメール",
     "Important first": "大事なものを先頭に",
@@ -106,6 +105,7 @@
     "Or make a key yourself": "または自分でキーを作成する",
     "On the same screen, choose a name, a level (read, mail or admin) and whether it may send. The secret is shown once.": "同じ画面で、名前、レベル（read、mail、admin）、送信を許可するかどうかを選びます。シークレットは1回だけ表示されます。",
     "For a key you made, the app prints the whole command:": "自分で作成したキーなら、アプリがコマンド全体を表示します：",
-    "A Mac copy older than 0.15.2 cannot update itself: download 0.15.2 once and install it over the old one. Later releases install themselves again.": "0.15.2 より前の Mac 版は自動でアップデートできません。0.15.2 を一度ダウンロードし、古いものに上書きしてインストールしてください。以降のリリースは再び自動でインストールされます。"
+    "A Mac copy older than 0.15.2 cannot update itself: download 0.15.2 once and install it over the old one. Later releases install themselves again.": "0.15.2 より前の Mac 版は自動でアップデートできません。0.15.2 を一度ダウンロードし、古いものに上書きしてインストールしてください。以降のリリースは再び自動でインストールされます。",
+    "Set up everything with one command": "コマンド1つですべてをセットアップ"
   }
 }

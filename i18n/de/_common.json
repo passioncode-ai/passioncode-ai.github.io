@@ -9,7 +9,6 @@
     "Primary navigation": "Hauptnavigation",
     "The tools": "Die Tools",
     "About": "Über das Projekt",
-    "Get the tools": "Tools herunterladen",
     "From vibe coding to passion coding": "Vom Vibe Coding zum Passion Coding",
     "Footer navigation": "Navigation in der Fußzeile",
     "Get started": "Loslegen",
@@ -59,14 +58,15 @@
     "AVAILABLE NOW, IN PART": "TEILWEISE JETZT VERFÜGBAR",
     "A team": "Ein Team",
     "An organization": "Eine Organisation",
-    "A TOOL WE RECOMMEND": "EIN TOOL, DAS WIR EMPFEHLEN",
-    "Agents that finish": "Agenten, die zu Ende bringen,",
-    "what they start": "was sie anfangen",
     "task-pipeline": "task-pipeline",
     ", a separate open-source skill from the": "– ein eigenständiger Open-Source-Skill aus der Sammlung",
     "sshlg-skills": "sshlg-skills",
     "task-pipeline on GitHub": "task-pipeline auf GitHub",
     "· it is not part of PassionCode.ai and needs nothing from it": "· der Skill gehört nicht zu PassionCode.ai und braucht nichts davon",
-    "X": "X"
+    "X": "X",
+    "Set up": "Einrichten",
+    "Investors": "Investoren",
+    "Contributors": "Mitwirken",
+    "Press": "Presse"
   }
 }

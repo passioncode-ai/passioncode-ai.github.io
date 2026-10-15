@@ -42,9 +42,9 @@ Português (Brasil)
 
 日本語
 
-GitHub
+Configurar
 
-↗
+↓
 
 FABRIC INBOX · VISTA PREVIA DE DESARROLLO
 
@@ -55,6 +55,8 @@ FABRIC INBOX · VISTA PREVIA DE DESARROLLO
 Reúne los buzones de Gmail y Cloudflare en una sola lista, con el correo importante primero. Los agentes de tus propios dominios responden lo que permites y dejan el resto como borrador
 
 EN EL CONJUNTO DE HERRAMIENTAS Correo: las direcciones que los agentes leen y responden dentro de la política que defines. Es el paso 5 de «Cómo funciona». Todas las herramientas
+
+Configúralo todo con un solo comando →
 
 Descargar para macOS
 
@@ -290,6 +292,12 @@ Fabric
 GitHub y código fuente
 
 Acerca de
+
+Inversores
+
+Colaborar
+
+Prensa
 
 Sistema de diseño
 

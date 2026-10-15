@@ -42,7 +42,7 @@ Português (Brasil)
 
 日本語
 
-下载
+安装设置
 
 ↓
 
@@ -55,6 +55,8 @@ FABRIC · 早期预览版
 Fabric 把每个项目的目标、看板、决策和版本保存在你的 Mac 上，供参与工作的每一个智能体使用。我们正在把它构建成你的智能体的 CEO
 
 工具包成员 一个项目里每个智能体共享的家：目标、看板、决策和版本。第 2 步和第 5 步，见工作原理。全部工具
+
+一条命令全部装好 →
 
 下载 macOS 版
 
@@ -223,19 +225,55 @@ Supabase CLI：brew install supabase/tap/supabase
 
 Fabric 是开源的，采用 GNU AGPL-3.0 许可证；对于 AGPL 未涵盖的使用方式，可向以下地址获取商业许可证：passioncode.ai/business。该 0.3.5 预览版由 CI 根据这份公开源代码构建、签名并公证。
 
-同一套工具集的一部分
+与 FABRIC 配合
 
-## Switchboard 管理账号
+## 围绕这个家的四个工具
 
-账号管理工具独立于 Fabric 运行。
+## 每个也都能单独使用
 
-下载 Switchboard
+Fabric 负责保存项目。这四个工具既能与 Fabric 配合，也能单独使用，你可以从任何一个开始。
 
-↓
+Fabric Switchboard
 
-返回工具集
+选择每个智能体运行所用的账号，并随时看到用量限制。
 
 ↗
+
+Fabric Dashboards
+
+在一个窗口里查看每个本地智能体服务，由你或智能体来操作。
+
+↗
+
+Project Observatory
+
+每个项目发生了什么变化、什么需要关注，都附有证据。
+
+↗
+
+Fabric Inbox
+
+Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智能体按策略回复。
+
+↗
+
+01
+
+现已可用
+
+### 一条命令全部装好
+
+在 Mac 上，它会从经过验证的版本安装四个工具和 Fabric（前提是有 Docker 和 Supabase CLI），以及它们的 MCP 服务器和技能。之后再次运行，它会检查并修复。
+
+安装设置
+
+02
+
+发展方向
+
+### 在 Fabric 内添加工具
+
+不离开 Fabric 就能选择和安装工具，是我们正在构建的方向。
 
 PassionCode
 
@@ -262,6 +300,12 @@ Fabric
 GitHub 与源代码
 
 关于
+
+投资者
+
+参与贡献
+
+媒体
 
 设计系统
 
