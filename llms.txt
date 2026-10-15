@@ -15,7 +15,7 @@ An agent you set up works for a week, then falls apart: it runs on the wrong acc
 - [Current releases as JSON](https://passioncode.ai/api/releases): every product's current version, release notes link, download URLs and SHA-256, resolved from GitHub releases.
 
 ## Products
-- [Fabric](https://passioncode.ai/fabric/): the home for your projects and their agents, built toward acting as the CEO of your agents; early preview for macOS on Apple silicon and Intel (one universal DMG since 0.3.4); keeps each project's purpose, board, decisions and releases. Its conversation does not reply yet.
+- [Fabric](https://passioncode.ai/fabric/): the home for your projects and their agents, built toward acting as the CEO of your agents; early preview for macOS on Apple silicon and Intel (one universal DMG since 0.3.4), Windows (x64 and arm64 installers) and Linux (.deb and AppImage, x64 and arm64) since 0.3.5; every system needs Docker and the Supabase CLI; keeps each project's purpose, board, decisions and releases. Its conversation does not reply yet.
 - [Coding agents Fabric works with](https://passioncode.ai/fabric/agents/): which agents Fabric connects (Claude Code, Codex, Kilo Code, Hermes Agent and Kimi Code, as of Fabric 0.3.5), which run in it (Cline), which are planned.
 - [Fabric Switchboard](https://passioncode.ai/switchboard/): local account manager for Claude Code and Codex CLI, macOS and Windows (Authenticode-signed since 0.6.16), with an MCP server (`switchboard mcp`); updates itself.
 - [Switchboard agents](https://passioncode.ai/switchboard/agents/): 30 other coding agents (Hermes, Kilo Code, Cline, Goose …) get Switchboard's tools; those that accept a custom endpoint have their API-key accounts switched through it.

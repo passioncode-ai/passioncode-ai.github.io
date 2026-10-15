@@ -62,7 +62,7 @@ Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. Switchboa
 
 ↗
 
-AGPL-3.0 오픈 소스 Fabric 0.3.5 · Switchboard 0.6.32 · Dashboards 0.7.10 · Observatory 0.24.5
+AGPL-3.0 오픈 소스 Fabric 0.3.5 · Switchboard 0.6.33 · Dashboards 0.7.10 · Observatory 0.24.5
 
 계정
 
@@ -234,7 +234,7 @@ Fabric Switchboard
 
 릴리스
 
-0.6.32
+0.6.33
 
 · macOS + Windows · 4단계
 

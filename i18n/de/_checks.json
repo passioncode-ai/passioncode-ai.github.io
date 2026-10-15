@@ -27,7 +27,11 @@
       "Intel",
       "du erlaubst oder verweigerst jede Anfrage",
       "href=\"/fabric/download/macos\"",
-      "kommerzielle Lizenz"
+      "kommerzielle Lizenz",
+      "href=\"/fabric/download/windows-x64\"",
+      "href=\"/fabric/download/linux-x64-deb\"",
+      "WSL2",
+      "scoop install supabase"
     ],
     "inbox/index.html": [
       "Entwicklungsvorschau",

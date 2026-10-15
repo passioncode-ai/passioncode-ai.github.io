@@ -128,6 +128,12 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   floor; hold the previous tag instead). A release is eligible only when every required asset is attached
   with a SHA-256 digest at the repository's own release path; a half-uploaded release is never
   offered. npm products (launcher, adapter) take the registry's `latest`.
+- A policy that names a new asset of a release already served (SITE-046: Fabric's Windows and Linux
+  builds of 0.3.5) works from the deploy: for the same tag, the merge keeps the union of the bundled
+  floor's and the stored answer's assets (`mergeSnapshots`), so a D1 answer read before the policy
+  changed cannot hide the new download route until the next refresh. A newer release brings only its
+  own assets, and a release missing any required asset is not eligible, so every platform the policy
+  names must be attached to the next release for it to be offered.
 - **The Worker's cron with a token is the main path** (since 2026-10-06). `GITHUB_TOKEN` is a
   fine-grained token with *Public repositories (read-only)* and no permissions, owned by the
   operator's account; the organization refuses fine-grained tokens that live longer than 366 days,
@@ -159,7 +165,9 @@ every product without a redeploy. One resolver (`worker/releases.js`) serves bot
   data-live-ld="<product>">` gets `softwareVersion`. Crawlers and visitors without JavaScript see
   the same values.
 - `/<product>/download/<platform>` (fabric, switchboard, inbox, dashboards, observatory; `macos`,
-  `windows`, `wheel` where the policy names them) answers 302 to that release's asset with
+  `windows`, `wheel` where the policy names them, and for Fabric `windows-x64`, `windows-arm64`,
+  `linux-x64-deb`, `linux-arm64-deb`, `linux-x64-appimage` and `linux-arm64-appimage`; a platform is
+  lowercase words joined by hyphens) answers 302 to that release's asset with
   `Cache-Control: no-store` and `X-Robots-Tag: noindex`. Unknown paths fall through to the asset 404.
 - `/api/releases` returns the snapshot as JSON (`Access-Control-Allow-Origin: *`, cached 60 s), for
   agents and other sites.

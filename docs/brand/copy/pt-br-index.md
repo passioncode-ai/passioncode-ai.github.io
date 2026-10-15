@@ -62,7 +62,7 @@ Para a sua organização
 
 ↗
 
-Código aberto sob a AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.32 · Dashboards 0.7.10 · Observatory 0.24.5
+Código aberto sob a AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.33 · Dashboards 0.7.10 · Observatory 0.24.5
 
 Contas
 
@@ -234,7 +234,7 @@ Escolha a conta em que cada agente roda, com os limites de uso à vista.
 
 Release
 
-0.6.32
+0.6.33
 
 · macOS + Windows · passo 4
 

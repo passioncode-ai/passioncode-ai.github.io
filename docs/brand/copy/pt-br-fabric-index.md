@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from pt-br/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | A casa dos seus projetos e dos agentes deles · prévia inicial para macOS | PassionCode.ai
+Fabric | A casa dos seus projetos e dos agentes deles · prévia inicial para macOS, Windows e Linux | PassionCode.ai
 
-O Fabric é a casa dos seus projetos e dos agentes deles, em prévia inicial para macOS em Apple silicon e Intel. Ele reúne num só lugar, no seu Mac, o quadro, as decisões, o trabalho e os releases de um projeto.
+O Fabric é a casa dos seus projetos e dos agentes deles, em prévia inicial para macOS, Windows e Linux. Ele reúne num só lugar, no seu computador, o quadro, as decisões, o trabalho e os releases de um projeto.
 
 Ir para o conteúdo
 
@@ -52,13 +52,13 @@ FABRIC · PRÉVIA INICIAL
 
 # e os agentes deles
 
-O Fabric guarda no seu Mac o propósito, o quadro, as decisões e os releases de cada projeto, para todos os agentes que trabalham nele. Estamos construindo o Fabric para atuar como o CEO dos seus agentes
+O Fabric guarda no seu computador o propósito, o quadro, as decisões e os releases de cada projeto, para todos os agentes que trabalham nele. Estamos construindo o Fabric para atuar como o CEO dos seus agentes
 
 NO CONJUNTO DE FERRAMENTAS A casa que todos os agentes de um projeto compartilham: propósito, quadro, decisões e releases. São os passos 2 e 5 de “Como funciona”. Todas as ferramentas
 
 Configure tudo com um único comando →
 
-Baixar para macOS
+Baixar o Fabric
 
 ↓
 
@@ -66,7 +66,7 @@ Conhecer o fluxo de trabalho
 
 ↓
 
-Prévia inicial 0.3.5 · macOS em Apple silicon e Intel
+Prévia inicial 0.3.5 · macOS, Windows e Linux
 
 A PRIMEIRA TELA · QUATRO AÇÕES
 
@@ -182,9 +182,9 @@ BAIXAR O FABRIC
 
 ## Uma prévia inicial
 
-## para o seu Mac
+## para Mac, Windows e Linux
 
-Prévia mais recente: 0.3.5. O Fabric roda no seu Mac com um banco de dados local; seus projetos ficam nesta máquina.
+Prévia mais recente: 0.3.5. O Fabric roda no seu computador com um banco de dados local; seus projetos ficam nesta máquina.
 
 ⌘
 
@@ -199,19 +199,57 @@ Baixar para macOS
 
 Abra o DMG e arraste o Fabric para Aplicativos. O mesmo DMG roda em Macs com Apple silicon e Intel.
 
+⊞
+
+### Windows
+
+x64 (Intel e AMD) e arm64 · instalador para Windows
+Instala para o seu usuário · assinatura Authenticode
+
+Baixar para Windows x64
+
+↓
+
+Windows em Arm (arm64) ↓
+
+Execute o arquivo de instalação. Os terminais que o Fabric abre usam o PowerShell.
+
+>_
+
+### Linux
+
+x64 e arm64
+Pacote .deb ou AppImage
+
+Baixar o .deb para x64
+
+↓
+
+.deb para arm64 ↓
+
+AppImage para x64 ↓
+
+AppImage para arm64 ↓
+
+Prefira o .deb: ele abre links fabric:// e mantém um só caminho para registrar o fabric-mcp. Um AppImage é montado num caminho novo a cada inicialização.
+
 ☰
 
 ### Antes de abrir
 
 O Fabric inicia o próprio banco de dados local com a Supabase CLI dentro do Docker.
 
-Docker Desktop ou OrbStack, em execução
+No macOS: Docker Desktop ou OrbStack, em execução, e a Supabase CLI: brew install supabase/tap/supabase
 
-Supabase CLI: brew install supabase/tap/supabase
+No Windows: Docker Desktop com WSL2, em execução, e a Supabase CLI: scoop install supabase
+
+No Linux: Docker Engine, em execução, e a Supabase CLI
 
 Claude Code ou Codex CLI, com login feito, para os agentes trabalharem
 
 Se faltar o Docker ou a CLI, o Fabric avisa qual deles na primeira inicialização. Veja com quais agentes de programação o Fabric funciona e o que cada um deles pode fazer nele.
+
+Ainda não no Windows e no Linux: o Fabric não lê se um agente de programação está com login feito, e avisa isso. Ainda não no Windows: conectar o segredo de um produto em nuvem pelo Project Observatory.
 
 Notas de versão e checksum
 

@@ -27,7 +27,11 @@
       "Intel",
       "사용자가 허용하거나 거절하며",
       "href=\"/fabric/download/macos\"",
-      "상용 라이선스"
+      "상용 라이선스",
+      "href=\"/fabric/download/windows-x64\"",
+      "href=\"/fabric/download/linux-x64-deb\"",
+      "WSL2",
+      "scoop install supabase"
     ],
     "inbox/index.html": [
       "개발 프리뷰",

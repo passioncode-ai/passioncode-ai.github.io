@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from ko/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | 내 프로젝트와 그 에이전트를 위한 집 · macOS용 초기 프리뷰 | PassionCode.ai
+Fabric | 내 프로젝트와 그 에이전트를 위한 집 · macOS, Windows, Linux용 초기 프리뷰 | PassionCode.ai
 
-Fabric은 내 프로젝트와 그 에이전트를 위한 집으로, 지금은 Apple silicon 및 Intel용 macOS 초기 프리뷰입니다. 프로젝트의 보드, 결정, 작업, 릴리스를 Mac 한곳에 모아 둡니다.
+Fabric은 내 프로젝트와 그 에이전트를 위한 집으로, 지금은 macOS, Windows, Linux용 초기 프리뷰입니다. 프로젝트의 보드, 결정, 작업, 릴리스를 내 컴퓨터 한곳에 모아 둡니다.
 
 본문으로 건너뛰기
 
@@ -52,13 +52,13 @@ FABRIC · 초기 프리뷰
 
 # 그 에이전트를 위한 집
 
-Fabric은 각 프로젝트의 목적, 보드, 결정, 릴리스를 Mac에 보관하고, 그 프로젝트에서 일하는 모든 에이전트가 함께 씁니다. 우리는 Fabric이 내 에이전트들의 CEO 역할을 하도록 만들고 있습니다
+Fabric은 각 프로젝트의 목적, 보드, 결정, 릴리스를 내 컴퓨터에 보관하고, 그 프로젝트에서 일하는 모든 에이전트가 함께 씁니다. 우리는 Fabric이 내 에이전트들의 CEO 역할을 하도록 만들고 있습니다
 
 툴킷 안에서 프로젝트의 모든 에이전트가 함께 쓰는 집입니다. 목적, 보드, 결정, 릴리스가 이곳에 있습니다. 작동 방식의 2단계와 5단계입니다. 모든 도구
 
 명령 하나로 모두 설정하기 →
 
-macOS용 다운로드
+Fabric 다운로드
 
 ↓
 
@@ -66,7 +66,7 @@ macOS용 다운로드
 
 ↓
 
-초기 프리뷰 0.3.5 · Apple silicon 및 Intel용 macOS
+초기 프리뷰 0.3.5 · macOS, Windows, Linux
 
 첫 화면 · 네 가지 동작
 
@@ -180,11 +180,11 @@ FABRIC 내부
 
 FABRIC 받기
 
-## Mac용
+## Mac, Windows, Linux용
 
 ## 초기 프리뷰
 
-최신 프리뷰: 0.3.5. Fabric은 로컬 데이터베이스와 함께 Mac에서 실행되며, 프로젝트는 이 기기에 남습니다.
+최신 프리뷰: 0.3.5. Fabric은 로컬 데이터베이스와 함께 내 컴퓨터에서 실행되며, 프로젝트는 이 기기에 남습니다.
 
 ⌘
 
@@ -199,19 +199,57 @@ macOS용 다운로드
 
 DMG를 열고 Fabric을 Applications로 끌어다 놓으세요. 같은 DMG가 Apple silicon Mac과 Intel Mac에서 모두 실행됩니다.
 
+⊞
+
+### Windows
+
+x64(Intel·AMD) 및 arm64 · Windows 설치 프로그램
+사용자 계정에 설치 · Authenticode 서명
+
+Windows x64용 다운로드
+
+↓
+
+Arm용 Windows(arm64) ↓
+
+설치 파일을 실행하세요. Fabric이 여는 터미널은 PowerShell을 씁니다.
+
+>_
+
+### Linux
+
+x64 및 arm64
+.deb 패키지 또는 AppImage
+
+x64용 .deb 다운로드
+
+↓
+
+arm64용 .deb ↓
+
+x64용 AppImage ↓
+
+arm64용 AppImage ↓
+
+.deb를 권장합니다. fabric:// 링크를 열고, fabric-mcp를 등록할 경로를 하나로 유지합니다. AppImage는 시작할 때마다 새 경로에 마운트됩니다.
+
 ☰
 
 ### 열기 전에
 
 Fabric은 Docker 안에서 Supabase CLI로 자체 로컬 데이터베이스를 시작합니다.
 
-Docker Desktop 또는 OrbStack(실행 중)
+macOS: 실행 중인 Docker Desktop 또는 OrbStack, 그리고 Supabase CLI: brew install supabase/tap/supabase
 
-Supabase CLI: brew install supabase/tap/supabase
+Windows: 실행 중인 Docker Desktop(WSL2), 그리고 Supabase CLI: scoop install supabase
+
+Linux: 실행 중인 Docker Engine, 그리고 Supabase CLI
 
 에이전트가 작업하려면 로그인된 Claude Code 또는 Codex CLI
 
 Docker나 CLI가 없으면 Fabric이 처음 시작할 때 어느 쪽인지 알려 줍니다. Fabric과 함께 쓸 수 있는 코딩 에이전트와 각 에이전트가 Fabric에서 할 수 있는 일을 확인하세요.
+
+Windows와 Linux에서는 아직: 코딩 에이전트에 로그인되어 있는지 Fabric이 읽지 않으며, 그렇다고 알려 줍니다. Windows에서는 아직: Project Observatory를 통한 클라우드 제품 시크릿 연결.
 
 릴리스 노트 및 체크섬
 

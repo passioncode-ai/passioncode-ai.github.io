@@ -27,7 +27,11 @@
       "Intel",
       "вы разрешаете или отклоняете каждый запрос",
       "href=\"/fabric/download/macos\"",
-      "коммерческую лицензию"
+      "коммерческую лицензию",
+      "href=\"/fabric/download/windows-x64\"",
+      "href=\"/fabric/download/linux-x64-deb\"",
+      "WSL2",
+      "scoop install supabase"
     ],
     "inbox/index.html": [
       "Предварительная версия в разработке",

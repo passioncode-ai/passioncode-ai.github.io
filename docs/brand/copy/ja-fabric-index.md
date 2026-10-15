@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from ja/fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | プロジェクトとそのエージェントのための拠点 · macOS向け早期プレビュー版 | PassionCode.ai
+Fabric | プロジェクトとそのエージェントのための拠点 · macOS、Windows、Linux向け早期プレビュー版 | PassionCode.ai
 
-Fabricは、プロジェクトとそのエージェントのための拠点で、Apple siliconおよびIntel搭載のmacOS向け早期プレビュー版です。プロジェクトのボード、決定、作業、リリースを、お使いのMac上の一か所にまとめます。
+Fabricは、プロジェクトとそのエージェントのための拠点で、macOS、Windows、Linux向けの早期プレビュー版です。プロジェクトのボード、決定、作業、リリースを、お使いのコンピューター上の一か所にまとめます。
 
 本文へスキップ
 
@@ -52,13 +52,13 @@ FABRIC · 早期プレビュー版
 
 # エージェントの拠点
 
-Fabricは、各プロジェクトの目的、ボード、決定、リリースをお使いのMac上に保ち、そのプロジェクトで働くすべてのエージェントが共有します。私たちは、FabricがあなたのエージェントたちのCEOとして働けるように開発しています
+Fabricは、各プロジェクトの目的、ボード、決定、リリースをお使いのコンピューター上に保ち、そのプロジェクトで働くすべてのエージェントが共有します。私たちは、FabricがあなたのエージェントたちのCEOとして働けるように開発しています
 
 ツールキットの一員 プロジェクトの全エージェントが共有する拠点。目的、ボード、決定、リリースがそろいます。使い方のステップ2と5です。すべてのツール
 
 コマンド1つですべてをセットアップ →
 
-macOS 版をダウンロード
+Fabricをダウンロード
 
 ↓
 
@@ -66,7 +66,7 @@ macOS 版をダウンロード
 
 ↓
 
-早期プレビュー版 0.3.5 · Apple silicon・Intel搭載のmacOS
+早期プレビュー版 0.3.5 · macOS、Windows、Linux
 
 最初の画面 · 4つの操作
 
@@ -182,9 +182,9 @@ FABRICを入手
 
 ## 早期プレビュー版
 
-## Mac 向け
+## Mac、Windows、Linux 向け
 
-最新のプレビュー版：0.3.5。FabricはMac上でローカルデータベースとともに動作し、プロジェクトはこのマシンの中にとどまります。
+最新のプレビュー版：0.3.5。Fabricはお使いのコンピューター上でローカルデータベースとともに動作し、プロジェクトはこのマシンの中にとどまります。
 
 ⌘
 
@@ -199,19 +199,57 @@ macOS 版をダウンロード
 
 DMGを開き、FabricをApplicationsにドラッグします。同じDMGがApple silicon搭載MacとIntel Macの両方で動作します。
 
+⊞
+
+### Windows
+
+x64（Intel・AMD）と arm64 · Windows インストーラー
+ユーザー単位でインストール · Authenticode 署名済み
+
+Windows x64 版をダウンロード
+
+↓
+
+Arm 版 Windows（arm64）↓
+
+セットアップファイルを実行してください。Fabric が開くターミナルは PowerShell を使います。
+
+>_
+
+### Linux
+
+x64 と arm64
+.deb パッケージまたは AppImage
+
+x64 版 .deb をダウンロード
+
+↓
+
+arm64 版 .deb ↓
+
+x64 版 AppImage ↓
+
+arm64 版 AppImage ↓
+
+.deb をおすすめします。fabric:// リンクを開けるうえ、fabric-mcp を登録するパスが一つに保たれます。AppImage は起動のたびに新しいパスにマウントされます。
+
 ☰
 
 ### 開く前に
 
 FabricはDocker内のSupabase CLIで、専用のローカルデータベースを起動します。
 
-Docker DesktopまたはOrbStack（起動中）
+macOS：起動中の Docker Desktop または OrbStack と Supabase CLI：brew install supabase/tap/supabase
 
-Supabase CLI：brew install supabase/tap/supabase
+Windows：起動中の Docker Desktop（WSL2）と Supabase CLI：scoop install supabase
+
+Linux：起動中の Docker Engine と Supabase CLI
 
 Claude CodeまたはCodex CLI（サインイン済み。エージェントが作業を行うために必要）
 
 DockerまたはCLIがない場合、Fabricは初回起動時にどちらが不足しているかを知らせます。詳しくはFabricが対応するコーディングエージェントと、それぞれでできることをご覧ください。
+
+Windows と Linux ではまだ：コーディングエージェントにサインインしているかを Fabric は読み取らず、その旨を表示します。Windows ではまだ：Project Observatory を通じたクラウド製品のシークレットの接続。
 
 リリースノートとチェックサム
 

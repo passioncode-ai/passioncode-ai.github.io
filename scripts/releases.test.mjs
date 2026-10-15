@@ -70,6 +70,15 @@ test('merge takes the newer version and never downgrades below the bundled floor
   assert.equal(mergeSnapshots(snap('0.6.0'), { products: {} }).products.switchboard.version, '0.6.0')
 })
 
+test('the same tag read before a policy named more assets keeps the floor\'s extra assets', () => {
+  const floor = snap('0.6.0'); floor.products.switchboard.assets.windows = { ...floor.products.switchboard.assets.macos, name: 'w.zip', url: floor.products.switchboard.assets.macos.url.replace('macos-universal', 'windows-x64') }
+  const stored = snap('0.6.0')
+  const merged = mergeSnapshots(floor, stored).products.switchboard
+  assert.deepEqual(Object.keys(merged.assets).sort(), ['macos', 'windows'])
+  assert.equal(merged.assets.macos.url, stored.products.switchboard.assets.macos.url)
+  assert.deepEqual(Object.keys(mergeSnapshots(floor, snap('0.6.1')).products.switchboard.assets), ['macos'], 'a newer release brings only its own assets')
+})
+
 test('validation rejects a snapshot that points outside the product repository', () => {
   const policies = { switchboard: policy }
   assert.equal(validSnapshot(snap('0.6.0'), policies), true)

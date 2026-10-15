@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from fabric/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Fabric | The home for your projects and their agents · early preview for macOS | PassionCode.ai
+Fabric | The home for your projects and their agents · early preview for macOS, Windows and Linux | PassionCode.ai
 
-Fabric is the home for your projects and their agents, an early preview for macOS on Apple silicon and Intel. It keeps a project’s board, decisions, work and releases in one place, on your Mac.
+Fabric is the home for your projects and their agents, an early preview for macOS, Windows and Linux. It keeps a project’s board, decisions, work and releases in one place, on your computer.
 
 Skip to content
 
@@ -52,13 +52,13 @@ FABRIC · EARLY PREVIEW
 
 # and their agents
 
-Fabric keeps each project’s purpose, board, decisions and releases on your Mac, for every agent that works on it. We are building it to act as the CEO of your agents
+Fabric keeps each project’s purpose, board, decisions and releases on your computer, for every agent that works on it. We are building it to act as the CEO of your agents
 
 IN THE TOOLKIT The home every agent of a project shares: its purpose, board, decisions and releases. Steps 2 and 5 of how it works. All the tools
 
 Set up everything with one command →
 
-Download for macOS
+Download Fabric
 
 ↓
 
@@ -66,7 +66,7 @@ Explore the workflow
 
 ↓
 
-Early preview 0.3.5 · macOS on Apple silicon and Intel
+Early preview 0.3.5 · macOS, Windows and Linux
 
 THE FIRST SCREEN · FOUR ACTIONS
 
@@ -182,9 +182,9 @@ GET FABRIC
 
 ## An early preview
 
-## for your Mac
+## for Mac, Windows and Linux
 
-Latest preview: 0.3.5. Fabric runs on your Mac with a local database; your projects stay on this machine.
+Latest preview: 0.3.5. Fabric runs on your computer with a local database; your projects stay on this machine.
 
 ⌘
 
@@ -199,19 +199,57 @@ Download for macOS
 
 Open the DMG and drag Fabric to Applications. The same DMG runs on Apple silicon and Intel Macs.
 
+⊞
+
+### Windows
+
+x64 (Intel and AMD) and arm64 · Windows installer
+Installs for your user · Authenticode-signed
+
+Download for Windows x64
+
+↓
+
+Windows on Arm (arm64) ↓
+
+Run the setup file. Terminals that Fabric opens use PowerShell.
+
+>_
+
+### Linux
+
+x64 and arm64
+.deb package or AppImage
+
+Download the .deb for x64
+
+↓
+
+.deb for arm64 ↓
+
+AppImage for x64 ↓
+
+AppImage for arm64 ↓
+
+Prefer the .deb: it opens fabric:// links and keeps one path for registering fabric-mcp. An AppImage mounts at a new path each time it starts.
+
 ☰
 
 ### Before you open it
 
 Fabric starts its own local database with the Supabase CLI inside Docker.
 
-Docker Desktop or OrbStack, running
+On macOS: Docker Desktop or OrbStack, running, and the Supabase CLI: brew install supabase/tap/supabase
 
-Supabase CLI: brew install supabase/tap/supabase
+On Windows: Docker Desktop with WSL2, running, and the Supabase CLI: scoop install supabase
+
+On Linux: Docker Engine, running, and the Supabase CLI
 
 Claude Code or Codex CLI, signed in, for agents to do work
 
 If Docker or the CLI is missing, Fabric says which one on its first start. See which coding agents Fabric works with and what each one can do there.
+
+Not yet on Windows and Linux: Fabric does not read whether a coding agent is signed in, and says so. Not yet on Windows: connecting a cloud product’s secret through Project Observatory.
 
 Release notes & checksum
 

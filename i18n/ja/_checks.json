@@ -26,7 +26,11 @@
       "早期プレビュー版",
       "Intel",
       "href=\"/fabric/download/macos\"",
-      "商用ライセンス"
+      "商用ライセンス",
+      "href=\"/fabric/download/windows-x64\"",
+      "href=\"/fabric/download/linux-x64-deb\"",
+      "WSL2",
+      "scoop install supabase"
     ],
     "inbox/index.html": [
       "開発中のプレビュー版",
