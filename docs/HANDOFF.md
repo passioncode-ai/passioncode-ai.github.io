@@ -1,3 +1,22 @@
+# Current handoff — SITE-047: /start/ says per system what setup installs — live, 2026-10-15
+
+Objective (backlog SITE-047): /start/ said "Fabric needs macOS on Apple silicon or Intel". Fabric 0.3.5 ships Windows and Linux builds, and the launcher installs apps only on macOS. Record: [evidence/2026-10-15-site-047/README.md](evidence/2026-10-15-site-047/README.md).
+
+Done: /start/ (ten languages, through the catalogs) now says it per system. On macOS one command installs the apps, the skills and the MCP servers. On Windows and Linux, download the apps from their pages (Fabric: /fabric/#download), then run the same command for the skills and the MCP servers. Fabric needs Docker and the Supabase CLI on every system. The hero reads "From an empty computer", and the manual steps have "For Windows and Linux" links. The same change updated the facts row *Launcher* (citing passioncode@9b84620 `lib/setup.js:34`, `lib/doctor.js:130`, `setting-up-passioncode/SKILL.md:99`), SCN-013, SCR-08 and `llms.txt`.
+
+Checks run:
+- `npm run check`: exit 0.
+- `npm run build`: 224 entries.
+- `npm run locales`: PASS.
+- WebKit at 390 and 1440 px on en, ru, ja, de, ko and zh-hans: no overflow, no page errors.
+- CI `check` on #142: pass.
+
+Shipped: #142 merged as `52d8c1a`; deployed as Worker version `1d762e44-8e28-4af1-9e1c-2464417a2337`. `scripts/verify-live.py` PASS: 263 checks, 13 download routes ([live.json](evidence/2026-10-15-site-047/live.json)).
+
+Open: the facts row *Switchboard release* still names 0.6.16 while the site serves 0.6.33 (SITE-003). SITE-040, SITE-041 and SITE-026 are as before.
+
+Next task: SITE-040.
+
 # Current handoff — SITE-046: Fabric's Windows and Linux downloads on /fabric/ — live, 2026-10-15
 
 Objective (backlog SITE-046): Fabric 0.3.5 ships Windows (x64, arm64 setup.exe) and Linux (x64, arm64 .deb and
