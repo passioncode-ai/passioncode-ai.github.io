@@ -48,11 +48,11 @@ Português (Brasil)
 
 시작하기 · 무료, 오픈 소스
 
-# 빈 Mac에서 첫 에이전트까지
+# 빈 컴퓨터에서 첫 에이전트까지
 
 계속 일하고 다른 에이전트가 한 일을 아는 에이전트를 만드세요. 명령 하나가 도구를 설정하고, 나중에는 같은 명령이 점검합니다
 
-Node.js 18+와 Claude Code 또는 Codex 필요 Fabric은 Apple silicon 또는 Intel 기반 macOS 필요
+Node.js 18+와 Claude Code 또는 Codex 필요 Fabric은 모든 시스템에서 Docker와 Supabase CLI 필요
 
 →
 
@@ -80,13 +80,13 @@ Node.js 18+와 Claude Code 또는 Codex 필요 Fabric은 Apple silicon 또는 In
 
 ## 지금 있는 것을 점검하세요
 
-명령 하나가 고른 도구를 서명된 릴리스에서 설치하고, 그 MCP 서버를 Claude Code, Codex, Gemini CLI, Kimi Code에 연결하고, 스킬을 추가합니다. 이미 설정된 컴퓨터에서는 같은 명령이 모든 것을 점검하고, 잘못된 것을 고치고, 바뀐 내용을 보여 줍니다.
+macOS에서는 명령 하나가 고른 도구를 서명된 릴리스에서 설치하고, 그 MCP 서버를 Claude Code, Codex, Gemini CLI, Kimi Code에 연결하고, 스킬을 추가합니다. Windows와 Linux에서는 각 앱을 해당 페이지에서 내려받은 뒤, 같은 명령으로 스킬과 MCP 서버를 설정하세요. 이미 설정된 컴퓨터에서는 같은 명령이 모든 것을 점검하고, 잘못된 것을 고치고, 바뀐 내용을 보여 줍니다.
 
 ### 직접 실행하기
 
 npx @passioncode-ai/passioncode@latest setup
 
-Node.js 18+ 필요 · 앱은 macOS에 설치되며, Linux와 Windows에서는 스킬과 MCP 서버를 설정합니다 · 서명, 체크섬, 공증 중 하나라도 맞지 않으면 아무것도 설치하지 않습니다 · 실행 후 코딩 에이전트를 다시 시작하세요 · 아무것도 바꾸지 않고 점검만 하려면:
+Node.js 18+ 필요 · 서명, 체크섬, 공증 중 하나라도 맞지 않으면 아무것도 설치하지 않습니다 · 실행 후 코딩 에이전트를 다시 시작하세요 · 아무것도 바꾸지 않고 점검만 하려면:
 
 npx @passioncode-ai/passioncode@latest doctor
 
@@ -94,9 +94,9 @@ npx @passioncode-ai/passioncode@latest doctor
 
 이 프롬프트를 Claude Code, Codex 또는 다른 코딩 에이전트에 붙여 넣으세요. 에이전트가 명령을 실행하고, 할 수 있는 일을 마친 뒤, 직접 하셔야 하는 일만 짧게 알려 드립니다. 로그인, 접근 허용, 도구 자체의 입력 창에 키 입력 같은 일입니다.
 
-이 컴퓨터에 PassionCode.ai를 설정하고, 이미 설정되어 있다면 점검하고 고쳐 줘. npx --yes @passioncode-ai/passioncode@latest setup --yes --json를 실행하고(Node 18 이상 필요) 그 JSON을 읽어. 이 명령은 빠진 앱을 서명된 릴리스에서 설치하고, 스킬과 모든 MCP 서버를 설정하고, 잘못된 것을 고친 뒤, 모든 것을 다시 점검해. 아무것도 직접 내려받거나 설치하지 말고, 실행 중인 앱을 절대 멈추거나 강제 종료하지 마. 그다음 목록에 있는 제품 온보딩 단계 중 에이전트가 할 수 있는 것을 실행하고, 채팅에서 나에게 키나 비밀번호를 절대 묻지 말고(도구가 자체 비공개 입력 창을 열어), 마지막에 npx --yes @passioncode-ai/passioncode@latest doctor를 실행해. 무엇을 설정하거나 고쳤는지, 무엇이 아직 실패하는지, 로그인처럼 나만 할 수 있는 단계를 번호를 매겨 짧게 알려 주고, 새 스킬과 MCP 서버가 로드되도록 너를 재시작하라고 알려 줘.
+이 컴퓨터에 PassionCode.ai를 설정하고, 이미 설정되어 있다면 점검하고 고쳐 줘. npx --yes @passioncode-ai/passioncode@latest setup --yes --json를 실행하고(Node 18 이상 필요) 그 JSON을 읽어. 이 명령은 macOS에서는 빠진 앱을 서명된 릴리스에서 설치하고, Windows와 Linux에서는 대신 각 앱의 다운로드 페이지를 알려 줘. 어느 시스템에서든 스킬과 모든 MCP 서버를 설정하고, 잘못된 것을 고친 뒤, 모든 것을 다시 점검해. 아무것도 직접 내려받거나 설치하지 말고, 실행 중인 앱을 절대 멈추거나 강제 종료하지 마. 그다음 목록에 있는 제품 온보딩 단계 중 에이전트가 할 수 있는 것을 실행하고, 채팅에서 나에게 키나 비밀번호를 절대 묻지 말고(도구가 자체 비공개 입력 창을 열어), 마지막에 npx --yes @passioncode-ai/passioncode@latest doctor를 실행해. 무엇을 설정하거나 고쳤는지, 무엇이 아직 실패하는지, 로그인이나, Windows와 Linux에서 각 페이지에서 앱을 설치하고 명령을 다시 실행하는 것처럼 나만 할 수 있는 단계를 번호를 매겨 짧게 알려 주고, 새 스킬과 MCP 서버가 로드되도록 너를 재시작하라고 알려 줘.
 
-Fabric은 초기 프리뷰입니다. 컴퓨터에 Docker와 Supabase CLI가 있으면 명령이 설치하고, 없으면 무엇을 추가해야 하는지 알려 줍니다.
+Fabric은 초기 프리뷰이며 모든 시스템에서 Docker와 Supabase CLI가 필요합니다. macOS에서는 둘 다 컴퓨터에 있으면 명령이 설치하고, 없으면 무엇을 추가해야 하는지 알려 줍니다. Windows와 Linux에서는 먼저 Fabric 페이지에서 내려받아 설치하세요.
 
 직접 하고 싶으신가요?
 
@@ -114,6 +114,8 @@ macOS용
 
 ↓
 
+Windows 및 Linux용
+
 요구 사항과 제한
 
 Apple silicon 및 Intel · 서명 및 공증 완료 · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · 릴리스 노트
@@ -129,6 +131,8 @@ Fabric Dashboards 다운로드
 0.7.10
 
 ↓
+
+Windows 및 Linux용
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 

@@ -48,11 +48,11 @@ Português (Brasil)
 
 はじめる · 無料のオープンソース
 
-# 何もない Mac から 最初のエージェントまで
+# 何もないコンピューターから 最初のエージェントまで
 
 働き続け、ほかのエージェントがしたことを知っているエージェントを作りましょう。コマンド1つでツールをセットアップし、あとで同じコマンドが点検します
 
-Node.js 18 以降と、Claude Code または Codex が必要です Fabric には Apple silicon または Intel 搭載の macOS が必要です
+Node.js 18 以降と、Claude Code または Codex が必要です Fabric にはどのシステムでも Docker と Supabase CLI が必要です
 
 →
 
@@ -80,13 +80,13 @@ Node.js 18 以降と、Claude Code または Codex が必要です Fabric には
 
 ## または今ある環境を点検
 
-コマンド1つで、選んだツールを署名済みリリースからインストールし、その MCP サーバーを Claude Code、Codex、Gemini CLI、Kimi Code に接続し、スキルを追加します。すでにセットアップ済みのコンピューターでは、同じコマンドがすべてを点検し、問題を修復し、変わった点を示します。
+macOS では、コマンド1つで、選んだツールを署名済みリリースからインストールし、その MCP サーバーを Claude Code、Codex、Gemini CLI、Kimi Code に接続し、スキルを追加します。Windows と Linux では、アプリをそれぞれのページからダウンロードしてから、同じコマンドでスキルと MCP サーバーを設定します。すでにセットアップ済みのコンピューターでは、同じコマンドがすべてを点検し、問題を修復し、変わった点を示します。
 
 ### 自分で実行する
 
 npx @passioncode-ai/passioncode@latest setup
 
-Node.js 18 以上が必要 · アプリは macOS にインストールされ、Linux と Windows ではスキルと MCP サーバーを設定します · 署名、チェックサム、公証のいずれかが合わないものは何もインストールしません · 実行後はコーディングエージェントを再起動します · 何も変えずに点検だけするには：
+Node.js 18 以上が必要 · 署名、チェックサム、公証のいずれかが合わないものは何もインストールしません · 実行後はコーディングエージェントを再起動します · 何も変えずに点検だけするには：
 
 npx @passioncode-ai/passioncode@latest doctor
 
@@ -94,9 +94,9 @@ npx @passioncode-ai/passioncode@latest doctor
 
 このプロンプトを Claude Code、Codex などのコーディングエージェントに貼り付けてください。エージェントがコマンドを実行し、できることを済ませ、あなたにしかできないこと（サインイン、アクセスの許可、ツール自身の入力欄へのキー入力）だけを短い一覧で伝えます。
 
-このコンピューターに PassionCode.ai をセットアップして。すでにセットアップ済みなら点検して修復して。npx --yes @passioncode-ai/passioncode@latest setup --yes --json を実行し（Node 18 以降が必要）、その JSON を読んで。このコマンドは足りないアプリを署名済みリリースからインストールし、スキルとすべての MCP サーバーを設定し、問題を修復して、すべてをもう一度点検する。何も手作業でダウンロードやインストールをせず、実行中のアプリを止めたり強制終了したりは絶対にしないで。そのあと、一覧にある製品のオンボーディング手順のうちエージェントが実行してよいものを実行し、チャットで私にキーやパスワードを絶対に尋ねず（ツールが自分の非表示の入力欄を開く）、最後に npx --yes @passioncode-ai/passioncode@latest doctor を実行して。何をセットアップまたは修復したか、何がまだ失敗しているか、サインインのように私にしかできない手順を番号付きで短く伝え、新しいスキルと MCP サーバーを読み込むためにあなたを再起動するよう私に知らせて。
+このコンピューターに PassionCode.ai をセットアップして。すでにセットアップ済みなら点検して修復して。npx --yes @passioncode-ai/passioncode@latest setup --yes --json を実行し（Node 18 以降が必要）、その JSON を読んで。このコマンドは、macOS では足りないアプリを署名済みリリースからインストールし、Windows と Linux では代わりに各アプリのダウンロードページを示す。どのシステムでもスキルとすべての MCP サーバーを設定し、問題を修復して、すべてをもう一度点検する。何も手作業でダウンロードやインストールをせず、実行中のアプリを止めたり強制終了したりは絶対にしないで。そのあと、一覧にある製品のオンボーディング手順のうちエージェントが実行してよいものを実行し、チャットで私にキーやパスワードを絶対に尋ねず（ツールが自分の非表示の入力欄を開く）、最後に npx --yes @passioncode-ai/passioncode@latest doctor を実行して。何をセットアップまたは修復したか、何がまだ失敗しているか、サインインや、Windows と Linux ではアプリをそれぞれのページからインストールしてコマンドをもう一度実行することのように、私にしかできない手順を番号付きで短く伝え、新しいスキルと MCP サーバーを読み込むためにあなたを再起動するよう私に知らせて。
 
-Fabric は早期プレビューです。Docker と Supabase CLI がコンピューターにあればコマンドがインストールし、なければ何を追加すればよいかを伝えます。
+Fabric は早期プレビューで、どのシステムでも Docker と Supabase CLI が必要です。macOS では、両方がコンピューターにあればコマンドがインストールし、なければ何を追加すればよいかを伝えます。Windows と Linux では、先にFabric のページからダウンロードしてインストールしてください。
 
 手作業で進めたい場合
 
@@ -114,6 +114,8 @@ Fabric をダウンロード
 
 ↓
 
+Windows と Linux 向け
+
 要件と制限
 
 Apple silicon・Intel · 署名・公証済み · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · リリースノート
@@ -129,6 +131,8 @@ Fabric Dashboards をダウンロード
 0.7.10
 
 ↓
+
+Windows と Linux 向け
 
 claude mcp add --scope user fabric-dashboards -- "/Applications/Fabric Dashboards.app/Contents/Resources/bin/fabric-dashboards-mcp"
 
