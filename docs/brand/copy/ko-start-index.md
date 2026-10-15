@@ -126,7 +126,7 @@ Fabric Dashboards는 모든 로컬 에이전트 서비스를 한 창에 보여 �
 
 Fabric Dashboards 다운로드
 
-0.7.9
+0.7.10
 
 ↓
 
