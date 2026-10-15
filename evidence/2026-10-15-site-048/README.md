@@ -28,3 +28,7 @@ Checks run:
 - WebKit 26.5 (Playwright 1.62.1), 1440 and 390 px, on built `dist/`. Pages: zh-hans /start/, /404, /fabric/,
   /business/thanks/; ja /start/, /switchboard/, /404; ko /start/. The h1 join is "的电脑|到你的", "ーから|最初の",
   "ージが|見つか"; ko keeps "에서 |첫 에". No overflow: 16 of 16 PASS.
+
+Shipped: PR #144 merged as `b1059ce`; `npm run deploy` from `main` (its own `npm run check` and build) published Worker
+version `54b43572-c501-4ed2-8c92-b0d1c76e1fc6`. `scripts/verify-live.py` PASS, 263 of 263 checks, 13 download routes, 23 not-found addresses
+([live.json](live.json)); the first run, seconds after the deploy, saw 3 changed pages still served old by the edge.

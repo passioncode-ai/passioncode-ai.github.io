@@ -1,4 +1,4 @@
-# Current handoff — SITE-048: no space at an emphasis join in Chinese and Japanese — 2026-10-15
+# Current handoff — SITE-048: no space at an emphasis join in Chinese and Japanese — live, 2026-10-15
 
 Objective (backlog SITE-048): a heading whose second half is emphasised kept the English source's space at the
 join in languages written without spaces: zh-hans /start/ read "从一台空白的电脑 到你的第一个智能体". Record:
@@ -13,6 +13,8 @@ carried the same stray space (zh-hans /start/ meta description, `i18n/zh-hans/st
 
 Checks run: two new tests in `scripts/locales.test.mjs` (failed before the fix with 19 hits on 14 zh-hans/ja pages,
 pass after); `npm run check` exit 0; `npm run build` 224 entries; WebKit check (see the record).
+
+Shipped: #144 merged as `b1059ce`; deployed as Worker version `54b43572-c501-4ed2-8c92-b0d1c76e1fc6`. `scripts/verify-live.py` PASS: 263 checks, 13 download routes ([live.json](evidence/2026-10-15-site-048/live.json)). The first run, seconds after the deploy, saw 3 changed pages still served old by the edge; the rerun passed.
 
 Open: kicker/caption spans (`<span>工具包成员</span> 状态…`, form `<small>`) keep their space on purpose: they are
 separate visual elements, not an emphasis join. SITE-040, SITE-041, SITE-026 as before.
