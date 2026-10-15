@@ -1,3 +1,28 @@
+# Current handoff — SITE-046: Fabric's Windows and Linux downloads on /fabric/ — live, 2026-10-15
+
+Objective (backlog SITE-046): Fabric 0.3.5 ships Windows (x64, arm64 setup.exe) and Linux (x64, arm64 .deb and
+AppImage) builds; /fabric/ offered only the DMG. Record: [evidence/2026-10-15-site-046/README.md](evidence/2026-10-15-site-046/README.md).
+
+Done: `releases/products.json` names Fabric's seven assets; the Worker's download route takes hyphenated platforms;
+`mergeSnapshots` keeps the union of assets for the same tag (a D1 snapshot stored before a policy change cannot hide a
+new route); /fabric/ in ten languages has macOS, Windows and Linux cards, per-system requirements (Docker Desktop or
+OrbStack on macOS, Docker Desktop with WSL2 and `scoop install supabase` on Windows, Docker Engine on Linux, the
+Supabase CLI everywhere) and the Windows/Linux limits; no OS detection (no product page has one). Facts rows *Fabric
+release* and *CEO name and status*, SCN-007, the /fabric/ screen, strings, DEPLOYMENT, `llms.txt`, check-site and
+`_checks.json`. `releases:sync` also moved Switchboard to 0.6.33 and the launcher to 0.2.5.
+
+Checks run: `npm run check` exit 0, `npm run build` 224 entries, `npm run locales -- --check` PASS, local Worker routes
+302, WebKit 1440/390 on en/ru/ja/de (no overflow, no page errors), CI `check` on #140.
+
+Shipped: #140 merged as `991691b`; deployed as Worker version `2c9d1f94-d81b-412c-804e-ba3f95e9e7de`;
+`scripts/verify-live.py` PASS, 263 checks, 13 download routes ([live.json](evidence/2026-10-15-site-046/live.json)).
+
+Open: SITE-047 (/start/ still says "Fabric needs macOS"; what is true depends on whether the launcher's `setup`
+installs Fabric on Windows and Linux); the facts row *Switchboard release* still names 0.6.16 while the site serves
+0.6.33 (SITE-003); SITE-040, SITE-041, SITE-026 as before.
+
+Next task: SITE-047, then SITE-040.
+
 # Current handoff — SITE-045: one door to setup, Fabric as the home, the About notes — live, 2026-10-15
 
 Objective (operator decisions D1–D4, given in chat 2026-10-14): keep the site small and make one door to start —
