@@ -66,7 +66,7 @@ Explore the workflow
 
 ↓
 
-Early preview 0.3.5 · macOS, Windows and Linux
+Early preview 0.3.6 · macOS, Windows and Linux
 
 THE FIRST SCREEN · FOUR ACTIONS
 
@@ -184,7 +184,7 @@ GET FABRIC
 
 ## for Mac, Windows and Linux
 
-Latest preview: 0.3.5. Fabric runs on your computer with a local database; your projects stay on this machine.
+Latest preview: 0.3.6. Fabric runs on your computer with a local database; your projects stay on this machine.
 
 ⌘
 
@@ -261,7 +261,7 @@ View source
 
 This is an early preview. You can keep projects, a board of decisions, tasks, goals, a pulse of the work and releases with their receipts. The conversation with Fabric saves your messages, but Fabric does not reply yet. A newer version does not upgrade an existing database on its own; it tells you the command to run. Agents registered on this Mac can ask Fabric, through its local agent hub, for access to a connected product such as Fabric Inbox; you allow or deny each request and can revoke it in Settings. Since 0.3.2, Fabric sends anonymous usage counts — counts and kinds only, never names, paths or content; turn them off in Settings → Share usage counts, which applies to every PassionCode.ai app on your Mac.
 
-Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from passioncode.ai/business for use the AGPL doesn’t cover. The 0.3.5 preview is built, signed and notarized in CI from that public source.
+Fabric is open source under the GNU AGPL-3.0, and a commercial license is available from passioncode.ai/business for use the AGPL doesn’t cover. The 0.3.6 preview is built, signed and notarized in CI from that public source.
 
 WORKS WITH FABRIC
 

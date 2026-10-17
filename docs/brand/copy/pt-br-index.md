@@ -62,7 +62,7 @@ Para a sua organização
 
 ↗
 
-Código aberto sob a AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.33 · Dashboards 0.7.10 · Observatory 0.24.5
+Código aberto sob a AGPL-3.0 Fabric 0.3.6 · Switchboard 0.6.37 · Dashboards 0.7.11 · Observatory 0.24.5
 
 Contas
 
@@ -220,7 +220,7 @@ A casa dos seus projetos e dos agentes deles: o propósito, o quadro, as decisõ
 
 Prévia inicial
 
-0.3.5
+0.3.6
 
 · macOS · passos 2 e 5
 
@@ -234,7 +234,7 @@ Escolha a conta em que cada agente roda, com os limites de uso à vista.
 
 Release
 
-0.6.33
+0.6.37
 
 · macOS + Windows · passo 4
 
@@ -246,7 +246,7 @@ Todos os serviços locais de agentes em uma só janela, controlados por você ou
 
 Release
 
-0.7.10
+0.7.11
 
 · macOS + Windows + Linux · passo 4
 

@@ -108,7 +108,7 @@ Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. 각 프�
 
 Fabric 다운로드
 
-0.3.5
+0.3.6
 
 macOS용
 
@@ -118,7 +118,7 @@ Windows 및 Linux용
 
 요구 사항과 제한
 
-Apple silicon 및 Intel · 서명 및 공증 완료 · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · 릴리스 노트
+Apple silicon 및 Intel · 서명 및 공증 완료 · SHA-256 b62074d0b039872dcdb24b89b2626fa10693ac330b802c893b0ea59544371c25 · 릴리스 노트
 
 02
 
@@ -128,7 +128,7 @@ Fabric Dashboards는 모든 로컬 에이전트 서비스를 한 창에 보여 �
 
 Fabric Dashboards 다운로드
 
-0.7.10
+0.7.11
 
 ↓
 

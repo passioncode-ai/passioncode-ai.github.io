@@ -66,7 +66,7 @@ Poznaj sposób pracy
 
 ↓
 
-Wczesna wersja zapoznawcza 0.3.5 · macOS, Windows i Linux
+Wczesna wersja zapoznawcza 0.3.6 · macOS, Windows i Linux
 
 PIERWSZY EKRAN · CZTERY AKCJE
 
@@ -184,7 +184,7 @@ POBIERZ FABRIC
 
 ## na Maca, Windows i Linux
 
-Najnowsza wersja zapoznawcza: 0.3.5. Fabric działa na Twoim komputerze z lokalną bazą danych; Twoje projekty zostają na tym komputerze.
+Najnowsza wersja zapoznawcza: 0.3.6. Fabric działa na Twoim komputerze z lokalną bazą danych; Twoje projekty zostają na tym komputerze.
 
 ⌘
 
@@ -261,7 +261,7 @@ Zobacz kod źródłowy
 
 To wczesna wersja zapoznawcza. Możesz w niej prowadzić projekty, tablicę decyzji, zadania, cele, puls pracy i wydania z ich potwierdzeniami. Rozmowa z Fabric zapisuje Twoje wiadomości, ale Fabric jeszcze nie odpowiada. Nowsza wersja nie aktualizuje istniejącej bazy danych sama; podaje polecenie, które trzeba uruchomić. Agenci zarejestrowani na tym Macu mogą przez lokalny hub agentów poprosić Fabric o dostęp do połączonego produktu, takiego jak Fabric Inbox; każdą prośbę akceptujesz albo odrzucasz i możesz cofnąć zgodę w Ustawieniach. Od wersji 0.3.2 Fabric wysyła anonimowe liczniki użycia — wyłącznie liczby i rodzaje, nigdy nazwy, ścieżki ani treść; wyłączysz je w Ustawienia → Share usage counts, co dotyczy każdej aplikacji PassionCode.ai na Twoim Macu.
 
-Fabric ma otwarty kod na licencji GNU AGPL-3.0, a licencję komercyjną można uzyskać na stronie passioncode.ai/business dla zastosowań, których AGPL nie obejmuje. Wersja 0.3.5 zapoznawcza jest budowana, podpisywana i poświadczana w CI z tego publicznego kodu.
+Fabric ma otwarty kod na licencji GNU AGPL-3.0, a licencję komercyjną można uzyskać na stronie passioncode.ai/business dla zastosowań, których AGPL nie obejmuje. Wersja 0.3.6 zapoznawcza jest budowana, podpisywana i poświadczana w CI z tego publicznego kodu.
 
 DZIAŁA Z FABRIC
 
