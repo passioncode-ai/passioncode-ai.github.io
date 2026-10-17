@@ -62,7 +62,7 @@ macOS 版をダウンロード ↓
 
 ソースを見る ↗
 
-リリース 0.7.10 · macOS 13 以降 · Windows · Linux
+リリース 0.7.11 · macOS 13 以降 · Windows · Linux
 
 ローカルのサービスを一か所に
 
@@ -134,7 +134,7 @@ Fabric Dashboards は、お使いのコンピューター上の対応サービ�
 
 ### macOS
 
-リリース 0.7.10。Apple silicon と Intel の両方に対応するユニバーサル DMG で、macOS 13 以降が必要です。Developer ID で署名され、公証とステープル処理済みです。
+リリース 0.7.11。Apple silicon と Intel の両方に対応するユニバーサル DMG で、macOS 13 以降が必要です。Developer ID で署名され、公証とステープル処理済みです。
 
 Fabric Dashboards をダウンロード ↓
 
@@ -142,7 +142,7 @@ DMG を開いて Fabric Dashboards を Applications にドラッグし、アプ�
 
 ### Windows と Linux
 
-リリース 0.7.10 には、x64 と arm64 向けの署名済み Windows インストーラーと、x64 と arm64 向けの Linux AppImage と .deb も含まれます。0.7.4 から、Windows アプリと AppImage は自動でアップデートされます。.deb からインストールしたものはアップデートされないため、次の .deb をインストールしてください。
+リリース 0.7.11 には、x64 と arm64 向けの署名済み Windows インストーラーと、x64 と arm64 向けの Linux AppImage と .deb も含まれます。0.7.4 から、Windows アプリと AppImage は自動でアップデートされます。.deb からインストールしたものはアップデートされないため、次の .deb をインストールしてください。
 
 Windows と Linux のダウンロード
 
@@ -156,7 +156,7 @@ Windows と Linux のダウンロード
 
 DMG SHA-256
 
-edcc0c571f0a29c7d7c8e061e75a5ad4479bc96c5d16ef23d5d4f3d25d7f2193
+cbc357ac4dc12183a37d9fa0060f818ae6fb8743898866afd451f3dd9c473144
 
 リリースノートとチェックサム ↗
 
