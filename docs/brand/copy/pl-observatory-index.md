@@ -130,13 +130,13 @@ POBIERZ OBSERVATORY
 
 ## Zacznij od własnej przestrzeni roboczej
 
-Najnowsze wydanie: 0.24.5. Do pierwszej lokalnej obserwacji nie potrzeba klucza API. Przekaż konfigurację swojemu agentowi programującemu albo wykonaj ją samodzielnie.
+Najnowsze wydanie: 0.29.0. Do pierwszej lokalnej obserwacji nie potrzeba klucza API. Przekaż konfigurację swojemu agentowi programującemu albo wykonaj ją samodzielnie.
 
 01
 
 ### Zainstaluj wydanie
 
-Pobierz project_observatory-0.24.5-py3-none-any.whl i SHA256SUMS z wydania 0.24.5, sprawdź je poleceniem shasum -a 256 -c SHA256SUMS --ignore-missing, a następnie w odizolowanym środowisku Python 3.11+ z obsługą rozszerzeń SQLite wykonaj pip install --no-deps dla pakietu wheel, a potem jego dodatku [full] z -c "$(project-observatory full-path)/requirements-full.lock", czyli zestawem zależności, z którym wydanie było testowane. Na macOS użyj Pythona z Homebrew. Na Windows użyj Pythona 3.13 lub nowszego i kroków dla PowerShell z instrukcji instalacji.
+Pobierz project_observatory-0.29.0-py3-none-any.whl i SHA256SUMS z wydania 0.29.0, sprawdź je poleceniem shasum -a 256 -c SHA256SUMS --ignore-missing, a następnie w odizolowanym środowisku Python 3.11+ z obsługą rozszerzeń SQLite wykonaj pip install --no-deps dla pakietu wheel, a potem jego dodatku [full] z -c "$(project-observatory full-path)/requirements-full.lock", czyli zestawem zależności, z którym wydanie było testowane. Na macOS użyj Pythona z Homebrew. Na Windows użyj Pythona 3.13 lub nowszego i kroków dla PowerShell z instrukcji instalacji.
 
 02
 
@@ -168,11 +168,11 @@ Wszystkie wydania
 
 ↗
 
-Aplikacja na Maca: ProjectObservatory-0.24.5-macos.zip, jedna aplikacja dla Apple silicon i Intel, podpisana certyfikatem Developer ID i notaryzowana przez Apple, na macOS 14+. Otwiera się na dashboardzie i korzysta z silnika zainstalowanego wyżej; sprawdź ją względem tego samego SHA256SUMS.
+Aplikacja na Maca: ProjectObservatory-0.29.0-macos.zip, jedna aplikacja dla Apple silicon i Intel, podpisana certyfikatem Developer ID i notaryzowana przez Apple, na macOS 14+. Otwiera się na dashboardzie i korzysta z silnika zainstalowanego wyżej; sprawdź ją względem tego samego SHA256SUMS.
 
-Aplikacja na Windows i Linuksa, od wersji 0.22.0: instalator dla Windows x64 i arm64, który nie wymaga uprawnień administratora, z podpisem Authenticode, oraz AppImage i .deb dla Linuksa x64 i arm64, na stronie wydania 0.24.5. Tak jak aplikacja na Maca otwiera się na dashboardzie i potrzebuje silnika zainstalowanego wyżej; sama go nie instaluje. Aktualizuje się sama, poza kopią zainstalowaną z pakietu .deb: zainstaluj kolejny .deb.
+Aplikacja na Windows i Linuksa, od wersji 0.22.0: instalator dla Windows x64 i arm64, który nie wymaga uprawnień administratora, z podpisem Authenticode, oraz AppImage i .deb dla Linuksa x64 i arm64, na stronie wydania 0.29.0. Tak jak aplikacja na Maca otwiera się na dashboardzie i potrzebuje silnika zainstalowanego wyżej; sama go nie instaluje. Aktualizuje się sama, poza kopią zainstalowaną z pakietu .deb: zainstaluj kolejny .deb.
 
-Bieżące wydanie, 0.24.5, jest na licencji AGPL, tak jak każde wydanie od 0.10.0, pierwszego na AGPL; 0.9.1 i wcześniejsze zachowują licencję, z którą zostały wydane.
+Bieżące wydanie, 0.29.0, jest na licencji AGPL, tak jak każde wydanie od 0.10.0, pierwszego na AGPL; 0.9.1 i wcześniejsze zachowują licencję, z którą zostały wydane.
 
 Skanowanie znanych wartości porównuje wybrane artefakty z kluczami już znanymi lokalnie. Nie potrafi znaleźć nieznanych sekretów ani udowodnić, że nie została żadna kopia, a lokalna kopia nie jest dowodem, że ktokolwiek inny zdobył klucz. Rotacja kluczy u prawdziwych dostawców i zewnętrzne hosty MCP nie wchodzą w skład testów offline.
 

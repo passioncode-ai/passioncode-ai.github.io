@@ -66,7 +66,7 @@ Den Workflow ansehen
 
 ↓
 
-Frühe Vorschau 0.3.5 · macOS, Windows und Linux
+Frühe Vorschau 0.3.11 · macOS, Windows und Linux
 
 DER ERSTE BILDSCHIRM · VIER AKTIONEN
 
@@ -184,7 +184,7 @@ FABRIC HOLEN
 
 ## für Mac, Windows und Linux
 
-Neueste Vorschau: 0.3.5. Fabric läuft auf deinem Rechner mit einer lokalen Datenbank; deine Projekte bleiben auf diesem Rechner.
+Neueste Vorschau: 0.3.11. Fabric läuft auf deinem Rechner mit einer lokalen Datenbank; deine Projekte bleiben auf diesem Rechner.
 
 ⌘
 
@@ -261,7 +261,7 @@ Quellcode ansehen
 
 Das ist eine frühe Vorschau. Du kannst Projekte, ein Board mit Entscheidungen, Aufgaben, Ziele, einen Puls der Arbeit und Releases mit ihren Belegen führen. Das Gespräch mit Fabric speichert deine Nachrichten, aber Fabric antwortet noch nicht. Eine neuere Version aktualisiert eine bestehende Datenbank nicht von selbst; sie nennt dir den Befehl, den du ausführen musst. Auf diesem Mac registrierte Agenten können Fabric über seinen lokalen Agent-Hub um Zugriff auf ein verbundenes Produkt wie Fabric Inbox bitten; du erlaubst oder verweigerst jede Anfrage und kannst sie in den Einstellungen widerrufen. Seit 0.3.2 sendet Fabric anonyme Nutzungszahlen – nur Zahlen und Arten, niemals Namen, Pfade oder Inhalte; schalte sie unter Einstellungen → Nutzungszahlen teilen aus, was für jede PassionCode.ai-App auf deinem Mac gilt.
 
-Fabric ist Open Source unter der GNU AGPL-3.0, und eine kommerzielle Lizenz ist erhältlich über passioncode.ai/business für eine Nutzung, die die AGPL nicht abdeckt. Die 0.3.5 Vorschau wird in der CI aus diesem öffentlichen Quellcode gebaut, signiert und notarisiert.
+Fabric ist Open Source unter der GNU AGPL-3.0, und eine kommerzielle Lizenz ist erhältlich über passioncode.ai/business für eine Nutzung, die die AGPL nicht abdeckt. Die 0.3.11 Vorschau wird in der CI aus diesem öffentlichen Quellcode gebaut, signiert und notarisiert.
 
 RUND UM FABRIC
 

@@ -130,13 +130,13 @@ OBSERVATORY を入手
 
 ## 自分のワークスペースから始めましょう
 
-最新のリリース：0.24.5。最初のローカル観察に API キーは不要です。セットアップはコーディングエージェントに任せることも、ご自身で実行することもできます。
+最新のリリース：0.29.0。最初のローカル観察に API キーは不要です。セットアップはコーディングエージェントに任せることも、ご自身で実行することもできます。
 
 01
 
 ### リリースをインストール
 
-ダウンロード対象：project_observatory-0.24.5-py3-none-any.whlとSHA256SUMS（取得元：リリース 0.24.5）。確認にはshasum -a 256 -c SHA256SUMS --ignore-missingを使います。その後、SQLite 拡張に対応した分離済みの Python 3.11+ 環境で、pip install --no-depsで wheel を、続けて[full] extra を-c "$(project-observatory full-path)/requirements-full.lock"付きでインストールします。これはリリースがテストされた依存関係セットです。macOS では Homebrew の Python を使ってください。Windows では Python 3.13 以降を使い、インストールガイドの PowerShell の手順に従ってください。
+ダウンロード対象：project_observatory-0.29.0-py3-none-any.whlとSHA256SUMS（取得元：リリース 0.29.0）。確認にはshasum -a 256 -c SHA256SUMS --ignore-missingを使います。その後、SQLite 拡張に対応した分離済みの Python 3.11+ 環境で、pip install --no-depsで wheel を、続けて[full] extra を-c "$(project-observatory full-path)/requirements-full.lock"付きでインストールします。これはリリースがテストされた依存関係セットです。macOS では Homebrew の Python を使ってください。Windows では Python 3.13 以降を使い、インストールガイドの PowerShell の手順に従ってください。
 
 02
 
@@ -168,11 +168,11 @@ MCP サーバーは stdio で動作します：claude mcp add observatory --scop
 
 ↗
 
-Mac アプリ：ProjectObservatory-0.24.5-macos.zip。Apple silicon と Intel の両方で動く一つのアプリで、Developer ID で署名され、Apple による公証済みで、macOS 14 以降向けです。ダッシュボードが開き、上でインストールしたエンジンを使います。検証には上記と同じファイルを使います：SHA256SUMS。
+Mac アプリ：ProjectObservatory-0.29.0-macos.zip。Apple silicon と Intel の両方で動く一つのアプリで、Developer ID で署名され、Apple による公証済みで、macOS 14 以降向けです。ダッシュボードが開き、上でインストールしたエンジンを使います。検証には上記と同じファイルを使います：SHA256SUMS。
 
-Windows と Linux 向けアプリ（0.22.0 から）：管理者権限の要らない x64 と arm64 向けの Windows インストーラー（Authenticode 署名済み）と、Linux x64 と arm64 向けの AppImage と .deb は、リリース 0.24.5で入手できます。Mac アプリと同じくダッシュボードが開き、上でインストールしたエンジンが必要です。エンジン自体はインストールしません。.deb からインストールしたものを除き、自動でアップデートされます。.deb の場合は次の .deb をインストールしてください。
+Windows と Linux 向けアプリ（0.22.0 から）：管理者権限の要らない x64 と arm64 向けの Windows インストーラー（Authenticode 署名済み）と、Linux x64 と arm64 向けの AppImage と .deb は、リリース 0.29.0で入手できます。Mac アプリと同じくダッシュボードが開き、上でインストールしたエンジンが必要です。エンジン自体はインストールしません。.deb からインストールしたものを除き、自動でアップデートされます。.deb の場合は次の .deb をインストールしてください。
 
-現在のリリース 0.24.5は AGPL です。0.10.0 以降のすべてのリリースがそうで、0.10.0 が AGPL 下での最初のリリースです。0.9.1 以前は、リリース時のライセンスのままです。
+現在のリリース 0.29.0は AGPL です。0.10.0 以降のすべてのリリースがそうで、0.10.0 が AGPL 下での最初のリリースです。0.9.1 以前は、リリース時のライセンスのままです。
 
 既知の値のスキャンは、選択したアーティファクトを、ローカルで既知のキーと照合します。未知のシークレットは検出できず、コピーが残っていないことの証明もできません。また、ローカルにコピーがあっても、他の誰かがキーを入手した証拠にはなりません。プロバイダー側での実際のローテーションと外部の MCP ホストは、オフラインのテストスイートの対象外です。
 

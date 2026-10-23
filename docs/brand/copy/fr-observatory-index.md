@@ -130,13 +130,13 @@ OBTENIR OBSERVATORY
 
 ## Commencez par votre propre espace de travail
 
-Dernière version : 0.24.5. Aucune clé API n’est nécessaire pour la première observation locale. Confiez l’installation à votre agent de code, ou faites-la vous-même.
+Dernière version : 0.29.0. Aucune clé API n’est nécessaire pour la première observation locale. Confiez l’installation à votre agent de code, ou faites-la vous-même.
 
 01
 
 ### Installez la version
 
-Télécharger project_observatory-0.24.5-py3-none-any.whl et SHA256SUMS depuis la version 0.24.5, les vérifier avec shasum -a 256 -c SHA256SUMS --ignore-missing, puis, dans un environnement Python 3.11+ isolé qui prend en charge les extensions SQLite, exécuter pip install --no-deps sur le wheel, puis sur son extra [full] avec -c "$(project-observatory full-path)/requirements-full.lock", l’ensemble de dépendances avec lequel la version a été testée. Sur macOS, utilisez le Python de Homebrew. Sous Windows, utilisez Python 3.13 ou ultérieur et les étapes PowerShell du guide d’installation.
+Télécharger project_observatory-0.29.0-py3-none-any.whl et SHA256SUMS depuis la version 0.29.0, les vérifier avec shasum -a 256 -c SHA256SUMS --ignore-missing, puis, dans un environnement Python 3.11+ isolé qui prend en charge les extensions SQLite, exécuter pip install --no-deps sur le wheel, puis sur son extra [full] avec -c "$(project-observatory full-path)/requirements-full.lock", l’ensemble de dépendances avec lequel la version a été testée. Sur macOS, utilisez le Python de Homebrew. Sous Windows, utilisez Python 3.13 ou ultérieur et les étapes PowerShell du guide d’installation.
 
 02
 
@@ -168,11 +168,11 @@ Toutes les versions
 
 ↗
 
-Application Mac : ProjectObservatory-0.24.5-macos.zip, une seule application pour Apple silicon et Intel, signée avec un Developer ID et notarisée par Apple, pour macOS 14+. Elle s’ouvre sur le tableau de bord et utilise le moteur installé ci-dessus ; vérifiez-la avec le même SHA256SUMS.
+Application Mac : ProjectObservatory-0.29.0-macos.zip, une seule application pour Apple silicon et Intel, signée avec un Developer ID et notarisée par Apple, pour macOS 14+. Elle s’ouvre sur le tableau de bord et utilise le moteur installé ci-dessus ; vérifiez-la avec le même SHA256SUMS.
 
-Application Windows et Linux, depuis la 0.22.0 : un installateur Windows pour x64 et arm64 qui ne demande pas de droits d’administrateur, signé avec Authenticode, et un AppImage et un .deb pour Linux x64 et arm64, dans la version 0.24.5. Comme l’application Mac, elle s’ouvre sur le tableau de bord et a besoin du moteur installé ci-dessus ; elle n’installe pas le moteur. Elle se met à jour d’elle-même, sauf une copie installée depuis le .deb : installez le .deb suivant.
+Application Windows et Linux, depuis la 0.22.0 : un installateur Windows pour x64 et arm64 qui ne demande pas de droits d’administrateur, signé avec Authenticode, et un AppImage et un .deb pour Linux x64 et arm64, dans la version 0.29.0. Comme l’application Mac, elle s’ouvre sur le tableau de bord et a besoin du moteur installé ci-dessus ; elle n’installe pas le moteur. Elle se met à jour d’elle-même, sauf une copie installée depuis le .deb : installez le .deb suivant.
 
-La version actuelle, 0.24.5, est sous AGPL, comme toutes les versions depuis la 0.10.0, la première sous AGPL ; la 0.9.1 et les précédentes conservent la licence avec laquelle elles sont sorties.
+La version actuelle, 0.29.0, est sous AGPL, comme toutes les versions depuis la 0.10.0, la première sous AGPL ; la 0.9.1 et les précédentes conservent la licence avec laquelle elles sont sorties.
 
 L’analyse par valeurs connues compare les artefacts sélectionnés aux clés déjà connues localement. Elle ne peut ni trouver des secrets inconnus ni prouver qu’aucune copie ne subsiste, et une copie locale ne prouve pas que quelqu’un d’autre a obtenu une clé. La rotation réelle des clés chez les fournisseurs et les hôtes MCP externes ne sont pas couverts par la suite de tests hors ligne.
 
