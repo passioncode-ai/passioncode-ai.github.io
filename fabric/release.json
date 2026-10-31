@@ -1,10 +1,10 @@
 {
-  "tag": "v0.3.5",
-  "version": "0.3.5",
+  "tag": "v0.3.15",
+  "version": "0.3.15",
   "repository": "passioncode-ai/fabric",
-  "releaseUrl": "https://github.com/passioncode-ai/fabric/releases/tag/v0.3.5",
+  "releaseUrl": "https://github.com/passioncode-ai/fabric/releases/tag/v0.3.15",
   "downloads": {
-    "macos": "https://github.com/passioncode-ai/fabric/releases/download/v0.3.5/Fabric-0.3.5-universal.dmg"
+    "macos": "https://github.com/passioncode-ai/fabric/releases/download/v0.3.15/Fabric-0.3.15-universal.dmg"
   },
-  "sha256": "1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b"
+  "sha256": "7c592d39b54e0350ada2cd110e861f5789bc33aa9af0dc6b055cd0b54dd3596d"
 }
