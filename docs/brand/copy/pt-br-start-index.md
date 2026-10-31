@@ -108,7 +108,7 @@ O Fabric é a casa dos seus projetos e dos agentes deles: cada projeto guarda al
 
 Baixar o Fabric
 
-0.3.5
+0.3.15
 
 para macOS
 
@@ -118,7 +118,7 @@ Para Windows e Linux
 
 Requisitos e limites
 
-Apple silicon e Intel · assinado e notarizado · SHA-256 1e54fe557f2752817bb00303a93d595c812609b355f6850420026663cf39b98b · notas de versão
+Apple silicon e Intel · assinado e notarizado · SHA-256 7c592d39b54e0350ada2cd110e861f5789bc33aa9af0dc6b055cd0b54dd3596d · notas de versão
 
 02
 
@@ -128,7 +128,7 @@ O Fabric Dashboards mostra cada serviço de agente local em uma só janela. Baix
 
 Baixar o Fabric Dashboards
 
-0.7.10
+0.8.17
 
 ↓
 

@@ -80,7 +80,7 @@ SWITCHBOARD 받기
 
 ## 플랫폼을 선택하세요
 
-최신 릴리스: 0.6.33. 두 다운로드 모두 데스크톱 앱과 switchboard CLI가 포함되어 있습니다.
+최신 릴리스: 0.7.2. 두 다운로드 모두 데스크톱 앱과 switchboard CLI가 포함되어 있습니다.
 
 ⌘
 
@@ -124,11 +124,11 @@ WebView2가 있는 Windows x64. Windows 빌드는 0.6.16부터 Authenticode로 �
 
 macOS ZIP · SHA-256
 
-7cda90f952fad85bebb3b7abb73a210366ac46c87b772cda24e748be1348620f
+66bbbe0c3360809bc5e39368018897e7f04b6bbe3c07673a3247705d69398167
 
 Windows ZIP · SHA-256
 
-204fea4e1a03df20e6feb655c0e6fed13ceee90a2c3c498fbde0cdb7b72c88a5
+800a1948f760badd94971bef970fe3c5ef2b43c7b0e32b8ffb3dca23602becee
 
 열기 전에 비교하세요: shasum -a 256 (터미널), Get-FileHash (PowerShell). 값이 다르면 다른 파일이니 다시 다운로드하세요.
 
@@ -303,7 +303,7 @@ Switchboard가 데이터를 전송하나요?
 
 직접 살펴보거나 빌드할 수 있나요?
 
-네. Switchboard는 오픈 소스(GNU AGPL-3.0)입니다. AGPL이 다루지 않는 용도에는 다음에서 상용 라이선스를 받을 수 있습니다: passioncode.ai/business. v0.3.1-beta.1까지의 릴리스는 MIT 라이선스로 배포되었으며 계속 그 라이선스로 이용할 수 있습니다. 현재 다운로드(0.6.33)는 AGPL로 릴리스되었습니다. v0.4.0-beta.1은 PolyForm Noncommercial or Internal Use로 릴리스되었으며 해당 라이선스가 유지됩니다. 빌드 방법, 소스 코드, 테스트, 릴리스 증거는 저장소에서 확인할 수 있습니다.
+네. Switchboard는 오픈 소스(GNU AGPL-3.0)입니다. AGPL이 다루지 않는 용도에는 다음에서 상용 라이선스를 받을 수 있습니다: passioncode.ai/business. v0.3.1-beta.1까지의 릴리스는 MIT 라이선스로 배포되었으며 계속 그 라이선스로 이용할 수 있습니다. 현재 다운로드(0.7.2)는 AGPL로 릴리스되었습니다. v0.4.0-beta.1은 PolyForm Noncommercial or Internal Use로 릴리스되었으며 해당 라이선스가 유지됩니다. 빌드 방법, 소스 코드, 테스트, 릴리스 증거는 저장소에서 확인할 수 있습니다.
 
 PASSIONCODE 툴킷의 일부
 

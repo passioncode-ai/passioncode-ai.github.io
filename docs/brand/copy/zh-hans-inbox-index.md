@@ -66,7 +66,7 @@ FABRIC INBOX · 开发中的预览版
 
 ↓
 
-开发预览版 0.18.0 · macOS 12+ · Windows · Linux · 以 AGPL-3.0 开源
+开发预览版 0.77.3 · macOS 12+ · Windows · Linux · 以 AGPL-3.0 开源
 
 FABRIC INBOX / 邮件 + 智能体
 
@@ -136,7 +136,7 @@ Inbox 以同样的方式分拣每个账号，并让你域名下的地址有智�
 
 ## 适用于 Mac、Windows 和 Linux
 
-最新预览版：0.18.0。应用会在你自己的 Cloudflare 账号中创建邮件服务器并将其打开；你的邮件只留在你自己的账号里。
+最新预览版：0.77.3。应用会在你自己的 Cloudflare 账号中创建邮件服务器并将其打开；你的邮件只留在你自己的账号里。
 
 ⌘
 
@@ -157,7 +157,7 @@ DMG 安装包 · 已使用 Developer ID 签名并通过 Apple 公证
 
 ### Windows 和 Linux
 
-版本 0.18.0 同时提供 Windows 安装程序（x64 和 arm64，无需管理员权限，自 0.14.1 起已使用 Authenticode 签名），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。
+版本 0.77.3 同时提供 Windows 安装程序（x64 和 arm64，无需管理员权限，自 0.14.1 起已使用 Authenticode 签名），以及 Linux 的 AppImage 和 .deb（x64 和 arm64）。
 
 下载 Windows 和 Linux 版本
 
@@ -181,7 +181,7 @@ Windows 应用和 AppImage 会自动更新；通过 .deb 安装的副本不会�
 
 macOS DMG · SHA-256
 
-3d971a0b00765ce1faf9dea63b41503dd29180adbe79bc2a5d0951a857641ffd
+eb118f3a0a9eefc337b045c0ebfcaddee83ecdeedb9343f5681bf6c6376923dd
 
 打开前请比对：shasum -a 256（终端）。值不同说明文件不同，请重新下载。
 
