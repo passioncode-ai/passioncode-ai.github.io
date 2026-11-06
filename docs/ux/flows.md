@@ -28,3 +28,6 @@ Any entry (header For organizations, hero For your organization, the home door c
 
 ## FLW-07 — Switch language
 Any page → header language switch → the same page in the other language at `/<code>/<path>` (English at `/`) → continue in that language: every internal link, the form and its confirmation stay under the prefix; downloads, release notes and source links are the same in every language. The address alone decides the language (no redirect by browser language, no cookie), so a shared link opens in the language it was copied in. SCN-019.
+
+## FLW-08 — From the problem to a door (SITE-049)
+Home → hero (kept) → video (optional) → 01 problem → 02 shift → 03 Fabric manages the process → 04 one system → 05 agents at work → 06 from a team to an organization → 07 four doors: founders and executives → /business/ (FLW-06); investors → /#investors → commercial@passioncode.ai; engineers → GitHub or /start/#setup (FLW-04); solo founders → /start/ (FLW-05). Every step is measured as the funnel events of `docs/analytics/events.md` (page_view, video_progress, cta_click with the door's `location`, command_copy, lead_started, lead_sent).
