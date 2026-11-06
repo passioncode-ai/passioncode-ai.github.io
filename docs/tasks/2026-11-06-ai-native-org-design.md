@@ -102,3 +102,17 @@ before it ships; the catalogue lives in `docs/analytics/events.md` with `file:li
   growth app `passioncode-site`; the App Key is in the vault as
   `passioncode-platform/prod/APTABASE_APP_KEY_PASSIONCODE_SITE` (never printed). Growth reads it once the platform's
   PR #134 is deployed; events are kept in Aptabase meanwhile.
+- **Second round (2026-11-06 19:00, `a0e2e873`, `34afe50d`), taken:** `iid` is formatted as a UUIDv8 (RFC 9562) from the
+  first 16 bytes of the HMAC (version nibble 8, variant bits 10, lower case), because growth counts only UUID ids
+  (`src/analytics/query.ts:106`). The catalogue states, next to the definition: an `iid` is a visitor-day, never a
+  person (growth's `uniqueInstalls` over several days counts visitor-days; read `dailyVisitors` and never add days);
+  people behind one NAT with one User-Agent merge, a phone changing network splits, midnight UTC cuts a path; growth's
+  own A/B assignment does not fit the site (a new id every day): a test on the site assigns its arm itself
+  (`assignment: external`, `experiment_exposure`) and measures within one visit. Events are batched per page in one
+  Aptabase request (the organization's intake limits requests per IP, and every visitor reaches it from Cloudflare).
+- **Legal basis (decided by the coordinator, the operator may reverse it before the deploy he approves):** legitimate
+  interest in measuring the site, disclosed on /privacy/; nothing is read from or written to the visitor's device
+  beyond the page request itself; the daily salt is discarded, so a hash cannot be linked across days or reversed to an
+  IP. This is the model of the cookieless analytics in common use; an EU authority may still treat it as needing
+  consent, and if the operator prefers that reading the fallback is counters only (`dailyVisitors` and step counts,
+  no conversion), decided before the first event so no series breaks.
