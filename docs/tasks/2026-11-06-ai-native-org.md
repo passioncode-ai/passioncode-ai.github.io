@@ -126,6 +126,37 @@ networks, partners and search; most read on a phone first.
 | 10 Acceptance | every REQ with evidence; HANDOFF; retro stamp |
 | Spend | Asset Foundry (narration, music, renders) and Copylot within the estate limits; expected under $15 in all |
 
+## Translation and copy check record
+
+Evidence for REQ-07 and REQ-08 (2026-11-06).
+
+- **Adaptation through Copylot, and where it stopped.** The 137 new home strings were sent per language as
+  two `copylot_write` jobs on `moonshotai/kimi-k3.1-pro` (`.task-pipeline/jobs.json`, git-ignored). Copylot caps an
+  answer at 4000 output tokens; Kimi K3.1 Pro spends part of it on reasoning, so for fr, es, pl, ko and ja at least
+  one half came back `partial` or `failed` with the list cut off. Reruns on `deepseek/deepseek-v4.1-flash` were cut
+  the same way, and `copylot_jobs_rerun` refuses a failed job. Result: de, pt-br and zh-hans are Copylot
+  adaptations; the second halves of es and ja are Copylot adaptations; fr, pl, ko and the first halves of es and ja
+  were translated by hand by the agent against the English deck and the site glossary. Copylot spend for the run:
+  24 jobs, about 1.89 USD (`copylot_jobs_list`, 2026-11-06), inside the estate limit. A Copylot change that splits
+  long lists into smaller calls is the fix; it is a row for the Copylot project, not for this site.
+- **Rule check in every language** (`copylot_check`, register `marketing`, voice `041b4138` v1, the new home copy):
+
+| Locale | Report | Result |
+|---|---|---|
+| en-US | `30a539a1` | score 100, no blocking finding (copy deck) |
+| ru-RU | `83baf38f` | score 100, no blocking finding; no-break-space notes come from the pasted text, the build sets them |
+| de-DE | `316d0f9b` | no finding, informal address held |
+| fr-FR | `ad9c62bf` | spacing before `:` and `; ? !`: fixed site-wide in `i18n/fr/*.json` (U+00A0 before `:`, U+202F before `; ? !` and inside guillemets) |
+| pl-PL | `33df630a` | no finding, after one agreement fix («wszyscy agenci») |
+| es-ES | `44552362` | no finding, informal address held |
+| pt-BR | `52316219` | no finding, after two wording fixes («sua equipe» instead of «suas pessoas») |
+| zh-Hans-CN | `0dbaa43b` | advisory only: 唯一 and 第一 (PRC ad-law practice); rewritten as 统一入口, 首批, 从启用之日起, 首个, 从哪里起步 |
+| ja-JP | `a3bfa857` | no finding |
+| ko-KR | `3eef274f` | no finding |
+
+- **Privacy notice.** The four new privacy strings (site analytics) were translated by hand in all nine languages;
+  the per-language disclosure checks in `i18n/<loc>/_checks.json` pass (`npm run check`, exit 0).
+
 ## Open assumptions and risks
 
 - A1: the analytics endpoint for a static site follows the pattern growth already counts for `sshlg-me` (a per-page

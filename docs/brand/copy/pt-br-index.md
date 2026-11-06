@@ -90,7 +90,7 @@ Seu agente funciona por uma semana. Depois tudo desmorona. A conta errada. Ele e
 
 ## Mais assistentes de IA não mudam isso
 
-Atualmente, toda empresa oferece assistentes de IA às suas pessoas. O trabalho ainda avança na velocidade das pessoas que ficam no meio.
+Atualmente, toda empresa oferece assistentes de IA às suas equipes. O trabalho ainda avança na velocidade das pessoas que ficam no meio.
 
 A pessoa ainda é o gargaloUm assistente redige e analisa, depois devolve o resultado a uma pessoa. Dez assistentes devolvem dez resultados. O trabalho espera até que essa pessoa tenha tempo.
 
@@ -476,7 +476,7 @@ O seu trabalho fica nos seus computadores e nas suas próprias contas de nuvem. 
 
 Isso substitui a minha equipe?
 
-Isso muda o que as suas pessoas fazem. Os agentes assumem o trabalho que circula entre pessoas; as pessoas definem a direção, aprovam o que precisa de uma pessoa e contribuem com o conhecimento especializado. O que medimos é o trabalho que os agentes entregam, nunca as pessoas.
+Isso muda o que a sua equipe faz. Os agentes assumem o trabalho que circula entre pessoas; as pessoas definem a direção, aprovam o que precisa de uma pessoa e contribuem com o conhecimento especializado. O que medimos é o trabalho que os agentes entregam, nunca as pessoas.
 
 Onde ficam os agentes e os dados da minha empresa?
 

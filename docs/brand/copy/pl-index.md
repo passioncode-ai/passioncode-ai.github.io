@@ -196,7 +196,7 @@ Co Fabric robi już dziś
 
 ## Każdy wynik zapisany
 
-Chaos agentów, które każdy buduje po swojemu, kończy się, gdy wszystkie agenty dzielą jeden kontrakt, jeden sejf i jeden zapis.
+Chaos agentów, których każdy buduje po swojemu, kończy się, gdy wszyscy agenci dzielą jeden kontrakt, jeden sejf i jeden zapis.
 
 01
 
