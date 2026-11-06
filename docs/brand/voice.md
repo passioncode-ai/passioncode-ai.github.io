@@ -27,6 +27,10 @@ Vision (operator, 2026-10-05): do what you love — agents take the rest. Start 
 Commercial register (/business/): the same voice speaking to a company lead — concrete processes, the formula behind every number, no fixed package, no promised price.
 
 ## Saved Tone of Voice v2 (2026-10-11, current)
+Correction (2026-11-06, SITE-049): the copy agent now lists this voice under `voiceId`
+`041b4138-44be-4b00-b17d-7d9a7b13ab98` (version 1, same content hash `8a4c0a7e…`; `copylot.voices.list`); the id
+`1657e5b3…` in the table below answers not-found. Use `{"voiceId": "041b4138-44be-4b00-b17d-7d9a7b13ab98", "version": 1}`.
+
 Use this one. It is v1 below with one change for the operator's decision ON-1 (SITE-032): the ban on "ROI" is removed, and
 a rule is added: "ROI is allowed (operator ON-1): never state a ROI number, payback period or savings figure we cannot
 prove; the model use is: See the ROI of each agent: what it cost and what it delivered." Everything else matches v1.
