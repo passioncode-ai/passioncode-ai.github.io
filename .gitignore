@@ -11,3 +11,4 @@ node_modules/
 # Python editorial tooling
 __pycache__/
 *.pyc
+.task-pipeline/
