@@ -85,6 +85,7 @@
     "task-pipeline on GitHub": "GitHub의 task-pipeline",
     "· it is not part of PassionCode.ai and needs nothing from it": "· PassionCode.ai에 속하지 않으며 PassionCode.ai 없이도 동작합니다",
     "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "Fabric에 연결된 에이전트는 한 프로젝트의 보드, 메모리, 인계를 공유하므로, 한 에이전트가 멈춘 곳에서 다른 에이전트가 이어받습니다. Fabric은 초기 프리뷰입니다.",
-    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "명령 하나로 도구를 설정하고 첫 에이전트를 만들거나, 조직 전체와 함께하세요. PassionCode for Enterprise는 개발 중이며 요청 시 제공됩니다."
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "명령 하나로 도구를 설정하고 첫 에이전트를 만들거나, 조직 전체와 함께하세요. PassionCode for Enterprise는 개발 중이며 요청 시 제공됩니다.",
+    "What we measure: the verified work agents deliver for each person, every month, at your quality bar. Never the people.": "우리가 측정하는 것: 귀사의 품질 기준에 맞춰 에이전트가 매달 한 사람당 해낸 검증된 일입니다. 사람을 측정하지는 않습니다."
   }
 }

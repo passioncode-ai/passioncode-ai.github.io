@@ -112,6 +112,8 @@ Jeder Agent, auf deinen RechnernHerstellerneutral, lokal zuerst und Open Source 
 
 Analytics, nie ÜberwachungDie Analysen betreffen Agenten und die Ergebnisse von Prozessen. Nichts beobachtet Menschen heimlich.
 
+Was wir messen: die geprüfte Arbeit, die Agenten pro Person und Monat in deiner Qualität liefern. Niemals die Menschen.
+
 Für die Änderungen, die deine Agenten vornehmen, empfehlen wir die task-pipeline– ein eigenständiger Open-Source-Skill aus der Sammlung sshlg-skills: Er führt jede Änderung vom Briefing bis zur Abnahme und geht erst weiter, wenn jedes Gate bestanden ist.
 
 npx sshlg-skills install

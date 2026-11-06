@@ -128,6 +128,12 @@
     "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise 让组织成为 AI 原生：机器接入组织、智能体部署并在机器之间传递工作、模型密钥留在各台机器上、每个智能体的花费与交付、管理，以及定制的签名构建。你的数据留在你的机器或你自己的云上。适用于从 1 人到 1000 人以上。",
     "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "智能体运行在你组织的机器上，彼此连接、清晰可见，基于开源工具，数据留在你的机器或你自己的云上。适用于从 1 人到 1000 人以上。",
     "Designed for one person to more than 1,000 · the estimate comes before any contract": "适用于从 1 人到 1000 人以上 · 先给出估算，再谈合同",
-    "Try it on one machine first: setup, then doctor": "先在一台机器上试用：先 setup，再 doctor"
+    "Try it on one machine first: setup, then doctor": "先在一台机器上试用：先 setup，再 doctor",
+    "Access by level": "按级别授予访问权限",
+    "Owners, administrators and project architects command the agents; a user’s request goes through approval.": "所有者、管理员和项目架构师可以指挥智能体；用户的请求需经过审批。",
+    "A base set of agents from day one": "从第一天起就有一组基础智能体",
+    "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "组织的管理员智能体、数据室和流程评估，均从模板安装。",
+    "Administration by PassionCode, on request": "应需由 PassionCode 管理",
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "我们可以远程管理你的系统；我们能看到配置和支出，但除非你同意，否则看不到你的内容。"
   }
 }

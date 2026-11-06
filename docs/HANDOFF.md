@@ -1,3 +1,29 @@
+# Current handoff: SITE-049, the site on the North Star, in review, 2026-11-06
+
+Objective (backlog SITE-049, operator 2026-11-06): reposition passioncode.ai as the workplace for AI-native
+organizations, from fabric-workspace `knowledge/north-star.md` (`6b7cd777`): the story under the kept header, funnels
+for founders, investors, engineers and solo founders, the site's own analytics, ten languages. Record:
+[evidence/2026-11-06-site-049/README.md](evidence/2026-11-06-site-049/README.md).
+
+Done: the home story in seven sections and two FAQ entries; /business/ Enterprise items; /vision/ North Star metric;
+/privacy/ site analytics; `llms.txt` and facts rows; the Worker's `/api/e` with a daily visitor id (salt in D1,
+deleted next day), the page script and the event catalogue; the UX chain; Copylot checks in all ten languages with
+their fixes; French spacing normalised site-wide.
+
+Decisions: header and H1 stay (D2); analytics on legitimate interest, nothing stored on the device, DNT and GPC
+honoured (D5, board thread `90a63b21`); no customer named (D7); the video is split off (SITE-050) so the copy and
+analytics can ship while the current video stays.
+
+Checks run: `npm run check` exit 0; `npm run build` 225 entries; ux lint 0 errors; WebKit 30 of 30 (10 languages at
+390, 768, 1440); analytics events seen on the local Worker; SEO basics in 10 languages.
+
+Prerequisites before deploy: the operator's one go (D9); the Worker secret `ANALYTICS_APP_KEY` from the vault slot
+`passioncode-platform/prod/APTABASE_APP_KEY_PASSIONCODE_SITE` and `wrangler d1 migrations apply` for `0004`.
+Without the secret the Worker answers 204 and counts nothing (counters-only fallback is the operator's choice).
+
+Next task: after the go, merge the PR, apply migration `0004`, set the secret through `use_secret.py`, `npm run
+deploy`, `scripts/verify-live.py`, then SITE-050 (video) once Asset Foundry reconnects; SITE-051 to SITE-053 after.
+
 # Current handoff — SITE-048: no space at an emphasis join in Chinese and Japanese — live, 2026-10-15
 
 Objective (backlog SITE-048): a heading whose second half is emphasised kept the English source's space at the

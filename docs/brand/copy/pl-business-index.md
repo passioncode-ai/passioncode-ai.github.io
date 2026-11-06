@@ -94,6 +94,12 @@ Analityka aktywności i użyciaCo działało, w którym procesie, z czego korzys
 
 AdministracjaCo wolno każdemu agentowi oraz do jakich kont i danych ma dostęp, ustawiane raz dla całej organizacji.
 
+Dostęp według poziomuWłaściciele, administratorzy i architekci projektów wydają polecenia agentom; prośba użytkownika przechodzi przez zatwierdzenie.
+
+Podstawowy zestaw agentów od pierwszego dniaAgent administrator organizacji, jej data room i ocena procesów, zainstalowane z szablonów.
+
+Administracja przez PassionCode, na życzenieMożemy zdalnie prowadzić administrację Twojego systemu; widzimy konfigurację i wydatki, ale nie Twoje treści, chyba że się zgodzisz.
+
 Własne kompilacje, podpisane przez nasTwoja własna kompilacja narzędzi, podpisana przez PassionCode.ai.
 
 Twoje dane zostają na Twoich komputerach albo w Twojej chmurze. Przeczytaj wizję

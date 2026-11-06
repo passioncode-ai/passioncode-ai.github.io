@@ -50,7 +50,7 @@ PRIVACY NOTICE · VERSION 2026-10-11
 
 # Privacy notice
 
-passioncode.ai has no analytics, no advertising trackers and no cookies. The only personal data it collects is what you send in a request from /business/, through its form or through your coding agent.
+passioncode.ai has no advertising trackers and no cookies, and it writes nothing on your device for analytics. It counts page views and clicks without identifying you (below), and the only personal data it collects is what you send in a request from /business/, through its form or through your coding agent.
 
 This notice is also published in other languages. If a translation differs from this English version, the English version prevails.
 
@@ -85,6 +85,12 @@ The copy at Cloudflare is deleted 30 days after it reaches our backend; a reques
 ## Your rights
 
 You can ask for a copy of your data, its correction or erasure, a restriction, or object to its use, by writing to commercial@passioncode.ai from the address you used. You can also complain to a data protection authority; in Poland that is the President of the Personal Data Protection Office (UODO).
+
+## Site analytics
+
+To see which pages and buttons help visitors, the site counts page views, clicks on its main buttons, how far the home video is played, copies of the setup command, and whether the request form was started and sent. Each event carries only fixed words (the page, a section, a button) and the page's language; never what you type, a URL you came from, your address or an identifier from your device.
+
+The site's own server makes a visitor-of-the-day number from your IP address, your browser's name and a random value that changes every day and is deleted the next day, so the same number cannot be made again or linked across days; your IP address and browser name are not passed on. The counts go to analytics run by PassionCode.ai at analytics.passioncode.ai. The basis is our legitimate interest in improving the site. If your browser sends Do Not Track or Global Privacy Control, nothing is counted.
 
 ## In your browser
 

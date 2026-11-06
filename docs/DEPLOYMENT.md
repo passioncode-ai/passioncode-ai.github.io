@@ -309,7 +309,25 @@ python3 "$(project-observatory full-path)/tools/use_secret.py" run --env prod \
 ```
 
 Tables: `release_snapshot` (one row), `release_cache` (GitHub ETags and bodies), `leads`,
-`form_tokens` (spent nonces, pruned after two days).
+`form_tokens` (spent nonces, pruned after two days), `analytics_salts` (one random salt per UTC day,
+deleted by the cron the next day; migration `0004`).
+
+## Site analytics
+
+`POST /api/e` (`worker/analytics.js`) takes up to 20 events of the closed catalogue
+([docs/analytics/events.md](analytics/events.md)) from this site's own pages, drops anything else, and forwards them to
+the organization's Aptabase at `https://analytics.passioncode.ai` (app «PassionCode Site», growth slug
+`passioncode-site`). The install id is a visitor of the day: a UUIDv8 from an HMAC over the day's salt, the IP and the
+user agent; neither leaves the Worker. Do Not Track, Global Privacy Control, a foreign origin, a body over 4096 bytes
+or a missing key answer 204 and send nothing. The key is the Worker secret `ANALYTICS_APP_KEY`, set from the vault
+without seeing it:
+
+```sh
+U="$(project-observatory full-path)/tools/use_secret.py"
+python3 "$U" run --env prod passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- \
+  python3 "$U" run --vault-only --env prod passioncode-platform APTABASE_APP_KEY_PASSIONCODE_SITE -- \
+  sh -c 'printf %s "$APTABASE_APP_KEY_PASSIONCODE_SITE" | npx wrangler secret put ANALYTICS_APP_KEY'
+```
 
 ## Commercial enquiries
 

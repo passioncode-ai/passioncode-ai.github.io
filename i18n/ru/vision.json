@@ -69,6 +69,7 @@
     "For the changes your agents make, we recommend": "Для изменений, которые делают ваши агенты, мы рекомендуем",
     "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": ": он ведёт каждое изменение от брифа до приёмки и не переходит к следующему этапу, пока не пройдены все проверки.",
     "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "У агентов, подключённых к Fabric, общие доска, память и передачи работы одного проекта, поэтому один продолжает с того места, где остановился другой. Fabric — ранняя предварительная версия.",
-    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Настройте инструменты одной командой и соберите первого агента или подключите всю организацию: PassionCode for Enterprise в разработке и доступен по запросу."
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Настройте инструменты одной командой и соберите первого агента или подключите всю организацию: PassionCode for Enterprise в разработке и доступен по запросу.",
+    "What we measure: the verified work agents deliver for each person, every month, at your quality bar. Never the people.": "Что мы измеряем: проверенную работу, которую агенты делают за каждого человека каждый месяц на уровне вашего качества. Никогда не самих людей."
   }
 }

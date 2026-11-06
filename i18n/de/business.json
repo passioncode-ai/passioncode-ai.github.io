@@ -129,6 +129,12 @@
     "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise macht eine Organisation AI-native: Rechner angebunden, Agenten ausgerollt und zwischen ihnen vermittelt, Modellschlüssel auf jedem Rechner behalten, was jeder Agent gekostet und was er geliefert hat, Administration und eigene signierte Builds. Deine Daten bleiben auf deinen Rechnern oder in deiner eigenen Cloud. Ausgelegt für eine Person bis mehr als 1000.",
     "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "Agenten auf den Rechnern deiner Organisation, verbunden und sichtbar, auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud. Ausgelegt für eine Person bis mehr als 1000.",
     "Designed for one person to more than 1,000 · the estimate comes before any contract": "Ausgelegt für eine Person bis mehr als 1000 · die Schätzung kommt vor jedem Vertrag",
-    "Try it on one machine first: setup, then doctor": "Probier es zuerst auf einem Rechner aus: setup, dann doctor"
+    "Try it on one machine first: setup, then doctor": "Probier es zuerst auf einem Rechner aus: setup, dann doctor",
+    "Access by level": "Zugriff nach Ebene",
+    "Owners, administrators and project architects command the agents; a user’s request goes through approval.": "Inhaber, Administratoren und Projektarchitekten steuern die Agenten; die Anfrage eines Nutzers läuft über eine Freigabe.",
+    "A base set of agents from day one": "Ein Basis-Set an Agenten ab dem ersten Tag",
+    "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "Der Administrator-Agent der Organisation, ihr Datenraum und ihre Prozessbewertung, aus Vorlagen installiert.",
+    "Administration by PassionCode, on request": "Administration durch PassionCode, auf Anfrage",
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "Wir können die Administration deines Systems aus der Ferne übernehmen; wir sehen Konfiguration und Ausgaben, nicht deine Inhalte, es sei denn, du stimmst zu."
   }
 }

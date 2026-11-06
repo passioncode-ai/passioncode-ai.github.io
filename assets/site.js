@@ -5,6 +5,7 @@
 // The copy buttons' words, in the page's language (<html lang>, assets/messages.js).
 import { M } from './messages.js'
 import { resolveLocale, t as translate } from './i18n.js'
+import './analytics.js' // SITE-049: the site's analytics (docs/analytics/events.md)
 
 const root = document.documentElement
 const motion = window.matchMedia('(prefers-reduced-motion: no-preference)')

@@ -1,12 +1,13 @@
 // passioncode.ai — the Worker in front of the static pages (docs/DEPLOYMENT.md).
 // Canonical host, always-current versions and downloads, and the commercial enquiry intake.
 import policyFile from '../releases/products.json' with { type: 'json' }
+import { collect as collectAnalytics, forgetOldSalts } from './analytics.js'
 import bundled from '../releases/current.json' with { type: 'json' }
 import { fetchSnapshot, mergeSnapshots, validSnapshot } from './releases.js'
 import { liveRewriter } from './live.js'
 import { buildLead, checkFormToken, consumeFormToken, deliver, findLead, FORM_TOKEN_MAX_AGE_MS, FORM_TOKEN_MIN_AGE_MS, formPage, formToObject, issueFormToken, issueMessage, knownFields, leadLocale, MAX_BODY_BYTES, platformSignature, retryDue, sha256, storeLead } from './leads.js'
 import { M } from './messages.js'
-import { SOURCE_LOCALE, t } from './i18n.js'
+import { LOCALES, SOURCE_LOCALE, t } from './i18n.js'
 import { BUSINESS_PAGE, localeOfPath, MISSING_PATH, NOT_FOUND_PAGE, notFoundPath } from './routing.js'
 
 const policies = policyFile.products
@@ -302,6 +303,13 @@ export default {
       return withHeaders(json(snapshot, 200, { 'Cache-Control': 'public, max-age=60', 'Access-Control-Allow-Origin': '*' }))
     }
 
+    // SITE-049: the site's analytics (worker/analytics.js): same origin only, always 204, never a body.
+    if (url.pathname === '/api/e') {
+      if (request.method !== 'POST') return withHeaders(json({ error: 'method_not_allowed' }, 405, { Allow: 'POST' }))
+      if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return withHeaders(new Response(null, { status: 204 }))
+      return withHeaders(await collectAnalytics(request, env, ctx, { locales: Object.keys(LOCALES) }))
+    }
+
     if (url.pathname === '/api/leads/token' || url.pathname === '/api/leads/token/') {
       if (request.method !== 'GET') return withHeaders(json({ error: 'method_not_allowed' }, 405, { Allow: 'GET' }))
       if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return withHeaders(json({ error: 'forbidden_origin' }, 403))
@@ -368,6 +376,10 @@ export default {
         const outcomes = await retryDue(env)
         if (outcomes.length) log('leads.retried', { count: outcomes.length, outcomes })
       } catch (error) { log('leads.retry_failed', { error: String(error.message || error) }) }
+      try {
+        const forgotten = await forgetOldSalts(env.DB)
+        if (forgotten) log('analytics.salts_forgotten', { count: forgotten })
+      } catch (error) { log('analytics.salt_cleanup_failed', { error: String(error.message || error) }) }
     })())
   }
 }

@@ -32,7 +32,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "PassionCode.ai remplace-t-il Claude Code ou Codex ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Il fonctionne par-dessus. Votre agent de code continue de faire le travail ; PassionCode.ai lui donne un foyer, des comptes, son état, une mémoire et des preuves, et permet à l’agent suivant de rejoindre le même projet." } }
+    { "@type": "Question", "name": "PassionCode.ai remplace-t-il Claude Code ou Codex ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Il fonctionne par-dessus. Votre agent de code continue de faire le travail ; PassionCode.ai lui donne un foyer, des comptes, son état, une mémoire et des preuves, et permet à l’agent suivant de rejoindre le même projet." } }
   ]
 }</script>
 </head>
@@ -55,7 +55,7 @@
 
 <section class="section" id="harness" aria-labelledby="harness-title">
  <span id="problem" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading story-heading"><p class="section-number">01 / CE QUI TIENT UN AGENT</p><h2 id="harness-title">Le problème n’est pas le modèle<br>mais ce qui le tient</h2><p>La plupart des organisations expérimentent déjà avec des agents, mais <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">10 % au plus les déploient à grande échelle</a> dans une même fonction. Un agent construit seul oublie tout d’une session à l’autre et perd de vue ses comptes. Il ne laisse aucune trace de ce qu’il a fait, et l’agent suivant ne sait rien de lui. Ce qui le tient ensemble, nous l’appelons <strong>un harness</strong> : tout ce qui entoure un modèle et maintient un agent au travail dans la durée. Les laboratoires emploient aussi le mot : <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic</a>, <a href="https://openai.com/index/harness-engineering/">OpenAI</a>.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">01 / CE QUI TIENT UN AGENT</p><h2 id="harness-title">Le problème n’est pas le modèle<br>mais ce qui le tient</h2><p>La plupart des organisations expérimentent déjà avec des agents, mais <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">10 % au plus les déploient à grande échelle</a> dans une même fonction. Un agent construit seul oublie tout d’une session à l’autre et perd de vue ses comptes. Il ne laisse aucune trace de ce qu’il a fait, et l’agent suivant ne sait rien de lui. Ce qui le tient ensemble, nous l’appelons <strong>un harness</strong> : tout ce qui entoure un modèle et maintient un agent au travail dans la durée. Les laboratoires emploient aussi le mot : <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic</a>, <a href="https://openai.com/index/harness-engineering/">OpenAI</a>.</p></div>
  <ol class="work-cycle">
   <li class="reveal"><span class="cycle-number">01</span><h3>Un foyer</h3><p>Chaque projet a un seul endroit pour son objectif, son tableau, ses décisions et ses versions, partagé par tous les agents qui y travaillent. C’est Fabric.</p></li>
   <li class="reveal"><span class="cycle-number">02</span><h3>Comptes</h3><p>Chaque agent tourne sur le bon compte, avec ses limites sous les yeux. C’est Fabric Switchboard.</p></li>
@@ -70,10 +70,11 @@
   <h2 id="beliefs-title">Quatre principes<br><em>qui guident notre travail</em></h2>
   <ul class="vision-principles">
    <li><strong>Les projets sont l’axe</strong><span>Chaque agent travaille pour un projet, et le projet garde l’objectif, les décisions et les versions, de sorte que le travail survit à la session qui l’a fait.</span></li>
-   <li><strong>Le travail s’améliore tout seul</strong><span>Une exécution laisse des preuves que vous pouvez consulter, et Observatory les conserve dès aujourd’hui. Des rétrospectives qui en tirent des leçons pour l’agent suivant : c’est l’orientation.</span></li>
+   <li><strong>Le travail s’améliore tout seul</strong><span>Une exécution laisse des preuves que vous pouvez consulter, et Observatory les conserve dès aujourd’hui. Des rétrospectives qui en tirent des leçons pour l’agent suivant : c’est l’orientation.</span></li>
    <li><strong>N’importe quel agent, sur vos machines</strong><span>Indépendant des fournisseurs, local d’abord et open source sous licence GNU AGPL-3.0, par-dessus Claude Code, Codex et ce qui viendra ensuite.</span></li>
    <li><strong>De l’analytique, jamais de la surveillance</strong><span>Les analyses portent sur les agents et les résultats des processus. Rien ne surveille les personnes en secret.</span></li>
   </ul>
+  <p class="section-note vision-measure">Ce que nous mesurons : le travail vérifié que les agents livrent pour chaque personne, chaque mois, à votre niveau de qualité. Jamais les personnes.</p>
   <div class="pipeline-note" id="pipeline">
    <p class="section-note">Pour les changements que font vos agents, nous recommandons <strong>task-pipeline</strong>, un skill open source distinct, issu de la collection <a href="https://github.com/ssheleg/sshlg-skills">sshlg-skills</a> : il mène chaque changement du brief à la recette et n’avance pas tant que chaque validation n’est pas passée.</p>
    <pre class="copyable"><code>npx sshlg-skills install</code></pre>
@@ -87,9 +88,9 @@
  <div class="section-heading story-heading"><p class="section-number">03 / LE CHEMIN</p><h2 id="path-title">Six étapes<br>chacune utile en soi</h2><p>Le même dispositif grandit d’une personne à toute une organisation. Chaque étape indique si elle fonctionne aujourd’hui ou si c’est là que nous construisons.</p></div>
  <ol class="work-cycle path-cycle">
   <li class="reveal"><span class="cycle-number">01</span><p class="availability">DISPONIBLE MAINTENANT</p><h3>Un agent</h3><p>Votre agent de code construit un agent pour une tâche, avec un contrat, un tableau de bord et des tests.</p><a href="/fr/#how">Comment ça marche, étape 3</a></li>
-  <li class="reveal"><span class="cycle-number">02</span><p class="availability">DISPONIBLE EN PARTIE</p><h3>Deux agents qui se parlent</h3><p>Les agents connectés à Fabric partagent le tableau, la mémoire et les passations d’un même projet : l’un reprend là où l’autre s’est arrêté. Fabric est en préversion.</p><a href="/fr/#how">Comment ça marche, étape 5</a></li>
+  <li class="reveal"><span class="cycle-number">02</span><p class="availability">DISPONIBLE EN PARTIE</p><h3>Deux agents qui se parlent</h3><p>Les agents connectés à Fabric partagent le tableau, la mémoire et les passations d’un même projet : l’un reprend là où l’autre s’est arrêté. Fabric est en préversion.</p><a href="/fr/#how">Comment ça marche, étape 5</a></li>
   <li class="reveal"><span class="cycle-number">03</span><p class="availability">ORIENTATION</p><h3>Une chaîne</h3><p>Les agents s’enchaînent en un seul processus : l’un prépare, le suivant vérifie, une personne valide.</p></li>
-  <li class="reveal"><span class="cycle-number">04</span><p class="availability">DISPONIBLE EN PARTIE</p><h3>Des agents bien entretenus</h3><p>Dashboards montre l’état et les dépenses de chaque agent, les outils se mettent à jour seuls, et Observatory garde ce qui a changé. Des agents qui veillent les uns sur les autres : c’est l’orientation.</p></li>
+  <li class="reveal"><span class="cycle-number">04</span><p class="availability">DISPONIBLE EN PARTIE</p><h3>Des agents bien entretenus</h3><p>Dashboards montre l’état et les dépenses de chaque agent, les outils se mettent à jour seuls, et Observatory garde ce qui a changé. Des agents qui veillent les uns sur les autres : c’est l’orientation.</p></li>
   <li class="reveal"><span class="cycle-number">05</span><p class="availability">ORIENTATION</p><h3>Une équipe</h3><p>Les personnes rejoignent les mêmes boucles : chacune reçoit un espace de travail, les agents de son rôle et ce qu’elle a le droit de faire.</p></li>
   <li class="reveal"><span class="cycle-number">06</span><p class="availability">ORIENTATION</p><h3>Une organisation</h3><p>Les agents arrivent à chaque poste de travail. Les personnes deviennent les experts qui vérifient le travail des agents et construisent leurs propres agents, et ces agents se diffusent dans le réseau.</p><a href="/fr/#how">Comment ça marche, étape 6</a></li>
  </ol>
@@ -97,10 +98,10 @@
 
 <section class="section faq" id="faq" aria-labelledby="faq-title">
  <div class="section-heading"><p class="section-number">QUESTIONS</p><h2 id="faq-title">Avant de commencer</h2></div>
- <details><summary>PassionCode.ai remplace-t-il Claude Code ou Codex ?</summary><p>Non. Il fonctionne par-dessus. Votre agent de code continue de faire le travail ; PassionCode.ai lui donne un foyer, des comptes, son état, une mémoire et des preuves, et permet à l’agent suivant de rejoindre le même projet.</p></details>
+ <details><summary>PassionCode.ai remplace-t-il Claude Code ou Codex ?</summary><p>Non. Il fonctionne par-dessus. Votre agent de code continue de faire le travail ; PassionCode.ai lui donne un foyer, des comptes, son état, une mémoire et des preuves, et permet à l’agent suivant de rejoindre le même projet.</p></details>
 </section>
 
-<section class="closing" aria-labelledby="closing-title"><span id="organizations" class="legacy-anchor" aria-hidden="true"></span><img src="/assets/passioncode-mark.svg" width="72" height="72" alt=""><p class="section-number">COMMENCEZ PAR UN AGENT</p><h2 id="closing-title">Vos agents commencent<br>par une seule commande</h2><p>Installez les outils en une commande et construisez le premier agent, ou emmenez toute une organisation : PassionCode for Enterprise est en cours de développement et proposé sur demande.</p><div class="hero-actions closing-actions"><a class="button button-primary" href="/fr/start/">Pour vous, gratuitement <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/fr/business/">Pour votre organisation <span aria-hidden="true">↗</span></a></div></section>
+<section class="closing" aria-labelledby="closing-title"><span id="organizations" class="legacy-anchor" aria-hidden="true"></span><img src="/assets/passioncode-mark.svg" width="72" height="72" alt=""><p class="section-number">COMMENCEZ PAR UN AGENT</p><h2 id="closing-title">Vos agents commencent<br>par une seule commande</h2><p>Installez les outils en une commande et construisez le premier agent, ou emmenez toute une organisation : PassionCode for Enterprise est en cours de développement et proposé sur demande.</p><div class="hero-actions closing-actions"><a class="button button-primary" href="/fr/start/">Pour vous, gratuitement <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/fr/business/">Pour votre organisation <span aria-hidden="true">↗</span></a></div></section>
 </main>
 <footer class="story-footer">
  <div><a class="brand footer-brand" href="/fr/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>Du vibe coding au passion coding</p></div>

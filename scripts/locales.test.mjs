@@ -45,11 +45,14 @@ test('a picture with an own-language file shows it; other languages keep the Eng
   } finally { rmSync(dir, { recursive: true, force: true }) }
   assert.equal(sourceAsset('/assets/journey-2-2-ru.jpg'), '/assets/journey-2-2.jpg')
   assert.equal(sourceAsset('/assets/journey-2-2.jpg'), '/assets/journey-2-2.jpg')
-  // On the site: the Russian home page shows the Russian first run, the German one the English.
+  // On the site: the Russian Fabric page shows the Russian first run, the German one the English (the home page
+  // carried these shots until SITE-049 moved its story to sections without them).
+  const page = read('fabric/index.html')
+  const shot = /src="\/assets\/(journey-3-\d)\.jpg"/.exec(page)[1]
+  assert.ok(read('ru/fabric/index.html').includes(`src="/assets/${shot}-ru.jpg"`))
+  assert.ok(read('de/fabric/index.html').includes(`src="/assets/${shot}.jpg"`))
+  assert.equal(skeletonDiff(skeleton(page), skeleton(read('ru/fabric/index.html'))), null)
   const home = read('index.html')
-  assert.ok(home.includes('src="/assets/journey-2-2.jpg"'))
-  assert.ok(read('ru/index.html').includes('src="/assets/journey-2-2-ru.jpg"'))
-  assert.ok(read('de/index.html').includes('src="/assets/journey-2-2.jpg"'))
   assert.equal(skeletonDiff(skeleton(home), skeleton(read('ru/index.html'))), null)
 })
 

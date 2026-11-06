@@ -67,6 +67,7 @@
     "For the changes your agents make, we recommend": "对于你的智能体所做的改动，我们推荐",
     "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "集合：它会把每项改动从简报带到验收，每个关卡通过后才继续。",
     "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "连接到 Fabric 的智能体共用一个项目的看板、记忆和交接，因此一个智能体可以从另一个停下的地方接着做。Fabric 是早期预览版。",
-    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "用一条命令装好工具并构建第一个智能体，或带上整个组织：PassionCode for Enterprise 正在开发中，按需提供。"
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "用一条命令装好工具并构建第一个智能体，或带上整个组织：PassionCode for Enterprise 正在开发中，按需提供。",
+    "What we measure: the verified work agents deliver for each person, every month, at your quality bar. Never the people.": "我们衡量的是：智能体每月为每个人交付的、达到你质量标准并经过验证的工作。从不衡量人本身。"
   }
 }

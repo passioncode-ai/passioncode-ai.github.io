@@ -94,6 +94,12 @@ Análises de atividade e usoO que rodou, em qual processo, o que usou e quanto c
 
 AdministraçãoO que cada agente pode fazer e a quais contas e dados ele pode ter acesso, definido uma vez para toda a organização.
 
+Acesso por nívelProprietários, administradores e arquitetos de projeto comandam os agentes; a solicitação de um usuário passa por aprovação.
+
+Um conjunto básico de agentes desde o primeiro diaO agente administrador da organização, a sala de dados e a avaliação de processos, instalados a partir de modelos.
+
+Administração pela PassionCode, sob solicitaçãoPodemos administrar seu sistema remotamente; vemos a configuração e os gastos, não o seu conteúdo, a menos que você concorde.
+
 Builds próprios, assinados por nósSeu próprio build das ferramentas, assinado pela PassionCode.ai.
 
 Seus dados ficam nas suas máquinas ou na sua própria nuvem. Leia a visão

@@ -94,6 +94,12 @@ Activity and usage analyticsWhat ran, on which process, what it used and what it
 
 AdministrationWhat each agent may do and which accounts and data it may reach, set once for the organization.
 
+Access by levelOwners, administrators and project architects command the agents; a user’s request goes through approval.
+
+A base set of agents from day oneThe organization’s administrator agent, its data room and its process assessment, installed from templates.
+
+Administration by PassionCode, on requestWe can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.
+
 Custom builds, signed by usYour own build of the tools, signed by PassionCode.ai.
 
 Your data stays on your machines or in your own cloud. Read the vision

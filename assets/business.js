@@ -9,6 +9,7 @@
 // translated through assets/i18n.js (generated from i18n/<locale>/_scripts.json).
 import { M } from './messages.js'
 import { resolveLocale, t as translate } from './i18n.js'
+import { track } from './analytics.js'
 const locale = resolveLocale(document.documentElement.lang)
 const t = (message, params) => translate(locale, message, params)
 
@@ -90,6 +91,7 @@ form.addEventListener('submit', async event => {
     const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...collect(), id: requestId(), form_token: field('form_token').value, pc_hp: field('pc_hp').value }) })
     const body = await response.json().catch(() => ({}))
     if (response.ok) {
+      track('lead_sent', { path: 'form' })
       storage.clear()
       const done = document.createElement('div')
       done.className = 'request-done'
@@ -118,7 +120,11 @@ form.addEventListener('submit', async event => {
 })
 
 let saveTimer
-form.addEventListener('input', () => { clearTimeout(saveTimer); saveTimer = setTimeout(() => storage.set(snapshot()), 300) })
+let started = false
+form.addEventListener('input', () => {
+  if (!started) { started = true; track('lead_started') }
+  clearTimeout(saveTimer); saveTimer = setTimeout(() => storage.set(snapshot()), 300)
+})
 
 restore(storage.get())
 // #endregion business-form

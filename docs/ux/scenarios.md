@@ -6,7 +6,7 @@
 
 | ID | Title | Feature | Persona | Traces | Status | Last audit |
 |---|---|---|---|---|---|---|
-| SCN-001 | Discover the toolkit | Discovery | P-01 | ST-01, FLW-01 | draft | pending |
+| SCN-001 | Discover the workplace and the toolkit | Discovery | P-01, P-03 | ST-01, ST-09, FLW-01, FLW-08 | draft | pending |
 | SCN-002 | Download for macOS | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-003 | Download for Windows | Downloads | P-01 | ST-02, FLW-01 | draft | pending |
 | SCN-004 | Inspect source and product boundaries | Trust | P-01 | ST-03, FLW-02 | draft | pending |
@@ -29,6 +29,8 @@
 | SCN-020 | Read the vision and choose a door | Vision | P-01, P-02 | ST-01, ST-04, ST-07, FLW-03 | draft | pending |
 | SCN-021 | See how it works, from entry to working agents | Journey | P-01, P-02 | ST-01, ST-04, ST-06, FLW-05 | draft | pending |
 | SCN-022 | Let a coding agent ask and send the request | Commercial | P-02 | ST-07, FLW-06 | draft | pending |
+| SCN-023 | Understand the shift to an agentic organization | Story | P-03, P-02, P-04 | ST-09, FLW-08 | draft | pending |
+| SCN-024 | Choose a door: founder, investor, engineer or solo founder | Doors | P-01, P-02, P-03, P-04 | ST-01, ST-07, ST-09, ST-10, FLW-08 | draft | pending |
 
 ## Personas
 
@@ -36,23 +38,25 @@ See [foundation](foundation.md).
 
 ## Scenarios
 
-### SCN-001: Discover the toolkit
-- **Persona:** P-01
+### SCN-001: Discover the workplace and the toolkit
+- **Persona:** P-01, P-03
 - **Feature:** Discovery
-- **Traces:** ST-01, FLW-01
+- **Traces:** ST-01, ST-09, FLW-01, FLW-08
 - **Entry point:** /
 - **Preconditions:** none
 - **Steps:**
-  1. Read the teams headline and its one subline (since 2026-10-14, operator D1: Fabric is the home for your projects and their agents; Switchboard, Dashboards, Observatory and Inbox work with it and on their own; one command sets it all up today) → the agent workplace and independent tools are explained in text above the fold; directly under the hero the home video (#video, SCN-021) explains what it is, who it is for and how it works in about ninety seconds when asked; How it works (#how, SCN-021) shows the six steps from entry to an organization with their state; the product directory (since SITE-045) shows Fabric first as the home, then the four tools that work with Fabric and on their own, each with its availability and the journey step it serves; the public word stays "the tools" / IN THE TOOLKIT, never "modules" (D2).
-  2. Follow the primary For you, free → /start/ (SCN-013); the secondary For your organization → /business/ (SCN-014).
-  3. Follow Set up in the header (every page since SITE-045, 2026-10-14; was Get the tools → #products) → /start/#setup, the one command and the copy-prompt (SCN-013); the For you card on / carries the same command with a Copy button, so a visitor can start without leaving /; each tool's page carries its own download (SCN-002).
-- **Expected result:** Product roles and available downloads are clear.
-- **Alt paths:** returning visitors can open the product or download anchor directly; keyboard and narrow screens expose the same actions.
-- **UI elements:** Navigation (one row at phone width, scrolling sideways when longer than the screen, SITE-039), the home video and its folded transcript, work cycle, product directory, For you, free, For your organization, the For you card's setup command with Copy, Set up
+  1. Read the header (kept as it is, SITE-049 D2: eyebrow, H1 «The agent-agnostic operating system for AI-native teams») and its subline, which states the promise: the workplace where agents run an organization's processes and people steer them.
+  2. Directly under the hero the home video (#video, SCN-021) tells the whole story in about ninety seconds when asked.
+  3. Scroll the story (SCN-023): the problem, the shift, Fabric managing the process, one system, agents at work, from a team to an organization; each claim about today carries AVAILABLE NOW, PREVIEW or DIRECTION.
+  4. Choose a door (SCN-024): the hero's «For your organization» → /business/ (SCN-014), «For you, free» → /start/ (SCN-013), or one of the four doors further down.
+  5. The tools section (#products) lists Fabric first as the home, then the four tools that work with Fabric and on their own, each with its current release; Set up in the header leads to /start/#setup.
+- **Expected result:** In the first screen the visitor knows what PassionCode is for and whom it serves; after the story they can say what an agentic organization is and what runs today.
+- **Alt paths:** returning visitors open an anchor directly; keyboard and narrow screens expose the same actions; without JavaScript every section and link is present.
+- **UI elements:** navigation, hero (kept), video, the story sections, the four doors, product directory, Set up
 - **States covered:** success, error; static content has no application loading or empty state.
 - **Errors & recovery:** Missing network: browser error; reload.
 - **Status:** draft
-- **Coverage:** index.html; browser evidence recorded in HANDOFF.
+- **Coverage:** index.html; browser evidence in the task record.
 - **Product:** unobserved
 
 ### SCN-007: Understand the work cycle and Fabric
@@ -484,3 +488,46 @@ rather than replaces, the browser review recorded above.
 - **Status:** draft
 - **Coverage:** business/index.html (#agent-request), business/agent-request.txt and its language copies (written by `npm run locales`), assets/site.js (prompt copy), worker/index.js (`/api/leads/token`, `?dry_run=1`), worker/leads.js; scripts/check-worker.mjs (valid agent request, missing email, oversized body, duplicate key, rate limit, dry run, token), scripts/locales.test.mjs (the plain text equals the page's prompt).
 - **Product:** unobserved
+
+### SCN-023: Understand the shift to an agentic organization
+- **Persona:** P-03, P-02, P-04
+- **Feature:** Story
+- **Traces:** ST-09, FLW-08
+- **Entry point:** / after the video (sections 01 to 06), the header's Vision (/vision/), /business/
+- **Preconditions:** none
+- **Steps:**
+  1. 01 / THE PROBLEM → three cards: the person stays the bottleneck however many assistants surround them; agents' output is reconciled in meetings; everyone builds agents their own way, with no record and keys everywhere; one line of market evidence with its sources.
+  2. 02 / THE SHIFT → the old process and the agentic one side by side; people in three roles (direction, control, expertise); running the system takes from zero to a few people.
+  3. 03 / FABRIC MANAGES THE PROCESS → the board as the agents' task tracker; five duties (keeps the board, routes, assigns, sets priorities, orders releases) and the entry point for management, each labelled AVAILABLE NOW, PREVIEW or DIRECTION.
+  4. 04 / ONE SYSTEM → four cards: agents from templates and one contract; keys in one vault with isolation per organization and person; every task, run and cost on the record; a dashboard for every role.
+  5. 05 / AGENTS AT WORK → a diagram of the roles around Fabric's board and the data room, and three loops in one line each (a user's problem becomes a release; market data becomes a hypothesis and an experiment; content goes out in every language).
+  6. 06 / FROM A TEAM TO AN ORGANIZATION → four steps: one machine (free, today), the organization's own device, cloned to the next team or company, scaled with PassionCode running the administration; the last two are DIRECTION.
+- **Expected result:** The visitor can explain why assistants on every desk do not make a company faster, what runs an agentic organization, what people do in it, and which parts work today.
+- **Alt paths:** the diagram is an inline SVG with a text alternative listing every role and arrow; at 390 px cards stack in one column and the diagram becomes a vertical list; reduced motion shows everything static; without JavaScript everything is present.
+- **UI elements:** section headings with numbers, cards, status labels, the side-by-side comparison, the diagram, the four-step path, links to /fabric/ and /business/
+- **States covered:** static populated; diagram failed to render (the text alternative carries it).
+- **Errors & recovery:** none beyond the page's; no form.
+- **Status:** draft
+- **Coverage:** index.html (#problem, #shift, #fabric, #system, #agents, #grow); /vision/
+- **Product:** unobserved
+
+### SCN-024: Choose a door: founder, investor, engineer or solo founder
+- **Persona:** P-01, P-02, P-03, P-04
+- **Feature:** Doors
+- **Traces:** ST-01, ST-07, ST-09, ST-10, FLW-08
+- **Entry point:** / section 07 (#doors); the hero's two buttons are the short form of the first and fourth doors
+- **Preconditions:** none
+- **Steps:**
+  1. Founders and executives → «Bring your organization» → /business/ (SCN-014, SCN-022).
+  2. Investors → «For investors» → /#investors (the thesis in one paragraph, what runs today, the founders, commercial@passioncode.ai); no figures or terms (facts *investors note*).
+  3. Engineers → «Read the source» → GitHub, and «Set up» → /start/#setup.
+  4. Solo founders → «Start free» → /start/ (SCN-013).
+- **Expected result:** Each reader reaches their next step in one click and knows what happens after it.
+- **Alt paths:** keyboard reaches every door in order; at 390 px doors stack; external links say so.
+- **UI elements:** four door cards, each with one line and one action
+- **States covered:** static populated.
+- **Errors & recovery:** none.
+- **Status:** draft
+- **Coverage:** index.html (#doors, #investors)
+- **Product:** unobserved
+
