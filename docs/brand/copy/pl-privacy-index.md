@@ -50,7 +50,7 @@ INFORMACJA O PRYWATNOŚCI · WERSJA 2026-10-11
 
 # Informacja o prywatności
 
-passioncode.ai nie używa analityki, trackerów reklamowych ani plików cookie. Jedyne dane osobowe, jakie zbiera, to te, które wysyłasz w zapytaniu ze strony /pl/business/, przez jej formularz albo przez swojego agenta kodującego.
+passioncode.ai nie ma trackerów reklamowych ani plików cookie i nie zapisuje niczego na Twoim urządzeniu na potrzeby statystyk. Liczy wyświetlenia stron i kliknięcia, nie identyfikując Cię (niżej), a jedyne dane osobowe, jakie zbiera, to te, które wysyłasz w zgłoszeniu ze strony /pl/business/, przez jej formularz albo przez swojego agenta kodującego.
 
 Ta informacja jest publikowana także w innych językach. Jeśli tłumaczenie różni się od tej wersji angielskiej, rozstrzygająca jest wersja angielska.
 
@@ -85,6 +85,12 @@ Kopia w Cloudflare jest usuwana 30 dni po dotarciu zgłoszenia do naszego backen
 ## Twoje prawa
 
 Możesz zażądać kopii swoich danych, ich sprostowania lub usunięcia, ograniczenia przetwarzania albo wnieść sprzeciw wobec ich wykorzystania, pisząc na commercial@passioncode.ai z adresu, którego użyto w zgłoszeniu. Możesz też złożyć skargę do organu ochrony danych; w Polsce jest to Prezes Urzędu Ochrony Danych Osobowych (UODO).
+
+## Statystyki strony
+
+Aby wiedzieć, które strony i przyciski pomagają odwiedzającym, strona liczy wyświetlenia stron, kliknięcia w główne przyciski, jak daleko obejrzano film na stronie głównej, skopiowania polecenia instalacji oraz to, czy formularz zgłoszenia został rozpoczęty i wysłany. Każde zdarzenie zawiera tylko stałe słowa (strona, sekcja, przycisk) i język strony; nigdy tego, co wpisujesz, adresu strony, z której przychodzisz, Twojego adresu ani identyfikatora Twojego urządzenia.
+
+Własny serwer strony tworzy numer odwiedzającego na dany dzień z Twojego adresu IP, nazwy przeglądarki i losowej wartości, która zmienia się codziennie i jest usuwana następnego dnia, więc tego samego numeru nie da się utworzyć ponownie ani powiązać między dniami; Twój adres IP i nazwa przeglądarki nie są przekazywane dalej. Liczniki trafiają do statystyk prowadzonych przez PassionCode.ai pod adresem analytics.passioncode.ai. Podstawą jest nasz prawnie uzasadniony interes w ulepszaniu strony. Jeśli Twoja przeglądarka wysyła Do Not Track lub Global Privacy Control, nic nie jest liczone.
 
 ## W Twojej przeglądarce
 

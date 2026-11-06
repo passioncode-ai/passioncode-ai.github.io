@@ -50,7 +50,7 @@ AVISO DE PRIVACIDADE · VERSÃO 2026-10-11
 
 # Aviso de privacidade
 
-O passioncode.ai não tem analytics, rastreadores de publicidade nem cookies. Os únicos dados pessoais que ele coleta são os que você envia numa solicitação a partir de /pt-br/business/, pelo formulário ou pelo seu agente de programação.
+O passioncode.ai não tem rastreadores de publicidade nem cookies e não grava nada no seu dispositivo para análise. Ele conta visualizações de página e cliques sem identificar você (abaixo), e os únicos dados pessoais que coleta são os que você envia em uma solicitação a partir de /pt-br/business/, pelo formulário ou pelo seu agente de programação.
 
 Este aviso também é publicado em outros idiomas. Se uma tradução diferir desta versão em inglês, prevalece a versão em inglês.
 
@@ -85,6 +85,12 @@ A cópia no Cloudflare é excluída 30 dias depois de chegar ao nosso backend; u
 ## Seus direitos
 
 Você pode pedir uma cópia dos seus dados, a correção ou a exclusão deles, uma restrição de uso, ou se opor ao uso, escrevendo para commercial@passioncode.ai a partir do endereço que você usou. Você também pode apresentar uma reclamação a uma autoridade de proteção de dados; na Polônia, é o Presidente do Escritório de Proteção de Dados Pessoais (UODO).
+
+## Análise do site
+
+Para saber quais páginas e botões ajudam os visitantes, o site conta visualizações de página, cliques nos botões principais, até onde o vídeo da página inicial é assistido, cópias do comando de instalação e se o formulário de solicitação foi iniciado e enviado. Cada evento leva apenas palavras fixas (a página, uma seção, um botão) e o idioma da página; nunca o que você digita, a URL de onde você veio, o seu endereço ou um identificador do seu dispositivo.
+
+O próprio servidor do site gera um número de visitante do dia a partir do seu endereço IP, do nome do seu navegador e de um valor aleatório que muda todo dia e é apagado no dia seguinte, de modo que o mesmo número não pode ser gerado de novo nem ligado entre dias; o seu endereço IP e o nome do navegador não são repassados. As contagens vão para a análise operada pela PassionCode.ai em analytics.passioncode.ai. A base é o nosso legítimo interesse em melhorar o site. Se o seu navegador enviar Do Not Track ou Global Privacy Control, nada é contado.
 
 ## No seu navegador
 

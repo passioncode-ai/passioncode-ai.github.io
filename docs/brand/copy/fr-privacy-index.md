@@ -50,7 +50,7 @@ POLITIQUE DE CONFIDENTIALITÉ · VERSION 2026-10-11
 
 # Politique de confidentialité
 
-passioncode.ai n’utilise ni outil d’analyse, ni traceur publicitaire, ni cookie. Les seules données personnelles qu’il collecte sont celles que vous envoyez dans une demande depuis /business/, par son formulaire ou par votre agent de code.
+passioncode.ai n’a ni traceur publicitaire ni cookie, et n’écrit rien sur votre appareil pour ses statistiques. Le site compte les pages vues et les clics sans vous identifier (voir ci-dessous), et les seules données personnelles qu’il collecte sont celles que vous envoyez dans une demande depuis /business/, par son formulaire ou par votre agent de code.
 
 Cette politique est aussi publiée dans d’autres langues. Si une traduction diffère de cette version anglaise, la version anglaise prévaut.
 
@@ -85,6 +85,12 @@ La copie chez Cloudflare est supprimée 30 jours après son arrivée sur notre b
 ## Vos droits
 
 Vous pouvez demander une copie de vos données, leur rectification ou leur effacement, une limitation du traitement, ou vous opposer à leur utilisation, en écrivant à commercial@passioncode.ai depuis l’adresse que vous avez utilisée. Vous pouvez aussi introduire une réclamation auprès d’une autorité de protection des données ; en Pologne, il s’agit du président de l’Office de protection des données personnelles (UODO).
+
+## Statistiques du site
+
+Pour savoir quelles pages et quels boutons aident les visiteurs, le site compte les pages vues, les clics sur ses principaux boutons, la part de la vidéo d’accueil regardée, les copies de la commande d’installation et si le formulaire de demande a été commencé puis envoyé. Chaque événement ne contient que des mots fixes (la page, une section, un bouton) et la langue de la page ; jamais ce que vous saisissez, l’adresse d’où vous venez, votre adresse ou un identifiant de votre appareil.
+
+Le serveur du site calcule un numéro de visiteur du jour à partir de votre adresse IP, du nom de votre navigateur et d’une valeur aléatoire qui change chaque jour et est supprimée le lendemain : le même numéro ne peut donc pas être recalculé ni relié d’un jour à l’autre ; votre adresse IP et le nom de votre navigateur ne sont pas transmis. Les comptages vont à un service de statistiques géré par PassionCode.ai sur analytics.passioncode.ai. La base légale est notre intérêt légitime à améliorer le site. Si votre navigateur envoie Do Not Track ou Global Privacy Control, rien n’est compté.
 
 ## Dans votre navigateur
 

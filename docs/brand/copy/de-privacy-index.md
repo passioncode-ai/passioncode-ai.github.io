@@ -50,7 +50,7 @@ DATENSCHUTZHINWEIS · VERSION 2026-10-11
 
 # Datenschutzhinweis
 
-passioncode.ai nutzt keine Analyse-Tools, keine Werbe-Tracker und keine Cookies. Die einzigen personenbezogenen Daten, die erhoben werden, sind das, was du in einer Anfrage sendest, von /business/ aus, über das Formular oder über deinen Coding-Agenten.
+passioncode.ai hat keine Werbetracker und keine Cookies und schreibt für Analysen nichts auf dein Gerät. Die Seite zählt Seitenaufrufe und Klicks, ohne dich zu identifizieren (siehe unten), und die einzigen personenbezogenen Daten, die sie erhebt, sind die, die du in einer Anfrage sendest, und zwar von /business/ aus, über das Formular oder über deinen Coding-Agenten.
 
 Dieser Hinweis wird auch in anderen Sprachen veröffentlicht. Weicht eine Übersetzung von dieser englischen Fassung ab, gilt die englische Fassung.
 
@@ -85,6 +85,12 @@ Die Kopie bei Cloudflare wird 30 Tage nach ihrem Eingang in unserem Backend gel�
 ## Deine Rechte
 
 Du kannst Auskunft über deine Daten sowie deren Berichtigung oder Löschung verlangen, eine Einschränkung der Verarbeitung fordern oder der Verarbeitung widersprechen, indem du schreibst an commercial@passioncode.ai von der Adresse, die du verwendet hast. Du kannst dich außerdem bei einer Datenschutzbehörde beschweren; in Polen ist das der Präsident des Amtes für den Schutz personenbezogener Daten (UODO).
+
+## Website-Analyse
+
+Um zu sehen, welche Seiten und Schaltflächen Besuchern helfen, zählt die Website Seitenaufrufe, Klicks auf ihre wichtigsten Schaltflächen, wie weit das Video auf der Startseite abgespielt wird, Kopien des Einrichtungsbefehls und ob das Anfrageformular begonnen und gesendet wurde. Jedes Ereignis enthält nur feste Wörter (die Seite, einen Abschnitt, eine Schaltfläche) und die Sprache der Seite; niemals, was du eingibst, eine URL, von der du kommst, deine Adresse oder eine Kennung deines Geräts.
+
+Der eigene Server der Website bildet eine Besucher-des-Tages-Nummer aus deiner IP-Adresse, dem Namen deines Browsers und einem Zufallswert, der sich jeden Tag ändert und am nächsten Tag gelöscht wird, sodass dieselbe Nummer weder erneut gebildet noch über Tage verknüpft werden kann; deine IP-Adresse und dein Browsername werden nicht weitergegeben. Die Zählungen gehen an eine Analyse, die PassionCode.ai unter analytics.passioncode.ai betreibt. Rechtsgrundlage ist unser berechtigtes Interesse, die Website zu verbessern. Sendet dein Browser Do Not Track oder Global Privacy Control, wird nichts gezählt.
 
 ## In deinem Browser
 
