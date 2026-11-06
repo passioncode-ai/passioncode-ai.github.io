@@ -129,6 +129,12 @@
     "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise переводит работу организации на ИИ-агентов: машины подключены, агенты развёрнуты и передают друг другу работу, ключи моделей остаются на каждой машине, видно, сколько стоил каждый агент и какой результат он дал; есть администрирование и собственные подписанные сборки. Данные остаются на ваших машинах или в вашем облаке. Подходит и одному человеку, и организации больше чем на 1000 человек.",
     "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "ИИ-агенты на машинах вашей организации: они связаны между собой, их работа на виду, инструменты с открытым кодом, а данные остаются на ваших машинах или в вашем облаке. Подходит и одному человеку, и организации больше чем на 1000 человек.",
     "Designed for one person to more than 1,000 · the estimate comes before any contract": "Для одного человека и для организаций больше 1000 человек · оценка до подписания договора",
-    "Try it on one machine first: setup, then doctor": "Сначала попробуйте на одной машине: setup, затем doctor"
+    "Try it on one machine first: setup, then doctor": "Сначала попробуйте на одной машине: setup, затем doctor",
+    "Access by level": "Доступ по уровням",
+    "Owners, administrators and project architects command the agents; a user’s request goes through approval.": "Владельцы, администраторы и архитекторы проектов командуют агентами; запрос пользователя проходит через одобрение.",
+    "A base set of agents from day one": "Базовый набор агентов с первого дня",
+    "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "Агент-администратор организации, её датарум и оценка процессов, установленные из шаблонов.",
+    "Administration by PassionCode, on request": "Администрирование силами PassionCode, по запросу",
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "Мы можем вести администрирование вашей системы удалённо; мы видим настройки и расходы, но не ваше содержимое, пока вы не разрешите."
   }
 }

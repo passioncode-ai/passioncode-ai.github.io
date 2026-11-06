@@ -94,6 +94,12 @@ Analytique d’activité et d’usageCe qui a tourné, dans quel processus, ce q
 
 AdministrationCe que chaque agent peut faire et à quels comptes et données il peut accéder, défini une fois pour toute l’organisation.
 
+Accès par niveauLes propriétaires, les administrateurs et les architectes de projet commandent les agents ; la demande d’un utilisateur passe par une validation.
+
+Un socle d’agents dès le premier jourL’agent administrateur de l’organisation, sa data room et son évaluation des processus, installés à partir de modèles.
+
+Administration par PassionCode, sur demandeNous pouvons assurer l’administration de votre système à distance ; nous voyons la configuration et les dépenses, pas votre contenu, sauf si vous l’acceptez.
+
 Builds sur mesure, signés par nousVotre propre build des outils, signé par PassionCode.ai.
 
 Vos données restent sur vos machines ou dans votre propre cloud. Lire la vision

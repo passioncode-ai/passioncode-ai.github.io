@@ -94,6 +94,12 @@ Aktivitäts- und NutzungsanalyticsWas lief, in welchem Prozess, was es verbrauch
 
 AdministrationWas jeder Agent darf und auf welche Accounts und Daten er zugreifen darf – einmal für die ganze Organisation festgelegt.
 
+Zugriff nach EbeneInhaber, Administratoren und Projektarchitekten steuern die Agenten; die Anfrage eines Nutzers läuft über eine Freigabe.
+
+Ein Basis-Set an Agenten ab dem ersten TagDer Administrator-Agent der Organisation, ihr Datenraum und ihre Prozessbewertung, aus Vorlagen installiert.
+
+Administration durch PassionCode, auf AnfrageWir können die Administration deines Systems aus der Ferne übernehmen; wir sehen Konfiguration und Ausgaben, nicht deine Inhalte, es sei denn, du stimmst zu.
+
 Eigene Builds, von uns signiertDein eigener Build der Tools, signiert von PassionCode.ai.
 
 Deine Daten bleiben auf deinen Rechnern oder in deiner eigenen Cloud. Lies die Vision

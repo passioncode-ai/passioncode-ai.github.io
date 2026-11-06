@@ -128,6 +128,12 @@
     "PassionCode for Enterprise makes an organization AI-native: machines onboarded, agents rolled out and routed between them, model keys kept on each machine, what each agent cost and what it delivered, administration and custom signed builds. Your data stays on your machines or your own cloud. Designed for one person to more than 1,000.": "PassionCode for Enterprise は、組織をAIネイティブにします。マシンの組織への登録、エージェントの展開とマシン間での受け渡し、各マシンに残るモデルキー、エージェントごとのコストと成果、管理、署名付きカスタムビルドを提供します。データはお客様のマシンまたは自社クラウドに置かれます。1人から1000人を超える規模まで想定しています。",
     "Agents on your organization’s machines, connected and visible, on open-source tools, with your data on your machines or your own cloud. Designed for one person to more than 1,000.": "組織のマシン上のエージェントを、つなぎ、見える状態にします。オープンソースのツールで、データはお客様のマシンまたは自社クラウドに置かれます。1人から1000人を超える規模まで想定しています。",
     "Designed for one person to more than 1,000 · the estimate comes before any contract": "1人から1000人を超える規模まで想定 · 見積もりは契約の前にお出しします",
-    "Try it on one machine first: setup, then doctor": "まずは1台のマシンで試せます：setup、次に doctor"
+    "Try it on one machine first: setup, then doctor": "まずは1台のマシンで試せます：setup、次に doctor",
+    "Access by level": "レベルごとのアクセス",
+    "Owners, administrators and project architects command the agents; a user’s request goes through approval.": "所有者、管理者、プロジェクトアーキテクトがエージェントに指示し、ユーザーの依頼は承認を経ます。",
+    "A base set of agents from day one": "初日から基本のエージェントセット",
+    "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "組織の管理者エージェント、データルーム、プロセス評価を、テンプレートからインストールします。",
+    "Administration by PassionCode, on request": "ご依頼に応じて PassionCode が管理",
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "システムの管理をリモートで行えます。設定と支出は確認しますが、ご同意がない限りコンテンツは確認しません。"
   }
 }
