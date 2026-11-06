@@ -35,29 +35,29 @@ Priority: must. As P-02, say in a few words what agents should do and where to r
 ## ST-08 — Contribute
 Priority: should. As P-01, find the repository, its gate and the pull-request route (CLA by opening the PR) without a private link.
 
-## P-03 — Founder or executive of a company moving to agents
+## P-03: Founder or executive of a company moving to agents
 Owns the company's results and its way of working, from a startup to a group of companies. Has seen AI assistants
 added to every desk without the company getting faster. Wants to understand, in a few minutes, what an AI-native
 organization is, what runs it, what people still do, how it is secured, and what the first step costs in time and
 risk.
 
-## P-04 — Investor
+## P-04: Investor
 Judges the thesis, the market timing, what is real today and who builds it, from the site alone before a call. Needs
 the problem, the shift, the product at the centre, what runs today against what is direction, and a way to reach the
 founders; never figures the founders have not published.
 
-## JTBD-03 — Understand the agentic organization
+## JTBD-03: Understand the agentic organization
 When I see that adding assistants to people does not speed my company up, I want to see how a company run by agents
 works, who manages the process and what people do in it, so I can decide whether to move my company there.
 
-## JTBD-04 — Judge the company
+## JTBD-04: Judge the company
 When I consider backing PassionCode, I want the thesis, the evidence of what runs today and the founders' contact on
 one page, so I can decide whether to talk.
 
-## ST-09 — Understand the shift
+## ST-09: Understand the shift
 Priority: must. As P-03 (and P-02, P-04), read the problem, the shift, Fabric as the process manager, the one system,
 agents at work and the path from a team to an organization, each with what runs today and what is direction.
-## ST-10 — Reach the founders as an investor
+## ST-10: Reach the founders as an investor
 Priority: should. As P-04, find the thesis, what runs today and the founders' contact, with no figures or terms
 the founders have not published.
 
