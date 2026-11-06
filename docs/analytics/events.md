@@ -24,13 +24,13 @@ passioncode.ai, `sandbox` elsewhere) and `platform: web`.
 
 | Event | Status | Properties and values | Sent from |
 | --- | --- | --- | --- |
-| `page_view` | live from SITE-049 | `page`: home, vision, start, business, business-thanks, privacy, switchboard, switchboard-agents, fabric, fabric-agents, inbox, dashboards, observatory, design-system, not-found, other | every page, on load |
-| `cta_click` | live from SITE-049 | `page` as above; `location`: header, hero, video, problem, shift, fabric, system, agents, grow, doors, products, source, faq, about, investors, footer, start, business, request, other; `target`: business, start, setup, github, investors, mail, fabric, products, vision, switchboard, dashboards, observatory, inbox, x, download, other | links and buttons carrying `data-cta` |
-| `video_progress` | live from SITE-049 | `page`; `percent`: "0" (play), "25", "50", "100" (strings: growth's `where` reads string properties) | the home video |
-| `command_copy` | live from SITE-049 | `page` | the Copy button of the setup command (home doors, /start/) |
-| `lead_started` | live from SITE-049 | `page` | the first input in the /business/ request form, once per page load |
-| `lead_sent` | live from SITE-049 | `page`; `path`: agent, form | the /business/ form after a 201 or 200 answer; the agent prompt's own requests are counted by the Worker's intake, not here |
-| `lang_switch` | live from SITE-049 | `page`; `to`: one of the site's locales or `other` | the header's language switch |
+| `page_view` | live from SITE-049 | `page`: home, vision, start, business, business-thanks, privacy, switchboard, switchboard-agents, fabric, fabric-agents, inbox, dashboards, observatory, design-system, not-found, other | every page, on load: `assets/analytics.js:42` (loaded by `assets/site.js`) |
+| `cta_click` | live from SITE-049 | `page` as above; `location`: header, hero, video, problem, shift, fabric, system, agents, grow, doors, products, source, faq, about, investors, footer, start, business, request, other; `target`: business, start, setup, github, investors, mail, fabric, products, vision, switchboard, dashboards, observatory, inbox, x, download, other | links and buttons carrying `data-cta` and `data-cta-location`: `assets/analytics.js:48` |
+| `video_progress` | live from SITE-049 | `page`; `percent`: "0" (play), "25", "50", "100" (strings: growth's `where` reads string properties) | the home video (`#video video`): `assets/analytics.js:55` |
+| `command_copy` | live from SITE-049 | `page` | every Copy button (`.copy-button`, `.copy-prompt`): `assets/analytics.js:49` |
+| `lead_started` | live from SITE-049 | `page` | the first input in the /business/ request form, once per page load: `assets/business.js:125` |
+| `lead_sent` | live from SITE-049 | `page`; `path`: agent, form | the /business/ form after a 201 or 200 answer: `assets/business.js:94`; the agent prompt's own requests are counted by the Worker's intake, not here |
+| `lang_switch` | live from SITE-049 | `page`; `to`: one of the site's locales or `other` | the header's language switch (`.lang-switch a[hreflang]`): `assets/analytics.js:50` |
 
 ## Funnels (FLW-08)
 

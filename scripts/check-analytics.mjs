@@ -131,3 +131,14 @@ test('the Worker routes /api/e: POST only, same origin, 204', async () => {
   const foreign = await worker.fetch(req({ lang: 'en', events: [] }, { origin: 'https://evil.example' }), e, ctx)
   assert.equal(foreign.status, 204)
 })
+
+test('the page names every page of the site the way the Worker accepts it', async () => {
+  const { pageOf } = await import('../assets/analytics.js')
+  const cases = { '/': 'home', '/ru/': 'home', '/vision/': 'vision', '/de/business/': 'business', '/business/thanks/': 'business-thanks',
+    '/zh-hans/fabric/agents/': 'fabric-agents', '/switchboard/agents/': 'switchboard-agents', '/pt-br/start/': 'start',
+    '/design-system/': 'design-system', '/secret/path/': 'other', '/fabric/download/macos': 'other' }
+  for (const [path, id] of Object.entries(cases)) {
+    assert.equal(pageOf(path), id, path)
+    assert.ok(EVENTS.page_view.page.includes(id), `${id} is a value the Worker accepts`)
+  }
+})

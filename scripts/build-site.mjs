@@ -13,6 +13,7 @@ const publicFiles = [
   ...LOCALES.map(locale => localizedFile(PROMPT_FILE, locale)),
   'llms.txt',
   'assets/site.js',
+  'assets/analytics.js',
   'assets/business.js',
   'assets/estimate.js',
   'assets/lead-options.js',
