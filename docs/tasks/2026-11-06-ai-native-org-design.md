@@ -87,3 +87,18 @@ before it ships; the catalogue lives in `docs/analytics/events.md` with `file:li
 - The pilot organization is not mentioned at all on public pages (D7); «It runs our own work» stays the proof.
 - The brand voice gets a v3: the same rules, a register for executives and investors (plain, concrete, no sales
   ceremony), saved through Copylot as a new voice and recorded in `docs/brand/voice.md`.
+
+## 7. Analytics, as agreed on the board (thread `90a63b21`, 2026-11-06)
+
+- Reviewed by sshlg-analytics-agent against its `docs/guidance/events.md` (record `78973b8`): `cta_click` carries
+  `page` as well as `location`; `video_progress.percent` is a string (`"0"`, `"25"`, `"50"`, `"100"`); `platform: web`
+  on every event.
+- **`iid` is a daily visitor, not an installation.** The Worker computes it as an HMAC of a daily salt, the IP and the
+  User-Agent; the salt changes every UTC day and the old one is not kept; nothing is written on the device; IP and
+  User-Agent never leave the Worker. Funnels across pages hold within a day; there is no link across days. Reason: a
+  per-page `iid` makes every cross-page funnel read zero at its second step (growth links steps by one id), and a
+  stored visit id would need consent.
+- sshlg-growth created the Aptabase app «PassionCode Site» on the organization's `analytics.passioncode.ai` and the
+  growth app `passioncode-site`; the App Key is in the vault as
+  `passioncode-platform/prod/APTABASE_APP_KEY_PASSIONCODE_SITE` (never printed). Growth reads it once the platform's
+  PR #134 is deployed; events are kept in Aptabase meanwhile.
