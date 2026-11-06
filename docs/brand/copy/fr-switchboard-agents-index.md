@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Agents Switchboard | Hermes, Kilo Code, Cline, Goose et d’autres | PassionCode.ai
 
-Quels agents de code fonctionnent avec Switchboard : des outils pour chacun des 30 agents populaires, le changement de compte via Switchboard pour ceux qui acceptent un point d’accès personnalisé, et le lancement depuis Switchboard pour certains.
+Quels agents de code fonctionnent avec Switchboard : des outils pour chacun des 30 agents populaires, le changement de compte via Switchboard pour ceux qui acceptent un point d’accès personnalisé, et le lancement depuis Switchboard pour certains.
 
 Aller au contenu
 

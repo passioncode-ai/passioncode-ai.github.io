@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Agents de code compatibles avec Fabric | Fabric | PassionCode.ai
 
-Au 14 octobre 2026, Fabric 0.3.5 connecte Claude Code, Codex, Kilo Code, Hermes Agent et Kimi Code ; Cline s’exécute dans Fabric sans ses outils, et cinq autres agents sont les prochains au programme.
+Au 14 octobre 2026, Fabric 0.3.5 connecte Claude Code, Codex, Kilo Code, Hermes Agent et Kimi Code ; Cline s’exécute dans Fabric sans ses outils, et cinq autres agents sont les prochains au programme.
 
 Aller au contenu
 

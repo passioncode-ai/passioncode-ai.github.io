@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode for Enterprise | Espace de travail pour agents IA à l’échelle des organisations | PassionCode.ai
 
-PassionCode for Enterprise rend une organisation AI-native : machines raccordées, agents déployés et acheminés entre elles, clés de modèles conservées sur chaque machine, ce que chaque agent a coûté et ce qu’il a apporté, administration et builds signés sur mesure. Vos données restent sur vos machines ou dans votre propre cloud. Conçu pour une personne comme pour plus de 1 000.
+PassionCode for Enterprise rend une organisation AI-native : machines raccordées, agents déployés et acheminés entre elles, clés de modèles conservées sur chaque machine, ce que chaque agent a coûté et ce qu’il a apporté, administration et builds signés sur mesure. Vos données restent sur vos machines ou dans votre propre cloud. Conçu pour une personne comme pour plus de 1 000.
 
 Aller au contenu
 
