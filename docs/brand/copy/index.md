@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 PassionCode.ai | The agent-agnostic operating system for AI-native teams
 
-Build a workplace where agents do the work, and you see all of it. Fabric is the home for your projects and their agents; your coding agent creates new agents and adapts the ones you have; Switchboard, Fabric Dashboards and Project Observatory run them and show what they did. Open source and free.
+The workplace where agents run your company’s processes and people steer them. Fabric manages your agents’ work on one board; Switchboard, Fabric Dashboards, Project Observatory and Fabric Inbox work with it. Open source under the GNU AGPL-3.0, free for personal use.
 
 Skip to content
 
@@ -50,17 +50,17 @@ From vibe coding to passion coding
 
 # The agent-agnostic operating system for AI-native teams
 
-Build a workplace where agents do the work, and you see all of it
+The workplace where agents run your company’s processes, and people steer them
 
 Fabric is the home for your projects and their agents. Switchboard, Dashboards, Observatory and Inbox work with it, and on their own. One command sets it all up today
+
+For your organization
+
+→
 
 For you, free
 
 →
-
-For your organization
-
-↗
 
 Open source under AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.33 · Dashboards 0.7.10 · Observatory 0.24.5
 
@@ -84,127 +84,297 @@ Read the transcript
 
 Your agent works for a week. Then it falls apart. The wrong account. It forgets what it learned. And nobody can say what it changed. PassionCode.ai is the agent-agnostic operating system for AI-native teams: a workplace where agents do the work, and you see all of it. It runs on your machines, as open source, with the agents and subscriptions you already have. Their work leaves a record you can open. For you, one command sets up Fabric, the tools around it and the skills, and your coding agent can run it for you. Fabric, in preview, is the home for your projects and their agents. Your coding agent shows its plan before it changes anything. Each tool works with Fabric, and on its own. Switchboard: each agent on the account it should, limits in view. Dashboards: state, spend and control, in one window. Observatory: what changed, with the evidence. Inbox, in preview: mail your agents answer only within your rules. Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where another stopped. For an organization, we bring agents onto your machines, connect them, and show what each one cost and what it delivered. Agents are easy to start and hard to keep. We are building what holds them together.
 
-01 / WHY
+01 / THE PROBLEM
 
-## Your agent works for a week
+## Your processes were built for people
 
-## Then it falls apart
+## More AI assistants do not change that
 
-It runs on the wrong account or hits a limit. It forgets what it learned yesterday, and nobody can say what it changed. The next agent you build starts from zero.
+Every company now gives its people AI assistants. The work still moves at the speed of the people in between.
 
-On your machines, as open sourcePassionCode.ai is a local, open-source workspace for working with AI agents, under the GNU AGPL-3.0. It runs on your own machines, with no sign-up and no lock-in.
+The person is still the bottleneckAn assistant drafts and analyzes, then hands the result back to a person. Ten assistants hand back ten results. The work waits until that person has time.
 
-With the agents you already haveClaude Code, Codex and what comes next, on the subscription you already have.
+Meetings reconcile what the assistants madeTwo people with their own assistants produce more than either can read. They meet to agree on it, and the process stays exactly as it was.
 
-A record you can openThe project board keeps decisions, tasks and releases. Observatory lists what changed, with the evidence and a next step. Every download names its version and SHA-256.
+Everyone builds their own agentsNo shared rules, no shared memory, keys pasted wherever they work, and no record of what an agent did or what it cost. It adds work instead of removing it.
 
-Read the vision: what keeps an agent working, and how one agent grows into an organization
+Most companies now experiment with agents, and few run them across a whole function (McKinsey, The State of AI, November 2025). Gartner expects over 40% of agentic AI projects to be canceled by the end of 2027 (Gartner, June 2025).
 
-02 / HOW IT WORKS
+02 / THE SHIFT
 
-## From one command
+## Agents run the process
 
-## to agents that work together
+## People steer it
 
-Six steps, in the order you take them. Each one says whether it works today, works as a preview or is where we are building.
+In an AI-native company the work moves between agents, not between people. People do what only people can.
+
+TODAY
+
+### Work moves between people
+
+A person takes a task, holds it and hands it on
+
+Meetings reconcile what everyone produced
+
+Each person's assistants, each person's rules
+
+More work means more people
+
+AI-NATIVE
+
+### Work moves between agents
+
+An agent takes the task and hands it to the next agent
+
+Agents settle it on one board, with the record
+
+One system: the same rules, keys and record for every agent
+
+More work means more agents
+
+DirectionWhat to build and why: the goals, the priorities and the taste. People set it; agents carry it out.
+
+ControlApproving what needs a person: a payment, a release to real users, a message to someone outside.
+
+ExpertiseKnowing the market and the craft, and teaching the agents to do the work the way it should be done.
+
+Running the whole system takes from none to a few people.
+
+03 / FABRIC MANAGES THE PROCESS
+
+## One agent manages the others
+
+## Fabric keeps the board
+
+A person cannot follow hundreds of agent tasks across every project. Fabric does: its board is the task tracker of your agents, and the one place management talks to.
 
 01
 
-AVAILABLE NOW
+PREVIEW
 
-### Enter
+### Keeps the board
 
-terminalnpx @passioncode-ai/passioncode@latest setup
-
-One command from the PassionCode.ai launcher sets up the tools, their MCP servers and the skills, or let your coding agent run it. Fabric, an early preview, also needs Docker and the Supabase CLI.
-
-Set it up
+Every request between agents, with its owner, its deadline and its answer.
 
 02
 
 PREVIEW
 
-### Onboard
+### Routes the work
 
-agentCreate one, or adapt one built elsewhere
-
-projectOpen a folder, or create a project
-
-Fabric’s first screen offers four actions in two pairs.
-
-What Fabric does today
+Projects and their agents ask each other through the board, never around it.
 
 03
 
-AVAILABLE NOW
+PREVIEW
 
-### First agent
+### Wakes the owner
 
-newCreate a Fabric agent that drafts release notes from merged pull requests
-
-adaptAdapt this repository to Fabric
-
-Your coding agent asks its questions and shows its plan before it changes anything.
-
-Create or adapt an agent
+When nobody is at work on a request, Fabric starts the agent that owns it and hands it the context.
 
 04
 
-AVAILABLE NOW
+DIRECTION
 
-### Grow
+### Sets priorities
 
-Each agent runs on the account it should, with its dashboard and spend in one window.
-
-Fabric Dashboards
+Ranks the work across projects and orders the release queue.
 
 05
 
-AVAILABLE NOW, IN PART
-
-### Work together and watch
-
-Agents connected to Fabric share one project’s board, memory and hand-offs; Observatory shows what changed, with the evidence.
-
-Project Observatory
-
-06
-
 DIRECTION
 
-### Organization
+### Answers to management
 
-enterpriseAgents rolled out per role, and work routed between your machines
+Takes a goal from you, splits it into tasks and reports back with the evidence.
 
-The same across a team’s machines, offered on request while we build it.
+What Fabric does today
+
+04 / ONE SYSTEM
+
+## Every agent built one way
+
+## Every result on the record
+
+The chaos of agents everyone builds their own way ends when every agent shares one contract, one vault and one record.
+
+01
+
+AVAILABLE NOW, IN PART
+
+### One contract
+
+Every agent speaks one open contract and starts from the same skills, so an employee's agent works like every other and its mistakes are found the same way.
+
+02
+
+AVAILABLE NOW
+
+### Keys in one vault
+
+Agents use keys by name and never see them, and every key has an owner.
+
+03
+
+AVAILABLE NOW, IN PART
+
+### Everything on the record
+
+What changed, what each agent spent and what it delivered, in one place you can open.
+
+04
+
+AVAILABLE NOW, IN PART
+
+### A dashboard for every agent
+
+Each agent ships its own page and joins one view of what runs, what it costs and what it connects to. A view for every role is where we are building.
+
+See the tools that do this today
+
+05 / AGENTS AT WORK
+
+## What an agentic company
+
+## looks like
+
+People give goals and approvals to Fabric’s board. Agents take the work, pass it on and keep one record the whole company reads.
+
+An agentic company
+
+Owners, administrators and industry experts give goals and approvals to Fabric’s board. The board assigns work to market research, analytics and signals, support, product and release, and marketing and content agents. All of them read and write the data room: facts, metrics, releases and known issues. Assessment and optimizer agents read the whole record, and a security agent watches keys, access and new agents.
+
+People: direction, control, expertise
+
+Fabric: the board
+
+Market research
+
+Analytics, signals
+
+Support
+
+Product, release
+
+Marketing, content
+
+Data room: facts, metrics, releases
+
+Assessment and optimizer
+
+read the whole record
+
+Security watches keys,
+
+access and new agents
+
+People give direction, control and expertise
+
+Fabric’s board assigns the work
+
+Agents for market research, analytics and signals, support, product and release, marketing and content take it
+
+The data room keeps facts, metrics, releases and known issues for everyone
+
+Assessment and optimizer agents read the whole record; security watches keys, access and new agents
+
+A user’s question becomes a releaseSupport answers from what the company knows; a new complaint becomes a signal; analytics confirms it; Fabric hands the fix to the product’s agent and puts it in the release queue.
+
+The market becomes a hypothesisResearch keeps the data current; an expert reads it and writes a hypothesis; agents build the change and the experiment; the result decides.
+
+One message, every languageMarketing plans, a copy agent writes in the brand’s voice and adapts every language, a media agent makes the visuals, and a posting agent sends it out.
+
+Each of these roles runs today as its own agent in our work. Connecting all of them through one board is what Fabric is built for.
+
+06 / FROM A TEAM TO AN ORGANIZATION
+
+## Start on one machine
+
+## Grow into an organization
+
+The same system from the first agent to a company of companies.
+
+01
+
+AVAILABLE NOW · FREE
+
+### One machine
+
+terminalnpx @passioncode-ai/passioncode@latest setup
+
+One command from the PassionCode.ai launcher sets up Fabric, the tools and the skills, or let your coding agent run it; it then builds your first agents. Fabric, an early preview, also needs Docker and the Supabase CLI.
+
+Set it up
+
+02
+
+ON REQUEST
+
+### Your organization’s own device
+
+A dedicated computer or cloud for the company: separate spaces, access by level (owner, administrator, project architect, user) and a base set of agents from the first day.
 
 For your organization
 
-03 / TWO WAYS IN
+03
 
-## For you,
+DIRECTION
 
-## or for your organization
+### Clone it
 
-PERSONAL USE · FREE
+The same setup for the next team, the next office, the next company.
 
-### Your own agent workspace
+04
 
-Set up the tools with one command, then build your first agent with Claude Code or Codex. About twenty minutes.
+ON REQUEST
 
-npx @passioncode-ai/passioncode@latest setup
+### Run it with us
 
-Get started
+PassionCode can run your system’s administration remotely, so your people only steer. It sees configuration and spend, not your content, unless you agree.
+
+07 / WHERE TO START
+
+## Four ways in
+
+FOUNDERS AND EXECUTIVES
+
+### Bring your organization
+
+Tell us which processes eat your people’s time. We show what agents would take over and what the first step is.
+
+Bring your organization
 
 →
 
-ORGANIZATIONS · ENTERPRISE
+INVESTORS
 
-### An AI-native organization
+### The thesis and the team
 
-We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, with your data on your machines or in your own cloud.
+Why companies will run on agents, what runs today, and who builds it.
 
-Estimate and request
+For investors
+
+↓
+
+ENGINEERS
+
+### Read the source
+
+Every tool is open source under AGPL-3.0, with its test command and contract in the open.
+
+Read the source
+
+↗
+
+SOLO FOUNDERS · FREE
+
+### Your own agent workplace
+
+A local, open-source workspace with the agents and the subscription you already have. Set it up in one command, then build your first agents with Claude Code or Codex. About twenty minutes.
+
+npx @passioncode-ai/passioncode@latest setup
+
+Start free
 
 →
 
@@ -304,6 +474,14 @@ Where does my data go?
 
 Your work stays on your computers and your own cloud accounts. Fabric Switchboard and, since version 0.3.2, Fabric send anonymous usage counts: counts and kinds only, never names, paths or content. Turn them off in Switchboard’s About window or in Fabric’s Settings. What is sent, exactly.
 
+Does this replace my team?
+
+It changes what your people do. Agents take the work that moves between people; people set the direction, approve what needs a person and bring the expertise. What we measure is the work agents deliver, never people.
+
+Where do my company’s agents and data live?
+
+On your own machines or in your own cloud, under your accounts. PassionCode administers them only if you ask, and then sees configuration and spend, not your content, unless you agree. For your organization.
+
 ABOUT
 
 ## How we got here
@@ -332,7 +510,7 @@ Sergey Sheleg · co-founder, PassionCode
 
 ### For investors
 
-PassionCode.ai is open source under the GNU AGPL-3.0 and free for personal use. Organizations get a commercial license and our services. The two co-founders above build it. Contact: commercial@passioncode.ai
+Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact: commercial@passioncode.ai
 
 ### For contributors
 
