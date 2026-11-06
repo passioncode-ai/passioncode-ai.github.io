@@ -112,6 +112,8 @@ Any agent, on your machinesVendor-neutral, local first and open source under the
 
 Analytics, never surveillanceAnalytics are about agents and the outcomes of processes. Nothing watches people in secret.
 
+What we measure: the verified work agents deliver for each person, every month, at your quality bar. Never the people.
+
 For the changes your agents make, we recommend task-pipeline, a separate open-source skill from the sshlg-skills collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.
 
 npx sshlg-skills install

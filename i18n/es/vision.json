@@ -69,6 +69,7 @@
     "For the changes your agents make, we recommend": "Para los cambios que hacen tus agentes, recomendamos la",
     "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": ": lleva cada cambio del brief a la aceptación y no avanza hasta que se supera cada verificación.",
     "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "Los agentes conectados a Fabric comparten el tablero, la memoria y los traspasos de un proyecto, de modo que uno continúa donde se quedó el otro. Fabric es una vista previa temprana.",
-    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Configura las herramientas con un solo comando y crea el primer agente, o lleva contigo a toda una organización: PassionCode for Enterprise está en desarrollo y se ofrece bajo solicitud."
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "Configura las herramientas con un solo comando y crea el primer agente, o lleva contigo a toda una organización: PassionCode for Enterprise está en desarrollo y se ofrece bajo solicitud.",
+    "What we measure: the verified work agents deliver for each person, every month, at your quality bar. Never the people.": "Lo que medimos: el trabajo verificado que los agentes entregan por cada persona, cada mes, con tu nivel de calidad. Nunca a las personas."
   }
 }

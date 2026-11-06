@@ -112,6 +112,8 @@ N’importe quel agent, sur vos machinesIndépendant des fournisseurs, local d�
 
 De l’analytique, jamais de la surveillanceLes analyses portent sur les agents et les résultats des processus. Rien ne surveille les personnes en secret.
 
+Ce que nous mesurons : le travail vérifié que les agents livrent pour chaque personne, chaque mois, à votre niveau de qualité. Jamais les personnes.
+
 Pour les changements que font vos agents, nous recommandons task-pipeline, un skill open source distinct, issu de la collection sshlg-skills : il mène chaque changement du brief à la recette et n’avance pas tant que chaque validation n’est pas passée.
 
 npx sshlg-skills install

@@ -67,6 +67,7 @@
     "For the changes your agents make, we recommend": "エージェントが加える変更には、",
     "collection: it carries each change from the brief to the acceptance and does not move on until each gate passes.": "コレクションに含まれます。ブリーフから受け入れまで各変更を運び、各ゲートを通過するまで次へ進みません。",
     "Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped. Fabric is an early preview.": "Fabric につながったエージェントは、1つのプロジェクトのボード、メモリ、引き継ぎを共有するので、1つのエージェントが止めたところから別のエージェントが続けられます。Fabric は早期プレビューです。",
-    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "コマンド1つでツールをセットアップして最初のエージェントを作るか、組織ごと進めることもできます。PassionCode for Enterprise は開発中で、ご依頼に応じて提供します。"
+    "Set up the tools with one command and build the first agent, or take a whole organization along: PassionCode for Enterprise is in development and offered on request.": "コマンド1つでツールをセットアップして最初のエージェントを作るか、組織ごと進めることもできます。PassionCode for Enterprise は開発中で、ご依頼に応じて提供します。",
+    "What we measure: the verified work agents deliver for each person, every month, at your quality bar. Never the people.": "私たちが測るもの：エージェントが毎月、一人あたりに届ける、品質基準を満たした検証済みの仕事です。人を測ることはありません。"
   }
 }

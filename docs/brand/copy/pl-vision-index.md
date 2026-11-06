@@ -112,6 +112,8 @@ Dowolny agent, na Twoich komputerachNiezależne od dostawców, lokalne w pierwsz
 
 Analityka, nigdy inwigilacjaAnalityka dotyczy agentów i wyników procesów. Nikt nie obserwuje ludzi po cichu.
 
+Co mierzymy: sprawdzoną pracę, którą agenci dostarczają za każdą osobę co miesiąc, na Twoim poziomie jakości. Nigdy samych ludzi.
+
 Do zmian wprowadzanych przez Twoich agentów polecamy task-pipeline, odrębny skill na otwartym kodzie z kolekcji sshlg-skills: prowadzi każdą zmianę od zlecenia do odbioru i nie idzie dalej, dopóki nie przejdzie każda kontrola.
 
 npx sshlg-skills install

@@ -112,6 +112,8 @@ Cualquier agente, en tus equiposNeutral respecto a proveedores, local primero y 
 
 Analítica, nunca vigilanciaLa analítica trata de los agentes y de los resultados de los procesos. Nada vigila a las personas en secreto.
 
+Lo que medimos: el trabajo verificado que los agentes entregan por cada persona, cada mes, con tu nivel de calidad. Nunca a las personas.
+
 Para los cambios que hacen tus agentes, recomendamos la task-pipeline, una skill de código abierto independiente de la colección sshlg-skills: lleva cada cambio del brief a la aceptación y no avanza hasta que se supera cada verificación.
 
 npx sshlg-skills install

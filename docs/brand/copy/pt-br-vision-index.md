@@ -112,6 +112,8 @@ Qualquer agente, nas suas máquinasNeutro quanto a fornecedores, local primeiro 
 
 Análises, nunca vigilânciaA análise trata de agentes e dos resultados dos processos. Nada vigia pessoas em segredo.
 
+O que medimos: o trabalho verificado que os agentes entregam por pessoa, todo mês, no seu padrão de qualidade. Nunca as pessoas.
+
 Para as mudanças que seus agentes fazem, recomendamos a task-pipeline, uma skill de código aberto independente da coleção sshlg-skills: ela leva cada mudança do brief até a aceitação e não avança até que cada verificação seja aprovada.
 
 npx sshlg-skills install
