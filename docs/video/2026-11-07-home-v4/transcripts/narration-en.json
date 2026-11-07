@@ -1,0 +1,1321 @@
+{
+"language": "eng",
+"model": "elevenlabs/scribe-v2",
+"text": "Your company runs on people passing work to people. Give each of them AI assistants, and the work still waits for a person. Meetings reconcile what the assistants made, and everyone builds their own agents. Nothing connects, keys scatter, and nobody can say what an agent did or what it cost. In an AI-native organization, agents run the process and people steer it. Fabric keeps the board. Today, in preview, it routes the work and wakes the agent that owns a task. Next, it sets priorities and orders the releases. People give direction, approve what needs a person, and bring the expertise. Here is what it looks like. A user's question becomes a signal, a fix, and a release without a meeting. Research turns the market into a hypothesis. One message goes out in every language. Every task, every cost, and every result is on the record. It holds together because it is one system. Every agent built one way, keys in one vault, a dashboard for every agent. Start on one machine free today. On request, we set your organization up on its own device and run its administration, so your people only steer. Next, you clone it to the next team and the next company. Passioncode.ai, the workplace for AI-native organizations. Start free or bring your organization.",
+"words": [
+{
+"text": "Your",
+"start": 0.12,
+"end": 0.24,
+"type": "word"
+},
+{
+"text": "company",
+"start": 0.34,
+"end": 0.72,
+"type": "word"
+},
+{
+"text": "runs",
+"start": 0.84,
+"end": 1.08,
+"type": "word"
+},
+{
+"text": "on",
+"start": 1.12,
+"end": 1.2,
+"type": "word"
+},
+{
+"text": "people",
+"start": 1.32,
+"end": 1.62,
+"type": "word"
+},
+{
+"text": "passing",
+"start": 1.76,
+"end": 2.16,
+"type": "word"
+},
+{
+"text": "work",
+"start": 2.22,
+"end": 2.48,
+"type": "word"
+},
+{
+"text": "to",
+"start": 2.52,
+"end": 2.6,
+"type": "word"
+},
+{
+"text": "people.",
+"start": 2.64,
+"end": 3.0,
+"type": "word"
+},
+{
+"text": "Give",
+"start": 3.62,
+"end": 3.82,
+"type": "word"
+},
+{
+"text": "each",
+"start": 3.88,
+"end": 4.04,
+"type": "word"
+},
+{
+"text": "of",
+"start": 4.1,
+"end": 4.18,
+"type": "word"
+},
+{
+"text": "them",
+"start": 4.22,
+"end": 4.42,
+"type": "word"
+},
+{
+"text": "AI",
+"start": 4.52,
+"end": 4.78,
+"type": "word"
+},
+{
+"text": "assistants,",
+"start": 4.86,
+"end": 5.46,
+"type": "word"
+},
+{
+"text": "and",
+"start": 5.78,
+"end": 5.86,
+"type": "word"
+},
+{
+"text": "the",
+"start": 5.9,
+"end": 6.0,
+"type": "word"
+},
+{
+"text": "work",
+"start": 6.04,
+"end": 6.3,
+"type": "word"
+},
+{
+"text": "still",
+"start": 6.46,
+"end": 6.66,
+"type": "word"
+},
+{
+"text": "waits",
+"start": 6.74,
+"end": 7.02,
+"type": "word"
+},
+{
+"text": "for",
+"start": 7.06,
+"end": 7.16,
+"type": "word"
+},
+{
+"text": "a",
+"start": 7.2,
+"end": 7.26,
+"type": "word"
+},
+{
+"text": "person.",
+"start": 7.3,
+"end": 7.74,
+"type": "word"
+},
+{
+"text": "Meetings",
+"start": 8.38,
+"end": 8.8,
+"type": "word"
+},
+{
+"text": "reconcile",
+"start": 8.92,
+"end": 9.58,
+"type": "word"
+},
+{
+"text": "what",
+"start": 9.62,
+"end": 9.74,
+"type": "word"
+},
+{
+"text": "the",
+"start": 9.78,
+"end": 9.84,
+"type": "word"
+},
+{
+"text": "assistants",
+"start": 9.9,
+"end": 10.4,
+"type": "word"
+},
+{
+"text": "made,",
+"start": 10.52,
+"end": 10.84,
+"type": "word"
+},
+{
+"text": "and",
+"start": 11.42,
+"end": 11.52,
+"type": "word"
+},
+{
+"text": "everyone",
+"start": 11.68,
+"end": 12.02,
+"type": "word"
+},
+{
+"text": "builds",
+"start": 12.12,
+"end": 12.4,
+"type": "word"
+},
+{
+"text": "their",
+"start": 12.46,
+"end": 12.62,
+"type": "word"
+},
+{
+"text": "own",
+"start": 12.7,
+"end": 12.86,
+"type": "word"
+},
+{
+"text": "agents.",
+"start": 12.92,
+"end": 13.36,
+"type": "word"
+},
+{
+"text": "Nothing",
+"start": 13.88,
+"end": 14.18,
+"type": "word"
+},
+{
+"text": "connects,",
+"start": 14.22,
+"end": 14.68,
+"type": "word"
+},
+{
+"text": "keys",
+"start": 15.0,
+"end": 15.32,
+"type": "word"
+},
+{
+"text": "scatter,",
+"start": 15.42,
+"end": 15.78,
+"type": "word"
+},
+{
+"text": "and",
+"start": 16.079,
+"end": 16.18,
+"type": "word"
+},
+{
+"text": "nobody",
+"start": 16.239,
+"end": 16.56,
+"type": "word"
+},
+{
+"text": "can",
+"start": 16.64,
+"end": 16.82,
+"type": "word"
+},
+{
+"text": "say",
+"start": 16.88,
+"end": 17.08,
+"type": "word"
+},
+{
+"text": "what",
+"start": 17.12,
+"end": 17.22,
+"type": "word"
+},
+{
+"text": "an",
+"start": 17.26,
+"end": 17.32,
+"type": "word"
+},
+{
+"text": "agent",
+"start": 17.38,
+"end": 17.72,
+"type": "word"
+},
+{
+"text": "did",
+"start": 17.76,
+"end": 18.04,
+"type": "word"
+},
+{
+"text": "or",
+"start": 18.36,
+"end": 18.48,
+"type": "word"
+},
+{
+"text": "what",
+"start": 18.52,
+"end": 18.64,
+"type": "word"
+},
+{
+"text": "it",
+"start": 18.68,
+"end": 18.78,
+"type": "word"
+},
+{
+"text": "cost.",
+"start": 18.84,
+"end": 19.26,
+"type": "word"
+},
+{
+"text": "In",
+"start": 19.88,
+"end": 19.94,
+"type": "word"
+},
+{
+"text": "an",
+"start": 19.98,
+"end": 20.14,
+"type": "word"
+},
+{
+"text": "AI-native",
+"start": 20.24,
+"end": 20.98,
+"type": "word"
+},
+{
+"text": "organization,",
+"start": 21.04,
+"end": 21.78,
+"type": "word"
+},
+{
+"text": "agents",
+"start": 22.14,
+"end": 22.56,
+"type": "word"
+},
+{
+"text": "run",
+"start": 22.62,
+"end": 22.78,
+"type": "word"
+},
+{
+"text": "the",
+"start": 22.82,
+"end": 22.92,
+"type": "word"
+},
+{
+"text": "process",
+"start": 22.96,
+"end": 23.46,
+"type": "word"
+},
+{
+"text": "and",
+"start": 23.68,
+"end": 23.76,
+"type": "word"
+},
+{
+"text": "people",
+"start": 23.88,
+"end": 24.16,
+"type": "word"
+},
+{
+"text": "steer",
+"start": 24.32,
+"end": 24.56,
+"type": "word"
+},
+{
+"text": "it.",
+"start": 24.62,
+"end": 24.76,
+"type": "word"
+},
+{
+"text": "Fabric",
+"start": 25.42,
+"end": 25.82,
+"type": "word"
+},
+{
+"text": "keeps",
+"start": 25.98,
+"end": 26.22,
+"type": "word"
+},
+{
+"text": "the",
+"start": 26.26,
+"end": 26.34,
+"type": "word"
+},
+{
+"text": "board.",
+"start": 26.38,
+"end": 26.74,
+"type": "word"
+},
+{
+"text": "Today,",
+"start": 27.34,
+"end": 27.74,
+"type": "word"
+},
+{
+"text": "in",
+"start": 27.94,
+"end": 28.08,
+"type": "word"
+},
+{
+"text": "preview,",
+"start": 28.14,
+"end": 28.56,
+"type": "word"
+},
+{
+"text": "it",
+"start": 28.92,
+"end": 29.02,
+"type": "word"
+},
+{
+"text": "routes",
+"start": 29.1,
+"end": 29.36,
+"type": "word"
+},
+{
+"text": "the",
+"start": 29.4,
+"end": 29.5,
+"type": "word"
+},
+{
+"text": "work",
+"start": 29.54,
+"end": 29.82,
+"type": "word"
+},
+{
+"text": "and",
+"start": 29.96,
+"end": 30.06,
+"type": "word"
+},
+{
+"text": "wakes",
+"start": 30.16,
+"end": 30.42,
+"type": "word"
+},
+{
+"text": "the",
+"start": 30.46,
+"end": 30.58,
+"type": "word"
+},
+{
+"text": "agent",
+"start": 30.66,
+"end": 31.0,
+"type": "word"
+},
+{
+"text": "that",
+"start": 31.04,
+"end": 31.16,
+"type": "word"
+},
+{
+"text": "owns",
+"start": 31.22,
+"end": 31.42,
+"type": "word"
+},
+{
+"text": "a",
+"start": 31.46,
+"end": 31.52,
+"type": "word"
+},
+{
+"text": "task.",
+"start": 31.58,
+"end": 32.04,
+"type": "word"
+},
+{
+"text": "Next,",
+"start": 32.659,
+"end": 33.0,
+"type": "word"
+},
+{
+"text": "it",
+"start": 33.2,
+"end": 33.3,
+"type": "word"
+},
+{
+"text": "sets",
+"start": 33.36,
+"end": 33.6,
+"type": "word"
+},
+{
+"text": "priorities",
+"start": 33.64,
+"end": 34.32,
+"type": "word"
+},
+{
+"text": "and",
+"start": 34.46,
+"end": 34.56,
+"type": "word"
+},
+{
+"text": "orders",
+"start": 34.68,
+"end": 34.98,
+"type": "word"
+},
+{
+"text": "the",
+"start": 35.02,
+"end": 35.08,
+"type": "word"
+},
+{
+"text": "releases.",
+"start": 35.12,
+"end": 35.7,
+"type": "word"
+},
+{
+"text": "People",
+"start": 36.32,
+"end": 36.62,
+"type": "word"
+},
+{
+"text": "give",
+"start": 36.66,
+"end": 36.8,
+"type": "word"
+},
+{
+"text": "direction,",
+"start": 36.84,
+"end": 37.44,
+"type": "word"
+},
+{
+"text": "approve",
+"start": 37.78,
+"end": 38.24,
+"type": "word"
+},
+{
+"text": "what",
+"start": 38.26,
+"end": 38.42,
+"type": "word"
+},
+{
+"text": "needs",
+"start": 38.46,
+"end": 38.68,
+"type": "word"
+},
+{
+"text": "a",
+"start": 38.72,
+"end": 38.78,
+"type": "word"
+},
+{
+"text": "person,",
+"start": 38.84,
+"end": 39.22,
+"type": "word"
+},
+{
+"text": "and",
+"start": 39.52,
+"end": 39.6,
+"type": "word"
+},
+{
+"text": "bring",
+"start": 39.7,
+"end": 39.9,
+"type": "word"
+},
+{
+"text": "the",
+"start": 39.94,
+"end": 40.02,
+"type": "word"
+},
+{
+"text": "expertise.",
+"start": 40.08,
+"end": 40.82,
+"type": "word"
+},
+{
+"text": "Here",
+"start": 41.48,
+"end": 41.66,
+"type": "word"
+},
+{
+"text": "is",
+"start": 41.7,
+"end": 41.8,
+"type": "word"
+},
+{
+"text": "what",
+"start": 41.82,
+"end": 41.94,
+"type": "word"
+},
+{
+"text": "it",
+"start": 41.98,
+"end": 42.06,
+"type": "word"
+},
+{
+"text": "looks",
+"start": 42.1,
+"end": 42.32,
+"type": "word"
+},
+{
+"text": "like.",
+"start": 42.36,
+"end": 42.62,
+"type": "word"
+},
+{
+"text": "A",
+"start": 43.26,
+"end": 43.34,
+"type": "word"
+},
+{
+"text": "user's",
+"start": 43.46,
+"end": 43.78,
+"type": "word"
+},
+{
+"text": "question",
+"start": 43.84,
+"end": 44.3,
+"type": "word"
+},
+{
+"text": "becomes",
+"start": 44.34,
+"end": 44.64,
+"type": "word"
+},
+{
+"text": "a",
+"start": 44.7,
+"end": 44.78,
+"type": "word"
+},
+{
+"text": "signal,",
+"start": 44.84,
+"end": 45.22,
+"type": "word"
+},
+{
+"text": "a",
+"start": 45.56,
+"end": 45.64,
+"type": "word"
+},
+{
+"text": "fix,",
+"start": 45.7,
+"end": 46.0,
+"type": "word"
+},
+{
+"text": "and",
+"start": 46.14,
+"end": 46.24,
+"type": "word"
+},
+{
+"text": "a",
+"start": 46.3,
+"end": 46.34,
+"type": "word"
+},
+{
+"text": "release",
+"start": 46.36,
+"end": 46.8,
+"type": "word"
+},
+{
+"text": "without",
+"start": 47.14,
+"end": 47.46,
+"type": "word"
+},
+{
+"text": "a",
+"start": 47.52,
+"end": 47.56,
+"type": "word"
+},
+{
+"text": "meeting.",
+"start": 47.6,
+"end": 47.98,
+"type": "word"
+},
+{
+"text": "Research",
+"start": 48.64,
+"end": 49.12,
+"type": "word"
+},
+{
+"text": "turns",
+"start": 49.24,
+"end": 49.5,
+"type": "word"
+},
+{
+"text": "the",
+"start": 49.54,
+"end": 49.62,
+"type": "word"
+},
+{
+"text": "market",
+"start": 49.66,
+"end": 50.06,
+"type": "word"
+},
+{
+"text": "into",
+"start": 50.12,
+"end": 50.3,
+"type": "word"
+},
+{
+"text": "a",
+"start": 50.36,
+"end": 50.4,
+"type": "word"
+},
+{
+"text": "hypothesis.",
+"start": 50.44,
+"end": 51.24,
+"type": "word"
+},
+{
+"text": "One",
+"start": 51.82,
+"end": 51.98,
+"type": "word"
+},
+{
+"text": "message",
+"start": 52.02,
+"end": 52.36,
+"type": "word"
+},
+{
+"text": "goes",
+"start": 52.46,
+"end": 52.68,
+"type": "word"
+},
+{
+"text": "out",
+"start": 52.76,
+"end": 52.96,
+"type": "word"
+},
+{
+"text": "in",
+"start": 53.0,
+"end": 53.14,
+"type": "word"
+},
+{
+"text": "every",
+"start": 53.22,
+"end": 53.44,
+"type": "word"
+},
+{
+"text": "language.",
+"start": 53.52,
+"end": 54.02,
+"type": "word"
+},
+{
+"text": "Every",
+"start": 54.64,
+"end": 54.82,
+"type": "word"
+},
+{
+"text": "task,",
+"start": 54.94,
+"end": 55.36,
+"type": "word"
+},
+{
+"text": "every",
+"start": 55.62,
+"end": 55.82,
+"type": "word"
+},
+{
+"text": "cost,",
+"start": 55.94,
+"end": 56.28,
+"type": "word"
+},
+{
+"text": "and",
+"start": 56.48,
+"end": 56.58,
+"type": "word"
+},
+{
+"text": "every",
+"start": 56.74,
+"end": 56.92,
+"type": "word"
+},
+{
+"text": "result",
+"start": 57.0,
+"end": 57.52,
+"type": "word"
+},
+{
+"text": "is",
+"start": 57.58,
+"end": 57.66,
+"type": "word"
+},
+{
+"text": "on",
+"start": 57.72,
+"end": 57.8,
+"type": "word"
+},
+{
+"text": "the",
+"start": 57.86,
+"end": 57.92,
+"type": "word"
+},
+{
+"text": "record.",
+"start": 57.96,
+"end": 58.42,
+"type": "word"
+},
+{
+"text": "It",
+"start": 58.98,
+"end": 59.06,
+"type": "word"
+},
+{
+"text": "holds",
+"start": 59.12,
+"end": 59.4,
+"type": "word"
+},
+{
+"text": "together",
+"start": 59.44,
+"end": 59.82,
+"type": "word"
+},
+{
+"text": "because",
+"start": 59.96,
+"end": 60.18,
+"type": "word"
+},
+{
+"text": "it",
+"start": 60.22,
+"end": 60.3,
+"type": "word"
+},
+{
+"text": "is",
+"start": 60.34,
+"end": 60.48,
+"type": "word"
+},
+{
+"text": "one",
+"start": 60.56,
+"end": 60.74,
+"type": "word"
+},
+{
+"text": "system.",
+"start": 60.86,
+"end": 61.3,
+"type": "word"
+},
+{
+"text": "Every",
+"start": 61.92,
+"end": 62.18,
+"type": "word"
+},
+{
+"text": "agent",
+"start": 62.26,
+"end": 62.64,
+"type": "word"
+},
+{
+"text": "built",
+"start": 62.68,
+"end": 62.88,
+"type": "word"
+},
+{
+"text": "one",
+"start": 63.0,
+"end": 63.2,
+"type": "word"
+},
+{
+"text": "way,",
+"start": 63.26,
+"end": 63.48,
+"type": "word"
+},
+{
+"text": "keys",
+"start": 63.88,
+"end": 64.239,
+"type": "word"
+},
+{
+"text": "in",
+"start": 64.28,
+"end": 64.42,
+"type": "word"
+},
+{
+"text": "one",
+"start": 64.48,
+"end": 64.64,
+"type": "word"
+},
+{
+"text": "vault,",
+"start": 64.739,
+"end": 65.0,
+"type": "word"
+},
+{
+"text": "a",
+"start": 65.4,
+"end": 65.48,
+"type": "word"
+},
+{
+"text": "dashboard",
+"start": 65.519,
+"end": 66.06,
+"type": "word"
+},
+{
+"text": "for",
+"start": 66.1,
+"end": 66.24,
+"type": "word"
+},
+{
+"text": "every",
+"start": 66.32,
+"end": 66.52,
+"type": "word"
+},
+{
+"text": "agent.",
+"start": 66.62,
+"end": 67.0,
+"type": "word"
+},
+{
+"text": "Start",
+"start": 67.74,
+"end": 68.04,
+"type": "word"
+},
+{
+"text": "on",
+"start": 68.08,
+"end": 68.22,
+"type": "word"
+},
+{
+"text": "one",
+"start": 68.28,
+"end": 68.42,
+"type": "word"
+},
+{
+"text": "machine",
+"start": 68.46,
+"end": 68.92,
+"type": "word"
+},
+{
+"text": "free",
+"start": 69.26,
+"end": 69.54,
+"type": "word"
+},
+{
+"text": "today.",
+"start": 69.84,
+"end": 70.28,
+"type": "word"
+},
+{
+"text": "On",
+"start": 70.88,
+"end": 70.98,
+"type": "word"
+},
+{
+"text": "request,",
+"start": 71.02,
+"end": 71.52,
+"type": "word"
+},
+{
+"text": "we",
+"start": 71.78,
+"end": 71.9,
+"type": "word"
+},
+{
+"text": "set",
+"start": 71.92,
+"end": 72.14,
+"type": "word"
+},
+{
+"text": "your",
+"start": 72.18,
+"end": 72.3,
+"type": "word"
+},
+{
+"text": "organization",
+"start": 72.36,
+"end": 73.06,
+"type": "word"
+},
+{
+"text": "up",
+"start": 73.16,
+"end": 73.32,
+"type": "word"
+},
+{
+"text": "on",
+"start": 73.36,
+"end": 73.42,
+"type": "word"
+},
+{
+"text": "its",
+"start": 73.46,
+"end": 73.62,
+"type": "word"
+},
+{
+"text": "own",
+"start": 73.7,
+"end": 73.84,
+"type": "word"
+},
+{
+"text": "device",
+"start": 73.88,
+"end": 74.34,
+"type": "word"
+},
+{
+"text": "and",
+"start": 74.6,
+"end": 74.72,
+"type": "word"
+},
+{
+"text": "run",
+"start": 74.8,
+"end": 74.94,
+"type": "word"
+},
+{
+"text": "its",
+"start": 74.96,
+"end": 75.08,
+"type": "word"
+},
+{
+"text": "administration,",
+"start": 75.14,
+"end": 75.96,
+"type": "word"
+},
+{
+"text": "so",
+"start": 76.26,
+"end": 76.4,
+"type": "word"
+},
+{
+"text": "your",
+"start": 76.46,
+"end": 76.58,
+"type": "word"
+},
+{
+"text": "people",
+"start": 76.68,
+"end": 77.08,
+"type": "word"
+},
+{
+"text": "only",
+"start": 77.16,
+"end": 77.46,
+"type": "word"
+},
+{
+"text": "steer.",
+"start": 77.54,
+"end": 77.9,
+"type": "word"
+},
+{
+"text": "Next,",
+"start": 78.54,
+"end": 78.86,
+"type": "word"
+},
+{
+"text": "you",
+"start": 79.1,
+"end": 79.2,
+"type": "word"
+},
+{
+"text": "clone",
+"start": 79.26,
+"end": 79.48,
+"type": "word"
+},
+{
+"text": "it",
+"start": 79.52,
+"end": 79.62,
+"type": "word"
+},
+{
+"text": "to",
+"start": 79.66,
+"end": 79.74,
+"type": "word"
+},
+{
+"text": "the",
+"start": 79.78,
+"end": 79.86,
+"type": "word"
+},
+{
+"text": "next",
+"start": 79.9,
+"end": 80.16,
+"type": "word"
+},
+{
+"text": "team",
+"start": 80.2,
+"end": 80.46,
+"type": "word"
+},
+{
+"text": "and",
+"start": 80.88,
+"end": 81.08,
+"type": "word"
+},
+{
+"text": "the",
+"start": 81.12,
+"end": 81.22,
+"type": "word"
+},
+{
+"text": "next",
+"start": 81.26,
+"end": 81.5,
+"type": "word"
+},
+{
+"text": "company.",
+"start": 81.58,
+"end": 82.02,
+"type": "word"
+},
+{
+"text": "Passioncode.ai,",
+"start": 82.76,
+"end": 84.32,
+"type": "word"
+},
+{
+"text": "the",
+"start": 84.78,
+"end": 84.88,
+"type": "word"
+},
+{
+"text": "workplace",
+"start": 84.94,
+"end": 85.48,
+"type": "word"
+},
+{
+"text": "for",
+"start": 85.52,
+"end": 85.68,
+"type": "word"
+},
+{
+"text": "AI-native",
+"start": 85.76,
+"end": 86.44,
+"type": "word"
+},
+{
+"text": "organizations.",
+"start": 86.58,
+"end": 87.48,
+"type": "word"
+},
+{
+"text": "Start",
+"start": 88.1,
+"end": 88.32,
+"type": "word"
+},
+{
+"text": "free",
+"start": 88.42,
+"end": 88.72,
+"type": "word"
+},
+{
+"text": "or",
+"start": 89.1,
+"end": 89.24,
+"type": "word"
+},
+{
+"text": "bring",
+"start": 89.4,
+"end": 89.62,
+"type": "word"
+},
+{
+"text": "your",
+"start": 89.66,
+"end": 89.76,
+"type": "word"
+},
+{
+"text": "organization.",
+"start": 89.82,
+"end": 90.58,
+"type": "word"
+}
+]
+}

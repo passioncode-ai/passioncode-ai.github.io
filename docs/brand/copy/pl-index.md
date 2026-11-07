@@ -78,7 +78,7 @@ Twoi agenci
 
 FABRIC · DOM DLA TWOICH PROJEKTÓW
 
-PassionCode.ai w półtorej minuty: czym jest, dla kogo i jak działa, z narracją i napisami. Ekrany pokazują dane demonstracyjne; konsola agenta kodującego to napisany przykład
+PassionCode.ai w półtorej minuty: jak praca przechodzi od ludzi do agentów prowadzonych przez Fabric i jak zespół wyrasta na organizację, z lektorem i napisami. Tablica pokazuje przykładowe dane
 
 Przeczytaj transkrypcję
 

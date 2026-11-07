@@ -78,7 +78,7 @@ Fabric 是你的项目及其智能体的家。Switchboard、Dashboards、Observa
 
 FABRIC · 你的项目的家
 
-用一分半钟讲清 PassionCode.ai 是什么、为谁而做、如何工作，带旁白和字幕。画面为演示数据；编码智能体的控制台是文字示例
+一分半钟了解 PassionCode.ai：工作如何从人转到由 Fabric 管理的智能体，团队又如何成长为组织，配有旁白和字幕。看板显示的是示例数据
 
 阅读文字稿
 

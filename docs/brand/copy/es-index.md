@@ -78,7 +78,7 @@ Tus agentes
 
 FABRIC · EL HOGAR DE TUS PROYECTOS
 
-PassionCode.ai en un minuto y medio: qué es, para quién es y cómo funciona, narrado y con subtítulos. Las pantallas muestran datos de demostración; la consola del agente de programación es un ejemplo escrito
+PassionCode.ai en un minuto y medio: cómo el trabajo pasa de las personas a agentes que gestiona Fabric, y cómo un equipo crece hasta ser una organización, narrado y con subtítulos. El tablero muestra datos de ejemplo
 
 Leer la transcripción
 

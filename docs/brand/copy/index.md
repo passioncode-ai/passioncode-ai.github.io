@@ -78,7 +78,7 @@ Your agents
 
 FABRIC · HOME FOR YOUR PROJECTS
 
-PassionCode.ai in a minute and a half: what it is, who it is for and how it works, narrated, with captions. The screens show sample data; the coding agent’s console is a written example
+PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data
 
 Read the transcript
 

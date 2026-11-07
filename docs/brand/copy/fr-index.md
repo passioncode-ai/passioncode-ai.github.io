@@ -78,7 +78,7 @@ Vos agents
 
 FABRIC · LE FOYER DE VOS PROJETS
 
-PassionCode.ai en une minute et demie : ce que c’est, pour qui et comment ça marche, commenté et sous-titré. Les écrans montrent des données de démonstration ; la console de l’agent de code est un exemple rédigé
+PassionCode.ai en une minute et demie : comment le travail passe des personnes aux agents que pilote Fabric, et comment une équipe devient une organisation, commenté et sous-titré. Le tableau montre des données d’exemple
 
 Lire la transcription
 
