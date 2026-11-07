@@ -138,6 +138,21 @@
     "A base set of agents from day one": "첫날부터 제공되는 기본 에이전트 세트",
     "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "조직의 관리자 에이전트, 데이터룸, 프로세스 평가를 템플릿에서 설치합니다.",
     "Administration by PassionCode, on request": "요청 시 PassionCode가 관리",
-    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "시스템 관리를 원격으로 맡을 수 있습니다. 설정과 지출은 보지만 동의 없이는 콘텐츠를 보지 않습니다."
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "시스템 관리를 원격으로 맡을 수 있습니다. 설정과 지출은 보지만 동의 없이는 콘텐츠를 보지 않습니다.",
+    "OUR AGENT BASE": "우리의 에이전트 베이스",
+    "Your agents start from": "조직의 에이전트는",
+    "ones that already work": "이미 작동하는 에이전트에서 시작합니다",
+    "We do not write your agents from scratch. We assemble them from 18 agent templates by type (support, data room, sales, marketing, video, research, administration and others), drawn from the 107 agents we have run ourselves; 58 of them are running today.": "에이전트를 처음부터 새로 만들지 않습니다. 유형별 에이전트 템플릿 18개(지원, 데이터룸, 영업, 마케팅, 동영상, 리서치, 관리 등)로 조립하며, 이 템플릿은 우리가 직접 운영한 에이전트 107개에서 나왔습니다. 그중 58개가 지금도 실행 중입니다.",
+    "Checked against real agents": "실제 에이전트와 대조",
+    "Each of the 107 agents can be rebuilt from its template: features, pipelines and rules were compared line by line.": "107개 에이전트 모두 각자의 템플릿에서 다시 만들 수 있습니다. 기능, 파이프라인, 규칙을 한 줄씩 대조했습니다.",
+    "2,572 tests": "테스트 2,572개",
+    "The reference code of the templates is covered by 2,572 tests.": "템플릿의 참조 코드는 테스트 2,572개로 검증됩니다.",
+    "An audit of any agent": "어떤 에이전트든 감사",
+    "Any agent, yours included, can be checked against the base in 13 areas: what is confirmed and what to improve.": "조직의 에이전트를 포함해 어떤 에이전트든 13개 영역에서 베이스와 비교해 점검할 수 있습니다. 확인된 점과 개선할 점을 알려 드립니다.",
+    "Updated every day, behind a gate": "매일 업데이트, 검증을 거쳐",
+    "A template changes only when the change is proven, by two sources or a measured win, and its tests do not get worse.": "템플릿은 변경이 입증되었을 때만 바뀝니다(출처 두 곳 또는 측정된 개선). 그리고 테스트 결과가 나빠지지 않아야 합니다.",
+    "Wins reach your agents": "개선은 조직의 에이전트에 반영됩니다",
+    "When an agent does measurably better, the win is recorded with its numbers before and after, and it reaches your agents with the next template release.": "에이전트가 측정 가능하게 더 잘하면 그 개선을 전후 수치와 함께 기록하고, 다음 템플릿 릴리스로 조직의 에이전트에 반영합니다.",
+    "The base itself stays closed. Your organization receives its assembled agents through its administrator agent.": "베이스 자체는 비공개입니다. 조직은 관리자 에이전트를 통해 조립된 에이전트를 받습니다."
   }
 }

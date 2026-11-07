@@ -134,6 +134,21 @@
     "A base set of agents from day one": "初日から基本のエージェントセット",
     "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "組織の管理者エージェント、データルーム、プロセス評価を、テンプレートからインストールします。",
     "Administration by PassionCode, on request": "ご依頼に応じて PassionCode が管理",
-    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "システムの管理をリモートで行えます。設定と支出は確認しますが、ご同意がない限りコンテンツは確認しません。"
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "システムの管理をリモートで行えます。設定と支出は確認しますが、ご同意がない限りコンテンツは確認しません。",
+    "OUR AGENT BASE": "私たちのエージェントベース",
+    "Your agents start from": "お客様のエージェントは",
+    "ones that already work": "すでに動いているものから始まります",
+    "We do not write your agents from scratch. We assemble them from 18 agent templates by type (support, data room, sales, marketing, video, research, administration and others), drawn from the 107 agents we have run ourselves; 58 of them are running today.": "エージェントをゼロから書くことはしません。種類別の18のエージェントテンプレート（サポート、データルーム、営業、マーケティング、動画、リサーチ、管理など）から組み立てます。テンプレートは、私たち自身が動かしてきた107のエージェントから作ったもので、そのうち58は今も稼働しています。",
+    "Checked against real agents": "実際のエージェントと照合済み",
+    "Each of the 107 agents can be rebuilt from its template: features, pipelines and rules were compared line by line.": "107のエージェントはどれも、それぞれのテンプレートから作り直せます。機能、パイプライン、ルールを1行ずつ照合しました。",
+    "2,572 tests": "2,572件のテスト",
+    "The reference code of the templates is covered by 2,572 tests.": "テンプレートのリファレンスコードは2,572件のテストで検証しています。",
+    "An audit of any agent": "どのエージェントも監査できます",
+    "Any agent, yours included, can be checked against the base in 13 areas: what is confirmed and what to improve.": "お客様のものを含め、どのエージェントもベースと照らして13の領域で確認できます。確認できた点と改善すべき点をお伝えします。",
+    "Updated every day, behind a gate": "毎日更新、ゲートを通して",
+    "A template changes only when the change is proven, by two sources or a measured win, and its tests do not get worse.": "テンプレートが変わるのは、変更が証明され（2つの情報源、または測定された改善）、テスト結果が悪くならないときだけです。",
+    "Wins reach your agents": "改善はお客様のエージェントに届きます",
+    "When an agent does measurably better, the win is recorded with its numbers before and after, and it reaches your agents with the next template release.": "あるエージェントの成果が測定できるほど良くなると、その改善を前後の数値とともに記録し、次のテンプレートリリースでお客様のエージェントに届けます。",
+    "The base itself stays closed. Your organization receives its assembled agents through its administrator agent.": "ベース自体は非公開です。組織は、組み立て済みのエージェントを管理者エージェントを通じて受け取ります。"
   }
 }

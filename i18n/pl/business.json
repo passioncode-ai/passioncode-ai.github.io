@@ -138,6 +138,21 @@
     "A base set of agents from day one": "Podstawowy zestaw agentów od pierwszego dnia",
     "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "Agent administrator organizacji, jej data room i ocena procesów, zainstalowane z szablonów.",
     "Administration by PassionCode, on request": "Administracja przez PassionCode, na życzenie",
-    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "Możemy zdalnie prowadzić administrację Twojego systemu; widzimy konfigurację i wydatki, ale nie Twoje treści, chyba że się zgodzisz."
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "Możemy zdalnie prowadzić administrację Twojego systemu; widzimy konfigurację i wydatki, ale nie Twoje treści, chyba że się zgodzisz.",
+    "OUR AGENT BASE": "NASZA BAZA AGENTÓW",
+    "Your agents start from": "Twoi agenci zaczynają od",
+    "ones that already work": "tych, które już działają",
+    "We do not write your agents from scratch. We assemble them from 18 agent templates by type (support, data room, sales, marketing, video, research, administration and others), drawn from the 107 agents we have run ourselves; 58 of them are running today.": "Nie piszemy Twoich agentów od zera. Składamy ich z 18 szablonów agentów według typu (wsparcie, data room, sprzedaż, marketing, wideo, badania, administracja i inne), wywiedzionych ze 107 agentów, których sami uruchamialiśmy; 58 z nich działa dziś.",
+    "Checked against real agents": "Sprawdzone na prawdziwych agentach",
+    "Each of the 107 agents can be rebuilt from its template: features, pipelines and rules were compared line by line.": "Każdego ze 107 agentów da się odbudować z jego szablonu: funkcje, pipeline’y i reguły porównano linia po linii.",
+    "2,572 tests": "2572 testy",
+    "The reference code of the templates is covered by 2,572 tests.": "Kod referencyjny szablonów pokrywa 2572 testy.",
+    "An audit of any agent": "Audyt dowolnego agenta",
+    "Any agent, yours included, can be checked against the base in 13 areas: what is confirmed and what to improve.": "Dowolnego agenta, także Twojego, można sprawdzić względem bazy w 13 obszarach: co jest potwierdzone, a co poprawić.",
+    "Updated every day, behind a gate": "Aktualizowana codziennie, przez bramkę",
+    "A template changes only when the change is proven, by two sources or a measured win, and its tests do not get worse.": "Szablon zmienia się tylko wtedy, gdy zmiana jest udowodniona (dwoma źródłami albo zmierzoną wygraną), a jego testy nie wypadają gorzej.",
+    "Wins reach your agents": "Wygrane trafiają do Twoich agentów",
+    "When an agent does measurably better, the win is recorded with its numbers before and after, and it reaches your agents with the next template release.": "Gdy agent działa mierzalnie lepiej, wygrana jest zapisywana z liczbami przed i po, a do Twoich agentów trafia z kolejnym wydaniem szablonu.",
+    "The base itself stays closed. Your organization receives its assembled agents through its administrator agent.": "Sama baza pozostaje zamknięta. Twoja organizacja otrzymuje złożonych agentów przez swojego agenta administratora."
   }
 }

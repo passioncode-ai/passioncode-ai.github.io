@@ -135,6 +135,21 @@
     "A base set of agents from day one": "Базовый набор агентов с первого дня",
     "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "Агент-администратор организации, её датарум и оценка процессов, установленные из шаблонов.",
     "Administration by PassionCode, on request": "Администрирование силами PassionCode, по запросу",
-    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "Мы можем вести администрирование вашей системы удалённо; мы видим настройки и расходы, но не ваше содержимое, пока вы не разрешите."
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "Мы можем вести администрирование вашей системы удалённо; мы видим настройки и расходы, но не ваше содержимое, пока вы не разрешите.",
+    "OUR AGENT BASE": "НАША БАЗА АГЕНТОВ",
+    "Your agents start from": "Ваши агенты начинаются",
+    "ones that already work": "с тех, что уже работают",
+    "We do not write your agents from scratch. We assemble them from 18 agent templates by type (support, data room, sales, marketing, video, research, administration and others), drawn from the 107 agents we have run ourselves; 58 of them are running today.": "Мы не пишем ваших агентов с нуля. Мы собираем их из 18 шаблонов агентов по типам (поддержка, датарум, продажи, маркетинг, видео, исследования, администрирование и другие), созданных на основе 107 агентов, которых мы запускали сами; 58 из них работают сейчас.",
+    "Checked against real agents": "Сверено с настоящими агентами",
+    "Each of the 107 agents can be rebuilt from its template: features, pipelines and rules were compared line by line.": "Каждый из 107 агентов восстанавливается из своего шаблона: функции, пайплайны и правила сверены построчно.",
+    "2,572 tests": "2572 теста",
+    "The reference code of the templates is covered by 2,572 tests.": "Референсный код шаблонов покрыт 2572 тестами.",
+    "An audit of any agent": "Аудит любого агента",
+    "Any agent, yours included, can be checked against the base in 13 areas: what is confirmed and what to improve.": "Любого агента, в том числе вашего, можно проверить по базе в 13 областях: что подтверждено и что улучшить.",
+    "Updated every day, behind a gate": "Обновляется каждый день, через проверку",
+    "A template changes only when the change is proven, by two sources or a measured win, and its tests do not get worse.": "Шаблон меняется, только когда изменение доказано (двумя источниками или измеренной победой) и тесты не становятся хуже.",
+    "Wins reach your agents": "Победы доходят до ваших агентов",
+    "When an agent does measurably better, the win is recorded with its numbers before and after, and it reaches your agents with the next template release.": "Когда агент работает измеримо лучше, победа записывается с цифрами до и после и доходит до ваших агентов со следующим выпуском шаблона.",
+    "The base itself stays closed. Your organization receives its assembled agents through its administrator agent.": "Сама база закрыта. Организация получает собранных агентов через своего агента-администратора."
   }
 }

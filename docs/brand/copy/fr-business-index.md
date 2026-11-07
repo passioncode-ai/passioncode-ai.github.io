@@ -74,6 +74,26 @@ PassionCode a deux cofondateurs, et nous dirigeons tous les deux des équipes : 
 
 Nous avons construit ce dispositif pour nous-mêmes, et notre propre travail repose sur lui aujourd’hui. Nous l’apportons maintenant à votre organisation : nous le connectons à vos systèmes et vous aidons à mettre en place des agents qui font tourner vos processus. Comment nous en sommes arrivés là →
 
+NOTRE BASE D’AGENTS
+
+## Vos agents partent
+
+## de ceux qui fonctionnent déjà
+
+Nous n’écrivons pas vos agents à partir de zéro. Nous les assemblons à partir de 18 modèles d’agents par type (support, data room, ventes, marketing, vidéo, recherche, administration et d’autres), tirés des 107 agents que nous avons fait tourner nous-mêmes ; 58 d’entre eux tournent aujourd’hui.
+
+Vérifié sur de vrais agentsChacun des 107 agents peut être reconstruit à partir de son modèle : fonctions, pipelines et règles ont été comparés ligne par ligne.
+
+2 572 testsLe code de référence des modèles est couvert par 2 572 tests.
+
+Un audit de n’importe quel agentN’importe quel agent, le vôtre compris, peut être vérifié par rapport à la base dans 13 domaines : ce qui est confirmé et ce qui est à améliorer.
+
+Mis à jour chaque jour, avec un contrôleUn modèle ne change que si le changement est prouvé, par deux sources ou un gain mesuré, et que ses tests ne se dégradent pas.
+
+Les gains arrivent à vos agentsQuand un agent fait mesurablement mieux, le gain est enregistré avec ses chiffres avant et après, et il arrive à vos agents avec la version suivante du modèle.
+
+La base elle-même reste fermée. Votre organisation reçoit ses agents assemblés par son agent administrateur.
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## Ce que nous mettons en place

@@ -1,3 +1,30 @@
+# Current handoff: SITE-055, the agent template base on /business/, in review, 2026-11-07
+
+Objective (backlog SITE-055; board request `609fd485`, thread `5aaa9ae3`, from fabric-agents-database, deadline
+2026-11-14): tell organizations about the agent template base as an advantage. The operator's words, relayed on the
+request: «давай про это в воркспейс все передадим там зафиксировать и на сайте обновить тоже рассказать про
+преимущество в виде такой базы у нас» (2026-11-07 about 19:25 UTC, session `12c8d3fa`).
+
+Done (branch `agent/site-agent-templates`): an unnumbered section Our agent base (`/business/#agent-base`) after Who
+we are: 18 templates from the 107 agents we ran (58 running), five proofs (rebuilt line by line, 2,572 tests, an
+audit in 13 areas, a daily gated update, wins reaching clients' agents), the base stays closed. Catalogs for the nine
+other languages, pages regenerated with `npm run locales`; facts row *agent template base* (what is not claimed:
+assembly time, any client or agent name); SCN-014 and SCR-09.
+
+Decisions: /business/ and not the home page, because the base is what an organization receives; unnumbered so the
+numbered sections 01 to 04 keep their labels in every catalog; the private repository is never linked.
+
+Not done: the Copylot check in all ten languages (the copy tools were not in the board run's session); the merge and
+the deploy (a board run stops before production).
+
+Checks run: `npm run check` exit 0; `python3 scripts/extract-public-copy.py --check` PASS 150; `npm run build`
+225 entries; WebKit (Playwright 1.63) over `dist/` at 390 and 1440 px in en, ru, ja, de: five items each, no sideways
+overflow; captures in [evidence/2026-11-07-site-055/](evidence/2026-11-07-site-055/).
+
+Next task: run Copylot over the new strings in every locale and apply its fixes, then with the operator's go merge,
+`npm run deploy` from `main`, `scripts/verify-live.py`, and a second reply on board request `609fd485` with the
+commit, the Worker version and https://passioncode.ai/business/#agent-base.
+
 # Current handoff: SITE-049, the site on the North Star, in review, 2026-11-06
 
 Objective (backlog SITE-049, operator 2026-11-06): reposition passioncode.ai as the workplace for AI-native

@@ -134,6 +134,21 @@
     "A base set of agents from day one": "从第一天起就有一组基础智能体",
     "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "组织的管理员智能体、数据室和流程评估，均从模板安装。",
     "Administration by PassionCode, on request": "应需由 PassionCode 管理",
-    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "我们可以远程管理你的系统；我们能看到配置和支出，但除非你同意，否则看不到你的内容。"
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "我们可以远程管理你的系统；我们能看到配置和支出，但除非你同意，否则看不到你的内容。",
+    "OUR AGENT BASE": "我们的智能体库",
+    "Your agents start from": "你的智能体",
+    "ones that already work": "从已经在运行的智能体起步",
+    "We do not write your agents from scratch. We assemble them from 18 agent templates by type (support, data room, sales, marketing, video, research, administration and others), drawn from the 107 agents we have run ourselves; 58 of them are running today.": "我们不从零编写你的智能体，而是用 18 个按类型划分的智能体模板（支持、数据室、销售、营销、视频、研究、管理等）来组装。这些模板来自我们自己运行过的 107 个智能体，其中 58 个今天仍在运行。",
+    "Checked against real agents": "与真实智能体逐一核对",
+    "Each of the 107 agents can be rebuilt from its template: features, pipelines and rules were compared line by line.": "107 个智能体中的每一个都能从各自的模板重建：功能、流水线和规则都已逐行核对。",
+    "2,572 tests": "2572 项测试",
+    "The reference code of the templates is covered by 2,572 tests.": "模板的参考代码由 2572 项测试覆盖。",
+    "An audit of any agent": "任何智能体都能审计",
+    "Any agent, yours included, can be checked against the base in 13 areas: what is confirmed and what to improve.": "任何智能体，包括你的，都可以对照这个库在 13 个方面检查：哪些已确认，哪些需要改进。",
+    "Updated every day, behind a gate": "每天更新，经过把关",
+    "A template changes only when the change is proven, by two sources or a measured win, and its tests do not get worse.": "只有当变更得到证明（两个来源或一次可测量的改进），且测试结果没有变差时，模板才会改变。",
+    "Wins reach your agents": "改进会到达你的智能体",
+    "When an agent does measurably better, the win is recorded with its numbers before and after, and it reaches your agents with the next template release.": "当某个智能体的表现可测量地变好，这次改进会连同前后数字一起记录，并随下一次模板发布到达你的智能体。",
+    "The base itself stays closed. Your organization receives its assembled agents through its administrator agent.": "这个库本身不公开。你的组织通过它的管理员智能体获得组装好的智能体。"
   }
 }
