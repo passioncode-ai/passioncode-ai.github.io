@@ -46,7 +46,7 @@ Skonfiguruj
 
 ↓
 
-INFORMACJA O PRYWATNOŚCI · WERSJA 2026-10-11
+INFORMACJA O PRYWATNOŚCI · WERSJA 2026-11-07
 
 # Informacja o prywatności
 
@@ -98,7 +98,9 @@ Podczas pisania w formularzu niewysłany tekst jest przechowywany wyłącznie w 
 
 ## Aplikacje
 
-Aplikacje PassionCode.ai działają na Twoich komputerach i nie wysyłają nam Twojej pracy. Fabric Switchboard oraz, od wersji 0.3.2, Fabric wysyłają anonimowe liczniki użycia — wyłącznie liczby i rodzaje zdarzeń, nigdy nazwy, ścieżki ani treść. Możesz je wyłączyć w oknie „Informacje” aplikacji Switchboard lub w ustawieniach Fabric; przełącznik działa dla wszystkich aplikacji PassionCode.ai na danym komputerze.
+Aplikacje PassionCode.ai działają na Twoich komputerach i nie wysyłają nam Twojej pracy. Fabric Switchboard, Fabric od wersji 0.3.2 i Fabric Dashboards od wersji 0.8.19 wysyłają anonimowe liczniki użycia (Fabric Dashboards liczy też błędy): wyłącznie liczby i rodzaje zdarzeń, nigdy nazwy, ścieżki ani treść. Każdy produkt ma własny przełącznik: okno „Informacje” w Switchboard, ustawienia Fabric oraz Ustawienia → Prywatność w Fabric Dashboards. Wyłączenie jednego nie wyłącza pozostałych.
+
+Launcher PassionCode od wersji 0.2.76 wysyła anonimowe liczniki użycia i błędów: które jego polecenie zostało uruchomione, jak się zakończyło, mniej więcej ile trwało oraz raz dziennie sam fakt użycia, z identyfikatorem instalacji z pliku, który aplikacje PassionCode.ai współdzielą na tym komputerze. Nigdy nie wysyła ścieżek, nazw, argumentów, tokenów ani treści błędów. Liczniki trafiają do analytics.passioncode.ai; zdarzenia są przechowywane dwa lata, identyfikator instalacji jest z nich usuwany po 400 dniach, a Twój adres IP nie jest zapisywany. Wyłącz je dla launchera poleceniem npx @passioncode-ai/passioncode@latest analytics off lub ustaw DO_NOT_TRACK=1. Jeśli już powiedziałeś „nie” w aplikacji PassionCode.ai, launcher zachowa tę odpowiedź.
 
 PassionCode
 

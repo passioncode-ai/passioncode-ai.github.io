@@ -46,7 +46,7 @@ Set up
 
 ↓
 
-PRIVACY NOTICE · VERSION 2026-10-11
+PRIVACY NOTICE · VERSION 2026-11-07
 
 # Privacy notice
 
@@ -98,7 +98,9 @@ While you write in the form, your unsent text is kept only in your own browser�
 
 ## The apps
 
-The PassionCode.ai apps run on your computers and do not send your work to us. Fabric Switchboard and, since version 0.3.2, Fabric send anonymous usage counts — counts and kinds only, never names, paths or content. Turn them off in Switchboard’s About window or in Fabric’s Settings; the switch applies to every PassionCode.ai app on that computer.
+The PassionCode.ai apps run on your computers and do not send your work to us. Fabric Switchboard, Fabric since version 0.3.2 and Fabric Dashboards since version 0.8.19 send anonymous usage counts (Fabric Dashboards also counts errors): counts and kinds only, never names, paths or content. Each product has its own switch: Switchboard’s About window, Fabric’s Settings, and Settings → Privacy in Fabric Dashboards. Turning one off does not turn off the others.
+
+The PassionCode launcher, from version 0.2.76, sends anonymous usage and error counts: which of its commands ran, how it ended, roughly how long it took, and once a day that it was used, with the installation id from the file the PassionCode.ai apps share on that computer. It never sends a path, a name, an argument, a token or the text of an error. The counts go to analytics.passioncode.ai; events are kept for two years, the installation id is removed from them after 400 days, and your IP address is not stored. Turn them off for the launcher with npx @passioncode-ai/passioncode@latest analytics off, or set DO_NOT_TRACK=1. If you already said no in a PassionCode.ai app, the launcher keeps that answer.
 
 PassionCode
 

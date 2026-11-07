@@ -396,7 +396,8 @@ rather than replaces, the browser review recorded above.
 - **Preconditions:** none
 - **Steps:**
   1. Read what is collected (the form: the text, the work email, an optional goal; through a coding agent also the organization size, the tools, the timing and the agent's name), why (Art. 6(1)(b): answering the request the person asked for, so no consent box), where it is stored, for how long and how to have it erased.
-- **Expected result:** The lead knows what happens to the request before sending it; nothing is collected outside the request.
+  2. Under "The apps", read which PassionCode.ai products send anonymous counts (Switchboard, Fabric, Fabric Dashboards, the launcher from 0.2.76), what they never send, and each product's own switch (the launcher: `npx @passioncode-ai/passioncode@latest analytics off` or `DO_NOT_TRACK=1`).
+- **Expected result:** The lead knows what happens to the request before sending it; nothing is collected outside the request; a user of the apps knows what each one counts and turns it off product by product.
 - **Alt paths:** none.
 - **UI elements:** legal page
 - **States covered:** static.

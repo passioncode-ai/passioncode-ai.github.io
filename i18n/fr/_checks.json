@@ -69,8 +69,12 @@
       "Europe de l",
       "Francfort",
       "cookie",
-      "VERSION 2026-10-11",
-      "la version anglaise prévaut"
+      "VERSION 2026-11-07",
+      "la version anglaise prévaut",
+      "npx @passioncode-ai/passioncode@latest analytics off",
+      "DO_NOT_TRACK=1",
+      "0.8.19",
+      "400"
     ]
   }
 }
