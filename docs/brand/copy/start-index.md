@@ -128,7 +128,7 @@ Fabric Dashboards shows every local agent service in one window. Download it, th
 
 Download Fabric Dashboards
 
-0.8.29
+0.8.30
 
 ↓
 

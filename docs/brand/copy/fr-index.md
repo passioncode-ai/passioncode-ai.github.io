@@ -62,7 +62,7 @@ Pour vous, gratuitement
 
 →
 
-Open source sous licence AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.21 · Dashboards 0.8.29 · Observatory 0.34.0
+Open source sous licence AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
 
 Comptes
 
@@ -404,7 +404,7 @@ Choisissez le compte sur lequel tourne chaque agent, en gardant les limites d’
 
 Version
 
-0.7.21
+0.7.22
 
 · macOS + Windows · étape 4
 
@@ -416,7 +416,7 @@ Tous les services d’agents locaux dans une seule fenêtre, pilotés par vous o
 
 Version
 
-0.8.29
+0.8.30
 
 · macOS + Windows + Linux · étape 4
 

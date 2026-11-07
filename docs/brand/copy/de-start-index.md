@@ -128,7 +128,7 @@ Fabric Dashboards zeigt jeden lokalen Agentendienst in einem Fenster. Lade es he
 
 Fabric Dashboards herunterladen
 
-0.8.29
+0.8.30
 
 ↓
 

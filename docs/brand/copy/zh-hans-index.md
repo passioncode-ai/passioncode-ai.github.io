@@ -62,7 +62,7 @@ Fabric 是你的项目及其智能体的家。Switchboard、Dashboards、Observa
 
 →
 
-基于 AGPL-3.0 开源 Fabric 0.3.16 · Switchboard 0.7.21 · Dashboards 0.8.29 · Observatory 0.34.0
+基于 AGPL-3.0 开源 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
 
 账号
 
@@ -404,7 +404,7 @@ Fabric Switchboard
 
 版本
 
-0.7.21
+0.7.22
 
 · macOS + Windows · 步骤 4
 
@@ -416,7 +416,7 @@ Fabric Dashboards
 
 版本
 
-0.8.29
+0.8.30
 
 · macOS + Windows + Linux · 步骤 4
 
