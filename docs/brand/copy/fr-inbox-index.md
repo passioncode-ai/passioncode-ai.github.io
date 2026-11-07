@@ -66,7 +66,7 @@ Ce qu’il fait
 
 ↓
 
-Préversion de développement 0.18.0 · macOS 12+ · Windows · Linux · open source sous licence AGPL-3.0
+Préversion de développement 1.0.0 · macOS 12+ · Windows · Linux · open source sous licence AGPL-3.0
 
 FABRIC INBOX / COURRIER + AGENTS
 
@@ -136,7 +136,7 @@ OBTENIR FABRIC INBOX
 
 ## pour Mac, Windows et Linux
 
-Dernière préversion : 0.18.0. L’application crée son serveur de messagerie dans votre propre compte Cloudflare et l’ouvre ; votre courrier reste dans vos comptes.
+Dernière préversion : 1.0.0. L’application crée son serveur de messagerie dans votre propre compte Cloudflare et l’ouvre ; votre courrier reste dans vos comptes.
 
 ⌘
 
@@ -157,7 +157,7 @@ Une copie Mac antérieure à 0.15.2 ne peut pas se mettre à jour elle-même : t
 
 ### Windows et Linux
 
-La version 0.18.0 fournit aussi un installateur Windows pour x64 et arm64 qui ne demande pas de droits d’administrateur, signé avec Authenticode depuis la 0.14.1, ainsi qu’un AppImage et un .deb Linux pour x64 et arm64.
+La version 1.0.0 fournit aussi un installateur Windows pour x64 et arm64 qui ne demande pas de droits d’administrateur, signé avec Authenticode depuis la 0.14.1, ainsi qu’un AppImage et un .deb Linux pour x64 et arm64.
 
 Téléchargements Windows et Linux
 
@@ -181,7 +181,7 @@ Le guide d’installation détaille chaque réglage.
 
 DMG macOS · SHA-256
 
-3d971a0b00765ce1faf9dea63b41503dd29180adbe79bc2a5d0951a857641ffd
+72b4cfb9ad373421fd9ef56b86638f025acd5dd5c2a07db3d2750f948ae42c8a
 
 Comparez avant d’ouvrir : shasum -a 256 dans Terminal. Une valeur différente signifie un fichier différent ; téléchargez-le à nouveau.
 

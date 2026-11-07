@@ -1058,6 +1058,9 @@ pre.copyable { padding-right: 7.5rem; }
 .journey-steps .step-prompt { margin: var(--pc-space-2) 0 0; }
 .journey-steps .step-prompt + p:not(.step-prompt) { margin-top: var(--pc-space-4); }
 .journey-steps .step-prompt code { overflow-wrap: anywhere; font-size: var(--pc-type-meta); }
+/* SITE-051: the home #grow card is narrow; its prompt stacks (label over command) and the command breaks between words. */
+#grow .step-prompt { flex-direction: column; gap: 4px; }
+#grow .step-prompt code { overflow-wrap: break-word; word-break: normal; }
 /* SITE-028 W10: the home video, click to play. The box keeps 16:9 before the poster arrives, so nothing moves. */
 /* The home video (SITE-028 W10), directly under the hero since SITE-039: the hero's text stays the
    page's answer above the fold; the player's 16:9 box is reserved, so nothing shifts when it loads. */
@@ -1080,6 +1083,9 @@ pre.copyable { padding-right: 7.5rem; }
    with <wbr> (phraseBreaks in i18n/locales.json, scripts/locales.mjs phraseChunks); keep-all stops
    the break inside a word (非依｜存), and overflow-wrap still breaks a phrase longer than the line. */
 :root:lang(ja) :is(h1, h2, h3), :root:lang(ja) :is(h1, h2, h3) em { word-break: keep-all; overflow-wrap: anywhere; }
+/* SITE-053: the Japanese hero H1 holds a 13-character word (オペレーティングシステム：); the size keeps it on one line
+   in the 650 px column and on a 390 px phone, so it never breaks inside the word. */
+:root:lang(ja) #hero-title { font-size: clamp(25px, 6.4vw, 48px); }
 
 /* Korean (docs/DEPLOYMENT.md#languages): words are separated by spaces, so lines break at spaces
    only (a word is never split unless it alone is wider than its column), and the negative or wide
@@ -1155,7 +1161,10 @@ html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -w
 .manual-setup > summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .manual-setup[open] > summary { margin-bottom: 8px; }
 /* Home #start: the setup command in the For you card. */
-.path-card pre.copyable { max-width: 100%; margin: 4px 0 20px; white-space: pre-wrap; overflow-wrap: anywhere; padding: var(--pc-space-4); padding-right: 7.5rem; background: var(--pc-bg); border: 1px solid var(--pc-border); border-radius: var(--pc-radius-control); font-size: 14px; color: var(--ink); }
+.path-card pre.copyable { max-width: 100%; margin: 4px 0 20px; white-space: pre-wrap; overflow-wrap: break-word; word-break: normal; padding: var(--pc-space-4); padding-bottom: 48px; background: var(--pc-bg); border: 1px solid var(--pc-border); border-radius: var(--pc-radius-control); font-size: 14px; color: var(--ink); }
+/* SITE-051: in a narrow card the copy button sits under the command, so the command keeps the full width and
+   breaks between words, never inside @passioncode-ai/passioncode@latest unless the token is wider than the card. */
+.path-card pre.copyable .copy-button { top: auto; bottom: 8px; }
 /* Home #products: Fabric first and wide, then the four that work with it and on their own. */
 .tool-choice-home { grid-column: 1 / -1; border-color: var(--pc-border-strong); }
 .tool-directory-label { grid-column: 1 / -1; margin: var(--pc-space-3) 0 0; color: var(--pc-accent); font-size: var(--pc-type-meta); letter-spacing: .08em; font-weight: 700; text-transform: uppercase; }
