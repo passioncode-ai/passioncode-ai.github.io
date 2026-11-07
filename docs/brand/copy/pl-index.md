@@ -62,7 +62,7 @@ Dla Ciebie, bezpłatnie
 
 →
 
-Otwarty kod na licencji AGPL-3.0 Fabric 0.3.5 · Switchboard 0.6.33 · Dashboards 0.7.10 · Observatory 0.24.5
+Otwarty kod na licencji AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.21 · Dashboards 0.8.29 · Observatory 0.34.0
 
 Konta
 
@@ -390,7 +390,7 @@ Dom dla Twoich projektów i ich agentów: cel, tablica, decyzje i wydania każde
 
 Wczesna wersja zapoznawcza
 
-0.3.5
+0.3.16
 
 · macOS · kroki 2 i 5
 
@@ -404,7 +404,7 @@ Wybieraj konto, na którym pracuje każdy agent, mając limity zużycia przed oc
 
 Wydanie
 
-0.6.33
+0.7.21
 
 · macOS + Windows · krok 4
 
@@ -416,7 +416,7 @@ Wszystkie lokalne usługi agentów w jednym oknie, sterowane przez Ciebie lub pr
 
 Wydanie
 
-0.7.10
+0.8.29
 
 · macOS + Windows + Linux · krok 4
 
@@ -428,7 +428,7 @@ Co zmieniło się w każdym projekcie i co wymaga uwagi — wraz z dowodami.
 
 Wydanie
 
-0.24.5
+0.34.0
 
 · macOS + Windows + Linux · krok 5
 
@@ -440,7 +440,7 @@ Poczta Gmail i Cloudflare na jednej liście, ważne na górze; agenci odpowiadaj
 
 Wersja zapoznawcza w rozwoju
 
-0.18.0
+1.0.0
 
 · macOS + Windows + Linux · krok 5
 
