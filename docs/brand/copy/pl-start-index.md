@@ -128,7 +128,7 @@ Fabric Dashboards pokazuje każdą lokalną usługę agenta w jednym oknie. Pobi
 
 Pobierz Fabric Dashboards
 
-0.8.29
+0.8.30
 
 ↓
 

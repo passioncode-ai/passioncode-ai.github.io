@@ -128,7 +128,7 @@ Fabric Dashboards は、ローカルのエージェントサービスをすべ�
 
 Fabric Dashboards をダウンロード
 
-0.8.29
+0.8.30
 
 ↓
 

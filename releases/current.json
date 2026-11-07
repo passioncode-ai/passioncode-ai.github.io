@@ -1,6 +1,6 @@
 {
   "schema": "releases/1",
-  "generatedAt": "2026-11-07T00:28:20.745Z",
+  "generatedAt": "2026-11-07T10:21:47.920Z",
   "products": {
     "fabric": {
       "key": "fabric",
@@ -62,23 +62,23 @@
       "name": "Fabric Switchboard",
       "repository": "passioncode-ai/fabric-switchboard",
       "page": "/switchboard/",
-      "version": "0.7.21",
-      "tag": "v0.7.21",
+      "version": "0.7.22",
+      "tag": "v0.7.22",
       "prerelease": false,
-      "publishedAt": "2026-11-06T15:17:22Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.7.21",
+      "publishedAt": "2026-11-07T01:35:20Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-switchboard/releases/tag/v0.7.22",
       "assets": {
         "macos": {
-          "name": "Fabric-Switchboard-0.7.21-macos-universal.zip",
-          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.7.21/Fabric-Switchboard-0.7.21-macos-universal.zip",
-          "sha256": "9a861076336f62d99ffe591abc140d148c31d5c4ba06eae10ef55859ea16c607",
-          "size": 40662900
+          "name": "Fabric-Switchboard-0.7.22-macos-universal.zip",
+          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.7.22/Fabric-Switchboard-0.7.22-macos-universal.zip",
+          "sha256": "81d6b5971bbf6a62525a4d133e15417cf12f0861a2c67e1b6e394036231d8a43",
+          "size": 40690337
         },
         "windows": {
-          "name": "Fabric-Switchboard-0.7.21-windows-x64.zip",
-          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.7.21/Fabric-Switchboard-0.7.21-windows-x64.zip",
-          "sha256": "cfd4c7c2898928b232a35653138749a72c03a056a6fd7f0ef18be88345d5e585",
-          "size": 18589115
+          "name": "Fabric-Switchboard-0.7.22-windows-x64.zip",
+          "url": "https://github.com/passioncode-ai/fabric-switchboard/releases/download/v0.7.22/Fabric-Switchboard-0.7.22-windows-x64.zip",
+          "sha256": "b90750e2154ad0ad73e71681489c8059810d7bb91177efba5338ddfd97b2ce3e",
+          "size": 18621597
         }
       }
     },
@@ -106,17 +106,17 @@
       "name": "Fabric Dashboards",
       "repository": "passioncode-ai/fabric-dashboards",
       "page": "/dashboards/",
-      "version": "0.8.29",
-      "tag": "v0.8.29",
+      "version": "0.8.30",
+      "tag": "v0.8.30",
       "prerelease": false,
-      "publishedAt": "2026-11-06T14:32:25Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.8.29",
+      "publishedAt": "2026-11-07T05:50:32Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-dashboards/releases/tag/v0.8.30",
       "assets": {
         "macos": {
-          "name": "Fabric-Dashboards-0.8.29.dmg",
-          "url": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.8.29/Fabric-Dashboards-0.8.29.dmg",
-          "sha256": "8aff5025fd415494b77bfea475b7a11752cb28ec3584be3e6d4688c1386602ea",
-          "size": 250493977
+          "name": "Fabric-Dashboards-0.8.30.dmg",
+          "url": "https://github.com/passioncode-ai/fabric-dashboards/releases/download/v0.8.30/Fabric-Dashboards-0.8.30.dmg",
+          "sha256": "4827ff04f4e20587a4363bd58d49bdb67e4d62ad2081acb08d68985857ea2e66",
+          "size": 250490130
         }
       }
     },
@@ -150,11 +150,11 @@
       "name": "Fabric Agent Adapter",
       "repository": "passioncode-ai/fabric-agent-adapter",
       "page": "/start/#build",
-      "version": "0.72.0",
-      "tag": "v0.72.0",
+      "version": "0.74.0",
+      "tag": "v0.74.0",
       "prerelease": false,
-      "publishedAt": "2026-11-06T12:23:38Z",
-      "releaseUrl": "https://github.com/passioncode-ai/fabric-agent-adapter/releases/tag/v0.72.0",
+      "publishedAt": "2026-11-07T09:03:32Z",
+      "releaseUrl": "https://github.com/passioncode-ai/fabric-agent-adapter/releases/tag/v0.74.0",
       "npm": "@passioncode-ai/fabric-agent-adapter",
       "assets": {}
     },
