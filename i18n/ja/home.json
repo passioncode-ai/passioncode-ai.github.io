@@ -64,10 +64,8 @@
     "Sergey Sheleg · co-founder, PassionCode": "Sergey Sheleg · PassionCode共同創業者",
     "PassionCode.ai explained, a narrated video": "PassionCode.ai の紹介（ナレーション付き動画）",
     "Captions": "字幕",
-    "PassionCode.ai in a minute and a half: what it is, who it is for and how it works, narrated, with captions. The screens show sample data; the coding agent’s console is a written example": "PassionCode.ai が何か、誰のためのものか、どう動くかを1分半で紹介する、ナレーションと字幕付きの動画です。画面はデモデータで、コーディングエージェントのコンソールは文章で書いた例です",
     "It is agent-agnostic. Claude Code, Codex, Kilo Code, Hermes Agent and Kimi Code connect to Fabric today, Cline runs inside it, and more are planned.": "特定のエージェントに縛られません。Claude Code、Codex、Kilo Code、Hermes Agent、Kimi Code は現在 Fabric に接続でき、Cline は Fabric の中で動作します。ほかにも対応を予定しています。",
     "PassionCode.ai explained": "PassionCode.ai の紹介",
-    "What PassionCode.ai is, who it is for and how it works, narrated, with captions. The screens show sample data.": "PassionCode.ai とは何か、誰のためのものか、どう動くかを、ナレーションと字幕付きで紹介します。画面はデモデータです。",
     "Fabric is the home for your projects and their agents. Switchboard, Dashboards, Observatory and Inbox work with it, and on their own. One command sets it all up today": "Fabric は、プロジェクトとそのエージェントのための拠点です。Switchboard、Dashboards、Observatory、Inbox は Fabric と連携し、単体でも動きます。現在はコマンド1つですべてをセットアップできます",
     "Read the transcript": "文字起こしを読む",
     "Set it up": "セットアップする",
@@ -219,6 +217,8 @@
     "Your own agent workplace": "自分だけのエージェントワークプレース",
     "A local, open-source workspace with the agents and the subscription you already have. Set it up in one command, then build your first agents with Claude Code or Codex. About twenty minutes.": "ローカルなオープンソースのワークスペース。既存のエージェントとサブスクリプションを利用できます。1 つのコマンドでセットアップし、Claude Code または Codex で最初のエージェントを構築します。所要時間は約 20 分です。",
     "Start free": "無料で始める",
-    "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "企業はエージェントによって運営されるようになり、誰かがエージェント間のプロセスを管理しなければなりません。PassionCode.ai は、そのワークプレースを開発しています。エージェントのボードを管理する Fabric と、その周辺ツールです。現在、私たち自身の業務でも稼働しています。GNU AGPL-3.0 の下でオープンソースとして提供され、個人利用は無料です。組織には商用ライセンスと私たちのサービスを提供します。上記の共同創業者 2 人が開発しています。お問い合わせ："
+    "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "企業はエージェントによって運営されるようになり、誰かがエージェント間のプロセスを管理しなければなりません。PassionCode.ai は、そのワークプレースを開発しています。エージェントのボードを管理する Fabric と、その周辺ツールです。現在、私たち自身の業務でも稼働しています。GNU AGPL-3.0 の下でオープンソースとして提供され、個人利用は無料です。組織には商用ライセンスと私たちのサービスを提供します。上記の共同創業者 2 人が開発しています。お問い合わせ：",
+    "PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data": "1 分半で分かる PassionCode.ai：仕事が人から Fabric の動かすエージェントへ移る流れと、チームが組織へ育つ道筋を、ナレーションと字幕付きで。ボードはサンプルデータです",
+    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "仕事が人から Fabric の動かすエージェントへ移る流れと、チームが組織へ育つ道筋を、ナレーションと字幕付きで。ボードはサンプルデータです。"
   }
 }

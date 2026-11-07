@@ -64,10 +64,8 @@
     "Sergey Sheleg · co-founder, PassionCode": "Sergey Sheleg · 联合创始人，PassionCode",
     "PassionCode.ai explained, a narrated video": "PassionCode.ai 介绍（带旁白的视频）",
     "Captions": "字幕",
-    "PassionCode.ai in a minute and a half: what it is, who it is for and how it works, narrated, with captions. The screens show sample data; the coding agent’s console is a written example": "用一分半钟讲清 PassionCode.ai 是什么、为谁而做、如何工作，带旁白和字幕。画面为演示数据；编码智能体的控制台是文字示例",
     "It is agent-agnostic. Claude Code, Codex, Kilo Code, Hermes Agent and Kimi Code connect to Fabric today, Cline runs inside it, and more are planned.": "它不绑定任何一个智能体。Claude Code、Codex、Kilo Code、Hermes Agent 和 Kimi Code 目前已接入 Fabric，Cline 在其中运行，更多智能体已在计划中。",
     "PassionCode.ai explained": "PassionCode.ai 介绍",
-    "What PassionCode.ai is, who it is for and how it works, narrated, with captions. The screens show sample data.": "介绍 PassionCode.ai 是什么、为谁而做、如何工作，带旁白和字幕。画面为演示数据。",
     "Fabric is the home for your projects and their agents. Switchboard, Dashboards, Observatory and Inbox work with it, and on their own. One command sets it all up today": "Fabric 是你的项目及其智能体的家。Switchboard、Dashboards、Observatory 和 Inbox 既能与它配合，也能单独使用。现在一条命令就能把它们全部装好",
     "Read the transcript": "阅读文字稿",
     "Set it up": "开始设置",
@@ -219,6 +217,8 @@
     "Your own agent workplace": "你自己的智能体工作空间",
     "A local, open-source workspace with the agents and the subscription you already have. Set it up in one command, then build your first agents with Claude Code or Codex. About twenty minutes.": "一个本地开源工作空间，使用你已有的智能体和订阅。运行一条命令即可完成设置，然后使用 Claude Code 或 Codex 构建你的首批智能体。大约需要 20 分钟。",
     "Start free": "免费开始",
-    "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "公司将依靠智能体运行，而它们之间的流程必须有人管理。PassionCode.ai 正在构建这样的工作空间：维护智能体看板的 Fabric，以及配套工具。我们如今用它运行自己的工作。它依据 GNU AGPL-3.0 开源，个人可免费使用；组织可获得商业许可证和我们的服务。它由上述两位联合创始人构建。联系方式："
+    "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "公司将依靠智能体运行，而它们之间的流程必须有人管理。PassionCode.ai 正在构建这样的工作空间：维护智能体看板的 Fabric，以及配套工具。我们如今用它运行自己的工作。它依据 GNU AGPL-3.0 开源，个人可免费使用；组织可获得商业许可证和我们的服务。它由上述两位联合创始人构建。联系方式：",
+    "PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data": "一分半钟了解 PassionCode.ai：工作如何从人转到由 Fabric 管理的智能体，团队又如何成长为组织，配有旁白和字幕。看板显示的是示例数据",
+    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "工作如何从人转到由 Fabric 管理的智能体，团队又如何成长为组织，配有旁白和字幕。看板显示的是示例数据。"
   }
 }

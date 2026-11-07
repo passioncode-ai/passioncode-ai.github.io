@@ -223,7 +223,7 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
   for (const a of ['autoplay', 'loop', 'muted']) assert.ok(!new RegExp(`\\s${a}\\b`).test(tag), `homepage video: no ${a} (motion doctrine: a rendered file owes a control and no autoplay)`)
   assert.ok(video.includes('<source src="/assets/video/home.webm" type="video/webm">') && video.includes('<source src="/assets/video/home.mp4" type="video/mp4">'), 'homepage video: WebM and MP4')
   assert.ok(/<track kind="captions" src="\/assets\/video\/home\.vtt" srclang="en" label="Captions" default>/.test(video), 'homepage video: English captions on by default')
-  assert.match(video, /<figcaption id="video-note">[^<]*sample data[^<]*written example[^<]*<\/figcaption>/, 'homepage video: says it shows sample data and a written example')
+  assert.match(video, /<figcaption id="video-note">[^<]*sample data[^<]*<\/figcaption>/, 'homepage video: says the board it shows is sample data (v4 has no console example, SITE-050)')
   const built = read('scripts/build-site.mjs')
   assert.ok(built.includes('assets/video/home${suffix}.mp4') && built.includes('assets/video/home${locale === \'en\' ? \'\' : `-${locale}`}.vtt`).filter(file => existsSync'), 'scripts/build-site.mjs publishes the home video files')
   for (const suffix of ['', '-ru']) {
@@ -245,7 +245,7 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
     assert.ok(vtt.startsWith('WEBVTT\n'), `${file}: a WebVTT file`)
     assert.ok((vtt.match(/ --> /g) || []).length >= 8, `${file}: captions for the whole narration`)
     const last = Math.max(...[...vtt.matchAll(/--> 00:(\d\d):(\d\d\.\d{3})/g)].map(m => +m[1] * 60 + +m[2]))
-    assert.ok(last > 78 && last < 98, `${file}: the last caption ends with the narration (${last} s; the v3 cut: en 91.6 s, ru 98.0 s)`)
+    assert.ok(last > 78 && last < 98, `${file}: the last caption ends with the narration (${last} s; the v4 cut: en 91.4 s, ru 95.4 s)`)
     // Captions translated on the English cue timings keep every cue's timing (SITE-035).
     if (['pl', 'ko', 'pt-br', 'zh-hans', 'ja'].includes(locale)) {
       const timings = text => text.split('\n').filter(line => line.includes(' --> ')).join('\n')

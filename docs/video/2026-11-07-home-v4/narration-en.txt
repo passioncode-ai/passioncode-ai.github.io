@@ -1,0 +1,11 @@
+Your company runs on people passing work to people. Give each of them AI assistants, and the work still waits for a person. Meetings reconcile what the assistants made. And everyone builds their own agents: nothing connects, keys scatter, and nobody can say what an agent did, or what it cost.
+
+In an AI-native organization, agents run the process, and people steer it. Fabric keeps the board. Today, in preview, it routes the work and wakes the agent that owns a task. Next, it sets priorities and orders the releases. People give direction, approve what needs a person, and bring the expertise.
+
+Here is what it looks like. A user's question becomes a signal, a fix and a release, without a meeting. Research turns the market into a hypothesis. One message goes out in every language. Every task, every cost and every result is on the record.
+
+It holds together because it is one system: every agent built one way, keys in one vault, a dashboard for every agent.
+
+Start on one machine, free, today. On request, we set your organization up on its own device and run its administration, so your people only steer. Next, you clone it to the next team, and the next company.
+
+PassionCode.ai: the workplace for AI-native organizations. Start free, or bring your organization.

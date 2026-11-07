@@ -1,124 +1,130 @@
 WEBVTT
 
 1
-00:00:00.620 --> 00:00:02.410
-Your agent works for a week.
+00:00:00.720 --> 00:00:03.850
+Your company runs on people
+passing work to people.
 
 2
-00:00:02.740 --> 00:00:04.330
-Then it falls apart.
+00:00:04.220 --> 00:00:08.590
+Give each of them AI assistants,
+and the work still waits for a person.
 
 3
-00:00:04.640 --> 00:00:05.810
-The wrong account.
+00:00:08.980 --> 00:00:11.690
+Meetings reconcile what the assistants made.
 
 4
-00:00:06.060 --> 00:00:07.630
-It forgets what it learned.
+00:00:12.020 --> 00:00:14.210
+And everyone builds their own agents:
 
 5
-00:00:07.860 --> 00:00:10.190
-And nobody can say what it changed.
+00:00:14.480 --> 00:00:16.630
+nothing connects, keys scatter,
 
 6
-00:00:10.700 --> 00:00:13.720
-PassionCode.ai is the agent-agnostic
+00:00:16.679 --> 00:00:20.110
+and nobody can say what an
+agent did, or what it cost.
 
 7
-00:00:13.760 --> 00:00:16.570
-operating system for AI-native teams:
+00:00:20.480 --> 00:00:22.630
+In an AI-native organization,
 
 8
-00:00:16.860 --> 00:00:20.610
-a workplace where agents do the work,
-and you see all of it.
+00:00:22.740 --> 00:00:25.610
+agents run the process, and people steer it.
 
 9
-00:00:20.940 --> 00:00:23.740
-It runs on your machines, as open source,
+00:00:26.020 --> 00:00:27.590
+Fabric keeps the board.
 
 10
-00:00:23.780 --> 00:00:26.650
-with the agents and
-subscriptions you already have.
+00:00:27.940 --> 00:00:29.410
+Today, in preview,
 
 11
-00:00:27.040 --> 00:00:29.370
-Their work leaves a record you can open.
+00:00:29.520 --> 00:00:32.890
+it routes the work and wakes
+the agent that owns a task.
 
 12
-00:00:29.820 --> 00:00:34.710
-For you, one command sets up Fabric,
-the tools around it and the skills,
+00:00:33.259 --> 00:00:36.550
+Next, it sets priorities
+and orders the releases.
 
 13
-00:00:34.840 --> 00:00:37.090
-and your coding agent can run it for you.
+00:00:36.920 --> 00:00:40.070
+People give direction,
+approve what needs a person,
 
 14
-00:00:37.500 --> 00:00:41.770
-Fabric, in preview, is the home
-for your projects and their agents.
+00:00:40.120 --> 00:00:41.670
+and bring the expertise.
 
 15
-00:00:42.100 --> 00:00:45.530
-Your coding agent shows its
-plan before it changes anything.
+00:00:42.080 --> 00:00:43.470
+Here is what it looks like.
 
 16
-00:00:45.840 --> 00:00:48.870
-Each tool works with Fabric, and on its own.
+00:00:43.860 --> 00:00:46.070
+A user's question becomes a signal,
 
 17
-00:00:49.300 --> 00:00:53.690
-Switchboard: each agent on the
-account it should, limits in view.
+00:00:46.160 --> 00:00:48.830
+a fix and a release, without a meeting.
 
 18
-00:00:54.060 --> 00:00:58.370
-Dashboards: state,
-spend and control, in one window.
+00:00:49.240 --> 00:00:52.090
+Research turns the market into a hypothesis.
 
 19
-00:00:58.740 --> 00:01:01.950
-Observatory: what changed, with the evidence.
+00:00:52.420 --> 00:00:54.870
+One message goes out in every language.
 
 20
-00:01:02.400 --> 00:01:04.050
-Inbox, in preview:
+00:00:55.240 --> 00:00:59.270
+Every task, every cost and
+every result is on the record.
 
 21
-00:01:04.260 --> 00:01:07.390
-mail your agents answer
-only within your rules.
+00:00:59.580 --> 00:01:02.150
+It holds together because it is one system:
 
 22
-00:01:07.920 --> 00:01:11.170
-Agents connected to Fabric
-share one project’s board,
+00:01:02.520 --> 00:01:05.850
+every agent built one way, keys in one vault,
 
 23
-00:01:11.240 --> 00:01:12.730
-memory and hand-offs,
+00:01:06.000 --> 00:01:07.850
+a dashboard for every agent.
 
 24
-00:01:12.860 --> 00:01:15.070
-so one picks up where another stopped.
+00:01:08.340 --> 00:01:11.130
+Start on one machine, free, today.
 
 25
-00:01:15.480 --> 00:01:19.830
-For an organization, we bring agents
-onto your machines, connect them,
+00:01:11.480 --> 00:01:14.020
+On request, we set your organization up on
 
 26
-00:01:19.880 --> 00:01:22.670
-and show what each one
-cost and what it delivered.
+00:01:14.060 --> 00:01:16.810
+its own device and run its administration,
 
 27
-00:01:23.100 --> 00:01:25.830
-Agents are easy to start and hard to keep.
+00:01:16.860 --> 00:01:18.750
+so your people only steer.
 
 28
-00:01:26.140 --> 00:01:28.250
-We are building what holds them together.
+00:01:19.140 --> 00:01:22.870
+Next, you clone it to the next team,
+and the next company.
+
+29
+00:01:23.360 --> 00:01:28.330
+PassionCode.ai: the workplace
+for AI-native organizations.
+
+30
+00:01:28.700 --> 00:01:31.430
+Start free, or bring your organization.
