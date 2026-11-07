@@ -47,3 +47,23 @@ the page (brief D6). No number, no customer, no assessment of people.
 
 Spend for v4: $0.43 (narration and timings). The pipeline's order ids and manifests stay in its private delivery
 record, as for v3.
+
+## Shipped files
+
+Masters (Foundry deliveries, profile `social`): en 94.00 s, -12.9 LUFS, true peak -2.6 dBFS; ru 97.93 s, -12.6 LUFS,
+-2.8 dBFS. Web files by [harness/webenc4.sh](harness/webenc4.sh) (H.264 CRF 28 + AAC, VP9 CRF 40 + Opus, one real
+frame as poster):
+
+| File | Duration | Size |
+|---|---|---|
+| `assets/video/home.mp4`  | 94.00 s | 4 092 681 B |
+| `assets/video/home.webm`  | 94.00 s | 3 308 956 B |
+| `assets/video/home.jpg` (frame at 24.1 s: the shift) | n/a | 55 565 B |
+| `assets/video/home-ru.mp4`  | 97.93 s | 4 262 333 B |
+| `assets/video/home-ru.webm`  | 97.93 s | 3 516 401 B |
+| `assets/video/home-ru.jpg` (frame at 24.9 s) | n/a | 53 942 B |
+
+Captions: English 30 and Russian 26 cues on their own narrations, the other eight on the English timings (WebKit:
+every language's track loads, the transcript under the player is its captions file). The project's default render
+profile is now `store-appstore` (30 s at most), which Frame Agent enforces since its 0.1.0-d8cab208982f release;
+these renders name `--profile social` (180 s), as v3's did.
