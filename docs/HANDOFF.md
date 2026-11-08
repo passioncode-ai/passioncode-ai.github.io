@@ -1,3 +1,31 @@
+# Current handoff: SITE-058, useful guide and blog hubs, in review, 2026-11-08
+
+Objective (backlog SITE-058, within the operator's decision D2 that the header stays): the `/guides/` and `/blog/` hubs
+say what the section is for, whom it helps and what to read first, with a summary under every item; the content first
+for machines where the structure allows. Record: [evidence/2026-11-08-site-058/README.md](evidence/2026-11-08-site-058/README.md).
+
+Done: a lead and «Where to start» on both hubs, the author's byline on `/blog/`, and on every card whom the item helps
+and its own sections, in ten languages (`scripts/build-content-pages.mjs`, `scripts/site-content.mjs`, the
+`i18n/<locale>/guides.json` and `blog.json` catalogs, `styles.css`); SCN-027, SCN-028, SCR-16 and SCR-17 updated.
+`page_audit.py`: `/guides/` read share 39.8 % → 62.2 %, words 138 → 342, no finding; `/blog/` 28.5 % → 55.8 %, words
+73 → 230; Russian alike (`/ru/blog/` 54.8 %).
+
+Decisions: no header change. Measured, the header is about 7 % of the 5,700-character window and its language menu
+3.6 %; the skip link and `<main id="main">` already lead to the content; the row's "half" held only on hubs shorter
+than the window. Spanish «directivos» and Portuguese «gestores» for "leaders" (Copylot reads «líderes» as a
+superlative); translations written by this session, checked with Copylot in ten languages (report ids in the record),
+USD 0 spent.
+
+Checks run: `npm run check` exit 0 (136 tests); `npm run locales` PASS (10 languages, 41 pages each); `python3
+scripts/extract-public-copy.py` PASS (410); `npm run build` PASS (485 entries); `node scripts/public-dashes.mjs` PASS;
+WebKit at 1440 and 390 px on `/guides/`, `/blog/`, `/ru/guides/`, `/ja/blog/`: 200, no overflow.
+
+Open: `/ru/blog/` 0.2 points under the read-budget line and `low-extractable-text` on `/blog/` (a third post closes
+both); SITE-059; SITE-026 (native review, now including these strings).
+
+Next task: after the merge, the operator deploys from `main` (`docs/DEPLOYMENT.md`), then `scripts/verify-live.py`;
+then SITE-059 with the operator's decision on Russian no-break spaces.
+
 # Current handoff: SITE-057, no em dash in public text, in review, 2026-11-08
 
 Objective (backlog SITE-057 and the operator's no-em-dash rule): no em dash (U+2014) and no substitute for one in any

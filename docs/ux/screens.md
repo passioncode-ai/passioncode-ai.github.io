@@ -172,7 +172,7 @@ Falsifiers: a source agent, client or organization name; a price, timeline or te
 **Entity:** one agent template, provided by PassionCode.ai.
 
 ### SCR-16: Guides and a guide
-**Scenarios:** SCN-027. /guides/: hero and three cards with dates. A guide: breadcrumbs, GUIDE and the date, h1, lead, byline, sections, one action, More guides.
+**Scenarios:** SCN-027. /guides/: hero with a lead and «Where to start» (two lines), then three cards with dates, whom each guide helps and its sections (SITE-058). A guide: breadcrumbs, GUIDE and the date, h1, lead, byline, sections, one action, More guides.
 **Web surface:** public
 **Route:** https://passioncode.ai/guides/ and /guides/<slug>/
 **Answers:** each guide's one question (docs/seo/brief-2026-11-08.md).
@@ -181,7 +181,7 @@ Falsifiers: a source agent, client or organization name; a price, timeline or te
 **Entity:** PassionCode.ai's guides.
 
 ### SCR-17: Blog and a post
-**Scenarios:** SCN-028. /blog/: hero and two cards with dates. A post: the same article layout as a guide (`legal` measure), BlogPosting data with the author.
+**Scenarios:** SCN-028. /blog/: hero with a lead, the author's byline and «Where to start» (three lines), then two cards with dates, whom each post helps and its sections (SITE-058). A post: the same article layout as a guide (`legal` measure), BlogPosting data with the author.
 **Web surface:** public
 **Route:** https://passioncode.ai/blog/ and /blog/<slug>/
 **Answers:** each post's one question.

@@ -165,7 +165,11 @@ ${closing('template', ` data-template="${t.slug}"`)}
 }
 
 // ---- /guides/ and /blog/ ----------------------------------------------------------------------
-function hub ({ folder, items, title, description, name, eyebrow, h1, body, location, kind }) {
+// SITE-058: a hub opens with what the section is for, whom it helps and what to read first (the answer before the list),
+// and each card says whom its item helps and lists the item's own h2 headings as what it covers (plain text, no links,
+// so the cards add words to quote rather than link markers).
+const topics = a => [...a.body.matchAll(/<h2>([^<]+)<\/h2>/g)].map(m => m[1])
+function hub ({ folder, items, title, description, name, eyebrow, h1, body, lead, start, covers, byline, location, kind }) {
   const path = `/${folder}/`
   const data = [
     { '@context': 'https://schema.org', '@type': 'CollectionPage', name, description, url: ORIGIN + path, publisher: PUBLISHER, mainEntity: { '@type': 'ItemList', itemListElement: items.map((a, i) => ({ '@type': 'ListItem', position: i + 1, name: a.name, url: `${ORIGIN}/${folder}/${a.slug}/` })) } },
@@ -178,13 +182,19 @@ function hub ({ folder, items, title, description, name, eyebrow, h1, body, loca
   <p class="eyebrow"><span></span> ${esc(eyebrow)}</p>
   <h1 id="hero-title">${h1}</h1>
   <p class="hero-body">${esc(body)}</p>
+  <p class="page-lead">${esc(lead)}</p>
+${byline ? `  <p class="article-meta hub-byline">${esc(byline)}</p>
+` : ''}  <h2 class="outcomes-title hub-start-title">Where to start</h2>
+  <ul class="shift-list hub-start">
+${start.map(([who, what]) => `   <li><strong>${esc(who)}</strong> ${esc(what)}</li>`).join('\n')}
+  </ul>
  </div>
 </section>
 
 <section class="section" aria-labelledby="list-title">
  <h2 id="list-title" class="visually-hidden">${esc(name)}</h2>
  <div class="path-grid path-grid-two article-grid">
-${items.map(a => `  <article class="path-card reveal"><p class="availability">${esc(kind)} · <time datetime="${PUBLISHED.iso}">${PUBLISHED.text}</time></p><h3><a href="/${folder}/${a.slug}/" data-cta="${folder}" data-cta-location="${location}">${esc(a.name)}</a></h3><p>${esc(a.lead)}</p></article>`).join('\n')}
+${items.map(a => `  <article class="path-card reveal"><p class="availability">${esc(kind)} · <time datetime="${PUBLISHED.iso}">${PUBLISHED.text}</time></p><h3><a href="/${folder}/${a.slug}/" data-cta="${folder}" data-cta-location="${location}">${esc(a.name)}</a></h3><p>${esc(a.lead)}</p><p class="hub-summary">${esc(a.summary)}</p><p class="hub-topics-title">${esc(covers)}</p><ul class="hub-topics">${topics(a).map(t => `<li>${esc(t)}</li>`).join('')}</ul></article>`).join('\n')}
  </div>
 </section>
 </main>
@@ -225,9 +235,9 @@ ${others.map(o => `  <li><a href="/${folder}/${o.slug}/">${esc(o.name)}</a></li>
 export function renderAll () {
   const files = { 'agents/index.html': marketplace() }
   for (const t of TEMPLATES) files[`agents/${t.slug}/index.html`] = template(t)
-  files['guides/index.html'] = hub({ folder: 'guides', items: GUIDES, title: 'Guides to working with agents | PassionCode.ai', description: 'Step-by-step guides: set up your agent workplace, how the free one-week assessment works, and how agent templates become your agents.', name: 'Guides', eyebrow: 'Guides', h1: 'Guides to <em>working with agents</em>', body: 'Short guides to setting up the tools on your computer and to bringing agents into your organization', location: 'guide', kind: 'Guide' })
+  files['guides/index.html'] = hub({ folder: 'guides', items: GUIDES, title: 'Guides to working with agents | PassionCode.ai', description: 'Step-by-step guides: set up your agent workplace, how the free one-week assessment works, and how agent templates become your agents.', name: 'Guides', eyebrow: 'Guides', h1: 'Guides to <em>working with agents</em>', body: 'Short guides to setting up the tools on your computer and to bringing agents into your organization', lead: 'Each guide explains what happens at each step before you take it. They help two kinds of readers: people who set up the tools on their own computer, and leaders who bring agents into a company.', start: [['On your own computer:', 'read the setup guide first, then run the command from the Get started page.'], ['For your company:', 'read how the free one-week assessment works, then how agent templates become your agents.']], covers: 'In this guide', location: 'guide', kind: 'Guide' })
   for (const a of GUIDES) files[`guides/${a.slug}/index.html`] = article({ folder: 'guides', a, kind: 'Guide', hubName: 'Guides', location: 'guide', others: GUIDES.filter(o => o !== a) })
-  files['blog/index.html'] = hub({ folder: 'blog', items: POSTS, title: 'Blog: notes on AI-native organizations | PassionCode.ai', description: 'Notes from PassionCode.ai on AI-native organizations: why processes built around people stall, and what changes when agents run the process.', name: 'Blog', eyebrow: 'Blog', h1: 'Notes on <em>AI-native organizations</em>', body: 'Why companies will run on agents, and what we learn building the tools for it', location: 'blog', kind: 'Article' })
+  files['blog/index.html'] = hub({ folder: 'blog', items: POSTS, title: 'Blog: notes on AI-native organizations | PassionCode.ai', description: 'Notes from PassionCode.ai on AI-native organizations: why processes built around people stall, and what changes when agents run the process.', name: 'Blog', eyebrow: 'Blog', h1: 'Notes on <em>AI-native organizations</em>', body: 'Why companies will run on agents, and what we learn building the tools for it', lead: 'The blog explains the ideas behind the tools: how work changes when agents run a company’s processes and people steer them. It is for founders and leaders deciding how their company should work with AI.', start: [['New to the idea:', 'start with what an AI-native organization is.'], ['Already giving people AI assistants:', 'read why processes built around people stall.'], ['Ready to try it in your company:', 'read how the free one-week assessment works.']], covers: 'In this article', byline: 'Sergey Sheleg, co-founder of PassionCode.ai', location: 'blog', kind: 'Article' })
   for (const a of POSTS) files[`blog/${a.slug}/index.html`] = article({ folder: 'blog', a, kind: 'Article', hubName: 'Blog', location: 'blog', others: POSTS.filter(o => o !== a) })
   return files
 }

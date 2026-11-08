@@ -54,6 +54,18 @@ Blog
 
 Por que as empresas vão operar com agentes, e o que aprendemos construindo as ferramentas para isso
 
+O blog explica as ideias por trás das ferramentas: como o trabalho muda quando agentes conduzem os processos de uma empresa e as pessoas os orientam. É para fundadores e gestores que estão decidindo como a empresa deve trabalhar com IA.
+
+Sergey Sheleg, cofundador da PassionCode.ai
+
+## Por onde começar
+
+Se a ideia é nova para você: comece pelo artigo sobre o que é uma organização AI-native.
+
+Se você já dá assistentes de IA às pessoas: leia por que processos centrados em pessoas emperram.
+
+Se quer testar na sua empresa: leia como funciona a avaliação gratuita de uma semana.
+
 ## Blog
 
 Artigo · 8 de novembro de 2026
@@ -62,11 +74,39 @@ Artigo · 8 de novembro de 2026
 
 A maioria das empresas adiciona IA dando um assistente a cada pessoa. O processo continua o mesmo, e o gargalo também.
 
+Para gestores que deram assistentes de IA às equipes e continuam esperando pelas mesmas pessoas.
+
+Neste artigo
+
+A pessoa ainda é o gargalo
+
+Reuniões reconciliam o que os assistentes produziram
+
+Todos criam seus próprios agentes
+
+O que muda
+
 Artigo · 8 de novembro de 2026
 
 ### O que é uma organização AI-native
 
 Uma organização AI-native é uma empresa onde agentes executam os processos e as pessoas os direcionam.
+
+Para fundadores que querem uma definição simples e um primeiro passo.
+
+Neste artigo
+
+O trabalho circula entre agentes
+
+O que fica com as pessoas
+
+Um sistema, não muitos assistentes
+
+O que ela não é
+
+Onde ficam os agentes e os dados
+
+Como começar
 
 PassionCode
 

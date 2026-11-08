@@ -1,0 +1,156 @@
+{
+ "/agents/": {
+  "word_count": 860,
+  "links_total": 60,
+  "read_budget": {
+   "content_pct": 71.3,
+   "link_marker_pct": 28.7,
+   "links_before_first_text": 7
+  },
+  "findings": [
+   [
+    "faq-collapsed",
+    "medium"
+   ],
+   [
+    "link-count",
+    "medium"
+   ]
+  ]
+ },
+ "/guides/": {
+  "word_count": 138,
+  "links_total": 40,
+  "read_budget": {
+   "content_pct": 39.8,
+   "link_marker_pct": 60.2,
+   "links_before_first_text": 7
+  },
+  "findings": [
+   [
+    "low-extractable-text",
+    "medium"
+   ],
+   [
+    "read-budget",
+    "high"
+   ]
+  ]
+ },
+ "/blog/": {
+  "word_count": 73,
+  "links_total": 39,
+  "read_budget": {
+   "content_pct": 28.5,
+   "link_marker_pct": 71.5,
+   "links_before_first_text": 7
+  },
+  "findings": [
+   [
+    "low-extractable-text",
+    "medium"
+   ],
+   [
+    "read-budget",
+    "high"
+   ]
+  ]
+ },
+ "/guides/start-agent-workplace/": {
+  "word_count": 386,
+  "links_total": 43,
+  "read_budget": {
+   "content_pct": 60.3,
+   "link_marker_pct": 39.7,
+   "links_before_first_text": 7
+  },
+  "findings": []
+ },
+ "/blog/what-is-an-ai-native-organization/": {
+  "word_count": 363,
+  "links_total": 43,
+  "read_budget": {
+   "content_pct": 57.2,
+   "link_marker_pct": 42.8,
+   "links_before_first_text": 7
+  },
+  "findings": []
+ },
+ "/ru/agents/": {
+  "word_count": 812,
+  "links_total": 60,
+  "read_budget": {
+   "content_pct": 71.1,
+   "link_marker_pct": 28.9,
+   "links_before_first_text": 7
+  },
+  "findings": [
+   [
+    "faq-collapsed",
+    "medium"
+   ],
+   [
+    "link-count",
+    "medium"
+   ]
+  ]
+ },
+ "/ru/guides/": {
+  "word_count": 131,
+  "links_total": 40,
+  "read_budget": {
+   "content_pct": 39.3,
+   "link_marker_pct": 60.7,
+   "links_before_first_text": 7
+  },
+  "findings": [
+   [
+    "low-extractable-text",
+    "medium"
+   ],
+   [
+    "read-budget",
+    "high"
+   ]
+  ]
+ },
+ "/ru/blog/": {
+  "word_count": 70,
+  "links_total": 39,
+  "read_budget": {
+   "content_pct": 27.3,
+   "link_marker_pct": 72.7,
+   "links_before_first_text": 7
+  },
+  "findings": [
+   [
+    "low-extractable-text",
+    "medium"
+   ],
+   [
+    "read-budget",
+    "high"
+   ]
+  ]
+ },
+ "/ru/guides/start-agent-workplace/": {
+  "word_count": 362,
+  "links_total": 43,
+  "read_budget": {
+   "content_pct": 60.7,
+   "link_marker_pct": 39.3,
+   "links_before_first_text": 7
+  },
+  "findings": []
+ },
+ "/ru/blog/what-is-an-ai-native-organization/": {
+  "word_count": 323,
+  "links_total": 43,
+  "read_budget": {
+   "content_pct": 55.5,
+   "link_marker_pct": 44.5,
+   "links_before_first_text": 7
+  },
+  "findings": []
+ }
+}

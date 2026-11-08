@@ -1255,3 +1255,12 @@ html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -w
 @media (max-width: 760px) {
   .page-lead { font-size: 16px; margin-bottom: 26px; }
 }
+
+/* SITE-058: the guide and blog hubs say what to read first, whom each item helps and what it covers. Existing tokens. */
+.hub-start-title { margin-top: 4px; }
+.hub-start { max-width: 650px; margin: 0; }
+.hub-start strong { color: var(--ink); font-weight: 600; }
+.path-card p.hub-summary { color: var(--ink); margin: 0 0 18px; }
+.path-card p.hub-topics-title { margin: auto 0 8px; color: var(--ink-muted); font-size: var(--pc-type-meta); letter-spacing: .08em; text-transform: uppercase; }
+.hub-topics { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+.hub-byline { margin: -18px 0 26px; }

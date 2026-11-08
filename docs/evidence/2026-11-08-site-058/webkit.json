@@ -1,0 +1,68 @@
+[
+ {
+  "page": "/guides/",
+  "width": 1440,
+  "status": 200,
+  "errors": [],
+  "horizontalOverflow": false,
+  "firstLink": "skip-link #main"
+ },
+ {
+  "page": "/guides/",
+  "width": 390,
+  "status": 200,
+  "errors": [],
+  "horizontalOverflow": false,
+  "firstLink": "skip-link #main"
+ },
+ {
+  "page": "/blog/",
+  "width": 1440,
+  "status": 200,
+  "errors": [
+   "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))"
+  ],
+  "horizontalOverflow": false,
+  "firstLink": "skip-link #main"
+ },
+ {
+  "page": "/blog/",
+  "width": 390,
+  "status": 200,
+  "errors": [],
+  "horizontalOverflow": false,
+  "firstLink": "skip-link #main"
+ },
+ {
+  "page": "/ru/guides/",
+  "width": 1440,
+  "status": 200,
+  "errors": [],
+  "horizontalOverflow": false,
+  "firstLink": "skip-link #main"
+ },
+ {
+  "page": "/ru/guides/",
+  "width": 390,
+  "status": 200,
+  "errors": [],
+  "horizontalOverflow": false,
+  "firstLink": "skip-link #main"
+ },
+ {
+  "page": "/ja/blog/",
+  "width": 1440,
+  "status": 200,
+  "errors": [],
+  "horizontalOverflow": false,
+  "firstLink": "skip-link #main"
+ },
+ {
+  "page": "/ja/blog/",
+  "width": 390,
+  "status": 200,
+  "errors": [],
+  "horizontalOverflow": false,
+  "firstLink": "skip-link #main"
+ }
+]
