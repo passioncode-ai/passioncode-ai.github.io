@@ -426,7 +426,7 @@ Release
 
 Project Observatory
 
-Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht – mit Nachweis.
+Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht, mit Nachweis.
 
 Release
 

@@ -291,7 +291,7 @@ O Switchboard é a ferramenta de gerenciamento de contas disponível hoje. O Fab
 
 Quais agentes funcionam com o Switchboard?
 
-Claude Code, Codex e os outros agentes de programação populares — Hermes, Kilo Code, Cline, Goose, OpenCode e mais. Veja os 30 e como cada um se conecta.
+Claude Code, Codex e os outros agentes de programação populares: Hermes, Kilo Code, Cline, Goose, OpenCode e mais. Veja os 30 e como cada um se conecta.
 
 Um projeto pode ter as suas próprias contas?
 

@@ -426,7 +426,7 @@ Wydanie
 
 Project Observatory
 
-Co zmieniło się w każdym projekcie i co wymaga uwagi — wraz z dowodami.
+Co zmieniło się w każdym projekcie i co wymaga uwagi, wraz z dowodami.
 
 Wydanie
 

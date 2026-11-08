@@ -40,3 +40,21 @@ staccato, status, specimen, caption and generator regressions. It also protects
 punctuation exceptions, empty coverage and sitemap coverage. General brand-lint
 remains a separate review: its advisory exit code does not prove that these roles
 were inspected. [Root-cause task](../tasks/2026-10-01-copy-guard.md).
+
+## Dashes in public text
+
+Operator rule (2026-11-08, SITE-057): text people read on the site, in every language, carries
+no em dash (U+2014) and no substitute for one: two hyphens, or a hyphen or an en dash with a
+space on each side, between words. Write a full stop, comma, colon or parentheses instead, as
+the language reads naturally (a full-width colon in Japanese and Chinese, a no-break space
+before the colon in French). Ranges with an unspaced en dash (25–50 %) and hyphenated words are
+not dashes.
+
+Enforcement: `scripts/public-dashes.mjs` reads every page's text nodes, the alt, title,
+aria-label and placeholder attributes, description and Open Graph meta and JSON-LD strings,
+plus the translation catalogs, `assets/messages.js`, `worker/messages.js`, `llms.txt` and the
+published agent prompt; `node scripts/check-site.mjs` (part of `npm run check`) fails on any
+finding with its file, place and excerpt. The allowlist (code, pre, kbd, samp, scripts other
+than JSON-LD, styles, SVG, templates, comments, and the Worker's internal notice to the
+commercial mailbox) is written in the module's header. `scripts/public-dashes.test.mjs` plants
+each kind of dash and each allowlisted context. [Evidence](../evidence/2026-11-08-site-057/README.md).

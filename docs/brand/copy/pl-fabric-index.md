@@ -259,7 +259,7 @@ Zobacz kod źródłowy
 
 ↗
 
-To wczesna wersja zapoznawcza. Możesz w niej prowadzić projekty, tablicę decyzji, zadania, cele, puls pracy i wydania z ich potwierdzeniami. Rozmowa z Fabric zapisuje Twoje wiadomości, ale Fabric jeszcze nie odpowiada. Nowsza wersja nie aktualizuje istniejącej bazy danych sama; podaje polecenie, które trzeba uruchomić. Agenci zarejestrowani na tym Macu mogą przez lokalny hub agentów poprosić Fabric o dostęp do połączonego produktu, takiego jak Fabric Inbox; każdą prośbę akceptujesz albo odrzucasz i możesz cofnąć zgodę w Ustawieniach. Od wersji 0.3.2 Fabric wysyła anonimowe liczniki użycia — wyłącznie liczby i rodzaje, nigdy nazwy, ścieżki ani treść; wyłączysz je w Ustawienia → Share usage counts, co dotyczy każdej aplikacji PassionCode.ai na Twoim Macu.
+To wczesna wersja zapoznawcza. Możesz w niej prowadzić projekty, tablicę decyzji, zadania, cele, puls pracy i wydania z ich potwierdzeniami. Rozmowa z Fabric zapisuje Twoje wiadomości, ale Fabric jeszcze nie odpowiada. Nowsza wersja nie aktualizuje istniejącej bazy danych sama; podaje polecenie, które trzeba uruchomić. Agenci zarejestrowani na tym Macu mogą przez lokalny hub agentów poprosić Fabric o dostęp do połączonego produktu, takiego jak Fabric Inbox; każdą prośbę akceptujesz albo odrzucasz i możesz cofnąć zgodę w Ustawieniach. Od wersji 0.3.2 Fabric wysyła anonimowe liczniki użycia: wyłącznie liczby i rodzaje, nigdy nazwy, ścieżki ani treść. Wyłączysz je w Ustawienia → Share usage counts, co dotyczy każdej aplikacji PassionCode.ai na Twoim Macu.
 
 Fabric ma otwarty kod na licencji GNU AGPL-3.0, a licencję komercyjną można uzyskać na stronie passioncode.ai/business dla zastosowań, których AGPL nie obejmuje. Wersja 0.3.16 zapoznawcza jest budowana, podpisywana i poświadczana w CI z tego publicznego kodu.
 
@@ -285,7 +285,7 @@ Wszystkie lokalne usługi agentów w jednym oknie, sterowane przez Ciebie lub pr
 
 Project Observatory
 
-Co zmieniło się w każdym projekcie i co wymaga uwagi — wraz z dowodami.
+Co zmieniło się w każdym projekcie i co wymaga uwagi, wraz z dowodami.
 
 ↗
 
@@ -311,7 +311,7 @@ KIERUNEK
 
 ### Dodaj narzędzie z wnętrza Fabric
 
-Wybieranie i instalowanie narzędzi bez wychodzenia z Fabric — nad tym pracujemy.
+Pracujemy nad tym, by narzędzia można było wybierać i instalować bez wychodzenia z Fabric.
 
 PassionCode
 

@@ -100,7 +100,7 @@
     "Is Switchboard the same thing as Fabric?": "Switchboard は Fabric と同じものですか？",
     "Explore what we’re building with Fabric": "Fabric で作っているものを見る",
     "Which agents work with Switchboard?": "Switchboard はどのエージェントで使えますか？",
-    "Claude Code, Codex and the other popular coding agents — Hermes, Kilo Code, Cline, Goose, OpenCode and more.": "Claude Code、Codex のほか、Hermes、Kilo Code、Cline、Goose、OpenCode など、よく使われるコーディングエージェントに対応しています。",
+    "Claude Code, Codex and the other popular coding agents: Hermes, Kilo Code, Cline, Goose, OpenCode and more.": "Claude Code、Codex のほか、Hermes、Kilo Code、Cline、Goose、OpenCode など、よく使われるコーディングエージェントに対応しています。",
     "See all 30 and how each connects": "30 件すべてと接続方法を見る",
     "Can a project keep its own accounts?": "プロジェクトごとに専用のアカウントを持てますか？",
     "Yes. Create a project, add its folders (for example several related repositories) and choose its accounts. Sessions launched from those folders use only those accounts, automatic switching stays inside them, and agents working in other projects never switch to them.": "はい。プロジェクトを作成し、そのフォルダー（たとえば関連する複数のリポジトリ）を追加して、使用するアカウントを選びます。それらのフォルダーから起動したセッションはそのアカウントだけを使い、自動切り替えもその範囲内にとどまります。他のプロジェクトで作業するエージェントがそれらのアカウントに切り替わることはありません。",

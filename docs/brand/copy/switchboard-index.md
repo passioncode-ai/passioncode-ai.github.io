@@ -291,7 +291,7 @@ Switchboard is the account-management tool available today. Fabric, in early pre
 
 Which agents work with Switchboard?
 
-Claude Code, Codex and the other popular coding agents — Hermes, Kilo Code, Cline, Goose, OpenCode and more. See all 30 and how each connects.
+Claude Code, Codex and the other popular coding agents: Hermes, Kilo Code, Cline, Goose, OpenCode and more. See all 30 and how each connects.
 
 Can a project keep its own accounts?
 

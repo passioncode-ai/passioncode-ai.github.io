@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai – ein Toolkit für AI-native Teams",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai: ein Toolkit für AI-native Teams",
     "Is PassionCode.ai free?": "Ist PassionCode.ai kostenlos?",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "Ja. Jedes Tool ist Open Source unter der GNU AGPL-3.0: Du kannst es kostenlos herunterladen, nutzen, studieren und ändern. Eine kommerzielle Lizenz gibt es, wenn du es in ein geschlossenes Produkt einbaust oder einen veränderten gehosteten Dienst betreibst, ohne dessen Quellcode zu veröffentlichen.",
     "Which agents does it work with?": "Mit welchen Agenten funktioniert es?",
@@ -21,7 +21,7 @@
     "Choose the account each agent runs on, with usage limits in view.": "Wähle den Account, auf dem jeder Agent läuft, mit den Nutzungslimits im Blick.",
     "Release": "Release",
     "Every local agent service in one window, driven by you or by agents.": "Jeder lokale Agentendienst in einem Fenster, gesteuert von dir oder von Agenten.",
-    "What changed in every project, what needs attention, with the evidence.": "Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht – mit Nachweis.",
+    "What changed in every project, what needs attention, with the evidence.": "Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht, mit Nachweis.",
     "Gmail and Cloudflare mail in one list, important first; agents answer by policy.": "Gmail und Cloudflare-Mail in einer Liste, Wichtiges zuerst; Agenten antworten nach Richtlinie.",
     "Development preview": "Entwicklungsvorschau",
     "Preview means unfinished: Fabric is in early preview and its conversation does not reply yet; Fabric Inbox is in development preview and real-model replies are not yet verified. Each product page lists requirements and limits before the download. Machine-readable versions:": "Vorschau heißt unfertig: Fabric ist in der frühen Vorschau und seine Unterhaltung antwortet noch nicht; Fabric Inbox ist in der Entwicklungsvorschau, und Antworten mit echten Modellen sind noch nicht verifiziert. Jede Produktseite nennt vor dem Download Voraussetzungen und Einschränkungen. Maschinenlesbare Versionen:",

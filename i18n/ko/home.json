@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai — AI 네이티브 팀을 위한 툴킷",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai: AI 네이티브 팀을 위한 툴킷",
     "Is PassionCode.ai free?": "PassionCode.ai는 무료인가요?",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "네. 모든 도구는 GNU AGPL-3.0 오픈 소스이므로 무료로 다운로드하고 사용하고 살펴보고 수정할 수 있습니다. 폐쇄형 제품에 포함하거나 수정한 호스팅 서비스를 소스 공개 없이 운영해야 한다면 상용 라이선스를 이용할 수 있습니다.",
     "Which agents does it work with?": "어떤 에이전트와 함께 쓸 수 있나요?",

@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai — zestaw narzędzi dla zespołów AI-native",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai: zestaw narzędzi dla zespołów AI-native",
     "Is PassionCode.ai free?": "Czy PassionCode.ai jest bezpłatny?",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "Tak. Każde narzędzie ma otwarty kod na licencji GNU AGPL-3.0: możesz je bezpłatnie pobierać, używać, badać i zmieniać. Licencja komercyjna jest potrzebna, gdy wbudowujesz narzędzie w zamknięty produkt albo uruchamiasz zmodyfikowaną usługę bez publikowania jej kodu źródłowego.",
     "Which agents does it work with?": "Z którymi agentami to działa?",
@@ -26,7 +26,7 @@
     "Fabric Dashboards": "Fabric Dashboards",
     "Every local agent service in one window, driven by you or by agents.": "Wszystkie lokalne usługi agentów w jednym oknie, sterowane przez Ciebie lub przez agentów.",
     "Project Observatory": "Project Observatory",
-    "What changed in every project, what needs attention, with the evidence.": "Co zmieniło się w każdym projekcie i co wymaga uwagi — wraz z dowodami.",
+    "What changed in every project, what needs attention, with the evidence.": "Co zmieniło się w każdym projekcie i co wymaga uwagi, wraz z dowodami.",
     "Fabric Inbox": "Fabric Inbox",
     "Gmail and Cloudflare mail in one list, important first; agents answer by policy.": "Poczta Gmail i Cloudflare na jednej liście, ważne na górze; agenci odpowiadają według reguł.",
     "Development preview": "Wersja zapoznawcza w rozwoju",

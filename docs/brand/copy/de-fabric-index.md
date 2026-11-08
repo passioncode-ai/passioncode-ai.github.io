@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Fabric | Das Zuhause für deine Projekte und ihre Agenten · frühe Vorschau für macOS, Windows und Linux | PassionCode.ai
 
-Fabric ist das Zuhause für deine Projekte und ihre Agenten, eine frühe Vorschau für macOS, Windows und Linux. Es hält Board, Entscheidungen, Arbeit und Releases eines Projekts an einem Ort – auf deinem Rechner.
+Fabric ist das Zuhause für deine Projekte und ihre Agenten, eine frühe Vorschau für macOS, Windows und Linux. Es hält Board, Entscheidungen, Arbeit und Releases eines Projekts an einem Ort, auf deinem Rechner.
 
 Zum Inhalt springen
 
@@ -116,7 +116,7 @@ Zweck, aktuellen Stand und relevanten Kontext an einem Ort zusammenbringen.
 
 ### Die Arbeit konkret machen
 
-Aus dem Ziel Arbeit machen – mit Verantwortlichem, erwartetem Ergebnis und klaren Grenzen.
+Aus dem Ziel Arbeit machen, mit Verantwortlichem, erwartetem Ergebnis und klaren Grenzen.
 
 03
 
@@ -176,7 +176,7 @@ BELEGE
 
 ### Ergebnisse brauchen einen Beleg
 
-Eine erledigte Aufgabe sollte etwas mitbringen, das ein Mensch prüfen kann – nicht nur die Aussage eines Agenten, dass sie fertig ist.
+Eine erledigte Aufgabe sollte etwas mitbringen, das ein Mensch prüfen kann, nicht nur die Aussage eines Agenten, dass sie fertig ist.
 
 FABRIC HOLEN
 
@@ -259,7 +259,7 @@ Quellcode ansehen
 
 ↗
 
-Das ist eine frühe Vorschau. Du kannst Projekte, ein Board mit Entscheidungen, Aufgaben, Ziele, einen Puls der Arbeit und Releases mit ihren Belegen führen. Das Gespräch mit Fabric speichert deine Nachrichten, aber Fabric antwortet noch nicht. Eine neuere Version aktualisiert eine bestehende Datenbank nicht von selbst; sie nennt dir den Befehl, den du ausführen musst. Auf diesem Mac registrierte Agenten können Fabric über seinen lokalen Agent-Hub um Zugriff auf ein verbundenes Produkt wie Fabric Inbox bitten; du erlaubst oder verweigerst jede Anfrage und kannst sie in den Einstellungen widerrufen. Seit 0.3.2 sendet Fabric anonyme Nutzungszahlen – nur Zahlen und Arten, niemals Namen, Pfade oder Inhalte; schalte sie unter Einstellungen → Nutzungszahlen teilen aus, was für jede PassionCode.ai-App auf deinem Mac gilt.
+Das ist eine frühe Vorschau. Du kannst Projekte, ein Board mit Entscheidungen, Aufgaben, Ziele, einen Puls der Arbeit und Releases mit ihren Belegen führen. Das Gespräch mit Fabric speichert deine Nachrichten, aber Fabric antwortet noch nicht. Eine neuere Version aktualisiert eine bestehende Datenbank nicht von selbst; sie nennt dir den Befehl, den du ausführen musst. Auf diesem Mac registrierte Agenten können Fabric über seinen lokalen Agent-Hub um Zugriff auf ein verbundenes Produkt wie Fabric Inbox bitten; du erlaubst oder verweigerst jede Anfrage und kannst sie in den Einstellungen widerrufen. Seit 0.3.2 sendet Fabric anonyme Nutzungszahlen: nur Zahlen und Arten, niemals Namen, Pfade oder Inhalte. Schalte sie unter Einstellungen → Nutzungszahlen teilen aus, was für jede PassionCode.ai-App auf deinem Mac gilt.
 
 Fabric ist Open Source unter der GNU AGPL-3.0, und eine kommerzielle Lizenz ist erhältlich über passioncode.ai/business für eine Nutzung, die die AGPL nicht abdeckt. Die 0.3.16 Vorschau wird in der CI aus diesem öffentlichen Quellcode gebaut, signiert und notarisiert.
 
@@ -285,7 +285,7 @@ Jeder lokale Agentendienst in einem Fenster, gesteuert von dir oder von Agenten.
 
 Project Observatory
 
-Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht – mit Nachweis.
+Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht, mit Nachweis.
 
 ↗
 

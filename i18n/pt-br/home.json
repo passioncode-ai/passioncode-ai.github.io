@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai — ferramentas para equipes AI-native",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai: ferramentas para equipes AI-native",
     "Is PassionCode.ai free?": "A PassionCode.ai é gratuita?",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "Sim. Todas as ferramentas são de código aberto sob a GNU AGPL-3.0: você pode baixar, usar, estudar e modificar sem custo. Uma licença comercial está disponível para quando você a incluir em um produto fechado ou executar um serviço hospedado modificado sem publicar o código-fonte.",
     "Which agents does it work with?": "Com quais agentes funciona?",

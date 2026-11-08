@@ -68,7 +68,7 @@ Aus der Anfrage selbst: das Land, das Cloudflare für deine Verbindung meldet, d
 
 ## Warum und auf welcher Grundlage
 
-Um deine Anfrage zu beantworten und ein Angebot vorzubereiten – Schritte, um die du vor einem möglichen Vertrag bittest (DSGVO Art. 6 Abs. 1 lit. b); deshalb hat das Formular kein Einwilligungskästchen. Die Missbrauchsprüfungen beruhen auf unserem berechtigten Interesse, das Formular nutzbar zu halten (Art. 6 Abs. 1 lit. f). Produktneuigkeiten erhalten nur Menschen, die darum gebeten haben, und sie können diese Einwilligung jederzeit widerrufen (Art. 6 Abs. 1 lit. a).
+Um deine Anfrage zu beantworten und ein Angebot vorzubereiten: Schritte, um die du vor einem möglichen Vertrag bittest (DSGVO Art. 6 Abs. 1 lit. b); deshalb hat das Formular kein Einwilligungskästchen. Die Missbrauchsprüfungen beruhen auf unserem berechtigten Interesse, das Formular nutzbar zu halten (Art. 6 Abs. 1 lit. f). Produktneuigkeiten erhalten nur Menschen, die darum gebeten haben, und sie können diese Einwilligung jederzeit widerrufen (Art. 6 Abs. 1 lit. a).
 
 ## Wo die Daten gespeichert werden
 
@@ -98,7 +98,7 @@ Während du im Formular schreibst, wird dein noch nicht gesendeter Text nur im S
 
 ## Die Apps
 
-Die PassionCode.ai-Apps laufen auf deinen Computern und senden deine Arbeit nicht an uns. Fabric Switchboard und, seit Version 0.3.2, Fabric senden anonyme Nutzungszahlen – nur Anzahlen und Arten, niemals Namen, Pfade oder Inhalte. Schalte sie im About-Fenster von Switchboard oder in den Settings von Fabric ab; der Schalter gilt für jede PassionCode.ai-App auf diesem Computer.
+Die PassionCode.ai-Apps laufen auf deinen Computern und senden deine Arbeit nicht an uns. Fabric Switchboard und, seit Version 0.3.2, Fabric senden anonyme Nutzungszahlen: nur Anzahlen und Arten, niemals Namen, Pfade oder Inhalte. Schalte sie im About-Fenster von Switchboard oder in den Settings von Fabric ab; der Schalter gilt für jede PassionCode.ai-App auf diesem Computer.
 
 PassionCode
 

@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai：AI 原生团队的工具集",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai：AI 原生团队的工具集",
     "Is PassionCode.ai free?": "PassionCode.ai 免费吗？",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "免费。所有工具都基于 GNU AGPL-3.0 开源：你可以免费下载、使用、研究和修改。如果你要把它放进闭源产品，或运行修改后的托管服务而不公开其源代码，可以申请商业许可证。",
     "Which agents does it work with?": "它支持哪些智能体？",

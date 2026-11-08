@@ -141,7 +141,7 @@ One action, one name, in every language. Where the en and ru columns disagree wi
 | evidence | подтверждения | what an agent's work and a release leave behind | D-T2 |
 | state | состояние | what is running, what needs you, what it costs | D-T3 |
 | the tools; your agents; IN THE TOOLKIT | инструменты; ваши агенты; В НАБОРЕ | products; a person's agents; the product pages' label | D-T4 |
-| Fabric, the home for your projects and their agents | Fabric — дом для ваших проектов и их агентов | Fabric, on every page but the one /fabric/ line that names the CEO direction | D-T5 |
+| Fabric, the home for your projects and their agents | Fabric, дом для ваших проектов и их агентов (no dash since SITE-057) | Fabric, on every page but the one /fabric/ line that names the CEO direction | D-T5 |
 | skills | навыки (first use «навыки (skills)») | the adapter's skills | D-T6 |
 
 ### Words we ban
@@ -171,7 +171,7 @@ rendered four ways («подтверждения», «доказательств
 | D-T2 | evidence | English "evidence". Russian **«подтверждения» everywhere**: one word for an agent's record and a release's proof alike. «доказательства», «основание» and «следы работы» leave the site | the operator chose Alternative A over the recommended «следы работы» |
 | D-T3 | health | English "state", Russian «состояние»: what is running, what needs you, what it costs (the word the Dashboards page already uses) | as recommended |
 | D-T4 | family | Products are "the tools" («инструменты»); the product pages' "IN THE FAMILY" label becomes "IN THE TOOLKIT" («В НАБОРЕ»); a person's agents are "your agents" («ваши агенты») | as recommended |
-| D-T5 | CEO AI agent | Lead with what Fabric does today: "Fabric, the home for your projects and their agents" («Fabric — дом для ваших проектов и их агентов»). "CEO" appears once, on /fabric/, as direction: "we are building it to act as the CEO of your agents". [facts.md](facts.md) row *CEO name and status* updated under lease the same day | as recommended |
+| D-T5 | CEO AI agent | Lead with what Fabric does today: "Fabric, the home for your projects and their agents" («Fabric, дом для ваших проектов и их агентов»; until SITE-057 written with a dash). "CEO" appears once, on /fabric/, as direction: "we are building it to act as the CEO of your agents". [facts.md](facts.md) row *CEO name and status* updated under lease the same day | as recommended |
 | D-T6 | skills (ru) | «навыки»; the first use on a page is «навыки (skills)», because Claude Code and Codex print "skills" | as recommended |
 
 ## 7. What changes on each page (for W6 and W7)

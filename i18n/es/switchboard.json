@@ -112,7 +112,7 @@
     "Is Switchboard the same thing as Fabric?": "¿Switchboard es lo mismo que Fabric?",
     "Explore what we’re building with Fabric": "Descubre lo que construimos con Fabric",
     "Which agents work with Switchboard?": "¿Qué agentes funcionan con Switchboard?",
-    "Claude Code, Codex and the other popular coding agents — Hermes, Kilo Code, Cline, Goose, OpenCode and more.": "Claude Code, Codex y los demás agentes de programación populares: Hermes, Kilo Code, Cline, Goose, OpenCode y más.",
+    "Claude Code, Codex and the other popular coding agents: Hermes, Kilo Code, Cline, Goose, OpenCode and more.": "Claude Code, Codex y los demás agentes de programación populares: Hermes, Kilo Code, Cline, Goose, OpenCode y más.",
     "See all 30 and how each connects": "Ver los 30 y cómo se conecta cada uno",
     "Can a project keep its own accounts?": "¿Un proyecto puede tener sus propias cuentas?",
     "Yes. Create a project, add its folders (for example several related repositories) and choose its accounts. Sessions launched from those folders use only those accounts, automatic switching stays inside them, and agents working in other projects never switch to them.": "Sí. Crea un proyecto, añade sus carpetas (por ejemplo, varios repositorios relacionados) y elige sus cuentas. Las sesiones iniciadas desde esas carpetas usan solo esas cuentas, el cambio automático se queda dentro de ellas y los agentes que trabajan en otros proyectos nunca cambian a ellas.",

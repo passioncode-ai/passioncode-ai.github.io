@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai — AIネイティブなチームのためのツールキット",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai：AIネイティブなチームのためのツールキット",
     "Is PassionCode.ai free?": "PassionCode.ai は無料ですか？",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "はい。すべてのツールは GNU AGPL-3.0 のオープンソースで、無料でダウンロード、利用、調査、変更できます。クローズドな製品に組み込む場合や、変更したホスト型サービスをソースを公開せずに運用する場合には、商用ライセンスをご利用いただけます。",
     "Which agents does it work with?": "どのエージェントに対応していますか？",
