@@ -100,7 +100,7 @@
     "Is Switchboard the same thing as Fabric?": "Switchboard 和 Fabric 是同一个东西吗？",
     "Explore what we’re building with Fabric": "了解我们用 Fabric 在构建什么",
     "Which agents work with Switchboard?": "哪些智能体可以与 Switchboard 配合使用？",
-    "Claude Code, Codex and the other popular coding agents — Hermes, Kilo Code, Cline, Goose, OpenCode and more.": "Claude Code、Codex 以及其他常用的编码智能体，包括 Hermes、Kilo Code、Cline、Goose、OpenCode 等。",
+    "Claude Code, Codex and the other popular coding agents: Hermes, Kilo Code, Cline, Goose, OpenCode and more.": "Claude Code、Codex 以及其他常用的编码智能体，包括 Hermes、Kilo Code、Cline、Goose、OpenCode 等。",
     "See all 30 and how each connects": "查看全部 30 个及各自的连接方式",
     "Can a project keep its own accounts?": "项目可以有自己的账号吗？",
     "Yes. Create a project, add its folders (for example several related repositories) and choose its accounts. Sessions launched from those folders use only those accounts, automatic switching stays inside them, and agents working in other projects never switch to them.": "可以。创建一个项目，添加它的文件夹（例如几个相关的代码仓库），再选择它的账号。从这些文件夹启动的会话只使用这些账号，自动切换也只在这些账号之间进行，其他项目中的智能体不会切换到它们。",

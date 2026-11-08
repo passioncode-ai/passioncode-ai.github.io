@@ -51,7 +51,7 @@
     "Everything the app does,": "Alles, was die App kann,",
     "an agent can do": "kann auch ein Agent",
     "Your server answers the Model Context Protocol at": "Dein Server spricht das Model Context Protocol unter",
-    ". Each function of the app is also an MCP tool, so Claude Code or another MCP client can read, sort and send mail and manage addresses within the level of its key.": ". Jede Funktion der App ist auch ein MCP-Tool, sodass Claude Code oder ein anderer MCP-Client Mails lesen, sortieren und senden und Adressen verwalten kann – im Rahmen der Stufe seines Schlüssels.",
+    ". Each function of the app is also an MCP tool, so Claude Code or another MCP client can read, sort and send mail and manage addresses within the level of its key.": ". Jede Funktion der App ist auch ein MCP-Tool, sodass Claude Code oder ein anderer MCP-Client Mails lesen, sortieren und senden und Adressen verwalten kann, im Rahmen der Stufe seines Schlüssels.",
     "In the app, open": "Öffne in der App",
     "Settings → Agent access": "Einstellungen → Agent-Zugriff",
     "Connect your agent": "Deinen Agenten verbinden",

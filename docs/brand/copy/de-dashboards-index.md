@@ -72,7 +72,7 @@ DAS FENSTER
 
 ## auf einem Bildschirm
 
-Was bereit ist, was dich braucht und was es kostet – die nächste Aktion ist nur einen Klick entfernt. Jeder Dienst öffnet sein eigenes Dashboard direkt in der App.
+Was bereit ist, was dich braucht und was es kostet: Die nächste Aktion ist nur einen Klick entfernt. Jeder Dienst öffnet sein eigenes Dashboard direkt in der App.
 
 Die echte App aus ihrem Entwicklungs-Build · Beispieldienste aus dem Kit des Fabric Agent Adapter, keine echten Daten
 

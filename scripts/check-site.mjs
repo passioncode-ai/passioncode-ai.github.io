@@ -1,12 +1,13 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
-import { existsSync, readFileSync, statSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 import { PAGES, NOINDEX, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { LEAD_OPTIONS } from '../assets/lead-options.js'
 import { alternates, isoDuration, langTag, languageSwitch, LOCALES, mp4Seconds, vttText, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
+import { catalogParts, dashFindings, moduleStringParts, readableParts, textFileParts } from './public-dashes.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const read = path => readFileSync(resolve(root, path), 'utf8')
@@ -150,6 +151,20 @@ for (const block of sitemap.match(/<url>[\s\S]*?<\/url>/g)) {
 }
 assert.match(sitemap, /xmlns:xhtml="http:\/\/www\.w3\.org\/1999\/xhtml"/, 'sitemap declares the xhtml namespace')
 console.log(`PASS: ${PAGES.length} static pages, metadata, CSP-safe markup, anchors, live values, shared header and footer`)
+
+// SITE-057: no em dash and no substitute for one in the words people read, in every language
+// (scripts/public-dashes.mjs names what counts as read and the allowlist).
+{
+  const sources = [
+    ...PAGES.map(file => [file, readableParts(read(file))]),
+    ...LOCALES.filter(l => l !== 'en').flatMap(locale => readdirSync(resolve(root, 'i18n', locale)).filter(f => f.endsWith('.json')).map(f => `i18n/${locale}/${f}`)).map(file => [file, catalogParts(JSON.parse(read(file)))]),
+    ...['assets/messages.js', 'worker/messages.js'].map(file => [file, moduleStringParts(read(file))]),
+    ...['llms.txt', 'business/agent-request.txt'].filter(file => existsSync(resolve(root, file))).map(file => [file, textFileParts(read(file))])
+  ]
+  const problems = sources.flatMap(([file, parts]) => dashFindings(parts).map(f => `${file}: ${f.rule} in ${f.where}: …${f.excerpt}…`))
+  assert.deepEqual(problems, [], `dashes in public text (rewrite with a full stop, comma, colon or parentheses):\n${problems.join('\n')}`)
+  console.log(`PASS: no em dash or substitute in public text, ${sources.length} files`)
+}
 
 // ---- the homepage: the hero, why, two doors, the tools, source, FAQ, the founder note ---------
 // Simplified 2026-10-10 (operator): the hero and its narrative are unchanged; after it, one beat

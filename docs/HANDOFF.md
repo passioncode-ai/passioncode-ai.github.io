@@ -1,3 +1,28 @@
+# Current handoff: SITE-057, no em dash in public text, in review, 2026-11-08
+
+Objective (backlog SITE-057 and the operator's no-em-dash rule): no em dash (U+2014) and no substitute for one in any
+text people read on the site, in all ten languages, rewritten in the source the locale build reads; a gate that keeps
+it so. Record: [evidence/2026-11-08-site-057/README.md](evidence/2026-11-08-site-057/README.md).
+
+Done: 316 findings on the 410 pages at `origin/main` `8c517867` rewritten (ru 119, de 68 spaced en dashes, pl 58,
+pt-br 48, en 7, fr 4, ko 4, zh-hans 4, ja 3, es 1), plus the form messages, the receipt subject and `llms.txt`; the
+header labels now read «Strona główna PassionCode.ai», «Página inicial do PassionCode.ai», «Startseite von
+PassionCode.ai»; `scripts/public-dashes.mjs` and its 6 tests in `npm run check`; brand pack section *Dashes in public
+text*; the Russian D-T5 form «Fabric, дом для ваших проектов и их агентов».
+
+Decisions: the German spaced en dash is a substitute and goes too; Japanese and Chinese take a full-width colon,
+French a no-break space before the colon; the Worker's internal notice to the commercial mailbox is not public text and
+keeps its separators; the home video and its captions are untouched (they carry no em dash).
+
+Checks run: `npm run check` exit 0 (136 tests); `npm run locales` PASS; `extract-public-copy.py` PASS (410); `npm run
+build` 485 entries; U+2014 grep over `dist/` HTML, text and XML prints nothing; Copylot in ten languages, nothing
+blocking (report ids in the record).
+
+Open: SITE-059 (uneven Russian no-break spaces, blocks nothing), SITE-058, SITE-026.
+
+Next task: after the merge, the operator deploys from `main` (`docs/DEPLOYMENT.md`), then `scripts/verify-live.py`;
+then SITE-058.
+
 # Current handoff: SITE-056, agent templates, guides and blog, in review, 2026-11-08
 
 Objective (operator, 2026-11-08, paraphrased from Russian): an agents marketplace with our templates, without details,

@@ -68,7 +68,7 @@ Da própria requisição: o país que o Cloudflare informa para a sua conexão, 
 
 ## Por quê, e com que base legal
 
-Para responder à sua solicitação e preparar uma proposta — providências que você pede antes de um possível contrato (GDPR, art. 6(1)(b)); por isso o formulário não tem caixa de consentimento. As verificações contra abuso se baseiam no nosso legítimo interesse em manter o formulário utilizável (art. 6(1)(f)). Novidades de produto só vão para quem pediu, e essas pessoas podem retirar o consentimento a qualquer momento (art. 6(1)(a)).
+Para responder à sua solicitação e preparar uma proposta: providências que você pede antes de um possível contrato (GDPR, art. 6(1)(b)); por isso o formulário não tem caixa de consentimento. As verificações contra abuso se baseiam no nosso legítimo interesse em manter o formulário utilizável (art. 6(1)(f)). Novidades de produto só vão para quem pediu, e essas pessoas podem retirar o consentimento a qualquer momento (art. 6(1)(a)).
 
 ## Onde os dados ficam
 
@@ -98,7 +98,7 @@ Enquanto você escreve no formulário, o texto ainda não enviado fica guardado 
 
 ## Os apps
 
-Os apps do PassionCode.ai rodam nos seus computadores e não enviam o seu trabalho para nós. O Fabric Switchboard e, desde a versão 0.3.2, o Fabric enviam contagens anônimas de uso — apenas contagens e tipos, nunca nomes, caminhos nem conteúdo. Desative-as na janela Sobre do Switchboard ou nas Configurações do Fabric; a opção vale para todos os apps do PassionCode.ai naquele computador.
+Os apps do PassionCode.ai rodam nos seus computadores e não enviam o seu trabalho para nós. O Fabric Switchboard e, desde a versão 0.3.2, o Fabric enviam contagens anônimas de uso: apenas contagens e tipos, nunca nomes, caminhos nem conteúdo. Desative-as na janela Sobre do Switchboard ou nas Configurações do Fabric; a opção vale para todos os apps do PassionCode.ai naquele computador.
 
 PassionCode
 
