@@ -1,0 +1,16 @@
+{
+  "page": "agents/sales-and-leads/index.html",
+  "strings": {
+    "Sales and leads agent template | PassionCode.ai": "Agente de ventas y leads: plantilla | PassionCode.ai",
+    "Collects requests": "Recoge solicitudes",
+    "A concierge on your site takes a request with no person online and never invents a price.": "Un conserje en tu sitio web recoge una solicitud aunque no haya nadie conectado y nunca inventa un precio.",
+    "Keeps one pipeline": "Mantiene un solo embudo de ventas",
+    "Every request lands in one pipeline with a score, a stage and an owner.": "Cada solicitud llega a un único embudo de ventas con una puntuación, una etapa y un responsable.",
+    "Finds missed follow-ups": "Detecta seguimientos olvidados",
+    "Spots warm leads and waiting buyers in the conversations your team already has.": "Localiza leads interesados y compradores que esperan respuesta en las conversaciones que tu equipo ya mantiene.",
+    "For teams that get requests from a site, chats, mail and messengers and lose some of them on the way.": "Para equipos que reciben solicitudes desde un sitio web, chats, correo y apps de mensajería, y pierden algunas por el camino.",
+    "No request lost between channels": "Ninguna solicitud perdida entre canales",
+    "A next step on every lead": "Un siguiente paso para cada lead",
+    "Prices that stay a person’s decision": "Precios que siguen siendo decisión de una persona"
+  }
+}

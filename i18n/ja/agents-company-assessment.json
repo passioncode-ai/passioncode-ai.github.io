@@ -1,0 +1,16 @@
+{
+  "page": "agents/company-assessment/index.html",
+  "strings": {
+    "Company assessment agent template | PassionCode.ai": "企業診断エージェントのテンプレート | PassionCode.ai",
+    "Maps the work": "仕事を地図にする",
+    "Builds a map of the kinds of tasks, how long each takes and how work moves between people and systems.": "タスクの種類、それぞれにかかる時間、人とシステムの間で仕事がどう動くかを地図にします。",
+    "Finds the waits": "待ちを見つける",
+    "Shows where work stops and for how long, and where the written process differs from the real one.": "仕事がどこでどれだけ止まっているか、文書上のプロセスが実際とどこで違うかを示します。",
+    "Plans the redesign": "再設計を計画する",
+    "Proposes which kinds of work an agent takes, where a person stays, and how many hours that frees.": "どの種類の仕事をエージェントが引き受け、どこに人が残るか、それで何時間が空くかを提案します。",
+    "For founders and leaders who want a true picture of their processes before they change them.": "プロセスを変える前に、その実像を知りたい創業者やリーダーのために。",
+    "A process map built from evidence, not from interviews alone": "インタビューだけに頼らず、根拠から作るプロセスマップ",
+    "A ranked list of processes for agents, each with its estimate": "エージェントに任せるプロセスの優先順位リスト（それぞれに見積もりつき）",
+    "Readings about processes, never scores of people": "プロセスについての読み取りで、人の採点は行いません"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "page": "agents/marketing-analyst/index.html",
+  "strings": {
+    "Marketing analyst agent template | PassionCode.ai": "Modèle d’agent analyste marketing | PassionCode.ai",
+    "Spend against revenue": "Les dépenses face aux revenus",
+    "Joins what each campaign cost with what its users paid, from your own records.": "Rapproche ce que chaque campagne a coûté de ce que ses utilisateurs ont payé, à partir de vos propres données.",
+    "Creatives as hypotheses": "Les créations comme hypothèses",
+    "Takes each creative apart into claims that a test can confirm or reject.": "Décompose chaque création en affirmations qu’un test peut confirmer ou rejeter.",
+    "Says when it does not know": "Dit quand il ne sait pas",
+    "Where the data does not support a number, it says so instead of guessing.": "Là où les données ne justifient pas un chiffre, il le dit au lieu de deviner.",
+    "For teams that buy traffic and want to know which spend pays back.": "Pour les équipes qui achètent du trafic et veulent savoir quelles dépenses sont rentables.",
+    "A portfolio of hypotheses, tests and briefs": "Un portefeuille d’hypothèses, de tests et de briefs",
+    "Budget changes only within limits you set": "Des changements de budget uniquement dans les limites que vous fixez",
+    "Reports that show their data": "Des rapports qui montrent leurs données"
+  }
+}

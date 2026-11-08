@@ -1,0 +1,16 @@
+{
+  "page": "agents/telegram-product-bot/index.html",
+  "strings": {
+    "Telegram product bot template | PassionCode.ai": "Modelo de bot de produto no Telegram | PassionCode.ai",
+    "Every update once": "Cada atualização uma só vez",
+    "Handles each update exactly once and keeps its state across restarts.": "Processa cada atualização exatamente uma vez e mantém o estado entre reinicializações.",
+    "Payments confirmed": "Pagamentos confirmados",
+    "Grants access only when the payment platform confirms the payment, never on a redirect alone.": "Libera o acesso só quando a plataforma de pagamento confirma o pagamento, nunca apenas com base em um redirecionamento.",
+    "A view for your team": "Uma visão para a sua equipe",
+    "Gives your team a place to see and manage what the bot is doing.": "Dá à sua equipe um lugar para ver e gerenciar o que o bot está fazendo.",
+    "For teams that sell or deliver a service inside Telegram.": "Para equipes que vendem ou prestam um serviço dentro do Telegram.",
+    "No double charges and no lost orders": "Sem cobranças duplicadas e sem pedidos perdidos",
+    "Every arrival traced to its source": "Cada chegada rastreada até a sua origem",
+    "A bot in every language you sell in": "Um bot em todos os idiomas em que você vende"
+  }
+}

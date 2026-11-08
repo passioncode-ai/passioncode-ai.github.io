@@ -1225,3 +1225,33 @@ html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -w
   .agents-map svg { display: none; }
   .agents-list { display: block; }
 }
+
+/* SITE-056: the agent templates, guides and blog. Existing tokens and components only; the new rules place them. */
+.breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 22px; font-size: var(--pc-type-meta); color: var(--ink-muted); }
+.breadcrumbs a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 4px; min-height: 24px; display: inline-flex; align-items: center; }
+.breadcrumbs a:hover { color: var(--gold); }
+.page-lead { max-width: 650px; margin: 0 0 34px; color: var(--ink-soft); font-size: 18px; line-height: 1.65; }
+.template-card h3 a { color: var(--ink); text-decoration: none; }
+.template-card h3 a:hover, .template-card h3 a:focus-visible { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+.template-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.template-card { position: relative; }
+.template-grid { margin-top: 8px; }
+.outcomes-title { margin: 0 0 8px; font-size: 18px; letter-spacing: -.01em; }
+.outcomes { max-width: 760px; }
+.related-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.related-list a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; display: inline-flex; min-height: 24px; align-items: center; }
+.related-templates .section-heading { margin-bottom: 28px; }
+.article-page ul { padding-left: 1.2em; }
+.article-page .availability { margin: 32px 0 0; color: var(--gold); }
+.article-page .button { text-decoration: none; }
+.article-page .button-primary { color: var(--pc-on-accent); }
+.article-meta { color: var(--ink-muted); font-size: var(--pc-type-meta); margin: 0 0 8px; }
+.article-actions { margin-top: 40px; }
+.article-grid h3 a { color: var(--ink); text-decoration: none; }
+.article-grid h3 a:hover, .article-grid h3 a:focus-visible { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+@media (min-width: 1001px) {
+  .assembly-steps { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) {
+  .page-lead { font-size: 16px; margin-bottom: 26px; }
+}

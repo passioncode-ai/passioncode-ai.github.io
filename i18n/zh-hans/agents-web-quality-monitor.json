@@ -1,0 +1,16 @@
+{
+  "page": "agents/web-quality-monitor/index.html",
+  "strings": {
+    "Web quality monitor agent template | PassionCode.ai": "网站质量监测智能体模板 | PassionCode.ai",
+    "Scenarios in a browser": "在浏览器中运行场景",
+    "Runs a scenario written in plain words and proves the result.": "运行用平实语言写成的场景，并证明结果。",
+    "Pages and checkouts": "页面与结账",
+    "Walks every page looking for errors and checks that every payment form opens.": "逐页查找错误，并检查每个支付表单都能打开。",
+    "Incidents, not noise": "只有事件，没有噪音",
+    "Turns error and metric alerts into incidents without duplicates, and starts a repair.": "把错误和指标告警转化为不重复的事件，并启动修复。",
+    "For teams that ship often and want to find problems before their users report them.": "适合频繁发布、希望在用户报告之前发现问题的团队。",
+    "Bugs found before users find them": "赶在用户之前发现缺陷",
+    "Reported bugs checked against production": "对照生产环境核实已报告的缺陷",
+    "Known vulnerabilities matched to what you ship": "将已知漏洞与你发布的内容相匹配"
+  }
+}

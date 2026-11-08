@@ -1,0 +1,16 @@
+{
+  "page": "agents/marketing-analyst/index.html",
+  "strings": {
+    "Marketing analyst agent template | PassionCode.ai": "マーケティングアナリストエージェントのテンプレート | PassionCode.ai",
+    "Spend against revenue": "支出と収益を突き合わせる",
+    "Joins what each campaign cost with what its users paid, from your own records.": "各キャンペーンにかかった費用と、そのユーザーが支払った金額を、お客様自身の記録から結びつけます。",
+    "Creatives as hypotheses": "クリエイティブを仮説に",
+    "Takes each creative apart into claims that a test can confirm or reject.": "各クリエイティブを、テストで確認または否定できる主張に分解します。",
+    "Says when it does not know": "わからないときはそう言う",
+    "Where the data does not support a number, it says so instead of guessing.": "データが数字を裏づけないときは、推測せずにそう伝えます。",
+    "For teams that buy traffic and want to know which spend pays back.": "トラフィックを購入し、どの支出が回収できているかを知りたいチームのために。",
+    "A portfolio of hypotheses, tests and briefs": "仮説、テスト、ブリーフのポートフォリオ",
+    "Budget changes only within limits you set": "予算の変更は設定した上限の範囲内だけ",
+    "Reports that show their data": "データを示すレポート"
+  }
+}

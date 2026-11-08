@@ -1,0 +1,16 @@
+{
+  "page": "agents/research/index.html",
+  "strings": {
+    "Research agent template | PassionCode.ai": "리서치 에이전트 템플릿 | PassionCode.ai",
+    "Quick and deep": "빠르게, 깊이 있게",
+    "Answers a quick question, or runs a deep investigation with a plan and verified quotes.": "간단한 질문에 답하거나, 계획과 검증된 인용을 갖춘 심층 조사를 진행합니다.",
+    "A watch on a topic": "주제 모니터링",
+    "Follows a topic on a schedule and reports only what is new.": "일정에 따라 주제를 추적하고 새로운 것만 보고합니다.",
+    "Paid data approved": "승인받는 유료 데이터",
+    "Asks a person before it spends money on paid data.": "유료 데이터에 돈을 쓰기 전에 사람에게 묻습니다.",
+    "For teams that make decisions on market, competitor or technical questions.": "시장, 경쟁사, 기술 문제를 놓고 결정을 내리는 팀에 적합합니다.",
+    "Reports where every claim has a source": "모든 주장에 출처가 있는 보고서",
+    "A clear line between what is known and what is not": "아는 것과 모르는 것 사이의 분명한 구분",
+    "Research your other agents can order": "다른 에이전트가 요청할 수 있는 리서치"
+  }
+}

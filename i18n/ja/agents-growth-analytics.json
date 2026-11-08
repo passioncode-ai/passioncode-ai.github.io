@@ -1,0 +1,16 @@
+{
+  "page": "agents/growth-analytics/index.html",
+  "strings": {
+    "Growth analytics agent template | PassionCode.ai": "グロース分析エージェントのテンプレート | PassionCode.ai",
+    "Events and funnels": "イベントとファネル",
+    "Counts what people do in your product and shows where they drop off.": "プロダクトの中で人が何をしているかを数え、どこで離脱しているかを示します。",
+    "Experiments by the rules": "ルールに沿った実験",
+    "Each test is registered before it starts, watched for safety and read once its sample is complete.": "各テストは開始前に登録され、安全性を監視され、サンプルがそろってから読み取られます。",
+    "A person approves changes": "変更は人が承認",
+    "Every change the agent proposes waits in an inbox of drafts for a person.": "エージェントが提案する変更はすべて、下書きの受信箱で人を待ちます。",
+    "For product teams that want experiments they can trust and a clear read of what changed.": "信頼できる実験と、何が変わったかの明確な読み取りを求めるプロダクトチームのために。",
+    "Experiments with a decision rule written in advance": "判断ルールを事前に書いた実験",
+    "Every product’s funnels in one place": "すべてのプロダクトのファネルを1か所に",
+    "Fewer arguments about what a number means": "数字の意味をめぐる議論が減る"
+  }
+}

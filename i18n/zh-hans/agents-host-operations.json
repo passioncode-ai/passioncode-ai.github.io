@@ -1,0 +1,16 @@
+{
+  "page": "agents/host-operations/index.html",
+  "strings": {
+    "Machine operations agent template | PassionCode.ai": "机器运维智能体模板 | PassionCode.ai",
+    "Declared state": "声明的状态",
+    "Every space, service and key is described once, and the machine is checked against that description.": "每个空间、服务和密钥都只描述一次，并对照这份描述检查机器。",
+    "Safe starts and stops": "安全地启动和停止",
+    "Wakes, stops and restarts the apps and services agents rely on, with a check before each action.": "唤醒、停止和重启智能体所依赖的应用和服务，每次操作前都先检查。",
+    "A receipt per change": "每次变更一张回执",
+    "Every change leaves a record of what was done and why, so the machine can be rebuilt.": "每次变更都留下记录，写明做了什么、为什么做，因此机器可以重建。",
+    "For organizations that run their agents on their own computer or server.": "适合在自己的电脑或服务器上运行智能体的组织。",
+    "A machine you can rebuild from its description": "可按描述重建的机器",
+    "Spend per space in view": "每个空间的花费一目了然",
+    "Fewer surprises at night": "夜间更少意外"
+  }
+}

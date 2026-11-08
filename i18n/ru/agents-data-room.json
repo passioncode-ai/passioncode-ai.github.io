@@ -1,0 +1,16 @@
+{
+  "page": "agents/data-room/index.html",
+  "strings": {
+    "Data room agent template | PassionCode.ai": "Шаблон агента датарума | PassionCode.ai",
+    "One book of facts": "Единая книга фактов",
+    "Finance, metrics, team, product and any block you add, each fact with where it came from.": "Финансы, метрики, команда, продукт и любой блок, который вы добавите, и у каждого факта указано, откуда он взялся.",
+    "Access by level": "Доступ по уровням",
+    "People and agents read the blocks their key opens, and nothing about one person leaves.": "Люди и агенты читают те блоки, которые открывает их ключ, и ничего об отдельном человеке наружу не выходит.",
+    "Never invents a number": "Никогда не выдумывает цифры",
+    "A missing value stays missing: it is never filled with a guess or a zero.": "Отсутствующее значение так и остаётся пустым: его никогда не заполняют догадкой или нулём.",
+    "For organizations whose numbers live in many spreadsheets and disagree with each other.": "Для организаций, чьи цифры разбросаны по множеству таблиц и не сходятся между собой.",
+    "One answer when someone asks for a number": "Один ответ, когда кто-то спрашивает цифру",
+    "Agents that quote facts with their sources": "Агенты, которые приводят факты с источниками",
+    "Reports for the board and investors from one place": "Отчёты для совета директоров и инвесторов из одного места"
+  }
+}

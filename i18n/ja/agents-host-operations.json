@@ -1,0 +1,16 @@
+{
+  "page": "agents/host-operations/index.html",
+  "strings": {
+    "Machine operations agent template | PassionCode.ai": "マシン運用エージェントのテンプレート | PassionCode.ai",
+    "Declared state": "宣言された状態",
+    "Every space, service and key is described once, and the machine is checked against that description.": "すべてのスペース、サービス、キーを一度だけ記述し、マシンをその記述と照らし合わせて確認します。",
+    "Safe starts and stops": "安全な起動と停止",
+    "Wakes, stops and restarts the apps and services agents rely on, with a check before each action.": "エージェントが頼るアプリやサービスを起動、停止、再起動し、各操作の前に確認を行います。",
+    "A receipt per change": "変更ごとの記録",
+    "Every change leaves a record of what was done and why, so the machine can be rebuilt.": "すべての変更が、何をなぜ行ったかの記録を残すので、マシンを再構築できます。",
+    "For organizations that run their agents on their own computer or server.": "自社のコンピューターやサーバーでエージェントを動かしている組織のために。",
+    "A machine you can rebuild from its description": "記述から再構築できるマシン",
+    "Spend per space in view": "スペースごとの支出が見える",
+    "Fewer surprises at night": "夜間の想定外が減る"
+  }
+}

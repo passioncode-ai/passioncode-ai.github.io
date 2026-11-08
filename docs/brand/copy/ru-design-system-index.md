@@ -146,6 +146,12 @@ PassionCode
 
 Для организаций
 
+Шаблоны агентов
+
+Руководства
+
+Блог
+
 Switchboard
 
 Observatory

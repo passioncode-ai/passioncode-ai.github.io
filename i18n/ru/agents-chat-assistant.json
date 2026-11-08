@@ -1,0 +1,16 @@
+{
+  "page": "agents/chat-assistant/index.html",
+  "strings": {
+    "Conversational assistant agent template | PassionCode.ai": "Шаблон диалогового ассистента | PassionCode.ai",
+    "Conversations with memory": "Разговоры с памятью",
+    "Keeps the conversation and a long-term memory, and streams its answers.": "Хранит разговор и долговременную память и выдаёт ответы потоком.",
+    "Tools and voice": "Инструменты и голос",
+    "Uses tools, listens and speaks, and moderates what comes in and what goes out.": "Пользуется инструментами, слушает и говорит, модерирует входящее и исходящее.",
+    "Metered": "С учётом расходов",
+    "Tracks each user’s limits, credits or subscription, and its own spend.": "Следит за лимитами, кредитами или подпиской каждого пользователя и за собственными расходами.",
+    "For products that offer an assistant as a feature, and for teams that want one in their own chats.": "Для продуктов, где ассистент служит одной из функций, и для команд, которым он нужен в собственных чатах.",
+    "An assistant that remembers the context": "Ассистент, который помнит контекст",
+    "Costs under control for each user": "Расходы под контролем по каждому пользователю",
+    "Careful handling of sensitive moments": "Бережная работа с деликатными ситуациями"
+  }
+}

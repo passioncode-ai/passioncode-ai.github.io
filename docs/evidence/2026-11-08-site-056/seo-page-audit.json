@@ -1,0 +1,112 @@
+{
+ "agents/index.html": [
+  {
+   "code": "faq-collapsed",
+   "severity": "medium",
+   "tier": "STUDY",
+   "message": "5 answers sit inside <details>/<summary>, so each one is a click away rather than text on the page. Browsers do expose <details> content to the accessibility tree and Google can index it, but an extracted answer is drawn from what renders — a definition list (<dl>/<dt>/<dd>) left open costs nothing and removes the question entirely"
+  },
+  {
+   "code": "link-count",
+   "severity": "medium",
+   "tier": "FIELD",
+   "message": "60 links on the page; in the same Deep Research measurement pages above 60 links spent ~33% of the first read on content"
+  }
+ ],
+ "agents/sales-and-leads/index.html": [
+  {
+   "code": "read-budget",
+   "severity": "high",
+   "tier": "FIELD",
+   "message": "only 53.5% of the first ~5700 characters is content; 46.5% is link markers (7 links before the first text). That window is the median measured on ChatGPT Deep Research, not a budget every answer engine enforces — treat the share as the finding and the window as one engine's median"
+  }
+ ],
+ "blog/index.html": [
+  {
+   "code": "low-extractable-text",
+   "severity": "medium",
+   "tier": "CONFIRMED",
+   "message": "only 73 words of extractable prose (link labels excluded; 69 more words sit in link text). Length itself is not a ranking signal — the study behind this reference found it barely correlates — so treat this as 'little for an engine to quote', and judge the page on information gain and task completion instead"
+  },
+  {
+   "code": "read-budget",
+   "severity": "high",
+   "tier": "FIELD",
+   "message": "only 28.5% of the first ~5700 characters is content; 71.5% is link markers (7 links before the first text). That window is the median measured on ChatGPT Deep Research, not a budget every answer engine enforces — treat the share as the finding and the window as one engine's median"
+  }
+ ],
+ "blog/what-is-an-ai-native-organization/index.html": [],
+ "blog/why-person-shaped-processes-stall/index.html": [
+  {
+   "code": "low-extractable-text",
+   "severity": "medium",
+   "tier": "CONFIRMED",
+   "message": "only 250 words of extractable prose (link labels excluded; 84 more words sit in link text). Length itself is not a ranking signal — the study behind this reference found it barely correlates — so treat this as 'little for an engine to quote', and judge the page on information gain and task completion instead"
+  },
+  {
+   "code": "read-budget",
+   "severity": "high",
+   "tier": "FIELD",
+   "message": "only 44.3% of the first ~5700 characters is content; 55.7% is link markers (7 links before the first text). That window is the median measured on ChatGPT Deep Research, not a budget every answer engine enforces — treat the share as the finding and the window as one engine's median"
+  }
+ ],
+ "de/blog/what-is-an-ai-native-organization/index.html": [],
+ "guides/free-assessment/index.html": [],
+ "guides/index.html": [
+  {
+   "code": "low-extractable-text",
+   "severity": "medium",
+   "tier": "CONFIRMED",
+   "message": "only 138 words of extractable prose (link labels excluded; 73 more words sit in link text). Length itself is not a ranking signal — the study behind this reference found it barely correlates — so treat this as 'little for an engine to quote', and judge the page on information gain and task completion instead"
+  },
+  {
+   "code": "read-budget",
+   "severity": "high",
+   "tier": "FIELD",
+   "message": "only 39.8% of the first ~5700 characters is content; 60.2% is link markers (7 links before the first text). That window is the median measured on ChatGPT Deep Research, not a budget every answer engine enforces — treat the share as the finding and the window as one engine's median"
+  }
+ ],
+ "guides/start-agent-workplace/index.html": [],
+ "guides/templates-to-agents/index.html": [
+  {
+   "code": "low-extractable-text",
+   "severity": "medium",
+   "tier": "CONFIRMED",
+   "message": "only 262 words of extractable prose (link labels excluded; 78 more words sit in link text). Length itself is not a ranking signal — the study behind this reference found it barely correlates — so treat this as 'little for an engine to quote', and judge the page on information gain and task completion instead"
+  },
+  {
+   "code": "read-budget",
+   "severity": "high",
+   "tier": "FIELD",
+   "message": "only 51.9% of the first ~5700 characters is content; 48.1% is link markers (7 links before the first text). That window is the median measured on ChatGPT Deep Research, not a budget every answer engine enforces — treat the share as the finding and the window as one engine's median"
+  }
+ ],
+ "ja/agents/data-room/index.html": [
+  {
+   "code": "low-extractable-text",
+   "severity": "medium",
+   "tier": "CONFIRMED",
+   "message": "only 67 words of extractable prose (link labels excluded; 62 more words sit in link text). Length itself is not a ranking signal — the study behind this reference found it barely correlates — so treat this as 'little for an engine to quote', and judge the page on information gain and task completion instead"
+  },
+  {
+   "code": "read-budget",
+   "severity": "high",
+   "tier": "FIELD",
+   "message": "only 40.3% of the first ~5700 characters is content; 59.7% is link markers (7 links before the first text). That window is the median measured on ChatGPT Deep Research, not a budget every answer engine enforces — treat the share as the finding and the window as one engine's median"
+  }
+ ],
+ "ru/agents/index.html": [
+  {
+   "code": "faq-collapsed",
+   "severity": "medium",
+   "tier": "STUDY",
+   "message": "5 answers sit inside <details>/<summary>, so each one is a click away rather than text on the page. Browsers do expose <details> content to the accessibility tree and Google can index it, but an extracted answer is drawn from what renders — a definition list (<dl>/<dt>/<dd>) left open costs nothing and removes the question entirely"
+  },
+  {
+   "code": "link-count",
+   "severity": "medium",
+   "tier": "FIELD",
+   "message": "60 links on the page; in the same Deep Research measurement pages above 60 links spent ~33% of the first read on content"
+  }
+ ]
+}

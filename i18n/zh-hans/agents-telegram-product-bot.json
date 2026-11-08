@@ -1,0 +1,16 @@
+{
+  "page": "agents/telegram-product-bot/index.html",
+  "strings": {
+    "Telegram product bot template | PassionCode.ai": "Telegram 产品机器人模板 | PassionCode.ai",
+    "Every update once": "每个更新只处理一次",
+    "Handles each update exactly once and keeps its state across restarts.": "每个更新恰好处理一次，并在重启后保留状态。",
+    "Payments confirmed": "付款经过确认",
+    "Grants access only when the payment platform confirms the payment, never on a redirect alone.": "只有在支付平台确认付款后才开通访问权限，绝不仅凭一次跳转。",
+    "A view for your team": "给团队的视图",
+    "Gives your team a place to see and manage what the bot is doing.": "让你的团队有一个地方查看和管理机器人正在做的事。",
+    "For teams that sell or deliver a service inside Telegram.": "适合在 Telegram 内销售或交付服务的团队。",
+    "No double charges and no lost orders": "不重复扣款，不丢失订单",
+    "Every arrival traced to its source": "每位新访客都能追溯来源",
+    "A bot in every language you sell in": "你销售所用的每种语言都有机器人版本"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "page": "agents/host-operations/index.html",
+  "strings": {
+    "Machine operations agent template | PassionCode.ai": "컴퓨터 운영 에이전트 템플릿 | PassionCode.ai",
+    "Declared state": "선언된 상태",
+    "Every space, service and key is described once, and the machine is checked against that description.": "모든 공간, 서비스, 키를 한 번 기술하고, 컴퓨터가 그 기술과 일치하는지 점검합니다.",
+    "Safe starts and stops": "안전한 시작과 중지",
+    "Wakes, stops and restarts the apps and services agents rely on, with a check before each action.": "에이전트가 의존하는 앱과 서비스를 깨우고, 중지하고, 다시 시작하며, 매번 실행 전에 점검합니다.",
+    "A receipt per change": "변경마다 남는 기록",
+    "Every change leaves a record of what was done and why, so the machine can be rebuilt.": "모든 변경은 무엇을 왜 했는지 기록을 남기므로, 컴퓨터를 다시 구축할 수 있습니다.",
+    "For organizations that run their agents on their own computer or server.": "자체 컴퓨터나 서버에서 에이전트를 실행하는 조직에 적합합니다.",
+    "A machine you can rebuild from its description": "기술 내용만으로 다시 구축할 수 있는 컴퓨터",
+    "Spend per space in view": "공간별 지출을 한눈에",
+    "Fewer surprises at night": "밤사이 돌발 상황 감소"
+  }
+}

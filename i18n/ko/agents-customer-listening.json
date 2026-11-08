@@ -1,0 +1,16 @@
+{
+  "page": "agents/customer-listening/index.html",
+  "strings": {
+    "Customer listening agent template | PassionCode.ai": "고객 의견 분석 에이전트 템플릿 | PassionCode.ai",
+    "One picture": "하나의 그림",
+    "Brings store reviews, support chats, community and public mentions into one ranked view.": "스토어 리뷰, 지원 채팅, 커뮤니티, 공개 언급을 순위가 매겨진 하나의 화면에 모읍니다.",
+    "Alerts on change": "변화 알림",
+    "Tells the right people when a problem grows or a new risk appears.": "문제가 커지거나 새로운 위험이 나타나면 알맞은 사람에게 알립니다.",
+    "Privacy first": "개인정보 우선",
+    "Keeps summaries, labels and counts rather than people’s own words where the rules forbid them.": "규칙이 원문 보관을 금지하는 곳에서는 사람들의 말 대신 요약, 라벨, 개수를 보관합니다.",
+    "For teams that want one picture of what customers say, without reading every channel.": "모든 채널을 읽지 않고도 고객의 목소리를 하나의 그림으로 보고 싶은 팀에 적합합니다.",
+    "A weekly picture of what customers say": "고객의 목소리를 담은 주간 그림",
+    "Problems ranked by how many people meet them": "겪는 사람 수에 따라 순위를 매긴 문제",
+    "Answering agents that learn from it": "이를 통해 배우는 답변 에이전트"
+  }
+}

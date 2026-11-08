@@ -1,0 +1,16 @@
+{
+  "page": "agents/growth-analytics/index.html",
+  "strings": {
+    "Growth analytics agent template | PassionCode.ai": "Vorlage: Agent für Wachstumsanalytik | PassionCode.ai",
+    "Events and funnels": "Events und Funnels",
+    "Counts what people do in your product and shows where they drop off.": "Zählt, was Menschen in deinem Produkt tun, und zeigt, wo sie abspringen.",
+    "Experiments by the rules": "Experimente nach festen Regeln",
+    "Each test is registered before it starts, watched for safety and read once its sample is complete.": "Jeder Test wird vor dem Start registriert, auf Sicherheit überwacht und erst ausgewertet, wenn seine Stichprobe vollständig ist.",
+    "A person approves changes": "Ein Mensch gibt Änderungen frei",
+    "Every change the agent proposes waits in an inbox of drafts for a person.": "Jede Änderung, die der Agent vorschlägt, wartet in einem Eingang für Entwürfe auf einen Menschen.",
+    "For product teams that want experiments they can trust and a clear read of what changed.": "Für Produktteams, die Experimente wollen, denen sie vertrauen können, und eine klare Auswertung dessen, was sich geändert hat.",
+    "Experiments with a decision rule written in advance": "Experimente mit einer vorab festgelegten Entscheidungsregel",
+    "Every product’s funnels in one place": "Die Funnels aller Produkte an einem Ort",
+    "Fewer arguments about what a number means": "Weniger Streit darüber, was eine Zahl bedeutet"
+  }
+}

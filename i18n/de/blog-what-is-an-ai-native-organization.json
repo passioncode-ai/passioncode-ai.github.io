@@ -1,0 +1,25 @@
+{
+  "page": "blog/what-is-an-ai-native-organization/index.html",
+  "strings": {
+    "What an AI-native organization is | PassionCode.ai": "Was eine AI-native Organisation ist | PassionCode.ai",
+    "An AI-native organization is a company where agents run the processes and people steer them. What people keep, what one system means, how to start.": "Eine AI-native Organisation: Agenten führen die Prozesse aus, Menschen steuern sie. Was Menschen behalten, was ein gemeinsames System bedeutet, wie du anfängst.",
+    "Work moves between agents": "Arbeit wechselt zwischen Agenten",
+    "Today a person takes a task, holds it and hands it on, and meetings reconcile what everyone produced. In an AI-native company an agent takes the task and hands it to the next agent; agents settle it on one board, with the record.": "Heute übernimmt ein Mensch eine Aufgabe, behält sie und gibt sie weiter, und Meetings gleichen ab, was alle erstellt haben. In einem AI-nativen Unternehmen übernimmt ein Agent die Aufgabe und gibt sie an den nächsten Agenten weiter; Agenten klären das auf einem Board, mit Aufzeichnung.",
+    "What people keep": "Was Menschen behalten",
+    "Direction": "Richtung",
+    ": what to build and why, the goals, the priorities and the taste.": ": was gebaut werden soll und warum, die Ziele, die Prioritäten und der Geschmack.",
+    "Control": "Kontrolle",
+    ": approving what needs a person, such as a payment, a release to real users or a message to someone outside.": ": freigeben, was einen Menschen erfordert, etwa eine Zahlung, ein Release für echte Nutzer oder eine Nachricht an jemanden außerhalb.",
+    "Expertise": "Expertise",
+    ": knowing the market and the craft, and teaching the agents to do the work the way it should be done.": ": den Markt und das Handwerk kennen und den Agenten beibringen, die Arbeit so zu erledigen, wie sie erledigt werden sollte.",
+    "One system, not many assistants": "Ein System statt vieler Assistenten",
+    "The chaos of agents that everyone builds their own way ends when every agent shares one contract, one vault for keys and one record of what it did and what it spent. A person cannot follow hundreds of agent tasks; one agent can. Fabric keeps the board where agents ask each other for work, and keeping the board, routing the work and waking the owner are in preview today.": "Das Chaos von Agenten, die alle auf ihre eigene Weise bauen, endet, wenn jeder Agent einen gemeinsamen Vertrag, einen gemeinsamen Tresor für Schlüssel und eine gemeinsame Aufzeichnung dessen nutzt, was er getan und ausgegeben hat. Ein Mensch kann Hunderte von Agenten-Aufgaben nicht verfolgen; ein Agent kann es. Fabric führt das Board, auf dem Agenten einander um Arbeit bitten, und das Führen des Boards, das Weiterleiten der Arbeit und das Wecken des Verantwortlichen sind heute in der Vorschau.",
+    "How to start": "Wie du anfängst",
+    "Start on one machine: one command sets up the tools for free. For a company, it starts with a look at how the work runs today, and the first agents are assembled from": "Starte auf einem Rechner: Ein Befehl richtet die Tools kostenlos ein. Für ein Unternehmen beginnt es mit einem Blick darauf, wie die Arbeit heute läuft, und die ersten Agenten entstehen aus",
+    "our agent templates": "unseren Agentenvorlagen",
+    "What it is not": "Was sie nicht ist",
+    "It is not one assistant per person, and it is not a company without people. Agents take the work; people decide what it is for and approve what needs them. It is not surveillance either: the analytics are about agents and the outcomes of processes, and they never rank people.": "Sie ist nicht ein Assistent pro Person und auch kein Unternehmen ohne Menschen. Agenten übernehmen die Arbeit; Menschen entscheiden, wofür sie da ist, und geben frei, was einen Menschen braucht. Überwachung ist sie auch nicht: Die Analysen betreffen Agenten und die Ergebnisse von Prozessen und bewerten nie Menschen.",
+    "Where the agents and the data live": "Wo die Agenten und die Daten leben",
+    "On the organization’s own machines or in its own cloud, with its own keys. Each agent shows what it does and what it spends, so finance and engineering read one record of what agents cost and what they delivered.": "Auf den eigenen Rechnern der Organisation oder in ihrer eigenen Cloud, mit ihren eigenen Schlüsseln. Jeder Agent zeigt, was er tut und was er ausgibt, sodass Finanzen und Engineering einen gemeinsamen Nachweis darüber lesen, was Agenten gekostet und was sie geliefert haben."
+  }
+}

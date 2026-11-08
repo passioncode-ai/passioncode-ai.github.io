@@ -1,0 +1,16 @@
+{
+  "page": "agents/organization-administrator/index.html",
+  "strings": {
+    "Organization administrator agent template | PassionCode.ai": "Szablon agenta administratora organizacji | PassionCode.ai",
+    "Keeps the rhythm": "Pilnuje rytmu",
+    "Sends the morning list, reminds owners of urgent and stale tasks within working hours, and keeps a list of blockers.": "Wysyła poranną listę, w godzinach pracy przypomina właścicielom o pilnych i zalegających zadaniach i prowadzi listę blokerów.",
+    "Routes requests": "Kieruje prośby",
+    "Takes any problem a person brings and hands it to the person or agent who owns it.": "Przyjmuje każdy problem, z którym ktoś przychodzi, i przekazuje go osobie lub agentowi, do których on należy.",
+    "Keeps the roster": "Prowadzi skład zespołu",
+    "Runs each joiner and each leaver as one checklist, and gives a person access to the organization’s agents.": "Prowadzi każde dołączenie i każde odejście jako jedną listę kontrolną i daje człowiekowi dostęp do agentów organizacji.",
+    "For teams that lose time chasing status and asking who owns what.": "Dla zespołów, które tracą czas na dopytywanie o status i ustalanie, kto za co odpowiada.",
+    "Fewer meetings about status": "Mniej spotkań o statusie",
+    "An owner for every request": "Właściciel każdej prośby",
+    "A team roster that stays current": "Aktualny skład zespołu"
+  }
+}

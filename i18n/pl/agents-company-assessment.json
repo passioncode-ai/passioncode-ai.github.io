@@ -1,0 +1,16 @@
+{
+  "page": "agents/company-assessment/index.html",
+  "strings": {
+    "Company assessment agent template | PassionCode.ai": "Szablon agenta oceny firmy | PassionCode.ai",
+    "Maps the work": "Mapuje pracę",
+    "Builds a map of the kinds of tasks, how long each takes and how work moves between people and systems.": "Tworzy mapę rodzajów zadań, czasu, jaki zajmuje każde z nich, i tego, jak praca przechodzi między ludźmi a systemami.",
+    "Finds the waits": "Znajduje przestoje",
+    "Shows where work stops and for how long, and where the written process differs from the real one.": "Pokazuje, gdzie praca stoi i jak długo, oraz gdzie spisany proces różni się od rzeczywistego.",
+    "Plans the redesign": "Planuje przebudowę",
+    "Proposes which kinds of work an agent takes, where a person stays, and how many hours that frees.": "Proponuje, które rodzaje pracy przejmuje agent, gdzie zostaje człowiek i ile godzin to zwalnia.",
+    "For founders and leaders who want a true picture of their processes before they change them.": "Dla założycieli i liderów, którzy chcą zobaczyć prawdziwy obraz swoich procesów, zanim je zmienią.",
+    "A process map built from evidence, not from interviews alone": "Mapa procesów zbudowana na dowodach, a nie tylko na wywiadach",
+    "A ranked list of processes for agents, each with its estimate": "Uszeregowana lista procesów dla agentów, każdy z własnym szacunkiem",
+    "Readings about processes, never scores of people": "Odczyty dotyczące procesów, nigdy punktacja ludzi"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "page": "guides/templates-to-agents/index.html",
+  "strings": {
+    "How agent templates become your agents | PassionCode.ai": "Как шаблоны агентов становятся вашими агентами | PassionCode.ai",
+    "What an agent template is, how our engineer agent assembles it for your organization, where the agent runs and what stays yours.": "Что такое шаблон агента, как наш агент-инженер собирает его для вашей организации, где работает агент и что остаётся вашим.",
+    "What a template is": "Что такое шаблон",
+    "A template describes one kind of agent: the job it does, the rules it keeps, what it must never do and when it calls a person, with tested code behind it. It collects what the agents of that kind we run in our own work have learned.": "Шаблон описывает один тип агента: какую работу он делает, каких правил придерживается, чего никогда не должен делать и когда зовёт человека, а за всем этим стоит проверенный тестами код. В нём собрано то, чему научились агенты такого типа, которых мы запускаем в своей работе.",
+    "See the agent templates": "Посмотреть шаблоны агентов",
+    "From your request to an agent": "От вашего запроса к агенту",
+    "You tell us what agents should do. Our engineer agent picks the template that fits, connects your systems with the access you grant, sets your rules and spending limits, and checks the agent on your own processes before it starts work.": "Вы рассказываете, что должны делать агенты. Наш агент-инженер выбирает подходящий шаблон, подключает ваши системы с тем доступом, который вы даёте, задаёт ваши правила и лимиты расходов и проверяет агента на ваших собственных процессах, прежде чем он приступит к работе.",
+    "Where it runs": "Где он работает",
+    "On your machines or in your own cloud, with your keys. Each agent shows its state and what it spends, and a person approves what needs a person: a payment, a release to real users, a message to someone outside.": "На ваших машинах или в вашем облаке, с вашими ключами. Каждый агент показывает своё состояние и сколько он тратит, а то, что требует решения человека, утверждает человек: платёж, релиз для реальных пользователей, сообщение кому-то за пределами организации.",
+    "What stays yours": "Что остаётся вашим",
+    "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "Ваши данные, ваши ключи и ваши агенты. Библиотека шаблонов остаётся нашей: вы получаете собранных агентов, а не библиотеку, а подробностями шаблона мы делимся, когда обсуждаем ваш запрос.",
+    "Agents that get better": "Агенты, которые становятся лучше",
+    "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "Когда мы улучшаем шаблон, улучшение может дойти до вашего агента со следующим релизом шаблона, после тех проверок, которые ваш агент уже проходит."
+  }
+}

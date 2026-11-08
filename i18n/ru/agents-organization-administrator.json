@@ -1,0 +1,16 @@
+{
+  "page": "agents/organization-administrator/index.html",
+  "strings": {
+    "Organization administrator agent template | PassionCode.ai": "Шаблон агента-администратора организации | PassionCode.ai",
+    "Keeps the rhythm": "Держит ритм",
+    "Sends the morning list, reminds owners of urgent and stale tasks within working hours, and keeps a list of blockers.": "Присылает утренний список, в рабочее время напоминает ответственным о срочных и зависших задачах и ведёт список блокеров.",
+    "Routes requests": "Распределяет запросы",
+    "Takes any problem a person brings and hands it to the person or agent who owns it.": "Принимает любую проблему, с которой пришёл человек, и передаёт её тому человеку или агенту, кто за неё отвечает.",
+    "Keeps the roster": "Ведёт состав команды",
+    "Runs each joiner and each leaver as one checklist, and gives a person access to the organization’s agents.": "Проводит каждый приход и уход сотрудника по одному чек-листу и даёт человеку доступ к агентам организации.",
+    "For teams that lose time chasing status and asking who owns what.": "Для команд, которые теряют время, выясняя статус задач и кто за что отвечает.",
+    "Fewer meetings about status": "Меньше встреч о статусе",
+    "An owner for every request": "Ответственный у каждого запроса",
+    "A team roster that stays current": "Состав команды, который всегда актуален"
+  }
+}

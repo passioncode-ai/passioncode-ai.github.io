@@ -1,3 +1,33 @@
+# Current handoff: SITE-056, agent templates, guides and blog, in review, 2026-11-08
+
+Objective (operator, 2026-11-08, paraphrased from Russian): an agents marketplace with our templates, without details,
+one page per template and one general page; guides and a blog; a proper sitemap; an SEO pass; then indexing. The home
+video stays as it is. Record: [evidence/2026-11-08-site-056/README.md](evidence/2026-11-08-site-056/README.md); brief:
+[seo/brief-2026-11-08.md](seo/brief-2026-11-08.md).
+
+Done: `/agents/` and 18 template pages, `/guides/` and three guides, `/blog/` and two posts, rendered by
+`scripts/build-content-pages.mjs` from `scripts/site-content.mjs` and generated in ten languages (260 pages); footer
+links on every page, the home #agents link; `sitemap.xml` (260 new addresses), `llms.txt`; analytics values and the
+event `template_request`; SCN-025 to SCN-028, FLW-09, SCR-14 to SCR-17; facts rows *agent templates (SITE-056)* and
+*free assessment*; check-site guards (private names, Service/Article/BreadcrumbList data, title and description length,
+the footer links); the locale test counts pages from `SOURCE_PAGES` instead of a fixed 15.
+
+Decisions: a template is described only by its job and outcome, ON REQUEST, assembled by our engineer agent; no price,
+timeline, assembly time, test count or source; the header is unchanged (D2), the new section is reached from the footer
+and the home story; translations by this session's translation agents with Copylot checks (USD 0 spent;
+`copylot_prepare` not used); German group label «Menschen ansprechen» (the uppercase «MIT …» tripped the license guard).
+
+Checks run: `npm run check` exit 0 (130 tests); `npm run locales` PASS; `extract-public-copy.py` PASS (410); `npm run
+build` 485 entries; WebKit 162 loads at 1440 and 390 px, 0 problems; seo-aeo-audit `page_audit.py` on twelve built
+pages (findings and actions in the record).
+
+Open: SITE-057 (em dashes on existing pages), SITE-058 (read budget of the kept header, thin hubs), SITE-026 (native
+review, now including the new pages), the free assessment's own gaps before the first outside founder
+(fabric-workspace `knowledge/system/entry-assessment.md`).
+
+Next task: after the merge, the operator deploys from `main` (`docs/DEPLOYMENT.md`), then `scripts/verify-live.py`; the
+coordinator submits the 260 new addresses for indexing; then SITE-057.
+
 # Current handoff: SITE-049, the site on the North Star, in review, 2026-11-06
 
 Objective (backlog SITE-049, operator 2026-11-06): reposition passioncode.ai as the workplace for AI-native

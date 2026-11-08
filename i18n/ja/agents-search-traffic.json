@@ -1,0 +1,16 @@
+{
+  "page": "agents/search-traffic/index.html",
+  "strings": {
+    "Search traffic (SEO) agent template | PassionCode.ai": "検索トラフィック（SEO）エージェントのテンプレート | PassionCode.ai",
+    "A daily record": "毎日の記録",
+    "Keeps search, analytics, ranking and crawl data as a record that only grows.": "検索、アナリティクス、順位、クロールのデータを、増えていくだけの記録として保管します。",
+    "Finds the losses": "損失を見つける",
+    "Shows which sites, countries, groups of queries and pages lose traffic, and what changed around them.": "どのサイト、国、クエリのグループ、ページがトラフィックを失っているか、その周りで何が変わったかを示します。",
+    "A measurement behind every line": "すべての行に計測の裏づけ",
+    "Each recommendation carries the number it came from, so you can check it.": "各推奨には根拠となった数字が付いているので、確認できます。",
+    "For owners of one large site or of many sites who depend on search traffic.": "検索トラフィックに頼る、大規模サイトや多数のサイトの運営者のために。",
+    "A list of fixes in order of impact": "影響の大きい順に並んだ修正リスト",
+    "What a release did to traffic": "リリースがトラフィックに与えた影響",
+    "Recommendations you can verify": "検証できる推奨"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "page": "agents/research/index.html",
+  "strings": {
+    "Research agent template | PassionCode.ai": "Szablon agenta badawczego | PassionCode.ai",
+    "Quick and deep": "Szybko i dogłębnie",
+    "Answers a quick question, or runs a deep investigation with a plan and verified quotes.": "Odpowiada na szybkie pytanie albo prowadzi dogłębne badanie z planem i zweryfikowanymi cytatami.",
+    "A watch on a topic": "Obserwacja tematu",
+    "Follows a topic on a schedule and reports only what is new.": "Śledzi temat według harmonogramu i zgłasza tylko to, co nowe.",
+    "Paid data approved": "Płatne dane za zgodą",
+    "Asks a person before it spends money on paid data.": "Pyta człowieka, zanim wyda pieniądze na płatne dane.",
+    "For teams that make decisions on market, competitor or technical questions.": "Dla zespołów, które podejmują decyzje w kwestiach rynku, konkurencji lub techniki.",
+    "Reports where every claim has a source": "Raporty, w których każde twierdzenie ma źródło",
+    "A clear line between what is known and what is not": "Wyraźna granica między tym, co wiadomo, a tym, czego nie wiadomo",
+    "Research your other agents can order": "Badania, które mogą zamawiać Twoi inni agenci"
+  }
+}

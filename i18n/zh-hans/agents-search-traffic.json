@@ -1,0 +1,16 @@
+{
+  "page": "agents/search-traffic/index.html",
+  "strings": {
+    "Search traffic (SEO) agent template | PassionCode.ai": "搜索流量（SEO）智能体模板 | PassionCode.ai",
+    "A daily record": "每日记录",
+    "Keeps search, analytics, ranking and crawl data as a record that only grows.": "把搜索、分析、排名和抓取数据保存为只增不减的记录。",
+    "Finds the losses": "找出流量损失",
+    "Shows which sites, countries, groups of queries and pages lose traffic, and what changed around them.": "显示哪些网站、国家、查询组和页面在流失流量，以及它们周围发生了什么变化。",
+    "A measurement behind every line": "每一行背后都有测量数据",
+    "Each recommendation carries the number it came from, so you can check it.": "每条建议都附有它所依据的数字，方便你核对。",
+    "For owners of one large site or of many sites who depend on search traffic.": "适合依赖搜索流量的大型网站或多个网站的所有者。",
+    "A list of fixes in order of impact": "按影响大小排序的修复清单",
+    "What a release did to traffic": "一次发布对流量的影响",
+    "Recommendations you can verify": "可以验证的建议"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "page": "guides/templates-to-agents/index.html",
+  "strings": {
+    "How agent templates become your agents | PassionCode.ai": "Jak szablony agentów stają się Twoimi agentami | PassionCode.ai",
+    "What an agent template is, how our engineer agent assembles it for your organization, where the agent runs and what stays yours.": "Czym jest szablon agenta, jak nasz agent inżynier składa go dla Twojej organizacji, gdzie działa agent i co pozostaje Twoje.",
+    "What a template is": "Czym jest szablon",
+    "A template describes one kind of agent: the job it does, the rules it keeps, what it must never do and when it calls a person, with tested code behind it. It collects what the agents of that kind we run in our own work have learned.": "Szablon opisuje jeden rodzaj agenta: zadanie, które wykonuje, zasady, których przestrzega, to, czego nie wolno mu nigdy robić, i to, kiedy wzywa człowieka, a za tym wszystkim stoi przetestowany kod. Zbiera to, czego nauczyli się agenci tego rodzaju, których prowadzimy w naszej własnej pracy.",
+    "See the agent templates": "Zobacz szablony agentów",
+    "From your request to an agent": "Od Twojego zapytania do agenta",
+    "You tell us what agents should do. Our engineer agent picks the template that fits, connects your systems with the access you grant, sets your rules and spending limits, and checks the agent on your own processes before it starts work.": "Mówisz nam, co agenci mają robić. Nasz agent inżynier wybiera pasujący szablon, podłącza Twoje systemy z dostępem, który przyznasz, ustawia Twoje zasady i limity wydatków oraz sprawdza agenta na Twoich własnych procesach, zanim ten zacznie pracę.",
+    "Where it runs": "Gdzie działa",
+    "On your machines or in your own cloud, with your keys. Each agent shows its state and what it spends, and a person approves what needs a person: a payment, a release to real users, a message to someone outside.": "Na Twoich maszynach lub w Twojej własnej chmurze, z Twoimi kluczami. Każdy agent pokazuje swój stan i to, ile wydaje, a człowiek zatwierdza to, co wymaga człowieka: płatność, wydanie dla prawdziwych użytkowników, wiadomość do kogoś z zewnątrz.",
+    "What stays yours": "Co pozostaje Twoje",
+    "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "Twoje dane, Twoje klucze i Twoi agenci. Biblioteka szablonów pozostaje nasza: dostajesz złożonych agentów, a nie bibliotekę, a szczegóły szablonu przekazujemy, gdy omawiamy Twoje zapytanie.",
+    "Agents that get better": "Agenci, którzy stają się lepsi",
+    "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "Gdy ulepszamy szablon, ulepszenie może trafić do Twojego agenta wraz z kolejnym wydaniem szablonu, po kontrolach, które Twój agent już przechodzi."
+  }
+}

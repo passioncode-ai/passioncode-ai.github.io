@@ -112,6 +112,12 @@ vibe coding에서 passion coding으로
 
 조직용
 
+에이전트 템플릿
+
+가이드
+
+블로그
+
 Switchboard
 
 Observatory

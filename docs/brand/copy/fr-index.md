@@ -286,6 +286,8 @@ Un message, toutes les languesLe marketing planifie, un agent de rédaction écr
 
 Chacun de ces rôles tourne aujourd’hui comme un agent à part entière dans notre travail. Les relier tous par un seul tableau, c’est ce pour quoi Fabric est construit.
 
+Les modèles d’agents que nous assemblons pour les organisations
+
 06 / D’UNE ÉQUIPE À UNE ORGANISATION
 
 ## Commencez sur une machine
@@ -533,6 +535,12 @@ Commencer
 Vision
 
 Pour les organisations
+
+Modèles d’agents
+
+Guides
+
+Blog
 
 Switchboard
 

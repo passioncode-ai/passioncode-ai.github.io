@@ -1,0 +1,16 @@
+{
+  "page": "agents/data-room/index.html",
+  "strings": {
+    "Data room agent template | PassionCode.ai": "数据室智能体模板 | PassionCode.ai",
+    "One book of facts": "一本事实簿",
+    "Finance, metrics, team, product and any block you add, each fact with where it came from.": "财务、指标、团队、产品以及你添加的任何板块，每条事实都标明出处。",
+    "Access by level": "按级别授予访问权限",
+    "People and agents read the blocks their key opens, and nothing about one person leaves.": "人和智能体只能读取其密钥可开启的板块，关于某一个人的信息不会外流。",
+    "Never invents a number": "绝不编造数字",
+    "A missing value stays missing: it is never filled with a guess or a zero.": "缺失的值保持缺失：绝不用猜测或零来填补。",
+    "For organizations whose numbers live in many spreadsheets and disagree with each other.": "适合数字分散在许多电子表格里、彼此还对不上的组织。",
+    "One answer when someone asks for a number": "有人问一个数字时，只有一个答案",
+    "Agents that quote facts with their sources": "引用事实时附带出处的智能体",
+    "Reports for the board and investors from one place": "董事会和投资者报告出自同一处"
+  }
+}

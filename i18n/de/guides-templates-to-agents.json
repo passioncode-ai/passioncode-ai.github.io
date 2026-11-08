@@ -1,0 +1,18 @@
+{
+  "page": "guides/templates-to-agents/index.html",
+  "strings": {
+    "How agent templates become your agents | PassionCode.ai": "Wie aus Agentenvorlagen deine Agenten werden | PassionCode.ai",
+    "What an agent template is, how our engineer agent assembles it for your organization, where the agent runs and what stays yours.": "Was eine Agentenvorlage ist, wie unser Engineering-Agent sie für deine Organisation zusammenstellt, wo der Agent läuft und was dir bleibt.",
+    "What a template is": "Was eine Vorlage ist",
+    "A template describes one kind of agent: the job it does, the rules it keeps, what it must never do and when it calls a person, with tested code behind it. It collects what the agents of that kind we run in our own work have learned.": "Eine Vorlage beschreibt eine Art von Agent: die Aufgabe, die er erledigt, die Regeln, die er einhält, was er nie tun darf und wann er einen Menschen hinzuzieht, mit getestetem Code dahinter. Sie sammelt, was die Agenten dieser Art, die wir in unserer eigenen Arbeit betreiben, gelernt haben.",
+    "See the agent templates": "Sieh dir die Agentenvorlagen an",
+    "From your request to an agent": "Von deiner Anfrage zum Agenten",
+    "You tell us what agents should do. Our engineer agent picks the template that fits, connects your systems with the access you grant, sets your rules and spending limits, and checks the agent on your own processes before it starts work.": "Du sagst uns, was Agenten tun sollen. Unser Engineering-Agent wählt die passende Vorlage, verbindet deine Systeme mit dem Zugriff, den du gewährst, legt deine Regeln und Ausgabenlimits fest und prüft den Agenten an deinen eigenen Prozessen, bevor er die Arbeit aufnimmt.",
+    "Where it runs": "Wo er läuft",
+    "On your machines or in your own cloud, with your keys. Each agent shows its state and what it spends, and a person approves what needs a person: a payment, a release to real users, a message to someone outside.": "Auf deinen Rechnern oder in deiner eigenen Cloud, mit deinen Schlüsseln. Jeder Agent zeigt seinen Zustand und was er ausgibt, und ein Mensch gibt frei, was einen Menschen erfordert: eine Zahlung, ein Release für echte Nutzer, eine Nachricht an jemanden außerhalb.",
+    "What stays yours": "Was dir bleibt",
+    "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "Deine Daten, deine Schlüssel und deine Agenten. Die Vorlagenbibliothek bleibt unsere: Du bekommst die zusammengestellten Agenten, nicht die Bibliothek, und die Details einer Vorlage teilen wir, wenn wir deine Anfrage besprechen.",
+    "Agents that get better": "Agenten, die besser werden",
+    "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "Wenn wir eine Vorlage verbessern, kann die Verbesserung mit dem nächsten Release der Vorlage deinen Agenten erreichen, nach den Prüfungen, die dein Agent bereits besteht."
+  }
+}

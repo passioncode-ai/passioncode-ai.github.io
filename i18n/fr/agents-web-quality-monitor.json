@@ -1,0 +1,16 @@
+{
+  "page": "agents/web-quality-monitor/index.html",
+  "strings": {
+    "Web quality monitor agent template | PassionCode.ai": "Modèle d’agent moniteur de qualité web | PassionCode.ai",
+    "Scenarios in a browser": "Des scénarios dans un navigateur",
+    "Runs a scenario written in plain words and proves the result.": "Exécute un scénario écrit avec des mots simples et prouve le résultat.",
+    "Pages and checkouts": "Pages et paiements",
+    "Walks every page looking for errors and checks that every payment form opens.": "Parcourt chaque page à la recherche d’erreurs et vérifie que chaque formulaire de paiement s’ouvre.",
+    "Incidents, not noise": "Des incidents, pas du bruit",
+    "Turns error and metric alerts into incidents without duplicates, and starts a repair.": "Transforme les alertes d’erreurs et de métriques en incidents sans doublons, et lance une réparation.",
+    "For teams that ship often and want to find problems before their users report them.": "Pour les équipes qui livrent souvent et veulent trouver les problèmes avant que leurs utilisateurs les signalent.",
+    "Bugs found before users find them": "Des bugs trouvés avant que les utilisateurs les trouvent",
+    "Reported bugs checked against production": "Des bugs signalés vérifiés en production",
+    "Known vulnerabilities matched to what you ship": "Des vulnérabilités connues rapprochées de ce que vous livrez"
+  }
+}
