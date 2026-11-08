@@ -1,0 +1,10 @@
+{
+  "page": "blog/index.html",
+  "strings": {
+    "Blog: notes on AI-native organizations | PassionCode.ai": "블로그: AI-native 조직에 관한 노트 | PassionCode.ai",
+    "Notes from PassionCode.ai on AI-native organizations: why processes built around people stall, and what changes when agents run the process.": "AI-native 조직에 관한 PassionCode.ai의 노트: 사람 중심으로 짜인 프로세스가 왜 멈추는지, 에이전트가 프로세스를 실행하면 무엇이 바뀌는지.",
+    "Notes on": "노트:",
+    "AI-native organizations": "AI-native 조직",
+    "Why companies will run on agents, and what we learn building the tools for it": "회사가 왜 에이전트로 움직이게 될지, 그리고 그 도구를 만들며 저희가 배우는 것"
+  }
+}

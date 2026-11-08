@@ -136,9 +136,19 @@ test('the page names every page of the site the way the Worker accepts it', asyn
   const { pageOf } = await import('../assets/analytics.js')
   const cases = { '/': 'home', '/ru/': 'home', '/vision/': 'vision', '/de/business/': 'business', '/business/thanks/': 'business-thanks',
     '/zh-hans/fabric/agents/': 'fabric-agents', '/switchboard/agents/': 'switchboard-agents', '/pt-br/start/': 'start',
-    '/design-system/': 'design-system', '/secret/path/': 'other', '/fabric/download/macos': 'other' }
+    '/design-system/': 'design-system', '/secret/path/': 'other', '/fabric/download/macos': 'other',
+    '/agents/': 'agents', '/ja/agents/data-room/': 'agent-template', '/guides/': 'guides', '/ru/guides/free-assessment/': 'guide',
+    '/blog/': 'blog', '/blog/what-is-an-ai-native-organization/': 'blog-post', '/agents/data-room/extra/': 'other' }
   for (const [path, id] of Object.entries(cases)) {
     assert.equal(pageOf(path), id, path)
     assert.ok(EVENTS.page_view.page.includes(id), `${id} is a value the Worker accepts`)
   }
+})
+
+test('SITE-056: every template a page can ask for is a value the Worker accepts, and nothing else is', async () => {
+  const { TEMPLATES } = await import('./site-content.mjs')
+  const accepted = EVENTS.template_request.template.filter(t => t !== 'other')
+  assert.deepEqual(accepted, TEMPLATES.map(t => t.slug), 'worker/analytics.js TEMPLATES follows scripts/site-content.mjs')
+  assert.deepEqual(clean({ n: 'template_request', p: { page: 'agent-template', template: 'data-room' } }, LOCALES).props, { page: 'agent-template', template: 'data-room' })
+  assert.equal(clean({ n: 'template_request', p: { page: 'agent-template', template: 'someone@example.com' } }, LOCALES).props.template, 'other')
 })

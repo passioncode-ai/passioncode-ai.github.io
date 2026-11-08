@@ -31,3 +31,6 @@ Any page → header language switch → the same page in the other language at `
 
 ## FLW-08: From the problem to a door (SITE-049)
 Home → hero (kept) → video (optional) → 01 problem → 02 shift → 03 Fabric manages the process → 04 one system → 05 agents at work → 06 from a team to an organization → 07 four doors: founders and executives → /business/ (FLW-06); investors → /#investors → commercial@passioncode.ai; engineers → GitHub or /start/#setup (FLW-04); solo founders → /start/ (FLW-05). Every step is measured as the funnel events of `docs/analytics/events.md` (page_view, video_progress, cta_click with the door's `location`, command_copy, lead_started, lead_sent).
+
+## FLW-09: From a template to a request (SITE-056)
+Footer (every page) or home #agents → /agents/ → a group → a template card → /agents/<slug>/ (what it does, who it is for, what you get, how it is assembled) → «Create your agent» → /business/#request (FLW-06). Guides: footer → /guides/ → a guide → its one action (/start/#setup or /business/#request). Blog: footer → /blog/ → a post → «Bring your organization» → /business/#request. Measured by `page_view` (agents, agent-template, guides, guide, blog, blog-post), `cta_click` (locations marketplace, template, guide, blog) and `template_request` (docs/analytics/events.md).

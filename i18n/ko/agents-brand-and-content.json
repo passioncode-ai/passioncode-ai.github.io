@@ -1,0 +1,16 @@
+{
+  "page": "agents/brand-and-content/index.html",
+  "strings": {
+    "Brand and content agent template | PassionCode.ai": "브랜드 및 콘텐츠 에이전트 템플릿 | PassionCode.ai",
+    "A plan with sources": "출처가 있는 계획",
+    "Keeps a content plan whose every number has a source, and measures it every day.": "모든 숫자에 출처가 있는 콘텐츠 계획을 관리하고 매일 측정합니다.",
+    "Drafts in your voice": "조직의 목소리로 쓰는 초안",
+    "Writes in your saved tone of voice, in every language you publish in.": "저장된 어조로, 게시하는 모든 언어로 씁니다.",
+    "One approved outbox": "승인을 거치는 하나의 발신함",
+    "Every post passes a check for facts, privacy and voice, then waits for approval.": "모든 게시물은 사실, 개인정보, 목소리 점검을 통과한 뒤 승인을 기다립니다.",
+    "For teams that publish often and want every post to sound like them and say only what is true.": "자주 게시하며, 모든 게시물이 자신다운 목소리로 사실만 말하기를 원하는 팀에 적합합니다.",
+    "One voice across every channel": "모든 채널에서 하나의 목소리",
+    "No claim in public without its source": "출처 없는 공개 주장 없음",
+    "Translations that keep the meaning": "의미를 지키는 번역"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "page": "agents/messenger-gateway/index.html",
+  "strings": {
+    "Messenger gateway agent template | PassionCode.ai": "Szablon agenta bramki komunikatora | PassionCode.ai",
+    "One home for identities": "Jeden dom dla tożsamości",
+    "The messenger accounts and bots live in one service, and no other agent holds them.": "Konta i boty komunikatora żyją w jednej usłudze i żaden inny agent ich nie przechowuje.",
+    "Permissions per agent": "Uprawnienia dla każdego agenta",
+    "Each agent gets only what it needs: reading, searching, sending or managing a group.": "Każdy agent dostaje tylko to, czego potrzebuje: czytanie, wyszukiwanie, wysyłanie lub zarządzanie grupą.",
+    "A person approves sends": "Człowiek zatwierdza wysyłkę",
+    "Messages wait for a person’s approval unless the owner has set a standing rule.": "Wiadomości czekają na zatwierdzenie przez człowieka, chyba że właściciel ustawił stałą regułę.",
+    "For organizations whose agents talk to people on Telegram and should not each hold their own account.": "Dla organizacji, których agenci rozmawiają z ludźmi w Telegramie i nie powinni mieć każdy własnego konta.",
+    "No bot tokens scattered across projects": "Żadnych tokenów botów rozrzuconych po projektach",
+    "A record of every message sent": "Zapis każdej wysłanej wiadomości",
+    "One switch that stops all sending": "Jeden przełącznik, który zatrzymuje całą wysyłkę"
+  }
+}

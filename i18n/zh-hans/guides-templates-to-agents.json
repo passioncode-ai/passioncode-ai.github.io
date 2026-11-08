@@ -1,0 +1,18 @@
+{
+  "page": "guides/templates-to-agents/index.html",
+  "strings": {
+    "How agent templates become your agents | PassionCode.ai": "智能体模板如何变成你的智能体 | PassionCode.ai",
+    "What an agent template is, how our engineer agent assembles it for your organization, where the agent runs and what stays yours.": "什么是智能体模板，我们的工程师智能体如何为你的组织组装它，智能体在哪里运行，以及哪些始终归你所有。",
+    "What a template is": "什么是模板",
+    "A template describes one kind of agent: the job it does, the rules it keeps, what it must never do and when it calls a person, with tested code behind it. It collects what the agents of that kind we run in our own work have learned.": "模板描述一类智能体：它做的工作、遵守的规则、绝不能做的事，以及何时找人介入，背后是经过测试的代码。它汇集了我们在自己的工作中运行的这类智能体所学到的东西。",
+    "See the agent templates": "查看智能体模板",
+    "From your request to an agent": "从你的需求到一个智能体",
+    "You tell us what agents should do. Our engineer agent picks the template that fits, connects your systems with the access you grant, sets your rules and spending limits, and checks the agent on your own processes before it starts work.": "你告诉我们智能体应该做什么。我们的工程师智能体选出合适的模板，以你授予的权限连接你的系统，设置你的规则和支出上限，并在智能体开始工作前用你自己的流程检验它。",
+    "Where it runs": "在哪里运行",
+    "On your machines or in your own cloud, with your keys. Each agent shows its state and what it spends, and a person approves what needs a person: a payment, a release to real users, a message to someone outside.": "在你的机器或你自己的云上，使用你的密钥。每个智能体都会显示它的状态和花费，必须由人处理的事项由人批准：一笔付款、一次面向真实用户的发布、一条发给外部人员的消息。",
+    "What stays yours": "哪些归你所有",
+    "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "你的数据、你的密钥和你的智能体。模板库归我们所有：你得到的是组装好的智能体，而不是模板库；在讨论你的需求时，我们会分享模板的详情。",
+    "Agents that get better": "不断改进的智能体",
+    "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "当我们改进某个模板时，这项改进可以随模板的下一个版本到达你的智能体，但须先通过你的智能体目前已通过的那些检查。"
+  }
+}

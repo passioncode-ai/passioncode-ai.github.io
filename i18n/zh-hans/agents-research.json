@@ -1,0 +1,16 @@
+{
+  "page": "agents/research/index.html",
+  "strings": {
+    "Research agent template | PassionCode.ai": "研究智能体模板 | PassionCode.ai",
+    "Quick and deep": "快速与深入",
+    "Answers a quick question, or runs a deep investigation with a plan and verified quotes.": "回答一个快速问题，或按计划开展深入调查，并附上经过核实的引文。",
+    "A watch on a topic": "持续关注一个主题",
+    "Follows a topic on a schedule and reports only what is new.": "按计划跟踪一个主题，只报告新的内容。",
+    "Paid data approved": "付费数据须经批准",
+    "Asks a person before it spends money on paid data.": "在为付费数据花钱之前先征求人的同意。",
+    "For teams that make decisions on market, competitor or technical questions.": "适合需要就市场、竞争对手或技术问题做决策的团队。",
+    "Reports where every claim has a source": "每个论断都有出处的报告",
+    "A clear line between what is known and what is not": "已知与未知界限分明",
+    "Research your other agents can order": "你的其他智能体也可以委托的研究"
+  }
+}

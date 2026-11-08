@@ -1,0 +1,16 @@
+{
+  "page": "agents/chat-assistant/index.html",
+  "strings": {
+    "Conversational assistant agent template | PassionCode.ai": "对话助手智能体模板 | PassionCode.ai",
+    "Conversations with memory": "有记忆的对话",
+    "Keeps the conversation and a long-term memory, and streams its answers.": "保存对话和长期记忆，并以流式方式输出回答。",
+    "Tools and voice": "工具与语音",
+    "Uses tools, listens and speaks, and moderates what comes in and what goes out.": "使用工具，能听也能说，并审核输入和输出的内容。",
+    "Metered": "计量",
+    "Tracks each user’s limits, credits or subscription, and its own spend.": "跟踪每个用户的额度、点数或订阅，以及它自己的花费。",
+    "For products that offer an assistant as a feature, and for teams that want one in their own chats.": "适合把助手作为功能提供的产品，以及想在自己的聊天中使用助手的团队。",
+    "An assistant that remembers the context": "记得上下文的助手",
+    "Costs under control for each user": "每个用户的成本都在掌控之中",
+    "Careful handling of sensitive moments": "谨慎处理敏感时刻"
+  }
+}

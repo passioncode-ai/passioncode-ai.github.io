@@ -1,0 +1,16 @@
+{
+  "page": "agents/media-production/index.html",
+  "strings": {
+    "Media production agent template | PassionCode.ai": "メディア制作エージェントのテンプレート | PassionCode.ai",
+    "Media to order": "注文に応じたメディア",
+    "Takes requests from people or other agents for video, images, 3D, voice, music and store media.": "人やほかのエージェントから、動画、画像、3D、音声、音楽、ストア用メディアの依頼を受け付けます。",
+    "Films from your product": "プロダクトから映像を",
+    "Builds explainers, launch films and demos from your own product, site or recordings.": "お客様自身のプロダクト、サイト、録画から、解説動画、ローンチ映像、デモを作ります。",
+    "One spending guard": "支出のガードを1つに",
+    "Every job runs within a budget and passes a check before delivery.": "すべての仕事は予算の範囲内で動き、納品前に確認を通ります。",
+    "For teams that need media often and want it made the same way every time.": "メディアを頻繁に必要とし、毎回同じやり方で作りたいチームのために。",
+    "Media on request without a studio": "スタジオなしで依頼に応じたメディア",
+    "The same quality from job to job": "仕事ごとに変わらない品質",
+    "Costs known before a job starts": "仕事を始める前にわかるコスト"
+  }
+}

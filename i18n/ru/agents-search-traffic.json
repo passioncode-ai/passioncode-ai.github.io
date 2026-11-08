@@ -1,0 +1,16 @@
+{
+  "page": "agents/search-traffic/index.html",
+  "strings": {
+    "Search traffic (SEO) agent template | PassionCode.ai": "Шаблон агента поискового трафика (SEO) | PassionCode.ai",
+    "A daily record": "Ежедневная запись",
+    "Keeps search, analytics, ranking and crawl data as a record that only grows.": "Хранит данные поиска, аналитики, ранжирования и сканирования как запись, которая только пополняется.",
+    "Finds the losses": "Находит потери",
+    "Shows which sites, countries, groups of queries and pages lose traffic, and what changed around them.": "Показывает, какие сайты, страны, группы запросов и страницы теряют трафик и что вокруг них изменилось.",
+    "A measurement behind every line": "За каждой строкой стоит измерение",
+    "Each recommendation carries the number it came from, so you can check it.": "У каждой рекомендации указана цифра, из которой она выросла, чтобы вы могли её проверить.",
+    "For owners of one large site or of many sites who depend on search traffic.": "Для владельцев одного большого сайта или многих сайтов, которые зависят от поискового трафика.",
+    "A list of fixes in order of impact": "Список исправлений в порядке их влияния",
+    "What a release did to traffic": "Как релиз повлиял на трафик",
+    "Recommendations you can verify": "Рекомендации, которые можно проверить"
+  }
+}

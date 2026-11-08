@@ -1,0 +1,16 @@
+{
+  "page": "agents/marketing-analyst/index.html",
+  "strings": {
+    "Marketing analyst agent template | PassionCode.ai": "마케팅 분석 에이전트 템플릿 | PassionCode.ai",
+    "Spend against revenue": "지출 대비 매출",
+    "Joins what each campaign cost with what its users paid, from your own records.": "자체 기록을 바탕으로 각 캠페인의 비용과 그 사용자가 지불한 금액을 연결합니다.",
+    "Creatives as hypotheses": "가설로 보는 광고 소재",
+    "Takes each creative apart into claims that a test can confirm or reject.": "각 광고 소재를 테스트로 확인하거나 기각할 수 있는 주장으로 나눕니다.",
+    "Says when it does not know": "모를 때는 모른다고 말합니다",
+    "Where the data does not support a number, it says so instead of guessing.": "데이터가 숫자를 뒷받침하지 않으면 추측하는 대신 그렇다고 말합니다.",
+    "For teams that buy traffic and want to know which spend pays back.": "트래픽을 구매하며 어떤 지출이 회수되는지 알고 싶은 팀에 적합합니다.",
+    "A portfolio of hypotheses, tests and briefs": "가설, 테스트, 브리프 포트폴리오",
+    "Budget changes only within limits you set": "설정한 한도 안에서만 바뀌는 예산",
+    "Reports that show their data": "데이터를 보여 주는 보고서"
+  }
+}

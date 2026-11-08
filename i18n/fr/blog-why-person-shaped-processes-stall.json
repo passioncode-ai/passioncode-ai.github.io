@@ -1,0 +1,20 @@
+{
+  "page": "blog/why-person-shaped-processes-stall/index.html",
+  "strings": {
+    "Why processes built around people stall | PassionCode.ai": "Pourquoi les processus centrés sur l’humain s’enlisent | PassionCode.ai",
+    "Adding AI assistants to a process built around people keeps the person as the bottleneck. What changes when agents run the process and people steer it.": "Ajouter des assistants IA à un processus centré sur l’humain laisse la personne en goulot d’étranglement. Ce qui change quand les agents le mènent et que les personnes le pilotent.",
+    "The person is still the bottleneck": "La personne reste le goulot d’étranglement",
+    "An assistant drafts and analyzes, then hands the result back to a person. Ten assistants hand back ten results. The work waits until that person has time to read them.": "Un assistant rédige et analyse, puis rend le résultat à une personne. Dix assistants rendent dix résultats. Le travail attend que cette personne ait le temps de les lire.",
+    "Meetings reconcile what the assistants made": "Les réunions rapprochent ce qu’ont produit les assistants",
+    "Two people with their own assistants produce more than either can read. They meet to agree on it, and the process stays exactly as it was.": "Deux personnes avec leurs propres assistants produisent plus que l’une ou l’autre ne peut lire. Elles se réunissent pour se mettre d’accord, et le processus reste exactement le même.",
+    "Everyone builds their own agents": "Chacun construit ses propres agents",
+    "No shared rules, no shared memory, keys pasted wherever someone works, and no record of what an agent did or what it cost. It adds work instead of removing it.": "Pas de règles communes, pas de mémoire partagée, des clés collées partout où quelqu’un travaille, et aucune trace de ce qu’un agent a fait ni de ce qu’il a coûté. Cela ajoute du travail au lieu d’en retirer.",
+    "Most companies now experiment with agents, and few run them across a whole function (": "La plupart des entreprises expérimentent désormais des agents, et peu les font tourner sur une fonction entière (",
+    "McKinsey, The State of AI, November 2025": "McKinsey, The State of AI, novembre 2025",
+    "). Gartner expects over 40% of agentic AI projects to be canceled by the end of 2027 (": "). Gartner prévoit que plus de 40 % des projets d’IA agentique seront annulés d’ici fin 2027 (",
+    "Gartner, June 2025": "Gartner, juin 2025",
+    "What changes": "Ce qui change",
+    "The process itself has to move. When work moves between agents instead of between people, an agent takes the task and hands it to the next agent, and they settle it on one board with the record. People keep what only people can do: direction, control and expertise. More work then means more agents, not more people.": "C’est le processus lui-même qui doit changer. Quand le travail circule entre agents plutôt qu’entre personnes, un agent prend la tâche et la transmet à l’agent suivant, et ils règlent la question sur un seul tableau, avec la trace. Les personnes gardent ce que seules des personnes peuvent faire : la direction, le contrôle et l’expertise. Plus de travail signifie alors plus d’agents, pas plus de personnes.",
+    "Read the vision": "Lire la vision"
+  }
+}

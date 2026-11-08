@@ -11,11 +11,15 @@ export const MAX_BODY = 4096
 export const MAX_EVENTS = 20
 
 const PAGES = ['home', 'vision', 'start', 'business', 'business-thanks', 'privacy', 'switchboard', 'switchboard-agents',
-  'fabric', 'fabric-agents', 'inbox', 'dashboards', 'observatory', 'design-system', 'not-found', 'other']
+  'fabric', 'fabric-agents', 'inbox', 'dashboards', 'observatory', 'design-system', 'not-found',
+  // SITE-056: the agent templates, guides and blog
+  'agents', 'agent-template', 'guides', 'guide', 'blog', 'blog-post', 'other']
 const LOCATIONS = ['header', 'hero', 'video', 'problem', 'shift', 'fabric', 'system', 'agents', 'grow', 'doors', 'products',
-  'source', 'faq', 'about', 'investors', 'footer', 'start', 'business', 'request', 'other']
+  'source', 'faq', 'about', 'investors', 'footer', 'start', 'business', 'request', 'marketplace', 'template', 'guide', 'blog', 'other']
 const TARGETS = ['business', 'start', 'setup', 'github', 'investors', 'mail', 'fabric', 'products', 'vision', 'switchboard',
-  'dashboards', 'observatory', 'inbox', 'x', 'download', 'other']
+  'dashboards', 'observatory', 'inbox', 'x', 'download', 'agents', 'guides', 'blog', 'other']
+// SITE-056: the agent templates (scripts/site-content.mjs), by their public slug.
+const TEMPLATES = ['company-assessment', 'organization-administrator', 'data-room', 'host-operations', 'messenger-gateway', 'sales-and-leads', 'marketing-analyst', 'growth-analytics', 'search-traffic', 'app-store-publisher', 'brand-and-content', 'support-answerer', 'chat-assistant', 'telegram-product-bot', 'customer-listening', 'media-production', 'research', 'web-quality-monitor', 'other']
 const PERCENTS = ['0', '25', '50', '100']
 const LEAD_PATHS = ['agent', 'form']
 
@@ -28,7 +32,8 @@ export const EVENTS = {
   command_copy: { page: PAGES },
   lead_started: { page: PAGES },
   lead_sent: { page: PAGES, path: LEAD_PATHS },
-  lang_switch: { page: PAGES }
+  lang_switch: { page: PAGES },
+  template_request: { page: PAGES, template: TEMPLATES }
 }
 
 const enc = new TextEncoder()

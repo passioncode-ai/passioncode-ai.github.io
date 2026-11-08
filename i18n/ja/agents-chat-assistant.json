@@ -1,0 +1,16 @@
+{
+  "page": "agents/chat-assistant/index.html",
+  "strings": {
+    "Conversational assistant agent template | PassionCode.ai": "対話アシスタントエージェントのテンプレート | PassionCode.ai",
+    "Conversations with memory": "記憶のある会話",
+    "Keeps the conversation and a long-term memory, and streams its answers.": "会話と長期記憶を保持し、回答をストリーミングで返します。",
+    "Tools and voice": "ツールと音声",
+    "Uses tools, listens and speaks, and moderates what comes in and what goes out.": "ツールを使い、聞いて話し、入ってくるものと出ていくものをモデレーションします。",
+    "Metered": "利用量の計測",
+    "Tracks each user’s limits, credits or subscription, and its own spend.": "ユーザーごとの上限、クレジット、サブスクリプションと、自身の支出を追跡します。",
+    "For products that offer an assistant as a feature, and for teams that want one in their own chats.": "機能としてアシスタントを提供するプロダクトと、自分たちのチャットにアシスタントを置きたいチームのために。",
+    "An assistant that remembers the context": "文脈を覚えているアシスタント",
+    "Costs under control for each user": "ユーザーごとに管理されたコスト",
+    "Careful handling of sensitive moments": "デリケートな場面への慎重な対応"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "page": "guides/start-agent-workplace/index.html",
+  "strings": {
+    "Start your agent workplace in 20 minutes | PassionCode.ai": "Monte seu ambiente com agentes em 20 minutos | PassionCode.ai",
+    "What happens, step by step, when you set up PassionCode on your computer: what you need, the one command, your first agent and how to check it.": "O que acontece, passo a passo, quando você configura o PassionCode no seu computador: o que é preciso, o comando único, o primeiro agente e como verificá-lo.",
+    "What you need": "O que você precisa",
+    "A computer with Node.js 18 or newer, and Claude Code or Codex. Fabric, the home for your projects and their agents, is an early preview and also needs Docker and the Supabase CLI on every system. Everything is open source and free for personal use.": "Um computador com Node.js 18 ou mais recente, e Claude Code ou Codex. O Fabric, a casa dos seus projetos e dos agentes deles, é uma prévia inicial e também requer o Docker e a Supabase CLI em todos os sistemas. Tudo é de código aberto e gratuito para uso pessoal.",
+    "Run one command": "Execute um comando",
+    "On macOS, one command installs the tools you choose from their signed releases, connects their MCP servers to your coding agent and adds the skills. On Windows and Linux, download the apps from their pages first, then run the same command for the skills and the MCP servers. It installs nothing whose signature or checksum fails. You can also hand the job to your coding agent:": "No macOS, um comando instala as ferramentas que você escolher a partir das versões assinadas, conecta os servidores MCP delas ao seu agente de programação e adiciona as skills. No Windows e no Linux, primeiro baixe os apps nas páginas deles e depois execute o mesmo comando para as skills e os servidores MCP. Ele não instala nada cuja assinatura ou checksum falhe. Você também pode passar a tarefa ao seu agente de programação:",
+    "the command and a prompt for your coding agent are on the Get started page": "o comando e um prompt para o seu agente de programação estão na página Primeiros passos",
+    "Restart your coding agent and check": "Reinicie seu agente de programação e verifique",
+    "Restart Claude Code or Codex so it picks up the new tools. Run the same command again, or": "Reinicie o Claude Code ou o Codex para que ele carregue as novas ferramentas. Execute o mesmo comando de novo, ou o",
+    "to check without changing anything: it tells you what is set up, what is missing and the steps only you can take, such as signing in.": "para verificar sem mudar nada: ele diz o que está configurado, o que falta e os passos que só você pode dar, como entrar na sua conta.",
+    "Create or adapt your first agent": "Crie ou adapte seu primeiro agente",
+    "Ask your coding agent for what you need, in plain words, or start from Fabric’s Create and Adapt actions. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything. You get an agent with a contract, a dashboard and tests.": "Peça ao seu agente de programação o que você precisa, em palavras simples, ou comece pelas ações de criar e adaptar do Fabric. A skill Fabric Agent Adapter faz as perguntas primeiro e mostra o plano antes de mudar qualquer coisa. Você recebe um agente com contrato, painel e testes.",
+    "See it run": "Veja-o funcionando",
+    "Fabric Dashboards shows every local agent service in one window: what it is doing and what it spends. Your coding agent can start, stop and open them for you.": "O Fabric Dashboards mostra cada serviço de agente local em uma só janela: o que ele está fazendo e quanto gasta. Seu agente de programação pode iniciá-los, pará-los e abri-los para você.",
+    "Add the next agent to the same project": "Adicione o próximo agente ao mesmo projeto",
+    "Build the next agent the same way and give it the same project in Fabric. Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "Crie o próximo agente do mesmo jeito e dê a ele o mesmo projeto no Fabric. Agentes conectados ao Fabric compartilham o quadro, a memória e as passagens de trabalho de um projeto, então um continua de onde o outro parou.",
+    "If something does not work": "Se algo não funcionar",
+    "Run the command again: on a computer that is already set up, it checks everything, repairs what is wrong and shows what changed. Each product page lists its requirements and limits.": "Execute o comando de novo: em um computador que já está configurado, ele verifica tudo, corrige o que está errado e mostra o que mudou. A página de cada produto lista os requisitos e os limites dele.",
+    "Set it up now": "Configure agora"
+  }
+}

@@ -286,6 +286,8 @@ One message, every languageMarketing plans, a copy agent writes in the brand’s
 
 Each of these roles runs today as its own agent in our work. Connecting all of them through one board is what Fabric is built for.
 
+The agent templates we assemble for organizations
+
 06 / FROM A TEAM TO AN ORGANIZATION
 
 ## Start on one machine
@@ -533,6 +535,12 @@ Get started
 Vision
 
 For organizations
+
+Agent templates
+
+Guides
+
+Blog
 
 Switchboard
 

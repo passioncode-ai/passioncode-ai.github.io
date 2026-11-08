@@ -1,0 +1,16 @@
+{
+  "page": "agents/telegram-product-bot/index.html",
+  "strings": {
+    "Telegram product bot template | PassionCode.ai": "Telegram 제품 봇 템플릿 | PassionCode.ai",
+    "Every update once": "모든 업데이트를 한 번씩",
+    "Handles each update exactly once and keeps its state across restarts.": "각 업데이트를 정확히 한 번 처리하고, 재시작해도 상태를 유지합니다.",
+    "Payments confirmed": "확인된 결제",
+    "Grants access only when the payment platform confirms the payment, never on a redirect alone.": "결제 플랫폼이 결제를 확인했을 때만 접근 권한을 주며, 리디렉션만으로는 절대 주지 않습니다.",
+    "A view for your team": "팀을 위한 화면",
+    "Gives your team a place to see and manage what the bot is doing.": "봇이 하는 일을 팀이 보고 관리할 수 있는 곳을 제공합니다.",
+    "For teams that sell or deliver a service inside Telegram.": "Telegram 안에서 서비스를 판매하거나 제공하는 팀에 적합합니다.",
+    "No double charges and no lost orders": "중복 결제도, 사라지는 주문도 없음",
+    "Every arrival traced to its source": "모든 유입을 출처까지 추적",
+    "A bot in every language you sell in": "판매하는 모든 언어로 동작하는 봇"
+  }
+}

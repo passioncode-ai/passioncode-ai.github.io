@@ -1,0 +1,16 @@
+{
+  "page": "agents/sales-and-leads/index.html",
+  "strings": {
+    "Sales and leads agent template | PassionCode.ai": "销售与线索智能体模板 | PassionCode.ai",
+    "Collects requests": "收集咨询",
+    "A concierge on your site takes a request with no person online and never invents a price.": "网站上的接待助手在无人在线时也能接下咨询，并且绝不编造价格。",
+    "Keeps one pipeline": "维护统一的销售管道",
+    "Every request lands in one pipeline with a score, a stage and an owner.": "每条咨询都进入同一个销售管道，附有评分、阶段和负责人。",
+    "Finds missed follow-ups": "找出漏掉的跟进",
+    "Spots warm leads and waiting buyers in the conversations your team already has.": "在团队现有的对话中发现有意向的线索和正在等待的买家。",
+    "For teams that get requests from a site, chats, mail and messengers and lose some of them on the way.": "适合从网站、聊天、邮件和即时通讯工具收到咨询、却在途中漏掉一部分的团队。",
+    "No request lost between channels": "咨询不会在渠道之间丢失",
+    "A next step on every lead": "每条线索都有下一步",
+    "Prices that stay a person’s decision": "价格始终由人决定"
+  }
+}

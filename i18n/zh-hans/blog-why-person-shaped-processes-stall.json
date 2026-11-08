@@ -1,0 +1,20 @@
+{
+  "page": "blog/why-person-shaped-processes-stall/index.html",
+  "strings": {
+    "Why processes built around people stall | PassionCode.ai": "为什么围绕人构建的流程会停滞 | PassionCode.ai",
+    "Adding AI assistants to a process built around people keeps the person as the bottleneck. What changes when agents run the process and people steer it.": "在围绕人构建的流程中加入 AI 助手，人仍然是瓶颈。本文说明当智能体运行流程、由人掌控方向时，会发生什么变化。",
+    "The person is still the bottleneck": "人仍然是瓶颈",
+    "An assistant drafts and analyzes, then hands the result back to a person. Ten assistants hand back ten results. The work waits until that person has time to read them.": "助手完成起草和分析，然后把结果交还给人。十个助手会交还十份结果。工作只能等待，直到那个人有时间阅读它们。",
+    "Meetings reconcile what the assistants made": "会议用来协调助手生成的内容",
+    "Two people with their own assistants produce more than either can read. They meet to agree on it, and the process stays exactly as it was.": "两个人各自带着助手，产出的内容多到任何一方都读不完。他们开会统一意见，流程却原封不动。",
+    "Everyone builds their own agents": "每个人都构建自己的智能体",
+    "No shared rules, no shared memory, keys pasted wherever someone works, and no record of what an agent did or what it cost. It adds work instead of removing it.": "没有共享规则，没有共享记忆，密钥被随意粘贴到各个工作环境，也没有智能体做了什么或花费多少的记录。这非但没有减少工作，反而增加了工作。",
+    "Most companies now experiment with agents, and few run them across a whole function (": "如今大多数公司都在试验智能体，但很少有公司在整个职能部门中运行智能体（",
+    "McKinsey, The State of AI, November 2025": "McKinsey，The State of AI，2025 年 11 月",
+    "). Gartner expects over 40% of agentic AI projects to be canceled by the end of 2027 (": "）。Gartner 预计，到 2027 年底，超过 40% 的智能体 AI 项目将被取消（",
+    "Gartner, June 2025": "Gartner，2025 年 6 月",
+    "What changes": "有什么改变",
+    "The process itself has to move. When work moves between agents instead of between people, an agent takes the task and hands it to the next agent, and they settle it on one board with the record. People keep what only people can do: direction, control and expertise. More work then means more agents, not more people.": "流程本身必须改变。当工作在智能体之间而不是在人与人之间流转时，智能体接下任务，再交给下一个智能体，它们在同一个看板上协调结果，并留下记录。人保留只有人能做的事：方向、控制和专业能力。这样一来，工作越多，需要的是更多智能体，而不是更多人。",
+    "Read the vision": "阅读愿景"
+  }
+}

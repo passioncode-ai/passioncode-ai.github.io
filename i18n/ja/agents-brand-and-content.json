@@ -1,0 +1,16 @@
+{
+  "page": "agents/brand-and-content/index.html",
+  "strings": {
+    "Brand and content agent template | PassionCode.ai": "ブランド・コンテンツエージェントのテンプレート | PassionCode.ai",
+    "A plan with sources": "出典のある計画",
+    "Keeps a content plan whose every number has a source, and measures it every day.": "すべての数字に出典があるコンテンツ計画を管理し、毎日計測します。",
+    "Drafts in your voice": "ブランドの声で下書き",
+    "Writes in your saved tone of voice, in every language you publish in.": "保存したトーン・オブ・ボイスで、発信するすべての言語で書きます。",
+    "One approved outbox": "承認を経る送信箱を1つに",
+    "Every post passes a check for facts, privacy and voice, then waits for approval.": "すべての投稿は、事実、プライバシー、トーンの確認を通ってから、承認を待ちます。",
+    "For teams that publish often and want every post to sound like them and say only what is true.": "頻繁に発信し、どの投稿も自分たちらしく、事実だけを語るものにしたいチームのために。",
+    "One voice across every channel": "すべてのチャネルで1つの声",
+    "No claim in public without its source": "出典のない主張は公開しない",
+    "Translations that keep the meaning": "意味を保つ翻訳"
+  }
+}

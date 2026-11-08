@@ -1,0 +1,10 @@
+{
+  "page": "blog/index.html",
+  "strings": {
+    "Blog: notes on AI-native organizations | PassionCode.ai": "Блог: заметки об AI-native организациях | PassionCode.ai",
+    "Notes from PassionCode.ai on AI-native organizations: why processes built around people stall, and what changes when agents run the process.": "Заметки PassionCode.ai об AI-native организациях: почему процессы, построенные вокруг людей, буксуют и что меняется, когда процесс ведут агенты.",
+    "Notes on": "Заметки",
+    "AI-native organizations": "об AI-native организациях",
+    "Why companies will run on agents, and what we learn building the tools for it": "Почему компании будут работать на агентах и чему мы учимся, создавая для этого инструменты"
+  }
+}

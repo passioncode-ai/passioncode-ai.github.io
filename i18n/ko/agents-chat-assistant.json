@@ -1,0 +1,16 @@
+{
+  "page": "agents/chat-assistant/index.html",
+  "strings": {
+    "Conversational assistant agent template | PassionCode.ai": "대화형 어시스턴트 에이전트 템플릿 | PassionCode.ai",
+    "Conversations with memory": "기억하는 대화",
+    "Keeps the conversation and a long-term memory, and streams its answers.": "대화와 장기 기억을 유지하고, 답변을 스트리밍합니다.",
+    "Tools and voice": "도구와 음성",
+    "Uses tools, listens and speaks, and moderates what comes in and what goes out.": "도구를 쓰고, 듣고 말하며, 들어오고 나가는 내용을 검토합니다.",
+    "Metered": "사용량 계량",
+    "Tracks each user’s limits, credits or subscription, and its own spend.": "사용자별 한도, 크레딧 또는 구독, 그리고 자체 지출을 추적합니다.",
+    "For products that offer an assistant as a feature, and for teams that want one in their own chats.": "어시스턴트를 기능으로 제공하는 제품, 그리고 자체 채팅에 어시스턴트를 두려는 팀에 적합합니다.",
+    "An assistant that remembers the context": "맥락을 기억하는 어시스턴트",
+    "Costs under control for each user": "사용자별로 관리되는 비용",
+    "Careful handling of sensitive moments": "민감한 순간의 신중한 처리"
+  }
+}

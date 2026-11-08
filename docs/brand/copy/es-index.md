@@ -286,6 +286,8 @@ Un mensaje, todos los idiomasMarketing planifica, un agente de redacción escrib
 
 Cada uno de estos roles funciona hoy como un agente independiente en nuestro trabajo. Conectarlos todos a través de un único tablero es para lo que está diseñado Fabric.
 
+Las plantillas de agentes que montamos para organizaciones
+
 06 / DE UN EQUIPO A UNA ORGANIZACIÓN
 
 ## Empieza en una máquina
@@ -533,6 +535,12 @@ Empezar
 Visión
 
 Para organizaciones
+
+Plantillas de agentes
+
+Guías
+
+Blog
 
 Switchboard
 

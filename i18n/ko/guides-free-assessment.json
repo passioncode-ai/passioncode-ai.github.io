@@ -1,0 +1,21 @@
+{
+  "page": "guides/free-assessment/index.html",
+  "strings": {
+    "How the free one-week assessment works | PassionCode.ai": "무료 1주 평가 진행 방식 | PassionCode.ai",
+    "One agent reads how your company works for a week, then you get a map of your processes and an offer: which work agents take first and what it costs.": "에이전트 하나가 일주일 동안 회사의 업무 방식을 읽은 뒤, 프로세스 지도와 제안을 드립니다: 에이전트가 어떤 일부터 맡는지, 비용이 얼마인지.",
+    "Before the week": "평가 주간 전",
+    "You answer four questions: your goal, the size of your team, the systems you use and what hurts most. You give read-only access to those systems, one link each. Our engineer agent sets the assessment agent up in a space of its own for your organization, or on your own machine if no data should leave it. This takes about twenty minutes of your time.": "네 가지 질문에 답해 주세요: 목표, 팀 규모, 사용하는 시스템, 가장 힘든 점. 그 시스템마다 링크 하나로 읽기 전용 접근 권한을 주시면 됩니다. 저희 엔지니어 에이전트가 조직 전용 공간에, 또는 데이터가 밖으로 나가면 안 된다면 조직의 컴퓨터에 평가 에이전트를 설정합니다. 여기에 드는 시간은 약 20분입니다.",
+    "During the week": "평가 주간 동안",
+    "The agent connects to your trackers, repositories, documents, team chats, mail and support, and reads the last 90 days. Then it follows the work as it happens: what was planned and what happened, where work waits and for how long. If the data leaves gaps, it may ask your team a few short questions in the channel they already use, anonymous by default. Nothing changes in your systems.": "에이전트는 트래커, 저장소, 문서, 팀 채팅, 메일, 고객 지원에 연결해 최근 90일을 읽습니다. 그다음 일이 진행되는 대로 따라갑니다: 무엇이 계획되었고 실제로 무엇이 일어났는지, 일이 어디서 얼마나 기다리는지. 데이터에 빈틈이 있으면 팀이 이미 쓰는 채널에서 짧은 질문 몇 가지를 할 수 있으며, 기본적으로 익명입니다. 조직의 시스템에서는 아무것도 바뀌지 않습니다.",
+    "What you get on day seven": "7일째에 받는 것",
+    "A map of your processes: the kinds of tasks, how much time each takes and how work moves between people and systems.": "프로세스 지도: 작업의 종류, 각각에 드는 시간, 사람과 시스템 사이에서 일이 오가는 방식.",
+    "Plan against fact, the blockers and waits, and where the documented process differs from the real one.": "계획 대비 실제, 걸림돌과 대기, 그리고 문서화된 프로세스가 실제와 다른 지점.",
+    "The offer: the processes agents should take over first, the hours each frees, the agent template that does it, and a pilot on one process to prove it.": "제안: 에이전트가 먼저 맡아야 할 프로세스, 각 프로세스로 확보되는 시간, 그 일을 하는 에이전트 템플릿, 그리고 이를 증명할 한 프로세스 대상 파일럿.",
+    "We go through it with you in a 30-minute call, and you keep it as a page.": "30분 통화로 함께 살펴보며, 결과는 페이지로 보관하실 수 있습니다.",
+    "About people, never scores": "사람에게 점수를 매기지 않습니다",
+    "The assessment reads processes, not people. It reports totals for groups, never a score for a person, and what stays with people (direction, control and expertise) is part of the offer.": "평가는 사람이 아니라 프로세스를 읽습니다. 그룹별 합계만 보고하고 개인의 점수는 절대 내지 않으며, 사람에게 남는 일(방향, 통제, 전문성)도 제안에 포함됩니다.",
+    "After the week": "평가 주간 후",
+    "If you go ahead, the pilot starts in the same place. If not, access is revoked, the data is deleted, and you receive a confirmation that it was.": "진행하시면 파일럿이 같은 곳에서 시작됩니다. 진행하지 않으시면 접근 권한을 회수하고 데이터를 삭제하며, 삭제되었다는 확인을 보내 드립니다.",
+    "Ask for an assessment": "평가 요청하기"
+  }
+}

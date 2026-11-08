@@ -1,0 +1,24 @@
+{
+  "page": "guides/start-agent-workplace/index.html",
+  "strings": {
+    "Start your agent workplace in 20 minutes | PassionCode.ai": "Miejsce pracy z agentami w 20 minut | PassionCode.ai",
+    "What happens, step by step, when you set up PassionCode on your computer: what you need, the one command, your first agent and how to check it.": "Co dzieje się krok po kroku, gdy konfigurujesz PassionCode na komputerze: czego potrzebujesz, jedno polecenie, pierwszy agent i jak go sprawdzić.",
+    "What you need": "Czego potrzebujesz",
+    "A computer with Node.js 18 or newer, and Claude Code or Codex. Fabric, the home for your projects and their agents, is an early preview and also needs Docker and the Supabase CLI on every system. Everything is open source and free for personal use.": "Komputer z Node.js 18 lub nowszym oraz Claude Code lub Codex. Fabric, dom dla Twoich projektów i ich agentów, jest we wczesnej wersji zapoznawczej i na każdym systemie wymaga też Dockera i Supabase CLI. Wszystko ma otwarty kod i jest bezpłatne do użytku osobistego.",
+    "Run one command": "Uruchom jedno polecenie",
+    "On macOS, one command installs the tools you choose from their signed releases, connects their MCP servers to your coding agent and adds the skills. On Windows and Linux, download the apps from their pages first, then run the same command for the skills and the MCP servers. It installs nothing whose signature or checksum fails. You can also hand the job to your coding agent:": "Na macOS jedno polecenie instaluje wybrane narzędzia z ich podpisanych wydań, łączy ich serwery MCP z Twoim agentem kodującym i dodaje skills. Na Windows i Linuksie najpierw pobierz aplikacje z ich stron, a potem uruchom to samo polecenie dla skills i serwerów MCP. Nie instaluje niczego, czego podpis lub suma kontrolna się nie zgadza. Możesz też zlecić to zadanie swojemu agentowi kodującemu:",
+    "the command and a prompt for your coding agent are on the Get started page": "polecenie i prompt dla Twojego agenta kodującego znajdziesz na stronie Pierwsze kroki",
+    "Restart your coding agent and check": "Zrestartuj agenta kodującego i sprawdź",
+    "Restart Claude Code or Codex so it picks up the new tools. Run the same command again, or": "Zrestartuj Claude Code lub Codex, żeby wczytał nowe narzędzia. Uruchom to samo polecenie jeszcze raz albo",
+    "to check without changing anything: it tells you what is set up, what is missing and the steps only you can take, such as signing in.": ", aby tylko sprawdzić, niczego nie zmieniając: pokaże Ci, co jest skonfigurowane, czego brakuje i jakie kroki możesz wykonać tylko Ty, na przykład zalogowanie się.",
+    "Create or adapt your first agent": "Utwórz lub dostosuj pierwszego agenta",
+    "Ask your coding agent for what you need, in plain words, or start from Fabric’s Create and Adapt actions. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything. You get an agent with a contract, a dashboard and tests.": "Poproś agenta kodującego zwykłymi słowami o to, czego potrzebujesz, albo zacznij od akcji tworzenia i dostosowania w Fabric. Skill Fabric Agent Adapter najpierw zadaje pytania i pokazuje plan, zanim cokolwiek zmieni. Dostajesz agenta z kontraktem, panelem i testami.",
+    "See it run": "Zobacz, jak działa",
+    "Fabric Dashboards shows every local agent service in one window: what it is doing and what it spends. Your coding agent can start, stop and open them for you.": "Fabric Dashboards pokazuje każdą lokalną usługę agenta w jednym oknie: co robi i ile wydaje. Twój agent kodujący może je za Ciebie uruchamiać, zatrzymywać i otwierać.",
+    "Add the next agent to the same project": "Dodaj kolejnego agenta do tego samego projektu",
+    "Build the next agent the same way and give it the same project in Fabric. Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "Zbuduj następnego agenta w ten sam sposób i daj mu ten sam projekt w Fabric. Agenci podłączeni do Fabric dzielą tablicę, pamięć i przekazania jednego projektu, więc jeden podejmuje pracę tam, gdzie skończył drugi.",
+    "If something does not work": "Jeśli coś nie działa",
+    "Run the command again: on a computer that is already set up, it checks everything, repairs what is wrong and shows what changed. Each product page lists its requirements and limits.": "Uruchom polecenie jeszcze raz: na komputerze, który jest już skonfigurowany, sprawdza ono wszystko, naprawia to, co nie działa, i pokazuje, co się zmieniło. Strona każdego produktu podaje jego wymagania i ograniczenia.",
+    "Set it up now": "Skonfiguruj teraz"
+  }
+}

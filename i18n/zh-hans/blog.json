@@ -1,0 +1,10 @@
+{
+  "page": "blog/index.html",
+  "strings": {
+    "Blog: notes on AI-native organizations | PassionCode.ai": "博客：关于 AI 原生组织的笔记 | PassionCode.ai",
+    "Notes from PassionCode.ai on AI-native organizations: why processes built around people stall, and what changes when agents run the process.": "PassionCode.ai 关于 AI 原生组织的笔记：为什么围绕人构建的流程会停滞，以及当智能体运行流程时会发生什么变化。",
+    "Notes on": "关于",
+    "AI-native organizations": "AI 原生组织的笔记",
+    "Why companies will run on agents, and what we learn building the tools for it": "为什么公司将依靠智能体运行，以及我们在为此构建工具时学到了什么"
+  }
+}

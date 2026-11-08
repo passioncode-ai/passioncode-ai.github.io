@@ -1,0 +1,16 @@
+{
+  "page": "agents/brand-and-content/index.html",
+  "strings": {
+    "Brand and content agent template | PassionCode.ai": "Vorlage: Agent für Marke und Inhalte | PassionCode.ai",
+    "A plan with sources": "Ein Plan mit Quellen",
+    "Keeps a content plan whose every number has a source, and measures it every day.": "Führt einen Content-Plan, in dem jede Zahl eine Quelle hat, und misst ihn jeden Tag.",
+    "Drafts in your voice": "Entwürfe in deiner Stimme",
+    "Writes in your saved tone of voice, in every language you publish in.": "Schreibt in deiner gespeicherten Tonalität, in jeder Sprache, in der du veröffentlichst.",
+    "One approved outbox": "Ein Postausgang mit Freigabe",
+    "Every post passes a check for facts, privacy and voice, then waits for approval.": "Jeder Beitrag durchläuft eine Prüfung auf Fakten, Datenschutz und Stimme und wartet dann auf Freigabe.",
+    "For teams that publish often and want every post to sound like them and say only what is true.": "Für Teams, die oft veröffentlichen und wollen, dass jeder Beitrag nach ihnen klingt und nur sagt, was stimmt.",
+    "One voice across every channel": "Eine Stimme in jedem Kanal",
+    "No claim in public without its source": "Keine öffentliche Aussage ohne Quelle",
+    "Translations that keep the meaning": "Übersetzungen, die den Sinn bewahren"
+  }
+}

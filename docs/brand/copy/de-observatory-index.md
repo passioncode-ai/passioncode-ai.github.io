@@ -226,6 +226,12 @@ Vision
 
 Für Organisationen
 
+Agentenvorlagen
+
+Anleitungen
+
+Blog
+
 Switchboard
 
 Observatory
