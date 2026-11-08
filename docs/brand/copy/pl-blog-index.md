@@ -54,6 +54,18 @@ Blog
 
 Dlaczego firmy będą działać na agentach i czego uczymy się, budując do tego narzędzia
 
+Blog wyjaśnia idee stojące za narzędziami: jak zmienia się praca, gdy procesy firmy prowadzą agenci, a ludzie nimi kierują. Jest dla założycieli i liderów, którzy decydują, jak ich firma ma pracować z AI.
+
+Sergey Sheleg, współzałożyciel PassionCode.ai
+
+## Od czego zacząć
+
+Jeśli to dla Ciebie nowy temat: zacznij od tego, czym jest organizacja AI-native.
+
+Jeśli już dajesz ludziom asystentów AI: przeczytaj, dlaczego procesy zbudowane wokół ludzi stają.
+
+Jeśli chcesz spróbować w swojej firmie: przeczytaj, jak działa bezpłatna tygodniowa ocena.
+
 ## Blog
 
 Artykuł · 8 listopada 2026
@@ -62,11 +74,39 @@ Artykuł · 8 listopada 2026
 
 Większość firm wprowadza AI, dając każdej osobie asystenta. Proces pozostaje taki sam, a wraz z nim jego wąskie gardło.
 
+Dla liderów, którzy dali zespołom asystentów AI, a wciąż czekają na tych samych ludzi.
+
+W tym artykule
+
+Wąskim gardłem nadal jest człowiek
+
+Spotkania uzgadniają to, co stworzyli asystenci
+
+Każdy buduje własnych agentów
+
+Co się zmienia
+
 Artykuł · 8 listopada 2026
 
 ### Czym jest organizacja AI-native
 
 Organizacja AI-native to firma, w której procesy prowadzą agenci, a ludzie nimi sterują.
+
+Dla założycieli, którzy chcą prostej definicji i pierwszego kroku.
+
+W tym artykule
+
+Praca przechodzi między agentami
+
+Co zachowują ludzie
+
+Jeden system, a nie wielu asystentów
+
+Czym nie jest
+
+Gdzie działają agenci i gdzie są dane
+
+Jak zacząć
 
 PassionCode
 

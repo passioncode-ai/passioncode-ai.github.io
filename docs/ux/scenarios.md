@@ -583,7 +583,7 @@ rather than replaces, the browser review recorded above.
 - **Entry point:** /guides/ from the footer; a guide from /agents/, a template's closing or a blog post
 - **Preconditions:** none
 - **Steps:**
-  1. /guides/ lists three guides with their date.
+  1. /guides/ says what the guides are for and whom they help, then «Where to start» (on your own computer: the setup guide, then /start/; for your company: the assessment guide, then the templates guide), then three cards, each with its date, lead, whom it helps and the guide's sections (SITE-058).
   2. «Start your agent workplace in 20 minutes»: what you need, the one command (the command itself stays on /start/#setup), restart and check, first agent, Dashboards, the next agent; «Set it up now» → /start/#setup.
   3. «How the free one-week assessment works» (ON REQUEST): before, during and after the week, what the founder receives, processes never people; «Ask for an assessment» → /business/#request.
   4. «How agent templates become your agents»: what a template is, from request to agent, where it runs, what stays yours; «Create your agent» → /business/#request.
@@ -603,7 +603,7 @@ rather than replaces, the browser review recorded above.
 - **Entry point:** /blog/ from the footer; a post from search or a share
 - **Preconditions:** none
 - **Steps:**
-  1. /blog/ lists two posts with their date.
+  1. /blog/ says what the blog explains and for whom, with the author's byline, then «Where to start» (new to the idea, already giving people AI assistants, ready to try it in a company), then two cards, each with its date, lead, whom it helps and the post's sections (SITE-058).
   2. «Why processes built around people stall when you add AI»: the bottleneck, meetings, everyone building their own agents (McKinsey and Gartner sources linked as on the home page), what changes.
   3. «What an AI-native organization is»: work moves between agents, what people keep, one system, how to start (Fabric's board in preview, one machine free, the assessment, the templates).
   4. «Bring your organization» → /business/#request.

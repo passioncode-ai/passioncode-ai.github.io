@@ -224,12 +224,14 @@ export const ASSEMBLY = [
 ]
 
 // Guides and posts: the body is English HTML written for the page; one h2 per section. `question` is the page's one
-// question (docs/seo/brief-2026-11-08.md).
+// question (docs/seo/brief-2026-11-08.md). `summary` (SITE-058): one line under the item's card on its hub, saying whom
+// it helps; the hub also lists the item's h2 headings as what it covers.
 export const GUIDES = [
   {
     slug: 'start-agent-workplace',
     title: 'Start your agent workplace in 20 minutes | PassionCode.ai',
     name: 'Start your agent workplace in 20 minutes',
+    summary: 'For anyone setting up on their own computer: read it before you run the command.',
     description: 'What happens, step by step, when you set up PassionCode on your computer: what you need, the one command, your first agent and how to check it.',
     lead: 'What happens at each step of setting up the tools on your own computer, from the one command to your first agent and the next one.',
     body: `
@@ -253,6 +255,7 @@ export const GUIDES = [
     slug: 'free-assessment',
     title: 'How the free one-week assessment works | PassionCode.ai',
     name: 'How the free one-week assessment works',
+    summary: 'For founders who want to see how their company really works before deciding what agents take.',
     description: 'One agent reads how your company works for a week, then you get a map of your processes and an offer: which work agents take first and what it costs.',
     lead: 'One agent reads how your company works for a week, with read-only access. At the end you get a map of how work really runs and a ready offer for what agents should take over first.',
     body: `
@@ -278,6 +281,7 @@ export const GUIDES = [
     slug: 'templates-to-agents',
     title: 'How agent templates become your agents | PassionCode.ai',
     name: 'How agent templates become your agents',
+    summary: 'For leaders who want to know what they receive, where the agents run and what stays theirs.',
     description: 'What an agent template is, how our engineer agent assembles it for your organization, where the agent runs and what stays yours.',
     lead: 'We do not build your agents from zero. Each one starts from a template that holds what we learned running agents of that kind, and is assembled for your processes.',
     body: `
@@ -300,6 +304,7 @@ export const POSTS = [
     slug: 'why-person-shaped-processes-stall',
     title: 'Why processes built around people stall | PassionCode.ai',
     name: 'Why processes built around people stall when you add AI',
+    summary: 'For leaders who gave their teams AI assistants and still wait on the same people.',
     description: 'Adding AI assistants to a process built around people keeps the person as the bottleneck. What changes when agents run the process and people steer it.',
     lead: 'Most companies add AI by giving each person an assistant. The process stays the same, and so does its bottleneck.',
     body: `
@@ -319,6 +324,7 @@ export const POSTS = [
     slug: 'what-is-an-ai-native-organization',
     title: 'What an AI-native organization is | PassionCode.ai',
     name: 'What an AI-native organization is',
+    summary: 'For founders who want a plain definition and a first step.',
     description: 'An AI-native organization is a company where agents run the processes and people steer them. What people keep, what one system means, how to start.',
     lead: 'An AI-native organization is a company where agents run the processes and people steer them.',
     body: `
