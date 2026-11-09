@@ -26,12 +26,38 @@ Promise: choose useful tools today, adapt them to your workflow, and see the bou
 Vision (operator, 2026-10-05): do what you love — agents take the rest. Start with words, the workplace grows with you, and every week leaves more room for creative work. Local, open source, safe, yours to shape, run by the agent subscription you already have. Copy states it as the direction and names today's start (one command and a coding agent).
 Commercial register (/business/): the same voice speaking to a company lead — concrete processes, the formula behind every number, no fixed package, no promised price.
 
-## Saved Tone of Voice v2 (2026-10-11, current)
+## Saved Tone of Voice v3 (2026-11-09, current): one brand voice for every product and channel
+Use this one. The operator decided on 2026-11-09 that PassionCode.ai speaks in one brand voice for all of its products,
+taken from the voice this site uses now, and that the same voice carries LinkedIn and X: professional, expert, bold,
+agentic, at the frontier of the technology, about integration, agents and business optimization. v3 is v2 brought up to
+the live home page (home v5, SITE-049: "The workplace where agents run your company's processes, and people steer
+them", "Agents run the process. People steer it."), extended to every product (Fabric and its tools, Project
+Observatory, Okolos, the launcher, the Agent Contract and Adapter) and given channel overlays: `web`, `ui`,
+`linkedin`, `x`, `sales` and `consumer`. It keeps every v2 rule, term and ban, and adds: no em dash in any language,
+the brand lines quoted exactly, "bold means a clear position backed by a fact", and social bans (engagement bait,
+decorative emoji, "we're excited to announce"). The organization's record of it, with the overlays and the consumers that
+pin it, is the knowledge base page `brand-voice.md` (fabric-workspace, private).
+
+| Field | Value |
+|---|---|
+| Name | PassionCode.ai · brand voice v3 |
+| voiceId (resourceId) | `93cd4851-8bf8-44f3-94b2-570ed3f2bce0` |
+| Version | 1 |
+| Content hash | `d62a377ec820b8522d08ee9cfe547a14c483e52ffde87e17471cc55e155a108a` |
+| voiceRef | `{"voiceId": "93cd4851-8bf8-44f3-94b2-570ed3f2bce0", "version": 1}` |
+| Saved | 2026-11-09, save operation `61884796-4788-4f28-9b39-78a223838c73`, from draft `ef0feafc-0ad8-4c5b-bb81-8b1cc8cdf98f` revision 1 |
+| Checked | 2026-11-09, rule check en-US, register web, five blocks of the live home page (hero, problem, shift, Fabric's board, solo start): no blocking finding, the same findings as v2 (one advisory repetition of "people"; reports `d94ae12a`, `2628cf4d`, `07fd8a49`, `41b35c87`, `766cb206`). Register marketing: the voice's LinkedIn and X samples pass with no finding (`20b3df91`, `25703aba`); a hype line with bait gets 11 findings (`759c3cea`) |
+| Supersedes | v2 `041b4138…` below, which stays immutable for the record |
+
+Copy checks for this site pass `{"voiceId": "93cd4851-8bf8-44f3-94b2-570ed3f2bce0", "version": 1}` from now on, with
+register `web` for a page, `ui` for interface strings and `marketing` for a social post.
+
+## Saved Tone of Voice v2 (2026-10-11, superseded on 2026-11-09 by v3)
 Correction (2026-11-06, SITE-049): the copy agent now lists this voice under `voiceId`
 `041b4138-44be-4b00-b17d-7d9a7b13ab98` (version 1, same content hash `8a4c0a7e…`; `copylot.voices.list`); the id
 `1657e5b3…` in the table below answers not-found. Use `{"voiceId": "041b4138-44be-4b00-b17d-7d9a7b13ab98", "version": 1}`.
 
-Use this one. It is v1 below with one change for the operator's decision ON-1 (SITE-032): the ban on "ROI" is removed, and
+It is v1 below with one change for the operator's decision ON-1 (SITE-032): the ban on "ROI" is removed, and
 a rule is added: "ROI is allowed (operator ON-1): never state a ROI number, payback period or savings figure we cannot
 prove; the model use is: See the ROI of each agent: what it cost and what it delivered." Everything else matches v1.
 The copy agent's tools always start a draft as a new voice, so v2 has a new voiceId.
