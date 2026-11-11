@@ -74,6 +74,26 @@ PassionCode hat zwei Mitgründer, und wir leiten beide Teams: Sergey Sheleg, Mit
 
 Wir haben diesen Aufbau für uns selbst gebaut, und heute läuft unsere eigene Arbeit darauf. Jetzt bringen wir ihn in deine Organisation: Wir verbinden ihn mit deinen Systemen und helfen dir, Agenten einzuführen, die deine Prozesse ausführen. Wie es dazu kam →
 
+UNSERE AGENTENBASIS
+
+## Deine Agenten beginnen bei
+
+## solchen, die schon funktionieren
+
+Wir schreiben deine Agenten nicht von Grund auf neu. Wir bauen sie aus 18 Agentenvorlagen nach Typ (Support, Datenraum, Vertrieb, Marketing, Video, Recherche, Administration und weitere), gewonnen aus den 107 Agenten, die wir selbst betrieben haben; 58 davon laufen heute.
+
+Mit echten Agenten abgeglichenJeder der 107 Agenten lässt sich aus seiner Vorlage wieder aufbauen: Funktionen, Pipelines und Regeln wurden Zeile für Zeile verglichen.
+
+2.500+ TestsDer Referenzcode der Vorlagen ist durch mehr als 2.500 Tests abgedeckt.
+
+Ein Audit für jeden AgentenJeder Agent, auch deiner, lässt sich in 13 Bereichen gegen die Basis prüfen: was bestätigt ist und was sich verbessern lässt.
+
+Täglich aktualisiert, mit PrüfungEine Vorlage ändert sich nur, wenn die Änderung belegt ist (durch zwei Quellen oder einen gemessenen Gewinn) und ihre Tests nicht schlechter werden.
+
+Erfolge erreichen deine AgentenArbeitet ein Agent messbar besser, wird der Erfolg mit seinen Zahlen vorher und nachher festgehalten und erreicht deine Agenten mit der nächsten Version der Vorlage.
+
+Die Basis selbst bleibt geschlossen. Deine Organisation erhält ihre fertigen Agenten über ihren Administrator-Agenten.
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## Was wir einrichten

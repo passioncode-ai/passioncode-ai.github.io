@@ -135,6 +135,21 @@
     "A base set of agents from day one": "Un conjunto básico de agentes desde el primer día",
     "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "El agente administrador de la organización, su sala de datos y su evaluación de procesos, instalados desde plantillas.",
     "Administration by PassionCode, on request": "Administración a cargo de PassionCode, bajo solicitud",
-    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "Podemos administrar tu sistema de forma remota; vemos la configuración y el gasto, no tu contenido, salvo que lo autorices."
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "Podemos administrar tu sistema de forma remota; vemos la configuración y el gasto, no tu contenido, salvo que lo autorices.",
+    "OUR AGENT BASE": "NUESTRA BASE DE AGENTES",
+    "Your agents start from": "Tus agentes parten",
+    "ones that already work": "de otros que ya funcionan",
+    "We do not write your agents from scratch. We assemble them from 18 agent templates by type (support, data room, sales, marketing, video, research, administration and others), drawn from the 107 agents we have run ourselves; 58 of them are running today.": "No escribimos tus agentes desde cero. Los montamos a partir de 18 plantillas de agentes por tipo (soporte, sala de datos, ventas, marketing, vídeo, investigación, administración y otros), extraídas de los 107 agentes que hemos puesto en marcha nosotros mismos; 58 de ellos funcionan hoy.",
+    "Checked against real agents": "Comprobado con agentes reales",
+    "Each of the 107 agents can be rebuilt from its template: features, pipelines and rules were compared line by line.": "Cada uno de los 107 agentes se puede reconstruir a partir de su plantilla: funciones, pipelines y reglas se compararon línea por línea.",
+    "2,500+ tests": "Más de 2.500 pruebas",
+    "The reference code of the templates is covered by more than 2,500 tests.": "El código de referencia de las plantillas está cubierto por más de 2.500 pruebas.",
+    "An audit of any agent": "Una auditoría de cualquier agente",
+    "Any agent, yours included, can be checked against the base in 13 areas: what is confirmed and what to improve.": "Cualquier agente, también el tuyo, se puede revisar frente a la base en 13 áreas: qué está confirmado y qué mejorar.",
+    "Updated every day, behind a gate": "Actualizada cada día, con un control",
+    "A template changes only when the change is proven, by two sources or a measured win, and its tests do not get worse.": "Una plantilla solo cambia cuando el cambio está demostrado, por dos fuentes o una mejora medida, y sus pruebas no empeoran.",
+    "Wins reach your agents": "Las mejoras llegan a tus agentes",
+    "When an agent does measurably better, the win is recorded with its numbers before and after, and it reaches your agents with the next template release.": "Cuando un agente rinde mediblemente mejor, la mejora se registra con sus cifras de antes y después y llega a tus agentes con la siguiente versión de la plantilla.",
+    "The base itself stays closed. Your organization receives its assembled agents through its administrator agent.": "La base en sí sigue cerrada. Tu organización recibe sus agentes montados a través de su agente administrador."
   }
 }

@@ -74,6 +74,26 @@ PassionCode has two co-founders, and we both run teams: Sergey Sheleg, co-founde
 
 We built this setup for ourselves, and it runs our own work today. Now we bring it to your organization: we connect it to your systems and help you bring in agents that run your processes. How we got here →
 
+OUR AGENT BASE
+
+## Your agents start from
+
+## ones that already work
+
+We do not write your agents from scratch. We assemble them from 18 agent templates by type (support, data room, sales, marketing, video, research, administration and others), drawn from the 107 agents we have run ourselves; 58 of them are running today.
+
+Checked against real agentsEach of the 107 agents can be rebuilt from its template: features, pipelines and rules were compared line by line.
+
+2,500+ testsThe reference code of the templates is covered by more than 2,500 tests.
+
+An audit of any agentAny agent, yours included, can be checked against the base in 13 areas: what is confirmed and what to improve.
+
+Updated every day, behind a gateA template changes only when the change is proven, by two sources or a measured win, and its tests do not get worse.
+
+Wins reach your agentsWhen an agent does measurably better, the win is recorded with its numbers before and after, and it reaches your agents with the next template release.
+
+The base itself stays closed. Your organization receives its assembled agents through its administrator agent.
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## What we set up

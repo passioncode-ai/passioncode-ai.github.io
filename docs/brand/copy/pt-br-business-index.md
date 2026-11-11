@@ -74,6 +74,26 @@ A PassionCode tem dois cofundadores, e nós dois lideramos equipes: Sergey Shele
 
 Construímos essa configuração para nós mesmos, e hoje o nosso próprio trabalho roda nela. Agora levamos isso para a sua organização: conectamos aos seus sistemas e ajudamos você a trazer agentes que conduzem os seus processos. Como chegamos até aqui →
 
+NOSSA BASE DE AGENTES
+
+## Seus agentes partem
+
+## de outros que já funcionam
+
+Não escrevemos seus agentes do zero. Montamos cada um a partir de 18 modelos de agentes por tipo (suporte, sala de dados, vendas, marketing, vídeo, pesquisa, administração e outros), tirados dos 107 agentes que nós mesmos colocamos para rodar; 58 deles rodam hoje.
+
+Conferido com agentes reaisCada um dos 107 agentes pode ser reconstruído a partir do seu modelo: funções, pipelines e regras foram comparados linha por linha.
+
+Mais de 2.500 testesO código de referência dos modelos é coberto por mais de 2.500 testes.
+
+Uma auditoria de qualquer agenteQualquer agente, inclusive o seu, pode ser verificado em relação à base em 13 áreas: o que está confirmado e o que melhorar.
+
+Atualizada todo dia, com uma verificaçãoUm modelo só muda quando a mudança está comprovada, por duas fontes ou um ganho medido, e seus testes não pioram.
+
+Os ganhos chegam aos seus agentesQuando um agente faz mensuravelmente melhor, o ganho é registrado com os números de antes e depois e chega aos seus agentes na próxima versão do modelo.
+
+A base em si continua fechada. Sua organização recebe os agentes montados pelo agente administrador dela.
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## O que configuramos

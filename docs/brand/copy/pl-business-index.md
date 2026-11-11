@@ -74,6 +74,26 @@ PassionCode ma dwóch współzałożycieli i obaj kierujemy zespołami: Sergey S
 
 Zbudowaliśmy ten układ dla siebie i dziś opiera się na nim nasza własna praca. Teraz wnosimy go do Twojej organizacji: podłączamy go do Twoich systemów i pomagamy Ci wdrożyć agentów, którzy prowadzą Twoje procesy. Jak do tego doszliśmy →
 
+NASZA BAZA AGENTÓW
+
+## Twoi agenci zaczynają od
+
+## tych, które już działają
+
+Nie piszemy Twoich agentów od zera. Składamy ich z 18 szablonów agentów według typu (wsparcie, data room, sprzedaż, marketing, wideo, badania, administracja i inne), wywiedzionych ze 107 agentów, których sami uruchamialiśmy; 58 z nich działa dziś.
+
+Sprawdzone na prawdziwych agentachKażdego ze 107 agentów da się odbudować z jego szablonu: funkcje, pipeline’y i reguły porównano linia po linii.
+
+Ponad 2500 testówKod referencyjny szablonów pokrywa ponad 2500 testów.
+
+Audyt dowolnego agentaDowolnego agenta, także Twojego, można sprawdzić względem bazy w 13 obszarach: co jest potwierdzone, a co poprawić.
+
+Aktualizowana codziennie, przez bramkęSzablon zmienia się tylko wtedy, gdy zmiana jest udowodniona (dwoma źródłami albo zmierzoną wygraną), a jego testy nie wypadają gorzej.
+
+Wygrane trafiają do Twoich agentówGdy agent działa mierzalnie lepiej, wygrana jest zapisywana z liczbami przed i po, a do Twoich agentów trafia z kolejnym wydaniem szablonu.
+
+Sama baza pozostaje zamknięta. Twoja organizacja otrzymuje złożonych agentów przez swojego agenta administratora.
+
 01 / PASSIONCODE FOR ENTERPRISE
 
 ## Co dla Ciebie konfigurujemy

@@ -1,4 +1,37 @@
-# Current handoff: SITE-054, the apps' usage counts on /privacy/ and the /start/ prompt, in review, brought up to `main` 2026-11-11
+# Current handoff: SITE-055, the agent template base on /business/, in review, brought up to `main` 2026-11-11
+
+Objective (backlog SITE-055; board request `609fd485`, thread `5aaa9ae3`, from fabric-agents-database, deadline
+2026-11-14): tell organizations about the agent template base as an advantage. The operator's words, relayed on the
+request: «давай про это в воркспейс все передадим там зафиксировать и на сайте обновить тоже рассказать про
+преимущество в виде такой базы у нас» (2026-11-07 about 19:25 UTC, session `12c8d3fa`).
+
+Done (branch `agent/site-agent-templates`): an unnumbered section Our agent base (`/business/#agent-base`) after Who
+we are: 18 templates from the 107 agents we ran (58 running), five proofs (rebuilt line by line, more than 2,500 tests (2,530; corrected by the board's `c8a1c655`), an
+audit in 13 areas, a daily gated update, wins reaching clients' agents), the base stays closed. Catalogs for the nine
+other languages, pages regenerated with `npm run locales`; facts row *agent template base* (what is not claimed:
+assembly time, any client or agent name); SCN-014 and SCR-09.
+
+Decisions: /business/ and not the home page, because the base is what an organization receives; unnumbered so the
+numbered sections 01 to 04 keep their labels in every catalog; the private repository is never linked.
+
+Not done: the Copylot check in all ten languages (the copy tools were not in the board run's session); the merge and
+the deploy (a board run stops before production).
+
+Checks run: `npm run check` exit 0; `python3 scripts/extract-public-copy.py --check` PASS 150; `npm run build`
+225 entries; WebKit (Playwright 1.63) over `dist/` at 390 and 1440 px in en, ru, ja, de: five items each, no sideways
+overflow; captures in [evidence/2026-11-07-site-055/](evidence/2026-11-07-site-055/).
+
+Next task: run Copylot over the new strings in every locale and apply its fixes, then with the operator's go merge,
+`npm run deploy` from `main`, `scripts/verify-live.py`, and a second reply on board request `609fd485` with the
+commit, the Worker version and https://passioncode.ai/business/#agent-base.
+
+Update 2026-11-11 (board thread `5aaa9ae3`, message `c8a1c655`): the test count reads "more than 2,500" on the page,
+in the nine catalogs and in `facts.md`; `origin/main` merged into the branch. Copylot was not available in that
+session, so the check in ten locales is still owed before the deploy the operator approved (relay `c8a1c655`:
+"давай про это в воркспейс все передадим там зафиксировать и на сайте обновить тоже рассказать про преимщество в
+виде такой базы у нас", 2026-11-07, fabric-agents-database session `12c8d3fa`, scope `/business/#agent-base`).
+
+# Current handoff: SITE-054, the apps' usage counts on /privacy/ and the /start/ prompt, merged 2026-11-11 as `d7da2a42` (PR #152), deploy pending
 
 Objective (backlog SITE-054; board request `7b09aef3` from the launcher project, PC-123, with its PC-137 addendum):
 /privacy/ "The apps" names every product that counts with its own switch and describes the launcher's counts from
