@@ -1,0 +1,21 @@
+{
+  "page": "guides/free-assessment/index.html",
+  "strings": {
+    "How the free one-week assessment works | PassionCode.ai": "So läuft die kostenlose einwöchige Analyse | PassionCode.ai",
+    "One agent reads how your company works for a week, then you get a map of your processes and an offer: which work agents take first and what it costs.": "Ein Agent liest eine Woche lang, wie dein Unternehmen arbeitet. Dann bekommst du eine Karte deiner Prozesse und ein Angebot: welche Arbeit Agenten zuerst übernehmen und was es kostet.",
+    "Before the week": "Vor der Woche",
+    "You answer four questions: your goal, the size of your team, the systems you use and what hurts most. You give read-only access to those systems, one link each. Our engineer agent sets the assessment agent up in a space of its own for your organization, or on your own machine if no data should leave it. This takes about twenty minutes of your time.": "Du beantwortest vier Fragen: dein Ziel, die Größe deines Teams, die Systeme, die du nutzt, und was am meisten schmerzt. Du gibst reinen Lesezugriff auf diese Systeme, je einen Link pro System. Unser Engineering-Agent richtet den Analyse-Agenten in einem eigenen Bereich für deine Organisation ein oder auf deinem eigenen Rechner, wenn keine Daten ihn verlassen sollen. Das kostet dich etwa zwanzig Minuten.",
+    "During the week": "Während der Woche",
+    "The agent connects to your trackers, repositories, documents, team chats, mail and support, and reads the last 90 days. Then it follows the work as it happens: what was planned and what happened, where work waits and for how long. If the data leaves gaps, it may ask your team a few short questions in the channel they already use, anonymous by default. Nothing changes in your systems.": "Der Agent verbindet sich mit deinen Trackern, Repositories, Dokumenten, Team-Chats, E-Mails und dem Support und liest die letzten 90 Tage. Dann verfolgt er die Arbeit, während sie geschieht: was geplant war und was passiert ist, wo Arbeit wartet und wie lange. Lassen die Daten Lücken, kann er deinem Team ein paar kurze Fragen in dem Kanal stellen, den es ohnehin nutzt, standardmäßig anonym. In deinen Systemen ändert sich nichts.",
+    "What you get on day seven": "Was du am siebten Tag bekommst",
+    "A map of your processes: the kinds of tasks, how much time each takes and how work moves between people and systems.": "Eine Karte deiner Prozesse: die Arten von Aufgaben, wie viel Zeit jede kostet und wie Arbeit zwischen Menschen und Systemen wechselt.",
+    "Plan against fact, the blockers and waits, and where the documented process differs from the real one.": "Plan gegen Ist, die Blocker und Wartezeiten und wo der dokumentierte Prozess vom tatsächlichen abweicht.",
+    "The offer: the processes agents should take over first, the hours each frees, the agent template that does it, and a pilot on one process to prove it.": "Das Angebot: die Prozesse, die Agenten zuerst übernehmen sollten, die Stunden, die jeder freisetzt, die Agentenvorlage, die das erledigt, und ein Pilot in einem Prozess als Nachweis.",
+    "We go through it with you in a 30-minute call, and you keep it as a page.": "Wir gehen es in einem 30-minütigen Gespräch mit dir durch, und du behältst es als Seite.",
+    "About people, never scores": "Keine Bewertungen von Menschen",
+    "The assessment reads processes, not people. It reports totals for groups, never a score for a person, and what stays with people (direction, control and expertise) is part of the offer.": "Die Analyse liest Prozesse, nicht Menschen. Sie meldet Summen für Gruppen, nie eine Bewertung für eine Person, und was bei den Menschen bleibt (Richtung, Kontrolle und Expertise), ist Teil des Angebots.",
+    "After the week": "Nach der Woche",
+    "If you go ahead, the pilot starts in the same place. If not, access is revoked, the data is deleted, and you receive a confirmation that it was.": "Wenn du weitermachst, startet der Pilot am selben Ort. Wenn nicht, wird der Zugriff entzogen, die Daten werden gelöscht, und du bekommst eine Bestätigung darüber.",
+    "Ask for an assessment": "Analyse anfragen"
+  }
+}

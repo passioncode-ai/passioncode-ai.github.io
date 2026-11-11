@@ -46,7 +46,7 @@ Português (Brasil)
 
 ↓
 
-개인정보 처리방침 · 버전 2026-10-11
+개인정보 처리방침 · 버전 2026-11-07
 
 # 개인정보 처리방침
 
@@ -98,7 +98,9 @@ Cloudflare에 있는 사본은 당사 백엔드에 도착한 지 30일 후에 �
 
 ## 앱
 
-PassionCode.ai 앱은 여러분의 컴퓨터에서 실행되며 작업 내용을 당사로 보내지 않습니다. Fabric Switchboard와 버전 0.3.2부터의 Fabric은 익명 사용 횟수를 보냅니다. 횟수와 종류만이며 이름, 경로, 내용은 절대 보내지 않습니다. Switchboard의 정보 창이나 Fabric의 설정에서 끌 수 있으며, 이 스위치는 해당 컴퓨터의 모든 PassionCode.ai 앱에 적용됩니다.
+PassionCode.ai 앱은 여러분의 컴퓨터에서 실행되며 작업 내용을 당사로 보내지 않습니다. Fabric Switchboard, 버전 0.3.2부터의 Fabric, 버전 0.8.19부터의 Fabric Dashboards는 익명 사용 횟수를 보냅니다(Fabric Dashboards는 오류도 셉니다). 횟수와 종류만이며 이름, 경로, 내용은 절대 보내지 않습니다. 제품마다 스위치가 따로 있습니다. Switchboard의 정보 창, Fabric의 설정, Fabric Dashboards의 설정 → 개인정보 보호입니다. 하나를 꺼도 다른 제품은 꺼지지 않습니다.
+
+PassionCode 런처는 버전 0.2.76부터 익명 사용 및 오류 횟수를 보냅니다. 어떤 명령이 실행되었는지, 어떻게 끝났는지, 대략 얼마나 걸렸는지, 그리고 하루에 한 번 사용되었다는 사실을, 해당 컴퓨터의 PassionCode.ai 앱이 함께 쓰는 파일의 설치 ID와 함께 보냅니다. 경로, 이름, 인수, 토큰, 오류 텍스트는 절대 보내지 않습니다. 횟수는 analytics.passioncode.ai로 전송되며, 이벤트는 2년간 보관되고, 설치 ID는 400일 후 이벤트에서 삭제되며, IP 주소는 저장되지 않습니다. 런처에서 끄려면 다음 명령을 실행하세요: npx @passioncode-ai/passioncode@latest analytics off 또는 다음을 설정하세요: DO_NOT_TRACK=1. PassionCode.ai 앱에서 이미 거부했다면 런처는 그 답을 그대로 유지합니다.
 
 PassionCode
 
@@ -111,6 +113,12 @@ vibe coding에서 passion coding으로
 비전
 
 조직용
+
+에이전트 템플릿
+
+가이드
+
+블로그
 
 Switchboard
 

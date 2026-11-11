@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>20分でエージェントワークプレースを始める | PassionCode.ai</title><meta name="description" content="コンピューターに PassionCode をセットアップするときに何が起きるかを、ステップごとに説明します：必要なもの、1つのコマンド、最初のエージェント、その確認方法。">
+  <link rel="canonical" href="https://passioncode.ai/ja/guides/start-agent-workplace/">
+  <link rel="alternate" hreflang="en" href="https://passioncode.ai/guides/start-agent-workplace/"><link rel="alternate" hreflang="ru" href="https://passioncode.ai/ru/guides/start-agent-workplace/"><link rel="alternate" hreflang="de" href="https://passioncode.ai/de/guides/start-agent-workplace/"><link rel="alternate" hreflang="fr" href="https://passioncode.ai/fr/guides/start-agent-workplace/"><link rel="alternate" hreflang="pl" href="https://passioncode.ai/pl/guides/start-agent-workplace/"><link rel="alternate" hreflang="ko" href="https://passioncode.ai/ko/guides/start-agent-workplace/"><link rel="alternate" hreflang="es" href="https://passioncode.ai/es/guides/start-agent-workplace/"><link rel="alternate" hreflang="pt-BR" href="https://passioncode.ai/pt-br/guides/start-agent-workplace/"><link rel="alternate" hreflang="zh-Hans" href="https://passioncode.ai/zh-hans/guides/start-agent-workplace/"><link rel="alternate" hreflang="ja" href="https://passioncode.ai/ja/guides/start-agent-workplace/"><link rel="alternate" hreflang="x-default" href="https://passioncode.ai/guides/start-agent-workplace/">
+  <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="PassionCode.ai"><meta property="og:locale" content="ja_JP"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="pl_PL"><meta property="og:locale:alternate" content="ko_KR"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="pt_BR"><meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:title" content="20分でエージェントワークプレースを始める"><meta property="og:description" content="コンピューターに PassionCode をセットアップするときに何が起きるかを、ステップごとに説明します：必要なもの、1つのコマンド、最初のエージェント、その確認方法。">
+  <meta property="og:url" content="https://passioncode.ai/ja/guides/start-agent-workplace/">
+  <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/passioncode-mark.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="/assets/icon-256.png">
+  <link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/assets/site.js"></script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "20分でエージェントワークプレースを始める",
+  "description": "コンピューターに PassionCode をセットアップするときに何が起きるかを、ステップごとに説明します：必要なもの、1つのコマンド、最初のエージェント、その確認方法。",
+  "url": "https://passioncode.ai/ja/guides/start-agent-workplace/",
+  "mainEntityOfPage": "https://passioncode.ai/guides/start-agent-workplace/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "@id": "https://passioncode.ai/#sergey-sheleg",
+    "name": "Sergey Sheleg",
+    "url": "https://x.com/sshlg93"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PassionCode.ai",
+    "url": "https://passioncode.ai/ja/"
+  },
+  "image": "https://passioncode.ai/assets/passioncode-social-card.png"
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://passioncode.ai/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ガイド",
+      "item": "https://passioncode.ai/ja/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "20分でエージェントワークプレースを始める",
+      "item": "https://passioncode.ai/ja/guides/start-agent-workplace/"
+    }
+  ]
+}</script>
+</head>
+<body class="story-site"><a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
+ <a class="brand" href="/ja/" aria-label="PassionCode.ai ホーム"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a>
+ <nav aria-label="メインナビゲーション"><a href="/ja/vision/">ビジョン</a><a href="/ja/start/">個人向け</a><a href="/ja/business/">組織向け</a><a href="/ja/#products">ツール</a><a href="/ja/#about">概要</a></nav>
+ <div class="header-actions"><details class="lang-switch lang-menu"><summary aria-label="言語: 日本語"><span lang="ja">日本語</span></summary><ul><li><a href="/guides/start-agent-workplace/" hreflang="en" lang="en">English</a></li><li><a href="/ru/guides/start-agent-workplace/" hreflang="ru" lang="ru">Русский</a></li><li><a href="/de/guides/start-agent-workplace/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/fr/guides/start-agent-workplace/" hreflang="fr" lang="fr">Français</a></li><li><a href="/pl/guides/start-agent-workplace/" hreflang="pl" lang="pl">Polski</a></li><li><a href="/ko/guides/start-agent-workplace/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/es/guides/start-agent-workplace/" hreflang="es" lang="es">Español</a></li><li><a href="/pt-br/guides/start-agent-workplace/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/zh-hans/guides/start-agent-workplace/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></details><a class="header-link header-download" href="/ja/start/#setup">セットアップ <span aria-hidden="true">↓</span></a></div>
+</header>
+<main id="main">
+<article class="section legal article-page" aria-labelledby="hero-title">
+ <nav class="breadcrumbs" aria-label="パンくずリスト"><a href="/ja/">ホーム</a><span aria-hidden="true">/</span><a href="/ja/guides/">ガイド</a></nav>
+ <p class="section-number">ガイド · <time datetime="2026-11-08">2026年11月8日</time></p>
+ <h1 id="hero-title">20分で<wbr>エージェントワークプレースを<wbr>始める</h1>
+ <p class="legal-lead">自分のコンピューターにツールをセットアップするとき、各ステップで何が起きるかを説明します。1つのコマンドから、最初のエージェント、そして次のエージェントまで。</p>
+ <p class="article-meta">Sergey Sheleg（PassionCode.ai 共同創業者）</p>
+ <h2>必要な<wbr>もの</h2>
+ <p>Node.js 18 以降が入ったコンピューターと、Claude Code または Codex が必要です。プロジェクトとそのエージェントのための拠点である Fabric は早期プレビュー版で、どのシステムでも Docker と Supabase CLI も必要です。すべてオープンソースで、個人利用は無料です。</p>
+ <h2>コマンドを<wbr>1つ実行する</h2>
+ <p>macOS では、コマンド1つで、選んだツールを署名済みリリースからインストールし、その MCP サーバーをコーディングエージェントに接続し、スキルを追加します。Windows と Linux では、先にアプリをそれぞれのページからダウンロードしてから、同じコマンドでスキルと MCP サーバーを設定します。署名やチェックサムが合わないものは何もインストールしません。作業をコーディングエージェントに任せることもできます：<a href="/ja/start/#setup">コマンドとコーディングエージェント用のプロンプトは「はじめる」ページにあります</a>。</p>
+ <h2>コーディングエージェントを<wbr>再起動して<wbr>確認する</h2>
+ <p>新しいツールを読み込むよう、Claude Code または Codex を再起動します。同じコマンドをもう一度実行するか、<code>doctor</code>を実行すると、何も変えずに点検できます：何が設定済みか、何が足りないか、サインインなどあなたにしかできない手順はどれかを教えてくれます。</p>
+ <h2>最初の<wbr>エージェントを<wbr>作成する、<wbr>または<wbr>対応させる</h2>
+ <p>必要なことをふだんの言葉でコーディングエージェントに頼むか、Fabric の作成（Create）と対応（Adapt）の操作から始めます。Fabric Agent Adapter スキルは、まず質問し、何かを変更する前に計画を示します。コントラクト、ダッシュボード、テストを備えたエージェントが得られます。</p>
+ <h2>動いている<wbr>ところを<wbr>見る</h2>
+ <p>Fabric Dashboards は、ローカルのエージェントサービスをすべて1つのウィンドウに表示します：何をしているか、どれだけ使っているか。コーディングエージェントが代わりに起動、停止、表示することもできます。</p>
+ <h2>次の<wbr>エージェントを<wbr>同じ<wbr>プロジェクトに<wbr>追加する</h2>
+ <p>次のエージェントも同じ方法で作り、Fabric の同じプロジェクトに割り当てます。Fabric につながったエージェントは、1つのプロジェクトのボード、メモリ、引き継ぎを共有するので、1つのエージェントが止めたところから別のエージェントが続けられます。</p>
+ <h2>うまく<wbr>動かない<wbr>とき</h2>
+ <p>コマンドをもう一度実行してください：すでにセットアップ済みのコンピューターでは、すべてを点検し、問題を修復し、何が変わったかを示します。各製品ページに、それぞれの要件と制限が記載されています。</p>
+ <div class="hero-actions article-actions"><a class="button button-primary" href="/ja/start/#setup" data-cta="start" data-cta-location="guide">今すぐセットアップする <span aria-hidden="true">→</span></a></div>
+</article>
+
+<section class="section related-templates" aria-labelledby="related-title">
+ <div class="section-heading"><p class="section-number">ガイド</p><h2 id="related-title">ほかの<wbr>ガイド</h2></div>
+ <ul class="related-list">
+  <li><a href="/ja/guides/free-assessment/">1週間の無料診断の進め方</a></li>
+  <li><a href="/ja/guides/templates-to-agents/">エージェントテンプレートが自社のエージェントになるまで</a></li>
+  <li><a href="/ja/agents/">エージェントテンプレート</a></li>
+ </ul>
+</section>
+</main>
+</main>
+<footer class="story-footer">
+ <div><a class="brand footer-brand" href="/ja/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>バイブコーディングからパッションコーディングへ</p></div>
+ <nav aria-label="フッターナビゲーション"><a href="/ja/start/">はじめる</a><a href="/ja/vision/">ビジョン</a><a href="/ja/business/">組織向け</a><a href="/ja/agents/">エージェントテンプレート</a><a href="/ja/guides/">ガイド</a><a href="/ja/blog/">ブログ</a><a href="/ja/switchboard/">Switchboard</a><a href="/ja/observatory/">Observatory</a><a href="/ja/inbox/">Inbox</a><a href="/ja/dashboards/">Dashboards</a><a href="/ja/fabric/">Fabric</a><a href="/ja/#source">GitHub とソース</a><a href="/ja/#about">概要</a><a href="/ja/#investors">投資家の方へ</a><a href="/ja/#contributors">コントリビュート</a><a href="/ja/#press">報道関係の方へ</a><a href="/ja/design-system/">デザインシステム</a><a href="/ja/privacy/">プライバシー</a><a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a><a href="https://x.com/sshlg93">X <span aria-hidden="true">↗</span></a></nav>
+</footer>
+</body></html>

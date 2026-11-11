@@ -113,7 +113,7 @@ export function sitemap () {
 // llms.txt names the languages, from the registry, between its "## Languages" heading and the
 // next section.
 export function llmsText (current) {
-  const others = TRANSLATED_LOCALES.map(l => `${REGISTRY.locales[l].englishName} (${LANGUAGE_NAMES[l]}) under /${l}/ — for example ${ORIGIN}/${l}/start/`)
+  const others = TRANSLATED_LOCALES.map(l => `${REGISTRY.locales[l].englishName} (${LANGUAGE_NAMES[l]}) under /${l}/ (for example ${ORIGIN}/${l}/start/)`)
   const line = others.length
     ? `- Every page is published in English and in ${others.length === 1 ? 'one more language' : `${others.length} more languages`}, at the same path under the language's prefix: ${others.join('; ')}. Each page names all its versions with hreflang, English as x-default, and sitemap.xml lists every version. English is the source; where a translated privacy notice differs, the English version prevails.`
     : '- Every page is published in English.'

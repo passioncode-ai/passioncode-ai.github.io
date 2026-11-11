@@ -50,7 +50,7 @@ Enterprise · für Organisationen
 
 # Mach deine Organisation AI-native
 
-Ein Agent, der auf dem Laptop einer einzelnen Person lebt, hilft genau einer Person. Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was jeder gekostet und was er geliefert hat – auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud
+Ein Agent, der auf dem Laptop einer einzelnen Person lebt, hilft genau einer Person. Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was jeder gekostet und was er geliefert hat. Alles läuft auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud
 
 Schätzung und Anfrage
 
@@ -84,7 +84,7 @@ Wir schreiben deine Agenten nicht von Grund auf neu. Wir bauen sie aus 18 Agente
 
 Mit echten Agenten abgeglichenJeder der 107 Agenten lässt sich aus seiner Vorlage wieder aufbauen: Funktionen, Pipelines und Regeln wurden Zeile für Zeile verglichen.
 
-2.572 TestsDer Referenzcode der Vorlagen ist durch 2.572 Tests abgedeckt.
+2.500+ TestsDer Referenzcode der Vorlagen ist durch mehr als 2.500 Tests abgedeckt.
 
 Ein Audit für jeden AgentenJeder Agent, auch deiner, lässt sich in 13 Bereichen gegen die Basis prüfen: was bestätigt ist und was sich verbessern lässt.
 
@@ -112,7 +112,7 @@ Modellzugriff bleibt lokalDer lokale Agent jedes Rechners ruft die Modelle auf, 
 
 Aktivitäts- und NutzungsanalyticsWas lief, in welchem Prozess, was es verbraucht hat und was es gekostet hat.
 
-AdministrationWas jeder Agent darf und auf welche Accounts und Daten er zugreifen darf – einmal für die ganze Organisation festgelegt.
+AdministrationWas jeder Agent darf und auf welche Accounts und Daten er zugreifen darf, einmal für die ganze Organisation festgelegt.
 
 Zugriff nach EbeneInhaber, Administratoren und Projektarchitekten steuern die Agenten; die Anfrage eines Nutzers läuft über eine Freigabe.
 
@@ -208,7 +208,7 @@ Eine Schätzung, kein Versprechen. Der Pilot misst die tatsächliche Zahl an dei
 
 ## für dich tun sollen
 
-Zwei kurze Wege. Dein Coding-Agent stellt dir ein paar Fragen und sendet die Anfrage, sobald du Ja sagst – oder du schreibst selbst ein paar Zeilen. Wir antworten innerhalb von zwei Werktagen.
+Zwei kurze Wege. Dein Coding-Agent stellt dir ein paar Fragen und sendet die Anfrage, sobald du Ja sagst. Oder du schreibst selbst ein paar Zeilen. Wir antworten innerhalb von zwei Werktagen.
 
 ### Lass deinen Coding-Agenten fragen
 
@@ -307,6 +307,12 @@ Loslegen
 Vision
 
 Für Organisationen
+
+Agentenvorlagen
+
+Anleitungen
+
+Blog
 
 Switchboard
 

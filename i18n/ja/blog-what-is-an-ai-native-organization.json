@@ -1,0 +1,25 @@
+{
+  "page": "blog/what-is-an-ai-native-organization/index.html",
+  "strings": {
+    "What an AI-native organization is | PassionCode.ai": "AIネイティブな組織とは | PassionCode.ai",
+    "An AI-native organization is a company where agents run the processes and people steer them. What people keep, what one system means, how to start.": "AIネイティブな組織とは、エージェントがプロセスを動かし、人が舵を取る会社です。人に残るもの、一つのシステムの意味、そして始め方。",
+    "Work moves between agents": "仕事はエージェントの間を移る",
+    "Today a person takes a task, holds it and hands it on, and meetings reconcile what everyone produced. In an AI-native company an agent takes the task and hands it to the next agent; agents settle it on one board, with the record.": "今は、人がタスクを受け取り、抱え、次へ渡し、全員の成果を会議でまとめています。AIネイティブな会社では、エージェントがタスクを受け取って次のエージェントに渡し、エージェント同士が一つのボードで、記録とともにそれを解決します。",
+    "What people keep": "人に残るもの",
+    "Direction": "方向",
+    ": what to build and why, the goals, the priorities and the taste.": "：何を、なぜ作るか。目標、優先順位、そしてセンス。",
+    "Control": "管理",
+    ": approving what needs a person, such as a payment, a release to real users or a message to someone outside.": "：支払い、実際のユーザーへのリリース、社外の人へのメッセージなど、人の判断が必要なことの承認。",
+    "Expertise": "専門知識",
+    ": knowing the market and the craft, and teaching the agents to do the work the way it should be done.": "：市場と仕事の勘所を知り、あるべきやり方で仕事をするようエージェントに教えること。",
+    "One system, not many assistants": "多くのアシスタントではなく、一つのシステム",
+    "The chaos of agents that everyone builds their own way ends when every agent shares one contract, one vault for keys and one record of what it did and what it spent. A person cannot follow hundreds of agent tasks; one agent can. Fabric keeps the board where agents ask each other for work, and keeping the board, routing the work and waking the owner are in preview today.": "誰もがばらばらに作るエージェントの混乱は、すべてのエージェントが一つのコントラクト、キーのための一つの保管庫、そして何をしていくら使ったかの一つの記録を共有したときに終わります。何百ものエージェントのタスクを人が追うことはできませんが、一つのエージェントにはできます。Fabric は、エージェント同士が仕事を依頼し合うボードを持ちます。ボードの管理、仕事の振り分け、担当者を起こす機能は、現在プレビュー段階です。",
+    "How to start": "始め方",
+    "Start on one machine: one command sets up the tools for free. For a company, it starts with a look at how the work runs today, and the first agents are assembled from": "まずは1台のマシンから：コマンド1つでツールを無料でセットアップできます。会社の場合は、いまの仕事の進め方を見ることから始まり、最初のエージェントは次をもとに組み立てます：",
+    "our agent templates": "私たちのエージェントテンプレート",
+    "What it is not": "そうではないもの",
+    "It is not one assistant per person, and it is not a company without people. Agents take the work; people decide what it is for and approve what needs them. It is not surveillance either: the analytics are about agents and the outcomes of processes, and they never rank people.": "一人に一つのアシスタントを付けることでも、人のいない会社でもありません。仕事はエージェントが担い、人はその仕事が何のためにあるかを決め、人の判断が必要なことを承認します。監視でもありません。分析の対象はエージェントとプロセスの成果であり、人を順位付けすることはありません。",
+    "Where the agents and the data live": "エージェントとデータの置き場所",
+    "On the organization’s own machines or in its own cloud, with its own keys. Each agent shows what it does and what it spends, so finance and engineering read one record of what agents cost and what they delivered.": "組織自身のマシンまたは自社クラウドに、組織自身のキーとともに置かれます。各エージェントは何をしていて何に費用を使っているかを示すので、財務とエンジニアリングは、エージェントにかかった費用と成果を一つの記録で確認できます。"
+  }
+}

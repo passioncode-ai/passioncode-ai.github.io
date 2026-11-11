@@ -84,7 +84,7 @@ We do not write your agents from scratch. We assemble them from 18 agent templat
 
 Checked against real agentsEach of the 107 agents can be rebuilt from its template: features, pipelines and rules were compared line by line.
 
-2,572 testsThe reference code of the templates is covered by 2,572 tests.
+2,500+ testsThe reference code of the templates is covered by more than 2,500 tests.
 
 An audit of any agentAny agent, yours included, can be checked against the base in 13 areas: what is confirmed and what to improve.
 
@@ -307,6 +307,12 @@ Get started
 Vision
 
 For organizations
+
+Agent templates
+
+Guides
+
+Blog
 
 Switchboard
 

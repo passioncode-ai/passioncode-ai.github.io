@@ -11,10 +11,10 @@ export const M = {
   required: 'Required.',
   email: 'A work email address.',
   sending: 'Sending…',
-  doneTitle: 'Thank you — it reached us',
+  doneTitle: 'Thank you, it reached us',
   doneBody: 'We reply within two business days. A confirmation email usually follows within minutes.',
   reference: 'Reference: {id}',
   notSent: 'The request was not sent.',
-  offline: 'The request did not leave your browser — check your connection and send it again. Your text is kept here.'
+  offline: 'The request did not leave your browser. Check your connection and send it again. Your text is kept here.'
 }
 // #endregion messages

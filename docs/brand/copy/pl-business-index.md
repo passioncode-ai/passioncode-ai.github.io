@@ -84,7 +84,7 @@ Nie piszemy Twoich agentów od zera. Składamy ich z 18 szablonów agentów wed�
 
 Sprawdzone na prawdziwych agentachKażdego ze 107 agentów da się odbudować z jego szablonu: funkcje, pipeline’y i reguły porównano linia po linii.
 
-2572 testyKod referencyjny szablonów pokrywa 2572 testy.
+Ponad 2500 testówKod referencyjny szablonów pokrywa ponad 2500 testów.
 
 Audyt dowolnego agentaDowolnego agenta, także Twojego, można sprawdzić względem bazy w 13 obszarach: co jest potwierdzone, a co poprawić.
 
@@ -307,6 +307,12 @@ Zacznij
 Wizja
 
 Dla organizacji
+
+Szablony agentów
+
+Poradniki
+
+Blog
 
 Switchboard
 

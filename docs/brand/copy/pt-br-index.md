@@ -286,6 +286,8 @@ Uma mensagem, todos os idiomasO marketing planeja, um agente de redação escrev
 
 Cada uma dessas funções funciona hoje como um agente próprio em nosso trabalho. Conectar todas elas por meio de um único quadro é o objetivo para o qual o Fabric foi criado.
 
+Os modelos de agentes que montamos para organizações
+
 06 / DE UMA EQUIPE A UMA ORGANIZAÇÃO
 
 ## Comece em uma máquina
@@ -533,6 +535,12 @@ Começar
 Visão
 
 Para organizações
+
+Modelos de agentes
+
+Guias
+
+Blog
 
 Switchboard
 

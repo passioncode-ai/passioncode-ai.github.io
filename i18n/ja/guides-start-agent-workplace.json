@@ -1,0 +1,24 @@
+{
+  "page": "guides/start-agent-workplace/index.html",
+  "strings": {
+    "Start your agent workplace in 20 minutes | PassionCode.ai": "20分でエージェントワークプレースを始める | PassionCode.ai",
+    "What happens, step by step, when you set up PassionCode on your computer: what you need, the one command, your first agent and how to check it.": "コンピューターに PassionCode をセットアップするときに何が起きるかを、ステップごとに説明します：必要なもの、1つのコマンド、最初のエージェント、その確認方法。",
+    "What you need": "必要なもの",
+    "A computer with Node.js 18 or newer, and Claude Code or Codex. Fabric, the home for your projects and their agents, is an early preview and also needs Docker and the Supabase CLI on every system. Everything is open source and free for personal use.": "Node.js 18 以降が入ったコンピューターと、Claude Code または Codex が必要です。プロジェクトとそのエージェントのための拠点である Fabric は早期プレビュー版で、どのシステムでも Docker と Supabase CLI も必要です。すべてオープンソースで、個人利用は無料です。",
+    "Run one command": "コマンドを1つ実行する",
+    "On macOS, one command installs the tools you choose from their signed releases, connects their MCP servers to your coding agent and adds the skills. On Windows and Linux, download the apps from their pages first, then run the same command for the skills and the MCP servers. It installs nothing whose signature or checksum fails. You can also hand the job to your coding agent:": "macOS では、コマンド1つで、選んだツールを署名済みリリースからインストールし、その MCP サーバーをコーディングエージェントに接続し、スキルを追加します。Windows と Linux では、先にアプリをそれぞれのページからダウンロードしてから、同じコマンドでスキルと MCP サーバーを設定します。署名やチェックサムが合わないものは何もインストールしません。作業をコーディングエージェントに任せることもできます：",
+    "the command and a prompt for your coding agent are on the Get started page": "コマンドとコーディングエージェント用のプロンプトは「はじめる」ページにあります",
+    "Restart your coding agent and check": "コーディングエージェントを再起動して確認する",
+    "Restart Claude Code or Codex so it picks up the new tools. Run the same command again, or": "新しいツールを読み込むよう、Claude Code または Codex を再起動します。同じコマンドをもう一度実行するか、",
+    "to check without changing anything: it tells you what is set up, what is missing and the steps only you can take, such as signing in.": "を実行すると、何も変えずに点検できます：何が設定済みか、何が足りないか、サインインなどあなたにしかできない手順はどれかを教えてくれます。",
+    "Create or adapt your first agent": "最初のエージェントを作成する、または対応させる",
+    "Ask your coding agent for what you need, in plain words, or start from Fabric’s Create and Adapt actions. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything. You get an agent with a contract, a dashboard and tests.": "必要なことをふだんの言葉でコーディングエージェントに頼むか、Fabric の作成（Create）と対応（Adapt）の操作から始めます。Fabric Agent Adapter スキルは、まず質問し、何かを変更する前に計画を示します。コントラクト、ダッシュボード、テストを備えたエージェントが得られます。",
+    "See it run": "動いているところを見る",
+    "Fabric Dashboards shows every local agent service in one window: what it is doing and what it spends. Your coding agent can start, stop and open them for you.": "Fabric Dashboards は、ローカルのエージェントサービスをすべて1つのウィンドウに表示します：何をしているか、どれだけ使っているか。コーディングエージェントが代わりに起動、停止、表示することもできます。",
+    "Add the next agent to the same project": "次のエージェントを同じプロジェクトに追加する",
+    "Build the next agent the same way and give it the same project in Fabric. Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "次のエージェントも同じ方法で作り、Fabric の同じプロジェクトに割り当てます。Fabric につながったエージェントは、1つのプロジェクトのボード、メモリ、引き継ぎを共有するので、1つのエージェントが止めたところから別のエージェントが続けられます。",
+    "If something does not work": "うまく動かないとき",
+    "Run the command again: on a computer that is already set up, it checks everything, repairs what is wrong and shows what changed. Each product page lists its requirements and limits.": "コマンドをもう一度実行してください：すでにセットアップ済みのコンピューターでは、すべてを点検し、問題を修復し、何が変わったかを示します。各製品ページに、それぞれの要件と制限が記載されています。",
+    "Set it up now": "今すぐセットアップする"
+  }
+}

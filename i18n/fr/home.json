@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai — une boîte à outils pour les équipes AI-native",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai : une boîte à outils pour les équipes AI-native",
     "Is PassionCode.ai free?": "PassionCode.ai est-il gratuit ?",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "Oui. Chaque outil est open source sous licence GNU AGPL-3.0 : vous pouvez le télécharger, l’utiliser, l’étudier et le modifier gratuitement. Une licence commerciale est disponible si vous l’intégrez à un produit fermé ou si vous exploitez une version modifiée en service hébergé sans en publier le code source.",
     "Which agents does it work with?": "Avec quels agents fonctionne-t-il ?",
@@ -224,6 +224,7 @@
     "Start free": "Commencer gratuitement",
     "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "Les entreprises tourneront sur des agents, et il faut que quelqu’un gère le processus entre eux. PassionCode.ai construit cet espace de travail : Fabric, qui tient le tableau des agents, et les outils qui l’entourent. Notre propre travail y tourne déjà. C’est open source sous GNU AGPL-3.0 et gratuit pour un usage personnel ; les organisations obtiennent une licence commerciale et nos services. Les deux cofondateurs présentés plus haut le construisent. Contact :",
     "PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data": "PassionCode.ai en une minute et demie : comment le travail passe des personnes aux agents que pilote Fabric, et comment une équipe devient une organisation, commenté et sous-titré. Le tableau montre des données d’exemple",
-    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "Comment le travail passe des personnes aux agents que pilote Fabric, et comment une équipe devient une organisation, commenté et sous-titré. Le tableau montre des données d’exemple."
+    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "Comment le travail passe des personnes aux agents que pilote Fabric, et comment une équipe devient une organisation, commenté et sous-titré. Le tableau montre des données d’exemple.",
+    "The agent templates we assemble for organizations": "Les modèles d’agents que nous assemblons pour les organisations"
   }
 }

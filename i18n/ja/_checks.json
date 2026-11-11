@@ -63,8 +63,12 @@
       "西ヨーロッパ",
       "フランクフルト",
       "cookie",
-      "2026-10-11",
-      "英語版が優先"
+      "2026-11-07",
+      "英語版が優先",
+      "npx @passioncode-ai/passioncode@latest analytics off",
+      "DO_NOT_TRACK=1",
+      "0.8.19",
+      "400"
     ]
   }
 }

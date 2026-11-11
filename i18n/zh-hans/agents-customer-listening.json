@@ -1,0 +1,16 @@
+{
+  "page": "agents/customer-listening/index.html",
+  "strings": {
+    "Customer listening agent template | PassionCode.ai": "客户倾听智能体模板 | PassionCode.ai",
+    "One picture": "一幅全景",
+    "Brings store reviews, support chats, community and public mentions into one ranked view.": "把商店评论、客服聊天、社区和公开提及汇集到一个排序视图中。",
+    "Alerts on change": "变化时提醒",
+    "Tells the right people when a problem grows or a new risk appears.": "当某个问题扩大或出现新风险时，通知相关的人。",
+    "Privacy first": "隐私优先",
+    "Keeps summaries, labels and counts rather than people’s own words where the rules forbid them.": "在规则禁止保存原话的地方，只保存摘要、标签和计数，而不保存人们的原话。",
+    "For teams that want one picture of what customers say, without reading every channel.": "适合想全面了解客户说法、又不必逐个渠道阅读的团队。",
+    "A weekly picture of what customers say": "每周一份客户声音全景",
+    "Problems ranked by how many people meet them": "按遇到人数排序的问题",
+    "Answering agents that learn from it": "负责回答的智能体从中学习"
+  }
+}

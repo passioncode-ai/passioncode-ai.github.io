@@ -31,6 +31,10 @@
 | SCN-022 | Let a coding agent ask and send the request | Commercial | P-02 | ST-07, FLW-06 | draft | pending |
 | SCN-023 | Understand the shift to an agentic organization | Story | P-03, P-02, P-04 | ST-09, FLW-08 | draft | pending |
 | SCN-024 | Choose a door: founder, investor, engineer or solo founder | Doors | P-01, P-02, P-03, P-04 | ST-01, ST-07, ST-09, ST-10, FLW-08 | draft | pending |
+| SCN-025 | Browse the agent templates and choose the work agents take | Agent templates | P-03, P-02 | ST-07, ST-09, FLW-09 | draft | pending |
+| SCN-026 | Read one agent template and ask for it | Agent templates | P-03, P-02 | ST-07, FLW-09 | draft | pending |
+| SCN-027 | Read a guide and take its next step | Guides | P-01, P-03 | ST-01, ST-07, FLW-09 | draft | pending |
+| SCN-028 | Read a blog post on AI-native organizations | Blog | P-03, P-04 | ST-09, FLW-09 | draft | pending |
 
 ## Personas
 
@@ -396,7 +400,8 @@ rather than replaces, the browser review recorded above.
 - **Preconditions:** none
 - **Steps:**
   1. Read what is collected (the form: the text, the work email, an optional goal; through a coding agent also the organization size, the tools, the timing and the agent's name), why (Art. 6(1)(b): answering the request the person asked for, so no consent box), where it is stored, for how long and how to have it erased.
-- **Expected result:** The lead knows what happens to the request before sending it; nothing is collected outside the request.
+  2. Under "The apps", read which PassionCode.ai products send anonymous counts (Switchboard, Fabric, Fabric Dashboards, the launcher from 0.2.76), what they never send, and each product's own switch (the launcher: `npx @passioncode-ai/passioncode@latest analytics off` or `DO_NOT_TRACK=1`).
+- **Expected result:** The lead knows what happens to the request before sending it; nothing is collected outside the request; a user of the apps knows what each one counts and turns it off product by product.
 - **Alt paths:** none.
 - **UI elements:** legal page
 - **States covered:** static.
@@ -531,3 +536,83 @@ rather than replaces, the browser review recorded above.
 - **Coverage:** index.html (#doors, #investors)
 - **Product:** unobserved
 
+### SCN-025: Browse the agent templates and choose the work agents take
+- **Persona:** P-03, P-02
+- **Feature:** Agent templates (SITE-056, operator 2026-11-08)
+- **Traces:** ST-07, ST-09, FLW-09
+- **Entry point:** /agents/ from the footer of every page, the home story (#agents, «The agent templates we assemble for organizations»), the guides and posts
+- **Preconditions:** none
+- **Steps:**
+  1. Read the hero: agents for your processes, each template assembled by our engineer agent for the organization, on its machines and with its keys; «Eighteen templates in four groups», details on request.
+  2. Scan the four groups (#run, #grow, #people, #make): each card carries ON REQUEST, the template's name as a link and one sentence of what it does.
+  3. Read How it works (#how): the three assembly steps, links to the two guides.
+  4. Read the four questions (code and prompts are not shown; a template is not a finished product; where agents run; no fixed price).
+  5. «Create your agent» → /business/#request (SCN-014, SCN-022), or open a template (SCN-026).
+- **Expected result:** The reader names the agents that would take their work and knows the next step, without seeing any source agent, client, prompt or code.
+- **Alt paths:** at 390 px the cards stack; keyboard reaches every card link in order; without JavaScript every card, step and answer is in the page.
+- **UI elements:** breadcrumbs, hero with one primary action, table of contents, four card grids, three steps, four questions, closing with two actions
+- **States covered:** static populated.
+- **Errors & recovery:** none (static).
+- **Status:** draft
+- **Coverage:** agents/index.html (rendered by scripts/build-content-pages.mjs from scripts/site-content.mjs)
+- **Product:** unobserved
+
+### SCN-026: Read one agent template and ask for it
+- **Persona:** P-03, P-02
+- **Feature:** Agent templates
+- **Traces:** ST-07, FLW-09
+- **Entry point:** /agents/<slug>/ from a card on /agents/, a related link on another template, search
+- **Preconditions:** none
+- **Steps:**
+  1. Breadcrumbs (Home / Agent templates), the group, the template's name and its one-sentence lead; ON REQUEST, assembled by our engineer agent.
+  2. What it does (#does): three things it does. Who it is for (#who) and three outcomes (What you get).
+  3. How it is assembled (#how): the three steps shared by every template.
+  4. More templates in this group, then «Create your agent» → /business/#request; the click also records which template was asked for (`template_request`, docs/analytics/events.md).
+- **Expected result:** The reader knows what this agent does, for whom, what they get and how to ask for it; no number, price or assembly time is promised.
+- **Alt paths:** back to /agents/ from the breadcrumbs or «All agent templates»; at 390 px everything is one column.
+- **UI elements:** breadcrumbs, hero, three-item list, outcomes, three steps, related links, closing
+- **States covered:** static populated.
+- **Errors & recovery:** none (static).
+- **Status:** draft
+- **Coverage:** agents/*/index.html (18 pages)
+- **Product:** unobserved
+
+### SCN-027: Read a guide and take its next step
+- **Persona:** P-01, P-03
+- **Feature:** Guides
+- **Traces:** ST-01, ST-07, FLW-09
+- **Entry point:** /guides/ from the footer; a guide from /agents/, a template's closing or a blog post
+- **Preconditions:** none
+- **Steps:**
+  1. /guides/ says what the guides are for and whom they help, then «Where to start» (on your own computer: the setup guide, then /start/; for your company: the assessment guide, then the templates guide), then three cards, each with its date, lead, whom it helps and the guide's sections (SITE-058).
+  2. «Start your agent workplace in 20 minutes»: what you need, the one command (the command itself stays on /start/#setup), restart and check, first agent, Dashboards, the next agent; «Set it up now» → /start/#setup.
+  3. «How the free one-week assessment works» (ON REQUEST): before, during and after the week, what the founder receives, processes never people; «Ask for an assessment» → /business/#request.
+  4. «How agent templates become your agents»: what a template is, from request to agent, where it runs, what stays yours; «Create your agent» → /business/#request.
+- **Expected result:** Each guide answers its one question in the served HTML and ends with one action.
+- **Alt paths:** «More guides» links the other two and /agents/.
+- **UI elements:** breadcrumbs, date, lead, byline, sections, one action, related links
+- **States covered:** static populated.
+- **Errors & recovery:** none (static).
+- **Status:** draft
+- **Coverage:** guides/index.html, guides/*/index.html
+- **Product:** unobserved
+
+### SCN-028: Read a blog post on AI-native organizations
+- **Persona:** P-03, P-04
+- **Feature:** Blog
+- **Traces:** ST-09, FLW-09
+- **Entry point:** /blog/ from the footer; a post from search or a share
+- **Preconditions:** none
+- **Steps:**
+  1. /blog/ says what the blog explains and for whom, with the author's byline, then «Where to start» (new to the idea, already giving people AI assistants, ready to try it in a company), then two cards, each with its date, lead, whom it helps and the post's sections (SITE-058).
+  2. «Why processes built around people stall when you add AI»: the bottleneck, meetings, everyone building their own agents (McKinsey and Gartner sources linked as on the home page), what changes.
+  3. «What an AI-native organization is»: work moves between agents, what people keep, one system, how to start (Fabric's board in preview, one machine free, the assessment, the templates).
+  4. «Bring your organization» → /business/#request.
+- **Expected result:** The reader can explain the shift in their own words and finds the next step; every figure has its source on the page.
+- **Alt paths:** «More from the blog» and /agents/.
+- **UI elements:** breadcrumbs, date, lead, byline, sections, one action, related links
+- **States covered:** static populated.
+- **Errors & recovery:** none (static).
+- **Status:** draft
+- **Coverage:** blog/index.html, blog/*/index.html
+- **Product:** unobserved

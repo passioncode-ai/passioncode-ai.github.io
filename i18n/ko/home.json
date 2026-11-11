@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai — AI 네이티브 팀을 위한 툴킷",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai: AI 네이티브 팀을 위한 툴킷",
     "Is PassionCode.ai free?": "PassionCode.ai는 무료인가요?",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "네. 모든 도구는 GNU AGPL-3.0 오픈 소스이므로 무료로 다운로드하고 사용하고 살펴보고 수정할 수 있습니다. 폐쇄형 제품에 포함하거나 수정한 호스팅 서비스를 소스 공개 없이 운영해야 한다면 상용 라이선스를 이용할 수 있습니다.",
     "Which agents does it work with?": "어떤 에이전트와 함께 쓸 수 있나요?",
@@ -233,6 +233,7 @@
     "Start free": "무료로 시작하기",
     "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "회사는 에이전트로 움직이게 될 것이고, 그 사이의 프로세스는 누군가 관리해야 합니다. PassionCode.ai는 그 업무 공간을 만듭니다. 에이전트의 보드를 운영하는 Fabric과 그 주변 도구입니다. 지금 우리 자신의 업무가 여기서 돌아갑니다. GNU AGPL-3.0 오픈 소스이며 개인 사용은 무료이고, 조직에는 상용 라이선스와 서비스를 제공합니다. 위에 소개한 두 공동 창업자가 만듭니다. 연락처:",
     "PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data": "1분 30초로 보는 PassionCode.ai: 일이 사람에게서 Fabric이 운영하는 에이전트로 옮겨 가는 방식과 팀이 조직으로 성장하는 과정, 내레이션과 자막 포함. 보드는 샘플 데이터입니다",
-    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "일이 사람에게서 Fabric이 운영하는 에이전트로 옮겨 가는 방식과 팀이 조직으로 성장하는 과정, 내레이션과 자막 포함. 보드는 샘플 데이터입니다."
+    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "일이 사람에게서 Fabric이 운영하는 에이전트로 옮겨 가는 방식과 팀이 조직으로 성장하는 과정, 내레이션과 자막 포함. 보드는 샘플 데이터입니다.",
+    "The agent templates we assemble for organizations": "저희가 조직을 위해 구성하는 에이전트 템플릿"
   }
 }

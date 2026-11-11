@@ -84,7 +84,7 @@ Não escrevemos seus agentes do zero. Montamos cada um a partir de 18 modelos de
 
 Conferido com agentes reaisCada um dos 107 agentes pode ser reconstruído a partir do seu modelo: funções, pipelines e regras foram comparados linha por linha.
 
-2.572 testesO código de referência dos modelos é coberto por 2.572 testes.
+Mais de 2.500 testesO código de referência dos modelos é coberto por mais de 2.500 testes.
 
 Uma auditoria de qualquer agenteQualquer agente, inclusive o seu, pode ser verificado em relação à base em 13 áreas: o que está confirmado e o que melhorar.
 
@@ -307,6 +307,12 @@ Começar
 Visão
 
 Para organizações
+
+Modelos de agentes
+
+Guias
+
+Blog
 
 Switchboard
 

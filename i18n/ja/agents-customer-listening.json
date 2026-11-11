@@ -1,0 +1,16 @@
+{
+  "page": "agents/customer-listening/index.html",
+  "strings": {
+    "Customer listening agent template | PassionCode.ai": "カスタマーリスニングエージェントのテンプレート | PassionCode.ai",
+    "One picture": "1つの全体像",
+    "Brings store reviews, support chats, community and public mentions into one ranked view.": "ストアのレビュー、サポートのチャット、コミュニティ、公開の言及を、順位付けした1つのビューにまとめます。",
+    "Alerts on change": "変化を知らせる",
+    "Tells the right people when a problem grows or a new risk appears.": "問題が大きくなったときや新しいリスクが現れたときに、適切な人に知らせます。",
+    "Privacy first": "プライバシー優先",
+    "Keeps summaries, labels and counts rather than people’s own words where the rules forbid them.": "規則で禁じられている場合は、人の言葉そのものではなく、要約、ラベル、件数を保管します。",
+    "For teams that want one picture of what customers say, without reading every channel.": "すべてのチャネルを読まずに、顧客の声の全体像をつかみたいチームのために。",
+    "A weekly picture of what customers say": "顧客の声の週ごとの全体像",
+    "Problems ranked by how many people meet them": "直面する人の多さで順位を付けた問題",
+    "Answering agents that learn from it": "そこから学ぶ回答エージェント"
+  }
+}

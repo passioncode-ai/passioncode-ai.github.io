@@ -1,4 +1,4 @@
-# Current handoff: SITE-055, the agent template base on /business/, in review, 2026-11-07
+# Current handoff: SITE-055, the agent template base on /business/, in review, brought up to `main` 2026-11-11
 
 Objective (backlog SITE-055; board request `609fd485`, thread `5aaa9ae3`, from fabric-agents-database, deadline
 2026-11-14): tell organizations about the agent template base as an advantage. The operator's words, relayed on the
@@ -6,7 +6,7 @@ request: «давай про это в воркспейс все передад�
 преимущество в виде такой базы у нас» (2026-11-07 about 19:25 UTC, session `12c8d3fa`).
 
 Done (branch `agent/site-agent-templates`): an unnumbered section Our agent base (`/business/#agent-base`) after Who
-we are: 18 templates from the 107 agents we ran (58 running), five proofs (rebuilt line by line, 2,572 tests, an
+we are: 18 templates from the 107 agents we ran (58 running), five proofs (rebuilt line by line, more than 2,500 tests (2,530; corrected by the board's `c8a1c655`), an
 audit in 13 areas, a daily gated update, wins reaching clients' agents), the base stays closed. Catalogs for the nine
 other languages, pages regenerated with `npm run locales`; facts row *agent template base* (what is not claimed:
 assembly time, any client or agent name); SCN-014 and SCR-09.
@@ -24,6 +24,116 @@ overflow; captures in [evidence/2026-11-07-site-055/](evidence/2026-11-07-site-0
 Next task: run Copylot over the new strings in every locale and apply its fixes, then with the operator's go merge,
 `npm run deploy` from `main`, `scripts/verify-live.py`, and a second reply on board request `609fd485` with the
 commit, the Worker version and https://passioncode.ai/business/#agent-base.
+
+Update 2026-11-11 (board thread `5aaa9ae3`, message `c8a1c655`): the test count reads "more than 2,500" on the page,
+in the nine catalogs and in `facts.md`; `origin/main` merged into the branch. Copylot was not available in that
+session, so the check in ten locales is still owed before the deploy the operator approved (relay `c8a1c655`:
+"давай про это в воркспейс все передадим там зафиксировать и на сайте обновить тоже рассказать про преимщество в
+виде такой базы у нас", 2026-11-07, fabric-agents-database session `12c8d3fa`, scope `/business/#agent-base`).
+
+# Current handoff: SITE-054, the apps' usage counts on /privacy/ and the /start/ prompt, merged 2026-11-11 as `d7da2a42` (PR #152), deploy pending
+
+Objective (backlog SITE-054; board request `7b09aef3` from the launcher project, PC-123, with its PC-137 addendum):
+/privacy/ "The apps" names every product that counts with its own switch and describes the launcher's counts from
+0.2.76; the /start/ copy-prompt ends with the launcher README's last two sentences. Ten languages.
+
+Done: English pages, catalogs in nine languages, `npm run locales`, copy projections, the gate's English and
+per-language disclosures (notice version 2026-11-07), facts row *app usage counts*, SCN-017 step 2.
+
+Decisions: the notice version moves to 2026-11-07 because what the notice covers changed; the README's
+usage-count sentence goes into the prompt with the version sentence, since the site's prompt is the README's copy.
+
+Checks run: `npm run check` exit 0 (129 tests); `npm run build` 225 entries. On 2026-11-11 `origin/main` (`9d2e7d79`, SITE-056 to SITE-058 and Tone of Voice v3) was merged into the branch for the launcher's board message `c782f9bf` (thread `c74718d3`); checks re-run after the merge are listed in PR #152.
+
+Open: translations are the agent's (no Copylot tools in the session), so SITE-026's native review covers them; the
+GDPR basis for the apps' counts is the operator's question; deploy is the operator's step and should follow launcher
+v0.2.76 on npm, or the page names a version that is not out yet.
+
+Next task: after launcher v0.2.76 is on npm and the operator's go, `npm run deploy` from `main`, then
+`scripts/verify-live.py`; reply on board thread `0e60bd38` with the Worker version.
+
+# Current handoff: SITE-058, useful guide and blog hubs, in review, 2026-11-08
+
+Objective (backlog SITE-058, within the operator's decision D2 that the header stays): the `/guides/` and `/blog/` hubs
+say what the section is for, whom it helps and what to read first, with a summary under every item; the content first
+for machines where the structure allows. Record: [evidence/2026-11-08-site-058/README.md](evidence/2026-11-08-site-058/README.md).
+
+Done: a lead and «Where to start» on both hubs, the author's byline on `/blog/`, and on every card whom the item helps
+and its own sections, in ten languages (`scripts/build-content-pages.mjs`, `scripts/site-content.mjs`, the
+`i18n/<locale>/guides.json` and `blog.json` catalogs, `styles.css`); SCN-027, SCN-028, SCR-16 and SCR-17 updated.
+`page_audit.py`: `/guides/` read share 39.8 % → 62.2 %, words 138 → 342, no finding; `/blog/` 28.5 % → 55.8 %, words
+73 → 230; Russian alike (`/ru/blog/` 54.8 %).
+
+Decisions: no header change. Measured, the header is about 7 % of the 5,700-character window and its language menu
+3.6 %; the skip link and `<main id="main">` already lead to the content; the row's "half" held only on hubs shorter
+than the window. Spanish «directivos» and Portuguese «gestores» for "leaders" (Copylot reads «líderes» as a
+superlative); translations written by this session, checked with Copylot in ten languages (report ids in the record),
+USD 0 spent.
+
+Checks run: `npm run check` exit 0 (136 tests); `npm run locales` PASS (10 languages, 41 pages each); `python3
+scripts/extract-public-copy.py` PASS (410); `npm run build` PASS (485 entries); `node scripts/public-dashes.mjs` PASS;
+WebKit at 1440 and 390 px on `/guides/`, `/blog/`, `/ru/guides/`, `/ja/blog/`: 200, no overflow.
+
+Open: `/ru/blog/` 0.2 points under the read-budget line and `low-extractable-text` on `/blog/` (a third post closes
+both); SITE-059; SITE-026 (native review, now including these strings).
+
+Next task: after the merge, the operator deploys from `main` (`docs/DEPLOYMENT.md`), then `scripts/verify-live.py`;
+then SITE-059 with the operator's decision on Russian no-break spaces.
+
+# Current handoff: SITE-057, no em dash in public text, in review, 2026-11-08
+
+Objective (backlog SITE-057 and the operator's no-em-dash rule): no em dash (U+2014) and no substitute for one in any
+text people read on the site, in all ten languages, rewritten in the source the locale build reads; a gate that keeps
+it so. Record: [evidence/2026-11-08-site-057/README.md](evidence/2026-11-08-site-057/README.md).
+
+Done: 316 findings on the 410 pages at `origin/main` `8c517867` rewritten (ru 119, de 68 spaced en dashes, pl 58,
+pt-br 48, en 7, fr 4, ko 4, zh-hans 4, ja 3, es 1), plus the form messages, the receipt subject and `llms.txt`; the
+header labels now read «Strona główna PassionCode.ai», «Página inicial do PassionCode.ai», «Startseite von
+PassionCode.ai»; `scripts/public-dashes.mjs` and its 6 tests in `npm run check`; brand pack section *Dashes in public
+text*; the Russian D-T5 form «Fabric, дом для ваших проектов и их агентов».
+
+Decisions: the German spaced en dash is a substitute and goes too; Japanese and Chinese take a full-width colon,
+French a no-break space before the colon; the Worker's internal notice to the commercial mailbox is not public text and
+keeps its separators; the home video and its captions are untouched (they carry no em dash).
+
+Checks run: `npm run check` exit 0 (136 tests); `npm run locales` PASS; `extract-public-copy.py` PASS (410); `npm run
+build` 485 entries; U+2014 grep over `dist/` HTML, text and XML prints nothing; Copylot in ten languages, nothing
+blocking (report ids in the record).
+
+Open: SITE-059 (uneven Russian no-break spaces, blocks nothing), SITE-058, SITE-026.
+
+Next task: after the merge, the operator deploys from `main` (`docs/DEPLOYMENT.md`), then `scripts/verify-live.py`;
+then SITE-058.
+
+# Current handoff: SITE-056, agent templates, guides and blog, in review, 2026-11-08
+
+Objective (operator, 2026-11-08, paraphrased from Russian): an agents marketplace with our templates, without details,
+one page per template and one general page; guides and a blog; a proper sitemap; an SEO pass; then indexing. The home
+video stays as it is. Record: [evidence/2026-11-08-site-056/README.md](evidence/2026-11-08-site-056/README.md); brief:
+[seo/brief-2026-11-08.md](seo/brief-2026-11-08.md).
+
+Done: `/agents/` and 18 template pages, `/guides/` and three guides, `/blog/` and two posts, rendered by
+`scripts/build-content-pages.mjs` from `scripts/site-content.mjs` and generated in ten languages (260 pages); footer
+links on every page, the home #agents link; `sitemap.xml` (260 new addresses), `llms.txt`; analytics values and the
+event `template_request`; SCN-025 to SCN-028, FLW-09, SCR-14 to SCR-17; facts rows *agent templates (SITE-056)* and
+*free assessment*; check-site guards (private names, Service/Article/BreadcrumbList data, title and description length,
+the footer links); the locale test counts pages from `SOURCE_PAGES` instead of a fixed 15.
+
+Decisions: a template is described only by its job and outcome, ON REQUEST, assembled by our engineer agent; no price,
+timeline, assembly time, test count or source; the header is unchanged (D2), the new section is reached from the footer
+and the home story; translations by this session's translation agents with Copylot checks (USD 0 spent;
+`copylot_prepare` not used); German group label «Menschen ansprechen» (the uppercase «MIT …» tripped the license guard).
+
+Checks run: `npm run check` exit 0 (130 tests); `npm run locales` PASS; `extract-public-copy.py` PASS (410); `npm run
+build` 485 entries; WebKit 162 loads at 1440 and 390 px, 0 problems; seo-aeo-audit `page_audit.py` on twelve built
+pages (findings and actions in the record).
+
+Open: SITE-057 (em dashes on existing pages), SITE-058 (read budget of the kept header, thin hubs), SITE-026 (native
+review, now including the new pages), the free assessment's own gaps before the first outside founder
+(fabric-workspace `knowledge/system/entry-assessment.md`).
+
+Next task: after the merge, the operator deploys from `main` (`docs/DEPLOYMENT.md`), then `scripts/verify-live.py`; the
+coordinator submits the 260 new addresses for indexing; then SITE-057.
 
 # Current handoff: SITE-049, the site on the North Star, in review, 2026-11-06
 

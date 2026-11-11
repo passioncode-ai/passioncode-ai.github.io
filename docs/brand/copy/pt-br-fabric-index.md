@@ -259,7 +259,7 @@ Ver código-fonte
 
 ↗
 
-Esta é uma prévia inicial. Você pode manter projetos, um quadro de decisões, tarefas, metas, um pulso do trabalho e releases com seus recibos. A conversa com o Fabric salva as suas mensagens, mas o Fabric ainda não responde. Uma versão mais nova não atualiza sozinha um banco de dados existente; ela informa o comando que você deve executar. Agentes registrados neste Mac podem pedir ao Fabric, pelo hub local de agentes, acesso a um produto conectado, como o Fabric Inbox; você permite ou recusa cada pedido e pode revogá-lo em Ajustes. Desde a versão 0.3.2, o Fabric envia contagens anônimas de uso — apenas quantidades e tipos, nunca nomes, caminhos ou conteúdo; desative em Ajustes → Compartilhar contagens de uso, o que vale para todos os apps da PassionCode.ai no seu Mac.
+Esta é uma prévia inicial. Você pode manter projetos, um quadro de decisões, tarefas, metas, um pulso do trabalho e releases com seus recibos. A conversa com o Fabric salva as suas mensagens, mas o Fabric ainda não responde. Uma versão mais nova não atualiza sozinha um banco de dados existente; ela informa o comando que você deve executar. Agentes registrados neste Mac podem pedir ao Fabric, pelo hub local de agentes, acesso a um produto conectado, como o Fabric Inbox; você permite ou recusa cada pedido e pode revogá-lo em Ajustes. Desde a versão 0.3.2, o Fabric envia contagens anônimas de uso: apenas quantidades e tipos, nunca nomes, caminhos ou conteúdo. Desative em Ajustes → Compartilhar contagens de uso, o que vale para todos os apps da PassionCode.ai no seu Mac.
 
 O Fabric é código aberto sob a GNU AGPL-3.0, e uma licença comercial está disponível em passioncode.ai/business para usos que a AGPL não cobre. A 0.3.16 prévia é compilada, assinada e notarizada no CI a partir desse código público.
 
@@ -324,6 +324,12 @@ Começar
 Visão
 
 Para organizações
+
+Modelos de agentes
+
+Guias
+
+Blog
 
 Switchboard
 

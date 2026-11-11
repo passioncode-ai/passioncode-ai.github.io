@@ -1,0 +1,16 @@
+{
+  "page": "agents/data-room/index.html",
+  "strings": {
+    "Data room agent template | PassionCode.ai": "데이터룸 에이전트 템플릿 | PassionCode.ai",
+    "One book of facts": "하나의 사실 장부",
+    "Finance, metrics, team, product and any block you add, each fact with where it came from.": "재무, 지표, 팀, 제품, 그리고 추가하는 모든 블록을 담으며, 각 사실에는 출처가 함께 기록됩니다.",
+    "Access by level": "수준별 접근 권한",
+    "People and agents read the blocks their key opens, and nothing about one person leaves.": "사람과 에이전트는 자신의 키로 열리는 블록만 읽으며, 한 개인에 관한 정보는 밖으로 나가지 않습니다.",
+    "Never invents a number": "숫자를 지어내지 않습니다",
+    "A missing value stays missing: it is never filled with a guess or a zero.": "없는 값은 없는 그대로 둡니다: 추측이나 0으로 채우지 않습니다.",
+    "For organizations whose numbers live in many spreadsheets and disagree with each other.": "숫자가 여러 스프레드시트에 흩어져 서로 맞지 않는 조직에 적합합니다.",
+    "One answer when someone asks for a number": "누가 숫자를 물어도 하나의 답",
+    "Agents that quote facts with their sources": "출처와 함께 사실을 인용하는 에이전트",
+    "Reports for the board and investors from one place": "한곳에서 나오는 이사회 및 투자자 보고서"
+  }
+}

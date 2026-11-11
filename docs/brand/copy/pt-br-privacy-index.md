@@ -46,7 +46,7 @@ Configurar
 
 ↓
 
-AVISO DE PRIVACIDADE · VERSÃO 2026-10-11
+AVISO DE PRIVACIDADE · VERSÃO 2026-11-07
 
 # Aviso de privacidade
 
@@ -68,7 +68,7 @@ Da própria requisição: o país que o Cloudflare informa para a sua conexão, 
 
 ## Por quê, e com que base legal
 
-Para responder à sua solicitação e preparar uma proposta — providências que você pede antes de um possível contrato (GDPR, art. 6(1)(b)); por isso o formulário não tem caixa de consentimento. As verificações contra abuso se baseiam no nosso legítimo interesse em manter o formulário utilizável (art. 6(1)(f)). Novidades de produto só vão para quem pediu, e essas pessoas podem retirar o consentimento a qualquer momento (art. 6(1)(a)).
+Para responder à sua solicitação e preparar uma proposta: providências que você pede antes de um possível contrato (GDPR, art. 6(1)(b)); por isso o formulário não tem caixa de consentimento. As verificações contra abuso se baseiam no nosso legítimo interesse em manter o formulário utilizável (art. 6(1)(f)). Novidades de produto só vão para quem pediu, e essas pessoas podem retirar o consentimento a qualquer momento (art. 6(1)(a)).
 
 ## Onde os dados ficam
 
@@ -98,7 +98,9 @@ Enquanto você escreve no formulário, o texto ainda não enviado fica guardado 
 
 ## Os apps
 
-Os apps do PassionCode.ai rodam nos seus computadores e não enviam o seu trabalho para nós. O Fabric Switchboard e, desde a versão 0.3.2, o Fabric enviam contagens anônimas de uso — apenas contagens e tipos, nunca nomes, caminhos nem conteúdo. Desative-as na janela Sobre do Switchboard ou nas Configurações do Fabric; a opção vale para todos os apps do PassionCode.ai naquele computador.
+Os apps do PassionCode.ai rodam nos seus computadores e não enviam o seu trabalho para nós. O Fabric Switchboard, o Fabric desde a versão 0.3.2 e o Fabric Dashboards desde a versão 0.8.19 enviam contagens anônimas de uso (o Fabric Dashboards também conta erros): apenas contagens e tipos, nunca nomes, caminhos nem conteúdo. Cada produto tem a sua própria opção: a janela Sobre do Switchboard, as Configurações do Fabric e Configurações → Privacidade no Fabric Dashboards. Desativar um não desativa os outros.
+
+O launcher do PassionCode, desde a versão 0.2.76, envia contagens anônimas de uso e de erros: qual comando foi executado, como terminou, quanto tempo levou aproximadamente e, uma vez por dia, o fato de ter sido usado, com o identificador de instalação do arquivo que os apps do PassionCode.ai compartilham naquele computador. Ele nunca envia um caminho, um nome, um argumento, um token nem o texto de um erro. As contagens vão para analytics.passioncode.ai; os eventos são guardados por dois anos, o identificador de instalação é removido deles após 400 dias e o seu endereço IP não é armazenado. Desative-as para o launcher com npx @passioncode-ai/passioncode@latest analytics off ou defina DO_NOT_TRACK=1. Se você já disse não em um app do PassionCode.ai, o launcher mantém essa resposta.
 
 PassionCode
 
@@ -111,6 +113,12 @@ Começar
 Visão
 
 Para organizações
+
+Modelos de agentes
+
+Guias
+
+Blog
 
 Switchboard
 

@@ -96,7 +96,7 @@ Jeder Agentendienst, was er gerade tut und was er ausgibt, in einem Fenster, das
 
 ### Gedächtnis und Nachweise
 
-Was sich geändert hat, was entschieden wurde und was Aufmerksamkeit braucht – mit dem Nachweis direkt daneben. Das ist Project Observatory.
+Was sich geändert hat, was entschieden wurde und was Aufmerksamkeit braucht, mit dem Nachweis direkt daneben. Das ist Project Observatory.
 
 02 / WORAN WIR GLAUBEN
 
@@ -217,6 +217,12 @@ Loslegen
 Vision
 
 Für Organisationen
+
+Agentenvorlagen
+
+Anleitungen
+
+Blog
 
 Switchboard
 

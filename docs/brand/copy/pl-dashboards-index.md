@@ -212,6 +212,12 @@ Wizja
 
 Dla organizacji
 
+Szablony agentów
+
+Poradniki
+
+Blog
+
 Switchboard
 
 Observatory

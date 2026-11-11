@@ -325,6 +325,12 @@ PassionCode
 
 组织
 
+智能体模板
+
+指南
+
+博客
+
 Switchboard
 
 Observatory

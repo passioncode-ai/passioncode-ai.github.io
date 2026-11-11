@@ -177,7 +177,7 @@ Token API, który tworzysz w jego panelu, z uprawnieniami podanymi w aplikacji
 
 Dla Gmaila: klient OAuth z Twojego własnego projektu Google Cloud
 
-Szczegóły w przewodniku konfiguracji — wymieniono w nim każde ustawienie.
+Szczegóły w przewodniku konfiguracji (wymieniono w nim każde ustawienie).
 
 macOS DMG · SHA-256
 
@@ -278,6 +278,12 @@ Zacznij
 Wizja
 
 Dla organizacji
+
+Szablony agentów
+
+Poradniki
+
+Blog
 
 Switchboard
 

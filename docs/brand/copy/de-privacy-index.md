@@ -46,7 +46,7 @@ Einrichten
 
 ↓
 
-DATENSCHUTZHINWEIS · VERSION 2026-10-11
+DATENSCHUTZHINWEIS · VERSION 2026-11-07
 
 # Datenschutzhinweis
 
@@ -68,7 +68,7 @@ Aus der Anfrage selbst: das Land, das Cloudflare für deine Verbindung meldet, d
 
 ## Warum und auf welcher Grundlage
 
-Um deine Anfrage zu beantworten und ein Angebot vorzubereiten – Schritte, um die du vor einem möglichen Vertrag bittest (DSGVO Art. 6 Abs. 1 lit. b); deshalb hat das Formular kein Einwilligungskästchen. Die Missbrauchsprüfungen beruhen auf unserem berechtigten Interesse, das Formular nutzbar zu halten (Art. 6 Abs. 1 lit. f). Produktneuigkeiten erhalten nur Menschen, die darum gebeten haben, und sie können diese Einwilligung jederzeit widerrufen (Art. 6 Abs. 1 lit. a).
+Um deine Anfrage zu beantworten und ein Angebot vorzubereiten: Schritte, um die du vor einem möglichen Vertrag bittest (DSGVO Art. 6 Abs. 1 lit. b); deshalb hat das Formular kein Einwilligungskästchen. Die Missbrauchsprüfungen beruhen auf unserem berechtigten Interesse, das Formular nutzbar zu halten (Art. 6 Abs. 1 lit. f). Produktneuigkeiten erhalten nur Menschen, die darum gebeten haben, und sie können diese Einwilligung jederzeit widerrufen (Art. 6 Abs. 1 lit. a).
 
 ## Wo die Daten gespeichert werden
 
@@ -98,7 +98,9 @@ Während du im Formular schreibst, wird dein noch nicht gesendeter Text nur im S
 
 ## Die Apps
 
-Die PassionCode.ai-Apps laufen auf deinen Computern und senden deine Arbeit nicht an uns. Fabric Switchboard und, seit Version 0.3.2, Fabric senden anonyme Nutzungszahlen – nur Anzahlen und Arten, niemals Namen, Pfade oder Inhalte. Schalte sie im About-Fenster von Switchboard oder in den Settings von Fabric ab; der Schalter gilt für jede PassionCode.ai-App auf diesem Computer.
+Die PassionCode.ai-Apps laufen auf deinen Computern und senden deine Arbeit nicht an uns. Fabric Switchboard, Fabric seit Version 0.3.2 und Fabric Dashboards seit Version 0.8.19 senden anonyme Nutzungszahlen (Fabric Dashboards zählt auch Fehler): nur Anzahlen und Arten, niemals Namen, Pfade oder Inhalte. Jedes Produkt hat seinen eigenen Schalter: das About-Fenster von Switchboard, die Settings von Fabric und Settings → Privacy in Fabric Dashboards. Schaltest du einen aus, bleiben die anderen an.
+
+Der PassionCode-Launcher sendet ab Version 0.2.76 anonyme Nutzungs- und Fehlerzahlen: welcher seiner Befehle lief, wie er endete, ungefähr wie lange er dauerte und einmal am Tag, dass er benutzt wurde, mit der Installations-ID aus der Datei, die sich die PassionCode.ai-Apps auf diesem Computer teilen. Er sendet niemals einen Pfad, einen Namen, ein Argument, ein Token oder den Text eines Fehlers. Die Zahlen gehen an analytics.passioncode.ai; Ereignisse werden zwei Jahre aufbewahrt, die Installations-ID wird nach 400 Tagen daraus entfernt, und deine IP-Adresse wird nicht gespeichert. Schalte sie für den Launcher ab mit npx @passioncode-ai/passioncode@latest analytics off oder setze DO_NOT_TRACK=1. Hast du in einer PassionCode.ai-App bereits Nein gesagt, übernimmt der Launcher diese Antwort.
 
 PassionCode
 
@@ -111,6 +113,12 @@ Loslegen
 Vision
 
 Für Organisationen
+
+Agentenvorlagen
+
+Anleitungen
+
+Blog
 
 Switchboard
 

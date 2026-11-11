@@ -53,11 +53,11 @@ export const CATALOGS = {
     "Required.": "Обязательное поле.",
     "A work email address.": "Нужен рабочий адрес почты.",
     "Sending…": "Отправляем…",
-    "Thank you — it reached us": "Спасибо, заявка у нас",
+    "Thank you, it reached us": "Спасибо, заявка у нас",
     "We reply within two business days. A confirmation email usually follows within minutes.": "Мы ответим в течение двух рабочих дней. Письмо-подтверждение обычно приходит в течение нескольких минут.",
     "Reference: {id}": "Номер заявки: {id}",
     "The request was not sent.": "Заявка не отправлена.",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "Заявка не ушла из браузера — проверьте подключение и отправьте её снова. Ваш текст сохранён здесь."
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "Заявка не ушла из браузера. Проверьте подключение и отправьте её снова. Ваш текст сохранён здесь."
   },
   "de": {
     "Copy": "Kopieren",
@@ -67,11 +67,11 @@ export const CATALOGS = {
     "Required.": "Pflichtfeld.",
     "A work email address.": "Gib eine geschäftliche E-Mail-Adresse an.",
     "Sending…": "Wird gesendet…",
-    "Thank you — it reached us": "Danke – deine Anfrage ist bei uns angekommen",
+    "Thank you, it reached us": "Danke, deine Anfrage ist bei uns angekommen",
     "We reply within two business days. A confirmation email usually follows within minutes.": "Wir antworten innerhalb von zwei Werktagen. Eine Bestätigung per E-Mail kommt meist innerhalb weniger Minuten.",
     "Reference: {id}": "Anfragenummer: {id}",
     "The request was not sent.": "Die Anfrage wurde nicht gesendet.",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "Die Anfrage hat deinen Browser nicht verlassen – prüf deine Verbindung und sende sie erneut. Dein Text bleibt hier erhalten."
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "Die Anfrage hat deinen Browser nicht verlassen. Prüf deine Verbindung und sende sie erneut. Dein Text bleibt hier erhalten."
   },
   "fr": {
     "Copy": "Copier",
@@ -81,11 +81,11 @@ export const CATALOGS = {
     "Required.": "Champ obligatoire.",
     "A work email address.": "Une adresse e-mail professionnelle.",
     "Sending…": "Envoi…",
-    "Thank you — it reached us": "Merci, votre demande nous est parvenue",
+    "Thank you, it reached us": "Merci, votre demande nous est parvenue",
     "We reply within two business days. A confirmation email usually follows within minutes.": "Nous répondons sous deux jours ouvrés. Un e-mail de confirmation arrive généralement en quelques minutes.",
     "Reference: {id}": "Référence : {id}",
     "The request was not sent.": "La demande n’a pas été envoyée.",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "La demande n’a pas quitté votre navigateur : vérifiez votre connexion et renvoyez-la. Votre texte est conservé ici."
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "La demande n’a pas quitté votre navigateur : vérifiez votre connexion et renvoyez-la. Votre texte est conservé ici."
   },
   "pl": {
     "Copy": "Kopiuj",
@@ -95,11 +95,11 @@ export const CATALOGS = {
     "Required.": "Pole wymagane.",
     "A work email address.": "Podaj służbowy adres e-mail.",
     "Sending…": "Wysyłanie…",
-    "Thank you — it reached us": "Dziękujemy — zgłoszenie do nas dotarło",
+    "Thank you, it reached us": "Dziękujemy, zgłoszenie do nas dotarło",
     "We reply within two business days. A confirmation email usually follows within minutes.": "Odpowiemy w ciągu dwóch dni roboczych. E-mail z potwierdzeniem zwykle przychodzi w ciągu kilku minut.",
     "Reference: {id}": "Numer zgłoszenia: {id}",
     "The request was not sent.": "Zgłoszenie nie zostało wysłane.",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "Zapytanie nie opuściło Twojej przeglądarki — sprawdź połączenie i wyślij je ponownie. Twój tekst jest tu zachowany."
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "Zapytanie nie opuściło Twojej przeglądarki. Sprawdź połączenie i wyślij je ponownie. Twój tekst jest tu zachowany."
   },
   "ko": {
     "Copy": "복사",
@@ -109,11 +109,11 @@ export const CATALOGS = {
     "Required.": "필수 항목입니다.",
     "A work email address.": "업무용 이메일 주소를 입력해 주세요.",
     "Sending…": "보내는 중…",
-    "Thank you — it reached us": "감사합니다. 요청이 도착했습니다",
+    "Thank you, it reached us": "감사합니다. 요청이 도착했습니다",
     "We reply within two business days. A confirmation email usually follows within minutes.": "영업일 기준 2일 이내에 답변드립니다. 확인 이메일은 보통 몇 분 안에 도착합니다.",
     "Reference: {id}": "참조 번호: {id}",
     "The request was not sent.": "요청이 전송되지 않았습니다.",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "요청이 브라우저를 떠나지 못했습니다. 연결을 확인하고 다시 보내 주세요. 작성하신 내용은 여기에 남아 있습니다."
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "요청이 브라우저를 떠나지 못했습니다. 연결을 확인하고 다시 보내 주세요. 작성하신 내용은 여기에 남아 있습니다."
   },
   "es": {
     "Copy": "Copiar",
@@ -123,11 +123,11 @@ export const CATALOGS = {
     "Required.": "Campo obligatorio.",
     "A work email address.": "Indica un correo de trabajo.",
     "Sending…": "Enviando…",
-    "Thank you — it reached us": "Gracias, tu solicitud nos ha llegado",
+    "Thank you, it reached us": "Gracias, tu solicitud nos ha llegado",
     "We reply within two business days. A confirmation email usually follows within minutes.": "Respondemos en un plazo de dos días hábiles. Un correo de confirmación suele llegar en unos minutos.",
     "Reference: {id}": "Referencia: {id}",
     "The request was not sent.": "La solicitud no se ha enviado.",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "La solicitud no salió de tu navegador: revisa tu conexión y vuelve a enviarla. Tu texto se guarda aquí."
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "La solicitud no salió de tu navegador: revisa tu conexión y vuelve a enviarla. Tu texto se guarda aquí."
   },
   "pt-br": {
     "Copy": "Copiar",
@@ -137,11 +137,11 @@ export const CATALOGS = {
     "Required.": "Campo obrigatório.",
     "A work email address.": "Informe um e-mail de trabalho.",
     "Sending…": "Enviando…",
-    "Thank you — it reached us": "Obrigado, recebemos a sua solicitação",
+    "Thank you, it reached us": "Obrigado, recebemos a sua solicitação",
     "We reply within two business days. A confirmation email usually follows within minutes.": "Respondemos em até dois dias úteis. Um e-mail de confirmação costuma chegar em poucos minutos.",
     "Reference: {id}": "Referência: {id}",
     "The request was not sent.": "A solicitação não foi enviada.",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "A solicitação não saiu do seu navegador — verifique a conexão e envie de novo. Seu texto fica guardado aqui."
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "A solicitação não saiu do seu navegador. Verifique a conexão e envie de novo. Seu texto fica guardado aqui."
   },
   "zh-hans": {
     "Copy": "复制",
@@ -151,11 +151,11 @@ export const CATALOGS = {
     "Required.": "必填。",
     "A work email address.": "请填写工作邮箱地址。",
     "Sending…": "正在发送…",
-    "Thank you — it reached us": "谢谢，我们已收到",
+    "Thank you, it reached us": "谢谢，我们已收到",
     "We reply within two business days. A confirmation email usually follows within minutes.": "我们会在两个工作日内回复。确认邮件通常几分钟内送达。",
     "Reference: {id}": "编号：{id}",
     "The request was not sent.": "申请未发送。",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "需求没有离开你的浏览器——请检查网络连接后重新发送。你的文本保留在这里。"
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "需求没有离开你的浏览器。请检查网络连接后重新发送。你的文本保留在这里。"
   },
   "ja": {
     "Copy": "コピー",
@@ -165,11 +165,11 @@ export const CATALOGS = {
     "Required.": "必須です。",
     "A work email address.": "勤務先のメールアドレスを入力してください。",
     "Sending…": "送信中…",
-    "Thank you — it reached us": "ありがとうございます。届きました",
+    "Thank you, it reached us": "ありがとうございます。届きました",
     "We reply within two business days. A confirmation email usually follows within minutes.": "2営業日以内にご返信します。確認メールは通常、数分以内に届きます。",
     "Reference: {id}": "参照番号：{id}",
     "The request was not sent.": "ご依頼は送信されませんでした。",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "依頼はブラウザーから送信されていません。接続を確認して、もう一度送信してください。入力した内容はここに残っています。"
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "依頼はブラウザーから送信されていません。接続を確認して、もう一度送信してください。入力した内容はここに残っています。"
   }
 }
 export const { resolveLocale, t, tn } = translator({ source: SOURCE_LOCALE, locales: LOCALES, catalogs: CATALOGS })

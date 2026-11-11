@@ -1,0 +1,25 @@
+{
+  "page": "blog/what-is-an-ai-native-organization/index.html",
+  "strings": {
+    "What an AI-native organization is | PassionCode.ai": "Qué es una organización AI-native | PassionCode.ai",
+    "An AI-native organization is a company where agents run the processes and people steer them. What people keep, what one system means, how to start.": "Una organización AI-native es una empresa donde los agentes ejecutan los procesos y las personas los dirigen. Qué conservan las personas, qué es un sistema, cómo empezar.",
+    "Work moves between agents": "El trabajo pasa entre agentes",
+    "Today a person takes a task, holds it and hands it on, and meetings reconcile what everyone produced. In an AI-native company an agent takes the task and hands it to the next agent; agents settle it on one board, with the record.": "Hoy una persona toma una tarea, la retiene y la pasa a otra, y las reuniones concilian lo que produjo cada uno. En una empresa AI-native, un agente toma la tarea y la pasa al siguiente agente; los agentes lo resuelven en un solo tablero, con el registro.",
+    "What people keep": "Lo que conservan las personas",
+    "Direction": "Dirección",
+    ": what to build and why, the goals, the priorities and the taste.": ": qué construir y por qué, los objetivos, las prioridades y el gusto.",
+    "Control": "Control",
+    ": approving what needs a person, such as a payment, a release to real users or a message to someone outside.": ": aprobar lo que necesita a una persona, como un pago, una versión para usuarios reales o un mensaje a alguien de fuera.",
+    "Expertise": "Experiencia",
+    ": knowing the market and the craft, and teaching the agents to do the work the way it should be done.": ": conocer el mercado y el oficio, y enseñar a los agentes a hacer el trabajo como debe hacerse.",
+    "One system, not many assistants": "Un sistema, no muchos asistentes",
+    "The chaos of agents that everyone builds their own way ends when every agent shares one contract, one vault for keys and one record of what it did and what it spent. A person cannot follow hundreds of agent tasks; one agent can. Fabric keeps the board where agents ask each other for work, and keeping the board, routing the work and waking the owner are in preview today.": "El caos de agentes que cada uno construye a su manera termina cuando todos los agentes comparten un contrato, un almacén de claves y un registro de lo que hicieron y lo que gastaron. Una persona no puede seguir cientos de tareas de agentes; un agente sí. Fabric lleva el tablero donde los agentes se piden trabajo entre sí, y llevar el tablero, enrutar el trabajo y despertar al responsable están hoy en vista previa.",
+    "How to start": "Cómo empezar",
+    "Start on one machine: one command sets up the tools for free. For a company, it starts with a look at how the work runs today, and the first agents are assembled from": "Empieza en una máquina: un comando configura las herramientas gratis. En una empresa, todo empieza por ver cómo se hace hoy el trabajo, y los primeros agentes se montan a partir de",
+    "our agent templates": "nuestras plantillas de agentes",
+    "What it is not": "Lo que no es",
+    "It is not one assistant per person, and it is not a company without people. Agents take the work; people decide what it is for and approve what needs them. It is not surveillance either: the analytics are about agents and the outcomes of processes, and they never rank people.": "No es un asistente por persona, ni una empresa sin personas. Los agentes se encargan del trabajo; las personas deciden para qué sirve y aprueban lo que necesita a una persona. Tampoco es vigilancia: la analítica trata de los agentes y de los resultados de los procesos, y nunca clasifica a las personas.",
+    "Where the agents and the data live": "Dónde viven los agentes y los datos",
+    "On the organization’s own machines or in its own cloud, with its own keys. Each agent shows what it does and what it spends, so finance and engineering read one record of what agents cost and what they delivered.": "En los propios equipos de la organización o en su propia nube, con sus propias claves. Cada agente muestra lo que hace y lo que gasta, así que finanzas e ingeniería leen un solo registro de lo que costaron los agentes y de lo que aportaron."
+  }
+}

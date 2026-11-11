@@ -1,0 +1,16 @@
+{
+  "page": "agents/app-store-publisher/index.html",
+  "strings": {
+    "App store publisher agent template | PassionCode.ai": "应用商店发布智能体模板 | PassionCode.ai",
+    "Keywords with demand": "有需求支撑的关键词",
+    "Places keywords across fields, languages and storefronts by the demand behind them.": "依据背后的需求，把关键词分配到各个字段、语言和商店地区。",
+    "Listings in every language": "各语言的商店页面",
+    "Has listing copy written, checked and localized, and orders screenshots and store graphics.": "安排商店页面文案的撰写、检查和本地化，并订制截图和商店图形素材。",
+    "Publishing in two steps": "分两步发布",
+    "Shows the exact change first and applies only that change, after a person approves it.": "先展示确切的变更，经人批准后只应用这一项变更。",
+    "For teams that publish apps on the App Store, Google Play or Meta Horizon.": "适合在 App Store、Google Play 或 Meta Horizon 上发布应用的团队。",
+    "Listings checked before review": "提交审核前先检查商店页面",
+    "Reviews answered under your policy": "按你的政策回复用户评论",
+    "Rankings tracked every day": "每天跟踪排名"
+  }
+}

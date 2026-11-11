@@ -275,7 +275,7 @@ NA START
 
 Czy Switchboard zastępuje Claude Code albo Codex?
 
-Nie. Zarządza kontami i uruchamia oficjalne CLI. Claude Code lub Codex zainstaluj osobno — do logowania i sesji. Switchboard nie zawiera subskrypcji u dostawcy ani kredytów API.
+Nie. Zarządza kontami i uruchamia oficjalne CLI. Claude Code lub Codex zainstaluj osobno, bo są potrzebne do logowania i sesji. Switchboard nie zawiera subskrypcji u dostawcy ani kredytów API.
 
 Czy zmienia moje bieżące konto CLI automatycznie?
 
@@ -291,7 +291,7 @@ Switchboard to narzędzie do zarządzania kontami dostępne już dziś. Fabric, 
 
 Które agenty działają ze Switchboard?
 
-Claude Code, Codex i inne popularne agenty kodujące — Hermes, Kilo Code, Cline, Goose, OpenCode i kolejne. Zobacz wszystkie 30 i sposób podłączenia każdego.
+Claude Code, Codex i inne popularne agenty kodujące: Hermes, Kilo Code, Cline, Goose, OpenCode i kolejne. Zobacz wszystkie 30 i sposób podłączenia każdego.
 
 Czy projekt może mieć własne konta?
 
@@ -354,6 +354,12 @@ Zacznij
 Wizja
 
 Dla organizacji
+
+Szablony agentów
+
+Poradniki
+
+Blog
 
 Switchboard
 

@@ -50,12 +50,12 @@
     ],
     "dashboards/index.html": [
       "Сервисы устанавливаются отдельно",
-      "Релиз 0.3.1 — первый под AGPL",
+      "Релиз 0.3.1 стал первым под AGPL",
       "href=\"/dashboards/download/macos\""
     ],
     "observatory/index.html": [
       "не может найти неизвестные секреты",
-      "с 0.8.2 по 0.9.1 — PolyForm",
+      "с 0.8.2 по 0.9.1 под PolyForm",
       "requirements-full.lock"
     ],
     "business/index.html": [
@@ -69,8 +69,12 @@
       "Западной Европе",
       "Франкфурте",
       "cookies",
-      "ВЕРСИЯ 2026-10-11",
-      "действует английская"
+      "ВЕРСИЯ 2026-11-07",
+      "действует английская",
+      "npx @passioncode-ai/passioncode@latest analytics off",
+      "DO_NOT_TRACK=1",
+      "0.8.19",
+      "400"
     ]
   }
 }

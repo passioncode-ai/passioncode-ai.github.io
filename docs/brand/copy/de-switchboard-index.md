@@ -291,7 +291,7 @@ Switchboard ist das Tool zur Account-Verwaltung, das es heute gibt. Fabric, in f
 
 Welche Agenten funktionieren mit Switchboard?
 
-Claude Code, Codex und die anderen beliebten Coding-Agenten – Hermes, Kilo Code, Cline, Goose, OpenCode und mehr. Alle 30 ansehen und wie sich jeder verbindet.
+Claude Code, Codex und die anderen beliebten Coding-Agenten: Hermes, Kilo Code, Cline, Goose, OpenCode und mehr. Alle 30 ansehen und wie sich jeder verbindet.
 
 Kann ein Projekt seine eigenen Accounts behalten?
 
@@ -354,6 +354,12 @@ Loslegen
 Vision
 
 Für Organisationen
+
+Agentenvorlagen
+
+Anleitungen
+
+Blog
 
 Switchboard
 

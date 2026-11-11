@@ -355,6 +355,12 @@ PassionCode
 
 組織向け
 
+エージェントテンプレート
+
+ガイド
+
+ブログ
+
 Switchboard
 
 Observatory

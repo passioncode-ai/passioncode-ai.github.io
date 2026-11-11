@@ -84,7 +84,7 @@ Nous n’écrivons pas vos agents à partir de zéro. Nous les assemblons à par
 
 Vérifié sur de vrais agentsChacun des 107 agents peut être reconstruit à partir de son modèle : fonctions, pipelines et règles ont été comparés ligne par ligne.
 
-2 572 testsLe code de référence des modèles est couvert par 2 572 tests.
+Plus de 2 500 testsLe code de référence des modèles est couvert par plus de 2 500 tests.
 
 Un audit de n’importe quel agentN’importe quel agent, le vôtre compris, peut être vérifié par rapport à la base dans 13 domaines : ce qui est confirmé et ce qui est à améliorer.
 
@@ -307,6 +307,12 @@ Commencer
 Vision
 
 Pour les organisations
+
+Modèles d’agents
+
+Guides
+
+Blog
 
 Switchboard
 

@@ -69,8 +69,12 @@
       "Westeuropa",
       "Frankfurt",
       "keine Cookies",
-      "VERSION 2026-10-11",
-      "gilt die englische Fassung"
+      "VERSION 2026-11-07",
+      "gilt die englische Fassung",
+      "npx @passioncode-ai/passioncode@latest analytics off",
+      "DO_NOT_TRACK=1",
+      "0.8.19",
+      "400"
     ]
   }
 }

@@ -46,7 +46,7 @@ Installer
 
 ↓
 
-POLITIQUE DE CONFIDENTIALITÉ · VERSION 2026-10-11
+POLITIQUE DE CONFIDENTIALITÉ · VERSION 2026-11-07
 
 # Politique de confidentialité
 
@@ -98,7 +98,9 @@ Pendant que vous écrivez dans le formulaire, votre texte non envoyé est conser
 
 ## Les applications
 
-Les applications PassionCode.ai s’exécutent sur vos ordinateurs et ne nous envoient pas votre travail. Fabric Switchboard et, depuis la version 0.3.2, Fabric envoient des compteurs d’usage anonymes : uniquement des nombres et des catégories, jamais de noms, de chemins ni de contenu. Vous pouvez les désactiver dans la fenêtre « À propos » de Switchboard ou dans les Réglages de Fabric ; ce réglage s’applique à toutes les applications PassionCode.ai de cet ordinateur.
+Les applications PassionCode.ai s’exécutent sur vos ordinateurs et ne nous envoient pas votre travail. Fabric Switchboard, Fabric depuis la version 0.3.2 et Fabric Dashboards depuis la version 0.8.19 envoient des compteurs d’usage anonymes (Fabric Dashboards compte aussi les erreurs) : uniquement des nombres et des catégories, jamais de noms, de chemins ni de contenu. Chaque produit a son propre interrupteur : la fenêtre « À propos » de Switchboard, les Réglages de Fabric, et Réglages → Confidentialité dans Fabric Dashboards. En désactiver un ne désactive pas les autres.
+
+Le lanceur PassionCode, depuis la version 0.2.76, envoie des compteurs d’usage et d’erreurs anonymes : quelle commande a été lancée, comment elle s’est terminée, sa durée approximative et, une fois par jour, le fait qu’il a été utilisé, avec l’identifiant d’installation du fichier que les applications PassionCode.ai partagent sur cet ordinateur. Il n’envoie jamais de chemin, de nom, d’argument, de jeton ni le texte d’une erreur. Les compteurs vont à analytics.passioncode.ai ; les événements sont conservés deux ans, l’identifiant d’installation en est retiré après 400 jours, et votre adresse IP n’est pas conservée. Désactivez-les pour le lanceur avec npx @passioncode-ai/passioncode@latest analytics off, ou définissez DO_NOT_TRACK=1. Si vous avez déjà dit non dans une application PassionCode.ai, le lanceur garde cette réponse.
 
 PassionCode
 
@@ -111,6 +113,12 @@ Commencer
 Vision
 
 Pour les organisations
+
+Modèles d’agents
+
+Guides
+
+Blog
 
 Switchboard
 

@@ -1,0 +1,31 @@
+{
+  "page": "blog/index.html",
+  "strings": {
+    "Blog: notes on AI-native organizations | PassionCode.ai": "ブログ：AIネイティブな組織についてのノート | PassionCode.ai",
+    "Notes from PassionCode.ai on AI-native organizations: why processes built around people stall, and what changes when agents run the process.": "AIネイティブな組織についての PassionCode.ai のノート：人を中心に作られたプロセスが滞る理由と、エージェントがプロセスを動かすと何が変わるか。",
+    "Notes on": "AIネイティブな組織についての",
+    "AI-native organizations": "ノート",
+    "Why companies will run on agents, and what we learn building the tools for it": "企業がエージェントで動くようになる理由と、そのためのツールを作りながら学んでいること",
+    "The blog explains the ideas behind the tools: how work changes when agents run a company’s processes and people steer them. It is for founders and leaders deciding how their company should work with AI.": "ブログでは、ツールの背景にある考え方を説明します。エージェントが会社のプロセスを担い、人が方向を決めるとき、仕事がどう変わるのか。会社が AI とどう働くかを決める創業者とリーダーに向けて書いています。",
+    "Where to start": "どこから始めるか",
+    "New to the idea:": "はじめての方は：",
+    "start with what an AI-native organization is.": "まず「AIネイティブな組織とは」から読んでください。",
+    "Already giving people AI assistants:": "すでにメンバーに AI アシスタントを渡している方は：",
+    "read why processes built around people stall.": "人を中心に作られたプロセスが滞る理由を読んでください。",
+    "For leaders who gave their teams AI assistants and still wait on the same people.": "チームに AI アシスタントを渡したのに、いまも同じ人を待っているリーダーへ。",
+    "For founders who want a plain definition and a first step.": "わかりやすい定義と最初の一歩を求める創業者へ。",
+    "In this article": "この記事の内容",
+    "The person is still the bottleneck": "ボトルネックは今も人です",
+    "Meetings reconcile what the assistants made": "アシスタントの成果を会議でまとめています",
+    "Everyone builds their own agents": "誰もが自分のエージェントを作っています",
+    "What changes": "何が変わるか",
+    "Work moves between agents": "仕事はエージェントの間を移る",
+    "What people keep": "人に残るもの",
+    "One system, not many assistants": "多くのアシスタントではなく、一つのシステム",
+    "What it is not": "そうではないもの",
+    "Where the agents and the data live": "エージェントとデータの置き場所",
+    "How to start": "始め方",
+    "Ready to try it in your company:": "自社で試したい方は：",
+    "read how the free one-week assessment works.": "まずは1週間の無料診断の進め方を読んでください。"
+  }
+}

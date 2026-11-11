@@ -1,0 +1,16 @@
+{
+  "page": "agents/customer-listening/index.html",
+  "strings": {
+    "Customer listening agent template | PassionCode.ai": "Шаблон агента мониторинга мнений клиентов | PassionCode.ai",
+    "One picture": "Одна картина",
+    "Brings store reviews, support chats, community and public mentions into one ranked view.": "Сводит отзывы в магазинах, чаты поддержки, сообщество и публичные упоминания в один обзор, упорядоченный по важности.",
+    "Alerts on change": "Оповещения об изменениях",
+    "Tells the right people when a problem grows or a new risk appears.": "Сообщает нужным людям, когда проблема растёт или появляется новый риск.",
+    "Privacy first": "Сначала приватность",
+    "Keeps summaries, labels and counts rather than people’s own words where the rules forbid them.": "Там, где правила запрещают хранить слова людей, хранит сводки, метки и счётчики, а не сами слова.",
+    "For teams that want one picture of what customers say, without reading every channel.": "Для команд, которым нужна одна картина того, что говорят клиенты, без чтения каждого канала.",
+    "A weekly picture of what customers say": "Еженедельная картина того, что говорят клиенты",
+    "Problems ranked by how many people meet them": "Проблемы по числу людей, которые с ними сталкиваются",
+    "Answering agents that learn from it": "Отвечающие агенты, которые на этом учатся"
+  }
+}

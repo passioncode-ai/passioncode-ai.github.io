@@ -1,0 +1,16 @@
+{
+  "page": "agents/sales-and-leads/index.html",
+  "strings": {
+    "Sales and leads agent template | PassionCode.ai": "Szablon agenta sprzedaży i leadów | PassionCode.ai",
+    "Collects requests": "Zbiera zapytania",
+    "A concierge on your site takes a request with no person online and never invents a price.": "Konsjerż na Twojej stronie przyjmuje zapytanie, nawet gdy nikogo nie ma online, i nigdy nie wymyśla ceny.",
+    "Keeps one pipeline": "Prowadzi jeden lejek",
+    "Every request lands in one pipeline with a score, a stage and an owner.": "Każde zapytanie trafia do jednego lejka sprzedaży z oceną, etapem i właścicielem.",
+    "Finds missed follow-ups": "Znajduje pominięte kontakty",
+    "Spots warm leads and waiting buyers in the conversations your team already has.": "Wyłapuje ciepłe leady i czekających kupujących w rozmowach, które Twój zespół już prowadzi.",
+    "For teams that get requests from a site, chats, mail and messengers and lose some of them on the way.": "Dla zespołów, które dostają zapytania ze strony, czatów, poczty i komunikatorów i część z nich gubią po drodze.",
+    "No request lost between channels": "Żadne zapytanie nie ginie między kanałami",
+    "A next step on every lead": "Następny krok przy każdym leadzie",
+    "Prices that stay a person’s decision": "Ceny, o których nadal decyduje człowiek"
+  }
+}

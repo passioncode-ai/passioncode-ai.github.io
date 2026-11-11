@@ -1,0 +1,16 @@
+{
+  "page": "agents/growth-analytics/index.html",
+  "strings": {
+    "Growth analytics agent template | PassionCode.ai": "增长分析智能体模板 | PassionCode.ai",
+    "Events and funnels": "事件与漏斗",
+    "Counts what people do in your product and shows where they drop off.": "统计人们在你的产品中的行为，并显示他们在哪里流失。",
+    "Experiments by the rules": "按规则做实验",
+    "Each test is registered before it starts, watched for safety and read once its sample is complete.": "每个测试在开始前登记，运行中监控安全，样本完整后再读取结果。",
+    "A person approves changes": "变更由人批准",
+    "Every change the agent proposes waits in an inbox of drafts for a person.": "智能体提出的每项变更都在草稿收件箱中等待人处理。",
+    "For product teams that want experiments they can trust and a clear read of what changed.": "适合想要可信的实验、并清楚了解发生了什么变化的产品团队。",
+    "Experiments with a decision rule written in advance": "预先写好决策规则的实验",
+    "Every product’s funnels in one place": "所有产品的漏斗集中在一处",
+    "Fewer arguments about what a number means": "更少为数字含义争论"
+  }
+}

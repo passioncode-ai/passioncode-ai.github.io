@@ -1,0 +1,16 @@
+{
+  "page": "agents/sales-and-leads/index.html",
+  "strings": {
+    "Sales and leads agent template | PassionCode.ai": "営業・リードエージェントのテンプレート | PassionCode.ai",
+    "Collects requests": "問い合わせを集める",
+    "A concierge on your site takes a request with no person online and never invents a price.": "サイト上のコンシェルジュが、誰もオンラインでなくても問い合わせを受け付け、価格を勝手に作り出すことはありません。",
+    "Keeps one pipeline": "パイプラインを1つに",
+    "Every request lands in one pipeline with a score, a stage and an owner.": "すべての問い合わせが、スコア、段階、担当者とともに1つのパイプラインに入ります。",
+    "Finds missed follow-ups": "漏れたフォローアップを見つける",
+    "Spots warm leads and waiting buyers in the conversations your team already has.": "チームがすでに交わしている会話の中から、見込みの高いリードや返事を待っている買い手を見つけます。",
+    "For teams that get requests from a site, chats, mail and messengers and lose some of them on the way.": "サイト、チャット、メール、メッセンジャーから問い合わせを受け、その一部を途中で取りこぼしているチームのために。",
+    "No request lost between channels": "チャネルの間で問い合わせを失わない",
+    "A next step on every lead": "すべてのリードに次のステップ",
+    "Prices that stay a person’s decision": "価格は人が決めるまま"
+  }
+}

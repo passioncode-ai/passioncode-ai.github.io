@@ -1,0 +1,16 @@
+{
+  "page": "agents/messenger-gateway/index.html",
+  "strings": {
+    "Messenger gateway agent template | PassionCode.ai": "即时通讯网关智能体模板 | PassionCode.ai",
+    "One home for identities": "身份统一存放",
+    "The messenger accounts and bots live in one service, and no other agent holds them.": "即时通讯账号和机器人都放在一个服务里，其他智能体都不持有它们。",
+    "Permissions per agent": "按智能体分配权限",
+    "Each agent gets only what it needs: reading, searching, sending or managing a group.": "每个智能体只获得它需要的权限：读取、搜索、发送或管理群组。",
+    "A person approves sends": "发送由人批准",
+    "Messages wait for a person’s approval unless the owner has set a standing rule.": "除非所有者设定了长期规则，否则消息会等待人的批准。",
+    "For organizations whose agents talk to people on Telegram and should not each hold their own account.": "适合智能体在 Telegram 上与人沟通、且不应各自持有账号的组织。",
+    "No bot tokens scattered across projects": "机器人令牌不再散落在各个项目中",
+    "A record of every message sent": "每条已发送消息都有记录",
+    "One switch that stops all sending": "一个开关即可停止所有发送"
+  }
+}

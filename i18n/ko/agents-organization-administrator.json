@@ -1,0 +1,16 @@
+{
+  "page": "agents/organization-administrator/index.html",
+  "strings": {
+    "Organization administrator agent template | PassionCode.ai": "조직 관리자 에이전트 템플릿 | PassionCode.ai",
+    "Keeps the rhythm": "리듬을 지킵니다",
+    "Sends the morning list, reminds owners of urgent and stale tasks within working hours, and keeps a list of blockers.": "아침 목록을 보내고, 근무 시간 안에 담당자에게 급하거나 오래 멈춘 작업을 알리며, 걸림돌 목록을 관리합니다.",
+    "Routes requests": "요청을 전달합니다",
+    "Takes any problem a person brings and hands it to the person or agent who owns it.": "누군가 가져온 문제를 받아, 그 문제를 맡은 사람이나 에이전트에게 넘깁니다.",
+    "Keeps the roster": "명단을 관리합니다",
+    "Runs each joiner and each leaver as one checklist, and gives a person access to the organization’s agents.": "입사자와 퇴사자마다 하나의 체크리스트로 처리하고, 사람에게 조직의 에이전트에 대한 접근 권한을 부여합니다.",
+    "For teams that lose time chasing status and asking who owns what.": "진행 상황을 확인하고 누가 무엇을 맡는지 묻느라 시간을 잃는 팀에 적합합니다.",
+    "Fewer meetings about status": "현황 회의 감소",
+    "An owner for every request": "모든 요청에 담당자",
+    "A team roster that stays current": "항상 최신으로 유지되는 팀 명단"
+  }
+}

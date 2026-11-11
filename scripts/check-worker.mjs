@@ -950,7 +950,7 @@ test('a Russian submission is stored with its language and page, and redirected 
   assert.equal(lead.goals[0], 'automate_operations', 'the values are the same keys in every language')
   // The receipt is in Russian; the commercial mailbox is told which language to answer in.
   const receipt = env.EMAIL.sent.find(m => m.to === 'alex@example.com')
-  assert.equal(receipt.subject, 'Мы получили вашу заявку — PassionCode.ai')
+  assert.equal(receipt.subject, 'PassionCode.ai: мы получили вашу заявку')
   assert.match(receipt.text, /Спасибо за заявку/)
   assert.match(receipt.text, /https:\/\/passioncode.ai\/ru\/privacy\//)
   assert.ok(!/Thank you/.test(receipt.text))
@@ -976,7 +976,7 @@ test('a refused Russian submission is explained in Russian; the error code stays
   assert.equal(body.message, 'Некоторые ответы нужно проверить.')
   assert.deepEqual(body.issues, [{ path: 'contact.email', message: 'рабочий адрес почты' }])
   const unknown = await post(env, JSON.stringify({}), { path: '/api/leads?lang=sv' })
-  assert.equal((await unknown.json()).message, 'The form has expired. Reload the page and send it again — your answers are kept in the browser.', 'an unknown language falls back to English')
+  assert.equal((await unknown.json()).message, 'The form has expired. Reload the page and send it again. Your answers are kept in the browser.', 'an unknown language falls back to English')
 })
 
 test('English stays the default: a form without ?lang is English end to end', async () => {
@@ -986,7 +986,7 @@ test('English stays the default: a form without ?lang is English end to end', as
   const lead = JSON.parse((await env.DB.prepare('SELECT payload FROM leads').first()).payload)
   assert.equal(lead.source.locale, 'en')
   assert.equal(lead.source.page, '/business/')
-  assert.equal(env.EMAIL.sent.find(m => m.to === 'alex@example.com').subject, 'We received your request — PassionCode.ai')
+  assert.equal(env.EMAIL.sent.find(m => m.to === 'alex@example.com').subject, 'PassionCode.ai: we received your request')
   assert.match(notificationText(lead), /Form language: English \(en\)/)
   assert.match(confirmationText(lead), /^Hello,/)
 })

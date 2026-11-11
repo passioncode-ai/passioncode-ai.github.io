@@ -1,0 +1,20 @@
+{
+  "page": "blog/why-person-shaped-processes-stall/index.html",
+  "strings": {
+    "Why processes built around people stall | PassionCode.ai": "사람 중심 프로세스는 왜 멈출까 | PassionCode.ai",
+    "Adding AI assistants to a process built around people keeps the person as the bottleneck. What changes when agents run the process and people steer it.": "사람 중심으로 짜인 프로세스에 AI 어시스턴트를 더해도 병목은 여전히 사람입니다. 에이전트가 프로세스를 실행하고 사람이 방향을 잡으면 무엇이 바뀌는지 살펴봅니다.",
+    "The person is still the bottleneck": "병목은 여전히 사람입니다",
+    "An assistant drafts and analyzes, then hands the result back to a person. Ten assistants hand back ten results. The work waits until that person has time to read them.": "어시스턴트는 초안을 쓰고 분석한 뒤 결과를 사람에게 돌려줍니다. 어시스턴트 열 개는 결과 열 개를 돌려줍니다. 일은 그 사람이 읽을 시간이 생길 때까지 기다립니다.",
+    "Meetings reconcile what the assistants made": "어시스턴트가 만든 결과를 회의에서 맞춥니다",
+    "Two people with their own assistants produce more than either can read. They meet to agree on it, and the process stays exactly as it was.": "각자 어시스턴트를 둔 두 사람은 어느 쪽도 다 읽지 못할 만큼 많은 것을 만들어 냅니다. 합의하려고 회의를 열지만 프로세스는 그대로입니다.",
+    "Everyone builds their own agents": "모두가 자기만의 에이전트를 만듭니다",
+    "No shared rules, no shared memory, keys pasted wherever someone works, and no record of what an agent did or what it cost. It adds work instead of removing it.": "공유된 규칙도, 공유된 메모리도 없고, 키는 누군가 일하는 곳마다 붙여 넣어져 있으며, 에이전트가 무엇을 했고 비용이 얼마였는지 기록도 없습니다. 일을 덜어 주기는커녕 더합니다.",
+    "Most companies now experiment with agents, and few run them across a whole function (": "이제 대부분의 회사가 에이전트를 시험하고 있지만, 한 기능 전체에서 운영하는 곳은 드뭅니다(",
+    "McKinsey, The State of AI, November 2025": "McKinsey, The State of AI, 2025년 11월",
+    "). Gartner expects over 40% of agentic AI projects to be canceled by the end of 2027 (": "). Gartner는 에이전트형 AI 프로젝트의 40% 이상이 2027년 말까지 취소될 것으로 예상합니다(",
+    "Gartner, June 2025": "Gartner, 2025년 6월",
+    "What changes": "무엇이 바뀌나",
+    "The process itself has to move. When work moves between agents instead of between people, an agent takes the task and hands it to the next agent, and they settle it on one board with the record. People keep what only people can do: direction, control and expertise. More work then means more agents, not more people.": "프로세스 자체가 바뀌어야 합니다. 일이 사람 사이가 아니라 에이전트 사이를 오가면, 에이전트가 작업을 받아 다음 에이전트에게 넘기고, 에이전트들이 하나의 보드에서 기록과 함께 해결합니다. 사람은 사람만 할 수 있는 일을 맡습니다: 방향, 통제, 전문성. 그러면 일이 늘어날 때 늘어나는 것은 사람이 아니라 에이전트입니다.",
+    "Read the vision": "비전 읽기"
+  }
+}

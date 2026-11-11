@@ -84,7 +84,7 @@ No escribimos tus agentes desde cero. Los montamos a partir de 18 plantillas de 
 
 Comprobado con agentes realesCada uno de los 107 agentes se puede reconstruir a partir de su plantilla: funciones, pipelines y reglas se compararon línea por línea.
 
-2.572 pruebasEl código de referencia de las plantillas está cubierto por 2.572 pruebas.
+Más de 2.500 pruebasEl código de referencia de las plantillas está cubierto por más de 2.500 pruebas.
 
 Una auditoría de cualquier agenteCualquier agente, también el tuyo, se puede revisar frente a la base en 13 áreas: qué está confirmado y qué mejorar.
 
@@ -307,6 +307,12 @@ Empezar
 Visión
 
 Para organizaciones
+
+Plantillas de agentes
+
+Guías
+
+Blog
 
 Switchboard
 

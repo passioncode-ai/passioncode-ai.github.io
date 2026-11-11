@@ -1,0 +1,16 @@
+{
+  "page": "agents/company-assessment/index.html",
+  "strings": {
+    "Company assessment agent template | PassionCode.ai": "Шаблон агента оценки компании | PassionCode.ai",
+    "Maps the work": "Составляет карту работы",
+    "Builds a map of the kinds of tasks, how long each takes and how work moves between people and systems.": "Строит карту видов задач: сколько времени занимает каждый и как работа переходит между людьми и системами.",
+    "Finds the waits": "Находит ожидания",
+    "Shows where work stops and for how long, and where the written process differs from the real one.": "Показывает, где и как надолго останавливается работа и где записанный процесс расходится с реальным.",
+    "Plans the redesign": "Планирует перестройку",
+    "Proposes which kinds of work an agent takes, where a person stays, and how many hours that frees.": "Предлагает, какие виды работы берёт агент, где остаётся человек и сколько часов это освобождает.",
+    "For founders and leaders who want a true picture of their processes before they change them.": "Для основателей и руководителей, которые хотят видеть реальную картину своих процессов, прежде чем их менять.",
+    "A process map built from evidence, not from interviews alone": "Карта процессов, построенная на подтверждениях, а не только на интервью",
+    "A ranked list of processes for agents, each with its estimate": "Список процессов для агентов по приоритету, у каждого своя оценка",
+    "Readings about processes, never scores of people": "Выводы о процессах, но никогда не рейтинги людей"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "page": "blog/why-person-shaped-processes-stall/index.html",
+  "strings": {
+    "Why processes built around people stall | PassionCode.ai": "人を中心に作られたプロセスが滞る理由 | PassionCode.ai",
+    "Adding AI assistants to a process built around people keeps the person as the bottleneck. What changes when agents run the process and people steer it.": "人を中心に作られたプロセスに AI アシスタントを加えても、ボトルネックは人のままです。エージェントがプロセスを動かし、人が舵を取ると何が変わるか。",
+    "The person is still the bottleneck": "ボトルネックは今も人です",
+    "An assistant drafts and analyzes, then hands the result back to a person. Ten assistants hand back ten results. The work waits until that person has time to read them.": "アシスタントが下書きと分析をして、結果を人に返します。10 個のアシスタントは 10 個の結果を返します。仕事は、その人がそれを読む時間をとれるまで待つことになります。",
+    "Meetings reconcile what the assistants made": "アシスタントの成果を会議でまとめています",
+    "Two people with their own assistants produce more than either can read. They meet to agree on it, and the process stays exactly as it was.": "自分のアシスタントを持つ 2 人は、どちらも読み切れないほどの量を生み出します。合意するために会議を開き、プロセスは元のままです。",
+    "Everyone builds their own agents": "誰もが自分のエージェントを作っています",
+    "No shared rules, no shared memory, keys pasted wherever someone works, and no record of what an agent did or what it cost. It adds work instead of removing it.": "共通のルールも共有の記憶もなく、キーは誰かが作業する場所ごとに貼り付けられ、エージェントが何をしていくらかかったかの記録もありません。仕事は減らず、むしろ増えます。",
+    "Most companies now experiment with agents, and few run them across a whole function (": "多くの企業がエージェントを試していますが、一つの機能全体で運用している企業はわずかです（",
+    "McKinsey, The State of AI, November 2025": "McKinsey, The State of AI, 2025 年 11 月",
+    "). Gartner expects over 40% of agentic AI projects to be canceled by the end of 2027 (": "）。Gartner は、エージェント型 AI プロジェクトの 40% 超が 2027 年末までに中止されると予測しています（",
+    "Gartner, June 2025": "Gartner, 2025 年 6 月",
+    "What changes": "何が変わるか",
+    "The process itself has to move. When work moves between agents instead of between people, an agent takes the task and hands it to the next agent, and they settle it on one board with the record. People keep what only people can do: direction, control and expertise. More work then means more agents, not more people.": "変わるべきなのはプロセスそのものです。仕事が人と人の間ではなくエージェントの間を移るようになると、エージェントがタスクを受け取って次のエージェントに渡し、エージェント同士が一つのボードで、記録とともにそれを解決します。人は、人にしかできないことを担います：方向、管理、専門知識。そうなれば、仕事が増えたときに増えるのはエージェントで、人ではありません。",
+    "Read the vision": "ビジョンを読む"
+  }
+}

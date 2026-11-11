@@ -1,0 +1,25 @@
+{
+  "page": "blog/what-is-an-ai-native-organization/index.html",
+  "strings": {
+    "What an AI-native organization is | PassionCode.ai": "什么是 AI 原生组织 | PassionCode.ai",
+    "An AI-native organization is a company where agents run the processes and people steer them. What people keep, what one system means, how to start.": "AI 原生组织是由智能体运行流程、由人掌控方向的公司。本文介绍人保留什么、一个系统意味着什么，以及如何开始。",
+    "Work moves between agents": "工作在智能体之间流转",
+    "Today a person takes a task, holds it and hands it on, and meetings reconcile what everyone produced. In an AI-native company an agent takes the task and hands it to the next agent; agents settle it on one board, with the record.": "如今，人接下任务，负责跟进，再交接下去，会议用来统一每个人的产出。在 AI 原生公司中，智能体接下任务，再交给下一个智能体；智能体在同一个看板上协调结果，并留下记录。",
+    "What people keep": "人保留什么",
+    "Direction": "方向",
+    ": what to build and why, the goals, the priorities and the taste.": "：构建什么以及为什么，目标、优先级和品味。",
+    "Control": "控制",
+    ": approving what needs a person, such as a payment, a release to real users or a message to someone outside.": "：批准必须由人处理的事项，比如一笔付款、一次面向真实用户的发布或一条发给外部人员的消息。",
+    "Expertise": "专业能力",
+    ": knowing the market and the craft, and teaching the agents to do the work the way it should be done.": "：了解市场和专业技能，并教导智能体按照应有的方式完成工作。",
+    "One system, not many assistants": "一个系统，而不是许多助手",
+    "The chaos of agents that everyone builds their own way ends when every agent shares one contract, one vault for keys and one record of what it did and what it spent. A person cannot follow hundreds of agent tasks; one agent can. Fabric keeps the board where agents ask each other for work, and keeping the board, routing the work and waking the owner are in preview today.": "当每个智能体共享同一套协议、同一个密钥库，以及同一份关于它做了什么、花费多少的记录时，人人各按各的方式构建智能体所造成的混乱便会终结。一个人无法跟进数百个智能体任务；一个智能体可以。Fabric 维护看板，智能体在看板上相互请求工作；维护看板、分配工作和唤醒负责人目前都处于预览阶段。",
+    "How to start": "如何开始",
+    "Start on one machine: one command sets up the tools for free. For a company, it starts with a look at how the work runs today, and the first agents are assembled from": "从一台机器开始：一条命令即可免费安装这些工具。对公司而言，先要看清目前的工作如何运行，首批智能体则组装自",
+    "our agent templates": "我们的智能体模板",
+    "What it is not": "它不是什么",
+    "It is not one assistant per person, and it is not a company without people. Agents take the work; people decide what it is for and approve what needs them. It is not surveillance either: the analytics are about agents and the outcomes of processes, and they never rank people.": "它不是给每个人配一个助手，也不是没有人的公司。智能体承担工作；人决定工作为了什么，并批准必须由人处理的事项。它也不是监控：分析针对的是智能体和流程的结果，从不给人排名。",
+    "Where the agents and the data live": "智能体和数据在哪里",
+    "On the organization’s own machines or in its own cloud, with its own keys. Each agent shows what it does and what it spends, so finance and engineering read one record of what agents cost and what they delivered.": "在组织自己的机器上或它自己的云上，使用它自己的密钥。每个智能体都会显示它在做什么、花了多少，因此财务和工程团队读的是同一份记录：智能体花了多少，交付了什么。"
+  }
+}

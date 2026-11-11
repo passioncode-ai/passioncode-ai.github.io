@@ -46,7 +46,7 @@ Configurar
 
 ↓
 
-AVISO DE PRIVACIDAD · VERSIÓN 2026-10-11
+AVISO DE PRIVACIDAD · VERSIÓN 2026-11-07
 
 # Aviso de privacidad
 
@@ -98,7 +98,9 @@ Mientras escribes en el formulario, tu texto sin enviar se guarda solo en el alm
 
 ## Las apps
 
-Las apps de PassionCode.ai se ejecutan en tus equipos y no nos envían tu trabajo. Fabric Switchboard y, desde la versión 0.3.2, Fabric envían recuentos de uso anónimos: solo cantidades y tipos, nunca nombres, rutas ni contenido. Desactívalos en la ventana Acerca de de Switchboard o en los Ajustes de Fabric; el interruptor se aplica a todas las apps de PassionCode.ai de ese equipo.
+Las apps de PassionCode.ai se ejecutan en tus equipos y no nos envían tu trabajo. Fabric Switchboard, Fabric desde la versión 0.3.2 y Fabric Dashboards desde la versión 0.8.19 envían recuentos de uso anónimos (Fabric Dashboards también cuenta errores): solo cantidades y tipos, nunca nombres, rutas ni contenido. Cada producto tiene su propio interruptor: la ventana Acerca de de Switchboard, los Ajustes de Fabric y Ajustes → Privacidad en Fabric Dashboards. Desactivar uno no desactiva los demás.
+
+El lanzador de PassionCode, desde la versión 0.2.76, envía recuentos anónimos de uso y de errores: qué comando se ejecutó, cómo terminó, cuánto duró aproximadamente y, una vez al día, que se usó, con el identificador de instalación del archivo que comparten las apps de PassionCode.ai en ese equipo. Nunca envía una ruta, un nombre, un argumento, un token ni el texto de un error. Los recuentos van a analytics.passioncode.ai; los eventos se guardan dos años, el identificador de instalación se elimina de ellos a los 400 días y tu dirección IP no se guarda. Desactívalos para el lanzador con npx @passioncode-ai/passioncode@latest analytics off o define DO_NOT_TRACK=1. Si ya dijiste que no en una app de PassionCode.ai, el lanzador conserva esa respuesta.
 
 PassionCode
 
@@ -111,6 +113,12 @@ Empezar
 Visión
 
 Para organizaciones
+
+Plantillas de agentes
+
+Guías
+
+Blog
 
 Switchboard
 

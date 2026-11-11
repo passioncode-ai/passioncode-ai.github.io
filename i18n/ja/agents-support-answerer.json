@@ -1,0 +1,16 @@
+{
+  "page": "agents/support-answerer/index.html",
+  "strings": {
+    "Support agent template | PassionCode.ai": "サポートエージェントのテンプレート | PassionCode.ai",
+    "Checked answers": "確認済みの回答",
+    "Every draft is checked against your knowledge base and by a second model before it is sent.": "すべての下書きは、送信前にナレッジベースと照らし合わせ、さらに別のモデルでも確認されます。",
+    "Nobody left waiting": "誰も待たせない",
+    "A question it cannot answer becomes a hand-off, a card for your staff and a follow-up.": "答えられない質問は、引き継ぎ、スタッフ向けのカード、フォローアップになります。",
+    "Learns from your people": "チームの人から学ぶ",
+    "An answer a person gives goes back into the knowledge base.": "人が出した回答は、ナレッジベースに戻されます。",
+    "For teams with a support inbox, a community chat or a help bot that is never fully covered.": "サポートの受信箱、コミュニティチャット、ヘルプボットに、手が回りきっていないチームのために。",
+    "Faster first answers in every language": "すべての言語で、より速い最初の回答",
+    "Gaps in your knowledge base you can see": "見えるようになるナレッジベースの抜け",
+    "Quality measured every day": "毎日計測される品質"
+  }
+}

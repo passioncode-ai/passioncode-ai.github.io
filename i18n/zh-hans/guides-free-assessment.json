@@ -1,0 +1,21 @@
+{
+  "page": "guides/free-assessment/index.html",
+  "strings": {
+    "How the free one-week assessment works | PassionCode.ai": "为期一周的免费评估如何进行 | PassionCode.ai",
+    "One agent reads how your company works for a week, then you get a map of your processes and an offer: which work agents take first and what it costs.": "一个智能体用一周时间了解你公司的运作方式，然后你会得到一张流程地图和一份方案：智能体先接手哪些工作，以及费用是多少。",
+    "Before the week": "这一周开始之前",
+    "You answer four questions: your goal, the size of your team, the systems you use and what hurts most. You give read-only access to those systems, one link each. Our engineer agent sets the assessment agent up in a space of its own for your organization, or on your own machine if no data should leave it. This takes about twenty minutes of your time.": "你回答四个问题：你的目标、团队规模、使用的系统，以及最让你头疼的是什么。你为这些系统提供只读权限，每个系统一个链接。我们的工程师智能体会在为你的组织单独设立的空间里部署评估智能体；如果数据不应离开你的机器，则部署在你自己的机器上。这大约占用你二十分钟时间。",
+    "During the week": "这一周期间",
+    "The agent connects to your trackers, repositories, documents, team chats, mail and support, and reads the last 90 days. Then it follows the work as it happens: what was planned and what happened, where work waits and for how long. If the data leaves gaps, it may ask your team a few short questions in the channel they already use, anonymous by default. Nothing changes in your systems.": "智能体连接你的任务跟踪工具、代码仓库、文档、团队聊天、邮件和客服系统，读取最近 90 天的数据。之后它会实时跟进工作：计划了什么、实际发生了什么、工作在哪里等待、等了多久。如果数据有缺口，它可能会在你的团队已经在用的渠道里问几个简短的问题，默认匿名。你的系统不会发生任何变化。",
+    "What you get on day seven": "第七天你会得到什么",
+    "A map of your processes: the kinds of tasks, how much time each takes and how work moves between people and systems.": "一张流程地图：有哪些类型的任务、每类耗费多少时间，以及工作如何在人和系统之间流转。",
+    "Plan against fact, the blockers and waits, and where the documented process differs from the real one.": "计划与实际的对比、阻碍和等待，以及书面流程与实际流程的差异所在。",
+    "The offer: the processes agents should take over first, the hours each frees, the agent template that does it, and a pilot on one process to prove it.": "方案：应最先交给智能体的流程、每个流程能腾出的小时数、承担这项工作的智能体模板，以及在一个流程上开展的验证试点。",
+    "We go through it with you in a 30-minute call, and you keep it as a page.": "我们会在 30 分钟的通话中和你一起过一遍，你可以把它作为一个页面保留下来。",
+    "About people, never scores": "关于人：绝不打分",
+    "The assessment reads processes, not people. It reports totals for groups, never a score for a person, and what stays with people (direction, control and expertise) is part of the offer.": "评估针对的是流程，而不是人。它报告的是群体的汇总数据，绝不给个人打分；留给人的部分（方向、控制和专业能力）也是方案的一部分。",
+    "After the week": "这一周之后",
+    "If you go ahead, the pilot starts in the same place. If not, access is revoked, the data is deleted, and you receive a confirmation that it was.": "如果你决定继续，试点会在同一个地方开始。如果不继续，访问权限会被撤销，数据会被删除，你会收到删除完成的确认。",
+    "Ask for an assessment": "申请评估"
+  }
+}

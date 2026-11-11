@@ -1,0 +1,16 @@
+{
+  "page": "agents/growth-analytics/index.html",
+  "strings": {
+    "Growth analytics agent template | PassionCode.ai": "그로스 분석 에이전트 템플릿 | PassionCode.ai",
+    "Events and funnels": "이벤트와 퍼널",
+    "Counts what people do in your product and shows where they drop off.": "사람들이 제품에서 하는 행동을 세고, 어디서 이탈하는지 보여 줍니다.",
+    "Experiments by the rules": "규칙을 따르는 실험",
+    "Each test is registered before it starts, watched for safety and read once its sample is complete.": "각 테스트는 시작 전에 등록되고, 진행 중 안전성을 지켜보며, 표본이 다 모인 뒤에 결과를 읽습니다.",
+    "A person approves changes": "변경은 사람이 승인합니다",
+    "Every change the agent proposes waits in an inbox of drafts for a person.": "에이전트가 제안하는 모든 변경은 초안 수신함에서 사람을 기다립니다.",
+    "For product teams that want experiments they can trust and a clear read of what changed.": "믿을 수 있는 실험과 무엇이 바뀌었는지에 대한 명확한 해석을 원하는 제품 팀에 적합합니다.",
+    "Experiments with a decision rule written in advance": "결정 규칙을 미리 정해 둔 실험",
+    "Every product’s funnels in one place": "모든 제품의 퍼널을 한곳에",
+    "Fewer arguments about what a number means": "숫자의 의미를 둘러싼 논쟁 감소"
+  }
+}

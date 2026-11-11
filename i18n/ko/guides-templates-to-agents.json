@@ -1,0 +1,18 @@
+{
+  "page": "guides/templates-to-agents/index.html",
+  "strings": {
+    "How agent templates become your agents | PassionCode.ai": "에이전트 템플릿이 조직의 에이전트가 되는 방식 | PassionCode.ai",
+    "What an agent template is, how our engineer agent assembles it for your organization, where the agent runs and what stays yours.": "에이전트 템플릿이 무엇인지, 저희 엔지니어 에이전트가 조직에 맞춰 어떻게 구성하는지, 에이전트가 어디에서 실행되는지, 무엇이 조직의 것으로 남는지 설명합니다.",
+    "What a template is": "템플릿이란",
+    "A template describes one kind of agent: the job it does, the rules it keeps, what it must never do and when it calls a person, with tested code behind it. It collects what the agents of that kind we run in our own work have learned.": "템플릿은 한 종류의 에이전트를 기술합니다: 하는 일, 지키는 규칙, 절대 해서는 안 되는 일, 사람을 부르는 시점이며, 그 뒤에는 테스트된 코드가 있습니다. 템플릿에는 저희가 실제 업무에서 운영하는 같은 종류의 에이전트가 배운 것이 모여 있습니다.",
+    "See the agent templates": "에이전트 템플릿 보기",
+    "From your request to an agent": "요청에서 에이전트까지",
+    "You tell us what agents should do. Our engineer agent picks the template that fits, connects your systems with the access you grant, sets your rules and spending limits, and checks the agent on your own processes before it starts work.": "에이전트가 무엇을 해야 하는지 알려 주세요. 저희 엔지니어 에이전트가 알맞은 템플릿을 골라, 허용하신 접근 권한으로 조직의 시스템을 연결하고, 규칙과 지출 한도를 설정하며, 일을 시작하기 전에 조직의 실제 프로세스에서 에이전트를 점검합니다.",
+    "Where it runs": "실행 위치",
+    "On your machines or in your own cloud, with your keys. Each agent shows its state and what it spends, and a person approves what needs a person: a payment, a release to real users, a message to someone outside.": "조직의 컴퓨터나 자체 클라우드에서, 조직의 키로 실행됩니다. 각 에이전트는 상태와 지출을 보여 주며, 사람이 필요한 일은 사람이 승인합니다: 결제, 실제 사용자 대상 릴리스, 외부인에게 보내는 메시지.",
+    "What stays yours": "조직의 것으로 남는 것",
+    "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "데이터, 키, 에이전트는 조직의 것입니다. 템플릿 라이브러리는 저희 것으로 남습니다: 라이브러리가 아니라 구성된 에이전트를 받으시며, 템플릿의 세부 내용은 요청을 논의할 때 공유합니다.",
+    "Agents that get better": "더 나아지는 에이전트",
+    "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "저희가 템플릿을 개선하면, 그 개선은 템플릿의 다음 릴리스와 함께, 조직의 에이전트가 이미 통과하는 점검을 거친 뒤 에이전트에 반영될 수 있습니다."
+  }
+}

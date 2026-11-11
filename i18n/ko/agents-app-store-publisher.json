@@ -1,0 +1,16 @@
+{
+  "page": "agents/app-store-publisher/index.html",
+  "strings": {
+    "App store publisher agent template | PassionCode.ai": "앱 스토어 퍼블리싱 에이전트 템플릿 | PassionCode.ai",
+    "Keywords with demand": "수요가 있는 키워드",
+    "Places keywords across fields, languages and storefronts by the demand behind them.": "키워드에 담긴 수요에 따라 필드, 언어, 스토어프론트에 키워드를 배치합니다.",
+    "Listings in every language": "모든 언어의 등록 정보",
+    "Has listing copy written, checked and localized, and orders screenshots and store graphics.": "등록 정보 문구의 작성, 점검, 현지화를 맡기고, 스크린숏과 스토어 그래픽을 주문합니다.",
+    "Publishing in two steps": "두 단계로 게시",
+    "Shows the exact change first and applies only that change, after a person approves it.": "정확한 변경 내용을 먼저 보여 주고, 사람이 승인한 뒤 그 변경만 적용합니다.",
+    "For teams that publish apps on the App Store, Google Play or Meta Horizon.": "App Store, Google Play 또는 Meta Horizon에 앱을 게시하는 팀에 적합합니다.",
+    "Listings checked before review": "심사 전에 점검한 등록 정보",
+    "Reviews answered under your policy": "정책에 따라 답하는 리뷰",
+    "Rankings tracked every day": "매일 추적하는 순위"
+  }
+}
