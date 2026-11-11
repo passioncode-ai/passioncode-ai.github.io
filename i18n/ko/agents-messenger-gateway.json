@@ -1,0 +1,16 @@
+{
+  "page": "agents/messenger-gateway/index.html",
+  "strings": {
+    "Messenger gateway agent template | PassionCode.ai": "메신저 게이트웨이 에이전트 템플릿 | PassionCode.ai",
+    "One home for identities": "계정은 한곳에",
+    "The messenger accounts and bots live in one service, and no other agent holds them.": "메신저 계정과 봇은 하나의 서비스에 있으며, 다른 어떤 에이전트도 이를 보유하지 않습니다.",
+    "Permissions per agent": "에이전트별 권한",
+    "Each agent gets only what it needs: reading, searching, sending or managing a group.": "각 에이전트는 필요한 권한만 받습니다: 읽기, 검색, 보내기 또는 그룹 관리.",
+    "A person approves sends": "발송은 사람이 승인합니다",
+    "Messages wait for a person’s approval unless the owner has set a standing rule.": "소유자가 상시 규칙을 정하지 않았다면 메시지는 사람의 승인을 기다립니다.",
+    "For organizations whose agents talk to people on Telegram and should not each hold their own account.": "에이전트가 Telegram에서 사람들과 대화하지만 각자 계정을 가져서는 안 되는 조직에 적합합니다.",
+    "No bot tokens scattered across projects": "프로젝트마다 흩어진 봇 토큰 없음",
+    "A record of every message sent": "보낸 모든 메시지의 기록",
+    "One switch that stops all sending": "모든 발송을 멈추는 하나의 스위치"
+  }
+}

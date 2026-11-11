@@ -68,7 +68,7 @@ From the request itself: the country Cloudflare reports for your connection, you
 
 ## Why, and on what basis
 
-To answer your request and prepare a proposal — steps you ask for before a possible contract (GDPR Art. 6(1)(b)), which is why the form has no consent box. The abuse checks rely on our legitimate interest in keeping the form usable (Art. 6(1)(f)). Product news goes only to people who asked for it, and they can withdraw that consent at any time (Art. 6(1)(a)).
+To answer your request and prepare a proposal: steps you ask for before a possible contract (GDPR Art. 6(1)(b)), which is why the form has no consent box. The abuse checks rely on our legitimate interest in keeping the form usable (Art. 6(1)(f)). Product news goes only to people who asked for it, and they can withdraw that consent at any time (Art. 6(1)(a)).
 
 ## Where it is kept
 
@@ -113,6 +113,12 @@ Get started
 Vision
 
 For organizations
+
+Agent templates
+
+Guides
+
+Blog
 
 Switchboard
 

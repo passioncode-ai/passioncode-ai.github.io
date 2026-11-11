@@ -286,6 +286,8 @@ Jeden przekaz, każdy językMarketing planuje, agent tekstów pisze głosem mark
 
 Każda z tych ról działa już dziś u nas jako osobny agent. Połączenie ich wszystkich jedną tablicą to właśnie to, do czego zbudowano Fabric.
 
+Szablony agentów, które składamy dla organizacji
+
 06 / OD ZESPOŁU DO ORGANIZACJI
 
 ## Zacznij na jednej maszynie
@@ -424,7 +426,7 @@ Wydanie
 
 Project Observatory
 
-Co zmieniło się w każdym projekcie i co wymaga uwagi — wraz z dowodami.
+Co zmieniło się w każdym projekcie i co wymaga uwagi, wraz z dowodami.
 
 Wydanie
 
@@ -533,6 +535,12 @@ Zacznij
 Wizja
 
 Dla organizacji
+
+Szablony agentów
+
+Poradniki
+
+Blog
 
 Switchboard
 

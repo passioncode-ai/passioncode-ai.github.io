@@ -1,0 +1,18 @@
+{
+  "page": "guides/templates-to-agents/index.html",
+  "strings": {
+    "How agent templates become your agents | PassionCode.ai": "Comment les modèles d’agents deviennent vos agents | PassionCode.ai",
+    "What an agent template is, how our engineer agent assembles it for your organization, where the agent runs and what stays yours.": "Ce qu’est un modèle d’agent, comment notre agent ingénieur l’assemble pour votre organisation, où l’agent tourne et ce qui reste à vous.",
+    "What a template is": "Ce qu’est un modèle",
+    "A template describes one kind of agent: the job it does, the rules it keeps, what it must never do and when it calls a person, with tested code behind it. It collects what the agents of that kind we run in our own work have learned.": "Un modèle décrit un type d’agent : le travail qu’il fait, les règles qu’il respecte, ce qu’il ne doit jamais faire et quand il appelle une personne, avec du code testé derrière. Il rassemble ce qu’ont appris les agents de ce type que nous faisons tourner dans notre propre travail.",
+    "See the agent templates": "Voir les modèles d’agents",
+    "From your request to an agent": "De votre demande à un agent",
+    "You tell us what agents should do. Our engineer agent picks the template that fits, connects your systems with the access you grant, sets your rules and spending limits, and checks the agent on your own processes before it starts work.": "Vous nous dites ce que les agents doivent faire. Notre agent ingénieur choisit le modèle adapté, connecte vos systèmes avec les accès que vous accordez, fixe vos règles et vos limites de dépenses, et vérifie l’agent sur vos propres processus avant qu’il se mette au travail.",
+    "Where it runs": "Où il tourne",
+    "On your machines or in your own cloud, with your keys. Each agent shows its state and what it spends, and a person approves what needs a person: a payment, a release to real users, a message to someone outside.": "Sur vos machines ou dans votre propre cloud, avec vos clés. Chaque agent affiche son état et ce qu’il dépense, et une personne approuve ce qui demande une personne : un paiement, une mise en production pour de vrais utilisateurs, un message à quelqu’un d’extérieur.",
+    "What stays yours": "Ce qui reste à vous",
+    "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "Vos données, vos clés et vos agents. La bibliothèque de modèles reste la nôtre : vous recevez les agents assemblés, pas la bibliothèque, et nous partageons les détails d’un modèle quand nous discutons de votre demande.",
+    "Agents that get better": "Des agents qui s’améliorent",
+    "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "Quand nous améliorons un modèle, l’amélioration peut atteindre votre agent avec la version suivante du modèle, après les vérifications que votre agent passe déjà."
+  }
+}

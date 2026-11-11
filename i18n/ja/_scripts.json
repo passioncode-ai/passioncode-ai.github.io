@@ -7,7 +7,7 @@
     "Required.": "必須です。",
     "A work email address.": "勤務先のメールアドレスを入力してください。",
     "Sending…": "送信中…",
-    "Thank you — it reached us": "ありがとうございます。届きました",
+    "Thank you, it reached us": "ありがとうございます。届きました",
     "We reply within two business days. A confirmation email usually follows within minutes.": "2営業日以内にご返信します。確認メールは通常、数分以内に届きます。",
     "Reference: {id}": "参照番号：{id}",
     "The request was not sent.": "ご依頼は送信されませんでした。",
@@ -20,12 +20,12 @@
     "The request is too long.": "ご依頼の内容が長すぎます。",
     "The request could not be read.": "ご依頼を読み取れませんでした。",
     "That was faster than a person can fill the form. Please check your answers and send it again.": "人がフォームに入力するよりも速く送信されました。入力内容を確認して、もう一度送信してください。",
-    "The form has expired. Reload the page and send it again — your answers are kept in the browser.": "フォームの有効期限が切れました。ページを再読み込みして、もう一度送信してください。入力内容はブラウザに保持されています。",
+    "The form has expired. Reload the page and send it again. Your answers are kept in the browser.": "フォームの有効期限が切れました。ページを再読み込みして、もう一度送信してください。入力内容はブラウザに保持されています。",
     "Some answers need another look.": "一部の回答をご確認ください。",
-    "This form was already sent once. Reload the page to send another request — your answers are kept in the browser.": "このフォームはすでに一度送信されています。別のご依頼を送るには、ページを再読み込みしてください。入力内容はブラウザに保持されています。",
+    "This form was already sent once. Reload the page to send another request. Your answers are kept in the browser.": "このフォームはすでに一度送信されています。別のご依頼を送るには、ページを再読み込みしてください。入力内容はブラウザに保持されています。",
     "We could not save your request. Nothing was sent. Please try again in a minute or write to {email}.": "ご依頼を保存できませんでした。何も送信されていません。1分ほど後にもう一度お試しいただくか、{email} 宛てにメールをお送りください。",
     "This request was already sent with different answers. Reload the page to start a new one.": "このご依頼はすでに別の回答で送信されています。新しく始めるには、ページを再読み込みしてください。",
-    "We received your request — PassionCode.ai": "ご依頼を受け付けました — PassionCode.ai",
+    "PassionCode.ai: we received your request": "PassionCode.ai：ご依頼を受け付けました",
     "Hello,": "こんにちは。",
     "Thank you for your request. It reached PassionCode.ai.": "ご依頼ありがとうございます。PassionCode.ai に届きました。",
     "What happens next:": "今後の流れ：",
@@ -50,7 +50,7 @@
     "a web address": "ウェブアドレス",
     "a work email address": "勤務先のメールアドレス",
     "agree to the privacy notice to send the request": "ご依頼を送信するには、プライバシー通知への同意が必要です",
-    "The request did not leave your browser — check your connection and send it again. Your text is kept here.": "依頼はブラウザーから送信されていません。接続を確認して、もう一度送信してください。入力した内容はここに残っています。",
+    "The request did not leave your browser. Check your connection and send it again. Your text is kept here.": "依頼はブラウザーから送信されていません。接続を確認して、もう一度送信してください。入力した内容はここに残っています。",
     "a request id: a UUID v4, made once and reused for a retry": "依頼 ID：一度だけ作成し、再試行でも使い回す UUID v4"
   }
 }

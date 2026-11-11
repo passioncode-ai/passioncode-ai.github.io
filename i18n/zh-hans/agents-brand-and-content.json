@@ -1,0 +1,16 @@
+{
+  "page": "agents/brand-and-content/index.html",
+  "strings": {
+    "Brand and content agent template | PassionCode.ai": "品牌与内容智能体模板 | PassionCode.ai",
+    "A plan with sources": "有出处的计划",
+    "Keeps a content plan whose every number has a source, and measures it every day.": "维护一份内容计划，其中每个数字都有出处，并每天衡量效果。",
+    "Drafts in your voice": "用你的口吻起草",
+    "Writes in your saved tone of voice, in every language you publish in.": "用你保存的语气风格，以你发布内容所用的每种语言写作。",
+    "One approved outbox": "统一的审批发件箱",
+    "Every post passes a check for facts, privacy and voice, then waits for approval.": "每篇帖子都要通过事实、隐私和语气检查，然后等待批准。",
+    "For teams that publish often and want every post to sound like them and say only what is true.": "适合发布频繁、希望每篇帖子都有自己的风格且只讲真实内容的团队。",
+    "One voice across every channel": "所有渠道一个声音",
+    "No claim in public without its source": "公开发布的每个论断都有出处",
+    "Translations that keep the meaning": "保留原意的翻译"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "page": "agents/sales-and-leads/index.html",
+  "strings": {
+    "Sales and leads agent template | PassionCode.ai": "영업 및 리드 에이전트 템플릿 | PassionCode.ai",
+    "Collects requests": "문의를 받습니다",
+    "A concierge on your site takes a request with no person online and never invents a price.": "사이트의 컨시어지가 아무도 온라인에 없을 때도 문의를 받으며, 가격을 지어내지 않습니다.",
+    "Keeps one pipeline": "하나의 파이프라인을 유지합니다",
+    "Every request lands in one pipeline with a score, a stage and an owner.": "모든 문의는 점수, 단계, 담당자와 함께 하나의 파이프라인에 들어갑니다.",
+    "Finds missed follow-ups": "놓친 후속 조치를 찾습니다",
+    "Spots warm leads and waiting buyers in the conversations your team already has.": "팀이 이미 나누는 대화에서 관심이 높은 리드와 기다리는 구매자를 찾아냅니다.",
+    "For teams that get requests from a site, chats, mail and messengers and lose some of them on the way.": "사이트, 채팅, 메일, 메신저로 문의를 받다가 그중 일부를 놓치는 팀에 적합합니다.",
+    "No request lost between channels": "채널 사이에서 사라지는 문의 없음",
+    "A next step on every lead": "모든 리드에 다음 단계",
+    "Prices that stay a person’s decision": "가격은 계속 사람이 결정"
+  }
+}

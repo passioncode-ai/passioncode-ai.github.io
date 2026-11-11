@@ -68,7 +68,7 @@ Z samego żądania: kraj, który Cloudflare przypisuje Twojemu połączeniu, ci�
 
 ## W jakim celu i na jakiej podstawie
 
-Aby odpowiedzieć na Twoje zgłoszenie i przygotować propozycję — czyli podjąć działania, o które prosisz przed ewentualnym zawarciem umowy (RODO (GDPR), art. 6 ust. 1 lit. b); dlatego formularz nie ma pola zgody. Kontrole nadużyć opierają się na naszym prawnie uzasadnionym interesie w utrzymaniu działającego formularza (art. 6 ust. 1 lit. f). Informacje o produktach wysyłamy tylko osobom, które o nie poprosiły, a zgodę można w każdej chwili wycofać (art. 6 ust. 1 lit. a).
+Aby odpowiedzieć na Twoje zgłoszenie i przygotować propozycję, czyli podjąć działania, o które prosisz przed ewentualnym zawarciem umowy (RODO (GDPR), art. 6 ust. 1 lit. b); dlatego formularz nie ma pola zgody. Kontrole nadużyć opierają się na naszym prawnie uzasadnionym interesie w utrzymaniu działającego formularza (art. 6 ust. 1 lit. f). Informacje o produktach wysyłamy tylko osobom, które o nie poprosiły, a zgodę można w każdej chwili wycofać (art. 6 ust. 1 lit. a).
 
 ## Gdzie dane są przechowywane
 
@@ -113,6 +113,12 @@ Zacznij
 Wizja
 
 Dla organizacji
+
+Szablony agentów
+
+Poradniki
+
+Blog
 
 Switchboard
 

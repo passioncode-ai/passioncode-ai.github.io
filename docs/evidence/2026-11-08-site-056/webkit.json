@@ -1,0 +1,1622 @@
+[
+ {
+  "path": "/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Agents for your processes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/company-assessment/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Company assessment agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Organization administrator agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/data-room/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Data room agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/host-operations/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Machine operations agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/messenger-gateway/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Messenger gateway agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/sales-and-leads/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Sales and leads agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/marketing-analyst/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Marketing analyst agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/growth-analytics/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Growth analytics agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/search-traffic/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Search traffic agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/app-store-publisher/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "App store publisher agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/brand-and-content/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Brand and content agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/support-answerer/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Support agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/chat-assistant/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Conversational assistant",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/telegram-product-bot/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Telegram product bot",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/customer-listening/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Customer listening agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/media-production/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Media production agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/research/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Research agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/web-quality-monitor/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Web quality monitor",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Guides to working with agents",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Start your agent workplace in 20 minutes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/guides/free-assessment/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "How the free one-week assessment works",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/guides/templates-to-agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "How agent templates become your agents",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Notes on AI-native organizations",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/blog/why-person-shaped-processes-stall/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Why processes built around people stall when you add AI",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "What an AI-native organization is",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "The agent-agnostic operating system for AI-native teams",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Агенты для ваших процессов",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Агент-администратор организации",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Запустите рабочее место для ИИ-агентов за 20 минут",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Что такое AI-native организация",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Руководства по работе с агентами",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Заметки об AI-native организациях",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Agenten für deine Prozesse",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Administrator-Agent der Organisation",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Richte deinen Arbeitsplatz für Agenten in 20 Minuten ein",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Was eine AI-native Organisation ist",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Anleitungen zur Arbeit mit Agenten",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Notizen zu AI-nativen Organisationen",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Des agents pour vos processus",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Agent administrateur de l’organisation",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Lancez votre espace de travail pour agents en 20 minutes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Ce qu’est une organisation AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Guides pour travailler avec des agents",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Notes sur les organisations AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Agenci do Twoich procesów",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Agent administrator organizacji",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Uruchom swoje miejsce pracy z agentami w 20 minut",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Czym jest organizacja AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Poradniki o pracy z agentami",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Notatki o organizacjach AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "에이전트, 조직의 프로세스를 위해",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "조직 관리자 에이전트",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "20분 만에 에이전트 업무 공간 시작하기",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "AI-native 조직이란 무엇인가",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "가이드: 에이전트와 함께 일하기",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "노트: AI-native 조직",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Agentes para tus procesos",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Agente administrador de la organización",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Pon en marcha tu espacio de trabajo de agentes en 20 minutos",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Qué es una organización AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Guías para trabajar con agentes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Notas sobre organizaciones AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Agentes para os seus processos",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Agente administrador da organização",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Monte seu ambiente de trabalho com agentes em 20 minutos",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "O que é uma organização AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Guias para trabalhar com agentes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Notas sobre organizações AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "为你的流程服务的智能体",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "组织管理员智能体",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "20 分钟搭建你的智能体工作空间",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "什么是 AI 原生组织",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "与智能体协作的指南",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "关于 AI 原生组织的笔记",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/agents/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "自社のプロセスのためのエージェント",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/agents/organization-administrator/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "組織管理者エージェント",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/guides/start-agent-workplace/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "20分でエージェントワークプレースを始める",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/blog/what-is-an-ai-native-organization/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "AIネイティブな組織とは",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/guides/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "エージェントと働くためのガイド",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/blog/",
+  "width": 1440,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "AIネイティブな組織についてのノート",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Agents for your processes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/company-assessment/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Company assessment agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Organization administrator agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/data-room/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Data room agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/host-operations/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Machine operations agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/messenger-gateway/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Messenger gateway agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/sales-and-leads/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Sales and leads agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/marketing-analyst/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Marketing analyst agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/growth-analytics/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Growth analytics agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/search-traffic/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Search traffic agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/app-store-publisher/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "App store publisher agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/brand-and-content/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Brand and content agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/support-answerer/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Support agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/chat-assistant/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Conversational assistant",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/telegram-product-bot/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Telegram product bot",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/customer-listening/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Customer listening agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/media-production/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Media production agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/research/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Research agent",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/agents/web-quality-monitor/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Web quality monitor",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Guides to working with agents",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Start your agent workplace in 20 minutes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/guides/free-assessment/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "How the free one-week assessment works",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/guides/templates-to-agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "How agent templates become your agents",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Notes on AI-native organizations",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/blog/why-person-shaped-processes-stall/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "Why processes built around people stall when you add AI",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "What an AI-native organization is",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "en",
+  "h1": "The agent-agnostic operating system for AI-native teams",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Агенты для ваших процессов",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Агент-администратор организации",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Запустите рабочее место для ИИ-агентов за 20 минут",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Что такое AI-native организация",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Руководства по работе с агентами",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ru/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ru",
+  "h1": "Заметки об AI-native организациях",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Agenten für deine Prozesse",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Administrator-Agent der Organisation",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Richte deinen Arbeitsplatz für Agenten in 20 Minuten ein",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Was eine AI-native Organisation ist",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Anleitungen zur Arbeit mit Agenten",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/de/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "de",
+  "h1": "Notizen zu AI-nativen Organisationen",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Des agents pour vos processus",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Agent administrateur de l’organisation",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Lancez votre espace de travail pour agents en 20 minutes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Ce qu’est une organisation AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Guides pour travailler avec des agents",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/fr/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "fr",
+  "h1": "Notes sur les organisations AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Agenci do Twoich procesów",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Agent administrator organizacji",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Uruchom swoje miejsce pracy z agentami w 20 minut",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Czym jest organizacja AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Poradniki o pracy z agentami",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pl/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pl",
+  "h1": "Notatki o organizacjach AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "에이전트, 조직의 프로세스를 위해",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "조직 관리자 에이전트",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "20분 만에 에이전트 업무 공간 시작하기",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "AI-native 조직이란 무엇인가",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "가이드: 에이전트와 함께 일하기",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ko/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ko",
+  "h1": "노트: AI-native 조직",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Agentes para tus procesos",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Agente administrador de la organización",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Pon en marcha tu espacio de trabajo de agentes en 20 minutos",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Qué es una organización AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Guías para trabajar con agentes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/es/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "es",
+  "h1": "Notas sobre organizaciones AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Agentes para os seus processos",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Agente administrador da organização",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Monte seu ambiente de trabalho com agentes em 20 minutos",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "O que é uma organização AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Guias para trabalhar com agentes",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/pt-br/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "pt-BR",
+  "h1": "Notas sobre organizações AI-native",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "为你的流程服务的智能体",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "组织管理员智能体",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "20 分钟搭建你的智能体工作空间",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "什么是 AI 原生组织",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "与智能体协作的指南",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/zh-hans/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "zh-Hans",
+  "h1": "关于 AI 原生组织的笔记",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/agents/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "自社のプロセスのためのエージェント",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/agents/organization-administrator/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "組織管理者エージェント",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/guides/start-agent-workplace/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "20分でエージェントワークプレースを始める",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/blog/what-is-an-ai-native-organization/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "AIネイティブな組織とは",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/guides/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "エージェントと働くためのガイド",
+  "wide": [],
+  "errors": []
+ },
+ {
+  "path": "/ja/blog/",
+  "width": 390,
+  "status": 200,
+  "overflow": 0,
+  "lang": "ja",
+  "h1": "AIネイティブな組織についてのノート",
+  "wide": [],
+  "errors": []
+ }
+]

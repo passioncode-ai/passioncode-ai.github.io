@@ -1,0 +1,16 @@
+{
+  "page": "agents/support-answerer/index.html",
+  "strings": {
+    "Support agent template | PassionCode.ai": "客户支持智能体模板 | PassionCode.ai",
+    "Checked answers": "经过核对的回答",
+    "Every draft is checked against your knowledge base and by a second model before it is sent.": "每份回答草稿在发送前都会对照你的知识库检查，并由第二个模型复核。",
+    "Nobody left waiting": "不让任何人干等",
+    "A question it cannot answer becomes a hand-off, a card for your staff and a follow-up.": "它答不了的问题会变成一次交接、一张给员工的卡片和一次跟进。",
+    "Learns from your people": "向你的员工学习",
+    "An answer a person gives goes back into the knowledge base.": "人给出的回答会回到知识库中。",
+    "For teams with a support inbox, a community chat or a help bot that is never fully covered.": "适合有客服收件箱、社区群聊或帮助机器人却总是忙不过来的团队。",
+    "Faster first answers in every language": "每种语言的首次回复都更快",
+    "Gaps in your knowledge base you can see": "知识库的缺口清晰可见",
+    "Quality measured every day": "每天衡量质量"
+  }
+}

@@ -68,7 +68,7 @@ Da própria requisição: o país que o Cloudflare informa para a sua conexão, 
 
 ## Por quê, e com que base legal
 
-Para responder à sua solicitação e preparar uma proposta — providências que você pede antes de um possível contrato (GDPR, art. 6(1)(b)); por isso o formulário não tem caixa de consentimento. As verificações contra abuso se baseiam no nosso legítimo interesse em manter o formulário utilizável (art. 6(1)(f)). Novidades de produto só vão para quem pediu, e essas pessoas podem retirar o consentimento a qualquer momento (art. 6(1)(a)).
+Para responder à sua solicitação e preparar uma proposta: providências que você pede antes de um possível contrato (GDPR, art. 6(1)(b)); por isso o formulário não tem caixa de consentimento. As verificações contra abuso se baseiam no nosso legítimo interesse em manter o formulário utilizável (art. 6(1)(f)). Novidades de produto só vão para quem pediu, e essas pessoas podem retirar o consentimento a qualquer momento (art. 6(1)(a)).
 
 ## Onde os dados ficam
 
@@ -113,6 +113,12 @@ Começar
 Visão
 
 Para organizações
+
+Modelos de agentes
+
+Guias
+
+Blog
 
 Switchboard
 

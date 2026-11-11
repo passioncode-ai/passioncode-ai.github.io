@@ -226,6 +226,12 @@ Vision
 
 For organizations
 
+Agent templates
+
+Guides
+
+Blog
+
 Switchboard
 
 Observatory

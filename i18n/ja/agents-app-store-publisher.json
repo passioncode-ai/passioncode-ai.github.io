@@ -1,0 +1,16 @@
+{
+  "page": "agents/app-store-publisher/index.html",
+  "strings": {
+    "App store publisher agent template | PassionCode.ai": "アプリストア公開エージェントのテンプレート | PassionCode.ai",
+    "Keywords with demand": "需要のあるキーワード",
+    "Places keywords across fields, languages and storefronts by the demand behind them.": "背後にある需要にもとづいて、キーワードを各項目、言語、ストアフロントに配置します。",
+    "Listings in every language": "すべての言語の掲載情報",
+    "Has listing copy written, checked and localized, and orders screenshots and store graphics.": "掲載文の執筆、確認、ローカライズを手配し、スクリーンショットとストア用グラフィックを発注します。",
+    "Publishing in two steps": "2段階の公開",
+    "Shows the exact change first and applies only that change, after a person approves it.": "まず正確な変更内容を示し、人が承認したあとで、その変更だけを適用します。",
+    "For teams that publish apps on the App Store, Google Play or Meta Horizon.": "App Store、Google Play、Meta Horizon でアプリを公開しているチームのために。",
+    "Listings checked before review": "審査の前に確認された掲載情報",
+    "Reviews answered under your policy": "ポリシーに沿ったレビューへの返信",
+    "Rankings tracked every day": "毎日追跡される順位"
+  }
+}

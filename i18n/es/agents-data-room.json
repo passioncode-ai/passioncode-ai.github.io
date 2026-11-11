@@ -1,0 +1,16 @@
+{
+  "page": "agents/data-room/index.html",
+  "strings": {
+    "Data room agent template | PassionCode.ai": "Agente de sala de datos: plantilla | PassionCode.ai",
+    "One book of facts": "Un solo libro de datos",
+    "Finance, metrics, team, product and any block you add, each fact with where it came from.": "Finanzas, métricas, equipo, producto y cualquier bloque que añadas, cada dato con su procedencia.",
+    "Access by level": "Acceso por nivel",
+    "People and agents read the blocks their key opens, and nothing about one person leaves.": "Personas y agentes leen los bloques que abre su clave, y nada sobre una persona concreta sale de ahí.",
+    "Never invents a number": "Nunca inventa una cifra",
+    "A missing value stays missing: it is never filled with a guess or a zero.": "Un valor que falta sigue faltando: nunca se rellena con una suposición ni con un cero.",
+    "For organizations whose numbers live in many spreadsheets and disagree with each other.": "Para organizaciones cuyas cifras viven en muchas hojas de cálculo y no coinciden entre sí.",
+    "One answer when someone asks for a number": "Una sola respuesta cuando alguien pide una cifra",
+    "Agents that quote facts with their sources": "Agentes que citan los datos con sus fuentes",
+    "Reports for the board and investors from one place": "Informes para el consejo y los inversores desde un solo lugar"
+  }
+}

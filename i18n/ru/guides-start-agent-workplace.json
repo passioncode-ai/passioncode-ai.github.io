@@ -1,0 +1,24 @@
+{
+  "page": "guides/start-agent-workplace/index.html",
+  "strings": {
+    "Start your agent workplace in 20 minutes | PassionCode.ai": "Рабочее место для ИИ-агентов за 20 минут | PassionCode.ai",
+    "What happens, step by step, when you set up PassionCode on your computer: what you need, the one command, your first agent and how to check it.": "Что происходит по шагам, когда вы настраиваете PassionCode на своём компьютере: что нужно, одна команда, первый агент и как его проверить.",
+    "What you need": "Что нужно",
+    "A computer with Node.js 18 or newer, and Claude Code or Codex. Fabric, the home for your projects and their agents, is an early preview and also needs Docker and the Supabase CLI on every system. Everything is open source and free for personal use.": "Компьютер с Node.js 18 или новее и Claude Code или Codex. Fabric, дом для ваших проектов и их агентов, пока в ранней предварительной версии, и на любой системе ему нужны ещё Docker и Supabase CLI. Всё это открытый код, бесплатный для личного использования.",
+    "Run one command": "Выполните одну команду",
+    "On macOS, one command installs the tools you choose from their signed releases, connects their MCP servers to your coding agent and adds the skills. On Windows and Linux, download the apps from their pages first, then run the same command for the skills and the MCP servers. It installs nothing whose signature or checksum fails. You can also hand the job to your coding agent:": "На macOS одна команда устанавливает выбранные вами инструменты из их подписанных релизов, подключает их MCP-серверы к вашему агенту для программирования и добавляет навыки (skills). На Windows и Linux сначала скачайте приложения с их страниц, затем выполните ту же команду для навыков и MCP-серверов. Команда не установит ничего, у чего не сходится подпись или контрольная сумма. Можно и поручить это агенту для программирования:",
+    "the command and a prompt for your coding agent are on the Get started page": "команда и промпт для него есть на странице «Начало работы»",
+    "Restart your coding agent and check": "Перезапустите агента для программирования и проверьте",
+    "Restart Claude Code or Codex so it picks up the new tools. Run the same command again, or": "Перезапустите Claude Code или Codex, чтобы он подхватил новые инструменты. Снова выполните ту же команду или",
+    "to check without changing anything: it tells you what is set up, what is missing and the steps only you can take, such as signing in.": "для проверки без изменений: вы увидите, что настроено, чего не хватает и какие шаги можете сделать только вы, например войти в аккаунт.",
+    "Create or adapt your first agent": "Создайте или адаптируйте первого агента",
+    "Ask your coding agent for what you need, in plain words, or start from Fabric’s Create and Adapt actions. The Fabric Agent Adapter skill asks its questions first and shows its plan before it changes anything. You get an agent with a contract, a dashboard and tests.": "Опишите агенту для программирования простыми словами, что вам нужно, или начните с действий «Создать» и «Адаптировать» в Fabric. Навык Fabric Agent Adapter сначала задаёт вопросы и показывает план, прежде чем что-то менять. В итоге у вас будет агент с контрактом, дашбордом и тестами.",
+    "See it run": "Посмотрите, как он работает",
+    "Fabric Dashboards shows every local agent service in one window: what it is doing and what it spends. Your coding agent can start, stop and open them for you.": "Fabric Dashboards показывает все локальные сервисы агентов в одном окне: что каждый делает и сколько тратит. Ваш агент для программирования может запускать, останавливать и открывать их за вас.",
+    "Add the next agent to the same project": "Добавьте следующего агента в тот же проект",
+    "Build the next agent the same way and give it the same project in Fabric. Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "Соберите следующего агента тем же способом и подключите его к тому же проекту в Fabric. У агентов, подключённых к Fabric, общие доска, память и передачи работы одного проекта, поэтому один продолжает с того места, где остановился другой.",
+    "If something does not work": "Если что-то не работает",
+    "Run the command again: on a computer that is already set up, it checks everything, repairs what is wrong and shows what changed. Each product page lists its requirements and limits.": "Выполните команду ещё раз: на уже настроенном компьютере она всё проверит, исправит то, что не так, и покажет, что изменилось. На странице каждого продукта указаны его требования и ограничения.",
+    "Set it up now": "Настроить сейчас"
+  }
+}

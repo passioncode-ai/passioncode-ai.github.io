@@ -1,0 +1,16 @@
+{
+  "page": "agents/app-store-publisher/index.html",
+  "strings": {
+    "App store publisher agent template | PassionCode.ai": "Szablon agenta publikacji w sklepach z aplikacjami | PassionCode.ai",
+    "Keywords with demand": "Słowa kluczowe z popytem",
+    "Places keywords across fields, languages and storefronts by the demand behind them.": "Rozmieszcza słowa kluczowe w polach, językach i krajowych wersjach sklepów według stojącego za nimi popytu.",
+    "Listings in every language": "Opisy w każdym języku",
+    "Has listing copy written, checked and localized, and orders screenshots and store graphics.": "Zleca napisanie, sprawdzenie i lokalizację tekstów opisów oraz zamawia zrzuty ekranu i grafiki do sklepu.",
+    "Publishing in two steps": "Publikacja w dwóch krokach",
+    "Shows the exact change first and applies only that change, after a person approves it.": "Najpierw pokazuje dokładną zmianę i wprowadza tylko ją, gdy zatwierdzi ją człowiek.",
+    "For teams that publish apps on the App Store, Google Play or Meta Horizon.": "Dla zespołów, które publikują aplikacje w App Store, Google Play lub Meta Horizon.",
+    "Listings checked before review": "Opisy sprawdzone przed weryfikacją w sklepie",
+    "Reviews answered under your policy": "Odpowiedzi na opinie zgodne z Twoimi zasadami",
+    "Rankings tracked every day": "Pozycje śledzone każdego dnia"
+  }
+}

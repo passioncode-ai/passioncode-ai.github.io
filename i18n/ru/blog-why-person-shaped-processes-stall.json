@@ -1,0 +1,20 @@
+{
+  "page": "blog/why-person-shaped-processes-stall/index.html",
+  "strings": {
+    "Why processes built around people stall | PassionCode.ai": "Почему буксуют процессы вокруг людей | PassionCode.ai",
+    "Adding AI assistants to a process built around people keeps the person as the bottleneck. What changes when agents run the process and people steer it.": "С ИИ-ассистентами в процессе, построенном вокруг людей, узким местом остаётся человек. Что меняется, когда процесс ведут агенты, а люди его направляют.",
+    "The person is still the bottleneck": "Узкое место по-прежнему человек",
+    "An assistant drafts and analyzes, then hands the result back to a person. Ten assistants hand back ten results. The work waits until that person has time to read them.": "Ассистент пишет черновик и анализирует, а затем возвращает результат человеку. Десять ассистентов возвращают десять результатов. Работа ждёт, пока у этого человека появится время их прочитать.",
+    "Meetings reconcile what the assistants made": "Встречи сводят то, что сделали ассистенты",
+    "Two people with their own assistants produce more than either can read. They meet to agree on it, and the process stays exactly as it was.": "Два человека со своими ассистентами производят больше, чем каждый успевает прочитать. Они встречаются, чтобы договориться, и процесс остаётся точно таким же.",
+    "Everyone builds their own agents": "Каждый собирает своих агентов",
+    "No shared rules, no shared memory, keys pasted wherever someone works, and no record of what an agent did or what it cost. It adds work instead of removing it.": "Нет общих правил, нет общей памяти, ключи вставлены везде, где кто-то работает, и нет записи о том, что агент сделал и сколько это стоило. Работы от этого становится больше, а не меньше.",
+    "Most companies now experiment with agents, and few run them across a whole function (": "Большинство компаний уже пробуют агентов, но немногие запускают их на целую функцию (",
+    "McKinsey, The State of AI, November 2025": "McKinsey, The State of AI, ноябрь 2025",
+    "). Gartner expects over 40% of agentic AI projects to be canceled by the end of 2027 (": "). Gartner ожидает, что к концу 2027 года будет отменено более 40% проектов агентного ИИ (",
+    "Gartner, June 2025": "Gartner, июнь 2025",
+    "What changes": "Что меняется",
+    "The process itself has to move. When work moves between agents instead of between people, an agent takes the task and hands it to the next agent, and they settle it on one board with the record. People keep what only people can do: direction, control and expertise. More work then means more agents, not more people.": "Меняться должен сам процесс. Когда работа переходит между агентами, а не между людьми, агент берёт задачу и передаёт её следующему агенту, и они доводят её до конца на одной доске, с записью. За людьми остаётся то, что могут только люди: направление, контроль и экспертиза. Тогда больше работы означает больше агентов, а не больше людей.",
+    "Read the vision": "Прочитать видение"
+  }
+}

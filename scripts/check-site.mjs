@@ -1,12 +1,13 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
-import { existsSync, readFileSync, statSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 import { PAGES, NOINDEX, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { LEAD_OPTIONS } from '../assets/lead-options.js'
 import { alternates, isoDuration, langTag, languageSwitch, LOCALES, mp4Seconds, vttText, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
+import { catalogParts, dashFindings, moduleStringParts, readableParts, textFileParts } from './public-dashes.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const read = path => readFileSync(resolve(root, path), 'utf8')
@@ -110,7 +111,7 @@ for (const file of PAGES) {
   if (source !== 'inbox/index.html') assert.ok(html.includes(primaryNav(locale)), `${file}: primary navigation`)
   assert.equal((html.match(/<footer class="story-footer">/g) || []).length, 1, `${file}: one footer`)
   assert.equal((html.match(/<nav aria-label="[^"]+"><a href="[^"]*\/start\/">/g) || []).length, 1, `${file}: one footer navigation landmark`)
-  for (const path of ['/start/', '/business/', '/privacy/']) assert.ok(html.includes(`<a href="${prefix}${path}">`), `${file}: footer links ${prefix}${path}`)
+  for (const path of ['/start/', '/business/', '/privacy/', '/agents/', '/guides/', '/blog/']) assert.ok(html.includes(`<a href="${prefix}${path}">`), `${file}: footer links ${prefix}${path}`)
   // A translated page links to pages in its own language; only the language switch and the
   // hreflang alternates point to the others.
   if (locale !== 'en') {
@@ -150,6 +151,20 @@ for (const block of sitemap.match(/<url>[\s\S]*?<\/url>/g)) {
 }
 assert.match(sitemap, /xmlns:xhtml="http:\/\/www\.w3\.org\/1999\/xhtml"/, 'sitemap declares the xhtml namespace')
 console.log(`PASS: ${PAGES.length} static pages, metadata, CSP-safe markup, anchors, live values, shared header and footer`)
+
+// SITE-057: no em dash and no substitute for one in the words people read, in every language
+// (scripts/public-dashes.mjs names what counts as read and the allowlist).
+{
+  const sources = [
+    ...PAGES.map(file => [file, readableParts(read(file))]),
+    ...LOCALES.filter(l => l !== 'en').flatMap(locale => readdirSync(resolve(root, 'i18n', locale)).filter(f => f.endsWith('.json')).map(f => `i18n/${locale}/${f}`)).map(file => [file, catalogParts(JSON.parse(read(file)))]),
+    ...['assets/messages.js', 'worker/messages.js'].map(file => [file, moduleStringParts(read(file))]),
+    ...['llms.txt', 'business/agent-request.txt'].filter(file => existsSync(resolve(root, file))).map(file => [file, textFileParts(read(file))])
+  ]
+  const problems = sources.flatMap(([file, parts]) => dashFindings(parts).map(f => `${file}: ${f.rule} in ${f.where}: …${f.excerpt}…`))
+  assert.deepEqual(problems, [], `dashes in public text (rewrite with a full stop, comma, colon or parentheses):\n${problems.join('\n')}`)
+  console.log(`PASS: no em dash or substitute in public text, ${sources.length} files`)
+}
 
 // ---- the homepage: the hero, why, two doors, the tools, source, FAQ, the founder note ---------
 // Simplified 2026-10-10 (operator): the hero and its narrative are unchanged; after it, one beat
@@ -492,3 +507,47 @@ for (const text of ['<time datetime="2026-10-14">14 October 2026</time>', 'the r
 assert.ok(!/\d+(?:\.\d+)?\s?%/.test(currentWords(agentsPage)), 'fabric/agents: OpenRouter shares are named as "largest", never as percentages')
 assert.ok(fabric.includes('href="/fabric/agents/"'), 'the Fabric page links its supported coding agents')
 console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one level, as of 2026-10-14`)
+
+// ---- SITE-056: the agent templates, guides and blog ---------------------------------------
+// Rendered by scripts/build-content-pages.mjs from scripts/site-content.mjs; the brief is docs/seo/brief-2026-11-08.md.
+{
+  const { TEMPLATES, GUIDES, POSTS } = await import('./site-content.mjs')
+  const { CONTENT_PAGES } = await import('./build-content-pages.mjs')
+  for (const page of CONTENT_PAGES) assert.ok(SOURCE_PAGES.includes(page), `scripts/pages.mjs lists ${page}`)
+  const market = read('agents/index.html')
+  for (const t of TEMPLATES) assert.ok(market.includes(`<a href="/agents/${t.slug}/">`), `/agents/ links ${t.slug}`)
+  const lists = [...market.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]))
+  assert.equal(lists.find(d => d['@type'] === 'CollectionPage').mainEntity.itemListElement.length, TEMPLATES.length, '/agents/: ItemList of every template')
+  // Never on a public page of this section: a source agent's, an organization's or a client's name, the private library.
+  const PRIVATE = /appvillis|nicegram|esim|privatephonebot|sms-activate|fabric-agents-database|sources\.json|org-[a-f]\b/i
+  for (const locale of LOCALES) {
+    for (const page of CONTENT_PAGES) {
+      const file = locale === 'en' ? page : `${locale}/${page}`
+      const html = read(file)
+      assert.ok(!PRIVATE.test(html), `${file}: a private name (SITE-056 brief, "Do not build")`)
+      assert.ok(!html.slice(html.indexOf('<main'), html.indexOf('</main>')).includes('\u2014'), `${file}: an em dash in the content`)
+      const types = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1])['@type'])
+      assert.ok(types.includes('BreadcrumbList'), `${file}: BreadcrumbList`)
+      assert.ok(html.includes('<nav class="breadcrumbs" aria-label='), `${file}: visible breadcrumbs`)
+    }
+  }
+  for (const t of TEMPLATES) {
+    const html = read(`agents/${t.slug}/index.html`)
+    assert.ok(/"@type": "Service"/.test(html), `${t.slug}: Service data`)
+    assert.equal((html.match(/data-template="([a-z-]+)"/g) || []).length, 2, `${t.slug}: two Create your agent buttons carry data-template`)
+    assert.ok(html.includes(`data-template="${t.slug}"`), `${t.slug}: data-template names its own slug`)
+  }
+  for (const page of CONTENT_PAGES) {
+    const html = read(page)
+    const title = /<title>([^<]*)<\/title>/.exec(html)[1].replace(/&amp;/g, '&')
+    const description = /<meta name="description" content="([^"]*)">/.exec(html)[1].replace(/&amp;/g, '&')
+    assert.ok(title.length <= 60, `${page}: title ${title.length} > 60`)
+    assert.ok(description.length <= 155, `${page}: description ${description.length} > 155`)
+  }
+  for (const a of [...GUIDES.map(g => `guides/${g.slug}/index.html`), ...POSTS.map(p => `blog/${p.slug}/index.html`)]) {
+    const html = read(a)
+    assert.ok(/"@type": "(Article|BlogPosting)"/.test(html) && html.includes('"datePublished": "2026-11-08"') && html.includes('<time datetime="2026-11-08">'), `${a}: Article with its visible date`)
+  }
+  assert.ok(read('index.html').includes('<a href="/agents/" data-cta="agents" data-cta-location="agents">'), 'home #agents links /agents/')
+  console.log(`PASS: SITE-056 agent templates (${TEMPLATES.length}), guides (${GUIDES.length}) and blog (${POSTS.length}) in ${LOCALES.length} languages`)
+}

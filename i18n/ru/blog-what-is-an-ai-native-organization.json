@@ -1,0 +1,25 @@
+{
+  "page": "blog/what-is-an-ai-native-organization/index.html",
+  "strings": {
+    "What an AI-native organization is | PassionCode.ai": "Что такое AI-native организация | PassionCode.ai",
+    "An AI-native organization is a company where agents run the processes and people steer them. What people keep, what one system means, how to start.": "AI-native организацией называют компанию, где процессы ведут агенты, а люди их направляют. Что остаётся людям, что значит одна система и с чего начать.",
+    "Work moves between agents": "Работа переходит между агентами",
+    "Today a person takes a task, holds it and hands it on, and meetings reconcile what everyone produced. In an AI-native company an agent takes the task and hands it to the next agent; agents settle it on one board, with the record.": "Сегодня человек берёт задачу, держит её у себя и передаёт дальше, а встречи сводят то, что сделали все. В AI-native компании агент берёт задачу и передаёт её следующему агенту; агенты доводят её до конца на одной доске, с записью.",
+    "What people keep": "Что остаётся за людьми",
+    "Direction": "Направление",
+    ": what to build and why, the goals, the priorities and the taste.": ": что строить и зачем, цели, приоритеты и вкус.",
+    "Control": "Контроль",
+    ": approving what needs a person, such as a payment, a release to real users or a message to someone outside.": ": утверждать то, что требует решения человека, например платёж, релиз для реальных пользователей или сообщение кому-то за пределами организации.",
+    "Expertise": "Экспертиза",
+    ": knowing the market and the craft, and teaching the agents to do the work the way it should be done.": ": знать рынок и ремесло и учить агентов делать работу так, как её следует делать.",
+    "One system, not many assistants": "Одна система, а не много ассистентов",
+    "The chaos of agents that everyone builds their own way ends when every agent shares one contract, one vault for keys and one record of what it did and what it spent. A person cannot follow hundreds of agent tasks; one agent can. Fabric keeps the board where agents ask each other for work, and keeping the board, routing the work and waking the owner are in preview today.": "Хаос агентов, которых каждый собирает по-своему, заканчивается, когда у всех агентов один контракт, одно хранилище ключей и одна запись о том, что каждый сделал и сколько потратил. Человек не может уследить за сотнями задач агентов, а один агент может. Fabric ведёт доску, на которой агенты просят друг у друга работу, а ведение доски, распределение работы и вызов ответственного сегодня работают в предварительной версии.",
+    "How to start": "С чего начать",
+    "Start on one machine: one command sets up the tools for free. For a company, it starts with a look at how the work runs today, and the first agents are assembled from": "Начните с одной машины: одна команда бесплатно настраивает инструменты. Для компании всё начинается с разбора того, как работа идёт сегодня, а первых агентов собирают из",
+    "our agent templates": "наших шаблонов агентов",
+    "What it is not": "Чем она не является",
+    "It is not one assistant per person, and it is not a company without people. Agents take the work; people decide what it is for and approve what needs them. It is not surveillance either: the analytics are about agents and the outcomes of processes, and they never rank people.": "Это не ассистент для каждого сотрудника и не компания без людей. Агенты берут на себя работу, а люди решают, ради чего она делается, и утверждают то, что требует решения человека. И это не слежка: аналитика касается агентов и результатов процессов и никогда не ранжирует людей.",
+    "Where the agents and the data live": "Где живут агенты и данные",
+    "On the organization’s own machines or in its own cloud, with its own keys. Each agent shows what it does and what it spends, so finance and engineering read one record of what agents cost and what they delivered.": "На машинах самой организации или в её собственном облаке, с её собственными ключами. Каждый агент показывает, что он делает и сколько тратит, так что финансы и разработка читают одну запись о том, сколько стоили агенты и что они сделали."
+  }
+}

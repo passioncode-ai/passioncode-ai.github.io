@@ -205,7 +205,7 @@ FÜR AGENTEN
 
 ## kann auch ein Agent
 
-Dein Server spricht das Model Context Protocol unter /mcp. Jede Funktion der App ist auch ein MCP-Tool, sodass Claude Code oder ein anderer MCP-Client Mails lesen, sortieren und senden und Adressen verwalten kann – im Rahmen der Stufe seines Schlüssels.
+Dein Server spricht das Model Context Protocol unter /mcp. Jede Funktion der App ist auch ein MCP-Tool, sodass Claude Code oder ein anderer MCP-Client Mails lesen, sortieren und senden und Adressen verwalten kann, im Rahmen der Stufe seines Schlüssels.
 
 01
 
@@ -278,6 +278,12 @@ Loslegen
 Vision
 
 Für Organisationen
+
+Agentenvorlagen
+
+Anleitungen
+
+Blog
 
 Switchboard
 

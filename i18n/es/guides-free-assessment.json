@@ -1,0 +1,21 @@
+{
+  "page": "guides/free-assessment/index.html",
+  "strings": {
+    "How the free one-week assessment works | PassionCode.ai": "Cómo funciona la evaluación gratuita de una semana | PassionCode.ai",
+    "One agent reads how your company works for a week, then you get a map of your processes and an offer: which work agents take first and what it costs.": "Un agente lee una semana cómo funciona tu empresa; luego recibes un mapa de tus procesos y una propuesta: qué asumen primero los agentes y cuánto cuesta.",
+    "Before the week": "Antes de la semana",
+    "You answer four questions: your goal, the size of your team, the systems you use and what hurts most. You give read-only access to those systems, one link each. Our engineer agent sets the assessment agent up in a space of its own for your organization, or on your own machine if no data should leave it. This takes about twenty minutes of your time.": "Respondes cuatro preguntas: tu objetivo, el tamaño de tu equipo, los sistemas que usas y lo que más te duele. Das acceso de solo lectura a esos sistemas, un enlace por cada uno. Nuestro agente ingeniero configura el agente de evaluación en un espacio propio para tu organización, o en tu propia máquina si ningún dato debe salir de ella. Esto te lleva unos veinte minutos.",
+    "During the week": "Durante la semana",
+    "The agent connects to your trackers, repositories, documents, team chats, mail and support, and reads the last 90 days. Then it follows the work as it happens: what was planned and what happened, where work waits and for how long. If the data leaves gaps, it may ask your team a few short questions in the channel they already use, anonymous by default. Nothing changes in your systems.": "El agente se conecta a tus gestores de tareas, repositorios, documentos, chats del equipo, correo y soporte, y lee los últimos 90 días. Después sigue el trabajo a medida que ocurre: qué se planificó y qué pasó, dónde espera el trabajo y durante cuánto tiempo. Si los datos dejan lagunas, puede hacer a tu equipo unas pocas preguntas breves en el canal que ya usa, anónimas por defecto. Nada cambia en tus sistemas.",
+    "What you get on day seven": "Qué recibes el séptimo día",
+    "A map of your processes: the kinds of tasks, how much time each takes and how work moves between people and systems.": "Un mapa de tus procesos: los tipos de tareas, cuánto tiempo lleva cada una y cómo pasa el trabajo entre personas y sistemas.",
+    "Plan against fact, the blockers and waits, and where the documented process differs from the real one.": "Lo planificado frente a lo real, los bloqueos y las esperas, y dónde el proceso documentado difiere del real.",
+    "The offer: the processes agents should take over first, the hours each frees, the agent template that does it, and a pilot on one process to prove it.": "La propuesta: los procesos que los agentes deberían asumir primero, las horas que libera cada uno, la plantilla de agente que lo hace y un piloto en un proceso para demostrarlo.",
+    "We go through it with you in a 30-minute call, and you keep it as a page.": "Lo repasamos contigo en una llamada de 30 minutos, y te lo quedas como una página.",
+    "About people, never scores": "Sobre las personas, nunca puntuaciones",
+    "The assessment reads processes, not people. It reports totals for groups, never a score for a person, and what stays with people (direction, control and expertise) is part of the offer.": "La evaluación lee procesos, no personas. Informa de totales por grupo, nunca de una puntuación de una persona, y lo que sigue en manos de las personas (dirección, control y experiencia) forma parte de la propuesta.",
+    "After the week": "Después de la semana",
+    "If you go ahead, the pilot starts in the same place. If not, access is revoked, the data is deleted, and you receive a confirmation that it was.": "Si sigues adelante, el piloto empieza en el mismo lugar. Si no, se revoca el acceso, se eliminan los datos y recibes una confirmación de que se hizo.",
+    "Ask for an assessment": "Solicita una evaluación"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai — zestaw narzędzi dla zespołów AI-native",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai: zestaw narzędzi dla zespołów AI-native",
     "Is PassionCode.ai free?": "Czy PassionCode.ai jest bezpłatny?",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "Tak. Każde narzędzie ma otwarty kod na licencji GNU AGPL-3.0: możesz je bezpłatnie pobierać, używać, badać i zmieniać. Licencja komercyjna jest potrzebna, gdy wbudowujesz narzędzie w zamknięty produkt albo uruchamiasz zmodyfikowaną usługę bez publikowania jej kodu źródłowego.",
     "Which agents does it work with?": "Z którymi agentami to działa?",
@@ -26,7 +26,7 @@
     "Fabric Dashboards": "Fabric Dashboards",
     "Every local agent service in one window, driven by you or by agents.": "Wszystkie lokalne usługi agentów w jednym oknie, sterowane przez Ciebie lub przez agentów.",
     "Project Observatory": "Project Observatory",
-    "What changed in every project, what needs attention, with the evidence.": "Co zmieniło się w każdym projekcie i co wymaga uwagi — wraz z dowodami.",
+    "What changed in every project, what needs attention, with the evidence.": "Co zmieniło się w każdym projekcie i co wymaga uwagi, wraz z dowodami.",
     "Fabric Inbox": "Fabric Inbox",
     "Gmail and Cloudflare mail in one list, important first; agents answer by policy.": "Poczta Gmail i Cloudflare na jednej liście, ważne na górze; agenci odpowiadają według reguł.",
     "Development preview": "Wersja zapoznawcza w rozwoju",
@@ -233,6 +233,7 @@
     "Start free": "Zacznij bezpłatnie",
     "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "Firmy będą działać na agentach, a ktoś musi prowadzić proces między nimi. PassionCode.ai buduje to miejsce pracy: Fabric, który prowadzi tablicę agentów, i narzędzia wokół niego. Działa na nim już nasza własna praca. To open source na licencji GNU AGPL-3.0, bezpłatne do użytku osobistego; organizacje dostają licencję komercyjną i nasze usługi. Budują to dwaj współzałożyciele przedstawieni wyżej. Kontakt:",
     "PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data": "PassionCode.ai w półtorej minuty: jak praca przechodzi od ludzi do agentów prowadzonych przez Fabric i jak zespół wyrasta na organizację, z lektorem i napisami. Tablica pokazuje przykładowe dane",
-    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "Jak praca przechodzi od ludzi do agentów prowadzonych przez Fabric i jak zespół wyrasta na organizację, z lektorem i napisami. Tablica pokazuje przykładowe dane."
+    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "Jak praca przechodzi od ludzi do agentów prowadzonych przez Fabric i jak zespół wyrasta na organizację, z lektorem i napisami. Tablica pokazuje przykładowe dane.",
+    "The agent templates we assemble for organizations": "Szablony agentów, które składamy dla organizacji"
   }
 }

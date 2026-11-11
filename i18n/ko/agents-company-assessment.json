@@ -1,0 +1,16 @@
+{
+  "page": "agents/company-assessment/index.html",
+  "strings": {
+    "Company assessment agent template | PassionCode.ai": "회사 평가 에이전트 템플릿 | PassionCode.ai",
+    "Maps the work": "업무를 지도로 그립니다",
+    "Builds a map of the kinds of tasks, how long each takes and how work moves between people and systems.": "작업의 종류, 각각에 걸리는 시간, 사람과 시스템 사이에서 일이 오가는 방식을 지도로 만듭니다.",
+    "Finds the waits": "대기 지점을 찾습니다",
+    "Shows where work stops and for how long, and where the written process differs from the real one.": "일이 어디서 얼마나 멈추는지, 문서화된 프로세스가 실제와 어디서 다른지 보여 줍니다.",
+    "Plans the redesign": "재설계를 계획합니다",
+    "Proposes which kinds of work an agent takes, where a person stays, and how many hours that frees.": "에이전트가 어떤 종류의 일을 맡고, 어디에 사람이 남으며, 그로써 몇 시간이 확보되는지 제안합니다.",
+    "For founders and leaders who want a true picture of their processes before they change them.": "프로세스를 바꾸기 전에 그 실제 모습을 알고 싶은 창업자와 리더에게 적합합니다.",
+    "A process map built from evidence, not from interviews alone": "인터뷰만이 아니라 증거로 만든 프로세스 지도",
+    "A ranked list of processes for agents, each with its estimate": "에이전트에게 맡길 프로세스의 우선순위 목록과 각각의 추정치",
+    "Readings about processes, never scores of people": "사람의 점수가 아닌 프로세스에 대한 분석"
+  }
+}

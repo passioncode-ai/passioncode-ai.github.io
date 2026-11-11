@@ -52,7 +52,7 @@ PROJECT OBSERVATORY · VON PASSIONCODE
 
 # Wieder im Blick
 
-Sieh, was sich in den Projekten deiner Agenten geändert hat und was dich zuerst braucht, auch wo ein bekannter API-Schlüssel eine Kopie hinterlassen hat – in einem lokalen Dashboard auf Englisch oder Russisch
+Sieh, was sich in den Projekten deiner Agenten geändert hat und was dich zuerst braucht, auch wo ein bekannter API-Schlüssel eine Kopie hinterlassen hat, in einem lokalen Dashboard auf Englisch oder Russisch
 
 IM TOOLKIT Gedächtnis und Nachweise: was sich in jedem Projekt geändert hat, was entschieden wurde und was Aufmerksamkeit braucht. Schritt 5 in „So funktioniert es“. Alle Tools
 
@@ -100,7 +100,7 @@ Wähle den Projektordner, den du beobachten willst. Observatory findet die Repos
 
 ### Sieh, was sich bewegt hat
 
-Commits, Zustand des Working Tree und Arbeit, die nur auf diesem Rechner existiert – über alle erfassten Projekte hinweg, jeweils mit dem Verlauf Woche für Woche.
+Commits, Zustand des Working Tree und Arbeit, die nur auf diesem Rechner existiert, über alle erfassten Projekte hinweg, jeweils mit dem Verlauf Woche für Woche.
 
 03 / BEFUNDE
 
@@ -225,6 +225,12 @@ Loslegen
 Vision
 
 Für Organisationen
+
+Agentenvorlagen
+
+Anleitungen
+
+Blog
 
 Switchboard
 

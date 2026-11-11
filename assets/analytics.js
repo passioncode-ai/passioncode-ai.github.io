@@ -16,6 +16,9 @@ export function pageOf (pathname, locales = ['ru', 'de', 'fr', 'pl', 'ko', 'es',
   const known = ['vision', 'start', 'business', 'privacy', 'switchboard', 'fabric', 'inbox', 'dashboards', 'observatory', 'design-system']
   if (parts[0] === 'business' && parts[1] === 'thanks') return 'business-thanks'
   if ((parts[0] === 'switchboard' || parts[0] === 'fabric') && parts[1] === 'agents') return `${parts[0]}-agents`
+  // SITE-056: the agent templates, guides and blog; a page under each is one kind, the slug is not a page name.
+  const sections = { agents: 'agent-template', guides: 'guide', blog: 'blog-post' }
+  if (sections[parts[0]]) return parts.length === 1 ? parts[0] : parts.length === 2 ? sections[parts[0]] : 'other'
   return known.includes(parts[0]) && parts.length === 1 ? parts[0] : 'other'
 }
 
@@ -45,7 +48,11 @@ function wire () {
   document.addEventListener('click', event => {
     const el = event.target.closest?.('[data-cta], .copy-button, .copy-prompt, .lang-switch a[hreflang]')
     if (!el) return
-    if (el.matches('[data-cta]')) track('cta_click', { location: el.dataset.ctaLocation || 'other', target: el.dataset.cta })
+    if (el.matches('[data-cta]')) {
+      track('cta_click', { location: el.dataset.ctaLocation || 'other', target: el.dataset.cta })
+      // SITE-056: which agent template a visitor asked for (catalogue: template_request).
+      if (el.dataset.template) track('template_request', { template: el.dataset.template })
+    }
     else if (el.matches('.copy-button, .copy-prompt')) track('command_copy')
     else track('lang_switch', { to: (el.getAttribute('hreflang') || '').toLowerCase() })
   })

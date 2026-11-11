@@ -1,0 +1,16 @@
+{
+  "page": "agents/support-answerer/index.html",
+  "strings": {
+    "Support agent template | PassionCode.ai": "고객 지원 에이전트 템플릿 | PassionCode.ai",
+    "Checked answers": "점검된 답변",
+    "Every draft is checked against your knowledge base and by a second model before it is sent.": "모든 초안은 보내기 전에 지식 베이스와 대조하고 두 번째 모델로 점검합니다.",
+    "Nobody left waiting": "기다리게 두지 않습니다",
+    "A question it cannot answer becomes a hand-off, a card for your staff and a follow-up.": "답할 수 없는 질문은 인계, 직원용 카드, 후속 조치가 됩니다.",
+    "Learns from your people": "조직의 사람에게서 배웁니다",
+    "An answer a person gives goes back into the knowledge base.": "사람이 준 답변은 지식 베이스로 돌아갑니다.",
+    "For teams with a support inbox, a community chat or a help bot that is never fully covered.": "지원 수신함, 커뮤니티 채팅, 도움말 봇을 늘 다 감당하지 못하는 팀에 적합합니다.",
+    "Faster first answers in every language": "모든 언어에서 더 빠른 첫 답변",
+    "Gaps in your knowledge base you can see": "눈에 보이는 지식 베이스의 빈틈",
+    "Quality measured every day": "매일 측정하는 품질"
+  }
+}

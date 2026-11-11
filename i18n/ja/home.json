@@ -1,7 +1,7 @@
 {
   "page": "index.html",
   "strings": {
-    "PassionCode.ai — a toolkit for AI-native teams": "PassionCode.ai — AIネイティブなチームのためのツールキット",
+    "PassionCode.ai: a toolkit for AI-native teams": "PassionCode.ai：AIネイティブなチームのためのツールキット",
     "Is PassionCode.ai free?": "PassionCode.ai は無料ですか？",
     "Yes. Every tool is open source under the GNU AGPL-3.0: you can download, use, study and change it at no cost. A commercial license is available when you ship it inside a closed product or run a modified hosted service without publishing its source.": "はい。すべてのツールは GNU AGPL-3.0 のオープンソースで、無料でダウンロード、利用、調査、変更できます。クローズドな製品に組み込む場合や、変更したホスト型サービスをソースを公開せずに運用する場合には、商用ライセンスをご利用いただけます。",
     "Which agents does it work with?": "どのエージェントに対応していますか？",
@@ -219,6 +219,7 @@
     "Start free": "無料で始める",
     "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "企業はエージェントによって運営されるようになり、誰かがエージェント間のプロセスを管理しなければなりません。PassionCode.ai は、そのワークプレースを開発しています。エージェントのボードを管理する Fabric と、その周辺ツールです。現在、私たち自身の業務でも稼働しています。GNU AGPL-3.0 の下でオープンソースとして提供され、個人利用は無料です。組織には商用ライセンスと私たちのサービスを提供します。上記の共同創業者 2 人が開発しています。お問い合わせ：",
     "PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data": "1 分半で分かる PassionCode.ai：仕事が人から Fabric の動かすエージェントへ移る流れと、チームが組織へ育つ道筋を、ナレーションと字幕付きで。ボードはサンプルデータです",
-    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "仕事が人から Fabric の動かすエージェントへ移る流れと、チームが組織へ育つ道筋を、ナレーションと字幕付きで。ボードはサンプルデータです。"
+    "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "仕事が人から Fabric の動かすエージェントへ移る流れと、チームが組織へ育つ道筋を、ナレーションと字幕付きで。ボードはサンプルデータです。",
+    "The agent templates we assemble for organizations": "私たちが組織のために組み立てるエージェントテンプレート"
   }
 }

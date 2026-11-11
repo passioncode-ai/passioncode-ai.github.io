@@ -1,0 +1,31 @@
+{
+  "page": "blog/index.html",
+  "strings": {
+    "Blog: notes on AI-native organizations | PassionCode.ai": "博客：关于 AI 原生组织的笔记 | PassionCode.ai",
+    "Notes from PassionCode.ai on AI-native organizations: why processes built around people stall, and what changes when agents run the process.": "PassionCode.ai 关于 AI 原生组织的笔记：为什么围绕人构建的流程会停滞，以及当智能体运行流程时会发生什么变化。",
+    "Notes on": "关于",
+    "AI-native organizations": "AI 原生组织的笔记",
+    "Why companies will run on agents, and what we learn building the tools for it": "为什么公司将依靠智能体运行，以及我们在为此构建工具时学到了什么",
+    "The blog explains the ideas behind the tools: how work changes when agents run a company’s processes and people steer them. It is for founders and leaders deciding how their company should work with AI.": "博客讲的是这些工具背后的想法：当智能体负责公司的流程、人来把握方向时，工作会发生什么变化。它写给正在决定公司如何使用 AI 的创始人和负责人。",
+    "Where to start": "从哪里开始",
+    "New to the idea:": "初次了解这个概念：",
+    "start with what an AI-native organization is.": "先读什么是 AI 原生组织。",
+    "Already giving people AI assistants:": "已经给员工配了 AI 助手：",
+    "read why processes built around people stall.": "读一读为什么围绕人构建的流程会停滞。",
+    "For leaders who gave their teams AI assistants and still wait on the same people.": "写给已经给团队配了 AI 助手、却仍在等待同样那几个人的负责人。",
+    "For founders who want a plain definition and a first step.": "写给想要一个清楚定义、并知道从哪里起步的创始人。",
+    "In this article": "本文包括",
+    "The person is still the bottleneck": "人仍然是瓶颈",
+    "Meetings reconcile what the assistants made": "会议用来协调助手生成的内容",
+    "Everyone builds their own agents": "每个人都构建自己的智能体",
+    "What changes": "有什么改变",
+    "Work moves between agents": "工作在智能体之间流转",
+    "What people keep": "人保留什么",
+    "One system, not many assistants": "一个系统，而不是许多助手",
+    "What it is not": "它不是什么",
+    "Where the agents and the data live": "智能体和数据在哪里",
+    "How to start": "如何开始",
+    "Ready to try it in your company:": "准备在公司里试一试：",
+    "read how the free one-week assessment works.": "读一读为期一周的免费评估如何进行。"
+  }
+}

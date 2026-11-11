@@ -68,7 +68,7 @@ Aus der Anfrage selbst: das Land, das Cloudflare für deine Verbindung meldet, d
 
 ## Warum und auf welcher Grundlage
 
-Um deine Anfrage zu beantworten und ein Angebot vorzubereiten – Schritte, um die du vor einem möglichen Vertrag bittest (DSGVO Art. 6 Abs. 1 lit. b); deshalb hat das Formular kein Einwilligungskästchen. Die Missbrauchsprüfungen beruhen auf unserem berechtigten Interesse, das Formular nutzbar zu halten (Art. 6 Abs. 1 lit. f). Produktneuigkeiten erhalten nur Menschen, die darum gebeten haben, und sie können diese Einwilligung jederzeit widerrufen (Art. 6 Abs. 1 lit. a).
+Um deine Anfrage zu beantworten und ein Angebot vorzubereiten: Schritte, um die du vor einem möglichen Vertrag bittest (DSGVO Art. 6 Abs. 1 lit. b); deshalb hat das Formular kein Einwilligungskästchen. Die Missbrauchsprüfungen beruhen auf unserem berechtigten Interesse, das Formular nutzbar zu halten (Art. 6 Abs. 1 lit. f). Produktneuigkeiten erhalten nur Menschen, die darum gebeten haben, und sie können diese Einwilligung jederzeit widerrufen (Art. 6 Abs. 1 lit. a).
 
 ## Wo die Daten gespeichert werden
 
@@ -113,6 +113,12 @@ Loslegen
 Vision
 
 Für Organisationen
+
+Agentenvorlagen
+
+Anleitungen
+
+Blog
 
 Switchboard
 

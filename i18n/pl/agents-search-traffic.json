@@ -1,0 +1,16 @@
+{
+  "page": "agents/search-traffic/index.html",
+  "strings": {
+    "Search traffic (SEO) agent template | PassionCode.ai": "Szablon agenta ruchu z wyszukiwarek (SEO) | PassionCode.ai",
+    "A daily record": "Codzienny zapis",
+    "Keeps search, analytics, ranking and crawl data as a record that only grows.": "Przechowuje dane o wyszukiwaniu, analityce, pozycjach i crawlowaniu jako zapis, który tylko rośnie.",
+    "Finds the losses": "Znajduje spadki",
+    "Shows which sites, countries, groups of queries and pages lose traffic, and what changed around them.": "Pokazuje, które witryny, kraje, grupy zapytań i strony tracą ruch oraz co zmieniło się wokół nich.",
+    "A measurement behind every line": "Pomiar za każdą pozycją",
+    "Each recommendation carries the number it came from, so you can check it.": "Każda rekomendacja zawiera liczbę, z której wynika, więc możesz ją sprawdzić.",
+    "For owners of one large site or of many sites who depend on search traffic.": "Dla właścicieli jednej dużej witryny lub wielu witryn, którzy zależą od ruchu z wyszukiwarek.",
+    "A list of fixes in order of impact": "Lista poprawek uporządkowana według wpływu",
+    "What a release did to traffic": "Jak wydanie wpłynęło na ruch",
+    "Recommendations you can verify": "Rekomendacje, które możesz zweryfikować"
+  }
+}

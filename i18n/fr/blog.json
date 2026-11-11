@@ -1,0 +1,31 @@
+{
+  "page": "blog/index.html",
+  "strings": {
+    "Blog: notes on AI-native organizations | PassionCode.ai": "Blog : notes sur les organisations AI-native | PassionCode.ai",
+    "Notes from PassionCode.ai on AI-native organizations: why processes built around people stall, and what changes when agents run the process.": "Notes de PassionCode.ai sur les organisations AI-native : pourquoi les processus centrés sur l’humain s’enlisent, et ce qui change quand les agents les font tourner.",
+    "Notes on": "Notes sur les",
+    "AI-native organizations": "organisations AI-native",
+    "Why companies will run on agents, and what we learn building the tools for it": "Pourquoi les entreprises tourneront sur des agents, et ce que nous apprenons en construisant les outils pour cela",
+    "The blog explains the ideas behind the tools: how work changes when agents run a company’s processes and people steer them. It is for founders and leaders deciding how their company should work with AI.": "Le blog explique les idées derrière les outils : comment le travail change quand des agents mènent les processus d’une entreprise et que les personnes les dirigent. Il s’adresse aux fondateurs et aux dirigeants qui décident comment leur entreprise doit travailler avec l’IA.",
+    "Where to start": "Par où commencer",
+    "New to the idea:": "Nouveau sur le sujet :",
+    "start with what an AI-native organization is.": "commencez par ce qu’est une organisation AI-native.",
+    "Already giving people AI assistants:": "Vos équipes ont déjà des assistants IA :",
+    "read why processes built around people stall.": "lisez pourquoi les processus conçus autour des personnes s’enlisent.",
+    "For leaders who gave their teams AI assistants and still wait on the same people.": "Pour les dirigeants qui ont donné des assistants IA à leurs équipes et attendent toujours les mêmes personnes.",
+    "For founders who want a plain definition and a first step.": "Pour les fondateurs qui veulent une définition simple et un premier pas.",
+    "In this article": "Dans cet article",
+    "The person is still the bottleneck": "La personne reste le goulot d’étranglement",
+    "Meetings reconcile what the assistants made": "Les réunions rapprochent ce qu’ont produit les assistants",
+    "Everyone builds their own agents": "Chacun construit ses propres agents",
+    "What changes": "Ce qui change",
+    "Work moves between agents": "Le travail circule entre agents",
+    "What people keep": "Ce que gardent les personnes",
+    "One system, not many assistants": "Un seul système, pas une foule d’assistants",
+    "What it is not": "Ce qu’elle n’est pas",
+    "Where the agents and the data live": "Où vivent les agents et les données",
+    "How to start": "Comment commencer",
+    "Ready to try it in your company:": "Prêt à l’essayer dans votre entreprise :",
+    "read how the free one-week assessment works.": "lisez comment fonctionne l’évaluation gratuite d’une semaine."
+  }
+}

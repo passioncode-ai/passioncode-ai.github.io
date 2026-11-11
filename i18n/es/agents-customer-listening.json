@@ -1,0 +1,16 @@
+{
+  "page": "agents/customer-listening/index.html",
+  "strings": {
+    "Customer listening agent template | PassionCode.ai": "Agente de escucha de clientes: plantilla | PassionCode.ai",
+    "One picture": "Una sola imagen",
+    "Brings store reviews, support chats, community and public mentions into one ranked view.": "Reúne reseñas de las tiendas, chats de soporte, comunidad y menciones públicas en una sola vista ordenada.",
+    "Alerts on change": "Alertas ante cambios",
+    "Tells the right people when a problem grows or a new risk appears.": "Avisa a las personas adecuadas cuando un problema crece o aparece un riesgo nuevo.",
+    "Privacy first": "La privacidad, primero",
+    "Keeps summaries, labels and counts rather than people’s own words where the rules forbid them.": "Guarda resúmenes, etiquetas y recuentos en lugar de las propias palabras de las personas cuando las reglas lo prohíben.",
+    "For teams that want one picture of what customers say, without reading every channel.": "Para equipos que quieren una sola imagen de lo que dicen los clientes, sin leer todos los canales.",
+    "A weekly picture of what customers say": "Una imagen semanal de lo que dicen los clientes",
+    "Problems ranked by how many people meet them": "Problemas ordenados según cuántas personas se los encuentran",
+    "Answering agents that learn from it": "Agentes de respuesta que aprenden de ello"
+  }
+}

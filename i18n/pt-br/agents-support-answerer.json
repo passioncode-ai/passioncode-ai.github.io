@@ -1,0 +1,16 @@
+{
+  "page": "agents/support-answerer/index.html",
+  "strings": {
+    "Support agent template | PassionCode.ai": "Modelo de agente de suporte | PassionCode.ai",
+    "Checked answers": "Respostas verificadas",
+    "Every draft is checked against your knowledge base and by a second model before it is sent.": "Cada rascunho é verificado com a sua base de conhecimento e por um segundo modelo antes de ser enviado.",
+    "Nobody left waiting": "Ninguém fica esperando",
+    "A question it cannot answer becomes a hand-off, a card for your staff and a follow-up.": "Uma pergunta que ele não consegue responder vira um repasse, um cartão para a sua equipe e um acompanhamento.",
+    "Learns from your people": "Aprende com a sua equipe",
+    "An answer a person gives goes back into the knowledge base.": "Uma resposta dada por uma pessoa volta para a base de conhecimento.",
+    "For teams with a support inbox, a community chat or a help bot that is never fully covered.": "Para equipes com uma caixa de suporte, um chat de comunidade ou um bot de ajuda que nunca tem cobertura completa.",
+    "Faster first answers in every language": "Primeiras respostas mais rápidas em todos os idiomas",
+    "Gaps in your knowledge base you can see": "Lacunas visíveis na sua base de conhecimento",
+    "Quality measured every day": "Qualidade medida todos os dias"
+  }
+}

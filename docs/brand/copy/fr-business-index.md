@@ -288,6 +288,12 @@ Vision
 
 Pour les organisations
 
+Modèles d’agents
+
+Guides
+
+Blog
+
 Switchboard
 
 Observatory

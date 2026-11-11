@@ -40,7 +40,7 @@ languages through the saved Tone of Voice ([voice.md](voice.md)).
 | D-T2 | evidence | подтверждения | one Russian word everywhere, for an agent's record and for a release's proof alike (the operator chose it over «следы работы»); never «доказательства», «основание», «следы» |
 | D-T3 | state | состояние | what is running, what needs you, what it costs; never "health" / «здоровье» |
 | D-T4 | the tools (products); your agents (agents); label IN THE TOOLKIT | инструменты; ваши агенты; В НАБОРЕ | "family" / «семья» is not used |
-| D-T5 | Fabric, the home for your projects and their agents | Fabric — дом для ваших проектов и их агентов | lead with what it does today; "CEO" once on /fabric/ as direction ([facts.md](facts.md) row *CEO name and status*) |
+| D-T5 | Fabric, the home for your projects and their agents | Fabric, дом для ваших проектов и их агентов (an apposition, no dash: SITE-057) | lead with what it does today; "CEO" once on /fabric/ as direction ([facts.md](facts.md) row *CEO name and status*) |
 | D-T6 | skills | навыки | first use on a page «навыки (skills)», then «навыки»; never «скилы», «скиллы» |
 
 ## Decided terms (operator, 2026-10-14)

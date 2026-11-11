@@ -1,0 +1,21 @@
+{
+  "page": "guides/free-assessment/index.html",
+  "strings": {
+    "How the free one-week assessment works | PassionCode.ai": "Jak działa bezpłatna tygodniowa ocena | PassionCode.ai",
+    "One agent reads how your company works for a week, then you get a map of your processes and an offer: which work agents take first and what it costs.": "Przez tydzień jeden agent odczytuje, jak działa Twoja firma, a potem dostajesz mapę procesów i ofertę: co agenci przejmą najpierw i ile to kosztuje.",
+    "Before the week": "Przed tygodniem oceny",
+    "You answer four questions: your goal, the size of your team, the systems you use and what hurts most. You give read-only access to those systems, one link each. Our engineer agent sets the assessment agent up in a space of its own for your organization, or on your own machine if no data should leave it. This takes about twenty minutes of your time.": "Odpowiadasz na cztery pytania: o Twój cel, wielkość zespołu, systemy, których używasz, i to, co najbardziej doskwiera. Dajesz dostęp tylko do odczytu do tych systemów, po jednym linku na każdy. Nasz agent inżynier konfiguruje agenta oceny w osobnej przestrzeni dla Twojej organizacji albo na Twojej własnej maszynie, jeśli żadne dane nie powinny jej opuszczać. Zajmuje to około dwudziestu minut Twojego czasu.",
+    "During the week": "W trakcie tygodnia",
+    "The agent connects to your trackers, repositories, documents, team chats, mail and support, and reads the last 90 days. Then it follows the work as it happens: what was planned and what happened, where work waits and for how long. If the data leaves gaps, it may ask your team a few short questions in the channel they already use, anonymous by default. Nothing changes in your systems.": "Agent łączy się z Twoimi trackerami zadań, repozytoriami, dokumentami, czatami zespołu, pocztą i wsparciem i czyta ostatnie 90 dni. Potem śledzi pracę na bieżąco: co zaplanowano, a co się wydarzyło, gdzie praca czeka i jak długo. Jeśli w danych są luki, może zadać Twojemu zespołowi kilka krótkich pytań w kanale, którego już używa, domyślnie anonimowo. Nic w Twoich systemach się nie zmienia.",
+    "What you get on day seven": "Co dostajesz siódmego dnia",
+    "A map of your processes: the kinds of tasks, how much time each takes and how work moves between people and systems.": "Mapa Twoich procesów: rodzaje zadań, ile czasu zajmuje każde z nich i jak praca przechodzi między ludźmi a systemami.",
+    "Plan against fact, the blockers and waits, and where the documented process differs from the real one.": "Plan w zestawieniu z faktami, blokery i przestoje oraz miejsca, w których udokumentowany proces różni się od rzeczywistego.",
+    "The offer: the processes agents should take over first, the hours each frees, the agent template that does it, and a pilot on one process to prove it.": "Oferta: procesy, które agenci powinni przejąć najpierw, godziny, które każdy z nich zwalnia, szablon agenta, który to robi, i pilotaż na jednym procesie, który to potwierdzi.",
+    "We go through it with you in a 30-minute call, and you keep it as a page.": "Omawiamy to z Tobą podczas 30-minutowej rozmowy, a Ty zachowujesz całość jako stronę.",
+    "About people, never scores": "Żadnej punktacji ludzi",
+    "The assessment reads processes, not people. It reports totals for groups, never a score for a person, and what stays with people (direction, control and expertise) is part of the offer.": "Ocena dotyczy procesów, a nie ludzi. Podaje sumy dla grup, nigdy punktację pojedynczej osoby, a to, co zostaje przy ludziach (kierunek, kontrola i wiedza ekspercka), jest częścią oferty.",
+    "After the week": "Po tygodniu",
+    "If you go ahead, the pilot starts in the same place. If not, access is revoked, the data is deleted, and you receive a confirmation that it was.": "Jeśli zdecydujesz się kontynuować, pilotaż rusza w tym samym miejscu. Jeśli nie, dostęp zostaje cofnięty, dane są usuwane, a Ty dostajesz potwierdzenie, że zostały usunięte.",
+    "Ask for an assessment": "Poproś o ocenę"
+  }
+}

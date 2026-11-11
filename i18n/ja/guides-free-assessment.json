@@ -1,0 +1,21 @@
+{
+  "page": "guides/free-assessment/index.html",
+  "strings": {
+    "How the free one-week assessment works | PassionCode.ai": "1週間の無料診断の進め方 | PassionCode.ai",
+    "One agent reads how your company works for a week, then you get a map of your processes and an offer: which work agents take first and what it costs.": "1つのエージェントが1週間、会社の仕事の進め方を読み取ります。その後、プロセスの地図と提案をお渡しします：最初にどの仕事をエージェントが引き受けるか、その費用はいくらか。",
+    "Before the week": "1週間の前に",
+    "You answer four questions: your goal, the size of your team, the systems you use and what hurts most. You give read-only access to those systems, one link each. Our engineer agent sets the assessment agent up in a space of its own for your organization, or on your own machine if no data should leave it. This takes about twenty minutes of your time.": "4つの質問に答えていただきます：目標、チームの規模、使っているシステム、いちばん困っていること。それらのシステムへの読み取り専用のアクセスを、それぞれ1つのリンクで付与していただきます。エンジニアエージェントが、組織専用のスペースに診断エージェントを設定します。データを外に出すべきでない場合は、お客様自身のマシン上に設定します。お客様の時間は約20分です。",
+    "During the week": "1週間のあいだ",
+    "The agent connects to your trackers, repositories, documents, team chats, mail and support, and reads the last 90 days. Then it follows the work as it happens: what was planned and what happened, where work waits and for how long. If the data leaves gaps, it may ask your team a few short questions in the channel they already use, anonymous by default. Nothing changes in your systems.": "エージェントは、トラッカー、リポジトリ、ドキュメント、チームのチャット、メール、サポートに接続し、直近90日分を読み取ります。その後は、仕事が進むのに合わせて追っていきます：何が計画され、実際に何が起きたか、仕事がどこでどれだけ待っているか。データに抜けがある場合は、チームがすでに使っているチャネルで、短い質問をいくつかすることがあります（標準では匿名です）。お客様のシステムでは何も変わりません。",
+    "What you get on day seven": "7日目に得られるもの",
+    "A map of your processes: the kinds of tasks, how much time each takes and how work moves between people and systems.": "プロセスの地図：タスクの種類、それぞれにかかる時間、人とシステムの間で仕事がどう動くか。",
+    "Plan against fact, the blockers and waits, and where the documented process differs from the real one.": "計画と実績の比較、ブロッカーと待ち、そして文書化されたプロセスが実際とどこで違うか。",
+    "The offer: the processes agents should take over first, the hours each frees, the agent template that does it, and a pilot on one process to prove it.": "提案：最初にエージェントに任せるべきプロセス、それぞれで空く時間、それを担うエージェントテンプレート、そしてそれを実証するための1つのプロセスでのパイロット。",
+    "We go through it with you in a 30-minute call, and you keep it as a page.": "30分の通話で一緒に内容を確認し、結果はページとしてお手元に残ります。",
+    "About people, never scores": "人については、採点しない",
+    "The assessment reads processes, not people. It reports totals for groups, never a score for a person, and what stays with people (direction, control and expertise) is part of the offer.": "診断が読み取るのはプロセスであり、人ではありません。報告するのはグループごとの合計で、個人の点数は決して出しません。人に残る仕事（方向、管理、専門知識）も提案の一部です。",
+    "After the week": "1週間のあと",
+    "If you go ahead, the pilot starts in the same place. If not, access is revoked, the data is deleted, and you receive a confirmation that it was.": "進める場合は、同じ場所でパイロットが始まります。進めない場合は、アクセスを取り消してデータを削除し、削除したことの確認をお送りします。",
+    "Ask for an assessment": "診断を依頼する"
+  }
+}

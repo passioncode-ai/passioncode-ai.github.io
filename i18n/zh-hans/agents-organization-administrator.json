@@ -1,0 +1,16 @@
+{
+  "page": "agents/organization-administrator/index.html",
+  "strings": {
+    "Organization administrator agent template | PassionCode.ai": "组织管理员智能体模板 | PassionCode.ai",
+    "Keeps the rhythm": "维持节奏",
+    "Sends the morning list, reminds owners of urgent and stale tasks within working hours, and keeps a list of blockers.": "发送晨间清单，在工作时间内提醒负责人处理紧急和停滞的任务，并维护一份阻碍事项清单。",
+    "Routes requests": "分派请求",
+    "Takes any problem a person brings and hands it to the person or agent who owns it.": "接下任何人提出的问题，并交给负责它的人或智能体。",
+    "Keeps the roster": "维护名册",
+    "Runs each joiner and each leaver as one checklist, and gives a person access to the organization’s agents.": "把每位成员的加入和离开都按一份清单执行，并为人开通访问组织智能体的权限。",
+    "For teams that lose time chasing status and asking who owns what.": "适合在追问进度、打听谁负责什么上浪费时间的团队。",
+    "Fewer meetings about status": "更少的进度会议",
+    "An owner for every request": "每个请求都有负责人",
+    "A team roster that stays current": "随时更新的团队名册"
+  }
+}

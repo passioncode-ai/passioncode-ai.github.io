@@ -286,6 +286,8 @@ Eine Nachricht, jede SpracheDas Marketing plant, ein Textagent schreibt in der M
 
 Jede dieser Rollen läuft heute in unserer Arbeit als eigener Agent. Fabric wurde dafür entwickelt, alle über ein Board zu verbinden.
 
+Die Agentenvorlagen, die wir für Organisationen zusammenstellen
+
 06 / VOM TEAM ZUR ORGANISATION
 
 ## Auf einem Rechner starten
@@ -424,7 +426,7 @@ Release
 
 Project Observatory
 
-Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht – mit Nachweis.
+Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht, mit Nachweis.
 
 Release
 
@@ -533,6 +535,12 @@ Loslegen
 Vision
 
 Für Organisationen
+
+Agentenvorlagen
+
+Anleitungen
+
+Blog
 
 Switchboard
 

@@ -1,0 +1,16 @@
+{
+  "page": "agents/host-operations/index.html",
+  "strings": {
+    "Machine operations agent template | PassionCode.ai": "Vorlage: Agent für den Rechnerbetrieb | PassionCode.ai",
+    "Declared state": "Beschriebener Sollzustand",
+    "Every space, service and key is described once, and the machine is checked against that description.": "Jeder Bereich, jeder Dienst und jeder Schlüssel wird einmal beschrieben, und der Rechner wird gegen diese Beschreibung geprüft.",
+    "Safe starts and stops": "Sicheres Starten und Stoppen",
+    "Wakes, stops and restarts the apps and services agents rely on, with a check before each action.": "Weckt, stoppt und startet die Apps und Dienste neu, auf die Agenten angewiesen sind, mit einer Prüfung vor jeder Aktion.",
+    "A receipt per change": "Ein Beleg pro Änderung",
+    "Every change leaves a record of what was done and why, so the machine can be rebuilt.": "Jede Änderung hinterlässt eine Aufzeichnung darüber, was getan wurde und warum, damit sich der Rechner neu aufbauen lässt.",
+    "For organizations that run their agents on their own computer or server.": "Für Organisationen, die ihre Agenten auf einem eigenen Computer oder Server betreiben.",
+    "A machine you can rebuild from its description": "Ein Rechner, den du aus seiner Beschreibung neu aufbauen kannst",
+    "Spend per space in view": "Ausgaben pro Bereich im Blick",
+    "Fewer surprises at night": "Weniger Überraschungen in der Nacht"
+  }
+}
