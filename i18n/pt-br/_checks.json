@@ -66,8 +66,12 @@
       "Europa Ocidental",
       "Frankfurt",
       "cookies",
-      "VERSÃO 2026-10-11",
-      "prevalece a versão em inglês"
+      "VERSÃO 2026-11-07",
+      "prevalece a versão em inglês",
+      "npx @passioncode-ai/passioncode@latest analytics off",
+      "DO_NOT_TRACK=1",
+      "0.8.19",
+      "400"
     ]
   }
 }

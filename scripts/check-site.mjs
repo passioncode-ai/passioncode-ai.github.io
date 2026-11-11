@@ -417,7 +417,7 @@ for (const locale of TRANSLATED_LOCALES) {
   for (const text of [`action="/api/leads?lang=${locale}" method="post"`, 'name="form_token"', 'name="pc_hp"', `href="/${locale}/privacy/"`, 'src="/assets/business.js"', `href="/${locale}/business/agent-request.txt"`, '"channel": "agent-prompt"', 'https://passioncode.ai/api/leads/token']) assert.ok(form.includes(text), `/${locale}/business/ missing ${text}`)
 }
 const privacy = read('privacy/index.html')
-for (const text of ['GDPR Art. 6(1)(b)', '24 months', '30 days', 'Western Europe', 'Frankfurt', 'no cookies', 'VERSION 2026-10-11', 'since version 0.3.2, Fabric send anonymous usage counts']) assert.ok(privacy.includes(text), `/privacy/ missing ${text}`)
+for (const text of ['GDPR Art. 6(1)(b)', '24 months', '30 days', 'Western Europe', 'Frankfurt', 'no cookies', 'VERSION 2026-11-07', 'Fabric since version 0.3.2 and Fabric Dashboards since version 0.8.19 send anonymous usage counts', 'Each product has its own switch', 'npx @passioncode-ai/passioncode@latest analytics off', 'DO_NOT_TRACK=1', 'removed from them after 400 days']) assert.ok(privacy.includes(text), `/privacy/ missing ${text}`)
 console.log('PASS: homepage vision and paths, /start/ guide, /business/ form ↔ Worker options, privacy notice')
 
 // ---- product pages: honest disclosures stay -------------------------------------------------

@@ -66,8 +66,12 @@
       "西欧",
       "法兰克福",
       "cookies",
-      "版本 2026-10-11",
-      "以英文版本为准"
+      "版本 2026-11-07",
+      "以英文版本为准",
+      "npx @passioncode-ai/passioncode@latest analytics off",
+      "DO_NOT_TRACK=1",
+      "0.8.19",
+      "400"
     ]
   }
 }

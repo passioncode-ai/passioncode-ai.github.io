@@ -1,3 +1,24 @@
+# Current handoff: SITE-054, the apps' usage counts on /privacy/ and the /start/ prompt, in review, brought up to `main` 2026-11-11
+
+Objective (backlog SITE-054; board request `7b09aef3` from the launcher project, PC-123, with its PC-137 addendum):
+/privacy/ "The apps" names every product that counts with its own switch and describes the launcher's counts from
+0.2.76; the /start/ copy-prompt ends with the launcher README's last two sentences. Ten languages.
+
+Done: English pages, catalogs in nine languages, `npm run locales`, copy projections, the gate's English and
+per-language disclosures (notice version 2026-11-07), facts row *app usage counts*, SCN-017 step 2.
+
+Decisions: the notice version moves to 2026-11-07 because what the notice covers changed; the README's
+usage-count sentence goes into the prompt with the version sentence, since the site's prompt is the README's copy.
+
+Checks run: `npm run check` exit 0 (129 tests); `npm run build` 225 entries. On 2026-11-11 `origin/main` (`9d2e7d79`, SITE-056 to SITE-058 and Tone of Voice v3) was merged into the branch for the launcher's board message `c782f9bf` (thread `c74718d3`); checks re-run after the merge are listed in PR #152.
+
+Open: translations are the agent's (no Copylot tools in the session), so SITE-026's native review covers them; the
+GDPR basis for the apps' counts is the operator's question; deploy is the operator's step and should follow launcher
+v0.2.76 on npm, or the page names a version that is not out yet.
+
+Next task: after launcher v0.2.76 is on npm and the operator's go, `npm run deploy` from `main`, then
+`scripts/verify-live.py`; reply on board thread `0e60bd38` with the Worker version.
+
 # Current handoff: SITE-058, useful guide and blog hubs, in review, 2026-11-08
 
 Objective (backlog SITE-058, within the operator's decision D2 that the header stays): the `/guides/` and `/blog/` hubs

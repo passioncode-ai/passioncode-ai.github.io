@@ -67,8 +67,12 @@
       "Europie Zachodniej",
       "Frankfurcie",
       "plików cookie",
-      "WERSJA 2026-10-11",
-      "rozstrzygająca jest wersja angielska"
+      "WERSJA 2026-11-07",
+      "rozstrzygająca jest wersja angielska",
+      "npx @passioncode-ai/passioncode@latest analytics off",
+      "DO_NOT_TRACK=1",
+      "0.8.19",
+      "400"
     ]
   }
 }

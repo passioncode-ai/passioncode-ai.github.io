@@ -66,8 +66,12 @@
       "Europa Occidental",
       "Fráncfort",
       "cookies",
-      "VERSIÓN 2026-10-11",
-      "prevalece la versión en inglés"
+      "VERSIÓN 2026-11-07",
+      "prevalece la versión en inglés",
+      "npx @passioncode-ai/passioncode@latest analytics off",
+      "DO_NOT_TRACK=1",
+      "0.8.19",
+      "400"
     ]
   }
 }
