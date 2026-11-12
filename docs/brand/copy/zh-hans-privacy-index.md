@@ -100,7 +100,7 @@ Cloudflare 上的副本在到达我们后端后 30 天删除；尚未到达后�
 
 PassionCode.ai 的应用在你的电脑上运行，不会把你的工作内容发送给我们。Fabric Switchboard、自 0.3.2 版起的 Fabric 以及自 0.8.19 版起的 Fabric Dashboards 会发送匿名使用统计（Fabric Dashboards 还会统计错误），仅包含数量和类别，绝不包含名称、路径或内容。每个产品都有自己的开关：Switchboard 的“关于”窗口、Fabric 的“设置”，以及 Fabric Dashboards 的“设置”→“隐私”。关闭其中一个不会关闭其他产品。
 
-PassionCode 启动器自 0.2.76 版起会发送匿名的使用和错误统计：运行了哪条命令、结果如何、大约用了多长时间，以及每天一次的使用记录，并附带这台电脑上各 PassionCode.ai 应用共用文件中的安装标识。它绝不发送路径、名称、参数、令牌或错误文本。统计数据发送到 analytics.passioncode.ai；事件保存两年，400 天后从中删除安装标识，不保存你的 IP 地址。要为启动器关闭统计，请运行 npx @passioncode-ai/passioncode@latest analytics off，或设置 DO_NOT_TRACK=1。如果你已在某个 PassionCode.ai 应用中选择了不发送，启动器会保留这一选择。
+PassionCode 启动器自 0.2.76 版起会发送匿名的使用和错误统计：它已安装或已更新（附带更新前的版本）、运行了哪条命令、结果如何、大约用了多长时间，以及每天一次的使用记录。每条统计都附带启动器版本、操作系统的名称和内核版本、系统语言、Node.js 版本，以及这台电脑上各 PassionCode.ai 应用共用文件中的安装标识。它绝不发送路径、名称、参数、令牌或错误文本。统计数据发送到 analytics.passioncode.ai；事件保存两年，400 天后从中删除安装标识，不保存你的 IP 地址。要为启动器关闭统计，请运行 npx @passioncode-ai/passioncode@latest analytics off，或设置 DO_NOT_TRACK=1。如果你已在某个 PassionCode.ai 应用中选择了不发送，启动器会保留这一选择。
 
 PassionCode
 

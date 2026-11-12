@@ -1,3 +1,26 @@
+# Current handoff: SITE-060, the launcher's install and update counts on /privacy/, in review, 2026-11-12
+
+Objective (backlog SITE-060; the launcher's board message `0bfe0021` in thread `c74718d3`, PC-137): /privacy/ names
+the launcher's install and update events and the fields every event carries; the /start/ prompt ends with the
+launcher README's last sentence. Ten languages. Serves the launcher's 0.2.76 release gate (PC-123), plan row 0.8.
+
+Done: `privacy/index.html`, `start/index.html`, the nine `i18n/<code>/privacy.json` and `start.json` catalogs,
+`npm run locales`, copy projections, facts row *app usage counts*. AGENTS.md *Read first* gains item 1a (the course
+check, fabric-workspace announcement `538acac6`). Backlog rows SITE-061 (light theme default) and SITE-062 (wiki memory
+on /start/) filed from the board.
+
+Decisions: the notice version stays 2026-11-07, as the paragraph adds detail about what SITE-054 already discloses
+(same sender, same purpose, same host and periods), not a new purpose. Translations by the agent without Copylot (no
+Copylot tools in the board run); SITE-026's native review covers them.
+
+Checks run: see the PR (`npm run check`, `python3 scripts/extract-public-copy.py --check`, `npm run build`).
+
+Open: deploy is the operator's step (site with real visitors; `npm run deploy` from `main`, then
+`scripts/verify-live.py`), together with the GDPR basis question (proposal in board thread `c74718d3`).
+
+Next task: after the operator's go, deploy from `main`, `scripts/verify-live.py`, then reply on thread `c74718d3` with
+the Worker version; then SITE-061.
+
 # Current handoff: SITE-054, the apps' usage counts on /privacy/ and the /start/ prompt, in review, brought up to `main` 2026-11-11
 
 Objective (backlog SITE-054; board request `7b09aef3` from the launcher project, PC-123, with its PC-137 addendum):
