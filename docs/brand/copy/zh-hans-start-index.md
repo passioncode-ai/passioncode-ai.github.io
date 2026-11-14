@@ -108,7 +108,7 @@ Fabric 是你的项目及其智能体的家：每个项目的目标、看板、�
 
 下载 Fabric
 
-0.3.16
+0.3.20
 
 macOS 版
 
@@ -118,7 +118,7 @@ macOS 版
 
 要求与限制
 
-Apple silicon 和 Intel · 已签名并公证 · SHA-256 0e836f6f50f2d442219c25bc4067b27cbc514e0f8c68eccde07a0cb48643019a · 版本说明
+Apple silicon 和 Intel · 已签名并公证 · SHA-256 2ec356098fa14374e82f6ec874af10a47b8c17a4481c1a6acfdba9cebf6abcf8 · 版本说明
 
 02
 
@@ -128,7 +128,7 @@ Fabric Dashboards 在一个窗口中显示所有本地智能体服务。下载�
 
 下载 Fabric Dashboards
 
-0.8.30
+0.8.76
 
 ↓
 

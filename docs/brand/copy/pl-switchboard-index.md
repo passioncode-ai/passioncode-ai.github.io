@@ -80,7 +80,7 @@ POBIERZ SWITCHBOARD
 
 ## Wybierz platformę
 
-Najnowsze wydanie: 0.7.22. Obie wersje zawierają aplikację desktopową i switchboard CLI.
+Najnowsze wydanie: 0.7.76. Obie wersje zawierają aplikację desktopową i switchboard CLI.
 
 ⌘
 
@@ -124,11 +124,11 @@ Po zamknięciu okna aplikacja działa dalej na pasku menu i uruchamia się przy 
 
 ZIP dla macOS · SHA-256
 
-81d6b5971bbf6a62525a4d133e15417cf12f0861a2c67e1b6e394036231d8a43
+0697c6adeba9023dead2167025fdc8b7beca1879de0ec2b596986b719d860a66
 
 ZIP dla Windows · SHA-256
 
-b90750e2154ad0ad73e71681489c8059810d7bb91177efba5338ddfd97b2ce3e
+655ee340832fb1d4e020ab55743f6b204e7c34b653f6771adb9a4ed2f1e3320a
 
 Porównaj przed otwarciem: shasum -a 256 w Terminalu, Get-FileHash w PowerShell. Inna wartość oznacza inny plik; pobierz go ponownie.
 
@@ -303,7 +303,7 @@ Wersje wydane zliczają instalacje, dni użycia i liczbę podłączonych kont we
 
 Czy mogę sam go przejrzeć albo zbudować?
 
-Tak. Switchboard ma otwarty kod na licencji GNU AGPL-3.0. Do zastosowań, których AGPL nie obejmuje, licencja komercyjna jest dostępna przez passioncode.ai/business. Wydania do v0.3.1-beta.1 włącznie zostały opublikowane na licencji MIT i nadal są na niej dostępne. Bieżąca wersja do pobrania, 0.7.22, jest wydana na licencji AGPL. v0.4.0-beta.1 została wydana na licencji PolyForm Noncommercial lub Internal Use i zachowuje tę licencję. W repozytorium znajdziesz instrukcje budowania, kod źródłowy, testy i dowody wydań.
+Tak. Switchboard ma otwarty kod na licencji GNU AGPL-3.0. Do zastosowań, których AGPL nie obejmuje, licencja komercyjna jest dostępna przez passioncode.ai/business. Wydania do v0.3.1-beta.1 włącznie zostały opublikowane na licencji MIT i nadal są na niej dostępne. Bieżąca wersja do pobrania, 0.7.76, jest wydana na licencji AGPL. v0.4.0-beta.1 została wydana na licencji PolyForm Noncommercial lub Internal Use i zachowuje tę licencję. W repozytorium znajdziesz instrukcje budowania, kod źródłowy, testy i dowody wydań.
 
 CZĘŚĆ ZESTAWU NARZĘDZI PASSIONCODE
 
