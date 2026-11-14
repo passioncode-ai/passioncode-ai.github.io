@@ -108,7 +108,7 @@ Fabric es el hogar de tus proyectos y sus agentes: cada proyecto guarda allí su
 
 Descargar Fabric
 
-0.3.16
+0.3.20
 
 para macOS
 
@@ -118,7 +118,7 @@ Para Windows y Linux
 
 Requisitos y límites
 
-Apple silicon e Intel · firmado y notarizado · SHA-256 0e836f6f50f2d442219c25bc4067b27cbc514e0f8c68eccde07a0cb48643019a · notas de la versión
+Apple silicon e Intel · firmado y notarizado · SHA-256 2ec356098fa14374e82f6ec874af10a47b8c17a4481c1a6acfdba9cebf6abcf8 · notas de la versión
 
 02
 
@@ -128,7 +128,7 @@ Fabric Dashboards muestra cada servicio de agente local en una sola ventana. Des
 
 Descargar Fabric Dashboards
 
-0.8.30
+0.8.76
 
 ↓
 

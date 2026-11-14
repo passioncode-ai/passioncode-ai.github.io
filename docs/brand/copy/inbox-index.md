@@ -66,7 +66,7 @@ See what it does
 
 ↓
 
-Development preview 1.0.0 · macOS 12+ · Windows · Linux · open source under AGPL-3.0
+Development preview 1.6.16 · macOS 12+ · Windows · Linux · open source under AGPL-3.0
 
 FABRIC INBOX / MAIL + AGENTS
 
@@ -136,7 +136,7 @@ GET FABRIC INBOX
 
 ## for Mac, Windows and Linux
 
-Latest preview: 1.0.0. The app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
+Latest preview: 1.6.16. The app creates its mail server in your own Cloudflare account and opens it; your mail stays with your accounts.
 
 ⌘
 
@@ -157,7 +157,7 @@ A Mac copy older than 0.15.2 cannot update itself: download 0.15.2 once and inst
 
 ### Windows and Linux
 
-Release 1.0.0 also ships a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed since 0.14.1, and a Linux AppImage and .deb for x64 and arm64.
+Release 1.6.16 also ships a Windows installer for x64 and arm64 that needs no administrator rights, Authenticode-signed since 0.14.1, and a Linux AppImage and .deb for x64 and arm64.
 
 Windows and Linux downloads
 
@@ -181,7 +181,7 @@ The setup guide lists every setting.
 
 macOS DMG · SHA-256
 
-72b4cfb9ad373421fd9ef56b86638f025acd5dd5c2a07db3d2750f948ae42c8a
+29e1a80f952de31c4c68378dae3aa80ecb5af4b715f7c3fc3bd14005b990d045
 
 Compare before opening: shasum -a 256 in Terminal. A different value means a different file; download it again.
 

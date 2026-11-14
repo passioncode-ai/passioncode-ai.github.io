@@ -62,7 +62,7 @@ Para você, grátis
 
 →
 
-Código aberto sob a AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
+Código aberto sob a AGPL-3.0 Fabric 0.3.20 · Switchboard 0.7.76 · Dashboards 0.8.76 · Observatory 0.35.17
 
 Contas
 
@@ -392,7 +392,7 @@ A casa dos seus projetos e dos agentes deles: o propósito, o quadro, as decisõ
 
 Prévia inicial
 
-0.3.16
+0.3.20
 
 · macOS · passos 2 e 5
 
@@ -406,7 +406,7 @@ Escolha a conta em que cada agente roda, com os limites de uso à vista.
 
 Release
 
-0.7.22
+0.7.76
 
 · macOS + Windows · passo 4
 
@@ -418,7 +418,7 @@ Todos os serviços locais de agentes em uma só janela, controlados por você ou
 
 Release
 
-0.8.30
+0.8.76
 
 · macOS + Windows + Linux · passo 4
 
@@ -430,7 +430,7 @@ O que mudou em cada projeto e o que precisa de atenção, com as evidências.
 
 Release
 
-0.34.0
+0.35.17
 
 · macOS + Windows + Linux · passo 5
 
@@ -442,7 +442,7 @@ E-mails do Gmail e do Cloudflare em uma só lista, os importantes primeiro; os a
 
 Prévia em desenvolvimento
 
-1.0.0
+1.6.16
 
 · macOS + Windows + Linux · passo 5
 

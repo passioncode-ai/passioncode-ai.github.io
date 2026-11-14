@@ -108,7 +108,7 @@ Fabric は、プロジェクトとそのエージェントのための拠点で�
 
 Fabric をダウンロード
 
-0.3.16
+0.3.20
 
 （macOS 向け）
 
@@ -118,7 +118,7 @@ Windows と Linux 向け
 
 要件と制限
 
-Apple silicon・Intel · 署名・公証済み · SHA-256 0e836f6f50f2d442219c25bc4067b27cbc514e0f8c68eccde07a0cb48643019a · リリースノート
+Apple silicon・Intel · 署名・公証済み · SHA-256 2ec356098fa14374e82f6ec874af10a47b8c17a4481c1a6acfdba9cebf6abcf8 · リリースノート
 
 02
 
@@ -128,7 +128,7 @@ Fabric Dashboards は、ローカルのエージェントサービスをすべ�
 
 Fabric Dashboards をダウンロード
 
-0.8.30
+0.8.76
 
 ↓
 
