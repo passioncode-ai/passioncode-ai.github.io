@@ -2,6 +2,8 @@
 // (field.js) and the pixel seam are layers on the same frame. Reduced motion: a static, legible page.
 import { CHAPTERS, getState, onFrame, subscribeAct, start, clamp, seg } from './store.js'
 import { mountField } from './field.js'
+import { mountRain } from './rain.js'
+import { mountVoice } from './voice.js'
 
 const root = document.documentElement
 const $ = id => document.getElementById(id)
@@ -77,7 +79,9 @@ if (reduce) {
 
   // The pixel seam: brand blocks that peel on at each chapter boundary in a diagonal wave.
   const canvas = $('pixels'), ctx = canvas.getContext('2d')
-  const COLORS = ['#41054b', '#f20673', '#ffd21a', '#1b1420', '#0a070d', '#6f2a7a']
+  const COLORS = root.classList.contains('matrix')
+    ? ['#003b14', '#00ff66', '#0a1a10', '#00c24e', '#020604', '#d6ffe2']
+    : ['#41054b', '#f20673', '#ffd21a', '#1b1420', '#0a070d', '#6f2a7a']
   let cells = [], cols = 0, size = 28
   const resizePixels = () => {
     const r = stage.getBoundingClientRect()
@@ -159,6 +163,7 @@ if (reduce) {
     stage.classList.toggle('good', t > 0.6)
   }
 
+  onFrame(mountRain($('rain'), getState))
   onFrame(mountField($('field'), getState))
   onFrame(s => {
     root.style.setProperty('--story', s.raw)
@@ -183,3 +188,4 @@ if (reduce) {
   })
   start()
 }
+mountVoice({ button: $('voice'), subtitle: $('vo-sub'), subscribeAct })

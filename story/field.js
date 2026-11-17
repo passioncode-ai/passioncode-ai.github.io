@@ -7,6 +7,10 @@ const PALETTE = {
   grey: [111, 94, 119], gold: [255, 210, 26], magenta: [242, 6, 115],
   blue: [166, 191, 255], green: [121, 212, 154], white: [255, 249, 240]
 }
+// The Matrix look (html.matrix) recolours the swarm in phosphor greens; the main palette stays for the default look.
+if (document.documentElement.classList.contains('matrix')) Object.assign(PALETTE, {
+  grey: [40, 90, 60], gold: [180, 255, 120], magenta: [0, 255, 102], blue: [60, 200, 140], green: [0, 255, 102], white: [214, 255, 226]
+})
 const TAU = Math.PI * 2
 const lerp = (a, b, t) => a + (b - a) * t
 const along = (pts, t) => { // a point at t (0..1) along a polyline

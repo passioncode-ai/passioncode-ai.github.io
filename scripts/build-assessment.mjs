@@ -9,7 +9,8 @@ import { fileURLToPath } from 'node:url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const out = join(root, 'dist-assessment')
 const files = [
-  'story/index.html', 'story/story.css', 'story/story.js', 'story/store.js', 'story/field.js',
+  'story/index.html', 'story/story.css', 'story/story.js', 'story/store.js', 'story/field.js', 'story/rain.js', 'story/voice.js', 'story/matrix.css', 'story/voice/script.json', 'story/vendor/scrolly-video.js', 'story/vendor/scrolly-video.LICENSE',
+  'story/film/film.css', 'story/film/film.js', 'story/film/standin.mp4', 'story/film/poster.jpg',
   'design-system/tokens.css', 'assets/passioncode-mark.svg', 'assets/favicon-64.png'
 ]
 
@@ -19,6 +20,10 @@ for (const f of files) {
   cpSync(join(root, f), join(out, f))
 }
 writeFileSync(join(out, 'index.html'), readFileSync(join(root, 'story/index.html')))
+// Variant B, the scroll cartoon, at /film/
+mkdirSync(join(out, 'film'), { recursive: true })
+writeFileSync(join(out, 'film/index.html'), readFileSync(join(root, 'story/film/index.html')))
+for (const f of ['story/film/cut.mp4']) { try { cpSync(join(root, f), join(out, f)) } catch {} } // the generated cut, once it exists
 writeFileSync(join(out, 'robots.txt'), 'User-agent: *\nDisallow: /\n')
 writeFileSync(join(out, '_headers'), [
   '/*',

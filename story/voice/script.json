@@ -1,0 +1,20 @@
+{
+  "schema": "story-voiceover/1",
+  "task": "SITE-068",
+  "voice": { "copylot": "861f15ee-486b-4a6d-9b16-4739217b277f", "version": 2, "channel": "vo" },
+  "speaker": "Morpheus, the PM agent: a calm, low, unhurried mentor voice (an original voice, not an imitation of any actor)",
+  "lines": [
+    { "id": "hero", "en": "I'm Morpheus. Let me show you how your business really runs.", "ru": "Я Морфеус. Давайте покажу, как на самом деле работает ваш бизнес." },
+    { "id": "ch00", "en": "Your business works. But every result waits for a person.", "ru": "Ваш бизнес работает. Но каждый результат ждёт человека." },
+    { "id": "ch01", "en": "One agent joins your chat. Not a project. Not a consultant.", "ru": "В ваш чат приходит один агент. Не проект. Не консультант." },
+    { "id": "ch02", "en": "I bring your team in. Access by level. Keys in one vault.", "ru": "Я подключаю команду. Доступ по уровням. Ключи в одном хранилище." },
+    { "id": "ch03", "en": "Tell me what the business must achieve. Goals, not tasks.", "ru": "Скажите, чего бизнес должен добиться. Цели, а не задачи." },
+    { "id": "ch04", "en": "First, we measure. Who waits for whom, and where the hours go.", "ru": "Сначала замер. Кто кого ждёт и куда уходят часы." },
+    { "id": "ch05", "en": "Goals become tasks. Tasks become departments.", "ru": "Цели становятся задачами. Задачи становятся отделами." },
+    { "id": "ch06", "en": "Each department gets its agents. They deploy themselves.", "ru": "Каждый отдел получает своих агентов. Они разворачиваются сами." },
+    { "id": "ch07", "en": "Watch the task move. Marketing, development, promotion. Seconds, not meetings.", "ru": "Смотрите, как идёт задача. Маркетинг, разработка, продвижение. Секунды, а не созвоны." },
+    { "id": "ch08", "en": "Same company. Two clocks. One of them is still waiting.", "ru": "Та же компания. Два хронометра. Один из них всё ещё ждёт." },
+    { "id": "ch09", "en": "You correct it once. Every agent remembers. The cost keeps falling.", "ru": "Вы поправляете один раз. Каждый агент это запоминает. Стоимость падает." },
+    { "id": "ch10", "en": "No person in the routine. The choice is yours. Start with one chat.", "ru": "В рутине нет человека. Выбор за вами. Начните с одного чата." }
+  ]
+}

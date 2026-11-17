@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="en" data-lang="en" class="matrix">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
@@ -8,6 +8,7 @@
 <link rel="icon" href="/assets/favicon-64.png">
 <link rel="stylesheet" href="/design-system/tokens.css">
 <link rel="stylesheet" href="/story/story.css">
+<link rel="stylesheet" href="/story/matrix.css">
 </head>
 <body>
 <a class="skip" href="#apply"><span lang="en">Skip to the request form</span><span lang="ru">Перейти к заявке</span></a>
@@ -15,12 +16,15 @@
  <a class="brand" href="https://passioncode.ai/"><img src="/assets/passioncode-mark.svg" width="28" height="28" alt=""><span>PassionCode<b>.ai</b></span></a>
  <div class="progress" aria-hidden="true"><i></i></div>
  <div class="bar-right">
+  <button class="voice-btn" type="button" id="voice" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span lang="en">Morpheus's voice</span><span lang="ru">Голос Морфеуса</span></button>
+  <a class="alt-link" href="/film/"><span lang="en">Watch as a cartoon</span><span lang="ru">Смотреть мультфильмом</span></a>
   <button class="lang" type="button" data-set-lang="en" aria-pressed="true">EN</button>
   <button class="lang" type="button" data-set-lang="ru" aria-pressed="false">RU</button>
   <a class="cta" href="#apply"><span lang="en">Agentize my business</span><span lang="ru">Агентизировать бизнес</span></a>
  </div>
 </header>
 
+<canvas class="rain" id="rain" aria-hidden="true"></canvas>
 <canvas class="field" id="field" aria-hidden="true"></canvas>
 
 <section class="hero" aria-labelledby="hero-title">
@@ -60,6 +64,7 @@
 <section id="story" aria-label="Story">
  <div class="stage" id="stage">
   <canvas class="pixels" id="pixels" aria-hidden="true"></canvas>
+  <p class="vo-sub" id="vo-sub" aria-live="polite"></p>
 
   <div class="caption" aria-live="off">
    <p class="ch-num"><span id="ch-num">00</span> / 10</p>
@@ -112,6 +117,7 @@
   <div class="scenes" aria-hidden="true">
    <!-- 0: the business today -->
    <div class="scene" data-s="0">
+    <b class="fx fx0" aria-hidden="true"><span lang="en">PING PING PING</span><span lang="ru">ДЗЫНЬ ДЗЫНЬ</span></b>
     <div class="biz">
      <div class="biz-card"><span class="ico shop"></span><b><span lang="en">Your shop</span><span lang="ru">Ваш магазин</span></b><small>app · site · store</small>
       <svg viewBox="0 0 220 70" class="flat"><polyline points="0,50 30,48 60,52 90,47 120,50 150,49 180,51 220,49"/></svg>
@@ -129,34 +135,36 @@
 
    <!-- 1: Morpheus lands -->
    <div class="scene" data-s="1">
+    <b class="fx fx1" aria-hidden="true"><span lang="en">GLITCH</span><span lang="ru">ГЛИТЧ</span></b>
     <div class="morpheus-wrap">
      <div class="beam"></div>
-     <svg class="morpheus" viewBox="0 0 200 260" role="img" aria-label="Morpheus">
+     <svg class="morpheus" viewBox="0 0 220 280" role="img" aria-label="Morpheus">
       <defs>
-       <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a0d55"/><stop offset=".55" stop-color="#2a0d30"/><stop offset="1" stop-color="#140a18"/></linearGradient>
-       <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a4262"/><stop offset="1" stop-color="#2a1f30"/></linearGradient>
-       <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f20673"/><stop offset=".5" stop-color="#1b0a20"/><stop offset="1" stop-color="#ffd21a"/></linearGradient>
-       <radialGradient id="halo" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#f20673" stop-opacity=".35"/><stop offset="1" stop-color="#f20673" stop-opacity="0"/></radialGradient>
+       <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.3" fill="#00ff66" opacity=".35"/></pattern>
+       <linearGradient id="coatg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2620"/><stop offset="1" stop-color="#050a07"/></linearGradient>
+       <linearGradient id="skin2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a5a3c"/><stop offset="1" stop-color="#4a2c1c"/></linearGradient>
+       <radialGradient id="halo2" cx=".5" cy=".4" r=".55"><stop offset="0" stop-color="#00ff66" stop-opacity=".28"/><stop offset="1" stop-color="#00ff66" stop-opacity="0"/></radialGradient>
       </defs>
-      <circle cx="100" cy="110" r="96" fill="url(#halo)"/>
-      <path d="M34 260 C36 206 56 176 100 170 C144 176 164 206 166 260 Z" fill="url(#coat)" stroke="#f20673" stroke-width="1.5" stroke-opacity=".7"/>
-      <path d="M100 176 L76 180 L94 246 Z M100 176 L124 180 L106 246 Z" fill="#5c1868" stroke="#f20673" stroke-width="1" stroke-opacity=".55"/>
-      <path d="M90 178 L100 222 L110 178 Z" fill="#0a070d"/>
-      <path d="M100 222 L100 252" stroke="#ffd21a" stroke-width="1.5" stroke-opacity=".7"/>
-      <path d="M72 186 C70 160 82 150 100 150 C118 150 130 160 128 186 L116 180 C114 166 86 166 84 180 Z" fill="#1e0a24" stroke="#6f2a7a" stroke-width="1"/>
-      <rect x="90" y="132" width="20" height="24" rx="6" fill="#3a2a40"/>
-      <ellipse cx="65" cy="98" rx="6" ry="9" fill="#3a2a40"/><ellipse cx="135" cy="98" rx="6" ry="9" fill="#3a2a40"/>
-      <ellipse cx="100" cy="94" rx="35" ry="42" fill="url(#skin)"/>
-      <path d="M126 70 C136 84 138 108 126 126" stroke="#f20673" stroke-width="2.5" fill="none" stroke-opacity=".55" stroke-linecap="round"/>
-      <path d="M80 62 C88 56 104 54 114 58" stroke="#fff9f0" stroke-width="3" fill="none" stroke-opacity=".14" stroke-linecap="round"/>
+      <circle cx="110" cy="120" r="104" fill="url(#halo2)"/>
+      <path d="M26 280 C30 214 56 184 110 176 C164 184 190 214 194 280 Z" fill="url(#coatg)" stroke="#000" stroke-width="4"/>
+      <path d="M26 280 C30 214 56 184 110 176 C164 184 190 214 194 280 Z" fill="url(#dots)"/>
+      <path d="M72 186 L58 150 L92 170 Z M148 186 L162 150 L128 170 Z" fill="#0d1610" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M92 176 L110 250 L128 176 Z" fill="#000"/>
+      <path d="M92 176 L80 200 L104 262 M128 176 L140 200 L116 262" fill="none" stroke="#00ff66" stroke-width="1.6" opacity=".7"/>
+      <rect x="98" y="144" width="24" height="30" rx="8" fill="url(#skin2)" stroke="#000" stroke-width="4"/>
+      <ellipse cx="110" cy="100" rx="40" ry="48" fill="url(#skin2)" stroke="#000" stroke-width="4"/>
+      <path d="M138 70 C150 88 152 116 138 136" stroke="#00ff66" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
+      <path d="M86 64 C96 56 116 54 128 60" stroke="#fff" stroke-width="3" fill="none" opacity=".22" stroke-linecap="round"/>
+      <path d="M84 84 q10 -6 20 -1 M116 83 q10 -5 20 1" stroke="#000" stroke-width="3.5" fill="none" stroke-linecap="round"/>
       <g class="shades">
-       <ellipse cx="85" cy="96" rx="13" ry="9" fill="url(#lens)" stroke="#ffd21a" stroke-width="1.6"/>
-       <ellipse cx="115" cy="96" rx="13" ry="9" fill="url(#lens)" stroke="#ffd21a" stroke-width="1.6"/>
-       <path d="M98 95 q2 -3 4 0" stroke="#ffd21a" stroke-width="1.6" fill="none"/>
-       <path d="M72 94 L66 92 M128 94 L134 92" stroke="#ffd21a" stroke-width="1.4"/>
-       <rect class="glint" x="77" y="91" width="7" height="2.5" rx="1.2" fill="#fff9f0"/>
+       <ellipse cx="96" cy="99" rx="11" ry="7.5" fill="#000" stroke="#000" stroke-width="2"/>
+       <ellipse cx="124" cy="99" rx="11" ry="7.5" fill="#000" stroke="#000" stroke-width="2"/>
+       <path d="M107 98 q3 -3 6 0" stroke="#000" stroke-width="2.5" fill="none"/>
+       <path class="lens-glow" d="M90 96 q4 -3 9 -1 M118 96 q4 -3 9 -1" stroke="#00ff66" stroke-width="2" fill="none" stroke-linecap="round"/>
+       <rect class="glint" x="88" y="95" width="6" height="2.2" rx="1.1" fill="#d6ffe2"/>
       </g>
-      <path d="M90 120 q10 5 20 0" stroke="#b6aabc" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M106 112 q4 6 8 0" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M96 128 q14 7 28 0" stroke="#000" stroke-width="3.5" fill="none" stroke-linecap="round"/>
      </svg>
      <div class="bubble"><span lang="en">“Hey. Let's make your business run itself.”</span><span lang="ru">«Привет. Давайте сделаем так, чтобы бизнес работал сам».</span></div>
      <p class="tag">Morpheus · PM agent</p>
@@ -197,6 +205,7 @@
 
    <!-- 5-7: departments, agents, the travelling task -->
    <div class="scene" data-s="5" data-also="6 7">
+    <b class="fx fx5" aria-hidden="true"><span lang="en">DEPLOY!</span><span lang="ru">ДЕПЛОЙ!</span></b>
     <svg class="org" viewBox="0 0 600 420">
      <g class="goal-row"><rect x="200" y="10" width="200" height="40" rx="12"/><text x="300" y="36">GOALS</text></g>
      <path class="branch b1" d="M300 50 C300 90 110 80 110 130"/>
@@ -224,6 +233,7 @@
 
    <!-- 8: old vs new -->
    <div class="scene" data-s="8">
+    <b class="fx fx8" aria-hidden="true"><span lang="en">TICK… TOCK…</span><span lang="ru">ТИК… ТАК…</span></b>
     <div class="versus">
      <div class="side old"><h3><span lang="en">People with assistants</span><span lang="ru">Люди с ассистентами</span></h3><div class="clock old big"><span class="hand"></span></div>
       <ul>

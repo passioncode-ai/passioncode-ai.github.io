@@ -163,3 +163,39 @@ the style and the voice from variants with references before the final render.
   `/story/story.js` and `/robots.txt`. Checked in WebKit at 1440 and 390 px, EN and RU, no console errors;
   `npm run check` passes. Copylot reports for the new strings: `d629e60a`, `425a9816`, `c52c954e`, `fc1bbc93`,
   `2a94a30a`, `d76d933d` (no blocking finding; the two non-breaking-space suggestions applied).
+- 2026-11-17: the Matrix comic and the two variants, on the operator's request in the same session («и улем туда релкам
+  уналивать и сделаем в стиле матрицы, морфи4ус агент и голос его надо туда и сдлать заготовки для РУ и ЕН языков по
+  озвучке сайта и немного в стиле комиксов можно такой интерактивный комикс при скроле и как второй альтернативный
+  вариант найди в гитабе есть популярная либа для рендеринга сайта из видео и попролуем сгенерить мультик такой который
+  скролить будут вместо анимации ан сатйе и оба ваорианта проработае еще лучше, сделай копилот стиль особой в стле
+  матрицы и морфиуса который будем исопльзовать для морфиуса агента/пм и для этого лендинга но не меняй стиль
+  основного»). The assessment host becomes the ad landing.
+  - **Copylot voice.** «Морфеус · PM-агент и лендинг, стиль Матрицы» is version 2 of voice `861f15ee` (the PM agent's
+    voice since PM-D62), with channel overlays `web` and `vo`, Matrix metaphor at most once per text, no film quotes
+    or other characters' names, "humanless" read as no person in the routine. The site's brand voice `93cd4851` is
+    unchanged.
+  - **Variant A, the interactive comic** (`/`). `story/matrix.css` scopes the look to `html.matrix` on this page only
+    (design-system tokens untouched): code rain (`story/rain.js`, faster with scroll speed), inked panels with offset
+    shadows and halftone, narration boxes, speech bubbles with tails, sound-effect lettering, Morpheus redrawn as an
+    original bald mentor in a high-collar coat with small oval glasses, the agent swarm and the pixel seam in phosphor
+    greens.
+  - **Voice-over.** `story/voice/script.json` holds the 12 lines (hero and chapters 0 to 10) in en and ru, written in
+    voice v2 (channel `vo`). Copylot reports: en `38a7cd89`..`822c3779` pass; ru `53b99410`..`93b254dd` pass in voice
+    and typography, flagged only by `ru-ad-marking` (register `ad`: Russian internet advertising needs the «Реклама»
+    label, advertiser and erid under 38-ФЗ). That marking belongs to the ad placement (the creative and its click URL),
+    not to the narration; record it before any paid Russian traffic is sent. `story/voice.js` plays
+    `story/voice/<lang>/<id>.mp3` per chapter after one click on «Голос Морфеуса»; while a recording is missing the
+    browser's speech engine reads the line and the subtitle says «черновой голос».
+  - **Variant B, the scroll cartoon** (`/film/`). Library: scrolly-video (github.com/dkaoster/scrolly-video, 1.1k
+    stars, MIT, vendored as `story/vendor/scrolly-video.js` 0.0.24, no CDN): it decodes the film with WebCodecs and maps
+    the scroll to the playhead, so scrolling back rewinds. The page plays `story/film/cut.mp4` when it exists, else the
+    draft cut `story/film/standin.mp4` (9 s, 5.0 MB, 220 frames recorded from variant A's stage) with a visible note.
+  - **Waits on Asset Foundry.** The keyframes order (`storyboard`, project `passioncode-site`, idempotency key
+    `passioncode-site/scroll-film-keyframes/v1`, nine 16:9 frames in the Matrix comic style with an original mentor)
+    timed out and the service on port 8787 stopped answering (503, then timeouts); asked on the board, request
+    `28d50641` to asset-foundry. When it answers: the keyframes, then `frames-to-video` for a 16:9 and a 9:16 cut
+    (phones crop a 16:9 film), then the 24 lines with the voice of the kira-passioncode Morpheus orders of 2026-11-16
+    ("Calm deep mentor narration"), saved as `story/voice/<lang>/<id>.mp3`, then a redeploy.
+  - Checked: `npm run check` passes; WebKit 1440 and 390 px, en and ru, no console errors on `/` (on `/film/` only the
+    expected 404 of the missing `cut.mp4`); deployed version `4ffb6722-be6e-4b47-b0c7-d92d9f07b80e`.
+

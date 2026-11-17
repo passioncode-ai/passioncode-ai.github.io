@@ -1,0 +1,115 @@
+/* The Matrix comic look of the story landing (SITE-068, operator 2026-11-17: «сделаем в стиле матрицы ... немного
+   в стиле комиксов»). Scoped to html.matrix on this page only: it remaps the page's tokens locally and never touches
+   design-system/tokens.css or the main site. Comic language: ink outlines, offset shadows, halftone, narration boxes,
+   speech bubbles with tails, sound-effect lettering. */
+html.matrix{
+ --pc-bg:#020604;--pc-panel:#06100a;--pc-panel-raised:#0a1a10;--pc-text:#e6ffee;--pc-text-muted:#8fbf9f;
+ --pc-border:#14331f;--pc-border-strong:#2e6a45;--pc-accent:#00ff66;--pc-accent-hover:#5cff9a;--pc-on-accent:#001a09;
+ --pc-accent-soft:#063a1a;--pc-link:#00ff66;--pc-brand-magenta:#00ff66;--pc-brand-plum:#003b14;--pc-positive:#00ff66;
+ --ink:#000;--glow:0 0 12px #00ff6688;--halftone:radial-gradient(#00ff6626 1.1px,transparent 1.4px) 0 0/7px 7px;
+ --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+.matrix body{background:var(--pc-bg)}
+.matrix .rain{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;opacity:.5}
+.matrix .field{opacity:.9}
+.matrix .bar{background:color-mix(in srgb,#020604 82%,transparent);border-bottom:2px solid #00ff6633}
+.matrix .brand b{color:var(--pc-accent);text-shadow:var(--glow)}
+.matrix .progress i{background:linear-gradient(90deg,#00c24e,#d6ffe2);box-shadow:var(--glow)}
+.matrix .cta{box-shadow:0 0 0 2px var(--ink),4px 4px 0 var(--ink),0 0 24px #00ff6655}
+.matrix .lang[aria-pressed="true"]{background:var(--pc-accent);color:var(--pc-on-accent)}
+
+/* Voice button and the alternative-variant link */
+.voice-btn{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid var(--pc-border-strong);color:var(--pc-text);border-radius:999px;padding:5px 12px;font:600 12px var(--pc-font);cursor:pointer}
+.voice-btn[aria-pressed="true"]{border-color:var(--pc-accent);color:var(--pc-accent);box-shadow:var(--glow)}
+.eq{display:inline-flex;gap:2px;align-items:flex-end;height:12px}
+.eq i{width:3px;height:4px;background:currentColor;border-radius:1px}
+.voice-btn[aria-pressed="true"] .eq i{animation:eq .7s ease-in-out infinite alternate}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{to{height:12px}}
+.alt-link{font:600 12px var(--pc-font);color:var(--pc-text-muted);text-decoration:none;border-bottom:1px dashed currentColor;margin:0 6px}
+.alt-link:hover{color:var(--pc-accent)}
+.vo-sub{position:absolute;left:50%;bottom:96px;transform:translateX(-50%);z-index:7;max-width:min(720px,86vw);margin:0;padding:10px 16px;
+ font:600 15px/1.4 var(--mono);color:#d6ffe2;background:#000d;border:2px solid var(--pc-accent);box-shadow:4px 4px 0 var(--ink),var(--glow);
+ opacity:0;transition:opacity .3s;text-align:center;pointer-events:none}
+.vo-sub.on{opacity:1}
+.vo-sub[data-draft]::after{content:" · draft voice";color:var(--pc-text-muted);font-weight:400;font-size:11px}
+html[data-lang="ru"] .vo-sub[data-draft]::after{content:" · черновой голос"}
+
+/* Hero */
+.matrix .hero::before{background:radial-gradient(closest-side,#00ff6630,transparent 70%)}
+.matrix .hero h1{font-family:var(--pc-font);text-shadow:0 0 30px #00ff6633}
+.matrix .hero h1 em{background:linear-gradient(90deg,#00ff66,#d6ffe2);-webkit-background-clip:text;background-clip:text}
+.matrix .chip{border-color:#00ff6655;font-family:var(--mono)}
+.matrix .proof li{border:2px solid var(--ink);box-shadow:3px 3px 0 #00ff6655;background:#06100ae6}
+.matrix .proof b{color:var(--pc-accent);text-shadow:var(--glow)}
+.matrix .core-m,.matrix i.m{background:radial-gradient(circle at 35% 30%,#5cff9a,#00a63e 60%,#003b14)!important;color:#001a09!important;box-shadow:0 0 40px #00ff6688}
+.matrix .ring{border-color:#00ff6666}
+
+/* Panels: every chat and scene sits in an inked comic panel */
+.matrix .mini-chat,.matrix .chat{border:3px solid var(--ink);outline:1px solid #00ff6644;outline-offset:-6px;box-shadow:6px 6px 0 #00ff6640,0 30px 60px #000c}
+.matrix .chat-head{font-family:var(--mono);border-bottom:2px solid #00ff6633}
+.matrix .chat-head .dot{background:var(--pc-accent);box-shadow:var(--glow)}
+
+/* Chat lines as comic speech bubbles with tails */
+.matrix .msg p,.matrix .mini-msgs li p{position:relative;border:2px solid var(--ink);border-radius:14px;background:#0d1d13;color:var(--pc-text);box-shadow:3px 3px 0 #00ff6633}
+.matrix .msg p::before,.matrix .mini-msgs li:not(.sys) p::before{content:"";position:absolute;left:-9px;top:8px;border:6px solid transparent;border-right:8px solid var(--ink)}
+.matrix .msg.agent p,.matrix .mini-msgs li.agent p{background:#062a14;border-color:#00ff66;box-shadow:3px 3px 0 var(--ink),0 0 14px #00ff6633}
+.matrix .msg.agent p::before{border-right-color:#00ff66}
+.matrix .msg.sys p,.matrix .mini-msgs li.sys p{background:none;border:0;box-shadow:none;color:var(--pc-accent);font-family:var(--mono)}
+.matrix .msg.sys p::before{display:none}
+.matrix .msg b{color:var(--pc-accent);font-family:var(--mono);letter-spacing:.04em}
+
+/* Captions as narration boxes */
+.matrix .cap h2{display:inline-block;padding:4px 12px 6px;background:var(--pc-accent);color:var(--pc-on-accent);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);transform:rotate(-1deg);font-size:clamp(20px,2.2vw,30px)}
+.matrix .cap p{margin-top:10px;font-family:var(--mono);font-size:14px;color:#bfeccc;max-width:76ch}
+.matrix .ch-num{font-family:var(--mono)}
+
+/* The scene area is a panel with halftone; scenes slam in */
+.matrix .scenes{border:3px solid var(--ink);border-radius:6px;background:var(--halftone),linear-gradient(#030a06cc,#020604ee);box-shadow:8px 8px 0 #00ff6626,inset 0 0 80px #00ff6614}
+.matrix .scene.on{animation:slam .55s cubic-bezier(.2,1.6,.4,1)}
+@keyframes slam{0%{transform:scale(1.12) rotate(-1.5deg);filter:brightness(2) blur(3px)}60%{filter:none}100%{transform:none}}
+.matrix .biz-card,.matrix .goal,.matrix .readout>span,.matrix .box,.matrix .side,.matrix .vault,.matrix .bubble,.matrix .correction,.matrix .hud>div,.matrix .apply-card,.matrix .eco-steps li,.matrix .eco-video{border:2px solid var(--ink)!important;box-shadow:4px 4px 0 #00ff6640}
+.matrix .bubble{background:#062a14;border-color:var(--pc-accent)!important;border-radius:22px;font-family:var(--mono);position:relative}
+.matrix .bubble::before{content:"";position:absolute;left:50%;top:-14px;margin-left:-8px;border:8px solid transparent;border-bottom:12px solid var(--pc-accent)}
+.matrix .beam{background:linear-gradient(to top,#00ff6655,transparent)}
+.matrix .morpheus{filter:drop-shadow(6px 6px 0 #000) drop-shadow(0 0 30px #00ff6655)}
+.matrix .lens-glow{animation:lens 3s ease-in-out infinite}
+@keyframes lens{50%{opacity:.25}}
+.matrix .tag{color:var(--pc-accent);text-shadow:var(--glow)}
+.matrix .org .dept rect{fill:#06100a;stroke:#000;stroke-width:3}
+.matrix .goal-row rect{fill:#063a1a;stroke:#00ff66}
+.matrix .goal-row text,.matrix .timer b{fill:#00ff66;color:#00ff66}
+.matrix .route{stroke:#00ff66}
+.matrix .token circle{fill:#d6ffe2;filter:drop-shadow(0 0 12px #00ff66)}
+.matrix .ag.live rect{stroke:#00ff66}
+.matrix .side.old{background:#140808}.matrix .side.new{background:#04170b;border-color:#00ff66!important}
+.matrix .up{stroke:#00ff66}.matrix .down{stroke:#ff4d6d}
+.matrix .l-up::before{background:#00ff66}.matrix .l-down::before{background:#ff4d6d}
+.matrix .final .big{background:linear-gradient(90deg,#00ff66,#d6ffe2);-webkit-background-clip:text;background-clip:text}
+.matrix .hud b{font-family:var(--mono)}
+.matrix .stage.good .hud b{text-shadow:var(--glow)}
+
+/* Sound effects: comic lettering, decorative, stamped in with the scene */
+.fx{position:absolute;z-index:3;font:900 clamp(22px,3vw,44px)/1 var(--pc-font);letter-spacing:.02em;color:var(--pc-accent);
+ -webkit-text-stroke:2px #000;paint-order:stroke fill;text-shadow:4px 4px 0 #000;transform:rotate(-8deg) scale(0);pointer-events:none;white-space:nowrap}
+.scene.on .fx{animation:fx .5s .25s cubic-bezier(.2,1.8,.4,1) forwards}
+@keyframes fx{to{transform:rotate(-8deg) scale(1)}}
+.fx0{left:6%;top:4%}.fx1{right:8%;top:8%;color:#d6ffe2}.fx5{left:4%;bottom:10%}.fx8{right:6%;top:2%;color:#ff4d6d}
+
+@media (max-width:860px){
+ .alt-link,.voice-btn [lang]{display:none}
+ .voice-btn{padding:6px 8px}
+ .vo-sub{bottom:auto;top:calc(56px + 96px);font-size:12px}
+ .matrix .cap h2{font-size:18px}
+ .matrix .scenes{border-width:2px}
+}
+@media (prefers-reduced-motion:reduce){.matrix .rain{display:none}.fx{transform:rotate(-8deg)}}
+.calm .rain{display:none}.calm .fx{transform:rotate(-8deg)}
+/* After the first WebKit pass: the narration box needs room for two lines; departments stay visible on black */
+.matrix .caption{min-height:136px}
+.matrix .captions{min-height:124px}
+.matrix .cap p{display:inline-block;background:#020604d9;padding:2px 6px;box-shadow:0 0 0 1px #00ff6622}
+.matrix .org .dept rect{fill:#06140c;stroke:#1f7a45;stroke-width:2}
+.matrix .dname{fill:#8fbf9f!important}
+@media (max-width:860px){.matrix .caption{min-height:118px}.matrix .captions{min-height:104px}}
+@media (max-width:860px){.matrix .cap p{font-size:11.5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
