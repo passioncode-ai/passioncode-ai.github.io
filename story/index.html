@@ -21,12 +21,41 @@
  </div>
 </header>
 
-<section class="intro">
- <p class="kicker"><span lang="en">Demo · scroll to play</span><span lang="ru">Демо · листайте вниз</span></p>
- <h1><span lang="en">We agentize businesses<br><em>Any online business becomes AI-native</em></span><span lang="ru">Мы агентизируем бизнес<br><em>Любой онлайн-бизнес становится AI-native</em></span></h1>
- <p class="lead"><span lang="en">No person in the routine flow. People set goals, approve and correct; agents do the work and hand it to each other. Watch how it starts: with one agent joining your chat.</span><span lang="ru">В рутине не нужен человек. Люди ставят цели, утверждают и поправляют, агенты делают работу и передают её друг другу. Смотрите, с чего всё начинается: в ваш чат приходит один агент.</span></p>
- <div class="scroll-hint" aria-hidden="true"><span></span></div>
+<canvas class="field" id="field" aria-hidden="true"></canvas>
+
+<section class="hero" aria-labelledby="hero-title">
+ <div class="hero-copy">
+  <p class="chip reveal" style="--i:0"><span class="pulse-dot"></span><span lang="en">Business agentization · demo</span><span lang="ru">Агентизация бизнеса · демо</span></p>
+  <h1 id="hero-title" class="reveal" style="--i:1"><span lang="en"><span class="w">We agentize</span> <span class="w">businesses</span><br><em class="w">Your online business,</em> <em class="w">AI-native</em></span><span lang="ru"><span class="w">Мы агентизируем</span> <span class="w">бизнес</span><br><em class="w">Ваш онлайн-бизнес</em> <em class="w">становится AI-native</em></span></h1>
+  <p class="lead reveal" style="--i:2"><span lang="en">No person in the routine flow. People set goals, approve and correct; agents do the work and hand it to each other, around the clock.</span><span lang="ru">В рутине не нужен человек. Люди ставят цели, утверждают и поправляют, агенты делают работу и передают её друг другу, круглые сутки.</span></p>
+  <div class="hero-actions reveal" style="--i:3">
+   <a class="cta big-cta" href="#apply"><span lang="en">Agentize my business</span><span lang="ru">Агентизировать бизнес</span> →</a>
+   <a class="ghost" href="#story"><span class="play-mini" aria-hidden="true"></span><span lang="en">Watch Morpheus at work</span><span lang="ru">Смотреть, как работает Морфеус</span></a>
+  </div>
+  <ul class="proof reveal" style="--i:4">
+   <li><b>1</b><span lang="en">agent starts it: the PM agent</span><span lang="ru">агент начинает: PM-агент</span></li>
+   <li><b>0</b><span lang="en">keys in chats: one vault</span><span lang="ru">ключей в чатах: одно хранилище</span></li>
+   <li><b>24/7</b><span lang="en">on Claude Code, Codex and next</span><span lang="ru">на Claude Code, Codex и следующих</span></li>
+  </ul>
+ </div>
+ <div class="hero-demo reveal" style="--i:2" aria-label="A preview: Morpheus joins a team chat">
+  <div class="orb" aria-hidden="true"><span class="ring r1"></span><span class="ring r2"></span><span class="core-m">M</span></div>
+  <div class="mini-chat">
+   <div class="chat-head"><span class="dot"></span><b><span lang="en">#your-company</span><span lang="ru">#ваша-компания</span></b><small>live</small></div>
+   <ol class="mini-msgs" id="mini">
+    <li data-k="0"><i>O</i><p><span lang="en">Launch slips again?</span><span lang="ru">Запуск опять переносим?</span></p></li>
+    <li data-k="1" class="sys"><p><span lang="en">Morpheus joined the chat</span><span lang="ru">Морфеус присоединился к чату</span></p></li>
+    <li data-k="2" class="agent"><i class="m">M</i><p><span lang="en">Hi, I am Morpheus. Give me your goals; agents will do the rest.</span><span lang="ru">Привет, я Морфеус. Дайте мне цели, остальное сделают агенты.</span></p></li>
+    <li data-k="3" class="sys ok"><p><span lang="en">7 agents deployed · 3 departments live</span><span lang="ru">7 агентов развёрнуто · 3 отдела работают</span></p></li>
+    <li data-k="4" class="agent"><i class="cp">Co</i><p><span lang="en">Launch copy ready in 10 languages →</span><span lang="ru">Тексты запуска готовы на 10 языках →</span></p></li>
+   </ol>
+   <div class="mini-typing" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+ </div>
+ <a class="scroll-cue" href="#story"><span class="cue-line" aria-hidden="true"></span><span lang="en">Scroll: the story of one business</span><span lang="ru">Листайте: история одного бизнеса</span></a>
 </section>
+
+<nav class="rail" aria-label="Chapters" id="rail"></nav>
 
 <section id="story" aria-label="Story">
  <div class="stage" id="stage">
@@ -260,6 +289,6 @@
 </section>
 
 <footer class="foot"><a href="/">passioncode.ai</a> · <span lang="en">demo, not linked from the site</span><span lang="ru">демо, не связано с сайтом</span></footer>
-<script src="/story/story.js" defer></script>
+<script type="module" src="/story/story.js"></script>
 </body>
 </html>

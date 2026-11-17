@@ -59,6 +59,8 @@ const publicFiles = [
   'story/index.html',
   'story/story.css',
   'story/story.js',
+  'story/store.js',
+  'story/field.js',
   'robots.txt',
   'sitemap.xml',
   'assets/passioncode-mark.svg',
