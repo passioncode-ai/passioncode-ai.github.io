@@ -149,3 +149,17 @@ the style and the voice from variants with references before the final render.
   `08abf962-e235-4f3e-9e91-78ac2f112f00` uploaded with `wrangler versions upload` (tag `site-068-demo`),
   not deployed: its preview answers `/story/` with 200, while `passioncode.ai/story/` answers 404 and the
   home page keeps the current version.
+- 2026-11-17: visual pass and its own host, on the operator's request in a fabric-workspace session («что тут по сайту
+  давай улучшим визуал новой версии лендинга, давай на сабдомен сделаем ее на assesment поддомен»). The hero headline
+  fits in three lines and its preview chat opens with messages (no empty pane); the chapter number leads each caption;
+  Morpheus is drawn again (coat with lapels and collar, oval shades with a gradient reflection, rim light); the finale's
+  line and a button sit in the bay of the particle M, in the same viewport box `field.js` draws it in (`.final` is a child
+  of the sticky stage); the rail shows labels only on hover; phones get stacked goals and a full-width org chart.
+  Outgoing links are absolute (`https://passioncode.ai/...`) so the page works on both hosts. `npm run build:assessment`
+  writes `dist-assessment/` (the story as `/`, robots `Disallow: /`, `X-Robots-Tag: noindex, nofollow`), and
+  `npm run deploy:assessment` deploys the assets-only Worker `passioncode-assessment` with the custom domain
+  `assessment.passioncode.ai`; the main Worker and passioncode.ai are not touched (`passioncode.ai/story/` still 404).
+  Deployed version `8d5f834e-6181-42e9-8543-26be99b6e1cc`; `curl -I` gives 200 with the noindex header for `/`,
+  `/story/story.js` and `/robots.txt`. Checked in WebKit at 1440 and 390 px, EN and RU, no console errors;
+  `npm run check` passes. Copylot reports for the new strings: `d629e60a`, `425a9816`, `c52c954e`, `fc1bbc93`,
+  `2a94a30a`, `d76d933d` (no blocking finding; the two non-breaking-space suggestions applied).

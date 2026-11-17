@@ -373,3 +373,44 @@ i.mp{background:#332314!important;color:var(--pc-warning)!important}
 .mini-chat .chat-head{padding-left:70px}
 .orb{left:-50px;top:-54px}
 @media (max-width:860px){.mini-chat .chat-head{padding-left:16px}}
+
+/* ---- assessment pass (SITE-068, 2026-11-17): the hero fits, the chapter number leads, Morpheus drawn again,
+   the finale reads inside the particle M, the rail stays out of the scene, phones keep every card in view ---- */
+.hero{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.hero h1{font-size:clamp(38px,4.4vw,68px);text-wrap:balance;max-width:16ch}
+.hero .lead{text-wrap:pretty}
+.mini-msgs{min-height:0;height:272px}
+.caption{flex-direction:column;align-items:flex-start;gap:4px;min-height:104px}
+.ch-num{font-size:11px;letter-spacing:.12em}
+.ch-num span{font-size:13px}
+.captions{width:100%;min-height:92px}
+.cap h2{text-wrap:balance}
+.morpheus{width:min(260px,42vh);filter:drop-shadow(0 24px 48px #f2067355)}
+.bubble{box-shadow:0 18px 40px #0008}
+/* .final is a child of the sticky stage, so it shares the viewport box the field draws the M in:
+   the M's legs stand at 0.468 and 0.852 of the width, its bay from 0.57 to 0.75 of the height. */
+.final{position:absolute;left:66%;top:57%;width:min(30vw,380px);translate:-50% 0;z-index:6;display:grid;justify-items:center;gap:14px;text-align:center;opacity:0;visibility:hidden;transition:opacity var(--dur-slow) var(--motion-ease),visibility var(--dur-slow)}
+.final.on{opacity:1;visibility:visible}
+.final .big{margin:0;font-size:clamp(22px,2.4vw,38px);line-height:1.05;text-wrap:balance;filter:drop-shadow(0 6px 24px #0a070dcc)}
+.final .big-cta{margin:0}
+.rail .on .lbl{opacity:0;transform:translateX(6px)}
+.rail a:hover .lbl,.rail a:focus-visible .lbl{opacity:1;transform:none}
+.hud{justify-content:center;position:relative}
+.illus{position:absolute;right:0;bottom:4px;margin:0}
+@media (max-width:860px){
+ .hero{grid-template-columns:1fr}
+ .hero h1{max-width:none}
+ .mini-msgs{height:220px}
+ .caption{min-height:92px}
+ .scene[data-s="3"]>*,.scene[data-s="5"]>*{scale:1}
+ .goals{grid-template-columns:1fr;gap:8px;width:min(320px,100%)}
+ .goal{display:grid;grid-template-columns:auto 1fr 90px;align-items:center;gap:10px;padding:10px 12px}
+ .goal b{margin:0;font-size:14px}.goal svg{height:22px}
+ .org{width:100%}
+ .final{left:50%;top:44%;width:52vw;gap:8px}
+ .final .big{font-size:20px}
+ .final{padding:8px 6px;border-radius:16px;background:radial-gradient(closest-side,#0a070deb,#0a070d99)}
+ .final .big-cta{font-size:13px;padding:8px 12px}
+}
+@media (prefers-reduced-motion:reduce){.final{position:static;translate:none;width:auto;opacity:1;visibility:visible;margin:24px auto}.mini-msgs{height:auto}}
+.calm .final{position:static;translate:none;width:auto;opacity:1;visibility:visible;margin:24px auto}.calm .mini-msgs{height:auto}

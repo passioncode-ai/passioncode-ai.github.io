@@ -49,6 +49,18 @@ the named production vault slot and a child confirmed the variable was present.
 Wrangler still needs its existing authenticated login/API token; a resolved account
 id alone is not proof of deployment permission. A contributor gets access from the operator.
 
+## The story demo host (SITE-068)
+
+`assessment.passioncode.ai` serves the story demo from `story/` as its root page, through its own assets-only
+Worker `passioncode-assessment` (`wrangler.assessment.json`). It is a preview host: `robots.txt` disallows
+everything and every response carries `X-Robots-Tag: noindex, nofollow`. It shares nothing with the main Worker
+(no D1, no mail, no routes on `passioncode.ai`), so deploying it changes nothing on the main site:
+
+```sh
+python3 "$(project-observatory full-path)/tools/use_secret.py" run --env prod \
+  passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npm run deploy:assessment
+```
+
 ## DNS and certificates
 
 Cloudflare Custom Domains own the apex and `www` DNS records and issue their certificates.

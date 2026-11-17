@@ -46,12 +46,12 @@ if (reduce) {
   // The hero's live preview loops only while it is on screen.
   const mini = [...document.querySelectorAll('#mini li')]
   const typing = document.querySelector('.mini-typing')
-  let step = 0, timer = null
+  let step = 3, timer = null
   const play = () => {
     mini.forEach((li, i) => li.classList.toggle('on', i < step))
     typing.classList.toggle('on', step < mini.length)
-    step = step >= mini.length + 2 ? 0 : step + 1
-    timer = setTimeout(play, step === 1 ? 900 : 1500)
+    step = step >= mini.length + 2 ? 1 : step + 1
+    timer = setTimeout(play, step === 2 ? 900 : 1500)
   }
   new IntersectionObserver(([e]) => {
     if (e.isIntersecting && !timer) play()
@@ -71,6 +71,7 @@ if (reduce) {
     caps.forEach(c => c.classList.toggle('on', Number(c.dataset.c) === act))
     railLinks.forEach((a, i) => { a.classList.toggle('on', i === act); a.classList.toggle('past', i < act) })
     rail.classList.toggle('show', act >= 0)
+    $('final').classList.toggle('on', act === CHAPTERS - 1)
     $('ch-num').textContent = String(Math.max(0, act)).padStart(2, '0')
   })
 
