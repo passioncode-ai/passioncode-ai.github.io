@@ -1,0 +1,87 @@
+/* Variation 2 «Ink» of the story landing (SITE-068 refactor 2026-11-17, F15): the same page as a printed comic.
+   Layered over matrix.css and scoped to html.ink: paper-black ink, halftone, panel gutters, white balloons,
+   one acid-green accent, no code rain. Never touches design-system/tokens.css or the main site. */
+html.ink{
+ --pc-bg:#111;--pc-panel:#f4f1e8;--pc-panel-raised:#fffdf6;--pc-text:#f4f1e8;--pc-text-muted:#b9b4a6;
+ --pc-border:#2b2b2b;--pc-border-strong:#f4f1e8;--pc-accent:#b6ff3b;--pc-accent-hover:#d4ff7a;--pc-on-accent:#111;
+ --paper:#f4f1e8;--ink:#0b0b0b;--glow:none;
+ --halftone:radial-gradient(#0b0b0b2e 1.2px,transparent 1.6px) 0 0/6px 6px;
+}
+.ink body{background:#111 radial-gradient(#ffffff0d 1px,transparent 1.4px) 0 0/5px 5px}
+.ink .rain{display:none}
+.ink .field{opacity:.35;filter:grayscale(1) contrast(1.4)}
+.ink .bar{background:#111e;border-bottom:3px solid var(--paper)}
+.ink .brand b{text-shadow:none}
+.ink .progress i{background:var(--pc-accent);box-shadow:none}
+.ink .cta{box-shadow:0 0 0 3px var(--ink),5px 5px 0 var(--paper)}
+.ink .hero::before{background:none}
+.ink .hero h1{text-shadow:4px 4px 0 #000;letter-spacing:-.01em}
+.ink .hero h1 em{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--pc-accent);-webkit-text-stroke:1px #000}
+.ink .chip{background:var(--paper);color:var(--ink);border:3px solid var(--ink)}
+.ink .proof li{background:var(--paper);color:var(--ink);border:3px solid var(--ink);box-shadow:5px 5px 0 #000}
+.ink .proof b{color:var(--ink);text-shadow:none}
+
+/* Panels: cream paper inside thick black frames, gutters around */
+.ink .mini-chat,.ink .chat{background:var(--paper);color:var(--ink);border:4px solid var(--ink);outline:3px solid var(--paper);outline-offset:0;box-shadow:8px 8px 0 #000}
+.ink .chat-head{color:var(--ink);border-bottom:3px solid var(--ink);background:var(--pc-accent)}
+.ink .chat-head small,.ink .chat-head b{color:var(--ink)}
+.ink .chat-head .dot{background:var(--ink);box-shadow:none}
+.ink .msg p,.ink .mini-msgs li p{background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:18px;box-shadow:3px 3px 0 #000}
+.ink .msg p::before,.ink .mini-msgs li:not(.sys) p::before{border-right-color:var(--ink)}
+.ink .msg.agent p,.ink .mini-msgs li.agent p{background:var(--pc-accent);border-color:var(--ink);box-shadow:3px 3px 0 #000}
+.ink .msg.agent p::before{border-right-color:var(--ink)}
+.ink .msg.sys p,.ink .mini-msgs li.sys p{color:var(--ink);background:none;font-weight:700}
+.ink .msg b{color:var(--ink)}
+.ink .msg i,.ink .mini-msgs i{border:2px solid var(--ink)}
+.ink .typing span,.ink .mini-typing span{background:var(--ink)}
+
+/* Narration boxes: yellowed caption boxes of a printed comic */
+.ink .cap h2{background:var(--paper);color:var(--ink);border:3px solid var(--ink);box-shadow:5px 5px 0 #000;transform:rotate(-1.2deg)}
+.ink .cap p{background:#111d;color:var(--paper);box-shadow:none}
+.ink .ch-num{color:var(--paper)}
+
+/* The scene panel: paper with halftone; drawings in ink */
+.ink .scenes{background:var(--halftone),var(--paper);border:4px solid var(--ink);outline:3px solid var(--paper);box-shadow:10px 10px 0 #000;color:var(--ink)}
+.ink .scenes,.ink .scenes b,.ink .scenes small,.ink .scenes h3,.ink .scenes li{color:var(--ink)}
+.ink .biz-card,.ink .goal,.ink .readout>span,.ink .box,.ink .side,.ink .vault,.ink .correction,.ink .timer,.ink .person i,.ink .sat i{background:#fff!important;color:var(--ink)!important;border:3px solid var(--ink)!important;box-shadow:4px 4px 0 #000!important}
+.ink .box.hot.lit{background:#ff4d4d!important;color:#fff!important}
+.ink .bubble{background:#fff;color:var(--ink);border:3px solid var(--ink)!important;box-shadow:5px 5px 0 #000}
+.ink .bubble::before{border-bottom-color:var(--ink)}
+.ink .tag{color:var(--ink);text-shadow:none;background:var(--pc-accent);display:inline-block;padding:2px 10px;border:2px solid var(--ink)}
+.ink .beam{background:linear-gradient(to top,#0b0b0b33,transparent)}
+.ink .guide{filter:drop-shadow(6px 6px 0 #000)}
+.ink .guide [fill="url(#jacket)"]{fill:#1b1b1b}
+.ink .guide [fill="url(#dots)"]{fill:url(#dots);opacity:.6}
+.ink .core-m,.ink i.m{background:var(--pc-accent)!important;color:var(--ink)!important;box-shadow:0 0 0 3px #000!important}
+.ink .ring{border-color:#0b0b0b55}
+.ink .goal svg path,.ink .goal svg circle,.ink .flat polyline{stroke:var(--ink)}
+.ink .org .dept rect{fill:#fff;stroke:var(--ink);stroke-width:3}
+.ink .dname{fill:var(--ink)!important}
+.ink .goal-row rect{fill:var(--pc-accent);stroke:var(--ink);stroke-width:3}
+.ink .goal-row text,.ink .timer b{fill:var(--ink);color:var(--ink)}
+.ink .branch,.ink .route{stroke:var(--ink)}
+.ink .ag rect{fill:#fff;stroke:var(--ink)}
+.ink .ag text{fill:var(--ink)}
+.ink .ag.live rect{fill:var(--pc-accent);stroke:var(--ink)}
+.ink .token circle{fill:#ff4d4d;stroke:#000;stroke-width:3;filter:none}
+.ink .stamp{fill:var(--ink)}
+.ink .side.old{background:#e6e0d0!important}.ink .side.new{background:var(--pc-accent)!important}
+.ink .up{stroke:var(--ink)}.ink .down{stroke:#ff4d4d}
+.ink .grid path{stroke:#0b0b0b33}
+.ink .legend span{color:var(--ink)}
+.ink .l-up::before{background:var(--ink)}.ink .l-down::before{background:#ff4d4d}
+.ink .fx{color:#fff;-webkit-text-stroke:3px #000;text-shadow:5px 5px 0 #000}
+.ink .fx1{color:var(--pc-accent)}.ink .fx8{color:#ff4d4d}
+.ink .hud>div{background:var(--paper);color:var(--ink);border:3px solid var(--ink)!important;box-shadow:4px 4px 0 #000}
+.ink .hud b,.ink .hud small{color:var(--ink)}
+.ink .final .big{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--paper);text-shadow:5px 5px 0 #000}
+.ink .vo-sub{background:#fff;color:var(--ink);border:3px solid var(--ink);box-shadow:5px 5px 0 #000}
+.ink .apply-card,.ink .eco-steps li,.ink .eco-video{background:var(--paper)!important;color:var(--ink);border:4px solid var(--ink)!important;box-shadow:8px 8px 0 #000}
+.ink .apply-card *,.ink .eco-steps li *,.ink .eco-video p{color:var(--ink)}
+.ink .apply-card .cta{color:var(--pc-on-accent)}
+.ink .lang[aria-pressed="true"]{background:var(--pc-accent);color:var(--ink)}
+.ink .voice-btn[aria-pressed="true"]{color:var(--pc-accent);border-color:var(--pc-accent);box-shadow:none}
+/* Iteration 2: the final line sits on the paper panel, so it is inked, not white */
+.ink .final .big{color:var(--ink);text-shadow:3px 3px 0 var(--pc-accent)}
+.ink .final .cta{box-shadow:0 0 0 3px var(--ink),5px 5px 0 #000}
+.ink .field{opacity:.55;filter:grayscale(1) brightness(.2)}

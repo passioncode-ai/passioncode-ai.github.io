@@ -64,6 +64,7 @@ const publicFiles = [
   'story/rain.js',
   'story/voice.js',
   'story/matrix.css',
+  'story/ink.css',
   'story/voice/script.json',
   'robots.txt',
   'sitemap.xml',

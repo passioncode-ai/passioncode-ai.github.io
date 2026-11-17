@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/design-system/tokens.css">
 <link rel="stylesheet" href="/story/story.css">
 <link rel="stylesheet" href="/story/matrix.css">
+<link rel="stylesheet" href="/story/ink.css">
 </head>
 <body>
 <a class="skip" href="#apply"><span lang="en">Skip to the request form</span><span lang="ru">Перейти к заявке</span></a>
@@ -17,6 +18,8 @@
  <div class="progress" aria-hidden="true"><i></i></div>
  <div class="bar-right">
   <button class="voice-btn" type="button" id="voice" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span lang="en">Morpheus's voice</span><span lang="ru">Голос Морфеуса</span></button>
+  <a class="alt-link look-link to-ink" href="/v2/"><span lang="en">Look 2: ink</span><span lang="ru">Вариант 2: тушь</span></a>
+  <a class="alt-link look-link to-terminal" href="/"><span lang="en">Look 1: terminal</span><span lang="ru">Вариант 1: терминал</span></a>
   <a class="alt-link" href="/film/"><span lang="en">Watch as a cartoon</span><span lang="ru">Смотреть мультфильмом</span></a>
   <button class="lang" type="button" data-set-lang="en" aria-pressed="true">EN</button>
   <button class="lang" type="button" data-set-lang="ru" aria-pressed="false">RU</button>
@@ -138,36 +141,50 @@
     <b class="fx fx1" aria-hidden="true"><span lang="en">GLITCH</span><span lang="ru">ГЛИТЧ</span></b>
     <div class="morpheus-wrap">
      <div class="beam"></div>
-     <svg class="morpheus" viewBox="0 0 220 280" role="img" aria-label="Morpheus">
+     <svg class="morpheus guide" viewBox="0 0 240 290" role="img" aria-label="Morpheus, the PM agent: an android project manager with a screen face, a headset and a task board">
+      <!-- An original character drawn for PassionCode (refactor 2026-11-17, F16): screen face, antenna, headset,
+           hooded jacket with the PassionCode mark, a floating task board. Not a likeness of any film character. -->
       <defs>
-       <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.3" fill="#00ff66" opacity=".35"/></pattern>
-       <linearGradient id="coatg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2620"/><stop offset="1" stop-color="#050a07"/></linearGradient>
-       <linearGradient id="skin2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a5a3c"/><stop offset="1" stop-color="#4a2c1c"/></linearGradient>
-       <radialGradient id="halo2" cx=".5" cy=".4" r=".55"><stop offset="0" stop-color="#00ff66" stop-opacity=".28"/><stop offset="1" stop-color="#00ff66" stop-opacity="0"/></radialGradient>
+       <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.2" fill="#00ff66" opacity=".3"/></pattern>
+       <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3326"/><stop offset="1" stop-color="#07110b"/></linearGradient>
+       <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9f5ee"/><stop offset="1" stop-color="#9fb8a9"/></linearGradient>
+       <radialGradient id="halo2" cx=".5" cy=".42" r=".55"><stop offset="0" stop-color="#00ff66" stop-opacity=".28"/><stop offset="1" stop-color="#00ff66" stop-opacity="0"/></radialGradient>
       </defs>
-      <circle cx="110" cy="120" r="104" fill="url(#halo2)"/>
-      <path d="M26 280 C30 214 56 184 110 176 C164 184 190 214 194 280 Z" fill="url(#coatg)" stroke="#000" stroke-width="4"/>
-      <path d="M26 280 C30 214 56 184 110 176 C164 184 190 214 194 280 Z" fill="url(#dots)"/>
-      <path d="M72 186 L58 150 L92 170 Z M148 186 L162 150 L128 170 Z" fill="#0d1610" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M92 176 L110 250 L128 176 Z" fill="#000"/>
-      <path d="M92 176 L80 200 L104 262 M128 176 L140 200 L116 262" fill="none" stroke="#00ff66" stroke-width="1.6" opacity=".7"/>
-      <rect x="98" y="144" width="24" height="30" rx="8" fill="url(#skin2)" stroke="#000" stroke-width="4"/>
-      <ellipse cx="110" cy="100" rx="40" ry="48" fill="url(#skin2)" stroke="#000" stroke-width="4"/>
-      <path d="M138 70 C150 88 152 116 138 136" stroke="#00ff66" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
-      <path d="M86 64 C96 56 116 54 128 60" stroke="#fff" stroke-width="3" fill="none" opacity=".22" stroke-linecap="round"/>
-      <path d="M84 84 q10 -6 20 -1 M116 83 q10 -5 20 1" stroke="#000" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-      <g class="shades">
-       <ellipse cx="96" cy="99" rx="11" ry="7.5" fill="#000" stroke="#000" stroke-width="2"/>
-       <ellipse cx="124" cy="99" rx="11" ry="7.5" fill="#000" stroke="#000" stroke-width="2"/>
-       <path d="M107 98 q3 -3 6 0" stroke="#000" stroke-width="2.5" fill="none"/>
-       <path class="lens-glow" d="M90 96 q4 -3 9 -1 M118 96 q4 -3 9 -1" stroke="#00ff66" stroke-width="2" fill="none" stroke-linecap="round"/>
-       <rect class="glint" x="88" y="95" width="6" height="2.2" rx="1.1" fill="#d6ffe2"/>
+      <circle cx="112" cy="124" r="106" fill="url(#halo2)"/>
+      <!-- antenna and its signal ring -->
+      <path d="M112 34 V14" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+      <circle class="g-led" cx="112" cy="11" r="6" fill="#00ff66" stroke="#000" stroke-width="3"/>
+      <circle class="g-ping" cx="112" cy="11" r="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+      <!-- hooded jacket -->
+      <path d="M30 290 C32 226 58 196 112 188 C166 196 192 226 194 290 Z" fill="url(#jacket)" stroke="#000" stroke-width="4"/>
+      <path d="M30 290 C32 226 58 196 112 188 C166 196 192 226 194 290 Z" fill="url(#dots)"/>
+      <path d="M70 196 C64 170 78 150 112 148 C146 150 160 170 154 196 C140 186 84 186 70 196 Z" fill="#14281c" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M112 196 V290" stroke="#000" stroke-width="3"/>
+      <path d="M100 206 l-6 30 M124 206 l6 30" stroke="#00ff66" stroke-width="2" opacity=".6" stroke-linecap="round"/>
+      <g transform="translate(138 222)"><rect x="-1" y="-1" width="26" height="26" rx="7" fill="#020604" stroke="#00ff66" stroke-width="2"/><path d="M6 18 V6 h7 a5 5 0 0 1 0 10 h-7" fill="none" stroke="#00ff66" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <!-- head: a rounded screen shell -->
+      <rect x="62" y="38" width="100" height="104" rx="34" fill="url(#shell)" stroke="#000" stroke-width="4"/>
+      <rect x="74" y="54" width="76" height="66" rx="22" fill="#031109" stroke="#000" stroke-width="3"/>
+      <path d="M80 62 q14 -6 30 -4" stroke="#fff" stroke-width="3" fill="none" opacity=".18" stroke-linecap="round"/>
+      <g class="g-eyes"><rect x="90" y="74" width="10" height="14" rx="5" fill="#00ff66"/><rect x="124" y="74" width="10" height="14" rx="5" fill="#00ff66"/></g>
+      <path class="g-wave" d="M92 104 h8 l4 -6 l5 12 l5 -12 l5 10 l4 -4 h9" fill="none" stroke="#00ff66" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- headset with a microphone boom -->
+      <path d="M58 92 C56 52 168 52 166 92" fill="none" stroke="#000" stroke-width="6" stroke-linecap="round"/>
+      <rect x="50" y="80" width="16" height="30" rx="7" fill="#1d3326" stroke="#000" stroke-width="4"/>
+      <rect x="158" y="80" width="16" height="30" rx="7" fill="#1d3326" stroke="#000" stroke-width="4"/>
+      <path d="M58 108 C60 128 74 132 88 130" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="90" cy="130" r="5" fill="#00ff66" stroke="#000" stroke-width="2.5"/>
+      <!-- the floating task board -->
+      <g class="g-board" transform="translate(166 150) rotate(8)">
+       <rect width="70" height="52" rx="9" fill="#020604e6" stroke="#00ff66" stroke-width="2.5"/>
+       <path d="M24 8 V44 M46 8 V44" stroke="#00ff6655" stroke-width="1.5"/>
+       <rect x="6" y="10" width="13" height="7" rx="2" fill="#00ff66"/><rect x="6" y="21" width="13" height="7" rx="2" fill="#00ff6699"/>
+       <rect x="28" y="10" width="13" height="7" rx="2" fill="#00ff66"/>
+       <rect x="50" y="10" width="13" height="7" rx="2" fill="#d6ffe2"/><rect x="50" y="21" width="13" height="7" rx="2" fill="#d6ffe2"/><rect x="50" y="32" width="13" height="7" rx="2" fill="#d6ffe2"/>
       </g>
-      <path d="M106 112 q4 6 8 0" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <path d="M96 128 q14 7 28 0" stroke="#000" stroke-width="3.5" fill="none" stroke-linecap="round"/>
      </svg>
      <div class="bubble"><span lang="en">“Hey. Let's make your business run itself.”</span><span lang="ru">«Привет. Давайте сделаем так, чтобы бизнес работал сам».</span></div>
-     <p class="tag">Morpheus · PM agent</p>
+     <p class="tag"><span lang="en">Morpheus · PM agent</span><span lang="ru">Морфеус · PM-агент</span></p>
     </div>
    </div>
 

@@ -73,8 +73,16 @@ html[data-lang="ru"] .vo-sub[data-draft]::after{content:" · черновой г
 .matrix .bubble::before{content:"";position:absolute;left:50%;top:-14px;margin-left:-8px;border:8px solid transparent;border-bottom:12px solid var(--pc-accent)}
 .matrix .beam{background:linear-gradient(to top,#00ff6655,transparent)}
 .matrix .morpheus{filter:drop-shadow(6px 6px 0 #000) drop-shadow(0 0 30px #00ff6655)}
-.matrix .lens-glow{animation:lens 3s ease-in-out infinite}
-@keyframes lens{50%{opacity:.25}}
+.matrix .guide .g-eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.2s infinite}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}}
+.matrix .guide .g-wave{stroke-dasharray:60;animation:talk 1.1s linear infinite}
+@keyframes talk{to{stroke-dashoffset:-120}}
+.matrix .guide .g-ping{transform-box:fill-box;transform-origin:center;animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}100%{transform:scale(2.2);opacity:0}}
+.matrix .guide .g-board{animation:hover 3.6s ease-in-out infinite alternate}
+@keyframes hover{to{translate:0 -8px}}
+@media (prefers-reduced-motion:reduce){.matrix .guide *{animation:none!important}}
+.calm .guide *{animation:none!important}
 .matrix .tag{color:var(--pc-accent);text-shadow:var(--glow)}
 .matrix .org .dept rect{fill:#06100a;stroke:#000;stroke-width:3}
 .matrix .goal-row rect{fill:#063a1a;stroke:#00ff66}
@@ -113,3 +121,16 @@ html[data-lang="ru"] .vo-sub[data-draft]::after{content:" · черновой г
 .matrix .dname{fill:#8fbf9f!important}
 @media (max-width:860px){.matrix .caption{min-height:118px}.matrix .captions{min-height:104px}}
 @media (max-width:860px){.matrix .cap p{font-size:11.5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
+
+/* The look switch between variation 1 (terminal) and 2 (ink), refactor 2026-11-17 (F15) */
+.look-link.to-terminal{display:none}
+.ink .look-link.to-ink{display:none}.ink .look-link.to-terminal{display:inline}
+.look-link{color:var(--pc-accent)}
+@media (max-width:860px){.look-link{display:inline!important;font-size:11px;margin:0 2px}.ink .look-link.to-ink,.look-link.to-terminal{display:none!important}.ink .look-link.to-terminal{display:inline!important}}
+/* Iteration 2: on a phone the look switch is a short chip, so the bar stays one line */
+@media (max-width:860px){
+ .look-link{border:1px solid currentColor;border-radius:999px;padding:2px 7px;font:700 11px var(--mono)}
+ .look-link [lang]{display:none}
+ .look-link.to-ink::after{content:"V2"}
+ .look-link.to-terminal::after{content:"V1"}
+}

@@ -67,34 +67,42 @@ if (reduce) {
   const heroDemo = document.querySelector('.hero-demo')
 
   // Coarse changes only: which chapter is the reading focus.
+  // Before the story top (act -1) the sticky stage is already entering the screen: it shows chapter 0, not an
+  // empty panel (F3, refactor 2026-11-17).
   subscribeAct(act => {
-    const sceneIdx = act >= 5 && act <= 7 ? 5 : act
+    const shown = Math.max(0, act)
+    const sceneIdx = shown >= 5 && shown <= 7 ? 5 : shown
     scenes.forEach(s => s.classList.toggle('on', Number(s.dataset.s) === sceneIdx))
-    caps.forEach(c => c.classList.toggle('on', Number(c.dataset.c) === act))
+    caps.forEach(c => c.classList.toggle('on', Number(c.dataset.c) === shown))
     railLinks.forEach((a, i) => { a.classList.toggle('on', i === act); a.classList.toggle('past', i < act) })
     rail.classList.toggle('show', act >= 0)
     $('final').classList.toggle('on', act === CHAPTERS - 1)
     $('ch-num').textContent = String(Math.max(0, act)).padStart(2, '0')
   })
 
-  // The pixel seam: brand blocks that peel on at each chapter boundary in a diagonal wave.
+  // The pixel seam: brand blocks that peel on at each chapter boundary in a diagonal wave. It is an accent, not a
+  // curtain (F5): drawn only inside the scene panel, never over the caption or the chat, and capped at SEAM_MAX.
+  const SEAM_MAX = 0.38, SEAM_SPAN = 0.03
   const canvas = $('pixels'), ctx = canvas.getContext('2d')
+  const panel = document.querySelector('.scenes')
+  let box = { x: 0, y: 0, w: 0, h: 0 }
   const COLORS = root.classList.contains('matrix')
     ? ['#003b14', '#00ff66', '#0a1a10', '#00c24e', '#020604', '#d6ffe2']
     : ['#41054b', '#f20673', '#ffd21a', '#1b1420', '#0a070d', '#6f2a7a']
   let cells = [], cols = 0, size = 28
   const resizePixels = () => {
-    const r = stage.getBoundingClientRect()
+    const r = stage.getBoundingClientRect(), pr = panel.getBoundingClientRect()
     canvas.width = r.width; canvas.height = r.height
-    size = r.width < 700 ? 18 : 26
-    cols = Math.ceil(r.width / size)
-    const rows = Math.ceil(r.height / size)
+    box = { x: pr.left - r.left, y: pr.top - r.top, w: pr.width, h: pr.height }
+    size = r.width < 700 ? 14 : 22
+    cols = Math.ceil(box.w / size)
+    const rows = Math.ceil(box.h / size)
     cells = Array.from({ length: cols * rows }, (_, i) => ({
       t: 0.6 * (((i % cols) / cols + ((i / cols) | 0) / rows) / 2) + 0.4 * Math.random(),
       c: COLORS[(Math.random() * COLORS.length) | 0]
     }))
   }
-  resizePixels(); addEventListener('resize', resizePixels)
+  resizePixels(); addEventListener('resize', resizePixels); new ResizeObserver(() => { resizePixels(); lastAmount = -1 }).observe(panel)
   let lastAmount = -1
   const drawPixels = amount => {
     if (Math.abs(amount - lastAmount) < 0.004) return
@@ -105,7 +113,8 @@ if (reduce) {
       const cell = cells[i]
       if (cell.t > amount) continue
       ctx.fillStyle = cell.c
-      ctx.fillRect((i % cols) * size, ((i / cols) | 0) * size, size - 1, size - 1)
+      const x = (i % cols) * size, y = ((i / cols) | 0) * size
+      ctx.fillRect(box.x + x, box.y + y, Math.min(size - 1, box.w - x), Math.min(size - 1, box.h - y))
     }
   }
 
@@ -184,7 +193,7 @@ if (reduce) {
     // The seam peaks at each chapter boundary; inside the org scene (6 and 7) the picture stays.
     const near = Math.round(g), d = Math.abs(g - near)
     const seam = near >= 1 && near <= CHAPTERS - 1 && near !== 6 && near !== 7
-    drawPixels(seam ? clamp(1 - d / 0.06) : 0)
+    drawPixels(seam ? SEAM_MAX * clamp(1 - d / SEAM_SPAN) : 0)
   })
   start()
 }
