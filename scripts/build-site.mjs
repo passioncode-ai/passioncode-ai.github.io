@@ -55,6 +55,10 @@ const publicFiles = [
   // every language (v2 since SITE-043: docs/video/2026-10-12-home-v2/README.md).
   ...['', '-ru'].flatMap(suffix => [`assets/video/home${suffix}.mp4`, `assets/video/home${suffix}.webm`, `assets/video/home${suffix}.jpg`]),
   ...LOCALES.map(locale => `assets/video/home${locale === 'en' ? '' : `-${locale}`}.vtt`).filter(file => existsSync(resolve(root, file))),
+  // The story demo (SITE-068): branch site/story-morpheus only, noindex, not in the sitemap.
+  'story/index.html',
+  'story/story.css',
+  'story/story.js',
   'robots.txt',
   'sitemap.xml',
   'assets/passioncode-mark.svg',
