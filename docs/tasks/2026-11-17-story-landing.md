@@ -142,3 +142,10 @@ the style and the voice from variants with references before the final render.
   and absolute claims without a criterion are flagged. Variants that pass: "no person in the routine
   flow", "cost per task falls toward zero as agents learn", with a footnote to the measured pilot.
 - Comparison numbers need receipts (see the table) before the page goes live.
+
+## Receipts
+
+- 2026-11-17: demo committed as `0d7612c5` on `site/story-morpheus`, draft PR #162. Worker version
+  `08abf962-e235-4f3e-9e91-78ac2f112f00` uploaded with `wrangler versions upload` (tag `site-068-demo`),
+  not deployed: its preview answers `/story/` with 200, while `passioncode.ai/story/` answers 404 and the
+  home page keeps the current version.
