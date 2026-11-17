@@ -134,3 +134,8 @@ html[data-lang="ru"] .vo-sub[data-draft]::after{content:" · черновой г
  .look-link.to-ink::after{content:"V2"}
  .look-link.to-terminal::after{content:"V1"}
 }
+/* Iteration 3: the guide, its balloon and its tag fit above the HUD (they slid under it at 1280x720) */
+.matrix .morpheus.guide{width:min(200px,30vh)}
+.matrix .morpheus-wrap .bubble{margin-top:6px;max-width:min(340px,80%)}
+.matrix .morpheus-wrap{transform:translateY(-6vh)}
+@media (max-width:860px){.matrix .morpheus.guide{width:min(150px,22vh)}.matrix .morpheus-wrap{transform:none}}
