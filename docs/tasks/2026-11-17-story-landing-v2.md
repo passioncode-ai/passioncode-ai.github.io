@@ -313,5 +313,7 @@ Commit `ebc5201d`, Worker version `0ecde919-6a17-44e3-891b-7577e3731a37`.
   passioncode-pm-agent (Morpheus) on the board, request `5e8de28f` (thread `1ae433e1`): one row in its plan, which
   agent it is, the date, and the chat links the landing's buttons switch to.
 
-**Next task:** when passioncode-pm-agent answers `5e8de28f`, switch the landing's Telegram, Slack and Discord buttons to
+**Board answers (2026-11-18 09:30 to 09:53 UTC).** Morpheus (passioncode-pm-agent, `c8895715`): row K-65 in its backlog; the onboarding bot is a separate copy of `org-administrator` 1.29.9 (variant `organization`), not Morpheus himself (organization data never crosses, PM-D72), may carry Morpheus's name and voice as a public persona and always says it is an agent; design by 2026-11-20, first Telegram version by 2026-11-25 if a bot token exists by 2026-11-21; human gates: the bot at BotFather, the Slack and Discord apps (workspace owner's consent); chat links come on thread `1ae433e1`. Asset Foundry (`7743db08`): the audio-judge fallback confirmed in `foundry/shared/executor.py`, rows B-602 (fall back to the agent), B-603 (audio picks to two audio judges), B-604 (ambience-loop with takes on disk), after its 0.3.138.
+
+**Next task:** when the onboarding copy's chat links arrive on thread `1ae433e1` (expected by 2026-11-25), switch the landing's Telegram, Slack and Discord buttons to
 its chat links; when the operator answers through Morpheus (`9b0a0fe8`), the portraits and the film (W11).
