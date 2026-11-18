@@ -193,7 +193,8 @@ def main():
 <div id="top"></div>
 {hero}
 {act0()}
-<section class="film-full" id="film" hidden aria-label="{t('Film', 'Фильм')}">
+<section class="film-full" id="film" hidden aria-labelledby="film-name">
+ <h2 class="sr-only" id="film-name">{t('Film «Awakening»', 'Фильм «Пробуждение»')}</h2>
  <video poster="/story/film/poster.jpg" playsinline preload="none" data-src-en="/story/film/film-en.mp4" data-src-ru="/story/film/film-ru.mp4"></video>
  <ol class="film-subs" aria-live="polite">
   <li data-from="{CAP['manager'][0]}" data-to="{CAP['manager'][1]}">{t("We won't make it.", 'Мы не успеваем.')}</li>
@@ -207,7 +208,8 @@ def main():
    <p class="film-cap">{t('Across the hall: another office. Another business. Nobody in the routine.', 'Напротив: другой офис. Другой бизнес. В рутине никого.')}</p>
    {av('morpheus', 'hero-av')}
    <p class="rise-line" data-vo="again">{t('Shall we go on?', 'Ну что, продолжим?')}</p>
-   <div class="pills" role="group" aria-label="{t('Choose', 'Выбор')}">
+   <span class="sr-only" id="film-choose">{t('Choose', 'Выбор')}</span>
+   <div class="pills" role="group" aria-labelledby="film-choose">
     <button type="button" class="pill red" data-film="red"><span class="capsule" aria-hidden="true"></span>{t('Go on: follow the white rabbit', 'Продолжить: за белым кроликом')}</button>
     <button type="button" class="pill blue" data-film="blue"><span class="capsule" aria-hidden="true"></span>{t('Wake up at the desk again', 'Проснуться снова за столом')}</button>
    </div>
