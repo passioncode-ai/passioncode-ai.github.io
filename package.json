@@ -12,7 +12,9 @@
     "test": "node --test scripts/locales.test.mjs scripts/switchboard-release.test.mjs scripts/releases.test.mjs scripts/check-worker.mjs scripts/check-analytics.mjs scripts/public-dashes.test.mjs && python3 scripts/test_display_copy.py",
     "releases:sync": "node scripts/sync-releases.mjs",
     "releases:check": "node scripts/sync-releases.mjs --check",
-    "locales": "node scripts/build-locale.mjs"
+    "locales": "node scripts/build-locale.mjs",
+    "build:assessment": "node scripts/build-assessment.mjs",
+    "deploy:assessment": "test -n \"$CLOUDFLARE_ACCOUNT_ID\" || { echo \"npm run deploy:assessment: set CLOUDFLARE_ACCOUNT_ID to the organization account (docs/DEPLOYMENT.md)\" >&2; exit 1; }; npm run build:assessment && wrangler deploy -c wrangler.assessment.json"
   },
   "devDependencies": {
     "budoux": "0.9.2",

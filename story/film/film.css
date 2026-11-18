@@ -1,0 +1,20 @@
+/* Variant B (SITE-068): the scroll cartoon. The track is tall; scrolly-video keeps the film sticky and full-screen
+   and maps the track's scroll to the playhead. The Matrix comic look comes from matrix.css. */
+.film-intro{position:relative;z-index:1;min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:96px max(24px,8vw) 48px}
+.film-intro h1{font-size:clamp(40px,5.6vw,84px);line-height:1.02;letter-spacing:-.03em;margin:18px 0;font-weight:800;text-wrap:balance}
+.film-intro h1 em{font-style:normal;background:linear-gradient(90deg,#00ff66,#d6ffe2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.film-intro .lead{max-width:56ch}
+.chip{align-self:flex-start;display:inline-flex;gap:8px;align-items:center;padding:4px 12px;border:1px solid #00ff6655;border-radius:999px;font:600 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--pc-text-muted)}
+.pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--pc-accent);box-shadow:var(--glow)}
+.draft-note{margin-top:22px;font:12px var(--mono);color:var(--pc-text-muted);border-left:3px solid var(--pc-accent);padding-left:10px}
+.draft-note[hidden]{display:none}
+.track{position:relative;z-index:1;height:1100vh}
+#scrolly{border-top:3px solid #000;border-bottom:3px solid #000}
+.film-overlay{position:sticky;top:0;height:100vh;margin-top:-100vh;pointer-events:none;padding:76px 28px 28px;display:flex;flex-direction:column}
+.film-overlay .captions{position:relative;min-height:120px}
+.film-overlay .cap{position:absolute;inset:0;opacity:0;transform:translateY(10px);transition:opacity .35s,transform .35s}
+.film-overlay .cap.on{opacity:1;transform:none}
+.film-overlay .vo-sub{bottom:40px}
+.film .scene,.film .stage{display:none}
+@media (max-width:860px){.track{height:900vh}.film-overlay{padding:66px 14px 14px}}
+@media (prefers-reduced-motion:reduce){.track{height:auto}.film-overlay{position:static;margin:0;height:auto}.film-overlay .cap{position:static;opacity:1;transform:none;margin:12px 0}}

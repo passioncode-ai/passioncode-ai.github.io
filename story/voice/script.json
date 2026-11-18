@@ -1,0 +1,73 @@
+{
+  "schema": "story-voiceover/1",
+  "task": "SITE-068",
+  "voice": {
+    "copylot": "861f15ee-486b-4a6d-9b16-4739217b277f",
+    "version": 2,
+    "channel": "vo"
+  },
+  "speaker": "Morpheus, the PM agent: a calm, low, unhurried mentor voice (an original voice, not an imitation of any actor)",
+  "lines": [
+    {
+      "id": "hero",
+      "en": "I'm Morpheus. Let me show you how your business really runs.",
+      "ru": "Я Морфеус. Давайте покажу, как на самом деле работает ваш бизнес."
+    },
+    {
+      "id": "ch00",
+      "en": "The launch slips again. Every result waits for a person.",
+      "ru": "Запуск опять переносится. Каждый результат ждёт человека."
+    },
+    {
+      "id": "ch01",
+      "en": "I join your chat as your PM. Give me the goals.",
+      "ru": "Я прихожу в ваш чат как PM. Дайте мне цели."
+    },
+    {
+      "id": "ch02",
+      "en": "Your team gets access by level. Keep it and grow together, or hand the routine to agents.",
+      "ru": "Команда получает доступ по уровням. Оставьте её и растите вместе или отдайте рутину агентам."
+    },
+    {
+      "id": "ch03",
+      "en": "Trinity measures how work flows and how many hours agents can take. Every connector sharpens the picture.",
+      "ru": "Тринити измеряет, как идёт работа и сколько часов возьмут агенты. Каждый коннектор делает картину точнее."
+    },
+    {
+      "id": "ch04",
+      "en": "Here is the plan: the phases, the cost, and how it grows with no person in the routine.",
+      "ru": "Вот план: этапы, стоимость и как всё растёт без людей в рутине."
+    },
+    {
+      "id": "ch05",
+      "en": "Neo builds an isolated, signed image for your organization. On our machine or yours.",
+      "ru": "Нео собирает изолированный подписанный образ для вашей организации. На нашей машине или на вашей."
+    },
+    {
+      "id": "ch06",
+      "en": "Inside, agents arrive in every department and clone themselves where the work needs hands.",
+      "ru": "Внутри агенты приходят в каждый отдел и клонируются там, где работе нужны руки."
+    },
+    {
+      "id": "ch07",
+      "en": "They hand work to each other in seconds, watch the product and improve it.",
+      "ru": "Они передают работу друг другу за секунды, следят за продуктом и улучшают его."
+    },
+    {
+      "id": "ch08",
+      "en": "Then it all folds back into one point, and Neo steps out.",
+      "ru": "Потом всё схлопывается в одну точку, и Нео выходит."
+    },
+    {
+      "id": "ch09",
+      "en": "Back in the chat: one live dashboard of your business.",
+      "ru": "Снова в чате: один живой дашборд вашего бизнеса."
+    },
+    {
+      "id": "ch10",
+      "en": "Your business next? I start with your chat.",
+      "ru": "Ваш бизнес следующий? Я начну с вашего чата."
+    }
+  ],
+  "storyboard": "v2 (docs/tasks/2026-11-17-story-landing-v2.md)"
+}
