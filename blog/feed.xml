@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:pc="https://passioncode.ai/ns">
  <channel>
   <title>PassionCode.ai blog</title>
   <link>https://passioncode.ai/blog/</link>
@@ -13,6 +13,7 @@
    <guid isPermaLink="true">https://passioncode.ai/blog/ai-research/2026-11-18/</guid>
    <pubDate>Wed, 18 Nov 2026 06:00:00 GMT</pubDate>
    <description>This week's research is about memory: agents that keep a record of what they changed and why do better on the next run. Five results, what each measured, and what we take from them for agents that run a company's work.</description>
+   <pc:summary_ru>Пять свежих работ про память агентов и самоулучшение. Главное: агент, который записывает свои правки вместе с ожидаемым и полученным эффектом, на следующем прогоне улучшается заметно сильнее; агенты учатся держать память в файлах; ночной разбор логов наводит порядок в памяти.</pc:summary_ru>
   </item>
   <item>
    <title>Why processes built around people stall when you add AI</title>
