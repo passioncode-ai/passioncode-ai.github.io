@@ -1,6 +1,7 @@
 // The story demo (SITE-068): DOM choreography. Reads the one clock (store.js); the agent field
 // (field.js) and the pixel seam are layers on the same frame. Reduced motion: a static, legible page.
-import { CHAPTERS, getState, onFrame, subscribeAct, start, clamp, seg } from './store.js'
+import { CHAPTERS, SCENES, getState, onFrame, subscribeAct, start, clamp, seg } from './store.js'
+import { mountCast, avatar } from './cast.js'
 import { mountField } from './field.js'
 import { mountRain } from './rain.js'
 import { mountVoice } from './voice.js'
@@ -9,6 +10,7 @@ const root = document.documentElement
 const $ = id => document.getElementById(id)
 const lerp = (a, b, t) => a + (b - a) * t
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+mountCast()
 
 // Language: ?lang=, then the saved choice, then the browser. The switch overrides.
 const setLang = lang => {
@@ -37,6 +39,16 @@ caps.forEach((c, i) => {
   rail.appendChild(a)
 })
 const railLinks = [...rail.children]
+
+// The dashboard Morpheus returns (chapter 9) is interactive in every mode (R9): tabs switch the panel.
+const dash = $('dash')
+if (dash) {
+  const tabs = [...dash.querySelectorAll('[data-tab]')]
+  tabs.forEach(b => b.addEventListener('click', () => {
+    tabs.forEach(x => x.setAttribute('aria-selected', String(x === b)))
+    dash.querySelectorAll('[data-panel]').forEach(pn => { pn.hidden = pn.dataset.panel !== b.dataset.tab })
+  }))
+}
 
 if (reduce) {
   root.classList.add('calm')
@@ -71,7 +83,7 @@ if (reduce) {
   // empty panel (F3, refactor 2026-11-17).
   subscribeAct(act => {
     const shown = Math.max(0, act)
-    const sceneIdx = shown >= 5 && shown <= 7 ? 5 : shown
+    const sceneIdx = SCENES[shown].el
     scenes.forEach(s => s.classList.toggle('on', Number(s.dataset.s) === sceneIdx))
     caps.forEach(c => c.classList.toggle('on', Number(c.dataset.c) === shown))
     railLinks.forEach((a, i) => { a.classList.toggle('on', i === act); a.classList.toggle('past', i < act) })
@@ -118,51 +130,74 @@ if (reduce) {
     }
   }
 
-  // Chapter-local instruments. Each reads p (0..1 inside the chapter) or g.
+  // Chapter-local instruments. Each reads only the scene beat's progress q (0..1), so nothing in a scene moves while
+  // the chat speaks (D3, R3). Chapters 6 to 8 share one scene (the Matrix grid), each with its own q.
   const text = (el, v) => { if (el && el.textContent !== v) el.textContent = v }
-  const route = $('route'), token = $('token')
-  const routeLen = route ? route.getTotalLength() : 0
-  const stamps = [...document.querySelectorAll('.stamp')]
-  const agents = [...document.querySelectorAll('.ag')]
-  const hot = [...document.querySelectorAll('.box.hot')]
-  const newItems = [...document.querySelectorAll('.side.new li')]
-  const sideItems = [...document.querySelectorAll('.side.old li')].map((li, i) => [li, newItems[i]])
-  const org = document.querySelector('.scene[data-s="5"]')
+  const conns = [...document.querySelectorAll('.conn')]
+  const phases = [...document.querySelectorAll('.ph')]
+  const layers = [...document.querySelectorAll('.ly')]
+  const depts = [...document.querySelectorAll('.dept-cell')]
+  const sc = i => document.querySelector(`.scene[data-s="${i}"]`)
+  const s2 = sc(2), s3 = sc(3), s4 = sc(4), s5 = sc(5), s6 = sc(6), s9 = sc(9)
+  const CLONES = 6
+  depts.forEach(c => { c.querySelector('.clones').innerHTML = Array.from({ length: CLONES }, () => avatar('smith')).join('') })
+  const clones = depts.map(c => [...c.querySelectorAll('.clones .av')])
+  const grid = (fill, flow, fold) => {
+    // fill: how many cells hold agents and how many clones each (ch 6); flow: links and status (ch 7); fold: collapse (ch 8)
+    let n = 0
+    depts.forEach((c, i) => {
+      const lit = fill > i / depts.length
+      c.classList.toggle('lit', lit)
+      const k = lit ? Math.min(CLONES, Math.ceil(clamp(fill * depts.length - i, 0, 1.6) / 1.6 * CLONES)) : 0
+      clones[i].forEach((a, j) => a.classList.toggle('on', j < k))
+      n += k
+      c.classList.toggle('flow', flow > (i % 4) / 4 + 0.05)
+    })
+    s6.style.setProperty('--flow', flow)
+    s6.style.setProperty('--fold', fold)
+    s6.classList.toggle('folding', fold > 0)
+    text($('agents-n'), String(n + Math.round(flow * 48)))
+    return n
+  }
   const local = {
-    0: p => text($('notif'), String(Math.round(lerp(1, 27, p)))),
-    2: p => {
-      document.querySelectorAll('.sat').forEach((s, i) => {
-        s.style.setProperty('--in', seg(p, 0.08 + i * 0.12, 0.32 + i * 0.12))
-        s.style.setProperty('--stamp', seg(p, 0.42 + i * 0.1, 0.52 + i * 0.1))
+    0: q => text($('notif'), String(Math.round(lerp(1, 27, q)))),
+    2: q => {
+      document.querySelectorAll('.sat').forEach((st, i) => {
+        st.style.setProperty('--in', seg(q, 0.04 + i * 0.12, 0.28 + i * 0.12))
+        st.style.setProperty('--stamp', seg(q, 0.36 + i * 0.1, 0.46 + i * 0.1))
       })
-      stage.style.setProperty('--vault', seg(p, 0.72, 0.86))
-      text($('members'), String(1 + Math.round(seg(p, 0.08, 0.7) * 4)))
+      s2.style.setProperty('--vault', seg(q, 0.62, 0.76))
+      document.querySelectorAll('.goal').forEach((g, i) => g.style.setProperty('--in', seg(q, 0.7 + i * 0.08, 0.86 + i * 0.08)))
+      text($('members'), String(1 + Math.round(seg(q, 0.04, 0.6) * 4)))
     },
-    3: p => document.querySelectorAll('.goal').forEach((g, i) => g.style.setProperty('--in', seg(p, 0.08 + i * 0.18, 0.36 + i * 0.18))),
-    4: p => {
-      hot.forEach((b, i) => b.classList.toggle('lit', p > 0.22 + i * 0.2))
-      text($('r-classes'), String(Math.round(seg(p, 0, 0.75) * 38)))
-      text($('r-hand'), String(Math.round(seg(p, 0.08, 0.8) * 64)))
-      text($('r-wait'), String(Math.round(seg(p, 0.16, 0.85) * 46)))
+    3: q => {
+      const on = conns.filter((c, i) => { const v = q > 0.06 + i * 0.12; c.classList.toggle('on', v); return v }).length
+      const prec = Math.round(28 + on * 13)
+      $('gauge').style.strokeDasharray = `${on ? prec : 0} 100`
+      text($('precision'), on ? `${prec}%` : '0%')
+      text($('r-hours'), String(Math.round(seg(q, 0.3, 0.8) * 1240)).replace(/\B(?=(\d{3})+(?!\d))/g, ' '))
+      text($('r-share'), `${Math.round(seg(q, 0.3, 0.8) * 68)}%`)
+      s3.classList.toggle('forecast-on', on === conns.length && q > 0.66)
     },
-    8: p => sideItems.forEach(([o, n], i) => { const on = p > 0.12 + i * 0.09; o.classList.toggle('on', on); n && n.classList.toggle('on', on) })
+    4: q => {
+      phases.forEach((ph, i) => ph.classList.toggle('on', q > 0.05 + i * 0.14))
+      text($('cost'), `$${Math.round(seg(q, 0.55, 0.75) * 24)}k`)
+      s4.classList.toggle('scaled', q > 0.72)
+      s4.classList.toggle('stamped', q > 0.86)
+    },
+    5: q => {
+      layers.forEach((l, i) => { l.classList.toggle('on', q > 0.05 + i * 0.12); l.classList.toggle('locked', q > 0.12 + i * 0.12) })
+      s5.classList.toggle('sealed', q > 0.72)
+      s5.style.setProperty('--door', seg(q, 0.8, 1))
+    },
+    6: q => grid(q, 0, 0),
+    7: q => grid(1, q, 0),
+    8: q => grid(1, 1, q),
+    9: q => s9.style.setProperty('--open', seg(q, 0, 0.5))
   }
-  const orgFrame = g => {
-    org.style.setProperty('--branch', seg(g, 5.05, 5.4))
-    org.style.setProperty('--dept', seg(g, 5.3, 5.7))
-    org.style.setProperty('--ag', seg(g, 5.95, 6.2))
-    agents.forEach((a, i) => a.classList.toggle('live', g > 6.15 + i * 0.07))
-    const r = seg(g, 6.95, 7.8)
-    org.style.setProperty('--route', seg(g, 6.8, 7.0))
-    if (route) {
-      const pt = route.getPointAtLength(r * routeLen)
-      token.setAttribute('transform', `translate(${pt.x} ${pt.y})`)
-    }
-    stamps.forEach((st, i) => st.classList.toggle('on', r > 0.18 + i * 0.25))
-    text($('timer'), `00:${String(Math.round(r * 42)).padStart(2, '0')}`)
-  }
-  const hud = g => {
-    const t = seg(g, 6.8, 9.8)
+  const hud = s => {
+    // The counters move only in the scene beats of chapters 6 to 9 (old process to new), labelled illustrative.
+    const t = s.ch < 6 ? 0 : s.ch > 9 ? 1 : (s.ch - 6 + s.sceneP) / 4
     const reply = lerp(360, 0.5, t)
     text($('h-reply'), reply >= 60 ? `${Math.round(reply / 60)} h` : reply >= 1 ? `${Math.round(reply)} min` : '30 s')
     const rel = lerp(21, 1, t)
@@ -170,6 +205,22 @@ if (reduce) {
     text($('h-streams'), String(Math.round(lerp(4, 120, t))))
     text($('h-cost'), `$${lerp(100, 3, t).toFixed(t > 0.5 ? 1 : 0)}`)
     stage.classList.toggle('good', t > 0.6)
+  }
+
+  // The chat speaks on its own beat: the messages of the current chapter appear one by one across the chat beat,
+  // earlier chapters stay, later ones wait (D3).
+  const byCh = msgs.reduce((m, el) => ((m[el.dataset.ch] ||= []).push(el), m), {})
+  const chatFrame = s => {
+    let typing = 0
+    msgs.forEach(el => {
+      const c = Number(el.dataset.ch)
+      if (c !== s.ch) { el.classList.toggle('on', c < s.ch); return }
+      const n = byCh[c].length, k = Number(el.dataset.k)
+      const at = (k + 0.6) / n
+      el.classList.toggle('on', s.chatP >= at)
+      if (s.chatP < at && s.chatP >= at - 0.6 / n && s.beat === 'chat') typing = 1
+    })
+    stage.style.setProperty('--typing', typing)
   }
 
   onFrame(mountRain($('rain'), getState))
@@ -181,18 +232,15 @@ if (reduce) {
     hero.style.setProperty('--h', s.hero)
     heroDemo.style.transform = `translate3d(0, ${-s.hero * 90}px, 0) scale(${1 - s.hero * 0.06})`
     if (s.raw <= 0) { drawPixels(0); return }
-    const g = s.g, ch = s.ch, p = s.p
+    if (stage.dataset.beat !== s.beat) stage.dataset.beat = s.beat
     const active = scenes.find(sc => sc.classList.contains('on'))
-    if (active) active.style.setProperty('--p', p)
-    msgs.forEach(m => m.classList.toggle('on', g >= Number(m.dataset.at)))
-    const next = msgs.find(m => g < Number(m.dataset.at))
-    stage.style.setProperty('--typing', next && Number(next.dataset.at) - g < 0.15 ? 1 : 0)
-    if (local[ch]) local[ch](p)
-    if (ch >= 5 && ch <= 7) orgFrame(g)
-    hud(g)
-    // The seam peaks at each chapter boundary; inside the org scene (6 and 7) the picture stays.
-    const near = Math.round(g), d = Math.abs(g - near)
-    const seam = near >= 1 && near <= CHAPTERS - 1 && near !== 6 && near !== 7
+    if (active) active.style.setProperty('--p', s.sceneP)
+    chatFrame(s)
+    if (local[s.ch]) local[s.ch](s.sceneP)
+    hud(s)
+    // The seam peaks at a chapter boundary the storyboard marks; it never runs over a beat that moves.
+    const near = Math.round(s.g), d = Math.abs(s.g - near)
+    const seam = near >= 1 && near <= CHAPTERS - 1 && SCENES[near].seam
     drawPixels(seam ? SEAM_MAX * clamp(1 - d / SEAM_SPAN) : 0)
   })
   start()

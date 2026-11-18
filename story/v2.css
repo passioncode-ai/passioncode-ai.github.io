@@ -1,0 +1,208 @@
+/* SITE-068 v2 (docs/tasks/2026-11-17-story-landing-v2.md): the chat on the right, one side moving at a time, the cast
+   (Morpheus, Trinity, Neo, Smith) and the scenes of the new storyboard. Loaded after matrix.css and ink.css; the ink
+   rules at the end recolour the cast and the scenes for look 2. */
+
+/* D4: the chat in the right column; the caption spans both, the HUD sits under the scene on the left. */
+.stage{grid-template-columns:1fr minmax(300px,380px)}
+.stage>.chat{grid-column:2;grid-row:2/4}
+.stage>.scenes{grid-column:1;grid-row:2}
+.stage>.hud{grid-column:1;grid-row:3}
+.stage{padding-right:28px}
+.rail{right:auto;left:14px}
+.rail a{justify-content:flex-start}.rail .tick{order:0}
+@media (max-width:860px){
+ .stage{grid-template-columns:1fr}
+ .stage>.chat{grid-column:1;grid-row:3}
+ .stage>.scenes{grid-row:2}
+ .stage>.hud{grid-row:4}
+}
+
+/* D3: the side that moves carries the focus; the other holds, dimmed. */
+.chat,.scenes{transition:opacity .35s var(--pc-ease),filter .35s var(--pc-ease)}
+.stage[data-beat="chat"] .scenes{opacity:.42;filter:saturate(.5)}
+.stage[data-beat="scene"] .chat{opacity:.5;filter:saturate(.5)}
+.stage[data-beat="chat"] .chat{box-shadow:0 0 0 1px var(--pc-accent),0 0 28px #00ff6633}
+
+/* The cast: inline sprite symbols, recoloured by custom properties. */
+html{--cast-line:#00ff66;--cast-skin:#0e2618;--cast-dark:#020604;--cast-hi:#d6ffe2}
+.av{display:block;flex:none;width:30px;height:30px;border-radius:50%;background:#020604;box-shadow:0 0 0 1px var(--pc-border-strong);overflow:hidden}
+.av.big{width:min(260px,32vh);height:min(260px,32vh);border-radius:24px;box-shadow:0 0 0 2px var(--cast-line),0 0 60px #00ff6644}
+.av.mid{width:112px;height:112px;border-radius:20px;box-shadow:0 0 0 2px var(--cast-line),0 0 30px #00ff6633}
+.av.tiny{display:inline-block;width:24px;height:24px;vertical-align:-6px;margin-right:8px}
+.msg.agent .av{box-shadow:0 0 0 1px var(--cast-line)}
+.mini-msgs .av{width:26px;height:26px}
+.msg.who-trinity p{border-color:#2fbf80}
+.msg.who-neo p{border-color:#7dffb0}
+.msg.who-smith p{border-style:dashed}
+.dash-chip{display:inline-block;margin-left:4px;padding:0 8px;border:1px solid var(--pc-accent);border-radius:999px;color:var(--pc-accent);font:600 12px var(--pc-font-data)}
+
+/* 1: Morpheus materialises */
+.portrait{position:relative;display:grid;justify-items:center;gap:14px}
+.portrait .beam{position:absolute;inset:-20% 30%;background:linear-gradient(#00ff6600,#00ff6633,#00ff6600);filter:blur(18px);opacity:calc(var(--p,0) * 1.2)}
+.portrait .av.big{clip-path:inset(calc((1 - min(1, var(--p,0) * 2.2)) * 100%) 0 0 0);transition:clip-path .1s linear}
+.portrait .bubble{opacity:clamp(0,calc((var(--p,0) - .55) * 4),1)}
+.portrait .tag{margin:0;font:600 13px var(--mono,monospace);color:var(--pc-accent)}
+
+/* 2: goals and the team */
+.scene[data-s="2"]{grid-template-rows:1fr auto;gap:14px}
+.orbit .core .av{width:72px;height:72px;border-radius:50%}
+.scene[data-s="2"] .goals{opacity:1}
+.scene[data-s="2"] .goal{opacity:var(--in,0);transform:translateY(calc((1 - var(--in,0)) * 18px))}
+
+/* 3: Trinity's assessment */
+.assess2{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"who conns" "gauge result";gap:16px 22px;width:min(760px,100%);align-items:center}
+.assess2 .who{grid-area:who;display:grid;justify-items:center;gap:6px}
+.assess2 .tag,.neo .tag{margin:0;font:600 12px var(--mono,monospace);color:var(--pc-accent)}
+.conns{grid-area:conns;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.conn{display:flex;align-items:center;gap:8px;padding:7px 12px;border:1px dashed var(--pc-border-strong);border-radius:10px;color:var(--pc-text-muted);font:600 13px var(--pc-font);transition:all .3s var(--pc-ease)}
+.conn .plug{width:10px;height:10px;border-radius:50%;border:1px solid currentColor}
+.conn.on{border-style:solid;border-color:var(--pc-accent);color:var(--pc-text);box-shadow:0 0 14px #00ff6633}
+.conn.on .plug{background:var(--pc-accent)}
+.gauge{grid-area:gauge;display:grid;justify-items:center;gap:0;width:140px}
+.gauge svg{width:140px;overflow:visible}
+.gauge path{fill:none;stroke-width:10;stroke-linecap:round}
+.g-bg{stroke:var(--pc-border)}
+.g-fg{stroke:var(--pc-accent);stroke-dasharray:0 100;transition:stroke-dasharray .4s var(--pc-ease);filter:drop-shadow(0 0 6px #00ff6699)}
+.gauge b{font:700 26px var(--pc-font-data);margin-top:-30px}
+.gauge small,.forecast small,.cost small,.agents-count small{color:var(--pc-text-muted);font-size:11px}
+.result{grid-area:result;display:grid;gap:6px}
+.result p{margin:0;display:flex;gap:10px;align-items:baseline}
+.result b{font:700 30px var(--pc-font-data);color:var(--pc-accent);min-width:96px}
+.forecast{opacity:0;transition:opacity .5s var(--pc-ease)}
+.forecast svg{width:220px;height:60px}
+.forecast path{fill:none;stroke:var(--pc-accent);stroke-width:2}
+.forecast .band{fill:#00ff6622;stroke:none}
+.forecast-on .forecast{opacity:1}
+
+/* 4: the plan and its cost */
+.plan{position:relative;width:min(620px,100%);padding:20px 22px;border:2px solid var(--pc-border-strong);border-radius:16px;background:var(--pc-panel)}
+.plan h3{margin:0 0 12px;font-size:18px}
+.phases{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.ph{padding:10px;border:1px solid var(--pc-border);border-radius:10px;opacity:.2;transform:translateY(8px);transition:all .35s var(--pc-ease)}
+.ph.on{opacity:1;transform:none;border-color:var(--pc-accent)}
+.ph b{display:block;font-size:13px}.ph small{color:var(--pc-text-muted);font:12px var(--pc-font-data)}
+.cost{display:flex;gap:12px;align-items:baseline;margin-top:14px}
+.cost b{font:700 34px var(--pc-font-data);color:var(--pc-accent)}
+.scale{margin-top:8px;height:22px;position:relative;opacity:0;transition:opacity .4s}
+.scale::before{content:"";position:absolute;left:0;right:30%;top:50%;height:2px;background:linear-gradient(90deg,transparent,var(--pc-accent))}
+.scale span{position:absolute;right:0;top:0;font:600 12px var(--pc-font-data);color:var(--pc-accent)}
+.scaled .scale{opacity:1}
+.accepted{position:absolute;right:18px;top:14px;padding:4px 12px;border:3px solid var(--pc-accent);color:var(--pc-accent);font:800 18px var(--pc-font-data);transform:rotate(-8deg) scale(1.6);opacity:0;transition:all .25s cubic-bezier(.2,1.6,.4,1)}
+.stamped .accepted{opacity:1;transform:rotate(-8deg) scale(1)}
+
+/* 5: Neo builds the isolated image */
+.neo{display:grid;grid-template-columns:auto 1fr;gap:16px 26px;align-items:center;width:min(640px,100%);position:relative}
+.neo .who{display:grid;justify-items:center;gap:6px;grid-row:1/3}
+.image{list-style:none;margin:0;padding:0;display:flex;flex-direction:column-reverse;gap:6px}
+.ly{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border:1px solid var(--pc-border);border-radius:8px;font:600 13px var(--pc-font-data);opacity:0;transform:translateX(24px);transition:all .3s var(--pc-ease)}
+.ly.on{opacity:1;transform:none}
+.ly .lock{width:12px;height:12px;border:2px solid var(--pc-text-muted);border-radius:3px;position:relative}
+.ly.locked{border-color:var(--pc-accent)}
+.ly.locked .lock{border-color:var(--pc-accent);background:var(--pc-accent);box-shadow:0 0 8px var(--pc-accent)}
+.sealed{margin:0;font:700 14px var(--mono,monospace);color:var(--pc-accent);opacity:0;transition:opacity .4s;letter-spacing:.06em}
+.scene.sealed .sealed{opacity:1}
+.door{position:absolute;inset:-10%;pointer-events:none;display:grid;place-items:center}
+.door span{width:calc(var(--door,0) * 140%);height:calc(var(--door,0) * 140%);border-radius:50%;background:radial-gradient(#00ff6600 40%,#00ff6655 60%,#020604 70%);opacity:var(--door,0)}
+
+/* 6-8: the Matrix grid of departments, Smith clones, the work flowing, the collapse */
+.scene[data-s="6"]{place-items:center}
+.matrix-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:min(760px,100%);
+ transform:scale(calc(1 - var(--fold,0) * .98)) rotate(calc(var(--fold,0) * 40deg));opacity:calc(1 - var(--fold,0) * var(--fold,0));transform-origin:50% 50%}
+.dept-cell{position:relative;min-height:92px;padding:8px;border:1px solid var(--pc-border);border-radius:10px;background:#020604cc;transition:border-color .3s,box-shadow .3s}
+.dept-cell b{display:block;font:600 11px var(--pc-font-data);color:var(--pc-text-muted);text-transform:uppercase;letter-spacing:.04em}
+.dept-cell.lit{border-color:var(--pc-border-strong)}
+.dept-cell.lit b{color:var(--pc-text)}
+.dept-cell.flow{border-color:var(--pc-accent);box-shadow:0 0 18px #00ff6633}
+.clones{display:flex;flex-wrap:wrap;gap:3px;margin-top:6px}
+.clones .av{width:24px;height:24px;opacity:0;transform:scale(.3);transition:opacity .2s,transform .25s cubic-bezier(.2,1.5,.4,1)}
+.clones .av.on{opacity:1;transform:none}
+.dept-cell .st{position:absolute;right:8px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--pc-border)}
+.dept-cell.flow .st{background:var(--pc-accent);box-shadow:0 0 8px var(--pc-accent)}
+.links{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.links path{fill:none;stroke:var(--pc-accent);stroke-width:1.5;stroke-dasharray:6 8;opacity:var(--flow,0);animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-28}}
+.agents-count{position:absolute;right:4%;top:2%;display:grid;justify-items:end}
+.agents-count b{font:700 34px var(--pc-font-data);color:var(--pc-accent);text-shadow:var(--glow)}
+.neo-exit{position:absolute;left:50%;top:50%;translate:-50% -50%;opacity:calc(clamp(0,(var(--fold,0) - .55) * 3,1) * clamp(0,(1 - var(--fold,0)) * 12,1));transform:translateX(calc(clamp(0,(var(--fold,0) - .55) * 2.2,1) * 40vw))}
+.folding .agents-count{opacity:calc(1 - var(--fold,0))}
+.fx6{position:absolute;left:6%;bottom:8%;opacity:calc(var(--flow,0) * (1 - var(--fold,0)))}
+
+/* 9: the dashboard Morpheus returns, interactive */
+.dash{width:min(640px,100%);padding:18px 20px;border:2px solid var(--pc-accent);border-radius:16px;background:var(--pc-panel);box-shadow:0 0 40px #00ff6633;
+ transform:translateX(calc((1 - var(--open,0)) * 30%)) scale(calc(.7 + var(--open,0) * .3));opacity:var(--open,0);transform-origin:100% 50%}
+.dash h3{margin:0 0 10px;font-size:18px}
+.tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.tabs button{font:600 13px var(--pc-font);padding:6px 12px;border-radius:999px;border:1px solid var(--pc-border-strong);background:none;color:var(--pc-text-muted);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--pc-accent);color:var(--pc-on-accent);border-color:var(--pc-accent)}
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.svc li{display:flex;gap:8px;align-items:center;padding:8px 10px;border:1px solid var(--pc-border);border-radius:8px;font-size:13px}
+.svc .ok{width:8px;height:8px;border-radius:50%;background:var(--pc-positive);box-shadow:0 0 8px var(--pc-positive)}
+.panel svg{width:100%;height:120px}
+.panel .area{fill:#00ff6622}.panel .line{fill:none;stroke:var(--pc-accent);stroke-width:2.5}
+.panel .bars rect{fill:var(--pc-accent);opacity:.75}
+.panel p{margin:6px 0 0;color:var(--pc-text-muted)}.panel p b{color:var(--pc-accent);font:700 20px var(--pc-font-data)}
+.spread{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.spread li{padding:6px 12px;border:1px solid var(--pc-accent);border-radius:999px;font:600 12px var(--pc-font-data);color:var(--pc-accent)}
+.dash .ill{margin:10px 0 0;font-size:11px;color:var(--pc-text-muted)}
+.scene[data-s="9"]{pointer-events:auto}
+
+@media (max-width:860px){
+ .assess2{grid-template-columns:1fr;grid-template-areas:"conns" "gauge" "result"}.assess2 .who{display:none}
+ .phases{grid-template-columns:1fr 1fr}
+ .neo{grid-template-columns:1fr}.neo .who{display:none}
+ .matrix-grid{grid-template-columns:repeat(3,1fr);gap:4px}.dept-cell{min-height:58px;padding:5px}.clones .av{width:14px;height:14px}
+ .svc{grid-template-columns:1fr 1fr}
+ .agents-count b{font-size:22px}
+}
+
+/* Reduced motion: every scene in its final state */
+.calm .portrait .av.big{clip-path:none}.calm .portrait .bubble,.calm .goal,.calm .ph,.calm .ly,.calm .sealed,.calm .forecast,.calm .scale,.calm .accepted{opacity:1;transform:none}
+.calm .conn{border-style:solid;border-color:var(--pc-accent)}.calm .clones .av{opacity:1;transform:none}
+.calm .dash{opacity:1;transform:none}.calm .matrix-grid{transform:none;opacity:1}.calm .neo-exit{display:none}
+.calm .stage .chat,.calm .stage .scenes{opacity:1;filter:none}
+
+/* Look 2 «Ink»: the cast in black ink on paper, the accent acid green */
+html.ink{--cast-line:#0b0b0b;--cast-skin:#f4f1e8;--cast-dark:#0b0b0b;--cast-hi:#b6ff3b}
+.ink .av{background:var(--paper);box-shadow:0 0 0 2px var(--ink)}
+.ink .av.big,.ink .av.mid{box-shadow:0 0 0 3px var(--ink),6px 6px 0 var(--ink)}
+.ink .stage[data-beat="chat"] .chat{box-shadow:0 0 0 3px var(--pc-accent)}
+.ink .dept-cell,.ink .plan,.ink .dash{background:var(--paper);color:var(--ink);border:3px solid var(--ink)}
+.ink .dept-cell b,.ink .ph small,.ink .dash .ill,.ink .panel p{color:#444}
+.ink .dept-cell.flow{border-color:var(--ink);box-shadow:4px 4px 0 var(--pc-accent)}
+.ink .ph.on{border-color:var(--ink);background:#fffdf6}
+.ink .cost b,.ink .result b,.ink .agents-count b,.ink .panel p b{color:var(--pc-accent);-webkit-text-stroke:1px #000}
+.ink .accepted{border-color:#c4142b;color:#c4142b}
+.ink .svc li{border-color:var(--ink)}
+.ink .tabs button{border-color:var(--ink);color:var(--ink)}
+.ink .tabs button[aria-selected="true"]{background:var(--ink);color:var(--pc-accent)}
+.ink .panel .line{stroke:var(--ink)}.ink .panel .area{fill:#b6ff3b66}.ink .panel .bars rect{fill:var(--ink)}
+.ink .spread li{border-color:var(--ink);color:var(--ink)}
+.ink .links path{stroke:var(--pc-accent)}
+
+/* Generated portraits (cast.js PICK): cropped to the face, recoloured per look so the generated palette never shows */
+.av.photo{display:block;overflow:hidden}
+.av.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:url(#cast-duo) contrast(1.15)}
+.av.photo.big img,.av.photo.mid img{object-position:50% 30%}
+.ink .av.photo img{filter:grayscale(1) contrast(1.35)}
+.mini-msgs span.av{width:26px;height:26px}
+
+/* v2 review fixes (Safari shots 2026-11-18): the finale sits over the scene panel (left), the goals stay above the HUD,
+   Neo stays in view as he steps out of the folded grid */
+.final{left:34%}
+.scene[data-s="2"] .orbit{scale:.82;margin-top:-4%}
+.scene[data-s="2"] .goals{margin-bottom:6px}
+.scene[data-s="2"] .goal{padding:10px 14px}
+.neo-exit{opacity:clamp(0,calc((var(--fold,0) - .45) * 3),1);transform:translateX(calc(clamp(0,(var(--fold,0) - .55) * 2.2,1) * 12vw))}
+.scene[data-s="2"]{grid-template-rows:none;grid-template-columns:minmax(0,1fr) 220px;gap:18px;padding-right:18px}
+.scene[data-s="2"] .orbit{scale:.9;margin-top:0}
+.scene[data-s="2"] .goals{grid-template-columns:1fr;gap:10px;width:220px}
+@media (max-width:860px){.scene[data-s="2"]{grid-template-columns:1fr;grid-template-rows:1fr auto}.scene[data-s="2"] .goals{grid-template-columns:repeat(3,1fr);width:100%}}
+@media (max-width:860px){
+ .scene[data-s="2"]{gap:4px;padding:0}
+ .scene[data-s="2"] .orbit{scale:.5;margin:-18% 0}
+ .scene[data-s="2"] .goal{padding:6px 8px}.scene[data-s="2"] .goal b{font-size:12px}
+ .dash{padding:10px 12px}.dash h3{font-size:14px;margin-bottom:6px}
+ .tabs{gap:4px;margin-bottom:6px}.tabs button{padding:3px 8px;font-size:11px}
+ .svc{grid-template-columns:repeat(3,1fr);gap:4px}.svc li{padding:4px 6px;font-size:11px}
+ .panel svg{height:70px}.dash .ill{display:none}
+}

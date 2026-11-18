@@ -83,11 +83,11 @@ export function mountField(canvas, getState) {
   build()
   addEventListener('resize', build)
 
-  // The box a formation lives in: the stage's scene area (right of the chat) or the hero's right half.
+  // The box a formation lives in: the stage's scene area (left of the chat since v2, D4) or the hero's right half.
   const box = (s, heroish) => {
     const W = innerWidth, H = innerHeight
     if (s.narrow) return heroish ? { x: 0.05 * W, y: 0.08 * H, w: 0.9 * W, h: 0.5 * H } : { x: 0.05 * W, y: 0.2 * H, w: 0.9 * W, h: 0.42 * H }
-    return heroish ? { x: 0.5 * W, y: 0.14 * H, w: 0.46 * W, h: 0.72 * H } : { x: 0.36 * W, y: 0.22 * H, w: 0.6 * W, h: 0.62 * H }
+    return heroish ? { x: 0.5 * W, y: 0.14 * H, w: 0.46 * W, h: 0.72 * H } : { x: 0.03 * W, y: 0.22 * H, w: 0.62 * W, h: 0.62 * H }
   }
 
   return s => {
