@@ -86,7 +86,7 @@ def main():
             + ''.join(f'<option value="{c}">{LABEL[c]}</option>' for c in ALL if c not in ('en', 'ru')) + '</select></span>')
     page = re.sub(r'<button class="lang" type="button" data-set-lang="en"[^>]*>EN</button>\s*<button class="lang" type="button" data-set-lang="ru"[^>]*>RU</button>', menu, page)
     rules = ''.join(f'html:not([data-lang="{c}"]) [lang="{c}"]{{display:none!important}}' for c in ALL)
-    page = page.replace('</head>', f'<style id="i18n-rules">{rules}.lang-switch{{display:inline-flex;gap:6px;align-items:center}}.lang-switch .lang[aria-pressed=true]{{border-color:var(--pc-accent);color:var(--pc-accent)}}.lang-menu{{max-width:120px;background:#020604;color:var(--pc-text);border:1px solid var(--pc-border-strong);border-radius:999px;padding:4px 8px;font:600 12px var(--pc-font)}}</style>\n</head>', 1)
+    page = page.replace('</head>', f'<style id="i18n-rules">{rules}.lang-switch{{display:inline-flex;gap:6px;align-items:center}}.lang-switch .lang[aria-pressed=true]{{border-color:var(--pc-accent);background:var(--pc-accent);color:#001a09}}@media (max-width:480px){{.lang-switch{{gap:4px}}.lang-switch .lang{{padding-inline:7px}}.lang-menu{{width:46px;max-width:46px;min-width:0;padding:4px 6px}}}}.lang-menu{{max-width:120px;background:#020604;color:var(--pc-text);border:1px solid var(--pc-border-strong);border-radius:999px;padding:4px 8px;font:600 12px var(--pc-font)}}</style>\n</head>', 1)
     PAGE.write_text(page)
     print('comic-i18n: pairs', len(pairs), 'languages', len(ALL))
 
