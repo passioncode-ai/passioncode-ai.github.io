@@ -98,3 +98,25 @@ Found in review, fixed or to fix in these waves:
 - The end still: the Foundry redo came neon again, so `story/film/future-office.jpg` is shot 15's chosen look frame.
 - Next task, exactly: when every clip and sound is delivered, copy them to one media folder under their cut names, run
   `python3 story/film/cut.py <folder>`, rebuild, run `v5-test.mjs` to the end card, then W4 to W6.
+
+## 6. Delivered, 2026-11-18 20:45 CET
+
+| Wave | State | Evidence |
+|---|---|---|
+| W1 leafing, rail, rabbit, voice queue, EN/RU | done | `v5-test.mjs` at 1440 (ru, en) and 390 (ru) on the live host: burst = one frame, leaf [1,2,3], no overflow, no errors |
+| W2 picks | done | every pick by two models, a third on a split: `story/film/SOURCES.md` |
+| W3 film | done | `story/film/film-{ru,en}.mp4`, 79.5 s, 16 shots, -22 LUFS, peak -1.7 dBFS; passport `story/film/SOURCES.md` |
+| W4 film in the page | done | end card shows at the end, blue loops from 0, red closes and opens the rail (Chrome 1440 and 390, Safari 26.6.2 via safaridriver) |
+| W5 Copylot, deploy, live | done | Copylot reports `97626b26`..`d98ea6fd` (18 strings), `868ae886`, `e3b13c74`, `6bceff97`, `14f45dd8`, chat text `edca6db3` (patches applied); Worker version `6335e916`; `npm test` 136/136 |
+| W6 Telegram | done | team chat `-1004480403446` through `telegram-gateway.default` as `fabric-workspace` (grant: send, that chat only), job `job_f724d16e3d580b283b35f93f` SENT; operator: communicator event `site068-v5-film-ready-2026-11-18` |
+
+Found on the way and fixed: static assets answered a Range request with the whole file, so Safari would not play the
+MP4 and no browser could seek: `worker/assessment.js` answers ranges for `/story/film/` and `/story/comic/audio/`
+(tested, `scripts/assessment-range.test.mjs`). The end card's group label leaked as visible text («Choose Выбор ">»):
+labels moved to `sr-only` elements.
+
+Open, none blocking:
+- A person's listening of the mix on studio headphones (the audio judges contradicted the measurements three rounds).
+- Asset Foundry defects reported on board request `bab23e73` (previz gate refuses clips for their audio rate; freesound
+  fallback for one-shots; no hold while a provider is down).
+- Publication notes (Morpheus likeness, pills in ads, AI disclosure): `story/film/SOURCES.md`.
