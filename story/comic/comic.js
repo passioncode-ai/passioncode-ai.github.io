@@ -14,15 +14,21 @@ mountCast()
 requestAnimationFrame(() => root.classList.add('ready'))
 document.querySelectorAll('#mini li').forEach(li => li.classList.add('on'))
 
-// Language: ?lang=, then the saved choice, then the browser (as the story page).
+// Language: ?lang=, then the saved choice, then the browser; ten languages (scripts/comic-i18n.py), the menu switches.
+const LANGS = ['en', 'ru', 'de', 'es', 'fr', 'ja', 'ko', 'pl', 'pt-BR', 'zh-Hans']
+const pick = v => LANGS.find(l => l.toLowerCase() === String(v || '').toLowerCase())
+  || LANGS.find(l => l.slice(0, 2) === String(v || '').toLowerCase().slice(0, 2))
+const menu = $('#lang-menu')
 const setLang = lang => {
   root.dataset.lang = lang; root.lang = lang
+  if (menu) menu.value = lang
   document.querySelectorAll('[data-set-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)))
   try { localStorage.setItem('story-lang', lang) } catch {}
 }
 let saved = null
 try { saved = localStorage.getItem('story-lang') } catch {}
-setLang(new URLSearchParams(location.search).get('lang') || saved || ((navigator.language || 'en').toLowerCase().startsWith('ru') ? 'ru' : 'en'))
+setLang(pick(new URLSearchParams(location.search).get('lang')) || pick(saved) || pick(navigator.language) || 'en')
+menu?.addEventListener('change', () => setLang(menu.value))
 document.querySelectorAll('[data-set-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.setLang)))
 
 // Speech in a panel pops in order: the n-th line waits n * 450 ms after the panel enters.

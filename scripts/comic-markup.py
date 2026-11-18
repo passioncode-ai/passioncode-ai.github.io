@@ -62,6 +62,7 @@ HANDOFF = [
     ('the blocks need agents', 'блокам нужны агенты'), ('agents fill the departments', 'агенты заполняют отделы'),
     ('marketing starts its loop', 'маркетинг начинает свой круг'), ('the data room feeds sales and quality', 'дата-рум кормит продажи и качество'),
     ('a signal becomes a test', 'сигнал становится тестом'), ('results go to the books', 'результаты уходят в отчётность'),
+    ('the books return to the chat', 'отчётность возвращается в чат'),
 ]
 
 def panel(n, title_en, title_ru, body, cls=''):
@@ -120,6 +121,12 @@ PANELS = [
      '<svg class="pnl" viewBox="0 0 320 140"><path class="rev" d="M0 120 C80 112 140 80 200 56 S280 18 320 10"/><path class="cost" d="M0 30 C80 36 150 70 210 96 S290 118 320 122"/></svg>'
      + '<p class="legend"><span class="l-rev">' + t('revenue', 'выручка') + '</span><span class="l-cost">' + t('costs', 'затраты') + '</span></p>'
      + say('morpheus', 'Revenue grows where agents work; costs fall where people waited.', 'Выручка растёт там, где работают агенты; затраты падают там, где люди ждали.', 'l', 'Morpheus')),
+    ('Back in the chat: your business, live', 'Снова в чате: ваш бизнес вживую',
+     say('neo', 'The Matrix folds back. I am out.', 'Матрица схлопывается. Я выхожу.', 'r', 'Neo')
+     + '<div class="cdash"><p class="dh">' + t('#your-company · Morpheus', '#ваша-компания · Морфеус') + '</p><ul class="svc">'
+     + ''.join(f'<li style="--k:{i}"><span class="ok"></span>{t(*x)}</li>' for i, x in enumerate([('services: all up', 'сервисы: все работают'), ('revenue: growing', 'выручка: растёт'), ('users: arriving', 'пользователи: приходят'), ('content: spreading', 'контент: разлетается')]))
+     + '</ul></div>'
+     + say('morpheus', 'Here is your business now. Every agent, task and cost on one screen.', 'Вот ваш бизнес сейчас. Все агенты, задачи и расходы на одном экране.', 'l', 'Morpheus')),
 ]
 
 def final():
@@ -151,6 +158,9 @@ def cta_strip(en, ru):
 def main():
     src = SRC.read_text()
     head = src[:src.index('<canvas class="rain"')]
+    # the comic has no voice yet (W12) and the old variants are not shown any more (the operator, 2026-11-18)
+    head = re.sub(r'\s*<button class="voice-btn".*?</button>', '', head, flags=re.S)
+    head = re.sub(r'\s*<a class="alt-link[^"]*"[^>]*>.*?</a>', '', head, flags=re.S)
     head = head.replace('<link rel="stylesheet" href="/story/v3.css">', '<link rel="stylesheet" href="/story/v3.css">\n<link rel="stylesheet" href="/story/comic/comic.css">')
     hero = src[src.index('<section class="hero"'):src.index('</section>', src.index('<section class="hero"')) + len('</section>')]
     hero = re.sub(r'\s*<a class="pill-btn[^>]*>.*?</a>', '', hero, flags=re.S)   # the pills move to act 0

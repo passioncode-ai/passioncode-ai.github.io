@@ -154,3 +154,11 @@ html.comic-page body{overflow-x:hidden}
 @media (prefers-reduced-motion:reduce){.carry{opacity:1;transform:none}}
 .sticky-cta{transition:opacity .3s,transform .3s}.sticky-cta.away{opacity:0;transform:translateY(20px);pointer-events:none}
 @media (max-width:860px){.comic-page .story-after{padding-bottom:72px}}
+/* round 3: the collapse back into the chat, Morpheus's live dashboard (the operator's first brief) */
+.cdash{border:1px solid var(--pc-accent);border-radius:10px;padding:12px 14px;margin:10px 0;background:#06100a}
+.cdash .dh{margin:0 0 8px;font:700 13px var(--mono,monospace);color:var(--pc-accent)}
+.cdash .svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cdash .svc li{display:flex;gap:8px;align-items:center;font:600 15px var(--pc-font);opacity:0;transform:translateY(8px);transition:opacity .35s calc(500ms + var(--k,0) * 200ms),transform .35s calc(500ms + var(--k,0) * 200ms)}
+.panel.in .cdash .svc li{opacity:1;transform:none}
+.cdash .ok{width:10px;height:10px;border-radius:50%;background:var(--pc-positive);box-shadow:0 0 10px var(--pc-positive)}
+@media (max-width:860px){.cdash .svc{grid-template-columns:1fr}}
