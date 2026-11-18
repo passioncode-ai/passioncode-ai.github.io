@@ -165,9 +165,9 @@ function rss ({ title, link, description, entries }) {
    <guid isPermaLink="true">${esc(e.link)}</guid>
    <pubDate>${rfc822(e.date)}</pubDate>
    <description>${esc(e.description)}</description>
-  </item>`).join('\n')
+${e.summaryRu ? `   <pc:summary_ru>${esc(e.summaryRu)}</pc:summary_ru>\n` : ''}  </item>`).join('\n')
   return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:pc="https://passioncode.ai/ns">
  <channel>
   <title>${esc(title)}</title>
   <link>${esc(link)}</link>
@@ -185,7 +185,8 @@ export function renderDigest () {
   const files = {}
   posts.forEach((p, i) => { files[`blog/ai-research/${p.date}/index.html`] = postPage(p, posts.slice(i + 1)) })
   files['blog/ai-research/index.html'] = hubPage(posts)
-  const digestEntries = posts.map(p => ({ title: p.title, link: ORIGIN + postPath(p), date: p.date, description: p.lead }))
+  // pc:summary_ru is the post's chat_summary_ru: the PM agent posts it to the team chat instead of the English lead.
+  const digestEntries = posts.map(p => ({ title: p.title, link: ORIGIN + postPath(p), date: p.date, description: p.lead, summaryRu: p.chat_summary_ru }))
   files['blog/ai-research/feed.xml'] = rss({ title: 'PassionCode.ai AI research digest', link: ORIGIN + SECTION, description: 'A daily review of new AI research on agents, from PassionCode.ai.', entries: digestEntries })
   const articles = POSTS.map(a => ({ title: a.name, link: `${ORIGIN}/blog/${a.slug}/`, date: PUBLISHED.iso, description: a.lead }))
   const all = [...digestEntries, ...articles].sort((a, b) => b.date.localeCompare(a.date))
