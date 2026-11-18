@@ -49,6 +49,10 @@ if (preset === 'red' || preset === 'blue') {
 }
 document.querySelector('.final-choice .pill.blue')?.addEventListener('click', e => { e.preventDefault(); scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }) })
 
+// The sticky button steps aside while the onboarding itself is on screen.
+const sticky = $('#sticky-cta')
+new IntersectionObserver(([e]) => sticky.classList.toggle('away', e.isIntersecting)).observe($('#onboard'))
+
 // Panels and arrows: revealed once, as they enter the screen.
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { threshold: 0.28 })
 document.querySelectorAll('.panel, .arrow').forEach(el => reduce ? el.classList.add('in') : io.observe(el))

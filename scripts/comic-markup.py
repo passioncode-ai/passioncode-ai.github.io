@@ -53,12 +53,23 @@ def act0():
 </section>'''
 
 # ---- the comic: panels, each one event, an arrow to the next ------------------------------------------------------
+# What each arrow carries to the next panel: the through-object of the winning scenario (round 2), so the comic reads
+# as one chain of causes, not a set of slides.
+HANDOFF = [
+    ('goals go to the team', 'цели уходят команде'), ('the team opens its tools', 'команда открывает свои инструменты'),
+    ('the data becomes hours', 'данные превращаются в часы'), ('the hours become a plan', 'часы превращаются в план'),
+    ('the plan becomes an image', 'план превращается в образ'), ('the image opens the Matrix', 'образ открывает матрицу'),
+    ('the blocks need agents', 'блокам нужны агенты'), ('agents fill the departments', 'агенты заполняют отделы'),
+    ('marketing starts its loop', 'маркетинг начинает свой круг'), ('the data room feeds sales and quality', 'дата-рум кормит продажи и качество'),
+    ('a signal becomes a test', 'сигнал становится тестом'), ('results go to the books', 'результаты уходят в отчётность'),
+]
+
 def panel(n, title_en, title_ru, body, cls=''):
     return f'''<article class="panel {cls}" id="p{n}">
  <header class="ptitle"><span class="pn">{n:02d}</span><h2>{t(title_en, title_ru)}</h2></header>
  <div class="pbody">{body}</div>
 </article>
-<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>'''
+<div class="handoff"><svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>{('<span class="carry">' + t(*HANDOFF[n - 1]) + '</span>') if n - 1 < len(HANDOFF) else ''}</div>'''
 
 def chips(items, cls='chip'):
     return ''.join(f'<span class="{cls}" style="--k:{i}">{t(*x)}</span>' for i, x in enumerate(items))
@@ -155,7 +166,7 @@ def main():
 <div id="top"></div>
 {hero}
 {act0()}
-<div class="after" id="after" hidden>
+<div class="story-after" id="after" hidden>
 <section class="film-panel" id="film" hidden>
  <h2>{t('How it runs now', 'Как всё устроено сейчас')}</h2>
  <video src="/story/film/standin.mp4" poster="/story/film/poster.jpg" muted playsinline loop preload="none"></video>

@@ -42,7 +42,7 @@ html.comic-page body{overflow-x:hidden}
 .chosen .wait-hint{display:none}
 
 /* ---- the comic ---- */
-.after{position:relative;z-index:2}
+.story-after{position:relative;z-index:2}
 .film-panel{max-width:960px;margin:0 auto;padding:12vh 20px 4vh;text-align:center}
 .film-panel video{width:100%;border:2px solid var(--pc-accent);border-radius:12px}
 .comic{max-width:1120px;margin:0 auto;padding:10vh 20px;display:flex;flex-direction:column;align-items:center}
@@ -146,3 +146,11 @@ html.comic-page body{overflow-x:hidden}
  offset-path:ellipse(32% 36% at 50% 50%);offset-anchor:50% 50%;animation:orbit 6s linear infinite;opacity:0;transition:opacity .4s 1.6s}
 .panel.in .loop::after{opacity:1}
 @media (max-width:860px){.loop{grid-template-columns:1fr;grid-template-areas:"core" "a" "b" "c" "d" "e" "f"}.loop::before,.loop::after{display:none}}
+/* round 2: each arrow names what it carries to the next panel */
+.handoff{display:flex;align-items:center;gap:6px}
+.carry{font:600 13px var(--mono,monospace);color:var(--pc-accent);opacity:0;transform:translateX(-8px);transition:opacity .5s .5s,transform .5s .5s;max-width:240px}
+.handoff:has(.arrow.in) .carry{opacity:1;transform:none}
+.comic>.handoff:last-child{display:none}
+@media (prefers-reduced-motion:reduce){.carry{opacity:1;transform:none}}
+.sticky-cta{transition:opacity .3s,transform .3s}.sticky-cta.away{opacity:0;transform:translateY(20px);pointer-events:none}
+@media (max-width:860px){.comic-page .story-after{padding-bottom:72px}}
