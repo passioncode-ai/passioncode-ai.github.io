@@ -79,9 +79,8 @@ Morpheus: the saved voice «Morpheus PassionCode», as in the comic. The manager
 | f-walla2 | `job_01M7QZHP29BV5X2SA5H060NJWV` | 0 (gemini-3.1-pro-preview 0, gemini-2.5-flash 0) |
 | f-walla3 | `job_01M7QZHRD77B3ZFJE18R9JYVN1` | 0 (gemini-3.1-pro-preview 0, gemini-2.5-flash 0) |
 | f-walla4 | `job_01M7QZHTTP4BYR52T6FN1J6NKE` | 1 (gemini-3.1-pro-preview 1, gemini-2.5-flash 1) |
-| f-walla2 | `job_01M7QZHP29BV5X2SA5H060NJWV` | 1 (gemini-3.1-pro-preview 1, gemini-2.5-flash 1) |
 
-The office under shots 03 to 09 is built from the four walla takes laid over each other with crossfades (a 2.2 s
+The office under shots 03 to 09 is built from three walla takes (walla2 failed Foundry's DC-offset gate) laid over each other with crossfades (a 2.2 s
 `ambience-loop` take repeated its own keyboard click every 1.7 s); `ambience-loop` gives about 2 s seamless loops, not
 the 20 s asked. The music bed is the comic's `audio/music/bed.mp3` (`job_01M7QM3WN3RM0M8Q5B0WZEKSQN`), joined to itself
 with a 4 s crossfade before its own fade-out.
@@ -103,3 +102,12 @@ request `ecbaf6a4`); the emergency stop held.
   shows beads; the page says «pill» in its buttons' class names only, its text says «красная», «синяя».
 - **White rabbit.** A literary motif (Carroll), free to use.
 - **Voices.** Synthetic (ElevenLabs); a disclosure «AI-generated voice and images» fits where a platform asks for one.
+
+## The mix, measured (2026-11-18)
+
+Integrated loudness -22 LUFS (EN -22.4, RU -21.8), sample peak -1.7 dBFS (`alimiter` with `level=disabled`: its default
+lifted the output to full scale). The manager's line sits about 17 dB above the office walla (-10.8 against -28 dB mean
+over one second); the music bed never drops below about -30 dB, its own fade-out is crossfaded away. Two audio judges
+(`gemini-3.1-pro-preview`, `gemini-3-flash-preview`) were asked three times; their remarks changed every round and
+contradicted these measurements (a «buried» voice 17 dB above the bed, «dead air» at -28 dB), so none is taken as
+blocking. A person's listening on studio headphones is the check they cannot replace (board row).

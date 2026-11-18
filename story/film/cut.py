@@ -51,11 +51,11 @@ def main(media):
     # 2. sound: each cue at a shot's start plus an offset; the music bed under all, quieter where the voices are
     S = starts
     cues = [  # file, at, gain dB
-        ('f-pings', S['01'] + 0.2, -8), ('f-office', S['03'] + 1.0, -14),
+        ('f-pings', S['01'] + 0.2, -11), ('f-office', S['03'] + 1.0, -17),
         ('f-papers', S['05'] + 0.6, -10), ('f-keyboard', S['06'] + 2.6, -6), ('f-papers', S['07'] + 1.0, -14),
         ('f-steps', S['07'] + 0.4, -12), ('f-steps', S['08'] + 0.6, -12), ('f-freeze', S['09'] + 1.1, -6),
         ('f-coffee', S['10'] + 1.6, -8), ('f-coat', S['12'] + 1.0, -8), ('f-steps', S['13'] + 0.6, -14),
-        ('f-door', S['14'] + 0.4, -8), ('f-future', S['13'] + 0.5, -26), ('f-future', S['15'], -16),
+        ('f-door', S['14'] + 0.4, -11), ('f-future', S['13'] + 0.5, -26), ('f-future', S['15'], -16),
     ]
     caps = {'manager': [S['04'] + 1.0, S['04'] + 4.0], 'error': [S['11'] + 0.4, S['11'] + 3.9],
             'morpheus': [S['16'] + 2.5, total - 0.1]}
@@ -102,7 +102,7 @@ def main(media):
     run(['ffmpeg', '-y', *sum([['-i', str(media / 'music-bed.mp3')] for _ in range(n + 1)], []), '-filter_complex',
          trims + ';'.join(xf) + f';{last}atrim=0:{total + 1:.2f}[o]', '-map', '[o]', str(bed)])
     for lang in ('en', 'ru'):
-        voices = [(f'film-manager-{lang}', caps['manager'][0], 3), (f'film-morpheus-{lang}', caps['morpheus'][0], 1)]
+        voices = [(f'film-manager-{lang}', caps['manager'][0], 5), (f'film-morpheus-{lang}', caps['morpheus'][0], 1)]
         inputs, chains = ['-i', str(work / 'picture.mp4')], []
         allc = [(media_amb.get(f, media / f'{f}.wav'), at, g) for f, at, g in cues] + [(media / f'{f}.wav', at, g) for f, at, g in voices]
         missing = sorted({f.name for f, _, _ in allc if not f.exists()})
@@ -114,7 +114,7 @@ def main(media):
         for i, (f, at, g) in enumerate(allc, start=1):
             inputs += ['-i', str(f)]
             # effects and ambiences step back under a voice (the cue's own time + its delay = film time)
-            dip = (f",volume='if({duck.replace('between(t,', 'between(t+' + format(at, '.2f') + ',')},0.35,1)':eval=frame" if i <= nv else '')
+            dip = (f",volume='if({duck.replace('between(t,', 'between(t+' + format(at, '.2f') + ',')},0.2,1)':eval=frame" if i <= nv else '')
             eq = ',equalizer=f=2500:t=q:w=1.2:g=4' if i > nv else ''  # a voice: presence, to sit above the office walla
             chains.append(f'[{i}:a]aresample=48000,pan=stereo|c0=c0|c1=c0{eq},volume={g}dB{dip},adelay={int(at * 1000)}|{int(at * 1000)}[a{i}]')
         m = len(allc) + 1
@@ -123,7 +123,7 @@ def main(media):
         chains.append(f'[{m}:a]aresample=48000,atrim=0:{total:.2f},volume=-14dB,volume=\'if({duck},0.3,1)\':eval=frame,'
                       f'afade=t=in:st=0:d=2,afade=t=out:st={total - 2:.2f}:d=2[bed]')
         mix = ''.join(f'[a{i}]' for i in range(1, m)) + '[bed]'
-        chains.append(f'{mix}amix=inputs={m}:normalize=0:duration=longest,atrim=0:{total:.2f},alimiter=limit=0.9[mix]')
+        chains.append(f'{mix}amix=inputs={m}:normalize=0:duration=longest,atrim=0:{total:.2f},alimiter=limit=0.79:level=disabled[mix]')
         run(['ffmpeg', '-y', *inputs, '-filter_complex', ';'.join(chains), '-map', '0:v', '-map', '[mix]',
              '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', str(HERE / f'film-{lang}.mp4')])
     run(['ffmpeg', '-y', '-ss', f'{S["01"] + 1.5:.2f}', '-i', str(work / 'picture.mp4'), '-frames:v', '1', '-q:v', '3', str(HERE / 'poster.jpg')])
