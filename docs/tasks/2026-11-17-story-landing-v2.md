@@ -258,3 +258,33 @@ errors; passioncode.ai untouched (200). The one final link went to the operator 
 Foundry (`voice-design`), record the comic's lines, order the UI sounds of the treatment §5 (`sfx-oneshot`), add the
 sound switch to the comic (off until the first action). Then, when the operator answers through Morpheus (board
 request `9b0a0fe8`): the portraits (Foundry `pick` on jobs `…G71F`, `…HH4`, `…GDR`, `…QRX`) and the film (W11).
+
+## W12 receipt: the voice and the interface sounds (2026-11-18)
+
+Done in commit `e0b55397`, deployed as Worker version `11a661cd-73d6-49cd-be23-370ffb052ae2`.
+
+- **Voice.** The catalogue already held a designed Morpheus voice («Morpheus PassionCode», Asset Foundry), so it was
+  reused instead of designing a second one (one voice for site, film and video, treatment §5). Nine lines of the comic
+  (act 0, «Your choice.», goals, access, plan, the Matrix, P&L, the dashboard, the final pill) recorded in en and ru
+  with `speech-line`: 18 files, each transcribed and checked against its text by `google/gemini-3.1-pro-preview`
+  (18 of 18 ok). The other eight languages keep the captions and stay silent (decision: a voice in another language
+  than the captions reads as a mismatch; the eight are a row in W13).
+- **Sounds.** Eight interface sounds (`sfx-oneshot`, two takes each, picked by two audio judges, a third on the two
+  splits) and a room tone (`ambience-loop`, the take that passed the loop-seam gate). Provenance with job ids:
+  [`story/comic/audio/SOURCES.md`](../../story/comic/audio/SOURCES.md).
+- **Page.** [`story/comic/sound.js`](../../story/comic/sound.js): off until the reader's first action, one «Sound» switch
+  in the header (remembered; on a phone its name comes from `aria-label`), a panel speaks its line once as it enters,
+  the act 0 chat ticks and Morpheus speaks when the pills come out, pills chime and thump, the clones click, CTAs
+  play a chord; interface sounds well under the voice; no room tone under reduced motion. Copylot «Sound» in 10
+  locales, no findings (report `610d09d4` and nine more).
+- **Checks.** Local and live, CDP agent Chrome at 1440 px: a real click arms the sound (switch `false` → `true`), ru
+  fetches 9 voice files and 9 sounds, de fetches only the sounds, no page errors; the switch: first press on it turns
+  the sound on, the second off, `off` survives a reload (two passes). 390 px: no horizontal overflow, the switch shows
+  its bars.
+- **Foundry trap found.** `choice_mode: judge` on an audio recipe falls back to a human stop (the vision judge
+  declines audio), so an agent order waits for a person; reordered with `choice_mode: agent`. Filed for Asset Foundry.
+
+**Next task:** W13 rows by priority (Copylot voice v3 allowing the character names, Copylot check of the eight
+translated locales, the «phosphor» style pack, the Morpheus onboarding bot as its own agent task, the canon into the
+brand pack and the agents base), the eight languages' voice; then, when the operator answers through Morpheus (board
+request `9b0a0fe8`): the portraits and the film (W11).
