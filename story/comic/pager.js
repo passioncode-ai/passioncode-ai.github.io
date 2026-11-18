@@ -12,11 +12,15 @@ export function mountPager({ stops, busy = () => false, enabled = () => true, on
   let lastWheel = 0, lastAbs = 0
   let queued = 0          // a gesture made while a frame is held: it turns the next frame when the hold ends, never lost
   let holdStart = 0, release = false, waiting = false
+  let jumpTo = null       // Home or End pressed during a hold: it ends the hold and goes there
   const INSIST = 420      // a second gesture this long into a hold turns the frame at once; the line plays on, uncut
   const MIN_HOLD = 420    // a frame is on screen at least this long before the next gesture can turn it
   const MAX_HOLD = 7000   // a line longer than this does not hold the reader
 
-  const refresh = () => { list = stops().filter(s => Number.isFinite(s.y)).sort((a, b) => a.y - b.y) }
+  const refresh = () => {
+    list = stops().filter(s => Number.isFinite(s.y)).sort((a, b) => a.y - b.y)
+    if (window.__pagerLog) window.__pagerStops = list.map(s => Math.round(s.y))  // only a test reads it
+  }
   const nearest = () => list.reduce((best, s, i) => (Math.abs(s.y - scrollY) < Math.abs(list[best].y - scrollY) ? i : best), 0)
 
   const scrollTo = (y, ms) => new Promise(resolve => {
@@ -32,7 +36,7 @@ export function mountPager({ stops, busy = () => false, enabled = () => true, on
   })
 
   const hold = () => new Promise(resolve => {
-    const t0 = holdStart = performance.now(); release = false
+    const t0 = holdStart = performance.now(); release = jumpTo !== null  // End pressed during the scroll ends the hold too
     const check = () => {
       const t = performance.now() - t0
       if ((t >= MIN_HOLD && !busy()) || t >= MAX_HOLD || release) resolve()
@@ -48,15 +52,18 @@ export function mountPager({ stops, busy = () => false, enabled = () => true, on
     locked = true
     const dist = Math.abs(target.y - scrollY)
     if (dist > 2) await scrollTo(target.y, clamp(520 + dist * 0.22, 620, 1150))
+    window.__pagerLog?.push({ arrive: list.indexOf(target), y: Math.round(target.y), of: list.length })  // only a test sets it
     onArrive(target, list.indexOf(target))
     refresh()  // a panel revealed on arrival may change height: the next stop is measured from the page as it is now
     await hold()
     locked = false
     if (waiting) { waiting = false; onWaitEnd() }
+    if (jumpTo !== null) { const j = jumpTo; jumpTo = null; queued = 0; go(j === 'end' ? list.length - 1 : 0); return }
     if (queued) { const d = queued; queued = 0; step(d) }
   }
 
   const step = dir => {
+    window.__pagerLog?.push({ t: Math.round(performance.now()), dir, locked, queued, y: Math.round(scrollY) })  // only a test sets it
     if (locked) {           // one at most: three flicks during a line still turn one frame
       const held = !animating && holdStart && performance.now() - holdStart
       if (queued && held > INSIST) release = true   // the reader insists: go on, the line keeps playing
@@ -74,20 +81,24 @@ export function mountPager({ stops, busy = () => false, enabled = () => true, on
   // A gesture ends when the wheel has been quiet for QUIET ms. Every event, during a turn too, restarts that
   // silence, so a long trackpad inertia tail or a fast run of flicks (events arriving slowly on a loaded machine
   // included) turns one frame; the next frame needs a pause first.
-  // A new swipe made during the inertia tail of the last one is a gesture too: inertia only decays, so a delta that
-  // jumps well above the tail's lowest point, a while after the last turn, is the reader's finger again.
+  // A new swipe made during the inertia tail of the last one is a gesture too: inertia only decays, so once the tail has
+  // fallen below half its peak, a delta that jumps well above the tail's lowest point is the reader's finger again.
+  // Times are the events' own (e.timeStamp, when the system made them), not when the page got to them: on a busy page
+  // one swipe's events can reach the handler with gaps longer than QUIET, and must still read as one gesture.
   const QUIET = 300
-  let lastTurn = 0, tailMin = Infinity
+  let lastTurn = -Infinity, peak = 0, tailMin = Infinity
   const onWheel = e => {
     if (e.ctrlKey || !enabled()) return  // pinch zoom on a trackpad; a layer above the page (the film) owns the wheel
     e.preventDefault()
     const dy = e.deltaMode === 1 ? e.deltaY * 32 : e.deltaMode === 2 ? e.deltaY * innerHeight : e.deltaY
-    const now = performance.now(), quiet = now - lastWheel > QUIET, abs = Math.abs(dy)
-    const rise = !quiet && now - lastTurn > 350 && abs >= 12 && abs > tailMin * 2 + 6
-    lastWheel = now; lastAbs = abs
-    tailMin = quiet || rise ? abs : Math.min(tailMin, abs)
+    const ts = e.timeStamp || performance.now(), abs = Math.abs(dy)
+    const quiet = ts - lastWheel > QUIET
+    const rise = !quiet && ts - lastTurn > 350 && abs >= 12 && tailMin < peak * 0.5 && abs > tailMin * 2 + 6
+    window.__pagerLog?.push({ t: Math.round(ts), wheel: Math.round(abs), quiet, rise })
+    lastWheel = ts; lastAbs = abs
+    if (quiet || rise || abs >= peak) { peak = abs; tailMin = abs } else tailMin = Math.min(tailMin, abs)
     if ((quiet || rise) && abs > 3) {
-      lastTurn = now
+      lastTurn = ts
       step(Math.sign(dy))  // during a hold it waits its turn (queued), so a gesture is never lost
     }
   }
@@ -99,8 +110,12 @@ export function mountPager({ stops, busy = () => false, enabled = () => true, on
     let dir = 0
     if (e.key === 'ArrowDown' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey && !onControl)) dir = 1
     else if (e.key === 'ArrowUp' || e.key === 'PageUp' || (e.key === ' ' && e.shiftKey && !onControl)) dir = -1
-    else if (e.key === 'Home') { e.preventDefault(); if (!locked) go(0); return }
-    else if (e.key === 'End') { e.preventDefault(); refresh(); if (!locked) go(list.length - 1); return }
+    else if (e.key === 'Home' || e.key === 'End') {
+      e.preventDefault(); refresh()
+      if (locked) { jumpTo = e.key === 'End' ? 'end' : 'home'; release = true }  // ends a hold at once
+      else go(e.key === 'End' ? list.length - 1 : 0)
+      return
+    }
     if (!dir) return
     e.preventDefault()
     step(dir)
