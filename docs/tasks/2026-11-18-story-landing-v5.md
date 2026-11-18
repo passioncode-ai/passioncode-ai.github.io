@@ -137,3 +137,7 @@ Next, exactly: matrix green locally, then deploy (`wrangler deploy -c wrangler.a
 https://assessment.passioncode.ai, then Morpheus's message to the PassionCode chat (`-1004480403446`) through the bot
 @MorpheusPMBot (`passioncode-pm-agent/prod/MORPHEUS_BOT_TOKEN`) mentioning the operator (199109936) and Sergey
 (319998697); text checked by Copylot report `a0b452d8`, file `site-story-tools/send/morpheus.html`.
+
+Done 2026-11-18: `scripts/e2e/story-matrix.mjs` 31/31 locally and 31/31 on https://assessment.passioncode.ai (Worker
+`017fc9ab`); `npm test` 136/136. Morpheus (@MorpheusPMBot) posted the link to the PassionCode chat, message 94, with
+text mentions of the operator (199109936) and Sergey (319998697); text Copylot `a0b452d8`, patches applied.
