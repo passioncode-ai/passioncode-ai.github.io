@@ -120,3 +120,20 @@ Open, none blocking:
 - Asset Foundry defects reported on board request `bab23e73` (previz gate refuses clips for their audio rate; freesound
   fallback for one-shots; no hold while a provider is down).
 - Publication notes (Morpheus likeness, pills in ads, AI disclosure): `story/film/SOURCES.md`.
+
+## 7. Leafing fixes after the operator's «скролл не работает» (2026-11-18 evening)
+
+Found on the live host with real trackpad flicks: a flick made while Morpheus spoke was dropped (3 of 12); a suspended
+audio context never fired a line's end and froze every frame up to 10 s; on a busy page one swipe's events arrived with
+gaps and turned two frames. Fixed in `story/comic/pager.js` and `sound.js`: a gesture during a line is kept and turns
+the frame when the line ends (a thin bar shows the wait), a second gesture goes on at once with the line uncut, gesture
+timing from the events' own timestamps, a line holds no longer than its own length, Home and End end a hold.
+
+Full check: `scripts/e2e/story-matrix.mjs` (desktop 1440 and phone 390, RU and EN: language and switch, act 0 frame by
+frame, the red path with the rail, the end and onboarding, the film with its end card, blue loop and red; browser
+language for ru, en, de, uk; the switch remembered; `?pill=red`; reduced motion).
+
+Next, exactly: matrix green locally, then deploy (`wrangler deploy -c wrangler.assessment.json`), matrix green on
+https://assessment.passioncode.ai, then Morpheus's message to the PassionCode chat (`-1004480403446`) through the bot
+@MorpheusPMBot (`passioncode-pm-agent/prod/MORPHEUS_BOT_TOKEN`) mentioning the operator (199109936) and Sergey
+(319998697); text checked by Copylot report `a0b452d8`, file `site-story-tools/send/morpheus.html`.

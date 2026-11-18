@@ -23,7 +23,14 @@ async function page ({ w, h, mobile, locale, reduce }) {
   if (reduce) await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] })
   await send('Page.addScriptToEvaluateOnNewDocument', { source: `window.__pagerLog = []; try { if (!sessionStorage.__init) { localStorage.removeItem('story-lang'); sessionStorage.__init = 1 } } catch {}
     window.__rest = []; (() => { let y = -1, since = performance.now(); setInterval(() => { const n = Math.round(scrollY); if (n !== y) { y = n; since = performance.now() } else if (performance.now() - since > 300 && __rest[__rest.length - 1] !== n) __rest.push(n) }, 50) })()` })
-  const go = async path => { await send('Page.navigate', { url: ORIGIN + path }); await sleep(5000) }
+  // ready: the language script has pressed its button and the comic's script has measured its stops (or, under reduced
+  // motion, revealed the panels); a loaded machine can take far longer than a fixed wait
+  const go = async path => { await send('Page.navigate', { url: ORIGIN + path }); await sleep(800)
+    const READY = `(() => { try { const d = document.documentElement, l = d && d.dataset.lang; if (!l || document.readyState !== 'complete') return false
+      const b = document.querySelector('.lang-switch .lang[aria-pressed=true]'), m = document.getElementById('lang-menu')
+      return ((b && b.dataset.setLang === l) || (m && m.value === l)) && (Array.isArray(window.__pagerStops) || matchMedia('(prefers-reduced-motion: reduce)').matches) } catch { return false } })()`
+    for (let i = 0; i < 60; i++) { if (await js(READY).catch(() => false)) break; await sleep(500) }
+    await sleep(1200) }
   const click = async (x, y) => { for (const type of ['mousePressed', 'mouseReleased']) await send('Input.dispatchMouseEvent', { type, x, y, button: 'left', clickCount: 1 }) }
   const flick = async () => { const ev = [4,10,22,38,52,60,58,50,42,35,29,24,20,16,13,11,9,7,6,5,4,3,3,2,2,1,1,1,1], base = Date.now() / 1000
     await Promise.all(ev.map((d, i) => send('Input.dispatchMouseEvent', { type: 'mouseWheel', x: w / 2, y: h / 2, deltaX: 0, deltaY: d, timestamp: base + i * 0.016 }))) }
