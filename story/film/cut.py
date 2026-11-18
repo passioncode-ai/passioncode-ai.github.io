@@ -4,7 +4,11 @@ the manager's lines (`speech-line`), the film's sounds (`sfx-oneshot`, `ambience
 story/film/film-en.mp4 and film-ru.mp4 (the same picture, the voices of each language), poster.jpg and timeline.json
 (each shot's start and the caption times, read by scripts/comic-markup.py).
 
-Usage: python3 story/film/cut.py <media dir>   (the folder the deliveries were copied into)"""
+Usage: python3 story/film/cut.py <media dir>   (the folder the deliveries were copied into)
+
+The media dir holds clips/<NN>-<k>.mp4 (every clip Foundry drew for shot NN) with clip-picks.json ({"NN": {"pick": k}},
+the judged take), the sounds and voices as <name>.wav and music-bed.mp3. A clip's own audio is dropped. Each film file
+stays under Cloudflare's 25 MiB asset limit."""
 import json, pathlib, subprocess, sys
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -24,19 +28,20 @@ def dur(path):
 def main(media):
     media = pathlib.Path(media)
     shots = json.loads((HERE / 'shots.json').read_text())
+    picks = json.loads((media / 'clip-picks.json').read_text())
     work = HERE / '.cut'; work.mkdir(exist_ok=True)
     # 1. picture: each clip scaled to 1280x720, cut to its planned length, joined after a black lead
     parts, t, starts = [], LEAD, {}
     run(['ffmpeg', '-y', '-f', 'lavfi', '-i', f'color=c=black:s={W}x{H}:r={FPS}:d={LEAD}', '-pix_fmt', 'yuv420p', str(work / 'lead.mp4')])
     parts.append(work / 'lead.mp4')
     for s in shots:
-        src = media / f'film-awakening-{s["n"]}-v1.mp4'
+        src = media / 'clips' / f'{s["n"]}-{picks[s["n"]]["pick"]}.mp4'
         length = min(s['seconds'], dur(src))
         out = work / f'{s["n"]}.mp4'
         fade = f',fade=t=in:st=0:d=0.25' if s['n'] in ('14', '15') else ''
         run(['ffmpeg', '-y', '-i', str(src), '-t', f'{length:.3f}', '-an', '-vf',
              f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},format=yuv420p{fade}',
-             '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', str(out)])
+             '-c:v', 'libx264', '-preset', 'medium', '-crf', '24', '-maxrate', '1600k', '-bufsize', '3200k', str(out)])
         starts[s['n']] = round(t, 2); t += length
         parts.append(out)
     total = t
@@ -58,6 +63,10 @@ def main(media):
         voices = [(f'film-manager-{lang}', caps['manager'][0], -2), (f'film-morpheus-{lang}', caps['morpheus'][0], 0)]
         inputs, chains = ['-i', str(work / 'picture.mp4')], []
         allc = [(media / f'{f}.wav', at, g) for f, at, g in cues] + [(media / f'{f}.wav', at, g) for f, at, g in voices]
+        missing = sorted({f.name for f, _, _ in allc if not f.exists()})
+        if missing:  # a draft cut while deliveries are still coming; the final cut must name none
+            print(f'film-{lang}: missing, left silent:', ', '.join(missing), file=sys.stderr)
+            allc = [c for c in allc if c[0].exists()]
         for i, (f, at, g) in enumerate(allc, start=1):
             inputs += ['-i', str(f)]
             chains.append(f'[{i}:a]aresample=48000,pan=stereo|c0=c0|c1=c0,volume={g}dB,adelay={int(at * 1000)}|{int(at * 1000)}[a{i}]')
@@ -74,6 +83,9 @@ def main(media):
     run(['ffmpeg', '-y', '-ss', f'{S["01"] + 1.5:.2f}', '-i', str(work / 'picture.mp4'), '-frames:v', '1', '-q:v', '3', str(HERE / 'poster.jpg')])
     (HERE / 'timeline.json').write_text(json.dumps({'total': round(total, 2), 'starts': starts,
                                                     'captions': {k: [round(a, 2), round(b, 2)] for k, (a, b) in caps.items()}}, indent=1))
+    for lang in ('en', 'ru'):
+        size = (HERE / f'film-{lang}.mp4').stat().st_size
+        assert size < 25 * 2**20, f'film-{lang}.mp4 is {size} bytes, over the 25 MiB asset limit'
     print('film', round(total, 2), 's')
 
 

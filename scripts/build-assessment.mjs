@@ -40,7 +40,7 @@ writeFileSync(join(out, 'layout-v2/index.html'), page.replace('class="matrix v3"
 // Variant B, the scroll cartoon, at /film/
 mkdirSync(join(out, 'film'), { recursive: true })
 writeFileSync(join(out, 'film/index.html'), readFileSync(join(root, 'story/film/index.html')))
-for (const f of ['story/film/cut.mp4', 'story/film/future-office.jpg']) { try { cpSync(join(root, f), join(out, f)) } catch {} } // the generated cut, once it exists
+for (const f of ['story/film/film-en.mp4', 'story/film/film-ru.mp4', 'story/film/timeline.json', 'story/film/future-office.jpg']) { try { cpSync(join(root, f), join(out, f)) } catch {} } // the film's cut (story/film/cut.py), once it exists
 writeFileSync(join(out, 'robots.txt'), 'User-agent: *\nDisallow: /\n')
 writeFileSync(join(out, '_headers'), [
   '/*',
