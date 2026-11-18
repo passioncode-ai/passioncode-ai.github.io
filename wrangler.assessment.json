@@ -2,12 +2,18 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "passioncode-assessment",
   "compatibility_date": "2026-09-03",
+  "main": "worker/assessment.js",
   "workers_dev": false,
   "preview_urls": true,
   "assets": {
     "directory": "./dist-assessment",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "none"
+    "not_found_handling": "none",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/story/film/*",
+      "/story/comic/audio/*"
+    ]
   },
   "routes": [
     {
