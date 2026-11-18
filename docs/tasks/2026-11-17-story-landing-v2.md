@@ -245,3 +245,16 @@ weights, Safari once it answers), Copylot check of the ten locales, the film (wa
 treatment), the voice and UI sounds, then ONE final link to the operator (his rule: only the final version, old
 versions are no longer sent). Machine: `~/.claude/settings.json` `cleanupPeriodDays` set to 14 on 2026-11-18 for the
 disk; after the next Claude Code start, measure free space and set it back to 90.
+
+### Deployed (2026-11-18)
+
+The comic (commit `98779df9`) deployed to assessment.passioncode.ai, Worker version `5f2b13bd-fb11-4456-88d3-3f2ef6786701`
+(`wrangler deploy -c wrangler.assessment.json`). Checks on the live host: `/`, `?pill=red`, the scripts and robots answer
+200, `X-Robots-Tag: noindex, nofollow`; opened in a browser (CDP, shared agent Chrome) at 1440 px: 16 screens, no page
+errors; passioncode.ai untouched (200). The one final link went to the operator (communicator event
+`site-068-v4-comic-final-5f2b13bd`), as he asked: no more links to old variants.
+
+**Next task:** W12, the voice and the UI sounds (no gate): design Morpheus's voice from its description through Asset
+Foundry (`voice-design`), record the comic's lines, order the UI sounds of the treatment §5 (`sfx-oneshot`), add the
+sound switch to the comic (off until the first action). Then, when the operator answers through Morpheus (board
+request `9b0a0fe8`): the portraits (Foundry `pick` on jobs `…G71F`, `…HH4`, `…GDR`, `…QRX`) and the film (W11).
