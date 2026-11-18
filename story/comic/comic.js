@@ -3,6 +3,7 @@
 // an arrow drawn to the next. Reduced motion: every state shown, nothing pinned.
 import { mountCast } from '../cast.js'
 import { mountRain } from '../rain.js'
+import { mountSound } from './sound.js'
 
 const root = document.documentElement
 const $ = s => document.querySelector(s)
@@ -10,6 +11,7 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v))
 const seg = (v, a, b) => clamp((v - a) / (b - a))
 mountCast()
+const sound = mountSound({ reduce })
 // The header as on the story page: one staggered reveal; its preview chat shows its last state.
 requestAnimationFrame(() => root.classList.add('ready'))
 document.querySelectorAll('#mini li').forEach(li => li.classList.add('on'))
@@ -60,8 +62,17 @@ const sticky = $('#sticky-cta')
 new IntersectionObserver(([e]) => sticky.classList.toggle('away', e.isIntersecting)).observe($('#onboard'))
 
 // Panels and arrows: revealed once, as they enter the screen.
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { threshold: 0.28 })
-document.querySelectorAll('.panel, .arrow').forEach(el => reduce ? el.classList.add('in') : io.observe(el))
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return
+  e.target.classList.add('in'); io.unobserve(e.target)
+  if (!e.target.matches('.arrow')) sound.panel(e.target)
+}), { threshold: 0.28 })
+document.querySelectorAll('.panel, .arrow, .final-choice').forEach(el => reduce ? el.classList.add('in') : io.observe(el))
+// Under reduced motion nothing reveals, so a line is spoken when its panel is mostly on screen.
+if (reduce) {
+  const quiet = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { sound.panel(e.target); quiet.unobserve(e.target) } }), { threshold: 0.5 })
+  document.querySelectorAll('.panel, .final-choice').forEach(el => quiet.observe(el))
+}
 
 if (reduce) {
   root.classList.add('calm')
@@ -71,12 +82,18 @@ if (reduce) {
   const rain = mountRain($('#rain'), () => state)
   const msgs = [...document.querySelectorAll('.cchat .m')]
   const state = { vel: 0, raw: 0 }
+  let offered = false
   let lastY = scrollY
   const tick = () => {
     const r = act0.getBoundingClientRect(), travel = act0.offsetHeight - innerHeight
     const p = clamp(-r.top / travel)
     // beats: the chat speaks (0..0.46), the chat leaves and Morpheus rises (0.5..0.68), the pills come out (0.7..0.82)
-    msgs.forEach(m => m.classList.toggle('on', p >= Number(m.dataset.at)))
+    msgs.forEach(m => {
+      const was = m.classList.contains('on'), now = p >= Number(m.dataset.at)
+      m.classList.toggle('on', now)
+      if (now && !was) (m.classList.contains('sys') ? sound.typing() : sound.message(m))
+    })
+    if (!offered && p >= 0.8) { offered = true; sound.say('choice') }
     act0.style.setProperty('--leave', seg(p, 0.5, 0.66))
     act0.style.setProperty('--rise', seg(p, 0.54, 0.7))
     act0.style.setProperty('--offer', seg(p, 0.72, 0.84))

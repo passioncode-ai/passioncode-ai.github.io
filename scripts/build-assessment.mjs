@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const out = join(root, 'dist-assessment')
 const files = [
-  'story/index.html', 'story/story.css', 'story/story.js', 'story/store.js', 'story/field.js', 'story/rain.js', 'story/voice.js', 'story/matrix.css', 'story/ink.css', 'story/v2.css', 'story/v3.css', 'story/cast.js', 'story/comic/comic.css', 'story/comic/comic.js', 'story/voice/script.json', 'story/vendor/scrolly-video.js', 'story/vendor/scrolly-video.LICENSE',
+  'story/index.html', 'story/story.css', 'story/story.js', 'story/store.js', 'story/field.js', 'story/rain.js', 'story/voice.js', 'story/matrix.css', 'story/ink.css', 'story/v2.css', 'story/v3.css', 'story/cast.js', 'story/comic/comic.css', 'story/comic/comic.js', 'story/comic/sound.js', 'story/voice/script.json', 'story/vendor/scrolly-video.js', 'story/vendor/scrolly-video.LICENSE',
   'story/film/film.css', 'story/film/film.js', 'story/film/standin.mp4', 'story/film/poster.jpg',
   'design-system/tokens.css', 'assets/passioncode-mark.svg', 'assets/favicon-64.png'
 ]
@@ -23,6 +23,8 @@ for (const f of files) {
 cpSync(join(root, 'story/cast'), join(out, 'story/cast'), { recursive: true })
 // The film treatment for the operator (SITE-068 v2, 2026-11-18): the page and, when rendered locally, its PDF
 cpSync(join(root, 'story/treatment'), join(out, 'story/treatment'), { recursive: true })
+// W12: Morpheus's recorded lines and the interface sounds (Asset Foundry), mp3
+cpSync(join(root, 'story/comic/audio'), join(out, 'story/comic/audio'), { recursive: true })
 // v4 the comic is the root (the operator, 2026-11-18); the scroll story with the side chat stays at /v3/
 writeFileSync(join(out, 'index.html'), readFileSync(join(root, 'story/comic/index.html')))
 mkdirSync(join(out, 'v3'), { recursive: true })

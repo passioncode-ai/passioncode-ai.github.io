@@ -16,10 +16,22 @@ def t(en, ru):
 def av(name, cls=''):
     return f'<svg class="av av-{name} {cls}" viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-{name}"/></svg>'
 
+# W12: Morpheus's recorded lines (Asset Foundry speech-line, voice «Morpheus PassionCode»), en and ru; comic.js plays the
+# line of the reader's language when its panel enters, once the sound is on.
+VO = {"I know why the launch slips. Want to see?": 'a0', 'Your choice.': 'choice',
+      'What must the business achieve this quarter?': 'goals',
+      'Access by level, keys in one vault. Keep the team and grow together, or hand the routine to agents.': 'access',
+      'Four phases, the cost, and how it scales with no person in the routine.': 'plan',
+      "Let's look inside. It builds itself from blocks.": 'matrix',
+      'Revenue grows where agents work; costs fall where people waited.': 'pnl',
+      'Here is your business now. Every agent, task and cost on one screen.': 'dash', 'Which pill do you take?': 'final'}
+def vo(en):
+    return f' data-vo="{VO[en]}"' if en in VO else ''
+
 def say(who, en, ru, side='l', name=None):
     face = av(who) if who in ('morpheus', 'trinity', 'neo', 'smith', 'architect') else f'<i class="face">{who[0].upper()}</i>'
     label = f'<b class="who">{name}</b>' if name else ''
-    return f'<div class="say say-{side} who-{who}">{face}<div class="balloon">{label}<p>{t(en, ru)}</p></div></div>'
+    return f'<div class="say say-{side} who-{who}"{vo(en) if who == "morpheus" else ""}>{face}<div class="balloon">{label}<p>{t(en, ru)}</p></div></div>'
 
 # ---- act 0: the company chat in the centre, Morpheus joins, rises, offers the pills -------------------------------
 CHAT = [
@@ -33,7 +45,7 @@ def act0():
     for i, (who, ne, nr, en, ru) in enumerate(CHAT):
         rows.append(f'<li class="m" data-at="{0.06 + i * 0.07:.2f}"><i class="face f-{who}">{who[0].upper()}</i><div><b>{t(ne, nr)}</b><p>{t(en, ru)}</p></div></li>')
     rows.append(f'<li class="m sys" data-at="0.36"><p>{t("Morpheus joined the chat", "Морфеус присоединился к чату")}</p></li>')
-    rows.append(f'<li class="m agent" data-at="0.42">{av("morpheus")}<div><b>{t("Morpheus · PM agent", "Морфеус · PM-агент")}</b><p>{t("I know why the launch slips. Want to see?", "Я знаю, почему запуск переносится. Показать?")}</p></div></li>')
+    rows.append(f'<li class="m agent" data-at="0.42" data-vo="a0">{av("morpheus")}<div><b>{t("Morpheus · PM agent", "Морфеус · PM-агент")}</b><p>{t("I know why the launch slips. Want to see?", "Я знаю, почему запуск переносится. Показать?")}</p></div></li>')
     return f'''<section class="act0" id="act0" aria-label="{'The choice'}">
  <div class="act0-stage">
   <div class="cchat" aria-label="Team chat">
@@ -42,7 +54,7 @@ def act0():
   </div>
   <div class="rise">
    {av('morpheus', 'hero-av')}
-   <p class="rise-line">{t('Your choice.', 'Выбор за вами.')}</p>
+   <p class="rise-line" data-vo="choice">{t('Your choice.', 'Выбор за вами.')}</p>
    <div class="pills" role="group" aria-label="Choose">
     <button type="button" class="pill red" data-pill="red"><span class="capsule" aria-hidden="true"></span>{t('Wake up: how your company runs on agents', 'Проснуться: как компания работает на агентах')}</button>
     <button type="button" class="pill blue" data-pill="blue"><span class="capsule" aria-hidden="true"></span>{t('Stay as is: how it runs now', 'Остаться как есть: как всё устроено сейчас')}</button>
@@ -132,7 +144,7 @@ PANELS = [
 def final():
     return f'''<section class="final-choice" id="final">
  {av('morpheus', 'hero-av')}
- <h2>{t('Which pill do you take?', 'Какую таблетку выберете вы?')}</h2>
+ <h2 data-vo="final">{t('Which pill do you take?', 'Какую таблетку выберете вы?')}</h2>
  <div class="pills">
   <a class="pill red" href="#onboard"><span class="capsule" aria-hidden="true"></span>{t('Wake up', 'Проснуться')}</a>
   <a class="pill blue" href="#top"><span class="capsule" aria-hidden="true"></span>{t('Forget it all', 'Забыть всё')}</a>
@@ -158,8 +170,9 @@ def cta_strip(en, ru):
 def main():
     src = SRC.read_text()
     head = src[:src.index('<canvas class="rain"')]
-    # the comic has no voice yet (W12) and the old variants are not shown any more (the operator, 2026-11-18)
-    head = re.sub(r'\s*<button class="voice-btn".*?</button>', '', head, flags=re.S)
+    # the header's voice button becomes the one sound switch (W12, treatment §5); the old variants are not shown any more
+    head = re.sub(r'<button class="voice-btn".*?</button>', '<button class="voice-btn" type="button" id="sound" aria-pressed="false">'
+                  '<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>' + t('Sound', 'Звук') + '</button>', head, flags=re.S)
     head = re.sub(r'\s*<a class="alt-link[^"]*"[^>]*>.*?</a>', '', head, flags=re.S)
     head = head.replace('<link rel="stylesheet" href="/story/v3.css">', '<link rel="stylesheet" href="/story/v3.css">\n<link rel="stylesheet" href="/story/comic/comic.css">')
     hero = src[src.index('<section class="hero"'):src.index('</section>', src.index('<section class="hero"')) + len('</section>')]
