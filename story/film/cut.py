@@ -51,30 +51,76 @@ def main(media):
     # 2. sound: each cue at a shot's start plus an offset; the music bed under all, quieter where the voices are
     S = starts
     cues = [  # file, at, gain dB
-        ('f-pings', S['01'] + 0.2, -8), ('f-office', S['03'] + 1.0, -14), ('f-office', S['03'] + 21.0, -14),
+        ('f-pings', S['01'] + 0.2, -8), ('f-office', S['03'] + 1.0, -14),
         ('f-papers', S['05'] + 0.6, -10), ('f-keyboard', S['06'] + 2.6, -6), ('f-papers', S['07'] + 1.0, -14),
         ('f-steps', S['07'] + 0.4, -12), ('f-steps', S['08'] + 0.6, -12), ('f-freeze', S['09'] + 1.1, -6),
         ('f-coffee', S['10'] + 1.6, -8), ('f-coat', S['12'] + 1.0, -8), ('f-steps', S['13'] + 0.6, -14),
-        ('f-door', S['14'] + 0.4, -8), ('f-future', S['15'], -16), ('f-future', S['15'] + 19.0, -18),
+        ('f-door', S['14'] + 0.4, -8), ('f-future', S['13'] + 0.5, -26), ('f-future', S['15'], -16),
     ]
     caps = {'manager': [S['04'] + 1.0, S['04'] + 4.0], 'error': [S['11'] + 0.4, S['11'] + 3.9],
             'morpheus': [S['16'] + 2.5, total - 0.1]}
+    # the office: one bed from the first office shot to the time freeze, which cuts it into silence (the brief); built
+    # from the walla takes laid over each other in a fixed shuffled order, so no one click repeats every two seconds
+    walla = [media / f'f-walla{i}.wav' for i in (1, 2, 3, 4) if (media / f'f-walla{i}.wav').exists()]
+    media_amb = {}
+    if walla:
+        need = S['09'] + 1.2 - (S['03'] + 1.0)
+        order = [walla[i % len(walla)] for i in (0, 2, 1, 3, 2, 0, 3, 1, 0, 3, 2, 1, 3, 0, 1, 2)]
+        seq, got = [], 0.0
+        for f in order:
+            seq.append(f); got += dur(f) - 0.8
+            if got > need + 1: break
+        xf, last = [], '[0:a]'
+        for i in range(1, len(seq)):
+            xf.append(f'{last}[{i}:a]acrossfade=d=0.8:c1=tri:c2=tri[w{i}]'); last = f'[w{i}]'
+        office = work / 'f-office.wav'
+        run(['ffmpeg', '-y', *sum([['-i', str(f)] for f in seq], []), '-filter_complex',
+             ';'.join(xf) + f'{";" if xf else ""}{last}atrim=0:{need:.2f},afade=t=in:d=1.5,afade=t=out:st={need - 0.35:.2f}:d=0.35[o]',
+             '-map', '[o]', str(office)])
+        media_amb['f-office'] = office
+    # a room tone shorter than its 20 s place is looped there, faded in and out, so a short take still fills the room
+    for amb in ('f-office', 'f-future'):
+        src = media / f'{amb}.wav'
+        if amb not in media_amb and src.exists() and dur(src) < 19:
+            looped, n = work / f'{amb}.wav', int(20 / max(0.5, dur(src) - 0.5)) + 2
+            # copies joined with 0.5 s crossfades: a hard loop of a 2 s take clicks at every seam
+            chain = ''.join(f'[{i}:a]' for i in range(n))
+            xf, last = [], '[0:a]'
+            for i in range(1, n):
+                xf.append(f'{last}[{i}:a]acrossfade=d=0.5:c1=tri:c2=tri[x{i}]'); last = f'[x{i}]'
+            run(['ffmpeg', '-y', *sum([['-i', str(src)] for _ in range(n)], []), '-filter_complex',
+                 ';'.join(xf) + f';{last}atrim=0:20,afade=t=in:d=1.5,afade=t=out:st=17.5:d=2.5[o]', '-map', '[o]', str(looped)])
+            media_amb[amb] = looped
+    # the music bed: its own ending fades out near 57 s, so a plain loop dips there; join its body to itself with a 4 s
+    # crossfade before that fade, as long as the film needs
+    bed, body = work / 'bed.wav', min(dur(media / 'music-bed.mp3'), 55.0)
+    n = int(total / (body - 4)) + 1
+    xf, last = [], '[b0]'
+    trims = ''.join(f'[{i}:a]atrim=0:{body:.2f},asetpts=PTS-STARTPTS[b{i}];' for i in range(n + 1))
+    for i in range(1, n + 1):
+        xf.append(f'{last}[b{i}]acrossfade=d=4:c1=qsin:c2=qsin[y{i}]'); last = f'[y{i}]'
+    run(['ffmpeg', '-y', *sum([['-i', str(media / 'music-bed.mp3')] for _ in range(n + 1)], []), '-filter_complex',
+         trims + ';'.join(xf) + f';{last}atrim=0:{total + 1:.2f}[o]', '-map', '[o]', str(bed)])
     for lang in ('en', 'ru'):
-        voices = [(f'film-manager-{lang}', caps['manager'][0], -2), (f'film-morpheus-{lang}', caps['morpheus'][0], 0)]
+        voices = [(f'film-manager-{lang}', caps['manager'][0], 3), (f'film-morpheus-{lang}', caps['morpheus'][0], 1)]
         inputs, chains = ['-i', str(work / 'picture.mp4')], []
-        allc = [(media / f'{f}.wav', at, g) for f, at, g in cues] + [(media / f'{f}.wav', at, g) for f, at, g in voices]
+        allc = [(media_amb.get(f, media / f'{f}.wav'), at, g) for f, at, g in cues] + [(media / f'{f}.wav', at, g) for f, at, g in voices]
         missing = sorted({f.name for f, _, _ in allc if not f.exists()})
         if missing:  # a draft cut while deliveries are still coming; the final cut must name none
             print(f'film-{lang}: missing, left silent:', ', '.join(missing), file=sys.stderr)
             allc = [c for c in allc if c[0].exists()]
+        duck = '+'.join(f'between(t,{a - 0.3:.2f},{a + 3.4:.2f})' for _, a, _ in voices)
+        nv = len(allc) - len(voices)
         for i, (f, at, g) in enumerate(allc, start=1):
             inputs += ['-i', str(f)]
-            chains.append(f'[{i}:a]aresample=48000,pan=stereo|c0=c0|c1=c0,volume={g}dB,adelay={int(at * 1000)}|{int(at * 1000)}[a{i}]')
+            # effects and ambiences step back under a voice (the cue's own time + its delay = film time)
+            dip = (f",volume='if({duck.replace('between(t,', 'between(t+' + format(at, '.2f') + ',')},0.35,1)':eval=frame" if i <= nv else '')
+            eq = ',equalizer=f=2500:t=q:w=1.2:g=4' if i > nv else ''  # a voice: presence, to sit above the office walla
+            chains.append(f'[{i}:a]aresample=48000,pan=stereo|c0=c0|c1=c0{eq},volume={g}dB{dip},adelay={int(at * 1000)}|{int(at * 1000)}[a{i}]')
         m = len(allc) + 1
-        inputs += ['-stream_loop', '-1', '-i', str(media / 'music-bed.mp3')]
+        inputs += ['-i', str(bed)]
         # the bed: in over 2 s, down under the voices, out over the last 2 s
-        duck = '+'.join(f'between(t,{a - 0.3:.2f},{a + 3.2:.2f})' for _, a, _ in voices)
-        chains.append(f'[{m}:a]aresample=48000,atrim=0:{total:.2f},volume=-20dB,volume=\'if({duck},0.35,1)\':eval=frame,'
+        chains.append(f'[{m}:a]aresample=48000,atrim=0:{total:.2f},volume=-14dB,volume=\'if({duck},0.3,1)\':eval=frame,'
                       f'afade=t=in:st=0:d=2,afade=t=out:st={total - 2:.2f}:d=2[bed]')
         mix = ''.join(f'[a{i}]' for i in range(1, m)) + '[bed]'
         chains.append(f'{mix}amix=inputs={m}:normalize=0:duration=longest,atrim=0:{total:.2f},alimiter=limit=0.9[mix]')
