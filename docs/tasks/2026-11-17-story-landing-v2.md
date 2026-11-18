@@ -192,3 +192,10 @@ its element `el`.
 | W12 | Voice: Morpheus designed from a description, recordings of the 12 lines and the film's lines; UI sounds (treatment §5) | none for the voice design; the film's lines with W11 |
 | W13 | Copylot voice `861f15ee` v3: the character names allowed, the light Matrix tone written down | relayed operator words above |
 | W7 | Style pack «phosphor» in sheleg-design | none |
+
+### W9 receipt (2026-11-18)
+
+Layout v3 (`story/v3.css`, `html.v3`): the story fills the screen; the chat is a translucent bracketed panel, the
+caption a terminal line typed on entry, the HUD tags with a phosphor edge, phones get a bottom sheet. The v2 layout stays
+at `/layout-v2/`, look 2 «Ink» at `/v2/` takes v3 too. Checks: sequence-probe 161 positions, 0 violations; Safari shots
+1440 and 390 px; `npm run check` exit 0.

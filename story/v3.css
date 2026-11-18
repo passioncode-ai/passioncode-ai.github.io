@@ -1,0 +1,64 @@
+/* SITE-068 v3 layout (the operator, 2026-11-18: «всю историю на фуллскрин [...] как погружение [...] а все остальное
+   это уже как элементы дополненной реальности [...] в стиле матрицы»). Scoped to html.v3: the story fills the screen,
+   the chat, the caption, the HUD and the rail float over it as an AR layer. The v2 layout stays at /layout-v2/. */
+html.v3 .stage{display:block;padding:0}
+html.v3 .stage>.scenes{position:absolute;inset:0;border:0;border-radius:0;background:none;box-shadow:none}
+html.v3 .scene{padding:150px 430px 110px 70px}
+html.v3 .pixels{position:absolute;inset:0}
+
+/* The AR layer: thin phosphor brackets, translucent glass, mono type */
+html.v3 .ar{--br:#00ff66aa}
+html.v3 .stage>.caption,html.v3 .stage>.chat,html.v3 .stage>.hud{position:absolute;z-index:5}
+html.v3 .stage>.caption{left:32px;top:72px;width:min(620px,52vw);min-height:0;flex-direction:column;align-items:flex-start;gap:2px;background:none;border:0}
+html.v3 .ch-num{font:600 11px var(--mono,monospace);color:var(--pc-accent);letter-spacing:.14em}
+html.v3 .ch-num::before{content:"[ CH ";opacity:.6}html.v3 .ch-num::after{content:" ]";opacity:.6}
+html.v3 .cap h2{font:700 clamp(22px,2.4vw,34px)/1.1 var(--mono,monospace);background:none;color:var(--pc-accent);padding:0;box-shadow:none;text-shadow:0 0 18px #00ff6688}
+html.v3 .cap h2::before{content:"> ";opacity:.55}
+html.v3 .cap.on h2{animation:v3type .7s steps(24,end) both}
+@keyframes v3type{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+html.v3 .cap p{font:13px/1.5 var(--mono,monospace);color:#bfffd6;background:#020604a6;border:0;border-left:2px solid var(--pc-accent);padding:6px 10px;margin-top:6px;max-width:560px}
+
+html.v3 .stage>.chat{right:24px;top:84px;bottom:24px;width:min(380px,30vw);background:#02060473;backdrop-filter:blur(7px) saturate(1.2);border:1px solid #00ff6640;border-radius:4px;box-shadow:0 0 40px #00ff6614 inset}
+html.v3 .stage>.chat::before,html.v3 .stage>.chat::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--pc-accent);pointer-events:none}
+html.v3 .stage>.chat::before{left:-2px;top:-2px;border-right:0;border-bottom:0}
+html.v3 .stage>.chat::after{right:-2px;bottom:-2px;border-left:0;border-top:0}
+html.v3 .chat-head{font:600 12px var(--mono,monospace);text-transform:uppercase;letter-spacing:.1em;background:none;border-bottom:1px dashed #00ff6640}
+html.v3 .msg p{background:#020604b3;border-radius:2px}
+html.v3 .msg.on{animation:v3in .45s steps(6,end) both}
+@keyframes v3in{from{opacity:0;filter:blur(3px) brightness(2);transform:translateX(8px)}to{opacity:1;filter:none;transform:none}}
+html.v3 .stage[data-beat="chat"] .chat{box-shadow:0 0 0 1px var(--pc-accent),0 0 40px #00ff6633,0 0 40px #00ff6614 inset}
+html.v3 .stage[data-beat="chat"] .scenes{opacity:.55}
+
+html.v3 .stage>.hud{left:32px;bottom:22px;display:flex;gap:8px;align-items:flex-end}
+html.v3 .hud>div{background:#020604a6;border:0;border-left:2px solid var(--pc-accent);border-radius:0;padding:4px 10px;min-width:0;box-shadow:none;backdrop-filter:blur(4px)}
+html.v3 .hud small{font:10px var(--mono,monospace);text-transform:uppercase;letter-spacing:.1em}
+html.v3 .hud b{font-size:18px;text-shadow:0 0 12px #00ff6666}
+html.v3 .hud .illus{margin:0 0 4px 8px}
+
+/* Scene objects read as holograms in the same space */
+html.v3 .dept-cell,html.v3 .plan,html.v3 .dash,html.v3 .ly,html.v3 .conn,html.v3 .biz-card{background:#020604b8;backdrop-filter:blur(3px)}
+html.v3 .av.big{width:min(300px,38vh);height:min(300px,38vh)}
+
+/* Phones: the AR layer becomes a bottom sheet */
+@media (max-width:860px){
+ html.v3 .scene{padding:150px 10px 44vh 10px}
+ html.v3 .stage>.caption{left:12px;right:12px;top:58px;width:auto}
+ html.v3 .cap p{font-size:12px;padding:4px 8px}
+ html.v3 .stage>.chat{left:8px;right:8px;top:auto;bottom:52px;width:auto;height:34vh}
+ html.v3 .stage>.hud{left:8px;right:8px;bottom:6px}
+ html.v3 .hud>div{flex:1;padding:3px 6px}html.v3 .hud b{font-size:13px}html.v3 .hud .illus{display:none}
+}
+
+/* Look 2 «Ink» under v3: paper panels instead of glass */
+html.v3.ink .stage>.chat{background:#f4f1e8e6;border:3px solid var(--ink);backdrop-filter:none}
+html.v3.ink .cap h2{color:var(--paper);text-shadow:4px 4px 0 #000}
+html.v3.ink .cap p{background:var(--paper);color:var(--ink);border-left-color:var(--ink)}
+html.v3.ink .hud>div{background:var(--paper);color:var(--ink);border-left-color:var(--ink)}
+html.v3.ink .dept-cell,html.v3.ink .plan,html.v3.ink .dash{background:var(--paper)}
+.calm.v3 .stage>.caption,.calm.v3 .stage>.chat,.calm.v3 .stage>.hud{position:static;width:auto;margin:12px}
+/* review fixes (Safari shots 2026-11-18): labels clear of the chat and the HUD */
+html.v3 .hud .illus{position:static;align-self:flex-end;margin:0 0 4px 6px;white-space:nowrap}
+html.v3 .agents-count{right:440px;top:130px}
+html.v3 .fx1{right:auto;left:58%}
+@media (max-width:860px){html.v3 .agents-count{right:14px;top:150px}html.v3 .fx1{left:auto;right:12px}}
+@media (max-width:860px){html.v3 .fx1{display:none}}
