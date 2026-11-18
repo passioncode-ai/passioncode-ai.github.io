@@ -84,3 +84,17 @@ Found in review, fixed or to fix in these waves:
 | W4 | Integration: the film in the page, its end card loops or enters the Matrix; scroll-by-scroll timing table | the v5 test passes end to end, both languages |
 | W5 | Copylot on every new string, build, deploy, live checks, receipts, backlog row, scenario run 2 in the workspace | live CDP pass, Copylot no blocking finding |
 | W6 | The link to the PassionCode chat (gateway) and to the operator (communicator) | message ids recorded |
+
+## 5. State, 2026-11-18 17:55 CET (handoff point)
+
+- W1 built and tested locally (see section 2); committed `3ed35215`.
+- W3 film: looks picked for all 16 shots by two vision models, a third on a split (`site-story-tools/film-picks.jsonl`,
+  outside Git); clips drawing in Foundry (job ids: `site-story-tools/film-jobs.clean`); the watcher `film-pick.py`
+  accepts each clip that passed its gate. Shot 16 was refused by Seedance moderation for «pill»: reworded as beads,
+  forked as `job_01M7QRZGDY4X1WB8DM9X6J69FQ`.
+- Film sounds: keyboard, papers, freeze, coffee, coat, pings chosen by two audio judges (`film-sfx-verdicts.jsonl`);
+  steps and door re-forked with ElevenLabs pinned (`job_01M7QS2RRD75TP980FG42KN0N0`, `job_01M7QS2TMKY3F9NF8GQNAXWB75`);
+  office and future ambiences and all 14 voice lines retried after ElevenLabs timeouts (ledger lines settled).
+- The end still: the Foundry redo came neon again, so `story/film/future-office.jpg` is shot 15's chosen look frame.
+- Next task, exactly: when every clip and sound is delivered, copy them to one media folder under their cut names, run
+  `python3 story/film/cut.py <folder>`, rebuild, run `v5-test.mjs` to the end card, then W4 to W6.
