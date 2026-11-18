@@ -1,0 +1,250 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 7,
+ "fps": 24,
+ "background": "#e8e2d6",
+ "note": "Medium then close: Morpheus steps out into the bright office and holds out both hands: a red and a blue bead (the pills, worded as beads: Seedance moderation refused \u00abpill\u00bb, 2026-11-18).",
+ "objects": [
+  {
+   "name": "floor",
+   "shape": "cube",
+   "location": [
+    0,
+    5,
+    0
+   ],
+   "scale": [
+    10,
+    12,
+    0.02
+   ],
+   "color": "#b58a5a"
+  },
+  {
+   "name": "window",
+   "shape": "cube",
+   "location": [
+    0,
+    10.5,
+    1.8
+   ],
+   "scale": [
+    10,
+    0.05,
+    3.4
+   ],
+   "color": "#dfe9f2"
+  },
+  {
+   "name": "desk",
+   "shape": "cube",
+   "location": [
+    1.6,
+    6.5,
+    0.75
+   ],
+   "scale": [
+    2.0,
+    0.9,
+    0.06
+   ],
+   "color": "#b58a5a"
+  },
+  {
+   "name": "morpheus",
+   "shape": "cylinder",
+   "location": [
+    0,
+    5.5,
+    0.7875
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.7875
+   ],
+   "color": "#202020",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      -1.2,
+      7,
+      0.7875
+     ]
+    },
+    {
+     "t": 4,
+     "location": [
+      0,
+      3.6,
+      0.7875
+     ]
+    },
+    {
+     "t": 7,
+     "location": [
+      0,
+      3.4,
+      0.7875
+     ]
+    }
+   ]
+  },
+  {
+   "name": "morpheus_head",
+   "shape": "sphere",
+   "location": [
+    0,
+    5.5,
+    1.6624999999999999
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      -1.2,
+      7,
+      1.6624999999999999
+     ]
+    },
+    {
+     "t": 4,
+     "location": [
+      0,
+      3.6,
+      1.6624999999999999
+     ]
+    },
+    {
+     "t": 7,
+     "location": [
+      0,
+      3.4,
+      1.6624999999999999
+     ]
+    }
+   ]
+  },
+  {
+   "name": "pill_red",
+   "shape": "cube",
+   "location": [
+    -0.35,
+    3.1,
+    1.15
+   ],
+   "scale": [
+    0.05,
+    0.05,
+    0.025
+   ],
+   "color": "#d03030",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      -0.6,
+      6.6,
+      1.0
+     ]
+    },
+    {
+     "t": 4,
+     "location": [
+      -0.35,
+      3.25,
+      1.05
+     ]
+    },
+    {
+     "t": 7,
+     "location": [
+      -0.35,
+      3.0,
+      1.18
+     ]
+    }
+   ]
+  },
+  {
+   "name": "pill_blue",
+   "shape": "cube",
+   "location": [
+    0.35,
+    3.1,
+    1.15
+   ],
+   "scale": [
+    0.05,
+    0.05,
+    0.025
+   ],
+   "color": "#3060d0",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      -1.0,
+      6.6,
+      1.0
+     ]
+    },
+    {
+     "t": 4,
+     "location": [
+      0.35,
+      3.25,
+      1.05
+     ]
+    },
+    {
+     "t": 7,
+     "location": [
+      0.35,
+      3.0,
+      1.18
+     ]
+    }
+   ]
+  }
+ ],
+ "camera": {
+  "lens": 40,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0,
+     0,
+     1.6
+    ],
+    "look_at": [
+     0,
+     5.5,
+     1.5
+    ]
+   },
+   {
+    "t": 7,
+    "location": [
+     0,
+     1.6,
+     1.55
+    ],
+    "look_at": [
+     0,
+     3.4,
+     1.4
+    ]
+   }
+  ]
+ }
+}

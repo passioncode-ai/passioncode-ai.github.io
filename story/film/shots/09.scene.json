@@ -1,0 +1,397 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 4,
+ "fps": 24,
+ "background": "#2b2b2b",
+ "note": "Close, impact: a stack of tickets flies into him, freeze, the sheets hang in the air.",
+ "objects": [
+  {
+   "name": "floor",
+   "shape": "cube",
+   "location": [
+    0,
+    10.0,
+    0
+   ],
+   "scale": [
+    12,
+    24,
+    0.02
+   ],
+   "color": "#4a4a4a"
+  },
+  {
+   "name": "wall_l",
+   "shape": "cube",
+   "location": [
+    -6.0,
+    10.0,
+    1.6
+   ],
+   "scale": [
+    0.1,
+    24,
+    3.2
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "wall_r",
+   "shape": "cube",
+   "location": [
+    6.0,
+    10.0,
+    1.6
+   ],
+   "scale": [
+    0.1,
+    24,
+    3.2
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "desk_l0",
+   "shape": "cube",
+   "location": [
+    -3.2,
+    2,
+    0.75
+   ],
+   "scale": [
+    2.4,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "screen_l0",
+   "shape": "cube",
+   "location": [
+    -3.2,
+    2.35,
+    1.1
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "desk_r0",
+   "shape": "cube",
+   "location": [
+    3.2,
+    2,
+    0.75
+   ],
+   "scale": [
+    2.4,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "screen_r0",
+   "shape": "cube",
+   "location": [
+    3.2,
+    2.35,
+    1.1
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "desk_l1",
+   "shape": "cube",
+   "location": [
+    -3.2,
+    6,
+    0.75
+   ],
+   "scale": [
+    2.4,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "screen_l1",
+   "shape": "cube",
+   "location": [
+    -3.2,
+    6.35,
+    1.1
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "desk_r1",
+   "shape": "cube",
+   "location": [
+    3.2,
+    6,
+    0.75
+   ],
+   "scale": [
+    2.4,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "screen_r1",
+   "shape": "cube",
+   "location": [
+    3.2,
+    6.35,
+    1.1
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "desk_l2",
+   "shape": "cube",
+   "location": [
+    -3.2,
+    10,
+    0.75
+   ],
+   "scale": [
+    2.4,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "screen_l2",
+   "shape": "cube",
+   "location": [
+    -3.2,
+    10.35,
+    1.1
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "desk_r2",
+   "shape": "cube",
+   "location": [
+    3.2,
+    10,
+    0.75
+   ],
+   "scale": [
+    2.4,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "screen_r2",
+   "shape": "cube",
+   "location": [
+    3.2,
+    10.35,
+    1.1
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "desk_l3",
+   "shape": "cube",
+   "location": [
+    -3.2,
+    14,
+    0.75
+   ],
+   "scale": [
+    2.4,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "screen_l3",
+   "shape": "cube",
+   "location": [
+    -3.2,
+    14.35,
+    1.1
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "desk_r3",
+   "shape": "cube",
+   "location": [
+    3.2,
+    14,
+    0.75
+   ],
+   "scale": [
+    2.4,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "screen_r3",
+   "shape": "cube",
+   "location": [
+    3.2,
+    14.35,
+    1.1
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "director",
+   "shape": "cylinder",
+   "location": [
+    0,
+    4,
+    0.7875
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.7875
+   ],
+   "color": "#3b3b3b"
+  },
+  {
+   "name": "director_head",
+   "shape": "sphere",
+   "location": [
+    0,
+    4,
+    1.6624999999999999
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8"
+  },
+  {
+   "name": "tickets",
+   "shape": "cube",
+   "location": [
+    -1.5,
+    4.2,
+    1.5
+   ],
+   "scale": [
+    0.4,
+    0.3,
+    0.3
+   ],
+   "color": "#f2f2f2",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      -2.5,
+      4.4,
+      1.6
+     ]
+    },
+    {
+     "t": 1.2,
+     "location": [
+      -0.2,
+      4.1,
+      1.45
+     ]
+    },
+    {
+     "t": 3,
+     "location": [
+      -0.15,
+      4.1,
+      1.47
+     ]
+    }
+   ]
+  }
+ ],
+ "camera": {
+  "lens": 45,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0.4,
+     2.2,
+     1.6
+    ],
+    "look_at": [
+     0,
+     4,
+     1.5
+    ]
+   },
+   {
+    "t": 3,
+    "location": [
+     0.35,
+     2.3,
+     1.6
+    ],
+    "look_at": [
+     0,
+     4,
+     1.5
+    ]
+   }
+  ]
+ }
+}

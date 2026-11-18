@@ -1,0 +1,152 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 5,
+ "fps": 24,
+ "background": "#2b2b2b",
+ "note": "The camera behind him in the corridor: he turns and follows the shadow, wary.",
+ "objects": [
+  {
+   "name": "floor",
+   "shape": "cube",
+   "location": [
+    0,
+    6,
+    0
+   ],
+   "scale": [
+    3,
+    16,
+    0.02
+   ],
+   "color": "#4a4a4a"
+  },
+  {
+   "name": "wall_l",
+   "shape": "cube",
+   "location": [
+    -1.5,
+    6,
+    1.6
+   ],
+   "scale": [
+    0.1,
+    16,
+    3.2
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "wall_r",
+   "shape": "cube",
+   "location": [
+    1.5,
+    6,
+    1.6
+   ],
+   "scale": [
+    0.1,
+    16,
+    3.2
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "director",
+   "shape": "cylinder",
+   "location": [
+    0,
+    2,
+    0.7875
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.7875
+   ],
+   "color": "#3b3b3b",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      0,
+      2,
+      0.7875
+     ]
+    },
+    {
+     "t": 5,
+     "location": [
+      0,
+      8,
+      0.7875
+     ]
+    }
+   ]
+  },
+  {
+   "name": "director_head",
+   "shape": "sphere",
+   "location": [
+    0,
+    2,
+    1.6624999999999999
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      0,
+      2,
+      1.6624999999999999
+     ]
+    },
+    {
+     "t": 5,
+     "location": [
+      0,
+      8,
+      1.6624999999999999
+     ]
+    }
+   ]
+  }
+ ],
+ "camera": {
+  "lens": 30,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0,
+     -1.5,
+     1.9
+    ],
+    "look_at": [
+     0,
+     6,
+     1.5
+    ]
+   },
+   {
+    "t": 5,
+    "location": [
+     0,
+     4.5,
+     1.9
+    ],
+    "look_at": [
+     0,
+     12,
+     1.5
+    ]
+   }
+  ]
+ }
+}

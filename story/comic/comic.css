@@ -165,3 +165,86 @@ html.comic-page body{overflow-x:hidden}
 .panel.in .cdash .svc li{opacity:1;transform:none}
 .cdash .ok{width:10px;height:10px;border-radius:50%;background:var(--pc-positive);box-shadow:0 0 10px var(--pc-positive)}
 @media (max-width:860px){.cdash .svc{grid-template-columns:1fr}}
+
+/* ---- v5 (SITE-068, 2026-11-18): frames as pages, the side diagram, the white rabbit, the film over the whole screen ---- */
+/* a frame is a page: it fills most of the screen, so one leaf shows one frame */
+.comic .panel{min-height:min(74svh,860px);display:flex;flex-direction:column;justify-content:center}
+html:not(.calm) body{overscroll-behavior-y:none}
+
+/* the white rabbit */
+.rabbit{display:block;width:56px;height:56px;filter:drop-shadow(0 0 10px #d8ffe8aa)}
+.rabbit svg{width:100%;height:100%;overflow:visible}
+.rabbit .ear{transform-box:fill-box;transform-origin:50% 100%;transition:transform .35s}
+.act0-rabbit{position:absolute;left:50%;bottom:-74px;margin-left:-28px;transform:translateY(40px);opacity:0;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.act0-rabbit.peek{transform:translateY(0);opacity:1}
+.act0-rabbit.peek .ear-f{animation:twitch 3.2s 1.2s infinite}
+.act0-rabbit[data-look="red"] .ear{transform:rotate(-14deg)}
+.act0-rabbit[data-look="blue"] .ear{transform:rotate(12deg)}
+.act0-rabbit.nudge{animation:nudge .5s}
+.act0-rabbit.jump-red{animation:jumpRed .9s cubic-bezier(.3,0,.3,1) forwards}
+.act0-rabbit.jump-blue{animation:jumpBlue .9s cubic-bezier(.3,0,.3,1) forwards}
+@keyframes twitch{0%,90%,100%{transform:rotate(0)}94%{transform:rotate(-12deg)}97%{transform:rotate(6deg)}}
+@keyframes nudge{0%,100%{translate:0 0}30%{translate:0 -18px}60%{translate:0 0}75%{translate:0 -6px}}
+@keyframes jumpRed{0%{translate:0 0;opacity:1}40%{translate:-140px -150px}70%{translate:-260px -40px;opacity:1}100%{translate:-320px 60px;opacity:0}}
+@keyframes jumpBlue{0%{translate:0 0;opacity:1}40%{translate:140px -150px}70%{translate:260px -40px;opacity:1}100%{translate:320px 60px;opacity:0}}
+
+/* the side diagram: one node per frame, drawn as the reader arrives; the chain slides, the rabbit hops */
+.rail{position:fixed;right:18px;top:0;bottom:0;width:230px;z-index:20;pointer-events:none;overflow:hidden;
+ mask-image:linear-gradient(transparent 0,#000 14%,#000 82%,transparent 100%)}
+.rail[hidden]{display:none}
+.rail-track{position:relative;list-style:none;margin:0;padding:22vh 0 60vh 34px;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.rail-node{position:relative;display:flex;gap:12px;align-items:flex-start;min-height:74px;pointer-events:auto;cursor:pointer}
+.rail-node::before{content:"";position:absolute;left:5px;top:14px;width:2px;height:calc(100% - 10px);background:var(--pc-accent);
+ transform-origin:top;transform:scaleY(0);transition:transform .8s .25s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 8px #00ff6688}
+.rail-node.drawn:not(.on)::before{transform:scaleY(1)}
+.rail-node:last-child::before{display:none}
+.rail-node .dot{flex:none;width:12px;height:12px;margin-top:4px;border-radius:50%;border:2px solid #00ff6655;background:#020604;transition:all .4s}
+.rail-node.drawn .dot{border-color:var(--pc-accent);background:#00ff6633}
+.rail-node.on .dot{background:var(--pc-accent);box-shadow:0 0 14px var(--pc-accent)}
+.rail-node .lbl{font:600 12px/1.3 var(--pc-font-data,monospace);color:#00ff6644;transition:color .4s,opacity .4s;opacity:.0}
+.rail-node.drawn .lbl{color:#9fd8b3;opacity:1}
+.rail-node.on .lbl{color:var(--pc-text);text-shadow:0 0 10px #00ff6655}
+.rail-rabbit{position:absolute;left:-26px;top:var(--y,0);width:40px;height:40px;transition:top .7s cubic-bezier(.3,0,.3,1)}
+.rail-rabbit.hop{animation:hop .7s cubic-bezier(.3,0,.3,1)}
+.rail-rabbit.land{animation:land .9s .35s cubic-bezier(.3,0,.3,1) both}
+@keyframes hop{0%,100%{translate:0 0}45%{translate:-14px -10px}}
+@keyframes land{0%{translate:-60vw 30vh;opacity:0}60%{opacity:1}100%{translate:0 0;opacity:1}}
+html.has-rail .comic{padding-right:250px}
+@media (max-width:1240px){
+ /* narrow screens: the chain becomes a strip along the bottom with the rabbit on the current frame */
+ .rail{top:auto;left:0;right:0;bottom:0;width:auto;height:52px;background:#020604ee;border-top:1px solid #00ff6633;mask-image:none}
+ .rail-track{display:flex;padding:14px 50vw 0;height:52px;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+ .rail-node{min-height:0;min-width:46px}.rail-node .lbl{display:none}
+ .rail-node::before{left:12px;top:9px;width:calc(100% - 10px);height:2px;transform-origin:left;transform:scaleX(0)}
+ .rail-node.drawn:not(.on)::before{transform:scaleX(1)}
+ .rail-rabbit{top:-6px;left:var(--x,0);width:30px;height:30px;transition:left .7s cubic-bezier(.3,0,.3,1)}
+ html.has-rail .comic{padding-right:20px;padding-bottom:70px}
+ html.has-rail .sticky-cta{bottom:64px}
+}
+
+/* the film owns the whole screen */
+html.film-open,html.film-open body{overflow:hidden}
+.film-full{position:fixed;inset:0;z-index:60;background:#000;display:grid;place-items:center}
+.film-full[hidden]{display:none}
+.film-full video{width:100%;height:100%;object-fit:cover}
+.film-note{position:absolute;left:16px;bottom:12px;margin:0;font-size:12px;color:#ffffff99}
+.film-close{position:absolute;top:14px;right:16px;z-index:2;background:#000a;color:#fff;border:1px solid #ffffff55;border-radius:999px;padding:6px 14px;font:600 13px var(--pc-font,sans-serif);cursor:pointer}
+.film-close:focus-visible,.film-full .pill:focus-visible{outline:2px solid var(--pc-accent);outline-offset:2px}
+.film-end{position:absolute;inset:0;display:grid;place-items:center;animation:fadeIn 1.2s both}
+.film-end[hidden]{display:none}
+.film-end .future{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95) brightness(.78)}
+.film-end-in{position:relative;display:grid;justify-items:center;gap:14px;padding:24px;text-align:center;max-width:900px}
+.film-cap{margin:0;font:600 clamp(16px,1.6vw,20px) var(--pc-font,sans-serif);color:#fff;text-shadow:0 2px 12px #000}
+.film-end .hero-av{width:min(26vh,220px);height:min(26vh,220px)}
+.film-end .rise-line{opacity:1}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+@media (prefers-reduced-motion:reduce){
+ .comic .panel{min-height:0}.act0-rabbit{opacity:1;transform:none;animation:none!important}
+ .rail-track,.rail-rabbit,.rail-node::before{transition:none!important;animation:none!important}
+}
+
+.film-subs{position:absolute;left:0;right:0;bottom:9vh;margin:0;padding:0 6vw;list-style:none;text-align:center;pointer-events:none}
+.film-subs li{display:none;margin:0 auto;max-width:900px;font:600 clamp(18px,2.2vw,28px)/1.35 var(--pc-font,sans-serif);color:#fff;text-shadow:0 2px 8px #000,0 0 2px #000}
+.film-subs li.on{display:block}
+.film-subs li.on-screen{font-family:var(--pc-font-data,monospace);color:#ff6b6b;letter-spacing:.04em}

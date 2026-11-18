@@ -76,11 +76,17 @@ def main():
         extra = ''.join(f'<span lang="{c}">{typeset(c, cats[c][en].replace(dash, ","))}</span>' for c in LANGS)
         return m.group(0) + extra
     page = PAIR.sub(spans, page)
-    menu = ('<select class="lang-menu" id="lang-menu" aria-label="Language">'
-            + ''.join(f'<option value="{c}">{LABEL[c]}</option>' for c in ALL) + '</select>')
+    # Russian and English are the first two buttons, on the first screen before the story (the operator, 2026-11-18,
+    # v5: «сверху видно переключить язык ... до того, как началась история»); the other eight sit in a menu beside them.
+    menu = ('<span class="lang-switch" role="group" aria-label="Language">'
+            '<button class="lang" type="button" data-set-lang="en" aria-pressed="false">EN</button>'
+            '<button class="lang" type="button" data-set-lang="ru" aria-pressed="false">RU</button>'
+            '<select class="lang-menu" id="lang-menu" aria-label="Language">'
+            '<option value="" disabled>\u2026</option>'
+            + ''.join(f'<option value="{c}">{LABEL[c]}</option>' for c in ALL if c not in ('en', 'ru')) + '</select></span>')
     page = re.sub(r'<button class="lang" type="button" data-set-lang="en"[^>]*>EN</button>\s*<button class="lang" type="button" data-set-lang="ru"[^>]*>RU</button>', menu, page)
     rules = ''.join(f'html:not([data-lang="{c}"]) [lang="{c}"]{{display:none!important}}' for c in ALL)
-    page = page.replace('</head>', f'<style id="i18n-rules">{rules}.lang-menu{{background:#020604;color:var(--pc-text);border:1px solid var(--pc-border-strong);border-radius:999px;padding:4px 8px;font:600 12px var(--pc-font)}}</style>\n</head>', 1)
+    page = page.replace('</head>', f'<style id="i18n-rules">{rules}.lang-switch{{display:inline-flex;gap:6px;align-items:center}}.lang-switch .lang[aria-pressed=true]{{border-color:var(--pc-accent);color:var(--pc-accent)}}.lang-menu{{max-width:120px;background:#020604;color:var(--pc-text);border:1px solid var(--pc-border-strong);border-radius:999px;padding:4px 8px;font:600 12px var(--pc-font)}}</style>\n</head>', 1)
     PAGE.write_text(page)
     print('comic-i18n: pairs', len(pairs), 'languages', len(ALL))
 

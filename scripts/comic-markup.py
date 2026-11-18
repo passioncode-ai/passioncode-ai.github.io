@@ -3,7 +3,7 @@
 Один произошел, второй стрелочкой туда [...] чат сбоку [...] убирай»; brief: fabric-workspace
 docs/scenarios/2026-11-18-humanless-matrix-story/brief.md). Writes story/comic/index.html from the header of
 story/index.html (kept as the operator liked it) and the panels below. Usage: python3 scripts/comic-markup.py"""
-import pathlib, re
+import json, pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT / 'story' / 'index.html', ROOT / 'story' / 'comic' / 'index.html'
@@ -18,7 +18,7 @@ def av(name, cls=''):
 
 # W12: Morpheus's recorded lines (Asset Foundry speech-line, voice «Morpheus PassionCode»), en and ru; comic.js plays the
 # line of the reader's language when its panel enters, once the sound is on.
-VO = {"I know why the launch slips. Want to see?": 'a0', 'Your choice.': 'choice',
+VO = {"I know why the launch slips. Want to see?": 'a0', 'Your choice.': 'choice', 'Shall we go on?': 'again',
       'What must the business achieve this quarter?': 'goals',
       'Access by level, keys in one vault. Keep the team and grow together, or hand the routine to agents.': 'access',
       'Four phases, the cost, and how it scales with no person in the routine.': 'plan',
@@ -167,6 +167,10 @@ def cta_strip(en, ru):
     return (f'<aside class="cta-strip"><p>{t(en, ru)}</p><a class="cta" href="https://passioncode.ai/business/?via=telegram#lead-form">'
             + t('Add Morpheus to Telegram', 'Добавить Морфеуса в Telegram') + '</a></aside>')
 
+# The film's caption times come from its cut (story/film/cut.py writes timeline.json); planned times until it exists.
+_TL = ROOT / 'story' / 'film' / 'timeline.json'
+CAP = json.loads(_TL.read_text())['captions'] if _TL.exists() else {'manager': [14.5, 17.5], 'error': [47.9, 51.4], 'morpheus': [75.0, 79.4]}
+
 def main():
     src = SRC.read_text()
     head = src[:src.index('<canvas class="rain"')]
@@ -189,12 +193,28 @@ def main():
 <div id="top"></div>
 {hero}
 {act0()}
-<div class="story-after" id="after" hidden>
-<section class="film-panel" id="film" hidden>
- <h2>{t('How it runs now', 'Как всё устроено сейчас')}</h2>
- <video src="/story/film/standin.mp4" poster="/story/film/poster.jpg" muted playsinline loop preload="none"></video>
- <p class="note">{t('The first-person film is in production; a draft cut plays here.', 'Фильм от первого лица в производстве; здесь черновой монтаж.')}</p>
+<section class="film-full" id="film" hidden aria-label="{t('Film', 'Фильм')}">
+ <video poster="/story/film/poster.jpg" playsinline preload="none" data-src-en="/story/film/film-en.mp4" data-src-ru="/story/film/film-ru.mp4"></video>
+ <ol class="film-subs" aria-live="polite">
+  <li data-from="{CAP['manager'][0]}" data-to="{CAP['manager'][1]}">{t("We won't make it.", 'Мы не успеваем.')}</li>
+  <li class="on-screen" data-from="{CAP['error'][0]}" data-to="{CAP['error'][1]}">{t('404 · waiting for approval', '404 · ждёт согласования')}</li>
+  <li data-from="{CAP['morpheus'][0]}" data-to="{CAP['morpheus'][1]}">{t('This is your business too. Without the routine.', 'Это тоже ваш бизнес. Только без рутины.')}</li>
+ </ol>
+ <button class="film-close" type="button" data-film="close">{t('Close', 'Закрыть')}</button>
+ <div class="film-end" hidden>
+  <img class="future" src="/story/film/future-office.jpg" alt="" loading="lazy">
+  <div class="film-end-in">
+   <p class="film-cap">{t('Across the hall: another office. Another business. Nobody in the routine.', 'Напротив: другой офис. Другой бизнес. В рутине никого.')}</p>
+   {av('morpheus', 'hero-av')}
+   <p class="rise-line" data-vo="again">{t('Shall we go on?', 'Ну что, продолжим?')}</p>
+   <div class="pills" role="group" aria-label="{t('Choose', 'Выбор')}">
+    <button type="button" class="pill red" data-film="red"><span class="capsule" aria-hidden="true"></span>{t('Go on: follow the white rabbit', 'Продолжить: за белым кроликом')}</button>
+    <button type="button" class="pill blue" data-film="blue"><span class="capsule" aria-hidden="true"></span>{t('Wake up at the desk again', 'Проснуться снова за столом')}</button>
+   </div>
+  </div>
+ </div>
 </section>
+<div class="story-after" id="after" hidden>
 <main class="comic" id="comic">
 {panels}
 </main>

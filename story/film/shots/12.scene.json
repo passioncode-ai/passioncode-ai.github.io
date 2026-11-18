@@ -1,0 +1,152 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 4,
+ "fps": 24,
+ "background": "#2b2b2b",
+ "note": "First person, a glance aside: at the end of a corridor a shadow in a long coat disappears round a corner.",
+ "objects": [
+  {
+   "name": "floor",
+   "shape": "cube",
+   "location": [
+    0,
+    6,
+    0
+   ],
+   "scale": [
+    3,
+    16,
+    0.02
+   ],
+   "color": "#4a4a4a"
+  },
+  {
+   "name": "wall_l",
+   "shape": "cube",
+   "location": [
+    -1.5,
+    6,
+    1.6
+   ],
+   "scale": [
+    0.1,
+    16,
+    3.2
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "wall_r",
+   "shape": "cube",
+   "location": [
+    1.5,
+    6,
+    1.6
+   ],
+   "scale": [
+    0.1,
+    16,
+    3.2
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "shadow",
+   "shape": "cylinder",
+   "location": [
+    0.6,
+    12,
+    0.7875
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.7875
+   ],
+   "color": "#111111",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      0.2,
+      12,
+      0.7875
+     ]
+    },
+    {
+     "t": 4,
+     "location": [
+      1.6,
+      12.5,
+      0.7875
+     ]
+    }
+   ]
+  },
+  {
+   "name": "shadow_head",
+   "shape": "sphere",
+   "location": [
+    0.6,
+    12,
+    1.6624999999999999
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8",
+   "keys": [
+    {
+     "t": 0,
+     "location": [
+      0.2,
+      12,
+      1.6624999999999999
+     ]
+    },
+    {
+     "t": 4,
+     "location": [
+      1.6,
+      12.5,
+      1.6624999999999999
+     ]
+    }
+   ]
+  }
+ ],
+ "camera": {
+  "lens": 35,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0,
+     0,
+     1.65
+    ],
+    "look_at": [
+     0,
+     12,
+     1.5
+    ]
+   },
+   {
+    "t": 4,
+    "location": [
+     0.1,
+     0.2,
+     1.65
+    ],
+    "look_at": [
+     0.4,
+     12,
+     1.5
+    ]
+   }
+  ]
+ }
+}

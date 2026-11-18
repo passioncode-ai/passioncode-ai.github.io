@@ -1,11 +1,12 @@
 // SITE-068 W12, the comic's sound (treatment §5): Morpheus's recorded voice and the interface sounds, made in Asset Foundry
 // (speech-line, sfx-oneshot, ambience-loop). Off until the reader's first action (a browser plays nothing before a
 // gesture anyway); the header switch turns it off and on and is remembered. Interface sounds sit well under the voice;
-// the room tone does not play under reduced motion. Voice plays in all ten languages (W12, W13).
+// the room tone does not play under reduced motion. Voice plays in all ten languages (W12, W13); v5: lines queue,
+// never cut one another, the music bed ducks under them, and busy() holds the pager while a line speaks.
 const BASE = '/story/comic/audio/'
 const SFX = ['pill-hover', 'pill-choose', 'seam-glitch', 'msg-tick', 'typing', 'clone-click', 'tab-switch', 'cta-chord']
 const VOICED = ['en', 'ru', 'de', 'es', 'fr', 'ja', 'ko', 'pl', 'pt-BR', 'zh-Hans']
-const VOL = { voice: 1, sfx: 0.32, bed: 0.12 }
+const VOL = { voice: 1, sfx: 0.32, bed: 0.12, music: 0.2, duck: 0.06 }
 
 export function mountSound({ reduce }) {
   const root = document.documentElement
@@ -18,6 +19,9 @@ export function mountSound({ reduce }) {
   const buffers = new Map()
   const played = new Set()   // a voice line is spoken once per page
   let voice = null           // the line now speaking: one at a time
+  const queue = []           // lines waiting their turn: a line is never cut by the next (the operator, 2026-11-18, v5)
+  let pending = 0            // lines scheduled but not yet started
+  let music = null
 
   const live = () => armed && on
   // On a phone the switch shows only its bars (matrix.css hides its words), so its name comes from the label too
@@ -49,21 +53,49 @@ export function mountSound({ reduce }) {
   }
 
   const sfx = (name, gain = VOL.sfx) => play(`sfx/${name}.mp3`, gain)
+  const duck = down => {
+    for (const b of [music, bed]) if (b) {
+      const g = b.g.gain, base = b === music ? VOL.music : VOL.bed
+      g.cancelScheduledValues(ctx.currentTime)
+      g.setTargetAtTime(down ? Math.min(base, VOL.duck) : base, ctx.currentTime, down ? 0.08 : 0.4)
+    }
+  }
+  let starting = false
+  const next = async () => {
+    if (voice || starting || !queue.length) return
+    starting = true
+    const key = queue.shift()
+    const v = await play(`vo/${key}-${root.dataset.lang}.mp3`, VOL.voice)
+    starting = false
+    if (!v) { next(); return }
+    voice = v; duck(true)
+    v.src.onended = () => { if (voice === v) voice = null; if (!queue.length) duck(false); next() }
+  }
   const say = key => {
     const lang = root.dataset.lang
     if (!VOICED.includes(lang) || played.has(key) || !live()) return
     played.add(key)
-    if (voice) try { voice.src.stop() } catch {}
-    play(`vo/${key}-${lang}.mp3`, VOL.voice).then(v => { voice = v })
+    queue.push(key)
+    next()
   }
+  // a line asked for after a delay: the reader is held for it too
+  const sayLater = (key, ms) => { pending++; setTimeout(() => { pending--; say(key) }, ms) }
+  const busy = () => live() && (!!voice || starting || queue.length > 0 || pending > 0)
   const startBed = async () => {
     if (reduce || bed || !live()) return
     bed = await play('sfx/ambience.mp3', 0, { loop: true })
-    if (bed) bed.g.gain.linearRampToValueAtTime(VOL.bed, ctx.currentTime + 2)
+    if (bed) bed.g.gain.linearRampToValueAtTime(voice ? VOL.duck : VOL.bed, ctx.currentTime + 2)
+    // the music bed (Asset Foundry background-music): under everything, ducked while Morpheus speaks
+    if (!music) {
+      music = await play('music/bed.mp3', 0, { loop: true })
+      if (music) music.g.gain.linearRampToValueAtTime(voice ? VOL.duck : VOL.music, ctx.currentTime + 3)
+    }
   }
   const stopAll = () => {
     if (bed) { try { bed.src.stop() } catch {} bed = null }
-    if (voice) { try { voice.src.stop() } catch {} voice = null }
+    if (music) { try { music.src.stop() } catch {} music = null }
+    queue.length = 0
+    if (voice) { const v = voice; voice = null; try { v.src.stop() } catch {} }
   }
 
   let armedBySwitch = false  // the press that armed the sound was on the switch: that press means «on», not a toggle
@@ -99,15 +131,16 @@ export function mountSound({ reduce }) {
   document.querySelectorAll('.cta, .sticky-cta').forEach(a => a.addEventListener('click', () => sfx('cta-chord', 0.4)))
 
   return {
-    sfx, say,
+    sfx, say, busy, live,
+    forget: key => played.delete(key),  // a line that may be spoken again (the film's loop)
     // a panel entered: the seam between beats, the clones' clicks, Morpheus's line in it
     panel(el) {
       sfx('seam-glitch', 0.22)
       if (el.querySelector('.clones')) [0, 1, 2, 3].forEach(i => setTimeout(() => sfx('clone-click', 0.2), 300 + i * 90))
       const line = el.querySelector('[data-vo]')
-      if (line) setTimeout(() => say(line.dataset.vo), 600)
+      if (line) sayLater(line.dataset.vo, 500)
     },
-    message(el) { sfx('msg-tick', 0.25); if (el.dataset.vo) setTimeout(() => say(el.dataset.vo), 250) },
+    message(el) { sfx('msg-tick', 0.25); if (el.dataset.vo) sayLater(el.dataset.vo, 250) },
     typing() { sfx('typing', 0.15) },
   }
 }

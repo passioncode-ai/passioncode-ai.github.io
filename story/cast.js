@@ -94,7 +94,7 @@ export const CAST = ['morpheus', 'trinity', 'neo', 'smith', 'architect']
 // The portraits generated through Asset Foundry (project passioncode-site, scenario character-new, 2026-11-18), one
 // pick per character; `?cast=svg` shows the drawn busts, `?cast=<name>-<n>,...` tries other candidates. The page
 // recolours a portrait: a green duotone in look 1, black ink in look 2 (v2.css), so the generated palette never shows.
-export const PICK = { morpheus: 'morpheus-1', trinity: 'trinity-1', neo: 'neo-1', smith: 'smith-3' }
+export const PICK = { morpheus: 'morpheus-1', trinity: 'trinity-1', neo: 'neo-3', smith: 'smith-3' }
 const query = new URLSearchParams(location.search).get('cast')
 const picks = query === 'svg' ? {} : { ...PICK, ...Object.fromEntries((query || '').split(',').filter(Boolean).map(v => [v.split('-')[0], v])) }
 const DUO = `<filter id="cast-duo" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/>

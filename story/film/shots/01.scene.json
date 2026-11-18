@@ -1,0 +1,101 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 4,
+ "fps": 24,
+ "background": "#1a1a1a",
+ "note": "First person, waking at the desk: the view rises from the desk to two monitors.",
+ "objects": [
+  {
+   "name": "desk",
+   "shape": "cube",
+   "location": [
+    0,
+    1.2,
+    0.75
+   ],
+   "scale": [
+    2.6,
+    1.2,
+    0.08
+   ],
+   "color": "#8a8a8a"
+  },
+  {
+   "name": "monitor_a",
+   "shape": "cube",
+   "location": [
+    -0.6,
+    1.6,
+    1.15
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "monitor_b",
+   "shape": "cube",
+   "location": [
+    0.6,
+    1.6,
+    1.15
+   ],
+   "scale": [
+    0.9,
+    0.06,
+    0.55
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "mug",
+   "shape": "cube",
+   "location": [
+    0.9,
+    0.9,
+    0.86
+   ],
+   "scale": [
+    0.09,
+    0.09,
+    0.14
+   ],
+   "color": "#f2f2f2"
+  }
+ ],
+ "camera": {
+  "lens": 28,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0,
+     -0.3,
+     1.0
+    ],
+    "look_at": [
+     0,
+     1.6,
+     0.95
+    ]
+   },
+   {
+    "t": 4,
+    "location": [
+     0,
+     -0.1,
+     1.25
+    ],
+    "look_at": [
+     0,
+     1.6,
+     1.15
+    ]
+   }
+  ]
+ }
+}
