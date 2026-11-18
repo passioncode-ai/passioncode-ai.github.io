@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" data-lang="en" class="matrix v3 comic-page">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Morpheus agentizes your business | PassionCode.ai (demo)</title>
+<meta name="description" content="A scroll story: Morpheus, the PM agent, joins your team chat, onboards the team, sets goals, assesses the work, forms departments and deploys agents. Any online business becomes an AI-native business.">
+<link rel="icon" href="/assets/favicon-64.png">
+<link rel="stylesheet" href="/design-system/tokens.css">
+<link rel="stylesheet" href="/story/story.css">
+<link rel="stylesheet" href="/story/matrix.css">
+<link rel="stylesheet" href="/story/ink.css">
+<link rel="stylesheet" href="/story/v2.css">
+<link rel="stylesheet" href="/story/v3.css">
+<link rel="stylesheet" href="/story/comic/comic.css">
+</head>
+<body>
+<a class="skip" href="#apply"><span lang="en">Skip to the request form</span><span lang="ru">Перейти к заявке</span></a>
+<header class="bar">
+ <a class="brand" href="https://passioncode.ai/"><img src="/assets/passioncode-mark.svg" width="28" height="28" alt=""><span>PassionCode<b>.ai</b></span></a>
+ <div class="progress" aria-hidden="true"><i></i></div>
+ <div class="bar-right">
+  <button class="voice-btn" type="button" id="voice" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span lang="en">Morpheus's voice</span><span lang="ru">Голос Морфеуса</span></button>
+  <a class="alt-link look-link to-ink" href="/v2/"><span lang="en">Look 2: ink</span><span lang="ru">Вариант 2: тушь</span></a>
+  <a class="alt-link look-link to-terminal" href="/"><span lang="en">Look 1: terminal</span><span lang="ru">Вариант 1: терминал</span></a>
+  <a class="alt-link" href="/film/"><span lang="en">Watch as a cartoon</span><span lang="ru">Смотреть мультфильмом</span></a>
+  <button class="lang" type="button" data-set-lang="en" aria-pressed="true">EN</button>
+  <button class="lang" type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+  <a class="cta" href="#apply"><span lang="en">Agentize my business</span><span lang="ru">Агентизировать бизнес</span></a>
+ </div>
+</header>
+
+<canvas class="rain" id="rain" aria-hidden="true"></canvas>
+<div id="top"></div>
+<section class="hero" aria-labelledby="hero-title">
+ <div class="hero-copy">
+  <p class="chip reveal" style="--i:0"><span class="pulse-dot"></span><span lang="en">Business agentization · demo</span><span lang="ru">Агентизация бизнеса · демо</span></p>
+  <h1 id="hero-title" class="reveal" style="--i:1"><span lang="en"><span class="w">We agentize</span> <span class="w">businesses</span><br><em class="w">Your online business,</em> <em class="w">AI-native</em></span><span lang="ru"><span class="w">Мы агентизируем</span> <span class="w">бизнес</span><br><em class="w">Ваш онлайн-бизнес</em> <em class="w">становится AI-native</em></span></h1>
+  <p class="lead reveal" style="--i:2"><span lang="en">No person in the routine flow. People set goals, approve and correct; agents do the work and hand it to each other, around the clock.</span><span lang="ru">В рутине не нужен человек. Люди ставят цели, утверждают и поправляют, агенты делают работу и передают её друг другу, круглые сутки.</span></p>
+  <div class="hero-actions reveal" style="--i:3">
+   <a class="cta big-cta" href="#apply"><span lang="en">Agentize my business</span><span lang="ru">Агентизировать бизнес</span> →</a>
+   <a class="ghost" href="#act0"><span class="play-mini" aria-hidden="true"></span><span lang="en">Watch Morpheus at work</span><span lang="ru">Смотреть, как работает Морфеус</span></a>
+  </div>
+  <ul class="proof reveal" style="--i:4">
+   <li><b>1</b><span lang="en">agent starts it: the PM agent</span><span lang="ru">агент начинает: PM-агент</span></li>
+   <li><b>0</b><span lang="en">keys in chats: one vault</span><span lang="ru">ключей в чатах: одно хранилище</span></li>
+   <li><b>24/7</b><span lang="en">on Claude Code, Codex and next</span><span lang="ru">на Claude Code, Codex и следующих</span></li>
+  </ul>
+ </div>
+ <div class="hero-demo reveal" style="--i:2" aria-label="A preview: Morpheus joins a team chat">
+  <div class="offer" aria-label="Morpheus offers a choice">
+   <svg class="av av-morpheus big" viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg>
+  </div>
+  <div class="orb" aria-hidden="true"><span class="ring r1"></span><span class="ring r2"></span><span class="core-m">M</span></div>
+  <div class="mini-chat">
+   <div class="chat-head"><span class="dot"></span><b><span lang="en">#your-company</span><span lang="ru">#ваша-компания</span></b><small>live</small></div>
+   <ol class="mini-msgs" id="mini">
+    <li data-k="0"><i>O</i><p><span lang="en">Launch slips again?</span><span lang="ru">Запуск опять переносим?</span></p></li>
+    <li data-k="1" class="sys"><p><span lang="en">Morpheus joined the chat</span><span lang="ru">Морфеус присоединился к чату</span></p></li>
+    <li data-k="2" class="agent"><svg class="av" viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg><p><span lang="en">Hi, I am Morpheus. Give me your goals; agents will do the rest.</span><span lang="ru">Привет, я Морфеус. Дайте мне цели, остальное сделают агенты.</span></p></li>
+    <li data-k="3" class="sys ok"><p><span lang="en">12 departments deployed · agents at work</span><span lang="ru">12 отделов развёрнуто · агенты работают</span></p></li>
+    <li data-k="4" class="sys ok"><p><span lang="en">Release launched ✓</span><span lang="ru">Релиз запущен ✓</span></p></li>
+   </ol>
+   <div class="mini-typing" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+ </div>
+ <a class="scroll-cue" href="#act0"><span class="cue-line" aria-hidden="true"></span><span lang="en">Scroll: the story of one business</span><span lang="ru">Листайте: история одного бизнеса</span></a>
+</section>
+<section class="act0" id="act0" aria-label="The choice">
+ <div class="act0-stage">
+  <div class="cchat" aria-label="Team chat">
+   <div class="cchat-head"><span class="ico-team" aria-hidden="true"></span><b><span lang="en">#your-company</span><span lang="ru">#ваша-компания</span></b><small><span lang="en">5 people</span><span lang="ru">5 человек</span></small></div>
+   <ol class="cchat-msgs"><li class="m" data-at="0.06"><i class="face f-anna">A</i><div><b><span lang="en">Anna · Marketing</span><span lang="ru">Анна · маркетинг</span></b><p><span lang="en">Who is writing the landing copy?</span><span lang="ru">Кто пишет текст лендинга?</span></p></div></li><li class="m" data-at="0.13"><i class="face f-ivan">I</i><div><b><span lang="en">Ivan · Dev</span><span lang="ru">Иван · разработка</span></b><p><span lang="en">Still waiting for the copy to start the page.</span><span lang="ru">Всё ещё жду текст, чтобы начать страницу.</span></p></div></li><li class="m" data-at="0.20"><i class="face f-olga">O</i><div><b><span lang="en">Olga · Growth</span><span lang="ru">Ольга · рост</span></b><p><span lang="en">So the launch slips again?</span><span lang="ru">Значит, запуск опять переносим?</span></p></div></li><li class="m" data-at="0.27"><i class="face f-ceo">C</i><div><b><span lang="en">CEO</span><span lang="ru">CEO</span></b><p><span lang="en">Let's discuss it at the 16:00 sync.</span><span lang="ru">Обсудим на созвоне в 16:00.</span></p></div></li><li class="m sys" data-at="0.36"><p><span lang="en">Morpheus joined the chat</span><span lang="ru">Морфеус присоединился к чату</span></p></li><li class="m agent" data-at="0.42"><svg class="av av-morpheus " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg><div><b><span lang="en">Morpheus · PM agent</span><span lang="ru">Морфеус · PM-агент</span></b><p><span lang="en">I know why the launch slips. Want to see?</span><span lang="ru">Я знаю, почему запуск переносится. Показать?</span></p></div></li></ol>
+  </div>
+  <div class="rise">
+   <svg class="av av-morpheus hero-av" viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg>
+   <p class="rise-line"><span lang="en">Your choice.</span><span lang="ru">Выбор за вами.</span></p>
+   <div class="pills" role="group" aria-label="Choose">
+    <button type="button" class="pill red" data-pill="red"><span class="capsule" aria-hidden="true"></span><span lang="en">Wake up: how your company runs on agents</span><span lang="ru">Проснуться: как компания работает на агентах</span></button>
+    <button type="button" class="pill blue" data-pill="blue"><span class="capsule" aria-hidden="true"></span><span lang="en">Stay as is: how it runs now</span><span lang="ru">Остаться как есть: как всё устроено сейчас</span></button>
+   </div>
+   <p class="wait-hint"><span lang="en">Pick a pill to go on</span><span lang="ru">Нажмите на таблетку, чтобы продолжить</span></p>
+  </div>
+ </div>
+</section>
+<div class="after" id="after" hidden>
+<section class="film-panel" id="film" hidden>
+ <h2><span lang="en">How it runs now</span><span lang="ru">Как всё устроено сейчас</span></h2>
+ <video src="/story/film/standin.mp4" poster="/story/film/poster.jpg" muted playsinline loop preload="none"></video>
+ <p class="note"><span lang="en">The first-person film is in production; a draft cut plays here.</span><span lang="ru">Фильм от первого лица в производстве; здесь черновой монтаж.</span></p>
+</section>
+<main class="comic" id="comic">
+<article class="panel " id="p1">
+ <header class="ptitle"><span class="pn">01</span><h2><span lang="en">Morpheus takes the goals</span><span lang="ru">Морфеус принимает цели</span></h2></header>
+ <div class="pbody"><div class="say say-l who-morpheus"><svg class="av av-morpheus " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg><div class="balloon"><b class="who">Morpheus</b><p><span lang="en">What must the business achieve this quarter?</span><span lang="ru">Чего бизнес должен добиться в этом квартале?</span></p></div></div><div class="say say-r who-ceo"><i class="face">C</i><div class="balloon"><b class="who">CEO</b><p><span lang="en">Grow revenue, ship every week, answer users within a minute.</span><span lang="ru">Расти в выручке, выпускать каждую неделю, отвечать за минуту.</span></p></div></div><div class="goals3"><span class="goal" style="--k:0"><span lang="en">Revenue ↑</span><span lang="ru">Выручка ↑</span></span><span class="goal" style="--k:1"><span lang="en">Release weekly</span><span lang="ru">Релиз каждую неделю</span></span><span class="goal" style="--k:2"><span lang="en">Reply < 1 min</span><span lang="ru">Ответ < 1 мин</span></span></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel " id="p2">
+ <header class="ptitle"><span class="pn">02</span><h2><span lang="en">The team joins by level</span><span lang="ru">Команда подключается по уровням</span></h2></header>
+ <div class="pbody"><div class="say say-l who-morpheus"><svg class="av av-morpheus " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg><div class="balloon"><b class="who">Morpheus</b><p><span lang="en">Access by level, keys in one vault. Keep the team and grow together, or hand the routine to agents.</span><span lang="ru">Доступ по уровням, ключи в одном хранилище. Оставьте команду и растите вместе или отдайте рутину агентам.</span></p></div></div><div class="team"><span class="mem" style="--k:0"><i class="face">C</i><em>owner</em></span><span class="mem" style="--k:1"><i class="face">A</i><em>admin</em></span><span class="mem" style="--k:2"><i class="face">I</i><em>member</em></span><span class="mem" style="--k:3"><i class="face">O</i><em>member</em></span><span class="vault"><span lang="en">one vault</span><span lang="ru">одно хранилище</span></span></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel " id="p3">
+ <header class="ptitle"><span class="pn">03</span><h2><span lang="en">Trinity connects the data</span><span lang="ru">Тринити подключает данные</span></h2></header>
+ <div class="pbody"><div class="say say-l who-trinity"><svg class="av av-trinity " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-trinity"/></svg><div class="balloon"><b class="who">Trinity</b><p><span lang="en">Connect what you use. Each connector makes the assessment more precise.</span><span lang="ru">Подключите то, чем пользуетесь. Каждый коннектор делает оценку точнее.</span></p></div></div><div class="conns"><span class="conn" style="--k:0"><span lang="en">Repository</span><span lang="ru">Репозиторий</span></span><span class="conn" style="--k:1"><span lang="en">Analytics</span><span lang="ru">Аналитика</span></span><span class="conn" style="--k:2"><span lang="en">Support</span><span lang="ru">Поддержка</span></span><span class="conn" style="--k:3"><span lang="en">Ads</span><span lang="ru">Реклама</span></span><span class="conn" style="--k:4"><span lang="en">Finance</span><span lang="ru">Финансы</span></span></div><div class="prec"><b>93%</b><small><span lang="en">precision</span><span lang="ru">точность</span></small></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel " id="p4">
+ <header class="ptitle"><span class="pn">04</span><h2><span lang="en">Trinity counts the hours</span><span lang="ru">Тринити считает часы</span></h2></header>
+ <div class="pbody"><div class="stats"><p><b>1 240</b><span lang="en">person-hours a month agents take</span><span lang="ru">человеко-часов в месяц возьмут агенты</span></p><p><b>68%</b><span lang="en">of routine work</span><span lang="ru">рутинной работы</span></p></div><svg class="forecast" viewBox="0 0 300 80"><path d="M0 70 C60 66 110 52 160 38 S250 10 300 4"/></svg><div class="say say-r who-trinity"><svg class="av av-trinity " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-trinity"/></svg><div class="balloon"><b class="who">Trinity</b><p><span lang="en">With finance connected: a revenue forecast too.</span><span lang="ru">С финансами ещё и прогноз выручки.</span></p></div></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<aside class="cta-strip"><p><span lang="en">Want this assessment for your company?</span><span lang="ru">Хотите такую оценку для своей компании?</span></p><a class="cta" href="https://passioncode.ai/business/?via=telegram#lead-form"><span lang="en">Add Morpheus to Telegram</span><span lang="ru">Добавить Морфеуса в Telegram</span></a></aside>
+<article class="panel " id="p5">
+ <header class="ptitle"><span class="pn">05</span><h2><span lang="en">The plan and its cost</span><span lang="ru">План и его стоимость</span></h2></header>
+ <div class="pbody"><div class="say say-l who-morpheus"><svg class="av av-morpheus " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg><div class="balloon"><b class="who">Morpheus</b><p><span lang="en">Four phases, the cost, and how it scales with no person in the routine.</span><span lang="ru">Четыре этапа, стоимость и как всё масштабируется без людей в рутине.</span></p></div></div><ol class="phases"><span class="ph" style="--k:0"><span lang="en">Goals and assessment · 1 wk</span><span lang="ru">Цели и оценка · 1 нед</span></span><span class="ph" style="--k:1"><span lang="en">Image and first agents · 1 wk</span><span lang="ru">Образ и первые агенты · 1 нед</span></span><span class="ph" style="--k:2"><span lang="en">Departments live · 2 wk</span><span lang="ru">Отделы в работе · 2 нед</span></span><span class="ph" style="--k:3"><span lang="en">Scaling</span><span lang="ru">Масштаб</span></span></ol><p class="cost"><b>$24k</b> <small><span lang="en">illustrative</span><span lang="ru">для примера</span></small></p><div class="say say-r who-ceo"><i class="face">C</i><div class="balloon"><b class="who">CEO</b><p><span lang="en">Accepted. Start.</span><span lang="ru">Принято. Запускайте.</span></p></div></div><b class="stamp"><span lang="en">ACCEPTED</span><span lang="ru">ПРИНЯТО</span></b></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel " id="p6">
+ <header class="ptitle"><span class="pn">06</span><h2><span lang="en">Neo builds the isolated image</span><span lang="ru">Нео собирает изолированный образ</span></h2></header>
+ <div class="pbody"><div class="say say-l who-neo"><svg class="av av-neo " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-neo"/></svg><div class="balloon"><b class="who">Neo</b><p><span lang="en">Your machine or ours. An isolated, signed image for your organization.</span><span lang="ru">Ваша машина или наша. Изолированный подписанный образ для вашей организации.</span></p></div></div><ol class="layers"><span class="ly" style="--k:0"><span lang="en">signature</span><span lang="ru">подпись</span></span><span class="ly" style="--k:1"><span lang="en">agent runtime</span><span lang="ru">среда агентов</span></span><span class="ly" style="--k:2"><span lang="en">network policy</span><span lang="ru">сетевые правила</span></span><span class="ly" style="--k:3"><span lang="en">key vault</span><span lang="ru">хранилище ключей</span></span><span class="ly" style="--k:4"><span lang="en">base system</span><span lang="ru">базовая система</span></span></ol></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel wide" id="p7">
+ <header class="ptitle"><span class="pn">07</span><h2><span lang="en">Now, how the Matrix works</span><span lang="ru">Теперь: как работает матрица</span></h2></header>
+ <div class="pbody"><div class="say say-l who-morpheus"><svg class="av av-morpheus " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg><div class="balloon"><b class="who">Morpheus</b><p><span lang="en">Let's look inside. It builds itself from blocks.</span><span lang="ru">Давайте заглянем внутрь. Она собирается из блоков.</span></p></div></div><div class="cubes"><span class="cube" style="--k:0"><b>Fabric</b></span><span class="cube" style="--k:1"><b>Switchboard</b></span><span class="cube" style="--k:2"><b>Inbox</b></span><span class="cube" style="--k:3"><b>Dashboards</b></span><span class="cube" style="--k:4"><b>Observatory</b></span><span class="cube" style="--k:5"><b>Agents base</b></span></div><p class="agnostic"><span lang="en">Agent-agnostic: on Claude Code, Codex and what comes next</span><span lang="ru">Agent-agnostic: на Claude Code, Codex и следующих</span></p></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel " id="p8">
+ <header class="ptitle"><span class="pn">08</span><h2><span lang="en">The Architect builds agents</span><span lang="ru">Архитектор собирает агентов</span></h2></header>
+ <div class="pbody"><div class="build"><span class="node"><span lang="en">template</span><span lang="ru">шаблон</span></span><span class="link"></span><span class="node"><span lang="en">agent</span><span lang="ru">агент</span></span><span class="link"></span><span class="node"><span lang="en">department</span><span lang="ru">отдел</span></span></div><div class="say say-r who-architect"><svg class="av av-architect " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-architect"/></svg><div class="balloon"><b class="who">Architect</b><p><span lang="en">Every agent comes from a tested template, and the base learns from every project.</span><span lang="ru">Каждый агент собирается из проверенного шаблона, а база учится на каждом проекте.</span></p></div></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel wide" id="p9">
+ <header class="ptitle"><span class="pn">09</span><h2><span lang="en">Departments come alive</span><span lang="ru">Отделы оживают</span></h2></header>
+ <div class="pbody"><div class="depts"><div class="dept" style="--k:0"><b><span lang="en">SEO</span><span lang="ru">SEO</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:1"><b><span lang="en">Support quality</span><span lang="ru">Качество поддержки</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:2"><b><span lang="en">Social</span><span lang="ru">Соцсети</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:3"><b><span lang="en">Development</span><span lang="ru">Разработка</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:4"><b><span lang="en">Community</span><span lang="ru">Комьюнити</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:5"><b><span lang="en">Sales</span><span lang="ru">Продажи</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:6"><b><span lang="en">Business dev</span><span lang="ru">Развитие бизнеса</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:7"><b><span lang="en">Strategy</span><span lang="ru">Стратегия</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:8"><b><span lang="en">Research</span><span lang="ru">Исследования</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:9"><b><span lang="en">Marketing</span><span lang="ru">Маркетинг</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:10"><b><span lang="en">Analytics</span><span lang="ru">Аналитика</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div><div class="dept" style="--k:11"><b><span lang="en">Finance</span><span lang="ru">Финансы</span></b><span class="clones"><svg style="--k:0" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:1" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:2" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><svg style="--k:3" class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg></span></div></div><div class="say say-r who-smith"><svg class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><div class="balloon"><b class="who">Smith</b><p><span lang="en">Where work needs hands, we clone.</span><span lang="ru">Где работе нужны руки, мы клонируемся.</span></p></div></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel wide" id="p10">
+ <header class="ptitle"><span class="pn">10</span><h2><span lang="en">The marketing loop</span><span lang="ru">Цикл маркетинга</span></h2></header>
+ <div class="pbody"><div class="loop"><span class="core"><span lang="en">data room</span><span lang="ru">дата-рум</span></span><span class="ln" style="--k:0"><span lang="en">market and competitors</span><span lang="ru">рынок и конкуренты</span></span><span class="ln" style="--k:1"><span lang="en">ideas and pick</span><span lang="ru">идеи и выбор</span></span><span class="ln" style="--k:2"><span lang="en">storyboard and creative</span><span lang="ru">раскадровка и креатив</span></span><span class="ln" style="--k:3"><span lang="en">ad account launch</span><span lang="ru">запуск в рекламном кабинете</span></span><span class="ln" style="--k:4"><span lang="en">traffic and analytics</span><span lang="ru">трафик и аналитика</span></span><span class="ln" style="--k:5"><span lang="en">back to the data room</span><span lang="ru">назад в дата-рум</span></span><i class="token"></i></div><div class="say say-r who-smith"><svg class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><div class="balloon"><b class="who">Smith · Marketing</b><p><span lang="en">One loop: signal, creative, launch, result, data room, next loop.</span><span lang="ru">Один круг: сигнал, креатив, запуск, результат, дата-рум, следующий круг.</span></p></div></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<aside class="cta-strip"><p><span lang="en">Your marketing could run this loop next week.</span><span lang="ru">Ваш маркетинг может пойти по этому кругу уже на следующей неделе.</span></p><a class="cta" href="https://passioncode.ai/business/?via=telegram#lead-form"><span lang="en">Add Morpheus to Telegram</span><span lang="ru">Добавить Морфеуса в Telegram</span></a></aside>
+<article class="panel " id="p11">
+ <header class="ptitle"><span class="pn">11</span><h2><span lang="en">Sales and quality run themselves</span><span lang="ru">Продажи и качество идут сами</span></h2></header>
+ <div class="pbody"><div class="twin"><div><h3><span lang="en">Sales</span><span lang="ru">Продажи</span></h3><p><span lang="en">Leads from the data room, answers, deals.</span><span lang="ru">Лиды из дата-рума, ответы, сделки.</span></p></div><div><h3><span lang="en">Quality</span><span lang="ru">Качество</span></h3><p><span lang="en">Test bench, a coding agent catches a signal and ships the fix.</span><span lang="ru">Тестовый стенд, агент-разработчик ловит сигнал и выкатывает исправление.</span></p></div></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel " id="p12">
+ <header class="ptitle"><span class="pn">12</span><h2><span lang="en">An A/B test on the site</span><span lang="ru">A/B-тест на сайте</span></h2></header>
+ <div class="pbody"><div class="ab"><div class="site"><span class="btn a">A</span><span class="btn b">B</span></div><div class="bars"><i class="ba"></i><i class="bb"></i></div></div><div class="say say-l who-smith"><svg class="av av-smith " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-smith"/></svg><div class="balloon"><b class="who">Smith · Growth</b><p><span lang="en">Hypothesis picked, test live, data to the data room.</span><span lang="ru">Гипотеза выбрана, тест запущен, данные в дата-рум.</span></p></div></div><p class="win"><span lang="en">B wins: revenue +15% in 30 days</span><span lang="ru">B выиграл: выручка +15% за 30 дней</span> <small><span lang="en">illustrative</span><span lang="ru">для примера</span></small></p></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+<article class="panel " id="p13">
+ <header class="ptitle"><span class="pn">13</span><h2><span lang="en">Your P&L</span><span lang="ru">Ваш P&L</span></h2></header>
+ <div class="pbody"><svg class="pnl" viewBox="0 0 320 140"><path class="rev" d="M0 120 C80 112 140 80 200 56 S280 18 320 10"/><path class="cost" d="M0 30 C80 36 150 70 210 96 S290 118 320 122"/></svg><p class="legend"><span class="l-rev"><span lang="en">revenue</span><span lang="ru">выручка</span></span><span class="l-cost"><span lang="en">costs</span><span lang="ru">затраты</span></span></p><div class="say say-l who-morpheus"><svg class="av av-morpheus " viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg><div class="balloon"><b class="who">Morpheus</b><p><span lang="en">Revenue grows where agents work; costs fall where people waited.</span><span lang="ru">Выручка растёт там, где работают агенты; затраты падают там, где люди ждали.</span></p></div></div></div>
+</article>
+<svg class="arrow" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 4 C 20 40, 100 70, 60 112 M48 98 L60 112 L72 98"/></svg>
+</main>
+<section class="final-choice" id="final">
+ <svg class="av av-morpheus hero-av" viewBox="0 0 120 120" aria-hidden="true"><use href="#cast-morpheus"/></svg>
+ <h2><span lang="en">Which pill do you take?</span><span lang="ru">Какую таблетку выберете вы?</span></h2>
+ <div class="pills">
+  <a class="pill red" href="#onboard"><span class="capsule" aria-hidden="true"></span><span lang="en">Wake up</span><span lang="ru">Проснуться</span></a>
+  <a class="pill blue" href="#top"><span class="capsule" aria-hidden="true"></span><span lang="en">Forget it all</span><span lang="ru">Забыть всё</span></a>
+ </div>
+</section>
+<section class="onboard" id="onboard">
+ <h2><span lang="en">One step: add Morpheus to your team chat</span><span lang="ru">Один шаг: добавьте Морфеуса в чат команды</span></h2>
+ <p><span lang="en">He says hello, takes your goals and starts the assessment.</span><span lang="ru">Он поздоровается, примет цели и начнёт оценку.</span></p>
+ <div class="go">
+  <a class="cta big-cta tg" href="https://passioncode.ai/business/?via=telegram#lead-form"><span lang="en">Add to Telegram</span><span lang="ru">Добавить в Telegram</span></a>
+ </div>
+ <p class="other"><span lang="en">Your team is elsewhere?</span><span lang="ru">Команда в другом месте?</span> <a href="https://passioncode.ai/business/?via=slack#lead-form">Slack</a> · <a href="https://passioncode.ai/business/?via=discord#lead-form">Discord</a> · <a href="https://passioncode.ai/business/#lead-form"><span lang="en">a short form</span><span lang="ru">короткая форма</span></a></p>
+ <p class="note"><span lang="en">Demo: the buttons open the request form while the onboarding bot is being built.</span><span lang="ru">Демо: пока бот онбординга в работе, кнопки ведут на форму заявки.</span></p>
+</section>
+</div>
+<a class="sticky-cta" id="sticky-cta" href="#onboard" hidden><span lang="en">Add Morpheus to your chat</span><span lang="ru">Добавить Морфеуса в чат</span></a>
+<footer class="foot"><a href="https://passioncode.ai/">passioncode.ai</a> · <span lang="en">demo, not linked from the site</span><span lang="ru">демо, не связано с сайтом</span></footer>
+<script type="module" src="/story/comic/comic.js"></script>
+</body>
+</html>

@@ -77,8 +77,20 @@ const SPRITE = `<!-- The cast of the story (SITE-068 v2): original busts drawn f
   <path d="M80 55 C82 60 78 62 80 66 C82 70 78 72 80 78" stroke-width="1.4"/>
  </g>
 </symbol>
+<!-- The Architect, the agent architect: white hair, a trimmed beard, a light suit, rimless lenses. -->
+<symbol id="cast-architect" viewBox="0 0 120 120">
+ <g fill="none" style="stroke:var(--cast-line,#00ff66)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M12 120 C14 98 30 88 48 86 L60 100 L72 86 C90 88 106 98 108 120 Z" style="fill:var(--cast-hi,#d6ffe2)" fill-opacity=".85"/>
+  <path d="M48 86 L60 100 L72 86" style="fill:var(--cast-dark,#020604)"/>
+  <path d="M42 46 C42 28 50 20 60 20 C70 20 78 28 78 46 C78 62 70 74 60 74 C50 74 42 62 42 46 Z" style="fill:var(--cast-skin,#0b1f13)"/>
+  <path d="M40 46 C38 24 50 14 62 14 C76 14 84 26 80 46 C78 34 70 28 60 28 C52 28 44 34 40 46 Z" style="fill:var(--cast-hi,#d6ffe2)" fill-opacity=".9"/>
+  <path d="M46 58 C48 74 56 80 60 80 C64 80 72 74 74 58 C70 64 50 64 46 58 Z" style="fill:var(--cast-hi,#d6ffe2)" fill-opacity=".9"/>
+  <circle cx="52" cy="46" r="5.5"/><circle cx="68" cy="46" r="5.5"/><path d="M57.5 46 H62.5"/>
+ </g>
+</symbol>
+
 `
-export const CAST = ['morpheus', 'trinity', 'neo', 'smith']
+export const CAST = ['morpheus', 'trinity', 'neo', 'smith', 'architect']
 // The portraits generated through Asset Foundry (project passioncode-site, scenario character-new, 2026-11-18), one
 // pick per character; `?cast=svg` shows the drawn busts, `?cast=<name>-<n>,...` tries other candidates. The page
 // recolours a portrait: a green duotone in look 1, black ink in look 2 (v2.css), so the generated palette never shows.
