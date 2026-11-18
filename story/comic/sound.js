@@ -1,10 +1,10 @@
 // SITE-068 W12, the comic's sound (treatment §5): Morpheus's recorded voice and the interface sounds, made in Asset Foundry
 // (speech-line, sfx-oneshot, ambience-loop). Off until the reader's first action (a browser plays nothing before a
 // gesture anyway); the header switch turns it off and on and is remembered. Interface sounds sit well under the voice;
-// the room tone does not play under reduced motion. Voice plays in en and ru; other languages keep the captions only.
+// the room tone does not play under reduced motion. Voice plays in all ten languages (W12, W13).
 const BASE = '/story/comic/audio/'
 const SFX = ['pill-hover', 'pill-choose', 'seam-glitch', 'msg-tick', 'typing', 'clone-click', 'tab-switch', 'cta-chord']
-const VOICED = ['en', 'ru']
+const VOICED = ['en', 'ru', 'de', 'es', 'fr', 'ja', 'ko', 'pl', 'pt-BR', 'zh-Hans']
 const VOL = { voice: 1, sfx: 0.32, bed: 0.12 }
 
 export function mountSound({ reduce }) {

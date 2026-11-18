@@ -83,7 +83,7 @@ html.comic-page body{overflow-x:hidden}
 .forecast path,.pnl .rev{stroke:var(--pc-accent)}.pnl .cost{stroke:#ff4d6d}.panel.in .forecast path,.panel.in .pnl path{stroke-dashoffset:0}
 .legend{display:flex;gap:16px;font:600 13px var(--mono,monospace)}.l-rev{color:var(--pc-accent)}.l-cost{color:#ff4d6d}
 .cost{font-size:15px}.cost b{font:800 36px var(--pc-font-data);color:var(--pc-accent)}
-.stamp{position:absolute;right:24px;top:22px;padding:4px 12px;border:3px solid #ff4d6d;color:#ff4d6d;font:800 20px var(--pc-font-data);transform:rotate(-10deg) scale(1.8);opacity:0;transition:all .3s cubic-bezier(.2,1.6,.4,1) 1.6s}
+.stamp{text-transform:uppercase;position:absolute;right:24px;top:22px;padding:4px 12px;border:3px solid #ff4d6d;color:#ff4d6d;font:800 20px var(--pc-font-data);transform:rotate(-10deg) scale(1.8);opacity:0;transition:all .3s cubic-bezier(.2,1.6,.4,1) 1.6s}
 .panel.in .stamp{opacity:1;transform:rotate(-10deg) scale(1)}
 .layers{flex-direction:column}.ly{font-family:var(--mono,monospace)}
 .cubes{display:grid;grid-template-columns:repeat(3,1fr)}.cube{padding:18px 10px;text-align:center;border:1px solid var(--pc-accent);background:#06100a;box-shadow:inset 0 0 22px #00ff6622;font:700 15px var(--mono,monospace);
@@ -127,6 +127,9 @@ html.comic-page body{overflow-x:hidden}
 .ink.comic-page .ptitle h2{color:var(--ink)}.ink.comic-page .cchat{background:var(--paper);color:var(--ink);border:3px solid var(--ink)}
 .balloon p,.balloon p span{color:#06110b}
 .panel p,.panel h3{color:var(--pc-text)}
+/* a balloon is a light card inside a dark panel: its text stays dark whatever the panel says (found 2026-11-18, contrast 1.01:1) */
+.panel .balloon p,.panel .balloon p span{color:#06110b}
+.panel .balloon .who{color:#2a6a44}
 /* round 1 (judges' must_fix): mid-story calls to action, one primary onboarding button, a sticky button after the choice */
 .cta-strip{width:min(760px,100%);display:flex;align-items:center;justify-content:space-between;gap:16px;margin:24px 0;padding:16px 20px;border:1px dashed var(--pc-accent);border-radius:12px;background:#02060499}
 .cta-strip p{margin:0;font:600 16px var(--pc-font)}

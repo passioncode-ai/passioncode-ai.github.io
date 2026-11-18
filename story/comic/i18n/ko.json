@@ -84,7 +84,7 @@
  "Let's look inside. It builds itself from blocks.": "내부를 살펴보겠습니다. 블록으로 스스로 구성됩니다.",
  "Agent-agnostic: on Claude Code, Codex and what comes next": "에이전트에 구애받지 않음: Claude Code, Codex, 그리고 그 다음까지",
  "the blocks need agents": "블록에는 에이전트가 필요합니다",
- "The Architect builds agents": "the Architect가 에이전트를 만듭니다",
+ "The Architect builds agents": "Architect가 에이전트를 만듭니다",
  "template": "템플릿",
  "agent": "에이전트",
  "department": "부서",
@@ -147,5 +147,6 @@
  "users: arriving": "사용자: 유입 중",
  "content: spreading": "콘텐츠: 확산 중",
  "Here is your business now. Every agent, task and cost on one screen.": "지금 당신의 비즈니스가 여기 있습니다. 모든 에이전트, 작업, 비용을 한 화면에서 확인하세요.",
- "Sound": "소리"
+ "Sound": "소리",
+ "Accepted": "수락됨"
 }

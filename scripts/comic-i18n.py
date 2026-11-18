@@ -41,6 +41,17 @@ def ask(lang_name, items):
             err = e; time.sleep(5 * (attempt + 1))
     raise SystemExit(f'comic-i18n: {lang_name} failed: {err}')
 
+def typeset(code, text):
+    # Copylot typography-intl: French takes a no-break space before a colon and a narrow one before ; ! ? (fr-space-colon,
+    # fr-space-high); applied to text only, never inside a tag.
+    if code != 'fr':
+        return text
+    parts = re.split(r'(<[^>]+>)', text)
+    for i in range(0, len(parts), 2):
+        parts[i] = re.sub(r'[ \u00a0\u202f]*([;!?])', '\u202f\\1', parts[i])
+        parts[i] = re.sub(r'(?<=\S)[ \u00a0\u202f]*:(?=\s|$)', '\u00a0:', parts[i])
+    return ''.join(parts)
+
 def main():
     page = PAGE.read_text()
     pairs = list(dict.fromkeys(PAIR.findall(page)))
@@ -62,7 +73,7 @@ def main():
     dash = '—'
     def spans(m):
         en, ru = m.group(1), m.group(2)
-        extra = ''.join(f'<span lang="{c}">{cats[c][en].replace(dash, ",")}</span>' for c in LANGS)
+        extra = ''.join(f'<span lang="{c}">{typeset(c, cats[c][en].replace(dash, ","))}</span>' for c in LANGS)
         return m.group(0) + extra
     page = PAIR.sub(spans, page)
     menu = ('<select class="lang-menu" id="lang-menu" aria-label="Language">'

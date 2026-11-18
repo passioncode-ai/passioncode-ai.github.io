@@ -91,7 +91,7 @@ PANELS = [
     ('Morpheus takes the goals', 'Морфеус принимает цели',
      say('morpheus', 'What must the business achieve this quarter?', 'Чего бизнес должен добиться в этом квартале?', 'l', 'Morpheus')
      + say('ceo', 'Grow revenue, ship every week, answer users within a minute.', 'Расти в выручке, выпускать каждую неделю, отвечать за минуту.', 'r', 'CEO')
-     + '<div class="goals3">' + chips([('Revenue ↑', 'Выручка ↑'), ('Release weekly', 'Релиз каждую неделю'), ('Reply < 1 min', 'Ответ < 1 мин')], 'goal') + '</div>'),
+     + '<div class="goals3">' + chips([('Revenue ↑', 'Выручка ↑'), ('Release weekly', 'Релиз каждую неделю'), ('Reply < 1 min', 'Ответ < 1 мин')], 'goal') + '</div>'),
     ('The team joins by level', 'Команда подключается по уровням',
      say('morpheus', 'Access by level, keys in one vault. Keep the team and grow together, or hand the routine to agents.', 'Доступ по уровням, ключи в одном хранилище. Оставьте команду и растите вместе или отдайте рутину агентам.', 'l', 'Morpheus')
      + '<div class="team">' + ''.join(f'<span class="mem" style="--k:{i}"><i class="face">{c}</i><em>{lvl}</em></span>' for i, (c, lvl) in enumerate([('C', 'owner'), ('A', 'admin'), ('I', 'member'), ('O', 'member')])) + '<span class="vault">' + t('one vault', 'одно хранилище') + '</span></div>'),
@@ -106,7 +106,7 @@ PANELS = [
      say('morpheus', 'Four phases, the cost, and how it scales with no person in the routine.', 'Четыре этапа, стоимость и как всё масштабируется без людей в рутине.', 'l', 'Morpheus')
      + '<ol class="phases">' + chips([('Goals and assessment · 1 wk', 'Цели и оценка · 1 нед'), ('Image and first agents · 1 wk', 'Образ и первые агенты · 1 нед'), ('Departments live · 2 wk', 'Отделы в работе · 2 нед'), ('Scaling', 'Масштаб')], 'ph') + '</ol>'
      + '<p class="cost"><b>$24k</b> <small>' + t('illustrative', 'для примера') + '</small></p>'
-     + say('ceo', 'Accepted. Start.', 'Принято. Запускайте.', 'r', 'CEO') + '<b class="stamp">' + t('ACCEPTED', 'ПРИНЯТО') + '</b>'),
+     + say('ceo', 'Accepted. Start.', 'Принято. Запускайте.', 'r', 'CEO') + '<b class="stamp">' + t('Accepted', 'Принято') + '</b>'),
     ('Neo builds the isolated image', 'Нео собирает изолированный образ',
      say('neo', 'Your machine or ours. An isolated, signed image for your organization.', 'Ваша машина или наша. Изолированный подписанный образ для вашей организации.', 'l', 'Neo')
      + '<ol class="layers">' + chips([('signature', 'подпись'), ('agent runtime', 'среда агентов'), ('network policy', 'сетевые правила'), ('key vault', 'хранилище ключей'), ('base system', 'базовая система')], 'ly') + '</ol>'),
@@ -206,8 +206,11 @@ def main():
 </body>
 </html>
 '''
+    # Copylot ru-nbsp-short-word over every Russian span, the header's included (it comes from story/index.html)
+    page = head.replace('class="matrix v3"', 'class="matrix v3 comic-page"') + body
+    page = re.sub(r'<span lang="ru">((?:(?!</span>).)*)</span>', lambda m: '<span lang="ru">' + NBSP_SHORT.sub(lambda n: n.group(1) + n.group(2) + '\u00a0', m.group(1)) + '</span>', page, flags=re.S)
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(head.replace('class="matrix v3"', 'class="matrix v3 comic-page"') + body)
+    OUT.write_text(page)
     print('comic-markup: panels', len(PANELS))
 
 if __name__ == '__main__':

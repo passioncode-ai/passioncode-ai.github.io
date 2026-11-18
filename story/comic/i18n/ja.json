@@ -84,7 +84,7 @@
  "Let's look inside. It builds itself from blocks.": "中を見てみましょう。ブロックから自ら構築されます。",
  "Agent-agnostic: on Claude Code, Codex and what comes next": "エージェント非依存：Claude Code、Codex、そして次に登場するツールにも対応",
  "the blocks need agents": "ブロックにはエージェントが必要",
- "The Architect builds agents": "the Architectがエージェントを構築",
+ "The Architect builds agents": "Architectがエージェントを構築",
  "template": "テンプレート",
  "agent": "エージェント",
  "department": "部署",
@@ -147,5 +147,6 @@
  "users: arriving": "ユーザー：増加中",
  "content: spreading": "コンテンツ：拡散中",
  "Here is your business now. Every agent, task and cost on one screen.": "これが現在のあなたのビジネスです。すべてのエージェント、タスク、コストを1つの画面に。",
- "Sound": "サウンド"
+ "Sound": "サウンド",
+ "Accepted": "承認済み"
 }

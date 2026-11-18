@@ -4,7 +4,7 @@ All made in Asset Foundry, project `passioncode-site`, 2026-11-18; delivered WAV
 
 ## Morpheus's lines (`vo/`, recipe `speech-line`, voice «Morpheus PassionCode», ElevenLabs)
 
-One take each, gate PASS; every line transcribed and checked against its text by `google/gemini-3.1-pro-preview` (18 of 18 ok). en and ru only: other languages keep the captions.
+One take each, gate PASS; every line transcribed and checked against its text by `google/gemini-3.1-pro-preview` (18 of 18 ok). Added the same day in de, es, fr, ja, ko, pl, pt-BR and zh-Hans (72 lines, `speech-line`, jobs in `vo-jobs8` of the W13 receipt); three re-recorded after the check (pt-BR dash: «em numa»; zh-Hans dash: cut end; zh-Hans access: «按» read as «半», so the line now opens «分级授权» on page and in voice); 90 of 90 ok.
 
 | File | Job |
 |---|---|
