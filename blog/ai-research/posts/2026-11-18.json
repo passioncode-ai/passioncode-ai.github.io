@@ -1,0 +1,90 @@
+{
+  "schema": "passioncode-digest-post/1",
+  "date": "2026-11-18",
+  "title": "AI research digest: agents that learn from their own edits",
+  "description": "Five new results on agent memory and self-improvement, what each measured, and what an agent platform can take from it. PassionCode.ai, November 18, 2026.",
+  "lead": "This week's research is about memory: agents that keep a record of what they changed and why do better on the next run. Five results, what each measured, and what we take from them for agents that run a company's work.",
+  "chat_summary_ru": "Пять свежих работ про память агентов и самоулучшение. Главное: агент, который записывает свои правки вместе с ожидаемым и полученным эффектом, на следующем прогоне улучшается заметно сильнее; агенты учатся держать память в файлах; ночной разбор логов наводит порядок в памяти.",
+  "items": [
+    {
+      "title": "Self-Improvement Memory Enables Continual Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2611.18856",
+      "source": "arXiv 2611.18856",
+      "take": "When an optimizer keeps improving an agent's harness after the benchmark or the model changes, it does better if it remembers its past edits, not only the current harness.",
+      "points": [
+        "The setting: continue a harness-optimization run across compatible benchmarks or policy models instead of starting over.",
+        "The memory groups edits by the recurring problem they addressed and keeps the rationale, the predicted outcome, the observed outcome and the evaluation context.",
+        "Across ten source runs in coding, continuing with this memory beat continuing from the harness alone by 2.36 points on average (p = 0.003)."
+      ],
+      "adopt": "Write the expected effect of a change before making it, next to the measured effect after it. The gap between the two is what the next change learns from."
+    },
+    {
+      "title": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
+      "url": "https://arxiv.org/abs/2611.23219",
+      "source": "arXiv 2611.23219",
+      "take": "A frozen model, given a compute budget and tools to collect experience and edit text notes, improves itself without a loop designed for it.",
+      "points": [
+        "No external improvement loop: the agent decides how to experiment within its budget.",
+        "Sufficiently capable models do improve under these conditions.",
+        "The notes they learn transfer to other benchmarks, including different game horizons, mechanics and 3D navigation."
+      ],
+      "adopt": "Give an agent a fixed budget and a place to keep its own notes, then measure the notes on tasks it did not train on before trusting them."
+    },
+    {
+      "title": "Coding Agent Memory Post-Training II: file operations as long-horizon memory",
+      "url": "https://academy.dair.ai/papers/coding-agent-memory-post-training-ii-unlocking-the-memory-potential-of-pre-train-2611.14009",
+      "source": "arXiv 2611.14009",
+      "take": "A small coding model can be trained to use ordinary files as its memory across context resets.",
+      "points": [
+        "The environments give the policy plain Bash and a workspace that persists through the episode, so it can write, revise, search and reuse files when its context is replaced.",
+        "One policy is trained across five environments by on-policy distillation from a frozen teacher that already uses files well.",
+        "It gets 2.97 times the gain of the strongest distillation baseline on 640 test tasks; the 4B model gains 6.9 points on Terminal-Bench 2.1 and on SWE-Bench Pro V2."
+      ],
+      "adopt": "Test an agent's memory across a context reset, not only within one session: a handoff file that survives compaction is the behavior to measure."
+    },
+    {
+      "title": "The components of agent memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "source": "Anthropic research",
+      "take": "Anthropic describes dreaming: the agent reflects on its logs to fix mistakes and write new notes, and finds it a useful way to give a model effective memory.",
+      "points": [
+        "Dreaming reorganizes memory from logs after the work, rather than during it.",
+        "In their tests, Claude Opus 5 was the first model to close the learning loop with memory on a long-horizon database task.",
+        "An earlier run shows the failure mode: a model wrote 413 memory files across 225 folders and earned one badge in a game."
+      ],
+      "adopt": "Schedule a daily review that reads yesterday's logs and rewrites the notes, and count notes that get used, not notes that get written."
+    },
+    {
+      "title": "An external sandbox for agent code",
+      "url": "https://simonwillison.net/",
+      "source": "Simon Willison's weblog",
+      "take": "The agent stays outside the sandbox and only the code it runs goes in, with three server implementations sharing one localhost API.",
+      "points": [
+        "The sandboxes can route traffic through an HTTP and HTTPS allow-list proxy, so you decide which hosts the agent's code may reach.",
+        "The pattern keeps the agent's own keys and tools out of the environment where untrusted code runs."
+      ],
+      "adopt": "Run code an agent writes in a separate sandbox with an allow-list of hosts, and keep the agent's keys on the other side."
+    }
+  ],
+  "adopt_summary": [
+    "Record the predicted effect of every change to an agent next to the measured one.",
+    "Measure an agent's memory across a context reset, with the handoff file it writes.",
+    "Run a daily review that turns logs into better notes, and track which notes get used.",
+    "Keep code an agent runs in a sandbox with an allow-list, apart from its keys."
+  ],
+  "sources_note": "Collected by PassionCode's research agent from arXiv, Hugging Face daily papers, dair.ai, lab research pages and researchers' blogs; every number above is quoted from the source it links.",
+  "copylot_report": [
+    "c2d6971a-21bc-4ff8-ada0-e89860265787",
+    "9f345f80-9b69-45a2-8baa-285de08b8c65",
+    "70840ec3-28c6-430d-9dee-d7279058f2a6",
+    "1e36cabc-a501-4a57-94b6-31864e4f2656",
+    "83dd29dc-3357-4576-93ff-e2b4f7cbacff",
+    "41483673-cfb9-4c22-9a7e-f4a2ef831417",
+    "989e23f8-a7ba-43ee-9133-2f3359660133",
+    "d16ec4df-501c-4e65-993f-fe559b7c2721",
+    "f283edda-180d-4547-a89f-dc2f0cdd3d44",
+    "b5a02977-9335-4554-bb5c-f96e7086ba6c",
+    "02972610-2acd-48f9-a18b-8c55db08c97f",
+    "aff4a369-9c3f-45b8-aa78-019b243baccf"
+  ]
+}

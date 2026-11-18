@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title>PassionCode.ai blog</title>
+  <link>https://passioncode.ai/blog/</link>
+  <atom:link href="https://passioncode.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Notes from PassionCode.ai on AI-native organizations, and the daily AI research digest.</description>
+  <language>en</language>
+  <lastBuildDate>Wed, 18 Nov 2026 06:00:00 GMT</lastBuildDate>
+  <item>
+   <title>AI research digest: agents that learn from their own edits</title>
+   <link>https://passioncode.ai/blog/ai-research/2026-11-18/</link>
+   <guid isPermaLink="true">https://passioncode.ai/blog/ai-research/2026-11-18/</guid>
+   <pubDate>Wed, 18 Nov 2026 06:00:00 GMT</pubDate>
+   <description>This week's research is about memory: agents that keep a record of what they changed and why do better on the next run. Five results, what each measured, and what we take from them for agents that run a company's work.</description>
+  </item>
+  <item>
+   <title>Why processes built around people stall when you add AI</title>
+   <link>https://passioncode.ai/blog/why-person-shaped-processes-stall/</link>
+   <guid isPermaLink="true">https://passioncode.ai/blog/why-person-shaped-processes-stall/</guid>
+   <pubDate>Sun, 08 Nov 2026 06:00:00 GMT</pubDate>
+   <description>Most companies add AI by giving each person an assistant. The process stays the same, and so does its bottleneck.</description>
+  </item>
+  <item>
+   <title>What an AI-native organization is</title>
+   <link>https://passioncode.ai/blog/what-is-an-ai-native-organization/</link>
+   <guid isPermaLink="true">https://passioncode.ai/blog/what-is-an-ai-native-organization/</guid>
+   <pubDate>Sun, 08 Nov 2026 06:00:00 GMT</pubDate>
+   <description>An AI-native organization is a company where agents run the processes and people steer them.</description>
+  </item>
+ </channel>
+</rss>
