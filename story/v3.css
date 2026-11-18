@@ -62,3 +62,29 @@ html.v3 .agents-count{right:440px;top:130px}
 html.v3 .fx1{right:auto;left:58%}
 @media (max-width:860px){html.v3 .agents-count{right:14px;top:150px}html.v3 .fx1{left:auto;right:12px}}
 @media (max-width:860px){html.v3 .fx1{display:none}}
+
+/* W10: the header offer (the operator, 2026-11-18: «большой такой морфиус [...] ты начинаешь скроллить, и он тебя
+   протягивает [...] две руки [...] нужно выбрать таблетку»). The pills come out of his hands as the reader starts to
+   scroll (--h, the hero's scroll share, set by story.js); red opens the transformation story, blue the film of how the
+   company runs now. Both are plain links, readable without motion. */
+.offer{position:relative;display:grid;justify-items:center;gap:10px;margin-bottom:18px}
+.offer .av.big{width:min(300px,34vh);height:min(300px,34vh);border-radius:50% 50% 18px 18px}
+.offer-q{margin:0;font:600 13px var(--mono,monospace);color:var(--pc-accent);letter-spacing:.12em;text-transform:uppercase;opacity:clamp(0,calc(var(--h,0) * 8 - .1),1)}
+.pill-btn{--out:clamp(0,calc(var(--h,0) * 7),1);position:absolute;top:58%;display:flex;align-items:center;gap:10px;max-width:220px;padding:10px 14px;border-radius:14px;
+ font:600 13px/1.25 var(--pc-font);color:var(--pc-text);text-decoration:none;background:#020604d9;backdrop-filter:blur(6px);border:1px solid #ffffff22;
+ opacity:var(--out);transition:box-shadow .25s,transform .25s}
+.pill-btn.red{right:calc(100% - 40px + (1 - var(--out)) * -60px);border-color:#ff3b5c88}
+.pill-btn.blue{left:calc(100% - 40px + (1 - var(--out)) * -60px);border-color:#3b8cff88}
+.cap-pill{flex:none;width:34px;height:14px;border-radius:999px;box-shadow:0 0 16px currentColor}
+.red .cap-pill{color:#ff2d55;background:linear-gradient(90deg,#ff2d55 50%,#b8001f 50%)}
+.blue .cap-pill{color:#2d7bff;background:linear-gradient(90deg,#2d7bff 50%,#0040b8 50%)}
+.pill-btn:hover,.pill-btn:focus-visible{transform:translateY(-3px)}
+.pill-btn.red:hover,.pill-btn.red:focus-visible{box-shadow:0 0 28px #ff2d5566}
+.pill-btn.blue:hover,.pill-btn.blue:focus-visible{box-shadow:0 0 28px #2d7bff66}
+.calm .pill-btn,.calm .offer-q{opacity:1;position:static}
+@media (max-width:860px){.offer .av.big{width:42vw;height:42vw}.pill-btn{position:static;opacity:1;max-width:none;width:100%}}
+.ink .pill-btn{background:var(--paper);color:var(--ink);border:3px solid var(--ink)}
+.hero-demo .orb{display:none}
+.pill-btn{top:70%;min-width:190px;max-width:210px}
+.pill-btn.red{right:calc(100% - 70px + (1 - var(--out)) * -60px)}
+.pill-btn.blue{left:calc(100% - 70px + (1 - var(--out)) * -60px)}
