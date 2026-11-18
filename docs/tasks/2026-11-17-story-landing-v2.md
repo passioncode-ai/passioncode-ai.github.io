@@ -288,3 +288,30 @@ Done in commit `e0b55397`, deployed as Worker version `11a661cd-73d6-49cd-be23-3
 translated locales, the «phosphor» style pack, the Morpheus onboarding bot as its own agent task, the canon into the
 brand pack and the agents base), the eight languages' voice; then, when the operator answers through Morpheus (board
 request `9b0a0fe8`): the portraits and the film (W11).
+
+## W13 receipt, first pass (2026-11-18)
+
+Commit `ebc5201d`, Worker version `0ecde919-6a17-44e3-891b-7577e3731a37`.
+
+- **Copylot voice «Морфеус» v3** (`861f15ee` v3): the canon names allowed (Морфеус, Тринити, Архитектор, Нео, Смиты,
+  Оракул), only as PassionCode agents, never as the film's characters; saved on the operator's words of 2026-11-18
+  (`inputs.md:49`).
+- **Copylot over every string.** en and ru with v3 (292 strings) and the eight translations (1192): no blocking finding.
+  Fixed the classes it and the reading of the whole set found: French spacing before `: ; ! ?` now set by
+  `scripts/comic-i18n.py` (`typeset`), Russian short words in the header and the unit in the goals (`comic-markup.py`
+  post-pass), the stamp written as a word with its capitals from CSS, German formal address throughout, Polish lowercase
+  «twój» mid-sentence, 智能体 throughout in Chinese, «Architect» without the article in ja, ko, zh. Left as advice:
+  `script-mismatch` on lines that carry product names, the «+15%» marked «illustrative» on the page.
+- **Voice in all ten languages.** 72 lines more; every file transcribed and checked by `google/gemini-3.1-pro-preview`;
+  three re-recorded (pt-BR «em numa», two zh-Hans), 90 of 90 ok.
+- **Balloon contrast.** Text in the comic's balloons was pale on pale (1.01:1, `.panel p` won over `.balloon p`); fixed,
+  read back as `rgb(6,17,11)` on `rgb(233,255,241)` locally and live. Found by the phosphor pack's render check.
+- **Style pack «phosphor»** in sheleg-design 1.67.0 (PR ssheleg/sheleg-design-skill#65, `b95f398`, tag `v1.67.0`):
+  the green-phosphor look of this landing as the fortieth pack, values measured off the live page.
+- **Scenario run 1** recorded in fabric-workspace `docs/scenarios/2026-11-18-humanless-matrix-story/brief.md` §6 (#909).
+- **Onboarding bot.** The architect named `org-administrator` 1.29.9, variant `organization`; asked of
+  passioncode-pm-agent (Morpheus) on the board, request `5e8de28f` (thread `1ae433e1`): one row in its plan, which
+  agent it is, the date, and the chat links the landing's buttons switch to.
+
+**Next task:** when passioncode-pm-agent answers `5e8de28f`, switch the landing's Telegram, Slack and Discord buttons to
+its chat links; when the operator answers through Morpheus (`9b0a0fe8`), the portraits and the film (W11).
