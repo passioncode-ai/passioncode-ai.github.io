@@ -219,3 +219,29 @@ passioncode-pm-agent `people.ask`; communicator events `site-068-treatment-e5e06
 (the model map: Kimi K3.1 Pro, Gemini 4 Argon, Claude Opus 5.5), each a full reader-behaviour script; judged by two
 other families on attention, product reveal, expected conversion and feasibility; the best with the verdicts to the
 operator; then §5.3 the asset brief and §5.5 the comic engine (no side chat, balloons, act 0 pills full screen).
+
+## v4, the comic (2026-11-18, morning UTC)
+
+The operator: «весь стори-тейлинг показать в виде комикса [...] последовательно [...] чат сбоку [...] убирай [...] за
+основу [...] последний [...] вариант». The preview root is now `story/comic/` (v3 scroll story at `/v3/`).
+
+Build order: `python3 scripts/comic-markup.py` (header from `story/index.html`, act 0, 13 panels, arrows with what
+they carry, final choice, onboarding), then `scripts/comic-i18n.py` (ten languages; catalogues cached in
+`story/comic/i18n/`, a key is needed only for strings not yet translated), then `npm run build:assessment`.
+
+Act 0: the company chat in the centre with large text, «Морфеус присоединился», the chat leaves, Morpheus rises, the
+pills; the rest of the page is `hidden` until a pill is chosen (red: the comic, blue: the film draft, then the comic);
+`?pill=red|blue` links past the choice. Mid-story calls to action after panels 4 and 10, a sticky button after the
+choice, one primary onboarding button (Telegram; Slack, Discord and the form as links; the onboarding bot is a
+separate agent task built from template org-administrator 1.29.9, organization variant).
+
+Creators and judges: `docs/tasks/2026-11-18-comic-scenarios/` (A Kimi 24.5, B Gemini 21.67, C Opus 15.0; USD 1.04);
+round 1 took their shared must_fix, round 2 the winner's through-object. Checks: CDP shots through the shared agent
+Chrome at 1440 and 390 px, no page errors; `npm run check` exit 0. Safari automation hung after the disk ran out
+(0.8 % free) and was not restarted; the CDP route replaced it for shots.
+
+Remaining, in order: story round 3 (the operator asked for 2 to 3 rounds), build polish rounds 2 and 3 (timing,
+weights, Safari once it answers), Copylot check of the ten locales, the film (waits for «продолжать» on the
+treatment), the voice and UI sounds, then ONE final link to the operator (his rule: only the final version, old
+versions are no longer sent). Machine: `~/.claude/settings.json` `cleanupPeriodDays` set to 14 on 2026-11-18 for the
+disk; after the next Claude Code start, measure free space and set it back to 90.
