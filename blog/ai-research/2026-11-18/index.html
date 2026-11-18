@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI research digest: agents that learn from their own edits</title><meta name="description" content="Five new results on agent memory and self-improvement, what each measured, and what an agent platform can take from it. PassionCode.ai, November 18, 2026.">
+  <link rel="canonical" href="https://passioncode.ai/blog/ai-research/2026-11-18/">
+  <link rel="alternate" type="application/rss+xml" title="PassionCode.ai AI research digest" href="https://passioncode.ai/blog/ai-research/feed.xml">
+  <meta name="robots" content="index, follow"><meta name="theme-color" content="#0a070d">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="PassionCode.ai">
+  <meta property="og:title" content="AI research digest: agents that learn from their own edits"><meta property="og:description" content="Five new results on agent memory and self-improvement, what each measured, and what an agent platform can take from it. PassionCode.ai, November 18, 2026.">
+  <meta property="og:url" content="https://passioncode.ai/blog/ai-research/2026-11-18/">
+  <meta property="og:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://passioncode.ai/assets/passioncode-social-card.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/passioncode-mark.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="/assets/icon-256.png">
+  <link rel="stylesheet" href="/design-system/tokens.css"><link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/assets/site.js"></script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI research digest: agents that learn from their own edits",
+  "description": "Five new results on agent memory and self-improvement, what each measured, and what an agent platform can take from it. PassionCode.ai, November 18, 2026.",
+  "url": "https://passioncode.ai/blog/ai-research/2026-11-18/",
+  "mainEntityOfPage": "https://passioncode.ai/blog/ai-research/2026-11-18/",
+  "datePublished": "2026-11-18",
+  "dateModified": "2026-11-18",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "PassionCode.ai",
+    "url": "https://passioncode.ai/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PassionCode.ai",
+    "url": "https://passioncode.ai/"
+  },
+  "image": "https://passioncode.ai/assets/passioncode-social-card.png",
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Self-Improvement Memory Enables Continual Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2611.18856"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
+      "url": "https://arxiv.org/abs/2611.23219"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Coding Agent Memory Post-Training II: file operations as long-horizon memory",
+      "url": "https://academy.dair.ai/papers/coding-agent-memory-post-training-ii-unlocking-the-memory-potential-of-pre-train-2611.14009"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "The components of agent memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "An external sandbox for agent code",
+      "url": "https://simonwillison.net/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://passioncode.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://passioncode.ai/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI research digest",
+      "item": "https://passioncode.ai/blog/ai-research/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "AI research digest: agents that learn from their own edits",
+      "item": "https://passioncode.ai/blog/ai-research/2026-11-18/"
+    }
+  ]
+}</script>
+</head>
+<body class="story-site"><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+ <a class="brand" href="/" aria-label="PassionCode.ai home"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a>
+ <nav aria-label="Primary navigation"><a href="/vision/">Vision</a><a href="/start/">For you</a><a href="/business/">For organizations</a><a href="/#products">The tools</a><a href="/#about">About</a></nav>
+ <div class="header-actions"><a class="header-link header-download" href="/start/#setup">Set up <span aria-hidden="true">↓</span></a></div>
+</header>
+<main id="main">
+<article class="section legal article-page" aria-labelledby="hero-title">
+ <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/ai-research/">AI research digest</a></nav>
+ <p class="section-number">AI research digest · <time datetime="2026-11-18">November 18, 2026</time></p>
+ <h1 id="hero-title">AI research digest: agents that learn from their own edits</h1>
+ <p class="legal-lead">This week's research is about memory: agents that keep a record of what they changed and why do better on the next run. Five results, what each measured, and what we take from them for agents that run a company's work.</p>
+ <p class="article-meta">PassionCode.ai research desk</p>
+ <h2 id="item-1">Self-Improvement Memory Enables Continual Recursive Self-Improvement</h2>
+ <p class="article-meta"><a href="https://arxiv.org/abs/2611.18856" rel="noopener">arXiv 2611.18856</a></p>
+ <p>When an optimizer keeps improving an agent's harness after the benchmark or the model changes, it does better if it remembers its past edits, not only the current harness.</p>
+ <ul>
+  <li>The setting: continue a harness-optimization run across compatible benchmarks or policy models instead of starting over.</li>
+  <li>The memory groups edits by the recurring problem they addressed and keeps the rationale, the predicted outcome, the observed outcome and the evaluation context.</li>
+  <li>Across ten source runs in coding, continuing with this memory beat continuing from the harness alone by 2.36 points on average (p = 0.003).</li>
+ </ul>
+ <p><strong>What we can adopt:</strong> Write the expected effect of a change before making it, next to the measured effect after it. The gap between the two is what the next change learns from.</p>
+ <h2 id="item-2">Do LLM Agents Still Need to Be Told How to Self-Improve?</h2>
+ <p class="article-meta"><a href="https://arxiv.org/abs/2611.23219" rel="noopener">arXiv 2611.23219</a></p>
+ <p>A frozen model, given a compute budget and tools to collect experience and edit text notes, improves itself without a loop designed for it.</p>
+ <ul>
+  <li>No external improvement loop: the agent decides how to experiment within its budget.</li>
+  <li>Sufficiently capable models do improve under these conditions.</li>
+  <li>The notes they learn transfer to other benchmarks, including different game horizons, mechanics and 3D navigation.</li>
+ </ul>
+ <p><strong>What we can adopt:</strong> Give an agent a fixed budget and a place to keep its own notes, then measure the notes on tasks it did not train on before trusting them.</p>
+ <h2 id="item-3">Coding Agent Memory Post-Training II: file operations as long-horizon memory</h2>
+ <p class="article-meta"><a href="https://academy.dair.ai/papers/coding-agent-memory-post-training-ii-unlocking-the-memory-potential-of-pre-train-2611.14009" rel="noopener">arXiv 2611.14009</a></p>
+ <p>A small coding model can be trained to use ordinary files as its memory across context resets.</p>
+ <ul>
+  <li>The environments give the policy plain Bash and a workspace that persists through the episode, so it can write, revise, search and reuse files when its context is replaced.</li>
+  <li>One policy is trained across five environments by on-policy distillation from a frozen teacher that already uses files well.</li>
+  <li>It gets 2.97 times the gain of the strongest distillation baseline on 640 test tasks; the 4B model gains 6.9 points on Terminal-Bench 2.1 and on SWE-Bench Pro V2.</li>
+ </ul>
+ <p><strong>What we can adopt:</strong> Test an agent's memory across a context reset, not only within one session: a handoff file that survives compaction is the behavior to measure.</p>
+ <h2 id="item-4">The components of agent memory</h2>
+ <p class="article-meta"><a href="https://www.anthropic.com/research/components-of-agent-memory" rel="noopener">Anthropic research</a></p>
+ <p>Anthropic describes dreaming: the agent reflects on its logs to fix mistakes and write new notes, and finds it a useful way to give a model effective memory.</p>
+ <ul>
+  <li>Dreaming reorganizes memory from logs after the work, rather than during it.</li>
+  <li>In their tests, Claude Opus 5 was the first model to close the learning loop with memory on a long-horizon database task.</li>
+  <li>An earlier run shows the failure mode: a model wrote 413 memory files across 225 folders and earned one badge in a game.</li>
+ </ul>
+ <p><strong>What we can adopt:</strong> Schedule a daily review that reads yesterday's logs and rewrites the notes, and count notes that get used, not notes that get written.</p>
+ <h2 id="item-5">An external sandbox for agent code</h2>
+ <p class="article-meta"><a href="https://simonwillison.net/" rel="noopener">Simon Willison's weblog</a></p>
+ <p>The agent stays outside the sandbox and only the code it runs goes in, with three server implementations sharing one localhost API.</p>
+ <ul>
+  <li>The sandboxes can route traffic through an HTTP and HTTPS allow-list proxy, so you decide which hosts the agent's code may reach.</li>
+  <li>The pattern keeps the agent's own keys and tools out of the environment where untrusted code runs.</li>
+ </ul>
+ <p><strong>What we can adopt:</strong> Run code an agent writes in a separate sandbox with an allow-list of hosts, and keep the agent's keys on the other side.</p>
+ <h2 id="adopt">What we can adopt</h2>
+ <ul>
+  <li>Record the predicted effect of every change to an agent next to the measured one.</li>
+  <li>Measure an agent's memory across a context reset, with the handoff file it writes.</li>
+  <li>Run a daily review that turns logs into better notes, and track which notes get used.</li>
+  <li>Keep code an agent runs in a sandbox with an allow-list, apart from its keys.</li>
+ </ul>
+ <p class="article-meta">Collected by PassionCode's research agent from arXiv, Hugging Face daily papers, dair.ai, lab research pages and researchers' blogs; every number above is quoted from the source it links.</p>
+ <div class="hero-actions article-actions"><a class="button button-primary" href="/agents/" data-cta="agents" data-cta-location="digest">Agent templates <span aria-hidden="true">→</span></a></div>
+</article>
+
+</main>
+</main>
+<footer class="story-footer">
+ <div><a class="brand footer-brand" href="/"><img src="/assets/passioncode-mark.svg" width="32" height="32" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a><p>From vibe coding to passion coding</p></div>
+ <nav aria-label="Footer navigation"><a href="/start/">Get started</a><a href="/vision/">Vision</a><a href="/business/">For organizations</a><a href="/agents/">Agent templates</a><a href="/guides/">Guides</a><a href="/blog/">Blog</a><a href="/switchboard/">Switchboard</a><a href="/observatory/">Observatory</a><a href="/inbox/">Inbox</a><a href="/dashboards/">Dashboards</a><a href="/fabric/">Fabric</a><a href="/#source">GitHub &amp; source</a><a href="/#about">About</a><a href="/#investors">Investors</a><a href="/#contributors">Contributors</a><a href="/#press">Press</a><a href="/design-system/">Design system</a><a href="/privacy/">Privacy</a><a href="mailto:commercial@passioncode.ai">commercial@passioncode.ai</a><a href="https://x.com/sshlg93">X <span aria-hidden="true">↗</span></a></nav>
+</footer>
+</body></html>

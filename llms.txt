@@ -39,6 +39,7 @@ Processes built around people keep the person as the bottleneck however many AI 
 
 ## Blog
 - [Why processes built around people stall when you add AI](https://passioncode.ai/blog/why-person-shaped-processes-stall/) and [What an AI-native organization is](https://passioncode.ai/blog/what-is-an-ai-native-organization/), by Sergey Sheleg, 2026-11-08.
+- [AI research digest](https://passioncode.ai/blog/ai-research/): a daily review of new AI research on agents, what each paper measured and what an agent platform can take from it, in English, with an RSS feed at https://passioncode.ai/blog/ai-research/feed.xml.
 
 ## Source
 - [GitHub organization](https://github.com/passioncode-ai): public repositories, issues and pull requests; contributions accepted under each repository's CLA.md.
