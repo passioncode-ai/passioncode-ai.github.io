@@ -199,3 +199,23 @@ Layout v3 (`story/v3.css`, `html.v3`): the story fills the screen; the chat is a
 caption a terminal line typed on entry, the HUD tags with a phosphor edge, phones get a bottom sheet. The v2 layout stays
 at `/layout-v2/`, look 2 «Ink» at `/v2/` takes v3 too. Checks: sequence-probe 161 positions, 0 violations; Safari shots
 1440 and 390 px; `npm run check` exit 0.
+
+## The comic brief and the handoff (2026-11-18, about 02:30 UTC)
+
+The operator then asked for the whole site as one full-screen comic without the side chat, the Matrix built from
+cubes, the marketing loop through the data room, sales, quality, an A/B test, the P&L and a one-button onboarding
+(Morpheus added to Telegram, Slack or Discord), with his inputs kept verbatim and the scenario kept in the workspace.
+That brief now leads: fabric-workspace `docs/scenarios/2026-11-18-humanless-matrix-story/brief.md` (`dbcbf8fd`, PR
+#906), inputs verbatim beside it. W8 to W13 above fold into its process (§5).
+
+Variations, each kept at its own address: `f5a9242c`, `827d0faf` (iteration 2 and 3), `5eda5242` (v2), `5eadcdde`
+(v3 layout), `9e404358` (v3 with the pill header, film treatment PDF); assessment.passioncode.ai still serves the earlier
+version. All of them sent to the operator (communicator event `site-068-all-variations-9e404358`).
+
+Waiting on the operator: the portrait pick and the treatment's «продолжать» (board request `9b0a0fe8` to
+passioncode-pm-agent `people.ask`; communicator events `site-068-treatment-e5e06c0c`, `site-068-v3-preview-5eadcdde`).
+
+**Next task:** brief §5.1, three packaging scenarios of the brief by three creators of different model families
+(the model map: Kimi K3.1 Pro, Gemini 4 Argon, Claude Opus 5.5), each a full reader-behaviour script; judged by two
+other families on attention, product reveal, expected conversion and feasibility; the best with the verdicts to the
+operator; then §5.3 the asset brief and §5.5 the comic engine (no side chat, balloons, act 0 pills full screen).
