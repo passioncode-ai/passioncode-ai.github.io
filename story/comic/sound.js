@@ -60,16 +60,21 @@ export function mountSound({ reduce }) {
       g.setTargetAtTime(down ? Math.min(base, VOL.duck) : base, ctx.currentTime, down ? 0.08 : 0.4)
     }
   }
-  let starting = false
+  let starting = false, startedAt = 0, voiceUntil = 0
+  const running = () => !!ctx && ctx.state === 'running'
   const next = async () => {
     if (voice || starting || !queue.length) return
-    starting = true
+    starting = true; startedAt = performance.now()
     const key = queue.shift()
     const v = await play(`vo/${key}-${root.dataset.lang}.mp3`, VOL.voice)
     starting = false
     if (!v) { next(); return }
     voice = v; duck(true)
-    v.src.onended = () => { if (voice === v) voice = null; if (!queue.length) duck(false); next() }
+    // the line's own length ends it too: a suspended context never fires onended, and the reader must not wait on it
+    voiceUntil = performance.now() + v.src.buffer.duration * 1000 + 150
+    const done = () => { if (voice !== v) return; voice = null; if (!queue.length) duck(false); next() }
+    v.src.onended = done
+    setTimeout(done, voiceUntil - performance.now() + 50)
   }
   const say = key => {
     const lang = root.dataset.lang
@@ -80,7 +85,9 @@ export function mountSound({ reduce }) {
   }
   // a line asked for after a delay: the reader is held for it too
   const sayLater = (key, ms) => { pending++; setTimeout(() => { pending--; say(key) }, ms) }
-  const busy = () => live() && (!!voice || starting || queue.length > 0 || pending > 0)
+  // the pager waits for a line only while sound can actually be heard; a slow file holds it two seconds at most
+  const busy = () => live() && running() &&
+    ((!!voice && performance.now() < voiceUntil) || (starting && performance.now() - startedAt < 2000) || queue.length > 0 || pending > 0)
   const startBed = async () => {
     if (reduce || bed || !live()) return
     bed = await play('sfx/ambience.mp3', 0, { loop: true })
@@ -132,6 +139,7 @@ export function mountSound({ reduce }) {
 
   return {
     sfx, say, busy, live,
+    left: () => (voice ? Math.max(0, voiceUntil - performance.now()) : 0),  // ms the current line still speaks
     forget: key => played.delete(key),  // a line that may be spoken again (the film's loop)
     // a panel entered: the seam between beats, the clones' clicks, Morpheus's line in it
     panel(el) {

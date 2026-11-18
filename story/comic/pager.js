@@ -6,12 +6,15 @@
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v))
 const ease = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
 
-export function mountPager({ stops, busy = () => false, enabled = () => true, onArrive = () => {}, onBlocked = () => {} }) {
+export function mountPager({ stops, busy = () => false, enabled = () => true, onArrive = () => {}, onBlocked = () => {}, onWait = () => {}, onWaitEnd = () => {} }) {
   let list = []           // sorted scroll positions, each {y, el}
   let locked = false, animating = false
   let lastWheel = 0, lastAbs = 0
+  let queued = 0          // a gesture made while a frame is held: it turns the next frame when the hold ends, never lost
+  let holdStart = 0, release = false, waiting = false
+  const INSIST = 420      // a second gesture this long into a hold turns the frame at once; the line plays on, uncut
   const MIN_HOLD = 420    // a frame is on screen at least this long before the next gesture can turn it
-  const MAX_HOLD = 10000  // a line longer than this does not hold the reader
+  const MAX_HOLD = 7000   // a line longer than this does not hold the reader
 
   const refresh = () => { list = stops().filter(s => Number.isFinite(s.y)).sort((a, b) => a.y - b.y) }
   const nearest = () => list.reduce((best, s, i) => (Math.abs(s.y - scrollY) < Math.abs(list[best].y - scrollY) ? i : best), 0)
@@ -29,10 +32,10 @@ export function mountPager({ stops, busy = () => false, enabled = () => true, on
   })
 
   const hold = () => new Promise(resolve => {
-    const t0 = performance.now()
+    const t0 = holdStart = performance.now(); release = false
     const check = () => {
       const t = performance.now() - t0
-      if ((t >= MIN_HOLD && !busy()) || t >= MAX_HOLD) resolve()
+      if ((t >= MIN_HOLD && !busy()) || t >= MAX_HOLD || release) resolve()
       else setTimeout(check, 100)
     }
     setTimeout(check, MIN_HOLD)
@@ -49,11 +52,18 @@ export function mountPager({ stops, busy = () => false, enabled = () => true, on
     refresh()  // a panel revealed on arrival may change height: the next stop is measured from the page as it is now
     await hold()
     locked = false
-    unlockedAt = performance.now()
+    if (waiting) { waiting = false; onWaitEnd() }
+    if (queued) { const d = queued; queued = 0; step(d) }
   }
 
   const step = dir => {
-    if (locked) return
+    if (locked) {           // one at most: three flicks during a line still turn one frame
+      const held = !animating && holdStart && performance.now() - holdStart
+      if (queued && held > INSIST) release = true   // the reader insists: go on, the line keeps playing
+      queued = dir
+      if (!waiting && !animating) { waiting = true; onWait() }
+      return
+    }
     refresh()
     if (!list.length) return
     const i = dir > 0 ? list.findIndex(s => s.y > scrollY + 6) : findLast(list, s => s.y < scrollY - 6)
@@ -61,18 +71,25 @@ export function mountPager({ stops, busy = () => false, enabled = () => true, on
     go(i)
   }
 
-  // A gesture ends only when the wheel has been quiet for QUIET ms. Every event, during a turn too, restarts that
+  // A gesture ends when the wheel has been quiet for QUIET ms. Every event, during a turn too, restarts that
   // silence, so a long trackpad inertia tail or a fast run of flicks (events arriving slowly on a loaded machine
   // included) turns one frame; the next frame needs a pause first.
+  // A new swipe made during the inertia tail of the last one is a gesture too: inertia only decays, so a delta that
+  // jumps well above the tail's lowest point, a while after the last turn, is the reader's finger again.
   const QUIET = 300
-  let unlockedAt = 0
+  let lastTurn = 0, tailMin = Infinity
   const onWheel = e => {
     if (e.ctrlKey || !enabled()) return  // pinch zoom on a trackpad; a layer above the page (the film) owns the wheel
     e.preventDefault()
     const dy = e.deltaMode === 1 ? e.deltaY * 32 : e.deltaMode === 2 ? e.deltaY * innerHeight : e.deltaY
-    const now = performance.now(), quiet = now - lastWheel > QUIET
-    lastWheel = now; lastAbs = Math.abs(dy)
-    if (quiet && !locked && now - unlockedAt > 120 && lastAbs > 3) step(Math.sign(dy))
+    const now = performance.now(), quiet = now - lastWheel > QUIET, abs = Math.abs(dy)
+    const rise = !quiet && now - lastTurn > 350 && abs >= 12 && abs > tailMin * 2 + 6
+    lastWheel = now; lastAbs = abs
+    tailMin = quiet || rise ? abs : Math.min(tailMin, abs)
+    if ((quiet || rise) && abs > 3) {
+      lastTurn = now
+      step(Math.sign(dy))  // during a hold it waits its turn (queued), so a gesture is never lost
+    }
   }
 
   const typing = el => el && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))

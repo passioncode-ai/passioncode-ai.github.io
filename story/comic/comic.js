@@ -78,9 +78,14 @@ const stops = () => {
   return list
 }
 const filmOpen = () => !film.hidden
+const holdBar = document.body.appendChild(Object.assign(document.createElement('div'), { className: 'hold-bar', innerHTML: '<i></i>' }))
+holdBar.setAttribute('aria-hidden', 'true')
 const pager = reduce ? null : mountPager({
   stops, busy: () => sound.busy(), enabled: () => !filmOpen(),
   onArrive: s => { if (!s.el || s.el === act0) return; reveal(s.el); const i = panels.indexOf(s.el); if (i >= 0) rail.set(i) },
+  // a gesture made while Morpheus speaks waits for the line; the bar shows how long (a second gesture goes on at once)
+  onWait: () => { holdBar.style.setProperty('--ms', Math.max(400, sound.left()) + 'ms'); holdBar.classList.remove('on'); void holdBar.offsetWidth; holdBar.classList.add('on') },
+  onWaitEnd: () => holdBar.classList.remove('on'),
   onBlocked: () => { if (after.hidden) { bunny.classList.remove('nudge'); void bunny.offsetWidth; bunny.classList.add('nudge') } },
 })
 
