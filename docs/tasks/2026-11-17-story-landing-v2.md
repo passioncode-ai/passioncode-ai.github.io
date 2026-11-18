@@ -147,3 +147,48 @@ playbook 02).
   product names. Variants that pass without question: the same story with the agents named by role (PM, Assessor,
   DevOps, Agent) and the ink look. The publication decision is the operator's.
 - Russian advertising marking (38-ФЗ «Реклама», advertiser, erid) belongs to paid placements, not to the page.
+
+## Receipts of v2 (2026-11-18)
+
+| Wave | Done | Evidence |
+|---|---|---|
+| W1 | Storyboard as the page itself and its Safari shots; treatment page `story/treatment/` with its PDF | preview `e5e06c0c` `/story/treatment/probuzhdenie.pdf` 200 |
+| W2 | Beat schedule (`store.js` rows carry `chat`, `scene`, `el`), chat on the right, focus dimming, seam per row | `evidence/site-068/sequence-probe.py`: 221 positions, 0 violations (Safari, 1440 px) |
+| W3 | Asset Foundry `character-new` x4 (jobs `…G71F`, `…HH4`, `…GDR`, `…QRX`), 3 candidates each, waiting at `pick` for the operator; spent $0.72 | `story/cast/*.jpg`; `cast.js` `PICK` holds the recommendation |
+| W4 | Chapters 0 to 10 of the storyboard, en and ru, both looks | Safari shots 1440 and 390 px; `npm run check` exit 0 |
+| W5 | Copylot en `8c742f36`, ru `6bb2214f` (score 100, no blocking finding); preview `5eda5242` (v2), `e5e06c0c` (v2 and treatment), not deployed | |
+
+Two defects found and fixed on the way: a `const cells` clash in `story.js` (the module failed to load) and the
+storyboard row's `scene` index overwritten by the beat range of the same name (no scene was shown); the row now names
+its element `el`.
+
+## The operator's later words (2026-11-18, same session) and the waves they add
+
+> зафиксируем персонажей наших агентов [...] а сэсмент, архитектор [...] PM, DevOps [...] агент Смит [...] сделали
+> всем портреты [...] везде одни и те же были портреты и персонажи [...] Морфеус, который будет приходить в чат и
+> предлагает выплеть таблетку
+
+> в хедере [...] большой такой морфиус [...] ты начинаешь скроллить, и он тебя протягивает [...] две руки [...] нужно
+> выбрать таблетку [...] выбрал таблетку [...] показывает путь [...] если выбрать не ту таблетку [...] показывает как
+> устроена сейчас организация, какие есть боли
+
+> видео сгенерируем от первого лица [...] Проснулся за рабочим столом [...] через C-Dance [...] сначала [...] в блендере
+> [...] сцены срендерились [...] покажем мне отчетик в виде PDF сначала
+
+> кофемашина [...] не работает [...] видит там тень [...] в плаще уходит [...] в какую-нибудь там дверь заходит, и там
+> его опять Морфей встречает, и опять возвращаемся на начало в сайте, где он тебе предлагает две таблетки
+
+> сразу же с озвучкой проработать [...] звуковую озвучку еще для сайта, для кликов
+
+> всю историю на фуллскрин [...] как погружение [...] а все остальное это уже как элементы дополненной реальности [...]
+> в стиле матрицы
+
+| Wave | Content | Gate |
+|---|---|---|
+| W8 | Character canon: PM Morpheus, assessment Trinity, agent architect the Architect, DevOps Neo, worker agents Smith, research the Oracle (proposed); character sheets from the picked portraits; the canon into the brand pack and, through `recording-insights`, into the agents base's persona of each template | the operator's portrait pick (asked) |
+| W9 | Layout v3: the story full screen, chat, captions, HUD and navigation as an AR layer in the Matrix look (treatment §3) | none: ordered |
+| W10 | Header with Morpheus offering two pills; red opens the transformation story, blue the film | none: ordered |
+| W11 | Film «Пробуждение»: 16 shots, Blender blockout then Seedance (`blender-previz`), two acts under the USD 100 line | the treatment's «продолжать» |
+| W12 | Voice: Morpheus designed from a description, recordings of the 12 lines and the film's lines; UI sounds (treatment §5) | none for the voice design; the film's lines with W11 |
+| W13 | Copylot voice `861f15ee` v3: the character names allowed, the light Matrix tone written down | relayed operator words above |
+| W7 | Style pack «phosphor» in sheleg-design | none |

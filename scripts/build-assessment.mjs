@@ -21,6 +21,8 @@ for (const f of files) {
 }
 // The generated cast portraits (SITE-068 v2, Asset Foundry character-new trial)
 cpSync(join(root, 'story/cast'), join(out, 'story/cast'), { recursive: true })
+// The film treatment for the operator (SITE-068 v2, 2026-11-18): the page and, when rendered locally, its PDF
+cpSync(join(root, 'story/treatment'), join(out, 'story/treatment'), { recursive: true })
 writeFileSync(join(out, 'index.html'), readFileSync(join(root, 'story/index.html')))
 // Variation 2 «Ink» at /v2/: the same page, html.ink on top of html.matrix (refactor 2026-11-17, F15)
 mkdirSync(join(out, 'v2'), { recursive: true })
