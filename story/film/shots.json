@@ -2,97 +2,229 @@
  {
   "n": "01",
   "seconds": 4,
+  "version": 5,
+  "how": "keep",
   "scene": "shots/01.scene.json",
   "prompt": "first-person view from a desk chair at a cluttered office desk at dusk, two monitors full of red notification badges and unread chat counters, a cold coffee mug, blurred office behind the monitors. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: first person, the view slowly lifts from the desk to the two monitors as if eyes open; notification badges blink on the screens."
  },
  {
   "n": "02",
   "seconds": 4,
+  "version": 5,
+  "how": "keep",
   "scene": "shots/02.scene.json",
   "prompt": "first-person view looking down at the hands of the director: a man in his forties, short dark hair, clean-shaven, dark grey suit resting on a desk beside an empty coffee mug, suit sleeves, papers, a sticky note that reads nothing. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: first person, looking down at the hands, the fingers move slightly, a clock ticks; very little motion."
  },
  {
   "n": "03",
   "seconds": 4,
-  "scene": "shots/03.scene.json",
-  "prompt": "first-person view through an opening office door onto a crowded open-plan office: rows of desks with glowing green screens, people talking at once, papers everywhere. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: first person, the door swings open and the camera steps out into the noisy open office."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "refs/office.png",
+   "refs/director.png"
+  ],
+  "first": "first-person view from a doorway, the dark edge of an office door swinging open on the left, looking onto this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of tall windows on the far wall; the room is full of people talking at once, papers on the floor. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the camera has stepped through the doorway into the same office, the door out of view, the noisy room and its desks closer. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "first person, the door swings open and the camera steps out into the noisy open office. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "04",
   "seconds": 5,
-  "scene": "shots/04.scene.json",
-  "prompt": "first-person view in an open office: a young woman manager runs toward the camera holding up an open laptop with a red missed-deadline warning on its screen, her face worried. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: slow motion: the manager runs toward the camera holding up the laptop, hair and papers floating."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "refs/office.png",
+   "refs/director.png"
+  ],
+  "first": "first-person view straight down the central aisle of this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of tall windows on the far wall: a young woman manager with dark hair in a bun, a white blouse and dark trousers runs toward the camera holding up an open laptop with a red warning triangle on its screen, her face worried. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the same manager is now close to the camera, the open laptop with the red warning triangle held up in the lower half of the frame, her hair and loose papers floating. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "slow motion: the manager runs toward the camera holding up the laptop, hair and papers floating. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "05",
   "seconds": 5,
-  "scene": "shots/05.scene.json",
-  "prompt": "medium shot over a shoulder: two colleagues argue over a printout in an open office, one jabs a finger at the page, sheets of paper fly between them. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the two argue with big gestures, sheets of paper fly up and scatter between them."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "refs/office.png",
+   "refs/director.png"
+  ],
+  "first": "medium shot over a shoulder at a desk of this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of tall windows on the far wall: two colleagues argue over a printout, one jabs a finger at the page, sheets of paper fly between them; green monitors and the far windows behind them. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the same two colleagues mid-argument with big gestures, sheets of paper scattered in the air between them. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "the two argue with big gestures, sheets of paper fly up and scatter between them. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "06",
   "seconds": 5,
-  "scene": "shots/06.scene.json",
-  "prompt": "medium shot: a sweaty young programmer in a hoodie hunched at a desk with a green-lit screen, hands on a keyboard, tense face. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the programmer types furiously, then lifts the keyboard and smashes it on the desk; keys fly; he throws it aside."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "refs/office.png",
+   "refs/director.png"
+  ],
+  "first": "medium shot at a desk of this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of tall windows on the far wall: a sweaty young programmer in a dark hoodie hunched over a keyboard in front of a green-lit monitor, tense face; rows of desks and the far windows behind him. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the same programmer has smashed the keyboard on the desk, keys flying in the air, his arms raised. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "the programmer types furiously, then lifts the keyboard and smashes it on the desk; keys fly; he throws it aside. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "07",
   "seconds": 6,
-  "scene": "shots/07.scene.json",
-  "prompt": "wide shot from behind: the director: a man in his forties, short dark hair, clean-shaven, dark grey suit walks down the aisle of a chaotic open office, seen whole from head to shoes, sticky notes, folders and pens hang in the air around him, people at desks shouting; the aisle between the camera and him is empty floor, nothing stands or moves in the foreground. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the camera follows behind him at a distance as he walks steadily; around him the objects drift in slow motion; the foreground stays empty floor."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "refs/office.png",
+   "refs/director.png"
+  ],
+  "first": "wide shot from behind at eye level: the director exactly as in the director reference sheet (same face, short dark side-parted hair, dark grey suit, white shirt, dark tie), seen whole from head to shoes from behind, walks away from the camera down the central aisle of this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of tall windows on the far wall toward the far windows; sticky notes, folders and pens hang in the air around him; people at the desks shout; the aisle between the camera and him is empty floor. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the same director further down the same aisle, smaller, nearer the far windows, seen from behind; sticky notes, folders and pens drifting in the air around him. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "the camera follows behind him at a distance as he walks steadily toward the far windows; around him the objects drift in slow motion; the foreground stays empty floor. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "08",
   "seconds": 5,
-  "scene": "shots/08.scene.json",
-  "prompt": "wide shot from the front: the director: a man in his forties, short dark hair, clean-shaven, dark grey suit walks toward the camera with a calm face while behind him the office falls apart: papers storm, a chair tips over, people argue. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the camera moves back as he walks toward it; behind him the chaos grows."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "refs/office.png",
+   "refs/director.png"
+  ],
+  "first": "wide shot from the front: the director exactly as in the director reference sheet (same face, short dark side-parted hair, dark grey suit, white shirt, dark tie) walks toward the camera down the central aisle of this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of tall windows on the far wall with a calm face, the far windows behind him; behind him the office falls apart: papers storm, a chair tips over, people argue. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the same director closer to the camera, seen from the waist up, calm face; behind him papers storm and people argue. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "the camera moves back as he walks toward it; behind him the chaos grows. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "09",
   "seconds": 4,
-  "scene": "shots/09.scene.json",
-  "prompt": "close shot: a stack of paper tickets bursts against the chest of the director: a man in his forties, short dark hair, clean-shaven, dark grey suit, the sheets frozen in mid-air around him like a cloud. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the tickets hit him and burst; then everything freezes, the sheets hang motionless in the air."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "refs/office.png",
+   "refs/director.png"
+  ],
+  "first": "close shot: a stack of paper tickets bursts against the chest of the director exactly as in the director reference sheet (same face, short dark side-parted hair, dark grey suit, white shirt, dark tie), sheets frozen in mid-air around him like a cloud; behind him desks with green monitors of this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of tall windows on the far wall. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a second later: the burst sheets of paper hang frozen and motionless in the air in a cloud around the same director, his face surprised. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "the tickets hit him and burst; then everything freezes, the sheets hang motionless in the air. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "10",
   "seconds": 4,
-  "scene": "shots/10.scene.json",
-  "prompt": "medium shot in a small office kitchen: the director: a man in his forties, short dark hair, clean-shaven, dark grey suit reaches for the button of a big coffee machine on the counter. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: he presses the coffee machine button and waits; nothing happens."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "src/dir10.jpg",
+   "refs/director.png",
+   "refs/office.png"
+  ],
+  "first": "medium shot in the small office kitchen of the kitchen reference (the same counter, coffee machine and shelves): the director exactly as in the director reference sheet (same face, short dark side-parted hair, dark grey suit, white shirt, dark tie) reaches for the button of the big coffee machine on the counter. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the same director has pressed the button and waits, looking at the machine; nothing pours. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "he presses the coffee machine button and waits; nothing happens. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "11",
   "seconds": 4,
+  "version": 5,
+  "how": "keep",
   "scene": "shots/11.scene.json",
   "prompt": "detail shot: the small display of an office coffee machine glows red with an error symbol; at its edge an agent in a dark suit, white shirt, tie, rectangular dark sunglasses and a coiled earpiece (an original character, not any real actor) peeks out from behind the machine. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the red error display blinks; the agent leans out from behind the machine for a second and hides again."
  },
  {
   "n": "12",
   "seconds": 4,
-  "scene": "shots/12.scene.json",
-  "prompt": "first-person view down a long dim office corridor: at its far end a tall figure in a long dark coat turns the corner, only a shadow and the coat hem visible. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the figure in the long coat slips round the corner at the end of the corridor; the office noise fades."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "src/c13.jpg",
+   "src/c14.jpg",
+   "refs/mentor.png"
+  ],
+  "first": "first-person view down the long dim grey corridor of the corridor references: at its far end a tall bald man in a charcoal suit, seen from behind, turns the corner and disappears; only his back and shoulder visible, drawn in the same charcoal style as the corridor. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the far end of the same corridor is empty, the man has gone round the corner. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "the man at the far end slips round the corner; the office noise fades. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "13",
   "seconds": 5,
-  "scene": "shots/13.scene.json",
-  "prompt": "shot from behind: the director: a man in his forties, short dark hair, clean-shaven, dark grey suit walks warily down a long dim corridor lit by humming ceiling lamps, toward its end. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: he walks down the corridor, the camera follows behind; the lamps hum and flicker."
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "src/c13.jpg",
+   "src/c14.jpg",
+   "refs/director.png"
+  ],
+  "first": "shot from behind: the director exactly as in the director reference sheet (same face, short dark side-parted hair, dark grey suit, white shirt, dark tie) walks warily down the same long dim grey corridor of the corridor references, lit by humming ceiling lamps, toward the closed door at its end. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end": "the same moment a few seconds later: the same director nearer the closed door at the end of the same corridor, seen from behind. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "he walks down the corridor toward the door, the camera follows behind; the lamps hum and flicker. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos."
  },
  {
   "n": "14",
   "seconds": 6,
+  "version": 5,
+  "how": "keep",
   "scene": "shots/14.scene.json",
   "prompt": "first-person view at the end of a dim grey office corridor: the door opposite swings open and warm golden daylight pours out from a bright room beyond. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the door ahead swings open, warm daylight floods the grey corridor; the camera moves toward it."
  },
  {
   "n": "15",
   "seconds": 6,
+  "version": 5,
+  "how": "keep",
   "scene": "shots/15.scene.json",
   "prompt": "an empty office of the future seen through a doorway: a floor-to-ceiling window across the whole far wall over a calm city, one simple wooden desk and chair, light oak floor, many green plants, nobody inside, spacious and quiet. adult animated film still in the same graphic-novel drawing style, but warm: soft natural daylight, light oak wood, white walls, many green plants, calm and spacious; cinematic composition, 16:9, no text, no logos. Action: a slow push into the empty bright office; leaves move a little; light shifts softly."
  },
  {
   "n": "16",
-  "seconds": 7,
-  "scene": "shots/16.scene.json",
-  "prompt": "medium shot in the bright empty future office: Morpheus: a bald calm mentor about fifty, small round dark glasses, a long dark coat with a high collar (an original character, not any real actor) steps toward the camera and holds out both open hands, a small glossy red bead in one palm and a small glossy blue bead in the other, warm daylight behind him. adult animated film still in the same graphic-novel drawing style, but warm: soft natural daylight, light oak wood, white walls, many green plants, calm and spacious; cinematic composition, 16:9, no text, no logos. Action: he walks toward the camera, stops and slowly opens both hands toward the viewer, a red bead and a blue bead resting in his palms."
+  "seconds": 4,
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "src/f15end.jpg",
+   "src/f15mid.jpg",
+   "refs/mentor.png"
+  ],
+  "first": "=15.last",
+  "end": "the same bright office of the references, the view turned to its right side wall: a light oak desk beside green plants and the edge of the big window, and behind the desk, in a dark leather office chair, sits the mentor exactly as in the mentor reference sheet, an original character: a calm bald man about fifty with a short neatly trimmed grey beard, small round dark glasses, a well-cut charcoal suit, a crisp white shirt open at the collar with no tie, a small green pocket square, calm, looking at the camera, his hands resting on the desk. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos.",
+  "end_refs_first": false,
+  "prompt": "the camera slowly turns to the right across the bright office and finds the man sitting in an office chair behind a wooden desk; he looks up at the camera. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos."
+ },
+ {
+  "n": "17",
+  "seconds": 5,
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "src/f15end.jpg",
+   "src/f15mid.jpg",
+   "refs/mentor.png"
+  ],
+  "first": "=16.end",
+  "end": "medium shot in the same bright office, the oak desk and plants behind him: the mentor exactly as in the mentor reference sheet, an original character: a calm bald man about fifty with a short neatly trimmed grey beard, small round dark glasses, a well-cut charcoal suit, a crisp white shirt open at the collar with no tie, a small green pocket square stands one step from the camera in front of the desk and holds both open hands toward the viewer at waist height, a small glossy red capsule in one open palm and a small glossy blue capsule in the other. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos.",
+  "end_refs_first": false,
+  "prompt": "he rises from the chair, walks round the desk toward the camera, stops and holds out both open hands toward the viewer, a red capsule and a blue capsule resting in his palms. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos."
+ },
+ {
+  "n": "18",
+  "seconds": 5,
+  "version": 7,
+  "how": "frames",
+  "refs": [
+   "src/f15end.jpg",
+   "src/f15mid.jpg",
+   "refs/mentor.png"
+  ],
+  "first": "=17.end",
+  "end": "a closer shot of the same man in the same office: his two open palms held out toward the viewer fill the lower half of the frame, a small glossy red capsule in one open palm and a small glossy blue capsule in the other, his calm face with the small round dark glasses above them. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos.",
+  "end_refs_first": true,
+  "prompt": "he holds still with his palms open toward the viewer, a red capsule and a blue capsule in them; the camera slowly pushes in toward his hands; he gives a slight calm nod. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos."
  }
 ]

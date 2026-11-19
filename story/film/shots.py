@@ -4,7 +4,15 @@ first frame; Asset Foundry's `blender-previz` redraws the blockout's first frame
 draws the clip that follows the blockout (B-231). The end follows the operator's v5 inputs (2026-11-18): the director
 reaches the end of his office, sees opposite a door into a clean future office, Morpheus comes out with the pills.
 
-Writes story/film/shots/<NN>.scene.json and story/film/shots.json (the order list). Usage: python3 story/film/shots.py
+v7 (2026-11-19, the operator: «синхронизацию по персонажам по месту», «уберем слоп», Morpheus «в кресле ... встает из-за
+стола подходит ... протягивает две таблетки ... в пиджачке аккуратненький чистенький»): `SHOTS_V7` below. `blender-previz`
+takes no references, so the office and the director drifted from shot to shot. v7 builds the references first (one
+establishing office, a director sheet, an agent sheet, a mentor sheet: Foundry `scene-pack-refs`), draws every drifting
+shot's first frame from them (`scene-pack-refs`) and the clip from that frame (`video-from-frames`, Kling v3 Pro). Shots
+01, 02, 14 and 15 keep their v5 clips; 16 becomes a short ending in shot 15's office (16, 17, 18). The v5 table stays
+here as `SHOTS` and is written to shots-v5.json; shots.json (read by cut.py) is the v7 table.
+
+Writes story/film/shots/<NN>.scene.json, story/film/shots-v5.json and story/film/shots.json. Usage: python3 story/film/shots.py
 """
 import json, pathlib
 
@@ -245,6 +253,144 @@ SHOTS = [
 ]
 
 
+# ---- v7 -------------------------------------------------------------------------------------------------------------
+# The references (Foundry `scene-pack-refs`, project passioncode-site; files in ~/DATA/_media/passioncode-site/film-v7/refs
+# on the Studio; picks and verdicts in SOURCES.md): the office every office shot shows, the director, the agent, the mentor.
+REFS = {'office': 'refs/office.png', 'director': 'refs/director.png', 'smith': 'refs/smith.png', 'mentor': 'refs/mentor.png',
+        # frames of the v5 cut kept as location references: the kitchen (10), the coffee machine (11), the corridor (13,
+        # 14) and the future office (15, its last and middle frame)
+        'kitchen': 'src/dir10.jpg', 'machine': 'src/smith11.jpg', 'corridor': 'src/c13.jpg', 'corridor_end': 'src/c14.jpg',
+        'future': 'src/f15end.jpg', 'future_mid': 'src/f15mid.jpg'}
+DIRECTOR_REF = 'the director exactly as in the director reference sheet (same face, short dark side-parted hair, dark grey suit, white shirt, dark tie)'
+THE_OFFICE = ('this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal '
+              'desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of '
+              'tall windows on the far wall')
+MENTOR_V7 = ('the mentor exactly as in the mentor reference sheet, an original character: a calm bald man about fifty with a short '
+             'neatly trimmed grey beard, small round dark glasses, a well-cut charcoal suit, a crisp white shirt open at the '
+             'collar with no tie, a small green pocket square')
+FUTURE_V7 = ('in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm '
+             'natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos')
+PILLS = 'a small glossy red capsule in one open palm and a small glossy blue capsule in the other'
+
+# n, seconds, how (keep: the v5 clip; frames: refs -> first frame -> clip), references, first frame, end frame or None, action
+SHOTS_V7 = [
+    ('01', 4, 'keep', None, None, None, None),
+    ('02', 4, 'keep', None, None, None, None),
+    ('03', 4, 'frames', ['office', 'director'],
+     f'first-person view from a doorway, the dark edge of an office door swinging open on the left, looking onto {THE_OFFICE}; '
+     'the room is full of people talking at once, papers on the floor', None,
+     'first person, the door swings open and the camera steps out into the noisy open office'),
+    ('04', 5, 'frames', ['office', 'director'],
+     f'first-person view straight down the central aisle of {THE_OFFICE}: a young woman manager with dark hair in a bun, a '
+     'white blouse and dark trousers runs toward the camera holding up an open laptop with a red warning triangle on its '
+     'screen, her face worried', None,
+     'slow motion: the manager runs toward the camera holding up the laptop, hair and papers floating'),
+    ('05', 5, 'frames', ['office', 'director'],
+     f'medium shot over a shoulder at a desk of {THE_OFFICE}: two colleagues argue over a printout, one jabs a finger at the '
+     'page, sheets of paper fly between them; green monitors and the far windows behind them', None,
+     'the two argue with big gestures, sheets of paper fly up and scatter between them'),
+    ('06', 5, 'frames', ['office', 'director'],
+     f'medium shot at a desk of {THE_OFFICE}: a sweaty young programmer in a dark hoodie hunched over a keyboard in front '
+     'of a green-lit monitor, tense face; rows of desks and the far windows behind him', None,
+     'the programmer types furiously, then lifts the keyboard and smashes it on the desk; keys fly; he throws it aside'),
+    ('07', 6, 'frames', ['office', 'director'],
+     f'wide shot from behind at eye level: {DIRECTOR_REF}, seen whole from head to shoes from behind, walks away from the '
+     f'camera down the central aisle of {THE_OFFICE} toward the far windows; sticky notes, folders and pens hang in the '
+     'air around him; people at the desks shout; the aisle between the camera and him is empty floor', None,
+     'the camera follows behind him at a distance as he walks steadily toward the far windows; around him the objects '
+     'drift in slow motion; the foreground stays empty floor'),
+    ('08', 5, 'frames', ['office', 'director'],
+     f'wide shot from the front: {DIRECTOR_REF} walks toward the camera down the central aisle of {THE_OFFICE} with a '
+     'calm face, the far windows behind him; behind him the office falls apart: papers storm, a chair tips over, people argue', None,
+     'the camera moves back as he walks toward it; behind him the chaos grows'),
+    ('09', 4, 'frames', ['office', 'director'],
+     f'close shot: a stack of paper tickets bursts against the chest of {DIRECTOR_REF}, sheets frozen in mid-air around '
+     f'him like a cloud; behind him desks with green monitors of {THE_OFFICE}', None,
+     'the tickets hit him and burst; then everything freezes, the sheets hang motionless in the air'),
+    ('10', 4, 'frames', ['kitchen', 'director', 'office'],
+     f'medium shot in the small office kitchen of the kitchen reference (the same counter, coffee machine and shelves): '
+     f'{DIRECTOR_REF} reaches for the button of the big coffee machine on the counter', None,
+     'he presses the coffee machine button and waits; nothing happens'),
+    # 11: redrawn twice with the agent sheet; both takes tinted magenta, both judges kept the v5 frame (10 and 9 of 10)
+    ('11', 4, 'keep', None, None, None, None),
+    ('12', 4, 'frames', ['corridor', 'corridor_end', 'mentor'],
+     'first-person view down the long dim grey corridor of the corridor references: at its far end a tall bald man in a '
+     'charcoal suit, seen from behind, turns the corner and disappears; only his back and shoulder visible, drawn in the '
+     'same charcoal style as the corridor', None,
+     'the man at the far end slips round the corner; the office noise fades'),
+    ('13', 5, 'frames', ['corridor', 'corridor_end', 'director'],
+     f'shot from behind: {DIRECTOR_REF} walks warily down the same long dim grey corridor of the corridor references, '
+     'lit by humming ceiling lamps, toward the closed door at its end', None,
+     'he walks down the corridor toward the door, the camera follows behind; the lamps hum and flicker'),
+    ('14', 6, 'keep', None, None, None, None),
+    ('15', 6, 'keep', None, None, None, None),
+    # the ending, in the very office of shot 15 (its last frame is the first frame of 16)
+    ('16', 4, 'frames', ['future', 'future_mid', 'mentor'],
+     '=15.last',  # first frame: shot 15's own frame at 5.95 s, where the cut leaves it
+     f'the same bright office of the references, the view turned to its right side wall: a light oak desk beside green '
+     f'plants and the edge of the big window, and behind the desk, in a dark leather office chair, sits {MENTOR_V7}, calm, '
+     'looking at the camera, his hands resting on the desk',
+     'the camera slowly turns to the right across the bright office and finds the man sitting in an office chair behind '
+     'a wooden desk; he looks up at the camera'),
+    ('17', 5, 'frames', ['future', 'future_mid', 'mentor'],
+     '=16.end',
+     f'medium shot in the same bright office, the oak desk and plants behind him: {MENTOR_V7} stands one step from the '
+     f'camera in front of the desk and holds both open hands toward the viewer at waist height, {PILLS}',
+     'he rises from the chair, walks round the desk toward the camera, stops and holds out both open hands toward the '
+     'viewer, a red capsule and a blue capsule resting in his palms'),
+    ('18', 5, 'frames', ['future', 'future_mid', 'mentor'],
+     '=17.end', None,
+     'he holds still with his palms open toward the viewer, a red capsule and a blue capsule in them; the camera slowly '
+     'pushes in toward his hands; he gives a slight calm nod'),
+]
+
+
+# End frames (video-from-frames takes a first and a last frame for every clip, failure `video-frames-need-both`): drawn
+# from the picked first frame and the shot's references, so the clip cannot leave the room or the man.
+END_V7 = {
+    '03': 'the same moment a few seconds later: the camera has stepped through the doorway into the same office, the door '
+          'out of view, the noisy room and its desks closer',
+    '04': 'the same moment a few seconds later: the same manager is now close to the camera, the open laptop with the red '
+          'warning triangle held up in the lower half of the frame, her hair and loose papers floating',
+    '05': 'the same moment a few seconds later: the same two colleagues mid-argument with big gestures, sheets of paper '
+          'scattered in the air between them',
+    '06': 'the same moment a few seconds later: the same programmer has smashed the keyboard on the desk, keys flying in '
+          'the air, his arms raised',
+    '07': 'the same moment a few seconds later: the same director further down the same aisle, smaller, nearer the far '
+          'windows, seen from behind; sticky notes, folders and pens drifting in the air around him',
+    '08': 'the same moment a few seconds later: the same director closer to the camera, seen from the waist up, calm face; '
+          'behind him papers storm and people argue',
+    '09': 'the same moment a second later: the burst sheets of paper hang frozen and motionless in the air in a cloud around '
+          'the same director, his face surprised',
+    '10': 'the same moment a few seconds later: the same director has pressed the button and waits, looking at the machine; '
+          'nothing pours',
+    '12': 'the same moment a few seconds later: the far end of the same corridor is empty, the man has gone round the corner',
+    '13': 'the same moment a few seconds later: the same director nearer the closed door at the end of the same corridor, '
+          'seen from behind',
+    '18': f'a closer shot of the same man in the same office: his two open palms held out toward the viewer fill the lower '
+          f'half of the frame, {PILLS}, his calm face with the small round dark glasses above them',
+}
+
+
+def order_v7():
+    """The v7 order list: per shot its look prompt and, for redrawn shots, the references and frames."""
+    out = []
+    for n, seconds, how, refs, first, end, action in SHOTS_V7:
+        o = {'n': n, 'seconds': seconds, 'version': 7 if how == 'frames' else 5, 'how': how}
+        if how == 'frames':
+            style = FUTURE_V7 if n >= '16' else LOOK
+            o.update({'refs': [REFS[r] for r in refs], 'first': f'{first}. {style}.' if first and not first.startswith('=') else first,
+                      'end': f'{end or END_V7[n]}. {style}.', 'end_refs_first': end is None,
+                      'prompt': f'{action}. {style}.'})
+        else:
+            o.update({k: v for k, v in V5[n].items() if k in ('scene', 'prompt')})
+        out.append(o)
+    return out
+
+
+V5 = {}
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     order = []
@@ -256,8 +402,11 @@ def main():
         style = FUTURE if n in ('15', '16') else LOOK
         order.append({'n': n, 'seconds': seconds, 'scene': f'shots/{n}.scene.json',
                       'prompt': f'{look}. {style}. Action: {action}.'})
-    (OUT.parent / 'shots.json').write_text(json.dumps(order, indent=1, ensure_ascii=False))
-    print('shots', len(order), 'seconds', sum(o['seconds'] for o in order))
+        V5[n] = order[-1]
+    (OUT.parent / 'shots-v5.json').write_text(json.dumps(order, indent=1, ensure_ascii=False))
+    v7 = order_v7()
+    (OUT.parent / 'shots.json').write_text(json.dumps(v7, indent=1, ensure_ascii=False))
+    print('shots v5', len(order), sum(o['seconds'] for o in order), 's; v7', len(v7), sum(o['seconds'] for o in v7), 's')
 
 
 if __name__ == '__main__':

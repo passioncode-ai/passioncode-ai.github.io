@@ -8,7 +8,11 @@ Usage: python3 story/film/cut.py <media dir>   (the folder the deliveries were c
 
 The media dir holds clips/<NN>-<k>.mp4 (every clip Foundry drew for shot NN) with clip-picks.json ({"NN": {"pick": k}},
 the judged take), the sounds and voices as <name>.wav and music-bed.mp3. A clip's own audio is dropped. Each film file
-stays under Cloudflare's 25 MiB asset limit."""
+stays under Cloudflare's 25 MiB asset limit.
+
+v7 (2026-11-19): the shot table has 18 shots (shots.py `SHOTS_V7`): 16, 17 and 18 are the ending in shot 15's office (the
+mentor at his desk, standing, holding out the two capsules); his line starts on 18. The v5 cut (16 shots, the line on 16)
+is commit 139b1b0d."""
 import json, pathlib, subprocess, sys
 
 from glitch import glitch
@@ -60,10 +64,10 @@ def main(media):
         ('f-steps', S['07'] + 0.4, -12), ('f-steps', S['08'] + 0.6, -12), ('f-freeze', S['09'] + 1.1, -6),
         ('f-coffee', S['10'] + 1.6, -8), ('f-coat', S['12'] + 1.0, -8), ('f-steps', S['13'] + 0.6, -14),
         ('f-door', S['14'] + 0.4, -11), ('f-future', S['13'] + 0.5, -26), ('f-future', S['15'], -16),
-        ('f-glitch', S['15'] - 0.5, -9),
+        ('f-glitch', S['15'] - 0.5, -9), ('f-steps', S['17'] + 1.2, -18),
     ]
     caps = {'manager': [S['04'] + 1.0, S['04'] + 4.0], 'error': [S['11'] + 0.4, S['11'] + 3.9],
-            'morpheus': [S['16'] + 2.5, total - 0.1]}
+            'morpheus': [S['18'] + 0.4, total - 0.1]}
     # the office: one bed from the first office shot to the time freeze, which cuts it into silence (the brief); built
     # from the walla takes laid over each other in a fixed shuffled order, so no one click repeats every two seconds
     walla = [media / f'f-walla{i}.wav' for i in (1, 2, 3, 4) if (media / f'f-walla{i}.wav').exists()]
