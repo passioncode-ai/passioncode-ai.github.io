@@ -367,6 +367,34 @@ export function tightenCjk (html, locale) {
 // attributes and body text keep the browser's own breaking. Chinese is not segmented: BudouX's
 // Chinese model splits words (智｜能体), and Chinese typography breaks between any two characters.
 const PHRASE_TAGS = new Set(['h1', 'h2', 'h3'])
+// SITE-074: short display lines outside h1–h3 that wrap like a heading (the hero's reframe line and the
+// assessment card's figure labels): phrase breaks and particle binding apply inside them too.
+const PHRASE_CLASSES = ['hero-reframe', 'assess-facts']
+const isPhraseElement = (name, token) => PHRASE_TAGS.has(name) || PHRASE_CLASSES.some(c => hasClass(token, c))
+// SITE-074: Polish typesetting keeps a one-letter word (a, i, o, u, w, z) off the end of a line: the space
+// after it becomes a no-break space (`bindWords` in the registry), in every text node of the page, never in
+// an attribute, a title or structured data.
+export function bindWords (text, locale) {
+  const words = localeInfo(locale).bindWords
+  if (!words?.length) return text
+  const pattern = new RegExp(`(^|[\\s(„«"\u00a0])(${words.join('|')}) +`, 'giu')
+  // Two passes: «i w domu» binds both words, which share the space between them.
+  return text.replace(pattern, '$1$2\u00a0').replace(pattern, '$1$2\u00a0')
+}
+// SITE-074: Chinese breaks between any two characters, so a heading can start a line with a particle
+// (…智能体 / 的操作系统). For a locale with `bindParticles`, a WORD JOINER (U+2060) before each listed
+// particle keeps it on the line of the character before it, in headings and the display lines above only.
+// Binding a particle alone would move the break into the word before it (掌控方 / 向的), so the characters of each
+// word (Intl.Segmenter, ICU's dictionary) are joined the same way: a line breaks between words, never inside one.
+const HAN_WORD = /^\p{Script=Han}{2,}$/u
+const segmenters = {}
+export function bindParticles (text, locale) {
+  const particles = localeInfo(locale).bindParticles
+  if (!particles) return text
+  const segmenter = (segmenters[locale] ??= new Intl.Segmenter(langTag(locale), { granularity: 'word' }))
+  const words = [...segmenter.segment(text)].map(({ segment }) => HAN_WORD.test(segment) ? [...segment].join('\u2060') : segment).join('')
+  return words.replace(new RegExp(`(?<=[^\\s\u2060>])([${particles}])`, 'gu'), '\u2060$1')
+}
 const PHRASE_PARSERS = { ja: loadDefaultJapaneseParser }
 const parsers = {}
 const LATIN_EDGE = /[A-Za-z0-9]/
@@ -392,7 +420,7 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
   const own = catalog.pages[sourceFile] || {}
   const missing = []
   const used = new Set()
-  const translate = (text, where, phrases = false) => {
+  const translate = (text, where, phrases = false, textNode = false) => {
     const key = catalogKey(text)
     if (!key) return text
     // A fragment without letters (a number range, an arrow) needs no translation, but may have
@@ -410,8 +438,8 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
     // opens with closing punctuation (，。）) or ends with any (。、（) takes no space on that side.
     const lead = /^\s/.test(value) || /^[,.;:!?)»]/.test(value) || CJK_OPENS_WITH.test(value) ? '' : /^\s*/.exec(text)[0]
     const trail = /\s$/.test(value) || value === '' || CJK_ENDS_WITH.test(value) ? '' : /\s*$/.exec(text)[0]
-    const body = phrases ? phraseChunks(value, locale).map(escapeText).join('<wbr>') : escapeText(value)
-    return lead + body + trail
+    const body = phrases ? phraseChunks(bindParticles(value, locale), locale).map(escapeText).join('<wbr>') : escapeText(value)
+    return textNode ? bindWords(lead + body + trail, locale) : lead + body + trail
   }
 
   const out = []
@@ -475,12 +503,12 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
       }
       out.push(tag)
       if (!VOID.has(name) && !token.endsWith('/>')) {
-        stack.push({ name, switch: isSwitch, verbatim: isSwitch || VERBATIM_TAGS.has(name) || VERBATIM_ATTRS.some(a => attr(token, a) !== undefined) })
+        stack.push({ name, switch: isSwitch, phrase: isPhraseElement(name, token), verbatim: isSwitch || VERBATIM_TAGS.has(name) || VERBATIM_ATTRS.some(a => attr(token, a) !== undefined) })
       }
       continue
     }
-    const inHeading = stack.some(e => PHRASE_TAGS.has(e.name))
-    out.push(verbatim() ? token : translate(token, `${region ? `release:${region} ` : ''}${stack.at(-1)?.name || 'text'}`, inHeading))
+    const inHeading = stack.some(e => e.phrase)
+    out.push(verbatim() ? token : translate(token, `${region ? `release:${region} ` : ''}${stack.at(-1)?.name || 'text'}`, inHeading, !stack.some(e => e.name === 'title')))
   }
   return { html: applyChrome(applyVideo(tightenCjk(out.join(''), locale), locale), { sourceFile, locale }), missing, used }
 }

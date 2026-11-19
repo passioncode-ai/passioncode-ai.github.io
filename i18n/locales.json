@@ -1,5 +1,5 @@
 {
-  "$comment": "The languages passioncode.ai is published in (docs/DEPLOYMENT.md#languages). English is the source: its pages are written by hand at /, every other language is generated under /<code>/ from the catalogs in i18n/<code>/. Adding a language is one entry here (latinSpacing: false writes Latin names against CJK text without a space, as Japanese does; attachParticles: true drops the space before a Korean particle that follows a link or code span; phraseBreaks: true marks phrase boundaries in h1–h3 with <wbr> so headings wrap between phrases, as Japanese needs) plus its catalogs; `npm run locales -- --missing` lists what to translate. name: the language's own name, shown in the language switch. englishName: what the commercial mailbox reads. og: the Open Graph locale. intl: the BCP 47 tag for numbers, money and plural rules. switchLabel: the language switch's accessible name, in the language itself.",
+  "$comment": "The languages passioncode.ai is published in (docs/DEPLOYMENT.md#languages). English is the source: its pages are written by hand at /, every other language is generated under /<code>/ from the catalogs in i18n/<code>/. Adding a language is one entry here (latinSpacing: false writes Latin names against CJK text without a space, as Japanese does; attachParticles: true drops the space before a Korean particle that follows a link or code span; phraseBreaks: true marks phrase boundaries in h1–h3 and the short display lines of scripts/locales.mjs PHRASE_CLASSES with <wbr> so they wrap between phrases, as Japanese needs; bindWords lists one-letter words whose following space becomes a no-break space in every text node, as Polish typesetting asks; bindParticles lists particles a WORD JOINER keeps on the line of the character before them in headings and display lines, as Chinese needs) plus its catalogs; `npm run locales -- --missing` lists what to translate. name: the language's own name, shown in the language switch. englishName: what the commercial mailbox reads. og: the Open Graph locale. intl: the BCP 47 tag for numbers, money and plural rules. switchLabel: the language switch's accessible name, in the language itself.",
   "source": "en",
   "locales": {
     "en": {
@@ -35,7 +35,8 @@
       "englishName": "Polish",
       "og": "pl_PL",
       "intl": "pl-PL",
-      "switchLabel": "Język"
+      "switchLabel": "Język",
+      "bindWords": ["a", "i", "o", "u", "w", "z"]
     },
     "ko": {
       "name": "한국어",
@@ -66,7 +67,8 @@
       "og": "zh_CN",
       "intl": "zh-Hans",
       "switchLabel": "语言",
-      "lang": "zh-Hans"
+      "lang": "zh-Hans",
+      "bindParticles": "的了地得着过吗呢吧们中里"
     },
     "ja": {
       "name": "日本語",

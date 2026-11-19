@@ -5,7 +5,7 @@ import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
 import { PAGES, NOINDEX, SCOPED, SCOPED_PAGES, SOURCE_PAGES, TRANSLATED_LOCALES, localesOfPage } from './pages.mjs'
 import { LEAD_OPTIONS } from '../assets/lead-options.js'
-import { alternates, isoDuration, langTag, languageSwitch, LOCALES, mp4Seconds, vttText, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
+import { alternates, bindWords, isoDuration, langTag, languageSwitch, LOCALES, mp4Seconds, vttText, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
 import { catalogParts, dashFindings, moduleStringParts, readableParts, textFileParts } from './public-dashes.mjs'
 
@@ -38,7 +38,7 @@ const primaryNav = locale => {
   const catalog = loadCatalog(root, locale)
   // A guide-only language (SITE-070) keeps its header strings in its page's catalog.
   const common = { ...Object.assign({}, ...Object.values(catalog.pages)), ...catalog.common }
-  return PRIMARY_NAV.replace(/href="([^"]+)"/g, (_, href) => `href="${localizeUrl(href, locale)}"`).replace(/aria-label="([^"]+)"/, (_, label) => `aria-label="${common[label]}"`).replace(/>([^<]+)</g, (_, text) => `>${common[text]}<`)
+  return PRIMARY_NAV.replace(/href="([^"]+)"/g, (_, href) => `href="${localizeUrl(href, locale)}"`).replace(/aria-label="([^"]+)"/, (_, label) => `aria-label="${common[label]}"`).replace(/>([^<]+)</g, (_, text) => `>${bindWords(common[text], locale)}<`)
 }
 // Each translated language's own assertions (i18n/<locale>/_checks.json): its banned phrases and
 // the disclosures its pages must keep — a translation may not soften a limitation.
@@ -270,7 +270,9 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
   assert.equal((video.match(/<video /g) || []).length, 1, 'homepage: one player')
   assert.ok(!/<iframe/.test(home), 'homepage: no embedded third-party player')
   const tag = /<video [^>]*>/.exec(video)[0]
-  for (const a of ['controls', 'preload="none"', 'playsinline', 'poster="/assets/video/home.jpg"', 'width="1920"', 'height="1080"']) assert.ok(tag.includes(a), `homepage video: ${a}`)
+  for (const a of ['controls', 'preload="none"', 'poster="/assets/video/home.jpg"', 'width="1920"', 'height="1080"']) assert.ok(tag.includes(a), `homepage video: ${a}`)
+  // SITE-074 (audit H-11): no playsinline, so an iPhone plays the video full screen; desktop browsers play it inline either way.
+  assert.ok(!tag.includes('playsinline'), 'homepage video: no playsinline (full screen on an iPhone)')
   for (const a of ['autoplay', 'loop', 'muted']) assert.ok(!new RegExp(`\\s${a}\\b`).test(tag), `homepage video: no ${a} (motion doctrine: a rendered file owes a control and no autoplay)`)
   assert.ok(video.includes('<source src="/assets/video/home.webm" type="video/webm">') && video.includes('<source src="/assets/video/home.mp4" type="video/mp4">'), 'homepage video: WebM and MP4')
   assert.ok(/<track kind="captions" src="\/assets\/video\/home\.vtt" srclang="en" label="Captions" default>/.test(video), 'homepage video: English captions on by default')

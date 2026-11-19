@@ -209,7 +209,8 @@ test('a heading split by emphasis joins without a space in Chinese and Japanese,
   const html = page('<h1 id="t">From an empty computer to <em>your first agent</em></h1><p>We build <strong>around</strong> projects.</p>')
   const strings = { zh: { 'From an empty computer to': '从一台空白的电脑', 'your first agent': '到你的第一个智能体', 'We build': '我们围绕', around: '项目', 'projects.': '来构建。' }, ja: { 'From an empty computer to': '何もないコンピューターから', 'your first agent': '最初のエージェントまで', 'We build': '私たちは', around: 'プロジェクト', 'projects.': 'を中心に作ります。' }, ko: { 'From an empty computer to': '빈 컴퓨터에서', 'your first agent': '첫 에이전트까지', 'We build': '우리는', around: '프로젝트를', 'projects.': '중심으로 만듭니다.' } }
   const zh = localizePage(html, { sourceFile: 'x/index.html', locale: 'zh-hans', catalog: catalog(strings.zh) }).html
-  assert.match(zh, /<h1 id="t">从一台空白的电脑<em>到你的第一个智能体<\/em><\/h1>/)
+  assert.match(zh.replace(/\u2060/g, ''), /<h1 id="t">从一台空白的电脑<em>到你的第一个智能体<\/em><\/h1>/, 'no space at the join')
+  assert.match(zh, /空\u2060白\u2060的/, 'a word and its particle keep together in a heading (SITE-074)')
   assert.match(zh, /我们围绕<strong>项目<\/strong>来构建。/, 'inline emphasis between Chinese characters takes no space either side')
   const ja = localizePage(html, { sourceFile: 'x/index.html', locale: 'ja', catalog: catalog(strings.ja) }).html
   assert.match(ja, /から<em>最初の/, 'Japanese: no space at the join')
@@ -430,4 +431,39 @@ test('a scoped language has only its pages, and every version of such a page nam
     assert.ok(!read('index.html').includes(`hreflang="${LANG_TAGS[locale]}"`), `home lists ${locale}`)
     assert.ok(!existsSync(resolve(import.meta.dirname, '..', `${locale}/index.html`)), `${locale}/index.html exists`)
   }
+})
+
+// SITE-074: typesetting rules a language carries in the registry.
+test('Polish one-letter words never end a line: the space after them is no-break in text, never in attributes or titles', () => {
+  const html = page('<h1 title="Agents in teams">Agents in teams</h1><p>Work with <a href="/x/">people</a> and agents</p>').replace('<title>Hello</title>', '<title>Agents in teams</title>')
+  const strings = { Hello: 'Cześć', 'Agents in teams': 'Agenci w zespołach i z ludźmi', 'Work with': 'Praca z', people: 'ludźmi', 'and agents': 'i agentami, a w tle u nas' }
+  const { html: out } = localizePage(html, { sourceFile: 'x/index.html', locale: 'pl', catalog: catalog(strings) })
+  assert.match(out, /<h1 title="Agenci w zespołach i z ludźmi">Agenci w zespołach i z ludźmi<\/h1>/, 'h1 text bound, its title attribute untouched')
+  assert.match(out, /<p>Praca z <a href="\/pl\/x\/">ludźmi<\/a> i agentami, a w tle u nas<\/p>/, 'a word before a link binds to it; consecutive one-letter words all bind')
+  assert.match(out, /<title>Agenci w zespołach i z ludźmi<\/title>/)
+  assert.equal(skeletonDiff(skeleton(html), skeleton(out)), null)
+  const { html: other } = ru(page('<p>A test</p>'), { 'A test': 'В а и о' })
+  assert.doesNotMatch(other, / /, 'only a language with bindWords')
+})
+
+test('Chinese headings and display lines break between words, never inside one or before a particle', () => {
+  const html = page('<h1>The OS for teams</h1><p class="hero-reframe">The workplace of people</p><p>The workplace of people</p>')
+  const strings = { 'The OS for teams': '不绑定特定智能体的操作系统', 'The workplace of people': '由人掌控方向的工作空间' }
+  const { html: out } = localizePage(html, { sourceFile: 'x/index.html', locale: 'zh-hans', catalog: catalog(strings) })
+  const h1 = /<h1>([^<]*)<\/h1>/.exec(out)[1]
+  assert.equal(h1.replace(/\u2060/g, ''), '不绑定特定智能体的操作系统')
+  assert.match(h1, /体\u2060的/, 'the particle keeps to the character before it')
+  assert.match(h1, /操\u2060作/, 'a word is not split')
+  const reframe = /<p class="hero-reframe">([^<]*)<\/p>/.exec(out)[1]
+  assert.match(reframe, /方\u2060向\u2060的/, 'the word before a particle stays whole (掌控方 / 向的 was the defect)')
+  assert.match(reframe, /控方/, 'a break remains possible between words')
+  assert.match(out, /<p>由人掌控方向的工作空间<\/p>/, 'body text keeps the browser’s own breaking')
+  assert.equal(skeletonDiff(skeleton(html), skeleton(out)), null)
+})
+
+test('Japanese display lines outside h1–h3 also break between phrases', () => {
+  const html = page('<dl class="assess-facts"><div><dt>9.8 days</dt><dd>median lead time</dd></div></dl>')
+  const { html: out } = localizePage(html, { sourceFile: 'x/index.html', locale: 'ja', catalog: catalog({ '9.8 days': '9.8日', 'median lead time': '製品テキスト作成タスクのリードタイム中央値' }) })
+  assert.match(out, /<dd>[^<]*<wbr>[^<]*<\/dd>/)
+  assert.doesNotMatch(out, /中<wbr>央値/, 'a word is never split')
 })
