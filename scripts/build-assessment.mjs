@@ -26,7 +26,11 @@ cpSync(join(root, 'story/treatment'), join(out, 'story/treatment'), { recursive:
 // W12: Morpheus's recorded lines and the interface sounds (Asset Foundry), mp3
 cpSync(join(root, 'story/comic/audio'), join(out, 'story/comic/audio'), { recursive: true })
 // v4 the comic is the root (the operator, 2026-11-18); the scroll story with the side chat stays at /v3/
-writeFileSync(join(out, 'index.html'), readFileSync(join(root, 'story/comic/index.html')))
+// the comic page is written by comic-markup.py and then given its languages by comic-i18n.py; a markup run after the
+// translations drops the language switch, so a page without it is never shipped (SITE-068 v6.1, 2026-11-19)
+const comic = readFileSync(join(root, 'story/comic/index.html'), 'utf8')
+if (!comic.includes('class="lang-switch"')) throw new Error('build-assessment: story/comic/index.html has no language switch; run scripts/comic-i18n.py after scripts/comic-markup.py')
+writeFileSync(join(out, 'index.html'), comic)
 mkdirSync(join(out, 'v3'), { recursive: true })
 writeFileSync(join(out, 'v3/index.html'), readFileSync(join(root, 'story/index.html')))
 // Variation 2 «Ink» at /v2/: the same page, html.ink on top of html.matrix (refactor 2026-11-17, F15)
