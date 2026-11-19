@@ -6,6 +6,8 @@
 import { M } from './messages.js'
 import { resolveLocale, t as translate } from './i18n.js'
 import './analytics.js' // SITE-049: the site's analytics (docs/analytics/events.md)
+// SITE-075: the white rabbit on the home's assessment button, loaded only where it sits (assets/rabbit.js).
+if (document.querySelector('.perch-rabbit')) import('./rabbit.js')
 
 const root = document.documentElement
 const motion = window.matchMedia('(prefers-reduced-motion: no-preference)')

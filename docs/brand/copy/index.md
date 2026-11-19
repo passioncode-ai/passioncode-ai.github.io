@@ -56,7 +56,7 @@ The workplace where agents run your company’s processes, and people steer them
 
 Fabric is the home for your projects and their agents. Switchboard, Dashboards, Observatory and Inbox work with it, and on their own. One command sets it all up today
 
-Get the free assessment
+Free assessment for your organization
 
 →
 
@@ -369,6 +369,8 @@ ON REQUEST
 ### Your organization’s own device
 
 A dedicated computer or cloud for the company: separate spaces, access by level (owner, administrator, project architect, user) and a base set of agents from the first day.
+
+Get the free assessment
 
 For your organization
 

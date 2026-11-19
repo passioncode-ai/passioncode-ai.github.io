@@ -134,6 +134,7 @@
     "A base set of agents from day one": "从第一天起就有一组基础智能体",
     "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "组织的管理员智能体、数据室和流程评估，均从模板安装。",
     "Administration by PassionCode, on request": "应需由 PassionCode 管理",
-    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "我们可以远程管理你的系统；我们能看到配置和支出，但除非你同意，否则看不到你的内容。"
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "我们可以远程管理你的系统；我们能看到配置和支出，但除非你同意，否则看不到你的内容。",
+    "Get the free assessment": "获取免费评估"
   }
 }

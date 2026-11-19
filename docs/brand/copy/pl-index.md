@@ -56,7 +56,7 @@ Miejsce pracy, w którym agenci prowadzą procesy Twojej firmy, a ludzie nimi st
 
 Fabric to dom dla Twoich projektów i ich agentów. Switchboard, Dashboards, Observatory i Inbox działają razem z nim i samodzielnie. Już dziś wszystko konfiguruje jedno polecenie
 
-Poproś o bezpłatną ocenę
+Bezpłatna ocena dla Twojej organizacji
 
 →
 
@@ -369,6 +369,8 @@ NA ŻYCZENIE
 ### Własne urządzenie Twojej organizacji
 
 Dedykowany komputer lub chmura firmy: oddzielne przestrzenie, dostęp według poziomu (właściciel, administrator, architekt projektu, użytkownik) i podstawowy zestaw agentów od pierwszego dnia.
+
+Poproś o bezpłatną ocenę
 
 Dla Twojej organizacji
 

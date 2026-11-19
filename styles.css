@@ -1299,3 +1299,26 @@ html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -w
  .assessment-actions .button { width: 100%; }
 }
 .path-card .button + .text-link { margin-top: 16px; align-self: flex-start; font-size: 14px; }
+
+/* SITE-075 (operator 2026-11-19: «белый кролик ... пропрыгивает по экрану ... на кнопке assessment ... останавливается
+   сидит и с нее можно перейти»). The hero's first button is the organization's free assessment; a white rabbit sits
+   on its top edge, at the inline end, facing the label. It is absolute (the row keeps room above for it, so nothing
+   moves when it appears) and part of the link, so a click on it opens the assessment. assets/rabbit.js makes it hop
+   in once, calmly; with reduced motion, or without scripts, it simply sits there. */
+.home-hero .rabbit-actions { margin-top: 46px; }
+.has-rabbit { position: relative; }
+.perch-rabbit { position: absolute; z-index: 2; inset-inline-end: 18px; bottom: calc(100% - 6px); width: 54px; height: 54px; cursor: pointer; transform-origin: 50% 100%; filter: drop-shadow(0 5px 8px rgba(0,0,0,.38)); }
+.perch-rabbit svg { display: block; width: 100%; height: 100%; overflow: visible; transform: scaleX(-1); }
+:where([dir="rtl"]) .perch-rabbit svg { transform: none; }
+.perch-rabbit .ear { transform-box: fill-box; transform-origin: 50% 100%; transition: transform 220ms ease; }
+.has-rabbit:hover .perch-rabbit .ear-f, .has-rabbit:focus-visible .perch-rabbit .ear-f { transform: rotate(-14deg); }
+.has-rabbit:hover .perch-rabbit .ear-b, .has-rabbit:focus-visible .perch-rabbit .ear-b { transform: rotate(8deg); }
+.perch-rabbit.is-hopping { pointer-events: none; }
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+ .perch-rabbit:not(.is-seated):not(.is-hopping) { opacity: 0; pointer-events: none; }
+ .perch-rabbit.is-seated .ear-f { animation: rabbit-twitch 6s 1.4s infinite; }
+}
+@keyframes rabbit-twitch { 0%, 88%, 100% { rotate: 0deg; } 92% { rotate: -12deg; } 96% { rotate: 5deg; } }
+.cycle-links { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+.work-cycle .cycle-links a { margin-top: 0; }
+@media (max-width: 620px) { .perch-rabbit { width: 46px; height: 46px; inset-inline-end: 22px; } .home-hero .rabbit-actions { margin-top: 44px; } }

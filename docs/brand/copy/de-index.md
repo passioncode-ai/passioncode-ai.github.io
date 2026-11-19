@@ -56,7 +56,7 @@ Der Arbeitsplatz, an dem Agenten die Prozesse deines Unternehmens ausführen und
 
 Fabric ist das Zuhause für deine Projekte und ihre Agenten. Switchboard, Dashboards, Observatory und Inbox arbeiten mit ihm und auch für sich allein. Ein Befehl richtet heute alles ein
 
-Kostenloses Assessment anfragen
+Kostenloses Assessment für deine Organisation
 
 →
 
@@ -369,6 +369,8 @@ AUF ANFRAGE
 ### Das eigene Gerät deiner Organisation
 
 Ein dedizierter Rechner oder eine dedizierte Cloud für das Unternehmen: getrennte Bereiche, Zugriff nach Ebene (Inhaber, Administrator, Projektarchitekt, Nutzer) und ein Basis-Set an Agenten ab dem ersten Tag.
+
+Kostenloses Assessment anfragen
 
 Für deine Organisation
 

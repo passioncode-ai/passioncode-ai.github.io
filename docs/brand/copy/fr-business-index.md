@@ -54,6 +54,10 @@ Enterprise · pour les organisations
 
 Un agent qui vit sur l’ordinateur portable d’une seule personne n’aide que cette personne. Nous amenons des agents sur les machines de votre organisation, nous les connectons et nous montrons ce que chacun a coûté et ce qu’il a apporté, sur des outils open source, avec vos données sur vos machines ou dans votre propre cloud
 
+Obtenir l’audit gratuit
+
+→
+
 Estimation et demande
 
 ↓

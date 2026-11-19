@@ -56,7 +56,7 @@ L’espace de travail où les agents font tourner les processus de votre entrepr
 
 Fabric est le foyer de vos projets et de leurs agents. Switchboard, Dashboards, Observatory et Inbox fonctionnent avec lui, et aussi seuls. Une commande installe le tout dès aujourd’hui
 
-Obtenir l’audit gratuit
+Audit gratuit pour votre organisation
 
 →
 
@@ -369,6 +369,8 @@ SUR DEMANDE
 ### L’appareil propre à votre organisation
 
 Un ordinateur ou un cloud dédié à l’entreprise : des espaces séparés, un accès par niveau (propriétaire, administrateur, architecte de projet, utilisateur) et un socle d’agents dès le premier jour.
+
+Obtenir l’audit gratuit
 
 Pour votre organisation
 

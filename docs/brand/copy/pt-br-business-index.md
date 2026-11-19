@@ -54,6 +54,10 @@ Enterprise · para organizações
 
 Um agente que vive no notebook de uma pessoa ajuda uma pessoa. Levamos agentes para as máquinas da sua organização, conectamos todos e mostramos quanto cada um custou e o que entregou, com ferramentas de código aberto e com os seus dados nas suas máquinas ou na sua própria nuvem
 
+Peça a avaliação gratuita
+
+→
+
 Estimativa e solicitação
 
 ↓

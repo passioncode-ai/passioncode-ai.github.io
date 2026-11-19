@@ -166,3 +166,12 @@ test('SITE-072: every data-cta and data-cta-location an English page carries is 
   assert.deepEqual(clean({ n: 'cta_click', p: { page: 'home', location: 'assessment', target: 'assessment' } }, LOCALES).props, { page: 'home', location: 'assessment', target: 'assessment' })
   assert.deepEqual(clean({ n: 'cta_click', p: { page: 'home', location: 'hero', target: 'guide' } }, LOCALES).props, { page: 'home', location: 'hero', target: 'guide' })
 })
+
+test('SITE-075: the rabbit on the home assessment button: its click and its landing are values the Worker accepts', () => {
+  assert.deepEqual(clean({ n: 'cta_click', p: { page: 'home', location: 'rabbit', target: 'assessment' } }, LOCALES).props, { page: 'home', location: 'rabbit', target: 'assessment' })
+  assert.deepEqual(clean({ n: 'rabbit_landed', p: { page: 'home', motion: 'hop' } }, LOCALES).props, { page: 'home', motion: 'hop' })
+  assert.deepEqual(clean({ n: 'rabbit_landed', p: { page: 'home', motion: 'still' } }, LOCALES).props, { page: 'home', motion: 'still' })
+  assert.equal(clean({ n: 'rabbit_landed', p: { page: 'home', motion: 'somewhere' } }, LOCALES), null, 'a motion outside the list drops the event')
+  const home = readFileSync(new URL('../index.html', import.meta.url), 'utf8')
+  assert.match(home, /<a class="button button-primary has-rabbit" href="https:\/\/assessment\.passioncode\.ai\/\?lang=en" data-cta="assessment" data-cta-location="hero">[^<]+<span aria-hidden="true">→<\/span><span class="perch-rabbit" data-cta="assessment" data-cta-location="rabbit" aria-hidden="true">/, 'the rabbit sits inside the hero assessment link, so a click on it opens the assessment')
+})
