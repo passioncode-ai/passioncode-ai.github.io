@@ -1,0 +1,155 @@
+{
+  "schema": "passioncode-digest-post/1",
+  "date": "2026-11-19",
+  "title": "Memory Needs Checks, Harnesses Need Gates",
+  "description": "Expectation-grounded memory, guarded harness updates, asynchronous agent RL, and benchmarks for efficiency and autonomous AI development.",
+  "lead": "This selection treats agent improvement as an evaluation problem. Procedural memory needs expectation checks and utility-based pruning, harness changes need retention gates, and self-improvement results need randomized task order. New training and benchmark results add evidence on asynchronous RL, trajectory efficiency, autonomous AI development, and judge calibration.",
+  "chat_summary_ru": "Главная тема: память и самоизменение агентов полезны только при строгой проверке. AdMem решает 441 задачу против 388 у ReAct, а наивная память между задачами часто ухудшает результат.\nДля изменений обвязки агента предлагают проверять текущий прогресс, сохранение прошлых навыков и корректность перед принятием изменения.\nПеред оценкой цикла памяти перемешивайте порядок задач, а автоматические судьи калибруйте по реальным исходам.",
+  "items": [
+    {
+      "title": "AdMem: Expectation-Grounded Procedural Memory",
+      "url": "https://arxiv.org/abs/2611.20605",
+      "source": "arXiv 2611.20605",
+      "take": "AdMem turns expectation checks into utility-ranked procedural memories without requiring an environment reward.",
+      "points": [
+        "Before each action, the actor commits to an expected outcome, while a concurrent critic compares the realized outcome and writes a binary reward and reflection.",
+        "A scalar utility updated online under a noisy-OR reward model ranks retrieval with context similarity and controls eviction and merging.",
+        "Across 707 tasks in eight AgentBoard domains, AdMem solved 441 tasks, versus 388 for ReAct and 312 for workflow induction.",
+        "Workflow-induction memory underperformed memoryless ReAct in seven of eight domains, and an unstructured per-step store lost half of ReAct's completions on Jericho."
+      ],
+      "adopt": "When building an agent memory, write entries only after an expectation check, rank them by utility and context similarity, and add utility-based eviction and merging."
+    },
+    {
+      "title": "Harness-Level Forgetting",
+      "url": "https://academy.dair.ai/papers/harness-level-forgetting",
+      "source": "dair.ai Academy",
+      "take": "Updating any harness component can break previously reliable behavior while leaving the model untouched.",
+      "points": [
+        "The paper names this failure harness-level forgetting and provides a measurement protocol.",
+        "A Continual Optimizer proposes candidate harnesses from post-execution feedback, and a Continual Evaluator commits only after checking current improvement, historical retention, and validity.",
+        "Experiments on textual reasoning, multimodal perception, and open-world interaction show capability accumulation and failure recovery, with relative gains exceeding 10% over corresponding baselines in multiple settings."
+      ],
+      "adopt": "Gate every harness change with an evaluator that checks historical retention alongside current improvement and validity before commit."
+    },
+    {
+      "title": "The Fragility of Self-Improving Agents",
+      "url": "https://academy.dair.ai/papers/the-fragility-of-self-improving-agents",
+      "source": "dair.ai Academy",
+      "take": "Noisy multi-step evaluation and hidden task curricula can make self-improvement results fragile.",
+      "points": [
+        "Agent evaluation is inherently noisy in complex environments and on multi-step tasks, and a self-improving loop can amplify that noise.",
+        "Improvement depends heavily on task order, and prior work often uses default orderings that impose an implicit curriculum.",
+        "Detailed rubrics and environment feedback in memory construction partially close the performance degradation, but significant gaps remain."
+      ],
+      "adopt": "Shuffle task order before measuring a memory loop, and test detailed rubrics plus environment feedback as memory inputs rather than assuming they remove degradation."
+    },
+    {
+      "title": "FlashREINFORCE: Single-Rollout Asynchronous RL",
+      "url": "https://arxiv.org/abs/2611.18627",
+      "source": "arXiv 2611.18627",
+      "take": "FlashREINFORCE combines critic-free, single-rollout asynchronous training with controls for policy drift and negative updates.",
+      "points": [
+        "One-Batch REINFORCE, a Sequence Trust Region, and Sample-Mean Optimization provide prompt coverage and batch centering while controlling policy drift and length-amplified negative updates.",
+        "Training remained stable through 6,000 updates on DeepSeek-R1-Distill-Qwen-1.5B at policy lag four, and through 1,450 updates on Qwen3-30B-A3B at lag eight.",
+        "With half the rollouts, it scored 38.0 versus 36.3 for published synchronous baselines on the Qwen2.5-Math-1.5B five-benchmark mean.",
+        "On Qwen2.5-7B-Instruct it maintained tool use where GRPO stopped calling tools and reached 98.3% seen and 96.5% unseen ALFWorld success."
+      ],
+      "adopt": "For asynchronous agent RL, evaluate single-rollout training with explicit drift and negative-update controls, and track tool calling alongside task success."
+    },
+    {
+      "title": "Singularity-Bench: Can Agents Build Agents?",
+      "url": "https://arxiv.org/abs/2611.16591v1",
+      "source": "arXiv 2611.16591",
+      "take": "Singularity-Bench evaluates autonomous AI development across six end-to-end tasks and exposes reward hacking in the execution framework.",
+      "points": [
+        "The tasks span pre-training, mid-training, post-training, inference, the agent harness, and cluster orchestration.",
+        "Red-teaming covered 9 of the 10 categories in the OWASP Top 10 for Agentic Applications, exposed reward-hacking vulnerabilities in Harbor, and led to Breakwater.",
+        "Opus 5.5 with Claude Code matched or outperformed the human baseline on all six tasks with a Singularity-Index of 1.25, while the remaining agents averaged 0.58."
+      ],
+      "adopt": "Use end-to-end agent-building tasks to evaluate autonomous development, and red-team the execution framework for reward hacking before trusting scores."
+    },
+    {
+      "title": "DetourBench: Exact Minimum-Action Bounds",
+      "url": "https://arxiv.org/abs/2611.20844",
+      "source": "arXiv 2611.20844",
+      "take": "DetourBench makes trajectory efficiency measurable by computing exact minimum action counts for partially observable tasks.",
+      "points": [
+        "Each task is a finite, partially observable transition system with unit-cost accesses whose resources become globally addressable after discovery, allowing exhaustive search to compute the exact minimum action count.",
+        "Across 375 scored episodes from five model endpoints on 25 integrated tasks with three repeats, success ranged from 58.7% to 96.0%."
+      ],
+      "adopt": "Benchmark interactive agents with both success and distance from an exact minimum-action bound so efficient trajectories are distinguishable from successful detours."
+    },
+    {
+      "title": "ReproBridge and AutoRefine",
+      "url": "https://academy.dair.ai/papers/week/2026-11-09-november-15",
+      "source": "dair.ai Academy",
+      "take": "Refined reproduction artifacts and calibrated judges improve both paper reproduction and agreement with deployed agent outcomes.",
+      "points": [
+        "On 1,029 tasks from 36 papers, refined artifacts in ReproBridge raised reproduction success from 76.4% to 92.6% across four models and cut API spending by 19.7%.",
+        "On Meta's deployed performance-optimization agent, AutoRefine judge calibration raised agreement between the judge and real outcomes from 0.16 to 0.51."
+      ],
+      "adopt": "Refine reproduction artifacts before execution and calibrate agent judges against real outcomes before using their scores for optimization."
+    }
+  ],
+  "adopt_summary": [
+    "Store procedural memories only after expectation checks, with utility-based retrieval and eviction.",
+    "Gate harness changes on current improvement, historical retention, and validity.",
+    "Shuffle task order before evaluating memory or self-improvement loops.",
+    "Evaluate agents on trajectory efficiency, tool use, and reward hacking, not success alone.",
+    "Calibrate automated judges against real outcomes."
+  ],
+  "sources_note": "Collected by PassionCode's research agent from arXiv, Hugging Face daily papers, dair.ai, lab research pages and researchers' blogs; every number above is quoted from the source it links.",
+  "copylot_report": [
+    "a7b72d52-7b1c-46ab-8ed7-51ded943bd3d",
+    "81101089-b66e-4a17-9035-fe3fb81abdf1",
+    "34ccdbc0-f3a0-4975-b235-7834a3cd369c",
+    "ef533943-0671-4332-ac89-72cc0af2e3e3",
+    "eb565756-aac8-4d40-aba6-81afdca0d821",
+    "4f49af3c-dfe0-452d-b954-288ec9fe060d",
+    "6cd2d8b8-f781-4786-b2a5-9b004dc67dbc",
+    "4848a34f-7b3d-476b-9c9c-55b04cefda8d",
+    "4be9a05b-5cc7-4e10-b798-179dbc9e2770",
+    "07f240da-d2cf-4e91-867a-d2f96abad95b",
+    "91ad67b0-aa2b-4c28-8864-05942f272819",
+    "5ffe8966-62f1-4236-a995-1bc42edb9b49",
+    "64501669-7ae1-4ccf-9dc9-b9933e8ef7de",
+    "13470be6-f728-494b-a056-86b83352f735",
+    "ad26cb40-2640-4fb7-b373-e5305ac5a556",
+    "628c6acf-ebff-4040-bcfa-1e63a343d777",
+    "6206ec21-f3f4-439a-82c0-25ccccb747a9",
+    "e49c665e-acad-4669-9d71-ca51a19ccdd1",
+    "4ef4b1b4-2e28-496b-ad17-47601d3e616e",
+    "7abbd54f-c557-4c5d-b520-740c77883b35",
+    "78910791-450b-4b52-8554-04463f73a05b",
+    "f0d63a5c-7220-4533-931b-ce5f8f132b14",
+    "8b989ce4-2d98-4f33-adc0-fe6e2b940ace",
+    "7dc19eca-76ec-40fb-8475-73b8b77c6979",
+    "e6adb321-9817-4ef9-a7ae-e1c1bf8654fd",
+    "792b6185-50c1-4393-a0cd-02a96a48b113",
+    "518ecc6b-1e9d-463e-bd65-e48bb80de9bb",
+    "a4e2b105-9c42-47f2-a9ef-590c435920e0",
+    "9d532a69-ce9c-4074-8557-edcfa09f43b5",
+    "e963402e-6503-4d1c-bec4-46c9d369f39e",
+    "029a969f-1dfe-4aeb-b168-d93679e69459",
+    "5e71d111-b207-4739-956b-41bc1842aee2",
+    "3b2858b9-c5f4-4ef3-bf15-14c24d26341c",
+    "cea8edde-666a-4155-84af-541dfc49aee5",
+    "316d723f-1654-4e0f-ac02-643671afcbe3",
+    "a6a85329-2dfa-4df0-9d1c-e1357cd32ab7",
+    "afefdb0e-2a35-4d3c-b9fb-30492d1afda2",
+    "69f0c040-b48c-4e49-b2b0-e6c6f26af2c8",
+    "97cdb768-395d-4e72-bc92-881cbeb93734",
+    "55f6bd30-6e5f-4070-a816-4cd5b34a5eee",
+    "7415a8bf-bb5a-415f-a4c1-3b7b8324f403",
+    "2c52a1bb-b0f6-4ea8-b334-26beb8933c3c",
+    "4c1f22c0-0677-433f-9ad0-62cb9e5b9344",
+    "b97b7d34-382c-4ae4-b32f-18f167ab4a8b",
+    "d2b2ea21-470c-43fb-82e9-9eff6175a9cd",
+    "cfb27b1e-78c0-469a-bb20-3635db98a6a8",
+    "87e4dc1d-cad9-4b95-a776-39348a8a21b8",
+    "7320d0eb-5fec-4f6a-bddb-36a1bb84e9ac",
+    "2b162928-1ecd-402f-87e2-da301bc2d396",
+    "06bc7f77-a855-4652-b9c8-bad72cc99ef0",
+    "f8ba6685-2a68-4197-8bde-40af9e3cec0c"
+  ]
+}
