@@ -29,6 +29,8 @@ const publicFiles = [
   'styles.css',
   'fabric/release.json',
   'assets/fabric-home.jpg',
+  // SITE-074: the founder's portrait in About (his public portrait at sshlg.me, cropped).
+  'assets/founder-sergey-sheleg.jpg',
   'assets/fabric-board.jpg',
   'assets/fabric-releases.jpg',
   'switchboard/release.json',

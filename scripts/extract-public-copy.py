@@ -8,7 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def render(source, html):
     return ('Contract: brand-contract v1\n\n<!-- Generated from ' + source
             + '; edit source and rerun scripts/extract-public-copy.py. -->\n\n'
-            + '\n\n'.join(projection(parse(html))) + '\n')
+            # SITE-074: the WORD JOINER that keeps a Chinese particle on its line is invisible; the record omits it.
+            + '\n\n'.join(projection(parse(html))).replace('\u2060', '') + '\n')
 
 def main():
     for source in PAGES:
