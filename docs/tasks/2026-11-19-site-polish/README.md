@@ -1,6 +1,6 @@
 # SITE-073 and SITE-074: a truthful verify-live and the home polish
 
-Status: SITE-073 merged (PR #174, squash `1eab1119`); SITE-074 in this change. Backlog rows SITE-073, SITE-074.
+Status: live since 2026-11-19 17:50 UTC. SITE-073: PR #174, squash `1eab1119`; SITE-074: PR #175, squash `13ab95d3`; Worker version `1f04c970-4995-4d3b-89e0-87f00c0cf4c6`. Backlog rows SITE-073, SITE-074.
 
 ## Order
 
@@ -52,7 +52,18 @@ unchanged (one word moved across the emphasis), so no new translation was needed
 
 ## 4. Deploy and live evidence
 
-Filled after the merge and the deploy.
+- Deploy: `use_secret.py run --env prod passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npm run deploy` from `main`
+  `13ab95d3` (its `npm run check` and `npm run build` passed): Worker version `1f04c970-4995-4d3b-89e0-87f00c0cf4c6`.
+- `python3 scripts/verify-live.py --output docs/tasks/2026-11-19-site-polish/verify-live.json`: PASS, 578 checks, 0
+  failures: 530 assets, 450 pages in 19 languages, hreflang on 416, 13 download routes, 23 not-found addresses, the
+  intake in dry-run mode; the edge served Fabric 0.3.24, Switchboard 0.7.122, Dashboards 0.8.217, Observatory 0.45.3
+  against the committed 0.3.16, 0.7.22, 0.8.30, 0.34.0 ([receipt](verify-live.json)).
+- Live readback (curl): the home carries the portrait (`/assets/founder-sergey-sheleg.jpg` 200, 14164 bytes) and no
+  `playsinline`.
+- Browser readback (Playwright WebKit on https://passioncode.ai): /pl/ at 390 px (gold line «w zespołach AI-native»),
+  /zh-hans/ at 1440 px (智能体的 / 操作系统, the card's figure column wide enough), / About at 1440 px with the
+  portrait, the video at 390 px edge to edge, /ja/ at 1440 px (中央値 and 計画 whole); no horizontal overflow. Shots
+  deleted after review.
 
 ## Open
 
