@@ -22,7 +22,7 @@
 .intro.hopped .intro-rabbit{animation:hopIn 1.5s cubic-bezier(.3,0,.3,1) forwards}
 @keyframes hopIn{0%{left:-80px;translate:0 0;opacity:1}18%{translate:0 -70px}33%{translate:0 0}50%{translate:0 -60px}66%{translate:0 0}
  82%{translate:0 -40px}100%{left:calc(50% - 32px);translate:0 0;opacity:1}}
-.intro.offered .intro-rabbit{animation:none;left:calc(50% - 32px);opacity:1;top:auto;bottom:6vh}
+.intro.offered .intro-rabbit{animation:none;left:calc(50% - 32px);opacity:1;top:auto;bottom:1.5vh}
 .intro-rabbit.jump-red{animation:jumpRed .9s cubic-bezier(.3,0,.3,1) forwards!important}
 .intro-rabbit.jump-blue{animation:jumpBlue .9s cubic-bezier(.3,0,.3,1) forwards!important}
 
