@@ -103,7 +103,20 @@ versions](#always-current-versions)). `scripts/verify-live.py` checks every entr
 (61 on 2026-10-08; the not-found page of each language through an address that cannot exist under
 its prefix, expecting 404), each page's `<html lang>` and, on indexed pages, the hreflang list (every
 language and x-default), redirect destination/no-store/noindex, and that private paths and the
-not-found page's own addresses in every language answer 404:
+not-found page's own addresses in every language answer 404.
+
+Since SITE-073 (2026-11-19) it compares with what the Worker legitimately serves. It reads the release
+snapshot the edge serves (`GET /api/releases`), fails when that snapshot is below `releases/current.json`
+(the floor `worker/releases.js` `mergeSnapshots` keeps, except a policy's `hold`), and expects each page
+as the build rewritten with that snapshot (`scripts/verify-live-expect.mjs` applies `worker/live.js`
+`rewriteSource`, the Worker's own rule), so a release newer than the last sync is not a failure. The
+download routes are checked against the same snapshot, every committed platform included. Hreflang
+follows `scripts/locales.mjs` `alternates`: the guide-only languages of `i18n/scoped-locales.json` on
+their pages, none on a held version and none on the English-only digest. `robots.txt` may start with
+Cloudflare's managed block (`# BEGIN Cloudflare Managed content` to `# END Cloudflare Managed Content`);
+the lines after it must equal ours, and a managed block that disallows `/` to every crawler fails. A
+release published during the run is its own failing row (run again). Tests:
+`scripts/test_verify_live.py`, `scripts/verify-live-expect.test.mjs`.
 
 ```sh
 python3 scripts/verify-live.py --output docs/evidence/2026-10-01-workplace/live.json
