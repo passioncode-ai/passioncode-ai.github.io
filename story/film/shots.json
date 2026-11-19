@@ -203,24 +203,24 @@
   "version": 7,
   "how": "frames",
   "refs": [
-   "src/f15end.jpg",
-   "src/f15mid.jpg",
-   "refs/mentor.png"
+   "frames/16e.png",
+   "refs/mentor.png",
+   "src/f15end.jpg"
   ],
   "first": "=16.end",
-  "end": "medium shot in the same bright office, the oak desk and plants behind him: the mentor exactly as in the mentor reference sheet, an original character: a calm bald man about fifty with a short neatly trimmed grey beard, small round dark glasses, a well-cut charcoal suit, a crisp white shirt open at the collar with no tie, a small green pocket square stands one step from the camera in front of the desk and holds both open hands toward the viewer at waist height, a small glossy red capsule in one open palm and a small glossy blue capsule in the other. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos.",
+  "end": "the same view as the first reference, the same camera direction (the white side wall, the big window on the left, the same plants, the same light oak desk and dark leather chair): the mentor exactly as in the mentor reference sheet, an original character: a calm bald man about fifty with a short neatly trimmed grey beard, small round dark glasses, a well-cut charcoal suit, a crisp white shirt open at the collar with no tie, a small green pocket square has risen and walked round the desk toward the camera; he stands one step from the camera in front of the desk, a medium shot, and holds both open hands toward the viewer at waist height, a small glossy red capsule in one open palm and a small glossy blue capsule in the other. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos.",
   "end_refs_first": false,
-  "prompt": "he rises from the chair, walks round the desk toward the camera, stops and holds out both open hands toward the viewer, a red capsule and a blue capsule resting in his palms. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos."
+  "prompt": "he rises from the chair, walks round the desk toward the camera, stops and holds out both open hands toward the viewer, a red capsule and a blue capsule resting in his palms; the room and the camera direction stay the same. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos."
  },
  {
   "n": "18",
-  "seconds": 5,
+  "seconds": 2.2,
   "version": 7,
   "how": "frames",
   "refs": [
-   "src/f15end.jpg",
-   "src/f15mid.jpg",
-   "refs/mentor.png"
+   "frames/16e.png",
+   "refs/mentor.png",
+   "src/f15end.jpg"
   ],
   "first": "=17.end",
   "end": "a closer shot of the same man in the same office: his two open palms held out toward the viewer fill the lower half of the frame, a small glossy red capsule in one open palm and a small glossy blue capsule in the other, his calm face with the small round dark glasses above them. in exactly the rendering of the reference office images: a soft painted illustration with clean drawn lines, warm natural daylight, light oak floor, white walls, green plants; not a photograph, not a cartoon; 16:9, no text, no logos.",

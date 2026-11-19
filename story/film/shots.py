@@ -260,7 +260,7 @@ REFS = {'office': 'refs/office.png', 'director': 'refs/director.png', 'smith': '
         # frames of the v5 cut kept as location references: the kitchen (10), the coffee machine (11), the corridor (13,
         # 14) and the future office (15, its last and middle frame)
         'kitchen': 'src/dir10.jpg', 'machine': 'src/smith11.jpg', 'corridor': 'src/c13.jpg', 'corridor_end': 'src/c14.jpg',
-        'future': 'src/f15end.jpg', 'future_mid': 'src/f15mid.jpg'}
+        'future': 'src/f15end.jpg', 'future_mid': 'src/f15mid.jpg', 'future_k2': 'frames/16e.png'}
 DIRECTOR_REF = 'the director exactly as in the director reference sheet (same face, short dark side-parted hair, dark grey suit, white shirt, dark tie)'
 THE_OFFICE = ('this exact open-plan office from the office reference: the same long central aisle, the same rows of grey metal '
               'desks with glowing green monitors, the same suspended ceiling with fluorescent panels and the same wall of '
@@ -332,13 +332,19 @@ SHOTS_V7 = [
      'looking at the camera, his hands resting on the desk',
      'the camera slowly turns to the right across the bright office and finds the man sitting in an office chair behind '
      'a wooden desk; he looks up at the camera'),
-    ('17', 5, 'frames', ['future', 'future_mid', 'mentor'],
+    # 17 v7.1: its first end frame looked at the window wall while 16 ends looking at the side wall; both takes cross-faded
+    # through the desk (judges: «phases through the desk»). The end frame now keeps 16's camera direction.
+    ('17', 5, 'frames', ['future_k2', 'mentor', 'future'],
      '=16.end',
-     f'medium shot in the same bright office, the oak desk and plants behind him: {MENTOR_V7} stands one step from the '
-     f'camera in front of the desk and holds both open hands toward the viewer at waist height, {PILLS}',
+     f'the same view as the first reference, the same camera direction (the white side wall, the big window on the left, '
+     f'the same plants, the same light oak desk and dark leather chair): {MENTOR_V7} has risen and walked round the desk '
+     f'toward the camera; he stands one step from the camera in front of the desk, a medium shot, and holds both open '
+     f'hands toward the viewer at waist height, {PILLS}',
      'he rises from the chair, walks round the desk toward the camera, stops and holds out both open hands toward the '
-     'viewer, a red capsule and a blue capsule resting in his palms'),
-    ('18', 5, 'frames', ['future', 'future_mid', 'mentor'],
+     'viewer, a red capsule and a blue capsule resting in his palms; the room and the camera direction stay the same'),
+    # 18 v7.1: both 5 s takes push in until the palms swell (judges: «unnaturally swollen, large, and cartoonish»); the cut
+    # keeps the first 2.2 s of take 1, a short push-in while his line plays over the open hands
+    ('18', 2.2, 'frames', ['future_k2', 'mentor', 'future'],
      '=17.end', None,
      'he holds still with his palms open toward the viewer, a red capsule and a blue capsule in them; the camera slowly '
      'pushes in toward his hands; he gives a slight calm nod'),

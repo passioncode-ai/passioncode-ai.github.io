@@ -11,7 +11,7 @@ the judged take), the sounds and voices as <name>.wav and music-bed.mp3. A clip'
 stays under Cloudflare's 25 MiB asset limit.
 
 v7 (2026-11-19): the shot table has 18 shots (shots.py `SHOTS_V7`): 16, 17 and 18 are the ending in shot 15's office (the
-mentor at his desk, standing, holding out the two capsules); his line starts on 18. The v5 cut (16 shots, the line on 16)
+mentor at his desk, standing, holding out the two capsules); his line starts 3.3 s into 17, as his hands open. The v5 cut (16 shots, the line on 16)
 is commit 139b1b0d."""
 import json, pathlib, subprocess, sys
 
@@ -67,7 +67,7 @@ def main(media):
         ('f-glitch', S['15'] - 0.5, -9), ('f-steps', S['17'] + 1.2, -18),
     ]
     caps = {'manager': [S['04'] + 1.0, S['04'] + 4.0], 'error': [S['11'] + 0.4, S['11'] + 3.9],
-            'morpheus': [S['18'] + 0.4, total - 0.1]}
+            'morpheus': [S['17'] + 3.3, total - 0.1]}
     # the office: one bed from the first office shot to the time freeze, which cuts it into silence (the brief); built
     # from the walla takes laid over each other in a fixed shuffled order, so no one click repeats every two seconds
     walla = [media / f'f-walla{i}.wav' for i in (1, 2, 3, 4) if (media / f'f-walla{i}.wav').exists()]
