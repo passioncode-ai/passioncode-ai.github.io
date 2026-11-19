@@ -53,10 +53,22 @@ Earlier: `2026-11-18-story-landing-v5.md`. Script: `story/v6-script.json` (every
 | Page v6 | built, checked at 1440 and 390 in Chrome | `scripts/comic-markup.py`, `story/comic/comic.js`, `story/comic/v6.css` |
 | Bot dissolve animation, voice messages | made | `story/film/morpheus-dissolve.mp4`, `story/bot/` |
 
-## 4. Next (exact)
+## 4. Delivered (2026-11-19 09:00 CET)
 
-1. When B9 is delivered: copy it to `media/bclips/B9.mp4`, run `python3 story/film/backstory_cut.py <media>`, then
-   `python3 scripts/comic-markup.py`, i18n, `npm run build:assessment`.
-2. Full check desktop and phone, RU and EN, every path (`scripts/e2e/story-matrix.mjs` updated to v6), Safari pass.
-3. Deploy (`wrangler deploy -c wrangler.assessment.json`), live check, Morpheus posts the link to the team chat.
-4. Give the PM agent the media (dissolve animation, voice messages) on thread `b4a26491`.
+| Check | Result | Evidence |
+|---|---|---|
+| Backstory film | 50.4 s, RU and EN, every line on its shot | `story/film/backstory-timeline.json`, commit `a6481402` |
+| Full check, local | 39/39 | `scripts/e2e/story-matrix.mjs` against dist-assessment |
+| Deploy | Worker version `4b2f619e-fe90-42ef-9668-c7639f0b0b72` | `wrangler deploy -c wrangler.assessment.json` |
+| Full check, live | 39/39 | the same script against https://assessment.passioncode.ai |
+| Safari, live | intro, backstory (50.4 s, no media error), end link pass; leafing not measurable there: the automation window is hidden and gets one animation frame in 2 s | `safari-v6.py` in the tools folder |
+| npm test | 136/136 | |
+| Morpheus in the team chat | message 97, text mentions of both founders | Copylot `eaa0f8a2` |
+| Bot media to the PM agent | board message `04c359c5` on thread `b4a26491` | |
+
+## 5. Open, blocking nothing
+
+- The bot side of the lead magnet is the PM agent's (request `bbd742b6`); until it ships, «Написать Морфеусу» opens
+  the bot, which answers a stranger with its present waiting reply.
+- A person checks leafing in a visible Safari and on a real phone.
+- The mix of both films on headphones (Fabric task `29fb8216`).
