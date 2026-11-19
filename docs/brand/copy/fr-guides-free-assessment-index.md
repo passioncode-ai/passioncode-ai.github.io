@@ -96,6 +96,8 @@ GUIDES
 
 ## Autres guides
 
+Pourquoi votre release dérape encore : ce que révèle un audit d'équipe
+
 Lancez votre espace de travail pour agents en 20 minutes
 
 Comment les modèles d’agents deviennent vos agents

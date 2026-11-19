@@ -1,6 +1,6 @@
 import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { PAGES } from './pages.mjs'
+import { PAGES, SCOPED_PAGES } from './pages.mjs'
 import { LOCALES, localizedFile } from './locales.mjs'
 import { PROMPT_FILE } from './agent-prompt.mjs'
 import { DIGEST_FILES } from './build-digest.mjs'
@@ -10,6 +10,8 @@ const output = resolve(root, 'dist')
 
 const publicFiles = [
   ...PAGES,
+  // SITE-070: the pages of the scoped languages (i18n/scoped-locales.json).
+  ...SCOPED_PAGES,
   // The English-only AI research digest, its feeds and its sitemap (scripts/build-digest.mjs).
   ...DIGEST_FILES(),
   // The /business/ agent prompt as plain text, in every language (npm run locales writes them).

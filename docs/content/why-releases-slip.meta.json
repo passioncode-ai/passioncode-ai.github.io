@@ -1,0 +1,471 @@
+{
+  "schema": "content-record/1",
+  "page": "guides/why-releases-slip/index.html",
+  "published": "2026-11-19",
+  "order": "operator 2026-11-19, Fabric task 6c4043eb (fabric-workspace board); backlog SITE-070",
+  "source_story": "SITE-068 story landing (branch site/story-morpheus, story/v6-script.json)",
+  "voice": {
+    "copylot_voice": "93cd4851-8bf8-44f3-94b2-570ed3f2bce0",
+    "version": 1
+  },
+  "english_check": {
+    "copylot_report": "ab14f97e-b49a-491c-96d5-c92e2b10b58d",
+    "score": 100,
+    "verdict": "pass",
+    "blocking": [],
+    "advice": [
+      "en-rule-of-three (three suggestions; the description was reworded after it)"
+    ]
+  },
+  "claims": [
+    {
+      "claim": "The assessment reads the last 90 days of trackers, repositories, documents, team chats, mail and support, read-only.",
+      "status": "released (offer on request)",
+      "source": "docs/brand/facts.md row «free assessment (SITE-056)»; fabric-workspace knowledge/system/entry-assessment.md:25"
+    },
+    {
+      "claim": "One pilot company: the 20 tasks of writing product texts, median lead time 9.8 days (calendar days, not hours).",
+      "status": "measured, one company, anonymised",
+      "source": "fabric-workspace knowledge/north-star.md:67-68 (main 388a9175)",
+      "risk": "a single-company figure: shown with its sample and method on the page; the company is never named (facts.md:78)",
+      "softer_variant": "drop the figure and keep the method: «the assessment measures lead time per kind of task»"
+    },
+    {
+      "claim": "Same pilot: 60 to 85% of the tasks the planners moved in a week were in no plan of that week (weeks 2026-05-25 to 2026-11-02).",
+      "status": "measured, one company, anonymised",
+      "source": "the assessment agent's plan-fact report of 2026-11-06 (private agent; quoted: «60 to 85 % of the Jira keys the planners moved in a week were in no plan of that week»)",
+      "risk": "the source counts Jira keys moved by planners; the page says tasks the planners moved and names the part that was follow-up, reviews and bugs",
+      "softer_variant": "«in one pilot company most of a week's moved tasks were in no plan of that week»"
+    },
+    {
+      "claim": "Ping-pong: a task returns to its earlier assignee within 14 days.",
+      "status": "released (assessment metric)",
+      "source": "the assessment agent's glossary (private agent): «the issue returns to its earlier assignee within 14 days»"
+    },
+    {
+      "claim": "PM agent defaults: 07:00 check-in, three buttons (seen, taking it, not mine), reminder every 30 working minutes, after 2 working hours the planner then the deputy then the administrator, 10:00 stale tasks, 21:00 founders' report daily.",
+      "status": "released (PM agent defaults, settings)",
+      "source": "passioncode-pm-agent playbook.md:304-322, code/escalation.py:3-18,100 (main d62ba6c4)"
+    },
+    {
+      "claim": "Releases also wait for decisions, texts, reviews and tasks without an owner (framing, not a measured finding).",
+      "status": "framing",
+      "source": "the story landing SITE-068 (story/v6-script.json:221); the assessment measures the stage with the largest wait share (its design, private agent)"
+    }
+  ],
+  "compliance": {
+    "advertising": "no superlatives, no promise of results; the free assessment is named as on its own guide (ON REQUEST, no price or start date)",
+    "privacy": "the pilot company is not named; group totals only",
+    "search": "machine adaptation of 18 languages is a known demotion profile (seo-aeo-audit references/technical-checks.md B2, failure mode 5); every language waits for a native check (SITE-071); hreflang complete with x-default",
+    "bot": "the button opens Morpheus on Telegram with lp_guide-why-releases-slip_<ru|en>; the bot has lead texts in Russian and English only (passioncode-pm-agent request df174f18)"
+  },
+  "locales": {
+    "ru": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "ru-RU",
+        "fabricJobId": "job_541a387142c1f895ca7fa111",
+        "executionJobId": "1cafb5cc-2129-42d0-8039-b5ed547d3b34",
+        "reportIds": [
+          "a99de423-a15e-452b-a3f0-e04e57dec892"
+        ],
+        "judgeScore": 88,
+        "costUsd": 0.1621719696,
+        "model": "anthropic/claude-sonnet-5.5",
+        "decision": "auto (passed judge bar). Retry job: first job at maxChargeUsd 0.50 refused max-charge-exceeded (job_da9b3a80653fe7f4016c2bc2, nothing charged); second job job_0f4a0253df9434bf3e09d87d on default writer moonshotai/kimi-k3.1-pro at maxChargeUsd 1.00 hit input_required because the draft was truncated at [29], declined (charged 0.1274976); this third job pinned modelId anthropic/claude-sonnet-5.5 at maxChargeUsd 1.00",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "es": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "es-ES",
+        "fabricJobId": "job_7a797da05520be8fe9c8cbd8",
+        "executionJobId": "39d7031c-2125-4c2e-97a5-09bd3653e373",
+        "reportIds": [
+          "a5067e7f-416c-4a0e-8582-54733ea85973"
+        ],
+        "judgeScore": 92,
+        "costUsd": 0.160773568,
+        "model": "anthropic/claude-sonnet-5.5",
+        "decision": "auto (passed judge bar). Retry job: first job at maxChargeUsd 0.50 refused max-charge-exceeded (job_a96a4418b6d7c0dfda32fe9b, nothing charged); second job job_54cb8e7768a203668fa7c666 on default writer moonshotai/kimi-k3.1-pro at maxChargeUsd 1.00 was cancelled while still queued after Kimi truncated the ru, pt-br and fr drafts; this third job pinned modelId anthropic/claude-sonnet-5.5 at maxChargeUsd 1.00",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "de": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "de-DE",
+        "fabricJobId": "job_2d4acb58a5832cc12af66a1d",
+        "executionJobId": "fb578e8e-c83b-4872-ba81-bbba273858de",
+        "reportIds": [
+          "4e956992-f9d5-4925-92d3-b6b9312410ab"
+        ],
+        "judgeScore": 90,
+        "costUsd": 0.17959432,
+        "model": "anthropic/claude-sonnet-5.5",
+        "decision": "auto (passed judge bar). Retry job: first job at maxChargeUsd 0.50 refused max-charge-exceeded (job_75b063ef58201cbe9ecae660, nothing charged); second job job_0348106f81b675a869b2b8db on default writer moonshotai/kimi-k3.1-pro at maxChargeUsd 1.00 was cancelled while still queued after Kimi truncated the ru, pt-br and fr drafts; this third job pinned modelId anthropic/claude-sonnet-5.5 at maxChargeUsd 1.00. Judge note: line 17 says 'mittlere Durchlaufzeit' where the source means median ('Median'); worth a manual fix.",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "pt-br": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "pt-BR",
+        "fabricJobId": "job_cd0688ef8c3b769b1a7382ff",
+        "executionJobId": "797a9f7d-6c18-4793-bd9a-5f988c6626fe",
+        "reportIds": [
+          "0285ac83-8ede-4521-a097-cea291f91f72"
+        ],
+        "judgeScore": 92,
+        "costUsd": 0.1373296,
+        "model": "anthropic/claude-sonnet-5.5",
+        "decision": "auto (passed judge bar). Retry job: first job at maxChargeUsd 0.50 refused max-charge-exceeded (job_e100244904407942a707637a, nothing charged); second job job_6d6bf0e2980fdb5522e3ae04 on default writer moonshotai/kimi-k3.1-pro at maxChargeUsd 1.00 hit input_required because the draft was truncated at [34], declined; this third job pinned modelId anthropic/claude-sonnet-5.5 at maxChargeUsd 1.00",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "fr": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "fr-FR",
+        "fabricJobId": "job_c3f3542ee65df9073e573370",
+        "executionJobId": "cde47c53-2040-4262-8f01-5d636830df2f",
+        "reportIds": [
+          "f9f18bd2-3b2c-4ae6-a132-022db785cda9"
+        ],
+        "judgeScore": 91,
+        "costUsd": 0.0854895,
+        "model": "anthropic/claude-sonnet-5.5",
+        "decision": "auto (passed judge bar). Retry job: first job at maxChargeUsd 0.50 refused max-charge-exceeded (job_187ce2468f327e7f0862f57c, nothing charged); second job job_f16c2ee2ad5a8aa74178ab71 on default writer moonshotai/kimi-k3.1-pro at maxChargeUsd 1.00 hit input_required because the draft was truncated at [34] (it also wrote 07 h 00 instead of 07:00), declined; this third job pinned modelId anthropic/claude-sonnet-5.5 at maxChargeUsd 1.00. costUsd is the charge so far: Copylot notes the final charge is still being reconciled with the provider, at most 0.2877645 USD. Text uses straight ASCII apostrophes as returned.",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "pl": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "pl-PL",
+        "fabricJobId": "job_cb2a47c2a54f8168f47cf6f0",
+        "executionJobId": "a8f97809-1d84-4faf-bffd-439324ed857e",
+        "reportIds": [
+          "92bef948-2d52-4cc4-bac1-d16662182a8a"
+        ],
+        "judgeScore": 88,
+        "costUsd": 0.098452,
+        "model": "anthropic/claude-sonnet-5.5",
+        "decision": "auto (passed judge bar). Retry job: first job at maxChargeUsd 0.50 refused max-charge-exceeded (job_c3f513cf38058160220c8998, nothing charged); second job job_ccdfb728ffa5c240caec79ff on default writer moonshotai/kimi-k3.1-pro at maxChargeUsd 1.00 was cancelled while still queued after Kimi truncated the ru, pt-br and fr drafts; this third job pinned modelId anthropic/claude-sonnet-5.5 at maxChargeUsd 1.00. costUsd is the charge so far: Copylot notes the final charge is still being reconciled with the provider, at most 0.298652 USD.",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "zh-hans": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "zh-Hans-CN",
+        "fabricJobId": "job_8167ba57dd2da5ee4b5a1feb",
+        "executionJobId": "75f54736-a312-49b2-83c1-d0212ac7d45e",
+        "reportIds": [
+          "16e008ba-0610-4a28-977a-0ecaa1eb8426"
+        ],
+        "judgeScore": 80,
+        "costUsd": 0.2366856,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "decision": "auto",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "ko": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "ko-KR",
+        "fabricJobId": "job_a3aa45e23847cd4473ec5c0c",
+        "executionJobId": "d07ee8bc-5632-4de0-9e55-e40aaaf2839a",
+        "reportIds": [
+          "f78756fe-2eb3-4a2f-a1fb-0d3a056acd02"
+        ],
+        "judgeScore": 85,
+        "costUsd": 0.239788,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "decision": "auto",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "ja": {
+      "site_languages": true,
+      "adaptation": {
+        "locale": "ja-JP",
+        "fabricJobId": "job_9d87e7621b8088384d1434d0",
+        "executionJobId": "38f7adf6-7298-496e-9dae-e62cc5a2ba53",
+        "reportIds": [
+          "9510f75c-ef77-441a-ab5b-096cc1ab4307"
+        ],
+        "judgeScore": 78,
+        "costUsd": 0.23462,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "decision": "auto",
+        "voiceUsed": true
+      },
+      "native_review": false
+    },
+    "it": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "it-IT",
+        "fabricJobId": "job_7359c93ad7392aa0537de4a0",
+        "executionJobId": "a6aee219-8cae-49a3-add5-21290445f6d9",
+        "reportIds": [
+          "818b3374-8606-4a5e-9982-e887ad1f09dd"
+        ],
+        "judgeScore": 92,
+        "costUsd": 0.196578678,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "decision": "auto",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "it-IT",
+        "fabricJobId": "job_151f6db4e376857d7d012618",
+        "executionJobId": "52c23465-bec3-4c8f-a2b5-bff1aae8f869",
+        "reportIds": [
+          "3789a5e7-3bbf-4676-bc85-31c35e8d5a22"
+        ],
+        "judgeScore": 88,
+        "costUsd": "0.055379400000",
+        "decision": "auto"
+      }
+    },
+    "uk": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "uk-UA",
+        "fabricJobId": "job_7688f65f725c713ec54096f4",
+        "executionJobId": "70e6c862-6301-4bda-87f1-28b04bf7ba75",
+        "reportIds": [
+          "0b841619-26bd-4e6f-9a17-a3608090d8c7"
+        ],
+        "judgeScore": 83,
+        "costUsd": 0.204205,
+        "model": "openai/gpt-6.1-sol",
+        "decision": "retry: first job job_6d0c7d8d7da888bf5b45c453 (kimi-k3.1-pro) hit input_required with variant 1 truncated at line 37 (output-truncated), declined; retry with modelId openai/gpt-6.1-sol completed automatically",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "uk-UA",
+        "fabricJobId": "job_56405f6c0af72d2474da04b2",
+        "executionJobId": "95e9f72f-f4cc-4209-b662-a8038366e3f9",
+        "reportIds": [
+          "7f14487f-3d05-4b34-8fce-c9f67fa6fe0a"
+        ],
+        "judgeScore": 82,
+        "costUsd": "0.170268000000",
+        "decision": "auto"
+      }
+    },
+    "id": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "id-ID",
+        "fabricJobId": "job_b9c2138fd831cfa9a3574a3c",
+        "executionJobId": "30a85c6a-cd03-416a-862c-c1b2b76d76ed",
+        "reportIds": [
+          "21b29ffe-c6c6-49ba-831c-aec434695a7b"
+        ],
+        "judgeScore": 77,
+        "costUsd": 0.295676,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "decision": "auto",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "id-ID",
+        "fabricJobId": "job_612a282deb17a73320b0bcda",
+        "executionJobId": "ced08f99-cf64-4651-81ef-cdc146d72900",
+        "reportIds": [
+          "a6ef7e18-d5f4-4d54-a234-b43a2bac7176"
+        ],
+        "judgeScore": 86,
+        "costUsd": "0.091451200000",
+        "decision": "auto"
+      }
+    },
+    "vi": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "vi-VN",
+        "fabricJobId": "job_d21f0e2611e95281cd10e5e8",
+        "executionJobId": "c18ce769-8e19-481f-90b1-c7c405d94017",
+        "reportIds": [
+          "283f31c8-70ca-4a40-b4ce-35e9e6580226"
+        ],
+        "judgeScore": 66,
+        "costUsd": 0.254027,
+        "model": "openai/gpt-6.1-sol",
+        "decision": "accepted variant 1 after input_required (judge 66 below bar 70; text has 38 lines [01]..[38]), on the retry job",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "vi-VN",
+        "fabricJobId": "job_0df74128fe9423db323639c2",
+        "executionJobId": "9f082731-97b0-4951-9aaa-a3681cbfcf59",
+        "reportIds": [
+          "1d4e894a-5083-4d50-8b96-29868810c375"
+        ],
+        "judgeScore": 88,
+        "costUsd": "0.141037000000",
+        "decision": "auto"
+      }
+    },
+    "nl": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "nl-NL",
+        "fabricJobId": "job_368633e45fb399a823658155",
+        "executionJobId": "8a57b86a-5a5c-46c4-929b-3bfeb699f05a",
+        "reportIds": [
+          "83691430-8f84-4b36-8848-3a36b1ec30e2"
+        ],
+        "judgeScore": 92,
+        "costUsd": 0.26131326,
+        "model": "openai/gpt-6.1-sol",
+        "decision": "retry: first job job_886d4c4b3d19d9af415fa55a (kimi-k3.1-pro) hit input_required with variant 1 truncated at line 34 (output-truncated), declined; retry with modelId openai/gpt-6.1-sol completed automatically",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "nl-NL",
+        "fabricJobId": "job_cd5ef957c894fdbad6c56ffe",
+        "executionJobId": "23d29f10-b371-42ed-9d8e-d88b2898cb0f",
+        "reportIds": [
+          "eaf470b9-44f9-4b02-9a0b-66abf3dc22cf"
+        ],
+        "judgeScore": 84,
+        "costUsd": "0.089456000000",
+        "decision": "auto"
+      }
+    },
+    "ar": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "ar-SA",
+        "fabricJobId": "job_45e0c058330553f335b6239e",
+        "executionJobId": "170206b7-c765-421e-83f4-cdb166c4da0f",
+        "reportIds": [
+          "c7aed0f7-3167-4694-88bd-bbd2e17f3083"
+        ],
+        "judgeScore": 67,
+        "costUsd": 0.256908,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "decision": "accepted variant 1 after input_required (judge 67 below bar 70; variant 1 had exactly 38 lines [01]..[38])",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "ar-SA",
+        "fabricJobId": "job_d7524f7298a905f633488296",
+        "executionJobId": "89405a72-f98e-4af9-bfbb-c74c9afc004b",
+        "reportIds": [
+          "d496c161-f935-41c3-a3ff-91054831c0d7"
+        ],
+        "judgeScore": 90,
+        "costUsd": "0.146388000000",
+        "decision": "auto"
+      },
+      "note": "dir=\"rtl\"; visual pass of the page pending (SITE-071)."
+    },
+    "tr": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "tr-TR",
+        "fabricJobId": "job_8807685ab8304a3f69345706",
+        "executionJobId": "e1584877-ce3b-49b2-be74-c8a003cc6254",
+        "reportIds": [
+          "470e5049-daff-4326-9d6f-e291dacce712"
+        ],
+        "judgeScore": 92,
+        "costUsd": 0.3090070838,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "decision": "auto",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "tr-TR",
+        "fabricJobId": "job_488bada390b61db94fcf9b7c",
+        "executionJobId": "38be55e4-172c-49eb-93f4-7b88408bf624",
+        "reportIds": [
+          "b2b2347f-343e-4831-b030-4f5a11aeaaac"
+        ],
+        "judgeScore": 90,
+        "costUsd": "0.104876000000",
+        "decision": "auto"
+      }
+    },
+    "bg": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "ru-RU",
+        "fabricJobId": "job_776f20be27b043d3ac1d822d",
+        "executionJobId": "4b365df0-19c9-41fb-a64e-45b89a68f154",
+        "reportIds": [
+          "5fab5615-94a3-4619-aee5-e91ed120929f"
+        ],
+        "judgeScore": 71,
+        "costUsd": 0.23422,
+        "model": "anthropic/claude-sonnet-5.5",
+        "decision": "auto, on the third job (judge 71)",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "ru-RU",
+        "fabricJobId": "job_e192a7c1e6f9a851cd46cbca",
+        "executionJobId": "435eff7d-26c9-4d32-b235-a2ae501fd6a3",
+        "reportIds": [
+          "3075d498-20e5-4f01-a685-135b42b86d49"
+        ],
+        "judgeScore": 85,
+        "costUsd": "0.121400000000",
+        "decision": "auto"
+      },
+      "note": "Copylot has no bg-BG locale: adapted under the ru-RU rules with a Bulgarian brief (copylot-agent request b2af2c89); native check first (SITE-071)."
+    },
+    "hi": {
+      "site_languages": false,
+      "adaptation": {
+        "locale": "hi-IN",
+        "fabricJobId": "job_4468eba3c9a86382069799fe",
+        "executionJobId": "0adfc6aa-b52d-4682-b07c-f600f101f4c1",
+        "reportIds": [
+          "6836240d-0128-45f7-b6ff-1998638b9861"
+        ],
+        "judgeScore": 90,
+        "costUsd": 0.196609352,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "decision": "auto (second job)",
+        "voiceUsed": true
+      },
+      "native_review": false,
+      "chrome": {
+        "locale": "hi-IN",
+        "fabricJobId": "job_92b33f1c0c704a7bede31ed3",
+        "executionJobId": "ff6e7b8a-df18-48c0-95cc-ff17aed44f28",
+        "reportIds": [
+          "c6a71712-c2dc-418b-91c6-b3c03cc26b41"
+        ],
+        "judgeScore": 85,
+        "costUsd": "0.128404000000",
+        "decision": "auto"
+      }
+    }
+  }
+}

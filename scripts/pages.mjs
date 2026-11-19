@@ -46,6 +46,7 @@ export const SOURCE_PAGES = [
   'agents/research/index.html',
   'agents/web-quality-monitor/index.html',
   'guides/index.html',
+  'guides/why-releases-slip/index.html',
   'guides/start-agent-workplace/index.html',
   'guides/free-assessment/index.html',
   'guides/templates-to-agents/index.html',
@@ -59,3 +60,13 @@ export const PAGES = [...SOURCE_PAGES, ...TRANSLATED_LOCALES.flatMap(locale => S
 // in every language. Every other page is indexed in every language.
 export const SOURCE_NOINDEX = ['business/thanks/index.html', '404.html']
 export const NOINDEX = new Set([...SOURCE_NOINDEX, ...TRANSLATED_LOCALES.flatMap(locale => SOURCE_NOINDEX.map(page => `${locale}/${page}`))])
+// SITE-070: languages published for some pages only (i18n/scoped-locales.json), today the content plan's guides. They
+// are not site languages: the Worker, the form, the checks of every page and the switch of other pages do not list them.
+export const SCOPED = JSON.parse(readFileSync(new URL('../i18n/scoped-locales.json', import.meta.url), 'utf8'))
+export const SCOPED_LOCALES = Object.keys(SCOPED.locales)
+export const SCOPED_SOURCE_PAGES = SCOPED.pages
+for (const page of SCOPED_SOURCE_PAGES) if (!SOURCE_PAGES.includes(page) || SOURCE_NOINDEX.includes(page)) throw new Error(`i18n/scoped-locales.json: ${page} is not an indexed page of SOURCE_PAGES`)
+for (const locale of SCOPED_LOCALES) if (LOCALES.includes(locale)) throw new Error(`i18n/scoped-locales.json: ${locale} is already a site language (i18n/locales.json)`)
+export const SCOPED_PAGES = SCOPED_LOCALES.flatMap(locale => SCOPED_SOURCE_PAGES.map(page => `${locale}/${page}`))
+// Every language a page is published in: the site's languages, plus the scoped ones for the pages they have.
+export const localesOfPage = page => SCOPED_SOURCE_PAGES.includes(page) ? [...LOCALES, ...SCOPED_LOCALES] : LOCALES

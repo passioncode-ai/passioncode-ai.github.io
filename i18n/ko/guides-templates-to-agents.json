@@ -13,6 +13,7 @@
     "What stays yours": "조직의 것으로 남는 것",
     "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "데이터, 키, 에이전트는 조직의 것입니다. 템플릿 라이브러리는 저희 것으로 남습니다: 라이브러리가 아니라 구성된 에이전트를 받으시며, 템플릿의 세부 내용은 요청을 논의할 때 공유합니다.",
     "Agents that get better": "더 나아지는 에이전트",
-    "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "저희가 템플릿을 개선하면, 그 개선은 템플릿의 다음 릴리스와 함께, 조직의 에이전트가 이미 통과하는 점검을 거친 뒤 에이전트에 반영될 수 있습니다."
+    "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "저희가 템플릿을 개선하면, 그 개선은 템플릿의 다음 릴리스와 함께, 조직의 에이전트가 이미 통과하는 점검을 거친 뒤 에이전트에 반영될 수 있습니다.",
+    "Why your release slips again: what a team assessment shows": "릴리스가 또 미뤄지는 이유: 팀 진단으로 확인할 수 있는 것"
   }
 }

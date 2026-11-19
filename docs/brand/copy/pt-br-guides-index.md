@@ -64,6 +64,32 @@ Para a sua empresa: leia como funciona a avaliação gratuita de uma semana e de
 
 ## Guias
 
+Guia · 19 de novembro de 2026
+
+### Por que seu lançamento atrasa de novo: o que uma avaliação de equipe mostra
+
+Um lançamento só sai quando tudo o que cerca o código também está pronto. A avaliação de equipe lê como o trabalho andou de fato nos últimos 90 dias e mostra onde ele esperou, para você corrigir a espera em vez de pressionar o time.
+
+Para fundadores cujas datas de lançamento não param de mudar e que querem ver onde o trabalho fica parado.
+
+Neste guia
+
+Onde um lançamento realmente espera
+
+O que a avaliação lê
+
+Três coisas que ela costuma encontrar
+
+Por que um plano melhor, sozinho, não resolve
+
+O que muda quando um agente conduz o ritmo
+
+Quem decide
+
+Como começar
+
+Fontes e método
+
 Guia · 8 de novembro de 2026
 
 ### Monte seu ambiente de trabalho com agentes em 20 minutos

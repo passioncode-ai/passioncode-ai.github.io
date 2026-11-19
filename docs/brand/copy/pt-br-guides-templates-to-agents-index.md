@@ -88,6 +88,8 @@ GUIAS
 
 ## Mais guias
 
+Por que seu lançamento atrasa de novo: o que uma avaliação de equipe mostra
+
 Monte seu ambiente de trabalho com agentes em 20 minutos
 
 Como funciona a avaliação gratuita de uma semana

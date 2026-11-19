@@ -64,6 +64,32 @@ Pour votre entreprise : lisez comment fonctionne l’évaluation gratuite d’un
 
 ## Guides
 
+Guide · 19 novembre 2026
+
+### Pourquoi votre release dérape encore : ce que révèle un audit d'équipe
+
+Une release ne part que lorsque tout ce qui entoure le code est prêt, lui aussi. Un audit d'équipe lit comment le travail a réellement avancé au cours des 90 derniers jours et montre où il a attendu : vous corrigez l'attente au lieu de pousser l'équipe.
+
+Pour les fondateurs dont les dates de release ne cessent de bouger et qui veulent voir où le travail attend.
+
+Dans ce guide
+
+Où une release attend vraiment
+
+Ce que lit l'audit
+
+Trois constats fréquents
+
+Pourquoi un meilleur plan ne suffit pas
+
+Ce qui change quand un agent tient le rythme
+
+Qui décide
+
+Comment démarrer
+
+Sources et méthode
+
 Guide · 8 novembre 2026
 
 ### Lancez votre espace de travail pour agents en 20 minutes

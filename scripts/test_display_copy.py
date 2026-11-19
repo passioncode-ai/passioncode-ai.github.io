@@ -100,8 +100,9 @@ class DisplayCopyTests(unittest.TestCase):
         self.assertEqual(set(PAGES) - noindex, expected)
         # The build ships every page by importing the same list.
         build = (ROOT / 'scripts/build-site.mjs').read_text()
-        self.assertIn("import { PAGES } from './pages.mjs'", build)
+        self.assertIn("import { PAGES, SCOPED_PAGES } from './pages.mjs'", build)
         self.assertIn('...PAGES', build)
+        self.assertIn('...SCOPED_PAGES', build)
 
     def test_projection_cli_staleness_is_in_gate(self):
         package = json.loads((ROOT / 'package.json').read_text())

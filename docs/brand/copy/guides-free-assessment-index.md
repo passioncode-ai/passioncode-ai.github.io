@@ -96,6 +96,8 @@ GUIDES
 
 ## More guides
 
+Why your release slips again: what a team assessment shows
+
 Start your agent workplace in 20 minutes
 
 How agent templates become your agents

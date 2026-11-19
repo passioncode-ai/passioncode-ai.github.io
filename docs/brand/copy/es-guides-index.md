@@ -64,6 +64,32 @@ Para tu empresa: lee cómo funciona la evaluación gratuita de una semana y lueg
 
 ## Guías
 
+Guía · 19 de noviembre de 2026
+
+### Por qué tu lanzamiento se retrasa otra vez: qué muestra una evaluación del equipo
+
+Un lanzamiento sale solo cuando también está listo todo lo que rodea al código. Una evaluación del equipo analiza cómo se movió realmente el trabajo en los últimos 90 días y muestra dónde esperó, de modo que corriges la espera en lugar de presionar al equipo.
+
+Para fundadores cuyas fechas de lanzamiento no dejan de moverse y que quieren ver dónde espera el trabajo.
+
+En esta guía
+
+Dónde espera realmente un lanzamiento
+
+Qué analiza la evaluación
+
+Tres cosas que suele encontrar
+
+Por qué un plan mejor no basta
+
+Qué cambia cuando un agente lleva el ritmo
+
+Quién decide
+
+Cómo empezar
+
+Fuentes y método
+
 Guía · 8 de noviembre de 2026
 
 ### Pon en marcha tu espacio de trabajo de agentes en 20 minutos

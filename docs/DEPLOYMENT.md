@@ -281,6 +281,28 @@ Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry
   `scripts/locales.test.mjs`. German keeps CLDR's bare `$` (`50 $`), not `US$`.
 - **Narrow screens**: `styles.css` hyphenates headings in German and Polish so a long compound never widens a 390 px page.
 
+### Guide-only languages
+
+SITE-070 (operator 2026-11-19, Fabric task `6c4043eb`): the content plan publishes its guides in 19 languages, nine of
+which (Italian, Ukrainian, Indonesian, Vietnamese, Dutch, Arabic, Turkish, Bulgarian, Hindi) the rest of the site does
+not have. They live in `i18n/scoped-locales.json`, not in `i18n/locales.json`: each names its language as the registry
+does (`name`, `englishName`, `og`, `intl`, `switchLabel`, and `dir: "rtl"` for Arabic) and the file lists the pages
+they have (`pages`). `npm run locales` writes `/<code>/<page>` for each from the English page and the catalogs
+`i18n/<code>/<page>.json` plus `i18n/<code>/_common.json` (only the header, footer and byline strings those pages use);
+`--missing` prints what to translate, `--check` fails on an untranslated fragment, an unused entry or a structure that
+differs from the English page, as for every language.
+
+- Every version of such a page, in the site's languages and the scoped ones, names all of them with hreflang plus
+  `x-default` (English), and `sitemap.xml` lists them; every other page names only the site's languages
+  (`localesOfPage` in `scripts/pages.mjs`). The language switch of such a page lists all its versions.
+- A link on a scoped page to a page its language does not have stays on the English page (`localizeUrl`).
+- Arabic pages carry `dir="rtl"`; `styles.css` uses logical properties for the article list and turns the button arrow.
+- They are not site languages: the Worker, the form, `_scripts.json` and `_checks.json` do not apply, and an unknown
+  address under their prefix gets the English not-found page.
+- A language moves to `i18n/locales.json` when every page is translated (then the steps below apply).
+- Translations are Copylot adaptations (`copylot.prepare`, voice `93cd4851` v1) with the judge's score and report ids
+  recorded in the page's content record (`docs/content/<slug>.meta.json`), and wait for a native check (SITE-071).
+
 ### Adding a language
 
 1. Add its entry to `i18n/locales.json` (e.g. `"de": { "name": "Deutsch", "englishName": "German",

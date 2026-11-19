@@ -224,9 +224,45 @@ export const ASSEMBLY = [
 ]
 
 // Guides and posts: the body is English HTML written for the page; one h2 per section. `question` is the page's one
-// question (docs/seo/brief-2026-11-08.md). `summary` (SITE-058): one line under the item's card on its hub, saying whom
+// question (docs/seo/brief-2026-11-08.md). `published` (SITE-070): the item's own date, else PUBLISHED. `summary` (SITE-058): one line under the item's card on its hub, saying whom
 // it helps; the hub also lists the item's h2 headings as what it covers.
 export const GUIDES = [
+  {
+    slug: 'why-releases-slip',
+    published: { iso: '2026-11-19', text: 'November 19, 2026' },
+    title: 'Why your release slips again | PassionCode.ai',
+    name: 'Why your release slips again: what a team assessment shows',
+    summary: 'For founders whose release dates keep moving and who want to see where the work waits.',
+    description: 'A release waits on more than code. A team assessment shows where the work waited and what changes when an agent runs the daily rhythm.',
+    lead: 'A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.',
+    body: `
+ <h2>Where a release really waits</h2>
+ <p>When a date slips, the first question is usually about engineering. The assessment looks past the code first, because a release also waits for a decision nobody has made yet, for the texts of a screen or a store page, for a review, or for a task that bounced between people until it lost its owner. None of these show up as code, so a plan built around code does not see them.</p>
+ <h2>What the assessment reads</h2>
+ <p>One agent connects to the systems your team already uses, with read-only access: trackers, repositories, documents, team chats, mail and support. It reads the last 90 days, then follows the work as it happens for a week. It builds a map of the kinds of tasks, how long each kind takes from start to finish and how work moves between people and systems. It reports totals for groups and processes, never a score for a person.</p>
+ <h2>Three things it usually finds</h2>
+ <p><strong>Waits that are not code.</strong> The assessment measures lead time per kind of task: the days from the moment a task starts to the moment it is done. In one pilot company, the 20 tasks of writing product texts had a median lead time of 9.8 days. That is days in the calendar, not hours of work: the gap between the two is time the task spent waiting.</p>
+ <p><strong>Work outside the plan.</strong> The assessment compares what was planned for a week with what moved. In the same pilot company, 60 to 85% of the tasks the planners moved in a week were in no plan of that week, measured over the weeks from May 25 to November 2, 2026. Part of it was follow-up of earlier weeks, reviews and bugs. The rest was work the plan never held.</p>
+ <p><strong>Ping-pong tasks.</strong> A task returns to the person who already had it within 14 days. Each return means the next step was unclear or nobody owned the decision. The assessment counts these returns per process, so you see which hand-offs keep failing.</p>
+ <h2>Why a better plan alone does not fix it</h2>
+ <p>A plan lists the work someone expected. The work that slips a release is the work no one listed: the decision that waits for a meeting, the text that waits for its author, the task that has no owner. A tighter plan meets the same waits a week later. What helps is a daily rhythm that finds a stuck task the same day and asks the right person before it costs a week.</p>
+ <h2>What changes when an agent runs the rhythm</h2>
+ <p>The PM agent takes over the routine of following the work, and keeps every hour of its day as a setting you can change:</p>
+ <ul>
+  <li><strong>07:00, the check-in.</strong> On working days it asks each person what they are on today, and reminds them later if there is no answer.</li>
+  <li><strong>Three buttons.</strong> Every task it raises has three answers: seen, taking it, not mine. “Not mine” goes to the planner at once, so a task without an owner gets one the same morning.</li>
+  <li><strong>The escalation ladder.</strong> A task nobody takes gets a reminder every 30 working minutes. After 2 working hours the planner hears about it, then the deputy, then the administrator.</li>
+  <li><strong>10:00, stale tasks.</strong> It lists the tasks that have not moved for days and the blockers per person, so the planner sees them in the morning.</li>
+  <li><strong>21:00, the founder’s report.</strong> Every day, weekends included, the founders get a short summary: what the team closed and moved, the decisions waiting on people, and what is critical.</li>
+ </ul>
+ <h2>Who decides</h2>
+ <p>Agents do the work, and people decide. An agent writes the draft, the reminder or the report. A person approves what leaves the company or touches money, sets the goals and corrects the agent when it is wrong. The assessment shows which kinds of work an agent can take end to end and where a person stays.</p>
+ <h2>How to start</h2>
+ <p>Start with the free one-week assessment. You answer four questions and give read-only access, one link per system. On day seven you get the map of your processes, plan against fact, the waits and an offer: which work agents take first. Write to Morpheus, our PM agent, on Telegram to ask for it, or read <a href="/guides/free-assessment/">how the free one-week assessment works</a>.</p>
+ <h2>Sources and method</h2>
+ <p>The lead time and plan figures come from one pilot company, read by our assessment agent; the company is not named. Lead time is measured in calendar days per task, not hours of work. The measurement after the change starts on December 7, 2026. The PM agent’s hours, buttons and ladder are its default settings.</p>`,
+    cta: { href: 'https://t.me/MorpheusPMBot?start=lp_guide-why-releases-slip_en', label: 'Write to Morpheus on Telegram', cta: 'morpheus' }
+  },
   {
     slug: 'start-agent-workplace',
     title: 'Start your agent workplace in 20 minutes | PassionCode.ai',

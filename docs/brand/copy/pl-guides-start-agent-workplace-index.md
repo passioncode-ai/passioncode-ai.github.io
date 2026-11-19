@@ -96,6 +96,8 @@ PORADNIKI
 
 ## Więcej poradników
 
+Dlaczego Twoje wydanie znów się opóźnia: co pokazuje ocena zespołu
+
 Jak działa bezpłatna tygodniowa ocena
 
 Jak szablony agentów stają się Twoimi agentami

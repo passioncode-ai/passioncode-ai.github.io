@@ -96,6 +96,8 @@ GUIDES
 
 ## Autres guides
 
+Pourquoi votre release dérape encore : ce que révèle un audit d'équipe
+
 Comment fonctionne l’évaluation gratuite d’une semaine
 
 Comment les modèles d’agents deviennent vos agents

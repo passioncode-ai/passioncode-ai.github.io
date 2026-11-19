@@ -96,6 +96,8 @@ ANLEITUNGEN
 
 ## Weitere Anleitungen
 
+Warum dein Release immer wieder rutscht: was ein Team-Assessment zeigt
+
 Wie die kostenlose einwöchige Analyse funktioniert
 
 Wie aus Agentenvorlagen deine Agenten werden

@@ -32,6 +32,18 @@
     "From your request to an agent": "ご依頼からエージェントまで",
     "Where it runs": "動く場所",
     "What stays yours": "お客様のものとして残るもの",
-    "Agents that get better": "良くなっていくエージェント"
+    "Agents that get better": "良くなっていくエージェント",
+    "Why your release slips again: what a team assessment shows": "リリースがまた遅れる理由：チームアセスメントでわかること",
+    "November 19, 2026": "2026年11月19日",
+    "A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.": "リリースには、コード以外の準備も必要です。チームアセスメントでは、過去90日間に実際の作業がどう進んだかを読み取り、どこで待ち時間が生じたかを示します。チームに負荷をかけるのではなく、待ち時間を解消するための情報が得られます。",
+    "For founders whose release dates keep moving and who want to see where the work waits.": "リリース予定日が繰り返しずれ込み、作業がどこで止まっているのかを把握したい創業者や経営者向けのガイドです。",
+    "Where a release really waits": "リリースが実際に待たされる場所",
+    "What the assessment reads": "アセスメントで読み取るもの",
+    "Three things it usually finds": "よく見つかる3つの問題",
+    "Why a better plan alone does not fix it": "計画を改善するだけでは解決しない理由",
+    "What changes when an agent runs the rhythm": "エージェントが日々のサイクルを回すと変わること",
+    "Who decides": "誰が判断するか",
+    "How to start": "始め方",
+    "Sources and method": "出典と方法"
   }
 }

@@ -96,6 +96,8 @@ PORADNIKI
 
 ## Więcej poradników
 
+Dlaczego Twoje wydanie znów się opóźnia: co pokazuje ocena zespołu
+
 Uruchom swoje miejsce pracy z agentami w 20 minut
 
 Jak szablony agentów stają się Twoimi agentami
