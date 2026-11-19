@@ -83,6 +83,7 @@
     "For the changes your agents make, we recommend task-pipeline, a separate open-source skill:": "エージェントが行う変更には、別のオープンソーススキルである task-pipeline をおすすめします：",
     "what it does and how to install it": "できることとインストール方法",
     "Run one command, npx @passioncode-ai/passioncode@latest setup, or let your coding agent run it; then create a Fabric agent or adapt an existing project, see it in Fabric Dashboards and add the next agent to the same project.": "コマンド1つ（npx @passioncode-ai/passioncode@latest setup）を実行するか、コーディングエージェントに実行を任せます。次に Fabric エージェントを作成するか既存のプロジェクトを適合させ、Fabric Dashboards で確認し、次のエージェントを同じプロジェクトに追加します。",
-    "Run npx @passioncode-ai/passioncode@latest setup, or paste the setup prompt into your coding agent, then restart the agent.": "npx @passioncode-ai/passioncode@latest setup を実行するか、セットアップ用のプロンプトをコーディングエージェントに貼り付けてから、エージェントを再起動します。"
+    "Run npx @passioncode-ai/passioncode@latest setup, or paste the setup prompt into your coding agent, then restart the agent.": "npx @passioncode-ai/passioncode@latest setup を実行するか、セットアップ用のプロンプトをコーディングエージェントに貼り付けてから、エージェントを再起動します。",
+    "Get the free assessment": "無料アセスメントを受ける"
   }
 }

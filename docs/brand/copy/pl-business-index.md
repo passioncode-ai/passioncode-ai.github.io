@@ -54,6 +54,10 @@ Enterprise · dla organizacji
 
 Agent, który żyje na laptopie jednej osoby, pomaga jednej osobie. Wprowadzamy agentów na komputery Twojej organizacji, łączymy ich i pokazujemy, ile kosztował każdy z nich i co dostarczył, na narzędziach o otwartym kodzie, z Twoimi danymi na Twoich komputerach albo w Twojej własnej chmurze
 
+Poproś o bezpłatną ocenę
+
+→
+
 Szacunek i zapytanie
 
 ↓

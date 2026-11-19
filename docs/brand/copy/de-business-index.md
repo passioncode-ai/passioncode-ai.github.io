@@ -54,6 +54,10 @@ Enterprise · für Organisationen
 
 Ein Agent, der auf dem Laptop einer einzelnen Person lebt, hilft genau einer Person. Wir bringen Agenten auf die Rechner deiner Organisation, verbinden sie und zeigen, was jeder gekostet und was er geliefert hat. Alles läuft auf Open-Source-Tools, mit deinen Daten auf deinen Rechnern oder in deiner eigenen Cloud
 
+Kostenloses Assessment anfragen
+
+→
+
 Schätzung und Anfrage
 
 ↓

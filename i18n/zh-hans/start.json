@@ -83,6 +83,7 @@
     "For the changes your agents make, we recommend task-pipeline, a separate open-source skill:": "对于你的智能体所做的更改，我们推荐 task-pipeline，这是一个独立的开源技能：",
     "what it does and how to install it": "它的作用和安装方法",
     "Run one command, npx @passioncode-ai/passioncode@latest setup, or let your coding agent run it; then create a Fabric agent or adapt an existing project, see it in Fabric Dashboards and add the next agent to the same project.": "运行一条命令 npx @passioncode-ai/passioncode@latest setup，或让你的编码智能体来运行；然后创建一个 Fabric 智能体或将现有项目接入，在 Fabric Dashboards 中查看它，再把下一个智能体加入同一个项目。",
-    "Run npx @passioncode-ai/passioncode@latest setup, or paste the setup prompt into your coding agent, then restart the agent.": "运行 npx @passioncode-ai/passioncode@latest setup，或把设置提示词粘贴到你的编码智能体中，然后重启该智能体。"
+    "Run npx @passioncode-ai/passioncode@latest setup, or paste the setup prompt into your coding agent, then restart the agent.": "运行 npx @passioncode-ai/passioncode@latest setup，或把设置提示词粘贴到你的编码智能体中，然后重启该智能体。",
+    "Get the free assessment": "获取免费评估"
   }
 }

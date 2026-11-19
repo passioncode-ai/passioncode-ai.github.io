@@ -56,7 +56,7 @@ O ambiente de trabalho onde agentes executam os processos da sua empresa, e as p
 
 O Fabric é a casa dos seus projetos e dos agentes deles. Switchboard, Dashboards, Observatory e Inbox funcionam com ele e também sozinhos. Hoje um único comando configura tudo
 
-Peça a avaliação gratuita
+Avaliação gratuita para a sua organização
 
 →
 
@@ -369,6 +369,8 @@ SOB SOLICITAÇÃO
 ### O próprio dispositivo da sua organização
 
 Um computador ou uma nuvem dedicados à empresa: espaços separados, acesso por nível (proprietário, administrador, arquiteto de projeto, usuário) e um conjunto básico de agentes desde o primeiro dia.
+
+Peça a avaliação gratuita
 
 Para a sua organização
 

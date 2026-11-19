@@ -138,6 +138,7 @@
     "A base set of agents from day one": "첫날부터 제공되는 기본 에이전트 세트",
     "The organization’s administrator agent, its data room and its process assessment, installed from templates.": "조직의 관리자 에이전트, 데이터룸, 프로세스 평가를 템플릿에서 설치합니다.",
     "Administration by PassionCode, on request": "요청 시 PassionCode가 관리",
-    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "시스템 관리를 원격으로 맡을 수 있습니다. 설정과 지출은 보지만 동의 없이는 콘텐츠를 보지 않습니다."
+    "We can run your system’s administration remotely; we see configuration and spend, not your content, unless you agree.": "시스템 관리를 원격으로 맡을 수 있습니다. 설정과 지출은 보지만 동의 없이는 콘텐츠를 보지 않습니다.",
+    "Get the free assessment": "무료 진단 받기"
   }
 }

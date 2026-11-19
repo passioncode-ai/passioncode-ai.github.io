@@ -242,7 +242,9 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
   // the pilot's, said as facts row *release guide (SITE-070)* says them, and the guide and Morpheus are one click away.
   {
     const hero = home.slice(home.indexOf('class="hero home-hero"'), home.indexOf('</section>', home.indexOf('class="hero home-hero"')))
-    assert.ok(hero.includes('<a class="button button-primary" href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="hero">Get the free assessment'), 'homepage hero: the first button opens the free assessment')
+    assert.ok(hero.includes('<a class="button button-primary has-rabbit" href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="hero">Free assessment for your organization'), 'homepage hero: the first button opens the free assessment for an organization (SITE-075)')
+    assert.ok(hero.includes('<span class="perch-rabbit" data-cta="assessment" data-cta-location="rabbit" aria-hidden="true"><svg'), 'homepage hero: the white rabbit sits inside the assessment button (SITE-075)')
+    assert.ok(section('grow').includes('href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="grow">Get the free assessment</a><a href="/business/"'), 'homepage #grow: the organization step offers the assessment first, then /business/ (SITE-075)')
     for (const text of ['9.8 days', '60 to 85%', 'One pilot company, not named', 'href="https://t.me/MorpheusPMBot?start=lp_home_en"', 'href="/guides/why-releases-slip/"']) assert.ok(hero.includes(text), `homepage hero card: ${text}`)
     const a = section('assessment')
     for (const text of ['href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="assessment"', 'href="https://t.me/MorpheusPMBot?start=lp_home_en" data-cta="morpheus"', 'href="/guides/why-releases-slip/" data-cta="guide"', 'href="/business/#request" data-cta="business"', 'never people', 'one pilot company that is not named']) assert.ok(a.includes(text), `homepage #assessment: ${text}`)
@@ -251,6 +253,14 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
       assert.ok(page.includes(`href="https://assessment.passioncode.ai/?lang=${locale}"`), `${locale}/index.html: the assessment opens in ${locale}`)
       assert.ok(!page.includes('https://assessment.passioncode.ai/?lang=en"'), `${locale}/index.html: no English assessment link left`)
     }
+  }
+  // SITE-075 (operator 2026-11-19): wherever an organization is offered the form, the free assessment comes first.
+  {
+    const business = read('business/index.html')
+    const bhero = business.slice(business.indexOf('class="hero page-hero business-hero"'), business.indexOf('</section>', business.indexOf('class="hero page-hero business-hero"')))
+    assert.ok(bhero.indexOf('href="https://assessment.passioncode.ai/?lang=en"') > -1 && bhero.indexOf('href="https://assessment.passioncode.ai/?lang=en"') < bhero.indexOf('href="#request"'), '/business/ hero: the free assessment first, the form second (SITE-075)')
+    const start = read('start/index.html')
+    assert.ok(start.indexOf('href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="start"') > -1 && start.indexOf('data-cta-location="start"') < start.indexOf('href="/business/" data-cta="business" data-cta-location="start"'), '/start/ closing: the free assessment first, the form second (SITE-075)')
   }
   const how = section('fabric-process')
   assert.ok(!how.includes('home-video'), 'homepage: the video is not inside the story (SITE-039)')
@@ -356,7 +366,7 @@ for (const file of SOURCE_PAGES) {
   for (const file of ['fabric/index.html', 'switchboard/index.html', 'dashboards/index.html', 'observatory/index.html', 'inbox/index.html']) assert.ok(read(file).includes('<p class="setup-line"><a href="/start/#setup">Set up everything with one command'), `${file}: one line to the setup`)
   const businessPage = read('business/index.html')
   const hero = businessPage.slice(businessPage.indexOf('business-hero'), businessPage.indexOf('</section>', businessPage.indexOf('business-hero')))
-  assert.deepEqual([...hero.matchAll(/<a class="button[^"]*" href="([^"]+)"/g)].map(m => m[1]), ['#request'], '/business/: one hero action, to the request')
+  assert.deepEqual([...hero.matchAll(/<a class="button[^"]*" href="([^"]+)"/g)].map(m => m[1]), ['https://assessment.passioncode.ai/?lang=en', '#request'], '/business/: two hero actions, the free assessment first and the request second (SITE-075)')
   assert.ok(businessPage.includes('href="/start/#setup">Try it on one machine first: setup, then doctor'), '/business/: the admin line to setup and doctor')
   assert.ok(!/1 to 1000 people/.test(businessPage), '/business/: the size line agrees with the 1000_plus answer')
 }
