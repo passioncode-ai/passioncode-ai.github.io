@@ -32,7 +32,7 @@ const ALLOWED_SCRIPTS = new Set(['/assets/site.js', '/assets/business.js'])
 // The header every page carries (the Inbox page keeps its own product navigation until its
 // redesign, docs/backlog.md SITE-009). In another language it is the same navigation, its links
 // under /<locale>/ and its words from the catalog.
-const PRIMARY_NAV = '<nav aria-label="Primary navigation"><a href="/vision/">Vision</a><a href="/start/">For you</a><a href="/business/">For organizations</a><a href="/#products">The tools</a><a href="/#about">About</a></nav>'
+const PRIMARY_NAV = '<nav aria-label="Primary navigation"><a class="nav-assessment" href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="header">Free assessment</a><a href="/vision/">Vision</a><a href="/start/">For you</a><a href="/business/">For organizations</a><a href="/#products">The tools</a><a href="/#about">About</a></nav>'
 const primaryNav = locale => {
   if (locale === 'en') return PRIMARY_NAV
   const catalog = loadCatalog(root, locale)

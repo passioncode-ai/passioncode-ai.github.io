@@ -220,6 +220,16 @@
     "Companies will run on agents, and someone has to manage the process between them. PassionCode.ai builds that workplace: Fabric, which keeps the agents’ board, and the tools around it. It runs our own work today. It is open source under the GNU AGPL-3.0 and free for personal use; organizations get a commercial license and our services. The two co-founders above build it. Contact:": "公司将依靠智能体运行，而它们之间的流程必须有人管理。PassionCode.ai 正在构建这样的工作空间：维护智能体看板的 Fabric，以及配套工具。我们如今用它运行自己的工作。它依据 GNU AGPL-3.0 开源，个人可免费使用；组织可获得商业许可证和我们的服务。它由上述两位联合创始人构建。联系方式：",
     "PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data": "一分半钟了解 PassionCode.ai：工作如何从人转到由 Fabric 管理的智能体，团队又如何成长为组织，配有旁白和字幕。看板显示的是示例数据",
     "How work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data.": "工作如何从人转到由 Fabric 管理的智能体，团队又如何成长为组织，配有旁白和字幕。看板显示的是示例数据。",
-    "The agent templates we assemble for organizations": "我们为组织组装的智能体模板"
+    "The agent templates we assemble for organizations": "我们为组织组装的智能体模板",
+    "02 / THE PROBLEM": "02 / 问题",
+    "03 / THE SHIFT": "03 / 转变",
+    "04 / FABRIC MANAGES THE PROCESS": "04 / Fabric 管理流程",
+    "05 / ONE SYSTEM": "05 / 一个系统",
+    "06 / AGENTS AT WORK": "06 / 智能体工作实况",
+    "07 / FROM A TEAM TO AN ORGANIZATION": "07 / 从团队到组织",
+    "08 / WHERE TO START": "08 / 从哪里开始",
+    "09 / THE TOOLS": "09 / 工具",
+    "10 / OPEN SOURCE": "10 / 开源",
+    "11 / QUESTIONS": "11 / 常见问题"
   }
 }

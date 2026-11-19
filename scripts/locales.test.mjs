@@ -404,9 +404,10 @@ test('a scoped language has only its pages, and every version of such a page nam
       const html = read(locale === 'en' ? page : `${locale}/${page}`)
       for (const link of expected) assert.ok(html.includes(link), `${locale}/${page}: ${link}`)
       assert.match(html, new RegExp(`<html lang="${LANG_TAGS[locale]}"${locale === 'ar' ? ' dir="rtl"' : ''}>`))
-      // The button to Morpheus: Russian on the Russian page, English everywhere else (the bot speaks those two).
+      // The button to Morpheus: the page's language where the bot speaks it, English everywhere else (SITE-072).
       const bot = /https:\/\/t\.me\/MorpheusPMBot\?start=lp_[a-z0-9-]+_([a-z]+)"/.exec(html)
-      if (bot) assert.equal(bot[1], locale === 'ru' ? 'ru' : 'en', `${locale}/${page}: the bot's language`)
+      const BOT = { ru: 'ru', es: 'es', de: 'de', 'pt-br': 'pt', fr: 'fr', ja: 'ja', ko: 'ko' }
+      if (bot) assert.equal(bot[1], BOT[locale] || 'en', `${locale}/${page}: the bot's language`)
       if (SCOPED_LOCALES.includes(locale)) {
         // A link to a page the scoped language does not have stays on the English page.
         assert.ok(!html.includes(`href="/${locale}/guides/free-assessment/"`), `${locale}: no link to a page it does not have`)
