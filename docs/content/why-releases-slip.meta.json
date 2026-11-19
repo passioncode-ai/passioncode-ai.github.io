@@ -57,7 +57,7 @@
     "advertising": "no superlatives, no promise of results; the free assessment is named as on its own guide (ON REQUEST, no price or start date)",
     "privacy": "the pilot company is not named; group totals only",
     "search": "machine adaptation of 18 languages is a known demotion profile (seo-aeo-audit references/technical-checks.md B2, failure mode 5); every language waits for a native check (SITE-071); hreflang complete with x-default",
-    "bot": "the button opens Morpheus on Telegram with lp_guide-why-releases-slip_<ru|en>; the bot has lead texts in Russian and English only (passioncode-pm-agent request df174f18)"
+    "bot": "the button opens Morpheus on Telegram with lp_guide-why-releases-slip_<ru|en>; the bot has lead texts in Russian and English only (passioncode-pm-agent request df174f18); since SITE-072 (2026-11-19) the bot has lead texts in ru, en, es, de, pt, fr, ja and ko (passioncode-pm-agent pm_agent/lead_texts.py), so the guide's pages in es, de, pt-br (as pt), fr, ja and ko link their own tail; every other language keeps _en"
   },
   "locales": {
     "ru": {

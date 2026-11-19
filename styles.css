@@ -1298,3 +1298,4 @@ html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -w
  .assess-facts dt { font-size: 24px; }
  .assessment-actions .button { width: 100%; }
 }
+.path-card .button + .text-link { margin-top: 16px; align-self: flex-start; font-size: 14px; }

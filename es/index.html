@@ -49,6 +49,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    { "@type": "Question", "name": "¿Qué es la evaluación gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "Un agente lee cómo trabajó tu empresa en los últimos 90 días con acceso de solo lectura, sigue el trabajo durante una semana y el séptimo día te muestra tus procesos, el plan frente a lo ocurrido, las esperas y qué trabajo asumen primero los agentes. Lee procesos, nunca personas, y pasada la semana se revoca el acceso y se eliminan los datos." } },
     { "@type": "Question", "name": "¿PassionCode.ai es gratis?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cada herramienta es de código abierto bajo la GNU AGPL-3.0: puedes descargarla, usarla, estudiarla y modificarla sin coste. Hace falta una licencia comercial si la incluyes en un producto cerrado o ejecutas un servicio alojado modificado sin publicar su código fuente." } },
     { "@type": "Question", "name": "¿Con qué agentes funciona?", "acceptedAnswer": { "@type": "Answer", "text": "No depende de un agente concreto. Claude Code, Codex, Kilo Code, Hermes Agent y Kimi Code se conectan hoy a Fabric, Cline se ejecuta dentro de él, y hay más previstos." } },
     { "@type": "Question", "name": "¿Adónde van mis datos?", "acceptedAnswer": { "@type": "Answer", "text": "Tu trabajo se queda en tus ordenadores y en tus propias cuentas de nube. Fabric Switchboard y, desde la versión 0.3.2, Fabric envían recuentos de uso anónimos: solo recuentos y tipos, nunca nombres, rutas ni contenido. Desactívalos en la ventana Acerca de de Switchboard o en los Ajustes de Fabric." } },
@@ -74,7 +75,7 @@
 <body class="story-site"><a class="skip-link" href="#main">Saltar al contenido</a>
 <header class="site-header">
  <a class="brand" href="/es/" aria-label="Inicio de PassionCode.ai"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span>PassionCode<span class="brand-dot">.ai</span></span></a>
- <nav aria-label="Navegación principal"><a href="/es/vision/">Visión</a><a href="/es/start/">Para ti</a><a href="/es/business/">Para organizaciones</a><a href="/es/#products">Herramientas</a><a href="/es/#about">Acerca de</a></nav>
+ <nav aria-label="Navegación principal"><a class="nav-assessment" href="https://assessment.passioncode.ai/?lang=es" data-cta="assessment" data-cta-location="header">Evaluación gratuita</a><a href="/es/vision/">Visión</a><a href="/es/start/">Para ti</a><a href="/es/business/">Para organizaciones</a><a href="/es/#products">Herramientas</a><a href="/es/#about">Acerca de</a></nav>
  <div class="header-actions"><details class="lang-switch lang-menu"><summary aria-label="Idioma: Español"><span lang="es">Español</span></summary><ul><li><a href="/" hreflang="en" lang="en">English</a></li><li><a href="/ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li><li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li></ul></details><a class="header-link header-download" href="/es/start/#setup">Configurar <span aria-hidden="true">↓</span></a></div>
 </header>
 <main id="main">
@@ -84,23 +85,19 @@
   <h1 id="hero-title">El sistema operativo para cualquier agente en <em>equipos AI-native</em></h1>
   <p class="hero-reframe">El espacio de trabajo donde los agentes ejecutan los procesos de tu empresa y las personas los dirigen</p>
   <p class="hero-body">Fabric es el hogar de tus proyectos y sus agentes. Switchboard, Dashboards, Observatory e Inbox funcionan con él y también por su cuenta. Hoy un solo comando lo configura todo</p>
-  <div class="hero-actions"><a class="button button-primary" href="/es/business/" data-cta="business" data-cta-location="hero">Para tu organización <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/es/start/" data-cta="start" data-cta-location="hero">Para ti, gratis <span aria-hidden="true">→</span></a></div>
+  <div class="hero-actions"><a class="button button-primary" href="https://assessment.passioncode.ai/?lang=es" data-cta="assessment" data-cta-location="hero">Solicita la evaluación gratuita <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/es/start/" data-cta="start" data-cta-location="hero">Para ti, gratis <span aria-hidden="true">→</span></a></div>
   <p class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Código abierto bajo AGPL-3.0 <span>Fabric <span data-live="fabric.version">0.3.16</span> · Switchboard <span data-live="switchboard.version">0.7.22</span> · Dashboards <span data-live="dashboards.version">0.8.30</span> · Observatory <span data-live="observatory.version">0.34.0</span></span></p>
  </div>
- <div class="workplace-map" aria-hidden="true">
-  <svg viewBox="0 0 480 480" class="map-lines">
-   <circle class="map-ring" cx="240" cy="240" r="190"/><circle class="map-ring map-ring-inner" cx="240" cy="240" r="128"/>
-   <path class="map-link" d="M240 240 L240 50"/><path class="map-link" d="M240 240 L420 180"/><path class="map-link" d="M240 240 L370 390"/><path class="map-link" d="M240 240 L110 390"/><path class="map-link" d="M240 240 L60 180"/>
-   <circle class="map-pulse" cx="240" cy="240" r="6"/>
-  </svg>
-  <img class="map-core" src="/assets/passioncode-mark.svg" width="150" height="150" alt="">
-  <span class="map-node node-1"><img src="/assets/switchboard-mark.svg" width="44" height="44" alt=""><b>Cuentas</b></span>
-  <span class="map-node node-2"><img src="/assets/dashboards-mark.svg" width="44" height="44" alt=""><b>Servicios</b></span>
-  <span class="map-node node-3"><img src="/assets/observatory-mark.svg" width="44" height="44" alt=""><b>Proyectos</b></span>
-  <span class="map-node node-4"><img src="/assets/inbox-mark.svg" width="44" height="44" alt=""><b>Correo</b></span>
-  <span class="map-node node-5 node-agent"><i>+</i><b>Tus agentes</b></span>
-  <span class="map-label">FABRIC · EL HOGAR DE TUS PROYECTOS</span>
- </div>
+ <aside class="assess-card" aria-labelledby="assess-card-title"><!-- SITE-072 (operator 2026-11-19): the hero's proof and entry into the free assessment; the figures are facts row *release guide (SITE-070)* -->
+  <p class="assess-kicker">EVALUACIÓN GRATUITA DE UNA SEMANA · BAJO SOLICITUD</p>
+  <h2 id="assess-card-title" class="assess-title">Por qué tu lanzamiento se retrasa otra vez</h2>
+  <dl class="assess-facts">
+   <div><dt>9,8 días</dt><dd>mediana del plazo de entrega de las tareas de redacción de textos de producto</dd></div>
+   <div><dt>60 a 85%</dt><dd>de las tareas que se movieron en una semana no estaban en ningún plan de esa semana</dd></div>
+  </dl>
+  <p class="assess-source">Una empresa piloto, sin nombre. Plazo de entrega en días naturales, no en horas de trabajo</p>
+  <p class="assess-links"><a href="https://t.me/MorpheusPMBot?start=lp_home_es" data-cta="morpheus" data-cta-location="hero">Escribe a Morpheus por Telegram <span aria-hidden="true">↗</span></a><a href="/es/guides/why-releases-slip/" data-cta="guide" data-cta-location="hero">Lee la guía <span aria-hidden="true">→</span></a></p>
+ </aside>
 </section>
 
 <figure class="home-video" id="video"><!-- SITE-028 W10, near the top since SITE-039 (operator 2026-10-12): directly under the hero, whose text stays the page's answer. Click to play, never autoplays; nothing but the poster loads before play (preload none). Russian pages take the -ru cut, poster and captions; the other languages the English cut with captions in their language (scripts/locales.mjs localizedAsset). Record: docs/evidence/2026-10-11-video/README.md -->
@@ -113,9 +110,26 @@
  <details class="video-transcript"><summary>Leer la transcripción</summary><!-- video-transcript: written by npm run locales from the captions file the player names (scripts/locales.mjs applyVideo); edit the captions, never this text --><p>Tu empresa funciona con personas que se pasan el trabajo unas a otras. Da a cada una asistentes de IA, y el trabajo sigue esperando a una persona. Las reuniones concilian lo que hicieron los asistentes. Y cada uno construye sus propios agentes: nada se conecta, las claves se dispersan, y nadie puede decir qué hizo un agente ni cuánto costó. En una organización AI-native, los agentes ejecutan el proceso y las personas lo dirigen. Fabric lleva el tablero. Hoy, en vista previa, encamina el trabajo y despierta al agente responsable de una tarea. Después, fijará prioridades y ordenará los lanzamientos. Las personas marcan la dirección, aprueban lo que necesita a una persona y aportan la experiencia. Así es como se ve. La pregunta de un usuario se convierte en una señal, una corrección y un lanzamiento, sin reuniones. La investigación convierte el mercado en una hipótesis. Un mensaje sale en todos los idiomas. Cada tarea, cada gasto y cada resultado quedan registrados. Todo se sostiene porque es un solo sistema: cada agente construido de la misma forma, las claves en un solo almacén, un panel para cada agente. Empieza en una máquina, gratis, hoy mismo. Bajo solicitud, configuramos tu organización en su propio dispositivo y nos encargamos de su administración, para que tu equipo solo dirija. Después, lo clonas para el siguiente equipo y la siguiente empresa. PassionCode.ai: el espacio de trabajo para organizaciones AI-native. Empieza gratis o trae tu organización.</p><!-- /video-transcript --></details>
 </figure>
 
+<section class="section assessment" id="assessment" aria-labelledby="assessment-title"><!-- SITE-072 (operator 2026-11-19): the home leads into the free assessment (assessment.passioncode.ai, the story landing SITE-068) and Morpheus, the PM agent's bot; facts rows *free assessment (SITE-056)* and *release guide (SITE-070)* -->
+ <div class="section-heading story-heading"><p class="section-number">01 / LA EVALUACIÓN</p><h2 id="assessment-title">Por qué tu lanzamiento se retrasa otra vez<br>Una semana muestra dónde espera el trabajo</h2><p>Un lanzamiento espera algo más que código. Un agente lee cómo trabajó tu empresa en los últimos 90 días, sigue el trabajo durante una semana y muestra dónde esperó, para que corrijas la espera en lugar de presionar al equipo.</p></div>
+ <ul class="vision-principles">
+  <li class="reveal"><strong>Esperas que no son código</strong><span>Las decisiones, los textos y las revisiones retienen un lanzamiento más tiempo que el código. En una empresa piloto, las 20 tareas de redacción de textos de producto tuvieron una mediana de 9,8 días.</span></li>
+  <li class="reveal"><strong>Trabajo fuera del plan</strong><span>En la misma empresa, del 60 al 85% de las tareas que se movieron en una semana no estaban en ningún plan de esa semana.</span></li>
+  <li class="reveal"><strong>Tareas de ping-pong</strong><span>Una tarea que vuelve a su responsable anterior en un plazo de 14 días indica que el siguiente paso no estaba claro. La evaluación cuenta estas devoluciones por proceso.</span></li>
+ </ul>
+ <ol class="work-cycle assessment-steps">
+  <li class="reveal"><span class="cycle-number">01</span><p class="availability">ANTES DE LA SEMANA</p><h3>Cuatro preguntas, enlaces de solo lectura</h3><p>Tu objetivo, el tamaño de tu equipo, tus sistemas y lo que más duele; después, acceso de solo lectura, un enlace por sistema. Unos veinte minutos de tu tiempo.</p></li>
+  <li class="reveal"><span class="cycle-number">02</span><p class="availability">DURANTE LA SEMANA</p><h3>Los últimos 90 días y después el trabajo en vivo</h3><p>Gestores de tareas, repositorios, documentos, chats del equipo, correo y soporte: qué estaba planificado, qué ocurrió y dónde esperó el trabajo.</p></li>
+  <li class="reveal"><span class="cycle-number">03</span><p class="availability">SÉPTIMO DÍA</p><h3>El mapa y el primer paso</h3><p>Tus procesos, el plan frente a lo ocurrido, las esperas y una propuesta: qué trabajo asumen primero los agentes. Lo repasamos contigo en una llamada de 30 minutos.</p></li>
+ </ol>
+ <div class="hero-actions assessment-actions"><a class="button button-primary" href="https://assessment.passioncode.ai/?lang=es" data-cta="assessment" data-cta-location="assessment">Solicita la evaluación gratuita <span aria-hidden="true">→</span></a><a class="button button-secondary" href="https://t.me/MorpheusPMBot?start=lp_home_es" data-cta="morpheus" data-cta-location="assessment">Escribe a Morpheus por Telegram <span aria-hidden="true">↗</span></a></div>
+ <p class="section-note">La evaluación lee procesos, nunca personas: totales por grupos, nunca una puntuación de una persona. Pasada la semana, se revoca el acceso y se eliminan los datos. Las cifras proceden de una empresa piloto sin nombre; el plazo de entrega se cuenta en días naturales, no en horas de trabajo.</p>
+ <p class="section-note assessment-more"><a href="/es/guides/why-releases-slip/" data-cta="guide" data-cta-location="assessment">La guía: por qué tu lanzamiento se retrasa otra vez</a><a href="/es/business/#request" data-cta="business" data-cta-location="assessment">¿Prefieres un formulario? Envía una solicitud</a></p>
+</section>
+
 <section class="section" id="problem" aria-labelledby="problem-title"><!-- SITE-049 (operator 2026-11-06): the home story follows the PassionCode North Star; design docs/tasks/2026-11-06-ai-native-org-design.md -->
  <span id="why" class="legacy-anchor" aria-hidden="true"></span><span id="path" class="legacy-anchor" aria-hidden="true"></span><span id="vision" class="legacy-anchor" aria-hidden="true"></span><span id="toolkit" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading story-heading"><p class="section-number">01 / EL PROBLEMA</p><h2 id="problem-title">Tus procesos se diseñaron para personas<br>Más asistentes de IA no cambian eso</h2><p>Hoy cada empresa da asistentes de IA a su gente. Aun así, el trabajo avanza a la velocidad de las personas que hay en medio.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">02 / EL PROBLEMA</p><h2 id="problem-title">Tus procesos se diseñaron para personas<br>Más asistentes de IA no cambian eso</h2><p>Hoy cada empresa da asistentes de IA a su gente. Aun así, el trabajo avanza a la velocidad de las personas que hay en medio.</p></div>
  <ul class="vision-principles">
   <li class="reveal"><strong>La persona sigue siendo el cuello de botella</strong><span>Un asistente redacta y analiza, y luego devuelve el resultado a una persona. Diez asistentes devuelven diez resultados. El trabajo espera hasta que esa persona tiene tiempo.</span></li>
   <li class="reveal"><strong>Las reuniones concilian lo que hicieron los asistentes</strong><span>Dos personas con sus propios asistentes producen más de lo que cualquiera de ellas puede leer. Se reúnen para ponerse de acuerdo, y el proceso sigue exactamente igual.</span></li>
@@ -125,7 +139,7 @@
 </section>
 
 <section class="section" id="shift" aria-labelledby="shift-title">
- <div class="section-heading story-heading"><p class="section-number">02 / EL CAMBIO</p><h2 id="shift-title">Los agentes ejecutan el proceso<br>Las personas lo dirigen</h2><p>En una empresa AI-native, el trabajo pasa entre agentes, no entre personas. Las personas hacen lo que solo las personas pueden hacer.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">03 / EL CAMBIO</p><h2 id="shift-title">Los agentes ejecutan el proceso<br>Las personas lo dirigen</h2><p>En una empresa AI-native, el trabajo pasa entre agentes, no entre personas. Las personas hacen lo que solo las personas pueden hacer.</p></div>
  <div class="path-grid path-grid-two shift-compare">
   <article class="path-card reveal"><p class="availability">HOY</p><h3>El trabajo pasa entre personas</h3><ul class="shift-list"><li>Una persona toma una tarea, la retiene y la pasa a otra</li><li>Las reuniones concilian lo que produjo cada uno</li><li>Los asistentes de cada persona, las reglas de cada persona</li><li>Más trabajo significa más personas</li></ul></article>
   <article class="path-card path-card-commercial reveal"><p class="availability">AI-NATIVE</p><h3>El trabajo pasa entre agentes</h3><ul class="shift-list"><li>Un agente toma la tarea y la pasa al siguiente agente</li><li>Los agentes lo resuelven en un solo tablero, con el registro</li><li>Un sistema: las mismas reglas, claves y registro para cada agente</li><li>Más trabajo significa más agentes</li></ul></article>
@@ -140,7 +154,7 @@
 
 <section class="section journey" id="fabric-process" aria-labelledby="fabric-process-title">
  <span id="how" class="legacy-anchor" aria-hidden="true"></span><span id="launcher" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading story-heading"><p class="section-number">03 / FABRIC GESTIONA EL PROCESO</p><h2 id="fabric-process-title">Un agente gestiona a los demás<br>Fabric lleva el tablero</h2><p>Una persona no puede seguir cientos de tareas de agentes en todos los proyectos. Fabric sí: su tablero es el gestor de tareas de tus agentes y el único lugar al que se dirige la dirección.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">04 / FABRIC GESTIONA EL PROCESO</p><h2 id="fabric-process-title">Un agente gestiona a los demás<br>Fabric lleva el tablero</h2><p>Una persona no puede seguir cientos de tareas de agentes en todos los proyectos. Fabric sí: su tablero es el gestor de tareas de tus agentes y el único lugar al que se dirige la dirección.</p></div>
  <figure class="product-screenshot fabric-board-shot reveal"><img src="/assets/fabric-board.jpg" width="1440" height="900" loading="lazy" alt="El tablero de Fabric: preguntas en las que se detuvieron los agentes y resultados que esperan revisión, cada uno con su proyecto y su responsable. Datos de demostración sintéticos."></figure>
  <ol class="work-cycle duty-list">
   <li class="reveal"><span class="cycle-number">01</span><p class="availability">VISTA PREVIA</p><h3>Lleva el tablero</h3><p>Cada solicitud entre agentes, con su responsable, su plazo y su respuesta.</p></li>
@@ -153,7 +167,7 @@
 </section>
 
 <section class="section" id="system" aria-labelledby="system-title">
- <div class="section-heading story-heading"><p class="section-number">04 / UN SISTEMA</p><h2 id="system-title">Cada agente construido de la misma forma<br>Cada resultado registrado</h2><p>El caos de agentes que cada uno construye a su manera termina cuando todos los agentes comparten un contrato, un almacén de claves y un registro.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">05 / UN SISTEMA</p><h2 id="system-title">Cada agente construido de la misma forma<br>Cada resultado registrado</h2><p>El caos de agentes que cada uno construye a su manera termina cuando todos los agentes comparten un contrato, un almacén de claves y un registro.</p></div>
  <ol class="work-cycle">
   <li class="reveal"><span class="cycle-number">01</span><p class="availability">DISPONIBLE AHORA, EN PARTE</p><h3>Un contrato</h3><p>Cada agente habla un contrato abierto y parte de las mismas skills, así que el agente de un empleado funciona como cualquier otro y sus errores se encuentran de la misma forma.</p></li>
   <li class="reveal"><span class="cycle-number">02</span><p class="availability">DISPONIBLE AHORA</p><h3>Las claves en un solo almacén</h3><p>Los agentes usan las claves por su nombre y nunca las ven, y cada clave tiene un responsable.</p></li>
@@ -164,7 +178,7 @@
 </section>
 
 <section class="section" id="agents" aria-labelledby="agents-title">
- <div class="section-heading story-heading"><p class="section-number">05 / AGENTES EN ACCIÓN</p><h2 id="agents-title">Cómo es<br>una empresa agéntica</h2><p>Las personas dan objetivos y aprobaciones al tablero de Fabric. Los agentes asumen el trabajo, lo transmiten y mantienen un único registro que lee toda la empresa.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">06 / AGENTES EN ACCIÓN</p><h2 id="agents-title">Cómo es<br>una empresa agéntica</h2><p>Las personas dan objetivos y aprobaciones al tablero de Fabric. Los agentes asumen el trabajo, lo transmiten y mantienen un único registro que lee toda la empresa.</p></div>
  <figure class="agents-map reveal">
   <svg viewBox="0 0 960 520" role="img" aria-labelledby="agents-map-title agents-map-desc">
    <title id="agents-map-title">Una empresa agéntica</title>
@@ -199,7 +213,7 @@
 
 <section class="section journey" id="grow" aria-labelledby="grow-title">
  <span id="start" class="legacy-anchor" aria-hidden="true"></span><span id="companies" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading story-heading"><p class="section-number">06 / DE UN EQUIPO A UNA ORGANIZACIÓN</p><h2 id="grow-title">Empieza en una máquina<br>Crece hasta ser una organización</h2><p>El mismo sistema desde el primer agente hasta una empresa de empresas.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">07 / DE UN EQUIPO A UNA ORGANIZACIÓN</p><h2 id="grow-title">Empieza en una máquina<br>Crece hasta ser una organización</h2><p>El mismo sistema desde el primer agente hasta una empresa de empresas.</p></div>
  <ol class="work-cycle journey-steps">
   <li class="reveal"><span class="cycle-number">01</span><p class="availability">DISPONIBLE AHORA · GRATIS</p><h3>Una máquina</h3><p class="step-prompt"><span>terminal</span><code>npx @passioncode-ai/<wbr>passioncode@latest setup</code></p><p>Un comando del lanzador de PassionCode.ai configura Fabric, las herramientas y las skills, o deja que tu agente de programación lo ejecute; después, este crea tus primeros agentes. Fabric, una vista previa temprana, también necesita Docker y Supabase CLI.</p><a href="/es/start/#setup" data-cta="setup" data-cta-location="grow">Configurarlo</a></li>
   <li class="reveal"><span class="cycle-number">02</span><p class="availability">BAJO SOLICITUD</p><h3>El dispositivo propio de tu organización</h3><p>Un ordenador dedicado o una nube dedicada para la empresa: espacios separados, acceso por nivel (propietario, administrador, arquitecto de proyecto, usuario) y un conjunto básico de agentes desde el primer día.</p><a href="/es/business/" data-cta="business" data-cta-location="grow">Para tu organización</a></li>
@@ -209,9 +223,9 @@
 </section>
 
 <section class="section paths" id="doors" aria-labelledby="doors-title">
- <div class="section-heading story-heading"><p class="section-number">07 / POR DÓNDE EMPEZAR</p><h2 id="doors-title">Cuatro formas de entrar</h2></div>
+ <div class="section-heading story-heading"><p class="section-number">08 / POR DÓNDE EMPEZAR</p><h2 id="doors-title">Cuatro formas de entrar</h2></div>
  <div class="path-grid path-grid-four">
-  <article class="path-card path-card-commercial reveal"><p class="availability">FUNDADORES Y DIRECTIVOS</p><h3>Trae tu organización</h3><p>Cuéntanos qué procesos consumen el tiempo de tu equipo. Te mostramos qué asumirían los agentes y cuál es el primer paso.</p><a class="button button-primary" href="/es/business/" data-cta="business" data-cta-location="doors">Trae tu organización <span aria-hidden="true">→</span></a></article>
+  <article class="path-card path-card-commercial reveal"><p class="availability">FUNDADORES Y DIRECTIVOS</p><h3>Empieza con la evaluación gratuita</h3><p>Una semana con acceso de solo lectura muestra dónde espera el trabajo de tu empresa y qué trabajo asumen primero los agentes.</p><a class="button button-primary" href="https://assessment.passioncode.ai/?lang=es" data-cta="assessment" data-cta-location="doors">Solicita la evaluación gratuita <span aria-hidden="true">→</span></a><a class="text-link" href="/es/business/" data-cta="business" data-cta-location="doors">O trae tu organización</a></article>
   <article class="path-card reveal"><p class="availability">INVERSORES</p><h3>La tesis y el equipo</h3><p>Por qué las empresas funcionarán con agentes, qué funciona hoy y quién lo construye.</p><a class="button button-secondary" href="#investors" data-cta="investors" data-cta-location="doors">Para inversores <span aria-hidden="true">↓</span></a></article>
   <article class="path-card reveal"><p class="availability">INGENIEROS</p><h3>Lee el código fuente</h3><p>Cada herramienta es de código abierto bajo AGPL-3.0, con su comando de pruebas y su contrato a la vista.</p><a class="button button-secondary" href="https://github.com/passioncode-ai" data-cta="github" data-cta-location="doors">Lee el código fuente <span aria-hidden="true">↗</span></a></article>
   <article class="path-card reveal"><p class="availability">FUNDADORES EN SOLITARIO · GRATIS</p><h3>Tu propio espacio de trabajo con agentes</h3><p>Un espacio de trabajo local y de código abierto con los agentes y la suscripción que ya tienes. Configúralo con un comando y después crea tus primeros agentes con Claude Code o Codex. Unos veinte minutos.</p><pre class="copyable"><code>npx @passioncode-ai/<wbr>passioncode@latest setup</code></pre><a class="button button-primary" href="/es/start/" data-cta="start" data-cta-location="doors">Empieza gratis <span aria-hidden="true">→</span></a></article>
@@ -220,7 +234,7 @@
 
 <section class="section product-directory" id="products" aria-labelledby="products-title">
  <span id="extend" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading"><p class="section-number">04 / LAS HERRAMIENTAS</p><h2 id="products-title">Herramientas que puedes usar hoy</h2><p>Fabric es el hogar de tus proyectos y sus agentes. Las cuatro herramientas que siguen funcionan con Fabric y también por su cuenta. Cada una indica su paso de «Cómo funciona», y las versiones son las actuales.</p></div>
+ <div class="section-heading"><p class="section-number">09 / LAS HERRAMIENTAS</p><h2 id="products-title">Herramientas que puedes usar hoy</h2><p>Fabric es el hogar de tus proyectos y sus agentes. Las cuatro herramientas que siguen funcionan con Fabric y también por su cuenta. Cada una indica su paso de «Cómo funciona», y las versiones son las actuales.</p></div>
  <div class="tool-directory tool-directory-four">
   <a class="tool-choice tool-choice-home reveal" href="/es/fabric/"><img src="/assets/passioncode-mark.svg" width="40" height="40" alt=""><span class="tool-choice-body"><strong>Fabric</strong><span>El hogar de tus proyectos y sus agentes: el propósito, el tablero, las decisiones y las versiones de cada proyecto.</span><small>Vista previa temprana <span data-live="fabric.version">0.3.16</span> · macOS · pasos 2 y 5</small></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
   <p class="tool-directory-label">Con Fabric y por su cuenta</p>
@@ -234,12 +248,13 @@
 
 <section class="section" id="source" aria-labelledby="source-title">
  <span id="open-source" class="legacy-anchor" aria-hidden="true"></span><span id="foundation" class="legacy-anchor" aria-hidden="true"></span><span id="pipeline" class="legacy-anchor" aria-hidden="true"></span>
- <div class="section-heading story-heading"><p class="section-number">05 / CÓDIGO ABIERTO</p><h2 id="source-title">Usa las herramientas<br>Lee el código fuente</h2><p>Fabric, Fabric Inbox, Switchboard, Observatory y Fabric Dashboards son de código abierto bajo AGPL-3.0: examínalos, compílalos desde el código fuente o aporta una corrección. Hay una licencia comercial disponible para los usos que la AGPL no cubre.</p></div>
+ <div class="section-heading story-heading"><p class="section-number">10 / CÓDIGO ABIERTO</p><h2 id="source-title">Usa las herramientas<br>Lee el código fuente</h2><p>Fabric, Fabric Inbox, Switchboard, Observatory y Fabric Dashboards son de código abierto bajo AGPL-3.0: examínalos, compílalos desde el código fuente o aporta una corrección. Hay una licencia comercial disponible para los usos que la AGPL no cubre.</p></div>
  <p class="section-note"><!-- license-history -->Las versiones publicadas conservan la licencia con la que salieron: MIT para Switchboard hasta la 0.3.1-beta.1, Observatory hasta la 0.8.1 y Fabric Dashboards 0.1.0; PolyForm Noncommercial o Internal Use para Switchboard 0.4.0-beta.1, Observatory 0.8.2 a 0.9.1, y Fabric Dashboards 0.2.0 y 0.3.0.<!-- /license-history --> La vista previa de Fabric 0.2.0 se compiló antes de que se publicara el código fuente de Fabric. <a href="https://github.com/passioncode-ai">Visita PassionCode en GitHub <span aria-hidden="true">↗</span></a></p>
 </section>
 
 <section class="section faq" id="faq" aria-labelledby="faq-title">
- <div class="section-heading"><p class="section-number">06 / PREGUNTAS</p><h2 id="faq-title">Las preguntas que más se hacen</h2></div>
+ <div class="section-heading"><p class="section-number">11 / PREGUNTAS</p><h2 id="faq-title">Las preguntas que más se hacen</h2></div>
+ <details><summary>¿Qué es la evaluación gratuita?</summary><p>Un agente lee cómo trabajó tu empresa en los últimos 90 días con acceso de solo lectura, sigue el trabajo durante una semana y el séptimo día te muestra tus procesos, el plan frente a lo ocurrido, las esperas y qué trabajo asumen primero los agentes. Lee procesos, nunca personas, y pasada la semana se revoca el acceso y se eliminan los datos. <a href="https://t.me/MorpheusPMBot?start=lp_home_es" data-cta="morpheus" data-cta-location="faq">Pregunta a Morpheus por Telegram</a>.</p></details>
  <details><summary>¿PassionCode.ai es gratis?</summary><p>Sí. Cada herramienta es de código abierto bajo la GNU AGPL-3.0: puedes descargarla, usarla, estudiarla y modificarla sin coste. Hace falta una licencia comercial si la incluyes en un producto cerrado o ejecutas un servicio alojado modificado sin publicar su código fuente.</p></details>
  <details><summary>¿Con qué agentes funciona?</summary><p>No depende de un agente concreto. Claude Code, Codex, Kilo Code, Hermes Agent y Kimi Code se conectan hoy a Fabric, Cline se ejecuta dentro de él, y hay más previstos: <a href="/es/fabric/agents/">la lista completa, por nivel</a>.</p></details>
  <details><summary>¿Adónde van mis datos?</summary><p>Tu trabajo se queda en tus ordenadores y en tus propias cuentas de nube. Fabric Switchboard y, desde la versión 0.3.2, Fabric envían recuentos de uso anónimos: solo recuentos y tipos, nunca nombres, rutas ni contenido. Desactívalos en la ventana Acerca de de Switchboard o en los Ajustes de Fabric. <a href="/es/privacy/">Qué se envía, exactamente</a>.</p></details>

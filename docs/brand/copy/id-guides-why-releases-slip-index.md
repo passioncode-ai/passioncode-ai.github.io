@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Asesmen gratis
+
 Visi
 
 Untuk Anda

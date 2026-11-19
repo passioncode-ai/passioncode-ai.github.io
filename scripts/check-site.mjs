@@ -216,29 +216,47 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
 // evidence carries its sources; four doors. Step 01 of #grow still teaches setup (SITE-045).
 {
   const section = id => { const i = home.indexOf(`id="${id}" aria-labelledby`); return i < 0 ? '' : home.slice(i, home.indexOf('</section>', i)) }
-  const order = ['problem', 'shift', 'fabric-process', 'system', 'agents', 'grow', 'doors', 'products']
+  // SITE-072 (operator 2026-11-19): the free assessment opens the story as 01, so the old seven are 02 to 08 and
+  // the tools, open source and questions continue the count (09 to 11) instead of restarting it at 04.
+  const order = ['assessment', 'problem', 'shift', 'fabric-process', 'system', 'agents', 'grow', 'doors', 'products', 'source', 'faq']
   const at = order.map(id => home.indexOf(`id="${id}" aria-labelledby`))
   assert.ok(at.every(i => i > 0), `homepage: the story sections ${order.join(', ')}`)
   assert.deepEqual([...at].sort((a, b) => a - b), at, 'homepage: the story sections in order')
-  const numbers = order.slice(0, 7).map(id => /<p class="section-number">(0\d) \//.exec(section(id))?.[1])
-  assert.deepEqual(numbers, ['01', '02', '03', '04', '05', '06', '07'], 'homepage: sections numbered 01 to 07')
+  const numbers = order.map(id => /<p class="section-number">(\d\d) \//.exec(section(id))?.[1])
+  assert.deepEqual(numbers, ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11'], 'homepage: sections numbered 01 to 11 in order, never restarting (SITE-072)')
   const labels = id => [...section(id).matchAll(/<span class="cycle-number">0(\d)<\/span><p class="availability">([^<]+)<\/p><h3>([^<]+)<\/h3>/g)].map(m => `${m[1]} ${m[3]}: ${m[2]}`)
   assert.deepEqual(labels('fabric-process'), ['1 Keeps the board: PREVIEW', '2 Routes the work: PREVIEW', '3 Wakes the owner: PREVIEW', '4 Sets priorities: DIRECTION', '5 Answers to management: DIRECTION'], 'homepage #fabric-process: five duties, each labelled (NS §6)')
   assert.deepEqual(labels('grow').map(l => l.split(':')[1].trim()), ['AVAILABLE NOW · FREE', 'ON REQUEST', 'DIRECTION', 'ON REQUEST'], 'homepage #grow: four steps, each labelled (NS §13)')
   for (const id of ['system']) for (const l of labels(id)) assert.match(l, /: (AVAILABLE NOW|AVAILABLE NOW, IN PART|PREVIEW|DIRECTION)$/, `homepage #${id}: ${l} labelled`)
   const SAFE = new Set(['dashboards-overview.jpg', 'fabric-board.jpg', 'fabric-home.jpg', 'fabric-releases.jpg', 'dashboards-service-dashboard.jpg', 'observatory-demo.jpg', 'switchboard-accounts.jpg', ...MOCKUPS])
-  for (const id of order.slice(0, 7)) for (const [, image] of section(id).matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #${id}: ${image} is not a synthetic shot the journey truth table marks reusable`)
+  for (const id of order.slice(0, 8)) for (const [, image] of section(id).matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #${id}: ${image} is not a synthetic shot the journey truth table marks reusable`)
   for (const source of ['https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai', 'https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027']) assert.ok(section('problem').includes(`href="${source}"`), `homepage #problem: the figure's source ${source} (facts row *agent sprawl sources*)`)
   const map = section('agents')
   assert.ok(/<svg [^>]*role="img"[^>]*aria-labelledby="agents-map-title agents-map-desc"/.test(map) && map.includes('<desc id="agents-map-desc">'), 'homepage #agents: the diagram has a title and a text alternative')
   for (const text of ['<code>npx @passioncode-ai/passioncode@latest setup</code>', 'or let your coding agent run it', 'Docker and the Supabase CLI', 'href="/start/#setup"']) assert.ok(section('grow').replace(/<wbr>/g, '').includes(text), `homepage #grow step 1: ${text}`)
   const doors = [...section('doors').matchAll(/<article class="path-card[^"]*"[^>]*><p class="availability">([^<]+)<\/p>[\s\S]*?data-cta="([a-z]+)" data-cta-location="doors"/g)].map(m => `${m[1]} → ${m[2]}`)
-  assert.deepEqual(doors, ['FOUNDERS AND EXECUTIVES → business', 'INVESTORS → investors', 'ENGINEERS → github', 'SOLO FOUNDERS · FREE → start'], 'homepage #doors: four doors, each with its next step (SCN-024)')
+  assert.deepEqual(doors, ['FOUNDERS AND EXECUTIVES → assessment', 'INVESTORS → investors', 'ENGINEERS → github', 'SOLO FOUNDERS · FREE → start'], 'homepage #doors: four doors, each with its next step; founders start with the free assessment (SCN-024, SITE-072)')
+  assert.ok(section('doors').includes('href="/business/" data-cta="business" data-cta-location="doors"'), 'homepage #doors: the founders door still links /business/ (SITE-072)')
+  // SITE-072: the home leads into the free assessment: the hero's first button, its proof card, #assessment, the
+  // founders' door and the header's first item open assessment.passioncode.ai in the page's language; the figures are
+  // the pilot's, said as facts row *release guide (SITE-070)* says them, and the guide and Morpheus are one click away.
+  {
+    const hero = home.slice(home.indexOf('class="hero home-hero"'), home.indexOf('</section>', home.indexOf('class="hero home-hero"')))
+    assert.ok(hero.includes('<a class="button button-primary" href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="hero">Get the free assessment'), 'homepage hero: the first button opens the free assessment')
+    for (const text of ['9.8 days', '60 to 85%', 'One pilot company, not named', 'href="https://t.me/MorpheusPMBot?start=lp_home_en"', 'href="/guides/why-releases-slip/"']) assert.ok(hero.includes(text), `homepage hero card: ${text}`)
+    const a = section('assessment')
+    for (const text of ['href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="assessment"', 'href="https://t.me/MorpheusPMBot?start=lp_home_en" data-cta="morpheus"', 'href="/guides/why-releases-slip/" data-cta="guide"', 'href="/business/#request" data-cta="business"', 'never people', 'one pilot company that is not named']) assert.ok(a.includes(text), `homepage #assessment: ${text}`)
+    for (const locale of TRANSLATED_LOCALES) {
+      const page = read(`${locale}/index.html`)
+      assert.ok(page.includes(`href="https://assessment.passioncode.ai/?lang=${locale}"`), `${locale}/index.html: the assessment opens in ${locale}`)
+      assert.ok(!page.includes('https://assessment.passioncode.ai/?lang=en"'), `${locale}/index.html: no English assessment link left`)
+    }
+  }
   const how = section('fabric-process')
   assert.ok(!how.includes('home-video'), 'homepage: the video is not inside the story (SITE-039)')
-  const afterHero = home.slice(home.indexOf('</section>', home.indexOf('class="hero home-hero"')), home.indexOf('<section class="section" id="problem"'))
+  const afterHero = home.slice(home.indexOf('</section>', home.indexOf('class="hero home-hero"')), home.indexOf('<section class="section assessment" id="assessment"'))
   const video = /^<\/section>\s*<figure class="home-video" id="video">([\s\S]*?)<\/figure>\s*$/.exec(afterHero)?.[1]
-  assert.ok(video, 'homepage: the video block directly under the hero, before #problem (SITE-039, SITE-049)')
+  assert.ok(video, 'homepage: the video block directly under the hero, before #assessment (SITE-039, SITE-049, SITE-072)')
   assert.equal((video.match(/<video /g) || []).length, 1, 'homepage: one player')
   assert.ok(!/<iframe/.test(home), 'homepage: no embedded third-party player')
   const tag = /<video [^>]*>/.exec(video)[0]
@@ -286,7 +304,7 @@ for (const file of SOURCE_PAGES) {
   if (!['vision/index.html', 'fabric/agents/index.html', 'switchboard/agents/index.html'].includes(file)) assert.ok(!/\bharness\b/i.test(words.replace(/id="harness"|#harness/g, '')), `${file}: "harness" is named on /vision/ only (D-T1)`)
 }
 for (const name of ['PassionCode.ai launcher', 'Fabric Dashboards', 'Project Observatory', 'Fabric Inbox', 'Fabric Switchboard']) assert.ok(home.includes(name), `homepage names ${name}`)
-assert.equal((home.match(/<details><summary>/g) || []).length, 5, 'homepage: a short FAQ (three, plus two since SITE-049)')
+assert.equal((home.match(/<details><summary>/g) || []).length, 6, 'homepage: a short FAQ (three, plus two since SITE-049, plus the free assessment since SITE-072)')
 for (const path of ['/switchboard/', '/dashboards/', '/observatory/', '/inbox/', '/fabric/']) assert.ok(home.includes(`href="${path}"`), `homepage links ${path}`)
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
 assert.ok(home.includes('"@type": "FAQPage"'), 'homepage FAQ structured data')
