@@ -168,6 +168,8 @@ ${closing('template', ` data-template="${t.slug}"`)}
 // SITE-058: a hub opens with what the section is for, whom it helps and what to read first (the answer before the list),
 // and each card says whom its item helps and lists the item's own h2 headings as what it covers (plain text, no links,
 // so the cards add words to quote rather than link markers).
+// SITE-070: an item's own publication date (N11: a date changes only with the content), else the section's.
+const dated = a => a.published || PUBLISHED
 const topics = a => [...a.body.matchAll(/<h2>([^<]+)<\/h2>/g)].map(m => m[1])
 function hub ({ folder, items, title, description, name, eyebrow, h1, body, lead, start, covers, byline, location, kind }) {
   const path = `/${folder}/`
@@ -194,7 +196,7 @@ ${start.map(([who, what]) => `   <li><strong>${esc(who)}</strong> ${esc(what)}</
 <section class="section" aria-labelledby="list-title">
  <h2 id="list-title" class="visually-hidden">${esc(name)}</h2>
  <div class="path-grid path-grid-two article-grid">
-${items.map(a => `  <article class="path-card reveal"><p class="availability">${esc(kind)} · <time datetime="${PUBLISHED.iso}">${PUBLISHED.text}</time></p><h3><a href="/${folder}/${a.slug}/" data-cta="${folder}" data-cta-location="${location}">${esc(a.name)}</a></h3><p>${esc(a.lead)}</p><p class="hub-summary">${esc(a.summary)}</p><p class="hub-topics-title">${esc(covers)}</p><ul class="hub-topics">${topics(a).map(t => `<li>${esc(t)}</li>`).join('')}</ul></article>`).join('\n')}
+${items.map(a => `  <article class="path-card reveal"><p class="availability">${esc(kind)} · <time datetime="${dated(a).iso}">${dated(a).text}</time></p><h3><a href="/${folder}/${a.slug}/" data-cta="${folder}" data-cta-location="${location}">${esc(a.name)}</a></h3><p>${esc(a.lead)}</p><p class="hub-summary">${esc(a.summary)}</p><p class="hub-topics-title">${esc(covers)}</p><ul class="hub-topics">${topics(a).map(t => `<li>${esc(t)}</li>`).join('')}</ul></article>`).join('\n')}
  </div>
 </section>
 </main>
@@ -206,13 +208,13 @@ function article ({ folder, a, kind, hubName, location, others }) {
   const path = `/${folder}/${a.slug}/`
   const blog = folder === 'blog'
   const data = [
-    { '@context': 'https://schema.org', '@type': blog ? 'BlogPosting' : 'Article', headline: a.name, description: a.description, url: ORIGIN + path, mainEntityOfPage: ORIGIN + path, datePublished: PUBLISHED.iso, dateModified: PUBLISHED.iso, inLanguage: 'en', author: AUTHOR, publisher: PUBLISHER, image: `${ORIGIN}/assets/passioncode-social-card.png` },
+    { '@context': 'https://schema.org', '@type': blog ? 'BlogPosting' : 'Article', headline: a.name, description: a.description, url: ORIGIN + path, mainEntityOfPage: ORIGIN + path, datePublished: dated(a).iso, dateModified: dated(a).iso, inLanguage: 'en', author: AUTHOR, publisher: PUBLISHER, image: `${ORIGIN}/assets/passioncode-social-card.png` },
     crumbs([HOME, [hubName, `/${folder}/`], [a.name, path]])
   ]
   const main = `<main id="main">
 <article class="section legal article-page" aria-labelledby="hero-title">
  ${breadcrumbNav([HOME, [hubName, `/${folder}/`]])}
- <p class="section-number">${esc(kind)} · <time datetime="${PUBLISHED.iso}">${PUBLISHED.text}</time></p>
+ <p class="section-number">${esc(kind)} · <time datetime="${dated(a).iso}">${dated(a).text}</time></p>
  <h1 id="hero-title">${esc(a.name)}</h1>
  <p class="legal-lead">${esc(a.lead)}</p>
  <p class="article-meta">Sergey Sheleg, co-founder of PassionCode.ai</p>

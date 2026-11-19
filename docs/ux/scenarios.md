@@ -35,6 +35,7 @@
 | SCN-026 | Read one agent template and ask for it | Agent templates | P-03, P-02 | ST-07, FLW-09 | draft | pending |
 | SCN-027 | Read a guide and take its next step | Guides | P-01, P-03 | ST-01, ST-07, FLW-09 | draft | pending |
 | SCN-028 | Read a blog post on AI-native organizations | Blog | P-03, P-04 | ST-09, FLW-09 | draft | pending |
+| SCN-029 | Start the free assessment from the home | Assessment | P-02, P-03 | ST-07, ST-09, FLW-08 | draft | pending |
 
 ## Personas
 
@@ -51,8 +52,8 @@ See [foundation](foundation.md).
 - **Steps:**
   1. Read the header (kept as it is, SITE-049 D2: eyebrow, H1 «The agent-agnostic operating system for AI-native teams») and its subline, which states the promise: the workplace where agents run an organization's processes and people steer them.
   2. Directly under the hero the home video (#video, SCN-021) tells the whole story in about ninety seconds when asked.
-  3. Scroll the story (SCN-023): the problem, the shift, Fabric managing the process, one system, agents at work, from a team to an organization; each claim about today carries AVAILABLE NOW, PREVIEW or DIRECTION.
-  4. Choose a door (SCN-024): the hero's «For your organization» → /business/ (SCN-014), «For you, free» → /start/ (SCN-013), or one of the four doors further down.
+  3. Scroll the story (SCN-023): since SITE-072 the free assessment first (#assessment, SCN-029), then the problem, the shift, Fabric managing the process, one system, agents at work, from a team to an organization; each claim about today carries AVAILABLE NOW, PREVIEW or DIRECTION.
+  4. Choose a door (SCN-024): since SITE-072 (2026-11-19) the hero's first button (since SITE-075 «Free assessment for your organization», with the white rabbit on it) → the free assessment (SCN-029), «For you, free» → /start/ (SCN-013), or one of the four doors further down; /business/ stays one click away in the header, #assessment and the founders' door.
   5. The tools section (#products) lists Fabric first as the home, then the four tools that work with Fabric and on their own, each with its current release; Set up in the header leads to /start/#setup.
 - **Expected result:** In the first screen the visitor knows what PassionCode is for and whom it serves; after the story they can say what an agentic organization is and what runs today.
 - **Alt paths:** returning visitors open an anchor directly; keyboard and narrow screens expose the same actions; without JavaScript every section and link is present.
@@ -520,10 +521,10 @@ rather than replaces, the browser review recorded above.
 - **Persona:** P-01, P-02, P-03, P-04
 - **Feature:** Doors
 - **Traces:** ST-01, ST-07, ST-09, ST-10, FLW-08
-- **Entry point:** / section 07 (#doors); the hero's two buttons are the short form of the first and fourth doors
+- **Entry point:** / section 08 (#doors, 07 before SITE-072); the hero's two buttons are the short form of the first and fourth doors
 - **Preconditions:** none
 - **Steps:**
-  1. Founders and executives → «Bring your organization» → /business/ (SCN-014, SCN-022).
+  1. Founders and executives → «Get the free assessment» → the free assessment (SCN-029), or «Or bring your organization» → /business/ (SCN-014, SCN-022) (since SITE-072, 2026-11-19).
   2. Investors → «For investors» → /#investors (the thesis in one paragraph, what runs today, the founders, commercial@passioncode.ai); no figures or terms (facts *investors note*).
   3. Engineers → «Read the source» → GitHub, and «Set up» → /start/#setup.
   4. Solo founders → «Start free» → /start/ (SCN-013).
@@ -615,4 +616,25 @@ rather than replaces, the browser review recorded above.
 - **Errors & recovery:** none (static).
 - **Status:** draft
 - **Coverage:** blog/index.html, blog/*/index.html
+- **Product:** unobserved
+
+### SCN-029: Start the free assessment from the home
+- **Persona:** P-02, P-03
+- **Feature:** Assessment (SITE-072, operator 2026-11-19)
+- **Traces:** ST-07, ST-09, FLW-08
+- **Entry point:** / in any of the ten languages; the header's first item «Free assessment» on every page
+- **Preconditions:** none
+- **Steps:**
+  1. The first screen: the hero's first button «Free assessment for your organization» (since SITE-075; «Get the free assessment» before), with the white rabbit on it (step 1a), and, beside it (below it on a phone), the card «Why your release slips again» with the pilot's two figures (copy median 9.8 days; 60 to 85% of a week's work in no plan), their source line (one pilot company, not named; calendar days, not hours) and two links: Morpheus on Telegram and the guide.
+  1a. Since SITE-075 (operator 2026-11-19): once the button is at least half on screen, a white rabbit appears at the far edge of the window, crosses it in a few soft low hops with one pause halfway, lands on the button's top edge at its inline end and sits there facing the label (it turns around when it came from the label's side; mirrored in right-to-left languages). It never covers a click while it moves and never shifts the layout; once seated, a click on it opens the assessment like the button. With reduced motion, or without JavaScript, it is simply sitting there.
+  2. Under the video, 01 / THE ASSESSMENT: why a release waits on more than code, three findings (waits that are not code, work outside the plan, ping-pong tasks), the week in three steps (four questions and read-only links; the last 90 days, then the live work; day seven: the map and the first step), then «Get the free assessment» and «Write to Morpheus on Telegram».
+  3. The note under it: processes, never people; access revoked and data deleted after the week; where the figures come from; then the guide and «Prefer a form? Send a request» → /business/#request (SCN-014).
+  4. «Get the free assessment» opens https://assessment.passioncode.ai/?lang=<the page's language> (the story landing, SITE-068), which ends in Morpheus's bot; «Write to Morpheus» opens https://t.me/MorpheusPMBot?start=lp_home_<lang> (the bot's language where it has lead texts, else en).
+- **Expected result:** A founder on the first screen sees what the assessment shows and how to start it, and reaches it, the bot, the guide or the form in one click.
+- **Alt paths:** the founders' door (#doors), the 08 / grow step «Your organization’s own device» (since SITE-075 «Get the free assessment» first, then «For your organization»), /business/'s hero (since SITE-075 «Get the free assessment» first, «Estimate and request» second), /start/'s closing (the same order) and the FAQ «What is the free assessment?» lead to the same places; without JavaScript every link works; the clicks are measured as `cta_click` (target assessment, morpheus, guide or business; location header, hero, rabbit, grow, start, assessment, doors or faq; page business for /business/'s hero); the rabbit's landing as `rabbit_landed` (motion hop or still), docs/analytics/events.md.
+- **UI elements:** header item, hero button with the white rabbit, proof card, #assessment section, founders' door, FAQ entry
+- **States covered:** static populated.
+- **Errors & recovery:** the assessment landing or Telegram unreachable: the browser's error; the /business/ form is the fallback.
+- **Status:** draft
+- **Coverage:** index.html (hero, #assessment, #grow, #doors, #faq), business/index.html hero, start/index.html closing, every page's header; assets/rabbit.js with scripts/rabbit.test.mjs; browser evidence in docs/tasks/2026-11-19-home-rabbit/README.md
 - **Product:** unobserved

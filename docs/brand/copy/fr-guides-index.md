@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Audit gratuit
+
 Vision
 
 Pour vous
@@ -63,6 +65,56 @@ Sur votre propre ordinateur : lisez d’abord le guide d’installation, puis la
 Pour votre entreprise : lisez comment fonctionne l’évaluation gratuite d’une semaine, puis comment les modèles d’agents deviennent vos agents.
 
 ## Guides
+
+Guide · 19 novembre 2026
+
+### Pourquoi les tâches stagnent entre les personnes, et ce qui change avec un agent
+
+Une tâche peut sembler active alors qu'elle attend que la personne suivante la voie, la prenne ou la renvoie au planificateur. Un agent change le rythme du quotidien : ces vérifications et ces escalades deviennent automatiques, et les personnes gardent la responsabilité et les décisions.
+
+Pour les fondateurs et les responsables d'équipe produit dont les tâches attendent entre les personnes et dont les planificateurs relancent les responsables à la main.
+
+Dans ce guide
+
+Où une tâche attend vraiment
+
+Les signes d'un passage de relais bloqué
+
+Pourquoi les relances manuelles ne passent pas à l'échelle
+
+Ce que l'agent change dans le rythme quotidien
+
+Les agents suivent le travail, les personnes décident
+
+Comment commencer avec l'évaluation gratuite
+
+Sources et méthode
+
+Guide · 19 novembre 2026
+
+### Pourquoi votre release dérape encore : ce que révèle un audit d'équipe
+
+Une release ne part que lorsque tout ce qui entoure le code est prêt, lui aussi. Un audit d'équipe lit comment le travail a réellement avancé au cours des 90 derniers jours et montre où il a attendu : vous corrigez l'attente au lieu de pousser l'équipe.
+
+Pour les fondateurs dont les dates de release ne cessent de bouger et qui veulent voir où le travail attend.
+
+Dans ce guide
+
+Où une release attend vraiment
+
+Ce que lit l'audit
+
+Trois constats fréquents
+
+Pourquoi un meilleur plan ne suffit pas
+
+Ce qui change quand un agent tient le rythme
+
+Qui décide
+
+Comment démarrer
+
+Sources et méthode
 
 Guide · 8 novembre 2026
 

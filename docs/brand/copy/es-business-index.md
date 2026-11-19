@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Evaluación gratuita
+
 Visión
 
 Para ti
@@ -51,6 +53,10 @@ Enterprise · para organizaciones
 # Haz que tu organización sea AI-native
 
 Un agente que vive en el portátil de una persona ayuda a una persona. Llevamos agentes a los equipos de tu organización, los conectamos y mostramos lo que costó cada uno y lo que aportó, con herramientas de código abierto y con tus datos en tus equipos o en tu propia nube
+
+Solicita la evaluación gratuita
+
+→
 
 Estimación y solicitud
 

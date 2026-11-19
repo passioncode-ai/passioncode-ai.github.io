@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Bezpłatna ocena
+
 Wizja
 
 Dla Ciebie
@@ -54,7 +56,7 @@ Miejsce pracy, w którym agenci prowadzą procesy Twojej firmy, a ludzie nimi st
 
 Fabric to dom dla Twoich projektów i ich agentów. Switchboard, Dashboards, Observatory i Inbox działają razem z nim i samodzielnie. Już dziś wszystko konfiguruje jedno polecenie
 
-Dla Twojej organizacji
+Bezpłatna ocena dla Twojej organizacji
 
 →
 
@@ -64,19 +66,21 @@ Dla Ciebie, bezpłatnie
 
 Otwarty kod na licencji AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
 
-Konta
+BEZPŁATNA TYGODNIOWA OCENA · NA ŻYCZENIE
 
-Usługi
+## Dlaczego Twoje wydanie znów się opóźnia
 
-Projekty
+9,8 dnia
 
-Poczta
+mediana czasu realizacji zadań pisania tekstów produktowych
 
-+
+60 do 85%
 
-Twoi agenci
+zadań przesuniętych w ciągu tygodnia nie było w żadnym planie tego tygodnia
 
-FABRIC · DOM DLA TWOICH PROJEKTÓW
+Jedna firma pilotażowa, bez nazwy. Czas realizacji w dniach kalendarzowych, nie w godzinach pracy
+
+Napisz do Morpheusa na Telegramie ↗Przeczytaj poradnik →
 
 PassionCode.ai w półtorej minuty: jak praca przechodzi od ludzi do agentów prowadzonych przez Fabric i jak zespół wyrasta na organizację, z lektorem i napisami. Tablica pokazuje przykładowe dane
 
@@ -84,7 +88,57 @@ Przeczytaj transkrypcję
 
 Twoja firma działa dzięki ludziom, którzy przekazują sobie pracę. Daj każdemu asystentów AI, a praca i tak czeka na człowieka. Spotkania uzgadniają to, co stworzyli asystenci. A każdy buduje własnych agentów: nic się nie łączy, klucze leżą wszędzie, i nikt nie powie, co agent zrobił ani ile to kosztowało. W organizacji AI-native proces prowadzą agenci, a ludzie nim sterują. Fabric prowadzi tablicę. Dziś, w wersji zapoznawczej, kieruje pracą i budzi agenta, do którego należy zadanie. Następnie będzie ustalać priorytety i układać kolejkę wydań. Ludzie wyznaczają kierunek, zatwierdzają to, co wymaga człowieka, i wnoszą wiedzę ekspercką. Tak to wygląda. Pytanie użytkownika staje się sygnałem, poprawką i wydaniem, bez spotkania. Badania zamieniają rynek w hipotezę. Jeden przekaz wychodzi w każdym języku. Każde zadanie, każdy wydatek i każdy wynik są zapisane. To trzyma się razem, bo to jeden system: każdy agent zbudowany tak samo, klucze w jednym sejfie, panel dla każdego agenta. Zacznij na jednej maszynie, bezpłatnie, już dziś. Na życzenie konfigurujemy twoją organizację na jej własnym urządzeniu i prowadzimy jej administrację, żeby twoi ludzie tylko sterowali. Następnie klonujesz to dla kolejnego zespołu i kolejnej firmy. PassionCode.ai: miejsce pracy dla organizacji AI-native. Zacznij bezpłatnie albo przyprowadź swoją organizację.
 
-01 / PROBLEM
+01 / OCENA
+
+## Dlaczego Twoje wydanie znów się opóźnia
+
+## Tydzień pokazuje, gdzie praca czeka
+
+Wydanie czeka nie tylko na kod. Jeden agent czyta, jak Twoja firma pracowała w ostatnich 90 dniach, przez tydzień śledzi pracę i pokazuje, gdzie czekała, więc naprawiasz oczekiwanie zamiast poganiać zespół.
+
+Oczekiwanie, które nie jest kodemDecyzje, teksty i recenzje wstrzymują wydanie dłużej niż kod. W jednej firmie pilotażowej 20 zadań pisania tekstów produktowych miało medianę czasu realizacji 9,8 dnia.
+
+Praca poza planemW tej samej firmie 60 do 85% zadań przesuniętych w ciągu tygodnia nie było w żadnym planie tego tygodnia.
+
+Zadania w ping-ponguZadanie, które wraca do poprzedniego właściciela w ciągu 14 dni, oznacza, że następny krok był niejasny. Ocena zlicza te powroty w każdym procesie.
+
+01
+
+PRZED TYGODNIEM OCENY
+
+### Cztery pytania, linki tylko do odczytu
+
+Twój cel, wielkość zespołu, Twoje systemy i to, co boli najbardziej, potem dostęp tylko do odczytu, jeden link do każdego systemu. Około dwudziestu minut Twojego czasu.
+
+02
+
+W TRAKCIE TYGODNIA
+
+### Ostatnie 90 dni, potem bieżąca praca
+
+Trackery, repozytoria, dokumenty, czaty zespołu, poczta i wsparcie: co zaplanowano, co się wydarzyło i gdzie praca czekała.
+
+03
+
+SIÓDMY DZIEŃ
+
+### Mapa i pierwszy krok
+
+Twoje procesy, plan na tle faktów, oczekiwanie i oferta: jaką pracę agenci przejmą w pierwszej kolejności. Omawiamy to z Tobą w 30-minutowej rozmowie.
+
+Poproś o bezpłatną ocenę
+
+→
+
+Napisz do Morpheusa na Telegramie
+
+↗
+
+Ocena czyta procesy, nigdy ludzi: sumy dla grup, nigdy punktacja człowieka. Po tygodniu dostęp zostaje cofnięty, a dane usunięte. Liczby pochodzą z jednej firmy pilotażowej, która nie jest wymieniona z nazwy; czas realizacji liczony jest w dniach kalendarzowych, nie w godzinach pracy.
+
+Poradnik: dlaczego Twoje wydanie znów się opóźniaWolisz formularz? Wyślij prośbę
+
+02 / PROBLEM
 
 ## Twoje procesy zbudowano dla ludzi
 
@@ -100,7 +154,7 @@ Każdy buduje własnych agentówBez wspólnych zasad, bez wspólnej pamięci, z 
 
 Większość firm eksperymentuje już z agentami, ale niewiele uruchamia je w całym obszarze działalności (McKinsey, The State of AI, listopad 2025). Gartner przewiduje, że ponad 40% projektów agentowej AI zostanie anulowanych do końca 2027 roku (Gartner, czerwiec 2025).
 
-02 / ZMIANA
+03 / ZMIANA
 
 ## Proces prowadzą agenci
 
@@ -140,7 +194,7 @@ Wiedza eksperckaZnajomość rynku i rzemiosła oraz uczenie agentów, jak wykony
 
 Do prowadzenia całego systemu potrzeba od zera do kilku osób.
 
-03 / FABRIC PROWADZI PROCES
+04 / FABRIC PROWADZI PROCES
 
 ## Jeden agent zarządza pozostałymi
 
@@ -190,7 +244,7 @@ Przyjmuje od Ciebie cel, dzieli go na zadania i melduje się z dowodami.
 
 Co Fabric robi już dziś
 
-04 / JEDEN SYSTEM
+05 / JEDEN SYSTEM
 
 ## Każdy agent zbudowany tak samo
 
@@ -232,7 +286,7 @@ Każdy agent ma własną stronę i dołącza do jednego widoku tego, co działa,
 
 Zobacz narzędzia, które robią to już dziś
 
-05 / AGENCI PRZY PRACY
+06 / AGENCI PRZY PRACY
 
 ## Jak wygląda
 
@@ -288,7 +342,7 @@ Każda z tych ról działa już dziś u nas jako osobny agent. Połączenie ich 
 
 Szablony agentów, które składamy dla organizacji
 
-06 / OD ZESPOŁU DO ORGANIZACJI
+07 / OD ZESPOŁU DO ORGANIZACJI
 
 ## Zacznij na jednej maszynie
 
@@ -316,6 +370,8 @@ NA ŻYCZENIE
 
 Dedykowany komputer lub chmura firmy: oddzielne przestrzenie, dostęp według poziomu (właściciel, administrator, architekt projektu, użytkownik) i podstawowy zestaw agentów od pierwszego dnia.
 
+Poproś o bezpłatną ocenę
+
 Dla Twojej organizacji
 
 03
@@ -334,19 +390,21 @@ NA ŻYCZENIE
 
 PassionCode może zdalnie prowadzić administrację Twojego systemu, żeby Twoi ludzie tylko sterowali. Widzi konfigurację i wydatki, ale nie Twoje treści, chyba że się zgodzisz.
 
-07 / OD CZEGO ZACZĄĆ
+08 / OD CZEGO ZACZĄĆ
 
 ## Cztery wejścia
 
 ZAŁOŻYCIELE I KADRA KIEROWNICZA
 
-### Przyprowadź swoją organizację
+### Zacznij od bezpłatnej oceny
 
-Powiedz nam, które procesy pochłaniają czas Twoich ludzi. Pokażemy, co przejęliby agenci i jaki jest pierwszy krok.
+Tydzień z dostępem tylko do odczytu pokazuje, gdzie czeka praca w Twojej firmie i jaką pracę agenci przejmą w pierwszej kolejności.
 
-Przyprowadź swoją organizację
+Poproś o bezpłatną ocenę
 
 →
+
+Albo zgłoś swoją organizację
 
 INWESTORZY
 
@@ -380,7 +438,7 @@ Zacznij bezpłatnie
 
 →
 
-04 / NARZĘDZIA
+09 / NARZĘDZIA
 
 ## Narzędzia, z których możesz korzystać już dziś
 
@@ -450,7 +508,7 @@ Wersja zapoznawcza w rozwoju
 
 Wersja zapoznawcza oznacza niedokończoną: Fabric jest we wczesnej wersji zapoznawczej i jego czat jeszcze nie odpowiada; Fabric Inbox jest w wersji zapoznawczej w rozwoju, a odpowiedzi z prawdziwym modelem nie zostały jeszcze zweryfikowane. Strona każdego produktu podaje wymagania i ograniczenia przed pobraniem. Wersje w formie czytelnej dla maszyn: /api/releases.
 
-05 / OTWARTY KOD
+10 / OTWARTY KOD
 
 ## Korzystaj z narzędzi
 
@@ -460,9 +518,13 @@ Fabric, Fabric Inbox, Switchboard, Observatory i Fabric Dashboards mają otwarty
 
 Wydane wersje zachowują licencję, z którą wyszły: MIT dla Switchboard do 0.3.1-beta.1, Observatory do 0.8.1 i Fabric Dashboards 0.1.0; PolyForm Noncommercial lub Internal Use dla Switchboard 0.4.0-beta.1, Observatory od 0.8.2 do 0.9.1 oraz Fabric Dashboards 0.2.0 i 0.3.0. Wersja zapoznawcza Fabric 0.2.0 powstała, zanim opublikowano kod źródłowy Fabric. PassionCode na GitHubie ↗
 
-06 / PYTANIA
+11 / PYTANIA
 
 ## O co ludzie pytają najpierw
+
+Czym jest bezpłatna ocena?
+
+Jeden agent czyta, jak Twoja firma pracowała w ostatnich 90 dniach, z dostępem tylko do odczytu, przez tydzień śledzi pracę, a siódmego dnia pokazuje Twoje procesy, plan na tle faktów, oczekiwanie i to, jaką pracę agenci przejmą w pierwszej kolejności. Czyta procesy, nigdy ludzi, a po tygodniu dostęp zostaje cofnięty i dane usunięte. Zapytaj Morpheusa na Telegramie.
 
 Czy PassionCode.ai jest bezpłatny?
 

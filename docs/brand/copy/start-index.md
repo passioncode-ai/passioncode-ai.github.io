@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Free assessment
+
 Vision
 
 For you
@@ -201,6 +203,10 @@ FOR ORGANIZATIONS
 ## for your whole team?
 
 We map your processes, estimate what agents can take over, and set it up with you or for you.
+
+Get the free assessment
+
+→
 
 Estimate and request
 

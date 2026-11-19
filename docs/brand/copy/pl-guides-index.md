@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Bezpłatna ocena
+
 Wizja
 
 Dla Ciebie
@@ -63,6 +65,56 @@ Na własnym komputerze: najpierw przeczytaj poradnik o konfiguracji, potem uruch
 Dla Twojej firmy: przeczytaj, jak działa bezpłatna tygodniowa ocena, a potem, jak szablony agentów stają się Twoimi agentami.
 
 ## Poradniki
+
+Poradnik · 19 listopada 2026
+
+### Dlaczego zadania grzęzną między ludźmi i co zmienia agent
+
+Zadanie może wyglądać na aktywne, a w rzeczywistości czeka, aż kolejna osoba je zauważy, weźmie albo odeśle do planisty. Agent zmienia codzienny rytm: sprawdzanie i eskalowanie dzieje się automatycznie, a ludzie zachowują odpowiedzialność i decyzje.
+
+Dla founderów i szefów zespołów produktowych, u których zadania czekają między ludźmi, a planiści ręcznie ścigają właścicieli.
+
+W tym poradniku
+
+Gdzie zadanie naprawdę czeka
+
+Objawy zawieszonego przekazania
+
+Dlaczego ręczne ponaglanie się nie skaluje
+
+Co agent zmienia w codziennym rytmie
+
+Agenci pilnują pracy, ludzie decydują
+
+Jak zacząć od bezpłatnej oceny
+
+Źródła i metoda
+
+Poradnik · 19 listopada 2026
+
+### Dlaczego Twoje wydanie znów się opóźnia: co pokazuje ocena zespołu
+
+Wydanie jest gotowe dopiero wtedy, gdy gotowe jest też wszystko wokół kodu. Ocena zespołu analizuje, jak naprawdę przebiegała praca w ostatnich 90 dniach, i pokazuje, gdzie czekała. Usuwasz więc przyczynę czekania, zamiast poganiać zespół.
+
+Dla założycieli, którym terminy wydań ciągle się przesuwają i którzy chcą zobaczyć, gdzie praca czeka.
+
+W tym poradniku
+
+Gdzie naprawdę czeka wydanie
+
+Co analizuje ocena
+
+Trzy rzeczy, które zwykle znajduje
+
+Dlaczego lepszy plan sam nie wystarczy
+
+Co się zmienia, gdy rytm pracy prowadzi agent
+
+Kto decyduje
+
+Jak zacząć
+
+Źródła i metoda
 
 Poradnik · 8 listopada 2026
 

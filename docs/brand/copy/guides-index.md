@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Free assessment
+
 Vision
 
 For you
@@ -63,6 +65,56 @@ On your own computer: read the setup guide first, then run the command from the 
 For your company: read how the free one-week assessment works, then how agent templates become your agents.
 
 ## Guides
+
+Guide · November 19, 2026
+
+### Why tasks stall between people, and what changes with an agent
+
+A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.
+
+For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.
+
+In this guide
+
+Where a task really waits
+
+The signs of a stalled hand-off
+
+Why manual chasing does not scale
+
+What an agent changes in the daily rhythm
+
+Agents follow the work, people decide
+
+How to start with the free assessment
+
+Sources and method
+
+Guide · November 19, 2026
+
+### Why your release slips again: what a team assessment shows
+
+A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.
+
+For founders whose release dates keep moving and who want to see where the work waits.
+
+In this guide
+
+Where a release really waits
+
+What the assessment reads
+
+Three things it usually finds
+
+Why a better plan alone does not fix it
+
+What changes when an agent runs the rhythm
+
+Who decides
+
+How to start
+
+Sources and method
 
 Guide · November 8, 2026
 

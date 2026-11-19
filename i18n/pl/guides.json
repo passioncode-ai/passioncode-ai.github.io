@@ -32,6 +32,27 @@
     "From your request to an agent": "Od Twojego zapytania do agenta",
     "Where it runs": "Gdzie działa",
     "What stays yours": "Co pozostaje Twoje",
-    "Agents that get better": "Agenci, którzy stają się lepsi"
+    "Agents that get better": "Agenci, którzy stają się lepsi",
+    "Why your release slips again: what a team assessment shows": "Dlaczego Twoje wydanie znów się opóźnia: co pokazuje ocena zespołu",
+    "November 19, 2026": "19 listopada 2026",
+    "A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.": "Wydanie jest gotowe dopiero wtedy, gdy gotowe jest też wszystko wokół kodu. Ocena zespołu analizuje, jak naprawdę przebiegała praca w ostatnich 90 dniach, i pokazuje, gdzie czekała. Usuwasz więc przyczynę czekania, zamiast poganiać zespół.",
+    "For founders whose release dates keep moving and who want to see where the work waits.": "Dla założycieli, którym terminy wydań ciągle się przesuwają i którzy chcą zobaczyć, gdzie praca czeka.",
+    "Where a release really waits": "Gdzie naprawdę czeka wydanie",
+    "What the assessment reads": "Co analizuje ocena",
+    "Three things it usually finds": "Trzy rzeczy, które zwykle znajduje",
+    "Why a better plan alone does not fix it": "Dlaczego lepszy plan sam nie wystarczy",
+    "What changes when an agent runs the rhythm": "Co się zmienia, gdy rytm pracy prowadzi agent",
+    "Who decides": "Kto decyduje",
+    "How to start": "Jak zacząć",
+    "Sources and method": "Źródła i metoda",
+    "Why tasks stall between people, and what changes with an agent": "Dlaczego zadania grzęzną między ludźmi i co zmienia agent",
+    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "Zadanie może wyglądać na aktywne, a w rzeczywistości czeka, aż kolejna osoba je zauważy, weźmie albo odeśle do planisty. Agent zmienia codzienny rytm: sprawdzanie i eskalowanie dzieje się automatycznie, a ludzie zachowują odpowiedzialność i decyzje.",
+    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "Dla founderów i szefów zespołów produktowych, u których zadania czekają między ludźmi, a planiści ręcznie ścigają właścicieli.",
+    "Where a task really waits": "Gdzie zadanie naprawdę czeka",
+    "The signs of a stalled hand-off": "Objawy zawieszonego przekazania",
+    "Why manual chasing does not scale": "Dlaczego ręczne ponaglanie się nie skaluje",
+    "What an agent changes in the daily rhythm": "Co agent zmienia w codziennym rytmie",
+    "Agents follow the work, people decide": "Agenci pilnują pracy, ludzie decydują",
+    "How to start with the free assessment": "Jak zacząć od bezpłatnej oceny"
   }
 }

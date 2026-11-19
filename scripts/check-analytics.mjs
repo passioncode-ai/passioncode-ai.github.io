@@ -152,3 +152,26 @@ test('SITE-056: every template a page can ask for is a value the Worker accepts,
   assert.deepEqual(clean({ n: 'template_request', p: { page: 'agent-template', template: 'data-room' } }, LOCALES).props, { page: 'agent-template', template: 'data-room' })
   assert.equal(clean({ n: 'template_request', p: { page: 'agent-template', template: 'someone@example.com' } }, LOCALES).props.template, 'other')
 })
+
+test('SITE-072: every data-cta and data-cta-location an English page carries is a value the Worker accepts', async () => {
+  const { SOURCE_PAGES } = await import('./pages.mjs')
+  const { execFileSync } = await import('node:child_process')
+  // The hand-written and generated English pages, plus the English-only digest under /blog/ai-research/.
+  const digest = execFileSync('git', ['ls-files', 'blog/ai-research/*.html', 'blog/ai-research/**/*.html'], { cwd: new URL('..', import.meta.url), encoding: 'utf8' }).split('\n').filter(Boolean)
+  for (const file of [...SOURCE_PAGES, ...digest]) {
+    const html = readFileSync(new URL(`../${file}`, import.meta.url), 'utf8')
+    for (const [, target] of html.matchAll(/data-cta="([^"]+)"/g)) assert.ok(EVENTS.cta_click.target.includes(target), `${file}: data-cta="${target}" is not a target the Worker accepts`)
+    for (const [, location] of html.matchAll(/data-cta-location="([^"]+)"/g)) assert.ok(EVENTS.cta_click.location.includes(location), `${file}: data-cta-location="${location}" is not a location the Worker accepts`)
+  }
+  assert.deepEqual(clean({ n: 'cta_click', p: { page: 'home', location: 'assessment', target: 'assessment' } }, LOCALES).props, { page: 'home', location: 'assessment', target: 'assessment' })
+  assert.deepEqual(clean({ n: 'cta_click', p: { page: 'home', location: 'hero', target: 'guide' } }, LOCALES).props, { page: 'home', location: 'hero', target: 'guide' })
+})
+
+test('SITE-075: the rabbit on the home assessment button: its click and its landing are values the Worker accepts', () => {
+  assert.deepEqual(clean({ n: 'cta_click', p: { page: 'home', location: 'rabbit', target: 'assessment' } }, LOCALES).props, { page: 'home', location: 'rabbit', target: 'assessment' })
+  assert.deepEqual(clean({ n: 'rabbit_landed', p: { page: 'home', motion: 'hop' } }, LOCALES).props, { page: 'home', motion: 'hop' })
+  assert.deepEqual(clean({ n: 'rabbit_landed', p: { page: 'home', motion: 'still' } }, LOCALES).props, { page: 'home', motion: 'still' })
+  assert.equal(clean({ n: 'rabbit_landed', p: { page: 'home', motion: 'somewhere' } }, LOCALES), null, 'a motion outside the list drops the event')
+  const home = readFileSync(new URL('../index.html', import.meta.url), 'utf8')
+  assert.match(home, /<a class="button button-primary has-rabbit" href="https:\/\/assessment\.passioncode\.ai\/\?lang=en" data-cta="assessment" data-cta-location="hero">[^<]+<span aria-hidden="true">→<\/span><span class="perch-rabbit" data-cta="assessment" data-cta-location="rabbit" aria-hidden="true">/, 'the rabbit sits inside the hero assessment link, so a click on it opens the assessment')
+})

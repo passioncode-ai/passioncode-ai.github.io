@@ -3,9 +3,9 @@ import { execFileSync } from 'node:child_process'
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
-import { PAGES, NOINDEX, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
+import { PAGES, NOINDEX, SCOPED, SCOPED_PAGES, SOURCE_PAGES, TRANSLATED_LOCALES, localesOfPage } from './pages.mjs'
 import { LEAD_OPTIONS } from '../assets/lead-options.js'
-import { alternates, isoDuration, langTag, languageSwitch, LOCALES, mp4Seconds, vttText, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
+import { alternates, bindWords, isoDuration, langTag, languageSwitch, LOCALES, mp4Seconds, vttText, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
 import { catalogParts, dashFindings, moduleStringParts, readableParts, textFileParts } from './public-dashes.mjs'
 
@@ -32,17 +32,20 @@ const ALLOWED_SCRIPTS = new Set(['/assets/site.js', '/assets/business.js'])
 // The header every page carries (the Inbox page keeps its own product navigation until its
 // redesign, docs/backlog.md SITE-009). In another language it is the same navigation, its links
 // under /<locale>/ and its words from the catalog.
-const PRIMARY_NAV = '<nav aria-label="Primary navigation"><a href="/vision/">Vision</a><a href="/start/">For you</a><a href="/business/">For organizations</a><a href="/#products">The tools</a><a href="/#about">About</a></nav>'
+const PRIMARY_NAV = '<nav aria-label="Primary navigation"><a class="nav-assessment" href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="header">Free assessment</a><a href="/vision/">Vision</a><a href="/start/">For you</a><a href="/business/">For organizations</a><a href="/#products">The tools</a><a href="/#about">About</a></nav>'
 const primaryNav = locale => {
   if (locale === 'en') return PRIMARY_NAV
-  const { common } = loadCatalog(root, locale)
-  return PRIMARY_NAV.replace(/href="([^"]+)"/g, (_, href) => `href="${localizeUrl(href, locale)}"`).replace(/aria-label="([^"]+)"/, (_, label) => `aria-label="${common[label]}"`).replace(/>([^<]+)</g, (_, text) => `>${common[text]}<`)
+  const catalog = loadCatalog(root, locale)
+  // A guide-only language (SITE-070) keeps its header strings in its page's catalog.
+  const common = { ...Object.assign({}, ...Object.values(catalog.pages)), ...catalog.common }
+  return PRIMARY_NAV.replace(/href="([^"]+)"/g, (_, href) => `href="${localizeUrl(href, locale)}"`).replace(/aria-label="([^"]+)"/, (_, label) => `aria-label="${common[label]}"`).replace(/>([^<]+)</g, (_, text) => `>${bindWords(common[text], locale)}<`)
 }
 // Each translated language's own assertions (i18n/<locale>/_checks.json): its banned phrases and
 // the disclosures its pages must keep — a translation may not soften a limitation.
 const CHECKS = Object.fromEntries(TRANSLATED_LOCALES.map(locale => [locale, JSON.parse(read(`i18n/${locale}/_checks.json`))]))
 
-for (const file of PAGES) {
+// SITE-070: the pages of the guide-only languages (i18n/scoped-locales.json) are checked like every page.
+for (const file of [...PAGES, ...SCOPED_PAGES]) {
   const html = read(file)
   const route = file.replace(/index.html$/, '')
   const locale = localeOfFile(file)
@@ -50,20 +53,21 @@ for (const file of PAGES) {
   const prefix = prefixOf(locale)
   assert.equal((html.match(/<h1\b/g) || []).length, 1, `${file}: exactly one h1`)
   assert.ok(html.includes(`rel="canonical" href="https://passioncode.ai/${route}"`), `${file}: canonical`)
-  assert.ok(html.includes(`<html lang="${langTag(locale)}">`), `${file}: <html lang="${langTag(locale)}">`)
+  const dir = SCOPED.locales[locale]?.dir === 'rtl' ? ' dir="rtl"' : ''
+  assert.ok(html.includes(`<html lang="${langTag(locale)}"${dir}>`), `${file}: <html lang="${langTag(locale)}"${dir}>`)
   // Every language version names all of them, English as x-default: the same list on every
   // version, so hreflang is reciprocal. Pages kept out of search carry none.
   const pageAlternates = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m => `${m[1]} ${m[2]}`)
   const expectedAlternates = NOINDEX.has(file) ? [] : alternates(source).map(([l, href]) => `${l} ${href}`)
   assert.deepEqual(pageAlternates, expectedAlternates, `${file}: hreflang alternates`)
-  if (!NOINDEX.has(file)) assert.deepEqual(expectedAlternates.map(a => a.split(' ')[0]), [...LOCALES.map(langTag), 'x-default'], `${file}: every language and x-default`)
+  if (!NOINDEX.has(file)) assert.deepEqual(expectedAlternates.map(a => a.split(' ')[0]), [...localesOfPage(source).map(langTag), 'x-default'], `${file}: every language and x-default`)
   assert.ok(html.includes(`rel="canonical" href="${ORIGIN}${pageRoute(source, locale)}"`), `${file}: canonical in its own language`)
   // One visible switch, leading to the same page in each other language.
   assert.equal((html.match(/class="lang-switch/g) || []).length, 1, `${file}: one language switch`)
   assert.ok(html.includes(languageSwitch(source, locale)), `${file}: the language switch leads to the same page in every other language`)
   if (html.includes('property="og:site_name"')) {
     assert.ok(html.includes(`<meta property="og:locale" content="${OG_LOCALES[locale]}">`), `${file}: og:locale`)
-    for (const l of LOCALES.filter(l => l !== locale)) assert.ok(html.includes(`<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`), `${file}: og:locale:alternate ${l}`)
+    for (const l of localesOfPage(source).filter(l => l !== locale)) assert.ok(html.includes(`<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`), `${file}: og:locale:alternate ${l}`)
   }
   assert.match(html, /<meta name="description" content="[^"]+">/)
   assert.ok(html.includes(NOINDEX.has(file) ? 'content="noindex, follow"' : 'content="index, follow"'), `${file}: robots meta`)
@@ -97,7 +101,7 @@ for (const file of PAGES) {
   assert.ok(!/PolyForm|\bMIT\b/.test(words), `${file}: MIT and PolyForm name only released versions, inside a license-history region`)
   if (locale === 'en') assert.ok(!/AI-native work\b/.test(words), `${file}: the tagline is "AI-native teams"`)
   if (locale === 'en') assert.ok(!/\bseamless|fully autonomous\b/i.test(words), `${file}: banned phrase (docs/brand/terminology.md)`)
-  if (locale !== 'en') for (const banned of CHECKS[locale].banned) assert.ok(!new RegExp(banned, 'iu').test(words), `${file}: banned phrase ${banned} (docs/brand/terminology.md, i18n/${locale}/_checks.json)`)
+  if (locale !== 'en') for (const banned of CHECKS[locale]?.banned ?? []) assert.ok(!new RegExp(banned, 'iu').test(words), `${file}: banned phrase ${banned} (docs/brand/terminology.md, i18n/${locale}/_checks.json)`)
   for (const [, value] of html.matchAll(/(?:href|src|action)="([^"\s]+)"/g)) {
     if (!value.startsWith('/') && !value.startsWith('#')) continue
     const url = new URL(value, `https://passioncode.ai/${route}`)
@@ -111,13 +115,17 @@ for (const file of PAGES) {
   if (source !== 'inbox/index.html') assert.ok(html.includes(primaryNav(locale)), `${file}: primary navigation`)
   assert.equal((html.match(/<footer class="story-footer">/g) || []).length, 1, `${file}: one footer`)
   assert.equal((html.match(/<nav aria-label="[^"]+"><a href="[^"]*\/start\/">/g) || []).length, 1, `${file}: one footer navigation landmark`)
-  for (const path of ['/start/', '/business/', '/privacy/', '/agents/', '/guides/', '/blog/']) assert.ok(html.includes(`<a href="${prefix}${path}">`), `${file}: footer links ${prefix}${path}`)
+  // A guide-only language has no such pages: its footer links lead to the English ones.
+  const linkPrefix = SCOPED.locales[locale] ? '' : prefix
+  for (const path of ['/start/', '/business/', '/privacy/', '/agents/', '/guides/', '/blog/']) assert.ok(html.includes(`<a href="${linkPrefix}${path}">`), `${file}: footer links ${linkPrefix}${path}`)
   // A translated page links to pages in its own language; only the language switch and the
   // hreflang alternates point to the others.
   if (locale !== 'en') {
     for (const [, value] of html.replace(languageSwitch(source, locale), '').replace(/<link rel="alternate"[^>]*>/g, '').matchAll(/\s(?:href|action)="(\/[^"]*)"/g)) {
       const path = value.split(/[?#]/, 1)[0]
-      if (path === '/' || path.endsWith('/')) assert.ok(path.startsWith(`/${locale}/`), `${file}: ${value} leaves the ${locale} site`)
+      // A guide-only language (SITE-070) has only its pages; a link to another page stays on the English one.
+      const own = SCOPED.locales[locale] ? SCOPED.pages.some(p => `/${locale}/${p.replace(/index\.html$/, '')}` === `/${locale}${path}`) || path.startsWith(`/${locale}/`) : true
+      if ((path === '/' || path.endsWith('/')) && own) assert.ok(path.startsWith(`/${locale}/`), `${file}: ${value} leaves the ${locale} site`)
     }
   }
   assert.ok(html.includes('href="https://x.com/sshlg93"'), `${file}: author link`)
@@ -137,14 +145,14 @@ assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
 assert.match(css, /@media \(prefers-reduced-motion: no-preference\)/)
 assert.ok(!/ease-in[;)\s,]/.test(css.replace(/ease-in-out/g, '')), 'no ease-in in UI motion (motion doctrine)')
 const sitemap = read('sitemap.xml')
-for (const file of PAGES) {
+for (const file of [...PAGES, ...SCOPED_PAGES]) {
   const loc = `<loc>https://passioncode.ai/${file.replace(/index.html$/, '')}</loc>`
   assert.equal(sitemap.includes(loc), !NOINDEX.has(file), `sitemap: ${loc} ${NOINDEX.has(file) ? 'must not be listed' : 'missing'}`)
 }
 // Each listed address names its language versions, as the pages' own hreflang links do.
 for (const block of sitemap.match(/<url>[\s\S]*?<\/url>/g)) {
   const loc = /<loc>([^<]+)<\/loc>/.exec(block)[1]
-  const file = PAGES.find(f => `${ORIGIN}${pageRoute(sourceFileOf(f), localeOfFile(f))}` === loc)
+  const file = [...PAGES, ...SCOPED_PAGES].find(f => `${ORIGIN}${pageRoute(sourceFileOf(f), localeOfFile(f))}` === loc)
   assert.ok(file, `sitemap: ${loc} is not a page`)
   const links = [...block.matchAll(/<xhtml:link rel="alternate" hreflang="([^"]+)" href="([^"]+)"\/>/g)].map(m => `${m[1]} ${m[2]}`)
   assert.deepEqual(links, alternates(sourceFileOf(file)).map(([l, href]) => `${l} ${href}`), `sitemap: ${loc} alternates`)
@@ -208,33 +216,63 @@ const MOCKUPS = ['journey-2-2.jpg', 'journey-3-1.jpg', 'journey-3-2.jpg', 'journ
 // evidence carries its sources; four doors. Step 01 of #grow still teaches setup (SITE-045).
 {
   const section = id => { const i = home.indexOf(`id="${id}" aria-labelledby`); return i < 0 ? '' : home.slice(i, home.indexOf('</section>', i)) }
-  const order = ['problem', 'shift', 'fabric-process', 'system', 'agents', 'grow', 'doors', 'products']
+  // SITE-072 (operator 2026-11-19): the free assessment opens the story as 01, so the old seven are 02 to 08 and
+  // the tools, open source and questions continue the count (09 to 11) instead of restarting it at 04.
+  const order = ['assessment', 'problem', 'shift', 'fabric-process', 'system', 'agents', 'grow', 'doors', 'products', 'source', 'faq']
   const at = order.map(id => home.indexOf(`id="${id}" aria-labelledby`))
   assert.ok(at.every(i => i > 0), `homepage: the story sections ${order.join(', ')}`)
   assert.deepEqual([...at].sort((a, b) => a - b), at, 'homepage: the story sections in order')
-  const numbers = order.slice(0, 7).map(id => /<p class="section-number">(0\d) \//.exec(section(id))?.[1])
-  assert.deepEqual(numbers, ['01', '02', '03', '04', '05', '06', '07'], 'homepage: sections numbered 01 to 07')
+  const numbers = order.map(id => /<p class="section-number">(\d\d) \//.exec(section(id))?.[1])
+  assert.deepEqual(numbers, ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11'], 'homepage: sections numbered 01 to 11 in order, never restarting (SITE-072)')
   const labels = id => [...section(id).matchAll(/<span class="cycle-number">0(\d)<\/span><p class="availability">([^<]+)<\/p><h3>([^<]+)<\/h3>/g)].map(m => `${m[1]} ${m[3]}: ${m[2]}`)
   assert.deepEqual(labels('fabric-process'), ['1 Keeps the board: PREVIEW', '2 Routes the work: PREVIEW', '3 Wakes the owner: PREVIEW', '4 Sets priorities: DIRECTION', '5 Answers to management: DIRECTION'], 'homepage #fabric-process: five duties, each labelled (NS §6)')
   assert.deepEqual(labels('grow').map(l => l.split(':')[1].trim()), ['AVAILABLE NOW · FREE', 'ON REQUEST', 'DIRECTION', 'ON REQUEST'], 'homepage #grow: four steps, each labelled (NS §13)')
   for (const id of ['system']) for (const l of labels(id)) assert.match(l, /: (AVAILABLE NOW|AVAILABLE NOW, IN PART|PREVIEW|DIRECTION)$/, `homepage #${id}: ${l} labelled`)
   const SAFE = new Set(['dashboards-overview.jpg', 'fabric-board.jpg', 'fabric-home.jpg', 'fabric-releases.jpg', 'dashboards-service-dashboard.jpg', 'observatory-demo.jpg', 'switchboard-accounts.jpg', ...MOCKUPS])
-  for (const id of order.slice(0, 7)) for (const [, image] of section(id).matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #${id}: ${image} is not a synthetic shot the journey truth table marks reusable`)
+  for (const id of order.slice(0, 8)) for (const [, image] of section(id).matchAll(/<img src="\/assets\/([^"]+)"/g)) assert.ok(SAFE.has(image), `homepage #${id}: ${image} is not a synthetic shot the journey truth table marks reusable`)
   for (const source of ['https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai', 'https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027']) assert.ok(section('problem').includes(`href="${source}"`), `homepage #problem: the figure's source ${source} (facts row *agent sprawl sources*)`)
   const map = section('agents')
   assert.ok(/<svg [^>]*role="img"[^>]*aria-labelledby="agents-map-title agents-map-desc"/.test(map) && map.includes('<desc id="agents-map-desc">'), 'homepage #agents: the diagram has a title and a text alternative')
   for (const text of ['<code>npx @passioncode-ai/passioncode@latest setup</code>', 'or let your coding agent run it', 'Docker and the Supabase CLI', 'href="/start/#setup"']) assert.ok(section('grow').replace(/<wbr>/g, '').includes(text), `homepage #grow step 1: ${text}`)
   const doors = [...section('doors').matchAll(/<article class="path-card[^"]*"[^>]*><p class="availability">([^<]+)<\/p>[\s\S]*?data-cta="([a-z]+)" data-cta-location="doors"/g)].map(m => `${m[1]} → ${m[2]}`)
-  assert.deepEqual(doors, ['FOUNDERS AND EXECUTIVES → business', 'INVESTORS → investors', 'ENGINEERS → github', 'SOLO FOUNDERS · FREE → start'], 'homepage #doors: four doors, each with its next step (SCN-024)')
+  assert.deepEqual(doors, ['FOUNDERS AND EXECUTIVES → assessment', 'INVESTORS → investors', 'ENGINEERS → github', 'SOLO FOUNDERS · FREE → start'], 'homepage #doors: four doors, each with its next step; founders start with the free assessment (SCN-024, SITE-072)')
+  assert.ok(section('doors').includes('href="/business/" data-cta="business" data-cta-location="doors"'), 'homepage #doors: the founders door still links /business/ (SITE-072)')
+  // SITE-072: the home leads into the free assessment: the hero's first button, its proof card, #assessment, the
+  // founders' door and the header's first item open assessment.passioncode.ai in the page's language; the figures are
+  // the pilot's, said as facts row *release guide (SITE-070)* says them, and the guide and Morpheus are one click away.
+  {
+    const hero = home.slice(home.indexOf('class="hero home-hero"'), home.indexOf('</section>', home.indexOf('class="hero home-hero"')))
+    assert.ok(hero.includes('<a class="button button-primary has-rabbit" href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="hero">Free assessment for your organization'), 'homepage hero: the first button opens the free assessment for an organization (SITE-075)')
+    assert.ok(hero.includes('<span class="perch-rabbit" data-cta="assessment" data-cta-location="rabbit" aria-hidden="true"><svg'), 'homepage hero: the white rabbit sits inside the assessment button (SITE-075)')
+    assert.ok(section('grow').includes('href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="grow">Get the free assessment</a><a href="/business/"'), 'homepage #grow: the organization step offers the assessment first, then /business/ (SITE-075)')
+    for (const text of ['9.8 days', '60 to 85%', 'One pilot company, not named', 'href="https://t.me/MorpheusPMBot?start=lp_home_en"', 'href="/guides/why-releases-slip/"']) assert.ok(hero.includes(text), `homepage hero card: ${text}`)
+    const a = section('assessment')
+    for (const text of ['href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="assessment"', 'href="https://t.me/MorpheusPMBot?start=lp_home_en" data-cta="morpheus"', 'href="/guides/why-releases-slip/" data-cta="guide"', 'href="/business/#request" data-cta="business"', 'never people', 'one pilot company that is not named']) assert.ok(a.includes(text), `homepage #assessment: ${text}`)
+    for (const locale of TRANSLATED_LOCALES) {
+      const page = read(`${locale}/index.html`)
+      assert.ok(page.includes(`href="https://assessment.passioncode.ai/?lang=${locale}"`), `${locale}/index.html: the assessment opens in ${locale}`)
+      assert.ok(!page.includes('https://assessment.passioncode.ai/?lang=en"'), `${locale}/index.html: no English assessment link left`)
+    }
+  }
+  // SITE-075 (operator 2026-11-19): wherever an organization is offered the form, the free assessment comes first.
+  {
+    const business = read('business/index.html')
+    const bhero = business.slice(business.indexOf('class="hero page-hero business-hero"'), business.indexOf('</section>', business.indexOf('class="hero page-hero business-hero"')))
+    assert.ok(bhero.indexOf('href="https://assessment.passioncode.ai/?lang=en"') > -1 && bhero.indexOf('href="https://assessment.passioncode.ai/?lang=en"') < bhero.indexOf('href="#request"'), '/business/ hero: the free assessment first, the form second (SITE-075)')
+    const start = read('start/index.html')
+    assert.ok(start.indexOf('href="https://assessment.passioncode.ai/?lang=en" data-cta="assessment" data-cta-location="start"') > -1 && start.indexOf('data-cta-location="start"') < start.indexOf('href="/business/" data-cta="business" data-cta-location="start"'), '/start/ closing: the free assessment first, the form second (SITE-075)')
+  }
   const how = section('fabric-process')
   assert.ok(!how.includes('home-video'), 'homepage: the video is not inside the story (SITE-039)')
-  const afterHero = home.slice(home.indexOf('</section>', home.indexOf('class="hero home-hero"')), home.indexOf('<section class="section" id="problem"'))
+  const afterHero = home.slice(home.indexOf('</section>', home.indexOf('class="hero home-hero"')), home.indexOf('<section class="section assessment" id="assessment"'))
   const video = /^<\/section>\s*<figure class="home-video" id="video">([\s\S]*?)<\/figure>\s*$/.exec(afterHero)?.[1]
-  assert.ok(video, 'homepage: the video block directly under the hero, before #problem (SITE-039, SITE-049)')
+  assert.ok(video, 'homepage: the video block directly under the hero, before #assessment (SITE-039, SITE-049, SITE-072)')
   assert.equal((video.match(/<video /g) || []).length, 1, 'homepage: one player')
   assert.ok(!/<iframe/.test(home), 'homepage: no embedded third-party player')
   const tag = /<video [^>]*>/.exec(video)[0]
-  for (const a of ['controls', 'preload="none"', 'playsinline', 'poster="/assets/video/home.jpg"', 'width="1920"', 'height="1080"']) assert.ok(tag.includes(a), `homepage video: ${a}`)
+  for (const a of ['controls', 'preload="none"', 'poster="/assets/video/home.jpg"', 'width="1920"', 'height="1080"']) assert.ok(tag.includes(a), `homepage video: ${a}`)
+  // SITE-074 (audit H-11): no playsinline, so an iPhone plays the video full screen; desktop browsers play it inline either way.
+  assert.ok(!tag.includes('playsinline'), 'homepage video: no playsinline (full screen on an iPhone)')
   for (const a of ['autoplay', 'loop', 'muted']) assert.ok(!new RegExp(`\\s${a}\\b`).test(tag), `homepage video: no ${a} (motion doctrine: a rendered file owes a control and no autoplay)`)
   assert.ok(video.includes('<source src="/assets/video/home.webm" type="video/webm">') && video.includes('<source src="/assets/video/home.mp4" type="video/mp4">'), 'homepage video: WebM and MP4')
   assert.ok(/<track kind="captions" src="\/assets\/video\/home\.vtt" srclang="en" label="Captions" default>/.test(video), 'homepage video: English captions on by default')
@@ -278,7 +316,7 @@ for (const file of SOURCE_PAGES) {
   if (!['vision/index.html', 'fabric/agents/index.html', 'switchboard/agents/index.html'].includes(file)) assert.ok(!/\bharness\b/i.test(words.replace(/id="harness"|#harness/g, '')), `${file}: "harness" is named on /vision/ only (D-T1)`)
 }
 for (const name of ['PassionCode.ai launcher', 'Fabric Dashboards', 'Project Observatory', 'Fabric Inbox', 'Fabric Switchboard']) assert.ok(home.includes(name), `homepage names ${name}`)
-assert.equal((home.match(/<details><summary>/g) || []).length, 5, 'homepage: a short FAQ (three, plus two since SITE-049)')
+assert.equal((home.match(/<details><summary>/g) || []).length, 6, 'homepage: a short FAQ (three, plus two since SITE-049, plus the free assessment since SITE-072)')
 for (const path of ['/switchboard/', '/dashboards/', '/observatory/', '/inbox/', '/fabric/']) assert.ok(home.includes(`href="${path}"`), `homepage links ${path}`)
 assert.match(home, /<meta name="description" content="[^"]*Project Observatory/, 'homepage description names Observatory')
 assert.ok(home.includes('"@type": "FAQPage"'), 'homepage FAQ structured data')
@@ -330,7 +368,7 @@ for (const file of SOURCE_PAGES) {
   for (const file of ['fabric/index.html', 'switchboard/index.html', 'dashboards/index.html', 'observatory/index.html', 'inbox/index.html']) assert.ok(read(file).includes('<p class="setup-line"><a href="/start/#setup">Set up everything with one command'), `${file}: one line to the setup`)
   const businessPage = read('business/index.html')
   const hero = businessPage.slice(businessPage.indexOf('business-hero'), businessPage.indexOf('</section>', businessPage.indexOf('business-hero')))
-  assert.deepEqual([...hero.matchAll(/<a class="button[^"]*" href="([^"]+)"/g)].map(m => m[1]), ['#request'], '/business/: one hero action, to the request')
+  assert.deepEqual([...hero.matchAll(/<a class="button[^"]*" href="([^"]+)"/g)].map(m => m[1]), ['https://assessment.passioncode.ai/?lang=en', '#request'], '/business/: two hero actions, the free assessment first and the request second (SITE-075)')
   assert.ok(businessPage.includes('href="/start/#setup">Try it on one machine first: setup, then doctor'), '/business/: the admin line to setup and doctor')
   assert.ok(!/1 to 1000 people/.test(businessPage), '/business/: the size line agrees with the 1000_plus answer')
 }
@@ -544,9 +582,10 @@ console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one l
     assert.ok(title.length <= 60, `${page}: title ${title.length} > 60`)
     assert.ok(description.length <= 155, `${page}: description ${description.length} > 155`)
   }
-  for (const a of [...GUIDES.map(g => `guides/${g.slug}/index.html`), ...POSTS.map(p => `blog/${p.slug}/index.html`)]) {
+  // Each item's own date where it has one (SITE-070), else the section's of 2026-11-08.
+  for (const [a, iso] of [...GUIDES.map(g => [`guides/${g.slug}/index.html`, g.published?.iso ?? '2026-11-08']), ...POSTS.map(p => [`blog/${p.slug}/index.html`, p.published?.iso ?? '2026-11-08'])]) {
     const html = read(a)
-    assert.ok(/"@type": "(Article|BlogPosting)"/.test(html) && html.includes('"datePublished": "2026-11-08"') && html.includes('<time datetime="2026-11-08">'), `${a}: Article with its visible date`)
+    assert.ok(/"@type": "(Article|BlogPosting)"/.test(html) && html.includes(`"datePublished": "${iso}"`) && html.includes(`<time datetime="${iso}">`), `${a}: Article with its visible date`)
   }
   assert.ok(read('index.html').includes('<a href="/agents/" data-cta="agents" data-cta-location="agents">'), 'home #agents links /agents/')
   console.log(`PASS: SITE-056 agent templates (${TEMPLATES.length}), guides (${GUIDES.length}) and blog (${POSTS.length}) in ${LOCALES.length} languages`)

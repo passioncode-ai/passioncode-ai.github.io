@@ -32,6 +32,27 @@
     "From your request to an agent": "ご依頼からエージェントまで",
     "Where it runs": "動く場所",
     "What stays yours": "お客様のものとして残るもの",
-    "Agents that get better": "良くなっていくエージェント"
+    "Agents that get better": "良くなっていくエージェント",
+    "Why your release slips again: what a team assessment shows": "リリースがまた遅れる理由：チームアセスメントでわかること",
+    "November 19, 2026": "2026年11月19日",
+    "A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.": "リリースには、コード以外の準備も必要です。チームアセスメントでは、過去90日間に実際の作業がどう進んだかを読み取り、どこで待ち時間が生じたかを示します。チームに負荷をかけるのではなく、待ち時間を解消するための情報が得られます。",
+    "For founders whose release dates keep moving and who want to see where the work waits.": "リリース予定日が繰り返しずれ込み、作業がどこで止まっているのかを把握したい創業者や経営者向けのガイドです。",
+    "Where a release really waits": "リリースが実際に待たされる場所",
+    "What the assessment reads": "アセスメントで読み取るもの",
+    "Three things it usually finds": "よく見つかる3つの問題",
+    "Why a better plan alone does not fix it": "計画を改善するだけでは解決しない理由",
+    "What changes when an agent runs the rhythm": "エージェントが日々のサイクルを回すと変わること",
+    "Who decides": "誰が判断するか",
+    "How to start": "始め方",
+    "Sources and method": "出典と方法",
+    "Why tasks stall between people, and what changes with an agent": "仕事が人の間で止まる理由と、エージェントで何が変わるか",
+    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "タスクは、次の担当者が気づく、引き受ける、プランナーに差し戻すまでの間も、動いているように見えることがあります。エージェントは確認とエスカレーションを自動化して、日々のリズムを変えます。担当と判断は人が持ち続けます。",
+    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "仕事が人の間で待たされ、プランナーが担当者を手作業で追いかけているチームの、創業者とプロダクトチームのリーダー向けです。",
+    "Where a task really waits": "タスクが実際に待っている場所",
+    "The signs of a stalled hand-off": "引き継ぎが止まっているサイン",
+    "Why manual chasing does not scale": "手作業の催促が通用しなくなる理由",
+    "What an agent changes in the daily rhythm": "エージェントが日々のリズムで変えること",
+    "Agents follow the work, people decide": "エージェントは仕事を追い、人が判断する",
+    "How to start with the free assessment": "無料のアセスメントで始める方法"
   }
 }

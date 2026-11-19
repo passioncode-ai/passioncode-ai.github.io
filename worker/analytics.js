@@ -15,12 +15,22 @@ const PAGES = ['home', 'vision', 'start', 'business', 'business-thanks', 'privac
   // SITE-056: the agent templates, guides and blog
   'agents', 'agent-template', 'guides', 'guide', 'blog', 'blog-post', 'other']
 const LOCATIONS = ['header', 'hero', 'video', 'problem', 'shift', 'fabric', 'system', 'agents', 'grow', 'doors', 'products',
-  'source', 'faq', 'about', 'investors', 'footer', 'start', 'business', 'request', 'marketplace', 'template', 'guide', 'blog', 'other']
+  'source', 'faq', 'about', 'investors', 'footer', 'start', 'business', 'request', 'marketplace', 'template', 'guide', 'blog',
+  // SITE-072: the home's assessment section; the AI research digest's button (build-digest.mjs sent it as other)
+  'assessment', 'digest',
+  // SITE-075: the white rabbit that sits on the home's assessment button (a click on the rabbit itself; the button is hero)
+  'rabbit', 'other']
 const TARGETS = ['business', 'start', 'setup', 'github', 'investors', 'mail', 'fabric', 'products', 'vision', 'switchboard',
-  'dashboards', 'observatory', 'inbox', 'x', 'download', 'agents', 'guides', 'blog', 'other']
+  'dashboards', 'observatory', 'inbox', 'x', 'download', 'agents', 'guides', 'blog',
+  // SITE-070: a guide's button to Morpheus, the PM agent's Telegram bot (the lead goes on there, PM-D114)
+  'morpheus',
+  // SITE-072: the free assessment's story landing (assessment.passioncode.ai) and one guide (a guides hub link stays guides)
+  'assessment', 'guide', 'other']
 // SITE-056: the agent templates (scripts/site-content.mjs), by their public slug.
 const TEMPLATES = ['company-assessment', 'organization-administrator', 'data-room', 'host-operations', 'messenger-gateway', 'sales-and-leads', 'marketing-analyst', 'growth-analytics', 'search-traffic', 'app-store-publisher', 'brand-and-content', 'support-answerer', 'chat-assistant', 'telegram-product-bot', 'customer-listening', 'media-production', 'research', 'web-quality-monitor', 'other']
 const PERCENTS = ['0', '25', '50', '100']
+// SITE-075: how the rabbit came to sit on the home's assessment button: it hopped in, or it was simply there (reduced motion).
+const RABBIT_MOTIONS = ['hop', 'still']
 const LEAD_PATHS = ['agent', 'form']
 
 // Each event and the closed values of each property. A value outside its list is sent as `other` (or the event is
@@ -33,7 +43,8 @@ export const EVENTS = {
   lead_started: { page: PAGES },
   lead_sent: { page: PAGES, path: LEAD_PATHS },
   lang_switch: { page: PAGES },
-  template_request: { page: PAGES, template: TEMPLATES }
+  template_request: { page: PAGES, template: TEMPLATES },
+  rabbit_landed: { page: PAGES, motion: RABBIT_MOTIONS }
 }
 
 const enc = new TextEncoder()

@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Audit gratuit
+
 Vision
 
 Pour vous
@@ -87,6 +89,10 @@ Créez votre agent
 GUIDES
 
 ## Autres guides
+
+Pourquoi les tâches stagnent entre les personnes, et ce qui change avec un agent
+
+Pourquoi votre release dérape encore : ce que révèle un audit d'équipe
 
 Lancez votre espace de travail pour agents en 20 minutes
 

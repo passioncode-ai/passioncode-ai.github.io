@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Kostenloses Assessment
+
 Vision
 
 Für dich
@@ -95,6 +97,10 @@ Jetzt einrichten
 ANLEITUNGEN
 
 ## Weitere Anleitungen
+
+Warum Aufgaben zwischen Menschen liegen bleiben und was sich mit einem Agent ändert
+
+Warum dein Release immer wieder rutscht: was ein Team-Assessment zeigt
 
 Wie die kostenlose einwöchige Analyse funktioniert
 

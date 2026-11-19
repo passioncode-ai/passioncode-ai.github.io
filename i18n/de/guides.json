@@ -32,6 +32,27 @@
     "From your request to an agent": "Von deiner Anfrage zum Agenten",
     "Where it runs": "Wo er läuft",
     "What stays yours": "Was dir bleibt",
-    "Agents that get better": "Agenten, die besser werden"
+    "Agents that get better": "Agenten, die besser werden",
+    "Why your release slips again: what a team assessment shows": "Warum dein Release immer wieder rutscht: was ein Team-Assessment zeigt",
+    "November 19, 2026": "19. November 2026",
+    "A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.": "Ein Release geht erst raus, wenn auch alles rund um den Code bereit ist. Ein Team-Assessment liest, wie die Arbeit in den letzten 90 Tagen tatsächlich lief, und zeigt, wo sie wartete. So beseitigst du das Warten, statt das Team anzutreiben.",
+    "For founders whose release dates keep moving and who want to see where the work waits.": "Für Gründerinnen und Gründer, deren Release-Termine ständig wandern und die sehen wollen, wo die Arbeit wartet.",
+    "Where a release really waits": "Wo ein Release wirklich wartet",
+    "What the assessment reads": "Was das Assessment liest",
+    "Three things it usually finds": "Drei Dinge, die es meistens findet",
+    "Why a better plan alone does not fix it": "Warum ein besserer Plan allein nicht reicht",
+    "What changes when an agent runs the rhythm": "Was sich ändert, wenn ein Agent den Rhythmus führt",
+    "Who decides": "Wer entscheidet",
+    "How to start": "So startest du",
+    "Sources and method": "Quellen und Methode",
+    "Why tasks stall between people, and what changes with an agent": "Warum Aufgaben zwischen Menschen liegen bleiben und was sich mit einem Agent ändert",
+    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "Eine Aufgabe kann aktiv aussehen, während sie darauf wartet, dass die nächste Person sie sieht, übernimmt oder an den Planer zurückgibt. Ein Agent verändert den Tagesrhythmus: Er erledigt diese Nachfragen und Eskalationen automatisch, während Menschen die Verantwortung und die Entscheidungen behalten.",
+    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "Für Gründer und Leiter von Produktteams, deren Aufgaben zwischen Menschen warten und deren Planer Verantwortlichen von Hand hinterherlaufen.",
+    "Where a task really waits": "Wo eine Aufgabe wirklich wartet",
+    "The signs of a stalled hand-off": "Woran du eine hängende Übergabe erkennst",
+    "Why manual chasing does not scale": "Warum manuelles Nachhaken nicht skaliert",
+    "What an agent changes in the daily rhythm": "Was ein Agent im Tagesrhythmus ändert",
+    "Agents follow the work, people decide": "Agents folgen der Arbeit, Menschen entscheiden",
+    "How to start with the free assessment": "So startest du mit dem kostenlosen Assessment"
   }
 }

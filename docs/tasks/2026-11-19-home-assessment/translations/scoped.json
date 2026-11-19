@@ -1,0 +1,9 @@
+{"it":{"text":"Valutazione gratuita","job":"job_25430f6fc8748649c3435bd9","score":82},
+ "uk":{"text":"Безкоштовний аналіз","job":"job_5f1ac92655a72dcff8e72a04","score":84},
+ "id":{"text":"Asesmen gratis","job":"job_f1fc541d1dff37bb01d544a2","score":92},
+ "vi":{"text":"Đánh giá miễn phí","job":"job_1aa8e7bc3610fd9f575a7690","score":91},
+ "nl":{"text":"Gratis teamanalyse","job":"job_ba46b797421a23b97a947ea6","score":93},
+ "ar":{"text":"التقييم المجاني","job":"job_9dee7a74d7c3323f1fc23477","score":97},
+ "tr":{"text":"Ücretsiz değerlendirme","job":"job_ebc9d806bc0fa726cba229fd","score":null,"note":"judge still queued when read"},
+ "hi":{"text":"मुफ्त असेसमेंट","job":"job_a598006171ff7153a18db2e5","score":null,"note":"judge still queued when read"},
+ "bg":{"text":"Безплатна оценка","job":"job_e8e05e7e608193bc62a9388c","score":null,"note":"Copylot has no bg-BG: run under ru-RU rules with a Bulgarian brief, as SITE-070 did; judge still queued when read"}}

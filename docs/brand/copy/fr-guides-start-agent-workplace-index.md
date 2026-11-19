@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Audit gratuit
+
 Vision
 
 Pour vous
@@ -95,6 +97,10 @@ L’installer maintenant
 GUIDES
 
 ## Autres guides
+
+Pourquoi les tâches stagnent entre les personnes, et ce qui change avec un agent
+
+Pourquoi votre release dérape encore : ce que révèle un audit d'équipe
 
 Comment fonctionne l’évaluation gratuite d’une semaine
 

@@ -16,7 +16,7 @@
 //   --missing  prints the untranslated fragments as catalog JSON, file by file, to fill in.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
-import { NOINDEX, REGISTRY, SOURCE_PAGES } from './pages.mjs'
+import { NOINDEX, REGISTRY, SCOPED, SCOPED_LOCALES, SCOPED_SOURCE_PAGES, SOURCE_PAGES, localesOfPage } from './pages.mjs'
 import { alternates, applyVideo, catalogFileOf, LANG_TAGS, LANGUAGE_NAMES, LOCALES, loadCatalog, localizePage, localizedFile, ORIGIN, pageRoute, skeleton, skeletonDiff, SOURCE_LOCALE, TRANSLATED_LOCALES, translateMessages } from './locales.mjs'
 import { renderSwitchboardPage } from './switchboard-release.mjs'
 import { PROMPT_FILE, promptText } from './agent-prompt.mjs'
@@ -42,6 +42,28 @@ function switchboardVariants (manifest) {
 }
 
 // The English pages with their chrome, and every translated page, in memory.
+// SITE-070: a scoped language (i18n/scoped-locales.json) builds only its pages; its catalogs hold those pages'
+// strings and the shared ones they use (_common.json), nothing for scripts, the Worker or the form.
+export function buildScoped (locale, { root = ROOT } = {}) {
+  const catalog = loadCatalog(root, locale)
+  const pages = []
+  const missing = {}
+  const used = new Set()
+  for (const sourceFile of SCOPED_SOURCE_PAGES) {
+    const source = readFileSync(resolve(root, sourceFile), 'utf8')
+    const result = localizePage(source, { sourceFile, locale, catalog })
+    for (const key of result.used) used.add(key)
+    for (const m of result.missing) (missing[sourceFile] ??= []).some(e => e.key === m.key) || missing[sourceFile].push(m)
+    pages.push({ sourceFile, file: localizedFile(sourceFile, locale), source, html: result.html })
+  }
+  const unused = [
+    ...Object.keys(catalog.common).filter(k => !used.has(`\u0000${k}`)).map(k => `_common: ${k}`),
+    ...Object.keys(catalog.scripts).map(k => `_scripts: ${k} (a scoped language has no script messages)`),
+    ...Object.entries(catalog.pages).flatMap(([page, strings]) => Object.keys(strings).filter(k => !used.has(`${page}\u0000${k}`)).map(k => `${page}: ${k}`))
+  ]
+  return { pages, missing, unused, problems: [] }
+}
+
 export function buildLocale (locale, { root = ROOT, manifest } = {}) {
   manifest ??= JSON.parse(readFileSync(resolve(root, 'switchboard/release.json'), 'utf8'))
   const catalog = loadCatalog(root, locale)
@@ -103,7 +125,7 @@ function messageModules (builds) {
 // Every indexed page in every language, each naming all its versions (the same list its own
 // hreflang links give).
 export function sitemap () {
-  const urls = LOCALES.flatMap(locale => SOURCE_PAGES.filter(page => !NOINDEX.has(page)).map(page => {
+  const urls = [...LOCALES, ...SCOPED_LOCALES].flatMap(locale => SOURCE_PAGES.filter(page => !NOINDEX.has(page) && localesOfPage(page).includes(locale)).map(page => {
     const links = alternates(page).map(([l, href]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${href}"/>`).join('\n')
     return `  <url><loc>${ORIGIN}${pageRoute(page, locale)}</loc>\n${links}\n  </url>`
   }))
@@ -117,7 +139,9 @@ export function llmsText (current) {
   const line = others.length
     ? `- Every page is published in English and in ${others.length === 1 ? 'one more language' : `${others.length} more languages`}, at the same path under the language's prefix: ${others.join('; ')}. Each page names all its versions with hreflang, English as x-default, and sitemap.xml lists every version. English is the source; where a translated privacy notice differs, the English version prevails.`
     : '- Every page is published in English.'
-  const section = `## Languages\n${line}\n`
+  const scoped = SCOPED_LOCALES.map(l => `${SCOPED.locales[l].englishName} (${LANGUAGE_NAMES[l]}) under /${l}/`)
+  const guides = scoped.length ? `\n- Some guides are also published in ${scoped.length} more languages, at the same path under the language's prefix: ${scoped.join('; ')}. Their hreflang and sitemap.xml list those versions too.` : ''
+  const section = `## Languages\n${line}${guides}\n`
   if (!/^## Languages\n[\s\S]*?\n(?=## )/m.test(current)) throw new Error('llms.txt: no "## Languages" section followed by another section')
   return current.replace(/^## Languages\n[\s\S]*?\n(?=## )/m, section + '\n')
 }
@@ -148,6 +172,19 @@ export function generate ({ root = ROOT, manifest } = {}) {
         if (prompt) files[localizedFile(PROMPT_FILE, locale)] = prompt
         else problems.push(`${file}: no agent prompt (data-copy-prompt) to publish as ${PROMPT_FILE}`)
       }
+    }
+  }
+  for (const locale of SCOPED_LOCALES) {
+    const b = buildScoped(locale, { root })
+    for (const [file, entries] of Object.entries(b.missing)) {
+      (missing[locale] ??= {})[file] = entries
+      for (const e of entries) problems.push(`${locale}/${file}: untranslated (${e.where}): ${e.key}`)
+    }
+    for (const entry of b.unused) problems.push(`i18n/${locale}: unused entry — ${entry}`)
+    for (const { sourceFile, file, source, html } of b.pages) {
+      const diff = skeletonDiff(skeleton(applyVideo(source, SOURCE_LOCALE)), skeleton(html))
+      if (diff) problems.push(`${file}: structure differs from ${sourceFile} at element ${diff.index}: ${diff.source} ≠ ${diff.localized}`)
+      files[file] = html
     }
   }
   Object.assign(files, messageModules(builds))
@@ -197,5 +234,5 @@ if (import.meta.main ?? process.argv[1] === import.meta.filename) {
     console.error(`FAIL: ${problems.length} localization problem(s)`)
     process.exit(1)
   }
-  console.log(`PASS: ${LOCALES.length} languages (${LOCALES.join(', ')}), ${SOURCE_PAGES.length} pages each, generated from the English pages and in step with them; script and Worker messages, sitemap and llms.txt follow`)
+  console.log(`PASS: ${LOCALES.length} languages (${LOCALES.join(', ')}), ${SOURCE_PAGES.length} pages each, generated from the English pages and in step with them; script and Worker messages, sitemap and llms.txt follow; ${SCOPED_LOCALES.length} guide-only languages (${SCOPED_LOCALES.join(', ')}), ${SCOPED_SOURCE_PAGES.length} page(s) each`)
 }

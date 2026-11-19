@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Kostenloses Assessment
+
 Vision
 
 Für dich
@@ -54,7 +56,7 @@ Der Arbeitsplatz, an dem Agenten die Prozesse deines Unternehmens ausführen und
 
 Fabric ist das Zuhause für deine Projekte und ihre Agenten. Switchboard, Dashboards, Observatory und Inbox arbeiten mit ihm und auch für sich allein. Ein Befehl richtet heute alles ein
 
-Für deine Organisation
+Kostenloses Assessment für deine Organisation
 
 →
 
@@ -64,19 +66,21 @@ Für dich, kostenlos
 
 Open Source unter AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
 
-Accounts
+KOSTENLOSES EINWÖCHIGES ASSESSMENT · AUF ANFRAGE
 
-Dienste
+## Warum dein Release immer wieder rutscht
 
-Projekte
+9,8 Tage
 
-Mail
+Median der Durchlaufzeit bei Aufgaben zum Schreiben von Produkttexten
 
-+
+60 bis 85 %
 
-Deine Agenten
+der in einer Woche bewegten Aufgaben standen in keinem Plan dieser Woche
 
-FABRIC · ZUHAUSE FÜR DEINE PROJEKTE
+Ein Pilotunternehmen, nicht genannt. Durchlaufzeit in Kalendertagen, nicht in Arbeitsstunden
+
+Morpheus auf Telegram schreiben ↗Den Leitfaden lesen →
 
 PassionCode.ai in anderthalb Minuten: wie die Arbeit von Menschen zu Agenten wechselt, die Fabric führt, und wie aus einem Team eine Organisation wird, vertont, mit Untertiteln. Das Board zeigt Beispieldaten
 
@@ -84,7 +88,57 @@ Transkript lesen
 
 Dein Unternehmen läuft darauf, dass Menschen Arbeit an Menschen weitergeben. Gib allen KI-Assistenten, und die Arbeit wartet trotzdem auf einen Menschen. Meetings gleichen ab, was die Assistenten erstellt haben. Und alle bauen ihre eigenen Agenten: nichts ist verbunden, Schlüssel liegen überall, und niemand kann sagen, was ein Agent getan oder was er gekostet hat. In einer AI-native Organisation führen Agenten den Prozess, und Menschen steuern ihn. Fabric führt das Board. Heute, als Vorschau, leitet es die Arbeit weiter und weckt den Agenten, dem eine Aufgabe gehört. Als Nächstes setzt es Prioritäten und ordnet die Releases. Menschen geben die Richtung vor, genehmigen, was einen Menschen braucht, und bringen die Expertise ein. So sieht das aus. Die Frage eines Nutzers wird zu einem Signal, einer Korrektur und einem Release, ohne Meeting. Die Recherche macht aus dem Markt eine Hypothese. Eine Botschaft geht in jeder Sprache hinaus. Jede Aufgabe, jede Ausgabe und jedes Ergebnis ist aufgezeichnet. Es hält zusammen, weil es ein System ist: jeder Agent gleich gebaut, Schlüssel in einem Tresor, ein Dashboard für jeden Agenten. Starte auf einem Rechner, kostenlos, schon heute. Auf Anfrage richten wir deine Organisation auf ihrem eigenen Gerät ein und übernehmen die Administration, sodass deine Leute nur noch steuern. Als Nächstes klonst du es für das nächste Team und das nächste Unternehmen. PassionCode.ai: der Arbeitsplatz für AI-native Organisationen. Starte kostenlos oder bring deine Organisation mit.
 
-01 / DAS PROBLEM
+01 / DAS ASSESSMENT
+
+## Warum dein Release immer wieder rutscht
+
+## Eine Woche zeigt, wo die Arbeit wartet
+
+Ein Release wartet nicht nur auf Code. Ein Agent liest, wie dein Unternehmen in den letzten 90 Tagen gearbeitet hat, begleitet die Arbeit eine Woche lang und zeigt, wo sie wartete, sodass du die Wartezeit behebst, statt das Team anzutreiben.
+
+Wartezeiten, die nicht Code sindEntscheidungen, Texte und Reviews halten ein Release länger auf als der Code. In einem Pilotunternehmen brauchten die 20 Aufgaben zum Schreiben von Produkttexten im Median 9,8 Tage.
+
+Arbeit außerhalb des PlansIm selben Unternehmen standen 60 bis 85 % der in einer Woche bewegten Aufgaben in keinem Plan dieser Woche.
+
+Ping-Pong-AufgabenKommt eine Aufgabe innerhalb von 14 Tagen zu ihrem früheren Bearbeiter zurück, war der nächste Schritt unklar. Das Assessment zählt diese Rückläufe pro Prozess.
+
+01
+
+VOR DER WOCHE
+
+### Vier Fragen, Links mit Lesezugriff
+
+Dein Ziel, die Größe deines Teams, deine Systeme und was am meisten schmerzt, danach Lesezugriff, ein Link pro System. Etwa zwanzig Minuten deiner Zeit.
+
+02
+
+WÄHREND DER WOCHE
+
+### Die letzten 90 Tage, dann die laufende Arbeit
+
+Tracker, Repositories, Dokumente, Team-Chats, Mail und Support: was geplant war, was geschah und wo die Arbeit wartete.
+
+03
+
+SIEBTER TAG
+
+### Die Karte und der erste Schritt
+
+Deine Prozesse, Plan gegen Ist, die Wartezeiten und ein Angebot: welche Arbeit Agenten zuerst übernehmen. Wir gehen es mit dir in einem 30-minütigen Gespräch durch.
+
+Kostenloses Assessment anfragen
+
+→
+
+Morpheus auf Telegram schreiben
+
+↗
+
+Das Assessment liest Prozesse, nie Menschen: Summen für Gruppen, nie eine Bewertung für eine Person. Nach der Woche wird der Zugriff entzogen und werden die Daten gelöscht. Die Zahlen stammen aus einem Pilotunternehmen, das nicht genannt wird; die Durchlaufzeit wird in Kalendertagen gezählt, nicht in Arbeitsstunden.
+
+Der Leitfaden: warum dein Release immer wieder rutschtLieber ein Formular? Anfrage senden
+
+02 / DAS PROBLEM
 
 ## Deine Prozesse wurden für Menschen gebaut
 
@@ -100,7 +154,7 @@ Alle bauen ihre eigenen AgentenKeine gemeinsamen Regeln, kein gemeinsames Gedäc
 
 Die meisten Unternehmen experimentieren inzwischen mit Agenten, aber nur wenige setzen sie in einem gesamten Funktionsbereich ein (McKinsey, The State of AI, November 2025). Gartner erwartet, dass bis Ende 2027 über 40 % der Projekte für agentische KI eingestellt werden (Gartner, Juni 2025).
 
-02 / DER WANDEL
+03 / DER WANDEL
 
 ## Agenten führen den Prozess aus
 
@@ -140,7 +194,7 @@ ExpertiseDen Markt und das Handwerk kennen und den Agenten beibringen, die Arbei
 
 Für den Betrieb des gesamten Systems braucht es null bis einige wenige Menschen.
 
-03 / FABRIC VERWALTET DEN PROZESS
+04 / FABRIC VERWALTET DEN PROZESS
 
 ## Ein Agent verwaltet die anderen
 
@@ -190,7 +244,7 @@ Nimmt ein Ziel von dir entgegen, zerlegt es in Aufgaben und berichtet mit den Be
 
 Was Fabric heute kann
 
-04 / EIN SYSTEM
+05 / EIN SYSTEM
 
 ## Jeder Agent auf dieselbe Weise gebaut
 
@@ -232,7 +286,7 @@ Jeder Agent wird mit einer eigenen Seite ausgeliefert und ist Teil einer gemeins
 
 Sieh dir die Tools an, die das heute können
 
-05 / AGENTEN BEI DER ARBEIT
+06 / AGENTEN BEI DER ARBEIT
 
 ## Wie ein agentenbasiertes Unternehmen
 
@@ -288,7 +342,7 @@ Jede dieser Rollen läuft heute in unserer Arbeit als eigener Agent. Fabric wurd
 
 Die Agentenvorlagen, die wir für Organisationen zusammenstellen
 
-06 / VOM TEAM ZUR ORGANISATION
+07 / VOM TEAM ZUR ORGANISATION
 
 ## Auf einem Rechner starten
 
@@ -316,6 +370,8 @@ AUF ANFRAGE
 
 Ein dedizierter Rechner oder eine dedizierte Cloud für das Unternehmen: getrennte Bereiche, Zugriff nach Ebene (Inhaber, Administrator, Projektarchitekt, Nutzer) und ein Basis-Set an Agenten ab dem ersten Tag.
 
+Kostenloses Assessment anfragen
+
 Für deine Organisation
 
 03
@@ -334,19 +390,21 @@ AUF ANFRAGE
 
 PassionCode kann die Administration deines Systems aus der Ferne übernehmen, sodass deine Mitarbeitenden nur steuern. PassionCode sieht die Konfiguration und die Ausgaben, nicht deine Inhalte, es sei denn, du stimmst zu.
 
-07 / DER EINSTIEG
+08 / DER EINSTIEG
 
 ## Vier Wege hinein
 
 GRÜNDER UND FÜHRUNGSKRÄFTE
 
-### Bring deine Organisation ein
+### Mit dem kostenlosen Assessment starten
 
-Sag uns, welche Prozesse die Zeit deiner Mitarbeitenden auffressen. Wir zeigen, was Agenten übernehmen würden und was der erste Schritt ist.
+Eine Woche mit Lesezugriff zeigt, wo die Arbeit in deinem Unternehmen wartet und welche Arbeit Agenten zuerst übernehmen.
 
-Bring deine Organisation ein
+Kostenloses Assessment anfragen
 
 →
+
+Oder bring deine Organisation mit
 
 INVESTOREN
 
@@ -380,7 +438,7 @@ Kostenlos starten
 
 →
 
-04 / DIE TOOLS
+09 / DIE TOOLS
 
 ## Tools, die du heute nutzen kannst
 
@@ -450,7 +508,7 @@ Entwicklungsvorschau
 
 Vorschau heißt unfertig: Fabric ist in der frühen Vorschau und seine Unterhaltung antwortet noch nicht; Fabric Inbox ist in der Entwicklungsvorschau, und Antworten mit echten Modellen sind noch nicht verifiziert. Jede Produktseite nennt vor dem Download Voraussetzungen und Einschränkungen. Maschinenlesbare Versionen: /api/releases.
 
-05 / OPEN SOURCE
+10 / OPEN SOURCE
 
 ## Nutze die Tools
 
@@ -460,9 +518,13 @@ Fabric, Fabric Inbox, Switchboard, Observatory und Fabric Dashboards sind Open S
 
 Veröffentlichte Versionen behalten die Lizenz, mit der sie erschienen sind: MIT für Switchboard bis 0.3.1-beta.1, Observatory bis 0.8.1 und Fabric Dashboards 0.1.0; PolyForm Noncommercial oder Internal Use für Switchboard 0.4.0-beta.1, Observatory 0.8.2 bis 0.9.1 sowie Fabric Dashboards 0.2.0 und 0.3.0. Die Vorschau von Fabric 0.2.0 entstand, bevor der Quellcode von Fabric veröffentlicht wurde. PassionCode auf GitHub besuchen ↗
 
-06 / FRAGEN
+11 / FRAGEN
 
 ## Fragen, die zuerst gestellt werden
+
+Was ist das kostenlose Assessment?
+
+Ein Agent liest mit reinem Lesezugriff, wie dein Unternehmen in den letzten 90 Tagen gearbeitet hat, begleitet die Arbeit eine Woche lang und zeigt dir am siebten Tag deine Prozesse, Plan gegen Ist, die Wartezeiten und welche Arbeit Agenten zuerst übernehmen. Er liest Prozesse, nie Menschen, und nach der Woche wird der Zugriff entzogen und werden die Daten gelöscht. Morpheus auf Telegram fragen.
 
 Ist PassionCode.ai kostenlos?
 

@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Evaluación gratuita
+
 Visión
 
 Para ti
@@ -201,6 +203,10 @@ PARA ORGANIZACIONES
 ## para todo tu equipo?
 
 Mapeamos tus procesos, estimamos qué pueden asumir los agentes y lo configuramos contigo o por ti.
+
+Solicita la evaluación gratuita
+
+→
 
 Estimación y solicitud
 

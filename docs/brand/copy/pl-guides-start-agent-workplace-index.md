@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Bezpłatna ocena
+
 Wizja
 
 Dla Ciebie
@@ -95,6 +97,10 @@ Skonfiguruj teraz
 PORADNIKI
 
 ## Więcej poradników
+
+Dlaczego zadania grzęzną między ludźmi i co zmienia agent
+
+Dlaczego Twoje wydanie znów się opóźnia: co pokazuje ocena zespołu
 
 Jak działa bezpłatna tygodniowa ocena
 

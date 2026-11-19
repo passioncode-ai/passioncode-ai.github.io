@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Audit gratuit
+
 Vision
 
 Pour vous
@@ -54,7 +56,7 @@ L’espace de travail où les agents font tourner les processus de votre entrepr
 
 Fabric est le foyer de vos projets et de leurs agents. Switchboard, Dashboards, Observatory et Inbox fonctionnent avec lui, et aussi seuls. Une commande installe le tout dès aujourd’hui
 
-Pour votre organisation
+Audit gratuit pour votre organisation
 
 →
 
@@ -64,19 +66,21 @@ Pour vous, gratuitement
 
 Open source sous licence AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
 
-Comptes
+AUDIT GRATUIT D’UNE SEMAINE · SUR DEMANDE
 
-Services
+## Pourquoi votre release dérape encore
 
-Projets
+9,8 jours
 
-Courrier
+délai médian des tâches de rédaction de textes produit
 
-+
+60 à 85 %
 
-Vos agents
+des tâches déplacées en une semaine n’étaient dans aucun plan de cette semaine
 
-FABRIC · LE FOYER DE VOS PROJETS
+Une entreprise pilote, non nommée. Délai en jours calendaires, pas en heures de travail
+
+Écrire à Morpheus sur Telegram ↗Lire le guide →
 
 PassionCode.ai en une minute et demie : comment le travail passe des personnes aux agents que pilote Fabric, et comment une équipe devient une organisation, commenté et sous-titré. Le tableau montre des données d’exemple
 
@@ -84,7 +88,57 @@ Lire la transcription
 
 Votre entreprise tourne sur des personnes qui se passent le travail. Donnez à chacune des assistants IA, et le travail attend toujours une personne. Les réunions rapprochent ce que les assistants ont produit. Et chacun construit ses propres agents : rien n’est relié, les clés traînent partout, et personne ne peut dire ce qu’un agent a fait, ni ce qu’il a coûté. Dans une organisation AI-native, les agents font tourner le processus, et les personnes le pilotent. Fabric tient le tableau. Aujourd’hui, en préversion, il achemine le travail et réveille l’agent responsable d’une tâche. Ensuite, il fixera les priorités et ordonnera les mises en production. Les personnes donnent la direction, approuvent ce qui demande une personne et apportent l’expertise. Voici à quoi cela ressemble. La question d’un utilisateur devient un signal, un correctif et une mise en production, sans réunion. La recherche transforme le marché en hypothèse. Un même message part dans toutes les langues. Chaque tâche, chaque dépense et chaque résultat sont tracés. L’ensemble tient parce que c’est un seul système : chaque agent construit de la même façon, les clés dans un seul coffre, un tableau de bord pour chaque agent. Commencez sur une machine, gratuitement, dès aujourd’hui. Sur demande, nous installons votre organisation sur son propre appareil et en assurons l’administration, pour que vos équipes ne fassent que piloter. Ensuite, vous le clonez pour l’équipe suivante, puis l’entreprise suivante. PassionCode.ai : l’espace de travail des organisations AI-native. Commencez gratuitement, ou amenez votre organisation.
 
-01 / LE PROBLÈME
+01 / L’AUDIT
+
+## Pourquoi votre release dérape encore
+
+## Une semaine montre où le travail attend
+
+Une release n’attend pas que le code. Un agent lit comment votre entreprise a travaillé ces 90 derniers jours, suit le travail pendant une semaine et montre où il a attendu : vous corrigez l’attente au lieu de pousser l’équipe.
+
+Des attentes qui ne sont pas du codeLes décisions, les textes et les relectures retiennent une release plus longtemps que le code. Dans une entreprise pilote, les 20 tâches de rédaction de textes produit ont pris un délai médian de 9,8 jours.
+
+Du travail hors planDans la même entreprise, 60 à 85 % des tâches déplacées en une semaine n’étaient dans aucun plan de cette semaine.
+
+Des tâches en ping-pongUne tâche qui revient à son précédent responsable en moins de 14 jours signale que l’étape suivante n’était pas claire. L’audit compte ces retours par processus.
+
+01
+
+AVANT LA SEMAINE
+
+### Quatre questions, des liens en lecture seule
+
+Votre objectif, la taille de votre équipe, vos systèmes et ce qui vous gêne le plus, puis un accès en lecture seule, un lien par système. Environ vingt minutes de votre temps.
+
+02
+
+PENDANT LA SEMAINE
+
+### Les 90 derniers jours, puis le travail en direct
+
+Trackers, dépôts, documents, messageries d’équipe, e-mails et support : ce qui était prévu, ce qui s’est passé et où le travail a attendu.
+
+03
+
+SEPTIÈME JOUR
+
+### La carte et le premier pas
+
+Vos processus, le plan face au réel, les attentes et une offre : le travail que les agents prennent en premier. Nous la parcourons avec vous lors d’un appel de 30 minutes.
+
+Obtenir l’audit gratuit
+
+→
+
+Écrire à Morpheus sur Telegram
+
+↗
+
+L’audit lit les processus, jamais les personnes : des totaux par groupe, jamais une note pour une personne. Après la semaine, l’accès est révoqué et les données sont supprimées. Les chiffres viennent d’une entreprise pilote non nommée ; le délai est compté en jours calendaires, pas en heures de travail.
+
+Le guide : pourquoi votre release dérape encoreVous préférez un formulaire ? Envoyer une demande
+
+02 / LE PROBLÈME
 
 ## Vos processus ont été conçus pour des personnes
 
@@ -100,7 +154,7 @@ Chacun construit ses propres agentsPas de règles communes, pas de mémoire part
 
 La plupart des entreprises expérimentent désormais des agents, et peu les font tourner sur une fonction entière (McKinsey, The State of AI, novembre 2025). Gartner prévoit que plus de 40 % des projets d’IA agentique seront annulés d’ici fin 2027 (Gartner, juin 2025).
 
-02 / LE CHANGEMENT
+03 / LE CHANGEMENT
 
 ## Les agents font tourner le processus
 
@@ -140,7 +194,7 @@ ExpertiseConnaître le marché et le métier, et apprendre aux agents à faire l
 
 Faire tourner tout le système demande de zéro à quelques personnes.
 
-03 / FABRIC GÈRE LE PROCESSUS
+04 / FABRIC GÈRE LE PROCESSUS
 
 ## Un agent gère les autres
 
@@ -190,7 +244,7 @@ Prend un objectif de votre part, le découpe en tâches et rend compte avec les 
 
 Ce que Fabric fait aujourd’hui
 
-04 / UN SEUL SYSTÈME
+05 / UN SEUL SYSTÈME
 
 ## Chaque agent construit de la même façon
 
@@ -232,7 +286,7 @@ Chaque agent fournit sa propre page et rejoint une vue unique de ce qui tourne, 
 
 Voir les outils qui le font aujourd’hui
 
-05 / LES AGENTS AU TRAVAIL
+06 / LES AGENTS AU TRAVAIL
 
 ## À quoi ressemble
 
@@ -288,7 +342,7 @@ Chacun de ces rôles tourne aujourd’hui comme un agent à part entière dans n
 
 Les modèles d’agents que nous assemblons pour les organisations
 
-06 / D’UNE ÉQUIPE À UNE ORGANISATION
+07 / D’UNE ÉQUIPE À UNE ORGANISATION
 
 ## Commencez sur une machine
 
@@ -316,6 +370,8 @@ SUR DEMANDE
 
 Un ordinateur ou un cloud dédié à l’entreprise : des espaces séparés, un accès par niveau (propriétaire, administrateur, architecte de projet, utilisateur) et un socle d’agents dès le premier jour.
 
+Obtenir l’audit gratuit
+
 Pour votre organisation
 
 03
@@ -334,19 +390,21 @@ SUR DEMANDE
 
 PassionCode peut assurer l’administration de votre système à distance, pour que vos équipes ne fassent que piloter. Il voit la configuration et les dépenses, pas votre contenu, sauf si vous l’acceptez.
 
-07 / PAR OÙ COMMENCER
+08 / PAR OÙ COMMENCER
 
 ## Quatre façons d’entrer
 
 FONDATEURS ET DIRIGEANTS
 
-### Amenez votre organisation
+### Commencer par l’audit gratuit
 
-Dites-nous quels processus mangent le temps de vos équipes. Nous montrons ce que les agents prendraient en charge et quelle est la première étape.
+Une semaine en accès en lecture seule montre où le travail de votre entreprise attend et quel travail les agents prennent en premier.
 
-Amenez votre organisation
+Obtenir l’audit gratuit
 
 →
+
+Ou venez avec votre organisation
 
 INVESTISSEURS
 
@@ -380,7 +438,7 @@ Commencer gratuitement
 
 →
 
-04 / LES OUTILS
+09 / LES OUTILS
 
 ## Des outils à utiliser dès aujourd’hui
 
@@ -450,7 +508,7 @@ Préversion de développement
 
 Préversion veut dire inachevé : Fabric est en préversion et sa conversation ne répond pas encore ; Fabric Inbox est en préversion de développement et les réponses avec un vrai modèle ne sont pas encore vérifiées. Chaque page produit indique la configuration requise et les limites avant le téléchargement. Versions lisibles par machine : /api/releases.
 
-05 / OPEN SOURCE
+10 / OPEN SOURCE
 
 ## Utilisez les outils
 
@@ -460,9 +518,13 @@ Fabric, Fabric Inbox, Switchboard, Observatory et Fabric Dashboards sont open so
 
 Les versions publiées conservent la licence avec laquelle elles sont sorties : MIT pour Switchboard jusqu’à 0.3.1-beta.1, Observatory jusqu’à 0.8.1 et Fabric Dashboards 0.1.0 ; PolyForm Noncommercial ou Internal Use pour Switchboard 0.4.0-beta.1, Observatory de 0.8.2 à 0.9.1, et Fabric Dashboards 0.2.0 et 0.3.0. La préversion de Fabric 0.2.0 a été construite avant la publication du code source de Fabric. PassionCode sur GitHub ↗
 
-06 / QUESTIONS
+11 / QUESTIONS
 
 ## Les questions qu’on nous pose d’abord
+
+Qu’est-ce que l’audit gratuit ?
+
+Un agent lit comment votre entreprise a travaillé ces 90 derniers jours, en accès en lecture seule, suit le travail pendant une semaine et, le septième jour, vous présente vos processus, le plan face au réel, les attentes et le travail que les agents prennent en premier. Il lit les processus, jamais les personnes, et après la semaine l’accès est révoqué et les données sont supprimées. Demander à Morpheus sur Telegram.
 
 PassionCode.ai est-il gratuit ?
 

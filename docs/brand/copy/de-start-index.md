@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Kostenloses Assessment
+
 Vision
 
 Für dich
@@ -201,6 +203,10 @@ FÜR ORGANISATIONEN
 ## ganzes Team laufen lassen?
 
 Wir erfassen deine Prozesse, schätzen, was Agenten übernehmen können, und richten es mit dir oder für dich ein.
+
+Kostenloses Assessment anfragen
+
+→
 
 Schätzung und Anfrage
 

@@ -32,6 +32,27 @@
     "From your request to an agent": "从你的需求到一个智能体",
     "Where it runs": "在哪里运行",
     "What stays yours": "哪些归你所有",
-    "Agents that get better": "不断改进的智能体"
+    "Agents that get better": "不断改进的智能体",
+    "Why your release slips again: what a team assessment shows": "为什么发布又延期了：团队评估能看清什么",
+    "November 19, 2026": "2026 年 11 月 19 日",
+    "A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.": "只有代码周边的一切也准备就绪，发布才能完成。团队评估会还原过去 90 天里工作的真实流转，找出工作在哪里等待，让你解决等待问题，而不是一味催促团队。",
+    "For founders whose release dates keep moving and who want to see where the work waits.": "适合发布日期一再变动、想看清工作在哪等待的创始人和公司负责人。",
+    "Where a release really waits": "发布究竟在哪里等待",
+    "What the assessment reads": "评估会读取什么",
+    "Three things it usually finds": "通常会发现的三件事",
+    "Why a better plan alone does not fix it": "为什么只把计划做得更好还不够",
+    "What changes when an agent runs the rhythm": "当智能体运行日常节奏后，会发生什么变化",
+    "Who decides": "谁来决策",
+    "How to start": "如何开始",
+    "Sources and method": "来源与方法",
+    "Why tasks stall between people, and what changes with an agent": "任务为什么卡在人与人之间，引入智能体后有什么变化",
+    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "一项任务看上去在进行，其实可能在等下一个人看到它、接手它，或者把它退回给计划员。智能体让这些检查和升级自动完成，从而改变日常节奏，而归属和决策仍由人负责。",
+    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "适合创始人和产品团队负责人：你们的任务在人与人之间等待，计划员只能靠人工催办。",
+    "Where a task really waits": "任务到底卡在哪里",
+    "The signs of a stalled hand-off": "交接停滞的迹象",
+    "Why manual chasing does not scale": "为什么人工催办无法扩展",
+    "What an agent changes in the daily rhythm": "智能体如何改变日常节奏",
+    "Agents follow the work, people decide": "智能体跟进工作，人来决策",
+    "How to start with the free assessment": "如何从免费评估开始"
   }
 }

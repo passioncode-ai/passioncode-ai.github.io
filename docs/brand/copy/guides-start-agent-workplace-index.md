@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Free assessment
+
 Vision
 
 For you
@@ -95,6 +97,10 @@ Set it up now
 GUIDES
 
 ## More guides
+
+Why tasks stall between people, and what changes with an agent
+
+Why your release slips again: what a team assessment shows
 
 How the free one-week assessment works
 

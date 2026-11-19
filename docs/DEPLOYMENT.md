@@ -103,7 +103,20 @@ versions](#always-current-versions)). `scripts/verify-live.py` checks every entr
 (61 on 2026-10-08; the not-found page of each language through an address that cannot exist under
 its prefix, expecting 404), each page's `<html lang>` and, on indexed pages, the hreflang list (every
 language and x-default), redirect destination/no-store/noindex, and that private paths and the
-not-found page's own addresses in every language answer 404:
+not-found page's own addresses in every language answer 404.
+
+Since SITE-073 (2026-11-19) it compares with what the Worker legitimately serves. It reads the release
+snapshot the edge serves (`GET /api/releases`), fails when that snapshot is below `releases/current.json`
+(the floor `worker/releases.js` `mergeSnapshots` keeps, except a policy's `hold`), and expects each page
+as the build rewritten with that snapshot (`scripts/verify-live-expect.mjs` applies `worker/live.js`
+`rewriteSource`, the Worker's own rule), so a release newer than the last sync is not a failure. The
+download routes are checked against the same snapshot, every committed platform included. Hreflang
+follows `scripts/locales.mjs` `alternates`: the guide-only languages of `i18n/scoped-locales.json` on
+their pages, none on a held version and none on the English-only digest. `robots.txt` may start with
+Cloudflare's managed block (`# BEGIN Cloudflare Managed content` to `# END Cloudflare Managed Content`);
+the lines after it must equal ours, and a managed block that disallows `/` to every crawler fails. A
+release published during the run is its own failing row (run again). Tests:
+`scripts/test_verify_live.py`, `scripts/verify-live-expect.test.mjs`.
 
 ```sh
 python3 scripts/verify-live.py --output docs/evidence/2026-10-01-workplace/live.json
@@ -280,6 +293,32 @@ Brazilian Portuguese lives at `/pt-br/` and carries `hreflang="pt-BR"` (registry
   checked against it by "static dollar amounts in every catalog match what the estimate prints" in
   `scripts/locales.test.mjs`. German keeps CLDR's bare `$` (`50 $`), not `US$`.
 - **Narrow screens**: `styles.css` hyphenates headings in German and Polish so a long compound never widens a 390 px page.
+
+### Guide-only languages
+
+SITE-070 (operator 2026-11-19, Fabric task `6c4043eb`): the content plan publishes its guides in 19 languages, nine of
+which (Italian, Ukrainian, Indonesian, Vietnamese, Dutch, Arabic, Turkish, Bulgarian, Hindi) the rest of the site does
+not have. They live in `i18n/scoped-locales.json`, not in `i18n/locales.json`: each names its language as the registry
+does (`name`, `englishName`, `og`, `intl`, `switchLabel`, and `dir: "rtl"` for Arabic) and the file lists the pages
+they have (`pages`). `npm run locales` writes `/<code>/<page>` for each from the English page and the catalogs
+`i18n/<code>/<page>.json` plus `i18n/<code>/_common.json` (only the header, footer and byline strings those pages use);
+`--missing` prints what to translate, `--check` fails on an untranslated fragment, an unused entry or a structure that
+differs from the English page, as for every language.
+
+- Every version of such a page, in the site's languages and the scoped ones, names all of them with hreflang plus
+  `x-default` (English), and `sitemap.xml` lists them; every other page names only the site's languages
+  (`localesOfPage` in `scripts/pages.mjs`). The language switch of such a page lists all its versions.
+- A link on a scoped page to a page its language does not have stays on the English page (`localizeUrl`).
+- Arabic pages carry `dir="rtl"`; `styles.css` uses logical properties for the article list and turns the button arrow.
+- They are not site languages: the Worker, the form, `_scripts.json` and `_checks.json` do not apply, and an unknown
+  address under their prefix gets the English not-found page.
+- A language moves to `i18n/locales.json` when every page is translated (then the steps below apply).
+- Translations are Copylot adaptations (`copylot.prepare`, voice `93cd4851` v1) with the judge's score and report ids
+  recorded in the page's content record (`docs/content/<slug>.meta.json`), and wait for a native check (SITE-071).
+- A version whose translation is below the judge's bar of 70 (`below_bar` in the content record), in a guide-only
+  language or a site language, is held until its native check: `"held": { "<code>": ["<page>"] }` in `i18n/scoped-locales.json` builds it with `noindex`, without
+  hreflang, out of `sitemap.xml`, and no other version names it (`HELD` in `scripts/pages.mjs`, SITE-071). Remove the
+  entry when the version passes.
 
 ### Adding a language
 

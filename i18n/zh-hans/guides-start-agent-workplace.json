@@ -19,6 +19,8 @@
     "Build the next agent the same way and give it the same project in Fabric. Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "以同样的方式构建下一个智能体，并让它加入 Fabric 中的同一个项目。连接到 Fabric 的智能体共用一个项目的看板、记忆和交接，因此一个智能体可以从另一个停下的地方接着做。",
     "If something does not work": "如果出了问题",
     "Run the command again: on a computer that is already set up, it checks everything, repairs what is wrong and shows what changed. Each product page lists its requirements and limits.": "再运行一次这条命令：在已经安装好的电脑上，它会检查所有内容，修复出错的部分，并显示改动了什么。每个产品页面都列出了它的要求和限制。",
-    "Set it up now": "现在就安装"
+    "Set it up now": "现在就安装",
+    "Why your release slips again: what a team assessment shows": "为什么发布又延期了：团队评估能看清什么",
+    "Why tasks stall between people, and what changes with an agent": "任务为什么卡在人与人之间，引入智能体后有什么变化"
   }
 }

@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Audit gratuit
+
 Vision
 
 Pour vous
@@ -201,6 +203,10 @@ POUR LES ORGANISATIONS
 ## pour toute votre équipe ?
 
 Nous cartographions vos processus, estimons ce que les agents peuvent prendre en charge et mettons le tout en place avec vous ou pour vous.
+
+Obtenir l’audit gratuit
+
+→
 
 Estimation et demande
 

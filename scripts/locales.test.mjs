@@ -10,7 +10,7 @@ import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symli
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { alternates, applyChrome, counterpartRoute, langTag, LANG_TAGS, languageSwitch, loadCatalog, localizedAsset, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceAsset, sourceUrl, translateMessages } from './locales.mjs'
-import { LOCALES, NOINDEX, PAGES, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
+import { HELD, LOCALES, NOINDEX, PAGES, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { buildLocale, generate } from './build-locale.mjs'
 import { rewriteSource } from '../worker/live.js'
 import { renderSwitchboardPage } from './switchboard-release.mjs'
@@ -74,7 +74,8 @@ test('the home video: each language takes its own poster, video and captions fil
   for (const src of ['poster="/assets/video/home.jpg"', 'src="/assets/video/home.webm"', 'src="/assets/video/home.mp4"', 'src="/assets/video/home.vtt"', 'srclang="en"']) assert.ok(home.includes(src), `home: ${src}`)
   const ru = read('ru/index.html')
   for (const src of ['poster="/assets/video/home-ru.jpg"', 'src="/assets/video/home-ru.webm"', 'src="/assets/video/home-ru.mp4"', 'src="/assets/video/home-ru.vtt"', 'srclang="ru"']) assert.ok(ru.includes(src), `ru: ${src}`)
-  for (const locale of Object.keys(LANG_TAGS).filter(l => !['en', 'ru'].includes(l))) {
+  // The site's languages only: a scoped language (SITE-070) has no home page.
+  for (const locale of LOCALES.filter(l => !['en', 'ru'].includes(l))) {
     const page = read(`${locale}/index.html`)
     assert.ok(page.includes('src="/assets/video/home.mp4"'), `${locale}: the English cut`)
     // Captions in the page's language where that file exists; until then the English captions, marked English.
@@ -208,7 +209,8 @@ test('a heading split by emphasis joins without a space in Chinese and Japanese,
   const html = page('<h1 id="t">From an empty computer to <em>your first agent</em></h1><p>We build <strong>around</strong> projects.</p>')
   const strings = { zh: { 'From an empty computer to': '从一台空白的电脑', 'your first agent': '到你的第一个智能体', 'We build': '我们围绕', around: '项目', 'projects.': '来构建。' }, ja: { 'From an empty computer to': '何もないコンピューターから', 'your first agent': '最初のエージェントまで', 'We build': '私たちは', around: 'プロジェクト', 'projects.': 'を中心に作ります。' }, ko: { 'From an empty computer to': '빈 컴퓨터에서', 'your first agent': '첫 에이전트까지', 'We build': '우리는', around: '프로젝트를', 'projects.': '중심으로 만듭니다.' } }
   const zh = localizePage(html, { sourceFile: 'x/index.html', locale: 'zh-hans', catalog: catalog(strings.zh) }).html
-  assert.match(zh, /<h1 id="t">从一台空白的电脑<em>到你的第一个智能体<\/em><\/h1>/)
+  assert.match(zh.replace(/\u2060/g, ''), /<h1 id="t">从一台空白的电脑<em>到你的第一个智能体<\/em><\/h1>/, 'no space at the join')
+  assert.match(zh, /空\u2060白\u2060的/, 'a word and its particle keep together in a heading (SITE-074)')
   assert.match(zh, /我们围绕<strong>项目<\/strong>来构建。/, 'inline emphasis between Chinese characters takes no space either side')
   const ja = localizePage(html, { sourceFile: 'x/index.html', locale: 'ja', catalog: catalog(strings.ja) }).html
   assert.match(ja, /から<em>最初の/, 'Japanese: no space at the join')
@@ -272,8 +274,10 @@ test('every page exists in every language, indexed exactly where English is', ()
     for (const file of SOURCE_PAGES) {
       assert.ok(existsSync(resolve(root, locale, file)), `${locale}/${file} is missing`)
       assert.ok(PAGES.includes(`${locale}/${file}`))
-      assert.equal(NOINDEX.has(`${locale}/${file}`), NOINDEX.has(file), `${locale}/${file}: same robots rule as the English page`)
-      assert.ok(read(`${locale}/${file}`).includes(NOINDEX.has(file) ? 'content="noindex, follow"' : 'content="index, follow"'), `${locale}/${file}: robots meta`)
+      // SITE-071: a held version (i18n/scoped-locales.json `held`) is kept out of search until its check passes
+      const kept = NOINDEX.has(file) || HELD.has(`${locale}/${file}`)
+      assert.equal(NOINDEX.has(`${locale}/${file}`), kept, `${locale}/${file}: same robots rule as the English page`)
+      assert.ok(read(`${locale}/${file}`).includes(kept ? 'content="noindex, follow"' : 'content="index, follow"'), `${locale}/${file}: robots meta`)
     }
   }
   assert.deepEqual([...NOINDEX].filter(f => SOURCE_PAGES.includes(f)).sort(), ['404.html', 'business/thanks/index.html'], 'only the thanks and 404 pages are kept out of search')
@@ -391,4 +395,75 @@ test('the agent prompt is published as plain text in every language, equal to th
       assert.ok(text.includes(`https://passioncode.ai/${locale}/privacy/`), `${file} links that language's privacy notice`)
     }
   }
+})
+
+// SITE-070: languages published for some pages only (i18n/scoped-locales.json).
+test('a scoped language has only its pages, and every version of such a page names all 19 languages', async () => {
+  const { SCOPED_LOCALES, SCOPED_SOURCE_PAGES } = await import('./pages.mjs')
+  for (const page of SCOPED_SOURCE_PAGES) {
+    const versions = [...LOCALES, ...SCOPED_LOCALES].filter(l => !HELD.has(`${l}/${page}`))
+    const expected = [...versions.map(l => `hreflang="${LANG_TAGS[l]}" href="https://passioncode.ai${l === 'en' ? '' : `/${l}`}/${page.replace(/index\.html$/, '')}"`), 'hreflang="x-default"']
+    // SITE-071: a held version is built with noindex, names no version and is named by none.
+    for (const locale of [...LOCALES, ...SCOPED_LOCALES].filter(l => HELD.has(`${l}/${page}`))) {
+      const html = read(`${locale}/${page}`)
+      assert.ok(html.includes('content="noindex, follow"'), `${locale}/${page}: held, noindex`)
+      assert.ok(!html.includes('<link rel="alternate" hreflang='), `${locale}/${page}: held, no hreflang`)
+      for (const other of versions) assert.ok(!read(other === 'en' ? page : `${other}/${page}`).includes(`hreflang="${LANG_TAGS[locale]}"`), `${other}/${page} names held ${locale}`)
+    }
+    for (const locale of versions) {
+      const html = read(locale === 'en' ? page : `${locale}/${page}`)
+      for (const link of expected) assert.ok(html.includes(link), `${locale}/${page}: ${link}`)
+      assert.match(html, new RegExp(`<html lang="${LANG_TAGS[locale]}"${locale === 'ar' ? ' dir="rtl"' : ''}>`))
+      // The button to Morpheus: the page's language where the bot speaks it, English everywhere else (SITE-072).
+      const bot = /https:\/\/t\.me\/MorpheusPMBot\?start=lp_[a-z0-9-]+_([a-z]+)"/.exec(html)
+      const BOT = { ru: 'ru', es: 'es', de: 'de', 'pt-br': 'pt', fr: 'fr', ja: 'ja', ko: 'ko' }
+      if (bot) assert.equal(bot[1], BOT[locale] || 'en', `${locale}/${page}: the bot's language`)
+      if (SCOPED_LOCALES.includes(locale)) {
+        // A link to a page the scoped language does not have stays on the English page.
+        assert.ok(!html.includes(`href="/${locale}/guides/free-assessment/"`), `${locale}: no link to a page it does not have`)
+        assert.ok(html.includes('href="/guides/free-assessment/"'), `${locale}: the English guide instead`)
+        assert.match(html, /"inLanguage":"[a-zA-Z-]+"|"inLanguage": "[a-zA-Z-]+"/)
+      }
+    }
+  }
+  // Pages a scoped language does not have neither list it nor exist under its prefix.
+  for (const locale of SCOPED_LOCALES) {
+    assert.ok(!read('index.html').includes(`hreflang="${LANG_TAGS[locale]}"`), `home lists ${locale}`)
+    assert.ok(!existsSync(resolve(import.meta.dirname, '..', `${locale}/index.html`)), `${locale}/index.html exists`)
+  }
+})
+
+// SITE-074: typesetting rules a language carries in the registry.
+test('Polish one-letter words never end a line: the space after them is no-break in text, never in attributes or titles', () => {
+  const html = page('<h1 title="Agents in teams">Agents in teams</h1><p>Work with <a href="/x/">people</a> and agents</p>').replace('<title>Hello</title>', '<title>Agents in teams</title>')
+  const strings = { Hello: 'Cześć', 'Agents in teams': 'Agenci w zespołach i z ludźmi', 'Work with': 'Praca z', people: 'ludźmi', 'and agents': 'i agentami, a w tle u nas' }
+  const { html: out } = localizePage(html, { sourceFile: 'x/index.html', locale: 'pl', catalog: catalog(strings) })
+  assert.match(out, /<h1 title="Agenci w zespołach i z ludźmi">Agenci w zespołach i z ludźmi<\/h1>/, 'h1 text bound, its title attribute untouched')
+  assert.match(out, /<p>Praca z <a href="\/pl\/x\/">ludźmi<\/a> i agentami, a w tle u nas<\/p>/, 'a word before a link binds to it; consecutive one-letter words all bind')
+  assert.match(out, /<title>Agenci w zespołach i z ludźmi<\/title>/)
+  assert.equal(skeletonDiff(skeleton(html), skeleton(out)), null)
+  const { html: other } = ru(page('<p>A test</p>'), { 'A test': 'В а и о' })
+  assert.doesNotMatch(other, / /, 'only a language with bindWords')
+})
+
+test('Chinese headings and display lines break between words, never inside one or before a particle', () => {
+  const html = page('<h1>The OS for teams</h1><p class="hero-reframe">The workplace of people</p><p>The workplace of people</p>')
+  const strings = { 'The OS for teams': '不绑定特定智能体的操作系统', 'The workplace of people': '由人掌控方向的工作空间' }
+  const { html: out } = localizePage(html, { sourceFile: 'x/index.html', locale: 'zh-hans', catalog: catalog(strings) })
+  const h1 = /<h1>([^<]*)<\/h1>/.exec(out)[1]
+  assert.equal(h1.replace(/\u2060/g, ''), '不绑定特定智能体的操作系统')
+  assert.match(h1, /体\u2060的/, 'the particle keeps to the character before it')
+  assert.match(h1, /操\u2060作/, 'a word is not split')
+  const reframe = /<p class="hero-reframe">([^<]*)<\/p>/.exec(out)[1]
+  assert.match(reframe, /方\u2060向\u2060的/, 'the word before a particle stays whole (掌控方 / 向的 was the defect)')
+  assert.match(reframe, /控方/, 'a break remains possible between words')
+  assert.match(out, /<p>由人掌控方向的工作空间<\/p>/, 'body text keeps the browser’s own breaking')
+  assert.equal(skeletonDiff(skeleton(html), skeleton(out)), null)
+})
+
+test('Japanese display lines outside h1–h3 also break between phrases', () => {
+  const html = page('<dl class="assess-facts"><div><dt>9.8 days</dt><dd>median lead time</dd></div></dl>')
+  const { html: out } = localizePage(html, { sourceFile: 'x/index.html', locale: 'ja', catalog: catalog({ '9.8 days': '9.8日', 'median lead time': '製品テキスト作成タスクのリードタイム中央値' }) })
+  assert.match(out, /<dd>[^<]*<wbr>[^<]*<\/dd>/)
+  assert.doesNotMatch(out, /中<wbr>央値/, 'a word is never split')
 })

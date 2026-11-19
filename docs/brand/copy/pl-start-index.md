@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Bezpłatna ocena
+
 Wizja
 
 Dla Ciebie
@@ -201,6 +203,10 @@ DLA ORGANIZACJI
 ## w całym Twoim zespole?
 
 Rozpisujemy Twoje procesy, szacujemy, co mogą przejąć agenci, i wdrażamy to razem z Tobą albo za Ciebie.
+
+Poproś o bezpłatną ocenę
+
+→
 
 Wycena i zgłoszenie
 

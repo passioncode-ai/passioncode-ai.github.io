@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Free assessment
+
 Vision
 
 For you
@@ -51,6 +53,10 @@ Enterprise · for organizations
 # Make your organization AI-native
 
 An agent that lives on one person’s laptop helps one person. We bring agents onto your organization’s machines, connect them and show what each one cost and what it delivered, on open-source tools, with your data on your machines or in your own cloud
+
+Get the free assessment
+
+→
 
 Estimate and request
 

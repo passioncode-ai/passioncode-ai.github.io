@@ -12,22 +12,24 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { loadDefaultJapaneseParser } from 'budoux'
-import { LOCALES, NOINDEX, REGISTRY, SOURCE_LOCALE, TRANSLATED_LOCALES } from './pages.mjs'
+import { LOCALES, NOINDEX, REGISTRY, SCOPED, SCOPED_LOCALES, SCOPED_SOURCE_PAGES, SOURCE_LOCALE, TRANSLATED_LOCALES, localesOfPage } from './pages.mjs'
 
-export { LOCALES, SOURCE_LOCALE, TRANSLATED_LOCALES }
+export { LOCALES, SCOPED_LOCALES, SOURCE_LOCALE, TRANSLATED_LOCALES, localesOfPage }
+// The site's languages and the scoped ones (SITE-070): what names, tags and Open Graph locales are known for.
+const KNOWN_LOCALES = [...LOCALES, ...SCOPED_LOCALES]
 export const ORIGIN = 'https://passioncode.ai'
 export const localeInfo = locale => {
-  const info = REGISTRY.locales[locale]
-  if (!info) throw new Error(`Unknown locale ${locale} (i18n/locales.json)`)
+  const info = REGISTRY.locales[locale] ?? SCOPED.locales[locale]
+  if (!info) throw new Error(`Unknown locale ${locale} (i18n/locales.json, i18n/scoped-locales.json)`)
   return info
 }
 // The language switch's visible label in each language: always the language's own name.
-export const LANGUAGE_NAMES = Object.fromEntries(LOCALES.map(l => [l, localeInfo(l).name]))
-export const OG_LOCALES = Object.fromEntries(LOCALES.map(l => [l, localeInfo(l).og]))
+export const LANGUAGE_NAMES = Object.fromEntries(KNOWN_LOCALES.map(l => [l, localeInfo(l).name]))
+export const OG_LOCALES = Object.fromEntries(KNOWN_LOCALES.map(l => [l, localeInfo(l).og]))
 // The language tag a version carries in <html lang>, hreflang and the switch's lang: the
 // registry's `lang` where the address prefix is not the tag itself (`pt-br` → `pt-BR`), the code
 // otherwise. The code stays the prefix, the catalog directory and the form's `?lang=`.
-export const LANG_TAGS = Object.fromEntries(LOCALES.map(l => {
+export const LANG_TAGS = Object.fromEntries(KNOWN_LOCALES.map(l => {
   const tag = localeInfo(l).lang ?? l
   const [canonical] = Intl.getCanonicalLocales(tag)
   if (canonical !== tag) throw new Error(`i18n/locales.json: ${l}.lang "${tag}" is not a canonical BCP 47 tag (${canonical})`)
@@ -72,7 +74,7 @@ const escapeHtml = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').r
 export const routeOf = file => '/' + file.replace(/index\.html$/, '')
 export const prefixOf = locale => locale === SOURCE_LOCALE ? '' : `/${locale}`
 export const localizedFile = (file, locale) => locale === SOURCE_LOCALE ? file : `${locale}/${file}`
-export const localeOfFile = file => TRANSLATED_LOCALES.find(l => file.startsWith(`${l}/`)) || SOURCE_LOCALE
+export const localeOfFile = file => [...TRANSLATED_LOCALES, ...SCOPED_LOCALES].find(l => file.startsWith(`${l}/`)) || SOURCE_LOCALE
 export const sourceFileOf = file => { const l = localeOfFile(file); return l === SOURCE_LOCALE ? file : file.slice(l.length + 1) }
 // A page's own address in a language: `/ru/start/`.
 export const pageRoute = (sourceFile, locale) => prefixOf(locale) + routeOf(sourceFile)
@@ -85,15 +87,29 @@ function pagePath (path) {
 // Files other than pages that every language publishes in its own words under its prefix: the
 // /business/ agent prompt as plain text (scripts/agent-prompt.mjs).
 const LOCALIZED_FILES = new Set(['/business/agent-request.txt'])
-const inLocale = path => TRANSLATED_LOCALES.some(l => path === `/${l}/` || path.startsWith(`/${l}/`))
+const inLocale = path => [...TRANSLATED_LOCALES, ...SCOPED_LOCALES].some(l => path === `/${l}/` || path.startsWith(`/${l}/`))
+// A scoped language (SITE-070) has only its pages: a link to any other page stays on the English one.
+const SCOPED_ROUTES = new Set(SCOPED_SOURCE_PAGES.map(p => '/' + p.replace(/index\.html$/, '')))
+// SITE-070: a button to Morpheus, the PM agent's Telegram bot, carries `/start lp_<page>_<lang>`. SITE-072: the bot
+// has lead texts in ru, en, es, de, pt, fr, ja and ko (passioncode-pm-agent `pm_agent/lead_texts.py` TEXTS, read at
+// main 2026-11-19; `pm_agent/leads.py` `lang_of` answers any other tail in English), so a page in one of those links
+// its own tail (Brazilian Portuguese as `pt`) and every other language keeps `_en` until the bot speaks it.
+const BOT_START = /^(https:\/\/t\.me\/MorpheusPMBot\?start=lp_[a-z0-9-]+_)(en|ru|es|de|pt|fr|ja|ko)$/
+const BOT_LANGS = { ru: 'ru', es: 'es', de: 'de', 'pt-br': 'pt', fr: 'fr', ja: 'ja', ko: 'ko' }
+// SITE-072: the free assessment's story landing (assessment.passioncode.ai, SITE-068) opens in the language its
+// `?lang=` names (its `comic.js` picks one of its ten, else the browser's); a page links its own language.
+const ASSESSMENT = /^(https:\/\/assessment\.passioncode\.ai\/\?lang=)([a-z]{2}(?:-[a-z]+)?)$/
 // Moves a site-relative or absolute passioncode.ai page URL under /<locale>/; anything else is kept.
 export function localizeUrl (value, locale) {
+  if (BOT_START.test(value)) return value.replace(BOT_START, (_, start) => start + (BOT_LANGS[locale] || 'en'))
+  if (ASSESSMENT.test(value)) return value.replace(ASSESSMENT, (_, start) => start + locale)
   if (locale === SOURCE_LOCALE) return value
   const absolute = value.startsWith(ORIGIN + '/')
   const rest = absolute ? value.slice(ORIGIN.length) : value
   if (!rest.startsWith('/') || rest.startsWith('//')) return value
   const path = rest.split(/[?#]/, 1)[0]
   if (!pagePath(path) || inLocale(path)) return value
+  if (SCOPED_LOCALES.includes(locale) && !SCOPED_ROUTES.has(path)) return value
   return (absolute ? ORIGIN : '') + `/${locale}` + rest
 }
 // A picture of a product's interface in a language (SITE-028 W5): `/assets/<name>.<ext>` becomes
@@ -187,7 +203,9 @@ export function applyVideo (html, locale, root = SITE_ROOT) {
 }
 // The inverse, for comparing two pages' structure.
 export function sourceUrl (value) {
-  for (const locale of TRANSLATED_LOCALES) {
+  if (BOT_START.test(value)) return value.replace(BOT_START, (_, start) => start + 'en')
+  if (ASSESSMENT.test(value)) return value.replace(ASSESSMENT, (_, start) => start + 'en')
+  for (const locale of [...TRANSLATED_LOCALES, ...SCOPED_LOCALES]) {
     for (const prefix of [`${ORIGIN}/${locale}/`, `/${locale}/`]) {
       if (value.startsWith(prefix)) return value.slice(0, prefix.length - locale.length - 2) + '/' + value.slice(prefix.length)
     }
@@ -206,13 +224,13 @@ export function counterpartRoute (sourceFile, locale) {
 // version, so hreflang is reciprocal. Pages kept out of search carry none.
 export function alternates (sourceFile) {
   if (NOINDEX.has(sourceFile)) return []
-  return [...LOCALES.map(l => [langTag(l), ORIGIN + pageRoute(sourceFile, l)]), ['x-default', ORIGIN + pageRoute(sourceFile, SOURCE_LOCALE)]]
+  return [...localesOfPage(sourceFile).map(l => [langTag(l), ORIGIN + pageRoute(sourceFile, l)]), ['x-default', ORIGIN + pageRoute(sourceFile, SOURCE_LOCALE)]]
 }
 // The visible switch. With two languages it is one link to the other; with more, a disclosure
 // that lists them all (it works without JavaScript: <details>). Each link leads to the same page
 // in that language and carries its hreflang and lang.
 export function languageSwitch (sourceFile, locale) {
-  const others = LOCALES.filter(l => l !== locale)
+  const others = localesOfPage(sourceFile).filter(l => l !== locale)
   const link = (l, cls = '') => `<a${cls} href="${counterpartRoute(sourceFile, l)}" hreflang="${langTag(l)}" lang="${langTag(l)}">${escapeHtml(LANGUAGE_NAMES[l])}</a>`
   if (others.length === 1) return link(others[0], ' class="lang-switch"')
   const label = `${localeInfo(locale).switchLabel}: ${LANGUAGE_NAMES[locale]}`
@@ -229,12 +247,14 @@ export function applyChrome (html, { sourceFile, locale }) {
   if (!/<html lang="[^"]*">/.test(html)) throw new Error(`${where}: no <html lang>`)
   if (!CANONICAL.test(html)) throw new Error(`${where}: no canonical link`)
   if ((html.match(SWITCH) || []).length !== 1) throw new Error(`${where}: expected one language switch (class="lang-switch")`)
-  const links = alternates(sourceFile).map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join('')
+  const held = NOINDEX.has(where) && !NOINDEX.has(sourceFile)   // SITE-071: a held version of an indexed page
+  const links = held ? '' : alternates(sourceFile).map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join('')
   let out = html
-    .replace(/<html lang="[^"]*">/, `<html lang="${langTag(locale)}">`)
+    .replace(/<html lang="[^"]*">/, `<html lang="${langTag(locale)}"${localeInfo(locale).dir === 'rtl' ? ' dir="rtl"' : ''}>`)
     .replace(CANONICAL, (_, open, close) => open + ORIGIN + pageRoute(sourceFile, locale) + close + (links ? `\n  ${links}` : ''))
     .replace(SWITCH, () => languageSwitch(sourceFile, locale))
-  if (OG_LOCALE.test(out)) out = out.replace(OG_LOCALE, (_, site) => site + `<meta property="og:locale" content="${OG_LOCALES[locale]}">` + LOCALES.filter(l => l !== locale).map(l => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`).join(''))
+  if (held) out = out.replace('<meta name="robots" content="index, follow">', '<meta name="robots" content="noindex, follow">')
+  if (OG_LOCALE.test(out)) out = out.replace(OG_LOCALE, (_, site) => site + `<meta property="og:locale" content="${OG_LOCALES[locale]}">` + localesOfPage(sourceFile).filter(l => l !== locale).map(l => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`).join(''))
   if (/<link rel="alternate" hreflang=/.test(out.replace(links, ''))) throw new Error(`${where}: an hreflang alternate outside the generated list`)
   return out
 }
@@ -347,6 +367,34 @@ export function tightenCjk (html, locale) {
 // attributes and body text keep the browser's own breaking. Chinese is not segmented: BudouX's
 // Chinese model splits words (智｜能体), and Chinese typography breaks between any two characters.
 const PHRASE_TAGS = new Set(['h1', 'h2', 'h3'])
+// SITE-074: short display lines outside h1–h3 that wrap like a heading (the hero's reframe line and the
+// assessment card's figure labels): phrase breaks and particle binding apply inside them too.
+const PHRASE_CLASSES = ['hero-reframe', 'assess-facts']
+const isPhraseElement = (name, token) => PHRASE_TAGS.has(name) || PHRASE_CLASSES.some(c => hasClass(token, c))
+// SITE-074: Polish typesetting keeps a one-letter word (a, i, o, u, w, z) off the end of a line: the space
+// after it becomes a no-break space (`bindWords` in the registry), in every text node of the page, never in
+// an attribute, a title or structured data.
+export function bindWords (text, locale) {
+  const words = localeInfo(locale).bindWords
+  if (!words?.length) return text
+  const pattern = new RegExp(`(^|[\\s(„«"\u00a0])(${words.join('|')}) +`, 'giu')
+  // Two passes: «i w domu» binds both words, which share the space between them.
+  return text.replace(pattern, '$1$2\u00a0').replace(pattern, '$1$2\u00a0')
+}
+// SITE-074: Chinese breaks between any two characters, so a heading can start a line with a particle
+// (…智能体 / 的操作系统). For a locale with `bindParticles`, a WORD JOINER (U+2060) before each listed
+// particle keeps it on the line of the character before it, in headings and the display lines above only.
+// Binding a particle alone would move the break into the word before it (掌控方 / 向的), so the characters of each
+// word (Intl.Segmenter, ICU's dictionary) are joined the same way: a line breaks between words, never inside one.
+const HAN_WORD = /^\p{Script=Han}{2,}$/u
+const segmenters = {}
+export function bindParticles (text, locale) {
+  const particles = localeInfo(locale).bindParticles
+  if (!particles) return text
+  const segmenter = (segmenters[locale] ??= new Intl.Segmenter(langTag(locale), { granularity: 'word' }))
+  const words = [...segmenter.segment(text)].map(({ segment }) => HAN_WORD.test(segment) ? [...segment].join('\u2060') : segment).join('')
+  return words.replace(new RegExp(`(?<=[^\\s\u2060>])([${particles}])`, 'gu'), '\u2060$1')
+}
 const PHRASE_PARSERS = { ja: loadDefaultJapaneseParser }
 const parsers = {}
 const LATIN_EDGE = /[A-Za-z0-9]/
@@ -372,7 +420,7 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
   const own = catalog.pages[sourceFile] || {}
   const missing = []
   const used = new Set()
-  const translate = (text, where, phrases = false) => {
+  const translate = (text, where, phrases = false, textNode = false) => {
     const key = catalogKey(text)
     if (!key) return text
     // A fragment without letters (a number range, an arrow) needs no translation, but may have
@@ -390,8 +438,8 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
     // opens with closing punctuation (，。）) or ends with any (。、（) takes no space on that side.
     const lead = /^\s/.test(value) || /^[,.;:!?)»]/.test(value) || CJK_OPENS_WITH.test(value) ? '' : /^\s*/.exec(text)[0]
     const trail = /\s$/.test(value) || value === '' || CJK_ENDS_WITH.test(value) ? '' : /\s*$/.exec(text)[0]
-    const body = phrases ? phraseChunks(value, locale).map(escapeText).join('<wbr>') : escapeText(value)
-    return lead + body + trail
+    const body = phrases ? phraseChunks(bindParticles(value, locale), locale).map(escapeText).join('<wbr>') : escapeText(value)
+    return textNode ? bindWords(lead + body + trail, locale) : lead + body + trail
   }
 
   const out = []
@@ -455,12 +503,12 @@ export function localizePage (html, { sourceFile, locale, catalog }) {
       }
       out.push(tag)
       if (!VOID.has(name) && !token.endsWith('/>')) {
-        stack.push({ name, switch: isSwitch, verbatim: isSwitch || VERBATIM_TAGS.has(name) || VERBATIM_ATTRS.some(a => attr(token, a) !== undefined) })
+        stack.push({ name, switch: isSwitch, phrase: isPhraseElement(name, token), verbatim: isSwitch || VERBATIM_TAGS.has(name) || VERBATIM_ATTRS.some(a => attr(token, a) !== undefined) })
       }
       continue
     }
-    const inHeading = stack.some(e => PHRASE_TAGS.has(e.name))
-    out.push(verbatim() ? token : translate(token, `${region ? `release:${region} ` : ''}${stack.at(-1)?.name || 'text'}`, inHeading))
+    const inHeading = stack.some(e => e.phrase)
+    out.push(verbatim() ? token : translate(token, `${region ? `release:${region} ` : ''}${stack.at(-1)?.name || 'text'}`, inHeading, !stack.some(e => e.name === 'title')))
   }
   return { html: applyChrome(applyVideo(tightenCjk(out.join(''), locale), locale), { sourceFile, locale }), missing, used }
 }
@@ -479,6 +527,9 @@ function localizeJsonLd (token, locale, translate) {
     const value = JSON.parse(literal)
     if (after === ':') { key = value; return literal }
     if (key === 'url' || key === 'item') return JSON.stringify(localizeUrl(value, locale))
+    // SITE-070: an article written in the source language says so; its version in another language says that one
+    // (the VideoObject's spoken language is set by applyVideo afterwards).
+    if (key === 'inLanguage' && value === langTag(SOURCE_LOCALE)) return JSON.stringify(langTag(locale))
     if (LD_VERBATIM_KEYS.has(key) || !HAS_LETTER.test(value) || /^(?:https?:|mailto:)/.test(value)) return literal
     const next = translate(value, `json-ld ${key}`)
     return next === value ? literal : JSON.stringify(next).replace(/</g, '\\u003c')
@@ -489,7 +540,7 @@ function localizeJsonLd (token, locale, translate) {
 
 // ---- structure -----------------------------------------------------------------------------
 
-const DROPPED_ATTRS = new Set([...TEXT_ATTRS, 'lang', 'hreflang'])
+const DROPPED_ATTRS = new Set([...TEXT_ATTRS, 'lang', 'hreflang', 'dir'])
 // The element skeleton every language version must share: every tag in order, with its
 // attributes except the translatable ones, links compared in the source language, and JSON-LD
 // reduced to its keys and identifiers. Text is not part of it, nor the chrome (the language
@@ -510,6 +561,7 @@ export function skeleton (html) {
         }
         if (typeof node !== 'string') return node
         if (key === 'url' || key === 'item') return sourceUrl(node)
+        if (key === 'inLanguage' && KNOWN_LOCALES.some(l => langTag(l) === node)) return '*'
         return LD_VERBATIM_KEYS.has(key) || !ANY_LETTER.test(node) || /^(?:https?:|mailto:)/.test(node) ? node : '*'
       }
       if (!skip) out.push(`ld:${JSON.stringify(walk(JSON.parse(body)))}`)
@@ -535,6 +587,8 @@ export function skeleton (html) {
     if (skip) continue
     if (name === 'link' && attr(token, 'hreflang') !== undefined) continue
     if (name === 'meta' && /^og:locale/.test(attr(token, 'property') || '')) continue
+    // The robots rule is chrome too (SITE-071: a held version is noindex); check-site and locales.test assert it per page.
+    if (name === 'meta' && attr(token, 'name') === 'robots') { out.push('<meta name=robots>'); continue }
     const attrs = [...token.matchAll(/\s([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:="([^"]*)")?/g)]
       .filter(([, a]) => !DROPPED_ATTRS.has(a))
       .filter(([, a]) => !(name === 'meta' && a === 'content' && TEXT_META.has(attr(token, 'name') || attr(token, 'property'))))

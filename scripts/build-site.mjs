@@ -1,6 +1,6 @@
 import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { PAGES } from './pages.mjs'
+import { PAGES, SCOPED_PAGES } from './pages.mjs'
 import { LOCALES, localizedFile } from './locales.mjs'
 import { PROMPT_FILE } from './agent-prompt.mjs'
 import { DIGEST_FILES } from './build-digest.mjs'
@@ -10,6 +10,8 @@ const output = resolve(root, 'dist')
 
 const publicFiles = [
   ...PAGES,
+  // SITE-070: the pages of the scoped languages (i18n/scoped-locales.json).
+  ...SCOPED_PAGES,
   // The English-only AI research digest, its feeds and its sitemap (scripts/build-digest.mjs).
   ...DIGEST_FILES(),
   // The /business/ agent prompt as plain text, in every language (npm run locales writes them).
@@ -17,6 +19,7 @@ const publicFiles = [
   'llms.txt',
   'assets/site.js',
   'assets/analytics.js',
+  'assets/rabbit.js',
   'assets/business.js',
   'assets/estimate.js',
   'assets/lead-options.js',
@@ -26,6 +29,8 @@ const publicFiles = [
   'styles.css',
   'fabric/release.json',
   'assets/fabric-home.jpg',
+  // SITE-074: the founder's portrait in About (his public portrait at sshlg.me, cropped).
+  'assets/founder-sergey-sheleg.jpg',
   'assets/fabric-board.jpg',
   'assets/fabric-releases.jpg',
   'switchboard/release.json',
