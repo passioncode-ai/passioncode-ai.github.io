@@ -57,6 +57,19 @@ def office(extra=(), length=24, width=12):
     return objs + list(extra)
 
 
+def suited(name, x, y, keys=None):
+    """A standing figure in a dark suit: two legs, a torso, a head; keys move all four together."""
+    parts = [('_leg_l', -0.1, 0.45, [0.09, 0.09, 0.45]), ('_leg_r', 0.1, 0.45, [0.09, 0.09, 0.45]),
+             ('', 0, 1.22, [0.24, 0.14, 0.33]), ('_head', 0, 1.67, [0.11, 0.12, 0.13])]
+    objs = []
+    for suffix, dx, z, scale in parts:
+        o = {'name': name + suffix, 'shape': 'sphere' if suffix == '_head' else 'cube', 'location': [x + dx, y, z],
+             'scale': scale, 'color': G['head'] if suffix == '_head' else G['person']}
+        if keys: o['keys'] = [{'t': k['t'], 'location': [k['xy'][0] + dx, k['xy'][1], z]} for k in keys]
+        objs.append(o)
+    return objs
+
+
 def cam(*keys, lens=32):
     return {'lens': lens, 'keys': [{'t': t, 'location': loc, 'look_at': at} for t, loc, at in keys]}
 
@@ -124,15 +137,19 @@ SHOTS = [
      'tense face',
      'the programmer types furiously, then lifts the keyboard and smashes it on the desk; keys fly; he throws it aside'),
     ('07', 6, {
-        'objects': office(person('director', 0, 1, keys=[{'t': 0, 'xy': [0, 1]}, {'t': 6, 'xy': [0, 8]}]) +
+        # v2 (2026-11-19): v1 kept the camera 3 m behind a body cylinder and both takes drew that cylinder as a black
+        # post riding behind the hero; now a suited figure (legs, torso, head) 6 m ahead and an empty aisle before it.
+        'objects': office(suited('director', 0, 4, keys=[{'t': 0, 'xy': [0, 4]}, {'t': 6, 'xy': [0, 11]}]) +
                           [box(f'note{i}', [-1.5 + i * 0.6, 3 + i, 1.8], [0.1, 0.01, 0.1], '#e8d84a',
                                keys=[{'t': 0, 'location': [-1.5 + i * 0.6, 3 + i, 1.8]},
                                      {'t': 6, 'location': [-1.2 + i * 0.5, 4 + i, 1.2]}]) for i in range(6)]),
-        'camera': cam((0, [0, -2.2, 1.9], [0, 2, 1.5]), (6, [0, 4.8, 1.9], [0, 9, 1.5]), lens=30),
+        'camera': cam((0, [0, -2.0, 2.4], [0, 6, 1.2]), (6, [0, 5.0, 2.4], [0, 13, 1.2]), lens=32),
         'note': 'Wide, the camera behind him: he walks through the office, sticky notes, folders and pens float around.'},
-     f'wide shot from behind: {DIRECTOR} walks down the aisle of a chaotic open office, sticky notes, folders and pens '
-     'hang in the air around him, people at desks shouting',
-     'the camera follows behind him as he walks steadily; around him the objects drift in slow motion'),
+     f'wide shot from behind: {DIRECTOR} walks down the aisle of a chaotic open office, seen whole from head to shoes, '
+     'sticky notes, folders and pens hang in the air around him, people at desks shouting; the aisle between the camera '
+     'and him is empty floor, nothing stands or moves in the foreground',
+     'the camera follows behind him at a distance as he walks steadily; around him the objects drift in slow motion; '
+     'the foreground stays empty floor'),
     ('08', 5, {
         'objects': office(person('director', 0, 8, keys=[{'t': 0, 'xy': [0, 9]}, {'t': 5, 'xy': [0, 4]}])),
         'camera': cam((0, [0, 3, 1.7], [0, 9, 1.5]), (5, [0, -1.5, 1.7], [0, 4, 1.5]), lens=35),

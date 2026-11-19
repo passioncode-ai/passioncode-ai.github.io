@@ -11,6 +11,8 @@ the judged take), the sounds and voices as <name>.wav and music-bed.mp3. A clip'
 stays under Cloudflare's 25 MiB asset limit."""
 import json, pathlib, subprocess, sys
 
+from glitch import glitch
+
 HERE = pathlib.Path(__file__).resolve().parent
 LEAD = 1.5          # black before the first shot, the breath
 W, H, FPS = 1280, 720, 24
@@ -38,7 +40,7 @@ def main(media):
         src = media / 'clips' / f'{s["n"]}-{picks[s["n"]]["pick"]}.mp4'
         length = min(s['seconds'], dur(src))
         out = work / f'{s["n"]}.mp4'
-        fade = f',fade=t=in:st=0:d=0.25' if s['n'] in ('14', '15') else ''
+        fade = f',fade=t=in:st=0:d=0.25' if s['n'] == '14' else ''  # 15 comes in through the glitch instead
         run(['ffmpeg', '-y', '-i', str(src), '-t', f'{length:.3f}', '-an', '-vf',
              f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},format=yuv420p{fade}',
              '-c:v', 'libx264', '-preset', 'medium', '-crf', '24', '-maxrate', '1600k', '-bufsize', '3200k', str(out)])
@@ -46,7 +48,9 @@ def main(media):
         parts.append(out)
     total = t
     (work / 'list.txt').write_text(''.join(f"file '{p}'\n" for p in parts))
-    run(['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', str(work / 'list.txt'), '-c', 'copy', str(work / 'picture.mp4')])
+    run(['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', str(work / 'list.txt'), '-c', 'copy', str(work / 'joined.mp4')])
+    # the Matrix glitches at the cut into the future office: the world switches style there (the operator, 2026-11-19)
+    glitch(work / 'joined.mp4', starts['15'], work / 'picture.mp4', work)
 
     # 2. sound: each cue at a shot's start plus an offset; the music bed under all, quieter where the voices are
     S = starts
@@ -56,6 +60,7 @@ def main(media):
         ('f-steps', S['07'] + 0.4, -12), ('f-steps', S['08'] + 0.6, -12), ('f-freeze', S['09'] + 1.1, -6),
         ('f-coffee', S['10'] + 1.6, -8), ('f-coat', S['12'] + 1.0, -8), ('f-steps', S['13'] + 0.6, -14),
         ('f-door', S['14'] + 0.4, -11), ('f-future', S['13'] + 0.5, -26), ('f-future', S['15'], -16),
+        ('f-glitch', S['15'] - 0.5, -9),
     ]
     caps = {'manager': [S['04'] + 1.0, S['04'] + 4.0], 'error': [S['11'] + 0.4, S['11'] + 3.9],
             'morpheus': [S['16'] + 2.5, total - 0.1]}

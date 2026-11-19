@@ -39,7 +39,7 @@
   "n": "07",
   "seconds": 6,
   "scene": "shots/07.scene.json",
-  "prompt": "wide shot from behind: the director: a man in his forties, short dark hair, clean-shaven, dark grey suit walks down the aisle of a chaotic open office, sticky notes, folders and pens hang in the air around him, people at desks shouting. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the camera follows behind him as he walks steadily; around him the objects drift in slow motion."
+  "prompt": "wide shot from behind: the director: a man in his forties, short dark hair, clean-shaven, dark grey suit walks down the aisle of a chaotic open office, seen whole from head to shoes, sticky notes, folders and pens hang in the air around him, people at desks shouting; the aisle between the camera and him is empty floor, nothing stands or moves in the foreground. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is the green glow of computer screens; cinematic composition, 16:9, no text, no logos. Action: the camera follows behind him at a distance as he walks steadily; around him the objects drift in slow motion; the foreground stays empty floor."
  },
  {
   "n": "08",
