@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Free assessment
+
 Vision
 
 For you

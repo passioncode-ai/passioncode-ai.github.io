@@ -90,14 +90,19 @@ const LOCALIZED_FILES = new Set(['/business/agent-request.txt'])
 const inLocale = path => [...TRANSLATED_LOCALES, ...SCOPED_LOCALES].some(l => path === `/${l}/` || path.startsWith(`/${l}/`))
 // A scoped language (SITE-070) has only its pages: a link to any other page stays on the English one.
 const SCOPED_ROUTES = new Set(SCOPED_SOURCE_PAGES.map(p => '/' + p.replace(/index\.html$/, '')))
-// SITE-070: a button to Morpheus, the PM agent's Telegram bot, carries `/start lp_<page>_<lang>`; the bot has lead
-// texts in English and Russian only (passioncode-pm-agent `pm_agent/leads.py` `lang_of`), so the English source links
-// `_en` and the Russian page links `_ru`; every other language keeps `_en` until the bot speaks it.
-const BOT_START = /^(https:\/\/t\.me\/MorpheusPMBot\?start=lp_[a-z0-9-]+_)(en|ru)$/
-const BOT_LANGS = new Set(['ru'])
+// SITE-070: a button to Morpheus, the PM agent's Telegram bot, carries `/start lp_<page>_<lang>`. SITE-072: the bot
+// has lead texts in ru, en, es, de, pt, fr, ja and ko (passioncode-pm-agent `pm_agent/lead_texts.py` TEXTS, read at
+// main 2026-11-19; `pm_agent/leads.py` `lang_of` answers any other tail in English), so a page in one of those links
+// its own tail (Brazilian Portuguese as `pt`) and every other language keeps `_en` until the bot speaks it.
+const BOT_START = /^(https:\/\/t\.me\/MorpheusPMBot\?start=lp_[a-z0-9-]+_)(en|ru|es|de|pt|fr|ja|ko)$/
+const BOT_LANGS = { ru: 'ru', es: 'es', de: 'de', 'pt-br': 'pt', fr: 'fr', ja: 'ja', ko: 'ko' }
+// SITE-072: the free assessment's story landing (assessment.passioncode.ai, SITE-068) opens in the language its
+// `?lang=` names (its `comic.js` picks one of its ten, else the browser's); a page links its own language.
+const ASSESSMENT = /^(https:\/\/assessment\.passioncode\.ai\/\?lang=)([a-z]{2}(?:-[a-z]+)?)$/
 // Moves a site-relative or absolute passioncode.ai page URL under /<locale>/; anything else is kept.
 export function localizeUrl (value, locale) {
-  if (BOT_START.test(value)) return value.replace(BOT_START, (_, start) => start + (BOT_LANGS.has(locale) ? locale : 'en'))
+  if (BOT_START.test(value)) return value.replace(BOT_START, (_, start) => start + (BOT_LANGS[locale] || 'en'))
+  if (ASSESSMENT.test(value)) return value.replace(ASSESSMENT, (_, start) => start + locale)
   if (locale === SOURCE_LOCALE) return value
   const absolute = value.startsWith(ORIGIN + '/')
   const rest = absolute ? value.slice(ORIGIN.length) : value
@@ -199,6 +204,7 @@ export function applyVideo (html, locale, root = SITE_ROOT) {
 // The inverse, for comparing two pages' structure.
 export function sourceUrl (value) {
   if (BOT_START.test(value)) return value.replace(BOT_START, (_, start) => start + 'en')
+  if (ASSESSMENT.test(value)) return value.replace(ASSESSMENT, (_, start) => start + 'en')
   for (const locale of [...TRANSLATED_LOCALES, ...SCOPED_LOCALES]) {
     for (const prefix of [`${ORIGIN}/${locale}/`, `/${locale}/`]) {
       if (value.startsWith(prefix)) return value.slice(0, prefix.length - locale.length - 2) + '/' + value.slice(prefix.length)
@@ -241,11 +247,13 @@ export function applyChrome (html, { sourceFile, locale }) {
   if (!/<html lang="[^"]*">/.test(html)) throw new Error(`${where}: no <html lang>`)
   if (!CANONICAL.test(html)) throw new Error(`${where}: no canonical link`)
   if ((html.match(SWITCH) || []).length !== 1) throw new Error(`${where}: expected one language switch (class="lang-switch")`)
-  const links = alternates(sourceFile).map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join('')
+  const held = NOINDEX.has(where) && !NOINDEX.has(sourceFile)   // SITE-071: a held version of an indexed page
+  const links = held ? '' : alternates(sourceFile).map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join('')
   let out = html
     .replace(/<html lang="[^"]*">/, `<html lang="${langTag(locale)}"${localeInfo(locale).dir === 'rtl' ? ' dir="rtl"' : ''}>`)
     .replace(CANONICAL, (_, open, close) => open + ORIGIN + pageRoute(sourceFile, locale) + close + (links ? `\n  ${links}` : ''))
     .replace(SWITCH, () => languageSwitch(sourceFile, locale))
+  if (held) out = out.replace('<meta name="robots" content="index, follow">', '<meta name="robots" content="noindex, follow">')
   if (OG_LOCALE.test(out)) out = out.replace(OG_LOCALE, (_, site) => site + `<meta property="og:locale" content="${OG_LOCALES[locale]}">` + localesOfPage(sourceFile).filter(l => l !== locale).map(l => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`).join(''))
   if (/<link rel="alternate" hreflang=/.test(out.replace(links, ''))) throw new Error(`${where}: an hreflang alternate outside the generated list`)
   return out
@@ -551,6 +559,8 @@ export function skeleton (html) {
     if (skip) continue
     if (name === 'link' && attr(token, 'hreflang') !== undefined) continue
     if (name === 'meta' && /^og:locale/.test(attr(token, 'property') || '')) continue
+    // The robots rule is chrome too (SITE-071: a held version is noindex); check-site and locales.test assert it per page.
+    if (name === 'meta' && attr(token, 'name') === 'robots') { out.push('<meta name=robots>'); continue }
     const attrs = [...token.matchAll(/\s([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:="([^"]*)")?/g)]
       .filter(([, a]) => !DROPPED_ATTRS.has(a))
       .filter(([, a]) => !(name === 'meta' && a === 'content' && TEXT_META.has(attr(token, 'name') || attr(token, 'property'))))

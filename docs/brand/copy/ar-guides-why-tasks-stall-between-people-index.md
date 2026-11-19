@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+التقييم المجاني
+
 الرؤية
 
 لك
@@ -26,37 +28,15 @@ PassionCode
 
 English
 
-Русский
-
 Deutsch
-
-Français
-
-Polski
-
-한국어
 
 Español
 
 Português (Brasil)
 
-简体中文
-
 日本語
 
-Italiano
-
-Українська
-
 Bahasa Indonesia
-
-Tiếng Việt
-
-Nederlands
-
-Türkçe
-
-Български
 
 हिन्दी
 

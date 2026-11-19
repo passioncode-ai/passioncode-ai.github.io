@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+無料アセスメント
+
 ビジョン
 
 個人向け
@@ -26,37 +28,13 @@ PassionCode
 
 English
 
-Русский
-
 Deutsch
-
-Français
-
-Polski
-
-한국어
 
 Español
 
 Português (Brasil)
 
-简体中文
-
-Italiano
-
-Українська
-
 Bahasa Indonesia
-
-Tiếng Việt
-
-Nederlands
-
-العربية
-
-Türkçe
-
-Български
 
 हिन्दी
 

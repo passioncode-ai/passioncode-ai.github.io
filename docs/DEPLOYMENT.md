@@ -302,6 +302,10 @@ differs from the English page, as for every language.
 - A language moves to `i18n/locales.json` when every page is translated (then the steps below apply).
 - Translations are Copylot adaptations (`copylot.prepare`, voice `93cd4851` v1) with the judge's score and report ids
   recorded in the page's content record (`docs/content/<slug>.meta.json`), and wait for a native check (SITE-071).
+- A version whose translation is below the judge's bar of 70 (`below_bar` in the content record), in a guide-only
+  language or a site language, is held until its native check: `"held": { "<code>": ["<page>"] }` in `i18n/scoped-locales.json` builds it with `noindex`, without
+  hreflang, out of `sitemap.xml`, and no other version names it (`HELD` in `scripts/pages.mjs`, SITE-071). Remove the
+  entry when the version passes.
 
 ### Adding a language
 

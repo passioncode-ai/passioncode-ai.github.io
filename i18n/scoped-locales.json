@@ -11,5 +11,19 @@
     "tr": { "name": "Türkçe", "englishName": "Turkish", "og": "tr_TR", "intl": "tr-TR", "switchLabel": "Dil" },
     "bg": { "name": "Български", "englishName": "Bulgarian", "og": "bg_BG", "intl": "bg-BG", "switchLabel": "Език" },
     "hi": { "name": "हिन्दी", "englishName": "Hindi", "og": "hi_IN", "intl": "hi-IN", "switchLabel": "भाषा" }
+  },
+  "held": {
+    "ar": ["guides/why-tasks-stall-between-people/index.html"],
+    "bg": ["guides/why-tasks-stall-between-people/index.html"],
+    "fr": ["guides/why-tasks-stall-between-people/index.html"],
+    "it": ["guides/why-tasks-stall-between-people/index.html"],
+    "ko": ["guides/why-tasks-stall-between-people/index.html"],
+    "nl": ["guides/why-tasks-stall-between-people/index.html"],
+    "pl": ["guides/why-tasks-stall-between-people/index.html"],
+    "ru": ["guides/why-tasks-stall-between-people/index.html"],
+    "tr": ["guides/why-tasks-stall-between-people/index.html"],
+    "uk": ["guides/why-tasks-stall-between-people/index.html"],
+    "vi": ["guides/why-tasks-stall-between-people/index.html"],
+    "zh-hans": ["guides/why-tasks-stall-between-people/index.html"]
   }
 }

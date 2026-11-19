@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Gratis teamanalyse
+
 Visie
 
 Voor jou
@@ -26,37 +28,15 @@ Nederlands
 
 English
 
-Русский
-
 Deutsch
-
-Français
-
-Polski
-
-한국어
 
 Español
 
 Português (Brasil)
 
-简体中文
-
 日本語
 
-Italiano
-
-Українська
-
 Bahasa Indonesia
-
-Tiếng Việt
-
-العربية
-
-Türkçe
-
-Български
 
 हिन्दी
 

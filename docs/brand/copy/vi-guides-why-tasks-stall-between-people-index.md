@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Đánh giá miễn phí
+
 Tầm nhìn
 
 Dành cho bạn
@@ -26,37 +28,15 @@ Tiếng Việt
 
 English
 
-Русский
-
 Deutsch
-
-Français
-
-Polski
-
-한국어
 
 Español
 
 Português (Brasil)
 
-简体中文
-
 日本語
 
-Italiano
-
-Українська
-
 Bahasa Indonesia
-
-Nederlands
-
-العربية
-
-Türkçe
-
-Български
 
 हिन्दी
 

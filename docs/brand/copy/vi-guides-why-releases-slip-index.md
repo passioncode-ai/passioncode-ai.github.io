@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Đánh giá miễn phí
+
 Tầm nhìn
 
 Dành cho bạn

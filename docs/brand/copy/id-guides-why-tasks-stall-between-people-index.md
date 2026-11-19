@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Asesmen gratis
+
 Visi
 
 Untuk Anda
@@ -26,37 +28,13 @@ Bahasa Indonesia
 
 English
 
-Русский
-
 Deutsch
-
-Français
-
-Polski
-
-한국어
 
 Español
 
 Português (Brasil)
 
-简体中文
-
 日本語
-
-Italiano
-
-Українська
-
-Tiếng Việt
-
-Nederlands
-
-العربية
-
-Türkçe
-
-Български
 
 हिन्दी
 

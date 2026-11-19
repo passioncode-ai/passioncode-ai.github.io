@@ -152,3 +152,17 @@ test('SITE-056: every template a page can ask for is a value the Worker accepts,
   assert.deepEqual(clean({ n: 'template_request', p: { page: 'agent-template', template: 'data-room' } }, LOCALES).props, { page: 'agent-template', template: 'data-room' })
   assert.equal(clean({ n: 'template_request', p: { page: 'agent-template', template: 'someone@example.com' } }, LOCALES).props.template, 'other')
 })
+
+test('SITE-072: every data-cta and data-cta-location an English page carries is a value the Worker accepts', async () => {
+  const { SOURCE_PAGES } = await import('./pages.mjs')
+  const { execFileSync } = await import('node:child_process')
+  // The hand-written and generated English pages, plus the English-only digest under /blog/ai-research/.
+  const digest = execFileSync('git', ['ls-files', 'blog/ai-research/*.html', 'blog/ai-research/**/*.html'], { cwd: new URL('..', import.meta.url), encoding: 'utf8' }).split('\n').filter(Boolean)
+  for (const file of [...SOURCE_PAGES, ...digest]) {
+    const html = readFileSync(new URL(`../${file}`, import.meta.url), 'utf8')
+    for (const [, target] of html.matchAll(/data-cta="([^"]+)"/g)) assert.ok(EVENTS.cta_click.target.includes(target), `${file}: data-cta="${target}" is not a target the Worker accepts`)
+    for (const [, location] of html.matchAll(/data-cta-location="([^"]+)"/g)) assert.ok(EVENTS.cta_click.location.includes(location), `${file}: data-cta-location="${location}" is not a location the Worker accepts`)
+  }
+  assert.deepEqual(clean({ n: 'cta_click', p: { page: 'home', location: 'assessment', target: 'assessment' } }, LOCALES).props, { page: 'home', location: 'assessment', target: 'assessment' })
+  assert.deepEqual(clean({ n: 'cta_click', p: { page: 'home', location: 'hero', target: 'guide' } }, LOCALES).props, { page: 'home', location: 'hero', target: 'guide' })
+})

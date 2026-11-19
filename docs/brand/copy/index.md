@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Free assessment
+
 Vision
 
 For you
@@ -54,7 +56,7 @@ The workplace where agents run your company’s processes, and people steer them
 
 Fabric is the home for your projects and their agents. Switchboard, Dashboards, Observatory and Inbox work with it, and on their own. One command sets it all up today
 
-For your organization
+Get the free assessment
 
 →
 
@@ -64,19 +66,21 @@ For you, free
 
 Open source under AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
 
-Accounts
+FREE ONE-WEEK ASSESSMENT · ON REQUEST
 
-Services
+## Why your release slips again
 
-Projects
+9.8 days
 
-Mail
+median lead time of the tasks of writing product texts
 
-+
+60 to 85%
 
-Your agents
+of the tasks moved in a week were in no plan of that week
 
-FABRIC · HOME FOR YOUR PROJECTS
+One pilot company, not named. Lead time in calendar days, not hours of work
+
+Write to Morpheus on Telegram ↗Read the guide →
 
 PassionCode.ai in a minute and a half: how work moves from people to agents run by Fabric, and how a team grows into an organization, narrated, with captions. The board shows sample data
 
@@ -84,7 +88,57 @@ Read the transcript
 
 Your company runs on people passing work to people. Give each of them AI assistants, and the work still waits for a person. Meetings reconcile what the assistants made. And everyone builds their own agents: nothing connects, keys scatter, and nobody can say what an agent did, or what it cost. In an AI-native organization, agents run the process, and people steer it. Fabric keeps the board. Today, in preview, it routes the work and wakes the agent that owns a task. Next, it sets priorities and orders the releases. People give direction, approve what needs a person, and bring the expertise. Here is what it looks like. A user's question becomes a signal, a fix and a release, without a meeting. Research turns the market into a hypothesis. One message goes out in every language. Every task, every cost and every result is on the record. It holds together because it is one system: every agent built one way, keys in one vault, a dashboard for every agent. Start on one machine, free, today. On request, we set your organization up on its own device and run its administration, so your people only steer. Next, you clone it to the next team, and the next company. PassionCode.ai: the workplace for AI-native organizations. Start free, or bring your organization.
 
-01 / THE PROBLEM
+01 / THE ASSESSMENT
+
+## Why your release slips again
+
+## One week shows where the work waits
+
+A release waits on more than code. One agent reads how your company worked over the last 90 days, follows the work for a week and shows where it waited, so you fix the wait instead of pushing the team.
+
+Waits that are not codeDecisions, texts and reviews hold a release longer than the code. In one pilot company, the 20 tasks of writing product texts took a median of 9.8 days.
+
+Work outside the planIn the same company, 60 to 85% of the tasks moved in a week were in no plan of that week.
+
+Ping-pong tasksA task that comes back to its earlier owner within 14 days means the next step was unclear. The assessment counts these returns per process.
+
+01
+
+BEFORE THE WEEK
+
+### Four questions, read-only links
+
+Your goal, your team’s size, your systems and what hurts most, then read-only access, one link per system. About twenty minutes of your time.
+
+02
+
+DURING THE WEEK
+
+### The last 90 days, then the live work
+
+Trackers, repositories, documents, team chats, mail and support: what was planned, what happened and where the work waited.
+
+03
+
+DAY SEVEN
+
+### The map and the first step
+
+Your processes, plan against fact, the waits and an offer: which work agents take first. We go through it with you in a 30-minute call.
+
+Get the free assessment
+
+→
+
+Write to Morpheus on Telegram
+
+↗
+
+The assessment reads processes, never people: totals for groups, never a score for a person. After the week, access is revoked and the data deleted. The figures come from one pilot company that is not named; lead time is counted in calendar days, not hours of work.
+
+The guide: why your release slips againPrefer a form? Send a request
+
+02 / THE PROBLEM
 
 ## Your processes were built for people
 
@@ -100,7 +154,7 @@ Everyone builds their own agentsNo shared rules, no shared memory, keys pasted w
 
 Most companies now experiment with agents, and few run them across a whole function (McKinsey, The State of AI, November 2025). Gartner expects over 40% of agentic AI projects to be canceled by the end of 2027 (Gartner, June 2025).
 
-02 / THE SHIFT
+03 / THE SHIFT
 
 ## Agents run the process
 
@@ -140,7 +194,7 @@ ExpertiseKnowing the market and the craft, and teaching the agents to do the wor
 
 Running the whole system takes from none to a few people.
 
-03 / FABRIC MANAGES THE PROCESS
+04 / FABRIC MANAGES THE PROCESS
 
 ## One agent manages the others
 
@@ -190,7 +244,7 @@ Takes a goal from you, splits it into tasks and reports back with the evidence.
 
 What Fabric does today
 
-04 / ONE SYSTEM
+05 / ONE SYSTEM
 
 ## Every agent built one way
 
@@ -232,7 +286,7 @@ Each agent ships its own page and joins one view of what runs, what it costs and
 
 See the tools that do this today
 
-05 / AGENTS AT WORK
+06 / AGENTS AT WORK
 
 ## What an agentic company
 
@@ -288,7 +342,7 @@ Each of these roles runs today as its own agent in our work. Connecting all of t
 
 The agent templates we assemble for organizations
 
-06 / FROM A TEAM TO AN ORGANIZATION
+07 / FROM A TEAM TO AN ORGANIZATION
 
 ## Start on one machine
 
@@ -334,19 +388,21 @@ ON REQUEST
 
 PassionCode can run your system’s administration remotely, so your people only steer. It sees configuration and spend, not your content, unless you agree.
 
-07 / WHERE TO START
+08 / WHERE TO START
 
 ## Four ways in
 
 FOUNDERS AND EXECUTIVES
 
-### Bring your organization
+### Start with the free assessment
 
-Tell us which processes eat your people’s time. We show what agents would take over and what the first step is.
+One week with read-only access shows where your company’s work waits and which work agents take first.
 
-Bring your organization
+Get the free assessment
 
 →
+
+Or bring your organization
 
 INVESTORS
 
@@ -380,7 +436,7 @@ Start free
 
 →
 
-04 / THE TOOLS
+09 / THE TOOLS
 
 ## Tools you can use today
 
@@ -450,7 +506,7 @@ Development preview
 
 Preview means unfinished: Fabric is in early preview and its conversation does not reply yet; Fabric Inbox is in development preview and real-model replies are not yet verified. Each product page lists requirements and limits before the download. Machine-readable versions: /api/releases.
 
-05 / OPEN SOURCE
+10 / OPEN SOURCE
 
 ## Use the tools
 
@@ -460,9 +516,13 @@ Fabric, Fabric Inbox, Switchboard, Observatory and Fabric Dashboards are open so
 
 Released versions keep the license they shipped with: MIT for Switchboard up to 0.3.1-beta.1, Observatory up to 0.8.1 and Fabric Dashboards 0.1.0; PolyForm Noncommercial or Internal Use for Switchboard 0.4.0-beta.1, Observatory 0.8.2 to 0.9.1, and Fabric Dashboards 0.2.0 and 0.3.0. The Fabric 0.2.0 preview was built before Fabric’s source was published. Visit PassionCode on GitHub ↗
 
-06 / QUESTIONS
+11 / QUESTIONS
 
 ## Questions people ask first
+
+What is the free assessment?
+
+One agent reads how your company worked over the last 90 days with read-only access, follows the work for a week and on day seven shows your processes, plan against fact, the waits and which work agents take first. It reads processes, never people, and after the week access is revoked and the data deleted. Ask Morpheus on Telegram.
 
 Is PassionCode.ai free?
 

@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Bezpłatna ocena
+
 Wizja
 
 Dla Ciebie
@@ -26,37 +28,15 @@ Polski
 
 English
 
-Русский
-
 Deutsch
-
-Français
-
-한국어
 
 Español
 
 Português (Brasil)
 
-简体中文
-
 日本語
 
-Italiano
-
-Українська
-
 Bahasa Indonesia
-
-Tiếng Việt
-
-Nederlands
-
-العربية
-
-Türkçe
-
-Български
 
 हिन्दी
 

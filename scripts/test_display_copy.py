@@ -7,7 +7,7 @@ import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from check_display_copy import check, inspect
-from html_copy import LOCALES, PAGES, SOURCE_NOINDEX, parse, projection
+from html_copy import HELD, LOCALES, PAGES, SOURCE_NOINDEX, parse, projection
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -97,6 +97,7 @@ class DisplayCopyTests(unittest.TestCase):
         source_noindex = set(SOURCE_NOINDEX)
         noindex = {page for page in PAGES
                    if page in source_noindex or (page.split('/', 1)[0] in LOCALES and page.split('/', 1)[1] in source_noindex)}
+        noindex |= set(HELD)   # SITE-071: held versions are shipped noindex, not listed
         self.assertEqual(set(PAGES) - noindex, expected)
         # The build ships every page by importing the same list.
         build = (ROOT / 'scripts/build-site.mjs').read_text()

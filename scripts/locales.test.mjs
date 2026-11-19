@@ -10,7 +10,7 @@ import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symli
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { alternates, applyChrome, counterpartRoute, langTag, LANG_TAGS, languageSwitch, loadCatalog, localizedAsset, localizePage, localizeUrl, placeholders, skeleton, skeletonDiff, sourceAsset, sourceUrl, translateMessages } from './locales.mjs'
-import { LOCALES, NOINDEX, PAGES, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
+import { HELD, LOCALES, NOINDEX, PAGES, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
 import { buildLocale, generate } from './build-locale.mjs'
 import { rewriteSource } from '../worker/live.js'
 import { renderSwitchboardPage } from './switchboard-release.mjs'
@@ -273,8 +273,10 @@ test('every page exists in every language, indexed exactly where English is', ()
     for (const file of SOURCE_PAGES) {
       assert.ok(existsSync(resolve(root, locale, file)), `${locale}/${file} is missing`)
       assert.ok(PAGES.includes(`${locale}/${file}`))
-      assert.equal(NOINDEX.has(`${locale}/${file}`), NOINDEX.has(file), `${locale}/${file}: same robots rule as the English page`)
-      assert.ok(read(`${locale}/${file}`).includes(NOINDEX.has(file) ? 'content="noindex, follow"' : 'content="index, follow"'), `${locale}/${file}: robots meta`)
+      // SITE-071: a held version (i18n/scoped-locales.json `held`) is kept out of search until its check passes
+      const kept = NOINDEX.has(file) || HELD.has(`${locale}/${file}`)
+      assert.equal(NOINDEX.has(`${locale}/${file}`), kept, `${locale}/${file}: same robots rule as the English page`)
+      assert.ok(read(`${locale}/${file}`).includes(kept ? 'content="noindex, follow"' : 'content="index, follow"'), `${locale}/${file}: robots meta`)
     }
   }
   assert.deepEqual([...NOINDEX].filter(f => SOURCE_PAGES.includes(f)).sort(), ['404.html', 'business/thanks/index.html'], 'only the thanks and 404 pages are kept out of search')
@@ -398,15 +400,23 @@ test('the agent prompt is published as plain text in every language, equal to th
 test('a scoped language has only its pages, and every version of such a page names all 19 languages', async () => {
   const { SCOPED_LOCALES, SCOPED_SOURCE_PAGES } = await import('./pages.mjs')
   for (const page of SCOPED_SOURCE_PAGES) {
-    const versions = [...LOCALES, ...SCOPED_LOCALES]
+    const versions = [...LOCALES, ...SCOPED_LOCALES].filter(l => !HELD.has(`${l}/${page}`))
     const expected = [...versions.map(l => `hreflang="${LANG_TAGS[l]}" href="https://passioncode.ai${l === 'en' ? '' : `/${l}`}/${page.replace(/index\.html$/, '')}"`), 'hreflang="x-default"']
+    // SITE-071: a held version is built with noindex, names no version and is named by none.
+    for (const locale of [...LOCALES, ...SCOPED_LOCALES].filter(l => HELD.has(`${l}/${page}`))) {
+      const html = read(`${locale}/${page}`)
+      assert.ok(html.includes('content="noindex, follow"'), `${locale}/${page}: held, noindex`)
+      assert.ok(!html.includes('<link rel="alternate" hreflang='), `${locale}/${page}: held, no hreflang`)
+      for (const other of versions) assert.ok(!read(other === 'en' ? page : `${other}/${page}`).includes(`hreflang="${LANG_TAGS[locale]}"`), `${other}/${page} names held ${locale}`)
+    }
     for (const locale of versions) {
       const html = read(locale === 'en' ? page : `${locale}/${page}`)
       for (const link of expected) assert.ok(html.includes(link), `${locale}/${page}: ${link}`)
       assert.match(html, new RegExp(`<html lang="${LANG_TAGS[locale]}"${locale === 'ar' ? ' dir="rtl"' : ''}>`))
-      // The button to Morpheus: Russian on the Russian page, English everywhere else (the bot speaks those two).
+      // The button to Morpheus: the page's language where the bot speaks it, English everywhere else (SITE-072).
       const bot = /https:\/\/t\.me\/MorpheusPMBot\?start=lp_[a-z0-9-]+_([a-z]+)"/.exec(html)
-      if (bot) assert.equal(bot[1], locale === 'ru' ? 'ru' : 'en', `${locale}/${page}: the bot's language`)
+      const BOT = { ru: 'ru', es: 'es', de: 'de', 'pt-br': 'pt', fr: 'fr', ja: 'ja', ko: 'ko' }
+      if (bot) assert.equal(bot[1], BOT[locale] || 'en', `${locale}/${page}: the bot's language`)
       if (SCOPED_LOCALES.includes(locale)) {
         // A link to a page the scoped language does not have stays on the English page.
         assert.ok(!html.includes(`href="/${locale}/guides/free-assessment/"`), `${locale}: no link to a page it does not have`)

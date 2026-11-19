@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+免费评估
+
 愿景
 
 个人
@@ -26,15 +28,7 @@ PassionCode
 
 English
 
-Русский
-
 Deutsch
-
-Français
-
-Polski
-
-한국어
 
 Español
 
@@ -42,21 +36,7 @@ Português (Brasil)
 
 日本語
 
-Italiano
-
-Українська
-
 Bahasa Indonesia
-
-Tiếng Việt
-
-Nederlands
-
-العربية
-
-Türkçe
-
-Български
 
 हिन्दी
 

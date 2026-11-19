@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+무료 진단
+
 비전
 
 개인용
@@ -26,37 +28,15 @@ PassionCode
 
 English
 
-Русский
-
 Deutsch
-
-Français
-
-Polski
 
 Español
 
 Português (Brasil)
 
-简体中文
-
 日本語
 
-Italiano
-
-Українська
-
 Bahasa Indonesia
-
-Tiếng Việt
-
-Nederlands
-
-العربية
-
-Türkçe
-
-Български
 
 हिन्दी
 

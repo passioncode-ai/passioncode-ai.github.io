@@ -1,0 +1,68 @@
+{
+ "ru": {
+  "job": "job_c84da013d44b2568f5fa2a73",
+  "exec": "ce22fa91-ae54-4a4e-89df-14f839b7e2a2",
+  "report": "9ecbdf41-9be4-4cc9-89b5-24365d1fe4d3",
+  "score": 57,
+  "charged": "0.203052",
+  "decision": "accepted by agent: the judge scored the JSON form low (typography patches broke its quotes); its meaning fixes applied: 'продвинули' for moved, lead time wording in 17, 'в реальном времени' in 26, 'доступ отзывается'"
+ },
+ "de": {
+  "job": "job_9de71e438bafc304ca937fff",
+  "exec": "8ba1e731-e80f-4143-8e28-9b179d313e6d",
+  "report": "1db9d75f-8bc4-4f70-a06e-72c4b9fc69d0",
+  "score": 91,
+  "charged": "0.257104",
+  "decision": "auto (passed the judge bar)"
+ },
+ "fr": {
+  "job": "job_68abf13ae98b31ebde0cb863",
+  "exec": "b79a91d4-3794-4525-aa5e-485c65ba8368",
+  "report": "27f82c3f-79d2-44c5-ae53-4b4aa81ca903",
+  "score": 92,
+  "charged": "0.247925",
+  "decision": "auto (passed the judge bar); French no-break spaces from the report's fr-space-high patches"
+ },
+ "es": {
+  "job": "job_d8a0049095d0d5b463961004",
+  "exec": "270ef567-5f4e-4ee6-9277-429f4b22fed6",
+  "score": 62,
+  "charged": "0.207340",
+  "decision": "accepted by agent: the judge scored the JSON form low; its meaning fixes applied (14 days inclusive, 'trae tu organización', one wording of 60 to 85)"
+ },
+ "pt-br": {
+  "job": "job_1c5c724ab327059fd2692103",
+  "exec": "e46e2856-e163-421f-9bd2-99c40bde1ee8",
+  "score": 61,
+  "charged": "0.182060",
+  "decision": "accepted by agent: the judge scored the JSON form low; its calque fixes applied ('o planejado versus o realizado', 'prazo mediano')"
+ },
+ "pl": {
+  "job": "job_702b9fc93e3a8c59ed62c6b9",
+  "exec": "158de50a-e0d2-4a1b-b10d-f8ede15d6ad5",
+  "score": 60,
+  "charged": "0.211520",
+  "decision": "accepted by agent: the judge scored the JSON form low; fixes applied: 17 says median as the approved guide does, 36 'zgłoś'; 'przesuniętych' kept as in the approved guide"
+ },
+ "ko": {
+  "job": "job_fdff7cab7af6ad4494861167",
+  "exec": "0bfe9ea1-e476-42ac-bef2-5cc96d1d4e83",
+  "score": 82,
+  "charged": "0.225748",
+  "decision": "auto (passed the judge bar); the full stops copied from the guide's run-in headings dropped from three headings (16, 18, 20)"
+ },
+ "zh-hans": {
+  "job": "job_180ba0adbd29bb74b914e630",
+  "exec": "81184275-96a7-45ff-930b-7dca392cdb52",
+  "score": null,
+  "charged": "0.097792",
+  "decision": "accepted by agent: one repair ran; a claim-evidence finding stayed on the split figure 60% 至 85%, which is the proof's 60 to 85% written as the approved guide writes it"
+ },
+ "ja": {
+  "job": "job_be664f5833db389739635e95",
+  "exec": "1b23514b-170b-44e7-b042-d54d80a60408",
+  "score": 63,
+  "charged": "0.219288",
+  "decision": "accepted by agent: the judge scored the JSON form low; fixes applied: question form in 1, no full stop in the headings 16, 18, 20, 'または組織として依頼する' for 36"
+ }
+}
