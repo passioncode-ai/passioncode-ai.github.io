@@ -1268,3 +1268,34 @@ html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -w
 /* SITE-070: right-to-left guides (Arabic, i18n/scoped-locales.json `dir`). The article list already uses a logical
    padding; the arrow of a button points the reading way. */
 [dir="rtl"] .button span[aria-hidden="true"] { display: inline-block; transform: scaleX(-1); }
+
+/* SITE-072: the home leads into the free assessment. The hero's right column is the assessment's proof (two
+   measured figures, their source, Morpheus and the guide) in place of the decorative workplace map; the header's
+   first item and the #assessment section lead to the same place. Flat panel, no glow: the figures carry it. */
+.assess-card { align-self: center; justify-self: end; width: min(100%, 460px); padding: 30px 30px 26px; border: 1px solid var(--pc-border-strong); border-radius: var(--pc-radius-panel); background: var(--pc-panel); }
+.assess-kicker { margin: 0 0 14px; color: var(--gold); font-size: var(--pc-type-meta); font-weight: 760; letter-spacing: .12em; }
+.assess-title { margin: 0 0 22px; font-size: 28px; line-height: 1.12; letter-spacing: -.035em; }
+.assess-facts { margin: 0; display: grid; gap: 0; }
+.assess-facts > div { display: grid; grid-template-columns: minmax(0, 132px) 1fr; gap: 18px; align-items: baseline; padding: 16px 0; border-top: 1px solid var(--line); }
+.assess-facts dt { color: var(--ink); font-family: var(--pc-font-data); font-size: 26px; letter-spacing: -.04em; font-weight: 650; white-space: nowrap; }
+.assess-facts dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.55; }
+.assess-source { margin: 0 0 20px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--ink-muted); font-size: 12px; line-height: 1.6; }
+.assess-links { margin: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.assess-links a, .assessment-more a { color: var(--gold); font-size: 14px; text-decoration: underline; text-underline-offset: 5px; }
+.assessment-steps { grid-template-columns: repeat(3, 1fr); margin-top: 48px; }
+.assessment-steps li:nth-child(3) { padding-left: 26px; border-left: 1px solid var(--line); }
+.assessment-actions { margin: 40px 0 0; }
+.assessment-more { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.site-header nav a.nav-assessment { color: var(--gold); }
+@media (max-width: 900px) {
+ .assess-card { justify-self: stretch; width: 100%; }
+}
+@media (max-width: 1000px) { .assessment-steps { grid-template-columns: 1fr; } .assessment-steps li, .assessment-steps li + li, .assessment-steps li:nth-child(3) { padding: 26px 0; border-left: 0; } }
+@media (max-width: 620px) {
+ .assess-card { padding: 22px 20px 20px; }
+ .assess-title { font-size: 23px; }
+ .assess-facts > div { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
+ .assess-facts dt { font-size: 24px; }
+ .assessment-actions .button { width: 100%; }
+}
+.path-card .button + .text-link { margin-top: 16px; align-self: flex-start; font-size: 14px; }

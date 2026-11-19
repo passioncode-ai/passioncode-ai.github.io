@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+무료 진단
+
 비전
 
 개인용

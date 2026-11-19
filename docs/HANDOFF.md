@@ -1,4 +1,21 @@
-# Current handoff: SITE-070, the release guide in 19 languages (content plan, guide 1), in review, 2026-11-19
+# Current handoff: SITE-072, the home leads into the free assessment, 2026-11-19
+
+Objective (backlog SITE-072; the operator's words verbatim in the row): the home tidied so it leads founders into the
+free assessment (assessment.passioncode.ai, Morpheus's bot, the release guide) and every entry is measured. Record:
+`docs/tasks/2026-11-19-home-assessment/README.md` (audit with a second vision model, decisions, translations and their
+Copylot reports, checks).
+
+Done: hero first button and proof card; section 01 / THE ASSESSMENT; sections 01 to 11; founders' door; sixth FAQ; the
+header item «Free assessment» on every page in 19 languages; assessment link and Morpheus tail per page language;
+`cta_click` targets assessment, guide and locations assessment, digest, with a test that every page's CTA values pass the
+Worker; facts row *home and the free assessment*; SCN-029, FLW-08, SCR-01.
+
+Checks run: `npm run check` exit 0; `npm run build`; local shots at 1440 and 390 px in four languages, no overflow.
+
+Next task: the board rows of the audit (H-07, H-10, H-11, Polish orphans, CJK line breaks), then SITE-071 with the new
+strings.
+
+# Earlier handoff: SITE-070, the release guide in 19 languages (content plan, guide 1), in review, 2026-11-19
 
 Objective (backlog SITE-070; Fabric task `6c4043eb` on the fabric-workspace board; the operator's words verbatim in the
 backlog row): the first guide of PassionCode's content plan, built on the story landing SITE-068, in English and 18

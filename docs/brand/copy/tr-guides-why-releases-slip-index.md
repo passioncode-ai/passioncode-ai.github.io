@@ -12,6 +12,8 @@ PassionCode
 
 .ai
 
+Ücretsiz değerlendirme
+
 Vizyon
 
 Sizin için
