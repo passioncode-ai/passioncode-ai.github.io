@@ -4,7 +4,7 @@ Contract: brand-contract v1
 
 Görevler insanlar arasında neden takılır | PassionCode.ai
 
-Devir tesliminin nerede takıldığını, elle takibin neden yetmediğini ve PM ajanının takibi yürütürken sahipliğin ve kararların nasıl insanlarda kaldığını görün.
+Devir tesliminin nerede takıldığını, elle takibin neden işlemediğini ve insanlar sahiplik ile kararları elinde tutarken bir PM ajanının takibi nasıl yürüttüğünü görün.
 
 İçeriğe atla
 
@@ -72,73 +72,73 @@ Kılavuzlar
 
 Kılavuz · 19 Kasım 2026
 
-# Görevler insanlar arasında neden takılır ve bir ajan neyi değiştirir
+# Görevler insanlar arasında neden takılır ve bir ajanla ne değişir
 
-Bir görev, bir sonraki kişi onu görene, üstlenene ya da planlamacıya geri verene kadar bekliyorken aktif görünebilir. Ajan bu kontrolleri ve yükseltmeleri otomatik yaparak günlük ritmi değiştirir. Sahiplik ve kararlar insanlarda kalır.
+Bir görev aktif görünürken aslında sıradaki kişinin onu görmesini, üstlenmesini ya da planlayıcıya geri göndermesini bekliyor olabilir. Ajan, bu kontrolleri ve yükseltmeleri otomatik hale getirerek günlük ritmi değiştirir. Sahiplik ve kararlar insanlarda kalır.
 
 Sergey Sheleg, PassionCode.ai kurucu ortağı
 
 ## Bir görev gerçekte nerede bekler
 
-Önce devir noktasına bakın: sonraki kişi görevi gördü mü, kabul etti mi, yoksa kendisine ait olmadığına mı karar verdi? Bunlardan biri olmadan görev, üzerinde kimse çalışmadan açık kalabilir.
+Önce devir teslime bakın: sıradaki kişi görevi gördü mü, kabul etti mi, yoksa kendisine ait olmadığına mı karar verdi? Bunlardan biri olmadıkça görev, kimse üzerinde çalışmadan açık kalabilir.
 
-Bu yüzden yoğun görünen bir pano bile bekleyen işi gizleyebilir. Asıl soru yalnızca göreve en son kimin dokunduğu değildir. Sonraki adımı açıkça kimin üstlendiği ve kimse üstlenmediğinde kimin haberdar olduğu da önemlidir.
+Bu yüzden yoğun görünen bir pano bile bekleyen işi gizleyebilir. Asıl soru yalnızca göreve en son kimin dokunduğu değildir. Sıradaki adımı açıkça kimin üstlendiği ve kimse üstlenmediğinde kimin haberdar olduğu da sorulmalıdır.
 
-## Takılan bir devrin belirtileri
+## Takılan bir devir teslimin belirtileri
 
-Tekrarlayan geri dönüşlere, haftalık planın dışına taşınan işlere ve iş saati yerine takvim günüyle ölçülen teslim süresine bakın. Bu işaretler birlikte, insanlar arasındaki akışta nereyi incelemeniz gerektiğini gösterir.
+Tekrarlanan geri dönüşlere, haftalık planın dışına taşınan işlere ve çalışma saatiyle değil takvim günüyle ölçülen teslim süresine bakın. Bu işaretler birlikte, insanlar arasındaki akışın nerede incelenmesi gerektiğini gösterir.
 
-Ping-pong görev, 14 gün içinde daha önce üzerinde olan kişiye geri dönen görevdir. Değerlendirme bu geri dönüşleri süreç bazında sayar.
+Ping-pong görev, 14 gün içinde daha önce üzerinde çalışmış olan kişiye geri dönen görevdir. Değerlendirme bu dönüşleri süreç bazında sayar.
 
-Bir pilot şirkette ürün metni yazmaya ait 20 görevin medyan teslim süresi 9,8 takvim günüydü. Süre, başlangıçtan bitişe geçen gün olarak ölçüldü, iş saati olarak değil.
+Bir pilot şirkette ürün metni yazma işinin 20 görevinin medyan teslim süresi 9,8 takvim günüydü. Bu süre, başlangıçtan tamamlanmaya geçen gün olarak ölçüldü, çalışma saati olarak değil.
 
-Aynı pilot şirkette, planlamacıların bir haftada taşıdığı görevlerin %60 ila %85'i o haftanın hiçbir planında yoktu. Ölçüm 25 Mayıs ile 2 Kasım 2026 arasındaki haftaları kapsıyor.
+Aynı pilot şirkette planlayıcıların bir haftada taşıdığı görevlerin %60 ila %85'i o haftanın hiçbir planında yoktu. Ölçüm, 25 Mayıs ile 2 Kasım 2026 arasındaki haftaları kapsıyor.
 
-Bu örüntüler size tanıdık geliyorsa, aynı devir görünümü şunu açıklamaya da yardımcı olur: sürümünüz neden yine kayıyor.
+Bu örüntüler size tanıdık geliyorsa, aynı devir teslim görünümü şunu açıklamaya da yardımcı olur: sürümünüz neden yine kayıyor.
 
 ## Elle takip neden ölçeklenmez
 
-Elle takip, planlamacıyı hatırlatma sistemine çevirir. Sessizliği fark etmeli, yeniden sormalı, sahibini bulmalı ve istisnaları yükseltmeli, bu arada planı da tutarlı tutmalıdır.
+Elle takip, planlayıcıyı hatırlatma sistemine dönüştürür. Sessizliği fark etmek, tekrar sormak, sahibi bulmak ve istisnaları yükseltmek zorundadır. Bunun yanında planı da tutarlı tutması gerekir.
 
-Daha fazla görev daha fazla kişiden geçtikçe bu düzen dengesizleşir. Bazı sessiz görevler biri hatırladığı için ilgi görür, diğerleri bekler. Daha çok kovalamak eksik döngüyü tamamlamaz.
+Daha fazla görev daha fazla kişiden geçtikçe bu düzen dengesizleşir. Bazı sessiz görevler biri hatırladığı için ilgi görür, diğerleri bekler. Daha çok takip etmek eksik döngüyü tamamlamaz.
 
-Bunun yerine talebi, yanıtı ve yükseltmeyi açık hale getirin. Böylece planlamacı, mevcut durumu sohbetlerden yeniden çıkarmak yerine zamanını sahiplik ve engelleri çözmeye ayırabilir.
+Bunun yerine istek, yanıt ve yükseltmeyi açık hale getirin. Böylece planlayıcı, güncel durumu sohbetlerden yeniden derlemek yerine sahiplik ve engelleri çözmeye zaman ayırabilir.
 
-## Bir ajan günlük ritimde neyi değiştirir
+## Bir ajan günlük ritmi nasıl değiştirir
 
-Ajan gelişigüzel takibin yerine tekrarlanabilir bir ritim koyar: günün işlerini toplar, sahipliği açıkça belirler, takılan görevleri öne çıkarır, sessizliği yükseltir ve kuruculara bekleyen kararları iletir.
+Ajan gelişigüzel takibin yerine tekrarlanabilir bir ritim koyar: günün işini toplar, sahipliği açık hale getirir, takılan görevleri öne çıkarır, sessizliği yükseltir ve kurucılara hâlâ bekleyen kararları sunar.
 
-İş günlerinde saat 07:00'de PM ajanı herkese bugün neyle ilgilendiğini sorar, yanıt yoksa daha sonra hatırlatır.
+Çalışma günlerinde saat 07:00'de PM ajanı herkese bugün neyle ilgilendiğini sorar. Yanıt gelmezse daha sonra hatırlatır.
 
-PM ajanının öne çıkardığı her görevin üç yanıtı vardır: gördüm, üstleniyorum, bana ait değil. Bana ait değil yanıtı hemen planlamacıya gider.
+PM ajanının öne çıkardığı her görevin üç yanıtı vardır: gördüm, üstleniyorum, bana ait değil. Bana ait değil yanıtı hemen planlayıcıya gider.
 
-Kimsenin üstlenmediği göreve her 30 iş dakikasında bir hatırlatma gider. 2 iş saati sonra planlamacı, ardından yardımcısı, sonra yönetici haberdar edilir.
+Kimsenin üstlenmediği görev için her 30 çalışma dakikasında bir hatırlatma gider. 2 çalışma saati sonra planlayıcı haberdar edilir, ardından yardımcısı, sonra yönetici.
 
-Saat 10:00'da PM ajanı günlerdir ilerlemeyen görevleri ve kişi başına engelleri listeler, böylece planlamacı bunları sabah görür.
+Saat 10:00'da PM ajanı günlerdir ilerlemeyen görevleri ve kişi başına engelleri listeler. Planlayıcı bunları sabah görür.
 
-Her gün saat 21:00'de, hafta sonları dahil, kurucular kısa bir özet alır: ekibin neleri kapattığı ve ilerlettiği, insanları bekleyen kararlar ve kritik olanlar.
+Her gün saat 21:00'de, hafta sonları dahil, kurucular kısa bir özet alır: ekibin neleri kapattığı ve ilerlettiği, insanlarda bekleyen kararlar ve kritik olanlar.
 
 ## Ajanlar işi izler, insanlar karar verir
 
-Ajan işi izler. Bunun ne anlama geldiğine ve sırada ne yapılacağına insanlar karar verir. Ajan, talepleri, yanıtları ve yükseltmeyi görünür tutar, ancak öncelikler üzerinde yetki almaz.
+Ajan işi izler. Bunun ne anlama geldiğine ve sırada ne yapılacağına insanlar karar verir. Ajan, istekleri, yanıtları ve yükseltmeyi görünür tutar, ancak önceliklerin üzerinde yetki sahibi olmaz.
 
-Bana ait değil diye dönen görevi yine planlamacı çözer, insanları bekleyen kararları yine kurucular ele alır. Ajanın işi, bu istisnaların sessiz kalmayıp bir insana ulaşmasını sağlamaktır.
+Bana ait değil olarak dönen görevi yine planlayıcı çözer, insanlarda bekleyen kararları da yine kurucular ele alır. Ajanın işi, bu istisnaların sessiz kalmayıp bir insana ulaşmasını sağlamaktır.
 
 ## Ücretsiz değerlendirmeyle nasıl başlanır
 
 Başka bir elle raporlama düzeni eklemek yerine, kendi süreçlerinizin nerede beklediğini gösteren salt okunur bir haftayla başlayın.
 
-Ücretsiz değerlendirmede tek bir agent bir hafta boyunca salt okunur erişimle son 90 günün görev takip araçlarını, repoları, dokümanları, ekip yazışmalarını, e-postalarını ve destek kayıtlarını okur. Yedinci günde kurucu; süreçlerin haritasını, plan ile gerçekleşenin karşılaştırmasını, bekleme noktalarını ve agent'ların önce hangi işleri alması gerektiğine dair bir öneriyi alır. Rapor grup ve süreç toplamlarını verir, kişi için puan vermez.
+Ücretsiz değerlendirmede bir agent bir hafta boyunca salt okunur erişimle son 90 günün görev takip araçlarını, repoları, belgeleri, ekip sohbetlerini, e-postalarını ve destek kayıtlarını okur. Yedinci günde kurucu; süreçlerin haritasını, plan ile gerçeğin karşılaştırmasını, bekleme noktalarını ve agent'ların hangi işi önce alacağına dair bir öneriyi alır. Rapor yalnızca grup ve süreç toplamlarını verir, hiçbir kişiye puan vermez.
 
-Şunu okuyun: ücretsiz bir haftalık değerlendirme nasıl çalışır, ardından PM agent'ı Morpheus'tan Telegram üzerinden bunu çalıştırmasını isteyin.
+Oku ücretsiz bir haftalık değerlendirme nasıl çalışır, ardından PM agent'ı Morpheus'tan Telegram üzerinden bunu çalıştırmasını iste.
 
 ## Kaynaklar ve yöntem
 
-Tanımlar ve ölçülmüş örnekler sitenin içerik ve marka bilgisi kayıtlarından gelir; çalışma ritmi PM agent'ın playbook'undan ve eskalasyon kodundan; değerlendirmenin kapsamı ise değerlendirme yöntemi kaydından alınmıştır.
+Tanımlar ve ölçülmüş örnekler sitenin içerik ve marka bilgisi kayıtlarından gelir; çalışma ritmi PM agent'ın çalışma kılavuzundan ve eskalasyon kodundan gelir; değerlendirmenin kapsamı ise değerlendirme yöntemi kaydından gelir.
 
-Ölçülmüş örnekler tek bir pilot şirketten gelir: ürün metni görevlerinde başlangıçtan bitişe geçen süre ve belirtilen haftalarda, o haftanın planı dışında kaydırılan görevlerin payı. Bunlar gözlemdir, ekibiniz için kıyas değeri taşımaz.
+Ölçülmüş örnekler tek bir pilot şirketten alınmıştır: ürün metni görevlerinde başlangıçtan bitişe geçen süre ve belirtilen haftalarda o haftanın planı dışından taşınan görevlerin payı. Bunlar gözlemdir, ekibiniz için kıyas değeri değildir.
 
-PM agent'ın saatleri, düğmeleri ve kademeli yükseltme sırası varsayılan ayarlardır, ekip bunları değiştirebilir. Ölçülmüş sonuç değildirler.
+PM agent'ın saatleri, düğmeleri ve kademeleri varsayılan ayarlardır, ekip bunları değiştirebilir. Ölçülmüş sonuç değildirler.
 
 Morpheus'a Telegram'dan yazın
 

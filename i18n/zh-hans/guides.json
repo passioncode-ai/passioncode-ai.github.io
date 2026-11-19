@@ -46,13 +46,13 @@
     "How to start": "如何开始",
     "Sources and method": "来源与方法",
     "Why tasks stall between people, and what changes with an agent": "任务为什么卡在人与人之间，引入智能体后有什么变化",
-    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "一项任务看上去在进行，其实可能在等下一个人看到它、接手它，或把它退回给计划员。智能体让这些检查和升级自动完成，改变了每天的工作节奏；任务归谁、怎么决定，仍由人负责。",
-    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "适合创始人和产品团队负责人：你们的任务在人与人之间等待，计划员只能靠手工追着负责人问。",
+    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "一项任务看上去在进行，其实可能在等下一个人看到它、接手它，或者把它退回给计划员。智能体让这些检查和升级自动完成，从而改变日常节奏，而归属和决策仍由人负责。",
+    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "适合创始人和产品团队负责人：你们的任务在人与人之间等待，计划员只能靠人工催办。",
     "Where a task really waits": "任务到底卡在哪里",
     "The signs of a stalled hand-off": "交接停滞的迹象",
-    "Why manual chasing does not scale": "为什么手工催办无法扩展",
-    "What an agent changes in the daily rhythm": "智能体如何改变每天的工作节奏",
-    "Agents follow the work, people decide": "智能体跟进工作，人来做决定",
+    "Why manual chasing does not scale": "为什么人工催办无法扩展",
+    "What an agent changes in the daily rhythm": "智能体如何改变日常节奏",
+    "Agents follow the work, people decide": "智能体跟进工作，人来决策",
     "How to start with the free assessment": "如何从免费评估开始"
   }
 }

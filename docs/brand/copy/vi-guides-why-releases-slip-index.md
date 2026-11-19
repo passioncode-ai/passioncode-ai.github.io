@@ -132,7 +132,7 @@ HƯỚNG DẪN
 
 ## Xem thêm hướng dẫn
 
-Vì sao công việc kẹt giữa các người, và agent thay đổi điều gì
+Vì sao công việc bị kẹt giữa người với người, và agent thay đổi điều gì
 
 Khởi chạy nơi làm việc agent của bạn trong 20 phút
 

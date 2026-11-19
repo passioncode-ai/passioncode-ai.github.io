@@ -132,7 +132,7 @@ KILAVUZLAR
 
 ## Diğer kılavuzlar
 
-Görevler insanlar arasında neden takılır ve bir ajan neyi değiştirir
+Görevler insanlar arasında neden takılır ve bir ajanla ne değişir
 
 Ajan çalışma alanınızı 20 dakikada kurun
 

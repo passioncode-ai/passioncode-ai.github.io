@@ -66,11 +66,11 @@ Dla Twojej firmy: przeczytaj, jak działa bezpłatna tygodniowa ocena, a potem, 
 
 Poradnik · 19 listopada 2026
 
-### Dlaczego zadania stoją między ludźmi i co zmienia agent
+### Dlaczego zadania grzęzną między ludźmi i co zmienia agent
 
-Zadanie może wyglądać na aktywne, a w rzeczywistości czeka, aż kolejna osoba je zauważy, weźmie albo odda planistce lub planiście. Agent zmienia codzienny rytm: sprawdzanie i eskalacje dzieją się automatycznie, a ludzie zachowują odpowiedzialność i decyzje.
+Zadanie może wyglądać na aktywne, a w rzeczywistości czeka, aż kolejna osoba je zauważy, weźmie albo odeśle do planisty. Agent zmienia codzienny rytm: sprawdzanie i eskalowanie dzieje się automatycznie, a ludzie zachowują odpowiedzialność i decyzje.
 
-Dla founderów i szefów zespołów produktowych, których zadania czekają między ludźmi, a planiści ręcznie gonią właścicieli.
+Dla founderów i szefów zespołów produktowych, u których zadania czekają między ludźmi, a planiści ręcznie ścigają właścicieli.
 
 W tym poradniku
 
@@ -78,11 +78,11 @@ Gdzie zadanie naprawdę czeka
 
 Objawy zawieszonego przekazania
 
-Dlaczego ręczne popędzanie się nie skaluje
+Dlaczego ręczne ponaglanie się nie skaluje
 
 Co agent zmienia w codziennym rytmie
 
-Agenci podążają za pracą, ludzie decydują
+Agenci pilnują pracy, ludzie decydują
 
 Jak zacząć od bezpłatnej oceny
 

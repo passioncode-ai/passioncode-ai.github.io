@@ -2,9 +2,9 @@ Contract: brand-contract v1
 
 <!-- Generated from pl/guides/why-tasks-stall-between-people/index.html; edit source and rerun scripts/extract-public-copy.py. -->
 
-Dlaczego zadania stoją między ludźmi | PassionCode.ai
+Dlaczego zadania grzęzną między ludźmi | PassionCode.ai
 
-Zobacz, gdzie stoją przekazania, dlaczego ręczne popędzanie zawodzi i jak agent PM prowadzi follow-up, a ludzie zachowują odpowiedzialność i decyzje.
+Zobacz, gdzie utykają przekazania, dlaczego ręczne ponaglanie zawodzi i jak agent PM prowadzi follow-up, a ludzie zachowują odpowiedzialność i decyzje.
 
 Przejdź do treści
 
@@ -72,73 +72,73 @@ Poradniki
 
 Poradnik · 19 listopada 2026
 
-# Dlaczego zadania stoją między ludźmi i co zmienia agent
+# Dlaczego zadania grzęzną między ludźmi i co zmienia agent
 
-Zadanie może wyglądać na aktywne, a w rzeczywistości czeka, aż kolejna osoba je zauważy, weźmie albo odda planistce lub planiście. Agent zmienia codzienny rytm: sprawdzanie i eskalacje dzieją się automatycznie, a ludzie zachowują odpowiedzialność i decyzje.
+Zadanie może wyglądać na aktywne, a w rzeczywistości czeka, aż kolejna osoba je zauważy, weźmie albo odeśle do planisty. Agent zmienia codzienny rytm: sprawdzanie i eskalowanie dzieje się automatycznie, a ludzie zachowują odpowiedzialność i decyzje.
 
 Sergey Sheleg, współzałożyciel PassionCode.ai
 
 ## Gdzie zadanie naprawdę czeka
 
-Zacznij od przekazania: czy kolejna osoba zobaczyła zadanie, przyjęła je albo uznała, że nie jest jej. Dopóki to się nie stanie, zadanie może zostać otwarte, choć nikt nad nim nie pracuje.
+Zacznij od przekazania: czy kolejna osoba zobaczyła zadanie, przyjęła je albo uznała, że nie jest jej. Dopóki nic z tego się nie stanie, zadanie może pozostawać otwarte, choć nikt przy nim nie pracuje.
 
-Dlatego zajęta tablica może ukrywać czekającą pracę. Ważne jest nie tylko, kto ostatni dotknął zadania, ale też kto jawnie wziął następny krok i kto się dowie, gdy nikt go nie weźmie.
+Dlatego pełna tablica może ukrywać czekającą pracę. Ważne jest nie tylko, kto ostatni dotknął zadania, ale też kto wyraźnie podjął kolejny krok i kto się dowie, gdy nikt go nie podejmie.
 
 ## Objawy zawieszonego przekazania
 
-Szukaj powtarzających się zwrotów, zadań przeniesionych poza plan tygodnia i czasu realizacji liczonego w dniach kalendarzowych, a nie w godzinach pracy. Razem te sygnały pokazują, gdzie warto przyjrzeć się przepływowi między ludźmi.
+Szukaj powtarzających się zwrotów, prac przeniesionych poza plan tygodnia i czasu realizacji liczonego w dniach kalendarzowych, a nie w godzinach pracy. Razem te sygnały pokazują, gdzie przyjrzeć się przepływowi między ludźmi.
 
-Zadanie pingpongowe to takie, które w ciągu 14 dni wraca do osoby, która już je miała. Ocena zlicza takie powroty w każdym procesie.
+Zadanie ping-pongowe to takie, które w ciągu 14 dni wraca do osoby, która już je miała, a ocena zlicza takie powroty w każdym procesie.
 
-W jednej firmie pilotażowej 20 zadań z pisania tekstów produktowych miało medianę czasu realizacji 9,8 dnia kalendarzowego, liczoną jako dni od startu do zakończenia, a nie godziny pracy.
+W jednej firmie pilotażowej 20 zadań pisania tekstów produktowych miało medianę czasu realizacji 9,8 dnia kalendarzowego, liczoną jako liczba dni od startu do zakończenia, a nie godzin pracy.
 
-W tej samej firmie pilotażowej od 60 do 85% zadań, które planiści przesunęli w tygodniu, nie było w żadnym planie tego tygodnia (tygodnie od 25 maja do 2 listopada 2026).
+W tej samej firmie pilotażowej od 60 do 85% zadań przesuniętych przez planistów w tygodniu nie było w żadnym planie tego tygodnia, w tygodniach od 25 maja do 2 listopada 2026.
 
-Jeśli te wzorce są Ci znane, ten sam widok przekazań pomoże też wyjaśnić, dlaczego Twoje wydanie znowu się opóźnia.
+Jeśli te wzorce brzmią znajomo, ten sam widok przekazań pomaga też wyjaśnić, dlaczego Twoje wydanie znów się opóźnia.
 
-## Dlaczego ręczne popędzanie się nie skaluje
+## Dlaczego ręczne ponaglanie się nie skaluje
 
-Ręczne popędzanie zamienia planistę w system przypominania. Musi zauważać ciszę, pytać ponownie, szukać właściciela i eskalować wyjątki, a przy tym pilnować spójności planu.
+Ręczne ponaglanie zmienia planistę w system przypomnień. Musi zauważyć ciszę, zapytać ponownie, znaleźć właściciela i eskalować wyjątki, a przy tym utrzymać spójny plan.
 
-Gdy więcej zadań przechodzi przez więcej osób, ta rutyna robi się nierówna: część cichych zadań dostaje uwagę, bo ktoś o nich pamiętał, a inne czekają. Mocniejsze popędzanie nie naprawi brakującej pętli.
+Im więcej zadań przechodzi przez więcej osób, tym bardziej nierówna staje się ta rutyna: część cichych zadań dostaje uwagę, bo ktoś o nich pamiętał, inne czekają. Mocniejsze ponaglanie nie naprawi brakującej pętli.
 
-Zamiast tego jawnie ustal prośbę, odpowiedź i eskalację. Planista może wtedy rozstrzygać właścicieli i blokady, zamiast odtwarzać aktualny stan z czatów.
+Zamiast tego jasno ustal prośbę, odpowiedź i eskalację. Planista może wtedy rozstrzygać kwestie własności i blokady, zamiast odtwarzać aktualny stan z czatów.
 
 ## Co agent zmienia w codziennym rytmie
 
-Agent zastępuje doraźne popędzanie powtarzalnym rytmem: zbiera pracę dnia, jawnie przypisuje właścicieli, pokazuje zatrzymane zadania, eskaluje ciszę i podaje founderom decyzje, które nadal czekają.
+Agent zastępuje doraźne ponaglanie powtarzalnym rytmem: zbiera pracę dnia, jasno przypisuje właścicieli, wyłapuje zawieszone zadania, eskaluje ciszę i podsuwa founderom decyzje, które wciąż czekają.
 
-W dni robocze o 07:00 agent PM pyta każdą osobę, czym dziś się zajmuje, a bez odpowiedzi przypomina później.
+W dni robocze o 07:00 agent PM pyta każdą osobę, czym zajmuje się dziś, a bez odpowiedzi przypomina później.
 
-Każde zadanie zgłoszone przez agenta PM ma trzy odpowiedzi: widzę, biorę, nie moje. Odpowiedź „nie moje” trafia od razu do planisty.
+Każde zadanie zgłoszone przez agenta PM ma trzy odpowiedzi: widziałem, biorę, nie moje; „nie moje” trafia od razu do planisty.
 
-Zadanie, którego nikt nie bierze, dostaje przypomnienie co 30 minut pracy. Po 2 godzinach pracy dowiaduje się o nim planista, potem zastępca, potem administrator.
+Zadanie, którego nikt nie bierze, dostaje przypomnienie co 30 minut pracy; po 2 godzinach pracy dowiaduje się o nim planista, potem zastępca, a potem administrator.
 
-O 10:00 agent PM wypisuje zadania, które od dni się nie ruszyły, oraz blokady przypadające na każdą osobę, żeby planista zobaczył je rano.
+O 10:00 agent PM wypisuje zadania, które od dni nie ruszyły, oraz blokady przypisane do osób, żeby planista widział je od rana.
 
 Codziennie o 21:00, także w weekendy, founderzy dostają krótkie podsumowanie: co zespół zamknął i przesunął, jakie decyzje czekają na ludzi i co jest krytyczne.
 
-## Agenci podążają za pracą, ludzie decydują
+## Agenci pilnują pracy, ludzie decydują
 
-Agent podąża za pracą, a ludzie decydują, co ona znaczy i co dalej. Utrzymuje prośby, odpowiedzi i eskalację na widoku, nie przejmując władzy nad priorytetami.
+Agent pilnuje pracy; ludzie decydują, co ona znaczy i co robić dalej. Utrzymuje widoczne prośby, odpowiedzi i eskalację, nie przejmując władzy nad priorytetami.
 
-Zadanie zwrócone jako „nie moje” nadal rozstrzyga planista, a decyzje czekające na ludzi nadal podejmują founderzy. Zadaniem agenta jest dopilnować, by te wyjątki trafiły do człowieka, zamiast cicho czekać.
+Planista nadal rozstrzyga zadanie zwrócone jako „nie moje”, a founderzy nadal zajmują się decyzjami czekającymi na ludzi. Zadaniem agenta jest dopilnować, by te wyjątki trafiły do człowieka, a nie wisiały w ciszy.
 
 ## Jak zacząć od bezpłatnej oceny
 
-Zacznij od tygodnia w trybie tylko do odczytu, który pokaże, gdzie czekają Twoje procesy, zamiast dokładać kolejną ręczną rutynę raportową.
+Zacznij od tygodnia w trybie tylko do odczytu, który pokaże, gdzie czekają Twoje procesy, zamiast dokładać kolejną ręczną rutynę raportowania.
 
-Bezpłatny assessment daje jednemu agentowi dostęp tylko do odczytu na tydzień, żeby przeczytał ostatnie 90 dni trackerów, repozytoriów, dokumentów, czatów zespołu, poczty i wsparcia. W siódmym dniu założyciel dostaje mapę procesów, plan zestawiony z faktami, miejsca oczekiwania oraz propozycję, jakie prace agenci przejmą w pierwszej kolejności. Raport podaje sumy dla grup i procesów, nigdy ocenę pojedynczej osoby.
+Bezpłatna ocena daje jednemu agentowi dostęp tylko do odczytu na tydzień, by przeczytał ostatnie 90 dni z trackerów, repozytoriów, dokumentów, czatów zespołu, poczty i wsparcia. W siódmym dniu założyciel dostaje mapę procesów, plan na tle faktów, miejsca oczekiwania i propozycję, jakie zadania agenci przejmą jako pierwsze. Raport podaje sumy dla grup i procesów, nigdy ocenę pojedynczej osoby.
 
-Przeczytaj jak działa bezpłatna tygodniowa ocena, a potem poproś na Telegramie Morpheusa, agenta PM, żeby go uruchomił.
+Przeczytaj jak działa bezpłatna tygodniowa ocena, a potem poproś Morpheusa, agenta PM, na Telegramie o jej uruchomienie.
 
 ## Źródła i metoda
 
-Definicje i zmierzone przykłady pochodzą z rejestrów treści i faktów marki na stronie. Rytm pracy pochodzi z playbooka agenta PM i kodu eskalacji. Zakres assessmentu pochodzi z rejestru metody assessmentu.
+Definicje i zmierzone przykłady pochodzą z rekordów treści i faktów marki na stronie. Rytm pracy pochodzi z playbooka agenta PM i kodu eskalacji. Zakres oceny pochodzi z rekordu metody oceny.
 
-Zmierzone przykłady pochodzą z jednej firmy pilotażowej: czas realizacji zadań tekstowych dla produktu od startu do ukończenia oraz odsetek przesuniętych zadań spoza planu danego tygodnia w podanych tygodniach. To obserwacje, nie wzorce dla Twojego zespołu.
+Zmierzone przykłady pochodzą z jednej firmy pilotażowej: czas realizacji od startu do zakończenia dla zadań z tekstami produktowymi oraz odsetek zadań przeniesionych poza plan danego tygodnia w podanych tygodniach. To obserwacje, nie wzorce dla Twojego zespołu.
 
-Godziny, przyciski i drabina eskalacji agenta PM to ustawienia domyślne, które zespół może zmienić, a nie zmierzone wyniki.
+Godziny, przyciski i drabina eskalacji agenta PM to ustawienia domyślne, które zespół może zmienić. Nie są to zmierzone wyniki.
 
 Napisz do Morpheusa na Telegramie
 

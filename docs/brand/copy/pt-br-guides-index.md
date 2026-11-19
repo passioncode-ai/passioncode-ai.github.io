@@ -66,23 +66,23 @@ Para a sua empresa: leia como funciona a avaliação gratuita de uma semana e de
 
 Guia · 19 de novembro de 2026
 
-### Por que as tarefas travam entre as pessoas e o que muda com um agente
+### Por que tarefas ficam paradas entre pessoas e o que muda com um agente
 
-Uma tarefa pode parecer ativa enquanto espera que a próxima pessoa a veja, a assuma ou a devolva ao planejador. Um agente muda o ritmo do dia a dia ao automatizar essas verificações e escalações, enquanto as pessoas mantêm a responsabilidade e as decisões.
+Uma tarefa pode parecer ativa enquanto espera que a próxima pessoa a veja, assuma ou devolva ao planejador. Um agente muda o ritmo do dia a dia ao automatizar essas verificações e escalações, enquanto as pessoas mantêm a responsabilidade e as decisões.
 
-Para fundadores e líderes de times de produto cujas tarefas esperam entre as pessoas e cujos planejadores cobram os responsáveis na mão.
+Para founders e líderes de times de produto cujas tarefas esperam entre pessoas e cujos planejadores cobram os responsáveis na mão.
 
 Neste guia
 
 Onde a tarefa realmente espera
 
-Os sinais de uma passagem de bastão travada
+Sinais de uma passagem de bastão parada
 
 Por que cobrar manualmente não escala
 
 O que um agente muda no ritmo do dia a dia
 
-Os agentes acompanham o trabalho, as pessoas decidem
+Agentes acompanham o trabalho, pessoas decidem
 
 Como começar com a avaliação gratuita
 

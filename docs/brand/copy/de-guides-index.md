@@ -68,9 +68,9 @@ Anleitung · 19. November 2026
 
 ### Warum Aufgaben zwischen Menschen liegen bleiben und was sich mit einem Agent ändert
 
-Eine Aufgabe kann aktiv aussehen, obwohl sie darauf wartet, dass die nächste Person sie sieht, übernimmt oder an den Planer zurückgibt. Ein Agent verändert den Tagesrhythmus, indem er diese Prüfungen und Eskalationen automatisch übernimmt. Die Verantwortung und die Entscheidungen bleiben bei den Menschen.
+Eine Aufgabe kann aktiv aussehen, während sie darauf wartet, dass die nächste Person sie sieht, übernimmt oder an den Planer zurückgibt. Ein Agent verändert den Tagesrhythmus: Er erledigt diese Nachfragen und Eskalationen automatisch, während Menschen die Verantwortung und die Entscheidungen behalten.
 
-Für Gründer und Leiter von Produktteams, deren Aufgaben zwischen Menschen warten und deren Planer Verantwortliche von Hand nachverfolgen.
+Für Gründer und Leiter von Produktteams, deren Aufgaben zwischen Menschen warten und deren Planer Verantwortlichen von Hand hinterherlaufen.
 
 In dieser Anleitung
 

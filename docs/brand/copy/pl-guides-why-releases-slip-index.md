@@ -132,7 +132,7 @@ PORADNIKI
 
 ## Więcej poradników
 
-Dlaczego zadania stoją między ludźmi i co zmienia agent
+Dlaczego zadania grzęzną między ludźmi i co zmienia agent
 
 Uruchom swoje miejsce pracy z agentami w 20 minut
 

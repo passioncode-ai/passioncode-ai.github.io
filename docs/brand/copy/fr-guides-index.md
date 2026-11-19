@@ -66,21 +66,21 @@ Pour votre entreprise : lisez comment fonctionne l’évaluation gratuite d’un
 
 Guide · 19 novembre 2026
 
-### Pourquoi les tâches s'enlisent entre les personnes, et ce que change un agent
+### Pourquoi les tâches stagnent entre les personnes, et ce qui change avec un agent
 
-Une tâche peut sembler active alors qu'elle attend que la personne suivante la voie, la prenne ou la renvoie au planificateur. Un agent change le rythme quotidien : ces vérifications et ces relances deviennent automatiques, tandis que les personnes gardent la responsabilité et les décisions.
+Une tâche peut sembler active alors qu'elle attend que la personne suivante la voie, la prenne ou la renvoie au planificateur. Un agent change le rythme du quotidien : ces vérifications et ces escalades deviennent automatiques, et les personnes gardent la responsabilité et les décisions.
 
 Pour les fondateurs et les responsables d'équipe produit dont les tâches attendent entre les personnes et dont les planificateurs relancent les responsables à la main.
 
 Dans ce guide
 
-Où une tâche attend réellement
+Où une tâche attend vraiment
 
-Les signes d'un passage de relais qui bloque
+Les signes d'un passage de relais bloqué
 
-Pourquoi la relance manuelle ne passe pas à l'échelle
+Pourquoi les relances manuelles ne passent pas à l'échelle
 
-Ce qu'un agent change dans le rythme quotidien
+Ce que l'agent change dans le rythme quotidien
 
 Les agents suivent le travail, les personnes décident
 

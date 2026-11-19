@@ -132,7 +132,7 @@ PANDUAN
 
 ## Panduan lainnya
 
-Mengapa tugas macet di antar orang, dan apa yang berubah dengan agen
+Mengapa tugas macet di antara orang, dan apa yang berubah dengan agen
 
 Mulai tempat kerja agen Anda dalam 20 menit
 

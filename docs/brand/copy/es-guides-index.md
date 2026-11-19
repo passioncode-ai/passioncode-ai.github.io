@@ -70,7 +70,7 @@ Guía · 19 de noviembre de 2026
 
 Una tarea puede parecer activa mientras espera a que la siguiente persona la vea, la asuma o la devuelva al planificador. Un agente cambia el ritmo diario porque automatiza esas comprobaciones y escalados, mientras las personas conservan la responsabilidad y las decisiones.
 
-Para fundadores y responsables de equipos de producto cuyas tareas esperan entre personas y cuyos planificadores persiguen a los responsables a mano.
+Para fundadores y responsables de equipos de producto cuyas tareas esperan entre personas y cuyos planificadores persiguen a mano a los responsables.
 
 En esta guía
 

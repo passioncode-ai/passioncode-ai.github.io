@@ -160,58 +160,66 @@
    "adaptation": {
     "locale": "ar-SA",
     "fabricJobIds": [
-     "job_708fb863c0d28ab5b163c12c",
-     "job_c12e80e982dddc137617b302"
+     null,
+     "job_eb55fdc0e06f260d76da3440",
+     null,
+     "job_43a6d9614cf5da9e3bd90036"
     ],
     "reportIds": [
-     "2e214624-64df-41b7-9214-ea6116017e4c",
-     "e7ba3fcc-c8ed-43a4-92d4-7b6bb7085170"
+     "3f7b4f26-0b41-4f00-b840-8a6764be8d9a",
+     "77fa8ca3-6d36-49b7-9b2a-fb6326e124d9"
     ],
-    "judgeScore": 66,
-    "costUsd": 0.308348,
+    "judgeScore": 66.0,
+    "costUsd": 0.311184,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "accepted variant 1 below the judge's bar (input_required)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (66.0)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "bg": {
    "site_languages": false,
    "adaptation": {
     "locale": "ru-RU",
     "fabricJobIds": [
-     "job_d4d4afa7d2b3794fde2d7689",
-     "job_76ee35d3108d43af5e585d46"
+     null,
+     "job_f651f91737c3d39acc4dce5d",
+     null,
+     "job_0080248020f3bb14a8ad1041"
     ],
     "reportIds": [
-     "16460ac1-91f2-47f3-a6e9-efdf9e57707a",
-     "9dae0ee1-4407-492d-bbf6-023390b9afcc"
+     "6149a7a8-f5c1-49b7-8500-98c4c678a4b6",
+     "065ca44a-8de5-453f-8b3a-29411cf80e58"
     ],
-    "judgeScore": 33,
-    "costUsd": 0.396192,
+    "judgeScore": 22.0,
+    "costUsd": 0.318872,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "accepted variant 1 below the judge's bar (input_required)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (30.0)",
     "voiceUsed": true
    },
    "native_review": false,
-   "note": "Copylot has no bg locale: adapted under the ru-RU rules with a Bulgarian brief"
+   "note": "Copylot has no bg locale: adapted under the ru-RU rules with a Bulgarian brief",
+   "below_bar": true
   },
   "de": {
    "site_languages": false,
    "adaptation": {
     "locale": "de-DE",
     "fabricJobIds": [
-     "job_c18a3dd56830abf0202b11d8",
-     "job_287716484854f52f4f20ddc0"
+     null,
+     "job_6df9f5a91153a70c62901f5d",
+     null,
+     "job_877dcc2ff7e78f94277b0161"
     ],
     "reportIds": [
-     "259466f8-ea42-4a71-a3f4-ae8a5121b89c",
-     "d997ffcc-a14f-45ee-a59d-c9e076c138b9"
+     "cfc6c7d3-f0cd-478b-8e12-1f5096dc09f8",
+     "a90298ea-4190-4190-afb6-059f333e8627"
     ],
-    "judgeScore": 65,
-    "costUsd": 0.29236,
+    "judgeScore": 75.0,
+    "costUsd": 0.292308,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "accepted variant 1 below the judge's bar (input_required)",
+    "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
    },
    "native_review": false
@@ -221,15 +229,17 @@
    "adaptation": {
     "locale": "es-ES",
     "fabricJobIds": [
-     "job_908d32960751b2e9dc937352",
-     "job_5030e9fee22c0fa46f8cded5"
+     null,
+     "job_c25ed2f8ee10428f172cc75a",
+     null,
+     "job_44c04f9463010d8151e5fa02"
     ],
     "reportIds": [
-     "c2a81546-9c39-400d-ba9a-d23c97376232",
-     "680217b2-a83d-48a0-bec8-8dd9522d54cf"
+     "aadc47d1-602b-4f88-8c14-b57f6bd8d765",
+     "1154e9d6-acf7-424f-aafd-0fcb9256bc30"
     ],
-    "judgeScore": 80,
-    "costUsd": 0.280952,
+    "judgeScore": 76.0,
+    "costUsd": 0.300012,
     "model": "anthropic/claude-sonnet-5.5",
     "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
@@ -241,35 +251,40 @@
    "adaptation": {
     "locale": "fr-FR",
     "fabricJobIds": [
-     "job_e34b6f4e48e70663b6763568",
-     "job_decdd7f7f38eb4059ad5811e"
+     null,
+     "job_babfdd8fdb5bb5cf6eb300e2",
+     null,
+     "job_02cf48f10b4069072425c37e"
     ],
     "reportIds": [
-     "6a06f39d-c1cb-4a05-aecb-5556f5a77f3f",
-     "6e94159a-13fb-46bc-b160-bfc8438c2c39"
+     "f85f06d6-6e3f-476e-8e77-10f089d75bcf",
+     "f4360f5a-eb25-4892-be7d-a536d823a5fc"
     ],
-    "judgeScore": 64,
-    "costUsd": 0.344496,
+    "judgeScore": 66.0,
+    "costUsd": 0.360264,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "accepted variant 1 below the judge's bar (input_required)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (66.0)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "hi": {
    "site_languages": false,
    "adaptation": {
     "locale": "hi-IN",
     "fabricJobIds": [
-     "job_30216e2cdb8cd87c217289b8",
-     "job_6b359f4eff5b8fe1fa3a5484"
+     null,
+     "job_6d162856a614fb9d2d88e2f1",
+     null,
+     "job_56a6558c91e4d1c96e583ab1"
     ],
     "reportIds": [
-     "92e69527-1e03-405c-8647-50170507d0ac",
-     "4fed41dd-8d9e-43b3-92f2-75816bdf3d36"
+     "e5958569-b096-4286-bf52-bab26d2b5880",
+     "89a5a9a4-dc6d-4685-ac7b-3d35442220bc"
     ],
-    "judgeScore": 66,
-    "costUsd": 0.350476,
+    "judgeScore": 80.0,
+    "costUsd": 0.42147,
     "model": "anthropic/claude-sonnet-5.5",
     "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
@@ -281,15 +296,17 @@
    "adaptation": {
     "locale": "id-ID",
     "fabricJobIds": [
-     "job_00f8750e2ebd554b3a17abd3",
-     "job_10063b130a0f89c63e805054"
+     null,
+     "job_bd1b51eccdebb43476138a4c",
+     null,
+     "job_41c2dce7043d206e61615103"
     ],
     "reportIds": [
-     "9005a70e-f686-4deb-9789-b88f56bd689c",
-     "1983fc24-692d-44eb-b9d3-80740a84d758"
+     "57ddd712-58d6-4f10-a66c-e42264a13184",
+     "ccf25e58-feef-45f8-935c-ea60debd9dfb"
     ],
-    "judgeScore": 64,
-    "costUsd": 0.28438,
+    "judgeScore": 73.0,
+    "costUsd": 0.321356,
     "model": "anthropic/claude-sonnet-5.5",
     "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
@@ -301,37 +318,42 @@
    "adaptation": {
     "locale": "it-IT",
     "fabricJobIds": [
-     "job_939a27fe325c51ee5df8a090",
-     "job_a398d1cc53a1537842c2ceaa"
+     null,
+     "job_55d8a70392163c6cb011de0e",
+     null,
+     "job_f3be93faaa1b774ae0482246"
     ],
     "reportIds": [
-     "9e3462e7-4c84-4b73-b1c2-3afddb6dc9d8",
-     "b5b2c7fc-3573-4eab-8c83-909b0f70cfe2"
+     "507f1736-4df2-4c24-aec2-cb524946477a",
+     "e031d0d3-cec9-4a9b-be7e-eb29be9e8ad1"
     ],
-    "judgeScore": 68,
-    "costUsd": 0.349496,
+    "judgeScore": 65.0,
+    "costUsd": 0.329804,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "accepted variant 1 below the judge's bar (input_required)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "ja": {
    "site_languages": false,
    "adaptation": {
     "locale": "ja-JP",
     "fabricJobIds": [
-     "job_510ff57f69ed804437b773c6",
-     "job_deb6072766e2afaafe1da775"
+     null,
+     "job_da176dbcd7c6f61629ee38e8",
+     null,
+     "job_d39ca9dc67a3bad7e84bf923"
     ],
     "reportIds": [
-     "770c2721-9f8a-4cf8-ab3a-e7bc1e7ebab6",
-     "02f4f0e2-7f36-40c2-8875-08a650b55d0c"
+     "39fff025-7dc8-4de3-97d2-48817f6c84f9",
+     "3e2cbc5d-ec26-475c-81e6-2d579f51a1f8"
     ],
-    "judgeScore": 66,
-    "costUsd": 0.282052,
+    "judgeScore": 81.0,
+    "costUsd": 0.313504,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "accepted variant 1 below the judge's bar (input_required)",
+    "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
    },
    "native_review": false
@@ -341,75 +363,86 @@
    "adaptation": {
     "locale": "ko-KR",
     "fabricJobIds": [
-     "job_d288471cffdf5ab3bf35d434",
-     "job_aca9eb7018911e45cc705faf"
+     null,
+     "job_b19e6502af0e74b69a9a2a16",
+     null,
+     "job_0bacb405382945f8c5f4c34c"
     ],
     "reportIds": [
-     "97f54a2c-247b-4dad-8c0d-fdd78df4e854",
-     "0b9c62c1-7490-427e-8807-fa68e7f2398d"
+     "1fff5f19-d93d-4c39-aba8-a94b85d7e86d",
+     "329f0078-8e34-4936-b86d-61059a67efd1"
     ],
-    "judgeScore": 68,
-    "costUsd": 0.270332,
+    "judgeScore": 65.0,
+    "costUsd": 0.262848,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "accepted variant 1 below the judge's bar (input_required)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "nl": {
    "site_languages": false,
    "adaptation": {
     "locale": "nl-NL",
     "fabricJobIds": [
-     "job_4fa621bad157ae951dbd93cf",
-     "job_7cceff22f958067d8f6928f6"
+     null,
+     "job_696f01ce42e175de1f719c81",
+     null,
+     "job_570b427b277a44bfd73b0c35"
     ],
     "reportIds": [
-     "c237ff39-eccc-4486-a570-bea222964ac2",
-     "dd3df832-4567-4d96-b4ce-a608cd050617"
+     "f90572ba-3108-4b1f-a210-4953340ca0cd",
+     "dd8a9252-a14b-4b14-976a-1bf33db2b648"
     ],
-    "judgeScore": 74,
-    "costUsd": 0.414709,
+    "judgeScore": 65.0,
+    "costUsd": 0.264704,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "auto (passed the judge's bar)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "pl": {
    "site_languages": false,
    "adaptation": {
     "locale": "pl-PL",
     "fabricJobIds": [
-     "job_96c08810e3539cb585831d1e",
-     "job_8b7f91da9b453b0721a6666c"
+     null,
+     "job_3fd07382e934d8d727b4c448",
+     null,
+     "job_9e655d2413d5e32f450c90e6"
     ],
     "reportIds": [
-     "faf5bda3-94cd-4c80-b4d5-85341398d1e5",
-     "4f429902-8601-478f-ad60-bbda14cbf7c5"
+     "10123e47-bc24-412a-b10c-864d1f3e7a4a",
+     "ef9c70a7-252e-49ca-8d07-bfa8f4db88c9"
     ],
-    "judgeScore": 74,
-    "costUsd": 0.399116,
+    "judgeScore": 0.0,
+    "costUsd": 0.407828,
     "model": "anthropic/claude-sonnet-5.5",
     "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "pt-br": {
    "site_languages": false,
    "adaptation": {
     "locale": "pt-BR",
     "fabricJobIds": [
-     "job_064879f54855fb26dde0d7b1",
-     "job_f216294c997722e0ecdad109"
+     null,
+     "job_9ad6ffd48922557fc4db8396",
+     null,
+     "job_57287c7356b849a2b3acb0c0"
     ],
     "reportIds": [
-     "266ebf0c-3a66-43f3-ad34-13c4afe45bc3",
-     "40bb93fb-d420-4163-ad08-9da9610451e5"
+     "e8212189-f3a0-42b9-ad27-06c5404c0c2c",
+     "911f1511-c86f-462f-a903-1acb13af3c91"
     ],
-    "judgeScore": 80,
-    "costUsd": 0.334212,
+    "judgeScore": 84.0,
+    "costUsd": 0.228298,
     "model": "anthropic/claude-sonnet-5.5",
     "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
@@ -421,100 +454,115 @@
    "adaptation": {
     "locale": "ru-RU",
     "fabricJobIds": [
-     "job_1d22e6860486d6f7a9b2fc59",
-     "job_5dfea6fefff33037d0508068"
+     null,
+     "job_b4771649cbd0c0ae568d9d5c",
+     null,
+     "job_d6f69ca13f196b7611431189"
     ],
     "reportIds": [
-     "cc70e2cf-38cc-40ac-9a73-0dc2eb5689ec",
-     "9d0c1b79-6e40-46a7-ac76-e27ba558dc8a"
+     "788bccb3-73e7-4fa8-8f81-6299874aa3ce",
+     "9badea8a-28b6-4217-acf8-f9d776b3297b"
     ],
-    "judgeScore": 76,
-    "costUsd": 0.286864,
+    "judgeScore": 65.0,
+    "costUsd": 0.328332,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "auto (passed the judge's bar)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "tr": {
    "site_languages": false,
    "adaptation": {
     "locale": "tr-TR",
     "fabricJobIds": [
-     "job_9c6abc31ac01a7ae4e7e0460",
-     "job_7ad7201226f5d965e69b7908"
+     null,
+     "job_89f5289ffb889fc5ce2e2dce",
+     null,
+     "job_7ef915368701a75ec487013a"
     ],
     "reportIds": [
-     "5b5e4889-5424-4537-b6a9-29b9a8e28382",
-     "fb184c7c-20ee-4a5e-b31b-dc5b5ab44f39"
+     "ba9df26f-8f7b-4ad6-909a-d39718b36a2f",
+     "8ce14ea8-9822-4397-8aad-221f0a5ce5d4"
     ],
-    "judgeScore": 64,
-    "costUsd": 0.356796,
+    "judgeScore": 65.0,
+    "costUsd": 0.30184,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "accepted variant 1 below the judge's bar (input_required)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "uk": {
    "site_languages": false,
    "adaptation": {
     "locale": "uk-UA",
     "fabricJobIds": [
-     "job_1f49c741a3eddf37ff7cca81",
-     "job_89da2fd9d81d4df22292aeda"
+     null,
+     "job_dff0d3471dfc9b820db20dd5",
+     null,
+     "job_99f8e851dcfa9835867a615a"
     ],
     "reportIds": [
-     "e2b19ed5-83cb-42c6-98f9-88c27ecc1143",
-     "06c9fa64-80be-40e1-abc5-67ee625f8c5e"
+     "bf45ac98-3750-4c80-a6f1-c517c844fb2a",
+     "a79bd44a-0b8a-4cb4-bf0a-c60396008ce0"
     ],
-    "judgeScore": 73,
-    "costUsd": 0.3088,
+    "judgeScore": 68.0,
+    "costUsd": 0.291876,
     "model": "anthropic/claude-sonnet-5.5",
     "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "vi": {
    "site_languages": false,
    "adaptation": {
     "locale": "vi-VN",
     "fabricJobIds": [
-     "job_2c78151a46879954ff7fe2a9",
-     "job_e735e7b5a8decb26e507df5f"
+     null,
+     "job_969bf3852df5f7e5a4204f56",
+     null,
+     "job_40ca64faddc1f878b6f47a82"
     ],
     "reportIds": [
-     "f3683393-284b-4248-97d6-b56b59d7c0f8",
-     "f709fa3f-1baf-460a-a44b-850b2dbe1946"
+     "2ed5bae9-d7fa-4a41-91d0-6d2f4106d850",
+     "deebda98-3b77-4430-9245-ce24cc4a1c3f"
     ],
-    "judgeScore": 56,
-    "costUsd": 0.28916,
+    "judgeScore": 66.0,
+    "costUsd": 0.279308,
     "model": "anthropic/claude-sonnet-5.5",
-    "decision": "auto (passed the judge's bar)",
+    "decision": "below the judge's bar after 2 job(s); kept the best (67.0)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   },
   "zh-hans": {
    "site_languages": false,
    "adaptation": {
     "locale": "zh-Hans-CN",
     "fabricJobIds": [
-     "job_18e5bb2ec5c463f9c0a1dfb8",
-     "job_67f4a52fe31c8ef17ee8e342"
+     null,
+     "job_05038df9b812a25395b74c01",
+     null,
+     "job_319d3915ed16275d38fd6108"
     ],
     "reportIds": [
-     "abba740e-f679-416b-9220-e129e8031e14",
-     "5b59b311-4280-4d9e-af7b-bf2a3d6a3193"
+     "d36e00a0-5ee2-4be8-95b3-aebc85d8a144",
+     "58b11ff2-e478-4bde-a35b-51ce4984b9a4"
     ],
-    "judgeScore": 82,
-    "costUsd": 0.303084,
+    "judgeScore": 67.0,
+    "costUsd": 0.31098,
     "model": "anthropic/claude-sonnet-5.5",
     "decision": "auto (passed the judge's bar)",
     "voiceUsed": true
    },
-   "native_review": false
+   "native_review": false,
+   "below_bar": true
   }
  }
 }

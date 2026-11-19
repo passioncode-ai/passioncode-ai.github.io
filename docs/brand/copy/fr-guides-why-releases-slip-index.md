@@ -132,7 +132,7 @@ GUIDES
 
 ## Autres guides
 
-Pourquoi les tâches s'enlisent entre les personnes, et ce que change un agent
+Pourquoi les tâches stagnent entre les personnes, et ce qui change avec un agent
 
 Lancez votre espace de travail pour agents en 20 minutes
 
