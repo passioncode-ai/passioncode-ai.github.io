@@ -61,7 +61,8 @@ def main(media):
         out = work / f'{s["n"]}.mp4'
         hold = f',tpad=stop_mode=clone:stop_duration={holds[s["n"]]:.3f}' if holds[s['n']] > 0.01 else ''
         fade = f',fade=t=out:st={s["len"] + holds[s["n"]] - 1.2:.3f}:d=1.2' if s is shots[-1] else ''
-        run(['ffmpeg', '-y', '-i', str(media / 'bclips' / f'{s["n"]}.mp4'), '-t', f'{s["len"]:.3f}', '-an', '-vf',
+        # -t on the input: the clip is cut first, then held on its last frame (a -t on the output would cut the hold)
+        run(['ffmpeg', '-y', '-t', f'{s["len"]:.3f}', '-i', str(media / 'bclips' / f'{s["n"]}.mp4'), '-an', '-vf',
              f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},format=yuv420p{hold}{fade}',
              '-c:v', 'libx264', '-preset', 'medium', '-crf', '24', '-maxrate', '1600k', '-bufsize', '3200k', str(out)])
         parts.append(out)
