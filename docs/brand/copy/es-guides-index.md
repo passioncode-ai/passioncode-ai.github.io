@@ -68,6 +68,30 @@ Para tu empresa: lee cómo funciona la evaluación gratuita de una semana y lueg
 
 Guía · 19 de noviembre de 2026
 
+### Por qué las tareas se atascan entre personas y qué cambia con un agente
+
+Una tarea puede parecer activa mientras espera a que la siguiente persona la vea, la asuma o la devuelva al planificador. Un agente cambia el ritmo diario porque automatiza esas comprobaciones y escalados, mientras las personas conservan la responsabilidad y las decisiones.
+
+Para fundadores y responsables de equipos de producto cuyas tareas esperan entre personas y cuyos planificadores persiguen a mano a los responsables.
+
+En esta guía
+
+Dónde espera de verdad una tarea
+
+Las señales de un traspaso atascado
+
+Por qué perseguir a mano no escala
+
+Qué cambia un agente en el ritmo diario
+
+Los agentes siguen el trabajo, las personas deciden
+
+Cómo empezar con la evaluación gratuita
+
+Fuentes y método
+
+Guía · 19 de noviembre de 2026
+
 ### Por qué tu lanzamiento se retrasa otra vez: qué muestra una evaluación del equipo
 
 Un lanzamiento sale solo cuando también está listo todo lo que rodea al código. Una evaluación del equipo analiza cómo se movió realmente el trabajo en los últimos 90 días y muestra dónde esperó, de modo que corriges la espera en lugar de presionar al equipo.

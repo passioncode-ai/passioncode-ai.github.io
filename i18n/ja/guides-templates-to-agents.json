@@ -14,6 +14,7 @@
     "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "データ、キー、そしてエージェントです。テンプレートのライブラリは私たちのものです：お客様が受け取るのは組み立てたエージェントで、ライブラリではありません。テンプレートの詳細は、ご依頼について話し合う際にお伝えします。",
     "Agents that get better": "良くなっていくエージェント",
     "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "テンプレートを改善すると、その改善は、お客様のエージェントがすでに通過しているチェックを経たうえで、テンプレートの次のリリースとともにエージェントに届くことがあります。",
-    "Why your release slips again: what a team assessment shows": "リリースがまた遅れる理由：チームアセスメントでわかること"
+    "Why your release slips again: what a team assessment shows": "リリースがまた遅れる理由：チームアセスメントでわかること",
+    "Why tasks stall between people, and what changes with an agent": "仕事が人の間で止まる理由と、エージェントで何が変わるか"
   }
 }

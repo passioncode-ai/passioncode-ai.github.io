@@ -134,6 +134,8 @@ GUIAS
 
 ## Mais guias
 
+Por que tarefas ficam paradas entre pessoas e o que muda com um agente
+
 Monte seu ambiente de trabalho com agentes em 20 minutos
 
 Como funciona a avaliação gratuita de uma semana

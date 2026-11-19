@@ -38,6 +38,7 @@
     "how the free one-week assessment works": "無料の1週間アセスメントの流れ",
     "Sources and method": "出典と方法",
     "The lead time and plan figures come from one pilot company, read by our assessment agent; the company is not named. Lead time is measured in calendar days per task, not hours of work. The measurement after the change starts on December 7, 2026. The PM agent’s hours, buttons and ladder are its default settings.": "リードタイムと計画に関する数値は、当社のアセスメントエージェントが読み取った1社のパイロット企業のもので、企業名は公表していません。リードタイムは実働時間ではなく、タスクごとのカレンダー上の日数で計測しています。変更後の計測は2026年12月7日に開始します。PMエージェントの時刻、ボタン、エスカレーションの順序は、初期設定です。",
-    "Write to Morpheus on Telegram": "TelegramでMorpheusに連絡"
+    "Write to Morpheus on Telegram": "TelegramでMorpheusに連絡",
+    "Why tasks stall between people, and what changes with an agent": "仕事が人の間で止まる理由と、エージェントで何が変わるか"
   }
 }

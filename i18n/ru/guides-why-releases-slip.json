@@ -38,6 +38,7 @@
     "how the free one-week assessment works": "как работает бесплатная недельная оценка",
     "Sources and method": "Источники и метод",
     "The lead time and plan figures come from one pilot company, read by our assessment agent; the company is not named. Lead time is measured in calendar days per task, not hours of work. The measurement after the change starts on December 7, 2026. The PM agent’s hours, buttons and ladder are its default settings.": "Цифры по времени выполнения и плану взяты из одной пилотной компании, их прочитал наш агент оценки; название компании не раскрывается. Время выполнения измеряется в календарных днях на задачу, а не в часах работы. Замер после изменений начинается 7 декабря 2026 года. Часы, кнопки и лестница эскалации агента-PM заданы настройками по умолчанию.",
-    "Write to Morpheus on Telegram": "Написать Morpheus в Telegram"
+    "Write to Morpheus on Telegram": "Написать Morpheus в Telegram",
+    "Why tasks stall between people, and what changes with an agent": "Почему задачи застревают между людьми и что меняется с агентом"
   }
 }

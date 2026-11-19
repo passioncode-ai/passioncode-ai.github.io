@@ -1,0 +1,568 @@
+{
+ "schema": "content-record/1",
+ "page": "guides/why-tasks-stall-between-people/index.html",
+ "published": "2026-11-19",
+ "order": "board request c3e163c6 (the operator's task 6c4043eb, 2026-11-19): the second guide, written by the conveyor",
+ "source_story": "the reference guide why-releases-slip (SITE-070) and the site's facts",
+ "written_by": {
+  "agent": "seo-content-agent",
+  "run": "r-20261119-e6ba60",
+  "models": [
+   "moonshotai/kimi-k3.1-pro",
+   "anthropic/claude-sonnet-5.5"
+  ]
+ },
+ "voice": {
+  "copylot_voice": "93cd4851-8bf8-44f3-94b2-570ed3f2bce0",
+  "version": 1
+ },
+ "english_check": {
+  "copylot_report": [
+   "e0c9df3e-d6f1-469e-8e9f-711919aa1889",
+   "15bef07f-71cc-479d-bf81-62376de5209a",
+   "0b90e700-8830-4335-83a6-5e6db656df03",
+   "35aaafb1-e9d5-410a-a336-35266629053f",
+   "015c7162-3804-4d22-a200-445184518fb7",
+   "36b00b55-bd89-4085-8919-f1cb669d1454",
+   "d1b0cfff-4a9b-40c9-86d2-f206ad543cf5",
+   "7f35cf53-3c68-4f67-adb1-199d7a68aa82",
+   "e577c656-7b9e-4859-ae62-fc0c99b332fc",
+   "38dcdd90-e32e-47f8-8ad1-f52d0dc1aff8",
+   "4187759f-bd6b-4e1a-a0b1-2e9da15e77da",
+   "c3f0a2f8-06f7-490a-bbc3-f0965a143644",
+   "51c9132a-94d6-402f-bf5c-27d812d1b282",
+   "f311809f-bc04-4252-a1ed-bdbf9152dca1",
+   "99983cd9-758f-43d1-98ab-9f5d0db7b884",
+   "35dcdb8c-ab57-4c6a-97ea-50c02d750930",
+   "c4428ca4-2a0a-4a89-8b78-fa8aafcf5959",
+   "9625db49-3ed1-4141-b959-45c9b7365db0",
+   "fa370ab4-a77a-438f-9e17-043bd58617b4",
+   "43b1b160-889b-4edf-b0e7-f105ea33469d",
+   "ade84e67-a018-4aba-a021-e1abb40ba14e",
+   "6a3103f9-417a-4154-82ac-1bf89efa16d2",
+   "8f45f7c7-1e6a-4f09-b2ca-f77281c174a3",
+   "81930c7f-527e-47ca-ab0a-877cdd90e2ba",
+   "b3b800e0-0d3b-4fa6-8f80-8a5c20764d06",
+   "a4b4d59c-efab-437c-aa75-8b75f989350c",
+   "302439ae-9d75-469a-827f-0d17b3075401",
+   "d06a4a6d-eb85-4054-b201-1907573cedf9",
+   "e653d04a-7827-44ca-8def-0194bc505c3f",
+   "0c5af275-9037-4ed3-8352-042811a75295",
+   "edce41aa-8291-46c7-b666-d595fb858a35",
+   "0d860584-53d2-4ddd-84bc-20bffa1f4518",
+   "b7613f73-5296-445c-8268-e6ad3c9c0218",
+   "2b960ad1-b987-4728-a6c6-cb4f64c9c208",
+   "35e06850-d381-412a-8b66-424eb759d50c",
+   "f5381c9d-ad83-487c-825d-f589d2321940"
+  ],
+  "verdict": "pass",
+  "blocking": [],
+  "judge_minor": [
+   {
+    "field": "lead",
+    "problem": "The lead opens with a claim about what a task can look like (\"can look active while it waits\") and says the agent makes checks and escalations \"automatic\". It does not answer the brief's question (why tasks stall between people) in a direct way. \"Automatic\" is also not stated in the facts.",
+    "fix": "Lead with the answer: tasks stall at the hand-off, when the next person has not seen, taken or returned the task and nobody hears about it. Then say the PM agent asks, reminds and escalates on a set rhythm while people keep ownership and decisions.",
+    "severity": "minor"
+   },
+   {
+    "field": "sections[2].blocks",
+    "problem": "The section claims chasing is uneven, \"some silent tasks get attention because someone remembered them, while others wait\", and that \"chasing harder does not fix the missing loop\". None of this is in the brief's facts. It is unsupported assertion stated as fact.",
+    "fix": "Tie the section to the supported facts, or hedge it as a pattern to watch for rather than a finding. For example: when the planner is the only reminder system, every silent task depends on them noticing it. Drop the claims about uneven attention.",
+    "severity": "minor"
+   },
+   {
+    "field": "sections[3] heading and intro",
+    "problem": "The brief asks for \"the day of the PM agent, hour by hour\". The list is in time order but has no 07:00 to 21:00 framing, and the reminder ladder sits between 07:00 and 10:00 without any time anchor.",
+    "fix": "Frame the section as a day from 07:00 to 21:00. Mark the escalation ladder as running through the day instead of in the middle of the clock times.",
+    "severity": "minor"
+   },
+   {
+    "field": "sections[5].blocks[0]",
+    "problem": "\"rather than adding another manual reporting routine\" implies a contrast that no fact supports.",
+    "fix": "Say that the assessment reads existing sources over a week with read-only access.",
+    "severity": "minor"
+   },
+   {
+    "field": "sections[4] and sections[5]",
+    "problem": "\"without taking authority over priorities\" and \"founders still handle the decisions\" go slightly beyond the facts, which only say not-mine goes to the planner and the summary lists decisions waiting on people.",
+    "fix": "Keep to the facts: the agent raises, reminds and escalates; the planner and founders decide.",
+    "severity": "minor"
+   }
+  ]
+ },
+ "claims": [
+  {
+   "claim": "A ping-pong task is one that returns to the person who already had it within 14 days; the assessment counts these returns per process.",
+   "status": "released",
+   "source": "the assessment agent's glossary (private agent), quoted in the site's content record docs/content/why-releases-slip.meta.json"
+  },
+  {
+   "claim": "In one pilot company, the 20 tasks of writing product texts had a median lead time of 9.8 calendar days, measured as days from start to done, not hours of work.",
+   "status": "released",
+   "source": "fabric-workspace knowledge/north-star.md:67-68 (main 388a9175); site docs/brand/facts.md row «release guide (SITE-070)»"
+  },
+  {
+   "claim": "In the same pilot company, 60 to 85% of the tasks the planners moved in a week were in no plan of that week, over the weeks from May 25 to November 2, 2026.",
+   "status": "released",
+   "source": "the assessment agent's plan-fact report of 2026-11-06 (private agent), quoted in docs/content/why-releases-slip.meta.json"
+  },
+  {
+   "claim": "On working days at 07:00 the PM agent asks each person what they are on today and reminds them later if there is no answer.",
+   "status": "released",
+   "source": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4); site docs/brand/facts.md row «release guide (SITE-070)»"
+  },
+  {
+   "claim": "Every task the PM agent raises has three answers: seen, taking it, not mine; not mine goes to the planner at once.",
+   "status": "released",
+   "source": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4)"
+  },
+  {
+   "claim": "A task nobody takes gets a reminder every 30 working minutes; after 2 working hours the planner hears about it, then the deputy, then the administrator.",
+   "status": "released",
+   "source": "passioncode-pm-agent code/escalation.py:3-18,100 (main d62ba6c4)"
+  },
+  {
+   "claim": "At 10:00 the PM agent lists the tasks that have not moved for days and the blockers per person, so the planner sees them in the morning.",
+   "status": "released",
+   "source": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4)"
+  },
+  {
+   "claim": "At 21:00 every day, weekends included, the founders get a short summary: what the team closed and moved, the decisions waiting on people and what is critical.",
+   "status": "released",
+   "source": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4); operator rule of 2026-11-18 on the PM agents' evening report"
+  },
+  {
+   "claim": "The PM agent's hours, buttons and ladder are default settings the team can change.",
+   "status": "released",
+   "source": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4)"
+  },
+  {
+   "claim": "The free assessment: one agent with read-only access for a week reads the last 90 days of trackers, repositories, documents, team chats, mail and support; on day seven the founder gets a map of the processes, plan against fact, the waits and an offer of which work agents take first; it reports totals for groups and processes, never a score for a person.",
+   "status": "released",
+   "source": "site docs/brand/facts.md row «free assessment (SITE-056)»; fabric-workspace knowledge/system/entry-assessment.md:25"
+  }
+ ],
+ "compliance": {
+  "advertising": "no superlatives and no promise of results; every number from a fact with its source",
+  "privacy": "the pilot company is not named; group totals only",
+  "search": "machine adaptation per language waits for a native check (SITE-071); hreflang complete with x-default, built by the site's scripts",
+  "bot": "the button opens Morpheus on Telegram with lp_guide-why-tasks-stall-between-people_<ru|en>; the bot has lead texts in Russian and English only",
+  "target_state": {
+   "page": "guides/why-tasks-stall-between-people/index.html",
+   "mode": "target-state",
+   "not_released": [],
+   "rules": 0
+  }
+ },
+ "locales": {
+  "ar": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "ar-SA",
+    "fabricJobIds": [
+     null,
+     "job_eb55fdc0e06f260d76da3440",
+     null,
+     "job_43a6d9614cf5da9e3bd90036"
+    ],
+    "reportIds": [
+     "3f7b4f26-0b41-4f00-b840-8a6764be8d9a",
+     "77fa8ca3-6d36-49b7-9b2a-fb6326e124d9"
+    ],
+    "judgeScore": 66.0,
+    "costUsd": 0.311184,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (66.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "bg": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "ru-RU",
+    "fabricJobIds": [
+     null,
+     "job_f651f91737c3d39acc4dce5d",
+     null,
+     "job_0080248020f3bb14a8ad1041"
+    ],
+    "reportIds": [
+     "6149a7a8-f5c1-49b7-8500-98c4c678a4b6",
+     "065ca44a-8de5-453f-8b3a-29411cf80e58"
+    ],
+    "judgeScore": 22.0,
+    "costUsd": 0.318872,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (30.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "note": "Copylot has no bg locale: adapted under the ru-RU rules with a Bulgarian brief",
+   "below_bar": true
+  },
+  "de": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "de-DE",
+    "fabricJobIds": [
+     null,
+     "job_6df9f5a91153a70c62901f5d",
+     null,
+     "job_877dcc2ff7e78f94277b0161"
+    ],
+    "reportIds": [
+     "cfc6c7d3-f0cd-478b-8e12-1f5096dc09f8",
+     "a90298ea-4190-4190-afb6-059f333e8627"
+    ],
+    "judgeScore": 75.0,
+    "costUsd": 0.292308,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false
+  },
+  "es": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "es-ES",
+    "fabricJobIds": [
+     null,
+     "job_c25ed2f8ee10428f172cc75a",
+     null,
+     "job_44c04f9463010d8151e5fa02"
+    ],
+    "reportIds": [
+     "aadc47d1-602b-4f88-8c14-b57f6bd8d765",
+     "1154e9d6-acf7-424f-aafd-0fcb9256bc30"
+    ],
+    "judgeScore": 76.0,
+    "costUsd": 0.300012,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false
+  },
+  "fr": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "fr-FR",
+    "fabricJobIds": [
+     null,
+     "job_babfdd8fdb5bb5cf6eb300e2",
+     null,
+     "job_02cf48f10b4069072425c37e"
+    ],
+    "reportIds": [
+     "f85f06d6-6e3f-476e-8e77-10f089d75bcf",
+     "f4360f5a-eb25-4892-be7d-a536d823a5fc"
+    ],
+    "judgeScore": 66.0,
+    "costUsd": 0.360264,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (66.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "hi": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "hi-IN",
+    "fabricJobIds": [
+     null,
+     "job_6d162856a614fb9d2d88e2f1",
+     null,
+     "job_56a6558c91e4d1c96e583ab1"
+    ],
+    "reportIds": [
+     "e5958569-b096-4286-bf52-bab26d2b5880",
+     "89a5a9a4-dc6d-4685-ac7b-3d35442220bc"
+    ],
+    "judgeScore": 80.0,
+    "costUsd": 0.42147,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false
+  },
+  "id": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "id-ID",
+    "fabricJobIds": [
+     null,
+     "job_bd1b51eccdebb43476138a4c",
+     null,
+     "job_41c2dce7043d206e61615103"
+    ],
+    "reportIds": [
+     "57ddd712-58d6-4f10-a66c-e42264a13184",
+     "ccf25e58-feef-45f8-935c-ea60debd9dfb"
+    ],
+    "judgeScore": 73.0,
+    "costUsd": 0.321356,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false
+  },
+  "it": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "it-IT",
+    "fabricJobIds": [
+     null,
+     "job_55d8a70392163c6cb011de0e",
+     null,
+     "job_f3be93faaa1b774ae0482246"
+    ],
+    "reportIds": [
+     "507f1736-4df2-4c24-aec2-cb524946477a",
+     "e031d0d3-cec9-4a9b-be7e-eb29be9e8ad1"
+    ],
+    "judgeScore": 65.0,
+    "costUsd": 0.329804,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "ja": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "ja-JP",
+    "fabricJobIds": [
+     null,
+     "job_da176dbcd7c6f61629ee38e8",
+     null,
+     "job_d39ca9dc67a3bad7e84bf923"
+    ],
+    "reportIds": [
+     "39fff025-7dc8-4de3-97d2-48817f6c84f9",
+     "3e2cbc5d-ec26-475c-81e6-2d579f51a1f8"
+    ],
+    "judgeScore": 81.0,
+    "costUsd": 0.313504,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false
+  },
+  "ko": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "ko-KR",
+    "fabricJobIds": [
+     null,
+     "job_b19e6502af0e74b69a9a2a16",
+     null,
+     "job_0bacb405382945f8c5f4c34c"
+    ],
+    "reportIds": [
+     "1fff5f19-d93d-4c39-aba8-a94b85d7e86d",
+     "329f0078-8e34-4936-b86d-61059a67efd1"
+    ],
+    "judgeScore": 65.0,
+    "costUsd": 0.262848,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "nl": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "nl-NL",
+    "fabricJobIds": [
+     null,
+     "job_696f01ce42e175de1f719c81",
+     null,
+     "job_570b427b277a44bfd73b0c35"
+    ],
+    "reportIds": [
+     "f90572ba-3108-4b1f-a210-4953340ca0cd",
+     "dd8a9252-a14b-4b14-976a-1bf33db2b648"
+    ],
+    "judgeScore": 65.0,
+    "costUsd": 0.264704,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "pl": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "pl-PL",
+    "fabricJobIds": [
+     null,
+     "job_3fd07382e934d8d727b4c448",
+     null,
+     "job_9e655d2413d5e32f450c90e6"
+    ],
+    "reportIds": [
+     "10123e47-bc24-412a-b10c-864d1f3e7a4a",
+     "ef9c70a7-252e-49ca-8d07-bfa8f4db88c9"
+    ],
+    "judgeScore": 0.0,
+    "costUsd": 0.407828,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "pt-br": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "pt-BR",
+    "fabricJobIds": [
+     null,
+     "job_9ad6ffd48922557fc4db8396",
+     null,
+     "job_57287c7356b849a2b3acb0c0"
+    ],
+    "reportIds": [
+     "e8212189-f3a0-42b9-ad27-06c5404c0c2c",
+     "911f1511-c86f-462f-a903-1acb13af3c91"
+    ],
+    "judgeScore": 84.0,
+    "costUsd": 0.228298,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false
+  },
+  "ru": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "ru-RU",
+    "fabricJobIds": [
+     null,
+     "job_b4771649cbd0c0ae568d9d5c",
+     null,
+     "job_d6f69ca13f196b7611431189"
+    ],
+    "reportIds": [
+     "788bccb3-73e7-4fa8-8f81-6299874aa3ce",
+     "9badea8a-28b6-4217-acf8-f9d776b3297b"
+    ],
+    "judgeScore": 65.0,
+    "costUsd": 0.328332,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "tr": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "tr-TR",
+    "fabricJobIds": [
+     null,
+     "job_89f5289ffb889fc5ce2e2dce",
+     null,
+     "job_7ef915368701a75ec487013a"
+    ],
+    "reportIds": [
+     "ba9df26f-8f7b-4ad6-909a-d39718b36a2f",
+     "8ce14ea8-9822-4397-8aad-221f0a5ce5d4"
+    ],
+    "judgeScore": 65.0,
+    "costUsd": 0.30184,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (65.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "uk": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "uk-UA",
+    "fabricJobIds": [
+     null,
+     "job_dff0d3471dfc9b820db20dd5",
+     null,
+     "job_99f8e851dcfa9835867a615a"
+    ],
+    "reportIds": [
+     "bf45ac98-3750-4c80-a6f1-c517c844fb2a",
+     "a79bd44a-0b8a-4cb4-bf0a-c60396008ce0"
+    ],
+    "judgeScore": 68.0,
+    "costUsd": 0.291876,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "vi": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "vi-VN",
+    "fabricJobIds": [
+     null,
+     "job_969bf3852df5f7e5a4204f56",
+     null,
+     "job_40ca64faddc1f878b6f47a82"
+    ],
+    "reportIds": [
+     "2ed5bae9-d7fa-4a41-91d0-6d2f4106d850",
+     "deebda98-3b77-4430-9245-ce24cc4a1c3f"
+    ],
+    "judgeScore": 66.0,
+    "costUsd": 0.279308,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "below the judge's bar after 2 job(s); kept the best (67.0)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  },
+  "zh-hans": {
+   "site_languages": false,
+   "adaptation": {
+    "locale": "zh-Hans-CN",
+    "fabricJobIds": [
+     null,
+     "job_05038df9b812a25395b74c01",
+     null,
+     "job_319d3915ed16275d38fd6108"
+    ],
+    "reportIds": [
+     "d36e00a0-5ee2-4be8-95b3-aebc85d8a144",
+     "58b11ff2-e478-4bde-a35b-51ce4984b9a4"
+    ],
+    "judgeScore": 67.0,
+    "costUsd": 0.31098,
+    "model": "anthropic/claude-sonnet-5.5",
+    "decision": "auto (passed the judge's bar)",
+    "voiceUsed": true
+   },
+   "native_review": false,
+   "below_bar": true
+  }
+ }
+}

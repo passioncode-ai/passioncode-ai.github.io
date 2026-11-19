@@ -247,11 +247,13 @@ export function applyChrome (html, { sourceFile, locale }) {
   if (!/<html lang="[^"]*">/.test(html)) throw new Error(`${where}: no <html lang>`)
   if (!CANONICAL.test(html)) throw new Error(`${where}: no canonical link`)
   if ((html.match(SWITCH) || []).length !== 1) throw new Error(`${where}: expected one language switch (class="lang-switch")`)
-  const links = alternates(sourceFile).map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join('')
+  const held = NOINDEX.has(where) && !NOINDEX.has(sourceFile)   // SITE-071: a held version of an indexed page
+  const links = held ? '' : alternates(sourceFile).map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join('')
   let out = html
     .replace(/<html lang="[^"]*">/, `<html lang="${langTag(locale)}"${localeInfo(locale).dir === 'rtl' ? ' dir="rtl"' : ''}>`)
     .replace(CANONICAL, (_, open, close) => open + ORIGIN + pageRoute(sourceFile, locale) + close + (links ? `\n  ${links}` : ''))
     .replace(SWITCH, () => languageSwitch(sourceFile, locale))
+  if (held) out = out.replace('<meta name="robots" content="index, follow">', '<meta name="robots" content="noindex, follow">')
   if (OG_LOCALE.test(out)) out = out.replace(OG_LOCALE, (_, site) => site + `<meta property="og:locale" content="${OG_LOCALES[locale]}">` + localesOfPage(sourceFile).filter(l => l !== locale).map(l => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`).join(''))
   if (/<link rel="alternate" hreflang=/.test(out.replace(links, ''))) throw new Error(`${where}: an hreflang alternate outside the generated list`)
   return out
@@ -557,6 +559,8 @@ export function skeleton (html) {
     if (skip) continue
     if (name === 'link' && attr(token, 'hreflang') !== undefined) continue
     if (name === 'meta' && /^og:locale/.test(attr(token, 'property') || '')) continue
+    // The robots rule is chrome too (SITE-071: a held version is noindex); check-site and locales.test assert it per page.
+    if (name === 'meta' && attr(token, 'name') === 'robots') { out.push('<meta name=robots>'); continue }
     const attrs = [...token.matchAll(/\s([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:="([^"]*)")?/g)]
       .filter(([, a]) => !DROPPED_ATTRS.has(a))
       .filter(([, a]) => !(name === 'meta' && a === 'content' && TEXT_META.has(attr(token, 'name') || attr(token, 'property'))))

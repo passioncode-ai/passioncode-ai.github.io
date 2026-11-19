@@ -134,6 +134,8 @@ HƯỚNG DẪN
 
 ## Xem thêm hướng dẫn
 
+Vì sao công việc bị kẹt giữa người với người, và agent thay đổi điều gì
+
 Khởi chạy nơi làm việc agent của bạn trong 20 phút
 
 Đợt đánh giá miễn phí một tuần diễn ra như thế nào

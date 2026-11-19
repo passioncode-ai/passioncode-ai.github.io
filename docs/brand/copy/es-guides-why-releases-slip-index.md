@@ -134,6 +134,8 @@ GUÍAS
 
 ## Más guías
 
+Por qué las tareas se atascan entre personas y qué cambia con un agente
+
 Pon en marcha tu espacio de trabajo de agentes en 20 minutos
 
 Cómo funciona la evaluación gratuita de una semana

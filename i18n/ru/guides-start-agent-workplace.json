@@ -20,6 +20,7 @@
     "If something does not work": "Если что-то не работает",
     "Run the command again: on a computer that is already set up, it checks everything, repairs what is wrong and shows what changed. Each product page lists its requirements and limits.": "Выполните команду ещё раз: на уже настроенном компьютере она всё проверит, исправит то, что не так, и покажет, что изменилось. На странице каждого продукта указаны его требования и ограничения.",
     "Set it up now": "Настроить сейчас",
-    "Why your release slips again: what a team assessment shows": "Почему релиз снова сдвигается: что показывает оценка команды"
+    "Why your release slips again: what a team assessment shows": "Почему релиз снова сдвигается: что показывает оценка команды",
+    "Why tasks stall between people, and what changes with an agent": "Почему задачи застревают между людьми и что меняется с агентом"
   }
 }

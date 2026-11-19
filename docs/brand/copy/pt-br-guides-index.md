@@ -68,6 +68,30 @@ Para a sua empresa: leia como funciona a avaliação gratuita de uma semana e de
 
 Guia · 19 de novembro de 2026
 
+### Por que tarefas ficam paradas entre pessoas e o que muda com um agente
+
+Uma tarefa pode parecer ativa enquanto espera que a próxima pessoa a veja, assuma ou devolva ao planejador. Um agente muda o ritmo do dia a dia ao automatizar essas verificações e escalações, enquanto as pessoas mantêm a responsabilidade e as decisões.
+
+Para founders e líderes de times de produto cujas tarefas esperam entre pessoas e cujos planejadores cobram os responsáveis na mão.
+
+Neste guia
+
+Onde a tarefa realmente espera
+
+Sinais de uma passagem de bastão parada
+
+Por que cobrar manualmente não escala
+
+O que um agente muda no ritmo do dia a dia
+
+Agentes acompanham o trabalho, pessoas decidem
+
+Como começar com a avaliação gratuita
+
+Fontes e método
+
+Guia · 19 de novembro de 2026
+
 ### Por que seu lançamento atrasa de novo: o que uma avaliação de equipe mostra
 
 Um lançamento só sai quando tudo o que cerca o código também está pronto. A avaliação de equipe lê como o trabalho andou de fato nos últimos 90 dias e mostra onde ele esperou, para você corrigir a espera em vez de pressionar o time.

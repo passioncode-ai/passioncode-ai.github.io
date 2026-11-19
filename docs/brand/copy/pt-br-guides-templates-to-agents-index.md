@@ -90,6 +90,8 @@ GUIAS
 
 ## Mais guias
 
+Por que tarefas ficam paradas entre pessoas e o que muda com um agente
+
 Por que seu lançamento atrasa de novo: o que uma avaliação de equipe mostra
 
 Monte seu ambiente de trabalho com agentes em 20 minutos

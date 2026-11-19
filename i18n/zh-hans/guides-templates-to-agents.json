@@ -14,6 +14,7 @@
     "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "你的数据、你的密钥和你的智能体。模板库归我们所有：你得到的是组装好的智能体，而不是模板库；在讨论你的需求时，我们会分享模板的详情。",
     "Agents that get better": "不断改进的智能体",
     "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "当我们改进某个模板时，这项改进可以随模板的下一个版本到达你的智能体，但须先通过你的智能体目前已通过的那些检查。",
-    "Why your release slips again: what a team assessment shows": "为什么发布又延期了：团队评估能看清什么"
+    "Why your release slips again: what a team assessment shows": "为什么发布又延期了：团队评估能看清什么",
+    "Why tasks stall between people, and what changes with an agent": "任务为什么卡在人与人之间，引入智能体后有什么变化"
   }
 }

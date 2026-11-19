@@ -21,6 +21,8 @@ LOCALES = tuple(code for code in _REGISTRY['locales'] if code != _REGISTRY['sour
 _SCOPED = json.loads((_SCRIPTS.parent / 'i18n' / 'scoped-locales.json').read_text())
 SCOPED_PAGES = tuple(f'{locale}/{page}' for locale in _SCOPED['locales'] for page in _SCOPED['pages'])
 PAGES = SOURCE_PAGES + tuple(f'{locale}/{page}' for locale in LOCALES for page in SOURCE_PAGES) + SCOPED_PAGES
+# SITE-071: held versions (i18n/scoped-locales.json `held`) are shipped noindex and left out of sitemap.xml.
+HELD = tuple(f'{locale}/{page}' for locale, pages in (_SCOPED.get('held') or {}).items() for page in pages)
 HEADINGS = {'h1', 'h2', 'h3', 'h4', 'h5', 'h6'}
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
         'meta', 'param', 'source', 'track', 'wbr'}

@@ -1,6 +1,6 @@
 {
   "$comment": "SITE-070 (operator 2026-11-19, Fabric task 6c4043eb): languages published for some pages only, today the guides of the content plan. Each language here has only the pages listed under `pages`, generated from the English page and the catalogs i18n/<code>/ by npm run locales; every version of such a page (the site's languages in i18n/locales.json and these) names all the others with hreflang. A language moves to i18n/locales.json when every page is translated (docs/DEPLOYMENT.md#guide-only-languages).",
-  "pages": ["guides/why-releases-slip/index.html"],
+  "pages": ["guides/why-releases-slip/index.html", "guides/why-tasks-stall-between-people/index.html"],
   "locales": {
     "it": { "name": "Italiano", "englishName": "Italian", "og": "it_IT", "intl": "it-IT", "switchLabel": "Lingua" },
     "uk": { "name": "Українська", "englishName": "Ukrainian", "og": "uk_UA", "intl": "uk-UA", "switchLabel": "Мова" },
@@ -11,5 +11,19 @@
     "tr": { "name": "Türkçe", "englishName": "Turkish", "og": "tr_TR", "intl": "tr-TR", "switchLabel": "Dil" },
     "bg": { "name": "Български", "englishName": "Bulgarian", "og": "bg_BG", "intl": "bg-BG", "switchLabel": "Език" },
     "hi": { "name": "हिन्दी", "englishName": "Hindi", "og": "hi_IN", "intl": "hi-IN", "switchLabel": "भाषा" }
+  },
+  "held": {
+    "ar": ["guides/why-tasks-stall-between-people/index.html"],
+    "bg": ["guides/why-tasks-stall-between-people/index.html"],
+    "fr": ["guides/why-tasks-stall-between-people/index.html"],
+    "it": ["guides/why-tasks-stall-between-people/index.html"],
+    "ko": ["guides/why-tasks-stall-between-people/index.html"],
+    "nl": ["guides/why-tasks-stall-between-people/index.html"],
+    "pl": ["guides/why-tasks-stall-between-people/index.html"],
+    "ru": ["guides/why-tasks-stall-between-people/index.html"],
+    "tr": ["guides/why-tasks-stall-between-people/index.html"],
+    "uk": ["guides/why-tasks-stall-between-people/index.html"],
+    "vi": ["guides/why-tasks-stall-between-people/index.html"],
+    "zh-hans": ["guides/why-tasks-stall-between-people/index.html"]
   }
 }

@@ -134,6 +134,8 @@ KILAVUZLAR
 
 ## Diğer kılavuzlar
 
+Görevler insanlar arasında neden takılır ve bir ajanla ne değişir
+
 Ajan çalışma alanınızı 20 dakikada kurun
 
 Ücretsiz bir haftalık değerlendirme nasıl işler

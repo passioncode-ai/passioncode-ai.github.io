@@ -134,6 +134,8 @@ GUIDES
 
 ## More guides
 
+Why tasks stall between people, and what changes with an agent
+
 Start your agent workplace in 20 minutes
 
 How the free one-week assessment works

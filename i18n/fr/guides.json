@@ -44,6 +44,15 @@
     "What changes when an agent runs the rhythm": "Ce qui change quand un agent tient le rythme",
     "Who decides": "Qui décide",
     "How to start": "Comment démarrer",
-    "Sources and method": "Sources et méthode"
+    "Sources and method": "Sources et méthode",
+    "Why tasks stall between people, and what changes with an agent": "Pourquoi les tâches stagnent entre les personnes, et ce qui change avec un agent",
+    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "Une tâche peut sembler active alors qu'elle attend que la personne suivante la voie, la prenne ou la renvoie au planificateur. Un agent change le rythme du quotidien : ces vérifications et ces escalades deviennent automatiques, et les personnes gardent la responsabilité et les décisions.",
+    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "Pour les fondateurs et les responsables d'équipe produit dont les tâches attendent entre les personnes et dont les planificateurs relancent les responsables à la main.",
+    "Where a task really waits": "Où une tâche attend vraiment",
+    "The signs of a stalled hand-off": "Les signes d'un passage de relais bloqué",
+    "Why manual chasing does not scale": "Pourquoi les relances manuelles ne passent pas à l'échelle",
+    "What an agent changes in the daily rhythm": "Ce que l'agent change dans le rythme quotidien",
+    "Agents follow the work, people decide": "Les agents suivent le travail, les personnes décident",
+    "How to start with the free assessment": "Comment commencer avec l'évaluation gratuite"
   }
 }

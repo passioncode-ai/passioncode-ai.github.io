@@ -134,6 +134,8 @@ GUIDE
 
 ## Altre guide
 
+Perché i task si bloccano tra le persone e cosa cambia con un agent
+
 Avvia il tuo spazio di lavoro per agenti in 20 minuti
 
 Come funziona la valutazione gratuita di una settimana

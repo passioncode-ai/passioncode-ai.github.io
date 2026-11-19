@@ -44,6 +44,15 @@
     "What changes when an agent runs the rhythm": "Что меняется, когда ритм ведёт агент",
     "Who decides": "Кто принимает решения",
     "How to start": "Как начать",
-    "Sources and method": "Источники и метод"
+    "Sources and method": "Источники и метод",
+    "Why tasks stall between people, and what changes with an agent": "Почему задачи застревают между людьми и что меняется с агентом",
+    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "Задача выглядит активной, а сама ждёт, пока следующий человек её заметит, возьмёт или вернёт планировщику. Агент меняет ежедневный ритм: проверки и эскалации идут автоматически, а владение задачей и решения остаются за людьми.",
+    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "Для основателей и руководителей продуктовых команд, у которых задачи ждут между людьми, а планировщики вручную догоняют исполнителей.",
+    "Where a task really waits": "Где задача на самом деле ждёт",
+    "The signs of a stalled hand-off": "Признаки застрявшей передачи",
+    "Why manual chasing does not scale": "Почему ручные напоминания не масштабируются",
+    "What an agent changes in the daily rhythm": "Что агент меняет в ежедневном ритме",
+    "Agents follow the work, people decide": "Агенты следят за работой, люди решают",
+    "How to start with the free assessment": "Как начать с бесплатной оценки"
   }
 }

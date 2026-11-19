@@ -14,6 +14,7 @@
     "Your data, your keys and your agents. The template library stays ours: you receive the assembled agents, not the library, and we share the details of a template when we discuss your request.": "Vos données, vos clés et vos agents. La bibliothèque de modèles reste la nôtre : vous recevez les agents assemblés, pas la bibliothèque, et nous partageons les détails d’un modèle quand nous discutons de votre demande.",
     "Agents that get better": "Des agents qui s’améliorent",
     "When we improve a template, the improvement can reach your agent with the template’s next release, after the checks your agent already passes.": "Quand nous améliorons un modèle, l’amélioration peut atteindre votre agent avec la version suivante du modèle, après les vérifications que votre agent passe déjà.",
-    "Why your release slips again: what a team assessment shows": "Pourquoi votre release dérape encore : ce que révèle un audit d'équipe"
+    "Why your release slips again: what a team assessment shows": "Pourquoi votre release dérape encore : ce que révèle un audit d'équipe",
+    "Why tasks stall between people, and what changes with an agent": "Pourquoi les tâches stagnent entre les personnes, et ce qui change avec un agent"
   }
 }

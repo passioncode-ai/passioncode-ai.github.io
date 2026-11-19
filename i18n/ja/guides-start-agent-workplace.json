@@ -20,6 +20,7 @@
     "If something does not work": "うまく動かないとき",
     "Run the command again: on a computer that is already set up, it checks everything, repairs what is wrong and shows what changed. Each product page lists its requirements and limits.": "コマンドをもう一度実行してください：すでにセットアップ済みのコンピューターでは、すべてを点検し、問題を修復し、何が変わったかを示します。各製品ページに、それぞれの要件と制限が記載されています。",
     "Set it up now": "今すぐセットアップする",
-    "Why your release slips again: what a team assessment shows": "リリースがまた遅れる理由：チームアセスメントでわかること"
+    "Why your release slips again: what a team assessment shows": "リリースがまた遅れる理由：チームアセスメントでわかること",
+    "Why tasks stall between people, and what changes with an agent": "仕事が人の間で止まる理由と、エージェントで何が変わるか"
   }
 }
