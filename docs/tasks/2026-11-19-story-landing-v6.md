@@ -101,3 +101,26 @@ Separate task: the guide in 19 languages, the content strategy and the content m
 
 Next task in this unit: none blocking. Open: voice v4 (above); the bot's funnel events (PM agent); leafing in a visible
 Safari and on a phone; the headphones mix (Fabric task `29fb8216`).
+
+## 7. v7 (2026-11-19, 16:00 CET): the film, one office and one cast, the new ending
+
+The operator: «в конце вот эта сцена с офисом и надо ее перерендерить ... эффект матрицы очень крутой вот этот кадр с
+переходом оставляем ... морфеус пусть сидит в кресле ... встает ... протягивает две таблетки ... в пиджачке
+аккуратненький чистенький ... синхронизацию по персонажам по месту ... в фабрике и раскатить на все».
+
+| Item | Result | Evidence |
+|---|---|---|
+| Cause of the drift | `blender-previz` takes no references: each shot redrew the office and the hero from words | `story/film/shots.py` docstring |
+| References | one office, one director sheet, one agent sheet, one mentor sheet (`scene-pack-refs`, two judges each) | `story/film/SOURCES.md` v7, `story/film/v7-verdicts.jsonl` |
+| Shots 03 to 10, 12, 13 | redrawn from the references: first and last frame (`scene-pack-refs`), clip from both (`video-from-frames`), two takes each, two judges | shot table `SHOTS_V7`, commit `a5a3c803` |
+| Kept | 01, 02, 11 (judges kept the v5 frame), 14 and 15 with the Matrix glitch | `story/film/cut.py` |
+| Ending | 16 starts on shot 15's last frame and turns to the mentor at an oak desk; 17 he rises, walks round the desk, holds out the red and blue capsules; 18 a 2.2 s push-in; the mentor is an original character in a neat charcoal suit, drawn in shot 15's style | `SHOTS_V7` 16 to 18, commits `d8805fc1`, `a5a3c803` |
+| Re-cut | RU and EN, 83.7 s, 15.2 MB each, -21.9 and -22.5 LUFS; the Morpheus caption 79.8 to 83.6 s | `story/film/timeline.json`, commit of the caption |
+| Frame check | contact sheet and a second round on the ending and shot 11: no blocking defect by two of three models | `v7-verdicts.jsonl` (`film-v7-sheet`, `film-v7-check2`) |
+| Asset Foundry | traces `op-20261119-film-continuity`, `op-20261119-film-ending-style` (request, change, verdict); board request `a71ddd94` (thread `b1b4cb38`) for a versioned film recipe with references before any shot and one drawing style per character | `foundry trace list` on the Studio |
+| Cost | USD 53.06 over 39 Foundry jobs (ledger; one `unknown` line per job awaits reconciliation) | `foundry ledger --job <id>` |
+| Deploy | Worker version `685a8b84-f626-4643-a2d3-c13352b1d5eb` | `wrangler deploy -c wrangler.assessment.json` |
+| Full check, live | 39/39 (third run; runs one and two failed the comic's desktop leafing check once each, 37/39 and 38/39, a timing check of the pager in a background Chrome that this change does not touch); film RU and EN 83.71 s, end card, loop and the red route pass | `scripts/e2e/story-matrix.mjs` |
+
+Open, blocking nothing: the leafing check's flakiness in a background Chrome (board row); a person's look at the ending
+on a phone; the Foundry recipe asked in `a71ddd94` (asset-foundry's).
