@@ -1,0 +1,56 @@
+[
+ {
+  "n": "B1",
+  "seconds": 5,
+  "scene": "backstory/B1.scene.json",
+  "prompt": "wide night view of a city of glass office towers, in many lit windows small figures of founders at work, above each of them a small glowing spark like a light bulb of an idea. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: the camera rises slowly over the city; the small glowing sparks pulse in the windows."
+ },
+ {
+  "n": "B2",
+  "seconds": 5,
+  "scene": "backstory/B2.scene.json",
+  "prompt": "medium shot: a young woman founder and a developer stand at a whiteboard full of product sketches and arrows, a small glowing green spark rises from the drawing, their faces lit with excitement. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: they point at the sketch and laugh; the glowing spark rises from the whiteboard and grows brighter."
+ },
+ {
+  "n": "B3",
+  "seconds": 5,
+  "scene": "backstory/B3.scene.json",
+  "prompt": "wide shot of an open office at night, rows of desks, the green screens and small glowing sparks above the desks going out one after another, thin smoke drifting where each one died. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: one by one the glowing screens and sparks go out down the rows, leaving thin smoke; the room gets darker."
+ },
+ {
+  "n": "B4",
+  "seconds": 5,
+  "scene": "backstory/B4.scene.json",
+  "prompt": "two founders in suits stand on opposite sides of a long boardroom table, leaning in and shouting at each other, a deep crack splits the table between them, papers torn in half. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: they shout and slam their hands on the table; the crack in the table spreads between them."
+ },
+ {
+  "n": "B5",
+  "seconds": 6,
+  "scene": "backstory/B5.scene.json",
+  "prompt": "low wide shot: a giant machine of gears, tangled process arrows, forms and stamps towers over a small team of people below; the people stand apart with their backs turned to each other. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: the machine grinds and stamps forms that rain down; the people below drift apart and turn their backs on each other."
+ },
+ {
+  "n": "B6",
+  "seconds": 6,
+  "scene": "backstory/B6.scene.json",
+  "prompt": "wide shot: an open office turned into a ruined battlefield, overturned desks, cracked dark screens, fallen startup sign boards on the floor, a storm of paper and smoke in the air. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: the camera moves slowly through the ruins; paper swirls like snow in a storm; smoke rolls over the fallen signs."
+ },
+ {
+  "n": "B7",
+  "seconds": 5,
+  "scene": "backstory/B7.scene.json",
+  "prompt": "wide shot: two exhausted survivors walk out of the smoke of a ruined office toward the camera, torn clothes, a bandaged arm, one carries a cracked laptop, tired but alive. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: the two walk slowly toward the camera out of the smoke, limping, the paper storm settling behind them."
+ },
+ {
+  "n": "B8",
+  "seconds": 7,
+  "scene": "backstory/B8.scene.json",
+  "prompt": "medium close-up: Morpheus: a bald calm mentor about fifty, small round dark glasses, a long dark coat with a high collar (an original character, not any real actor) stands in darkness lit from one side by the green light of a screen, looking straight into the camera, calm and certain. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: he speaks calmly to the camera while the camera slowly pushes in on his face; the green light flickers softly."
+ },
+ {
+  "n": "B9",
+  "seconds": 4,
+  "scene": "backstory/B9.scene.json",
+  "prompt": "medium shot: Morpheus: a bald calm mentor about fifty, small round dark glasses, a long dark coat with a high collar (an original character, not any real actor) holds out one open hand toward the camera in the dark, inviting, green light on his palm. adult animated film still in a graphic-novel style: charcoal and graphite on paper, grey and black tones, visible paper grain and ink hatching, the only colour accent is a small warm-green glow of ideas and screens; cinematic composition, 16:9, no text, no logos. Action: he extends his open hand toward the camera; thin streams of falling green code begin to rise over the image."
+ }
+]

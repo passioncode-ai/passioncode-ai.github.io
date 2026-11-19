@@ -1,0 +1,86 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 4,
+ "fps": 24,
+ "background": "#0c0c0c",
+ "note": "Medium: Morpheus holds out his open hand to the camera; the image starts to turn into green code.",
+ "objects": [
+  {
+   "name": "morpheus",
+   "shape": "cylinder",
+   "location": [
+    0,
+    2.6,
+    0.8325
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.8325
+   ],
+   "color": "#3b3b3b"
+  },
+  {
+   "name": "morpheus_head",
+   "shape": "sphere",
+   "location": [
+    0,
+    2.6,
+    1.7575
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8"
+  },
+  {
+   "name": "hand",
+   "shape": "cube",
+   "location": [
+    0.2,
+    1.8,
+    1.2
+   ],
+   "scale": [
+    0.12,
+    0.3,
+    0.06
+   ],
+   "color": "#c8b8a8"
+  }
+ ],
+ "camera": {
+  "lens": 35,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0,
+     -0.6,
+     1.6
+    ],
+    "look_at": [
+     0,
+     2.6,
+     1.5
+    ]
+   },
+   {
+    "t": 4,
+    "location": [
+     0,
+     -0.2,
+     1.5
+    ],
+    "look_at": [
+     0,
+     2.4,
+     1.3
+    ]
+   }
+  ]
+ }
+}

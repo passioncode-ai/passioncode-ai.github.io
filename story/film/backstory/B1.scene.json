@@ -1,0 +1,536 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 5,
+ "fps": 24,
+ "background": "#101010",
+ "note": "Wide, night: a city of glass towers, lit windows, a small green glow of an idea in many of them.",
+ "objects": [
+  {
+   "name": "ground",
+   "shape": "cube",
+   "location": [
+    0,
+    20,
+    0
+   ],
+   "scale": [
+    60,
+    60,
+    0.02
+   ],
+   "color": "#4a4a4a"
+  },
+  {
+   "name": "tower0",
+   "shape": "cube",
+   "location": [
+    -9,
+    18,
+    7.0
+   ],
+   "scale": [
+    3,
+    3,
+    14
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "win00",
+   "shape": "cube",
+   "location": [
+    -9,
+    16.45,
+    2.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win01",
+   "shape": "cube",
+   "location": [
+    -9,
+    16.45,
+    5.5
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win02",
+   "shape": "cube",
+   "location": [
+    -9,
+    16.45,
+    9.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "tower1",
+   "shape": "cube",
+   "location": [
+    -5,
+    24,
+    10.0
+   ],
+   "scale": [
+    3,
+    3,
+    20
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "win10",
+   "shape": "cube",
+   "location": [
+    -5,
+    22.45,
+    2.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win11",
+   "shape": "cube",
+   "location": [
+    -5,
+    22.45,
+    7.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win12",
+   "shape": "cube",
+   "location": [
+    -5,
+    22.45,
+    12.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "tower2",
+   "shape": "cube",
+   "location": [
+    -1,
+    30,
+    13.0
+   ],
+   "scale": [
+    3,
+    3,
+    26
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "win20",
+   "shape": "cube",
+   "location": [
+    -1,
+    28.45,
+    2.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win21",
+   "shape": "cube",
+   "location": [
+    -1,
+    28.45,
+    8.5
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win22",
+   "shape": "cube",
+   "location": [
+    -1,
+    28.45,
+    15.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "tower3",
+   "shape": "cube",
+   "location": [
+    4,
+    22,
+    8.0
+   ],
+   "scale": [
+    3,
+    3,
+    16
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "win30",
+   "shape": "cube",
+   "location": [
+    4,
+    20.45,
+    2.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win31",
+   "shape": "cube",
+   "location": [
+    4,
+    20.45,
+    6.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win32",
+   "shape": "cube",
+   "location": [
+    4,
+    20.45,
+    10.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "tower4",
+   "shape": "cube",
+   "location": [
+    8,
+    28,
+    11.0
+   ],
+   "scale": [
+    3,
+    3,
+    22
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "win40",
+   "shape": "cube",
+   "location": [
+    8,
+    26.45,
+    2.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win41",
+   "shape": "cube",
+   "location": [
+    8,
+    26.45,
+    7.5
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win42",
+   "shape": "cube",
+   "location": [
+    8,
+    26.45,
+    13.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "tower5",
+   "shape": "cube",
+   "location": [
+    12,
+    20,
+    6.0
+   ],
+   "scale": [
+    3,
+    3,
+    12
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "win50",
+   "shape": "cube",
+   "location": [
+    12,
+    18.45,
+    2.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win51",
+   "shape": "cube",
+   "location": [
+    12,
+    18.45,
+    5.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win52",
+   "shape": "cube",
+   "location": [
+    12,
+    18.45,
+    8.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "tower6",
+   "shape": "cube",
+   "location": [
+    -13,
+    30,
+    9.0
+   ],
+   "scale": [
+    3,
+    3,
+    18
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "win60",
+   "shape": "cube",
+   "location": [
+    -13,
+    28.45,
+    2.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win61",
+   "shape": "cube",
+   "location": [
+    -13,
+    28.45,
+    6.5
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win62",
+   "shape": "cube",
+   "location": [
+    -13,
+    28.45,
+    11.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "tower7",
+   "shape": "cube",
+   "location": [
+    16,
+    34,
+    12.0
+   ],
+   "scale": [
+    3,
+    3,
+    24
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "win70",
+   "shape": "cube",
+   "location": [
+    16,
+    32.45,
+    2.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win71",
+   "shape": "cube",
+   "location": [
+    16,
+    32.45,
+    8.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  },
+  {
+   "name": "win72",
+   "shape": "cube",
+   "location": [
+    16,
+    32.45,
+    14.0
+   ],
+   "scale": [
+    0.6,
+    0.02,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  }
+ ],
+ "camera": {
+  "lens": 28,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0,
+     -8,
+     3
+    ],
+    "look_at": [
+     0,
+     24,
+     10
+    ]
+   },
+   {
+    "t": 5,
+    "location": [
+     0,
+     -5,
+     4
+    ],
+    "look_at": [
+     0,
+     24,
+     11
+    ]
+   }
+  ]
+ }
+}

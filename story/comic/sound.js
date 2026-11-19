@@ -53,11 +53,12 @@ export function mountSound({ reduce }) {
   }
 
   const sfx = (name, gain = VOL.sfx) => play(`sfx/${name}.mp3`, gain)
+  let hushed = false         // a film plays with its own sound: the page's music and room tone fall silent under it
   const duck = down => {
     for (const b of [music, bed]) if (b) {
       const g = b.g.gain, base = b === music ? VOL.music : VOL.bed
       g.cancelScheduledValues(ctx.currentTime)
-      g.setTargetAtTime(down ? Math.min(base, VOL.duck) : base, ctx.currentTime, down ? 0.08 : 0.4)
+      g.setTargetAtTime(hushed ? 0 : down ? Math.min(base, VOL.duck) : base, ctx.currentTime, down || hushed ? 0.08 : 0.4)
     }
   }
   let starting = false, startedAt = 0, voiceUntil = 0
@@ -139,6 +140,7 @@ export function mountSound({ reduce }) {
 
   return {
     sfx, say, busy, live,
+    hush(v) { hushed = !!v; if (ctx) duck(!!voice) },
     left: () => (voice ? Math.max(0, voiceUntil - performance.now()) : 0),  // ms the current line still speaks
     forget: key => played.delete(key),  // a line that may be spoken again (the film's loop)
     // a panel entered: the seam between beats, the clones' clicks, Morpheus's line in it

@@ -1,0 +1,130 @@
+/* SITE-068 v6 (the operator, 2026-11-19): no header at first, the white rabbit hops in and Morpheus offers the pills;
+   the big chat fills the screen; the comic is laid out big and still (no entrance animation), small on a phone; the
+   film turns to landscape on a phone held upright; the end opens Morpheus's chat and the author's X and LinkedIn.
+   Loaded after comic.css; scoped to html.comic-page. */
+
+/* ---- no header until a pill is chosen: only the language and sound switches stay, quietly, in the corner ---- */
+.comic-page.intro-state .bar{background:none;border:0;box-shadow:none;backdrop-filter:none}
+.comic-page.intro-state .bar .brand,.comic-page.intro-state .bar .cta,.comic-page.intro-state .bar .progress{visibility:hidden}
+.comic-page.intro-state .bar-right{opacity:.55;transition:opacity .3s}
+.comic-page.intro-state .bar-right:hover,.comic-page.intro-state .bar-right:focus-within{opacity:1}
+
+/* ---- the intro: the rabbit hops in, then Morpheus and the pills; the page ends here until a pill is chosen ---- */
+.act0.intro{height:100vh;height:100svh}
+.intro .act0-stage{position:relative;height:100%;display:grid;place-items:center;align-content:center;gap:22px}
+.intro-line{margin:0;font:700 clamp(20px,2.4vw,32px) var(--mono,monospace);color:#d8ffe8;text-shadow:0 0 18px #00ff6666;
+ opacity:0;transition:opacity .6s .9s}
+.intro.hopped .intro-line{opacity:1}
+.intro .rise{position:static;transform:translateY(24px);opacity:0;transition:opacity .8s,transform .8s cubic-bezier(.2,1,.3,1)}
+.intro.offered .rise{transform:none;opacity:1}
+.intro .rise .pill,.intro .rise-line{opacity:1;transform:none}
+.intro-rabbit{position:absolute;left:0;top:58%;width:64px;height:64px;opacity:0;z-index:3}
+.intro.hopped .intro-rabbit{animation:hopIn 1.5s cubic-bezier(.3,0,.3,1) forwards}
+@keyframes hopIn{0%{left:-80px;translate:0 0;opacity:1}18%{translate:0 -70px}33%{translate:0 0}50%{translate:0 -60px}66%{translate:0 0}
+ 82%{translate:0 -40px}100%{left:calc(50% - 32px);translate:0 0;opacity:1}}
+.intro.offered .intro-rabbit{animation:none;left:calc(50% - 32px);opacity:1;top:auto;bottom:6vh}
+.intro-rabbit.jump-red{animation:jumpRed .9s cubic-bezier(.3,0,.3,1) forwards!important}
+.intro-rabbit.jump-blue{animation:jumpBlue .9s cubic-bezier(.3,0,.3,1) forwards!important}
+
+/* ---- the big chat: the whole screen, large type, one message per leaf ---- */
+.bigchat-act{position:relative;height:calc(100vh + var(--beats,11) * 46vh)}
+.bigchat-pin{position:sticky;top:0;height:100vh;height:100svh;display:grid;place-items:center;padding:72px 3vw 3vh}
+.bigchat{width:min(1240px,94vw);height:100%;display:flex;flex-direction:column;background:#020604ee;border:1px solid #00ff6655;
+ border-radius:18px;box-shadow:0 0 80px #00ff6622;overflow:hidden}
+.bigchat .cchat-head{font-size:clamp(17px,1.4vw,22px);padding:18px 24px}
+.bc-msgs{list-style:none;margin:0;padding:22px 28px;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;flex:1;overflow:hidden}
+.bc-msgs .m{display:none;gap:16px;align-items:flex-start}
+.bc-msgs .m.on{display:flex;animation:msgIn .3s ease-out}
+@keyframes msgIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.bc-msgs .m b{display:block;font:600 clamp(13px,1vw,15px) var(--mono,monospace);color:#8fbf9f;margin-bottom:4px}
+.bc-msgs .m p{margin:0;font-size:clamp(19px,1.9vw,30px);line-height:1.35;background:#0a1a10;border:1px solid #14331f;border-radius:4px 16px 16px 16px;padding:12px 18px}
+.bc-msgs .m .face,.bc-msgs .m .av{flex:none;width:clamp(44px,4vw,64px);height:clamp(44px,4vw,64px);border-radius:50%}
+.bc-msgs .m.sys{justify-content:center}.bc-msgs .m.sys p{background:none;border:0;color:var(--pc-accent);font:600 clamp(15px,1.2vw,19px) var(--mono,monospace)}
+.bc-msgs .m.agent p{border-color:var(--pc-accent);box-shadow:0 0 22px #00ff6633}
+.bc-msgs .m.who-trinity p{border-color:#c4a1ff;box-shadow:0 0 22px #c4a1ff33}
+.bc-msgs .m.speaking p{outline:2px solid var(--pc-accent);outline-offset:3px}
+
+/* ---- the comic: big and still on a large screen, compact on a phone ---- */
+.comic-page .comic{max-width:min(1500px,96vw);padding:8vh 2vw}
+html.has-rail .comic-page .comic,html.has-rail .comic{padding-right:260px}
+.comic-page .comic .panel{width:min(1240px,100%);padding:clamp(20px,2.6vw,44px);opacity:1;transform:none;transition:none;align-self:center}
+.comic-page .comic .panel .say,.comic-page .comic .goal,.comic-page .comic .conn,.comic-page .comic .ly,.comic-page .comic .ph,
+.comic-page .comic .mem,.comic-page .comic .cube,.comic-page .comic .dept,.comic-page .comic .ln,.comic-page .comic .stamp,
+.comic-page .comic .win,.comic-page .comic .cdash .svc li,.comic-page .comic .clones .av,.comic-page .carry{opacity:1;transform:none;transition:none}
+.comic-page .comic .stamp{transform:rotate(-10deg)}
+.comic-page .arrow{stroke-dashoffset:0;transition:none}
+.comic-page .forecast path,.comic-page .pnl path{stroke-dashoffset:0;transition:none}
+.comic-page .link{transform:none;transition:none}
+.comic-page .ptitle h2{font-size:clamp(24px,2.6vw,42px)}
+.comic-page .pn{font-size:clamp(12px,1vw,16px)}
+.comic-page .balloon{max-width:min(900px,100%)}
+.comic-page .balloon p{font-size:clamp(17px,1.7vw,26px)}
+.comic-page .say .av,.comic-page .say .face{width:clamp(52px,5vw,84px);height:clamp(52px,5vw,84px)}
+.comic-page .say.who-trinity .balloon{background:#f2eaff;border-color:#1a0b33}
+.comic-page .say.who-trinity .balloon .who{color:#5b2ea6}
+.comic-page .goal,.comic-page .conn,.comic-page .ly,.comic-page .ph,.comic-page .node{font-size:clamp(14px,1.2vw,19px)}
+
+/* v6 panel instruments */
+.checkin,.ladder,.facts,.chain{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
+.checkin li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;padding:12px 16px;border:1px solid #14331f;border-radius:12px;background:#06100a}
+.checkin .dm{font:600 clamp(13px,1vw,16px) var(--mono,monospace);color:var(--pc-accent)}
+.checkin b{font:600 clamp(16px,1.5vw,22px) var(--pc-font)}
+.checkin li:last-child b{color:#ffd21a}
+.tcard{margin:18px 0 0;padding:18px 20px;border:2px solid #ff4d6d;border-radius:14px;background:#12060a;max-width:640px}
+.tc-t{margin:0 0 14px;font:700 clamp(17px,1.6vw,24px) var(--pc-font)}
+.tc-b{display:flex;gap:10px;flex-wrap:wrap}
+.tb{padding:10px 16px;border:1px solid #ffffff44;border-radius:10px;font:600 clamp(14px,1.2vw,18px) var(--pc-font)}
+.tb.no{border-color:#ff4d6d;background:#ff4d6d22;color:#ffb3c0}
+.ladder{counter-reset:r}
+.ladder li{display:flex;gap:14px;align-items:center;font:600 clamp(16px,1.5vw,22px) var(--pc-font);padding-left:calc(var(--i,0) * 0px)}
+.ladder li:nth-child(2){margin-left:4%}.ladder li:nth-child(3){margin-left:8%}.ladder li:nth-child(4){margin-left:12%;color:#ff8da1}
+.rung{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:8px;background:var(--pc-accent);color:#001a09;font:800 18px var(--pc-font-data)}
+.waits{display:grid;gap:12px;margin-top:16px}
+.wbar{display:grid;grid-template-columns:minmax(150px,24%) 1fr auto;gap:14px;align-items:center;margin:0;font:600 clamp(15px,1.3vw,20px) var(--pc-font)}
+.wbar i{display:block;height:22px;width:calc(var(--v) * 2%);max-width:100%;background:var(--pc-accent);border-radius:4px;box-shadow:0 0 14px #00ff6655}
+.wbar:first-child i{background:#ffd21a;box-shadow:0 0 14px #ffd21a77}
+.wbar b{font:800 clamp(18px,1.8vw,28px) var(--pc-font-data)}
+.facts li{font:600 clamp(15px,1.3vw,20px) var(--pc-font);padding-left:18px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--pc-accent)}
+.pbody .note{margin:10px 0 0;font-size:13px;color:var(--pc-text-muted)}
+.pp{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:18px 0 0;font:700 clamp(17px,1.6vw,24px) var(--pc-font)}
+.pp-n{padding:10px 16px;border:1px solid #ffd21a;border-radius:999px;color:#ffd21a}
+.pp-n:last-child{border-color:#ff4d6d;color:#ff8da1}
+.pp-arr{color:var(--pc-accent);font-size:1.3em}
+.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+.mode{padding:14px;text-align:center;border:1px solid #14331f;border-radius:12px;font:600 clamp(14px,1.2vw,18px) var(--pc-font);color:var(--pc-text-muted)}
+.mode.on{border:2px solid var(--pc-accent);color:var(--pc-text);background:#00ff6618;box-shadow:0 0 24px #00ff6633}
+.chain{grid-auto-flow:column;grid-auto-columns:1fr;gap:0;counter-reset:c}
+.chain li{position:relative;text-align:center;padding:14px 6px;font:700 clamp(13px,1.2vw,18px) var(--pc-font);border-top:3px solid var(--pc-accent)}
+.chain li::before{content:"";position:absolute;left:50%;top:-9px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--pc-accent);box-shadow:0 0 12px var(--pc-accent)}
+.chain li:last-child{color:var(--pc-accent)}
+
+/* ---- the end: Morpheus's chat and the author's channels ---- */
+.final-choice.onboard{max-width:none;min-height:100vh;padding:12vh 20px 16vh}
+.final-line{max-width:900px;text-align:center;font-size:clamp(20px,2.2vw,32px)!important}
+.follow-h{margin:30px 0 8px;font:600 14px var(--mono,monospace);color:var(--pc-text-muted);text-transform:uppercase;letter-spacing:.1em}
+.follow{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.fl{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #ffffff3a;border-radius:999px;color:var(--pc-text);text-decoration:none;font:600 15px var(--pc-font)}
+.fl svg{width:18px;height:18px;fill:currentColor}
+.fl:hover,.fl:focus-visible{border-color:var(--pc-accent);color:var(--pc-accent)}
+.big-cta.tg{font-size:clamp(17px,1.5vw,22px);padding:16px 28px}
+
+/* ---- the film: on a phone held upright the player turns to landscape (the operator: «сделай поворот») ---- */
+.film-rot{position:absolute;inset:0;display:grid;place-items:center}
+@media (orientation:portrait) and (max-width:900px){
+ .film-full .film-rot{inset:auto;top:50%;left:50%;width:100vh;width:100dvh;height:100vw;height:100dvw;transform:translate(-50%,-50%) rotate(90deg)}
+ .film-full .film-rot video{object-fit:contain}
+}
+
+@media (max-width:860px){
+ .bigchat-pin{padding:60px 8px 8px}
+ .bc-msgs{padding:14px 12px;gap:12px}
+ .modes{grid-template-columns:1fr 1fr}
+ .chain{grid-auto-flow:row}.chain li{border-top:0;border-left:3px solid var(--pc-accent);text-align:left;padding-left:18px}.chain li::before{left:-9px;top:50%;margin:-7px 0 0}
+ .wbar{grid-template-columns:1fr auto}.wbar i{grid-column:1/-1;grid-row:2}
+ .comic-page .comic .panel{padding:16px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+ .intro .rise,.intro-line{opacity:1;transform:none;transition:none}.intro-rabbit{opacity:1;left:calc(50% - 32px);animation:none}
+ .bigchat-act{height:auto}.bigchat-pin{position:static;height:auto}.bc-msgs .m{display:flex;animation:none}
+}

@@ -1,0 +1,86 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 7,
+ "fps": 24,
+ "background": "#0c0c0c",
+ "note": "Medium close: Morpheus in the dark, lit by green screen light, speaks to the camera, slow push in.",
+ "objects": [
+  {
+   "name": "morpheus",
+   "shape": "cylinder",
+   "location": [
+    0,
+    3,
+    0.8325
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.8325
+   ],
+   "color": "#3b3b3b"
+  },
+  {
+   "name": "morpheus_head",
+   "shape": "sphere",
+   "location": [
+    0,
+    3,
+    1.7575
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8"
+  },
+  {
+   "name": "screen",
+   "shape": "cube",
+   "location": [
+    1.4,
+    2.2,
+    1.2
+   ],
+   "scale": [
+    0.8,
+    0.05,
+    0.5
+   ],
+   "color": "#2f8f4f"
+  }
+ ],
+ "camera": {
+  "lens": 40,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0,
+     -0.8,
+     1.7
+    ],
+    "look_at": [
+     0,
+     3,
+     1.7
+    ]
+   },
+   {
+    "t": 7,
+    "location": [
+     0,
+     0.6,
+     1.72
+    ],
+    "look_at": [
+     0,
+     3,
+     1.72
+    ]
+   }
+  ]
+ }
+}

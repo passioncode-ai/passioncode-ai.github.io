@@ -1,0 +1,176 @@
+{
+ "aspect": "16:9",
+ "height": 720,
+ "seconds": 6,
+ "fps": 24,
+ "background": "#1a1a1a",
+ "note": "Low wide: a giant machine of gears, arrows and paper towers over tiny people pulled apart.",
+ "objects": [
+  {
+   "name": "machine",
+   "shape": "cube",
+   "location": [
+    0,
+    6,
+    4
+   ],
+   "scale": [
+    6,
+    1.5,
+    3
+   ],
+   "color": "#6e6e6e"
+  },
+  {
+   "name": "p1",
+   "shape": "cylinder",
+   "location": [
+    -1.5,
+    3,
+    0.7200000000000001
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.7200000000000001
+   ],
+   "color": "#3b3b3b"
+  },
+  {
+   "name": "p1_head",
+   "shape": "sphere",
+   "location": [
+    -1.5,
+    3,
+    1.52
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8"
+  },
+  {
+   "name": "p2",
+   "shape": "cylinder",
+   "location": [
+    -0.5,
+    3.2,
+    0.765
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.765
+   ],
+   "color": "#3b3b3b"
+  },
+  {
+   "name": "p2_head",
+   "shape": "sphere",
+   "location": [
+    -0.5,
+    3.2,
+    1.615
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8"
+  },
+  {
+   "name": "p3",
+   "shape": "cylinder",
+   "location": [
+    0.8,
+    3.1,
+    0.7200000000000001
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.7200000000000001
+   ],
+   "color": "#3b3b3b"
+  },
+  {
+   "name": "p3_head",
+   "shape": "sphere",
+   "location": [
+    0.8,
+    3.1,
+    1.52
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8"
+  },
+  {
+   "name": "p4",
+   "shape": "cylinder",
+   "location": [
+    1.7,
+    3.3,
+    0.7875
+   ],
+   "scale": [
+    0.28,
+    0.28,
+    0.7875
+   ],
+   "color": "#3b3b3b"
+  },
+  {
+   "name": "p4_head",
+   "shape": "sphere",
+   "location": [
+    1.7,
+    3.3,
+    1.6624999999999999
+   ],
+   "scale": [
+    0.13,
+    0.13,
+    0.15
+   ],
+   "color": "#c8b8a8"
+  }
+ ],
+ "camera": {
+  "lens": 26,
+  "keys": [
+   {
+    "t": 0,
+    "location": [
+     0,
+     -2.5,
+     1.4
+    ],
+    "look_at": [
+     0,
+     5,
+     2.5
+    ]
+   },
+   {
+    "t": 6,
+    "location": [
+     0,
+     -1.5,
+     1.2
+    ],
+    "look_at": [
+     0,
+     5,
+     3.0
+    ]
+   }
+  ]
+ }
+}

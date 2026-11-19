@@ -1,0 +1,63 @@
+{
+ "_": "SITE-068 v6 script (the operator, 2026-11-19): the backstory film, the big chat, the comic of sync, escalation and assessment, the onboarding. Source of every line spoken or shown; voiced lines carry a key (vo) and a speaker. Facts from passioncode-pm-agent playbook.md:304-322, code/escalation.py, company-assessment-agent docs/design/analysis.md, fabric-workspace knowledge/north-star.md:64-68 (copy-texts median 9.8 days) and the plan-fact report; chart shares are marked illustrative.",
+ "backstory": [
+  {"vo": "b1", "who": "morpheus", "en": "There was a world full of ideas. Founders, startups, projects of genius.", "ru": "Был мир, полный идей. Основатели, стартапы, гениальные проекты."},
+  {"vo": "b2", "who": "morpheus", "en": "Any one of them could change a market.", "ru": "Каждый из них мог изменить рынок."},
+  {"vo": "b3", "who": "morpheus", "en": "But the ideas went out, one after another.", "ru": "Но идеи гасли, одна за другой."},
+  {"vo": "b4", "who": "morpheus", "en": "A war began. Between founders.", "ru": "Началась война. Между основателями."},
+  {"vo": "b5", "who": "morpheus", "en": "Between processes and people. Inside the teams themselves.", "ru": "Между процессами и людьми. Внутри самих команд."},
+  {"vo": "b6", "who": "morpheus", "en": "In that chaos, many beautiful projects died.", "ru": "В этом хаосе погибло много прекрасных проектов."},
+  {"vo": "b7", "who": "morpheus", "en": "Some held on. But they came out broken.", "ru": "Кто-то выстоял. Но вышел из него изломанным."},
+  {"vo": "b8", "who": "morpheus", "en": "That is how this world is now. But I know you feel ready to see another side of it.", "ru": "Таков этот мир сейчас. Но я знаю: ты чувствуешь, что готов увидеть другую его сторону."},
+  {"vo": "b9", "who": "morpheus", "en": "Let me show you.", "ru": "Давай я тебе покажу."}
+ ],
+ "chat": [
+  {"who": "ivan", "en": "The build is ready. We're only waiting for the landing copy.", "ru": "Сборка готова. Ждём только текст лендинга."},
+  {"who": "anna", "en": "I thought Olga was writing it.", "ru": "Я думала, текст пишет Ольга."},
+  {"who": "olga", "en": "I was waiting for the brief.", "ru": "Я ждала бриф."},
+  {"who": "ceo", "en": "Why didn't the release ship again?", "ru": "Почему релиз опять не вышел?"},
+  {"who": "sys", "en": "Morpheus joined the chat", "ru": "Морфеус присоединился к чату"},
+  {"vo": "c1", "who": "morpheus", "en": "I know why. I ran an assessment: we launched agents and studied their activity.", "ru": "Я знаю почему. Я провёл ассессмент: мы запустили агентов и изучили их активность."},
+  {"who": "sys", "en": "Trinity joined the chat", "ru": "Тринити присоединилась к чату"},
+  {"vo": "c2", "who": "trinity", "en": "Ninety days of tasks, code and chats. I took them apart step by step.", "ru": "Девяносто дней задач, кода и переписки. Я разобрала их по шагам."},
+  {"vo": "c3", "who": "trinity", "en": "The release wasn't waiting for code. It was waiting for the copy, and three people each thought someone else was writing it.", "ru": "Релиз ждал не код. Он ждал текст, а каждый из троих думал, что пишет другой."},
+  {"who": "ceo", "en": "So what do we do?", "ru": "И что с этим делать?"},
+  {"vo": "c4", "who": "morpheus", "en": "Let me show you how it works from the inside.", "ru": "Покажу, как это работает изнутри."}
+ ],
+ "panels": [
+  {"id": "sync", "title": {"en": "07:00. One question each morning", "ru": "07:00. Один вопрос каждое утро"},
+   "vo": {"key": "p1", "who": "morpheus", "en": "Every morning I ask each person one question: what are you on today? Not a report. One question.", "ru": "Каждое утро я задаю каждому один вопрос: над чем ты сегодня? Не отчёт. Один вопрос."},
+   "items": [{"en": "Ivan: waiting for the copy", "ru": "Иван: жду текст"}, {"en": "Olga: waiting for the brief", "ru": "Ольга: жду бриф"}, {"en": "Anna: no answer, a reminder in 2 hours", "ru": "Анна: нет ответа, напомню через 2 часа"}]},
+  {"id": "owner", "title": {"en": "A task with no owner", "ru": "Задача без хозяина"},
+   "vo": {"key": "p2", "who": "morpheus", "en": "An urgent task goes to its assignee with three buttons: I see it, I take it, not mine.", "ru": "Срочная задача приходит исполнителю с тремя кнопками: вижу, беру, не моё."},
+   "card": {"en": "Landing copy · urgent", "ru": "Текст лендинга · срочно"}, "buttons": [{"en": "I see it", "ru": "Вижу"}, {"en": "I take it", "ru": "Беру"}, {"en": "Not mine", "ru": "Не моё"}]},
+  {"id": "ladder", "title": {"en": "The escalation ladder", "ru": "Лестница эскалаций"},
+   "vo": {"key": "p3", "who": "morpheus", "en": "Nobody takes it, so I climb: assignee, planner, deputy, owner. By evening it is the first line of the founder's report.", "ru": "Никто не берёт, и я иду по лестнице: исполнитель, планировщик, заместитель, владелец. Вечером это первая строка в отчёте основателю."},
+   "steps": [{"en": "every 30 min: a reminder", "ru": "каждые 30 мин: напоминание"}, {"en": "2 h: the planner knows", "ru": "2 ч: знает планировщик"}, {"en": "10:00: blocker, day 3", "ru": "10:00: блокер, 3-й день"}, {"en": "21:00: the founder's report, critical", "ru": "21:00: отчёт основателю, критично"}]},
+  {"id": "waits", "title": {"en": "The assessment: where work stands still", "ru": "Ассессмент: где стоит работа"},
+   "vo": {"key": "p4", "who": "trinity", "en": "Releases don't wait for code. They wait for decisions and copy that no plan contains.", "ru": "Релизы ждут не код. Они ждут решений и текстов, которых нет ни в одном плане."},
+   "bars": [{"en": "waiting for copy", "ru": "ожидание текста", "v": 34}, {"en": "waiting for review", "ru": "ожидание ревью", "v": 19}, {"en": "QA", "ru": "QA", "v": 11}],
+   "facts": [{"en": "copy: median 9.8 days", "ru": "тексты: медиана 9,8 дня"}, {"en": "60 to 85% of a week's work was in no plan", "ru": "60–85 % работы недели не было в плане"}], "note": {"en": "shares illustrative", "ru": "доли для примера"}},
+  {"id": "pingpong", "title": {"en": "Ping-pong", "ru": "Пинг-понг"},
+   "vo": {"key": "p5", "who": "trinity", "en": "The task came back to where it started three times. That is what work with no owner looks like.", "ru": "Задача трижды вернулась туда, откуда пришла. Так выглядит работа без хозяина."},
+   "path": [{"en": "Anna", "ru": "Анна"}, {"en": "Olga", "ru": "Ольга"}, {"en": "CEO", "ru": "CEO"}, {"en": "Anna", "ru": "Анна"}]},
+  {"id": "fix", "title": {"en": "The fix: an agent writes, a person approves", "ru": "Решение: агент пишет, человек одобряет"},
+   "vo": {"key": "p6", "who": "morpheus", "en": "The copy now has an owner: an agent writes the draft, a person approves it with one tap.", "ru": "Теперь у текста есть хозяин: черновик пишет агент, человек одобряет одним нажатием."},
+   "modes": [{"en": "agent alone", "ru": "агент сам"}, {"en": "agent with approval", "ru": "агент с одобрением", "on": true}, {"en": "person with an agent", "ru": "человек с агентом"}, {"en": "person only", "ru": "только человек"}]},
+  {"id": "ship", "title": {"en": "The release ships", "ru": "Релиз выходит"},
+   "vo": {"key": "p7", "who": "morpheus", "en": "And the release goes down the chain: the agent builds, the tests check, a person decides only where a person is needed.", "ru": "А релиз идёт по цепочке: агент собирает, тесты проверяют, человек решает только там, где нужен человек."},
+   "chain": [{"en": "signal", "ru": "сигнал"}, {"en": "agent", "ru": "агент"}, {"en": "QA", "ru": "QA"}, {"en": "staging", "ru": "стейджинг"}, {"en": "production", "ru": "прод"}, {"en": "verified", "ru": "проверено"}]}
+ ],
+ "final": {
+  "vo": {"key": "f1", "who": "morpheus", "en": "Want this assessment for your company? Write to me. I'll ask a few questions and come back with an answer.", "ru": "Хочешь такой ассессмент для своей компании? Напиши мне. Я задам пару вопросов и вернусь с ответом."},
+  "write": {"en": "Write to Morpheus", "ru": "Написать Морфеусу"},
+  "follow": {"en": "Follow the story", "ru": "Следить за историей"},
+  "x": {"en": "Follow on X", "ru": "Подписаться в X"},
+  "linkedin": {"en": "Follow on LinkedIn", "ru": "Подписаться в LinkedIn"}
+ },
+ "intro": {
+  "rabbit": {"en": "Follow the white rabbit.", "ru": "Следуй за белым кроликом."},
+  "red": {"en": "Dig in: why the release slipped again", "ru": "Разобраться: почему релиз опять не вышел"},
+  "blue": {"en": "Wake up: the film «Awakening»", "ru": "Проснуться: фильм «Пробуждение»"}
+ }
+}
