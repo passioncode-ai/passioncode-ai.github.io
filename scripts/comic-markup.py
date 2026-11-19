@@ -30,7 +30,9 @@ def vo(en):
 
 def say(who, en, ru, side='l', name=None):
     face = av(who) if who in ('morpheus', 'trinity', 'neo', 'smith', 'architect') else f'<i class="face">{who[0].upper()}</i>'
-    label = f'<b class="who">{name}</b>' if name else ''
+    names = {'Morpheus': 'Морфеус', 'Trinity': 'Тринити', 'Neo': 'Нео', 'Smith': 'Смит', 'Architect': 'Архитектор', 'CEO': 'CEO',
+          'Smith · Marketing': 'Смит · маркетинг', 'Smith · Growth': 'Смит · рост'}
+    label = f'<b class="who">{t(name, names.get(name, name))}</b>' if name else ''
     return f'<div class="say say-{side} who-{who}"{vo(en) if who == "morpheus" else ""}>{face}<div class="balloon">{label}<p>{t(en, ru)}</p></div></div>'
 
 # ---- act 0: the company chat in the centre, Morpheus joins, rises, offers the pills -------------------------------
@@ -222,7 +224,8 @@ def bigchat():
 
 def narrator(v):
     who = v['who']
-    return (f'<div class="say say-l who-{who}" data-vo="{v["key"]}">{av(who)}<div class="balloon"><b class="who">{who.title()}</b>'
+    name = t(*{'morpheus': ('Morpheus', 'Морфеус'), 'trinity': ('Trinity', 'Тринити')}[who])
+    return (f'<div class="say say-l who-{who}" data-vo="{v["key"]}">{av(who)}<div class="balloon"><b class="who">{name}</b>'
             f'<p>{tt(v)}</p></div></div>')
 
 HANDOFF6 = [('an unanswered question becomes a task', 'вопрос без ответа становится задачей'),
@@ -317,6 +320,7 @@ def main():
     head = re.sub(r'<button class="voice-btn".*?</button>', '<button class="voice-btn" type="button" id="sound" aria-pressed="false">'
                   '<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>' + t('Sound', 'Звук') + '</button>', head, flags=re.S)
     head = re.sub(r'\s*<a class="alt-link[^"]*"[^>]*>.*?</a>', '', head, flags=re.S)
+    head = head.replace('href="#apply"', 'href="#final"')  # v6: the header's button and the skip link go to the end
     head = head.replace('<link rel="stylesheet" href="/story/v3.css">', '<link rel="stylesheet" href="/story/v3.css">\n<link rel="stylesheet" href="/story/comic/comic.css">\n<link rel="stylesheet" href="/story/comic/v6.css">')
     hero = src[src.index('<section class="hero"'):src.index('</section>', src.index('<section class="hero"')) + len('</section>')]
     hero = re.sub(r'\s*<a class="pill-btn[^>]*>.*?</a>', '', hero, flags=re.S)   # the pills move to act 0

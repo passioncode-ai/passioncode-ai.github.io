@@ -46,7 +46,7 @@
 
 /* ---- the comic: big and still on a large screen, compact on a phone ---- */
 .comic-page .comic{max-width:min(1500px,96vw);padding:8vh 2vw}
-html.has-rail .comic-page .comic,html.has-rail .comic{padding-right:260px}
+@media (min-width:1241px){html.has-rail .comic{padding-right:260px}}
 .comic-page .comic .panel{width:min(1240px,100%);padding:clamp(20px,2.6vw,44px);opacity:1;transform:none;transition:none;align-self:center}
 .comic-page .comic .panel .say,.comic-page .comic .goal,.comic-page .comic .conn,.comic-page .comic .ly,.comic-page .comic .ph,
 .comic-page .comic .mem,.comic-page .comic .cube,.comic-page .comic .dept,.comic-page .comic .ln,.comic-page .comic .stamp,
@@ -58,13 +58,14 @@ html.has-rail .comic-page .comic,html.has-rail .comic{padding-right:260px}
 .comic-page .ptitle h2{font-size:clamp(24px,2.6vw,42px)}
 .comic-page .pn{font-size:clamp(12px,1vw,16px)}
 .comic-page .balloon{max-width:min(900px,100%)}
-.comic-page .balloon p{font-size:clamp(17px,1.7vw,26px)}
+.comic-page .balloon p{font-size:clamp(17px,1.9vw,30px)}
 .comic-page .say .av,.comic-page .say .face{width:clamp(52px,5vw,84px);height:clamp(52px,5vw,84px)}
 .comic-page .say.who-trinity .balloon{background:#f2eaff;border-color:#1a0b33}
 .comic-page .say.who-trinity .balloon .who{color:#5b2ea6}
 .comic-page .goal,.comic-page .conn,.comic-page .ly,.comic-page .ph,.comic-page .node{font-size:clamp(14px,1.2vw,19px)}
 
-/* v6 panel instruments */
+/* v6 panel instruments: sized to the screen, a frame on a large display is read from a distance */
+@media (min-width:1241px){.checkin b,.ladder li,.facts li,.wbar{font-size:clamp(18px,1.6vw,26px)!important}.tc-t,.pp{font-size:clamp(20px,1.9vw,30px)!important}.mode,.chain li,.tb{font-size:clamp(16px,1.4vw,22px)!important}.wbar i{height:28px}.rung{width:46px;height:46px;font-size:22px}}
 .checkin,.ladder,.facts,.chain{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
 .checkin li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;padding:12px 16px;border:1px solid #14331f;border-radius:12px;background:#06100a}
 .checkin .dm{font:600 clamp(13px,1vw,16px) var(--mono,monospace);color:var(--pc-accent)}
@@ -101,7 +102,9 @@ html.has-rail .comic-page .comic,html.has-rail .comic{padding-right:260px}
 
 /* ---- the end: Morpheus's chat and the author's channels ---- */
 .final-choice.onboard{max-width:none;min-height:100vh;padding:12vh 20px 16vh}
-.final-line{max-width:900px;text-align:center;font-size:clamp(20px,2.2vw,32px)!important}
+.final-choice.onboard .hero-av{width:min(300px,34vh);height:min(300px,34vh)}
+#onboard{display:grid;justify-items:center;gap:18px}
+.final-line{max-width:900px;text-align:center;font-size:clamp(20px,2.2vw,32px)!important;opacity:1!important}
 .follow-h{margin:30px 0 8px;font:600 14px var(--mono,monospace);color:var(--pc-text-muted);text-transform:uppercase;letter-spacing:.1em}
 .follow{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .fl{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #ffffff3a;border-radius:999px;color:var(--pc-text);text-decoration:none;font:600 15px var(--pc-font)}
@@ -117,7 +120,7 @@ html.has-rail .comic-page .comic,html.has-rail .comic{padding-right:260px}
 }
 
 @media (max-width:860px){
- .bigchat-pin{padding:60px 8px 8px}
+ .bigchat-pin{padding:60px 8px 124px}
  .bc-msgs{padding:14px 12px;gap:12px}
  .modes{grid-template-columns:1fr 1fr}
  .chain{grid-auto-flow:row}.chain li{border-top:0;border-left:3px solid var(--pc-accent);text-align:left;padding-left:18px}.chain li::before{left:-9px;top:50%;margin:-7px 0 0}
