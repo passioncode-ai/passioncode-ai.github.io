@@ -72,7 +72,7 @@ for (const [dev, w, h, mobile] of [['desktop', 1440, 900, false], ['phone', 390,
     const ch = await p.js(`({ arr: __pagerLog.filter(e => 'arrive' in e), on: document.querySelectorAll('.bc-msgs .m.on').length, all: document.querySelectorAll('.bc-msgs .m').length, big: parseFloat(getComputedStyle(document.querySelector('.bc-msgs .m.on p')).fontSize) })`)
     ok(`${tag}: the chat leafs message by message in order, none skipped, large type`, inOrder(ch.arr) && ch.on >= 4 && ch.on <= ch.all && ch.big >= (mobile ? 18 : 22), { arrivals: ch.arr.map(a => a.arrive), on: ch.on, big: ch.big })
     // on into the comic: panels in order, at most one per gesture
-    await p.js(`window.__pager.go(window.__pagerStops.findIndex(s => s.el && s.el.id === 'p1'))`); await sleep(2500)
+    await p.js(`window.__pager.go(window.__pager.list().findIndex(s => s.el && s.el.id === 'p1'))`); await sleep(2500)
     await p.js('__pagerLog.length = 0')
     for (let k = 0; k < 5; k++) { await gesture(p, mobile); await sleep(1500) }
     await sleep(2500)

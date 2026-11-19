@@ -102,7 +102,7 @@ const pager = reduce ? null : mountPager({
   onWaitEnd: () => holdBar.classList.remove('on'),
   onBlocked: () => { if (after.hidden) { bunny.classList.remove('nudge'); void bunny.offsetWidth; bunny.classList.add('nudge') } },
 })
-if (params.has('debug')) window.__pager = pager  // checks only
+if (params.has('debug') || window.__pagerLog) window.__pager = pager  // checks only (a test sets __pagerLog)
 // The rail follows a reader who scrolls by hand too (the scrollbar, a reduced-motion reader).
 const railIo = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const i = panels.indexOf(e.target); if (i >= 0) rail.set(i) } }), { threshold: 0.6 })
 panels.forEach(p => railIo.observe(p))
@@ -199,6 +199,14 @@ else if (preset === 'blue') awake.open()
 
 // The sticky button steps aside while the end itself is on screen.
 new IntersectionObserver(([e]) => sticky.classList.toggle('away', e.isIntersecting)).observe($('#final'))
+
+// the chat also follows plain scroll events: a page in a background or low-power tab gets few animation frames
+const chatByScroll = () => {
+  if (after.hidden || reduce) return
+  const r = chat.getBoundingClientRect()
+  if (r.bottom > 0 && r.top < innerHeight) showMsgs(clamp(-r.top / chatTravel()) + 0.001)
+}
+addEventListener('scroll', chatByScroll, { passive: true })
 
 if (reduce) {
   root.classList.add('calm')
