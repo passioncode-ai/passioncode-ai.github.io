@@ -1,6 +1,6 @@
 # SITE-075: the white rabbit and the organization's first offer
 
-Status: built and checked locally; deploy and live evidence in section 6. Backlog SITE-075 (and SITE-076, the asset swap).
+Status: live since 2026-11-19 13:45 UTC (PR #172, squash `0a54db4c`; Worker version `332d8af6-33f3-4ba2-b8a1-8416a0068ae0`). Backlog SITE-075 (and SITE-076, the asset swap).
 
 ## Order
 
@@ -90,4 +90,19 @@ Copylot spend: about USD 0.43 (nine jobs, USD 0.037 to 0.062 each). The judge ca
 
 ## 6. Deploy and live evidence
 
-Filled after the deploy.
+- Merge: PR https://github.com/passioncode-ai/passioncode-ai.github.io/pull/172 (its `check` job passed in 37 s), squash
+  `0a54db4c` on `main`.
+- Deploy: `use_secret.py run --env prod passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npm run deploy` from `main`
+  `0a54db4c`: `npm run check` and `npm run build` inside it passed; 33 files uploaded (477 already there); Worker version
+  `332d8af6-33f3-4ba2-b8a1-8416a0068ae0`.
+- Live links, read with curl: `/`, `/ru/`, `/ja/` carry the hero button in the page's language with `?lang=<lang>` and the
+  rabbit inside it; `/business/` and `/ru/business/` offer the assessment before `#request`; `/start/` offers the
+  assessment before /business/; `/assets/rabbit.js` answers.
+- Browser readback of the live site (Playwright WebKit) at 1440 x 900 and 390 x 844 in en and ru: the rabbit hopped in and
+  sat on the button, no horizontal overflow, the button did not move, a click on the seated rabbit opened
+  `https://assessment.passioncode.ai/?lang=en` and `?lang=ru` (intercepted, not followed); reduced motion: seated at once;
+  forced right to left: seated at the button's left end. On the phone the rabbit crosses from the left edge and turns to face
+  the label at the end (computed transform read every 0.5 s: `matrix(-1, ...)` while it travels right, none after it sits).
+- Analytics in growth (`growth.analytics.events.list`, app `passioncode-site`, production, 13:40 to 15:00 UTC, as of
+  13:48:57Z): `rabbit_landed` 7 (`motion` hop and still, `lang` en and ru), `cta_click` 4 (`location` rabbit, `target`
+  assessment), `page_view` 7 on home. These are the agent's own checks, not visitors.
