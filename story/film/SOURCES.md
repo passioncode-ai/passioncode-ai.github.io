@@ -1,4 +1,56 @@
-# Film «Пробуждение» / «Awakening»: sources, picks and delivery notes (SITE-068 v5)
+# Film «Пробуждение» / «Awakening»: sources, picks and delivery notes
+
+## v7 (2026-11-19): one office, one cast, the new ending
+
+The operator (2026-11-19, verbatim excerpts): «в конце вот эта сцена с офисом и надо ее перерендерить там типа офис один
+потом морфеус появляется где-то в другом месте уже а морфеус который еще там перед этим мультяшный он вообще какой-то
+другого стиля потерянный ... эффект матрицы очень крутой вот этот кадр с переходом оставляем ... морфеус пусть сидит в
+кресле ... встает там типа из-за стола подходит типа и вот протягивает две таблетки он уже типа такой в пиджачке
+аккуратненький чистенький ... синхронизацию по персонажам по месту». Ordered «to the end»: every pick is the agent's,
+checked by two vision models (`gemini-3.1-pro-preview`, `kimi-k3.1-pro`), `claude-sonnet-5.5` on a split; every verdict
+is in `v7-verdicts.jsonl` (label, candidates, each model's pick, scores and named defects).
+
+Cause of the drift: `blender-previz` takes no references, so each shot redrew the office and the hero from words. v7
+builds the references first and draws every drifting shot from them (shot table `shots.py`, `SHOTS_V7`; the v5 table
+stays as `SHOTS` and `shots-v5.json`). All media in Asset Foundry on the Studio, project `passioncode-site`, keys
+`passioncode-site/film-awakening-v7/*`; files in `~/DATA/_media/passioncode-site/film-v7/` on the Studio.
+
+| Step | Recipe | Foundry jobs | Picks |
+|---|---|---|---|
+| References: office, director, agent, mentor | `scene-pack-refs` | `job_01M7SYPF1CWC49E33SHG1NQ7YZ`, `job_01M7SYPJX421SSCTV9A5136P01`, `job_01M7SYPP6Y57VPSY87BXEYXRR3`, `job_01M7SYPTF9Z12XZQWSP8KKW1C0` | office 1 of 3 (three-way split, summed scores 22/24/21), director 2 of 3, agent 0 of 2, mentor 2 of 3 |
+| First frames 03 to 13, ending key frames 16, 17 | `scene-pack-refs` | `job_01M7SZE43DY8SDNR3G4CM1EPC0` (03-06), `job_01M7SZE71C64N58HPQRHEFHPMG` (07-09), `job_01M7SZDFRJQC37073YDSF64SJ6` (10), `job_01M7SZDK047BCA2M2BNR8E20DK` (11), `job_01M7SZDNTBGS855A969JNMCMXS` (12), `job_01M7SZDRNYJ13DR7ET7W99XMSP` (13), `job_01M7SZDVMYAE9VRCVNP1T3ZB94` (16, 17 v1), `job_01M7T1JFKJWYD82H90VHZ63QDG` (17 v7.1) | two takes each; see `v7-verdicts.jsonl` (`frame-*`) |
+| Last frames (from the picked first frame) | `scene-pack-refs` | `job_01M7T05YEXCM5X7KS28CEY824H` ... `job_01M7T06SWJZDXAYSFRQ36BBH1T`, `job_01M7T1XD37K4PVSHVXTJS7QE96` (18 v2) | `end-*` |
+| Clips | `video-from-frames` (first and last frame) | 03 `job_01M7T0SJ8MHV3K4G7KT7MGQ13P`, 04 `job_01M7T0QZSR2KNTW3TM97R6QD3X`, 05 `job_01M7T0RADPH56V0P2KTXS4XPZA`, 06 `job_01M7T0RJNZ0JND8FZKYZQTJAYQ`, 07 `job_01M7T0RNXPKQW0HZY6NS5WFXPH`, 08 `job_01M7T0RRWYRP15JS5GQBJJ26RM`, 09 `job_01M7T0RVSV4806TGBYVP5QWBP1`, 10 `job_01M7T0RYQR1HRF8W2505Y8RMSR`, 12 `job_01M7T0S1RR8K9B6WHRYGYDPFJ7`, 13 `job_01M7T0S52RTAW8RVCAHBWVCQ58`, 16 `job_01M7T072Z325KTJCVE2VZ9QJAF`, 17 `job_01M7T1XXTGZ6SV9DSFJS8QZV16`, 18 `job_01M7T22K0PQGBVK11YAYASPXTW` | takes: 03 0, 04 1, 05 1, 06 1, 07 0, 08 1, 09 0, 10 1, 12 1, 13 1, 16 1, 17 1, 18 1 (`clip-*`) |
+
+Kept from v5: 01, 02 (first person at the desk), 11 (both redrawn agent frames came out magenta; both judges kept the v5
+frame, 10 and 9 of 10), 14 (the door) and 15 with the Matrix glitch into the future office, exactly as they were.
+
+The ending (16, 17, 18) is in shot 15's own office: 16 starts on shot 15's frame at 5.95 s, where the cut leaves it, and
+turns to the side wall, where the mentor sits at an oak desk; in 17 he rises, walks round the desk and holds out a red
+and a blue capsule; 18 is a 2.2 s push-in (both 5 s takes swelled the palms toward the end, judges: «unnaturally swollen,
+large, and cartoonish»). 17 was redrawn once: its first last frame looked at the window wall and both takes cross-faded
+through the desk; the v7.1 last frame keeps 16's camera direction. The mentor's line starts 3.3 s into 17, as his hands
+open. The mentor is an original character drawn from his own reference sheet: bald, a short trimmed grey beard, small
+round dark glasses, a charcoal suit, a white shirt open at the collar with no tie, a green pocket square; no prompt names a
+film or an actor. «Capsule» is the word in the prompts (moderation refused «pill» in v5).
+
+Check: a contact sheet of the RU cut (3 frames a shot) read by both judges, then a second round on 20 frames of the ending
+and 10 of shot 11: no blocking defect by two of three models (Sonnet named the second desk the camera finds, which is the
+operator's «где-то он поворачивается»; round one's «agent appears» in 11 is that shot's peek). Mix: RU -21.9 LUFS,
+peak -1.9 dBFS; EN -22.5 LUFS, peak -1.6 dBFS. Files: 15.2 MB each, under the 25 MiB asset limit; 83.7 s.
+
+Cost (Foundry ledger, the 39 v7 jobs): USD 53.06, of it about USD 47 the clips; each job has one ledger line in state
+`unknown` (its last operation awaits Foundry's reconciliation).
+
+Recorded in Asset Foundry: traces `op-20261119-film-continuity` and `op-20261119-film-ending-style` (the operator's words,
+the change, the verdict), and board request `a71ddd94` (thread `b1b4cb38`, capability `change.request`) asking a versioned
+film recipe that builds location and character references before any shot and keeps one drawing style per character.
+
+Publication note (rule «Content first, compliance as metadata»): the red and blue choice is still a homage to a famous
+film; the v7 mentor no longer wears the long coat and has a beard, an open collar and a green pocket square, which lowers
+the likeness risk noted for v5 below.
+
+## v5 (2026-11-18)
 
 All media made in Asset Foundry on the Mac Studio, project `passioncode-site`, 2026-11-18; the cut is
 `story/film/cut.py` (shot table `shots.py`, `shots.json`). Ordered «to the end» by the operator (2026-11-18:
