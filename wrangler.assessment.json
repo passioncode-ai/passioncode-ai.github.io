@@ -12,7 +12,8 @@
     "binding": "ASSETS",
     "run_worker_first": [
       "/story/film/*",
-      "/story/comic/audio/*"
+      "/story/comic/audio/*",
+      "/api/*"
     ]
   },
   "routes": [
@@ -23,5 +24,12 @@
   ],
   "observability": {
     "enabled": true
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "passioncode-site",
+      "database_id": "61632ee2-ae1b-453a-a112-18d1025b9c22"
+    }
+  ]
 }

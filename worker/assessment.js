@@ -1,4 +1,8 @@
-// assessment.passioncode.ai: static assets, plus byte ranges for the media under /story/film/ and /story/comic/audio/.
+import { collect } from './analytics.js'
+import { LOCALES } from './i18n.js'
+
+// assessment.passioncode.ai: static assets, plus byte ranges for the media under /story/film/ and /story/comic/audio/,
+// and the site's analytics at /api/e (worker/analytics.js, the same catalogue and sink as passioncode.ai; SITE-068).
 // Static assets answer a Range request with the whole file (measured 2026-11-18: 200 on a cache miss and a hit), and
 // Safari plays no MP4 without 206 while every browser needs one to seek. wrangler.assessment.json runs this Worker
 // first only for those paths; every other request goes straight to the assets.
@@ -16,8 +20,13 @@ export function parseRange (header, size) {
 }
 
 export default {
-  async fetch (request, env) {
+  async fetch (request, env, ctx) {
     const url = new URL(request.url)
+    if (url.pathname === '/api/e') {
+      if (request.method !== 'POST') return new Response(null, { status: 405, headers: { Allow: 'POST' } })
+      if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return new Response(null, { status: 204 })
+      return collect(request, env, ctx, { locales: Object.keys(LOCALES) })
+    }
     if (!/^\/story\/(film|comic\/audio)\//.test(url.pathname)) return env.ASSETS.fetch(request)
     const headers = new Headers(request.headers); headers.delete('range'); headers.delete('if-range')
     const res = await env.ASSETS.fetch(new Request(request.url, { method: request.method === 'HEAD' ? 'GET' : request.method, headers }))

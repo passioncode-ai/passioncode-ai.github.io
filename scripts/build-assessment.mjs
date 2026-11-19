@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const out = join(root, 'dist-assessment')
 const files = [
-  'story/index.html', 'story/story.css', 'story/story.js', 'story/store.js', 'story/field.js', 'story/rain.js', 'story/voice.js', 'story/matrix.css', 'story/ink.css', 'story/v2.css', 'story/v3.css', 'story/cast.js', 'story/comic/comic.css', 'story/comic/v6.css', 'story/comic/comic.js', 'story/comic/sound.js', 'story/comic/pager.js', 'story/comic/rail.js', 'story/voice/script.json', 'story/vendor/scrolly-video.js', 'story/vendor/scrolly-video.LICENSE',
+  'story/index.html', 'story/story.css', 'story/story.js', 'story/store.js', 'story/field.js', 'story/rain.js', 'story/voice.js', 'story/matrix.css', 'story/ink.css', 'story/v2.css', 'story/v3.css', 'story/cast.js', 'story/comic/comic.css', 'story/comic/v6.css', 'story/comic/comic.js', 'story/comic/sound.js', 'story/comic/pager.js', 'story/comic/rail.js', 'story/comic/track.js', 'story/voice/script.json', 'story/vendor/scrolly-video.js', 'story/vendor/scrolly-video.LICENSE',
   'story/film/film.css', 'story/film/film.js', 'story/film/standin.mp4', 'story/film/poster.jpg',
   'design-system/tokens.css', 'assets/passioncode-mark.svg', 'assets/favicon-64.png'
 ]

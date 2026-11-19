@@ -152,3 +152,35 @@ test('SITE-056: every template a page can ask for is a value the Worker accepts,
   assert.deepEqual(clean({ n: 'template_request', p: { page: 'agent-template', template: 'data-room' } }, LOCALES).props, { page: 'agent-template', template: 'data-room' })
   assert.equal(clean({ n: 'template_request', p: { page: 'agent-template', template: 'someone@example.com' } }, LOCALES).props.template, 'other')
 })
+
+test('SITE-068: the story events pass with their closed values, and assessment.passioncode.ai is production', async () => {
+  assert.deepEqual(clean({ n: 'story_choice', p: { page: 'story', pill: 'red', from: 'intro' } }, LOCALES), { name: 'story_choice', props: { page: 'story', pill: 'red', from: 'intro' } })
+  assert.equal(clean({ n: 'story_choice', p: { page: 'story', pill: 'green', from: 'intro' } }, LOCALES), null, 'a pill outside the list drops the event')
+  assert.deepEqual(clean({ n: 'story_film', p: { page: 'story', film: 'backstory', action: 'skip' } }, LOCALES).props, { page: 'story', film: 'backstory', action: 'skip' })
+  assert.deepEqual(clean({ n: 'story_progress', p: { page: 'story', step: 'p11' } }, LOCALES).props, { page: 'story', step: 'p11' })
+  assert.equal(clean({ n: 'story_progress', p: { page: 'story', step: 'p99' } }, LOCALES), null)
+  assert.deepEqual(clean({ n: 'cta_click', p: { page: 'story', location: 'story', target: 'morpheus' } }, LOCALES).props, { page: 'story', location: 'story', target: 'morpheus' })
+  const s = sink()
+  await collect(req({ lang: 'ru', events: [{ n: 'story_choice', p: { page: 'story', pill: 'blue', from: 'film_end' } }] }, {}, 'assessment.passioncode.ai'), env(), null, { locales: LOCALES, fetchImpl: s.fetch })
+  assert.equal(s.calls[0].body[0].props.environment, 'production')
+  assert.equal(s.calls[0].body[0].systemProps.isDebug, false)
+})
+
+test('SITE-068: the assessment Worker routes /api/e to the same collector: POST only, same origin, 204', async () => {
+  const { default: worker } = await import('../worker/assessment.js')
+  const assets = { fetch: async () => new Response('asset', { status: 200 }) }
+  const s = sink()
+  const realFetch = globalThis.fetch
+  globalThis.fetch = s.fetch
+  try {
+    const ok = await worker.fetch(req({ lang: 'en', events: [{ n: 'page_view', p: { page: 'story' } }] }, {}, 'assessment.passioncode.ai'), { ...env(), ASSETS: assets }, null)
+    assert.equal(ok.status, 204)
+    assert.equal(s.calls.length, 1, 'one batch to the sink')
+    assert.equal(s.calls[0].body[0].props.page, 'story')
+    const get = await worker.fetch(new Request('https://assessment.passioncode.ai/api/e'), { ...env(), ASSETS: assets }, null)
+    assert.equal(get.status, 405)
+    const foreign = await worker.fetch(req({ events: [{ n: 'page_view', p: { page: 'story' } }] }, { origin: 'https://evil.example' }, 'assessment.passioncode.ai'), { ...env(), ASSETS: assets }, null)
+    assert.equal(foreign.status, 204)
+    assert.equal(s.calls.length, 1, 'a foreign origin sends nothing')
+  } finally { globalThis.fetch = realFetch }
+})

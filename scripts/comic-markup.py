@@ -25,15 +25,18 @@ VO = {"I know why the launch slips. Want to see?": 'a0', 'Your choice.': 'choice
       "Let's look inside. It builds itself from blocks.": 'matrix',
       'Revenue grows where agents work; costs fall where people waited.': 'pnl',
       'Here is your business now. Every agent, task and cost on one screen.': 'dash', 'Which pill do you take?': 'final'}
+# v6.1 (the operator, 2026-11-19: «голос сео и агента смита в комиксе нет»): the other characters speak too
+CAST_VO = {'Where work needs hands, we clone.': 'k-smith', 'The Matrix folds back. I am out.': 'k-neo'}
 def vo(en):
-    return f' data-vo="{VO[en]}"' if en in VO else ''
+    key = VO.get(en) or CAST_VO.get(en)
+    return f' data-vo="{key}"' if key else ''
 
 def say(who, en, ru, side='l', name=None):
     face = av(who) if who in ('morpheus', 'trinity', 'neo', 'smith', 'architect') else f'<i class="face">{who[0].upper()}</i>'
     names = {'Morpheus': 'Морфеус', 'Trinity': 'Тринити', 'Neo': 'Нео', 'Smith': 'Смит', 'Architect': 'Архитектор', 'CEO': 'CEO',
           'Smith · Marketing': 'Смит · маркетинг', 'Smith · Growth': 'Смит · рост'}
     label = f'<b class="who">{t(name, names.get(name, name))}</b>' if name else ''
-    return f'<div class="say say-{side} who-{who}"{vo(en) if who == "morpheus" else ""}>{face}<div class="balloon">{label}<p>{t(en, ru)}</p></div></div>'
+    return f'<div class="say say-{side} who-{who}"{vo(en)}>{face}<div class="balloon">{label}<p>{t(en, ru)}</p></div></div>'
 
 # ---- act 0: the company chat in the centre, Morpheus joins, rises, offers the pills -------------------------------
 CHAT = [
@@ -368,7 +371,7 @@ def main():
 </main>
 {final6()}
 </div>
-<a class="sticky-cta" id="sticky-cta" href="#final" hidden>{tt(S6['final']['write'])}</a>
+<a class="sticky-cta" id="sticky-cta" data-tg href="{TG}" target="_blank" rel="noopener" hidden>{tt(S6['final']['write'])}</a>
 <footer class="foot"><a href="https://passioncode.ai/">passioncode.ai</a> · {t('demo, not linked from the site', 'демо, не связано с сайтом')}</footer>
 <script type="module" src="/story/comic/comic.js"></script>
 </body>

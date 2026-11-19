@@ -147,8 +147,8 @@ export function mountSound({ reduce }) {
     panel(el) {
       sfx('seam-glitch', 0.22)
       if (el.querySelector('.clones')) [0, 1, 2, 3].forEach(i => setTimeout(() => sfx('clone-click', 0.2), 300 + i * 90))
-      const line = el.querySelector('[data-vo]')
-      if (line) sayLater(line.dataset.vo, 500)
+      // every speaker in the frame, in reading order: the queue plays them one after another (v6.1)
+      el.querySelectorAll('[data-vo]').forEach((line, i) => sayLater(line.dataset.vo, 500 + i * 50))
     },
     message(el) { sfx('msg-tick', 0.25); if (el.dataset.vo) sayLater(el.dataset.vo, 250) },
     typing() { sfx('typing', 0.15) },

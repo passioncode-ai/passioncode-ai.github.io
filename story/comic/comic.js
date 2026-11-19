@@ -10,6 +10,7 @@ import { mountRain } from '../rain.js'
 import { mountSound } from './sound.js'
 import { mountPager } from './pager.js'
 import { mountRail, RABBIT } from './rail.js'
+import { track } from './track.js'
 
 const root = document.documentElement
 const $ = s => document.querySelector(s)
@@ -20,6 +21,7 @@ mountCast()
 const sound = mountSound({ reduce })
 requestAnimationFrame(() => root.classList.add('ready'))
 root.classList.add('intro-state')
+track('page_view', {}, 'view')
 
 // Language: ?lang=, then the saved choice, then the browser; ten languages (scripts/comic-i18n.py), the menu switches.
 // Morpheus's chat opens with the reader's language, so the bot greets them in it.
@@ -61,7 +63,11 @@ if (reduce) act0.classList.add('hopped', 'offered')
 else { setTimeout(() => act0.classList.add('hopped'), 350); setTimeout(offer, 2000) }
 
 // Frames revealed once, as they come into view (and on arrival, when the pager brings them): the line in them speaks.
-const reveal = el => { if (el && !el.classList.contains('in')) { el.classList.add('in'); sound.panel(el) } }
+const stepOf = el => (el?.id === 'final' ? 'final' : /^p\d+$/.test(el?.id || '') ? el.id : null)
+const reveal = el => {
+  if (el && !el.classList.contains('in')) { el.classList.add('in'); sound.panel(el) }
+  const step = stepOf(el); if (step) track('story_progress', { step }, 'step-' + step)
+}
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target) } }), { threshold: 0.55 })
 document.querySelectorAll('.panel, .final-choice').forEach(el => io.observe(el))
 
@@ -109,6 +115,7 @@ panels.forEach(p => railIo.observe(p))
 
 // Red: into the story. The chat, the comic and the end appear; the page leafs to the first message.
 const enterMatrix = () => {
+  track('story_progress', { step: 'chat' }, 'step-chat')
   after.hidden = false
   sticky.hidden = false
   root.classList.remove('intro-state')
@@ -127,7 +134,7 @@ const mountFilm = (sec, onEnd) => {
   const video = sec.querySelector('video'), subs = [...sec.querySelectorAll('.film-subs li')]
   const src = () => video.dataset[root.dataset.lang === 'ru' ? 'srcRu' : 'srcEn']
   video.addEventListener('timeupdate', () => subs.forEach(li => li.classList.toggle('on', video.currentTime >= +li.dataset.from && video.currentTime < +li.dataset.to)))
-  video.addEventListener('ended', onEnd)
+  video.addEventListener('ended', () => { track('story_film', { film: sec.dataset.kind, action: 'end' }); onEnd() })
   const open = () => {
     if (video.getAttribute('src') !== src()) video.src = src()
     video.muted = !sound.live()
@@ -142,6 +149,7 @@ const mountFilm = (sec, onEnd) => {
     } catch {}
     video.preload = 'auto'; video.currentTime = 0
     video.play().catch(() => { video.controls = true })  // a browser that refuses to play shows the player's own button
+    track('story_film', { film: sec.dataset.kind, action: 'start' })
   }
   const close = () => {
     video.pause()
@@ -162,27 +170,31 @@ awake.sec.addEventListener('click', e => {
   if (!b) return
   const which = b.dataset.film
   if (which === 'blue') {        // wakes at the desk again: the film plays from the start
+    track('story_choice', { pill: 'blue', from: 'film_end' }); track('story_film', { film: 'awakening', action: 'loop' })
     sound.forget('again')
     awake.sec.querySelector('.film-end').hidden = true; awake.video.currentTime = 0; awake.video.play().catch(() => {})
   } else if (which === 'red') {  // goes on: the backstory, then the chat
+    track('story_choice', { pill: 'red', from: 'film_end' })
     awake.close(); openBackstory()
   } else {                        // closed: back to the pills
     awake.close(); bunny.classList.remove('jump-blue'); pager?.go(0)
   }
 })
-story.sec.addEventListener('click', e => { if (e.target.closest('[data-film="skip"]')) { story.close(); enterMatrix() } })
+const skipBackstory = () => { track('story_film', { film: 'backstory', action: 'skip' }); story.close(); enterMatrix() }
+story.sec.addEventListener('click', e => { if (e.target.closest('[data-film="skip"]')) skipBackstory() })
 addEventListener('keydown', e => {
   if (e.key !== 'Escape') return
-  if (story.isOpen()) { story.close(); enterMatrix() } else if (awake.isOpen()) { awake.close(); bunny.classList.remove('jump-blue'); pager?.go(0) }
+  if (story.isOpen()) skipBackstory(); else if (awake.isOpen()) { awake.close(); bunny.classList.remove('jump-blue'); pager?.go(0) }
 })
 // leaving full screen during a film: the backstory goes on into the chat, the awakening closes back to the pills
 document.addEventListener('fullscreenchange', () => {
   if (document.fullscreenElement) return
-  if (story.isOpen()) { story.close(); enterMatrix() }
+  if (story.isOpen()) skipBackstory()
   else if (awake.isOpen() && awake.sec.querySelector('.film-end').hidden && !awake.video.ended) { awake.close(); bunny.classList.remove('jump-blue') }
 })
 
 const choose = which => {
+  track('story_choice', { pill: which, from: 'intro' })
   if (which === 'blue') { if (!reduce) bunny.classList.add('jump-blue'); awake.open() } else openBackstory()
 }
 act0.querySelectorAll('[data-pill]').forEach(b => b.addEventListener('click', () => choose(b.dataset.pill)))
@@ -196,6 +208,14 @@ if (preset === 'red') {
   })))
 } else if (preset === 'backstory') story.open()
 else if (preset === 'blue') awake.open()
+
+// The way out: Morpheus's chat in Telegram (the end's button and the sticky one), the author's X and LinkedIn.
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href]')
+  if (!a) return
+  const target = a.matches('[data-tg]') ? 'morpheus' : a.matches('.fl.x') ? 'x' : a.matches('.fl.li') ? 'linkedin' : null
+  if (target) track('cta_click', { location: 'story', target })
+}, true)
 
 // The sticky button steps aside while the end itself is on screen.
 new IntersectionObserver(([e]) => sticky.classList.toggle('away', e.isIntersecting)).observe($('#final'))

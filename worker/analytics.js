@@ -13,15 +13,24 @@ export const MAX_EVENTS = 20
 const PAGES = ['home', 'vision', 'start', 'business', 'business-thanks', 'privacy', 'switchboard', 'switchboard-agents',
   'fabric', 'fabric-agents', 'inbox', 'dashboards', 'observatory', 'design-system', 'not-found',
   // SITE-056: the agent templates, guides and blog
-  'agents', 'agent-template', 'guides', 'guide', 'blog', 'blog-post', 'other']
+  'agents', 'agent-template', 'guides', 'guide', 'blog', 'blog-post',
+  // SITE-068: the story at assessment.passioncode.ai
+  'story', 'other']
 const LOCATIONS = ['header', 'hero', 'video', 'problem', 'shift', 'fabric', 'system', 'agents', 'grow', 'doors', 'products',
-  'source', 'faq', 'about', 'investors', 'footer', 'start', 'business', 'request', 'marketplace', 'template', 'guide', 'blog', 'other']
+  'source', 'faq', 'about', 'investors', 'footer', 'start', 'business', 'request', 'marketplace', 'template', 'guide', 'blog', 'story', 'other']
 const TARGETS = ['business', 'start', 'setup', 'github', 'investors', 'mail', 'fabric', 'products', 'vision', 'switchboard',
-  'dashboards', 'observatory', 'inbox', 'x', 'download', 'agents', 'guides', 'blog', 'other']
+  'dashboards', 'observatory', 'inbox', 'x', 'download', 'agents', 'guides', 'blog', 'morpheus', 'linkedin', 'other']
 // SITE-056: the agent templates (scripts/site-content.mjs), by their public slug.
 const TEMPLATES = ['company-assessment', 'organization-administrator', 'data-room', 'host-operations', 'messenger-gateway', 'sales-and-leads', 'marketing-analyst', 'growth-analytics', 'search-traffic', 'app-store-publisher', 'brand-and-content', 'support-answerer', 'chat-assistant', 'telegram-product-bot', 'customer-listening', 'media-production', 'research', 'web-quality-monitor', 'other']
 const PERCENTS = ['0', '25', '50', '100']
-const LEAD_PATHS = ['agent', 'form']
+const LEAD_PATHS = ['agent', 'form', 'telegram']
+// SITE-068 (the operator, 2026-11-19: «переход за кроликом и переход потом по сайту и в бота надо трекать»): the story's
+// steps. A pill chosen at the intro or at the film's end, a film started, ended, skipped or looped, each frame reached.
+const PILLS = ['red', 'blue']
+const PILL_FROM = ['intro', 'film_end']
+const FILMS = ['awakening', 'backstory']
+const FILM_ACTIONS = ['start', 'end', 'skip', 'loop']
+const STORY_STEPS = ['chat', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 'final']
 
 // Each event and the closed values of each property. A value outside its list is sent as `other` (or the event is
 // dropped where no `other` exists), never as written.
@@ -33,8 +42,13 @@ export const EVENTS = {
   lead_started: { page: PAGES },
   lead_sent: { page: PAGES, path: LEAD_PATHS },
   lang_switch: { page: PAGES },
-  template_request: { page: PAGES, template: TEMPLATES }
+  template_request: { page: PAGES, template: TEMPLATES },
+  story_choice: { page: PAGES, pill: PILLS, from: PILL_FROM },
+  story_film: { page: PAGES, film: FILMS, action: FILM_ACTIONS },
+  story_progress: { page: PAGES, step: STORY_STEPS }
 }
+// The hosts whose events are production; any other host (a preview, a test) is sandbox.
+const PRODUCTION_HOSTS = ['passioncode.ai', 'assessment.passioncode.ai']
 
 const enc = new TextEncoder()
 const hex = bytes => [...bytes].map(b => b.toString(16).padStart(2, '0')).join('')
@@ -105,7 +119,7 @@ export async function collect (request, env, ctx, { locales, now = new Date(), f
   const events = (Array.isArray(body?.events) ? body.events : []).slice(0, MAX_EVENTS).map(e => clean(e, locales)).filter(Boolean)
   if (!events.length || !env.ANALYTICS_APP_KEY || !env.DB) return none
   const url = new URL(request.url)
-  const environment = url.hostname === 'passioncode.ai' ? 'production' : 'sandbox'
+  const environment = PRODUCTION_HOSTS.includes(url.hostname) ? 'production' : 'sandbox'
   const ip = request.headers.get('cf-connecting-ip') || ''
   const ua = request.headers.get('user-agent') || ''
   const send = (async () => {
