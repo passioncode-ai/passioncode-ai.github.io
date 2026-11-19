@@ -74,7 +74,8 @@ test('the home video: each language takes its own poster, video and captions fil
   for (const src of ['poster="/assets/video/home.jpg"', 'src="/assets/video/home.webm"', 'src="/assets/video/home.mp4"', 'src="/assets/video/home.vtt"', 'srclang="en"']) assert.ok(home.includes(src), `home: ${src}`)
   const ru = read('ru/index.html')
   for (const src of ['poster="/assets/video/home-ru.jpg"', 'src="/assets/video/home-ru.webm"', 'src="/assets/video/home-ru.mp4"', 'src="/assets/video/home-ru.vtt"', 'srclang="ru"']) assert.ok(ru.includes(src), `ru: ${src}`)
-  for (const locale of Object.keys(LANG_TAGS).filter(l => !['en', 'ru'].includes(l))) {
+  // The site's languages only: a scoped language (SITE-070) has no home page.
+  for (const locale of LOCALES.filter(l => !['en', 'ru'].includes(l))) {
     const page = read(`${locale}/index.html`)
     assert.ok(page.includes('src="/assets/video/home.mp4"'), `${locale}: the English cut`)
     // Captions in the page's language where that file exists; until then the English captions, marked English.
@@ -390,5 +391,33 @@ test('the agent prompt is published as plain text in every language, equal to th
       assert.notEqual(text, english, `${file} is in its own language`)
       assert.ok(text.includes(`https://passioncode.ai/${locale}/privacy/`), `${file} links that language's privacy notice`)
     }
+  }
+})
+
+// SITE-070: languages published for some pages only (i18n/scoped-locales.json).
+test('a scoped language has only its pages, and every version of such a page names all 19 languages', async () => {
+  const { SCOPED_LOCALES, SCOPED_SOURCE_PAGES } = await import('./pages.mjs')
+  for (const page of SCOPED_SOURCE_PAGES) {
+    const versions = [...LOCALES, ...SCOPED_LOCALES]
+    const expected = [...versions.map(l => `hreflang="${LANG_TAGS[l]}" href="https://passioncode.ai${l === 'en' ? '' : `/${l}`}/${page.replace(/index\.html$/, '')}"`), 'hreflang="x-default"']
+    for (const locale of versions) {
+      const html = read(locale === 'en' ? page : `${locale}/${page}`)
+      for (const link of expected) assert.ok(html.includes(link), `${locale}/${page}: ${link}`)
+      assert.match(html, new RegExp(`<html lang="${LANG_TAGS[locale]}"${locale === 'ar' ? ' dir="rtl"' : ''}>`))
+      // The button to Morpheus: Russian on the Russian page, English everywhere else (the bot speaks those two).
+      const bot = /https:\/\/t\.me\/MorpheusPMBot\?start=lp_[a-z0-9-]+_([a-z]+)"/.exec(html)
+      if (bot) assert.equal(bot[1], locale === 'ru' ? 'ru' : 'en', `${locale}/${page}: the bot's language`)
+      if (SCOPED_LOCALES.includes(locale)) {
+        // A link to a page the scoped language does not have stays on the English page.
+        assert.ok(!html.includes(`href="/${locale}/guides/free-assessment/"`), `${locale}: no link to a page it does not have`)
+        assert.ok(html.includes('href="/guides/free-assessment/"'), `${locale}: the English guide instead`)
+        assert.match(html, /"inLanguage":"[a-zA-Z-]+"|"inLanguage": "[a-zA-Z-]+"/)
+      }
+    }
+  }
+  // Pages a scoped language does not have neither list it nor exist under its prefix.
+  for (const locale of SCOPED_LOCALES) {
+    assert.ok(!read('index.html').includes(`hreflang="${LANG_TAGS[locale]}"`), `home lists ${locale}`)
+    assert.ok(!existsSync(resolve(import.meta.dirname, '..', `${locale}/index.html`)), `${locale}/index.html exists`)
   }
 })

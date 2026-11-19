@@ -32,6 +32,18 @@
     "From your request to an agent": "От вашего запроса к агенту",
     "Where it runs": "Где он работает",
     "What stays yours": "Что остаётся вашим",
-    "Agents that get better": "Агенты, которые становятся лучше"
+    "Agents that get better": "Агенты, которые становятся лучше",
+    "Why your release slips again: what a team assessment shows": "Почему релиз снова сдвигается: что показывает оценка команды",
+    "November 19, 2026": "19 ноября 2026 года",
+    "A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.": "Релиз выходит, только когда готово не только то, что внутри кода. Оценка команды читает, как работа двигалась последние 90 дней, и показывает, где она ждала. Вы устраняете ожидание, а не подгоняете команду.",
+    "For founders whose release dates keep moving and who want to see where the work waits.": "Для основателей, у которых сроки релиза постоянно сдвигаются и которые хотят увидеть, где работа простаивает.",
+    "Where a release really waits": "Где на самом деле ждёт релиз",
+    "What the assessment reads": "Что читает оценка",
+    "Three things it usually finds": "Три вещи, которые она обычно находит",
+    "Why a better plan alone does not fix it": "Почему одного хорошего плана мало",
+    "What changes when an agent runs the rhythm": "Что меняется, когда ритм ведёт агент",
+    "Who decides": "Кто принимает решения",
+    "How to start": "Как начать",
+    "Sources and method": "Источники и метод"
   }
 }

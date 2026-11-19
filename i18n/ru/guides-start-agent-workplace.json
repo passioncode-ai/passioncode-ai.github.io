@@ -19,6 +19,7 @@
     "Build the next agent the same way and give it the same project in Fabric. Agents connected to Fabric share one project’s board, memory and hand-offs, so one picks up where the other stopped.": "Соберите следующего агента тем же способом и подключите его к тому же проекту в Fabric. У агентов, подключённых к Fabric, общие доска, память и передачи работы одного проекта, поэтому один продолжает с того места, где остановился другой.",
     "If something does not work": "Если что-то не работает",
     "Run the command again: on a computer that is already set up, it checks everything, repairs what is wrong and shows what changed. Each product page lists its requirements and limits.": "Выполните команду ещё раз: на уже настроенном компьютере она всё проверит, исправит то, что не так, и покажет, что изменилось. На странице каждого продукта указаны его требования и ограничения.",
-    "Set it up now": "Настроить сейчас"
+    "Set it up now": "Настроить сейчас",
+    "Why your release slips again: what a team assessment shows": "Почему релиз снова сдвигается: что показывает оценка команды"
   }
 }

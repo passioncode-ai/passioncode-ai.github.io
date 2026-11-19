@@ -64,6 +64,32 @@ Dla Twojej firmy: przeczytaj, jak działa bezpłatna tygodniowa ocena, a potem, 
 
 ## Poradniki
 
+Poradnik · 19 listopada 2026
+
+### Dlaczego Twoje wydanie znów się opóźnia: co pokazuje ocena zespołu
+
+Wydanie jest gotowe dopiero wtedy, gdy gotowe jest też wszystko wokół kodu. Ocena zespołu analizuje, jak naprawdę przebiegała praca w ostatnich 90 dniach, i pokazuje, gdzie czekała. Usuwasz więc przyczynę czekania, zamiast poganiać zespół.
+
+Dla założycieli, którym terminy wydań ciągle się przesuwają i którzy chcą zobaczyć, gdzie praca czeka.
+
+W tym poradniku
+
+Gdzie naprawdę czeka wydanie
+
+Co analizuje ocena
+
+Trzy rzeczy, które zwykle znajduje
+
+Dlaczego lepszy plan sam nie wystarczy
+
+Co się zmienia, gdy rytm pracy prowadzi agent
+
+Kto decyduje
+
+Jak zacząć
+
+Źródła i metoda
+
 Poradnik · 8 listopada 2026
 
 ### Uruchom swoje miejsce pracy z agentami w 20 minut

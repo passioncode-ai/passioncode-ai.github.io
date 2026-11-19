@@ -96,6 +96,8 @@ GUIDES
 
 ## More guides
 
+Why your release slips again: what a team assessment shows
+
 How the free one-week assessment works
 
 How agent templates become your agents

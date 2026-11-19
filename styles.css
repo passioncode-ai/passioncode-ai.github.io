@@ -1241,7 +1241,7 @@ html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -w
 .related-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
 .related-list a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; display: inline-flex; min-height: 24px; align-items: center; }
 .related-templates .section-heading { margin-bottom: 28px; }
-.article-page ul { padding-left: 1.2em; }
+.article-page ul { padding-inline-start: 1.2em; }
 .article-page .availability { margin: 32px 0 0; color: var(--gold); }
 .article-page .button { text-decoration: none; }
 .article-page .button-primary { color: var(--pc-on-accent); }
@@ -1264,3 +1264,7 @@ html:lang(de) :is(h1, h2, h3), html:lang(pl) :is(h1, h2, h3) { hyphens: auto; -w
 .path-card p.hub-topics-title { margin: auto 0 8px; color: var(--ink-muted); font-size: var(--pc-type-meta); letter-spacing: .08em; text-transform: uppercase; }
 .hub-topics { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
 .hub-byline { margin: -18px 0 26px; }
+
+/* SITE-070: right-to-left guides (Arabic, i18n/scoped-locales.json `dir`). The article list already uses a logical
+   padding; the arrow of a button points the reading way. */
+[dir="rtl"] .button span[aria-hidden="true"] { display: inline-block; transform: scaleX(-1); }

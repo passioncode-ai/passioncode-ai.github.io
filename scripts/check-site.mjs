@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process'
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { AGPL_LICENSE_URL, checkSwitchboardPage, releaseFacts } from './switchboard-release.mjs'
-import { PAGES, NOINDEX, SOURCE_PAGES, TRANSLATED_LOCALES } from './pages.mjs'
+import { PAGES, NOINDEX, SCOPED, SCOPED_PAGES, SOURCE_PAGES, TRANSLATED_LOCALES, localesOfPage } from './pages.mjs'
 import { LEAD_OPTIONS } from '../assets/lead-options.js'
 import { alternates, isoDuration, langTag, languageSwitch, LOCALES, mp4Seconds, vttText, loadCatalog, localeOfFile, localizeUrl, OG_LOCALES, ORIGIN, pageRoute, prefixOf, sourceFileOf } from './locales.mjs'
 import { liveValue } from '../worker/live.js'
@@ -35,14 +35,17 @@ const ALLOWED_SCRIPTS = new Set(['/assets/site.js', '/assets/business.js'])
 const PRIMARY_NAV = '<nav aria-label="Primary navigation"><a href="/vision/">Vision</a><a href="/start/">For you</a><a href="/business/">For organizations</a><a href="/#products">The tools</a><a href="/#about">About</a></nav>'
 const primaryNav = locale => {
   if (locale === 'en') return PRIMARY_NAV
-  const { common } = loadCatalog(root, locale)
+  const catalog = loadCatalog(root, locale)
+  // A guide-only language (SITE-070) keeps its header strings in its page's catalog.
+  const common = { ...Object.assign({}, ...Object.values(catalog.pages)), ...catalog.common }
   return PRIMARY_NAV.replace(/href="([^"]+)"/g, (_, href) => `href="${localizeUrl(href, locale)}"`).replace(/aria-label="([^"]+)"/, (_, label) => `aria-label="${common[label]}"`).replace(/>([^<]+)</g, (_, text) => `>${common[text]}<`)
 }
 // Each translated language's own assertions (i18n/<locale>/_checks.json): its banned phrases and
 // the disclosures its pages must keep — a translation may not soften a limitation.
 const CHECKS = Object.fromEntries(TRANSLATED_LOCALES.map(locale => [locale, JSON.parse(read(`i18n/${locale}/_checks.json`))]))
 
-for (const file of PAGES) {
+// SITE-070: the pages of the guide-only languages (i18n/scoped-locales.json) are checked like every page.
+for (const file of [...PAGES, ...SCOPED_PAGES]) {
   const html = read(file)
   const route = file.replace(/index.html$/, '')
   const locale = localeOfFile(file)
@@ -50,20 +53,21 @@ for (const file of PAGES) {
   const prefix = prefixOf(locale)
   assert.equal((html.match(/<h1\b/g) || []).length, 1, `${file}: exactly one h1`)
   assert.ok(html.includes(`rel="canonical" href="https://passioncode.ai/${route}"`), `${file}: canonical`)
-  assert.ok(html.includes(`<html lang="${langTag(locale)}">`), `${file}: <html lang="${langTag(locale)}">`)
+  const dir = SCOPED.locales[locale]?.dir === 'rtl' ? ' dir="rtl"' : ''
+  assert.ok(html.includes(`<html lang="${langTag(locale)}"${dir}>`), `${file}: <html lang="${langTag(locale)}"${dir}>`)
   // Every language version names all of them, English as x-default: the same list on every
   // version, so hreflang is reciprocal. Pages kept out of search carry none.
   const pageAlternates = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m => `${m[1]} ${m[2]}`)
   const expectedAlternates = NOINDEX.has(file) ? [] : alternates(source).map(([l, href]) => `${l} ${href}`)
   assert.deepEqual(pageAlternates, expectedAlternates, `${file}: hreflang alternates`)
-  if (!NOINDEX.has(file)) assert.deepEqual(expectedAlternates.map(a => a.split(' ')[0]), [...LOCALES.map(langTag), 'x-default'], `${file}: every language and x-default`)
+  if (!NOINDEX.has(file)) assert.deepEqual(expectedAlternates.map(a => a.split(' ')[0]), [...localesOfPage(source).map(langTag), 'x-default'], `${file}: every language and x-default`)
   assert.ok(html.includes(`rel="canonical" href="${ORIGIN}${pageRoute(source, locale)}"`), `${file}: canonical in its own language`)
   // One visible switch, leading to the same page in each other language.
   assert.equal((html.match(/class="lang-switch/g) || []).length, 1, `${file}: one language switch`)
   assert.ok(html.includes(languageSwitch(source, locale)), `${file}: the language switch leads to the same page in every other language`)
   if (html.includes('property="og:site_name"')) {
     assert.ok(html.includes(`<meta property="og:locale" content="${OG_LOCALES[locale]}">`), `${file}: og:locale`)
-    for (const l of LOCALES.filter(l => l !== locale)) assert.ok(html.includes(`<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`), `${file}: og:locale:alternate ${l}`)
+    for (const l of localesOfPage(source).filter(l => l !== locale)) assert.ok(html.includes(`<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`), `${file}: og:locale:alternate ${l}`)
   }
   assert.match(html, /<meta name="description" content="[^"]+">/)
   assert.ok(html.includes(NOINDEX.has(file) ? 'content="noindex, follow"' : 'content="index, follow"'), `${file}: robots meta`)
@@ -97,7 +101,7 @@ for (const file of PAGES) {
   assert.ok(!/PolyForm|\bMIT\b/.test(words), `${file}: MIT and PolyForm name only released versions, inside a license-history region`)
   if (locale === 'en') assert.ok(!/AI-native work\b/.test(words), `${file}: the tagline is "AI-native teams"`)
   if (locale === 'en') assert.ok(!/\bseamless|fully autonomous\b/i.test(words), `${file}: banned phrase (docs/brand/terminology.md)`)
-  if (locale !== 'en') for (const banned of CHECKS[locale].banned) assert.ok(!new RegExp(banned, 'iu').test(words), `${file}: banned phrase ${banned} (docs/brand/terminology.md, i18n/${locale}/_checks.json)`)
+  if (locale !== 'en') for (const banned of CHECKS[locale]?.banned ?? []) assert.ok(!new RegExp(banned, 'iu').test(words), `${file}: banned phrase ${banned} (docs/brand/terminology.md, i18n/${locale}/_checks.json)`)
   for (const [, value] of html.matchAll(/(?:href|src|action)="([^"\s]+)"/g)) {
     if (!value.startsWith('/') && !value.startsWith('#')) continue
     const url = new URL(value, `https://passioncode.ai/${route}`)
@@ -111,13 +115,17 @@ for (const file of PAGES) {
   if (source !== 'inbox/index.html') assert.ok(html.includes(primaryNav(locale)), `${file}: primary navigation`)
   assert.equal((html.match(/<footer class="story-footer">/g) || []).length, 1, `${file}: one footer`)
   assert.equal((html.match(/<nav aria-label="[^"]+"><a href="[^"]*\/start\/">/g) || []).length, 1, `${file}: one footer navigation landmark`)
-  for (const path of ['/start/', '/business/', '/privacy/', '/agents/', '/guides/', '/blog/']) assert.ok(html.includes(`<a href="${prefix}${path}">`), `${file}: footer links ${prefix}${path}`)
+  // A guide-only language has no such pages: its footer links lead to the English ones.
+  const linkPrefix = SCOPED.locales[locale] ? '' : prefix
+  for (const path of ['/start/', '/business/', '/privacy/', '/agents/', '/guides/', '/blog/']) assert.ok(html.includes(`<a href="${linkPrefix}${path}">`), `${file}: footer links ${linkPrefix}${path}`)
   // A translated page links to pages in its own language; only the language switch and the
   // hreflang alternates point to the others.
   if (locale !== 'en') {
     for (const [, value] of html.replace(languageSwitch(source, locale), '').replace(/<link rel="alternate"[^>]*>/g, '').matchAll(/\s(?:href|action)="(\/[^"]*)"/g)) {
       const path = value.split(/[?#]/, 1)[0]
-      if (path === '/' || path.endsWith('/')) assert.ok(path.startsWith(`/${locale}/`), `${file}: ${value} leaves the ${locale} site`)
+      // A guide-only language (SITE-070) has only its pages; a link to another page stays on the English one.
+      const own = SCOPED.locales[locale] ? SCOPED.pages.some(p => `/${locale}/${p.replace(/index\.html$/, '')}` === `/${locale}${path}`) || path.startsWith(`/${locale}/`) : true
+      if ((path === '/' || path.endsWith('/')) && own) assert.ok(path.startsWith(`/${locale}/`), `${file}: ${value} leaves the ${locale} site`)
     }
   }
   assert.ok(html.includes('href="https://x.com/sshlg93"'), `${file}: author link`)
@@ -137,14 +145,14 @@ assert.match(css, /@media \(prefers-reduced-motion: reduce\)/)
 assert.match(css, /@media \(prefers-reduced-motion: no-preference\)/)
 assert.ok(!/ease-in[;)\s,]/.test(css.replace(/ease-in-out/g, '')), 'no ease-in in UI motion (motion doctrine)')
 const sitemap = read('sitemap.xml')
-for (const file of PAGES) {
+for (const file of [...PAGES, ...SCOPED_PAGES]) {
   const loc = `<loc>https://passioncode.ai/${file.replace(/index.html$/, '')}</loc>`
   assert.equal(sitemap.includes(loc), !NOINDEX.has(file), `sitemap: ${loc} ${NOINDEX.has(file) ? 'must not be listed' : 'missing'}`)
 }
 // Each listed address names its language versions, as the pages' own hreflang links do.
 for (const block of sitemap.match(/<url>[\s\S]*?<\/url>/g)) {
   const loc = /<loc>([^<]+)<\/loc>/.exec(block)[1]
-  const file = PAGES.find(f => `${ORIGIN}${pageRoute(sourceFileOf(f), localeOfFile(f))}` === loc)
+  const file = [...PAGES, ...SCOPED_PAGES].find(f => `${ORIGIN}${pageRoute(sourceFileOf(f), localeOfFile(f))}` === loc)
   assert.ok(file, `sitemap: ${loc} is not a page`)
   const links = [...block.matchAll(/<xhtml:link rel="alternate" hreflang="([^"]+)" href="([^"]+)"\/>/g)].map(m => `${m[1]} ${m[2]}`)
   assert.deepEqual(links, alternates(sourceFileOf(file)).map(([l, href]) => `${l} ${href}`), `sitemap: ${loc} alternates`)
@@ -544,9 +552,10 @@ console.log(`PASS: /fabric/agents/ lists ${allRows.length} agents, each at one l
     assert.ok(title.length <= 60, `${page}: title ${title.length} > 60`)
     assert.ok(description.length <= 155, `${page}: description ${description.length} > 155`)
   }
-  for (const a of [...GUIDES.map(g => `guides/${g.slug}/index.html`), ...POSTS.map(p => `blog/${p.slug}/index.html`)]) {
+  // Each item's own date where it has one (SITE-070), else the section's of 2026-11-08.
+  for (const [a, iso] of [...GUIDES.map(g => [`guides/${g.slug}/index.html`, g.published?.iso ?? '2026-11-08']), ...POSTS.map(p => [`blog/${p.slug}/index.html`, p.published?.iso ?? '2026-11-08'])]) {
     const html = read(a)
-    assert.ok(/"@type": "(Article|BlogPosting)"/.test(html) && html.includes('"datePublished": "2026-11-08"') && html.includes('<time datetime="2026-11-08">'), `${a}: Article with its visible date`)
+    assert.ok(/"@type": "(Article|BlogPosting)"/.test(html) && html.includes(`"datePublished": "${iso}"`) && html.includes(`<time datetime="${iso}">`), `${a}: Article with its visible date`)
   }
   assert.ok(read('index.html').includes('<a href="/agents/" data-cta="agents" data-cta-location="agents">'), 'home #agents links /agents/')
   console.log(`PASS: SITE-056 agent templates (${TEMPLATES.length}), guides (${GUIDES.length}) and blog (${POSTS.length}) in ${LOCALES.length} languages`)

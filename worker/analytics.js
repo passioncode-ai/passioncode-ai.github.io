@@ -17,7 +17,9 @@ const PAGES = ['home', 'vision', 'start', 'business', 'business-thanks', 'privac
 const LOCATIONS = ['header', 'hero', 'video', 'problem', 'shift', 'fabric', 'system', 'agents', 'grow', 'doors', 'products',
   'source', 'faq', 'about', 'investors', 'footer', 'start', 'business', 'request', 'marketplace', 'template', 'guide', 'blog', 'other']
 const TARGETS = ['business', 'start', 'setup', 'github', 'investors', 'mail', 'fabric', 'products', 'vision', 'switchboard',
-  'dashboards', 'observatory', 'inbox', 'x', 'download', 'agents', 'guides', 'blog', 'other']
+  'dashboards', 'observatory', 'inbox', 'x', 'download', 'agents', 'guides', 'blog',
+  // SITE-070: a guide's button to Morpheus, the PM agent's Telegram bot (the lead goes on there, PM-D114)
+  'morpheus', 'other']
 // SITE-056: the agent templates (scripts/site-content.mjs), by their public slug.
 const TEMPLATES = ['company-assessment', 'organization-administrator', 'data-room', 'host-operations', 'messenger-gateway', 'sales-and-leads', 'marketing-analyst', 'growth-analytics', 'search-traffic', 'app-store-publisher', 'brand-and-content', 'support-answerer', 'chat-assistant', 'telegram-product-bot', 'customer-listening', 'media-production', 'research', 'web-quality-monitor', 'other']
 const PERCENTS = ['0', '25', '50', '100']

@@ -88,6 +88,8 @@ GUIDES
 
 ## Autres guides
 
+Pourquoi votre release dérape encore : ce que révèle un audit d'équipe
+
 Lancez votre espace de travail pour agents en 20 minutes
 
 Comment fonctionne l’évaluation gratuite d’une semaine

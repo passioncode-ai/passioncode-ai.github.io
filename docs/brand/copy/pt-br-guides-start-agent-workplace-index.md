@@ -96,6 +96,8 @@ GUIAS
 
 ## Mais guias
 
+Por que seu lançamento atrasa de novo: o que uma avaliação de equipe mostra
+
 Como funciona a avaliação gratuita de uma semana
 
 Como os modelos de agentes viram os seus agentes

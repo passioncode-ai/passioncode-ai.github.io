@@ -64,6 +64,32 @@ For your company: read how the free one-week assessment works, then how agent te
 
 ## Guides
 
+Guide · November 19, 2026
+
+### Why your release slips again: what a team assessment shows
+
+A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.
+
+For founders whose release dates keep moving and who want to see where the work waits.
+
+In this guide
+
+Where a release really waits
+
+What the assessment reads
+
+Three things it usually finds
+
+Why a better plan alone does not fix it
+
+What changes when an agent runs the rhythm
+
+Who decides
+
+How to start
+
+Sources and method
+
 Guide · November 8, 2026
 
 ### Start your agent workplace in 20 minutes

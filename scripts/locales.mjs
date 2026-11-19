@@ -12,22 +12,24 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { loadDefaultJapaneseParser } from 'budoux'
-import { LOCALES, NOINDEX, REGISTRY, SOURCE_LOCALE, TRANSLATED_LOCALES } from './pages.mjs'
+import { LOCALES, NOINDEX, REGISTRY, SCOPED, SCOPED_LOCALES, SCOPED_SOURCE_PAGES, SOURCE_LOCALE, TRANSLATED_LOCALES, localesOfPage } from './pages.mjs'
 
-export { LOCALES, SOURCE_LOCALE, TRANSLATED_LOCALES }
+export { LOCALES, SCOPED_LOCALES, SOURCE_LOCALE, TRANSLATED_LOCALES, localesOfPage }
+// The site's languages and the scoped ones (SITE-070): what names, tags and Open Graph locales are known for.
+const KNOWN_LOCALES = [...LOCALES, ...SCOPED_LOCALES]
 export const ORIGIN = 'https://passioncode.ai'
 export const localeInfo = locale => {
-  const info = REGISTRY.locales[locale]
-  if (!info) throw new Error(`Unknown locale ${locale} (i18n/locales.json)`)
+  const info = REGISTRY.locales[locale] ?? SCOPED.locales[locale]
+  if (!info) throw new Error(`Unknown locale ${locale} (i18n/locales.json, i18n/scoped-locales.json)`)
   return info
 }
 // The language switch's visible label in each language: always the language's own name.
-export const LANGUAGE_NAMES = Object.fromEntries(LOCALES.map(l => [l, localeInfo(l).name]))
-export const OG_LOCALES = Object.fromEntries(LOCALES.map(l => [l, localeInfo(l).og]))
+export const LANGUAGE_NAMES = Object.fromEntries(KNOWN_LOCALES.map(l => [l, localeInfo(l).name]))
+export const OG_LOCALES = Object.fromEntries(KNOWN_LOCALES.map(l => [l, localeInfo(l).og]))
 // The language tag a version carries in <html lang>, hreflang and the switch's lang: the
 // registry's `lang` where the address prefix is not the tag itself (`pt-br` → `pt-BR`), the code
 // otherwise. The code stays the prefix, the catalog directory and the form's `?lang=`.
-export const LANG_TAGS = Object.fromEntries(LOCALES.map(l => {
+export const LANG_TAGS = Object.fromEntries(KNOWN_LOCALES.map(l => {
   const tag = localeInfo(l).lang ?? l
   const [canonical] = Intl.getCanonicalLocales(tag)
   if (canonical !== tag) throw new Error(`i18n/locales.json: ${l}.lang "${tag}" is not a canonical BCP 47 tag (${canonical})`)
@@ -72,7 +74,7 @@ const escapeHtml = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').r
 export const routeOf = file => '/' + file.replace(/index\.html$/, '')
 export const prefixOf = locale => locale === SOURCE_LOCALE ? '' : `/${locale}`
 export const localizedFile = (file, locale) => locale === SOURCE_LOCALE ? file : `${locale}/${file}`
-export const localeOfFile = file => TRANSLATED_LOCALES.find(l => file.startsWith(`${l}/`)) || SOURCE_LOCALE
+export const localeOfFile = file => [...TRANSLATED_LOCALES, ...SCOPED_LOCALES].find(l => file.startsWith(`${l}/`)) || SOURCE_LOCALE
 export const sourceFileOf = file => { const l = localeOfFile(file); return l === SOURCE_LOCALE ? file : file.slice(l.length + 1) }
 // A page's own address in a language: `/ru/start/`.
 export const pageRoute = (sourceFile, locale) => prefixOf(locale) + routeOf(sourceFile)
@@ -85,15 +87,24 @@ function pagePath (path) {
 // Files other than pages that every language publishes in its own words under its prefix: the
 // /business/ agent prompt as plain text (scripts/agent-prompt.mjs).
 const LOCALIZED_FILES = new Set(['/business/agent-request.txt'])
-const inLocale = path => TRANSLATED_LOCALES.some(l => path === `/${l}/` || path.startsWith(`/${l}/`))
+const inLocale = path => [...TRANSLATED_LOCALES, ...SCOPED_LOCALES].some(l => path === `/${l}/` || path.startsWith(`/${l}/`))
+// A scoped language (SITE-070) has only its pages: a link to any other page stays on the English one.
+const SCOPED_ROUTES = new Set(SCOPED_SOURCE_PAGES.map(p => '/' + p.replace(/index\.html$/, '')))
+// SITE-070: a button to Morpheus, the PM agent's Telegram bot, carries `/start lp_<page>_<lang>`; the bot has lead
+// texts in English and Russian only (passioncode-pm-agent `pm_agent/leads.py` `lang_of`), so the English source links
+// `_en` and the Russian page links `_ru`; every other language keeps `_en` until the bot speaks it.
+const BOT_START = /^(https:\/\/t\.me\/MorpheusPMBot\?start=lp_[a-z0-9-]+_)(en|ru)$/
+const BOT_LANGS = new Set(['ru'])
 // Moves a site-relative or absolute passioncode.ai page URL under /<locale>/; anything else is kept.
 export function localizeUrl (value, locale) {
+  if (BOT_START.test(value)) return value.replace(BOT_START, (_, start) => start + (BOT_LANGS.has(locale) ? locale : 'en'))
   if (locale === SOURCE_LOCALE) return value
   const absolute = value.startsWith(ORIGIN + '/')
   const rest = absolute ? value.slice(ORIGIN.length) : value
   if (!rest.startsWith('/') || rest.startsWith('//')) return value
   const path = rest.split(/[?#]/, 1)[0]
   if (!pagePath(path) || inLocale(path)) return value
+  if (SCOPED_LOCALES.includes(locale) && !SCOPED_ROUTES.has(path)) return value
   return (absolute ? ORIGIN : '') + `/${locale}` + rest
 }
 // A picture of a product's interface in a language (SITE-028 W5): `/assets/<name>.<ext>` becomes
@@ -187,7 +198,8 @@ export function applyVideo (html, locale, root = SITE_ROOT) {
 }
 // The inverse, for comparing two pages' structure.
 export function sourceUrl (value) {
-  for (const locale of TRANSLATED_LOCALES) {
+  if (BOT_START.test(value)) return value.replace(BOT_START, (_, start) => start + 'en')
+  for (const locale of [...TRANSLATED_LOCALES, ...SCOPED_LOCALES]) {
     for (const prefix of [`${ORIGIN}/${locale}/`, `/${locale}/`]) {
       if (value.startsWith(prefix)) return value.slice(0, prefix.length - locale.length - 2) + '/' + value.slice(prefix.length)
     }
@@ -206,13 +218,13 @@ export function counterpartRoute (sourceFile, locale) {
 // version, so hreflang is reciprocal. Pages kept out of search carry none.
 export function alternates (sourceFile) {
   if (NOINDEX.has(sourceFile)) return []
-  return [...LOCALES.map(l => [langTag(l), ORIGIN + pageRoute(sourceFile, l)]), ['x-default', ORIGIN + pageRoute(sourceFile, SOURCE_LOCALE)]]
+  return [...localesOfPage(sourceFile).map(l => [langTag(l), ORIGIN + pageRoute(sourceFile, l)]), ['x-default', ORIGIN + pageRoute(sourceFile, SOURCE_LOCALE)]]
 }
 // The visible switch. With two languages it is one link to the other; with more, a disclosure
 // that lists them all (it works without JavaScript: <details>). Each link leads to the same page
 // in that language and carries its hreflang and lang.
 export function languageSwitch (sourceFile, locale) {
-  const others = LOCALES.filter(l => l !== locale)
+  const others = localesOfPage(sourceFile).filter(l => l !== locale)
   const link = (l, cls = '') => `<a${cls} href="${counterpartRoute(sourceFile, l)}" hreflang="${langTag(l)}" lang="${langTag(l)}">${escapeHtml(LANGUAGE_NAMES[l])}</a>`
   if (others.length === 1) return link(others[0], ' class="lang-switch"')
   const label = `${localeInfo(locale).switchLabel}: ${LANGUAGE_NAMES[locale]}`
@@ -231,10 +243,10 @@ export function applyChrome (html, { sourceFile, locale }) {
   if ((html.match(SWITCH) || []).length !== 1) throw new Error(`${where}: expected one language switch (class="lang-switch")`)
   const links = alternates(sourceFile).map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join('')
   let out = html
-    .replace(/<html lang="[^"]*">/, `<html lang="${langTag(locale)}">`)
+    .replace(/<html lang="[^"]*">/, `<html lang="${langTag(locale)}"${localeInfo(locale).dir === 'rtl' ? ' dir="rtl"' : ''}>`)
     .replace(CANONICAL, (_, open, close) => open + ORIGIN + pageRoute(sourceFile, locale) + close + (links ? `\n  ${links}` : ''))
     .replace(SWITCH, () => languageSwitch(sourceFile, locale))
-  if (OG_LOCALE.test(out)) out = out.replace(OG_LOCALE, (_, site) => site + `<meta property="og:locale" content="${OG_LOCALES[locale]}">` + LOCALES.filter(l => l !== locale).map(l => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`).join(''))
+  if (OG_LOCALE.test(out)) out = out.replace(OG_LOCALE, (_, site) => site + `<meta property="og:locale" content="${OG_LOCALES[locale]}">` + localesOfPage(sourceFile).filter(l => l !== locale).map(l => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}">`).join(''))
   if (/<link rel="alternate" hreflang=/.test(out.replace(links, ''))) throw new Error(`${where}: an hreflang alternate outside the generated list`)
   return out
 }
@@ -479,6 +491,9 @@ function localizeJsonLd (token, locale, translate) {
     const value = JSON.parse(literal)
     if (after === ':') { key = value; return literal }
     if (key === 'url' || key === 'item') return JSON.stringify(localizeUrl(value, locale))
+    // SITE-070: an article written in the source language says so; its version in another language says that one
+    // (the VideoObject's spoken language is set by applyVideo afterwards).
+    if (key === 'inLanguage' && value === langTag(SOURCE_LOCALE)) return JSON.stringify(langTag(locale))
     if (LD_VERBATIM_KEYS.has(key) || !HAS_LETTER.test(value) || /^(?:https?:|mailto:)/.test(value)) return literal
     const next = translate(value, `json-ld ${key}`)
     return next === value ? literal : JSON.stringify(next).replace(/</g, '\\u003c')
@@ -489,7 +504,7 @@ function localizeJsonLd (token, locale, translate) {
 
 // ---- structure -----------------------------------------------------------------------------
 
-const DROPPED_ATTRS = new Set([...TEXT_ATTRS, 'lang', 'hreflang'])
+const DROPPED_ATTRS = new Set([...TEXT_ATTRS, 'lang', 'hreflang', 'dir'])
 // The element skeleton every language version must share: every tag in order, with its
 // attributes except the translatable ones, links compared in the source language, and JSON-LD
 // reduced to its keys and identifiers. Text is not part of it, nor the chrome (the language
@@ -510,6 +525,7 @@ export function skeleton (html) {
         }
         if (typeof node !== 'string') return node
         if (key === 'url' || key === 'item') return sourceUrl(node)
+        if (key === 'inLanguage' && KNOWN_LOCALES.some(l => langTag(l) === node)) return '*'
         return LD_VERBATIM_KEYS.has(key) || !ANY_LETTER.test(node) || /^(?:https?:|mailto:)/.test(node) ? node : '*'
       }
       if (!skip) out.push(`ld:${JSON.stringify(walk(JSON.parse(body)))}`)

@@ -64,6 +64,32 @@ Für dein Unternehmen: lies, wie die kostenlose einwöchige Analyse funktioniert
 
 ## Anleitungen
 
+Anleitung · 19. November 2026
+
+### Warum dein Release immer wieder rutscht: was ein Team-Assessment zeigt
+
+Ein Release geht erst raus, wenn auch alles rund um den Code bereit ist. Ein Team-Assessment liest, wie die Arbeit in den letzten 90 Tagen tatsächlich lief, und zeigt, wo sie wartete. So beseitigst du das Warten, statt das Team anzutreiben.
+
+Für Gründerinnen und Gründer, deren Release-Termine ständig wandern und die sehen wollen, wo die Arbeit wartet.
+
+In dieser Anleitung
+
+Wo ein Release wirklich wartet
+
+Was das Assessment liest
+
+Drei Dinge, die es meistens findet
+
+Warum ein besserer Plan allein nicht reicht
+
+Was sich ändert, wenn ein Agent den Rhythmus führt
+
+Wer entscheidet
+
+So startest du
+
+Quellen und Methode
+
 Anleitung · 8. November 2026
 
 ### Richte deinen Arbeitsplatz für Agenten in 20 Minuten ein

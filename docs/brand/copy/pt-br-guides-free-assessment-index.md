@@ -96,6 +96,8 @@ GUIAS
 
 ## Mais guias
 
+Por que seu lançamento atrasa de novo: o que uma avaliação de equipe mostra
+
 Monte seu ambiente de trabalho com agentes em 20 minutos
 
 Como os modelos de agentes viram os seus agentes
