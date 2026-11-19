@@ -72,3 +72,32 @@ Earlier: `2026-11-18-story-landing-v5.md`. Script: `story/v6-script.json` (every
   the bot, which answers a stranger with its present waiting reply.
 - A person checks leafing in a visible Safari and on a real phone.
 - The mix of both films on headphones (Fabric task `29fb8216`).
+
+## 6. v6.1 (2026-11-19, 11:10 CET): voices, tracking, the cleanup wave
+
+The operator: «голос сео и агента смита в комиксе нет проработай, фильм хороший все гуд, переход за кроликом и переход
+потом по сайту и в бота надо трекать и продебажить и еще волну запустить по анимациям таймингу UI нейрослопу и
+вычистить все».
+
+| Item | Result | Evidence |
+|---|---|---|
+| CEO, Smith, Neo voiced (RU, EN) | Brian, Daniel, Liam, picked by two audio models (a third on the CEO tie); 8 takes transcript-checked | commit `4abe57b6`, `cast/` in the tools folder |
+| Story tracking | `story_choice`, `story_film`, `story_progress` (chat, p1..p11, final), `cta_click` to Morpheus, X, LinkedIn, via the assessment Worker's `/api/e` | `worker/analytics.js`, `story/comic/track.js`, `docs/analytics/events.md` |
+| Tracking, live debug | a walk of the live page queued 20 events; growth `passioncode-site` production shows the same counts, no duplicates (13 steps, 3 clicks) | `track-live.mjs` in the tools folder; the two test sessions of 2026-11-19 09:4x to 09:5x UTC are the agent's |
+| Bot side of the funnel | asked of passioncode-pm-agent: count `/start lp_assessment_*`, send `lead_sent {page: story, path: telegram}` per confirmed lead, skip test starts | board message `92b372d1`, thread `b4a26491` |
+| Cleanup wave | all 25 stops shot at 1440 and 390; reviewed by Gemini 3.1 Pro over contact sheets and by our own pass; fixed: «ты» on the landing (three RU lines re-voiced and transcript-checked), bridges between frames removed, a plate under the film's end card, less glow, P&L marked illustrative and enlarged, departments readable on a phone | commit `a603f004`, `ui-critique.py` |
+| Regression found and fixed | a markup run after the translations dropped the language switch; the build now refuses such a page | commit `daf7b37e` |
+| Copylot | new RU strings clean of blocking findings | reports `516c2426`, `5791c070`, `9ad6c338`, `d36a7e72`, `29103696`, `72d4e8c1`, `a1d8afc8`; EN `e6b37c01` |
+| Deploy | Worker version `6e8d2a74-fb5e-49b6-ae13-9d9ead404465`, secret `ANALYTICS_APP_KEY` set from the vault | `wrangler deploy -c wrangler.assessment.json` |
+| Full check | local 39/39, live 39/39; `npm test` exit 0 | `scripts/e2e/story-matrix.mjs` |
+
+D8 (address). Copylot voice `861f15ee` v3 sets «вы» for landing visitors, v1 had «ты». The operator's own dictation for
+this landing (2026-11-19) has Morpheus say «Давай я тебе покажу», and the PM agent took «ты» for leads (PM-D116), so the
+landing speaks «ты»; Copylot's `address-mismatch` findings are suggestions, not blocks. Next: a voice v4 that sets «ты»
+for the landing and the bot, saved with the operator's words as the decision.
+
+Separate task: the guide in 19 languages, the content strategy and the content marketing agent are Fabric task
+`6c4043eb` (the operator: «как отдельная таска»), run by its own session.
+
+Next task in this unit: none blocking. Open: voice v4 (above); the bot's funnel events (PM agent); leafing in a visible
+Safari and on a phone; the headphones mix (Fabric task `29fb8216`).
