@@ -54,12 +54,12 @@ def act0():
     return f'''<section class="act0" id="act0" aria-label="{'The choice'}">
  <div class="act0-stage">
   <div class="cchat" aria-label="Team chat">
-   <div class="cchat-head"><span class="ico-team" aria-hidden="true"></span><b>{t('#your-company', '#ваша-компания')}</b><small>{t('5 people', '5 человек')}</small></div>
+   <div class="cchat-head"><span class="ico-team" aria-hidden="true"></span><b>{t('#your-company', '#твоя-компания')}</b><small>{t('5 people', '5 человек')}</small></div>
    <ol class="cchat-msgs">{''.join(rows)}</ol>
   </div>
   <div class="rise">
    {av('morpheus', 'hero-av')}
-   <p class="rise-line" data-vo="choice">{t('Your choice.', 'Выбор за вами.')}</p>
+   <p class="rise-line" data-vo="choice">{t('Your choice.', 'Выбор за тобой.')}</p>
    <div class="pills" role="group" aria-label="Choose">
     <button type="button" class="pill red" data-pill="red"><span class="capsule" aria-hidden="true"></span>{t('Wake up: how your company runs on agents', 'Проснуться: как компания работает на агентах')}</button>
     <button type="button" class="pill blue" data-pill="blue"><span class="capsule" aria-hidden="true"></span>{t('Stay as is: how it runs now', 'Остаться как есть: как всё устроено сейчас')}</button>
@@ -116,7 +116,7 @@ PANELS = [
      say('neo', 'Your machine or ours. An isolated, signed image for your organization.', 'Ваша машина или наша. Изолированный подписанный образ для вашей организации.', 'l', 'Neo')
      + '<ol class="layers">' + chips([('signature', 'подпись'), ('agent runtime', 'среда агентов'), ('network policy', 'сетевые правила'), ('key vault', 'хранилище ключей'), ('base system', 'базовая система')], 'ly') + '</ol>'),
     ('Now, how the Matrix works', 'Теперь: как работает матрица',
-     say('morpheus', "Let's look inside. It builds itself from blocks.", 'Давайте заглянем внутрь. Она собирается из блоков.', 'l', 'Morpheus')
+     say('morpheus', "Let's look inside. It builds itself from blocks.", 'Давай заглянем внутрь. Она собирается из блоков.', 'l', 'Morpheus')
      + '<div class="cubes">' + ''.join(f'<span class="cube" style="--k:{i}"><b>{n}</b></span>' for i, n in enumerate(['Fabric', 'Switchboard', 'Inbox', 'Dashboards', 'Observatory', 'Agents base'])) + '</div>'
      + '<p class="agnostic">' + t('Agent-agnostic: on Claude Code, Codex and what comes next', 'Agent-agnostic: на Claude Code, Codex и следующих') + '</p>', 'wide'),
     ('The Architect builds agents', 'Архитектор собирает агентов',
@@ -134,16 +134,16 @@ PANELS = [
      '<div class="ab"><div class="site"><span class="btn a">A</span><span class="btn b">B</span></div><div class="bars"><i class="ba"></i><i class="bb"></i></div></div>'
      + say('smith', 'Hypothesis picked, test live, data to the data room.', 'Гипотеза выбрана, тест запущен, данные в дата-рум.', 'l', 'Smith · Growth')
      + '<p class="win">' + t('B wins: revenue +15% in 30 days', 'B выиграл: выручка +15% за 30 дней') + ' <small>' + t('illustrative', 'для примера') + '</small></p>'),
-    ('Your P&L', 'Ваш P&L',
+    ('Your P&L', 'Твой P&L',
      '<svg class="pnl" viewBox="0 0 320 140"><path class="rev" d="M0 120 C80 112 140 80 200 56 S280 18 320 10"/><path class="cost" d="M0 30 C80 36 150 70 210 96 S290 118 320 122"/></svg>'
-     + '<p class="legend"><span class="l-rev">' + t('revenue', 'выручка') + '</span><span class="l-cost">' + t('costs', 'затраты') + '</span></p>'
+     + '<p class="legend"><span class="l-rev">' + t('revenue', 'выручка') + '</span><span class="l-cost">' + t('costs', 'затраты') + '</span><small>' + t('illustrative', 'для примера') + '</small></p>'
      + say('morpheus', 'Revenue grows where agents work; costs fall where people waited.', 'Выручка растёт там, где работают агенты; затраты падают там, где люди ждали.', 'l', 'Morpheus')),
-    ('Back in the chat: your business, live', 'Снова в чате: ваш бизнес вживую',
+    ('Back in the chat: your business, live', 'Снова в чате: твой бизнес вживую',
      say('neo', 'The Matrix folds back. I am out.', 'Матрица схлопывается. Я выхожу.', 'r', 'Neo')
-     + '<div class="cdash"><p class="dh">' + t('#your-company · Morpheus', '#ваша-компания · Морфеус') + '</p><ul class="svc">'
+     + '<div class="cdash"><p class="dh">' + t('#your-company · Morpheus', '#твоя-компания · Морфеус') + '</p><ul class="svc">'
      + ''.join(f'<li style="--k:{i}"><span class="ok"></span>{t(*x)}</li>' for i, x in enumerate([('services: all up', 'сервисы: все работают'), ('revenue: growing', 'выручка: растёт'), ('users: arriving', 'пользователи: приходят'), ('content: spreading', 'контент: разлетается')]))
      + '</ul></div>'
-     + say('morpheus', 'Here is your business now. Every agent, task and cost on one screen.', 'Вот ваш бизнес сейчас. Все агенты, задачи и расходы на одном экране.', 'l', 'Morpheus')),
+     + say('morpheus', 'Here is your business now. Every agent, task and cost on one screen.', 'Вот твой бизнес сейчас. Все агенты, задачи и расходы на одном экране.', 'l', 'Morpheus')),
 ]
 
 def final():
@@ -195,7 +195,7 @@ def intro():
   <p class="intro-line" id="intro-line">{tt(r['rabbit'])}</p>
   <div class="rise">
    {av('morpheus', 'hero-av')}
-   <p class="rise-line" data-vo="choice">{t('Your choice.', 'Выбор за вами.')}</p>
+   <p class="rise-line" data-vo="choice">{t('Your choice.', 'Выбор за тобой.')}</p>
    <div class="pills" role="group" aria-labelledby="intro-line">
     <button type="button" class="pill red" data-pill="red"><span class="capsule" aria-hidden="true"></span>{tt(r['red'])}</button>
     <button type="button" class="pill blue" data-pill="blue"><span class="capsule" aria-hidden="true"></span>{tt(r['blue'])}</button>
@@ -219,7 +219,7 @@ def bigchat():
     return f'''<section class="bigchat-act" id="chat" aria-label="{'Team chat'}">
  <div class="bigchat-pin">
   <div class="bigchat">
-   <div class="cchat-head"><span class="ico-team" aria-hidden="true"></span><b>{t('#your-company', '#ваша-компания')}</b><small>{t('6 members', '6 участников')}</small></div>
+   <div class="cchat-head"><span class="ico-team" aria-hidden="true"></span><b>{t('#your-company', '#твоя-компания')}</b><small>{t('6 members', '6 участников')}</small></div>
    <ol class="bc-msgs">{''.join(rows)}</ol>
   </div>
  </div>

@@ -131,3 +131,28 @@
  .intro .rise,.intro-line{opacity:1;transform:none;transition:none}.intro-rabbit{opacity:1;left:calc(50% - 32px);animation:none}
  .bigchat-act{height:auto}.bigchat-pin{position:static;height:auto}.bc-msgs .m{display:flex;animation:none}
 }
+
+/* ---- v6.1 cleanup wave (the operator, 2026-11-19: «волну ... по анимациям таймингу UI нейрослопу и вычистить все»);
+   findings from two readers (Gemini 3.1 Pro over the contact sheets and our own pass), wave.md in the spec ---- */
+/* the bridges between frames: the pager stops on frames, so a bridge only ever showed cut in half at a frame's edge */
+.comic-page .comic>.handoff{display:none}
+.comic-page .comic{gap:12vh}
+/* the film's end card sits on the bright future office: a dark plate keeps the line and the pills readable */
+.film-end-in{background:#020604d0;border:1px solid #00ff6633;border-radius:20px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:22px 28px 26px}
+/* less glow: text reads on solid green against black */
+.intro-line,.rise-line{text-shadow:none}
+.hero-av{box-shadow:0 0 0 2px var(--pc-accent),0 0 40px #00ff6633}
+.bc-msgs .m.agent p,.bc-msgs .m.who-trinity p{box-shadow:none}
+.wbar i,.wbar:first-child i{box-shadow:none}
+/* the task card, the P&L and the build blocks were small in a frame meant to be read from a distance */
+.comic-page .tcard{max-width:820px}
+.comic-page .pnl{max-width:720px;margin:12px auto 4px;display:block}
+.comic-page .pnl path{stroke-width:4}
+@media (min-width:1241px){.comic-page .ly,.comic-page .node{font-size:clamp(17px,1.4vw,22px);padding:14px 16px}.dept b{font-size:13px}.clones .av{width:34px;height:34px}}
+@media (max-width:860px){
+ .dept b{font-size:12px;letter-spacing:0}.clones .av{width:26px;height:26px}.clones .av:nth-child(n+3){display:none}
+ .balloon{padding:12px 14px}
+ .comic-page .comic{gap:8vh}
+}
+.comic-page .legend{display:flex;gap:22px;justify-content:center;align-items:baseline;font:600 clamp(14px,1.2vw,18px) var(--pc-font)}
+.comic-page .legend small{font-size:13px;color:var(--pc-text-muted)}
