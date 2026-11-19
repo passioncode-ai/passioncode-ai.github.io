@@ -132,6 +132,8 @@ PANDUAN
 
 ## Panduan lainnya
 
+Mengapa tugas macet di antar orang, dan apa yang berubah dengan agen
+
 Mulai tempat kerja agen Anda dalam 20 menit
 
 Cara kerja asesmen gratis selama satu minggu

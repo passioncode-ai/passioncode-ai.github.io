@@ -1,0 +1,78 @@
+{
+ "schema": "target-state-page/1",
+ "page": "guides/why-tasks-stall-between-people/index.html",
+ "mode": "target-state",
+ "basis": [
+  {
+   "kind": "spec",
+   "ref": "passioncode-pm-agent playbook.md@d62ba6c4"
+  },
+  {
+   "kind": "vision",
+   "ref": "fabric-workspace knowledge/north-star.md@388a9175"
+  }
+ ],
+ "operator_word": null,
+ "claims": [
+  {
+   "claim": "A ping-pong task is one that returns to the person who already had it within 14 days; the assessment counts these returns per process.",
+   "quote": "A ping-pong task is one that returns to the person who already had it within 14 days, and the assessment counts these returns per process.",
+   "status": "released",
+   "basis_ref": "the assessment agent's glossary (private agent), quoted in the site's content record docs/content/why-releases-slip.meta.json"
+  },
+  {
+   "claim": "In one pilot company, the 20 tasks of writing product texts had a median lead time of 9.8 calendar days, measured as days from start to done, not hours of work.",
+   "quote": "In one pilot company, the 20 tasks of writing product texts had a median lead time of 9.8 calendar days, measured as days from start to done, not hours of work.",
+   "status": "released",
+   "basis_ref": "fabric-workspace knowledge/north-star.md:67-68 (main 388a9175); site docs/brand/facts.md row «release guide (SITE-070)»"
+  },
+  {
+   "claim": "In the same pilot company, 60 to 85% of the tasks the planners moved in a week were in no plan of that week, over the weeks from May 25 to November 2, 2026.",
+   "quote": "In the same pilot company, 60 to 85% of the tasks the planners moved in a week were in no plan of that week, over the weeks from May 25 to November 2, 2026.",
+   "status": "released",
+   "basis_ref": "the assessment agent's plan-fact report of 2026-11-06 (private agent), quoted in docs/content/why-releases-slip.meta.json"
+  },
+  {
+   "claim": "On working days at 07:00 the PM agent asks each person what they are on today and reminds them later if there is no answer.",
+   "quote": "On working days at 07:00 the PM agent asks each person what they are on today and reminds them later if there is no answer.",
+   "status": "released",
+   "basis_ref": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4); site docs/brand/facts.md row «release guide (SITE-070)»"
+  },
+  {
+   "claim": "Every task the PM agent raises has three answers: seen, taking it, not mine; not mine goes to the planner at once.",
+   "quote": "Every task the PM agent raises has three answers: seen, taking it, not mine; not mine goes to the planner at once.",
+   "status": "released",
+   "basis_ref": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4)"
+  },
+  {
+   "claim": "A task nobody takes gets a reminder every 30 working minutes; after 2 working hours the planner hears about it, then the deputy, then the administrator.",
+   "quote": "A task nobody takes gets a reminder every 30 working minutes; after 2 working hours the planner hears about it, then the deputy, then the administrator.",
+   "status": "released",
+   "basis_ref": "passioncode-pm-agent code/escalation.py:3-18,100 (main d62ba6c4)"
+  },
+  {
+   "claim": "At 10:00 the PM agent lists the tasks that have not moved for days and the blockers per person, so the planner sees them in the morning.",
+   "quote": "At 10:00 the PM agent lists the tasks that have not moved for days and the blockers per person, so the planner sees them in the morning.",
+   "status": "released",
+   "basis_ref": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4)"
+  },
+  {
+   "claim": "At 21:00 every day, weekends included, the founders get a short summary: what the team closed and moved, the decisions waiting on people and what is critical.",
+   "quote": "At 21:00 every day, weekends included, the founders get a short summary: what the team closed and moved, the decisions waiting on people and what is critical.",
+   "status": "released",
+   "basis_ref": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4); operator rule of 2026-11-18 on the PM agents' evening report"
+  },
+  {
+   "claim": "The PM agent's hours, buttons and ladder are default settings the team can change.",
+   "quote": "The PM agent's hours, buttons and ladder are default settings the team can change, not measured results.",
+   "status": "released",
+   "basis_ref": "passioncode-pm-agent playbook.md:304-322 (main d62ba6c4)"
+  },
+  {
+   "claim": "The free assessment: one agent with read-only access for a week reads the last 90 days of trackers, repositories, documents, team chats, mail and support; on day seven the founder gets a map of the processes, plan against fact, the waits and an offer of which work agents take first; it reports totals for groups and processes, never a score for a person.",
+   "quote": "The free assessment gives one agent read-only access for a week to read the last 90 days of trackers, repositories, documents, team chats, mail and support; on day seven the founder gets a map of the processes, plan against fact, the waits and an offer of which work agents take first, and it reports totals for groups and processes, never a score for a person.",
+   "status": "released",
+   "basis_ref": "site docs/brand/facts.md row «free assessment (SITE-056)»; fabric-workspace knowledge/system/entry-assessment.md:25"
+  }
+ ]
+}

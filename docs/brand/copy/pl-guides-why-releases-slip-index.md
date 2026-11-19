@@ -132,6 +132,8 @@ PORADNIKI
 
 ## Więcej poradników
 
+Dlaczego zadania stoją między ludźmi i co zmienia agent
+
 Uruchom swoje miejsce pracy z agentami w 20 minut
 
 Jak działa bezpłatna tygodniowa ocena

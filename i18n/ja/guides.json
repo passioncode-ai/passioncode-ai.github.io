@@ -44,6 +44,15 @@
     "What changes when an agent runs the rhythm": "エージェントが日々のサイクルを回すと変わること",
     "Who decides": "誰が判断するか",
     "How to start": "始め方",
-    "Sources and method": "出典と方法"
+    "Sources and method": "出典と方法",
+    "Why tasks stall between people, and what changes with an agent": "タスクが人と人の間で止まる理由と、エージェントで変わること",
+    "A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.": "タスクは、次の担当者が気づく、引き受ける、プランナーに戻すのを待っている間も、進行中に見えることがあります。エージェントがこれらの確認とエスカレーションを自動で行うことで、日々のリズムが変わります。担当と判断は人が持ち続けます。",
+    "For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.": "担当者間でタスクが滞り、プランナーが手作業で担当者を追いかけているスタートアップの創業者とプロダクトチームのリーダー向けです。",
+    "Where a task really waits": "タスクが実際に止まる場所",
+    "The signs of a stalled hand-off": "引き継ぎが止まっているサイン",
+    "Why manual chasing does not scale": "手作業の催促が通用しなくなる理由",
+    "What an agent changes in the daily rhythm": "エージェントが日々のリズムで変えること",
+    "Agents follow the work, people decide": "エージェントは仕事を追い、人が決める",
+    "How to start with the free assessment": "無料アセスメントで始める方法"
   }
 }

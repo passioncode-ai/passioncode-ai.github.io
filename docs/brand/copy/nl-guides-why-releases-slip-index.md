@@ -132,6 +132,8 @@ HANDLEIDINGEN
 
 ## Meer handleidingen
 
+Waarom taken tussen mensen blijven liggen, en wat er verandert met een agent
+
 Start je werkplek voor agenten in 20 minuten
 
 Hoe de gratis beoordeling van één week werkt

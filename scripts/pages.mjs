@@ -46,6 +46,7 @@ export const SOURCE_PAGES = [
   'agents/research/index.html',
   'agents/web-quality-monitor/index.html',
   'guides/index.html',
+  'guides/why-tasks-stall-between-people/index.html',
   'guides/why-releases-slip/index.html',
   'guides/start-agent-workplace/index.html',
   'guides/free-assessment/index.html',

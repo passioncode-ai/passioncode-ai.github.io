@@ -228,6 +228,52 @@ export const ASSEMBLY = [
 // it helps; the hub also lists the item's h2 headings as what it covers.
 export const GUIDES = [
   {
+    slug: 'why-tasks-stall-between-people',
+    published: { iso: '2026-11-19', text: 'November 19, 2026' },
+    title: 'Why tasks stall between people | PassionCode.ai',
+    name: 'Why tasks stall between people, and what changes with an agent',
+    summary: 'For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.',
+    description: 'See where hand-offs stall, why manual chasing fails, and how a PM agent runs follow-up while people keep ownership and decisions.',
+    lead: 'A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.',
+    body: `
+ <h2>Where a task really waits</h2>
+ <p>Look first at the hand-off: whether the next person has seen the task, accepted it, or decided that it is not theirs. Until one of those things happens, the task can remain open without anyone working on it.</p>
+ <p>This is why a busy board can still conceal waiting work. The practical question is not only who touched the task last, but who has explicitly taken the next step and who hears about it when nobody does.</p>
+ <h2>The signs of a stalled hand-off</h2>
+ <p>Look for repeated returns, work moved outside the weekly plan, and lead time measured in calendar days rather than work hours. Together, these signals show where to inspect the flow between people.</p>
+ <ul>
+  <li>A ping-pong task is one that returns to the person who already had it within 14 days, and the assessment counts these returns per process.</li>
+  <li>In one pilot company, the 20 tasks of writing product texts had a median lead time of 9.8 calendar days, measured as days from start to done, not hours of work.</li>
+  <li>In the same pilot company, 60 to 85% of the tasks the planners moved in a week were in no plan of that week, over the weeks from May 25 to November 2, 2026.</li>
+ </ul>
+ <p>If these patterns are familiar, the same hand-off view also helps explain <a href="/guides/why-releases-slip/">why your release slips again</a>.</p>
+ <h2>Why manual chasing does not scale</h2>
+ <p>Manual chasing turns the planner into the reminder system. They must notice silence, ask again, find an owner and escalate exceptions while also keeping the plan coherent.</p>
+ <p>As more tasks cross more people, that routine becomes uneven: some silent tasks get attention because someone remembered them, while others wait. Chasing harder does not fix the missing loop.</p>
+ <p>Make the request, response and escalation explicit instead. The planner can then spend their time resolving ownership and blockers rather than reconstructing the current state from chats.</p>
+ <h2>What an agent changes in the daily rhythm</h2>
+ <p>The agent replaces ad hoc chasing with a repeatable rhythm: collect the day's work, make ownership explicit, surface stalled tasks, escalate silence and give founders the decisions still waiting.</p>
+ <ul>
+  <li>On working days at 07:00 the PM agent asks each person what they are on today and reminds them later if there is no answer.</li>
+  <li>Every task the PM agent raises has three answers: seen, taking it, not mine; not mine goes to the planner at once.</li>
+  <li>A task nobody takes gets a reminder every 30 working minutes; after 2 working hours the planner hears about it, then the deputy, then the administrator.</li>
+  <li>At 10:00 the PM agent lists the tasks that have not moved for days and the blockers per person, so the planner sees them in the morning.</li>
+  <li>At 21:00 every day, weekends included, the founders get a short summary: what the team closed and moved, the decisions waiting on people and what is critical.</li>
+ </ul>
+ <h2>Agents follow the work, people decide</h2>
+ <p>The agent follows the work; people decide what it means and what to do next. It keeps requests, responses and escalation visible without taking authority over priorities.</p>
+ <p>The planner still resolves a task returned as not mine, and founders still handle the decisions waiting on people. The agent's job is to make sure those exceptions reach a person instead of remaining silent.</p>
+ <h2>How to start with the free assessment</h2>
+ <p>Start with a read-only week that shows where your own processes wait, rather than adding another manual reporting routine.</p>
+ <p>The free assessment gives one agent read-only access for a week to read the last 90 days of trackers, repositories, documents, team chats, mail and support; on day seven the founder gets a map of the processes, plan against fact, the waits and an offer of which work agents take first, and it reports totals for groups and processes, never a score for a person.</p>
+ <p>Read <a href="/guides/free-assessment/">how the free one-week assessment works</a>, then ask Morpheus, the PM agent, on Telegram to run it.</p>
+ <h2>Sources and method</h2>
+ <p>The definitions and measured examples come from the site's content and brand facts records; the operating rhythm comes from the PM agent's playbook and escalation code; the assessment scope comes from the assessment method record.</p>
+ <p>The measured examples come from one pilot company: lead time from start to done for product-text tasks, and the share of moved tasks outside that week's plan over the stated weeks. They are observations, not benchmarks for your team.</p>
+ <p>The PM agent's hours, buttons and ladder are default settings the team can change, not measured results.</p>`,
+    cta: { href: 'https://t.me/MorpheusPMBot?start=lp_guide-why-tasks-stall-between-people_en', label: 'Write to Morpheus on Telegram', cta: 'morpheus' }
+  },
+  {
     slug: 'why-releases-slip',
     published: { iso: '2026-11-19', text: 'November 19, 2026' },
     title: 'Why your release slips again | PassionCode.ai',

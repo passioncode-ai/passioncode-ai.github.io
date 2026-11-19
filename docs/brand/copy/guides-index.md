@@ -66,6 +66,30 @@ For your company: read how the free one-week assessment works, then how agent te
 
 Guide · November 19, 2026
 
+### Why tasks stall between people, and what changes with an agent
+
+A task can look active while it waits for the next person to see it, take it, or return it to the planner. An agent changes the daily rhythm by making those checks and escalations automatic, while people keep ownership and decisions.
+
+For founders and product team leads whose tasks wait between people and whose planners chase owners by hand.
+
+In this guide
+
+Where a task really waits
+
+The signs of a stalled hand-off
+
+Why manual chasing does not scale
+
+What an agent changes in the daily rhythm
+
+Agents follow the work, people decide
+
+How to start with the free assessment
+
+Sources and method
+
+Guide · November 19, 2026
+
 ### Why your release slips again: what a team assessment shows
 
 A release ships only when everything around the code is ready too. A team assessment reads how the work really moved over the last 90 days and shows where it waited, so you fix the wait instead of pushing the team.

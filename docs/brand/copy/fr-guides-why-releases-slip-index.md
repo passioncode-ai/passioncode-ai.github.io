@@ -132,6 +132,8 @@ GUIDES
 
 ## Autres guides
 
+Pourquoi les tâches s'enlisent entre les personnes, et ce que change un agent
+
 Lancez votre espace de travail pour agents en 20 minutes
 
 Comment fonctionne l’évaluation gratuite d’une semaine

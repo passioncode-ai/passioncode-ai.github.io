@@ -66,6 +66,30 @@ Pour votre entreprise : lisez comment fonctionne l’évaluation gratuite d’un
 
 Guide · 19 novembre 2026
 
+### Pourquoi les tâches s'enlisent entre les personnes, et ce que change un agent
+
+Une tâche peut sembler active alors qu'elle attend que la personne suivante la voie, la prenne ou la renvoie au planificateur. Un agent change le rythme quotidien : ces vérifications et ces relances deviennent automatiques, tandis que les personnes gardent la responsabilité et les décisions.
+
+Pour les fondateurs et les responsables d'équipe produit dont les tâches attendent entre les personnes et dont les planificateurs relancent les responsables à la main.
+
+Dans ce guide
+
+Où une tâche attend réellement
+
+Les signes d'un passage de relais qui bloque
+
+Pourquoi la relance manuelle ne passe pas à l'échelle
+
+Ce qu'un agent change dans le rythme quotidien
+
+Les agents suivent le travail, les personnes décident
+
+Comment commencer avec l'évaluation gratuite
+
+Sources et méthode
+
+Guide · 19 novembre 2026
+
 ### Pourquoi votre release dérape encore : ce que révèle un audit d'équipe
 
 Une release ne part que lorsque tout ce qui entoure le code est prêt, lui aussi. Un audit d'équipe lit comment le travail a réellement avancé au cours des 90 derniers jours et montre où il a attendu : vous corrigez l'attente au lieu de pousser l'équipe.

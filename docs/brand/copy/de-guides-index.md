@@ -66,6 +66,30 @@ Für dein Unternehmen: lies, wie die kostenlose einwöchige Analyse funktioniert
 
 Anleitung · 19. November 2026
 
+### Warum Aufgaben zwischen Menschen liegen bleiben und was sich mit einem Agent ändert
+
+Eine Aufgabe kann aktiv aussehen, obwohl sie darauf wartet, dass die nächste Person sie sieht, übernimmt oder an den Planer zurückgibt. Ein Agent verändert den Tagesrhythmus, indem er diese Prüfungen und Eskalationen automatisch übernimmt. Die Verantwortung und die Entscheidungen bleiben bei den Menschen.
+
+Für Gründer und Leiter von Produktteams, deren Aufgaben zwischen Menschen warten und deren Planer Verantwortliche von Hand nachverfolgen.
+
+In dieser Anleitung
+
+Wo eine Aufgabe wirklich wartet
+
+Woran du eine hängende Übergabe erkennst
+
+Warum manuelles Nachhaken nicht skaliert
+
+Was ein Agent im Tagesrhythmus ändert
+
+Agents folgen der Arbeit, Menschen entscheiden
+
+So startest du mit dem kostenlosen Assessment
+
+Quellen und Methode
+
+Anleitung · 19. November 2026
+
 ### Warum dein Release immer wieder rutscht: was ein Team-Assessment zeigt
 
 Ein Release geht erst raus, wenn auch alles rund um den Code bereit ist. Ein Team-Assessment liest, wie die Arbeit in den letzten 90 Tagen tatsächlich lief, und zeigt, wo sie wartete. So beseitigst du das Warten, statt das Team anzutreiben.

@@ -96,6 +96,8 @@ ANLEITUNGEN
 
 ## Weitere Anleitungen
 
+Warum Aufgaben zwischen Menschen liegen bleiben und was sich mit einem Agent ändert
+
 Warum dein Release immer wieder rutscht: was ein Team-Assessment zeigt
 
 Richte deinen Arbeitsplatz für Agenten in 20 Minuten ein

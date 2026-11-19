@@ -66,6 +66,30 @@ Dla Twojej firmy: przeczytaj, jak działa bezpłatna tygodniowa ocena, a potem, 
 
 Poradnik · 19 listopada 2026
 
+### Dlaczego zadania stoją między ludźmi i co zmienia agent
+
+Zadanie może wyglądać na aktywne, a w rzeczywistości czeka, aż kolejna osoba je zauważy, weźmie albo odda planistce lub planiście. Agent zmienia codzienny rytm: sprawdzanie i eskalacje dzieją się automatycznie, a ludzie zachowują odpowiedzialność i decyzje.
+
+Dla founderów i szefów zespołów produktowych, których zadania czekają między ludźmi, a planiści ręcznie gonią właścicieli.
+
+W tym poradniku
+
+Gdzie zadanie naprawdę czeka
+
+Objawy zawieszonego przekazania
+
+Dlaczego ręczne popędzanie się nie skaluje
+
+Co agent zmienia w codziennym rytmie
+
+Agenci podążają za pracą, ludzie decydują
+
+Jak zacząć od bezpłatnej oceny
+
+Źródła i metoda
+
+Poradnik · 19 listopada 2026
+
 ### Dlaczego Twoje wydanie znów się opóźnia: co pokazuje ocena zespołu
 
 Wydanie jest gotowe dopiero wtedy, gdy gotowe jest też wszystko wokół kodu. Ocena zespołu analizuje, jak naprawdę przebiegała praca w ostatnich 90 dniach, i pokazuje, gdzie czekała. Usuwasz więc przyczynę czekania, zamiast poganiać zespół.

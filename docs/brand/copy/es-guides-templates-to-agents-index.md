@@ -88,6 +88,8 @@ GUÍAS
 
 ## Más guías
 
+Por qué las tareas se atascan entre personas y qué cambia con un agente
+
 Por qué tu lanzamiento se retrasa otra vez: qué muestra una evaluación del equipo
 
 Pon en marcha tu espacio de trabajo de agentes en 20 minutos

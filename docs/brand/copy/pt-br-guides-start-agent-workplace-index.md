@@ -96,6 +96,8 @@ GUIAS
 
 ## Mais guias
 
+Por que as tarefas travam entre as pessoas e o que muda com um agente
+
 Por que seu lançamento atrasa de novo: o que uma avaliação de equipe mostra
 
 Como funciona a avaliação gratuita de uma semana
