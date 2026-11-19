@@ -1,4 +1,4 @@
-# Current handoff: SITE-072, the home leads into the free assessment, 2026-11-19
+# Current handoff: SITE-072, the home leads into the free assessment, live 2026-11-19
 
 Objective (backlog SITE-072; the operator's words verbatim in the row): the home tidied so it leads founders into the
 free assessment (assessment.passioncode.ai, Morpheus's bot, the release guide) and every entry is measured. Record:
@@ -12,8 +12,9 @@ Worker; facts row *home and the free assessment*; SCN-029, FLW-08, SCR-01.
 
 Checks run: `npm run check` exit 0; `npm run build`; local shots at 1440 and 390 px in four languages, no overflow.
 
-Next task: the board rows of the audit (H-07, H-10, H-11, Polish orphans, CJK line breaks), then SITE-071 with the new
-strings.
+Shipped: PR #170, squash `0a5d3b00`; deployed from `main`, Worker version `3add768c-2955-46f3-9014-8e868b6014ec`; live links per language read with curl; browser readback in en and ru; growth shows `cta_click` with the new values (task record section 6). `verify-live.py` FAIL rows are pre-existing tooling gaps (SITE-073).
+
+Next task: SITE-073 (verify-live knows the live snapshot, the guide-only languages, the digest and the managed robots.txt), then SITE-074 (audit follow-ups) and SITE-071 with the new strings.
 
 # Earlier handoff: SITE-070, the release guide in 19 languages (content plan, guide 1), in review, 2026-11-19
 

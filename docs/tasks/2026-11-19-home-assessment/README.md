@@ -1,6 +1,6 @@
 # SITE-072: the home leads into the free assessment
 
-Status: in review on branch `site/home-assessment` (from `main` `e26cf1f6`), 2026-11-19. Backlog SITE-072.
+Status: live since 2026-11-19 12:37 UTC (PR #170, squash `0a5d3b00`; Worker version `3add768c-2955-46f3-9014-8e868b6014ec`). Backlog SITE-072.
 
 ## Order
 
@@ -100,7 +100,26 @@ USD 0.02 to 0.04 each). Native review: none yet (SITE-071 covers the guide; this
 
 ## 6. Deploy and live evidence
 
-Filled in after the deploy (see `docs/HANDOFF.md` for the current state).
+- Merge: PR https://github.com/passioncode-ai/passioncode-ai.github.io/pull/170, squash `0a5d3b00` on `main`.
+- Deploy: `use_secret.py run --env prod passioncode-ai.github.io CLOUDFLARE_ACCOUNT_ID -- npm run deploy` from `main`
+  `0a5d3b00`: `npm run check` and `npm run build` inside it passed; 422 files uploaded; Worker version
+  `3add768c-2955-46f3-9014-8e868b6014ec` (`wrangler deployments list`, 2026-11-19T12:37:21Z).
+- Live links, read with curl: `/` → `assessment.passioncode.ai/?lang=en` and `lp_home_en`; `/ru/` → `?lang=ru`,
+  `lp_home_ru`; `/de/` → `?lang=de`, `lp_home_de`; `/ja/` → `?lang=ja`, `lp_home_ja`; `/es/guides/why-releases-slip/`
+  → `lp_guide-why-releases-slip_es`; `/business/` carries the header item.
+- Live home equals the build except the live version values the Worker writes (diff of `dist/index.html` and the
+  served page with versions masked: no difference).
+- Browser readback (CDP headless Chrome, reduced motion) of the live home in en and ru at 1440 and 390 px: the header
+  item, the hero button and card, #assessment; no horizontal overflow.
+- `scripts/verify-live.py --output verify-live.json`: FAIL with 105 rows, none caused by this change, recorded as
+  SITE-073: download routes answer the Worker's newer live snapshot (Fabric 0.3.24 against `fabric/release.json`
+  0.3.16, the same for Observatory), pages with live version values hash differently for the same reason, the guide's
+  nine guide-only languages and the digest carry hreflang sets the script does not know (SITE-070, SITE-068A), and
+  Cloudflare prepends its managed content signals to `robots.txt`.
+- Analytics in growth (`growth.analytics.events.list`, app `passioncode-site`, production, 12:37 to 13:30 UTC, as of
+  12:43:12Z): `cta_click` 3 with `location` hero, header, assessment, `target` assessment and morpheus, `lang` en, ru,
+  de; `page_view` 7 on home. These are the agent's own checks (three clicks through CDP on `/`, `/ru/`, `/de/`, links
+  not followed), not visitors.
 
 ## Open
 
