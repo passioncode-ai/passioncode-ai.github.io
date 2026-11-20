@@ -1,0 +1,155 @@
+{
+  "schema": "passioncode-digest-post/1",
+  "date": "2026-11-20",
+  "title": "Self-Improving Agents Move From Models to Harnesses",
+  "description": "GUARD stabilizes harness edits, agents design their own learning, and new results clarify memory, training and the economics of autonomous research.",
+  "lead": "This research treats improvement as an engineering problem around a frozen model: edit prompts, skills, tool rules and memory, test the result, and reject regressions. OpenAI's usage figures show why reliability and cost discipline matter as agents take on longer research tasks.",
+  "chat_summary_ru": "В фокусе дайджеста самосовершенствование вокруг замороженной модели: меняются промпты, навыки, правила инструментов и память.\nGUARD не принимает правки, чьи регрессии перевешивают выигрыш, а другой эксперимент показывает, что сильные модели сами выстраивают обучение и переносят его на новые задачи.\nПрактический вывод: проверять изменения на регрессии, консолидировать память между сессиями и считать стоимость автономной работы по типам задач.",
+  "items": [
+    {
+      "title": "GUARD: Stabilizing Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2611.23476",
+      "source": "arXiv 2611.23476",
+      "take": "GUARD keeps a frozen base model stable while continually evolving the harness around it.",
+      "points": [
+        "The editable harness contains prompts, skills, tool rules and memory, with no external reference grader required.",
+        "Each round grades trajectories against pre-execution self-checks, pins mastered rules, prioritizes newly broken behaviors and ranks parallel edits by critic-free group-relative fitness.",
+        "A Soft-HURT gate promotes an edit only when its gains outweigh its regressions, and the reported benchmarks show consistent improvement without catastrophic forgetting or memory pollution while cutting deployment token usage."
+      ],
+      "adopt": "Gate harness edits on self-check results and group-relative candidate fitness, then roll out only edits whose gains outweigh their regressions."
+    },
+    {
+      "title": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
+      "url": "https://arxiv.org/abs/2611.23219",
+      "source": "arXiv 2611.23219",
+      "take": "Sufficiently capable frozen agents can design useful self-improvement procedures without a prescribed learning loop.",
+      "points": [
+        "The agent receives a compute budget and tools for collecting experience and updating text documents, with no externally imposed loop or real-world data.",
+        "Its strategies align with classic cognitive frameworks for self-regulated learning and with self-generated curricula.",
+        "The resulting text artifacts improve external benchmarks across different game horizons, mechanics and 3D navigation."
+      ],
+      "adopt": "Give strong agents a bounded experimentation sandbox and evaluate their learned text artifacts on held-out tasks before deploying them."
+    },
+    {
+      "title": "The Components of Agent Memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "source": "Anthropic research",
+      "take": "Agent memory works best when it consolidates validated rules rather than archiving every event.",
+      "points": [
+        "Anthropic describes offline consolidation during idle time, building on sleep-time compute from Letta and UC Berkeley, and calls log reflection dreaming.",
+        "On Continual Learning Bench 1.0, Claude Opus 5 was Anthropic's first tested model to close the learning loop with memory, while Opus 5.5 and Sonnet 5.5 also closed it and scored about the same as Opus 5 with memory.",
+        "A contrasting Pokémon Red run shows the failure mode: Sonnet 3.7 wrote 413 memory files across 225 folders and earned one badge."
+      ],
+      "adopt": "Schedule idle-time memory consolidation that extracts validated rules and repairs notes instead of appending an unfiltered event log."
+    },
+    {
+      "title": "Research Acceleration: The Jagged Frontier",
+      "url": "https://openai.com/index/research-acceleration-jagged-frontier/",
+      "source": "OpenAI research",
+      "take": "Autonomous research capability and usage rose sharply, but success remains highly dependent on the task.",
+      "points": [
+        "From March to October, estimated success rose from 23% to 46% for tasks requiring two to four hours of human work and from 13% to 35% for tasks requiring four to eight hours.",
+        "Success was 79% for monitoring training runs, 35% for launching them and 25% for writing inference and serving code.",
+        "Median daily usage reached $2,400 per researcher at API list prices in October, up 62% from September, while agent workdays rose from 0.5 to 5.7 per researcher, an elevenfold increase."
+      ],
+      "adopt": "Track autonomous success and spending separately for each research task type before expanding agent autonomy."
+    },
+    {
+      "title": "Large-Scale Harness Evolution Results",
+      "url": "https://agentsocialx.com/omarsar/linkedin-posts-october-2026-part-2",
+      "source": "Elvis Saravia",
+      "take": "A large harness-evolution study reports broad population gains alongside lower cost on jointly solved tasks.",
+      "points": [
+        "Population-mean success rose in all six model-benchmark settings, with single agents gaining up to 11.2 points.",
+        "On SWE-bench Multilingual, one evolved agent gained 5.0 points and spent 38.5% less on tasks both versions solved.",
+        "The work covered nearly 35,000 agent runs on SWE-bench Verified and Terminal-Bench and varied three decisions separately."
+      ],
+      "adopt": "Evaluate harness decisions independently across a population of runs, and compare both success and cost on tasks solved by the baseline."
+    },
+    {
+      "title": "A Curriculum for Post-Training Agents",
+      "url": "https://huggingface.co/blog/huggingface/train-agents",
+      "source": "Hugging Face",
+      "take": "The curriculum moves agents from imitation of correct traces toward group-relative reinforcement learning in environments and harnesses.",
+      "points": [
+        "Its five steps are SFT on agent traces, distillation, RL with GRPO, RL environments and harnesses at scale.",
+        "SFT exposes the model only to correct traces, so it has not learned how to recover when its own task attempt goes wrong.",
+        "GRPO samples several answers per prompt, scores them and raises the probability of answers above the group average."
+      ],
+      "adopt": "Use SFT for basic execution, then train in environments where agents generate and score their own attempts rather than relying only on correct demonstrations."
+    },
+    {
+      "title": "AI Papers of the Week",
+      "url": "https://academy.dair.ai/papers?topic=Agents",
+      "source": "DAIR.AI",
+      "take": "The roundup maps complementary approaches to agent improvement through memory, routine decisions, skill repair, harness validation and safer updates.",
+      "points": [
+        "ARISE learns from enterprise-agent failures without changing model weights, tools or workflow code, while AnyS1 trains one 4B System-1 model on decision points mined from human-written skills.",
+        "Selective maintenance checks and repairs stored skill state after environment changes without extra model calls.",
+        "A self-rewriting harness framework uses four editable runtime components and a diagnose, propose, validate and deploy loop tested on SWE-bench Lite, while Safe Personal RSI decides whether a proposed instruction update is safe for the Kicker health assistant.",
+        "The Resolution Hypothesis argues that noisy evaluations stall evolution because they cannot distinguish better candidates from worse ones."
+      ],
+      "adopt": "Prefer failure-derived memory and selective skill repair before changing weights, and make candidate evaluation reliable enough to resolve real improvements."
+    }
+  ],
+  "adopt_summary": [
+    "Gate every harness edit on measured gains and regressions.",
+    "Let capable agents design curricula inside bounded, transferable test environments.",
+    "Consolidate memory offline into validated rules instead of retaining every event.",
+    "Track success, token use and dollar cost by task before expanding autonomy."
+  ],
+  "sources_note": "Collected by PassionCode's research agent from arXiv, Hugging Face daily papers, dair.ai, lab research pages and researchers' blogs; every number above is quoted from the source it links.",
+  "copylot_report": [
+    "3c237f4f-1ef0-4718-bf18-1506da474a86",
+    "13097bc7-e9d7-4742-bea0-283ebc54340f",
+    "58de1cf2-2f96-4fdf-9908-e6c2b34460f3",
+    "7ba2c793-55f2-438b-80eb-4fab218bd9e9",
+    "a104f5f8-e85f-4136-ac3d-72554aeab489",
+    "6ba97831-1f51-4570-b00a-dcbba43cdc1b",
+    "0618fd04-e7e9-4d3c-bbb8-7c4866286f6d",
+    "6e8ce3e3-ac24-4689-9800-12dc479ec6f4",
+    "ffcee2df-be22-47b6-b990-c3e0508f5601",
+    "358541c4-3f24-4410-b524-62e88dc392c1",
+    "e326e3e0-0c8c-4e5e-a774-7aa99eede30e",
+    "b9f7b1aa-0145-432c-87d1-0f71fb5a363b",
+    "b3bab5ab-e472-45b3-9d5b-aee625bb03a9",
+    "a5ffbaea-3fe5-451d-a845-1a4b91a381be",
+    "318ed0d7-c1af-447b-bd6f-0087dd786f7e",
+    "eca0a6a8-1e41-4647-8c53-af6d6e4d11f4",
+    "847fa616-fa11-49da-842b-5e3a202d40db",
+    "97705251-d135-4c6f-85f9-40246059fd2d",
+    "67143fdc-eba6-45d1-92b4-be27414bb99a",
+    "aca8b3af-173a-4ba2-9fa5-afb5a7e0e392",
+    "1617bcd3-3246-417d-840b-15ab03792d91",
+    "041b2f5d-77a3-4e8e-9e2f-51ebb8a879c3",
+    "d7c94891-3d6b-4b30-8f45-042151b731ab",
+    "43cfebd3-4abe-4456-abb6-41785259471a",
+    "11da0c38-2585-4fb0-9213-82525628a678",
+    "4016b3d7-534d-442a-924d-431e2b08d96b",
+    "a0df5310-ceff-4000-aef1-018ebd70076d",
+    "00e4f1b4-dbc1-4b95-8197-bb1b3f909725",
+    "0437259a-066e-4a18-8225-a19a397193b9",
+    "3efcbdde-f5fa-4b3d-b958-fe90bc3e5072",
+    "8cff277f-0d5f-401f-ad23-ce7a2a6321b6",
+    "09ac828f-4033-41eb-8855-585cafb5e677",
+    "f0f0d7e3-7a5b-4dbd-acc7-9811294dfa8b",
+    "2e91b996-81e7-4c04-8898-21665a9d7701",
+    "bab3e45d-80e1-4296-b3e7-1316607f4638",
+    "05484674-d8d5-460a-af2c-0f365ed9d9fe",
+    "7f8f0a40-641f-4990-9629-f0e4094df322",
+    "86ed6cd6-08ee-43e4-b63d-bc42c4996725",
+    "c51a3a7c-a59b-457a-a61e-cc6ad38de287",
+    "9942e5dc-6900-46e0-97a4-5c4b0a6f660b",
+    "0fbf0995-1bd9-496f-aa50-bbe5527ab977",
+    "e1e7dc98-64f1-4c46-892b-7b0ebdf0e40d",
+    "5bef165d-9f08-43ac-b234-5445efd2f08f",
+    "d8250f87-9c85-40e7-9972-5bb859026d83",
+    "bb926289-9357-472c-9844-658b5ec56be0",
+    "7a0388b3-0fb9-42cd-8b9f-3e3df3e3bcdb",
+    "7e297873-0a92-4eae-a8f1-5ce36ebddbab",
+    "ec2d5eea-8b6a-47ed-886f-0ad4c6ca065b",
+    "5794d7ba-47ed-4a52-8eae-4d4c8306f0e6",
+    "32ea734c-69be-49e9-b201-b97a1af0ba42",
+    "fa960d07-3426-4fd1-837f-ee0724600652"
+  ]
+}
