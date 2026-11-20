@@ -6,7 +6,17 @@
   <atom:link href="https://passioncode.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Notes from PassionCode.ai on AI-native organizations, and the daily AI research digest.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 19 Nov 2026 06:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 20 Nov 2026 06:00:00 GMT</lastBuildDate>
+  <item>
+   <title>Self-Improving Agents Move From Models to Harnesses</title>
+   <link>https://passioncode.ai/blog/ai-research/2026-11-20/</link>
+   <guid isPermaLink="true">https://passioncode.ai/blog/ai-research/2026-11-20/</guid>
+   <pubDate>Fri, 20 Nov 2026 06:00:00 GMT</pubDate>
+   <description>This research treats improvement as an engineering problem around a frozen model: edit prompts, skills, tool rules and memory, test the result, and reject regressions. OpenAI's usage figures show why reliability and cost discipline matter as agents take on longer research tasks.</description>
+   <pc:summary_ru>В фокусе дайджеста самосовершенствование вокруг замороженной модели: меняются промпты, навыки, правила инструментов и память.
+GUARD не принимает правки, чьи регрессии перевешивают выигрыш, а другой эксперимент показывает, что сильные модели сами выстраивают обучение и переносят его на новые задачи.
+Практический вывод: проверять изменения на регрессии, консолидировать память между сессиями и считать стоимость автономной работы по типам задач.</pc:summary_ru>
+  </item>
   <item>
    <title>Memory Needs Checks, Harnesses Need Gates</title>
    <link>https://passioncode.ai/blog/ai-research/2026-11-19/</link>
