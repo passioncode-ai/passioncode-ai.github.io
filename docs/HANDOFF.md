@@ -39,6 +39,23 @@ Exact next task: SITE-080 by the new structure (move `catalog.json` to `site/cat
 the header panel, the footer, the breadcrumbs, the sitemap and `llms.txt` from it, add the aliases and `/media/`),
 through task-pipeline; in parallel SITE-092's first batch: `foundry_estimate`, then the orders for V-01 and V-11.
 
+Found after the merge (`3e3645bf`, pull request 182, CI run 44907515459 green), before part 2 starts:
+- **The MacBook's disk sentry holds heavy work** (owner's rule of 2026-11-21: no local installs, builds or renders
+  under 12 GB free; `df -h ~` read 6.8 GB at 13:20 UTC, and a shell command that names the install is refused). Part
+  1's install, `npm run check` and `npm run build` ran before the sentry's notice, in a worktree that is removed. For
+  part 2: write and run the dependency-free node scripts locally and let the pull request's CI be the gate for the
+  install, the check and the build, or work in a worktree on the Mac Studio (`ssh studio-sshlg`, 298 GB free, a
+  checkout of this repository exists there; its load average was above 100 at 13:20 UTC). Video renders (Frame Agent
+  renders locally) wait until the disk is back above 14 GB or Foundry routes them to the Studio.
+- **Asset Foundry's project `passioncode-site` is set for the story landing, not for this order**
+  (`foundry_project get`, 2026-11-21): trial variants with the operator picking, a comic style, the first three
+  orders' taste stops held for a person, 30 USD per order. A context for the autonomous product videos is asked of
+  asset-foundry on board thread `a777a937` (request `6edd0947`: a second project or context beside the old one, the
+  scenario for 16:9 films up to 120 s, and whether renders can go to the Studio). No order was placed; SITE-092's
+  first step is that answer, then `foundry_estimate`.
+- `npx @passioncode-ai/passioncode doctor`, 2026-11-21: no failure, 12 warnings (among them no Fabric Inbox MCP in
+  four runners and Project Observatory degraded on five collectors).
+
 # Earlier handoff: SITE-079, the site after Humanless, spec and backlog written 2026-11-21
 
 Objective (backlog SITE-079; the owner's words verbatim in the spec's section 1): a spec by sub-flows for the site's
