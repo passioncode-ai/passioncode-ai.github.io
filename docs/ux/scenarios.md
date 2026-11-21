@@ -46,6 +46,11 @@
 | SCN-037 | Read a case and take its first step | Cases | P-03, P-02 | ST-14, FLW-12 | draft | pending |
 | SCN-038 | Go from a pain to the assessment or a request | Pains | P-03, P-02 | ST-15, ST-07, FLW-13 | draft | pending |
 | SCN-039 | See what is free and what is paid | Pricing | P-05, P-02, P-03 | ST-16, FLW-10, FLW-12 | draft | pending |
+| SCN-040 | Read the home from Fabric down to the ecosystem | Vision home | P-05, P-01 | ST-11, ST-12, FLW-10 | draft | pending |
+| SCN-041 | Watch a page's video and take the page's action | Video | P-02, P-03, P-05 | ST-14, ST-12, FLW-12 | draft | pending |
+| SCN-042 | See what Fabric gives a person who builds products | For you | P-05, P-01 | ST-11, FLW-10 | draft | pending |
+| SCN-043 | Go from Fabric to a module, a feature and its part | Product structure | P-01, P-05 | ST-13, FLW-11 | draft | pending |
+| SCN-044 | Arrive on a video's watch page and reach its page | Video | P-01, P-03 | ST-13, FLW-11 | draft | pending |
 
 ## Personas
 
@@ -865,6 +870,119 @@ header, /fabric/, /business/ and the guides change (SCN-029's hero order is repl
 - **UI elements:** h1, line, tier table, one button per tier, licence line, FAQ, header «Sign in»
 - **States covered:** before the account is live; after it.
 - **Errors & recovery:** the account unreachable -> the platform's own error page; the site's buttons are plain links.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+## SITE-091: the site's architecture for years (spec of 2026-11-21, not built)
+
+Scenarios SCN-040 to SCN-044 are written before the interface, from the owner's order of 2026-11-21 12:53 UTC
+([spec](../tasks/2026-11-21-site-architecture/README.md)). They start as `draft` with `Coverage: none yet`. SCN-040
+replaces the section order of SCN-030 on the home (decision A7) and the header named in SCN-030's UI elements
+(decision A13); SCN-030's first screen and its action stand.
+
+### SCN-040: Read the home from Fabric down to the ecosystem
+- **Persona:** P-05, P-01
+- **Feature:** Vision home (SITE-081, decision A7)
+- **Traces:** ST-11, ST-12, FLW-10
+- **Entry point:** / in any of the site's languages
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens the home -> the hero of SCN-030 with the film's poster under it; the film plays on a click, with captions in the page's language.
+  2. The visitor scrolls -> the Fabric section: what Fabric is, the CEO agent, and the product's interface assembling as the page moves; with reduced motion or without JavaScript the finished interface is shown with the same text.
+  3. The visitor scrolls -> «For you»: what stays with a person and what goes to agents, and the link to /for-you/.
+  4. The visitor scrolls -> four cards on why the system can be trusted, each a link to its page; then one screen for organizations with the links to /business/ and /assessment/; then the proof.
+  5. The visitor reaches the ecosystem -> the line «Fabric is made of these modules» and one card per module (Switchboard, Inbox, Dashboards, Observatory, the Agent Contract and Adapter, the launcher, Relay, Okolos), each with one sentence and a link to its page.
+  6. The visitor clicks a module's card -> that module's page opens.
+- **Expected result:** A visitor learns what Fabric is and what it gives them before any list of products, and finds every module with its own page at the foot of the home.
+- **Alt paths:** the header's Fabric panel lists the same modules; the FAQ; the big White Rabbit under the ecosystem (SCN-035).
+- **UI elements:** hero, film poster and player, Fabric section with the scroll-led walk, «For you» block, four cards, organization screen, proof, ecosystem cards, FAQ, foot rabbit
+- **States covered:** static populated; reduced motion; without JavaScript; a module without a release (its card says «Read the source»).
+- **Errors & recovery:** the film's file unreachable: the poster stays with the link to the transcript on the watch page.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-041: Watch a page's video and take the page's action
+- **Persona:** P-02, P-03, P-05
+- **Feature:** Video on product and audience pages (SITE-092)
+- **Traces:** ST-14, ST-12, FLW-12
+- **Entry point:** any page whose catalogue row names a video; here /business/
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens /business/ -> the film's poster sits in the second block with its title as text and its length.
+  2. The visitor clicks play -> the film plays with sound and with captions in the page's language; nothing played before the click.
+  3. The visitor opens «Transcript» under the player -> the full text of the narration in the page's language.
+  4. The film ends -> the player shows the page's one action («Assess your company») and «Watch again».
+  5. The visitor clicks the action -> /assessment/.
+- **Expected result:** An organization's lead understands in two minutes how a business moves to agents, and reaches the assessment in one click from the film's end.
+- **Alt paths:** the visitor reads the page without the film (the page's text carries every fact the film says); a language without its own narration plays the English cut with its own captions; «Watch on its own page» opens /videos/<slug>/.
+- **UI elements:** poster, title, length, play button, captions control, transcript `details`, end card with the action
+- **States covered:** before play; playing; ended; reduced motion (no motion on the poster); a clip on a sub-feature page (muted, in view only, stopped under reduced motion).
+- **Errors & recovery:** the file unreachable or the format unsupported: the poster, the transcript and the action stay; one line says the video cannot be played here.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-042: See what Fabric gives a person who builds products
+- **Persona:** P-05, P-01
+- **Feature:** For you (SITE-093, decision A8)
+- **Traces:** ST-11, FLW-10
+- **Entry point:** header «For you»; the home's «For you» block
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens /for-you/ -> one sentence says who this is for (developers, founders and everyone who builds products, whatever their role) and the film follows.
+  2. The visitor reads «what changes for you» -> the routine that goes to agents, in the reader's own tasks.
+  3. The visitor reads how it works in three steps -> tell the CEO agent, the agents work in their sessions, you check the result.
+  4. The visitor reads «what you keep» -> direction, control, expertise, with the link to how control works (/fabric/gates/).
+  5. The visitor picks a path -> cards to the features that matter first, then «Try Fabric free».
+  6. The visitor clicks «Try Fabric free» -> /start/#setup.
+- **Expected result:** A developer or a founder sees their own work in the page and reaches the setup command.
+- **Alt paths:** a visitor who runs a company takes the link to /business/; the plan that opens more (/pro/).
+- **UI elements:** h1, audience line, film, three blocks, feature cards, FAQ, action
+- **States covered:** static populated; before a role page exists (no role links are shown).
+- **Errors & recovery:** none beyond the browser's own.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-043: Go from Fabric to a module, a feature and its part
+- **Persona:** P-01, P-05
+- **Feature:** Product structure (SITE-080, decisions A4 and A6)
+- **Traces:** ST-13, FLW-11
+- **Entry point:** header «Fabric»; /fabric/
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens the header's Fabric panel -> the features in two groups, the modules, then Security, Cloud and Open source, each a link.
+  2. The visitor opens /fabric/ -> the film, the map of surfaces, a card per feature and a card per module.
+  3. The visitor opens a feature, for example /fabric/gates/ -> the answer in the first paragraph, the overview video, how it works, and «its parts» as cards.
+  4. The visitor opens a part, for example /fabric/gates/approvals/ -> the answer, a short clip, three steps and the limit.
+  5. The visitor uses the breadcrumbs -> Home › Fabric › Gates › Approvals, each a link; from a module's page the trail is Home › Fabric › the module.
+- **Expected result:** Any part of the product is reached in at most three clicks from the home, and the visitor always knows where they are.
+- **Alt paths:** the footer's columns; a sibling link at the end of each page; a surface not yet released shows «In development» beside its name.
+- **UI elements:** header panel, feature cards, module cards, breadcrumbs, «its parts» block, sibling links
+- **States covered:** a feature without parts yet (the block is absent); the panel without JavaScript (a `details` element).
+- **Errors & recovery:** an alias people guess (/features/, /ecosystem/, /modules/) lands on the matching part of /fabric/.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-044: Arrive on a video's watch page and reach its page
+- **Persona:** P-01, P-03
+- **Feature:** Watch pages and the video library (SITE-092, decision A10)
+- **Traces:** ST-13, FLW-11
+- **Entry point:** a search result for a video; /videos/; «Watch on its own page» under a player
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens /videos/<slug>/ -> the title, the player and one paragraph on what the video shows.
+  2. The visitor plays the video -> as SCN-041 steps 2 and 3; the transcript is open on this page.
+  3. The visitor clicks the link to the page the video belongs to -> that page opens.
+  4. The visitor opens /videos/ -> every video by group (Fabric, the modules, for you, for organizations).
+- **Expected result:** A visitor who came for one video finds the product page behind it in one click.
+- **Alt paths:** three related videos under the transcript; the page's action.
+- **UI elements:** title, player, transcript, the link to the page, related videos, library groups
+- **States covered:** static populated; a language without its own narration.
+- **Errors & recovery:** as SCN-041.
 - **Status:** draft
 - **Coverage:** none yet
 - **Product:** unobserved

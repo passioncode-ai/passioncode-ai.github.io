@@ -1,4 +1,45 @@
-# Current handoff: SITE-079, the site after Humanless, spec and backlog written 2026-11-21
+# Current handoff: SITE-091, the site's architecture for years, spec written 2026-11-21
+
+Objective (backlog SITE-091; the owner's words verbatim in the spec's section 1): deepen SITE-079 into a structure
+that lasts for years, so the site and its pages are not rebuilt again: the full URL catalogue, page types, the
+language rules, rules for adding a module or a feature, and an overview video for every product and every
+sub-feature. Delivery in three parts: (1) this spec; (2) the home, for you, for organizations and the module pages
+with their videos; (3) the sub-feature pages and the content for search.
+
+Entry point: [docs/tasks/2026-11-21-site-architecture/README.md](tasks/2026-11-21-site-architecture/README.md).
+
+Done (part 1; documents only, nothing built, the live site unchanged):
+- the spec: request rows A-R1 to A-R10, the positioning the structure serves, decisions A1 to A17, twenty page types,
+  the header and footer, the programme of fifty videos, languages and the sitemap, URL rules U1 to U7, extension rules
+  E1 to E9, content clusters, amendments to SITE-079 from the neighbours' answers, compliance rows, the plan;
+- [catalog.json](tasks/2026-11-21-site-architecture/catalog.json) and its rendering
+  [URL-CATALOG.md](tasks/2026-11-21-site-architecture/URL-CATALOG.md): 92 URL rows, 14 aliases, the reserved names,
+  50 videos; `render-catalog.mjs --check` verifies the rules and that the rendering is fresh;
+- the SEO brief's addendum (rows N1, N2, N4, N7, N9 amended; N20 and N21 new);
+- scenarios SCN-040 to SCN-044 (draft, coverage none yet);
+- backlog rows SITE-091 (spec done) and SITE-092 to SITE-096 (open); SITE-080's row points at the new structure.
+
+Decisions worth knowing before the first build row: English keeps no prefix and `/en/…` becomes a 301 alias (A1); no
+live URL moves and a URL never moves when the product is reorganized (A2, A3); Fabric is the ecosystem's hub and the
+modules keep root URLs (A4); the public words are «the ecosystem» and «modules» (A5); `/for-you/` is new and `/start/`
+stays the command page (A8); video files live outside Git under `/media/video/` and every video has a watch page (A9,
+A10); the header's White Rabbit button leads to `/assessment/`, which leads into the other site (A14).
+
+Checks actually run: `node docs/tasks/2026-11-21-site-architecture/render-catalog.mjs --check` (ok: 92 rows, 50
+videos, 14 aliases); the em dash check on the new files and the added lines; `npm run check` and `npm run build` (see
+the pull request). Not run: anything against the live site; no search demand measured; no video estimated or ordered;
+the sub-features' names not confirmed by Fabric.
+
+Board: Fabric task `4caf32a8` (this order). The order's thread `005d3e3f` does not include this project
+(`not_authorized` on read and write), so the plan and the state are on thread `de1297d7` (this project, the Fabric CEO,
+fabric-workspace), where fabric-workspace was told that the owner puts this work before wave 3. Open questions Q1 to Q4
+(spec section 13) go to the CEO; each has a default and none blocks.
+
+Exact next task: SITE-080 by the new structure (move `catalog.json` to `site/catalog.json`, generate the page list,
+the header panel, the footer, the breadcrumbs, the sitemap and `llms.txt` from it, add the aliases and `/media/`),
+through task-pipeline; in parallel SITE-092's first batch: `foundry_estimate`, then the orders for V-01 and V-11.
+
+# Earlier handoff: SITE-079, the site after Humanless, spec and backlog written 2026-11-21
 
 Objective (backlog SITE-079; the owner's words verbatim in the spec's section 1): a spec by sub-flows for the site's
 update after Humanless, a thought-through SEO structure, the commerce backlog, and tasks on the board. Extends the
