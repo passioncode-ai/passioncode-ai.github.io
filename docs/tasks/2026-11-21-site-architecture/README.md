@@ -1,6 +1,6 @@
 # SITE-091: the site's architecture for years
 
-Status: spec written 2026-11-21 (part 1 of the owner's order of 2026-11-21 12:53 UTC). Nothing is built and the live
+Status: spec written 2026-11-21 and amended the same day by the owner's addition on Memory (section 17) (part 1 of the owner's order of 2026-11-21 12:53 UTC). Nothing is built and the live
 site is unchanged. It deepens [SITE-079](../2026-11-21-humanless-site/README.md): that spec stays the source for the
 sub-flows, the working copy and the compliance table; this file replaces its section 4 (structure of pages and URLs)
 and its header, and adds the page types, the video programme, the language rules and the rules for growing the site
@@ -9,7 +9,7 @@ without rebuilding it.
 Files: [catalog.json](catalog.json) (the URL catalogue, the source) · [URL-CATALOG.md](URL-CATALOG.md) (the same,
 rendered) · [render-catalog.mjs](render-catalog.mjs) (renders and checks it) · the SEO brief's
 [addendum](../../seo/brief-2026-11-21.md#addendum-site-091-the-architecture-for-years) · scenarios SCN-040 to SCN-044
-in [scenarios](../../ux/scenarios.md) · backlog rows SITE-091 to SITE-096 in [backlog](../../backlog.md).
+and SCN-045 in [scenarios](../../ux/scenarios.md) · backlog rows SITE-091 to SITE-097 in [backlog](../../backlog.md).
 
 ## 1. The order
 
@@ -76,7 +76,7 @@ organizations») and SITE-079's message house, which stays.
 | For whom | the main tool for developers and founders, and for everyone who builds products, whatever their role | `/for-you/` |
 | The promise (kept from SITE-079) | free your time for the work you love: the routine goes to agents | `/` |
 | Why trust it | control is built in: gates, approvals, limits and a record of every action | `/fabric/gates/`, `/security/` |
-| How it grows | every run leaves a lesson the next one reads (Fabric principle 11) | `/fabric/self-improvement/`, `/fabric/memory/` |
+| How it grows | every run leaves a lesson the next one reads (Fabric principle 11) | `/memory/`, `/fabric/self-improvement/` |
 | For organizations | from the first process on agents to a Humanless business; the assessment is the first step | `/business/`, `/assessment/` |
 | The ecosystem | Fabric is made of modules; each works with Fabric and on its own | `/#ecosystem`, `/fabric/#ecosystem`, the module pages |
 
@@ -91,7 +91,7 @@ row here says it replaces one.
 | ID | Decision | Reason | Reopened by |
 |---|---|---|---|
 | A1 | **The default language keeps no prefix.** English stays at `/…`; every other language stays at `/<code>/…`; `/en/…` answers 301 to the same path without the prefix; `x-default` stays the English URL | (1) Current URLs: 416 sitemap rows and every inbound link are on unprefixed English URLs; a move is a redirect for each and a period of lost signals, for no gain. (2) hreflang: the set is already complete and reciprocal with `x-default` on the English URL, which the specification allows. (3) SEO: search engines treat a prefixed and an unprefixed default alike; what they punish is language detection that redirects the root, which a prefixed default invites. (4) Redirects: none are needed today; the only new one is the `/en/` alias. (5) Cost of keeping: the tooling treats English as the special case, which `scripts/pages.mjs` and `scripts/locales.mjs` already do | English stops being the source or the fallback, or a second English market (for example `en-gb`) gets its own offer. Then the new English variant gets its prefix beside the root; the root still does not move |
-| A1b | **One English slug per page in every language** (`/ru/fabric/memory/`, never `/ru/fabric/pamyat/`) | one registry key per page, hreflang pairs by construction, no redirect map per language, links that survive a language switch. The cost is no keyword in the URL for non-Latin languages, a weak signal next to the title and the h1 | never, short of a market where local slugs are measured to matter; then by alias, not by a move |
+| A1b | **One English slug per page in every language** (`/ru/memory/`, never `/ru/pamyat/`) | one registry key per page, hreflang pairs by construction, no redirect map per language, links that survive a language switch. The cost is no keyword in the URL for non-Latin languages, a weak signal next to the title and the h1 | never, short of a market where local slugs are measured to matter; then by alias, not by a move |
 | A2 | **No live URL moves.** `/business/` stays the organizations' home under the label «For organizations»; `/start/` stays the page with the command | SITE-079 D4 and brief N1; `/business/` carries the form, the thanks page and inbound links. The names people guess become aliases (`/for-organizations/`, `/organizations/`) | never |
 | A3 | **A URL is an identity, a type is metadata.** A page's place in the path is fixed on the day it ships. If a feature later becomes its own module, or a module is folded into Fabric, its type changes in the catalogue and its URL stays; a new alias may point at it | this is the rule that makes «not ten rebuilds» true: reorganizing the product does not reorganize the site | never |
 | A4 | **Fabric is the hub of the ecosystem; there is no `/ecosystem/` page.** The modules are listed in `/fabric/#ecosystem` and in the home's ecosystem section; their breadcrumb parent is `/fabric/` while their URLs stay at the root (`/switchboard/`, `/inbox/` …) | the owner: «Fabric состоит из этих модулей». A separate hub would answer the question `/fabric/` already answers (brief N2). Root URLs for modules are live for four of them and are kept short for the rest | a module that is not part of Fabric at all (then it still gets a root URL and another parent) |
@@ -146,7 +146,7 @@ section 9); the video never holds a fact the page's text lacks.
 ## 6. Navigation and links
 
 - **Header:** decision A13. The Fabric panel lists the features in two groups (Run: the CEO agent, sessions, the board,
-  create, mobile; Trust and grow: gates, memory, self-improvement, reports, the agents it works with) and the
+  create, mobile; Trust and grow: gates, self-improvement, reports, the agents it works with; Memory has its own header item since section 17) and the
   ecosystem (the eight modules), then Security, Cloud, Open source. The panel is generated from the catalogue.
 - **Footer, five columns:** Fabric (the hub, its features) · The ecosystem (the modules, security, cloud, open source)
   · For you (for you, start, pricing, the paid personal plan) · For organizations (business, the cases, the
@@ -160,14 +160,14 @@ section 9); the video never holds a fact the page's text lacks.
 
 ## 7. The video programme
 
-Fifty videos, one per page that sells or explains a product (the full list with ids is in
+Fifty-five videos since the amendment of section 17 (fifty before it), one per page that sells or explains a product (the full list with ids is in
 [URL-CATALOG.md](URL-CATALOG.md#videos)). Guides, posts, agent templates and hubs get none by default.
 
 | Class | For | Length | Narration | Cuts |
 |---|---|---|---|---|
-| film (8) | the home, vision, humanless, for you, for organizations, the assessment, Fabric, the first customer story | 75 to 120 s | English and Russian | 16:9 for the page and the watch page, 9:16 for social |
-| overview (25) | each module, each feature, each capability, the paid personal plan, each use case | 45 to 75 s | English and Russian | 16:9 and 9:16 |
-| clip (16) | each sub-feature | 15 to 30 s, loops | none (A11) | 16:9; 1:1 when the page's layout asks |
+| film (9) | the home, vision, humanless, for you, for organizations, the assessment, Fabric, Memory, the first customer story | 75 to 120 s | English and Russian | 16:9 for the page and the watch page, 9:16 for social |
+| overview (24) | each module, each feature, each capability, the paid personal plan, each use case | 45 to 75 s | English and Russian | 16:9 and 9:16 |
+| clip (21) | each sub-feature | 15 to 30 s, loops | none (A11) | 16:9; 1:1 when the page's layout asks |
 | how-to (1) | `/start/` | 60 to 120 s | English and Russian | 16:9 |
 
 What the owner named for the two audience films: **For you (V-04)**: the vision, then Fabric, then the system around
@@ -199,8 +199,8 @@ the home). Clips play muted when in view and stop under `prefers-reduced-motion`
 
 **Spending.** `foundry_estimate` before every batch, the estimate and the actual cost in the record. Asset Foundry
 runs without a per-order line since 2026-11-18 (owner's rule); its emergency stop (USD 500 a day, 1,000 a month) and
-the estate's monthly total still hold, so the fifty videos are ordered in batches that fit them: part 2 orders the 19
-videos of its pages, part 3 the other 31. A batch whose estimate does not fit is split and the rest waits for the next
+the estate's monthly total still hold, so the fifty videos are ordered in batches that fit them: part 2 orders the 20
+videos of its pages, part 3 the other 35. A batch whose estimate does not fit is split and the rest waits for the next
 day, with the date written in the handoff.
 
 **Order of production in part 2:** V-01 (home) and V-11 (Fabric) first, because every other video quotes their look;
@@ -233,7 +233,7 @@ then V-04 and V-06 (the two audiences); then the eight module overviews; then V-
 |---|---|
 | U1 | Lowercase English words joined by hyphens; a trailing slash on every page; no file extension, no query string in a canonical URL |
 | U2 | At most three path segments after the language prefix |
-| U3 | Nouns that name the thing (`/fabric/memory/`), never a campaign, a date, a version or a claim (`/new/`, `/2026/`, `/v2/`, `/best-agents/`) |
+| U3 | Nouns that name the thing (`/fabric/sessions/`), never a campaign, a date, a version or a claim (`/new/`, `/2026/`, `/v2/`, `/best-agents/`) |
 | U4 | A URL never moves and is never reused for another thing. A retired page answers 301 to the page that took over its question, and its catalogue row stays with the state `retired` and the date |
 | U5 | The first segment is never a reserved root name (the list in the catalogue: the language codes, `api`, `assets`, `media`, `account` and the like) |
 | U6 | One page per question; before a row is added, the catalogue is searched for the question, not for the slug |
@@ -280,7 +280,7 @@ Clusters: every guide belongs to one and links to its page, which links back to 
 | Starting a company with agents | `/business/founder-team/`, `/for-you/` | a founder | the first function from templates |
 | The agent workplace | `/fabric/`, `/start/` | a developer | `/guides/start-agent-workplace/` (live); running several agents on one project |
 | Control and safety | `/fabric/gates/`, `/security/` | a developer, a security lead | what an agent may do without asking; keys an agent never sees |
-| Memory and learning | `/fabric/memory/`, `/fabric/self-improvement/` | a developer | how an agent keeps context between sessions |
+| Memory and learning | `/memory/`, `/fabric/self-improvement/` | a developer | how an agent keeps context between sessions |
 | Accounts and limits | `/switchboard/` | a developer | what to do when a coding agent hits its usage limit |
 
 Search demand is not measured for any row (the brief's rule: a blank, never a zero). Part 3 orders the keyword pass
@@ -383,7 +383,7 @@ after each part.
 
 | Check | Result |
 |---|---|
-| `node docs/tasks/2026-11-21-site-architecture/render-catalog.mjs --check` | `catalogue ok: 92 rows, 50 videos, 14 aliases` (rules U1, U2, U5; every parent and video resolves; no alias shadows a page) |
+| `node docs/tasks/2026-11-21-site-architecture/render-catalog.mjs --check` | `catalogue ok: 97 rows, 55 videos, 16 aliases` since section 17 (92, 50 and 14 before it) (rules U1, U2, U5; every parent and video resolves; no alias shadows a page) |
 | Count of sitemap URLs behind decision A1 | `grep -c '<loc>' sitemap.xml` → 416 |
 | Home video's weight behind decision A9 | `du -sh assets/video` → 15M |
 | Em dash check (U+2014) on the new files and on the added lines of the changed ones | see the pull request |
@@ -401,3 +401,83 @@ decisions) · Asset Foundry (its catalogue of operations read, nothing ordered).
 layout in this unit; section 12 is its brief), copywriting and Copylot (this unit adds no string a visitor reads; the
 working lines of SITE-079 section 7 stand), the agent architect (no agent is built or changed in this unit; SITE-090's
 consult of 2026-11-21 stands).
+
+## 17. Amendment of 2026-11-21: Memory at the centre
+
+The owner, in the CEO's window, 2026-11-21 about 15:20 Warsaw (voice, transcribed; relayed by the Fabric CEO into
+this session), verbatim as relayed:
+
+> «главное, что мы собираем, это вот эти вот грамотные memory, на которой типа лежит и мозг, самообучающийся мозг на
+> любом уровне, объединенный в общий мозг, шаринг, делегирование… Это, наверное, самое главное, то, что у нас есть.
+> позволить любым будущим агентам начать сейчас, во-первых, собирать правильный мемори, а в будущем любые агенты с ним
+> работая будут только улучшать все это… отдельная страничка мемори и видео… графику, а может даже 3D на сайте, чтобы
+> это даже покрутить… На главной странице сайта это должно быть, и на страничке отдельно memory в том числе. И там
+> рассказываем про наш облачный мемори, про шаринг, про сбор мемори, про шаринг знаний, про шаринг общий,
+> делегирование, доступ к конкретным нодам или область знаний, про возможность создать общий облачный коллективный
+> разум. ролик, тоже объясняющий это все на страничке про memory и vision… если вы пользуетесь фабриком, вы получаете
+> уже вот эти бонусы от нашей памяти и также обзаводитесь своей собственной памятью, которая постоянно улучшается.»
+
+The CEO's directions with it: Memory becomes the central theme; a section on the home right after Fabric and «for
+you»; a page `/memory`; a film on Memory and on the vision; an interactive 3D brain that is light, has a static
+fallback and costs nothing in Core Web Vitals; the style reference is a screen recording of the Sound Engine Hub's
+dashboard; the film and, if it works out, the 3D scene are made by Asset Foundry (its session `58e7fb0f`, the order
+already handed over); how the brain really works is asked of the memory's owners, never invented.
+
+### Decisions
+
+| ID | Decision | Reason | Reopened by |
+|---|---|---|---|
+| A18 | **Memory gets its own root page, `/memory/`.** It replaces `/fabric/memory/` and its two parts, which were planned and never shipped, so no live URL moves; `/fabric/memory/` and `/brain/` become aliases. Its breadcrumb parent stays `/fabric/` | the owner: «отдельная страничка мемори», «самое главное, то, что у нас есть». By the test of A6 Memory is a property of the whole platform: one engine serves Fabric's Memory, the agents base and other brains (agents base R36, D-87), and it works at every level from a machine to an organization | never |
+| A19 | **A capability may have parts.** `/memory/<part>/` uses the `subfeature` type; the `capability` type gains the block «its parts» after the mechanism. Seven parts, each one of the owner's topics: collection, search, context packs, sharing, delegation (access to one node or one area), cloud, the collective mind | each topic the owner names is its own question (brief N2); rule E3 already allows one level under a page | never |
+| A20 | **The home's order (replaces A7's list):** (1) hero; (2) Fabric; (3) for you; (4) **Memory**: the brain, what you gain from day one and what keeps improving, the door to `/memory/`; (5) why you can trust it; (6) for your organization; (7) proof; (8) the ecosystem; (9) FAQ; (10) the big White Rabbit | the owner: «На главной странице сайта это должно быть»; the CEO: right after Fabric and «for you» | the owner |
+| A21 | **The header (replaces A13's list):** Fabric · Memory (`/memory/`) · For you · For organizations · Pricing · Resources · the White Rabbit button · language switch · «Try Fabric free». Vision moves to the first place in the Resources panel and stays in the footer, on the home (the hero's film and the link under it) and on `/memory/` | six items is what the header carries at a tablet's width with the rabbit and the action; the theme the owner calls the main thing takes the place of the page a new visitor needs least to find from the header | the owner |
+| A22 | **The brain is one figure in three forms, loaded in this order.** (a) Always: a static picture of the graph with a text twin (the levels and what flows between them) in the served HTML, in a box of fixed size. (b) Where motion is allowed: a short muted loop of the same figure turning, loaded when the box is near the viewport. (c) On a click or a key press on «Explore the brain»: the interactive 3D scene (turn it, pick a level, see its nodes and links), whose code and data load only then. Nothing of (b) or (c) loads under `prefers-reduced-motion`, with data saving on, without JavaScript or without WebGL | the owner: «графику, а может даже 3D ... чтобы это даже покрутить». The picture is the largest paint and never waits for a script; the box never changes size; the scene's weight is paid only by a visitor who asked for it, so the field metrics of everyone else do not see it | never |
+| A23 | **Two films carry Memory:** V-14 on `/memory/` (a film, not an overview) and V-02 on `/vision/`, whose script now ends on the memory an organization grows. Both come from Asset Foundry's order of session `58e7fb0f`; SITE-092 does not order them again and takes their look as the reference for the seven clips | the owner: «ролик, тоже объясняющий это все на страничке про memory и vision»; one order, one look | never |
+| A24 | **The scene shows a synthetic graph.** Its nodes and links are made for the site; no node, name or number of a real memory (ours, a customer's, or a personal agent's) is shown, and the reference recording is used for style only | this repository is public; the Sound Engine Hub belongs to personal projects, whose data, names and paths are never published | never |
+
+### What `/memory/` says, and where each line comes from
+
+The page is written from the owners' records, read through the organization's knowledge graph (MCP `search`,
+2026-11-21). A line without a source is not written.
+
+| The page's block | What it says | Source on record | State today |
+|---|---|---|---|
+| The answer | Fabric Memory is a graph of what your work produced: decisions, results, sources, and the links between them. Agents read it before they act and add to it as they work, so it improves with use | agents base D-84 (a link graph with semantic links, a knowledge map), R36 | the knowledge layer is decided for every agent with a knowledge base; rollout by owner |
+| Levels | four levels: the work of agents on a machine; one agent instance; a project, reachable from any machine; an organization, the memory of its shared projects | report `fabric/2026-10-12-org-contexts` section 9 (decided by the operator) | project and organization memory in the cloud Fabric are planned (CX-31) |
+| Collection | sources state what happened; gates (a release, a merge, a receipt, a decision) write nodes at the moment they pass | agents base D-94 (design `memory-process-load-agents` section 12) | decided 2026-11-20; build in progress |
+| Search | by keyword, by meaning and by following links, fused into one ranking; every answer carries its passage and its source | data-room pattern P23 (BM25 and vectors fused by reciprocal rank, one hop of stated links, citations) | running in the organization's knowledge graph and in three agents |
+| Sharing and delegation | graphs link into a graph of graphs; an agent walks a link only under a grant that names the graph, its sections and its gates; an approval widens a grant | agents base D-92, backlog B-260 | open: the grant check is not built yet |
+| One engine | the same memory engine under Fabric's Memory, the agents base and other brains, improved in one place | agents base R36, D-87, backlog B-252 | open: three engines today, one pattern planned |
+| It keeps itself healthy | every brain runs a regular pass that archives what is stale, rebuilds links and marks damage, and can bring back what it archived | agents base R37 | decided 2026-11-20 |
+| It is yours | your memory lives with your projects; what you share is your choice | SITE-079 `/security/` block; report `fabric/2026-10-12-org-contexts` section 9 (who reads what) | as the report states |
+| What you gain on day one | Fabric's agents arrive knowing what the base of agents has learned, and your own memory starts from your first session | the owner's words above; agents base R36 | the claim is the owner's; the mechanism for a new user is asked of Fabric (below) |
+
+Asked of the owners, not assumed: Fabric (thread `be7f6de5`: what Memory does in the current release, the public
+names of its surfaces, how cloud memory and sharing reach a person) and the sound engine (thread opened with this
+change: the mechanics of its brain that may be told publicly, and nothing else). Until they answer, the blocks above
+that are marked open or planned carry «In development».
+
+### Compliance rows added
+
+| Claim or element | State on 2026-11-21 | Rule that may apply | A variant that passes anywhere |
+|---|---|---|---|
+| Cloud memory, sharing between people and organizations, access to single nodes, a collective mind | decided or designed; the grant check and the one engine are open backlog rows | misleading-advertising rules (EU UCPD 2005/29/EC, FTC Act §5) for a described feature a visitor cannot get | «In development» beside each block and in the film's transcript; the release line shows what today's build does |
+| «a memory that only gets better» | the improvement is measured on a gold set before a change ships (agents base D-84, R37); no public figure exists | unsubstantiated performance claims | «every change to memory is measured before it ships», without a figure |
+| A shared or collective memory holds what people and agents wrote | who reads which level is decided (report section 9) | GDPR Art. 5, 6 and 28 for personal data in an organization's memory; works-council rules where a memory records people's work | the page says who can read each level and that sharing is by explicit grant; `/privacy/` names what cloud memory stores when it ships |
+| The 3D scene | synthetic data only (A24) | none | n/a |
+
+### What changes in the plan
+
+- Part 2 gains `/memory/`, the home's Memory section and the brain in its first two forms (the picture and the loop);
+  the interactive scene follows in the same part if Asset Foundry delivers a scene, otherwise in part 3. New row:
+  SITE-097. The header and the home in SITE-080 and SITE-081 follow A20 and A21.
+- Part 3 gains the seven parts of `/memory/` with their clips.
+- The catalogue: 97 rows, 55 videos, 16 aliases.
+- Routes for the scene: sheleg-design for the look, the web 3D skills for the runtime, frontend-performance for the
+  budget of A22, Asset Foundry for the scene's asset.
+
+Not done for this amendment: the style reference was not viewed (the disk sentry refuses media tools on this machine
+while free space is under its line; the recording stays the brief for Asset Foundry's order); the result of Asset
+Foundry's order has not arrived; the order's thread `005d3e3f` is still closed to this project, so the plan change was
+written to thread `de1297d7`.
+
