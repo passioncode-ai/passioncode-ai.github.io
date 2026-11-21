@@ -64,7 +64,7 @@ Pobierz na macOS ↓
 
 Zobacz kod źródłowy ↗
 
-Wydanie 0.8.30 · macOS 13+ · Windows · Linux
+Wydanie 0.8.220 · macOS 13+ · Windows · Linux
 
 TWOJE LOKALNE USŁUGI / RAZEM
 
@@ -136,7 +136,7 @@ Settings → Language: jak na tym Macu, English lub Русский. Okno, menu i
 
 ### macOS
 
-Wydanie 0.8.30. Universal DMG dla Apple silicon i Intel, macOS 13 lub nowszy. Podpisany certyfikatem Developer ID, notaryzowany, z dołączonym biletem notaryzacji.
+Wydanie 0.8.220. Universal DMG dla Apple silicon i Intel, macOS 13 lub nowszy. Podpisany certyfikatem Developer ID, notaryzowany, z dołączonym biletem notaryzacji.
 
 Pobierz Fabric Dashboards ↓
 
@@ -144,7 +144,7 @@ Otwórz DMG, przeciągnij Fabric Dashboards do Aplikacji, a potem otwórz je. Ap
 
 ### Windows i Linux
 
-Wydanie 0.8.30 zawiera też podpisany instalator dla Windows na x64 i arm64 oraz AppImage i .deb dla Linuksa na x64 i arm64. Od 0.7.4 aplikacja na Windows i AppImage aktualizują się same; kopia zainstalowana z pakietu .deb nie, więc zainstaluj kolejny .deb.
+Wydanie 0.8.220 zawiera też podpisany instalator dla Windows na x64 i arm64 oraz AppImage i .deb dla Linuksa na x64 i arm64. Od 0.7.4 aplikacja na Windows i AppImage aktualizują się same; kopia zainstalowana z pakietu .deb nie, więc zainstaluj kolejny .deb.
 
 Pobieranie dla Windows i Linuksa
 
@@ -158,7 +158,7 @@ Wypróbuj Project Observatory, albo stwórz własną usługę za pomocą Fabric 
 
 SHA-256 pliku DMG
 
-4827ff04f4e20587a4363bd58d49bdb67e4d62ad2081acb08d68985857ea2e66
+369200e344e1bdf4a6e09e61e5e5e013197d38a0e552b391536cd2fb59d97c6f
 
 Informacje o wydaniu i sumy kontrolne ↗
 

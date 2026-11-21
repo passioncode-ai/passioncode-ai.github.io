@@ -64,7 +64,7 @@ Fabric은 내 프로젝트와 그 에이전트를 위한 집입니다. Switchboa
 
 →
 
-AGPL-3.0 오픈 소스 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
+AGPL-3.0 오픈 소스 Fabric 0.3.26 · Switchboard 0.7.126 · Dashboards 0.8.220 · Observatory 0.45.3
 
 무료 1주일 진단 · 요청 시 진행
 
@@ -450,7 +450,7 @@ Fabric
 
 초기 프리뷰
 
-0.3.16
+0.3.26
 
 · macOS · 2단계, 5단계
 
@@ -464,7 +464,7 @@ Fabric Switchboard
 
 릴리스
 
-0.7.22
+0.7.126
 
 · macOS + Windows · 4단계
 
@@ -476,7 +476,7 @@ Fabric Dashboards
 
 릴리스
 
-0.8.30
+0.8.220
 
 · macOS + Windows + Linux · 4단계
 
@@ -488,7 +488,7 @@ Project Observatory
 
 릴리스
 
-0.34.0
+0.45.3
 
 · macOS + Windows + Linux · 5단계
 
@@ -500,7 +500,7 @@ Gmail과 Cloudflare 메일을 한 목록에 모아 중요한 것부터 보여 �
 
 개발 프리뷰
 
-1.0.0
+1.9.1
 
 · macOS + Windows + Linux · 5단계
 
