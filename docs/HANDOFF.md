@@ -39,6 +39,14 @@ Exact next task: SITE-080 by the new structure (move `catalog.json` to `site/cat
 the header panel, the footer, the breadcrumbs, the sitemap and `llms.txt` from it, add the aliases and `/media/`),
 through task-pipeline; in parallel SITE-092's first batch: `foundry_estimate`, then the orders for V-01 and V-11.
 
+Amended 2026-11-21 by the owner's addition on Memory (spec section 17, backlog SITE-097): Memory is the central
+theme. `/memory/` is a root page with seven parts and replaces the planned `/fabric/memory/` (A18, A19); the home
+gains a Memory section after Fabric and «for you» (A20); the header reads Fabric, Memory, For you, For organizations,
+Pricing, Resources, with Vision first in Resources (A21); the brain is a picture, then a loop, then a 3D scene loaded
+only on request (A22); the Memory and vision films and the scene's asset come from Asset Foundry's own order (session
+`58e7fb0f`), not from SITE-092 (A23); the scene shows synthetic data only (A24). The catalogue reads 97 rows, 55
+videos, 16 aliases. SITE-080 and SITE-081 follow A20 and A21.
+
 Found after the merge (`3e3645bf`, pull request 182, CI run 44907515459 green), before part 2 starts:
 - **The MacBook's disk sentry holds heavy work** (owner's rule of 2026-11-21: no local installs, builds or renders
   under 12 GB free; `df -h ~` read 6.8 GB at 13:20 UTC, and a shell command that names the install is refused). Part

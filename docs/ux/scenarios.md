@@ -51,6 +51,7 @@
 | SCN-042 | See what Fabric gives a person who builds products | For you | P-05, P-01 | ST-11, FLW-10 | draft | pending |
 | SCN-043 | Go from Fabric to a module, a feature and its part | Product structure | P-01, P-05 | ST-13, FLW-11 | draft | pending |
 | SCN-044 | Arrive on a video's watch page and reach its page | Video | P-01, P-03 | ST-13, FLW-11 | draft | pending |
+| SCN-045 | Understand Memory and explore the brain | Memory | P-05, P-01, P-03 | ST-12, ST-13, FLW-10, FLW-11 | draft | pending |
 
 ## Personas
 
@@ -983,6 +984,28 @@ replaces the section order of SCN-030 on the home (decision A7) and the header n
 - **UI elements:** title, player, transcript, the link to the page, related videos, library groups
 - **States covered:** static populated; a language without its own narration.
 - **Errors & recovery:** as SCN-041.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-045: Understand Memory and explore the brain
+- **Persona:** P-05, P-01, P-03
+- **Feature:** Memory (SITE-097, decisions A18 to A24)
+- **Traces:** ST-12, ST-13, FLW-10, FLW-11
+- **Entry point:** the home's Memory section; header «Memory»; /fabric/
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor scrolls the home past Fabric and «for you» -> the Memory section: the picture of the brain as a graph, one paragraph on what it is, the two gains (what you get on day one, a memory of your own that keeps improving) and the link to /memory/.
+  2. The visitor opens /memory/ -> the answer in the first paragraph, then the film; the brain's picture sits in a box that does not move as the page loads.
+  3. The visitor reads the levels -> a machine, an agent, a project, an organization, with who reads each.
+  4. The visitor presses «Explore the brain» -> the 3D scene loads in the same box; the visitor turns it, picks a level and sees its nodes and links; a pressed node shows its kind and one sentence.
+  5. The visitor reads «its parts» -> seven cards: collection, search, context packs, sharing, access to one node or area, cloud, the collective mind, each a link to its page.
+  6. The visitor clicks «Try Fabric free» -> /start/#setup.
+- **Expected result:** A visitor understands that Memory is a shared, growing graph they own, sees it move if they want to, and reaches the setup command.
+- **Alt paths:** with reduced motion, data saving, no JavaScript or no WebGL the picture and its text twin stay and the button is absent; the keyboard turns the scene with the arrow keys and Escape leaves it; a block not yet released shows «In development»; the vision's film from the link under the brain.
+- **UI elements:** brain picture with text twin, loop, «Explore the brain» button, scene controls (turn, level, close), film, levels table, seven part cards, action
+- **States covered:** picture only; loop; scene loading (the picture stays under a progress line); scene ready; scene failed.
+- **Errors & recovery:** the scene's files unreachable or WebGL lost: one line says the scene cannot be shown here and the picture stays; nothing else on the page depends on it.
 - **Status:** draft
 - **Coverage:** none yet
 - **Product:** unobserved

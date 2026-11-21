@@ -3,14 +3,14 @@
 Generated from [catalog.json](catalog.json) by `node docs/tasks/2026-11-21-site-architecture/render-catalog.mjs`;
 edit the JSON, never this file. The rules and the reasons are in the [spec](README.md).
 
-Rows: 92 (15 live, 12 change, 47 new, 16 reserved, 2 external). Videos: 50 (8 film, 1 howto, 25 overview, 16 clip; part 2: 19, part 3: 31).
+Rows: 97 (15 live, 12 change, 52 new, 16 reserved, 2 external). Videos: 55 (9 film, 1 howto, 24 overview, 21 clip; part 2: 20, part 3: 35).
 
 ## Pages
 
 | URL | Type | State | Breadcrumb parent | The one question | The one action | Video | Languages | Part | Row |
 |---|---|---|---|---|---|---|---|---|---|
 | `/` | home | change | n/a | What is PassionCode, and what does Fabric free me from? | Try Fabric free | V-01 | site | 2 | SITE-081 |
-| `/vision/` | concept | change | `/` | How does one agent grow into an agentic organization? | Try Fabric free | V-02 | site | 2 | SITE-081 |
+| `/vision/` | concept | change | `/` | How does one agent grow into an agentic organization with a memory of its own? | Try Fabric free | V-02 | site | 2 | SITE-081 |
 | `/humanless/` | concept | new | `/` | What is a Humanless business? | Assess your company | V-03 | site | 2 | SITE-093 |
 | `/for-you/` | audience | new | `/` | What does Fabric give me as a developer, a founder or anyone who builds products? | Try Fabric free | V-04 | site | 2 | SITE-093 |
 | `/for-you/<role>/` | audience | reserved | `/for-you/` | What does Fabric give a person in this role? First roles: developers, founders | Try Fabric free | none | site | later | n/a |
@@ -27,7 +27,6 @@ Rows: 92 (15 live, 12 change, 47 new, 16 reserved, 2 external). Videos: 50 (8 fi
 | `/fabric/download/<platform>` | utility | live | `/fabric/` | n/a (download redirect served by the Worker) | n/a | none | none | n/a | n/a |
 | `/fabric/ceo/` | feature | new | `/fabric/` | What is the Fabric CEO agent and what does it do? | Try Fabric free | V-12 | site | 2 | SITE-082 |
 | `/fabric/sessions/` | feature | new | `/fabric/` | How do I run many agent sessions and terminals across my machines? | Try Fabric free | V-13 | site | 3 | SITE-084 |
-| `/fabric/memory/` | feature | new | `/fabric/` | How do AI agents keep memory of a project between sessions? | Try Fabric free | V-14 | site | 3 | SITE-084 |
 | `/fabric/board/` | feature | new | `/fabric/` | How do agents hand tasks to each other without losing them? | Try Fabric free | V-15 | site | 3 | SITE-084 |
 | `/fabric/gates/` | feature | new | `/fabric/` | How do I stay in control of what my agents do, and why can I trust them? | Try Fabric free | V-16 | site | 3 | SITE-094 |
 | `/fabric/self-improvement/` | feature | new | `/fabric/` | How does a system of agents learn from every run? | Try Fabric free | V-17 | site | 3 | SITE-094 |
@@ -39,8 +38,6 @@ Rows: 92 (15 live, 12 change, 47 new, 16 reserved, 2 external). Videos: 50 (8 fi
 | `/fabric/ceo/dispatch/` | subfeature | new | `/fabric/ceo/` | How does the CEO agent hand out tasks, and how do I know each one was done? | Try Fabric free | V-12b | site | 3 | SITE-094 |
 | `/fabric/sessions/terminals/` | subfeature | new | `/fabric/sessions/` | How do I watch and steer an agent's terminal? | Try Fabric free | V-13a | site | 3 | SITE-094 |
 | `/fabric/sessions/machines/` | subfeature | new | `/fabric/sessions/` | How do I run agents on several computers as one workplace? | Try Fabric free | V-13b | site | 3 | SITE-094 |
-| `/fabric/memory/context-packs/` | subfeature | new | `/fabric/memory/` | What does an agent know about my project when a session starts? | Try Fabric free | V-14a | site | 3 | SITE-094 |
-| `/fabric/memory/search/` | subfeature | new | `/fabric/memory/` | How do agents find what was decided before, with its source? | Try Fabric free | V-14b | site | 3 | SITE-094 |
 | `/fabric/board/requests/` | subfeature | new | `/fabric/board/` | How does one project's agent ask another project's agent for work? | Try Fabric free | V-15a | site | 3 | SITE-094 |
 | `/fabric/board/claims/` | subfeature | new | `/fabric/board/` | How do two agents avoid doing the same task? | Try Fabric free | V-15b | site | 3 | SITE-094 |
 | `/fabric/gates/approvals/` | subfeature | new | `/fabric/gates/` | Which agent actions need a person's approval? | Try Fabric free | V-16a | site | 3 | SITE-094 |
@@ -65,6 +62,14 @@ Rows: 92 (15 live, 12 change, 47 new, 16 reserved, 2 external). Videos: 50 (8 fi
 | `/okolos/` | module | new | `/fabric/` | How do I keep an AI agent's browsing safe? | Read the source | V-37 | site | 2 | SITE-083 |
 | `/<module>/` | module | reserved | `/fabric/` | A later module of the ecosystem: a part with its own install and its own releases (rule E1) | Set up with one command | none | site | later | n/a |
 | `/<module>/<feature>/` | subfeature | reserved | `/<module>/` | A later feature of a module (rule E3) | Set up with one command | none | site | later | n/a |
+| `/memory/` | capability | new | `/fabric/` | What is Fabric Memory, and what do my agents and I gain from a memory that keeps improving? | Try Fabric free | V-14 | site | 2 | SITE-097 |
+| `/memory/collection/` | subfeature | new | `/memory/` | How does the memory of my work get collected, and from what? | Try Fabric free | V-14a | site | 3 | SITE-097 |
+| `/memory/search/` | subfeature | new | `/memory/` | How do agents find what was decided before, with its source? | Try Fabric free | V-14b | site | 3 | SITE-097 |
+| `/memory/context-packs/` | subfeature | new | `/memory/` | What does an agent know about my project when a session starts? | Try Fabric free | V-14c | site | 3 | SITE-097 |
+| `/memory/sharing/` | subfeature | new | `/memory/` | How do I share knowledge between my agents, my projects and my team? | Try Fabric free | V-14d | site | 3 | SITE-097 |
+| `/memory/delegation/` | subfeature | new | `/memory/` | How do I give an agent or a person access to one node or one area of knowledge, and nothing else? | Try Fabric free | V-14e | site | 3 | SITE-097 |
+| `/memory/cloud/` | subfeature | new | `/memory/` | What does cloud memory give me, and what stays on my machines? | See pricing | V-14f | site | 3 | SITE-097 |
+| `/memory/collective/` | subfeature | new | `/memory/` | How do an organization's separate memories become one shared mind? | Assess your company | V-14g | site | 3 | SITE-097 |
 | `/security/` | capability | new | `/fabric/` | Is it safe to let AI agents work on my machine and my company's systems? | Try Fabric free | V-40 | site | 3 | SITE-084 |
 | `/cloud/` | capability | new | `/fabric/` | Can my agents keep working in the cloud when my computer is off, and what does the cloud give me? | See pricing | V-41 | site | 2 | SITE-084 |
 | `/open-source/` | capability | new | `/fabric/` | Is Fabric free and open source, and what does the licence allow? | Try Fabric free | V-42 | site | 3 | SITE-084 |
@@ -130,6 +135,8 @@ Rows: 92 (15 live, 12 change, 47 new, 16 reserved, 2 external). Videos: 50 (8 fi
 | `/plans/` | `/pricing/` | 301 | a guessed name |
 | `/download/` | `/start/#setup` | 301 | one door to setup |
 | `/enterprise/` | `/business/` | 302 | temporary until the page is built |
+| `/fabric/memory/` | `/memory/` | 301 | Memory moved out of Fabric's features before anything shipped (decision A18); the earlier spec named this URL |
+| `/brain/` | `/memory/` | 301 | the word people say |
 
 ## Reserved root names
 
@@ -140,7 +147,7 @@ No page, module or content slug may take one of these as its first path segment:
 | ID | Title (working) | Class | Page | Part |
 |---|---|---|---|---|
 | V-01 | PassionCode: free your time for the work you love | film | `/` | 2 |
-| V-02 | The vision: from one agent to an agentic organization | film | `/vision/` | 2 |
+| V-02 | The vision: from one agent to an agentic organization, and the memory it grows | film | `/vision/` | 2 |
 | V-03 | What a Humanless business is | film | `/humanless/` | 2 |
 | V-04 | For you: the vision, Fabric and the system around it | film | `/for-you/` | 2 |
 | V-05 | Set up Fabric with one command | howto | `/start/` | 2 |
@@ -156,9 +163,14 @@ No page, module or content slug may take one of these as its first path segment:
 | V-13 | Sessions, agents and terminals | overview | `/fabric/sessions/` | 3 |
 | V-13a | An agent's terminal, watched and steered | clip | `/fabric/sessions/terminals/` | 3 |
 | V-13b | Several machines, one workplace | clip | `/fabric/sessions/machines/` | 3 |
-| V-14 | Memory | overview | `/fabric/memory/` | 3 |
-| V-14a | The context pack a session starts with | clip | `/fabric/memory/context-packs/` | 3 |
-| V-14b | Search with sources | clip | `/fabric/memory/search/` | 3 |
+| V-14 | Memory: the brain your agents share, and that keeps learning | film | `/memory/` | 2 |
+| V-14a | How memory is collected | clip | `/memory/collection/` | 3 |
+| V-14b | Search with sources | clip | `/memory/search/` | 3 |
+| V-14c | The context pack a session starts with | clip | `/memory/context-packs/` | 3 |
+| V-14d | Sharing knowledge | clip | `/memory/sharing/` | 3 |
+| V-14e | Access to one node or one area | clip | `/memory/delegation/` | 3 |
+| V-14f | Cloud memory | clip | `/memory/cloud/` | 3 |
+| V-14g | A collective mind | clip | `/memory/collective/` | 3 |
 | V-15 | The board | overview | `/fabric/board/` | 3 |
 | V-15a | A request from one project to another | clip | `/fabric/board/requests/` | 3 |
 | V-15b | Claims: one task, one agent | clip | `/fabric/board/claims/` | 3 |
