@@ -36,6 +36,16 @@
 | SCN-027 | Read a guide and take its next step | Guides | P-01, P-03 | ST-01, ST-07, FLW-09 | draft | pending |
 | SCN-028 | Read a blog post on AI-native organizations | Blog | P-03, P-04 | ST-09, FLW-09 | draft | pending |
 | SCN-029 | Start the free assessment from the home | Assessment | P-02, P-03 | ST-07, ST-09, FLW-08 | draft | pending |
+| SCN-030 | Start the free personal version from the promise | Vision home | P-05, P-01 | ST-11, FLW-10 | draft | pending |
+| SCN-031 | Understand Fabric and its CEO agent | Fabric | P-05, P-01, P-03 | ST-12, FLW-11 | draft | pending |
+| SCN-032 | Read about one part of the product and install it | Toolkit | P-01 | ST-13, FLW-11 | draft | pending |
+| SCN-033 | Read about one feature under the hood | Features | P-01, P-02, P-05 | ST-13, FLW-11 | draft | pending |
+| SCN-034 | Choose a path as an organization | Organizations | P-02, P-03 | ST-14, FLW-12 | draft | pending |
+| SCN-035 | Follow the White Rabbit to the assessment | Assessment | P-02, P-03 | ST-15, FLW-13 | draft | pending |
+| SCN-036 | Answer the assessment chat and send the request | Assessment | P-02, P-03 | ST-15, ST-07, FLW-13 | draft | pending |
+| SCN-037 | Read a case and take its first step | Cases | P-03, P-02 | ST-14, FLW-12 | draft | pending |
+| SCN-038 | Go from a pain to the assessment or a request | Pains | P-03, P-02 | ST-15, ST-07, FLW-13 | draft | pending |
+| SCN-039 | See what is free and what is paid | Pricing | P-05, P-02, P-03 | ST-16, FLW-10, FLW-12 | draft | pending |
 
 ## Personas
 
@@ -637,4 +647,224 @@ rather than replaces, the browser review recorded above.
 - **Errors & recovery:** the assessment landing or Telegram unreachable: the browser's error; the /business/ form is the fallback.
 - **Status:** draft
 - **Coverage:** index.html (hero, #assessment, #grow, #doors, #faq), business/index.html hero, start/index.html closing, every page's header; assets/rabbit.js with scripts/rabbit.test.mjs; browser evidence in docs/tasks/2026-11-19-home-rabbit/README.md
+- **Product:** unobserved
+
+## SITE-079: the site after Humanless (spec of 2026-11-21, not built)
+
+Scenarios SCN-030 to SCN-039 are written before the interface, from the owner's order of 2026-11-21
+([spec](../tasks/2026-11-21-humanless-site/README.md)). They start as `draft` with `Coverage: none yet`. When a build
+row lands, SCN-001, SCN-007, SCN-014, SCN-020, SCN-027 and SCN-029 are updated in the same change where the home, the
+header, /fabric/, /business/ and the guides change (SCN-029's hero order is replaced by SCN-030's on the home only).
+
+### SCN-030: Start the free personal version from the promise
+- **Persona:** P-05, P-01
+- **Feature:** Vision home (SITE-081, owner 2026-11-21)
+- **Traces:** ST-11, FLW-10
+- **Entry point:** / in any of the site's languages; the header action «Try Fabric free» on every page
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens the home -> the first screen shows the label «Humanless AI», the h1 «Free your time for the work you love», the lead (a CEO agent runs your agents, their sessions and terminals; you set the direction and check the result), the audience line (founder, programmer, engineer or marketer) and two buttons: «Try Fabric free» first, «Assess your company» second with the small white rabbit on it; under the first button the caption «Free for personal use on your own computers. Open source under AGPL-3.0.»
+  2. The visitor scrolls -> one screen says what goes to agents and what stays with a person (direction, control, expertise), which is the meaning of «humanless» on this site.
+  3. The visitor reads «under the hood» -> four cards, each one sentence and a link: any agent (/fabric/agents/), safe by design (/security/), cloud (/cloud/), free and open source (/open-source/).
+  4. The visitor reads the Fabric screen -> one paragraph on Fabric and the CEO agent with the link to /fabric/.
+  5. The visitor reaches the two doors -> «For you» (free, /start/) and «For your organization» (/assessment/).
+  6. The visitor clicks «Try Fabric free» -> /start/#setup opens with the one command and its Copy button; copying it shows «Copied».
+- **Expected result:** A person understands in one screen what they are freed from and that it is free, and reaches the setup command in one click from the hero or the header.
+- **Alt paths:** the header action from any page; the doors; the FAQ entry «Is it really free?» → /open-source/ and /pricing/; a visitor who is an organization takes the second button (SCN-035); the video under the hero stays click-to-play.
+- **UI elements:** header (Product, For you, For organizations, Assess your company, Pricing, Vision, language switch, action), hero label, h1, lead, two buttons, caption, four cards, Fabric screen, two door cards, FAQ, foot rabbit
+- **States covered:** static populated; without JavaScript (every link and the whole argument work; the rabbit sits).
+- **Errors & recovery:** /api/releases unreachable: the release line shows the committed snapshot; a broken clipboard permission on /start/: the command stays selectable and the button says «Select and copy».
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-031: Understand Fabric and its CEO agent
+- **Persona:** P-05, P-01, P-03
+- **Feature:** Fabric (SITE-082)
+- **Traces:** ST-12, FLW-11
+- **Entry point:** header «Product»; the home's Fabric screen; a search result for /fabric/ or /fabric/ceo/
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens /fabric/ -> the h1 «Fabric, one app to run your virtual company», the lead, the current release line and the map of its surfaces: Home («Needs you»), the CEO agent, projects, sessions, Memory, machine, Create, Reports, mobile, cloud; each is a link, and each surface that is not in the current release carries «In development».
+  2. The visitor opens «The CEO agent» -> /fabric/ceo/ answers in its first paragraph what the agent is; then four steps (you say what you want; it opens the project and picks the agent and the account; it starts the sessions and terminals; it returns a receipt for every task and asks only what needs you).
+  3. The visitor reads «What it never does» -> it does not decide what is yours to decide, spend above a limit or act outside the access you gave.
+  4. The visitor clicks «Try Fabric free» -> /start/#setup.
+- **Expected result:** The visitor can say what Fabric is, what the CEO agent does with the workplace, agents, sessions and terminals, and what today's release already does.
+- **Alt paths:** from /fabric/ceo/ to /fabric/sessions/, /fabric/board/ or /fabric/memory/; the part pages from the map's «The toolkit» row.
+- **UI elements:** breadcrumbs, h1, lead, release line, surfaces map (a diagram with a text list twin), «In development» labels, steps, «What it never does», action button
+- **States covered:** static populated; the release line's fallback.
+- **Errors & recovery:** as SCN-030.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-032: Read about one part of the product and install it
+- **Persona:** P-01
+- **Feature:** Toolkit (SITE-083)
+- **Traces:** ST-13, FLW-11
+- **Entry point:** the footer column «The toolkit»; /fabric/'s map; a search result for a part's page
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens a part's page (/adapter/, /launcher/, /relay/, /okolos/, or a live one: /switchboard/, /inbox/, /dashboards/, /observatory/) -> the IN THE TOOLKIT line, the h1 and one sentence saying what the part does.
+  2. The visitor reads who needs it, what it does today, and how it works with Fabric and alone -> every statement about today names the release it comes from.
+  3. The visitor reaches install -> the launcher's command with a Copy button, or Download; for a part without a release, «Read the source» and the sentence that it has no release yet.
+  4. The visitor checks the licence -> «Open source under AGPL-3.0; a commercial license is available», with the source link.
+- **Expected result:** The visitor knows what the part is for, whether they need it, and has installed it or opened its source.
+- **Alt paths:** back to /fabric/; to the neighbouring parts by name.
+- **UI elements:** breadcrumbs, toolkit line, h1, six blocks, command with Copy, Download or source button, licence line
+- **States covered:** released part; part without a release.
+- **Errors & recovery:** a download route that fails answers with the release page link (the Worker's existing behaviour).
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-033: Read about one feature under the hood
+- **Persona:** P-01, P-02, P-05
+- **Feature:** Features (SITE-084)
+- **Traces:** ST-13, FLW-11
+- **Entry point:** a card on the home; /fabric/'s map; the footer; a search result
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens a feature page (/security/, /cloud/, /open-source/, /fabric/agents/, /fabric/memory/, /fabric/sessions/, /fabric/board/, /fabric/create/, /fabric/reports/, /fabric/mobile/) -> the first paragraph answers the page's question.
+  2. The visitor reads how it works -> three to five steps or a diagram with a text twin.
+  3. The visitor reads «For you» and «For your organization» -> what the feature gives each.
+  4. The visitor reads the limits -> what it does not do or cannot prove, and «In development» with no date when it is not in the current release.
+  5. The visitor takes the next step -> «Try Fabric free»; on /cloud/ also «See pricing»; on /security/ also «Read how request data is handled» (/privacy/).
+- **Expected result:** One question answered on one page, with the limit said, and one obvious next step.
+- **Alt paths:** two sibling features linked by what they answer; back to /fabric/.
+- **UI elements:** breadcrumbs, h1, answer paragraph, steps or diagram, two audience blocks, limits block, action buttons, sibling links
+- **States covered:** feature in the current release; feature in development.
+- **Errors & recovery:** none beyond the browser's own.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-034: Choose a path as an organization
+- **Persona:** P-02, P-03
+- **Feature:** Organizations (SITE-085)
+- **Traces:** ST-14, FLW-12
+- **Entry point:** header «For organizations»; the home's second door
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens /business/ -> the h1 «Take people out of the routine, keep them in charge», the lead, and two buttons: «Assess your company» first, «Send a request» second.
+  2. The visitor sees three cards -> make your current business humanless and keep your team; launch a new business with a team of agents; prepare your business for sale; each with one line and a link to its page (SCN-037).
+  3. The visitor reads «How it starts» -> the free assessment in three lines with the rabbit and the button.
+  4. The visitor reads what is set up, what agents cost and the estimate -> unchanged from today.
+  5. The visitor clicks «Assess your company» -> /assessment/ (SCN-035), or scrolls to the request (SCN-014, SCN-022, unchanged).
+- **Expected result:** A company lead recognizes their situation and starts with the assessment or the request.
+- **Alt paths:** «Pricing» in the header (SCN-039); the guides for a pain (SCN-038).
+- **UI elements:** h1, lead, two buttons, three case cards, «How it starts», the existing sections and form
+- **States covered:** static populated; the form's existing states (SCN-014).
+- **Errors & recovery:** as SCN-014.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-035: Follow the White Rabbit to the assessment
+- **Persona:** P-02, P-03
+- **Feature:** Assessment (SITE-086; SITE-078 steps 4 and 5)
+- **Traces:** ST-15, FLW-13
+- **Entry point:** the foot of any page; the header item «Assess your company»; the home's second button
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor reaches the foot of a page -> a large White Rabbit sits beside the line and the button «Follow the White Rabbit», looking at the button.
+  2. The visitor clicks the button -> the button hops once and /assessment/ opens in the page's language; there the rabbit jumps in from the same side and lands by the h1 «Assess your company». The whole motion is under one second on each page and never moves the layout or covers a click.
+  3. The visitor reads the lead -> «One week, read-only access, free. You get a map of where work waits and a ready offer for the first process to hand to agents.»
+  4. The visitor reads four pains in their own words -> each is a link to its guide.
+  5. The visitor reads what the assessment reads, what comes out and what it never does (it reads processes, never judges people; access is revoked and data deleted after the week).
+  6. The visitor reaches the chat -> SCN-036.
+- **Expected result:** From any page, one click brings an organization's lead to the page that explains and starts the assessment.
+- **Alt paths:** with reduced motion or without JavaScript the button is an ordinary link and the rabbit is already sitting on /assessment/; from the header or the hero the same page opens without the hop; under the chat the visitor continues to the self-guided story (assessment.passioncode.ai) or the guide to the week.
+- **UI elements:** foot rabbit, foot line and button, h1, lead, pain links, three content blocks, chat frame, story and guide links
+- **States covered:** hop; still (reduced motion, no JavaScript); arrival with and without `?from=`.
+- **Errors & recovery:** the animation script fails to load: the link still navigates.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-036: Answer the assessment chat and send the request
+- **Persona:** P-02, P-03
+- **Feature:** Assessment (SITE-086 for the slot and the doors; SITE-090 for the agent's chat)
+- **Traces:** ST-15, ST-07, FLW-13
+- **Entry point:** the chat on /assessment/
+- **Preconditions:** for steps 2 to 6, the product's assessment agent exists (gap G9); before that only step 1b applies
+- **Steps:**
+  1a. The chat is ready -> its first message says who is speaking (PassionCode's AI assistant; a person reads every request), what it will ask (four questions, about two minutes) and what it will do with the answers; when the visitor came with `?from=`, it names that pain first.
+  1b. The assessment agent does not exist yet, or the chat is unavailable -> the slot shows «Start the self-guided assessment» (assessment.passioncode.ai/?lang=<the page's language>), «Write to Morpheus on Telegram» and «Prefer a form? Send a request» (/business/#request); when the chat is down, one line says so.
+  2. The visitor answers the first question (what the company does and how many people work in it) -> the chat shows «2 of 4» and the next question; the earlier answer stays visible and editable.
+  3. The visitor answers the remaining questions (which process hurts most; which systems hold the work; where to reply) -> after the fourth the chat shows a summary card with every answer.
+  4. The visitor clicks «Edit» on a line -> that answer opens for change and the card updates.
+  5. The visitor clicks «Confirm and send» -> the button shows «Sending», then the confirmation: the request is received, a person answers within two business days, and the next step is the read-only links for the week.
+  6. The visitor follows «While you wait» -> the self-guided story or the guide to the week.
+- **Expected result:** The visitor sends a complete request for the assessment in about two minutes, sees exactly what was sent, and knows when a person answers. Nothing is sent before «Confirm and send».
+- **Alt paths:** the visitor asks the chat a question of their own -> it answers from the published facts or says it does not know and offers the form; it quotes no price or date the facts do not hold; asked whether it is a person, it says it is an AI assistant. The visitor leaves midway -> nothing is sent.
+- **UI elements:** chat frame, message list, answer field, progress, summary card with Edit, «Confirm and send», confirmation, the two doors, form link
+- **States covered:** absent, loading, ready, unavailable, question, summary, sending, sent, send failed.
+- **Errors & recovery:** the send fails -> the summary stays, the message says the request was not sent, with «Try again» and the form link; an answer that is empty or too long -> the field says what is needed; the visitor's message that looks like an instruction to the agent is treated as text.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-037: Read a case and take its first step
+- **Persona:** P-03, P-02
+- **Feature:** Cases (SITE-087)
+- **Traces:** ST-14, FLW-12
+- **Entry point:** a case card on /business/ or the footer; a search result
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens a case (/business/humanless-business/, /business/founder-team/ or /business/sale-ready/) -> the h1 and a lead that names their situation.
+  2. The visitor reads «Who this is for» and «The situation» -> their own words: the team carries the routine; no team yet; the business depends on its founder.
+  3. The visitor reads «What changes» -> a before and after table.
+  4. The visitor reads «How it runs» -> which agents take which work, each linked to its template page under /agents/.
+  5. The visitor reads «What people keep» -> direction, control, expertise; on the first case, that the team stays.
+  6. The visitor takes the first step -> «Assess your company» (/assessment/?from=<case>); on the founder's case «Try Fabric free» is first and the assessment second.
+- **Expected result:** The visitor sees their case described, what would change and what people keep, and starts the assessment or the free version.
+- **Alt paths:** the other two cases; «Send a request»; the FAQ.
+- **UI elements:** breadcrumbs, h1, lead, five blocks, before and after table, agent links, action buttons, FAQ, other cases
+- **States covered:** static populated.
+- **Errors & recovery:** none beyond the browser's own.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-038: Go from a pain to the assessment or a request
+- **Persona:** P-03, P-02
+- **Feature:** Pains (SITE-088)
+- **Traces:** ST-15, ST-07, FLW-13
+- **Entry point:** a search result, a post or a link from /assessment/ or /business/ to a pain guide
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens a pain guide (/guides/where-team-time-goes/, /guides/why-tasks-stall-between-people/, /guides/scale-without-hiring/ or /guides/catch-process-failures/) -> the h1 is their question and the first paragraph answers it.
+  2. The visitor reads the mechanism and one worked example -> every figure has its source on the page.
+  3. The visitor reads «What an assessment would show you» -> three lines specific to this pain.
+  4. The visitor clicks «Assess your company» -> /assessment/?from=<guide slug>, where the page (and the chat, when it exists) names this pain first.
+- **Expected result:** A reader who came with a problem leaves with its explanation and one click into the assessment, or a sent request.
+- **Alt paths:** «Send a request» → /business/#request; the related case page; more guides.
+- **UI elements:** breadcrumbs, GUIDE and the date, h1, answer paragraph, sections, «What an assessment would show you», two action buttons, related case, more guides
+- **States covered:** static populated.
+- **Errors & recovery:** none beyond the browser's own.
+- **Status:** draft
+- **Coverage:** none yet
+- **Product:** unobserved
+
+### SCN-039: See what is free and what is paid
+- **Persona:** P-05, P-02, P-03
+- **Feature:** Pricing (SITE-089)
+- **Traces:** ST-16, FLW-10, FLW-12
+- **Entry point:** header «Pricing»; «See pricing» on /cloud/; the FAQ on the home
+- **Preconditions:** none
+- **Steps:**
+  1. The visitor opens /pricing/ -> the h1 «Free for people, paid for organizations and the cloud» and one sentence saying where the line is.
+  2. The visitor reads the tier table -> Free, Personal cloud, Organization, Enterprise, Cloud instance, Services, each with what it carries; a price where one is set, «by offer after the assessment» elsewhere.
+  3. The visitor picks Free -> /start/#setup.
+  4. The visitor picks a self-serve paid tier -> the account opens with that plan chosen; before the account is live the button reads «Talk to us» and opens /business/#request.
+  5. The visitor picks Organization or Enterprise -> /assessment/.
+  6. The visitor reads the FAQ -> what stays free, what the insights switch does, how to cancel, where the licence is.
+- **Expected result:** The visitor knows what they can use for free, what costs money and how to get each.
+- **Alt paths:** «Sign in» in the header for a returning customer (the account, on the platform).
+- **UI elements:** h1, line, tier table, one button per tier, licence line, FAQ, header «Sign in»
+- **States covered:** before the account is live; after it.
+- **Errors & recovery:** the account unreachable -> the platform's own error page; the site's buttons are plain links.
+- **Status:** draft
+- **Coverage:** none yet
 - **Product:** unobserved

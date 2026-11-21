@@ -23,6 +23,13 @@ Design system: [PassionCode](../../design-system/README.md), existing static HTM
 | SCR-15 | Agent template | SCN-026 |
 | SCR-16 | Guides and a guide | SCN-027 |
 | SCR-17 | Blog and a post | SCN-028 |
+| SCR-18 | Fabric: the CEO agent (SITE-079, not built) | SCN-031 |
+| SCR-19 | A feature page (SITE-079, not built) | SCN-033 |
+| SCR-20 | A part page (SITE-079, not built) | SCN-032 |
+| SCR-21 | Pricing (SITE-079, not built) | SCN-039 |
+| SCR-22 | A case for organizations (SITE-079, not built) | SCN-037 |
+| SCR-23 | Assess your company (SITE-079, not built) | SCN-035, SCN-036 |
+| SCR-24 | The foot with the White Rabbit, every page (SITE-079, not built) | SCN-035 |
 
 Every screen exists in every language of `i18n/locales.json` (Russian at `/ru/…`), generated from the English one with the same structure (docs/DEPLOYMENT.md#languages). The shared header carries the language switch beside its action: one text link to the same page in the other language with two languages, a `<details>` menu listing every language with three or more (SCN-019).
 
@@ -192,3 +199,81 @@ Falsifiers: a source agent, client or organization name; a price, timeline or te
 **Indexable:** yes; CollectionPage or BlogPosting, BreadcrumbList, sitemap, hreflang.
 **Without JS:** the whole page.
 **Entity:** PassionCode.ai's blog, author Sergey Sheleg.
+
+## SITE-079 screens (spec of 2026-11-21, not built)
+
+The screens below are specified in [SITE-079](../tasks/2026-11-21-humanless-site/README.md) and its
+[SEO brief](../seo/brief-2026-11-21.md). SCR-01 (Home), SCR-05 (Fabric), SCR-08 (Get started), SCR-09 (For
+organizations) and SCR-16 (a guide) change with it: their entries above describe the live pages until each build row
+lands and rewrites them in the same change.
+
+### SCR-18: Fabric: the CEO agent
+**Scenarios:** SCN-031. Breadcrumbs, h1, the lead (what it does in two sentences), «What you say and what it does» (four steps: you say it; it opens the project and picks the agent and the account; it starts the sessions and terminals; it returns a receipt and asks only what needs you), «What it never does», the release line with «In development» labels, the action «Try Fabric free», links to sessions, the board and Memory.
+**Web surface:** public
+**Route:** https://passioncode.ai/fabric/ceo/
+**Answers:** What is the Fabric CEO agent and what does it do?
+**Indexable:** yes; WebPage, BreadcrumbList, sitemap, hreflang.
+**Without JS:** the whole page.
+**Entity:** Fabric's CEO agent.
+**States:** static; the release line falls back to the committed snapshot when /api/releases does not answer.
+
+### SCR-19: A feature page
+**Scenarios:** SCN-033. One layout for /fabric/sessions/, /fabric/memory/, /fabric/board/, /fabric/create/, /fabric/reports/, /fabric/mobile/, /security/, /cloud/, /open-source/ (and /fabric/agents/, which keeps its table): breadcrumbs, h1, the answer in the first paragraph, how it works (steps or a diagram with a text twin), for a person and for an organization, the limits, the next step, two sibling features.
+**Web surface:** public
+**Route:** https://passioncode.ai/<feature path>/
+**Answers:** each feature's one question (docs/seo/brief-2026-11-21.md).
+**Indexable:** yes; WebPage, BreadcrumbList, sitemap, hreflang.
+**Without JS:** the whole page.
+**Entity:** Fabric and the named feature.
+**States:** static; a feature not in the current release carries «In development» in its heading block.
+
+### SCR-20: A part page
+**Scenarios:** SCN-032. One layout for /adapter/, /launcher/, /relay/, /okolos/ (the four live part pages keep theirs): breadcrumbs, IN THE TOOLKIT line, h1, what it does, who needs it, what it does today, with Fabric and alone, install (the command with a Copy button, or Download), source and licence.
+**Web surface:** public
+**Route:** https://passioncode.ai/<part>/
+**Answers:** each part's one question (docs/seo/brief-2026-11-21.md).
+**Indexable:** yes; SoftwareApplication, BreadcrumbList, sitemap, hreflang.
+**Without JS:** the whole page; the Copy button is the only script.
+**Entity:** the named product.
+**States:** a part without a release shows «Read the source» in place of install and says it has no release yet.
+
+### SCR-21: Pricing
+**Scenarios:** SCN-039. h1, the line in one sentence, the tier table (Free; Personal cloud; Organization; Enterprise; Cloud instance; Services: what each carries, a price or «by offer after the assessment»), one button per tier, the licence line with the link to /open-source/, FAQ.
+**Web surface:** public
+**Route:** https://passioncode.ai/pricing/
+**Answers:** What does PassionCode cost?
+**Indexable:** yes; WebPage, an Offer only for a tier whose price is on the page, BreadcrumbList, sitemap, hreflang.
+**Without JS:** the whole page.
+**Entity:** PassionCode.ai's offers.
+**States:** before the platform's account is live the paid tiers' buttons read «Talk to us» and lead to /business/#request; after it, self-serve tiers lead to the account.
+
+### SCR-22: A case for organizations
+**Scenarios:** SCN-037. One layout for /business/humanless-business/, /business/founder-team/, /business/sale-ready/: breadcrumbs, h1, the lead, who this is for, the situation, before and after (a table), how it runs (agents and links to their templates), what people keep, the first step (one button), FAQ, the other two cases.
+**Web surface:** public
+**Route:** https://passioncode.ai/business/<case>/
+**Answers:** each case's one question (docs/seo/brief-2026-11-21.md).
+**Indexable:** yes; Service, BreadcrumbList, sitemap, hreflang.
+**Without JS:** the whole page.
+**Entity:** PassionCode.ai's service for organizations.
+**States:** static.
+
+### SCR-23: Assess your company
+**Scenarios:** SCN-035, SCN-036. The rabbit landing by the h1; the lead (one week, read-only, free; the map and the offer); four pains as links; what the assessment reads; what you get; what it never does; the chat frame (question, answer field, progress «2 of 4», the summary card with Confirm and Edit); under it the two doors and «Prefer a form?»; then the self-guided story and the guide.
+**Web surface:** public
+**Route:** https://passioncode.ai/assessment/ (optional `?from=<guide or case slug>`)
+**Answers:** How do I get my company assessed for work that agents can take over?
+**Indexable:** yes (the address without `from` is canonical); Service, BreadcrumbList, sitemap, hreflang.
+**Without JS:** the whole argument, the four questions as text, the two doors and the form link; no chat.
+**Entity:** PassionCode.ai's company assessment.
+**States:** chat absent (before the agent exists: the two doors hold the slot); chat loading (a skeleton, the doors visible under it); chat ready; chat unavailable (one line saying so, the doors and the form); summary shown; sent (the confirmation with when a person answers); send failed (the summary stays, «Try again», and the form link).
+
+### SCR-24: The foot with the White Rabbit
+**Scenarios:** SCN-035. On every page above the footer links: the large White Rabbit sitting beside one line and the button «Follow the White Rabbit». The rabbit looks at the button.
+**Web surface:** public
+**Route:** every page; the link target is /assessment/ (under the page's language prefix).
+**Answers:** n/a (a navigation element).
+**Indexable:** part of each page; an ordinary link.
+**Without JS:** the rabbit sits and the link works.
+**Entity:** n/a.
+**States:** resting; hop on click (under one second, transform and opacity only); reduced motion: resting only. On /assessment/ itself the foot shows the line and the button «Start the assessment» pointing at the chat.
+

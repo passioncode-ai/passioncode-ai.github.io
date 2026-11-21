@@ -1,4 +1,45 @@
-# Current handoff: SITE-072, the home leads into the free assessment, live 2026-11-19
+# Current handoff: SITE-079, the site after Humanless, spec and backlog written 2026-11-21
+
+Objective (backlog SITE-079; the owner's words verbatim in the spec's section 1): a spec by sub-flows for the site's
+update after Humanless, a thought-through SEO structure, the commerce backlog, and tasks on the board. Extends the
+order of 2026-11-19 (SITE-078). Written on Claude Fable 5.2 as the owner asked.
+
+Entry point: [docs/tasks/2026-11-21-humanless-site/README.md](tasks/2026-11-21-humanless-site/README.md).
+
+Done (documents only; nothing built, the live site unchanged):
+- the spec: REQ rows R1 to R14, decisions D1 to D12, the page and URL structure, sub-flows SF-1 to SF-11, the three
+  cases' positioning, the pains' table, working copy (32 strings checked with Copylot, report ids in section 7),
+  compliance metadata, the plan of construction in three waves;
+- [docs/seo/brief-2026-11-21.md](seo/brief-2026-11-21.md): the page-question table for 33 URLs, cannibalization
+  resolved, rows N1 to N19, «Do not build»;
+- UX: stories ST-11 to ST-16 with persona P-05 (`ux/foundation.md`), flows FLW-10 to FLW-13, scenarios SCN-030 to
+  SCN-039 (draft, coverage none yet), screens SCR-18 to SCR-24;
+- [commerce-backlog.md](tasks/2026-11-21-humanless-site/commerce-backlog.md): the site's view (offers and their
+  doors, the funnel in twelve steps with what each lacks, the site's rows). The full backlog with prices on record,
+  rows by owner and the owners' gates is private: fabric-workspace `docs/plans/2026-11-21-commerce-backlog/README.md`
+  (pull request 945, commit `3fea0efc`), because this repository is public;
+- backlog rows SITE-079 (done) and SITE-080 to SITE-090 (open); SITE-078 marked as superseded for the structure.
+
+Decisions worth knowing before the first row: the home's first button is «Try Fabric free», the assessment second
+(D1); no live URL moves (D4); pains are guides (D5); the chat on `/assessment/` is the product's assessment agent, not
+company-assessment-agent, and until it exists the slot holds the two working doors (D7, D8); prices only where the
+owners set them (D9).
+
+Checks actually run: `copylot_check_batch` (voice `93cd4851` v1, en-US, web): pass, no blocking finding; the em dash
+check on the new documents; scenario integrity by hand (`docs/ux/lint.py` is not seeded here); the repository's check
+workflow in CI on the pull request. Not run: anything against the live site (a brief has no findings); search demand
+was not measured; no local install or artifact run (the MacBook's disk sentry holds heavy work).
+
+Board: BOARD_PLACEHOLDER
+
+Prerequisites for construction: the strategic plan's wave (wave 3; SITE-080 and SITE-088
+may go earlier, they change no product claim); the owner's word for each deploy to the live site; for SITE-089 the
+platform's account, payment being switched on and the owners' prices; for SITE-090 an owner of North Star gap G9.
+
+Next task: SITE-080 (structure: page registry, header and footer, content kinds, sitemap, events scaffold) through
+task-pipeline, starting from its scenarios' validation (SCN-030's header) and the brief's rows N1, N7, N8, N13.
+
+# Earlier handoff: SITE-072, the home leads into the free assessment, live 2026-11-19
 
 Objective (backlog SITE-072; the operator's words verbatim in the row): the home tidied so it leads founders into the
 free assessment (assessment.passioncode.ai, Morpheus's bot, the release guide) and every entry is measured. Record:
