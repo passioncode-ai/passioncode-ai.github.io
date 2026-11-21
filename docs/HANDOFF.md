@@ -27,10 +27,25 @@ owners set them (D9).
 
 Checks actually run: `copylot_check_batch` (voice `93cd4851` v1, en-US, web): pass, no blocking finding; the em dash
 check on the new documents; scenario integrity by hand (`docs/ux/lint.py` is not seeded here); the repository's check
-workflow in CI on the pull request. Not run: anything against the live site (a brief has no findings); search demand
+workflow in CI on pull request 180: pass (run 44855878486); merged as `57b9c372`. Not run: anything against the live site (a brief has no findings); search demand
 was not measured; no local install or artifact run (the MacBook's disk sentry holds heavy work).
 
-Board: BOARD_PLACEHOLDER
+Board: eleven tasks on the site's Fabric board, one per row SITE-080 to SITE-090 (each linked to its backlog row); the
+parent task `6fe55486`. Requests sent 2026-11-21 02:28 UTC, each carrying the owner's words verbatim with their date
+and source:
+- passioncode-platform, request `ba923b13` (thread `ff00de47`): the lead source `assessment_chat` with the
+  assessment's answers and `from`, as a new contract version; the account's address and offer ids for `/pricing/`;
+- go-to-market-strategy, request `15414f2a` (thread `22217832`; no responder online, it waits for that project's
+  session): the three cases as offers, a check of the positioning in SF-8 and of its rows in the commerce backlog;
+- fabric-agents-database, request `68b49fe4` (thread `d1710bac`, capability `agents-db.design`): the design of the
+  site's assessment chat agent (G9);
+- fabric, request `59af228f` (thread `be7f6de5`): per surface, the release that carries it, one true sentence about
+  today and a screenshot on synthetic data; the CEO agent today and after its planned rows;
+- fabric-workspace, message `ec33125b` (thread `c38cf23e`): the full commerce backlog as its pull request 945 and
+  the site's place in the plan's wave 3;
+- thread `c17cf2e5` (the order of 2026-11-19), message `c50637c5`: the state, and company-assessment-agent's ask
+  taken as decision D7.
+Replies are read at the next session start (`com.list {unread: true}`); none of them holds SITE-080 or SITE-088.
 
 Prerequisites for construction: the strategic plan's wave (wave 3; SITE-080 and SITE-088
 may go earlier, they change no product claim); the owner's word for each deploy to the live site; for SITE-089 the
