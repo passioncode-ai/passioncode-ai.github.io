@@ -61,5 +61,39 @@ agents at work and the path from a team to an organization, each with what runs 
 Priority: should. As P-04, find the thesis, what runs today and the founders' contact, with no figures or terms
 the founders have not published.
 
+## P-05: A person freeing their own time (SITE-079, owner 2026-11-21)
+A founder, a programmer, an engineer or a marketer working alone or in a small team. Does by hand what a machine could
+do and wants the hours back for creative work. Will try something free on their own computer before reading about
+organizations. A hypothesis from the owner's words («будь ты founder, программист, инженер или маркетолог, ты
+освобождаешь время для творчества»), not yet from interviews; P-01 stays the builder who already runs coding agents.
+
+## JTBD-05: Get my time back
+When routine fills my week, I want to hand it to agents on my own computer for free and see that it is safe, so I can
+spend my hours on the work I love.
+
+## JTBD-06: See where my company loses work
+When I cannot tell how efficient my team is, where the process hurts, how to scale or which failure I will miss, I
+want an outside reading of my own company before I commit to anything, so I can decide what to hand to agents first.
+
+## ST-11: Start free from the promise
+Priority: must. As P-05 (and P-01), read on the first screen what I am freed from and who it is for, see what is
+under the hood (any agent, safe, cloud, free and open source) and start the free personal version in one click.
+## ST-12: Understand Fabric and its CEO agent
+Priority: must. As P-05, P-01 and P-03, read what Fabric is as one application and what the CEO agent does with my
+workplace, agents, sessions and terminals, with what today's release does said beside it.
+## ST-13: Read about one part or one feature
+Priority: should. As P-01 or P-02, open a page that answers one question about one part of the product or one
+feature (security, cloud, memory, licence), with its limits said plainly.
+## ST-14: Recognize my case as an organization
+Priority: must. As P-03 or P-02, find my situation among three (make the current business humanless and keep the
+team; start a new business with a team of agents; prepare the business for sale) and see what changes, what people
+keep and the first step.
+## ST-15: Start the assessment of my company
+Priority: must. As P-03 or P-02, follow the White Rabbit or a pain I recognize to one page, read what the assessment
+reads and returns, and start it in a chat or in the self-guided story, with a form as the fallback.
+## ST-16: See what is free and what is paid
+Priority: should. As any visitor, read the line between free and paid on one page, with a price only where one is
+set, and reach the account or the assessment from the tier I chose.
+
 ## Motion
 Motion level 5 of 10 (sheleg-design, announced 2026-10-05: VARIANCE 7 / MOTION 5 / DENSITY 4 on the site's own locked tokens). Entrances reveal sections once on scroll (`assets/site.js`, ease-out, ≤ 560 ms) and never hide content without JavaScript; the onboarding rail is the one scroll-scrubbed instrument (`animation-timeline: view()`, linear); the hero map's links flow and its nodes float in loops whose first and last frames match. `prefers-reduced-motion: reduce`, no JavaScript and print all render the static page. No animation on keyboard-driven controls.
