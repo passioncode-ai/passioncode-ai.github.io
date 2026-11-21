@@ -64,7 +64,7 @@ Für dich, kostenlos
 
 →
 
-Open Source unter AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
+Open Source unter AGPL-3.0 Fabric 0.3.26 · Switchboard 0.7.126 · Dashboards 0.8.220 · Observatory 0.45.3
 
 KOSTENLOSES EINWÖCHIGES ASSESSMENT · AUF ANFRAGE
 
@@ -450,7 +450,7 @@ Das Zuhause für deine Projekte und ihre Agenten: Zweck, Board, Entscheidungen u
 
 Frühe Vorschau
 
-0.3.16
+0.3.26
 
 · macOS · Schritte 2 und 5
 
@@ -464,7 +464,7 @@ Wähle den Account, auf dem jeder Agent läuft, mit den Nutzungslimits im Blick.
 
 Release
 
-0.7.22
+0.7.126
 
 · macOS + Windows · Schritt 4
 
@@ -476,7 +476,7 @@ Jeder lokale Agentendienst in einem Fenster, gesteuert von dir oder von Agenten.
 
 Release
 
-0.8.30
+0.8.220
 
 · macOS + Windows + Linux · Schritt 4
 
@@ -488,7 +488,7 @@ Was sich in jedem Projekt geändert hat und was Aufmerksamkeit braucht, mit Nach
 
 Release
 
-0.34.0
+0.45.3
 
 · macOS + Windows + Linux · Schritt 5
 
@@ -500,7 +500,7 @@ Gmail und Cloudflare-Mail in einer Liste, Wichtiges zuerst; Agenten antworten na
 
 Entwicklungsvorschau
 
-1.0.0
+1.9.1
 
 · macOS + Windows + Linux · Schritt 5
 

@@ -64,7 +64,7 @@ Fabric 是你的项目及其智能体的家。Switchboard、Dashboards、Observa
 
 →
 
-基于 AGPL-3.0 开源 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
+基于 AGPL-3.0 开源 Fabric 0.3.26 · Switchboard 0.7.126 · Dashboards 0.8.220 · Observatory 0.45.3
 
 免费一周评估 · 按需申请
 
@@ -450,7 +450,7 @@ Fabric
 
 早期预览版
 
-0.3.16
+0.3.26
 
 · macOS · 步骤 2 和 5
 
@@ -464,7 +464,7 @@ Fabric Switchboard
 
 版本
 
-0.7.22
+0.7.126
 
 · macOS + Windows · 步骤 4
 
@@ -476,7 +476,7 @@ Fabric Dashboards
 
 版本
 
-0.8.30
+0.8.220
 
 · macOS + Windows + Linux · 步骤 4
 
@@ -488,7 +488,7 @@ Project Observatory
 
 版本
 
-0.34.0
+0.45.3
 
 · macOS + Windows + Linux · 步骤 5
 
@@ -500,7 +500,7 @@ Gmail 和 Cloudflare 邮件合在一个列表里，重要的排在前面；智�
 
 开发预览版
 
-1.0.0
+1.9.1
 
 · macOS + Windows + Linux · 步骤 5
 

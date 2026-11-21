@@ -64,7 +64,7 @@ Português (Brasil)
 
 →
 
-Открытый код под AGPL-3.0 Fabric 0.3.16 · Switchboard 0.7.22 · Dashboards 0.8.30 · Observatory 0.34.0
+Открытый код под AGPL-3.0 Fabric 0.3.26 · Switchboard 0.7.126 · Dashboards 0.8.220 · Observatory 0.45.3
 
 БЕСПЛАТНАЯ НЕДЕЛЬНАЯ ОЦЕНКА · ПО ЗАПРОСУ
 
@@ -450,7 +450,7 @@ Fabric
 
 Ранняя предварительная версия
 
-0.3.16
+0.3.26
 
 · macOS · шаги 2 и 5
 
@@ -464,7 +464,7 @@ Fabric Switchboard
 
 Релиз
 
-0.7.22
+0.7.126
 
 · macOS + Windows · шаг 4
 
@@ -476,7 +476,7 @@ Fabric Dashboards
 
 Релиз
 
-0.8.30
+0.8.220
 
 · macOS + Windows + Linux · шаг 4
 
@@ -488,7 +488,7 @@ Project Observatory
 
 Релиз
 
-0.34.0
+0.45.3
 
 · macOS + Windows + Linux · шаг 5
 
@@ -500,7 +500,7 @@ Fabric Inbox
 
 Предварительная версия в разработке
 
-1.0.0
+1.9.1
 
 · macOS + Windows + Linux · шаг 5
 
